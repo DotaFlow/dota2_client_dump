@@ -1,0 +1,265 @@
+/* Prettified by Source 2 Viewer - https://valveresourceformat.github.io */
+
+.Season_Fall2025 #LevelShieldProgressLayer1
+{
+	background-color: #af9362;
+}
+
+.Season_Fall2025 #LevelShieldProgressLayer2
+{
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #fff3d4 ), to( #f4cf7e) );
+}
+
+.Season_Fall2025 .EventLevelParticles
+{
+	hue-rotation: 0deg;
+}
+
+.Season_Winter2025 #LevelShieldProgressLayer1
+{
+	background-color: #b4b796;
+}
+
+.Season_Winter2025 #LevelShieldProgressLayer2
+{
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #c7edf5 ), to( #b1e7f3) );
+}
+
+.Season_Winter2025 .EventLevelParticles
+{
+	hue-rotation: 170deg;
+	saturation: 0.5;
+}
+
+.Season_Spring2026 #LevelShieldProgressLayer1
+{
+	background-color: #C5ADD9;
+}
+
+.Season_Spring2026 #LevelShieldProgressLayer2
+{
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #FFE5F5 ), to( #FFCCEA) );
+}
+
+.Season_Spring2026 .EventLevelParticles
+{
+	hue-rotation: 170deg;
+	saturation: 0.5;
+}
+
+.Season_Summer2026 #LevelShieldProgressLayer1
+{
+	background-color: #59B295;
+}
+
+.Season_Summer2026 #LevelShieldProgressLayer2
+{
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #BFFFE6 ), to( #91F2CC) );
+}
+
+.Season_Summer2026 .EventLevelParticles
+{
+	hue-rotation: 100deg;
+	saturation: 0.5;
+}
+
+DOTAEventStatus
+{
+	width: 120px;
+	height: 120px;
+}
+
+.LevelShieldContainer
+{
+	horizontal-align: center;
+}
+
+.EventLevelParticles
+{
+	width: 210%;
+	height: width-percentage(100%);
+	opacity: 0.4;
+	opacity-mask: url("s2r://panorama/images/masks/sun_burst_png.vtex");
+	brightness: 5;
+	overflow: noclip;
+	horizontal-align: center;
+	margin-top: -42%;
+	blur: gaussian(4px);
+}
+
+#LevelShieldProgressBG
+{
+	margin-left: 1px;
+	margin-top: 0px;
+	width: 64px;
+	height: 64px;
+	opacity-mask: url("s2r://panorama/images/events/seasonal/artwork/polygonscore_progressbar_png.vtex");
+	background-color: black;
+}
+
+DOTAEventStatus.NoData DOTAEventLevelShield
+{
+	visibility: collapse;
+}
+
+DOTAEventStatus.NoData Panel
+{
+	visibility: collapse;
+}
+
+DOTAEventStatus.NoData #LevelShieldProgressBG
+{
+	visibility: visible;
+}
+
+#LevelShieldProgressLayer1
+{
+	margin-left: 1px;
+	margin-top: 0px;
+	width: 64px;
+	height: 64px;
+	opacity-mask: url("s2r://panorama/images/events/seasonal/artwork/polygonscore_progressbar_png.vtex");
+}
+
+#LevelShieldProgressLayer2
+{
+	margin-left: 1px;
+	margin-top: 0px;
+	width: 64px;
+	height: 64px;
+	opacity-mask: url("s2r://panorama/images/events/seasonal/artwork/polygonscore_progressbar_png.vtex");
+	animation-name: BrightnessLoop;
+	animation-duration: 1s;
+	animation-delay: 0s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate-reverse;
+}
+
+@keyframes 'BrightnessLoop'
+{
+	0%
+	{
+		brightness: 1.0;
+	}
+	
+	100%
+	{
+		brightness: 3.0;
+	}
+	
+}
+
+#TimeLeft
+{
+	flow-children: down;
+	horizontal-align: right;
+	visibility: collapse;
+}
+
+.EventActive #TimeLeft
+{
+	visibility: visible;
+}
+
+#EventEnded
+{
+	flow-children: down;
+	visibility: collapse;
+}
+
+.EventEnded #EventEnded,.EventExpired #EventEnded
+{
+	visibility: visible;
+}
+
+.EndedTitle
+{
+	color: #999;
+	text-shadow: 2px 2px 4px black;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.EndedDate
+{
+	font-size: 16px;
+	color: #999;
+	margin-top: -1px;
+}
+
+#EventNotStarted
+{
+	flow-children: down;
+	visibility: collapse;
+}
+
+.EventNotStarted #EventNotStarted
+{
+	visibility: visible;
+}
+
+.NotStartedTitle
+{
+	color: #aaa;
+	text-shadow: 2px 2px 4px black;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.NotStartedDate
+{
+	font-size: 16px;
+	color: #aaa;
+	margin-top: -1px;
+}
+
+.TimeLeftLabels
+{
+	text-transform: uppercase;
+	font-size: 14px;
+	horizontal-align: right;
+	color: #9BBAB2;
+}
+
+#TimeLeftLabel
+{
+	margin-right: 4px;
+}
+
+#TimeLeftDate
+{
+	color: #999;
+	text-shadow: 0px 1px 1px 2.0 #000000;
+}
+
+#LevelWellContent
+{
+	width: 500px;
+	height: 100px;
+	margin-left: 8px;
+	flow-children: right;
+	vertical-align: middle;
+}
+
+#LevelDetails
+{
+	margin-top: 70px;
+	horizontal-align: center;
+	flow-children: down;
+}
+
+#LevelShieldBurst,#LevelShieldBurstBG
+{
+	width: 150px;
+	height: 150px;
+	margin-top: -43px;
+	margin-left: -42px;
+	margin-right: -143px;
+	visibility: collapse;
+}
+
+.LevelledUp #LevelShieldBurst,.LevelledUp #LevelShieldBurstBG
+{
+	visibility: visible;
+}
+

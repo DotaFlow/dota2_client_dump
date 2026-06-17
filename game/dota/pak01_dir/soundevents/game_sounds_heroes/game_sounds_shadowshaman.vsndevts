@@ -1,0 +1,253 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
+{
+	Hero_ShadowShaman.PreAttack = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 72.0
+		distance_max = 1500.0
+		event_type = 1.0
+		vsnd_files = "sounds/weapons/hero/shadowshaman/preattack.vsnd"
+		vsnd_duration = 0.771837
+	}
+	Hero_ShadowShaman.Attack = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 75.0
+		distance_max = 2500.0
+		event_type = 1.0
+		vsnd_files = "sounds/weapons/hero/shadowshaman/attack.vsnd"
+		vsnd_duration = 1.166508
+	}
+	Hero_ShadowShaman.ProjectileImpact = 
+	{
+		type = "dota_src1_3d"
+		volume = 0.5
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 72.0
+		distance_max = 1000.0
+		limiter_on = 0.0
+		vsnd_files = "sounds/weapons/hero/shadowshaman/projectile_impact.vsnd"
+		vsnd_duration = 0.578027
+	}
+	Hero_ShadowShaman.EtherShock = 
+	{
+		type = "dota_src1_3d"
+		volume = 0.5
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		distance_max = 2500.0
+		limiter_on = 0.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/shadowshaman/shock01.vsnd",
+			"sounds/weapons/hero/shadowshaman/shock02.vsnd",
+			"sounds/weapons/hero/shadowshaman/shock03.vsnd",
+		]
+		vsnd_duration = 2.388254
+	}
+	Hero_ShadowShaman.EtherShock.Target = 
+	{
+		type = "dota_update_default"
+		volume = 0.899902
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 0.95
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/shadowshaman/shock01.vsnd",
+			"sounds/weapons/hero/shadowshaman/shock02.vsnd",
+			"sounds/weapons/hero/shadowshaman/shock03.vsnd",
+		]
+		vsnd_duration = 2.388254
+	}
+	Hero_ShadowShaman.Hex.Target = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 90.0
+		distance_max = 2500.0
+		limiter_on = 0.0
+		vsnd_files = "sounds/ambient/chicken.vsnd"
+		vsnd_duration = 1.397347
+	}
+	Hero_ShadowShaman.Shackles.Cast = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.025
+		pitch_rand_max = 0.025
+		pitch = 1.075
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		vsnd_files = "sounds/weapons/hero/shadowshaman/shackle_cast.vsnd"
+		vsnd_duration = 1.605102
+	}
+	Hero_ShadowShaman.Shackles = 
+	{
+		type = "dota_update_default"
+		volume = 0.5
+		pitch_rand_min = -0.1
+		pitch_rand_max = 0.1
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		volume_fade_out = 0.1
+		spread_radius = 300.0
+		vsnd_files = "sounds/weapons/hero/shadowshaman/shackleloop.vsnd"
+		vsnd_duration = 1.534513
+	}
+	Hero_ShadowShaman.SerpentWard = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 600.0
+		vsnd_files = "sounds/weapons/hero/shadowshaman/serpent_ward.vsnd"
+		vsnd_duration = 2.751837
+	}
+	ShadowShaman_Ward.Attack = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.05
+		soundlevel = 72.0
+		distance_max = 2500.0
+		event_type = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/creep/good/range_projectile_launch.vsnd",
+			"sounds/weapons/creep/good/range_projectile_launch2.vsnd",
+			"sounds/weapons/creep/good/range_projectile_launch3.vsnd",
+			"sounds/weapons/creep/good/range_projectile_launch4.vsnd",
+		]
+		vsnd_duration = 0.502721
+	}
+	ShadowShaman_Ward.ProjectileImpact = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 69.0
+		distance_max = 2500.0
+		limiter_on = 1.0
+		limiter_event_name = "ShadowShaman_Ward.ProjectileImpact"
+		limiter_max = 1.0
+		limiter_match_type = 0.0
+		limiter_match_entity = 1.0
+		limiter_match_substring = 0.0
+		vsnd_files = 
+		[
+			"sounds/weapons/creep/good/range_projectile_impact.vsnd",
+			"sounds/weapons/creep/good/range_projectile_impact2.vsnd",
+			"sounds/weapons/creep/good/range_projectile_impact3.vsnd",
+			"sounds/weapons/creep/good/range_projectile_impact4.vsnd",
+		]
+		vsnd_duration = 0.578322
+	}
+	Hero_ShadowShaman.Footsteps = 
+	{
+		type = "dota_src1_3d_footsteps"
+		volume_rand_min = -0.099976
+		volume_rand_max = 0.099976
+		volume = 0.299927
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 72.0
+		distance_max = 2000.0
+		event_type = 4.0
+		vsnd_files = 
+		[
+			"sounds/physics/footsteps/hero/shared/general01.vsnd",
+			"sounds/physics/footsteps/hero/shared/general02.vsnd",
+			"sounds/physics/footsteps/hero/shared/general03.vsnd",
+			"sounds/physics/footsteps/hero/shared/general04.vsnd",
+			"sounds/physics/footsteps/hero/shared/general05.vsnd",
+			"sounds/physics/footsteps/hero/shared/general06.vsnd",
+			"sounds/physics/footsteps/hero/shared/general07.vsnd",
+		]
+		vsnd_duration = 0.453787
+	}
+	Hero_ShadowShaman.Death = 
+	{
+		type = "dota_null_start"
+	}
+	Hero_ShadowShaman.SheepHex.Target = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		distance_max = 2500.0
+		limiter_on = 0.0
+		vsnd_files = "sounds/ambient/sheep.vsnd"
+		vsnd_duration = 0.967642
+	}
+	Hero_ShadowShaman.Taunt.TI9 = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch = 1.0
+		soundlevel = 81.0
+		distance_max = 2500.0
+		event_type = 1.0
+		volume_fade_out = 1.0
+		vsnd_files = "sounds/weapons/hero/shadowshaman/taunt_ti9.vsnd"
+		vsnd_duration = 5.984172
+	}
+	Hero_ShadowShaman.Urnaconda.Cast = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 0.7
+		soundlevel = 81.0
+		distance_max = 2500.0
+		event_type = 1.0
+		vsnd_files = "sounds/weapons/hero/shadowshaman/attack.vsnd"
+		vsnd_duration = 1.166508
+	}
+	Hero_ShadowShaman.Urnaconda = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 0.7
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 600.0
+		vsnd_files = "sounds/weapons/hero/shadowshaman/serpent_ward.vsnd"
+		vsnd_duration = 2.751837
+	}
+}

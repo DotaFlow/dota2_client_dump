@@ -1,0 +1,458 @@
+/* Prettified by Source 2 Viewer - https://valveresourceformat.github.io */
+
+.AghsDescriptionContents
+{
+	width: 360px background-color: #10171c00;
+	flow-children: down;
+	padding-bottom: 6px;
+	border-brush: gradient( linear, 0% 0%, 0% 100%, from( #ffffff ), to( #ffffff00 ) );
+}
+
+.AghsDescriptionContents.MultipleOptions
+{
+	width: 300px;
+}
+
+.AghsDescriptionContents.Inactive
+{
+	saturation: 0.5;
+	wash-color: rgba(67, 72, 74, 0.7);
+}
+
+.AghsDescriptionContents.Inactive .ChoiceLabelContainer
+{
+	visibility: collapse;
+}
+
+.AghsDescriptionContents.Choosen
+{
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #a4d2ff0c ), to( #6481a800 ) );
+	border: 1px solid rgba(205, 217, 255, 0.4);
+}
+
+.AghsContainer
+{
+	width: 100%;
+	flow-children: down;
+	margin-top: 6px;
+}
+
+#TopSection
+{
+	background-color: gradient( linear, 0% 0%, 0% 200%, from( #1c2024fd ), to( #000000fd ) );
+	background-color: #10171c;
+	background-image: url("s2r://panorama/images/hud/aghs_tooltip_bg_psd.vtex");
+	background-repeat: no-repeat;
+	background-position: 0px -2px;
+}
+
+#BottomSection
+{
+	background-color: gradient( linear, 0% -100%, 0% 100%, from( #1c2024fd ), to( #000000fd ) );
+	background-image: url("s2r://panorama/images/hud/aghs_tooltip_bg_psd.vtex");
+	background-repeat: no-repeat;
+	background-position: 0px -2px;
+}
+
+#AghsTooltipConnecter
+{
+	width: 100%;
+	height: 12px;
+	margin: 0px 16px;
+	background-color: #111416f7;
+}
+
+.InsetContainer
+{
+	width: 100%;
+	padding: 0;
+}
+
+.DetailsContainer
+{
+	flow-children: right;
+	padding: 6px 6px;
+}
+
+#AbilityCoreDetails .DetailsContainer
+{
+	padding: 0px;
+}
+
+.TypeTitle
+{
+	color: #678FFF;
+	color: #596e89;
+	text-transform: uppercase;
+	text-overflow: shrink;
+	text-align: center;
+	height: 18px;
+	vertical-align: center;
+	color: #9ab0cd;
+	background-color: #4160b630;
+	border-radius: 3px;
+	font-size: 16px;
+	padding: -1px 5px;
+}
+
+#AghsShardContainer #AbilityCosts,#AghsScepterContainer #AbilityCosts,#ScepterUpgradeDescription #AbilityCosts,#ShardUpgradeDescription #AbilityCosts
+{
+	margin-left: -5px;
+	visibility: visible;
+}
+
+#AghsScepterContainer .HeroScepter #AbilityCosts,#ScepterUpgradeDescription .HeroScepter #AbilityCosts
+{
+	visibility: collapse;
+}
+
+.HeroShard .TypeTitle
+{
+	margin-left: -2px;
+}
+
+.GrantedAbility .TypeTitle
+{
+	background-color: #4160b660;
+	color:#9ab0cd;
+}
+
+.AbilityInfo
+{
+	flow-children: down;
+	padding: 4px 4px 0px;
+	width: fill-parent-flow(1);
+}
+
+.GrantedAbility .DetailsContainer
+{
+	border-radius: 4px;
+}
+
+.AbilityName
+{
+	font-family: titleFont;
+	color: #c9cdd4;
+	text-shadow: 0px 1px 6px 2 black;
+	vertical-align: top;
+	margin-top: -2px;
+	text-transform: uppercase;
+	font-weight: semi-bold;
+	letter-spacing: 1px;
+	font-size: 18px;
+}
+
+.AghsScepterAbilityCharges
+{
+	margin-top: 5px;
+	color: #596e89;
+	visibility: collapse;
+}
+
+.UsesAbilityCharges .AghsScepterAbilityCharges
+{
+	visibility: visible;
+}
+
+.AbilityDescription,.AbilitySpecialKeys
+{
+	color: #9ab0cd;
+	font-size: 16px;
+}
+
+.MultipleOptions .AbilityDescription,.MultipleOptions .AbilitySpecialKeys
+{
+	font-size: 14px;
+}
+
+#ScepterAbilityImage
+{
+	width: 36px;
+	height: 36px;
+	border-radius: 3px;
+	horizontal-align: right;
+	box-shadow: 0px 1px 6px 0px #0008;
+	border: 1px solid black;
+	margin-right: 4px;
+	margin-top: 4px;
+	margin-left: 4px;
+}
+
+#AghsStatusShardContainer,#AghsStatusScepterContainer,#AghsStatusTomeContainer
+{
+	width: 34px;
+	height: 34px;
+	margin-right: 4px;
+	overflow: noclip;
+}
+
+.AbilityTypeTitle
+{
+	height: 36px;
+	flow-children: down;
+	margin-bottom: 5px;
+}
+
+.HeroScepter .AbilityTypeTitle
+{
+	height: 20px;
+}
+
+#AghsStatusScepterIcon
+{
+	width: 100%;
+	height: 100%;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image: url("s2r://panorama/images/hud/reborn/aghsstatus_scepter_psd.vtex");
+	z-index: 2;
+	overflow: noclip;
+	margin-top: -5px;
+}
+
+#AghsStatusShardIcon
+{
+	width: 100%;
+	height: 100%;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image: url("s2r://panorama/images/hud/reborn/aghsstatus_shard_psd.vtex");
+	z-index: 2;
+	overflow: noclip;
+	margin-top: -5px;
+}
+
+#AghsStatusTomeIcon
+{
+	width: 100%;
+	height: 100%;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image: url("s2r://panorama/images/hud/reborn/aghsstatus_scepter_psd.vtex");
+	z-index: 2;
+	overflow: noclip;
+	margin-top: -5px;
+}
+
+.HeroHasScepter.InlineScepterDescription #AghsStatusScepterIcon
+{
+	background-image: url("s2r://panorama/images/hud/reborn/aghsstatus_scepter_on_psd.vtex");
+}
+
+.HeroHasShard.InlineShardDescription #AghsStatusShardIcon
+{
+	background-image: url("s2r://panorama/images/hud/reborn/aghsstatus_shard_on_psd.vtex");
+}
+
+.HeroHasTome.InlineTomeDescription #AghsStatusTomeIcon
+{
+	background-image: url("s2r://panorama/images/hud/reborn/aghsstatus_tome_on_psd.vtex");
+}
+
+#AghsStatusScepterScene
+{
+	opacity: 0;
+	width: 250%;
+	height: 250%;
+	margin-top: -60%;
+	margin-left: -70%;
+	opacity-mask: url("s2r://panorama/images/masks/softedge_box_irregular_png.vtex") 1.0;
+}
+
+#AghsStatusScepterScene.SceneLoaded
+{
+	opacity: 0;
+}
+
+#AghsStatusShardScene
+{
+	opacity: 0;
+	width: 250%;
+	height: 250%;
+	margin-top: -143%;
+	margin-left: -75%;
+	opacity-mask: url("s2r://panorama/images/masks/softedge_box_irregular_png.vtex") 1.0;
+}
+
+#AghsStatusShardScene.SceneLoaded
+{
+	opacity: 0;
+}
+
+#AghsStatusTomeScene
+{
+	opacity: 0;
+	width: 250%;
+	height: 250%;
+	margin-top: -143%;
+	margin-left: -75%;
+	opacity-mask: url("s2r://panorama/images/masks/softedge_box_irregular_png.vtex") 1.0;
+}
+
+#AghsStatusTomeScene.SceneLoaded
+{
+	opacity: 0;
+}
+
+.AghsTitle
+{
+	font-size: 20px;
+	font-weight: semi-bold;
+	color: gradient( linear, 0% 0%, 40% 0%, from( #92acf5 ), to(#6378b3 ) );
+	text-shadow: 2px 2px 0px #000000;
+}
+
+#HeroImage
+{
+	width: 36px;
+	height: 50px;
+	border-radius: 3px;
+	horizontal-align: left;
+	box-shadow: 0px 1px 6px 0px #0008;
+	border: 1px solid black;
+	margin-right: 4px;
+	margin-top: 1px;
+	margin-left: 4px;
+}
+
+.NoChildrenLabel
+{
+	visibility: collapse;
+}
+
+.NoChildrenLabel Label
+{
+	color: rgb(133, 110, 69);
+}
+
+.NoUpgrade .NoChildrenLabel
+{
+	visibility: visible;
+}
+
+.AbilitySpecialKeys
+{
+	visibility: collapse;
+	color: #596e89;
+	margin-top: 5px;
+}
+
+.UsesAbilityCharges .AbilitySpecialKeys
+{
+	margin-top: 0px;
+}
+
+.HasAbilitySpecialKeys .AbilitySpecialKeys
+{
+	visibility: visible;
+}
+
+.InlineScepterHeader,.InlineShardHeader,.InlineTomeHeader
+{
+	flow-children: right;
+	visibility: collapse;
+}
+
+.InlineScepterDescription,.InlineShardDescription,.InlineTomeDescription
+{
+	padding-top: 10px;
+	background-color: gradient( linear, 0% 0%, 0% 200%, from( #1c2024fd ), to( #000000fd ) );
+	background-color: #10171c;
+	background-image: url("s2r://panorama/images/hud/aghs_tooltip_bg_psd.vtex");
+	background-repeat: no-repeat;
+	background-position: 0px -2px;
+	margin-left: 4px;
+	margin-bottom: 10px;
+	border: 1px solid black;
+}
+
+.InlineScepterDescription .InlineScepterHeader,.InlineShardDescription .InlineShardHeader,.InlineTomeDescription .InlineTomeHeader
+{
+	visibility: visible;
+}
+
+.InlineScepterDescription #ScepterAbilityImage,.InlineShardDescription #ScepterAbilityImage,.InlineTomeDescription #ScepterAbilityImage,.InlineScepterDescription .AbilityName,.InlineShardDescription .AbilityName,.InlineTomeDescription .AbilityName,.InlineScepterDescription .TypeTitle,.InlineScepterDescription .AbilityTypeTitle,.InlineShardDescription .AbilityTypeTitle,.InlineTomeDescription .TypeTitle,.InlineTomeDescription .AbilityTypeTitle
+{
+	visibility: collapse;
+}
+
+.InlineScepterDescription #AghsStatusScepterIcon,.InlineScepterDescription #AghsStatusScepterScene,.InlineScepterDescription .AghsTitle,.InlineShardDescription #AghsStatusShardIcon,.InlineShardDescription #AghsStatusShardScene,.InlineShardDescription .AghsTitle,.InlineTomeDescription #AghsStatusScepterIcon,.InlineTomeDescription #AghsStatusScepterScene,.InlineTomeDescription .AghsTitle
+{
+	margin-left: 8px;
+}
+
+.InlineScepterDescription #AghsStatusScepterScene
+{
+	opacity: 1;
+}
+
+.InlineScepterDescription .AbilityDescription,.InlineScepterDescription .AbilitySpecialKeys,.InlineShardDescription .AbilityDescription,.InlineShardDescription .AbilitySpecialKeys
+{
+	margin-left: 4px;
+}
+
+.ChoiceLabelContainer
+{
+	ignore-parent-flow: true;
+	horizontal-align: right;
+	width: 100%;
+	height: 100%;
+	overflow: clip;
+}
+
+.ChoiceLabelContainer .ChoiceLabelGlow
+{
+	horizontal-align: right;
+	width: 140%;
+	height: 60%;
+	opacity: 0.06;
+	overflow: noclip;
+}
+
+.ChoiceLabelContainer .ChoiceLabelContents
+{
+	horizontal-align: right;
+	padding: 2px;
+	background-color: gradient( linear, 0% 0%, 100% 0%, from( #ffffff00 ), to( #77abff14 ) );
+}
+
+.ChoiceLabelContainer .ChoiceLabelContents .ChoiceLabel
+{
+	color: rgba(255, 255, 255, 0.7);
+	margin-left: 40px;
+	text-shadow: 0px 1px 6px black;
+}
+
+.Option1 .ChoiceLabelContainer .ChoiceLabelContents
+{
+	background-color: gradient( linear, 0% 0%, 100% 0%, from( #00000000 ), color-stop( 0.5, #335bc844 ), to( #3b7fd866 ) );
+}
+
+.Option1 .ChoiceLabelContainer .ChoiceLabelGlow
+{
+	background-color: gradient( radial, 100% 0%, 0% 0%, 100% 100%, from( #3b7fd8 ), color-stop( 0.5, #335bc899 ), to( #00000000 ) );
+}
+
+.Option2 .ChoiceLabelContainer .ChoiceLabelContents
+{
+	background-color: gradient( linear, 0% 0%, 100% 0%, from( #00000000 ), color-stop( 0.5, #a647b544 ), to( #c65ea766 ) );
+}
+
+.Option2 .ChoiceLabelContainer .ChoiceLabelGlow
+{
+	background-color: gradient( radial, 100% 0%, 0% 0%, 100% 100%, from( #c65ea7 ), color-stop( 0.5, #a647b599 ), to( #00000000 ) );
+}
+
+.Option3 .ChoiceLabelContainer .ChoiceLabelContents
+{
+	background-color: gradient( linear, 0% 0%, 100% 0%, from( #00000000 ), color-stop( 0.5, #a9532844 ), to( #c27d3866 ) );
+}
+
+.Option3 .ChoiceLabelContainer .ChoiceLabelGlow
+{
+	background-color: gradient( radial, 100% 0%, 0% 0%, 100% 100%, from( #c27d38 ), color-stop( 0.5, #a9532899 ), to( #00000000 ) );
+}
+

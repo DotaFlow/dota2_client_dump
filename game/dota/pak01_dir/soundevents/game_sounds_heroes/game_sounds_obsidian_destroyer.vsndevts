@@ -1,0 +1,353 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
+{
+	Hero_ObsidianDestroyer.preAttack = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 72.0
+		distance_max = 1500.0
+		event_type = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/obsidian_destroyer/preattack01.vsnd",
+			"sounds/weapons/hero/obsidian_destroyer/preattack02.vsnd",
+		]
+		vsnd_duration = 1.141361
+	}
+	Hero_ObsidianDestroyer.Attack = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 75.0
+		distance_max = 2500.0
+		event_type = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/obsidian_destroyer/attack01.vsnd",
+			"sounds/weapons/hero/obsidian_destroyer/attack02.vsnd",
+		]
+		vsnd_duration = 0.99898
+	}
+	Hero_ObsidianDestroyer.projectileImpact = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 72.0
+		distance_max = 1000.0
+		limiter_on = 0.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/obsidian_destroyer/projectile_impact01.vsnd",
+		]
+		vsnd_duration = 0.689229
+	}
+	Hero_ObsidianDestroyer.ArcaneOrb = 
+	{
+		type = "dota_update_default"
+		volume = 0.5
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 75.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/obsidian_destroyer/attack01.vsnd",
+			"sounds/weapons/hero/obsidian_destroyer/attack02.vsnd",
+		]
+		vsnd_duration = 0.99898
+	}
+	Hero_ObsidianDestroyer.ArcaneOrb.Impact = 
+	{
+		type = "dota_update_default"
+		volume = 0.5
+		pitch_rand_min = -0.025
+		pitch_rand_max = 0.025
+		pitch = 0.825
+		soundlevel = 72.0
+		mixgroup = "Weapons"
+		spread_radius = 100.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/obsidian_destroyer/projectile_impact02.vsnd",
+		]
+		vsnd_duration = 1.264399
+	}
+	Hero_ObsidianDestroyer.AstralImprisonment.Cast = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 150.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/obsidian_destroyer/astral_imprison_cast.vsnd",
+		]
+		vsnd_duration = 1.992472
+	}
+	Hero_ObsidianDestroyer.AstralImprisonment = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 750.0
+		limiter_on = 1.0
+		limiter_event_name = "Hero_ObsidianDestroyer.AstralImprisonment"
+		limiter_max = 3.0
+		limiter_stop_oldest = false
+		limiter_match_event_duration = 0.25
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/obsidian_destroyer/astral_imprison.vsnd",
+		]
+		vsnd_duration = 4.940204
+	}
+	Hero_ObsidianDestroyer.AstralImprisonment.End = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		limiter_on = 1.0
+		limiter_event_name = "Hero_ObsidianDestroyer.AstralImprisonment.End"
+		limiter_max = 2.0
+		limiter_stop_oldest = false
+		limiter_match_event_duration = 0.25
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/obsidian_destroyer/astral_imprison_stop.vsnd",
+		]
+		vsnd_duration = 1.00449
+	}
+	Hero_ObsidianDestroyer.EssenceFlux.Cast = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.025
+		pitch_rand_max = 0.025
+		pitch = 1.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/obsidian_destroyer/essence_aura.vsnd",
+		]
+		vsnd_duration = 2.737075
+	}
+	Hero_ObsidianDestroyer.Equilibrium.Cast = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.025
+		pitch_rand_max = 0.025
+		pitch = 1.5
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/obsidian_destroyer/essence_aura.vsnd",
+		]
+		vsnd_duration = 2.737075
+	}
+	Hero_ObsidianDestroyer.Equilibrium.Damage = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.025
+		pitch_rand_max = 0.025
+		pitch = 1.0
+		soundlevel = 78.0
+		distance_max = 2500.0
+		limiter_on = 0.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/obsidian_destroyer/essence_aura.vsnd",
+		]
+		vsnd_duration = 2.737075
+	}
+	Hero_ObsidianDestroyer.SanityEclipse.Cast = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Ultimates"
+		spread_radius = 300.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/obsidian_destroyer/sanity_cast.vsnd",
+		]
+		vsnd_duration = 2.020272
+	}
+	Hero_ObsidianDestroyer.SanityEclipse = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Ultimates"
+		spread_radius = 700.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/obsidian_destroyer/sanity_eclipse.vsnd",
+		]
+		vsnd_duration = 3.766009
+	}
+	Hero_ObsidianDestroyer.Wings = 
+	{
+		type = "dota_update_default"
+		volume = 0.399902
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 72.0
+		mixgroup = "Physics"
+		volume_move_vol = 0.2
+		volume_move_vel = 300.0
+		volume_move_filter_vel = 1.0
+		volume_falloff_min = 10.0
+		volume_falloff_max = 1000.0
+		vsnd_files = 
+		[
+			"sounds/physics/movement/hero/obsidian_destroyer/wing01.vsnd",
+			"sounds/physics/movement/hero/obsidian_destroyer/wing02.vsnd",
+			"sounds/physics/movement/hero/obsidian_destroyer/wing03.vsnd",
+		]
+		vsnd_duration = 1.494286
+	}
+	Hero_ObsidianDestroyer.IdleLoop = 
+	{
+		type = "dota_update_default"
+		volume = 0.399902
+		pitch = 1.0
+		soundlevel = 75.0
+		mixgroup = "Physics"
+		volume_move_vol = 0.2
+		volume_move_vel = 300.0
+		volume_move_filter_vel = 1.0
+		volume_falloff_min = 10.0
+		volume_falloff_max = 1000.0
+		vsnd_files = 
+		[
+			"sounds/physics/movement/hero/obsidian_destroyer/movement_loop.vsnd",
+		]
+		vsnd_duration = 5.132336
+	}
+	Hero_ObsidianDestroyer.Death = 
+	{
+		type = "dota_src1_3d"
+		volume = 0.599609
+		pitch = 1.0
+		soundlevel = 81.0
+		distance_max = 2000.0
+		event_type = 4.0
+		vsnd_files = 
+		[
+			"sounds/physics/deaths/specials/outworlddestroyer_death.vsnd",
+		]
+	}
+	Hero_ObsidianDestroyer.SanityEclipse.TI8 = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Ultimates"
+		spread_radius = 900.0
+		soundevent_layer2 = "Hero_ObsidianDestroyer.SanityEclipse.TI8Layer"
+		soundevent_layer2_on = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/obsidian_destroyer/sanity_eclipse_ti8.vsnd",
+		]
+		vsnd_duration = 3.624195
+	}
+	Hero_ObsidianDestroyer.SanityEclipse.TI8Layer = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 450.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/obsidian_destroyer/sanity_eclipse.vsnd",
+		]
+		vsnd_duration = 3.766009
+	}
+	Hero_ObsidianDestroyer.Taunt = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch = 1.0
+		soundlevel = 81.0
+		distance_max = 2500.0
+		event_type = 1.0
+		volume_fade_out = 1.5
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/obsidian_destroyer/taunt2022.vsnd",
+		]
+		vsnd_duration = 5.03725
+	}
+	Hero_ObsidianDestroyer.Taunt.Movement = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch = 1.0
+		soundlevel = 81.0
+		volume_move_vol = 0.01
+		volume_move_vel = 200.0
+		volume_move_filter_vel = 1.0
+		volume_falloff_min = 1000.0
+		volume_falloff_max = 2000.0
+		volume_fade_out = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/obsidian_destroyer/taunt_movement.vsnd",
+		]
+		vsnd_duration = 4.20875
+	}
+	Hero_ObsidianDestroyer.Shield.Cast = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = 0.0
+		pitch_rand_max = 0.1
+		pitch = 0.85
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/obsidian_destroyer/essence_aura.vsnd",
+		]
+		vsnd_duration = 2.737075
+	}
+}

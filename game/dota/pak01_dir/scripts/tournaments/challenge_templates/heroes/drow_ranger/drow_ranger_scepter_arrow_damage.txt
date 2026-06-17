@@ -1,0 +1,60 @@
+"drow_ranger_scepter_arrow_damage"
+{
+	"desc"		"#DOTA_ChallengeDesc_DrowRanger_KillsUnderHypothermia"
+	"status_text"		"#DOTA_ChallengeStatus_DrowRanger_KillsUnderHypothermia"
+	"image"			"images/spellicons/drow_ranger_frost_arrows.png"
+	"requiredhero"		"drow_ranger"
+	"events"
+	{
+		"matching_type"		"linear_series"
+		"query"
+		{
+			"enemy_killed"
+			{
+				"event"		"death"
+				"target"	"!1"
+			}
+			"separator"		"0.6"
+			"hypothermia_remove"
+			{
+				"event"					"modifier_remove"
+				"caster"				"!hero"
+				"target_team"			"!enemyteam"
+				"modifier"				"modifier_drow_ranger_frost_arrows_hypothermia"
+				"target_must_be_hero"	"1"
+				"storage"
+				{
+					"1"		"target"
+				}
+			}
+		}
+		"progress_stored_in"		"2"
+		"postmatch_increments"
+		{
+			"storage"
+			{
+				"2"
+				{
+					"aggregator"		"increment"
+				}
+			}
+		}
+		"post_tests"
+		{
+			"test_value"
+			{
+				"storage"		"2"
+				"compare"		">="
+				"amount"		"<kills_under_hypothermia>"
+			}
+		}
+	}
+	"variables"
+	{
+		"<kills_under_hypothermia>"
+		{
+			"format"		"int"
+			"index"			"0"
+		}
+	}
+}

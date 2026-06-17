@@ -1,0 +1,253 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
+{
+	Hero_Silencer.PreAttack = 
+	{
+		type = "dota_null_start"
+	}
+	Hero_Silencer.Attack = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 75.0
+		distance_max = 2500.0
+		event_type = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/silencer/attack01.vsnd",
+			"sounds/weapons/hero/silencer/attack02.vsnd",
+			"sounds/weapons/hero/silencer/attack03.vsnd",
+		]
+		vsnd_duration = 0.55771
+	}
+	Hero_Silencer.ProjectileImpact = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 72.0
+		distance_max = 1000.0
+		limiter_on = 0.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/enchantress/impact01.vsnd",
+			"sounds/weapons/hero/enchantress/impact02.vsnd",
+			"sounds/weapons/hero/enchantress/impact03.vsnd",
+		]
+		vsnd_duration = 0.365125
+	}
+	Hero_Silencer.Curse.Cast = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/silencer/curse_cast.vsnd",
+		]
+		vsnd_duration = 1.333696
+	}
+	Hero_Silencer.Curse = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 750.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/silencer/curse_aoe.vsnd",
+		]
+		vsnd_duration = 3.464218
+	}
+	Hero_Silencer.Curse.Impact = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 150.0
+		limiter_on = 1.0
+		limiter_event_name = "Hero_Silencer.Curse.Impact"
+		limiter_max = 2.0
+		limiter_match_type = 0.0
+		limiter_match_entity = 0.0
+		limiter_match_substring = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/silencer/curse_impact.vsnd",
+		]
+		vsnd_duration = 1.69551
+	}
+	Hero_Silencer.Curse_Tick = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 72.0
+		limiter_on = 0.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/silencer/curse_tick.vsnd",
+		]
+		vsnd_duration = 1.868481
+	}
+	Hero_Silencer.GlaivesOfWisdom = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 78.0
+		mixgroup = "Weapons"
+		spread_radius = 150.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/silencer/glaives_attack01.vsnd",
+			"sounds/weapons/hero/silencer/glaives_attack02.vsnd",
+			"sounds/weapons/hero/silencer/glaives_attack03.vsnd",
+		]
+		vsnd_duration = 0.998639
+	}
+	Hero_Silencer.GlaivesOfWisdom.Damage = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 75.0
+		distance_max = 2500.0
+		limiter_on = 0.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/silencer/glaives_impact01.vsnd",
+			"sounds/weapons/hero/silencer/glaives_impact02.vsnd",
+			"sounds/weapons/hero/silencer/glaives_impact03.vsnd",
+		]
+		vsnd_duration = 0.998458
+	}
+	Hero_Silencer.LastWord.Cast = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/silencer/last_word_cast.vsnd",
+		]
+		vsnd_duration = 3.296009
+	}
+	Hero_Silencer.LastWord.Target = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		limiter_on = 1.0
+		limiter_event_name = "Hero_Silencer.LastWord.Target"
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/silencer/last_word_target.vsnd",
+		]
+		vsnd_duration = 7.104013
+	}
+	Hero_Silencer.LastWord.Damage = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		limiter_on = 1.0
+		limiter_event_name = "Hero_Silencer.LastWord.Damage"
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/silencer/last_word_damage.vsnd",
+		]
+		vsnd_duration = 1.288435
+	}
+	Hero_Silencer.GlobalSilence.Cast = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch = 1.0
+		soundlevel = 120.0
+		mixgroup = "Ultimates"
+		volume_move_vol = 1.0
+		volume_falloff_min = 599999.0
+		volume_falloff_max = 600000.0
+		spread_radius = 1200.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/silencer/global_silence_cast.vsnd",
+		]
+		vsnd_duration = 3.186463
+	}
+	Hero_Silencer.GlobalSilence.Effect = 
+	{
+		type = "dota_src1_2d"
+		volume = 1.0
+		pitch = 1.0
+		limiter_on = 0.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/silencer/global_silence_effect.vsnd",
+		]
+		vsnd_duration = 6.034195
+	}
+	Hero_Silencer.Footsteps = 
+	{
+		type = "dota_src1_3d_footsteps"
+		volume_rand_min = -0.149902
+		volume_rand_max = 0.149902
+		volume = 0.449707
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 72.0
+		distance_max = 2000.0
+		event_type = 4.0
+		vsnd_files = 
+		[
+			"sounds/physics/footsteps/hero/shared/general01.vsnd",
+			"sounds/physics/footsteps/hero/shared/general02.vsnd",
+			"sounds/physics/footsteps/hero/shared/general03.vsnd",
+			"sounds/physics/footsteps/hero/shared/general04.vsnd",
+			"sounds/physics/footsteps/hero/shared/general05.vsnd",
+			"sounds/physics/footsteps/hero/shared/general06.vsnd",
+			"sounds/physics/footsteps/hero/shared/general07.vsnd",
+		]
+		vsnd_duration = 0.453787
+	}
+}

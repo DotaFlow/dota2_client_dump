@@ -1,0 +1,156 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc28:version{fb63b6ca-f435-4aa0-a2c7-c66ddc651dca} -->
+{
+	rootNode = 
+	{
+		_class = "RootNode"
+		children = 
+		[
+			{
+				_class = "BoneMarkupList"
+				children = [  ]
+				bone_cull_type = "None"
+			},
+			{
+				_class = "RenderMeshList"
+				children = 
+				[
+					{
+						_class = "RenderMeshFile"
+						name = "gr_bracer_right"
+						filename = "models/items/earthshaker/golden_reel_arms/golden_reel_arms_refit_gr_bracer_right.dmx"
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "gr_bracer_right_lod1"
+						filename = "models/items/earthshaker/golden_reel_arms/golden_reel_arms_refit_gr_bracer_right_lod11.dmx"
+					},
+				]
+			},
+			{
+				_class = "BodyGroupList"
+				children = 
+				[
+					{
+						_class = "BodyGroup"
+						name = "default"
+						children = 
+						[
+							{
+								_class = "BodyGroupChoice"
+								name = "0_#&gr_bracer_right"
+								meshes = 
+								[
+									"gr_bracer_right",
+									"gr_bracer_right_lod1",
+								]
+							},
+						]
+					},
+					{
+						_class = "BodyGroup"
+						name = "arcana"
+						children = 
+						[
+							{
+								_class = "BodyGroupChoice"
+								name = "0_#&gr_bracer_left"
+								meshes = [  ]
+							},
+							{
+								_class = "BodyGroupChoice"
+								name = "1_#&empty"
+								meshes = [  ]
+							},
+						]
+					},
+				]
+			},
+			{
+				_class = "HitboxSetList"
+				children = 
+				[
+					{
+						_class = "HitboxSet"
+						name = "default"
+						children = 
+						[
+							{
+								_class = "Hitbox"
+								hitbox_mins = [ 0.0, -14.117458, 0.0 ]
+								hitbox_maxs = [ 6.738005, 14.117447, 12.210991 ]
+								name = "0"
+								parent_bone = "spine3"
+								surface_property = "default"
+								translation_only = false
+								group_id = 0
+							},
+							{
+								_class = "Hitbox"
+								hitbox_mins = [ -52.513412, -15.18613, -22.874638 ]
+								hitbox_maxs = [ 0.0, 24.478771, 20.627285 ]
+								name = "1"
+								parent_bone = "elbow_R"
+								surface_property = "default"
+								translation_only = false
+								group_id = 0
+							},
+							{
+								_class = "Hitbox"
+								hitbox_mins = [ -26.011091, -1.355197, -18.089207 ]
+								hitbox_maxs = [ 5.224436, 15.308421, 16.150265 ]
+								name = "2"
+								parent_bone = "wrist_R"
+								surface_property = "default"
+								translation_only = false
+								group_id = 0
+							},
+							{
+								_class = "Hitbox"
+								hitbox_mins = [ 0.0, -24.46159, -20.586971 ]
+								hitbox_maxs = [ 52.513416, 15.203321, 22.914955 ]
+								name = "3"
+								parent_bone = "elbow_L"
+								surface_property = "default"
+								translation_only = false
+								group_id = 0
+							},
+							{
+								_class = "Hitbox"
+								hitbox_mins = [ -5.035501, -15.332472, -16.118214 ]
+								hitbox_maxs = [ 26.200031, 1.331141, 18.121254 ]
+								name = "4"
+								parent_bone = "wrist_L"
+								surface_property = "default"
+								translation_only = false
+								group_id = 0
+							},
+						]
+					},
+				]
+			},
+			{
+				_class = "Skeleton"
+				children = 
+				[
+					{
+						_class = "Bone"
+						name = "elbow_R"
+						origin = [ 18.207869, -49.843082, 66.751709 ]
+						angles = [ -55.065384, -177.830353, 16.481586 ]
+						do_not_discard = true
+						children = 
+						[
+							{
+								_class = "Bone"
+								name = "wrist_R"
+								origin = [ -52.513901, 0.000664, 0.000298 ]
+								angles = [ -1.252431, 10.438867, -11.491852 ]
+								do_not_discard = true
+							},
+						]
+					},
+				]
+			},
+		]
+	}
+}

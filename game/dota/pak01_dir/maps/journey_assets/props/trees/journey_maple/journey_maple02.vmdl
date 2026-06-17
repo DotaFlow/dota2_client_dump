@@ -1,0 +1,90 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc28:version{fb63b6ca-f435-4aa0-a2c7-c66ddc651dca} -->
+{
+	rootNode = 
+	{
+		_class = "RootNode"
+		children = 
+		[
+			{
+				_class = "BoneMarkupList"
+				children = [  ]
+				bone_cull_type = "None"
+			},
+			{
+				_class = "RenderMeshList"
+				children = 
+				[
+					{
+						_class = "RenderMeshFile"
+						name = "journey_maple02"
+						filename = "maps/journey_assets/props/trees/journey_maple/journey_maple02_journey_maple02.dmx"
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "journey_maple02_stump"
+						filename = "maps/journey_assets/props/trees/journey_maple/journey_maple02_journey_maple02_stump1.dmx"
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "journey_maple02_inspector"
+						filename = "maps/journey_assets/props/trees/journey_maple/journey_maple02_journey_maple02_inspector2.dmx"
+					},
+				]
+			},
+			{
+				_class = "BodyGroupList"
+				children = 
+				[
+					{
+						_class = "BodyGroup"
+						name = "default"
+						children = 
+						[
+							{
+								_class = "BodyGroupChoice"
+								name = "0_#&empty"
+								meshes = [  ]
+							},
+							{
+								_class = "BodyGroupChoice"
+								name = "1_#&journey_maple02"
+								meshes = 
+								[
+									"journey_maple02",
+								]
+							},
+							{
+								_class = "BodyGroupChoice"
+								name = "2_#&journey_maple02_inspector"
+								meshes = 
+								[
+									"journey_maple02_inspector",
+								]
+							},
+						]
+					},
+					{
+						_class = "BodyGroup"
+						name = "stump"
+						children = 
+						[
+							{
+								_class = "BodyGroupChoice"
+								name = "0_#&empty"
+								meshes = [  ]
+							},
+							{
+								_class = "BodyGroupChoice"
+								name = "1_#&journey_maple02_stump"
+								meshes = 
+								[
+									"journey_maple02_stump",
+								]
+							},
+						]
+					},
+				]
+			},
+		]
+	}
+}

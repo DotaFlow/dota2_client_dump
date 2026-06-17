@@ -1,0 +1,28 @@
+<!-- xml reconstructed by Source 2 Viewer - https://valveresourceformat.github.io -->
+<root>
+	<styles>
+		<include src="s2r://panorama/styles/dotastyles.vcss_c" />
+		<include src="s2r://panorama/styles/controls/dota_ui_event_status.vcss_c" />
+	</styles>
+	<DOTAEventStatus hittest="false">
+		<Panel class="LevelShieldContainer">
+			<DOTAParticleScenePanel class="EventLevelParticles" id="GodRays" hittest="true" renderdeferred="true" particleonly="false" startActive="true" cameraOrigin="0 0 120" lookAt="0 0 0" fov="60" squarePixels="true" />
+			<DOTAEventLevelShield id="LevelShield" class="LargeStack" />
+			<DOTAParticleScenePanel id="LevelShieldBurstBG" hittest="false" renderdeferred="true" particleonly="true" startActive="true" cameraOrigin="0 0 -559" lookAt="0 0 0" fov="45" />
+			<Panel id="LevelShieldProgressBG" />
+			<Panel id="LevelShieldProgressLayer1" />
+			<Panel id="LevelShieldProgressLayer2" />
+			<DOTAParticleScenePanel id="LevelShieldBurst" hittest="false" renderdeferred="true" particleonly="true" startActive="true" cameraOrigin="0 0 -559" lookAt="0 0 0" fov="45" />
+		</Panel>
+		<Panel id="LevelDetails">
+			<Panel id="EventEnded">
+				<Label class="EndedTitle" text="#DOTA_Nemestice2021_Ended" />
+				<Label class="EndedDate" text="{t:l:event_end_date}" />
+			</Panel>
+			<Panel id="EventNotStarted">
+				<Label class="NotStartedTitle" text="#DOTA_Event_NotStarted" />
+				<Label class="NotStartedDate" text="{t:l:event_start_date}" />
+			</Panel>
+		</Panel>
+	</DOTAEventStatus>
+</root>

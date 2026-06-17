@@ -1,0 +1,207 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
+{
+	Hero_VengefulSpirit.PreAttack = 
+	{
+		type = "dota_null_start"
+	}
+	Hero_VengefulSpirit.Attack = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 75.0
+		distance_max = 2500.0
+		event_type = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/vengeful_spirit/attack1.vsnd",
+			"sounds/weapons/hero/vengeful_spirit/attack2.vsnd",
+			"sounds/weapons/hero/vengeful_spirit/attack3.vsnd",
+			"sounds/weapons/hero/vengeful_spirit/attack4.vsnd",
+		]
+		vsnd_duration = 1.185714
+	}
+	Hero_VengefulSpirit.ProjectileImpact = 
+	{
+		type = "dota_src1_3d"
+		volume_rand_min = -0.149902
+		volume_rand_max = 0.149902
+		volume = 0.649902
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 72.0
+		distance_max = 1000.0
+		limiter_on = 0.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/vengeful_spirit/attack_impact1.vsnd",
+			"sounds/weapons/hero/vengeful_spirit/attack_impact2.vsnd",
+			"sounds/weapons/hero/vengeful_spirit/attack_impact3.vsnd",
+		]
+		vsnd_duration = 1.13
+	}
+	Hero_VengefulSpirit.MagicMissile = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 600.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/vengeful_spirit/magic_missile1.vsnd",
+			"sounds/weapons/hero/vengeful_spirit/magic_missile2.vsnd",
+			"sounds/weapons/hero/vengeful_spirit/magic_missile3.vsnd",
+			"sounds/weapons/hero/vengeful_spirit/magic_missile4.vsnd",
+		]
+		vsnd_duration = 1.23102
+	}
+	Hero_VengefulSpirit.MagicMissileImpact = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		distance_max = 2500.0
+		limiter_on = 0.0
+		vsnd_files = "sounds/weapons/hero/vengeful_spirit/magic_missile_impact.vsnd"
+		vsnd_duration = 1.835125
+	}
+	Hero_VengefulSpirit.WaveOfTerror = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		use_entity_position = 0.0
+		volume_use_FOW = 1.0
+		vsnd_files = "sounds/weapons/hero/vengeful_spirit/wave_of_terror.vsnd"
+		vsnd_duration = 4.821338
+	}
+	Hero_VengefulSpirit.NetherSwap = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Ultimates"
+		spread_radius = 300.0
+		vsnd_files = "sounds/weapons/hero/vengeful_spirit/nether_swap.vsnd"
+		vsnd_duration = 2.157959
+	}
+	Hero_VengefulSpirit.Footsteps = 
+	{
+		type = "dota_src1_3d_footsteps"
+		volume_rand_min = -0.099976
+		volume_rand_max = 0.099976
+		volume = 0.39978
+		pitch_rand_min = -0.025
+		pitch_rand_max = 0.025
+		pitch = 1.075
+		soundlevel = 69.0
+		distance_max = 2000.0
+		event_type = 4.0
+		vsnd_files = 
+		[
+			"sounds/physics/footsteps/hero/shared/general01.vsnd",
+			"sounds/physics/footsteps/hero/shared/general02.vsnd",
+			"sounds/physics/footsteps/hero/shared/general03.vsnd",
+			"sounds/physics/footsteps/hero/shared/general04.vsnd",
+			"sounds/physics/footsteps/hero/shared/general05.vsnd",
+			"sounds/physics/footsteps/hero/shared/general06.vsnd",
+			"sounds/physics/footsteps/hero/shared/general07.vsnd",
+		]
+		vsnd_duration = 0.453787
+	}
+	Hero_VengefulSpirit.Death = 
+	{
+		type = "dota_null_start"
+	}
+	Hero_VengefulSpirit.ChickenDance = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch = 1.0
+		soundlevel = 81.0
+		distance_max = 2500.0
+		limiter_on = 0.0
+		vsnd_files = "sounds/weapons/hero/vengeful_spirit/chicken_dance.vsnd"
+		vsnd_duration = 5.146304
+	}
+	Hero_VengefulSpirit.MagicMissile.TI8 = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 600.0
+		soundevent_layer2 = "Hero_VengefulSpirit.Missile.Cast.TI8.Layer"
+		soundevent_layer2_on = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/vengeful_spirit/magic_missile1.vsnd",
+			"sounds/weapons/hero/vengeful_spirit/magic_missile2.vsnd",
+			"sounds/weapons/hero/vengeful_spirit/magic_missile3.vsnd",
+			"sounds/weapons/hero/vengeful_spirit/magic_missile4.vsnd",
+		]
+		vsnd_duration = 1.23102
+	}
+	Hero_VengefulSpirit.MagicMissileImpact.TI8 = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		distance_max = 2500.0
+		limiter_on = 0.0
+		soundevent_layer2 = "Hero_VengefulSpirit.Missile.Target.TI8.Layer"
+		soundevent_layer2_on = 1.0
+		vsnd_files = "sounds/weapons/hero/vengeful_spirit/magic_missile_impact.vsnd"
+		vsnd_duration = 1.835125
+	}
+	Hero_VengefulSpirit.Missile.Cast.TI8.Layer = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		distance_max = 2500.0
+		limiter_on = 0.0
+		vsnd_files = "sounds/weapons/hero/vengeful_spirit/missile_cast_ti8.vsnd"
+		vsnd_duration = 1.511875
+	}
+	Hero_VengefulSpirit.Missile.Target.TI8.Layer = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		distance_max = 2500.0
+		limiter_on = 0.0
+		vsnd_files = "sounds/weapons/hero/vengeful_spirit/missile_target_ti8.vsnd"
+		vsnd_duration = 1.822417
+	}
+}

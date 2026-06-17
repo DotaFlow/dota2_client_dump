@@ -1,0 +1,90 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc28:version{fb63b6ca-f435-4aa0-a2c7-c66ddc651dca} -->
+{
+	rootNode = 
+	{
+		_class = "RootNode"
+		children = 
+		[
+			{
+				_class = "BoneMarkupList"
+				children = [  ]
+				bone_cull_type = "None"
+			},
+			{
+				_class = "RenderMeshList"
+				children = 
+				[
+					{
+						_class = "RenderMeshFile"
+						name = "unnamed_1"
+						filename = "models/dev/unittest/boot_breakable_model_unnamed_1.dmx"
+					},
+				]
+			},
+			{
+				_class = "PhysicsShapeList"
+				children = 
+				[
+					{
+						_class = "PhysicsHullFile"
+						filename = "models/dev/unittest/boot_breakable_model_hull.dmx"
+						surface_prop = "default"
+						collision_tags = ""
+						name = ""
+					},
+				]
+			},
+			{
+				_class = "BreakPieceList"
+				children = 
+				[
+					{
+						_class = "BreakPieceExternal"
+						piece_name = "boot_l_brk"
+						model = resource:"models/dev/unittest/boot_breakable_model/boot_l_brk1.vmdl"
+						spawn_entity = "prop_physics"
+						ragdoll_applies_bind_pose_root = true
+						offset = [ 0.0, 0.0, 0.0 ]
+						offset_rotation = [ 0.0, 0.0, 0.0 ]
+						fadetime = 20.0
+						fademindist = 0.0
+						fademaxdist = 0.0
+						massoverride = -1.0
+						random_spawn_chance = 1.0
+						suppress_creation_on_death = false
+						is_essential_piece = false
+						can_player_pickup_piece = false
+						physics_joint_modification_type = "none"
+						placementbone = "ankle_L"
+						sound_event_on_spawn = ""
+						render_color_mode = "inherit_owner"
+						material_group_mode = "inherit_owner_name"
+					},
+				]
+			},
+			{
+				_class = "Skeleton"
+				children = 
+				[
+					{
+						_class = "Bone"
+						name = "ankle_L"
+						origin = [ -2.103712, 8.651156, 6.673896 ]
+						angles = [ 38.121906, 22.349564, 110.081055 ]
+						do_not_discard = true
+						children = 
+						[
+							{
+								_class = "Bone"
+								name = "boot_l_0"
+								origin = [ 3.733676, -0.887033, 0.390004 ]
+								angles = [ 6.347835, 158.698105, -159.412888 ]
+								do_not_discard = true
+							},
+						]
+					},
+				]
+			},
+		]
+	}
+}

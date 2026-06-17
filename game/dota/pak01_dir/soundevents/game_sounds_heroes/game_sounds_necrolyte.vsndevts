@@ -1,0 +1,197 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
+{
+	Hero_Necrolyte.PreAttack = 
+	{
+		type = "dota_null_start"
+	}
+	Hero_Necrolyte.Attack = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 75.0
+		distance_max = 2500.0
+		event_type = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/necrolyte/attack1.vsnd",
+			"sounds/weapons/hero/necrolyte/attack2.vsnd",
+			"sounds/weapons/hero/necrolyte/attack3.vsnd",
+		]
+		vsnd_duration = 1.324399
+	}
+	Hero_Necrolyte.ProjectileImpact = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 65.0
+		distance_max = 1000.0
+		limiter_on = 0.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/necrolyte/attack_impact1.vsnd",
+			"sounds/weapons/hero/necrolyte/attack_impact2.vsnd",
+			"sounds/weapons/hero/necrolyte/attack_impact3.vsnd",
+		]
+		vsnd_duration = 0.805442
+	}
+	Hero_Necrolyte.DeathPulse = 
+	{
+		type = "dota_update_default"
+		volume = 0.799805
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 150.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/necrolyte/death_pulse.vsnd",
+		]
+		vsnd_duration = 2.372789
+	}
+	Hero_Necrolyte.SpiritForm.Cast = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/necrolyte/spirit_form.vsnd",
+		]
+		vsnd_duration = 5.437075
+	}
+	Hero_Necrolyte.ReapersScythe.Cast = 
+	{
+		type = "dota_update_default"
+		volume = 0.699707
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Ultimates"
+		spread_radius = 600.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/necrolyte/reapers_scythe.vsnd",
+		]
+		vsnd_duration = 3.604331
+	}
+	Hero_Necrolyte.ReapersScythe.Target = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Ultimates"
+		spread_radius = 300.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/necrolyte/scythe_target.vsnd",
+		]
+		vsnd_duration = 3.371293
+	}
+	Hero_Necrolyte.IdleLoop = 
+	{
+		type = "dota_update_default"
+		volume = 0.5
+		pitch = 1.0
+		soundlevel = 69.0
+		mixgroup = "Physics"
+		volume_move_vol = 0.2
+		volume_move_vel = 300.0
+		volume_move_filter_vel = 1.0
+		volume_falloff_min = 10.0
+		volume_falloff_max = 1000.0
+		vsnd_files = 
+		[
+			"sounds/physics/movement/hero/necrolyte/idle_loop.vsnd",
+		]
+		vsnd_duration = 7.996326
+	}
+	Necrolyte.Staff = 
+	{
+		type = "dota_src1_3d_footsteps"
+		volume = 0.5
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 66.0
+		distance_max = 1000.0
+		event_type = 4.0
+		vsnd_files = 
+		[
+			"sounds/physics/footsteps/hero/necrolyte/staff01.vsnd",
+			"sounds/physics/footsteps/hero/necrolyte/staff02.vsnd",
+			"sounds/physics/footsteps/hero/shared/general01.vsnd",
+			"sounds/physics/footsteps/hero/shared/general02.vsnd",
+			"sounds/physics/footsteps/hero/shared/general04.vsnd",
+		]
+		vsnd_duration = 0.43737
+	}
+	Hero_Necrolyte.Death = 
+	{
+		type = "dota_null_start"
+	}
+	Hero_Necrolyte.ReapersScythe.Cast.ti7 = 
+	{
+		type = "dota_update_default"
+		volume = 0.5
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Ultimates"
+		spread_radius = 600.0
+		soundevent_layer2 = "Hero_Necrolyte.ReapersScythe.Cast.ti7_layer"
+		soundevent_layer2_on = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/necrolyte/reapers_scythe.vsnd",
+		]
+		vsnd_duration = 3.604331
+	}
+	Hero_Necrolyte.ReapersScythe.Cast.ti7_layer = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Ultimates"
+		spread_radius = 600.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/necrolyte/reapers_ti7_layer.vsnd",
+		]
+		vsnd_duration = 4.210272
+	}
+	Hero_Necrolyte.DeathSeeker = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 0.66
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		use_entity_position = 0.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/necrolyte/death_pulse.vsnd",
+		]
+		vsnd_duration = 2.372789
+	}
+}

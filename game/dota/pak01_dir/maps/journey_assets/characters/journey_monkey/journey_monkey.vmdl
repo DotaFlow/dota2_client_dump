@@ -1,0 +1,988 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc28:version{fb63b6ca-f435-4aa0-a2c7-c66ddc651dca} -->
+{
+	rootNode = 
+	{
+		_class = "RootNode"
+		children = 
+		[
+			{
+				_class = "BoneMarkupList"
+				children = [  ]
+				bone_cull_type = "None"
+			},
+			{
+				_class = "RenderMeshList"
+				children = 
+				[
+					{
+						_class = "RenderMeshFile"
+						name = "journey_monkey"
+						filename = "maps/journey_assets/characters/journey_monkey/journey_monkey_journey_monkey.dmx"
+					},
+				]
+			},
+			{
+				_class = "AttachmentList"
+				children = 
+				[
+					{
+						_class = "Attachment"
+						name = "fruit"
+						ignore_rotation = false
+						parent_bone = "hand_R"
+						relative_origin = [ 0.0, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+					},
+				]
+			},
+			{
+				_class = "AnimationList"
+				children = 
+				[
+					{
+						_class = "AnimFile"
+						name = "jm_railing_128_idle_test_long"
+						source_filename = "maps/journey_assets/characters/journey_monkey/jm_railing_128_idle_test_long.dmx"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						children = 
+						[
+							{
+								_class = "AnimEvent"
+								event_class = "AE_CL_CREATE_PARTICLE_EFFECT"
+								event_frame = 0
+								event_keys = 
+								{
+									name = resource:"particles/addons_gameplay/pit_lava_glow.vpcf"
+									detach_from_owner = false
+									always_run = false
+									stop_on_seq_change = false
+									stop_immediately = false
+									use_layer_sequence = false
+									tags = null
+									attachment_point = ""
+									attachment_type = "absorigin"
+									attachment_point_cp1 = null
+									attachment_type_cp1 = "point_follow"
+								}
+							},
+						]
+					},
+					{
+						_class = "AnimFile"
+						name = "jm_railing_128_idle_test_long_mirrored"
+						source_filename = "maps/journey_assets/characters/journey_monkey/jm_railing_128_idle_test_long_mirrored.dmx"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+					},
+					{
+						_class = "AnimFile"
+						name = "jm_generic_ground_eating_1"
+						source_filename = "maps/journey_assets/characters/journey_monkey/jm_generic_ground_eating_1.dmx"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						children = 
+						[
+							{
+								_class = "AnimEvent"
+								event_class = "AE_CL_CREATE_PARTICLE_EFFECT"
+								event_frame = 0
+								event_keys = 
+								{
+									name = resource:"particles/miketest/mangotest.vpcf"
+									detach_from_owner = false
+									always_run = false
+									stop_on_seq_change = false
+									stop_immediately = false
+									use_layer_sequence = false
+									tags = null
+									attachment_point = ""
+									attachment_type = "absorigin"
+									attachment_point_cp1 = null
+									attachment_type_cp1 = "point_follow"
+								}
+							},
+						]
+					},
+					{
+						_class = "AnimFile"
+						name = "jm_generic_ground_eating_2"
+						source_filename = "maps/journey_assets/characters/journey_monkey/jm_generic_ground_eating_2.dmx"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						children = 
+						[
+							{
+								_class = "AnimEvent"
+								event_class = "AE_CL_CREATE_PARTICLE_EFFECT"
+								event_frame = 0
+								event_keys = 
+								{
+									name = resource:"particles/miketest/mangotest.vpcf"
+									detach_from_owner = false
+									always_run = false
+									stop_on_seq_change = false
+									stop_immediately = false
+									use_layer_sequence = false
+									tags = null
+									attachment_point = ""
+									attachment_type = "absorigin"
+									attachment_point_cp1 = null
+									attachment_type_cp1 = "point_follow"
+								}
+							},
+						]
+					},
+					{
+						_class = "AnimFile"
+						name = "jm_generic_ground_eating_3"
+						source_filename = "maps/journey_assets/characters/journey_monkey/jm_generic_ground_eating_3.dmx"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+					},
+					{
+						_class = "AnimFile"
+						name = "jm_generic_ground_eating_1_offset"
+						source_filename = "maps/journey_assets/characters/journey_monkey/jm_generic_ground_eating_1_offset.dmx"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+					},
+					{
+						_class = "AnimFile"
+						name = "jm_generic_ground_eating_2_offset"
+						source_filename = "maps/journey_assets/characters/journey_monkey/jm_generic_ground_eating_2_offset.dmx"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+					},
+					{
+						_class = "AnimFile"
+						name = "jm_generic_ground_eating_3_offset"
+						source_filename = "maps/journey_assets/characters/journey_monkey/jm_generic_ground_eating_3_offset.dmx"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+					},
+					{
+						_class = "AnimFile"
+						name = "jm_endcap_jrny_radiant_paifang_str_2_grp_a_1"
+						source_filename = "maps/journey_assets/characters/journey_monkey/jm_endcap_jrny_radiant_paifang_str_2_grp_a_1.dmx"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+					},
+					{
+						_class = "AnimFile"
+						name = "jm_endcap_jrny_radiant_paifang_str_2_grp_a_2"
+						source_filename = "maps/journey_assets/characters/journey_monkey/jm_endcap_jrny_radiant_paifang_str_2_grp_a_2.dmx"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+					},
+					{
+						_class = "AnimFile"
+						name = "jm_endcap_jrny_radiant_paifang_str_2_grp_b_1"
+						source_filename = "maps/journey_assets/characters/journey_monkey/jm_endcap_jrny_radiant_paifang_str_2_grp_b_1.dmx"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+					},
+					{
+						_class = "AnimFile"
+						name = "jm_endcap_jrny_radiant_paifang_str_2_grp_b_2"
+						source_filename = "maps/journey_assets/characters/journey_monkey/jm_endcap_jrny_radiant_paifang_str_2_grp_b_2.dmx"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+					},
+					{
+						_class = "AnimFile"
+						name = "jm_journey_stoneforest01_grp_a_1"
+						source_filename = "maps/journey_assets/characters/journey_monkey/jm_journey_stoneforest01_grp_a_1.dmx"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+					},
+					{
+						_class = "AnimFile"
+						name = "jm_journey_stoneforest01_grp_a_2"
+						source_filename = "maps/journey_assets/characters/journey_monkey/jm_journey_stoneforest01_grp_a_2.dmx"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+					},
+					{
+						_class = "AnimFile"
+						name = "jm_journey_stoneforest01_grp_a_3"
+						source_filename = "maps/journey_assets/characters/journey_monkey/jm_journey_stoneforest01_grp_a_3.dmx"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+					},
+					{
+						_class = "AnimFile"
+						name = "jm_journey_stoneforest01_grp_a_4"
+						source_filename = "maps/journey_assets/characters/journey_monkey/jm_journey_stoneforest01_grp_a_4.dmx"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+					},
+					{
+						_class = "AnimFile"
+						name = "jm_journey_stoneforest01_grp_a_5"
+						source_filename = "maps/journey_assets/characters/journey_monkey/jm_journey_stoneforest01_grp_a_5.dmx"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+					},
+					{
+						_class = "AnimFile"
+						name = "jm_railing_jrny_128_post_part_grp_a_part1"
+						source_filename = "maps/journey_assets/characters/journey_monkey/jm_railing_jrny_128_post_part_grp_a_part1.dmx"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+					},
+					{
+						_class = "AnimFile"
+						name = "jm_railing_jrny_128_post_part_grp_a_part2"
+						source_filename = "maps/journey_assets/characters/journey_monkey/jm_railing_jrny_128_post_part_grp_a_part2.dmx"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+					},
+					{
+						_class = "AnimFile"
+						name = "jm_railing_jrny_128_post_part_grp_b_part1"
+						source_filename = "maps/journey_assets/characters/journey_monkey/jm_railing_jrny_128_post_part_grp_b_part1.dmx"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+					},
+					{
+						_class = "AnimFile"
+						name = "jm_railing_jrny_128_post_part_grp_b_part2"
+						source_filename = "maps/journey_assets/characters/journey_monkey/jm_railing_jrny_128_post_part_grp_b_part2.dmx"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+					},
+					{
+						_class = "AnimFile"
+						name = "jm_railing_jrny_radiant_128_post_1_grp_a_1"
+						source_filename = "maps/journey_assets/characters/journey_monkey/jm_railing_jrny_radiant_128_post_1_grp_a_1.dmx"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+					},
+					{
+						_class = "AnimFile"
+						name = "jm_railing_jrny_radiant_128_post_1_grp_a_2"
+						source_filename = "maps/journey_assets/characters/journey_monkey/jm_railing_jrny_radiant_128_post_1_grp_a_2.dmx"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+					},
+					{
+						_class = "AnimFile"
+						name = "jm_railing_jrny_radiant_128_post_1_grp_a_3"
+						source_filename = "maps/journey_assets/characters/journey_monkey/jm_railing_jrny_radiant_128_post_1_grp_a_3.dmx"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+					},
+					{
+						_class = "AnimFile"
+						name = "jm_railing_jrny_radiant_256_str_1_grp_a_1"
+						source_filename = "maps/journey_assets/characters/journey_monkey/jm_railing_jrny_radiant_256_str_1_grp_a_1.dmx"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+					},
+					{
+						_class = "AnimFile"
+						name = "jm_railing_jrny_radiant_256_str_1_grp_a_2"
+						source_filename = "maps/journey_assets/characters/journey_monkey/jm_railing_jrny_radiant_256_str_1_grp_a_2.dmx"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+					},
+					{
+						_class = "AnimFile"
+						name = "jm_roof_jrny_radiant_256_ext_1_grp_a_1"
+						source_filename = "maps/journey_assets/characters/journey_monkey/jm_roof_jrny_radiant_256_ext_1_grp_a_1.dmx"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+					},
+					{
+						_class = "AnimFile"
+						name = "jm_roof_jrny_radiant_256_ext_1_grp_a_2"
+						source_filename = "maps/journey_assets/characters/journey_monkey/jm_roof_jrny_radiant_256_ext_1_grp_a_2.dmx"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+					},
+					{
+						_class = "AnimFile"
+						name = "jm_roof_jrny_radiant_256_ext_1_grp_a_3"
+						source_filename = "maps/journey_assets/characters/journey_monkey/jm_roof_jrny_radiant_256_ext_1_grp_a_3.dmx"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+					},
+					{
+						_class = "AnimFile"
+						name = "jm_roof_jrny_radiant_256_ext_1_grp_b_1"
+						source_filename = "maps/journey_assets/characters/journey_monkey/jm_roof_jrny_radiant_256_ext_1_grp_b_1.dmx"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+					},
+					{
+						_class = "AnimFile"
+						name = "jm_roof_jrny_radiant_256_ext_1_grp_b_2"
+						source_filename = "maps/journey_assets/characters/journey_monkey/jm_roof_jrny_radiant_256_ext_1_grp_b_2.dmx"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+					},
+					{
+						_class = "AnimFile"
+						name = "jm_roof_jrny_radiant_256_ext_1_grp_b_3"
+						source_filename = "maps/journey_assets/characters/journey_monkey/jm_roof_jrny_radiant_256_ext_1_grp_b_3.dmx"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+					},
+					{
+						_class = "AnimFile"
+						name = "jm_banner"
+						source_filename = "maps/journey_assets/characters/journey_monkey/jm_banner.dmx"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+					},
+					{
+						_class = "AnimFile"
+						name = "jm_journey_stoneforest01_grp_b_1_taichi"
+						source_filename = "maps/journey_assets/characters/journey_monkey/jm_journey_stoneforest01_grp_b_1_taichi.dmx"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+					},
+					{
+						_class = "AnimFile"
+						name = "jm_journey_stoneforest01_grp_b_3_taichi"
+						source_filename = "maps/journey_assets/characters/journey_monkey/jm_journey_stoneforest01_grp_b_3_taichi.dmx"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+					},
+					{
+						_class = "AnimFile"
+						name = "jm_journey_stoneforest01_grp_b_4_taichi"
+						source_filename = "maps/journey_assets/characters/journey_monkey/jm_journey_stoneforest01_grp_b_4_taichi.dmx"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+					},
+					{
+						_class = "AnimFile"
+						name = "jm_journey_stoneforest01_grp_c_taichi"
+						source_filename = "maps/journey_assets/characters/journey_monkey/jm_journey_stoneforest01_grp_c_taichi.dmx"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+					},
+					{
+						_class = "AnimFile"
+						name = "jm_journey_stoneforest01_grp_d_taichi"
+						source_filename = "maps/journey_assets/characters/journey_monkey/jm_journey_stoneforest01_grp_d_taichi.dmx"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+					},
+					{
+						_class = "AnimFile"
+						name = "jm_debut_web_idle_01"
+						source_filename = "maps/journey_assets/characters/journey_monkey/jm_debut_web_idle_01.dmx"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+					},
+					{
+						_class = "AnimFile"
+						name = "jm_debut_web_idle_02"
+						source_filename = "maps/journey_assets/characters/journey_monkey/jm_debut_web_idle_02.dmx"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+					},
+					{
+						_class = "AnimFile"
+						name = "jm_debut_web_idle_03"
+						source_filename = "maps/journey_assets/characters/journey_monkey/jm_debut_web_idle_03.dmx"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+					},
+					{
+						_class = "AnimFile"
+						name = "jm_debut_web_idle_04"
+						source_filename = "maps/journey_assets/characters/journey_monkey/jm_debut_web_idle_04.dmx"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+					},
+				]
+			},
+			{
+				_class = "Skeleton"
+				children = 
+				[
+					{
+						_class = "Bone"
+						name = "pelvis"
+						origin = [ -5.279934, -0.0, 34.460987 ]
+						angles = [ -90.0, 0.0, 0.0 ]
+						do_not_discard = true
+						children = 
+						[
+							{
+								_class = "Bone"
+								name = "spine_0"
+								origin = [ 4.819714, 0.714616, -0.0 ]
+								angles = [ 0.000002, 11.351923, 0.000003 ]
+								do_not_discard = true
+								children = 
+								[
+									{
+										_class = "Bone"
+										name = "spine_1"
+										origin = [ 7.763161, 0.000002, 0.0 ]
+										angles = [ 0.0, 3.27061, 0.0 ]
+										do_not_discard = true
+										children = 
+										[
+											{
+												_class = "Bone"
+												name = "spine_2"
+												origin = [ 9.953331, 0.00001, 0.0 ]
+												angles = [ 0.0, 5.443668, 0.0 ]
+												do_not_discard = true
+												children = 
+												[
+													{
+														_class = "Bone"
+														name = "clavicle_R"
+														origin = [ 6.754456, -0.518444, -2.229214 ]
+														angles = [ -67.690491, -54.161331, -147.942886 ]
+														do_not_discard = true
+														children = 
+														[
+															{
+																_class = "Bone"
+																name = "arm_upper_R"
+																origin = [ -3.95951, 0.000017, -0.000111 ]
+																angles = [ -20.653061, 11.976176, 16.355957 ]
+																do_not_discard = true
+																children = 
+																[
+																	{
+																		_class = "Bone"
+																		name = "arm_lower_R"
+																		origin = [ -14.870117, -0.000015, -0.000092 ]
+																		angles = [ -0.00001, 42.777431, -0.000013 ]
+																		do_not_discard = true
+																		children = 
+																		[
+																			{
+																				_class = "Bone"
+																				name = "hand_R"
+																				origin = [ -17.92001, 0.000012, -0.000126 ]
+																				angles = [ 14.537054, -13.168857, 81.635406 ]
+																				do_not_discard = true
+																				children = 
+																				[
+																					{
+																						_class = "Bone"
+																						name = "index_0_R"
+																						origin = [ -7.313798, 0.347675, 1.701251 ]
+																						angles = [ 12.964576, -8.32945, -4.393775 ]
+																						do_not_discard = true
+																						children = 
+																						[
+																							{
+																								_class = "Bone"
+																								name = "index_1_R"
+																								origin = [ -2.955814, -0.00016, -0.000034 ]
+																								angles = [ 0.647891, 24.142651, 0.265912 ]
+																								do_not_discard = true
+																							},
+																						]
+																					},
+																					{
+																						_class = "Bone"
+																						name = "ring_0_R"
+																						origin = [ -7.331645, -0.185989, -0.93845 ]
+																						angles = [ -15.018311, -7.392995, -10.157167 ]
+																						do_not_discard = true
+																						children = 
+																						[
+																							{
+																								_class = "Bone"
+																								name = "ring_1_R"
+																								origin = [ -2.368057, -0.000149, -0.000093 ]
+																								angles = [ 5.113322, 33.439655, 1.816596 ]
+																								do_not_discard = true
+																							},
+																						]
+																					},
+																					{
+																						_class = "Bone"
+																						name = "thumb_0_R"
+																						origin = [ -2.034576, -0.712292, 2.603497 ]
+																						angles = [ 38.682938, 13.567719, 50.645027 ]
+																						do_not_discard = true
+																						children = 
+																						[
+																							{
+																								_class = "Bone"
+																								name = "thumb_1_R"
+																								origin = [ -1.988877, -0.000153, 0.000128 ]
+																								angles = [ -8.843258, 20.96767, -1.946834 ]
+																								do_not_discard = true
+																							},
+																						]
+																					},
+																				]
+																			},
+																		]
+																	},
+																]
+															},
+														]
+													},
+													{
+														_class = "Bone"
+														name = "clavicle_L"
+														origin = [ 6.75449, -0.518456, 2.229217 ]
+														angles = [ -67.690453, 125.838722, -147.942902 ]
+														do_not_discard = true
+														children = 
+														[
+															{
+																_class = "Bone"
+																name = "arm_upper_L"
+																origin = [ 3.959509, -0.000006, 0.000084 ]
+																angles = [ -20.653059, 11.976178, 16.355955 ]
+																do_not_discard = true
+																children = 
+																[
+																	{
+																		_class = "Bone"
+																		name = "arm_lower_L"
+																		origin = [ 14.870121, 0.00002, 0.000065 ]
+																		angles = [ 0.000001, 42.777416, -0.000005 ]
+																		do_not_discard = true
+																		children = 
+																		[
+																			{
+																				_class = "Bone"
+																				name = "hand_L"
+																				origin = [ 17.920019, -0.000016, 0.000092 ]
+																				angles = [ 14.537054, -13.16885, 81.635384 ]
+																				do_not_discard = true
+																				children = 
+																				[
+																					{
+																						_class = "Bone"
+																						name = "thumb_0_L"
+																						origin = [ 2.034601, 0.712257, -2.603503 ]
+																						angles = [ 38.682896, 13.567697, 50.645031 ]
+																						do_not_discard = true
+																						children = 
+																						[
+																							{
+																								_class = "Bone"
+																								name = "thumb_1_L"
+																								origin = [ 1.988899, 0.000099, -0.000078 ]
+																								angles = [ -8.843272, 20.967665, -1.94682 ]
+																								do_not_discard = true
+																							},
+																						]
+																					},
+																					{
+																						_class = "Bone"
+																						name = "ring_0_L"
+																						origin = [ 7.331677, 0.185986, 0.938447 ]
+																						angles = [ -15.018298, -7.39301, -10.157158 ]
+																						do_not_discard = true
+																						children = 
+																						[
+																							{
+																								_class = "Bone"
+																								name = "ring_1_L"
+																								origin = [ 2.368076, 0.00013, 0.000072 ]
+																								angles = [ 5.113309, 33.439632, 1.816618 ]
+																								do_not_discard = true
+																							},
+																						]
+																					},
+																					{
+																						_class = "Bone"
+																						name = "index_0_L"
+																						origin = [ 7.313828, -0.347698, -1.701255 ]
+																						angles = [ 12.964563, -8.329461, -4.393754 ]
+																						do_not_discard = true
+																						children = 
+																						[
+																							{
+																								_class = "Bone"
+																								name = "index_1_L"
+																								origin = [ 2.955845, 0.000118, 0.00003 ]
+																								angles = [ 0.647887, 24.142641, 0.26592 ]
+																								do_not_discard = true
+																							},
+																						]
+																					},
+																				]
+																			},
+																		]
+																	},
+																]
+															},
+														]
+													},
+													{
+														_class = "Bone"
+														name = "neck_0"
+														origin = [ 8.329361, 0.000008, 0.0 ]
+														angles = [ -0.0, -2.853926, 0.0 ]
+														do_not_discard = true
+														children = 
+														[
+															{
+																_class = "Bone"
+																name = "head"
+																origin = [ 7.237553, 0.000013, 0.0 ]
+																angles = [ -0.000002, -62.60181, 0.000001 ]
+																do_not_discard = true
+																children = 
+																[
+																	{
+																		_class = "Bone"
+																		name = "ear_0_R"
+																		origin = [ 4.997131, 0.551861, -7.646798 ]
+																		angles = [ -84.142441, 133.77681, 91.672974 ]
+																		do_not_discard = true
+																	},
+																	{
+																		_class = "Bone"
+																		name = "ear_0_L"
+																		origin = [ 4.997116, 0.551846, 7.64679 ]
+																		angles = [ -84.142441, -46.223309, 91.67305 ]
+																		do_not_discard = true
+																	},
+																]
+															},
+														]
+													},
+												]
+											},
+										]
+									},
+								]
+							},
+							{
+								_class = "Bone"
+								name = "leg_upper_R"
+								origin = [ -3.981564, -0.064441, -2.855028 ]
+								angles = [ -15.917735, -34.648445, -0.097199 ]
+								do_not_discard = true
+								children = 
+								[
+									{
+										_class = "Bone"
+										name = "leg_lower_R"
+										origin = [ -12.582872, -0.000014, 0.00001 ]
+										angles = [ -0.000004, 55.058289, -0.000008 ]
+										do_not_discard = true
+										children = 
+										[
+											{
+												_class = "Bone"
+												name = "ankle_R"
+												origin = [ -13.300449, 0.000005, 0.000018 ]
+												angles = [ 9.142536, -55.504898, 170.444305 ]
+												do_not_discard = true
+												children = 
+												[
+													{
+														_class = "Bone"
+														name = "ball_R"
+														origin = [ -5.94945, 0.000009, -0.000018 ]
+														angles = [ -2.862597, 23.196745, 1.72763 ]
+														do_not_discard = true
+													},
+												]
+											},
+										]
+									},
+								]
+							},
+							{
+								_class = "Bone"
+								name = "leg_upper_L"
+								origin = [ -3.981565, -0.064444, 2.855026 ]
+								angles = [ -15.917738, 145.351547, -0.097211 ]
+								do_not_discard = true
+								children = 
+								[
+									{
+										_class = "Bone"
+										name = "leg_lower_L"
+										origin = [ 12.582875, 0.000019, -0.000014 ]
+										angles = [ -0.000014, 55.058304, -0.000002 ]
+										do_not_discard = true
+										children = 
+										[
+											{
+												_class = "Bone"
+												name = "ankle_L"
+												origin = [ 13.300452, -0.000008, -0.000028 ]
+												angles = [ 9.142538, -55.504921, 170.444305 ]
+												do_not_discard = true
+												children = 
+												[
+													{
+														_class = "Bone"
+														name = "ball_L"
+														origin = [ 5.949445, -0.00001, 0.000023 ]
+														angles = [ -2.86259, 23.196753, 1.727621 ]
+														do_not_discard = true
+													},
+												]
+											},
+										]
+									},
+								]
+							},
+							{
+								_class = "Bone"
+								name = "tail_0"
+								origin = [ -3.599199, -4.511999, 0.0 ]
+								angles = [ 0.000003, -89.999992, 0.0 ]
+								do_not_discard = true
+								children = 
+								[
+									{
+										_class = "Bone"
+										name = "tail_1"
+										origin = [ 7.129921, -0.000013, 0.0 ]
+										angles = [ 0.0, -0.000003, 0.0 ]
+										do_not_discard = true
+										children = 
+										[
+											{
+												_class = "Bone"
+												name = "tail_2"
+												origin = [ 14.523094, -0.00001, 0.000001 ]
+												angles = [ 0.0, 0.0, 0.0 ]
+												do_not_discard = true
+												children = 
+												[
+													{
+														_class = "Bone"
+														name = "tail_3"
+														origin = [ 17.434967, -0.000011, 0.000001 ]
+														angles = [ 0.0, 0.0, 0.0 ]
+														do_not_discard = true
+														children = 
+														[
+															{
+																_class = "Bone"
+																name = "tail_4"
+																origin = [ 20.463913, -0.000015, 0.000001 ]
+																angles = [ 0.0, 0.0, 0.0 ]
+																do_not_discard = true
+																children = 
+																[
+																	{
+																		_class = "Bone"
+																		name = "tail_5"
+																		origin = [ 19.455391, -0.000011, 0.000001 ]
+																		angles = [ 0.0, 0.0, 0.0 ]
+																		do_not_discard = true
+																		children = 
+																		[
+																			{
+																				_class = "Bone"
+																				name = "tail_6"
+																				origin = [ 19.599556, -0.000015, 0.000001 ]
+																				angles = [ 0.0, 0.0, 0.0 ]
+																				do_not_discard = true
+																				children = 
+																				[
+																					{
+																						_class = "Bone"
+																						name = "tail_end"
+																						origin = [ 12.60791, -0.000008, 0.000001 ]
+																						angles = [ 0.0, 0.0, 0.0 ]
+																						do_not_discard = true
+																					},
+																				]
+																			},
+																		]
+																	},
+																]
+															},
+														]
+													},
+												]
+											},
+										]
+									},
+								]
+							},
+						]
+					},
+				]
+			},
+		]
+	}
+}

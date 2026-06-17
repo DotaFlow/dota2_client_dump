@@ -1,0 +1,763 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc28:version{fb63b6ca-f435-4aa0-a2c7-c66ddc651dca} -->
+{
+	rootNode = 
+	{
+		_class = "RootNode"
+		children = 
+		[
+			{
+				_class = "BoneMarkupList"
+				children = [  ]
+				bone_cull_type = "None"
+			},
+			{
+				_class = "RenderMeshList"
+				children = 
+				[
+					{
+						_class = "RenderMeshFile"
+						name = "2023poisonous_assassin_skill"
+						filename = "models/items/venomancer/ward/venomancer_poisonous_assassin_ward_alt/venomancer_poisonous_assassin_ward_alt_2023poisonous_assassin_skill.dmx"
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "2023poisonous_assassin_skill_lod1"
+						filename = "models/items/venomancer/ward/venomancer_poisonous_assassin_ward_alt/venomancer_poisonous_assassin_ward_alt_2023poisonous_assassin_skill_lod11.dmx"
+					},
+				]
+			},
+			{
+				_class = "AttachmentList"
+				children = 
+				[
+					{
+						_class = "Attachment"
+						name = "attach_hitloc"
+						ignore_rotation = false
+						parent_bone = "spine1_4"
+						relative_origin = [ 0.0, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+					},
+					{
+						_class = "Attachment"
+						name = "attach_attack1"
+						ignore_rotation = false
+						parent_bone = "head"
+						relative_origin = [ 15.0, 0.0, 10.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+					},
+					{
+						_class = "Attachment"
+						name = "attach_mouth"
+						ignore_rotation = false
+						parent_bone = "low_jaw"
+						relative_origin = [ 22.45483, -0.600914, -13.14386 ]
+						relative_angles = [ -18.027336, -0.25973, 0.206925 ]
+						weight = 0.018229
+						children = 
+						[
+							{
+								_class = "AttachmentInfluence"
+								parent_bone = "up_jaw"
+								relative_origin = [ 7.212425, -0.600912, -27.040756 ]
+								relative_angles = [ 13.602238, -0.254106, 0.066785 ]
+								weight = 0.875
+							},
+							{
+								_class = "AttachmentInfluence"
+								parent_bone = "up_pincer_1"
+								relative_origin = [ 19.373466, -0.600911, -14.959793 ]
+								relative_angles = [ -71.588806, -179.217987, 179.384537 ]
+								weight = 0.106771
+							},
+						]
+					},
+				]
+			},
+			{
+				_class = "PoseParamList"
+				children = 
+				[
+					{
+						_class = "PoseParam"
+						name = "aim"
+						poseparam_min = -1.0
+						poseparam_max = 1.0
+						poseparam_looping = false
+						poseparam_loop = 0.0
+					},
+				]
+			},
+			{
+				_class = "AnimationList"
+				children = 
+				[
+					{
+						_class = "Folder"
+						children = 
+						[
+							{
+								_class = "AnimFile"
+								name = "ward_spawn"
+								source_filename = "models/items/venomancer/ward/venomancer_poisonous_assassin_ward_alt/ward_spawn.dmx"
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+								activity_name = "ACT_DOTA_SPAWN"
+								activity_weight = 1
+							},
+							{
+								_class = "AnimFile"
+								name = "ward_portrait"
+								source_filename = "models/items/venomancer/ward/venomancer_poisonous_assassin_ward_alt/ward_portrait.dmx"
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = true
+								delta = false
+								worldSpace = false
+								hidden = false
+								activity_name = "ACT_DOTA_CAPTURE"
+								activity_weight = 1
+							},
+							{
+								_class = "AnimFile"
+								name = "ward_stun"
+								source_filename = "models/items/venomancer/ward/venomancer_poisonous_assassin_ward_alt/ward_stun.dmx"
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = true
+								delta = false
+								worldSpace = false
+								hidden = false
+								activity_name = "ACT_DOTA_DISABLED"
+								activity_weight = 1
+							},
+							{
+								_class = "AnimFile"
+								name = "ward_flail"
+								source_filename = "models/items/venomancer/ward/venomancer_poisonous_assassin_ward_alt/ward_flail.dmx"
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = true
+								delta = false
+								worldSpace = false
+								hidden = false
+								activity_name = "ACT_DOTA_FLAIL"
+								activity_weight = 1
+							},
+							{
+								_class = "AnimFile"
+								name = "ward_attack_minus179"
+								source_filename = "models/items/venomancer/ward/venomancer_poisonous_assassin_ward_alt/ward_attack_minus179.dmx"
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+							},
+							{
+								_class = "AnimFile"
+								name = "ward_attack_minus90"
+								source_filename = "models/items/venomancer/ward/venomancer_poisonous_assassin_ward_alt/ward_attack_minus90.dmx"
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+							},
+							{
+								_class = "AnimFile"
+								name = "ward_attackN"
+								source_filename = "models/items/venomancer/ward/venomancer_poisonous_assassin_ward_alt/ward_attackN.dmx"
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+							},
+							{
+								_class = "AnimFile"
+								name = "ward_attack90"
+								source_filename = "models/items/venomancer/ward/venomancer_poisonous_assassin_ward_alt/ward_attack90.dmx"
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+							},
+							{
+								_class = "AnimFile"
+								name = "ward_attack180"
+								source_filename = "models/items/venomancer/ward/venomancer_poisonous_assassin_ward_alt/ward_attack180.dmx"
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+							},
+							{
+								_class = "AnimFile"
+								name = "ward_idle_minus179"
+								source_filename = "models/items/venomancer/ward/venomancer_poisonous_assassin_ward_alt/ward_idle_minus179.dmx"
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = true
+								delta = false
+								worldSpace = false
+								hidden = false
+							},
+							{
+								_class = "AnimFile"
+								name = "ward_idle_minus90"
+								source_filename = "models/items/venomancer/ward/venomancer_poisonous_assassin_ward_alt/ward_idle_minus90.dmx"
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = true
+								delta = false
+								worldSpace = false
+								hidden = false
+							},
+							{
+								_class = "AnimFile"
+								name = "ward_idle"
+								source_filename = "models/items/venomancer/ward/venomancer_poisonous_assassin_ward_alt/ward_idle.dmx"
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = true
+								delta = false
+								worldSpace = false
+								hidden = false
+							},
+							{
+								_class = "AnimFile"
+								name = "ward_idle90"
+								source_filename = "models/items/venomancer/ward/venomancer_poisonous_assassin_ward_alt/ward_idle90.dmx"
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = true
+								delta = false
+								worldSpace = false
+								hidden = false
+							},
+							{
+								_class = "AnimFile"
+								name = "ward_idle180"
+								source_filename = "models/items/venomancer/ward/venomancer_poisonous_assassin_ward_alt/ward_idle180.dmx"
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = true
+								delta = false
+								worldSpace = false
+								hidden = false
+							},
+							{
+								_class = "AnimFile"
+								name = "ward_die_minus179"
+								source_filename = "models/items/venomancer/ward/venomancer_poisonous_assassin_ward_alt/ward_die_minus179.dmx"
+								fade_in_time = 0.0
+								fade_out_time = 0.0
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+								children = 
+								[
+									{
+										_class = "ExtractMotion"
+										extract_tx = true
+										extract_ty = true
+										extract_tz = false
+										extract_rz = false
+										linear = false
+										quadratic = false
+										motion_type = "uniform"
+									},
+								]
+							},
+							{
+								_class = "AnimFile"
+								name = "ward_die_minus90"
+								source_filename = "models/items/venomancer/ward/venomancer_poisonous_assassin_ward_alt/ward_die_minus90.dmx"
+								fade_in_time = 0.0
+								fade_out_time = 0.0
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+								children = 
+								[
+									{
+										_class = "ExtractMotion"
+										extract_tx = true
+										extract_ty = true
+										extract_tz = false
+										extract_rz = false
+										linear = false
+										quadratic = false
+										motion_type = "uniform"
+									},
+								]
+							},
+							{
+								_class = "AnimFile"
+								name = "ward_die"
+								source_filename = "models/items/venomancer/ward/venomancer_poisonous_assassin_ward_alt/ward_die.dmx"
+								fade_in_time = 0.0
+								fade_out_time = 0.0
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+								children = 
+								[
+									{
+										_class = "AnimEvent"
+										event_class = "AE_CL_PLAYSOUND"
+										event_frame = 19
+										event_keys = 
+										{
+											name = "Hero_VenomancerWard.Death"
+											stop_on_seq_change = false
+											use_layer_sequence = false
+											tags = null
+										}
+									},
+								]
+							},
+							{
+								_class = "AnimFile"
+								name = "ward_die90"
+								source_filename = "models/items/venomancer/ward/venomancer_poisonous_assassin_ward_alt/ward_die90.dmx"
+								fade_in_time = 0.0
+								fade_out_time = 0.0
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+								children = 
+								[
+									{
+										_class = "ExtractMotion"
+										extract_tx = true
+										extract_ty = true
+										extract_tz = false
+										extract_rz = false
+										linear = false
+										quadratic = false
+										motion_type = "uniform"
+									},
+								]
+							},
+							{
+								_class = "AnimFile"
+								name = "ward_die180"
+								source_filename = "models/items/venomancer/ward/venomancer_poisonous_assassin_ward_alt/ward_die180.dmx"
+								fade_in_time = 0.0
+								fade_out_time = 0.0
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+								children = 
+								[
+									{
+										_class = "ExtractMotion"
+										extract_tx = true
+										extract_ty = true
+										extract_tz = false
+										extract_rz = false
+										linear = false
+										quadratic = false
+										motion_type = "uniform"
+									},
+								]
+							},
+							{
+								_class = "AnimFile"
+								name = "ward_loadout"
+								source_filename = "models/items/venomancer/ward/venomancer_poisonous_assassin_ward_alt/ward_loadout.dmx"
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = true
+								delta = false
+								worldSpace = false
+								hidden = false
+								activity_name = "ACT_DOTA_LOADOUT"
+								activity_weight = 1
+							},
+							{
+								_class = "AnimFile"
+								name = "ward_loadout_spawn"
+								source_filename = "models/items/venomancer/ward/venomancer_poisonous_assassin_ward_alt/ward_loadout_spawn.dmx"
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+								activity_name = "ACT_DOTA_SPAWN"
+								activity_weight = 1
+							},
+						]
+						name = "asset_sequences"
+					},
+					{
+						_class = "AnimBindPose"
+						name = "bind_pose"
+					},
+					{
+						_class = "AnimFile"
+						name = "ward_attack_multi"
+						source_filename = "models/items/venomancer/ward/venomancer_poisonous_assassin_ward_alt/ward_attack_multi.dmx"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						activity_name = "ACT_DOTA_ATTACK"
+						activity_weight = 1
+					},
+					{
+						_class = "AnimFile"
+						name = "ward_idle_multi"
+						source_filename = "models/items/venomancer/ward/venomancer_poisonous_assassin_ward_alt/ward_idle_multi.dmx"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						activity_name = "ACT_DOTA_IDLE"
+						activity_weight = 1
+					},
+					{
+						_class = "AnimFile"
+						name = "ward_die_multi"
+						source_filename = "models/items/venomancer/ward/venomancer_poisonous_assassin_ward_alt/ward_die_multi.dmx"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						activity_name = "ACT_DOTA_DIE"
+						activity_weight = 1
+						children = 
+						[
+							{
+								_class = "ExtractMotion"
+								extract_tx = true
+								extract_ty = true
+								extract_tz = false
+								extract_rz = false
+								linear = false
+								quadratic = false
+								motion_type = "uniform"
+							},
+						]
+					},
+				]
+			},
+			{
+				_class = "GameDataList"
+				children = 
+				[
+					{
+						_class = "GenericGameData"
+						name = "particles/econ/items/venomancer/venomancer_poisonous_assassin_alt/venomancer_poisonous_assassin_alt_ward_ambient.vpcf"
+						game_class = "particle_cfg"
+						game_keys = 
+						{
+							name = resource:"particles/econ/items/venomancer/venomancer_poisonous_assassin_alt/venomancer_poisonous_assassin_alt_ward_ambient.vpcf"
+							config = null
+						}
+					},
+				]
+			},
+			{
+				_class = "HitboxSetList"
+				children = 
+				[
+					{
+						_class = "HitboxSet"
+						name = "default"
+						children = [  ]
+					},
+					{
+						_class = "HitboxSet"
+						name = "select_low"
+						children = 
+						[
+							{
+								_class = "Hitbox"
+								hitbox_mins = [ -62.392101, -58.698601, 0.993858 ]
+								hitbox_maxs = [ 66.470299, 59.011902, 134.427994 ]
+								name = "root"
+								parent_bone = "root"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+							},
+						]
+					},
+					{
+						_class = "HitboxSet"
+						name = "select_high"
+						children = 
+						[
+							{
+								_class = "Hitbox"
+								hitbox_mins = [ -37.940701, -22.1038, 0.097429 ]
+								hitbox_maxs = [ 25.501699, 22.417101, 118.198997 ]
+								name = "root1"
+								parent_bone = "root"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+							},
+						]
+					},
+					{
+						_class = "HitboxSet"
+						name = "head"
+						children = 
+						[
+							{
+								_class = "Hitbox"
+								hitbox_mins = [ -18.0786, -29.543699, -21.8619 ]
+								hitbox_maxs = [ 26.1318, 29.5429, 22.378901 ]
+								name = "head"
+								parent_bone = "head"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+							},
+						]
+					},
+					{
+						_class = "HitboxSet"
+						name = "feet"
+						children = 
+						[
+							{
+								_class = "Hitbox"
+								hitbox_mins = [ -53.240398, -62.4884, -6.15753 ]
+								hitbox_maxs = [ 56.846001, 62.3237, 17.4261 ]
+								name = "root2"
+								parent_bone = "root"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+							},
+						]
+					},
+				]
+			},
+			{
+				_class = "Skeleton"
+				children = 
+				[
+					{
+						_class = "Bone"
+						name = "root"
+						origin = [ 17.03137, 0.0, -1.684601 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						do_not_discard = true
+						children = 
+						[
+							{
+								_class = "Bone"
+								name = "spine1_0"
+								origin = [ 0.882444, -0.0, 13.684092 ]
+								angles = [ -65.761208, -179.999954, -179.999985 ]
+								do_not_discard = true
+								children = 
+								[
+									{
+										_class = "Bone"
+										name = "spine1_1"
+										origin = [ 22.014061, 0.000001, -0.000025 ]
+										angles = [ -25.98555, 0.000002, -0.000001 ]
+										do_not_discard = true
+										children = 
+										[
+											{
+												_class = "Bone"
+												name = "spine1_2"
+												origin = [ 29.229034, 0.000001, -0.000074 ]
+												angles = [ 25.818655, -0.000002, -0.000001 ]
+												do_not_discard = true
+												children = 
+												[
+													{
+														_class = "Bone"
+														name = "spine1_3"
+														origin = [ 30.02063, 0.000001, -0.000027 ]
+														angles = [ 30.914284, -0.000003, -0.000001 ]
+														do_not_discard = true
+														children = 
+														[
+															{
+																_class = "Bone"
+																name = "spine1_4"
+																origin = [ 25.180458, 0.000001, 0.000244 ]
+																angles = [ 48.846752, 0.000012, -0.000006 ]
+																do_not_discard = true
+																children = 
+																[
+																	{
+																		_class = "Bone"
+																		name = "spine1_5"
+																		origin = [ 17.19931, -0.000003, 0.000893 ]
+																		angles = [ 27.198046, -0.000002, -0.000007 ]
+																		do_not_discard = true
+																		children = 
+																		[
+																			{
+																				_class = "Bone"
+																				name = "head"
+																				origin = [ 14.646213, -0.000001, 0.001289 ]
+																				angles = [ -1.838807, -0.000005, 0.000034 ]
+																				do_not_discard = true
+																				children = 
+																				[
+																					{
+																						_class = "Bone"
+																						name = "low_jaw"
+																						origin = [ 1.237078, -0.000001, -3.640045 ]
+																						angles = [ 0.0, 0.0, 0.0 ]
+																						do_not_discard = true
+																						children = 
+																						[
+																							{
+																								_class = "Bone"
+																								name = "low_pincer_R_0"
+																								origin = [ 4.336761, -18.055756, -13.728462 ]
+																								angles = [ 50.094604, -47.018906, 44.764412 ]
+																								do_not_discard = true
+																								children = 
+																								[
+																									{
+																										_class = "Bone"
+																										name = "low_pincer_R_1"
+																										origin = [ 21.620937, 0.00132, 0.001068 ]
+																										angles = [ 8.919168, 51.261898, 16.245375 ]
+																										do_not_discard = true
+																									},
+																								]
+																							},
+																							{
+																								_class = "Bone"
+																								name = "low_pincer_L_0"
+																								origin = [ 4.336761, 17.900795, -13.7285 ]
+																								angles = [ 49.150158, 48.748882, 136.82753 ]
+																								do_not_discard = true
+																								children = 
+																								[
+																									{
+																										_class = "Bone"
+																										name = "low_pincer_L_1"
+																										origin = [ 21.926199, 0.001266, -0.001068 ]
+																										angles = [ -10.211018, 51.927753, -18.804422 ]
+																										do_not_discard = true
+																									},
+																								]
+																							},
+																						]
+																					},
+																					{
+																						_class = "Bone"
+																						name = "up_jaw"
+																						origin = [ 3.370279, 0.000001, 2.458908 ]
+																						angles = [ -31.633999, 0.000008, -0.000009 ]
+																						do_not_discard = true
+																						children = 
+																						[
+																							{
+																								_class = "Bone"
+																								name = "up_pincer_0"
+																								origin = [ 19.618034, 0.000001, 0.001404 ]
+																								angles = [ 68.318329, -0.000019, -0.000024 ]
+																								do_not_discard = true
+																								children = 
+																								[
+																									{
+																										_class = "Bone"
+																										name = "up_pincer_1"
+																										origin = [ 21.335094, 0.0, 0.002548 ]
+																										angles = [ 61.656368, -0.0, 0.0 ]
+																										do_not_discard = true
+																									},
+																								]
+																							},
+																						]
+																					},
+																				]
+																			},
+																		]
+																	},
+																]
+															},
+														]
+													},
+												]
+											},
+										]
+									},
+								]
+							},
+							{
+								_class = "Bone"
+								name = "tail_01_JNT"
+								origin = [ 51.624023, -19.617943, 11.673886 ]
+								angles = [ -8.22739, -126.61747, 104.464394 ]
+								do_not_discard = true
+								children = 
+								[
+									{
+										_class = "Bone"
+										name = "tail_02_JNT"
+										origin = [ 41.235123, -0.000012, 0.000023 ]
+										angles = [ -38.734623, 32.232742, -45.219757 ]
+										do_not_discard = true
+										children = 
+										[
+											{
+												_class = "Bone"
+												name = "tail_03_JNT"
+												origin = [ 41.328339, 0.000011, -0.000004 ]
+												angles = [ -33.199039, 4.27365, -7.771564 ]
+												do_not_discard = true
+												children = 
+												[
+													{
+														_class = "Bone"
+														name = "tail_04_JNT"
+														origin = [ 41.516319, 0.000069, -0.000065 ]
+														angles = [ -6.795013, 1.477092, -12.294637 ]
+														do_not_discard = true
+													},
+												]
+											},
+										]
+									},
+								]
+							},
+						]
+					},
+				]
+			},
+		]
+	}
+}

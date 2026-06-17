@@ -1,0 +1,207 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
+{
+	Hero_Ursa.PreAttack = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 75.0
+		distance_max = 1500.0
+		event_type = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/earthshaker/fist_swing1.vsnd",
+			"sounds/weapons/hero/earthshaker/fist_swing2.vsnd",
+			"sounds/weapons/hero/earthshaker/fist_swing3.vsnd",
+		]
+		vsnd_duration = 0.627755
+	}
+	Hero_Ursa.Attack = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "BaseAttacks"
+		distance_max = 2500.0
+		soundevent_layer2 = "Hero_Ursa.Attack.Post"
+		soundevent_layer2_on = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/ursa/ursa_attack_01.vsnd",
+			"sounds/weapons/hero/ursa/ursa_attack_02.vsnd",
+			"sounds/weapons/hero/ursa/ursa_attack_03.vsnd",
+		]
+		vsnd_duration = 0.421134
+	}
+	Hero_Ursa.Attack.Post = 
+	{
+		type = "dota_src1_3d"
+		volume_rand_min = -0.25
+		volume_rand_max = 0.25
+		volume = 0.75
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 75.0
+		distance_max = 2500.0
+		rand_delay_min = 0.05
+		rand_delay_max = 0.12
+		soundevent_layer2 = "Damage_Melee.Gore"
+		soundevent_layer2_on = 1.0
+		limiter_on = 0.0
+		vsnd_files = 
+		[
+			"sounds/physics/damage/npc/rip01.vsnd",
+			"sounds/physics/damage/npc/rip02.vsnd",
+			"sounds/physics/damage/npc/rip03.vsnd",
+			"sounds/physics/damage/npc/rip04.vsnd",
+		]
+		vsnd_duration = 0.244626
+	}
+	Hero_Ursa.Earthshock = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 84.0
+		mixgroup = "Weapons"
+		spread_radius = 600.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/ursa/ursa_earthshock.vsnd",
+		]
+		vsnd_duration = 2.479932
+	}
+	Hero_Ursa.Earthshock.TI10 = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 84.0
+		mixgroup = "Weapons"
+		spread_radius = 600.0
+		soundevent_layer2 = "Hero_Ursa.Earthshock.Layer.TI10"
+		soundevent_layer2_on = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/ursa/ursa_earthshock.vsnd",
+		]
+		vsnd_duration = 2.479932
+	}
+	Hero_Ursa.Earthshock.Layer.TI10 = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = 0.0
+		pitch_rand_max = 0.25
+		pitch = 1.0
+		soundlevel = 81.0
+		distance_max = 2500.0
+		mixgroup = "Weapons"
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/ursa/earthshock_layer_ti10.vsnd",
+		]
+		vsnd_duration = 2.143687
+	}
+	Hero_Ursa.Overpower = 
+	{
+		type = "dota_update_default"
+		volume = 0.699707
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/ursa/ursa_overpower.vsnd",
+		]
+		vsnd_duration = 3.146168
+	}
+	Hero_Ursa.Enrage = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Ultimates"
+		spread_radius = 600.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/ursa/ursa_enrage.vsnd",
+		]
+		vsnd_duration = 4.74
+	}
+	Hero_Ursa.Footsteps = 
+	{
+		type = "dota_src1_3d_footsteps"
+		volume_rand_min = -0.049988
+		volume_rand_max = 0.049988
+		volume = 0.44989
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 0.85
+		soundlevel = 75.0
+		distance_max = 2000.0
+		event_type = 4.0
+		vsnd_files = 
+		[
+			"sounds/physics/footsteps/hero/shared/general01.vsnd",
+			"sounds/physics/footsteps/hero/shared/general02.vsnd",
+			"sounds/physics/footsteps/hero/shared/general03.vsnd",
+			"sounds/physics/footsteps/hero/shared/general04.vsnd",
+			"sounds/physics/footsteps/hero/shared/general05.vsnd",
+			"sounds/physics/footsteps/hero/shared/general06.vsnd",
+			"sounds/physics/footsteps/hero/shared/general07.vsnd",
+		]
+		vsnd_duration = 0.453787
+	}
+	Hero_Ursa.Death = 
+	{
+		type = "dota_null_start"
+	}
+	Hero_Ursa.Taunt.TI9 = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch = 1.0
+		soundlevel = 81.0
+		distance_max = 2500.0
+		event_type = 1.0
+		volume_fade_out = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/ursa/taunt_ti9.vsnd",
+		]
+		vsnd_duration = 3.99966
+	}
+	Hero_Ursa.Enrage.Shard = 
+	{
+		type = "dota_src1_3d"
+		mixgroup = "Weapons"
+		volume = 1.0
+		pitch = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		soundlevel = 84.0
+		distance_max = 2500.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/ursa/ursa_enrage.vsnd",
+		]
+		vsnd_duration = 4.74
+	}
+}

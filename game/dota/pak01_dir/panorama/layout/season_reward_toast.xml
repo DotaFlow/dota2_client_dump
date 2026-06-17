@@ -1,0 +1,49 @@
+<!-- xml reconstructed by Source 2 Viewer - https://valveresourceformat.github.io -->
+<root>
+	<styles>
+		<include src="s2r://panorama/styles/dotastyles.vcss_c" />
+		<include src="s2r://panorama/styles/season_reward_toast.vcss_c" />
+	</styles>
+	<snippets>
+		<snippet name="SeasonRewardToast">
+			<Panel class="SeasonRewardToast">
+				<Image id="ToastImage" scaling="stretch-to-cover-preserve-aspect" />
+				<Panel class="RewardTextContainer">
+					<Panel class="ToastLevelContainer">
+						<DOTAEventCrestImage id="EventCrest" class="ShieldIcon" />
+						<Label class="LevelLabel" text="#DOTA_SeasonPass_Toast_Reward_Level" />
+					</Panel>
+					<Label class="Title" text="#DOTA_SeasonPass_Toast_Rewards_Unlocked" />
+					<Label class="Description" text="{s:description}" html="true" />
+				</Panel>
+			</Panel>
+		</snippet>
+		<snippet name="SeasonRewardEmoticonToast">
+			<Panel class="SeasonRewardToast Emoticon">
+				<DOTAEmoticon id="Emoticon" />
+				<Panel class="RewardTextContainer">
+					<Panel class="ToastLevelContainer">
+						<DOTAEventCrestImage id="EventCrest" class="ShieldIcon" />
+						<Label class="LevelLabel" text="#DOTA_SeasonPass_Toast_Reward_Level" />
+					</Panel>
+					<Label class="Title" text="#DOTA_SeasonPass_Toast_Emoticon_Unlocked" />
+					<Label class="Description" text="{s:description}" />
+				</Panel>
+			</Panel>
+		</snippet>
+		<snippet name="SeasonRewardItemToast">
+			<Panel class="SeasonRewardToast">
+				<DOTAEconItem id="MainImage" class="DisableInspect DisableEquipped" />
+				<Panel class="RewardTextContainer">
+					<Label class="Title" text="#DOTA_SeasonPass_Toast_Rewards_Unlocked" />
+					<Label class="Description" text="{s:description}" />
+				</Panel>
+			</Panel>
+		</snippet>
+	</snippets>
+	<DOTASeasonRewardToast onactivate="DismissToast()" toast_appear_sound="RewardToast.Appear">
+		<Panel class="International2025 ToastContainer" event-id="52" />
+		<Panel class="Quartero ToastContainer" event-id="53" />
+		<Panel id="DefaultToastContainer" class="ToastContainer" />
+	</DOTASeasonRewardToast>
+</root>
