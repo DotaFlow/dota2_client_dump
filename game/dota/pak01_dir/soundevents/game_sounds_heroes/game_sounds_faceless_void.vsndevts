@@ -1,0 +1,256 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
+{
+	Hero_FacelessVoid.PreAttack = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 72.0
+		distance_max = 1500.0
+		event_type = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/shared/large_blade/whoosh01.vsnd",
+			"sounds/weapons/hero/shared/large_blade/whoosh02.vsnd",
+			"sounds/weapons/hero/shared/large_blade/whoosh03.vsnd",
+		]
+		vsnd_duration = 0.734172
+	}
+	Hero_FacelessVoid.Attack = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 75.0
+		distance_max = 2500.0
+		soundevent_layer2 = "Damage_Melee.Gore"
+		soundevent_layer2_on = 1.0
+		soundevent_layer3 = "Hero_FacelessVoid.Attack.Impact"
+		soundevent_layer3_on = 1.0
+		event_type = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/faceless_void/attack01.vsnd",
+			"sounds/weapons/hero/faceless_void/attack02.vsnd",
+			"sounds/weapons/hero/faceless_void/attack03.vsnd",
+		]
+		vsnd_duration = 1.001361
+	}
+	Hero_FacelessVoid.Attack.Impact = 
+	{
+		type = "dota_update_default"
+		volume = 0.799805
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "BaseAttacks"
+		spread_radius = 150.0
+		distance_max = 2500.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/shared/large_blade/thump01.vsnd",
+			"sounds/weapons/hero/shared/large_blade/thump02.vsnd",
+			"sounds/weapons/hero/shared/large_blade/thump03.vsnd",
+		]
+		vsnd_duration = 0.330522
+	}
+	Hero_FacelessVoid.TimeWalk = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 900.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/faceless_void/time_walk.vsnd",
+		]
+		vsnd_duration = 1.580816
+	}
+	Hero_FacelessVoid.TimeLockImpact = 
+	{
+		type = "dota_update_default"
+		volume = 0.699707
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		block_duration = 0.1
+		block_distance = 500.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/faceless_void/faceless_void_timelockimpact.vsnd",
+		]
+		vsnd_duration = 2.479365
+	}
+	Hero_FacelessVoid.Chronosphere = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Ultimates"
+		spread_radius = 600.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/faceless_void/chronosphere.vsnd",
+		]
+		vsnd_duration = 5.840658
+	}
+	Hero_FacelessVoid.Footsteps = 
+	{
+		type = "dota_src1_3d_footsteps"
+		volume_rand_min = -0.099976
+		volume_rand_max = 0.099976
+		volume = 0.299927
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 72.0
+		distance_max = 2000.0
+		event_type = 4.0
+		vsnd_files = 
+		[
+			"sounds/physics/footsteps/hero/shared/general01.vsnd",
+			"sounds/physics/footsteps/hero/shared/general02.vsnd",
+			"sounds/physics/footsteps/hero/shared/general03.vsnd",
+			"sounds/physics/footsteps/hero/shared/general04.vsnd",
+			"sounds/physics/footsteps/hero/shared/general05.vsnd",
+			"sounds/physics/footsteps/hero/shared/general06.vsnd",
+			"sounds/physics/footsteps/hero/shared/general07.vsnd",
+		]
+		vsnd_duration = 0.453787
+	}
+	Hero_FacelessVoid.Death = 
+	{
+		type = "dota_null_start"
+	}
+	Hero_FacelessVoid.TimeWalk.Aeons = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 900.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/faceless_void/time_walk_aeons.vsnd",
+		]
+		vsnd_duration = 1.68127
+	}
+	Hero_FacelessVoid.TimeDilation.Cast = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 600.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/faceless_void/time_dilation_cast.vsnd",
+		]
+		vsnd_duration = 2.509456
+	}
+	Hero_FacelessVoid.TimeDilation.Target = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		volume_fade_out = 1.0
+		volume_falloff_max = 2500.0
+		spread_radius = 300.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/faceless_void/time_dilation_target.vsnd",
+		]
+		vsnd_duration = 5.523923
+	}
+	Hero_FacelessVoid.Chronosphere.MaceOfAeons = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Ultimates"
+		spread_radius = 600.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/faceless_void/chronosphere_immortal.vsnd",
+		]
+		vsnd_duration = 5.456803
+	}
+	Hero_FacelessVoid.FunkyFeets = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch = 1.0
+		soundlevel = 84.0
+		distance_max = 2500.0
+		event_type = 1.0
+		volume_fade_out = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/faceless_void/funky_feets.vsnd",
+		]
+		vsnd_duration = 5.955918
+	}
+	Hero_FacelessVoid.TimeDilation.Cast.ti7 = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		soundevent_layer2 = "Hero_FacelessVoid.TimeDilation.Cast.ti7_layer"
+		soundevent_layer2_on = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/faceless_void/time_dilation_cast.vsnd",
+		]
+		vsnd_duration = 2.509456
+	}
+	Hero_FacelessVoid.TimeDilation.Cast.ti7_layer = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 900.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/faceless_void/time_dilation_cast_ti7.vsnd",
+		]
+		vsnd_duration = 1.772902
+	}
+	Hero_FacelessVoid.Chronosphere.ti11 = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Ultimates"
+		spread_radius = 600.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/faceless_void/chronosphere_ti11.vsnd",
+		]
+		vsnd_duration = 5.473312
+	}
+}

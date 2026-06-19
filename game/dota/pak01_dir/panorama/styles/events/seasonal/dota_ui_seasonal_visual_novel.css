@@ -1,0 +1,1691 @@
+/* Prettified by Source 2 Viewer - https://valveresourceformat.github.io */
+
+.Season_Fall2025 .MainContents
+{
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #211910 ), to( #120a06 ) );
+}
+
+.Season_Fall2025 .VisualNovelBackground
+{
+	background-image: url("s2r://panorama/images/events/seasonal/backgrounds/fall_background_png.vtex");
+}
+
+.Season_Fall2025 .InstructionText
+{
+	color: gradient( linear, 0% 0%, 0% 100%, from( gold1 ), to( gold3 ) );
+}
+
+.Season_Fall2025 .InstructionIcon
+{
+	opacity-brush: gradient( linear, 0% 0%, 0% 100%, from( gold1 ), to( gold3 ) );
+}
+
+.Season_Fall2025 #RewardLabel,.Season_Fall2025 #RewardTextHero
+{
+	color: #cbb89b;
+}
+
+.Season_Fall2025 .PortraitBackgroundFrame
+{
+	background-image: url("s2r://panorama/images/events/seasonal/artwork/visual_novel_portrait_frame_fall_png.vtex");
+}
+
+.Season_Winter2025 .MainContents
+{
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #12292e ), to( #060608 ) );
+}
+
+.Season_Winter2025 .VisualNovelBackground
+{
+	background-image: url("s2r://panorama/images/events/seasonal/backgrounds/winter_background_png.vtex");
+	blur: gaussian( 2px );
+	brightness: 0.5;
+}
+
+.Season_Winter2025 .InstructionText
+{
+	color: gradient( linear, 0% 30%, 0% 140%, from( #acdfff ), to( #74a7d8 ) );
+}
+
+.Season_Winter2025 .InstructionIcon
+{
+	opacity-brush: gradient( linear, 0% 30%, 0% 140%, from( #acdfff ), to( #74a7d8 ) );
+}
+
+.Season_Winter2025 #RewardLabel,.Season_Winter2025 #RewardTextHero
+{
+	color: #8fb3b8;
+}
+
+.Season_Winter2025 .PortraitBackgroundFrame
+{
+	background-image: url("s2r://panorama/images/events/seasonal/artwork/visual_novel_portrait_frame_winter_png.vtex");
+}
+
+.Season_Spring2026 .MainContents
+{
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #2A1B32 ), to( #0D0910 ) );
+}
+
+.Season_Spring2026 .VisualNovelBackground
+{
+	background-image: url("s2r://panorama/images/events/seasonal/backgrounds/spring_background_psd.vtex");
+	blur: gaussian( 2px );
+	brightness: 0.5;
+}
+
+.Season_Spring2026 .InstructionText
+{
+	color: gradient( linear, 0% 0%, 0% 100%, from( #FFCCEA ), to( #CC8DB2 ) );
+}
+
+.Season_Spring2026 .InstructionIcon
+{
+	opacity-brush: gradient( linear, 0% 0%, 0% 100%, from( #FFCCEA ), to( #CC8DB2 ) );
+}
+
+.Season_Spring2026 #RewardLabel,.Season_Spring2026 #RewardTextHero
+{
+	color: #B298A8;
+}
+
+.Season_Spring2026 .PortraitBackgroundFrame
+{
+	background-image: url("s2r://panorama/images/events/seasonal/artwork/visual_novel_portrait_frame_spring_psd.vtex");
+}
+
+.Season_Summer2026 .MainContents
+{
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #143226 ), to( #060910 ) );
+}
+
+.Season_Summer2026 .VisualNovelBackground
+{
+	background-image: url("s2r://panorama/images/events/seasonal/backgrounds/summer_background_psd.vtex");
+	background-size: cover;
+	background-repeat: no-repeat;
+	blur: gaussian( 2px );
+	brightness: 0.5;
+	opacity-mask: url("s2r://panorama/images/events/seasonal/backgrounds/background_mask_psd.vtex");
+}
+
+.Season_Summer2026 .InstructionText
+{
+	color: gradient( linear, 0% 0%, 0% 100%, from( #AAF2D5 ), to( #6BB296 ) );
+}
+
+.Season_Summer2026 .InstructionIcon
+{
+	opacity-brush: gradient( linear, 0% 0%, 0% 100%, from( #AAF2D5 ), to( #6BB296 ) );
+}
+
+.Season_Summer2026 #RewardLabel,.Season_Summer2026 #RewardTextHero
+{
+	color: #80AB9A;
+}
+
+.Season_Summer2026 .PortraitBackgroundFrame
+{
+	background-image: url("s2r://panorama/images/events/seasonal/artwork/visual_novel_portrait_frame_summer_psd.vtex");
+}
+
+#GroupContainer2
+{
+	opacity: 0;
+}
+
+.ShowActor2 #GroupContainer2
+{
+	opacity: 1;
+}
+
+DOTASeasonalVisualNovel
+{
+	horizontal-align: center;
+	vertical-align: center;
+	flow-children: down;
+	padding: 48px;
+	opacity: 1;
+	transform: scale3d( 1, 1, 1 );
+}
+
+DOTASeasonalVisualNovel.Hidden
+{
+	opacity: 0;
+	transform: scale3d( 0.6, 0.6, 1 );
+	transition-duration: 0.3s;
+	transition-timing-function: cubic-bezier(0, 1, 0, 1);
+}
+
+#CloseButtonContainer
+{
+	visibility: collapse;
+	margin: 3px;
+}
+
+.EscapePressed #CloseButtonContainer
+{
+	visibility: visible;
+}
+
+#ChapterNavigation
+{
+	visibility: collapse;
+}
+
+.MainContents
+{
+	width: 1200px;
+	height: 720px;
+}
+
+.EncounterDialogue .MainContents
+{
+	width: 1200px;
+	height: fit-children;
+	background-color: none;
+	box-shadow: none;
+	border: 0;
+}
+
+.ShakeWindow .MainContents
+{
+	animation-name: Shake;
+	animation-duration: 0.5s;
+	animation-iteration-count:1;
+}
+
+.EncounterDialogue .MainContents:hover .MoreIndicator
+{
+	wash-color: white;
+	pre-transform-scale2d: 1;
+}
+
+.VisualNovelBackground
+{
+	width: 100%;
+	height: 100%;
+	background-size: 140%;
+	background-position: center;
+	overflow: noclip;
+	horizontal-align: center;
+	opacity: 0.5;
+	y: -20%;
+}
+
+.VisualNovelBorderTop
+{
+	width: 1260px;
+	vertical-align: top;
+	horizontal-align: center;
+	margin-top: -10px;
+}
+
+.Dash
+{
+	width: 50%;
+	height: 0.5px;
+	horizontal-align: center;
+	vertical-align: bottom;
+	background-color: gradient( linear, 0% 0%, 100% 0%, from( gold3&00 ), color-stop( 0.5, gold1 ), to( gold3&00 ) );
+	opacity: 0.7;
+	margin-top: 50px;
+	margin-bottom: 0px;
+}
+
+.NovelContainer
+{
+	flow-children: down;
+	horizontal-align: center;
+	vertical-align: center;
+	width: 100%;
+	y: -80px;
+}
+
+.GroupContainer
+{
+	horizontal-align: center;
+	height: 220px;
+	opacity: 0;
+}
+
+.GroupContainer .PortraitContainerLayered
+{
+	transition-property: opacity, position, transform, saturation, brightness, blur;
+	transition-duration: 0.2s;
+	brightness: 0.6;
+	saturation: 0.7;
+	blur: gaussian( 2 );
+}
+
+.GroupContainer .ActorTextContainer
+{
+	transition-property: opacity, position, blur;
+	transition-duration: 0.2s;
+	brightness: 0.6;
+	saturation: 0.7;
+	blur: gaussian( 2 );
+	padding: 4px;
+}
+
+.GroupContainer.Top
+{
+	flow-children: right;
+}
+
+.GroupContainer.Top .ActorTextContainer
+{
+	padding-right: 40px;
+}
+
+.ShowActor1 .GroupContainer.Top
+{
+	opacity: 1;
+}
+
+.GroupContainer.Bottom
+{
+	flow-children: left;
+}
+
+.GroupContainer.Bottom .ActorTextContainer
+{
+	padding-left: 40px;
+}
+
+.ShowActor2 .GroupContainer.Bottom
+{
+	opacity: 1;
+}
+
+.TopUpdated .GroupContainer.Top .PortraitContainerLayered.PortraitOrder0,.BottomUpdated .GroupContainer.Bottom .PortraitContainerLayered.PortraitOrder0,.NoPortraitDimBlur .GroupContainer.Top .PortraitContainerLayered.PortraitOrder0,.NoPortraitDimBlur .GroupContainer.Bottom .PortraitContainerLayered.PortraitOrder0
+{
+	brightness: 1.0;
+	saturation: 1.0;
+	blur: none;
+}
+
+.TopUpdated .GroupContainer.Top .ActorTextContainer,.BottomUpdated .GroupContainer.Bottom .ActorTextContainer,.NoPortraitDimBlur .GroupContainer.Top .ActorTextContainer,.NoPortraitDimBlur .GroupContainer.Bottom .ActorTextContainer
+{
+	brightness: 1.0;
+	saturation: 1.0;
+	blur: none;
+}
+
+.NoPortraitBlur .GroupContainer.Top .PortraitContainerLayered.PortraitOrder0,.NoPortraitBlur .GroupContainer.Bottom .PortraitContainerLayered.PortraitOrder0
+{
+	blur: none;
+}
+
+.TypewriterLabel
+{
+	vertical-align: top;
+}
+
+.ActorTextContainer
+{
+	width: 740px;
+	height: 200px;
+	vertical-align: top;
+	horizontal-align: center;
+	height: 200px;
+	vertical-align: center;
+	z-index: 1;
+}
+
+.Exiting .ActorTextContainer
+{
+	opacity: 0.0;
+}
+
+.Top.Exiting .ActorTextContainer,.Bottom.Exiting .ActorTextContainer
+{
+	background-color: #0000;
+}
+
+.ActorTextContainer .MoreIndicator
+{
+	width: 26px;
+	height: 26px;
+	horizontal-align: right;
+	vertical-align: bottom;
+	margin-bottom: 32px;
+	background-image: url("s2r://panorama/images/transport_controls/icon_nexttrack_png.vtex");
+	background-size: contain;
+	wash-color: gold2;
+	pre-transform-scale2d: 0.8;
+	transition-property: wash-color, pre-transform-scale2d;
+	transition-duration: 0.1s;
+	animation-name: MoreIndicatorAnim;
+	animation-duration: 0.5s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	visibility: collapse;
+}
+
+.Bottom .ActorTextContainer .MoreIndicator
+{
+	margin-right: 80px;
+}
+
+.EncounterDialogue .ActorTextContainer .MoreIndicator
+{
+	visibility: visible;
+}
+
+.Animating .ActorTextContainer .MoreIndicator,.NoMoreDialogue .ActorTextContainer .MoreIndicator
+{
+	visibility: collapse;
+}
+
+.ActorTextContainer DOTATypewriterText
+{
+	vertical-align: center;
+}
+
+@keyframes 'MoreIndicatorAnim'
+{
+	100%
+	{
+		transform: translateX( 3px );
+		brightness: 2;
+	}
+	
+}
+
+.PortraitGroup
+{
+	overflow: noclip;
+	vertical-align: center;
+	margin: 0px -48px;
+	width: 380px;
+	height: width-percentage( 100% );
+}
+
+.PortraitGroup .PortraitContainerLayered
+{
+	width: 100%;
+	height: width-percentage( 100% );
+}
+
+.PortraitGroup .PortraitContainerLayered .PortraitDropShadow
+{
+	width: 50%;
+	height: width-percentage( 100% );
+	border-radius: 50%;
+	horizontal-align: center;
+	vertical-align: center;
+	box-shadow: 0px 8px 64px rgba(0, 0, 0, 0.5);
+}
+
+.PortraitGroup .PortraitContainerLayered .PortraitBackgroundFrame
+{
+	width: 67%;
+	height: width-percentage( 100% );
+	margin-bottom: 11%;
+	background-size: cover;
+	horizontal-align: center;
+	vertical-align: center;
+}
+
+.PortraitGroup .PortraitContainerLayered .AnimationContainer
+{
+	width: 100%;
+	height: width-percentage( 100% );
+}
+
+.PortraitGroup .PortraitContainerLayered .AnimationContainer .ActorPicture
+{
+	width: 100%;
+	height: width-percentage( 100% );
+}
+
+.PortraitGroup .PortraitContainerLayered.Hidden
+{
+	visibility: collapse;
+}
+
+.PortraitGroup .PortraitContainerLayered.ExitingPortrait
+{
+	opacity: 0;
+}
+
+.PortraitGroup .PortraitContainerLayered.PortraitOrder0
+{
+	z-index: 4;
+}
+
+.PortraitGroup .PortraitContainerLayered.PortraitOrder1
+{
+	z-index: 3;
+}
+
+.PortraitGroup .PortraitContainerLayered.PortraitOrder2
+{
+	z-index: 2;
+}
+
+.PortraitGroup .PortraitContainerLayered.PortraitOrder3
+{
+	z-index: 1;
+}
+
+.PortraitGroup .PortraitContainerLayered.PortraitOrder1,.PortraitGroup .PortraitContainerLayered.PortraitOrder2,.PortraitGroup .PortraitContainerLayered.PortraitOrder3,.PortraitGroup .PortraitContainerLayered.PortraitOrder4
+{
+	saturation: 0.5;
+	brightness: 0.3;
+}
+
+.Top .PortraitGroup .PortraitContainerLayered.PortraitOrder1
+{
+	transform: translateX(-70px);
+}
+
+.Bottom .PortraitGroup .PortraitContainerLayered.PortraitOrder1
+{
+	transform: translateX(70px);
+}
+
+.Top .PortraitGroup .PortraitContainerLayered.PortraitOrder2
+{
+	transform: translateX( -140px);
+}
+
+.Bottom .PortraitGroup .PortraitContainerLayered.PortraitOrder2
+{
+	transform: translateX( 140px);
+}
+
+.PortraitGroup .PortraitContainerLayered .ActorEffectOverlay
+{
+	width: 100%;
+	height: width-percentage( 100% );
+	vertical-align: center;
+	background-size: cover;
+	transition-property: opacity, transform;
+	transition-duration: 1s;
+	margin-bottom: 20px;
+	opacity: 0;
+	overflow: noclip;
+}
+
+.PortraitGroup .PortraitContainerLayered.ShowActorEffectOverlay .ActorEffectOverlay
+{
+	opacity: 1;
+}
+
+.PortraitGroup .PortraitContainerLayered.ActorAnger .ActorEffectOverlay
+{
+	background-image: url("s2r://panorama/images/events/crownfall/visual_novel/effects/anger_png.vtex");
+}
+
+.PortraitGroup .PortraitContainerLayered.ActorAnxiety .ActorEffectOverlay
+{
+	background-image: url("s2r://panorama/images/events/crownfall/visual_novel/effects/anxiety_png.vtex");
+}
+
+.PortraitGroup .PortraitContainerLayered.ActorSweatDrop .ActorEffectOverlay
+{
+	background-image: url("s2r://panorama/images/events/crownfall/visual_novel/effects/sweatdrop_png.vtex");
+}
+
+.PortraitGroup .PortraitContainerLayered.Flipped .AnimationContainer .ActorPicture
+{
+	transform: scaleX(-1);
+}
+
+.PortraitGroup .PortraitContainerLayered .ActorEffectOverlay
+{
+	transform: translateY( -20px );
+}
+
+.PortraitGroup .PortraitContainerLayered.Flipped .ActorEffectOverlay
+{
+	transform: scaleX(-1) translateY( -20px );
+}
+
+.PortraitGroup .PortraitContainerLayered.ShowActorEffectOverlay .ActorEffectOverlay
+{
+	transform: translateY( 0 );
+}
+
+.PortraitGroup .PortraitContainerLayered.ShowActorEffectOverlay.Flipped .ActorEffectOverlay
+{
+	transform: scaleX(-1) translateY( 0 );
+}
+
+.PortraitGroup .PortraitContainerLayered.ShowActorEffectOverlay.Flipped.ActorAnger .ActorEffectOverlay
+{
+	animation-name: AnimAngerTop;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+}
+
+.PortraitGroup .PortraitContainerLayered.ShowActorEffectOverlay.ActorAnger .ActorEffectOverlay
+{
+	animation-name: AnimAngerBottom;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+}
+
+.PortraitGroup .PortraitContainerLayered.ShowActorEffectOverlay.ActorSweatDrop .ActorEffectOverlay
+{
+	animation-name: AnimSweatDrop;
+	animation-duration: 2s;
+	animation-fill-mode: both;
+	animation-delay: 0.5s;
+}
+
+.PortraitGroup .PortraitContainerLayered.ShowActorEffectOverlay.Flipped.ActorSweatDrop .ActorEffectOverlay
+{
+	animation-name: AnimSweatDropFlipped;
+}
+
+.Top .PortraitGroup .PortraitContainerLayered
+{
+	horizontal-align: right;
+}
+
+.Top .PortraitGroup .PortraitContainerLayered.EntranceRising
+{
+	animation-name: EntranceRising;
+	animation-duration: 0.5s;
+}
+
+.Top .PortraitGroup .PortraitContainerLayered.ExitFalling
+{
+	animation-name: EntranceRising;
+	animation-duration: 0.5s;
+	animation-direction: reverse;
+}
+
+.Top .PortraitGroup .PortraitContainerLayered.ExitRising
+{
+	animation-name: EntranceFalling;
+	animation-duration: 0.5s;
+	animation-direction: reverse;
+}
+
+.Top .PortraitGroup .PortraitContainerLayered.EntranceSlideFast
+{
+	animation-name: EntranceSlideTop;
+	animation-duration: 0.5s;
+	animation-iteration-count:1;
+}
+
+.Top .PortraitGroup .PortraitContainerLayered.EntranceSlideFast .PortraitDropShadow
+{
+	animation-name: EntranceSlideTop;
+	animation-duration: 0.5s;
+	animation-iteration-count:1;
+}
+
+.Top .PortraitGroup .PortraitContainerLayered.EntranceSlideFast.ShakePortrait
+{
+	animation-name: EntranceSlideTopThenShake;
+	animation-duration: 1.0;
+}
+
+.Top .PortraitGroup .PortraitContainerLayered.EntranceSlideFast.ShakePortrait .PortraitDropShadow
+{
+	animation-name: EntranceSlideTopThenShake;
+	animation-duration: 1.0s;
+}
+
+.Top .PortraitGroup .PortraitContainerLayered.ExitSlideFast
+{
+	animation-direction: reverse;
+	animation-name: EntranceSlideTop;
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
+}
+
+.Bottom .PortraitGroup .PortraitContainerLayered
+{
+	horizontal-align: left;
+}
+
+.Bottom .PortraitGroup .PortraitContainerLayered.EntranceRising
+{
+	animation-name: EntranceRising;
+	animation-duration: 0.5s;
+}
+
+.Bottom .PortraitGroup .PortraitContainerLayered.ExitFalling
+{
+	animation-name: EntranceRising;
+	animation-duration: 0.5s;
+	animation-direction: reverse;
+}
+
+.Bottom .PortraitGroup .PortraitContainerLayered.ExitRising
+{
+	animation-name: EntranceFalling;
+	animation-duration: 0.5s;
+	animation-direction: reverse;
+}
+
+.Bottom .PortraitGroup .PortraitContainerLayered.EntranceSlideFast
+{
+	animation-name: EntranceSlideBottom;
+	animation-duration: 0.5s;
+}
+
+.Bottom .PortraitGroup .PortraitContainerLayered.EntranceSlideFast.ShakePortrait
+{
+	animation-name: EntranceSlideBottomThenShake;
+	animation-duration: 1.0s;
+}
+
+.Bottom .PortraitGroup .PortraitContainerLayered.ExitSlideFast
+{
+	animation-direction: reverse;
+	animation-name: EntranceSlideBottom;
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
+}
+
+.PortraitGroup .PortraitContainerLayered.ShakePortrait
+{
+	animation-name: Shake;
+	animation-duration: 0.5s;
+	animation-iteration-count:1;
+}
+
+.PortraitGroup .PortraitContainerLayered.WeavePortrait
+{
+	animation-name: Weave;
+	animation-duration: 2.6s;
+	animation-iteration-count:1;
+}
+
+.PortraitGroup .PortraitContainerLayered.JitterPortrait
+{
+	animation-name: Jitter;
+	animation-duration: 0.1s;
+	animation-iteration-count:infinite;
+}
+
+@keyframes 'ShowPortrait'
+{
+	0%
+	{
+		opacity: 0;
+	}
+	
+	60%
+	{
+		opacity: 0;
+		transform: scale3d(0.9, 0.9, 1 );
+	}
+	
+	100%
+	{
+		opacity: 1;
+		transform: none;
+	}
+	
+}
+
+#PopupContainer
+{
+	ignore-parent-flow: true;
+	horizontal-align: center;
+	vertical-align: center;
+	transition-property: opacity, transform;
+	transition-duration: 0.2s;
+	transition-timing-function: cubic-bezier( 0.5, 0, 0.5, 4 );
+	opacity: 0;
+	transform: scale3d( 0.9, 0.9, 1 );
+}
+
+.ShowPopup #PopupContainer
+{
+	opacity: 1;
+	transform: none;
+	transition-duration: 0.1s;
+	transition-timing-function: ease-in;
+}
+
+#PopupContainer .SoundEffectBackground
+{
+	width: 100%;
+	height: 100%;
+	margin-top: 3%;
+}
+
+#PopupContainer .SoundEffectBackground.Wet
+{
+	visibility: collapse;
+}
+
+.WetPopup #PopupContainer .SoundEffectBackground.Wet
+{
+	visibility: visible;
+}
+
+.WetPopup #PopupContainer .SoundEffectBackground.Hit
+{
+	visibility: collapse;
+}
+
+#PopupContainer #BackgroundHit
+{
+	visibility: visible;
+}
+
+#PopupContainer #PopupText
+{
+	horizontal-align: center;
+	vertical-align: center;
+	text-align: center;
+	font-size: 96px;
+	height: 96px;
+	max-width: 560px;
+	line-height: 0.9;
+	text-overflow: shrink;
+	font-style: italic;
+	font-weight: bold;
+	color: gradient( linear, 0% 0%, 0% 100%, from( gold1 ), color-stop( 0.5, gold2 ), to( gold3 ) );
+	margin: 160px 180px;
+	letter-spacing: -1px;
+}
+
+.EncounterDialogue #PopupContainer #PopupText
+{
+	margin:0;
+}
+
+.EncounterDialogue #PopupContainer
+{
+	height: 100%;
+	width: 100%;
+	margin-top: 30px;
+}
+
+@keyframes 'Squash'
+{
+	33%
+	{
+		transform:scaleX(1) scaleY( 1.4 );
+	}
+	
+	66%
+	{
+		transform:scaleX(1.6) scaleY( 0.8 );
+	}
+	
+}
+
+@keyframes 'Shake'
+{
+	0%
+	{
+		transform:translateX( -20px );
+	}
+	
+	10%
+	{
+		transform:translateX( 20px );
+	}
+	
+	20%
+	{
+		transform:translateX( -18px );
+	}
+	
+	30%
+	{
+		transform:translateX( 18px );
+	}
+	
+	40%
+	{
+		transform:translateX( -16px );
+	}
+	
+	50%
+	{
+		transform:translateX( 16px );
+	}
+	
+	60%
+	{
+		transform:translateX( -13px );
+	}
+	
+	70%
+	{
+		transform:translateX( 13px );
+	}
+	
+	80%
+	{
+		transform:translateX( -10px );
+	}
+	
+	90%
+	{
+		transform:translateX( 10px );
+	}
+	
+	100%
+	{
+		transform:translateX( -10px );
+	}
+	
+}
+
+@keyframes 'Jitter'
+{
+	0%
+	{
+		transform:translateX( -1px );
+	}
+	
+	50%
+	{
+		transform: translateX( 1px);
+	}
+	
+	100%
+	{
+		transform:translateX( -1px );
+	}
+	
+}
+
+@keyframes 'Weave'
+{
+	0%
+	{
+		transform:translateX( 0px );
+	}
+	
+	25%
+	{
+		transform: translateX( 10px);
+	}
+	
+	50%
+	{
+		transform:translateX( 0px );
+	}
+	
+	75%
+	{
+		transform: translateX( 10px);
+	}
+	
+	100%
+	{
+		transform:translateX( 0px );
+	}
+	
+}
+
+@keyframes 'Bob'
+{
+	0%
+	{
+		transform:translateY(0px);
+	}
+	
+	50%
+	{
+		transform:translateY(-10px);
+	}
+	
+	100%
+	{
+		transform:translateY(0px);
+	}
+	
+}
+
+@keyframes 'EntranceSlideTop'
+{
+	0%
+	{
+		opacity: 0;
+		transform:translateX(-400px);
+	}
+	
+	100%
+	{
+		opacity: 1;
+		transform:translateX(0px);
+	}
+	
+}
+
+@keyframes 'EntranceSlideBottom'
+{
+	0%
+	{
+		opacity: 0;
+		transform:translateX(400px);
+	}
+	
+	100%
+	{
+		opacity: 1;
+		transform:translateX(0px);
+	}
+	
+}
+
+@keyframes 'EntranceSlideShakeTop'
+{
+	0%
+	{
+		transform:translateX( -420px );
+		opacity: 0;
+	}
+	
+	10%
+	{
+		transform:translateX( -340px );
+	}
+	
+	20%
+	{
+		transform:translateX( -338px );
+	}
+	
+	30%
+	{
+		transform:translateX( -262px );
+	}
+	
+	40%
+	{
+		transform:translateX( -256px );
+	}
+	
+	50%
+	{
+		transform:translateX( -184px );
+	}
+	
+	60%
+	{
+		transform:translateX( -173px );
+	}
+	
+	70%
+	{
+		transform:translateX( -107px );
+	}
+	
+	80%
+	{
+		transform:translateX( -90px );
+	}
+	
+	90%
+	{
+		transform:translateX( -30px );
+	}
+	
+	100%
+	{
+		opacity: 1;
+		transform:translateX( -10px );
+	}
+	
+}
+
+@keyframes 'EntranceSlideShakeBottom'
+{
+	0%
+	{
+		transform:translateX( 420px );
+		opacity: 0;
+	}
+	
+	10%
+	{
+		transform:translateX( 340px );
+	}
+	
+	20%
+	{
+		transform:translateX( 338px );
+	}
+	
+	30%
+	{
+		transform:translateX( 262px );
+	}
+	
+	40%
+	{
+		transform:translateX( 256px );
+	}
+	
+	50%
+	{
+		transform:translateX( 184px );
+	}
+	
+	60%
+	{
+		transform:translateX( 173px );
+	}
+	
+	70%
+	{
+		transform:translateX( 107px );
+	}
+	
+	80%
+	{
+		transform:translateX( 90px );
+	}
+	
+	90%
+	{
+		transform:translateX( 30px );
+	}
+	
+	100%
+	{
+		opacity: 1;
+		transform:translateX( 10px );
+	}
+	
+}
+
+@keyframes 'EntranceSlideTopThenShake'
+{
+	0%
+	{
+		opacity: 0;
+		transform:translateX(-400px);
+	}
+	
+	50%
+	{
+		opacity: 1;
+		transform:translateX(0px);
+	}
+	
+	55%
+	{
+		transform:translateX( 20px );
+	}
+	
+	60%
+	{
+		transform:translateX( -18px );
+	}
+	
+	65%
+	{
+		transform:translateX( 18px );
+	}
+	
+	70%
+	{
+		transform:translateX( -16px );
+	}
+	
+	75%
+	{
+		transform:translateX( 16px );
+	}
+	
+	80%
+	{
+		transform:translateX( -13px );
+	}
+	
+	85%
+	{
+		transform:translateX( 13px );
+	}
+	
+	90%
+	{
+		transform:translateX( -10px );
+	}
+	
+	95%
+	{
+		transform:translateX( 10px );
+	}
+	
+	100%
+	{
+		transform:translateX( -10px );
+	}
+	
+}
+
+@keyframes 'EntranceSlideBottomThenShake'
+{
+	0%
+	{
+		opacity: 0;
+		transform:translateX(400px);
+	}
+	
+	50%
+	{
+		opacity: 1;
+		transform:translateX(0px);
+	}
+	
+	55%
+	{
+		transform:translateX( 20px );
+	}
+	
+	60%
+	{
+		transform:translateX( -18px );
+	}
+	
+	65%
+	{
+		transform:translateX( 18px );
+	}
+	
+	70%
+	{
+		transform:translateX( -16px );
+	}
+	
+	75%
+	{
+		transform:translateX( 16px );
+	}
+	
+	80%
+	{
+		transform:translateX( -13px );
+	}
+	
+	85%
+	{
+		transform:translateX( 13px );
+	}
+	
+	90%
+	{
+		transform:translateX( -10px );
+	}
+	
+	95%
+	{
+		transform:translateX( 10px );
+	}
+	
+	100%
+	{
+		transform:translateX( -10px );
+	}
+	
+}
+
+@keyframes 'EntranceRising'
+{
+	0%
+	{
+		opacity: 0;
+		transform:translateY(400px);
+	}
+	
+	100%
+	{
+		opacity: 1;
+		transform:translateY(0px);
+	}
+	
+}
+
+@keyframes 'EntranceFalling'
+{
+	0%
+	{
+		opacity: 0;
+		transform:translateY(-400px);
+	}
+	
+	100%
+	{
+		opacity: 1;
+		transform:translateY(0px);
+	}
+	
+}
+
+@keyframes 'AnimAngerTop'
+{
+	0%
+	{
+		opacity: 0;
+		transform: scale3d( -0.5, 0.5, 1.0) translateX( 40px);
+	}
+	
+	40%
+	{
+		opacity: 1;
+		transform: scale3d( -1, 1, 1.0) translateX( 60px);
+	}
+	
+	100%
+	{
+		opacity: 0;
+		transform: scale3d( -1, 1, 1.0) translateX( 65px) translateY( -2px);
+	}
+	
+}
+
+@keyframes 'AnimAngerBottom'
+{
+	0%
+	{
+		opacity: 0;
+		transform: scale3d( 0.5, 0.5, 1.0) translateX( -40px);
+	}
+	
+	40%
+	{
+		opacity: 1;
+		transform: scale3d( 1, 1, 1.0) translateX( -60px);
+	}
+	
+	100%
+	{
+		opacity: 0;
+		transform: scale3d( 1, 1, 1.0) translateX( -65px) translateY( -2px);
+	}
+	
+}
+
+@keyframes 'AnimSweatDrop'
+{
+	0%
+	{
+		opacity: 0;
+		transform: translateY( -40px);
+	}
+	
+	100%
+	{
+		opacity: 1;
+		transform: translateY( 0px);
+	}
+	
+}
+
+@keyframes 'AnimSweatDropFlipped'
+{
+	0%
+	{
+		opacity: 0;
+		transform: translateY( -40px) scaleX( -1 );
+	}
+	
+	100%
+	{
+		opacity: 1;
+		transform: translateY( 0px) scaleX( -1 );
+	}
+	
+}
+
+.HideText
+{
+	color: transparent;
+	text-shadow: none;
+}
+
+#PreloadActorPicture
+{
+	visibility: collapse;
+}
+
+#ItemContents
+{
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #08080870 ), to( #00000001 ) );
+	horizontal-align: center;
+	vertical-align: bottom;
+	border-radius: 5px;
+	border: 0px solid #ffffff;
+	width: 100%;
+	ignore-parent-flow: true;
+	flow-children: down;
+	ui-scale: 100%;
+	visibility: collapse;
+}
+
+.HasFlavorText #ItemContents
+{
+	width: 500px;
+}
+
+#ItemContents #ItemContentsContainer
+{
+	flow-children: right;
+	horizontal-align: center;
+	vertical-align: center;
+}
+
+#ItemContents #RewardTextContainer
+{
+	flow-children: down;
+	horizontal-align: left;
+	vertical-align: center;
+	margin-left: 10px;
+}
+
+#ItemContents #RewardLabel
+{
+	font-size: 11px;
+	text-align: left;
+	font-family: radiance;
+	font-weight: light;
+	letter-spacing: 1.1px;
+	text-transform: uppercase;
+	opacity: 0.8;
+}
+
+#ItemContents #RewardText
+{
+	text-align: left;
+	color: white;
+	font-size: 18px;
+	font-family: titleFont;
+	font-weight: light;
+	vertical-align: top;
+	letter-spacing: 0.45px;
+	text-shadow: 1px 1px 2px black;
+	margin-bottom: 0px;
+}
+
+#ItemContents #RewardTextHero
+{
+	font-size: 14px;
+	text-align: left;
+	font-family: radiance;
+	font-weight: light;
+	letter-spacing: 2.0px;
+	text-transform: uppercase;
+	opacity: 0.8;
+}
+
+#ItemContents #ImageContainer
+{
+	width: 114px;
+	height: 110px;
+	visibility: collapse;
+}
+
+.HasImage #ItemContents #ImageContainer,.HasVideo #ItemContents #ImageContainer
+{
+	visibility: visible;
+}
+
+#ItemContents #ImageContainer #RewardImage
+{
+	width: 100%;
+	height: 100%;
+}
+
+#ItemContents #ImageContainer #RewardVideo
+{
+	width: 100%;
+	height: 100%;
+}
+
+#ItemContents #RewardFlavorText
+{
+	width: 100%;
+	margin: 8px;
+	text-align: center;
+	font-size: 18px;
+	font-weight: normal;
+	font-style: italic;
+	vertical-align: top;
+	letter-spacing: -1px;
+	visibility: collapse;
+}
+
+.HasFlavorText #ItemContents #RewardFlavorText
+{
+	visibility: visible;
+}
+
+#ItemContents #RewardClaimedText
+{
+	width: 100%;
+	text-align: center;
+	font-size: 18px;
+	font-weight: normal;
+	vertical-align: top;
+	visibility: collapse;
+	font-style: italic;
+}
+
+.AlreadyClaimed #ItemContents #RewardClaimedText
+{
+	visibility: visible;
+}
+
+.HasItem #ItemContents
+{
+	visibility: visible;
+}
+
+.PopupBorderDash
+{
+	width: 100%;
+	height: 3px;
+	background-color: gradient( linear, 0% 0%, 100% 0%, from( #514431 ), color-stop( 0.5, #a89c78 ), to( #514431 ) );
+	box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.2);
+}
+
+.PopupBorderDash.Bottom
+{
+	vertical-align: bottom;
+	box-shadow: 0px -1px 0px rgba(0, 0, 0, 0.6);
+}
+
+.PopupBorder
+{
+	width: 100%;
+	height: 100%;
+	border: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.dialogue_q04_set03_itm04 .GroupContainer.Bottom .ActorTextContainer
+{
+	padding-left: 0px;
+	padding-right: 40px;
+}
+
+@keyframes 'EntranceSlideBottom_CustomQ04S03I04_Galdron'
+{
+	0%
+	{
+		opacity: 0;
+		transform:translateX(400px);
+	}
+	
+	100%
+	{
+		opacity: 1;
+		transform:translateX(1000px);
+	}
+	
+}
+
+@keyframes 'Shake_CustomQ04S03I04_Galdron'
+{
+	0%
+	{
+		transform:translateX( -70px );
+	}
+	
+	10%
+	{
+		transform:translateX( -30px );
+	}
+	
+	20%
+	{
+		transform:translateX( -68px );
+	}
+	
+	30%
+	{
+		transform:translateX( -28px );
+	}
+	
+	40%
+	{
+		transform:translateX( -66px );
+	}
+	
+	50%
+	{
+		transform:translateX( -26px );
+	}
+	
+	60%
+	{
+		transform:translateX( -63px );
+	}
+	
+	70%
+	{
+		transform:translateX( -23px );
+	}
+	
+	80%
+	{
+		transform:translateX( -60px );
+	}
+	
+	90%
+	{
+		transform:translateX( -30px );
+	}
+	
+	100%
+	{
+		transform:translateX( -60px );
+	}
+	
+}
+
+.dialogue_q04_set03_itm04 .PortraitContainerLayered.Portrait0.Galdron
+{
+	z-index: 3;
+	transform: translateX( -50px );
+}
+
+.dialogue_q04_set03_itm04 .PortraitContainerLayered.Portrait0.Galdron.EntranceSlideFast
+{
+	animation-name: EntranceSlideBottom_CustomQ04S03I04_Galdron;
+}
+
+.dialogue_q04_set03_itm04 .PortraitContainerLayered.Portrait0.Galdron.ShakePortrait
+{
+	animation-name: Shake_CustomQ04S03I04_Galdron;
+}
+
+@keyframes 'EntranceSlideBottom_CustomQ04S03I04_Sextus'
+{
+	0%
+	{
+		opacity: 0;
+		transform:translateX(500px);
+	}
+	
+	100%
+	{
+		opacity: 1;
+		transform:translateX(100px);
+	}
+	
+}
+
+@keyframes 'Shake_CustomQ04S03I04_Sextus'
+{
+	0%
+	{
+		transform:translateX( 80px );
+	}
+	
+	10%
+	{
+		transform:translateX( 120px );
+	}
+	
+	20%
+	{
+		transform:translateX( 82px );
+	}
+	
+	30%
+	{
+		transform:translateX( 118px );
+	}
+	
+	40%
+	{
+		transform:translateX( 84px );
+	}
+	
+	50%
+	{
+		transform:translateX( 116px );
+	}
+	
+	60%
+	{
+		transform:translateX( 87px );
+	}
+	
+	70%
+	{
+		transform:translateX( 113px );
+	}
+	
+	80%
+	{
+		transform:translateX( 90px );
+	}
+	
+	90%
+	{
+		transform:translateX( 110px );
+	}
+	
+	100%
+	{
+		transform:translateX( 90px );
+	}
+	
+}
+
+.dialogue_q04_set03_itm04 .PortraitContainerLayered.Portrait1.Sextus
+{
+	z-index: 2;
+	transform: translateX( 100px );
+}
+
+.dialogue_q04_set03_itm04 .PortraitContainerLayered.Portrait1.Sextus.EntranceSlideFast
+{
+	animation-name: EntranceSlideBottom_CustomQ04S03I04_Sextus;
+}
+
+.dialogue_q04_set03_itm04 .PortraitContainerLayered.Portrait1.Sextus.ShakePortrait
+{
+	animation-name: Shake_CustomQ04S03I04_Sextus;
+}
+

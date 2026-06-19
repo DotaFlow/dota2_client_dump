@@ -1,0 +1,339 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
+{
+	Hero_PhantomAssassin.PreAttack = 
+	{
+		type = "dota_src1_3d"
+		volume_rand_min = -0.149902
+		volume_rand_max = 0.149902
+		volume = 0.649902
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.1
+		soundlevel = 69.0
+		distance_max = 1500.0
+		event_type = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/phantom_assassin/phantom_assassin_swing1.vsnd",
+		]
+		vsnd_duration = 0.584218
+	}
+	Hero_PhantomAssassin.Attack = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 75.0
+		distance_max = 2500.0
+		soundevent_layer2 = "Hero_PhantomAssassin.Attack.Rip"
+		soundevent_layer2_on = 1.0
+		event_type = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/shared/small_blade/attack_long01.vsnd",
+			"sounds/weapons/hero/shared/small_blade/attack_long02.vsnd",
+			"sounds/weapons/hero/shared/small_blade/attack_long03.vsnd",
+		]
+		vsnd_duration = 0.333673
+	}
+	Hero_PhantomAssassin.Attack.Rip = 
+	{
+		type = "dota_src1_3d"
+		volume_rand_min = -0.149902
+		volume_rand_max = 0.149902
+		volume = 0.649902
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 72.0
+		distance_max = 2500.0
+		rand_delay_min = 0.05
+		rand_delay_max = 0.1
+		soundevent_layer2 = "Damage_Melee.Gore"
+		soundevent_layer2_on = 1.0
+		limiter_on = 0.0
+		vsnd_files = 
+		[
+			"sounds/physics/damage/npc/rip01.vsnd",
+			"sounds/physics/damage/npc/rip02.vsnd",
+			"sounds/physics/damage/npc/rip03.vsnd",
+			"sounds/physics/damage/npc/rip04.vsnd",
+		]
+		vsnd_duration = 0.244626
+	}
+	Hero_PhantomAssassin.Dagger.Cast = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/phantom_assassin/stifling_dagger_cast.vsnd",
+		]
+		vsnd_duration = 1.001292
+	}
+	Hero_PhantomAssassin.Dagger.Target = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 150.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/phantom_assassin/stifling_dagger_target.vsnd",
+		]
+		vsnd_duration = 2.465261
+	}
+	Hero_PhantomAssassin.Strike.Start = 
+	{
+		type = "dota_update_default"
+		volume = 0.5
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.15
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 150.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/antimage/blink_out.vsnd",
+		]
+		vsnd_duration = 2.037143
+	}
+	Hero_PhantomAssassin.Strike.End = 
+	{
+		type = "dota_update_default"
+		volume = 0.5
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.15
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 150.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/antimage/blink_in.vsnd",
+		]
+		vsnd_duration = 0.888889
+	}
+	Hero_PhantomAssassin.Blur = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		volume_fade_out = 0.5
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/phantom_assassin/blur_cast.vsnd",
+		]
+		vsnd_duration = 2.124444
+	}
+	Hero_PhantomAssassin.Blur.Break = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/phantom_assassin/blur_break.vsnd",
+		]
+		vsnd_duration = 0.761497
+	}
+	Hero_PhantomAssassin.CoupDeGrace.Mech = 
+	{
+		type = "dota_update_default"
+		volume = 0.5
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.15
+		soundlevel = 78.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/juggernaut/sword_swing_special.vsnd",
+		]
+		vsnd_duration = 2.847279
+	}
+	Hero_PhantomAssassin.CoupDeGrace = 
+	{
+		type = "dota_update_default"
+		volume = 0.799805
+		pitch_rand_min = -0.1
+		pitch_rand_max = 0.1
+		pitch = 1.0
+		soundlevel = 78.0
+		mixgroup = "Weapons"
+		distance_max = 2500.0
+		soundevent_layer2 = "Hero_PhantomAssassin.Spatter"
+		soundevent_layer2_on = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/phantom_assassin/coup_de_grace.vsnd",
+		]
+		vsnd_duration = 1.943243
+	}
+	Hero_PhantomAssassin.Spatter = 
+	{
+		type = "dota_src1_3d"
+		volume = 0.699707
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 78.0
+		distance_max = 2500.0
+		rand_delay_min = 0.1
+		rand_delay_max = 0.3
+		limiter_on = 0.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/phantom_assassin/crit_spatter01.vsnd",
+			"sounds/weapons/hero/phantom_assassin/crit_spatter02.vsnd",
+			"sounds/weapons/hero/phantom_assassin/crit_spatter03.vsnd",
+		]
+		vsnd_duration = 1.333401
+	}
+	Hero_PhantomAssassin.Footsteps = 
+	{
+		type = "dota_src1_3d_footsteps"
+		volume_rand_min = -0.049988
+		volume_rand_max = 0.049988
+		volume = 0.249939
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.1
+		soundlevel = 72.0
+		distance_max = 1000.0
+		event_type = 4.0
+		vsnd_files = 
+		[
+			"sounds/physics/footsteps/hero/shared/general01.vsnd",
+			"sounds/physics/footsteps/hero/shared/general02.vsnd",
+			"sounds/physics/footsteps/hero/shared/general03.vsnd",
+			"sounds/physics/footsteps/hero/shared/general04.vsnd",
+			"sounds/physics/footsteps/hero/shared/general05.vsnd",
+			"sounds/physics/footsteps/hero/shared/general06.vsnd",
+			"sounds/physics/footsteps/hero/shared/general07.vsnd",
+		]
+		vsnd_duration = 0.453787
+	}
+	Hero_PhantomAssassin.CoupDeGrace.Arcana = 
+	{
+		type = "dota_update_default"
+		volume = 0.799805
+		pitch_rand_min = -0.1
+		pitch_rand_max = 0.1
+		pitch = 1.0
+		soundlevel = 78.0
+		mixgroup = "Weapons"
+		distance_max = 2500.0
+		soundevent_layer2 = "Hero_PhantomAssassin.Spatter"
+		soundevent_layer2_on = 1.0
+		soundevent_layer3 = "Hero_PhantomAssassin.Arcana_Layer"
+		soundevent_layer3_on = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/phantom_assassin/coup_de_grace.vsnd",
+		]
+		vsnd_duration = 1.943243
+	}
+	Hero_PhantomAssassin.Arcana_Layer = 
+	{
+		type = "dota_src1_3d"
+		volume = 0.5
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		limiter_on = 0.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/phantom_assassin/arcana_layer.vsnd",
+		]
+		vsnd_duration = 2.893538
+	}
+	Hero_PhantomAssassin.TI8_taunt = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch = 1.0
+		soundlevel = 81.0
+		distance_max = 2500.0
+		event_type = 1.0
+		volume_fade_out = 0.5
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/phantom_assassin/ti8_taunt.vsnd",
+		]
+		vsnd_duration = 4.720726
+	}
+	Hero_PhantomAssassin.FanOfKnives.Cast = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = 0.0
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		limiter_on = 0.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/phantom_assassin/fan_of_knives.vsnd",
+		]
+		vsnd_duration = 1.997125
+	}
+	Hero_PhantomAssassin.PreAttack.Persona = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = 0.0
+		pitch_rand_max = 0.2
+		pitch = 1.0
+		soundlevel = 72.0
+		distance_max = 2000.0
+		event_type = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/phantom_assassin/phantom_assassin_swing1.vsnd",
+		]
+		vsnd_duration = 0.584218
+	}
+	Hero_PhantomAssassin.Attack.Persona = 
+	{
+		type = "dota_src1_3d"
+		volume = 0.75
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 0.8
+		soundlevel = 75.0
+		distance_max = 2500.0
+		soundevent_layer2 = "Damage_Melee.Gore"
+		soundevent_layer2_on = 1.0
+		event_type = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/shared/small_blade/attack_long02.vsnd",
+			"sounds/weapons/hero/shared/small_blade/attack_long03.vsnd",
+		]
+		vsnd_duration = 0.200204
+	}
+}

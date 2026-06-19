@@ -1,0 +1,390 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
+{
+	Hero_Terrorblade.PreAttack = 
+	{
+		type = "dota_src1_3d"
+		volume_rand_min = -0.049988
+		volume_rand_max = 0.049988
+		volume = 0.649597
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 75.0
+		distance_max = 1500.0
+		event_type = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/terrorblade/melee_pre_attack_01.vsnd",
+			"sounds/weapons/hero/terrorblade/melee_pre_attack_02.vsnd",
+			"sounds/weapons/hero/terrorblade/melee_pre_attack_03.vsnd",
+			"sounds/weapons/hero/terrorblade/melee_pre_attack_04.vsnd",
+		]
+		vsnd_duration = 0.442653
+	}
+	Hero_Terrorblade.Attack = 
+	{
+		type = "dota_src1_3d"
+		volume_rand_min = -0.1
+		volume_rand_max = 0.1
+		volume = 0.9
+		pitch_rand_min = -0.075
+		pitch_rand_max = 0.075
+		pitch = 0.975
+		soundlevel = 78.0
+		distance_max = 2500.0
+		soundevent_layer2 = "Hero_Terrorblade.Attack.Ring"
+		soundevent_layer2_on = 1.0
+		soundevent_layer3 = "Hero_Terrorblade.Attack.Rip"
+		soundevent_layer3_on = 1.0
+		limiter_on = 1.0
+		limiter_event_name = "Hero_Terrorblade.Attack"
+		limiter_max = 2.0
+		limiter_match_type = 0.0
+		limiter_match_entity = 0.0
+		limiter_match_substring = 0.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/terrorblade/melee_impacts_01.vsnd",
+			"sounds/weapons/hero/terrorblade/melee_impacts_02.vsnd",
+			"sounds/weapons/hero/terrorblade/melee_impacts_03.vsnd",
+			"sounds/weapons/hero/terrorblade/melee_impacts_04.vsnd",
+		]
+		vsnd_duration = 0.686349
+	}
+	Hero_Terrorblade.Attack.Ring = 
+	{
+		type = "dota_src1_3d"
+		volume_rand_min = -0.099976
+		volume_rand_max = 0.099976
+		volume = 0.499878
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 75.0
+		distance_max = 1250.0
+		soundevent_layer2 = "Damage_Melee.Gore"
+		soundevent_layer2_on = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/terrorblade/melee_ring_01.vsnd",
+			"sounds/weapons/hero/terrorblade/melee_ring_02.vsnd",
+			"sounds/null.vsnd",
+		]
+		vsnd_duration = 0.734308
+	}
+	Hero_Terrorblade.Attack.Rip = 
+	{
+		type = "dota_src1_3d"
+		volume_rand_min = -0.099976
+		volume_rand_max = 0.099976
+		volume = 0.499878
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 75.0
+		distance_max = 1250.0
+		rand_delay_min = 0.05
+		rand_delay_max = 0.12
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/terrorblade/melee_rip_01.vsnd",
+			"sounds/weapons/hero/terrorblade/melee_rip_02.vsnd",
+			"sounds/weapons/hero/terrorblade/melee_rip_03.vsnd",
+			"sounds/null.vsnd",
+		]
+		vsnd_duration = 0.65059
+	}
+	Hero_Terrorblade_Morphed.preAttack = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 75.0
+		distance_max = 1500.0
+		event_type = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/terrorblade/ranged_pre_attack_01.vsnd",
+			"sounds/weapons/hero/terrorblade/ranged_pre_attack_02.vsnd",
+			"sounds/weapons/hero/terrorblade/ranged_pre_attack_03.vsnd",
+		]
+		vsnd_duration = 0.482426
+	}
+	Hero_Terrorblade_Morphed.Attack = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 78.0
+		distance_max = 2500.0
+		event_type = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/terrorblade/ranged_attack_01.vsnd",
+			"sounds/weapons/hero/terrorblade/ranged_attack_02.vsnd",
+			"sounds/weapons/hero/terrorblade/ranged_attack_03.vsnd",
+		]
+		vsnd_duration = 0.630363
+	}
+	Hero_Terrorblade_Morphed.projectileImpact = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 78.0
+		distance_max = 1000.0
+		limiter_on = 0.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/terrorblade/ranged_impacts_01.vsnd",
+			"sounds/weapons/hero/terrorblade/ranged_impacts_02.vsnd",
+		]
+		vsnd_duration = 0.556939
+	}
+	Hero_Terrorblade.Reflection = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.05
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/terrorblade/reflection.vsnd",
+		]
+		vsnd_duration = 1.777982
+	}
+	Hero_Terrorblade.ConjureImage = 
+	{
+		type = "dota_update_default"
+		volume = 0.799805
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/terrorblade/conjuration.vsnd",
+		]
+		vsnd_duration = 1.175442
+	}
+	Hero_Terrorblade.Metamorphosis = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch = 1.0
+		soundlevel = 82.0
+		mixgroup = "Weapons"
+		spread_radius = 600.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/terrorblade/morph.vsnd",
+		]
+		vsnd_duration = 1.841995
+	}
+	Hero_Terrorblade.Metamorphosis.Scepter = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch = 1.0
+		mixgroup = "Ultimates"
+		spread_radius = 1500.0
+		soundevent_layer2 = "Hero_Terrorblade.Metamorphosis"
+		soundevent_layer2_on = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/terrorblade/morph_scepter.vsnd",
+		]
+		vsnd_duration = 3.619955
+	}
+	Hero_Terrorblade.Metamorphosis.Fear = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch = 1.5
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		limiter_on = 1.0
+		limiter_event_name = "Hero_Terrorblade.Metamorphosis.Fear"
+		limiter_max = 4.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/terrorblade/morph_scepter.vsnd",
+		]
+		vsnd_duration = 3.619955
+	}
+	Hero_Terrorblade.Sunder.Cast = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		mixgroup = "Ultimates"
+		spread_radius = 900.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/terrorblade/sunder_cast.vsnd",
+		]
+		vsnd_duration = 2.31551
+	}
+	Hero_Terrorblade.Sunder.Target = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.1
+		pitch_rand_max = 0.1
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Ultimates"
+		spread_radius = 600.0
+		rand_delay_min = 0.1
+		rand_delay_max = 0.15
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/terrorblade/sunder_target.vsnd",
+		]
+		vsnd_duration = 2.016213
+	}
+	Hero_Terrorblade.Footstep = 
+	{
+		type = "dota_src1_3d_footsteps"
+		volume = 0.199951
+		pitch_rand_min = -0.025
+		pitch_rand_max = 0.025
+		pitch = 1.125
+		soundlevel = 72.0
+		distance_max = 2000.0
+		soundevent_layer2 = "Hero_Terrorblade.Foley"
+		soundevent_layer2_on = 1.0
+		event_type = 4.0
+		vsnd_files = 
+		[
+			"sounds/physics/footsteps/hero/abaddon/footstep_01.vsnd",
+			"sounds/physics/footsteps/hero/abaddon/footstep_02.vsnd",
+			"sounds/physics/footsteps/hero/abaddon/footstep_03.vsnd",
+			"sounds/physics/footsteps/hero/abaddon/footstep_04.vsnd",
+			"sounds/physics/footsteps/hero/abaddon/footstep_05.vsnd",
+		]
+		vsnd_duration = 0.219683
+	}
+	Hero_Terrorblade.Foley = 
+	{
+		type = "dota_src1_3d"
+		volume = 0.199951
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 65.0
+		distance_max = 3000.0
+		limiter_on = 0.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/abaddon/foley_01.vsnd",
+			"sounds/weapons/hero/abaddon/foley_02.vsnd",
+			"sounds/weapons/hero/abaddon/foley_03.vsnd",
+			"sounds/weapons/hero/abaddon/foley_04.vsnd",
+			"sounds/weapons/hero/abaddon/foley_05.vsnd",
+		]
+		vsnd_duration = 0.485351
+	}
+	Hero_Terrorblade.Death = 
+	{
+		type = "dota_src1_3d"
+		volume = 0.699707
+		pitch = 1.0
+		soundlevel = 75.0
+		distance_max = 2000.0
+		event_type = 4.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/abaddon/death.vsnd",
+		]
+		vsnd_duration = 2.655351
+	}
+	Hero_Terrorblade.morph_Footstep = 
+	{
+		type = "dota_src1_3d_footsteps"
+		volume = 0.799805
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 72.0
+		distance_max = 2000.0
+		soundevent_layer2 = "Hero_Terrorblade.Foley"
+		soundevent_layer2_on = 1.0
+		event_type = 4.0
+		vsnd_files = 
+		[
+			"sounds/physics/footsteps/hero/warlock_golem/step01.vsnd",
+			"sounds/physics/footsteps/hero/warlock_golem/step02.vsnd",
+			"sounds/physics/footsteps/hero/warlock_golem/step03.vsnd",
+			"sounds/physics/footsteps/hero/warlock_golem/step04.vsnd",
+			"sounds/physics/footsteps/hero/warlock_golem/step05.vsnd",
+		]
+		vsnd_duration = 0.625805
+	}
+	Hero_Terrorblade.morph_Foley = 
+	{
+		type = "dota_src1_3d"
+		volume = 0.199951
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 0.9
+		soundlevel = 65.0
+		distance_max = 3000.0
+		limiter_on = 0.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/abaddon/foley_01.vsnd",
+			"sounds/weapons/hero/abaddon/foley_02.vsnd",
+			"sounds/weapons/hero/abaddon/foley_03.vsnd",
+			"sounds/weapons/hero/abaddon/foley_04.vsnd",
+			"sounds/weapons/hero/abaddon/foley_05.vsnd",
+		]
+		vsnd_duration = 0.485351
+	}
+	Hero_Terrorblade.morph_Death = 
+	{
+		type = "dota_src1_3d"
+		volume = 0.699707
+		pitch_rand_min = -0.025
+		pitch_rand_max = 0.025
+		pitch = 0.925
+		soundlevel = 75.0
+		distance_max = 2000.0
+		event_type = 4.0
+		vsnd_files = 
+		[
+			"sounds/physics/deaths/specials/spectre_death.vsnd",
+		]
+		vsnd_duration = 1.840363
+	}
+	Hero_Terrorblade.DemonZeal.Cast = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/terrorblade/demon_zeal.vsnd",
+		]
+		vsnd_duration = 2.314966
+	}
+}

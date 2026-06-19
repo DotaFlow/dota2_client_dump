@@ -1,0 +1,365 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
+{
+	Hero_QueenOfPain.PreAttack = 
+	{
+		type = "dota_null_start"
+	}
+	Hero_QueenOfPain.Attack = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 75.0
+		distance_max = 2500.0
+		event_type = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/queenofpain/queenofpain_attack1.vsnd",
+			"sounds/weapons/hero/queenofpain/queenofpain_attack2.vsnd",
+			"sounds/weapons/hero/queenofpain/queenofpain_attack3.vsnd",
+			"sounds/weapons/hero/queenofpain/queenofpain_attack4.vsnd",
+		]
+		vsnd_duration = 1.446236
+	}
+	Hero_QueenOfPain.ArcanaAttack = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		distance_max = 2500.0
+		event_type = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/queenofpain/arc_attack_layer.vsnd",
+		]
+		vsnd_duration = 0.924187
+	}
+	Hero_QueenOfPain.ProjectileImpact = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 72.0
+		distance_max = 1000.0
+		limiter_on = 0.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/queenofpain/impact_1.vsnd",
+			"sounds/weapons/hero/queenofpain/impact_2.vsnd",
+			"sounds/weapons/hero/queenofpain/impact_3.vsnd",
+		]
+		vsnd_duration = 0.472834
+	}
+	Hero_QueenOfPain.ShadowStrike = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/queenofpain/queenofpain_shadowstrike.vsnd",
+		]
+		vsnd_duration = 2.260318
+	}
+	Hero_QueenOfPain.ShadowStrike.Target = 
+	{
+		type = "dota_null_start"
+	}
+	Hero_QueenOfPain.Blink_out = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/queenofpain/blink_out.vsnd",
+		]
+		vsnd_duration = 0.328299
+	}
+	Hero_QueenOfPain.Blink_out.Arcana = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.1
+		pitch_rand_max = 0.1
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		distance_max = 2500.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/queenofpain/blink_out_arc.vsnd",
+		]
+		vsnd_duration = 2.245583
+	}
+	Hero_QueenOfPain.Blink_in = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 150.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/queenofpain/blink_in.vsnd",
+		]
+		vsnd_duration = 3.462018
+	}
+	Hero_QueenOfPain.Blink_in.Arcana = 
+	{
+		type = "dota_update_default"
+		volume = 0.75
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		soundevent_layer2 = "Hero_QueenOfPain.Blink_in.Layer"
+		soundevent_layer2_on = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/queenofpain/blink_in.vsnd",
+		]
+		vsnd_duration = 3.462018
+	}
+	Hero_QueenOfPain.Blink_in.Layer = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = 0.0
+		pitch_rand_max = 0.25
+		pitch = 1.0
+		soundlevel = 84.0
+		mixgroup = "Weapons"
+		distance_max = 2500.0
+		delay = 0.1
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/queenofpain/blink_in_layer.vsnd",
+		]
+		vsnd_duration = 1.863708
+	}
+	Hero_QueenOfPain.ScreamOfPain = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/queenofpain/queenofpain_screamofpain.vsnd",
+		]
+		vsnd_duration = 2.694286
+	}
+	Hero_QueenOfPain.SonicWave.Precast = 
+	{
+		type = "dota_null_start"
+	}
+	Hero_QueenOfPain.SonicWave.Precast.Arcana = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		block_duration = 1.0
+		volume_fade_out = 0.2
+		max_gain_change_per_second = 100.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/queenofpain/sonic_wave_precast.vsnd",
+		]
+		vsnd_duration = 1.61
+	}
+	Hero_QueenOfPain.SonicWave = 
+	{
+		type = "dota_update_default"
+		volume = 0.8
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Ultimates"
+		spread_radius = 400.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/queenofpain/queenofpain_sonicwave.vsnd",
+		]
+		vsnd_duration = 3.608141
+	}
+	Hero_QueenOfPain.SonicWave.ArcanaLayer = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 900.0
+		volume_falloff_max = 9000.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/queenofpain/sonic_wave_layer.vsnd",
+		]
+		vsnd_duration = 4.536
+	}
+	Hero_QueenOfPain.SonicWave.Arcana.Target = 
+	{
+		type = "dota_src1_3d"
+		volume = 0.8
+		pitch = 1.05
+		pitch_rand_min = 0.0
+		pitch_rand_max = 0.05
+		soundlevel = 90.0
+		distance_max = 2500.0
+		mixgroup = "Ultimates"
+		block_multiple_instances = 1.0
+		block_match_entity = 0.0
+		block_distance = 600.0
+		block_duration = 0.1
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/queenofpain/sonic_wave_target_arc.vsnd",
+		]
+		vsnd_duration = 3.494943
+	}
+	Hero_QueenOfPain.Footsteps = 
+	{
+		type = "dota_src1_3d_footsteps"
+		volume_rand_min = -0.049988
+		volume_rand_max = 0.049988
+		volume = 0.349792
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.05
+		soundlevel = 72.0
+		distance_max = 2000.0
+		event_type = 4.0
+		vsnd_files = 
+		[
+			"sounds/physics/footsteps/hero/shared/general01.vsnd",
+			"sounds/physics/footsteps/hero/shared/general02.vsnd",
+			"sounds/physics/footsteps/hero/shared/general03.vsnd",
+			"sounds/physics/footsteps/hero/shared/general04.vsnd",
+			"sounds/physics/footsteps/hero/shared/general05.vsnd",
+			"sounds/physics/footsteps/hero/shared/general06.vsnd",
+			"sounds/physics/footsteps/hero/shared/general07.vsnd",
+		]
+		vsnd_duration = 0.453787
+	}
+	Hero_QueenOfPain.ShadowStrike.Target.TI8 = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		distance_max = 2000.0
+		limiter_on = 1.0
+		limiter_max = 1.0
+		limiter_match_entity = 0.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/queenofpain/shadowstrike_target_ti8.vsnd",
+		]
+		vsnd_duration = 6.171202
+	}
+	Hero_QueenOfPain.Arcana.AltRun = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 84.0
+		mixgroup = "Physics"
+		distance_max = 2500.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/queenofpain/alt_run_whip.vsnd",
+		]
+		vsnd_duration = 6.008791
+	}
+	Hero_QueenOfPain.Arcana.ComboDamageSummary = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch = 1.0
+		mixgroup = "UI"
+		limiter_on = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/earthshaker/damage_summary.vsnd",
+		]
+		vsnd_duration = 3.179547
+	}
+	Hero_QueenOfPain.Blink_out.Shard = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch = 1.0
+		pitch_rand_min = 0.05
+		pitch_rand_max = 0.05
+		soundlevel = 90.0
+		distance_max = 4500.0
+		mixgroup = "NoDuck"
+		soundevent_layer2 = "QuickDuck.HalfSecond"
+		soundevent_layer2_on = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/queenofpain/shard_blink_out.vsnd",
+		]
+		vsnd_duration = 2.975833
+	}
+	Hero_QueenOfPain.Blink_in.Shard = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch = 1.0
+		pitch_rand_min = 0.1
+		pitch_rand_max = 0.1
+		soundlevel = 84.0
+		distance_max = 3500.0
+		mixgroup = "NoDuck"
+		soundevent_layer2 = "QuickDuck.HalfSecond"
+		soundevent_layer2_on = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/queenofpain/shard_blink_in.vsnd",
+		]
+		vsnd_duration = 3.03
+	}
+	Hero_QueenOfPain.Taunt2022 = 
+	{
+		type = "dota_src1_3d"
+		volume = 0.66
+		pitch = 1.0
+		soundlevel = 81.0
+		distance_max = 2500.0
+		event_type = 1.0
+		volume_fade_out = 1.0
+		vsnd_files = "sounds/weapons/hero/queenofpain/taunt2022.vsnd"
+		vsnd_duration = 8.235646
+	}
+}

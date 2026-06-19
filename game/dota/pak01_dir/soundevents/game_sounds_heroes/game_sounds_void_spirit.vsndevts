@@ -1,0 +1,400 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
+{
+	Hero_VoidSpirit.PreAttack = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.1
+		pitch = 1.0
+		soundlevel = 78.0
+		distance_max = 2000.0
+		limiter_on = 0.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/void_spirit/preattack.vsnd",
+		]
+		vsnd_duration = 1.285556
+	}
+	Hero_VoidSpirit.Attack = 
+	{
+		type = "dota_src1_3d"
+		volume = 0.6
+		pitch = 1.0
+		pitch_rand_min = 0.0
+		pitch_rand_max = 0.1
+		soundlevel = 75.0
+		distance_max = 2500.0
+		event_type = 1.0
+		soundevent_layer2_on = 1
+		soundevent_layer2 = "Hero_VoidSpirit.Attack.Layer"
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/void_spirit/attack.vsnd",
+		]
+		vsnd_duration = 1.130522
+	}
+	Hero_VoidSpirit.Attack.Layer = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		soundlevel = 78.0
+		distance_max = 2500.0
+		soundevent_layer2_on = 1
+		soundevent_layer2 = "Damage_Melee.Gore"
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/void_spirit/attack_layer01.vsnd",
+			"sounds/weapons/hero/void_spirit/attack_layer02.vsnd",
+			"sounds/weapons/hero/void_spirit/attack_layer03.vsnd",
+		]
+		vsnd_duration = 0.377143
+	}
+	Hero_VoidSpirit.AetherRemnant.Cast = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/void_spirit/remnant_cast.vsnd",
+		]
+		vsnd_duration = 1.501497
+	}
+	Hero_VoidSpirit.AetherRemnant = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		volume_fade_out = 1.0
+		spread_radius = 300.0
+		use_entity_position = 0.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/void_spirit/remnant_projectile.vsnd",
+		]
+		vsnd_duration = 2.161973
+	}
+	Hero_VoidSpirit.AetherRemnant.Spawn_lp = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 78.0
+		mixgroup = "Weapons"
+		volume_fade_in = 1.0
+		volume_fade_out = 1.0
+		stop_at_time = 21.0
+		distance_max = 1500.0
+		volume_use_FOW = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/void_spirit/remnant_lp.vsnd",
+		]
+		vsnd_duration = 2.457823
+	}
+	Hero_VoidSpirit.AetherRemnant.Triggered = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 84.0
+		mixgroup = "Weapons"
+		distance_max = 2500.0
+		volume_fade_out = 0.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/void_spirit/remnant_triggered.vsnd",
+		]
+		vsnd_duration = 2.616735
+	}
+	Hero_VoidSpirit.AetherRemnant.Target = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		distance_max = 2500.0
+		volume_fade_out = 1.25
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/void_spirit/remnant_target.vsnd",
+		]
+		vsnd_duration = 3.132063
+	}
+	Hero_VoidSpirit.AetherRemnant.Destroy = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		distance_max = 2000.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/void_spirit/remnant_destroy.vsnd",
+		]
+		vsnd_duration = 1.063946
+	}
+	Hero_VoidSpirit.Dissimilate.Cast = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch = 1.0
+		pitch_rand_min = 0.0
+		pitch_rand_max = 0.0
+		mixgroup = "Weapons"
+		soundlevel = 81.0
+		spread_radius = 1200.0
+		volume_fade_out = 1.0
+		delay = 0.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/void_spirit/dissimilate_cast.vsnd",
+		]
+		vsnd_duration = 2.122834
+	}
+	Hero_VoidSpirit.Dissimilate.Portals = 
+	{
+		type = "dota_src1_3d"
+		volume = 0.5
+		pitch = 0.9
+		pitch_rand_min = 0.0
+		pitch_rand_max = 0.1
+		mixgroup = "NoDuck"
+		soundlevel = 84.0
+		distance_max = 3000.0
+		volume_fade_in = 0.0
+		limiter_on = 0.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/void_spirit/dissimilate_portal01.vsnd",
+			"sounds/weapons/hero/void_spirit/dissimilate_portal02.vsnd",
+		]
+		vsnd_duration = 1.720136
+	}
+	Hero_VoidSpirit.Dissimilate.TeleportIn = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		mixgroup = "Weapons"
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/void_spirit/dissimilate_appear.vsnd",
+		]
+		vsnd_duration = 2.082993
+	}
+	Hero_VoidSpirit.Dissimilate.Stun = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch = 1.0
+		soundlevel = 81.0
+		distance_max = 3000.0
+		mixgroup = "Weapons"
+		limiter_on = 1.0
+		limiter_max = 1.0
+		limiter_match_entity = 0.0
+		limiter_event_name = "Hero_VoidSpirit.Dissimilate.Stun"
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/void_spirit/dissimilate_stun.vsnd",
+		]
+		vsnd_duration = 2.1915
+	}
+	Hero_VoidSpirit.Pulse.Cast = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		soundlevel = 84.0
+		mixgroup = "Weapons"
+		soundevent_layer2_on = 1.0
+		soundevent_layer2 = "Hero_VoidSpirit.Pulse"
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/void_spirit/pulse_cast.vsnd",
+		]
+		vsnd_duration = 1.602177
+	}
+	Hero_VoidSpirit.Pulse = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		mixgroup = "Weapons"
+		volume_fade_in = 0.1
+		spread_radius = 1000.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/void_spirit/pulse_ring.vsnd",
+		]
+		vsnd_duration = 1.58415
+	}
+	Hero_VoidSpirit.Pulse.Target = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 78.0
+		distance_max = 3000.0
+		mixgroup = "Weapons"
+		limiter_on = 0.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/void_spirit/pulse_target.vsnd",
+		]
+		vsnd_duration = 1.113197
+	}
+	Hero_VoidSpirit.Pulse.Destroy = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 0.7
+		soundlevel = 72.0
+		distance_max = 2000.0
+		mixgroup = "Weapons"
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/void_spirit/pulse_target.vsnd",
+		]
+		vsnd_duration = 1.113197
+	}
+	Hero_VoidSpirit.AstralStep.Start = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		distance_max = 3000.0
+		mixgroup = "Weapons"
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/void_spirit/astral_start.vsnd",
+		]
+		vsnd_duration = 1.266122
+	}
+	Hero_VoidSpirit.AstralStep.End = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 84.0
+		distance_max = 3000.0
+		mixgroup = "Weapons"
+		delay = 0.05
+		volume_use_FOW = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/void_spirit/astral_end.vsnd",
+		]
+		vsnd_duration = 1.498458
+	}
+	Hero_VoidSpirit.AstralStep.Target = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		limiter_on = 1.0
+		limiter_max = 0.0
+		limiter_match_entity = 0.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/void_spirit/astral_target.vsnd",
+		]
+		vsnd_duration = 1.654671
+	}
+	Hero_VoidSpirit.AstralStep.MarkExplosionAOE = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.25
+		soundlevel = 75.0
+		distance_max = 2000.0
+		mixgroup = "Weapons"
+		limiter_on = 0.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/brewmaster/thunder_clap.vsnd",
+		]
+		vsnd_duration = 2.047438
+	}
+	Hero_VoidSpirit.Footsteps = 
+	{
+		type = "dota_src1_3d_footsteps"
+		volume_rand_min = -0.049988
+		volume_rand_max = 0.049988
+		volume = 0.4
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.1
+		soundlevel = 72.0
+		distance_max = 1000.0
+		event_type = 4.0
+		vsnd_files = 
+		[
+			"sounds/physics/footsteps/hero/shared/general01.vsnd",
+			"sounds/physics/footsteps/hero/shared/general02.vsnd",
+			"sounds/physics/footsteps/hero/shared/general03.vsnd",
+			"sounds/physics/footsteps/hero/shared/general04.vsnd",
+			"sounds/physics/footsteps/hero/shared/general05.vsnd",
+			"sounds/physics/footsteps/hero/shared/general06.vsnd",
+			"sounds/physics/footsteps/hero/shared/general07.vsnd",
+		]
+		vsnd_duration = 0.453787
+	}
+	Hero_VoidSpirit.Taunt.TI10 = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch = 1.0
+		soundlevel = 81.0
+		distance_max = 2500.0
+		limiter_on = 1.0
+		volume_fade_out = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/void_spirit/taunt_ti10.vsnd",
+		]
+		vsnd_duration = 3.792608
+	}
+}

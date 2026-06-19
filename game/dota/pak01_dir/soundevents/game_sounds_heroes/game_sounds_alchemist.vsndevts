@@ -1,0 +1,322 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
+{
+	Hero_Alchemist.PreAttack = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 75.0
+		distance_max = 1500.0
+		event_type = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/earthshaker/fist_swing1.vsnd",
+			"sounds/weapons/hero/earthshaker/fist_swing2.vsnd",
+			"sounds/weapons/hero/earthshaker/fist_swing3.vsnd",
+		]
+		vsnd_duration = 0.627755
+	}
+	Hero_Alchemist.Attack = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 75.0
+		distance_max = 2500.0
+		event_type = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/earthshaker/fist_swing_impact1.vsnd",
+			"sounds/weapons/hero/earthshaker/fist_swing_impact2.vsnd",
+			"sounds/weapons/hero/earthshaker/fist_swing_impact3.vsnd",
+		]
+		vsnd_duration = 0.731338
+	}
+	Hero_Alchemist.AcidSpray = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		volume_fade_out = 1.0
+		stop_at_time = 16.0
+		spread_radius = 1200.0
+		use_entity_position = 0.0
+		volume_use_FOW = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/alchemist/acid_spray.vsnd",
+		]
+		vsnd_duration = 9.255919
+	}
+	Hero_Alchemist.AcidSpray.Damage = 
+	{
+		type = "dota_src1_3d"
+		volume_rand_min = -0.25
+		volume_rand_max = 0.25
+		volume = 0.75
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 78.0
+		distance_max = 2500.0
+		limiter_on = 1.0
+		limiter_event_name = "Spray.Damage"
+		limiter_max = 6.0
+		limiter_match_type = 0.0
+		limiter_match_entity = 0.0
+		limiter_match_substring = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/alchemist/acid_spray_damage01.vsnd",
+			"sounds/weapons/hero/alchemist/acid_spray_damage02.vsnd",
+			"sounds/weapons/hero/alchemist/acid_spray_damage03.vsnd",
+			"sounds/weapons/hero/alchemist/acid_spray_damage04.vsnd",
+			"sounds/weapons/hero/alchemist/acid_spray_damage05.vsnd",
+			"sounds/weapons/hero/alchemist/acid_spray_damage06.vsnd",
+			"sounds/weapons/hero/alchemist/acid_spray_damage07.vsnd",
+		]
+		vsnd_duration = 1.091338
+	}
+	Hero_Alchemist.UnstableConcoction.Fuse = 
+	{
+		type = "dota_update_default"
+		volume = 0.5
+		pitch = 1.0
+		soundlevel = 84.0
+		mixgroup = "Weapons"
+		volume_fade_out = 0.5
+		spread_radius = 300.0
+		volume_use_FOW = 1.0
+		volume_FOW_filter_vel = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/alchemist/unstable_concoction_fuse.vsnd",
+		]
+		vsnd_duration = 5.713968
+	}
+	Hero_Alchemist.UnstableConcoction.Throw = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 75.0
+		distance_max = 2500.0
+		event_type = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/alchemist/unstable_concoction_throw.vsnd",
+		]
+		vsnd_duration = 1.485714
+	}
+	Hero_Alchemist.UnstableConcoction.Stun = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch = 1.0
+		soundlevel = 84.0
+		mixgroup = "Weapons"
+		spread_radius = 600.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/alchemist/unstable_concoction_stun01.vsnd",
+			"sounds/weapons/hero/alchemist/unstable_concoction_stun02.vsnd",
+		]
+		vsnd_duration = 2.316009
+	}
+	Hero_Alchemist.ChemicalRage.Cast = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch = 1.0
+		soundlevel = 84.0
+		mixgroup = "Ultimates"
+		spread_radius = 300.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/alchemist/chemical_rage_cast.vsnd",
+		]
+		vsnd_duration = 3.384921
+	}
+	Hero_Alchemist.ChemicalRage = 
+	{
+		type = "dota_update_default"
+		volume = 0.199951
+		pitch = 1.0
+		soundlevel = 84.0
+		mixgroup = "Weapons"
+		volume_fade_out = 0.8
+		stop_at_time = 25.0
+		volume_falloff_max = 1200.0
+		spread_radius = 100.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/alchemist/chemical_rage_loop.vsnd",
+		]
+		vsnd_duration = 4.181995
+	}
+	Hero_Alchemist.ChemicalRage.PreAttack = 
+	{
+		type = "dota_src1_3d"
+		volume_rand_min = -0.099976
+		volume_rand_max = 0.099976
+		volume = 0.89978
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.15
+		soundlevel = 75.0
+		distance_max = 1500.0
+		event_type = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/shared/large_blade/whoosh01.vsnd",
+			"sounds/weapons/hero/shared/large_blade/whoosh02.vsnd",
+			"sounds/weapons/hero/shared/large_blade/whoosh03.vsnd",
+		]
+		vsnd_duration = 0.734172
+	}
+	Hero_Alchemist.ChemicalRage.Attack = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch = 1.0
+		soundlevel = 75.0
+		distance_max = 2500.0
+		soundevent_layer2 = "Damage_Melee.Gore"
+		soundevent_layer2_on = 1.0
+		event_type = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/shared/impacts/sword_impact1.vsnd",
+			"sounds/weapons/hero/shared/impacts/sword_impact2.vsnd",
+			"sounds/weapons/hero/shared/impacts/sword_impact3.vsnd",
+			"sounds/weapons/hero/shared/impacts/sword_impact4.vsnd",
+		]
+		vsnd_duration = 0.64
+	}
+	Hero_Alchemist.Scepter.Cast = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 84.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/alchemist/scepter_target.vsnd",
+		]
+		vsnd_duration = 4.395555
+	}
+	Hero_Alchemist.Footsteps = 
+	{
+		type = "dota_src1_3d_footsteps"
+		volume_rand_min = -0.049988
+		volume_rand_max = 0.049988
+		volume = 0.44989
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 0.85
+		soundlevel = 75.0
+		distance_max = 2000.0
+		event_type = 4.0
+		vsnd_files = 
+		[
+			"sounds/physics/footsteps/hero/shared/general01.vsnd",
+			"sounds/physics/footsteps/hero/shared/general02.vsnd",
+			"sounds/physics/footsteps/hero/shared/general03.vsnd",
+			"sounds/physics/footsteps/hero/shared/general04.vsnd",
+			"sounds/physics/footsteps/hero/shared/general05.vsnd",
+			"sounds/physics/footsteps/hero/shared/general06.vsnd",
+			"sounds/physics/footsteps/hero/shared/general07.vsnd",
+		]
+		vsnd_duration = 0.453787
+	}
+	Hero_Alchemist.Foley = 
+	{
+		type = "dota_src1_3d"
+		volume_rand_min = -0.25
+		volume_rand_max = 0.25
+		volume = 0.25
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 78.0
+		distance_max = 2000.0
+		event_type = 3.0
+		vsnd_files = 
+		[
+			"sounds/physics/movement/hero/alchemist/slosh01.vsnd",
+			"sounds/physics/movement/hero/alchemist/slosh02.vsnd",
+			"sounds/physics/movement/hero/alchemist/slosh03.vsnd",
+			"sounds/physics/movement/hero/alchemist/slosh04.vsnd",
+			"sounds/physics/movement/hero/alchemist/slosh05.vsnd",
+			"sounds/physics/movement/hero/alchemist/rattle01.vsnd",
+			"sounds/physics/movement/hero/alchemist/rattle02.vsnd",
+			"sounds/physics/movement/hero/alchemist/rattle03.vsnd",
+			"sounds/physics/movement/hero/alchemist/rattle04.vsnd",
+			"sounds/physics/movement/hero/alchemist/rattle05.vsnd",
+		]
+		vsnd_duration = 0.75941
+	}
+	Hero_Alchemist.Death = 
+	{
+		type = "dota_null_start"
+	}
+	Hero_Alchemist.Taunt = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch = 1.0
+		soundlevel = 84.0
+		distance_max = 2500.0
+		event_type = 1.0
+		volume_fade_out = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/alchemist/ogre_hop.vsnd",
+		]
+		vsnd_duration = 6.824172
+	}
+	Hero_Alchemist.BerserkPotion.Cast = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 75.0
+		distance_max = 2500.0
+		event_type = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/alchemist/berserk_potion_cast.vsnd",
+		]
+		vsnd_duration = 1.485708
+	}
+	Hero_Alchemist.BerserkPotion.Target = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch = 1.0
+		soundlevel = 84.0
+		mixgroup = "Weapons"
+		spread_radius = 600.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/alchemist/berserk_potion_target.vsnd",
+		]
+		vsnd_duration = 1.388594
+	}
+}

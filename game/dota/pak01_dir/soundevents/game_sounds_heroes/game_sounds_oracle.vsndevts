@@ -1,0 +1,262 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
+{
+	Hero_Oracle.PreAttack = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 72.0
+		distance_max = 1500.0
+		event_type = 1.0
+		vsnd_files = "sounds/weapons/hero/oracle/preattack.vsnd"
+		vsnd_duration = 0.994694
+	}
+	Hero_Oracle.Attack = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 75.0
+		distance_max = 2500.0
+		event_type = 1.0
+		vsnd_files = "sounds/weapons/hero/oracle/attack.vsnd"
+		vsnd_duration = 0.997506
+	}
+	Hero_Oracle.ProjectileImpact = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 72.0
+		distance_max = 1000.0
+		limiter_on = 0.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/necrolyte/attack_impact1.vsnd",
+			"sounds/weapons/hero/necrolyte/attack_impact2.vsnd",
+			"sounds/weapons/hero/necrolyte/attack_impact3.vsnd",
+		]
+		vsnd_duration = 0.805442
+	}
+	Hero_Oracle.FortunesEnd.Channel = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 0.95
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		volume_fade_out = 1.0
+		spread_radius = 150.0
+		vsnd_files = "sounds/weapons/hero/oracle/fortune_channel.vsnd"
+		vsnd_duration = 3.932132
+	}
+	Hero_Oracle.FortunesEnd.Attack = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		limiter_event_name = "Hero_Oracle.FortunesEnd.Channel"
+		limiter_on = 1.0
+		limiter_match_entity = 1.0
+		vsnd_files = "sounds/weapons/hero/oracle/fortune_attack.vsnd"
+		vsnd_duration = 2.105714
+	}
+	Hero_Oracle.FortunesEnd.Target = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 75.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		distance_max = 2500.0
+		vsnd_files = "sounds/weapons/hero/oracle/fortune_target.vsnd"
+		vsnd_duration = 2.878753
+	}
+	Hero_Oracle.FatesEdict.Cast = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		vsnd_files = "sounds/weapons/hero/oracle/edict_cast.vsnd"
+		vsnd_duration = 2.73
+	}
+	Hero_Oracle.FatesEdict = 
+	{
+		type = "dota_update_default"
+		volume = 0.699707
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		volume_fade_out = 1.0
+		volume_falloff_max = 2500.0
+		spread_radius = 300.0
+		vsnd_files = "sounds/weapons/hero/oracle/edict_target.vsnd"
+		vsnd_duration = 7.508572
+	}
+	Hero_Oracle.PurifyingFlames.Damage = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		vsnd_files = "sounds/weapons/hero/oracle/purifying_damage.vsnd"
+		vsnd_duration = 3.015964
+	}
+	Hero_Oracle.PurifyingFlames = 
+	{
+		type = "dota_update_default"
+		volume = 0.599609
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		volume_fade_out = 3.0
+		stop_at_time = 4.5
+		volume_falloff_max = 2000.0
+		spread_radius = 300.0
+		vsnd_files = "sounds/weapons/hero/oracle/purifying_loop.vsnd"
+		vsnd_duration = 1.999864
+	}
+	Hero_Oracle.FalsePromise.Cast = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Ultimates"
+		spread_radius = 300.0
+		vsnd_files = "sounds/weapons/hero/oracle/false_promise_cast.vsnd"
+		vsnd_duration = 2.160862
+	}
+	Hero_Oracle.FalsePromise.Target = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Ultimates"
+		spread_radius = 300.0
+		vsnd_files = "sounds/weapons/hero/oracle/false_promise_target.vsnd"
+		vsnd_duration = 6.061519
+	}
+	Hero_Oracle.FalsePromise.FP = 
+	{
+		type = "dota_src1_2d"
+		volume = 1.0
+		pitch = 1.0
+		limiter_on = 0.0
+		vsnd_files = "sounds/weapons/hero/oracle/false_promise_fp.vsnd"
+		vsnd_duration = 9.142858
+	}
+	Hero_Oracle.FalsePromise.Healed = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Ultimates"
+		spread_radius = 150.0
+		vsnd_files = "sounds/weapons/hero/oracle/false_promise_heal.vsnd"
+		vsnd_duration = 3.072222
+	}
+	Hero_Oracle.FalsePromise.Damaged = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Ultimates"
+		spread_radius = 300.0
+		vsnd_files = "sounds/weapons/hero/oracle/false_promise_damage.vsnd"
+		vsnd_duration = 2.668662
+	}
+	Hero_Oracle.RainOfDestiny.Cast = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		vsnd_files = "sounds/weapons/hero/oracle/rain_cast.vsnd"
+		vsnd_duration = 2.333628
+	}
+	Hero_Oracle.RainOfDestiny = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 900.0
+		vsnd_files = "sounds/weapons/hero/oracle/enc/rain_of_destiny.vsnd"
+		vsnd_duration = 10.457146
+	}
+	Hero_Oracle.IdleLoop = 
+	{
+		type = "dota_update_default"
+		volume = 0.399902
+		pitch = 1.0
+		soundlevel = 69.0
+		mixgroup = "Physics"
+		volume_move_vol = 0.1
+		volume_move_vel = 300.0
+		volume_move_filter_vel = 1.0
+		volume_falloff_min = 10.0
+		volume_falloff_max = 1000.0
+		vsnd_files = "sounds/physics/movement/hero/oracle/idle_loop.vsnd"
+		vsnd_duration = 2.000544
+	}
+	Hero_Oracle.Death = 
+	{
+		type = "dota_null_start"
+	}
+	Hero_Oracle.Taunt = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch = 1.0
+		soundlevel = 81.0
+		distance_max = 2500.0
+		event_type = 1.0
+		volume_fade_out = 0.5
+		vsnd_files = "sounds/weapons/hero/oracle/taunt_2021.vsnd"
+		vsnd_duration = 5.271896
+	}
+}

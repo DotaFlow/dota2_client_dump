@@ -1,0 +1,67 @@
+<!-- xml reconstructed by Source 2 Viewer - https://valveresourceformat.github.io -->
+<root>
+	<styles>
+		<include src="s2r://panorama/styles/dotastyles.vcss_c" />
+		<include src="s2r://panorama/styles/ability_details.vcss_c" />
+		<include src="s2r://panorama/styles/facet_details.vcss_c" />
+	</styles>
+	<snippets>
+		<snippet name="FacetAbilityMod">
+			<Panel class="FacetAbilityMod">
+				<Panel class="FacetAbilityHeader DetailsOnly">
+					<DOTAAbilityImage id="FacetAbilityImage" />
+					<DOTAFacetIcon id="FacetFacetImage" />
+					<DOTAInnateIcon id="FacetInnateImage" show-tooltips="false" />
+					<Label id="FacetAbilityName" text="{s:facet_ability_name}" />
+				</Panel>
+				<Panel class="FacetAbilityDescriptionBody ModAbility">
+					<Label class="FacetDescriptionLabel" text="{s:facet_ability_desc}" html="true" />
+					<Label class="FacetDescriptionExtraText DetailsOnly" text="{s:facet_ability_variables}" html="true" />
+				</Panel>
+				<Panel class="FacetAbilityDescriptionBody NewAbility">
+					<DOTAAbilityDetails id="FacetAbilityDetails" />
+				</Panel>
+			</Panel>
+		</snippet>
+		<snippet name="AghsSection">
+			<Panel class="AghsSection">
+				<Panel class="InlineScepterHeader">
+					<Panel id="AghsStatusScepterContainer">
+						<Panel id="AghsStatusScepterIcon" class="AghanimsIcon" />
+					</Panel>
+					<Label class="AghsTitle" text="#DOTA_AbilityTooltip_Aghs_Scepter" />
+				</Panel>
+				<Panel class="InlineShardHeader">
+					<Panel id="AghsStatusShardContainer">
+						<Panel id="AghsStatusShardIcon" class="AghanimsIcon" />
+					</Panel>
+					<Label class="AghsTitle" text="#DOTA_AbilityTooltip_Aghs_Shard" />
+				</Panel>
+				<Panel id="AghsSectionContents" />
+			</Panel>
+		</snippet>
+	</snippets>
+	<DOTAFacetDetails>
+		<Panel class="FacetHeader">
+			<Panel class="FacetBackground" />
+			<Panel class="FacetBackgroundTexture" />
+			<Panel class="FacetIconContainer">
+				<Panel class="FacetIconContainerShard" />
+				<Panel id="FacetIcon" />
+			</Panel>
+			<Panel class="FacetHeaderText">
+				<Label class="FacetName TitleSmall" text="{s:facet_name}" />
+			</Panel>
+		</Panel>
+		<Panel class="Wrapper">
+			<Panel class="FacetBody MainDetails MinAbilityTooltip">
+				<Label class="FacetDetails" text="{s:facet_desc}" html="true" />
+				<Panel class="AltDetailsHelp">
+					<Image class="AltKeyIcon" src="s2r://panorama/images/control_icons/alt_key_png.vtex" scaling="stretch-to-fit-preserve-aspect" />
+					<Label html="true" text="#DOTA_More_Details" />
+				</Panel>
+			</Panel>
+			<Panel class="FacetBody AltDetails" id="FacetAltDetailsContainer" />
+		</Panel>
+	</DOTAFacetDetails>
+</root>

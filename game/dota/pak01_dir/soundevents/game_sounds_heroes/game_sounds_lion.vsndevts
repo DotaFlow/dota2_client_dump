@@ -1,0 +1,418 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
+{
+	Hero_Lion.PreAttack = 
+	{
+		type = "dota_null_start"
+	}
+	Hero_Lion.Attack = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 75.0
+		distance_max = 2500.0
+		event_type = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/lion/attack01.vsnd",
+			"sounds/weapons/hero/lion/attack02.vsnd",
+			"sounds/weapons/hero/lion/attack03.vsnd",
+		]
+		vsnd_duration = 1.261859
+	}
+	Hero_Lion.ProjectileImpact = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 72.0
+		distance_max = 1000.0
+		limiter_on = 0.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/lion/lion_attack_impact1.vsnd",
+			"sounds/weapons/hero/lion/lion_attack_impact2.vsnd",
+		]
+		vsnd_duration = 1.062245
+	}
+	Hero_Lion.Punch.PreAttack = 
+	{
+		type = "dota_src1_3d"
+		volume_rand_min = -0.099976
+		volume_rand_max = 0.099976
+		volume = 0.499878
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.2
+		soundlevel = 75.0
+		distance_max = 1500.0
+		event_type = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/shared/large_blade/whoosh01.vsnd",
+			"sounds/weapons/hero/shared/large_blade/whoosh02.vsnd",
+			"sounds/weapons/hero/shared/large_blade/whoosh03.vsnd",
+		]
+		vsnd_duration = 0.734172
+	}
+	Hero_Lion.Punch.Attack = 
+	{
+		type = "dota_src1_3d"
+		volume = 0.8
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 78.0
+		distance_max = 2500.0
+		soundevent_layer2 = "Hero_Lion.Punch.Attack.Impact"
+		soundevent_layer2_on = 1.0
+		soundevent_layer3 = "Damage_Melee.Gore"
+		soundevent_layer3_on = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/nightstalker/attack01.vsnd",
+			"sounds/weapons/hero/nightstalker/attack02.vsnd",
+			"sounds/weapons/hero/nightstalker/attack03.vsnd",
+		]
+		vsnd_duration = 0.886939
+	}
+	Hero_Lion.Punch.Attack.Impact = 
+	{
+		type = "dota_src1_3d"
+		volume_rand_min = -0.099976
+		volume_rand_max = 0.099976
+		volume = 0.599976
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 78.0
+		distance_max = 2500.0
+		limiter_on = 0.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/shared/large_blade/follow_thru01.vsnd",
+			"sounds/weapons/hero/shared/large_blade/follow_thru02.vsnd",
+			"sounds/weapons/hero/shared/large_blade/follow_thru03.vsnd",
+		]
+		vsnd_duration = 1.034444
+	}
+	Hero_Lion.Impale = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		vsnd_files = "sounds/weapons/hero/lion/lion_impale.vsnd"
+		vsnd_duration = 2.391769
+	}
+	Hero_Lion.ImpaleHitTarget = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		distance_max = 2500.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/lion/lion_impale_target_hit1.vsnd",
+			"sounds/weapons/hero/lion/lion_impale_target_hit2.vsnd",
+			"sounds/weapons/hero/lion/lion_impale_target_hit3.vsnd",
+		]
+		vsnd_duration = 0.641723
+	}
+	Hero_Lion.ImpaleTargetLand = 
+	{
+		type = "dota_src1_3d"
+		volume_rand_min = -0.049988
+		volume_rand_max = 0.049988
+		volume = 0.6
+		pitch = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		soundlevel = 75.0
+		distance_max = 2000.0
+		limiter_on = 0.0
+		vsnd_files = 
+		[
+			"sounds/physics/deaths/common/body_impact_light_01.vsnd",
+			"sounds/physics/deaths/common/body_impact_light_02.vsnd",
+			"sounds/physics/deaths/common/body_impact_light_03.vsnd",
+			"sounds/physics/deaths/common/body_impact_light_04.vsnd",
+		]
+		vsnd_duration = 0.282676
+	}
+	Hero_Lion.Voodoo = 
+	{
+		type = "dota_src1_3d"
+		volume = 0.699707
+		pitch = 1.0
+		soundlevel = 81.0
+		distance_max = 2500.0
+		limiter_on = 0.0
+		vsnd_files = "sounds/weapons/hero/lion/lion_voodoo.vsnd"
+		vsnd_duration = 1.889524
+	}
+	Hero_Lion.Hex.Target = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 90.0
+		distance_max = 2500.0
+		limiter_on = 0.0
+		vsnd_files = "sounds/ambient/frog.vsnd"
+		vsnd_duration = 0.717347
+	}
+	Hero_Lion.ManaDrain = 
+	{
+		type = "dota_update_default"
+		volume = 0.5
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		volume_fade_out = 1.0
+		spread_radius = 300.0
+		vsnd_files = "sounds/weapons/hero/lion/lion_manadrain.vsnd"
+		vsnd_duration = 3.96576
+	}
+	Hero_Lion.FingerOfDeath = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		vsnd_files = "sounds/weapons/hero/lion/finger_of_death.vsnd"
+		vsnd_duration = 1.36
+	}
+	Hero_Lion.FingerOfDeathImpact = 
+	{
+		type = "dota_update_default"
+		volume = 0.7
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Ultimates"
+		spread_radius = 300.0
+		block_distance = 600.0
+		block_duration = 0.1
+		vsnd_files = "sounds/weapons/hero/lion/finger_of_death_impact.vsnd"
+		vsnd_duration = 2.486508
+	}
+	Hero_Lion.Footsteps = 
+	{
+		type = "dota_src1_3d_footsteps"
+		volume_rand_min = -0.149902
+		volume_rand_max = 0.149902
+		volume = 0.449707
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 72.0
+		distance_max = 2000.0
+		event_type = 4.0
+		vsnd_files = 
+		[
+			"sounds/physics/footsteps/hero/shared/general01.vsnd",
+			"sounds/physics/footsteps/hero/shared/general02.vsnd",
+			"sounds/physics/footsteps/hero/shared/general03.vsnd",
+			"sounds/physics/footsteps/hero/shared/general04.vsnd",
+			"sounds/physics/footsteps/hero/shared/general05.vsnd",
+			"sounds/physics/footsteps/hero/shared/general06.vsnd",
+			"sounds/physics/footsteps/hero/shared/general07.vsnd",
+		]
+		vsnd_duration = 0.453787
+	}
+	Hero_Lion.Death = 
+	{
+		type = "dota_null_start"
+	}
+	Hero_Lion.Hex.Fishstick = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch = 1.0
+		soundlevel = 81.0
+		distance_max = 2500.0
+		limiter_on = 0.0
+		vsnd_files = "sounds/weapons/hero/lion/fishstick_cast.vsnd"
+		vsnd_duration = 1.344354
+	}
+	Hero_Lion.Fishstick.Target = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 84.0
+		distance_max = 1500.0
+		limiter_on = 0.0
+		vsnd_files = "sounds/ambient/fish/fish.vsnd"
+		vsnd_duration = 2.1
+	}
+	Hero_Lion.TauntToHell = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch = 1.0
+		soundlevel = 84.0
+		distance_max = 2500.0
+		event_type = 1.0
+		volume_fade_out = 1.0
+		vsnd_files = "sounds/weapons/hero/lion/taunt_to_hell.vsnd"
+		vsnd_duration = 6.265986
+	}
+	Hero_Lion.FingerOfDeath.TI8 = 
+	{
+		type = "dota_update_default"
+		volume = 0.8
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		soundevent_layer2 = "Hero_Lion.FoD.Cast.TI8_layer"
+		soundevent_layer2_on = 1.0
+		vsnd_files = "sounds/weapons/hero/lion/finger_of_death.vsnd"
+		vsnd_duration = 1.36
+	}
+	Hero_Lion.FingerOfDeathImpact.TI8 = 
+	{
+		type = "dota_update_default"
+		volume = 0.8
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		soundevent_layer2 = "Hero_Lion.FoD.Target.TI8_layer"
+		soundevent_layer2_on = 1.0
+		block_duration = 0.1
+		block_distance = 600.0
+		vsnd_files = "sounds/weapons/hero/lion/finger_of_death_impact.vsnd"
+		vsnd_duration = 2.486508
+	}
+	Hero_Lion.FoD.Cast.TI8_layer = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		vsnd_files = "sounds/weapons/hero/lion/finger_cast_ti8.vsnd"
+		vsnd_duration = 0.97127
+	}
+	Hero_Lion.FoD.Target.TI8_layer = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		delay = 0.15
+		mixgroup = "Ultimates"
+		spread_radius = 300.0
+		block_duration = 0.1
+		block_distance = 600.0
+		vsnd_files = "sounds/weapons/hero/lion/finger_target_ti8.vsnd"
+		vsnd_duration = 2.184762
+	}
+	Hero_Lion.KillCounter = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch = 1.0
+		soundlevel = 90.0
+		mixgroup = "Weapons"
+		distance_max = 3500.0
+		vsnd_files = "sounds/weapons/hero/lion/kill_counter.vsnd"
+		vsnd_duration = 4.533832
+	}
+	Hero_Lion.Impale.Projectile = 
+	{
+		type = "dota_null_start"
+	}
+	Hero_Lion.Impale.Projectile.TI9 = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		volume_use_FOW = 1.0
+		volume_FOW_radius = 300.0
+		vsnd_files = "sounds/weapons/hero/lion/impale_projectile_ti9.vsnd"
+		vsnd_duration = 2.626531
+	}
+	Hero_Lion.FingerOfDeath.Precast = 
+	{
+		type = "dota_null_start"
+	}
+	Hero_Lion.FingerOfDeath.Precast.2025 = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 0.8
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		vsnd_files = "sounds/weapons/hero/lion/attack01.vsnd"
+		vsnd_duration = 1.054082
+	}
+	Hero_Lion.FingerOfDeath.2025 = 
+	{
+		type = "dota_update_default"
+		volume = 0.8
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		soundevent_layer2 = "Hero_Lion.FingerOfDeath.2025.Layer"
+		soundevent_layer2_on = 1.0
+		vsnd_files = "sounds/weapons/hero/lion/finger_of_death.vsnd"
+		vsnd_duration = 1.36
+	}
+	Hero_Lion.FingerOfDeath.2025.Layer = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Ultimates"
+		spread_radius = 600.0
+		vsnd_files = "sounds/weapons/hero/lion/finger_cast_2025.vsnd"
+		vsnd_duration = 5.461315
+	}
+}

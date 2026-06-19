@@ -1,0 +1,469 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
+{
+	Hero_Treant.PreAttack = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 75.0
+		distance_max = 1500.0
+		event_type = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/earthshaker/fist_swing1.vsnd",
+			"sounds/weapons/hero/earthshaker/fist_swing2.vsnd",
+			"sounds/weapons/hero/earthshaker/fist_swing3.vsnd",
+		]
+		vsnd_duration = 0.627755
+	}
+	Hero_Treant.Attack = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 75.0
+		mixgroup = "BaseAttacks"
+		spread_radius = 150.0
+		distance_max = 2500.0
+		soundevent_layer2 = "Hero_Treant.Attack.Impact"
+		soundevent_layer2_on = 1.0
+		soundevent_layer3 = "Damage_Melee.Gore"
+		soundevent_layer3_on = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/earthshaker/fist_swing_impact1.vsnd",
+			"sounds/weapons/hero/earthshaker/fist_swing_impact2.vsnd",
+			"sounds/weapons/hero/earthshaker/fist_swing_impact3.vsnd",
+		]
+		vsnd_duration = 0.731338
+	}
+	Hero_Treant.Attack.Impact = 
+	{
+		type = "dota_update_default"
+		volume = 0.5
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "BaseAttacks"
+		spread_radius = 150.0
+		distance_max = 2500.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/shared/large_blade/thump01.vsnd",
+			"sounds/weapons/hero/shared/large_blade/thump02.vsnd",
+			"sounds/weapons/hero/shared/large_blade/thump03.vsnd",
+		]
+		vsnd_duration = 0.330522
+	}
+	Hero_Treant.NaturesGrasp.Cast = 
+	{
+		type = "dota_update_default"
+		volume = 0.599609
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 0.8
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		volume_fade_out = 0.0
+		spread_radius = 300.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/treant/natures_guise.vsnd",
+		]
+		vsnd_duration = 2.763039
+	}
+	Hero_Treant.NaturesGrasp.Spawn = 
+	{
+		type = "dota_src1_3d"
+		volume = 0.8
+		volume_rand_min = -0.1
+		volume_rand_max = 0.1
+		pitch = 1.0
+		pitch_rand_min = -0.1
+		pitch_rand_max = 0.1
+		soundlevel = 75.0
+		mixgroup = "Weapons"
+		distance_max = 2500.0
+		soundevent_layer2 = "Hero_Treant.NaturesGrasp.Spawn.Layer"
+		soundevent_layer2_on = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/dark_willow/bramble_spawn.vsnd",
+		]
+		vsnd_duration = 1.839841
+	}
+	Hero_Treant.NaturesGrasp.Spawn.Layer = 
+	{
+		type = "dota_src1_3d"
+		volume = 0.8
+		volume_rand_min = -0.1
+		volume_rand_max = 0.1
+		pitch = 1.0
+		pitch_rand_min = -0.2
+		pitch_rand_max = 0.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		delay = 0.25
+		distance_max = 2500.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/treant/natures_grasp_layer01.vsnd",
+			"sounds/weapons/hero/treant/natures_grasp_layer02.vsnd",
+			"sounds/weapons/hero/treant/natures_grasp_layer03.vsnd",
+			"sounds/weapons/hero/treant/natures_grasp_layer04.vsnd",
+		]
+		vsnd_duration = 0.450726
+	}
+	Hero_Treant.NaturesGrasp.Damage = 
+	{
+		type = "dota_src1_3d"
+		volume = 0.75
+		volume_rand_min = -1.0
+		pitch = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		soundlevel = 72.0
+		mixgroup = "Physics"
+		delay = 0.0
+		distance_max = 2000.0
+		limiter_match_entity = 0.0
+		limiter_stop_oldest = false
+		volume_fade_out = 0.2
+		volume_fade_in = 0.2
+		limiter_max = 2.0
+		limiter_match_type = 0.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/dark_willow/bramble_layer01.vsnd",
+			"sounds/weapons/hero/dark_willow/bramble_layer02.vsnd",
+			"sounds/weapons/hero/dark_willow/bramble_layer03.vsnd",
+			"sounds/weapons/hero/dark_willow/bramble_layer04.vsnd",
+		]
+		vsnd_duration = 1.986327
+	}
+	Hero_Treant.NaturesGrasp.Destroy = 
+	{
+		type = "dota_src1_3d"
+		volume = 0.8
+		volume_rand_min = -0.099975
+		volume_rand_max = 0.099975
+		pitch = 1.2
+		pitch_rand_min = -0.1
+		pitch_rand_max = 0.1
+		soundlevel = 75.0
+		mixgroup = "Physics"
+		distance_max = 2500.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/dark_willow/bramble_destroy.vsnd",
+		]
+		vsnd_duration = 2.776145
+	}
+	Hero_Treant.LeechSeed.Cast = 
+	{
+		type = "dota_update_default"
+		volume = 0.5
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 600.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/treant/leech_seed_cast.vsnd",
+		]
+		vsnd_duration = 2.985714
+	}
+	Hero_Treant.LeechSeed.Target = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/treant/leech_seed_target.vsnd",
+		]
+		vsnd_duration = 2.634671
+	}
+	Hero_Treant.LeechSeed.Tick = 
+	{
+		type = "dota_update_default"
+		volume_rand_min = -0.099976
+		volume_rand_max = 0.099976
+		volume = 0.299927
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/treant/leech_seed_tick.vsnd",
+		]
+		vsnd_duration = 1.187347
+	}
+	Hero_Treant.LivingArmor.Cast = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch = 1.5
+		soundlevel = 81.0
+		distance_max = 2500.0
+		limiter_on = 0.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/treant/living_armor.vsnd",
+		]
+		vsnd_duration = 4.443378
+	}
+	Hero_Treant.LivingArmor.Target = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		volume_fade_out = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/treant/living_armor.vsnd",
+		]
+		vsnd_duration = 4.443378
+	}
+	Hero_Treant.Eyes.Cast = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 900.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/treant/eyes_of_the_forest.vsnd",
+		]
+		vsnd_duration = 5.221088
+	}
+	Hero_Treant.Overgrowth.Cast = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Ultimates"
+		spread_radius = 600.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/treant/overgrowth_cast.vsnd",
+		]
+		vsnd_duration = 3.640975
+	}
+	Hero_Treant.Overgrowth.CastAnim = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Ultimates"
+		spread_radius = 600.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/treant/overgrowth_anim.vsnd",
+		]
+		vsnd_duration = 2.735193
+	}
+	Hero_Treant.Overgrowth.Target = 
+	{
+		type = "dota_update_default"
+		volume = 0.599609
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Ultimates"
+		delay = 1.5
+		spread_radius = 300.0
+		distance_max = 2500.0
+		soundevent_layer2 = "Hero_Treant.SpellFoley"
+		soundevent_layer2_on = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/treant/overgrowth_target01.vsnd",
+			"sounds/weapons/hero/treant/overgrowth_target02.vsnd",
+			"sounds/weapons/hero/treant/overgrowth_target03.vsnd",
+			"sounds/weapons/hero/treant/overgrowth_target04.vsnd",
+		]
+		vsnd_duration = 3.927619
+	}
+	Hero_Treant.Footsteps = 
+	{
+		type = "dota_src1_3d_footsteps"
+		volume = 0.799805
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 75.0
+		distance_max = 3000.0
+		soundevent_layer2 = "Hero_Treant.Foley"
+		soundevent_layer2_on = 1.0
+		event_type = 4.0
+		vsnd_files = 
+		[
+			"sounds/physics/footsteps/hero/treant/step01.vsnd",
+			"sounds/physics/footsteps/hero/treant/step02.vsnd",
+			"sounds/physics/footsteps/hero/treant/step03.vsnd",
+			"sounds/physics/footsteps/hero/treant/step04.vsnd",
+		]
+		vsnd_duration = 0.547438
+	}
+	Hero_Treant.Foley = 
+	{
+		type = "dota_src1_3d"
+		volume_rand_min = -0.199951
+		volume_rand_max = 0.199951
+		volume = 0.399902
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 72.0
+		distance_max = 2000.0
+		event_type = 4.0
+		vsnd_files = 
+		[
+			"sounds/physics/footsteps/hero/furion/treant_move01.vsnd",
+			"sounds/physics/footsteps/hero/furion/treant_move02.vsnd",
+			"sounds/physics/footsteps/hero/furion/treant_move03.vsnd",
+			"sounds/physics/footsteps/hero/furion/treant_move04.vsnd",
+			"sounds/physics/footsteps/hero/furion/treant_move05.vsnd",
+			"sounds/physics/footsteps/hero/furion/treant_move06.vsnd",
+		]
+		vsnd_duration = 1.104172
+	}
+	Hero_Treant.SpellFoley = 
+	{
+		type = "dota_src1_3d"
+		volume_rand_min = -0.149902
+		volume_rand_max = 0.149902
+		volume = 0.449707
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 78.0
+		distance_max = 2000.0
+		event_type = 4.0
+		vsnd_files = 
+		[
+			"sounds/physics/footsteps/hero/furion/treant_move01.vsnd",
+			"sounds/physics/footsteps/hero/furion/treant_move02.vsnd",
+			"sounds/physics/footsteps/hero/furion/treant_move03.vsnd",
+			"sounds/physics/footsteps/hero/furion/treant_move04.vsnd",
+			"sounds/physics/footsteps/hero/furion/treant_move05.vsnd",
+			"sounds/physics/footsteps/hero/furion/treant_move06.vsnd",
+		]
+		vsnd_duration = 1.104172
+	}
+	Hero_Treant.Death = 
+	{
+		type = "dota_src1_3d"
+		volume = 0.5
+		pitch = 1.0
+		soundlevel = 81.0
+		distance_max = 2000.0
+		event_type = 4.0
+		vsnd_files = 
+		[
+			"sounds/physics/deaths/specials/treeant_death.vsnd",
+		]
+		vsnd_duration = 2.892336
+	}
+	Hero_Treant.LivingArmor.Target.ti7 = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		soundevent_layer2 = "Hero_Treant.LivingArmor.Target.ti7_layer"
+		soundevent_layer2_on = 1.0
+		dont_stop_layers = 0.0
+		volume_fade_out = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/treant/living_armor.vsnd",
+		]
+		vsnd_duration = 4.443378
+	}
+	Hero_Treant.LivingArmor.Target.ti7_layer = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		soundlevel = 81.0
+		distance_max = 1500.0
+		volume_fade_out = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/treant/armor_ti7_layer.vsnd",
+		]
+		vsnd_duration = 7.340408
+	}
+	Hero_Treant.NaturesGuise.On = 
+	{
+		type = "dota_update_default"
+		volume = 0.599609
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		volume_fade_out = 0.5
+		spread_radius = 300.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/treant/natures_guise.vsnd",
+		]
+		vsnd_duration = 2.763039
+	}
+	Hero_Treant.NaturesGuise.Off = 
+	{
+		type = "dota_update_default"
+		volume = 0.299805
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 150.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/treant/natures_guise_off.vsnd",
+		]
+		vsnd_duration = 0.633424
+	}
+}

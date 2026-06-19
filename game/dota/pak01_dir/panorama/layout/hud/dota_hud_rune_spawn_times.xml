@@ -1,0 +1,21 @@
+<!-- xml reconstructed by Source 2 Viewer - https://valveresourceformat.github.io -->
+<root>
+	<styles>
+		<include src="s2r://panorama/styles/dotastyles.vcss_c" />
+		<include src="s2r://panorama/styles/hudstyles.vcss_c" />
+		<include src="s2r://panorama/styles/hud/dota_hud_rune_spawn_times.vcss_c" />
+	</styles>
+	<snippets>
+		<snippet name="RuneSpawnTimes">
+			<Panel class="Timer SpawnTimer" onactivate="DOTAOnRuneTimerClicked()">
+				<Panel class="TimerContainer">
+					<DOTAEmoticon id="RuneEmoticon" />
+					<CircularProgressBar class="ProgressBar" id="SpawnProgressBar" />
+					<Label class="TitleLabel" text="{s:spawn_rune_label}" />
+					<Label class="TimeLabel" text="{s:spawn_countdown}" />
+				</Panel>
+			</Panel>
+		</snippet>
+	</snippets>
+	<DOTAHUDRuneSpawnTimes hittest="false" />
+</root>

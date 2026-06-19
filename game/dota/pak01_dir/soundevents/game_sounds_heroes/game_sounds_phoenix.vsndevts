@@ -1,0 +1,417 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
+{
+	Hero_Phoenix.PreAttack = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 72.0
+		distance_max = 1500.0
+		event_type = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/lina/preattack.vsnd",
+		]
+		vsnd_duration = 0.722789
+	}
+	Hero_Phoenix.Attack = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 78.0
+		distance_max = 2500.0
+		event_type = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/phoenix/attack01.vsnd",
+			"sounds/weapons/hero/phoenix/attack02.vsnd",
+		]
+		vsnd_duration = 1.585079
+	}
+	Hero_Phoenix.ProjectileImpact = 
+	{
+		type = "dota_src1_3d"
+		volume_rand_min = -0.149902
+		volume_rand_max = 0.149902
+		volume = 0.749512
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 75.0
+		distance_max = 1000.0
+		limiter_on = 0.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/phoenix/projectile_impact.vsnd",
+		]
+		vsnd_duration = 1.494558
+	}
+	Hero_Phoenix.IcarusDive.Cast = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		volume_fade_out = 1.0
+		spread_radius = 300.0
+		volume_use_FOW = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/phoenix/icarus_dive.vsnd",
+		]
+		vsnd_duration = 3.378685
+	}
+	Hero_Phoenix.IcarusDive.Stop = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		limiter_on = 0.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/phoenix/icarus_dive_stop.vsnd",
+		]
+		vsnd_duration = 1.756871
+	}
+	Hero_Phoenix.FireSpirits.Cast = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/phoenix/fire_spirits_cast.vsnd",
+		]
+		vsnd_duration = 4.420431
+	}
+	Hero_Phoenix.FireSpirits.Loop = 
+	{
+		type = "dota_update_default"
+		volume = 0.25
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 65.0
+		mixgroup = "Weapons"
+		volume_fade_out = 0.5
+		stop_at_time = 17.0
+		spread_radius = 300.0
+		volume_use_FOW = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/phoenix/fire_spirits_loop.vsnd",
+		]
+		vsnd_duration = 2.108889
+	}
+	Hero_Phoenix.FireSpirits.Launch = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 75.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/phoenix/fire_spirits_launch.vsnd",
+		]
+		vsnd_duration = 2.514286
+	}
+	Hero_Phoenix.FireSpirits.Target = 
+	{
+		type = "dota_update_default"
+		volume = 0.299805
+		pitch = 1.2
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 150.0
+		limiter_on = 1.0
+		limiter_event_name = "Hero_Phoenix.FireSpirits.Target"
+		limiter_max = 3.0
+		limiter_stop_oldest = false
+		limiter_match_event_duration = 0.25
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/batrider/batrider_sticky_napalm_impact_01.vsnd",
+		]
+		vsnd_duration = 2.042426
+	}
+	Hero_Phoenix.FireSpirits.ProjectileHit = 
+	{
+		type = "dota_update_default"
+		volume = 0.5
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 72.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/ember_spirit/searing_chains01.vsnd",
+			"sounds/weapons/hero/ember_spirit/searing_chains02.vsnd",
+		]
+		vsnd_duration = 4.788503
+	}
+	Hero_Phoenix.SunRay.Cast = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 84.0
+		mixgroup = "Weapons"
+		volume_fade_out = 1.0
+		spread_radius = 600.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/phoenix/sunray_cast.vsnd",
+		]
+		vsnd_duration = 4.593197
+	}
+	Hero_Phoenix.SunRay.Beam = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 84.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/phoenix/sunray_beam_location.vsnd",
+		]
+		vsnd_duration = 2.004354
+	}
+	Hero_Phoenix.SunRay.Loop = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 65.0
+		mixgroup = "Weapons"
+		volume_fade_out = 0.5
+		stop_at_time = 6.0
+		spread_radius = 300.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/phoenix/sunray_beam_loop.vsnd",
+		]
+		vsnd_duration = 5.477846
+	}
+	Hero_Phoenix.SunRay.Stop = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		distance_max = 2500.0
+		limiter_on = 0.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/phoenix/sunray_beam_stop.vsnd",
+		]
+		vsnd_duration = 1.427302
+	}
+	Hero_Phoenix.SuperNova.Cast = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		volume_fade_out = 0.5
+		spread_radius = 300.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/phoenix/super_nova_cast.vsnd",
+		]
+		vsnd_duration = 6.530612
+	}
+	Hero_Phoenix.SuperNova.Begin = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Ultimates"
+		spread_radius = 600.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/phoenix/super_nova_begin.vsnd",
+		]
+		vsnd_duration = 2.319116
+	}
+	Hero_Phoenix.SuperNova.Death = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 600.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/phoenix/super_nova_death.vsnd",
+		]
+		vsnd_duration = 3.191837
+	}
+	Hero_Phoenix.SuperNova.Explode = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Ultimates"
+		volume_falloff_max = 20000.0
+		spread_radius = 3000.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/phoenix/super_nova_explode.vsnd",
+		]
+		vsnd_duration = 4.082857
+	}
+	Hero_Phoenix.Flap = 
+	{
+		type = "dota_update_default"
+		volume = 0.599609
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 75.0
+		mixgroup = "Physics"
+		volume_move_vol = 0.1
+		volume_move_vel = 100.0
+		volume_move_filter_vel = 1.0
+		volume_falloff_min = 10.0
+		volume_falloff_max = 1000.0
+		vsnd_files = 
+		[
+			"sounds/physics/movement/hero/phoenix/wings.vsnd",
+		]
+		vsnd_duration = 0.906667
+	}
+	Hero_Phoenix.IdleLoop = 
+	{
+		type = "dota_update_default"
+		volume = 0.399902
+		pitch = 1.1
+		soundlevel = 75.0
+		mixgroup = "Physics"
+		volume_move_vol = 0.2
+		volume_move_vel = 300.0
+		volume_move_filter_vel = 1.0
+		volume_falloff_min = 10.0
+		volume_falloff_max = 750.0
+		vsnd_files = 
+		[
+			"sounds/physics/movement/hero/phoenix/idle_loop.vsnd",
+		]
+		vsnd_duration = 2.389342
+	}
+	Hero_Phoenix.Death = 
+	{
+		type = "dota_src1_3d"
+		volume = 0.599609
+		pitch = 1.0
+		soundlevel = 81.0
+		distance_max = 2000.0
+		event_type = 4.0
+		vsnd_files = 
+		[
+			"sounds/physics/deaths/specials/lina_death.vsnd",
+		]
+		vsnd_duration = 3.210159
+	}
+	Hero_Phoenix.SunRay.Cast.Immortal = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 84.0
+		mixgroup = "Weapons"
+		volume_fade_out = 1.0
+		spread_radius = 600.0
+		soundevent_layer2 = "Hero_Phoenix.SolarForge.Layer"
+		soundevent_layer2_on = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/phoenix/sunray_cast.vsnd",
+		]
+		vsnd_duration = 4.593197
+	}
+	Hero_Phoenix.SolarForge.Layer = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 84.0
+		mixgroup = "Weapons"
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/phoenix/solar_forge.vsnd",
+		]
+		vsnd_duration = 1.995941
+	}
+	Hero_Phoenix.TI8_taunt = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch = 1.0
+		soundlevel = 81.0
+		distance_max = 2500.0
+		event_type = 1.0
+		volume_fade_out = 0.5
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/phoenix/ti8_taunt.vsnd",
+		]
+		vsnd_duration = 2.214966
+	}
+	Hero_Phoenix.TI8_taunt.Rare = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch = 1.0
+		soundlevel = 81.0
+		distance_max = 2500.0
+		event_type = 1.0
+		volume_fade_out = 0.5
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/phoenix/ti8_taunt_rare.vsnd",
+		]
+		vsnd_duration = 5.639864
+	}
+}

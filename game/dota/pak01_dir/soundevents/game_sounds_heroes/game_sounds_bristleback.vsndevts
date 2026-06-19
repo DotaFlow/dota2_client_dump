@@ -1,0 +1,327 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
+{
+	Hero_Bristleback.PreAttack = 
+	{
+		type = "dota_src1_3d"
+		volume_rand_min = -0.099976
+		volume_rand_max = 0.099976
+		volume = 0.89978
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.1
+		soundlevel = 75.0
+		distance_max = 1500.0
+		event_type = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/shared/large_blade/whoosh01.vsnd",
+			"sounds/weapons/hero/shared/large_blade/whoosh02.vsnd",
+			"sounds/weapons/hero/shared/large_blade/whoosh03.vsnd",
+		]
+		vsnd_duration = 0.734172
+	}
+	Hero_Bristleback.Attack = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 75.0
+		distance_max = 2500.0
+		soundevent_layer2 = "Hero_Bristleback.Attack.Impact"
+		soundevent_layer2_on = 1.0
+		event_type = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/spirit_breaker/attack01.vsnd",
+			"sounds/weapons/hero/spirit_breaker/attack02.vsnd",
+			"sounds/weapons/hero/spirit_breaker/attack03.vsnd",
+		]
+		vsnd_duration = 0.837143
+	}
+	Hero_Bristleback.Attack.Impact = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 78.0
+		distance_max = 2500.0
+		soundevent_layer2 = "Damage_Melee.Gore"
+		soundevent_layer2_on = 1.0
+		limiter_on = 0.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/shared/large_blade/thump01.vsnd",
+			"sounds/weapons/hero/shared/large_blade/thump02.vsnd",
+			"sounds/weapons/hero/shared/large_blade/thump03.vsnd",
+		]
+		vsnd_duration = 0.330522
+	}
+	Hero_Bristleback.ViscousGoo.Cast = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/bristlebog/goo_cast.vsnd",
+		]
+		vsnd_duration = 1.513946
+	}
+	Hero_Bristleback.ViscousGoo.Target = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 78.0
+		mixgroup = "Weapons"
+		spread_radius = 100.0
+		limiter_on = 1.0
+		limiter_event_name = "Hero_Bristleback.ViscousGoo.Target"
+		limiter_max = 1.0
+		limiter_stop_oldest = true
+		limiter_match_event_duration = 0.0
+		block_duration = 0.1
+		block_distance = 300.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/bristlebog/goo_target.vsnd",
+		]
+		vsnd_duration = 4.991157
+	}
+	Hero_Bristleback.SnotRocket.Cast = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.5
+		soundlevel = 78.0
+		distance_max = 2500.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/bristlebog/goo_cast.vsnd",
+		]
+		vsnd_duration = 1.513946
+	}
+	Hero_Bristleback.QuillSpray.Cast = 
+	{
+		type = "dota_update_default"
+		volume_rand_min = -0.149902
+		volume_rand_max = 0.149902
+		volume = 0.649902
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 84.0
+		mixgroup = "Weapons"
+		spread_radius = 150.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/bristlebog/quill_cast.vsnd",
+		]
+		vsnd_duration = 0.612268
+	}
+	Hero_Bristleback.QuillSpray.Target = 
+	{
+		type = "dota_src1_3d"
+		volume_rand_min = -0.099976
+		volume_rand_max = 0.099976
+		volume = 0.599976
+		pitch_rand_min = -0.1
+		pitch_rand_max = 0.1
+		pitch = 1.0
+		soundlevel = 75.0
+		distance_max = 2500.0
+		soundevent_layer2 = "Damage_Melee.Gore"
+		soundevent_layer2_on = 1.0
+		event_type = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/bristlebog/quill_target01.vsnd",
+			"sounds/weapons/hero/bristlebog/quill_target02.vsnd",
+			"sounds/weapons/hero/bristlebog/quill_target03.vsnd",
+			"sounds/weapons/hero/bristlebog/quill_target04.vsnd",
+		]
+		vsnd_duration = 0.471383
+	}
+	Hero_Bristleback.Bristleback = 
+	{
+		type = "dota_src1_3d"
+		volume = 0.199951
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 84.0
+		distance_max = 2500.0
+		limiter_on = 0.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/bristlebog/bristleback.vsnd",
+		]
+		vsnd_duration = 1.543515
+	}
+	Hero_Bristleback.Bristleback.Active = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 0.5
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		vsnd_files = "sounds/weapons/hero/bristlebog/quill_cast.vsnd"
+		vsnd_duration = 0.612268
+	}
+	Hero_Bristleback.Footsteps = 
+	{
+		type = "dota_src1_3d_footsteps"
+		volume_rand_min = -0.149902
+		volume_rand_max = 0.149902
+		volume = 0.449707
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 72.0
+		distance_max = 2000.0
+		event_type = 4.0
+		vsnd_files = 
+		[
+			"sounds/physics/footsteps/hero/shared/general01.vsnd",
+			"sounds/physics/footsteps/hero/shared/general02.vsnd",
+			"sounds/physics/footsteps/hero/shared/general03.vsnd",
+			"sounds/physics/footsteps/hero/shared/general04.vsnd",
+			"sounds/physics/footsteps/hero/shared/general05.vsnd",
+			"sounds/physics/footsteps/hero/shared/general06.vsnd",
+			"sounds/physics/footsteps/hero/shared/general07.vsnd",
+		]
+		vsnd_duration = 0.453787
+	}
+	Hero_Bristleback.Death = 
+	{
+		type = "dota_null_start"
+	}
+	Hero_Bristleback.IdleLoop = 
+	{
+		type = "dota_null_start"
+	}
+	Hero_Bristleback.PistonProngs.QuillSpray.Cast = 
+	{
+		type = "dota_update_default"
+		volume_rand_min = -0.049988
+		volume_rand_max = 0.049988
+		volume = 0.599792
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 84.0
+		mixgroup = "Weapons"
+		spread_radius = 150.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/bristlebog/pistonprongs_quill_cast.vsnd",
+		]
+		vsnd_duration = 0.838685
+	}
+	Hero_Bristleback.PistonProngs.Bristleback = 
+	{
+		type = "dota_src1_3d"
+		volume = 0.25
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 84.0
+		distance_max = 2500.0
+		limiter_on = 0.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/bristlebog/pistonprongs_bristleback.vsnd",
+		]
+		vsnd_duration = 0.969002
+	}
+	Hero_Bristleback.PistonProngs.IdleLoop = 
+	{
+		type = "dota_src1_3d"
+		volume = 0.5
+		pitch = 1.1
+		soundlevel = 75.0
+		mixgroup = "Physics"
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/bristlebog/pistonprongs_loop.vsnd",
+		]
+		vsnd_duration = 0.58932
+	}
+	Hero_Bristleback.ViscousGoo.Cast.Immortal = 
+	{
+		type = "dota_update_default"
+		volume = 0.6
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		soundevent_layer2 = "Hero_Bristleback.Goo.Cast.Layer"
+		soundevent_layer2_on = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/bristlebog/goo_cast.vsnd",
+		]
+		vsnd_duration = 1.513946
+	}
+	Hero_Bristleback.Goo.Cast.Layer = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/bristlebog/goo_cast_layer.vsnd",
+		]
+		vsnd_duration = 1.993333
+	}
+	Hero_Bristleback.Hairball.Cast = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.5
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/bristlebog/goo_cast.vsnd",
+		]
+		vsnd_duration = 1.513946
+	}
+	Hero_Bristleback.Taunt.2021 = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch = 1.0
+		soundlevel = 81.0
+		distance_max = 2500.0
+		event_type = 1.0
+		volume_fade_out = 0.5
+		vsnd_files = "sounds/weapons/hero/bristlebog/taunt_2021.vsnd"
+		vsnd_duration = 2.374167
+	}
+}

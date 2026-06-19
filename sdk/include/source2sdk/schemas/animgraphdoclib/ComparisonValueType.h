@@ -1,5 +1,0 @@
-enum ComparisonValueType : uint8_t
-{
-	COMPARISONVALUETYPE_FIXEDVALUE = 0,
-	COMPARISONVALUETYPE_PARAMETER = 1,
-};

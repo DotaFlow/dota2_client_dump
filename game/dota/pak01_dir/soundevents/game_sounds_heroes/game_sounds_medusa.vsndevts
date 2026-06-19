@@ -1,0 +1,309 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
+{
+	Hero_Medusa.PreAttack = 
+	{
+		type = "dota_null_start"
+	}
+	Hero_Medusa.Attack = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 75.0
+		distance_max = 2500.0
+		event_type = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/medusa/arrow_01.vsnd",
+			"sounds/weapons/hero/medusa/arrow_02.vsnd",
+			"sounds/weapons/hero/medusa/arrow_03.vsnd",
+			"sounds/weapons/hero/medusa/arrow_04.vsnd",
+		]
+		vsnd_duration = 0.602971
+	}
+	Hero_Medusa.AttackSplit = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.1
+		pitch_rand_max = 0.1
+		pitch = 1.0
+		soundlevel = 81.0
+		distance_max = 2500.0
+		event_type = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/medusa/arrow_01.vsnd",
+			"sounds/weapons/hero/medusa/arrow_02.vsnd",
+			"sounds/weapons/hero/medusa/arrow_03.vsnd",
+			"sounds/weapons/hero/medusa/arrow_04.vsnd",
+			"sounds/weapons/hero/medusa/arrow_split_01.vsnd",
+			"sounds/weapons/hero/medusa/arrow_split_02.vsnd",
+			"sounds/weapons/hero/medusa/arrow_split_03.vsnd",
+			"sounds/weapons/hero/medusa/arrow_split_04.vsnd",
+			"sounds/weapons/hero/medusa/arrow_split_05.vsnd",
+			"sounds/weapons/hero/medusa/arrow_split_06.vsnd",
+		]
+		vsnd_duration = 0.79873
+	}
+	Hero_Medusa.ProjectileImpact = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 75.0
+		distance_max = 2000.0
+		limiter_on = 0.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/drow_ranger/arrow_impact_1.vsnd",
+			"sounds/weapons/hero/drow_ranger/arrow_impact_2.vsnd",
+			"sounds/weapons/hero/drow_ranger/arrow_impact_3.vsnd",
+		]
+		vsnd_duration = 0.341837
+	}
+	Hero_Medusa.MysticSnake.Cast = 
+	{
+		type = "dota_src1_3d"
+		volume = 0.75
+		pitch = 1.0
+		soundlevel = 81.0
+		distance_max = 2500.0
+		limiter_on = 0.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/medusa/snake_shoot.vsnd",
+		]
+		vsnd_duration = 1.723832
+	}
+	Hero_Medusa.MysticSnake.Target = 
+	{
+		type = "dota_src1_3d"
+		volume = 0.449951
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		distance_max = 2500.0
+		limiter_on = 0.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/medusa/snake_impact_01.vsnd",
+			"sounds/weapons/hero/medusa/snake_impact_02.vsnd",
+			"sounds/weapons/hero/medusa/snake_impact_03.vsnd",
+		]
+		vsnd_duration = 0.896213
+	}
+	Hero_Medusa.MysticSnake.Return = 
+	{
+		type = "dota_src1_3d"
+		volume = 0.75
+		pitch = 1.0
+		soundlevel = 75.0
+		distance_max = 2500.0
+		limiter_on = 0.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/medusa/snake_return.vsnd",
+		]
+		vsnd_duration = 2.260499
+	}
+	Hero_Medusa.ManaShield.On = 
+	{
+		type = "dota_update_default"
+		volume = 0.75
+		pitch = 1.0
+		soundlevel = 75.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/medusa/orb_on.vsnd",
+		]
+		vsnd_duration = 1.5
+	}
+	Hero_Medusa.ManaShield.Off = 
+	{
+		type = "dota_update_default"
+		volume = 0.75
+		pitch = 1.0
+		soundlevel = 75.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/medusa/orb_off.vsnd",
+		]
+		vsnd_duration = 1.481088
+	}
+	Hero_Medusa.ManaShield.Proc = 
+	{
+		type = "dota_src1_3d"
+		volume = 0.199951
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 75.0
+		distance_max = 2500.0
+		event_type = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/medusa/orb_absorb_01.vsnd",
+		]
+		vsnd_duration = 0.597778
+	}
+	Hero_Medusa.StoneGaze.Cast = 
+	{
+		type = "dota_update_default"
+		volume = 0.66
+		pitch = 1.0
+		mixgroup = "Weapons"
+		volume_fade_out = 1.0
+		spread_radius = 100.0
+		volume_use_FOW = 1.0
+		volume_FOW_filter_vel = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/medusa/stonegaze.vsnd",
+		]
+		vsnd_duration = 12.564898
+	}
+	Hero_Medusa.StoneGaze.Target = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/medusa/turntostone.vsnd",
+		]
+		vsnd_duration = 2.190499
+	}
+	Hero_Medusa.StoneGaze.Stun = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Ultimates"
+		spread_radius = 300.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/medusa/stonegaze_stun.vsnd",
+		]
+		vsnd_duration = 1.998481
+	}
+	Hero_Medusa.Movement = 
+	{
+		type = "dota_src1_3d"
+		volume_rand_min = -0.099976
+		volume_rand_max = 0.099976
+		volume = 0.5
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 75.0
+		distance_max = 2000.0
+		event_type = 4.0
+		vsnd_files = 
+		[
+			"sounds/physics/movement/hero/medusa/move_01.vsnd",
+			"sounds/physics/movement/hero/medusa/move_02.vsnd",
+			"sounds/physics/movement/hero/medusa/move_03.vsnd",
+			"sounds/physics/movement/hero/medusa/move_04.vsnd",
+			"sounds/physics/movement/hero/medusa/move_05.vsnd",
+		]
+		vsnd_duration = 0.829252
+	}
+	Hero_Medusa.Death = 
+	{
+		type = "dota_null_start"
+	}
+	Hero_Medusa.GorgonsGrasp.Cast = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.1
+		pitch_rand_max = 0.1
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 900.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/medusa/gorgons_grasp_cast.vsnd",
+		]
+		vsnd_duration = 2.238775
+	}
+	Hero_Medusa.GorgonsGrasp.Impact = 
+	{
+		type = "dota_update_default"
+		volume = 0.7
+		pitch = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		soundlevel = 75.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/medusa/gorgons_grasp_impact.vsnd",
+		]
+		vsnd_duration = 1.52576
+	}
+	Hero_Medusa.Attack.VenomousVolley = 
+	{
+		type = "dota_src1_3d"
+		volume = 0.5
+		pitch = 1.0
+		soundlevel = 75.0
+		distance_max = 2500.0
+		event_type = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/venomancer/venomancer_attack1.vsnd",
+			"sounds/weapons/hero/venomancer/venomancer_attack2.vsnd",
+			"sounds/weapons/hero/venomancer/venomancer_attack3.vsnd",
+		]
+		vsnd_duration = 1.34
+	}
+	Hero_Medusa.Taunt.TI10 = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch = 1.0
+		soundlevel = 81.0
+		distance_max = 2500.0
+		limiter_on = 1.0
+		volume_fade_out = 1.5
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/medusa/taunt_ti10.vsnd",
+		]
+		vsnd_duration = 5.583333
+	}
+	Hero_Medusa.Taunt.Target = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 0.8
+		soundlevel = 75.0
+		distance_max = 2000.0
+		limiter_on = 0.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/drow_ranger/arrow_impact_1.vsnd",
+			"sounds/weapons/hero/drow_ranger/arrow_impact_2.vsnd",
+			"sounds/weapons/hero/drow_ranger/arrow_impact_3.vsnd",
+		]
+		vsnd_duration = 0.341837
+	}
+}

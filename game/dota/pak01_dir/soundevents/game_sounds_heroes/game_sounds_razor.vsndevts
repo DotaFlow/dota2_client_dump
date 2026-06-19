@@ -1,0 +1,384 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
+{
+	Hero_Razor.PreAttack = 
+	{
+		type = "dota_null_start"
+	}
+	Hero_razor.Attack = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 75.0
+		distance_max = 2500.0
+		event_type = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/razor/razor_attack_reg_01.vsnd",
+			"sounds/weapons/hero/razor/razor_attack_reg_02.vsnd",
+			"sounds/weapons/hero/razor/razor_attack_reg_03.vsnd",
+		]
+		vsnd_duration = 0.73254
+	}
+	Hero_Razor.ProjectileImpact = 
+	{
+		type = "dota_null_start"
+	}
+	Ability.PlasmaField = 
+	{
+		type = "dota_update_default"
+		volume = 0.6
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 500.0
+		vsnd_files = "sounds/weapons/hero/razor/plasma_field.vsnd"
+		vsnd_duration = 3.11102
+	}
+	Ability.PlasmaFieldImpact = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 78.0
+		distance_max = 2500.0
+		limiter_on = 0.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/razor/plasma_field_impact01.vsnd",
+			"sounds/weapons/hero/razor/plasma_field_impact02.vsnd",
+			"sounds/weapons/hero/razor/plasma_field_impact03.vsnd",
+		]
+		vsnd_duration = 2.473197
+	}
+	Hero_Razor.UnstableCurrent.Strike = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 0.8
+		soundlevel = 75.0
+		distance_max = 2000.0
+		limiter_on = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/razor/razor_lightning_strike_01.vsnd",
+			"sounds/weapons/hero/razor/razor_lightning_strike_02.vsnd",
+			"sounds/weapons/hero/razor/razor_lightning_strike_03.vsnd",
+			"sounds/weapons/hero/razor/razor_lightning_strike_04.vsnd",
+			"sounds/weapons/hero/razor/razor_lightning_strike_05.vsnd",
+		]
+		vsnd_duration = 2.04034
+	}
+	Hero_Razor.UnstableCurrent.Target = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 78.0
+		delay = 0.1
+		vsnd_files = "sounds/weapons/hero/razor/unstable_current_target.vsnd"
+		vsnd_duration = 3.756349
+	}
+	Hero_razor.lightning = 
+	{
+		type = "dota_src1_3d"
+		volume_rand_min = -0.149902
+		volume_rand_max = 0.149902
+		volume = 0.749512
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 75.0
+		distance_max = 2500.0
+		limiter_on = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/razor/razor_lightning_strike_01.vsnd",
+			"sounds/weapons/hero/razor/razor_lightning_strike_02.vsnd",
+			"sounds/weapons/hero/razor/razor_lightning_strike_03.vsnd",
+			"sounds/weapons/hero/razor/razor_lightning_strike_04.vsnd",
+			"sounds/weapons/hero/razor/razor_lightning_strike_05.vsnd",
+		]
+		vsnd_duration = 2.04034
+	}
+	Hero_Razor.Storm.Cast = 
+	{
+		type = "dota_update_default"
+		volume = 0.5
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Ultimates"
+		spread_radius = 600.0
+		vsnd_files = "sounds/weapons/hero/razor/storm_cast.vsnd"
+		vsnd_duration = 3.036576
+	}
+	Hero_Razor.Storm.Loop = 
+	{
+		type = "dota_update_default"
+		volume = 0.299805
+		pitch = 1.0
+		soundlevel = 75.0
+		mixgroup = "Weapons"
+		volume_fade_in = 1.0
+		volume_fade_out = 1.0
+		distance_max = 2500.0
+		stop_at_time = 40.0
+		vsnd_files = "sounds/weapons/hero/razor/storm_loop.vsnd"
+		vsnd_duration = 5.911565
+	}
+	Hero_Razor.StormEnd = 
+	{
+		type = "dota_src1_3d"
+		volume = 0.299805
+		pitch = 1.0
+		soundlevel = 75.0
+		distance_max = 2500.0
+		limiter_on = 0.0
+		vsnd_files = "sounds/weapons/hero/razor/razor_storm_loop_end.vsnd"
+		vsnd_duration = 2.091769
+	}
+	Ability.static.start = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		vsnd_files = "sounds/weapons/hero/razor/static_attack_start.vsnd"
+		vsnd_duration = 0.732789
+	}
+	Ability.static.loop = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 78.0
+		mixgroup = "Weapons"
+		spread_radius = 500.0
+		stop_at_time = 12.0
+		vsnd_files = "sounds/weapons/hero/razor/static_attack_loop.vsnd"
+		vsnd_duration = 3.736463
+	}
+	Ability.static.end = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 78.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		vsnd_files = "sounds/weapons/hero/razor/static_attack_end.vsnd"
+		vsnd_duration = 0.966621
+	}
+	Hero_Razor.IdleLoop = 
+	{
+		type = "dota_update_default"
+		volume = 0.299805
+		pitch = 1.0
+		soundlevel = 66.0
+		mixgroup = "Physics"
+		volume_move_vol = 0.2
+		volume_move_vel = 300.0
+		volume_move_filter_vel = 1.0
+		volume_falloff_min = 10.0
+		volume_falloff_max = 1000.0
+		vsnd_files = "sounds/physics/movement/hero/razor/idle_loop.vsnd"
+		vsnd_duration = 5.348662
+	}
+	Hero_Razor.Death = 
+	{
+		type = "dota_null_start"
+	}
+	Hero_Razor.SeveringCrest.Loop = 
+	{
+		type = "dota_update_default"
+		volume = 0.699707
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 78.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		vsnd_files = "sounds/weapons/hero/razor/severing_crest_loop.vsnd"
+		vsnd_duration = 3.703175
+	}
+	Hero_Razor.PlasmaField.SeveringLash = 
+	{
+		type = "dota_update_default"
+		volume = 0.9
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 600.0
+		vsnd_files = "sounds/weapons/hero/razor/plasma_field_immortal.vsnd"
+		vsnd_duration = 3.485578
+	}
+	Hero_Razor.Taunt2021 = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch = 1.0
+		soundlevel = 81.0
+		distance_max = 2500.0
+		event_type = 1.0
+		volume_fade_out = 0.5
+		vsnd_files = "sounds/weapons/hero/razor/taunt2021.vsnd"
+		vsnd_duration = 6.6
+	}
+	Hero_Razor.ArcanaProgressHud = 
+	{
+		type = "dota_src1_2d"
+		volume = 0.6
+		limiter_on = 1.0
+		mixgroup = "UI"
+		vsnd_files = "sounds/weapons/hero/razor/arcana_progress_hud.vsnd"
+		vsnd_duration = 4.706146
+	}
+	Hero_Razor.ArcanaProgress = 
+	{
+		type = "dota_src1_2d"
+		volume = 0.8
+		limiter_on = 1.0
+		mixgroup = "UI"
+		vsnd_files = "sounds/weapons/hero/razor/arcana_progress_popup.vsnd"
+		vsnd_duration = 5.184875
+	}
+	Hero_Razor.ArcanaProgressComplete = 
+	{
+		type = "dota_src1_2d"
+		volume = 1.0
+		limiter_on = 1.0
+		mixgroup = "Stingers"
+		soundevent_layer2 = "Hero_Razor.ArcanaProgress"
+		soundevent_layer2_on = 1.0
+		vsnd_files = "sounds/weapons/hero/razor/arcana_progress_complete.vsnd"
+		vsnd_duration = 8.486438
+	}
+	Hero_Razor.PreAttack.Arcana = 
+	{
+		type = "dota_src1_3d"
+		volume_rand_min = -0.149902
+		volume_rand_max = 0.149902
+		volume = 0.649902
+		pitch_rand_min = -0.1
+		pitch_rand_max = 0.0
+		pitch = 1.0
+		soundlevel = 75.0
+		distance_max = 1500.0
+		delay = 0.15
+		event_type = 1.0
+		vsnd_files = "sounds/weapons/hero/razor/preattack_arc.vsnd"
+		vsnd_duration = 0.776875
+	}
+	Hero_Razor.Attack.Arcana = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 75.0
+		distance_max = 2500.0
+		event_type = 1.0
+		soundevent_layer2 = "Hero_Razor.Attack.Layer"
+		soundevent_layer2_on = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/razor/razor_attack_reg_01.vsnd",
+			"sounds/weapons/hero/razor/razor_attack_reg_02.vsnd",
+			"sounds/weapons/hero/razor/razor_attack_reg_03.vsnd",
+		]
+		vsnd_duration = 0.73254
+	}
+	Hero_Razor.Attack.Layer = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 72.0
+		distance_max = 2500.0
+		event_type = 1.0
+		rand_delay_min = 0.01
+		rand_delay_max = 0.1
+		vsnd_files = "sounds/weapons/hero/razor/arc_attack_layer.vsnd"
+		vsnd_duration = 1.346083
+	}
+	Hero_Razor.ProjectileImpact.Arcana = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 78.0
+		distance_max = 2000.0
+		event_type = 1.0
+		soundevent_layer2 = "Hero_razor.Attack"
+		soundevent_layer2_on = 1.0
+		vsnd_files = "sounds/weapons/hero/razor/projectile_impact_arc.vsnd"
+		vsnd_duration = 0.819729
+	}
+	Hero_razor.Attack.Melee = 
+	{
+		type = "dota_src1_3d"
+		volume = 0.5
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.25
+		soundlevel = 78.0
+		mixgroup = "Weapons"
+		distance_max = 2500.0
+		soundevent_layer2 = "Hero_razor.Attack"
+		soundevent_layer2_on = 1.0
+		soundevent_layer3 = "Hero_razor.Attack.Ring"
+		soundevent_layer3_on = 1.0
+		vsnd_files = "sounds/weapons/hero/sven/attack01.vsnd"
+		vsnd_duration = 0.702948
+	}
+	Hero_razor.Attack.Ring = 
+	{
+		type = "dota_src1_3d"
+		volume_rand_min = -0.25
+		volume_rand_max = 0.0
+		volume = 1.0
+		pitch_rand_min = 0.0
+		pitch_rand_max = 0.1
+		pitch = 1.25
+		soundlevel = 72.0
+		distance_max = 2000.0
+		rand_delay_min = 0.01
+		rand_delay_max = 0.08
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/shared/large_blade/ring01.vsnd",
+			"sounds/weapons/hero/shared/large_blade/ring02.vsnd",
+			"sounds/weapons/hero/shared/large_blade/ring03.vsnd",
+			"sounds/weapons/hero/shared/large_blade/ring04.vsnd",
+			"sounds/null.vsnd",
+		]
+		vsnd_duration = 0.802857
+	}
+}

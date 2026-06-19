@@ -1,0 +1,350 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
+{
+	Hero_Sven.PreAttack = 
+	{
+		type = "dota_src1_3d"
+		volume_rand_min = -0.099976
+		volume_rand_max = 0.099976
+		volume = 0.89978
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 75.0
+		distance_max = 1500.0
+		event_type = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/shared/large_blade/whoosh01.vsnd",
+			"sounds/weapons/hero/shared/large_blade/whoosh02.vsnd",
+			"sounds/weapons/hero/shared/large_blade/whoosh03.vsnd",
+		]
+		vsnd_duration = 0.734172
+	}
+	Hero_Sven.Attack = 
+	{
+		type = "dota_src1_3d"
+		volume = 0.5
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 78.0
+		mixgroup = "BaseAttacks"
+		distance_max = 2500.0
+		soundevent_layer2 = "Hero_Sven.Attack.Impact"
+		soundevent_layer2_on = 1.0
+		soundevent_layer3 = "Hero_Sven.Attack.Ring"
+		soundevent_layer3_on = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/sven/attack01.vsnd",
+			"sounds/weapons/hero/sven/attack02.vsnd",
+			"sounds/weapons/hero/sven/attack03.vsnd",
+			"sounds/weapons/hero/sven/attack04.vsnd",
+		]
+		vsnd_duration = 0.710884
+	}
+	Hero_Sven.Attack.Impact = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "BaseAttacks"
+		distance_max = 2500.0
+		soundevent_layer2 = "Damage_Melee.Gore"
+		soundevent_layer2_on = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/shared/large_blade/thump01.vsnd",
+			"sounds/weapons/hero/shared/large_blade/thump02.vsnd",
+			"sounds/weapons/hero/shared/large_blade/thump03.vsnd",
+		]
+		vsnd_duration = 0.330522
+	}
+	Hero_Sven.Attack.Ring = 
+	{
+		type = "dota_src1_3d"
+		volume_rand_min = -0.5
+		volume_rand_max = 0.5
+		volume = 0.5
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 78.0
+		distance_max = 2500.0
+		rand_delay_min = 0.01
+		rand_delay_max = 0.08
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/shared/large_blade/ring01.vsnd",
+			"sounds/weapons/hero/shared/large_blade/ring02.vsnd",
+			"sounds/weapons/hero/shared/large_blade/ring03.vsnd",
+			"sounds/weapons/hero/shared/large_blade/ring04.vsnd",
+			"sounds/null.vsnd",
+		]
+		vsnd_duration = 0.802857
+	}
+	Hero_Sven.GodsStrength.PreAttack = 
+	{
+		type = "dota_src1_3d"
+		volume_rand_min = -0.099976
+		volume_rand_max = 0.099976
+		volume = 0.89978
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 75.0
+		distance_max = 1500.0
+		event_type = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/shared/large_blade/whoosh01.vsnd",
+			"sounds/weapons/hero/shared/large_blade/whoosh02.vsnd",
+			"sounds/weapons/hero/shared/large_blade/whoosh03.vsnd",
+		]
+		vsnd_duration = 0.734172
+	}
+	Hero_Sven.GodsStrength.Attack = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 78.0
+		distance_max = 2500.0
+		soundevent_layer2 = "Hero_Sven.Layer.GodsStrength"
+		soundevent_layer2_on = 1.0
+		soundevent_layer3 = "Hero_Sven.Attack.Impact"
+		soundevent_layer3_on = 1.0
+		event_type = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/sven/attack01.vsnd",
+			"sounds/weapons/hero/sven/attack02.vsnd",
+			"sounds/weapons/hero/sven/attack03.vsnd",
+			"sounds/weapons/hero/sven/attack04.vsnd",
+		]
+		vsnd_duration = 0.710884
+	}
+	Hero_Sven.Layer.GodsStrength = 
+	{
+		type = "dota_src1_3d"
+		volume = 0.5
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 72.0
+		distance_max = 2500.0
+		limiter_on = 0.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/sven/gods_strength_heavy_sword_impact1.vsnd",
+			"sounds/weapons/hero/sven/gods_strength_heavy_sword_impact2.vsnd",
+			"sounds/weapons/hero/sven/gods_strength_heavy_sword_impact3.vsnd",
+		]
+		vsnd_duration = 2.009592
+	}
+	Hero_Sven.GreatCleave = 
+	{
+		type = "dota_update_default"
+		volume_rand_min = -0.1
+		volume_rand_max = 0.1
+		volume = 0.7
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.05
+		soundlevel = 75.0
+		mixgroup = "Weapons"
+		distance_max = 1500.0
+		vsnd_files = 
+		[
+			"sounds/items/blade_fury.vsnd",
+		]
+		vsnd_duration = 1.240771
+	}
+	Hero_Sven.StormBolt = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 600.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/sven/storm_bolt.vsnd",
+		]
+		vsnd_duration = 2.019683
+	}
+	Hero_Sven.StormBoltImpact = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/sven/storm_bolt_impact.vsnd",
+		]
+		vsnd_duration = 2.48254
+	}
+	Hero_Sven.WarCry = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 900.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/sven/warcry.vsnd",
+		]
+		vsnd_duration = 2.421043
+	}
+	Hero_Sven.WarCry.Shield = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		distance_max = 2500.0
+		delay = 0.1
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/sven/warcry_shield.vsnd",
+		]
+		vsnd_duration = 1.998367
+	}
+	Hero_Sven.GodsStrength = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Ultimates"
+		spread_radius = 300.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/sven/gods_strength.vsnd",
+		]
+		vsnd_duration = 3.298413
+	}
+	Hero_Sven.Footsteps = 
+	{
+		type = "dota_src1_3d_footsteps"
+		volume_rand_min = -0.099976
+		volume_rand_max = 0.099976
+		volume = 0.39978
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 72.0
+		distance_max = 2000.0
+		event_type = 4.0
+		vsnd_files = 
+		[
+			"sounds/physics/footsteps/hero/shared/general01.vsnd",
+			"sounds/physics/footsteps/hero/shared/general02.vsnd",
+			"sounds/physics/footsteps/hero/shared/general03.vsnd",
+			"sounds/physics/footsteps/hero/shared/general04.vsnd",
+			"sounds/physics/footsteps/hero/shared/general05.vsnd",
+			"sounds/physics/footsteps/hero/shared/general06.vsnd",
+			"sounds/physics/footsteps/hero/shared/general07.vsnd",
+		]
+		vsnd_duration = 0.453787
+	}
+	Hero_Sven.Death = 
+	{
+		type = "dota_null_start"
+	}
+	Hero_Sven.IronWill = 
+	{
+		type = "dota_src1_3d"
+		volume = 0.699707
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 78.0
+		mixgroup = "BaseAttacks"
+		distance_max = 2500.0
+		soundevent_layer2 = "Hero_Sven.Attack.Impact"
+		soundevent_layer2_on = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/sven/attack_alt01.vsnd",
+			"sounds/weapons/hero/sven/attack_alt02.vsnd",
+		]
+		vsnd_duration = 0.595397
+	}
+	Hero_Sven.WarCry.Signet = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 900.0
+		distance_max = 2500.0
+		soundevent_layer2 = "Hero_Sven.SignetLayer"
+		soundevent_layer2_on = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/sven/warcry.vsnd",
+		]
+		vsnd_duration = 2.421043
+	}
+	Hero_Sven.SignetLayer = 
+	{
+		type = "dota_update_default"
+		volume = 0.799805
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/sven/warcry_signet.vsnd",
+		]
+		vsnd_duration = 3.408345
+	}
+	Hero_Sven.GreatCleave.ti7 = 
+	{
+		type = "dota_src1_3d"
+		volume_rand_min = -0.1
+		volume_rand_max = 0.1
+		volume = 0.8
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 75.0
+		mixgroup = "Weapons"
+		distance_max = 2000.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/sven/greater_cleave_ti7.vsnd",
+		]
+		vsnd_duration = 1.204331
+	}
+	Hero_Sven.Taunt2024 = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch = 1.0
+		soundlevel = 81.0
+		distance_max = 2500.0
+		volume_fade_out = 0.5
+		vsnd_files = "sounds/weapons/hero/sven/taunt2024.vsnd"
+		vsnd_duration = 9.533854
+	}
+}

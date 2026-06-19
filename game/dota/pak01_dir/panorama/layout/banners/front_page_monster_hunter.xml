@@ -1,0 +1,36 @@
+<!-- xml reconstructed by Source 2 Viewer - https://valveresourceformat.github.io -->
+<root>
+	<styles>
+		<include src="s2r://panorama/styles/dotastyles.vcss_c" />
+		<include src="s2r://panorama/styles/frontpage_shared.vcss_c" />
+		<include src="s2r://panorama/styles/events/monster_hunter/monster_hunter_shared.vcss_c" />
+		<include src="s2r://panorama/styles/banners/front_page_monster_hunter.vcss_c" />
+	</styles>
+	<scripts>
+		<include src="s2r://panorama/scripts/util.vts_c" />
+		<include src="s2r://panorama/scripts/sequence_actions.vts_c" />
+		<include src="s2r://panorama/scripts/dota_sequence_actions.vts_c" />
+		<include src="s2r://panorama/scripts/leaf_pages/dashboard_background_monster_hunter.vts_c" />
+	</scripts>
+	<CustomLayoutPanel class="MonsterHunterCell" onactivate="DOTAShowMonsterHunterPage()">
+		<DOTAScenePanel id="MonsterHunterScene" class="MonsterHunterScene" onload="PlayScene();" map="maps/events/monster_hunter/monster_hunter_dashboard" squarePixels="true" particleonly="false" renderdeferred="true" deferredalpha="true" camera="dashboard_camera" light="versus_light" antialias="true" pin-fov="vertical" rotateonmousemove="true" yawmin="-0.1" yawmax="0.1" pitchmin="0" pitchmax="0" />
+		<Image class="MonsterHunterLogo" src="s2r://panorama/images/events/monster_hunter/logos/monster_hunter_logo_horiz_png.vtex" scaling="stretch-to-fit-preserve-aspect" />
+		<Panel class="DiscountContainer">
+			<Label class="DiscountLabel MHLabelFont LabelSmall" text="#DOTA_MonsterHunter_FrontpageCellDiscount" />
+			<Image class="GuildIcon" src="s2r://panorama/images/events/monster_hunter/icons/guildmembership_icon_on_png.vtex" scaling="stretch-to-fit-preserve-aspect" />
+		</Panel>
+		<Panel class="CellContent">
+			<Label class="LastChanceText" html="true" text="#DOTA_MonsterHunter_UniversalMaterials_EndingSoon" />
+			<Panel class="FrontCellEndDate" onmouseover="DOTAShowTextTooltip(#DOTA_MonsterHunter_FrontPageCell_LastChance_Tooltip)" onmouseout="DOTAHideTextTooltip()">
+				<Label class="EndDateText" html="true" text="#DOTA_MonsterHunter_EndDate" />
+				<Image class="InfoIcon" />
+			</Panel>
+			<Panel class="MaterialPacks">
+				<Label class="MHLabelFont LabelMedium PacksTitle" text="#DOTA_MonsterHunter_UniversalMaterials_NewCraftingOptions" />
+				<Label class="MHBodyFont BodySmall PacksDescription" text="#DOTA_MonsterHunter_UniversalMaterials_PurchaseDescription" />
+			</Panel>
+			<Label class="ProgressAvailableBadge MHLabelFont Medium" text="#DOTA_MonsterHunter_FrontPage_ProgressAvailable" hittest="false" />
+		</Panel>
+		<Panel class="CellBorder" hittest="false" />
+	</CustomLayoutPanel>
+</root>

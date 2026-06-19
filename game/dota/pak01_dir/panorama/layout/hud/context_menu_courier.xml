@@ -1,0 +1,30 @@
+<!-- xml reconstructed by Source 2 Viewer - https://valveresourceformat.github.io -->
+<root>
+	<styles>
+		<include src="s2r://panorama/styles/dotastyles.vcss_c" />
+		<include src="s2r://panorama/styles/hudstyles.vcss_c" />
+		<include src="s2r://panorama/styles/hud/context_menu_courier.vcss_c" />
+	</styles>
+	<DOTACourierContextMenu>
+		<Button id="ToggleAutoDeliver" class="LeftRightFlow">
+			<Panel id="Color" class="RowColor" />
+			<Image id="Icon" src="s2r://panorama/images/control_icons/24px/settings.vsvg" />
+			<Label id="Name" text="{s:auto_deliver_toggle_text}" />
+			<DOTAViolator class="AutoDeliverViolator DOTAViolator" name="autodeliver_violator">
+				<Panel class="DOTAViolatorOuter" />
+				<Panel class="DOTAViolatorInner" />
+			</DOTAViolator>
+		</Button>
+		<Button id="Home" class="LeftRightFlow">
+			<Panel id="Color" class="RowColor" />
+			<Image id="Icon" src="s2r://panorama/images/control_icons/shop_icon_main_psd.vtex" />
+			<Label id="Name" text="#DOTA_SHOP_NAME_BASIC" />
+		</Button>
+		<Button id="SecretShop" class="LeftRightFlow">
+			<Panel id="Color" class="RowColor" />
+			<Image id="Icon" src="s2r://panorama/images/control_icons/shop_icon_secret_psd.vtex" />
+			<Label id="Name" text="#DOTA_SHOP_NAME_SECRET" />
+		</Button>
+		<Panel id="Teammates" class="TopBottomFlow" />
+	</DOTACourierContextMenu>
+</root>

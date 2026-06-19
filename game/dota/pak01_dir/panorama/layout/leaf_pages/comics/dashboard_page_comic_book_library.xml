@@ -1,0 +1,25 @@
+<!-- xml reconstructed by Source 2 Viewer - https://valveresourceformat.github.io -->
+<root>
+	<styles>
+		<include src="s2r://panorama/styles/comic_book_library_styles.vcss_c" />
+	</styles>
+	<scripts>
+		<include src="s2r://panorama/scripts/util.vts_c" />
+		<include src="s2r://panorama/scripts/sequence_actions.vts_c" />
+		<include src="s2r://panorama/scripts/dota_sequence_actions.vts_c" />
+		<include src="s2r://panorama/scripts/leaf_pages/dashboard_page_comic_book_library.vts_c" />
+	</scripts>
+	<snippets>
+		<snippet name="ComicBook">
+			<Panel class="ComicBook">
+				<Panel id="CoverImage" />
+				<TextButton id="Button" />
+			</Panel>
+		</snippet>
+	</snippets>
+	<DOTAReferencePage class="DashboardPage">
+		<ComicViewerBookLibrary>
+			<Panel id="ComicBooks" />
+		</ComicViewerBookLibrary>
+	</DOTAReferencePage>
+</root>

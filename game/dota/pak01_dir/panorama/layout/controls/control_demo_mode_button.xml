@@ -1,0 +1,23 @@
+<!-- xml reconstructed by Source 2 Viewer - https://valveresourceformat.github.io -->
+<root>
+	<styles>
+		<include src="s2r://panorama/styles/dotastyles.vcss_c" />
+		<include src="s2r://panorama/styles/battle_pass/current_battle_pass.vcss_c" />
+		<include src="s2r://panorama/styles/controls/control_demo_mode_button.vcss_c" />
+	</styles>
+	<DemoModeButton>
+		<Panel class="DemoButtonContainer">
+			<Button class="DemoButton StartDemo ButtonPrimary Green" onactivate="DOTADemoButtonClicked( false )" onmouseover="UIShowTextTooltip( #DOTA_HeroDemo_Button_Tooltip )" onmouseout="UIHideTextTooltip()">
+				<Label class="" text="#DOTA_HeroDemo_Button" />
+				<Image src="s2r://panorama/images/control_icons/24px/arrow_top_right.vsvg" />
+			</Button>
+			<Button class="OptionsButton StartDemo ButtonPrimary Green" onactivate="DOTADemoModeContextMenu()">
+				<Image class="ArrowIcon" src="s2r://panorama/images/control_icons/24px/caret_down.vsvg" />
+			</Button>
+		</Panel>
+		<Button class="DemoButton ReturnToDemo ButtonPrimary Green" onactivate="DOTADemoButtonClicked( true )" onmouseover="UIShowTextTooltip( #DOTA_HeroDemo_Button_Return_Tooltip )" onmouseout="UIHideTextTooltip()">
+			<Label class="" text="#DOTA_HeroDemo_Button_Return" />
+			<Image src="s2r://panorama/images/control_icons/24px/arrow_top_right.vsvg" />
+		</Button>
+	</DemoModeButton>
+</root>

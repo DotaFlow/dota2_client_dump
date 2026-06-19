@@ -1,0 +1,362 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
+{
+	Hero_Beastmaster.PreAttack = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 75.0
+		distance_max = 1500.0
+		event_type = 1.0
+		vsnd_files = "sounds/weapons/hero/beastmaster/preattack.vsnd"
+		vsnd_duration = 0.584218
+	}
+	Hero_Beastmaster.Attack = 
+	{
+		type = "dota_update_default"
+		volume = 0.699707
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 78.0
+		mixgroup = "BaseAttacks"
+		spread_radius = 150.0
+		distance_max = 2500.0
+		soundevent_layer2 = "Hero_Beastmaster.Attack.Impact"
+		soundevent_layer2_on = 1.0
+		soundevent_layer3 = "Hero_Beastmaster.Attack.Post"
+		soundevent_layer3_on = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/beastmaster/attack01.vsnd",
+			"sounds/weapons/hero/beastmaster/attack02.vsnd",
+			"sounds/weapons/hero/beastmaster/attack03.vsnd",
+		]
+		vsnd_duration = 0.294331
+	}
+	Hero_Beastmaster.Attack.Impact = 
+	{
+		type = "dota_update_default"
+		volume_rand_min = -0.149902
+		volume_rand_max = 0.149902
+		volume = 0.149902
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 75.0
+		mixgroup = "BaseAttacks"
+		spread_radius = 150.0
+		distance_max = 2500.0
+		soundevent_layer2 = "Damage_Melee.Gore"
+		soundevent_layer2_on = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/shared/large_blade/ring01.vsnd",
+			"sounds/weapons/hero/shared/large_blade/ring04.vsnd",
+			"sounds/null.vsnd",
+		]
+		vsnd_duration = 0.74585
+	}
+	Hero_Beastmaster.Attack.Post = 
+	{
+		type = "dota_src1_3d"
+		volume_rand_min = -0.25
+		volume_rand_max = 0.25
+		volume = 0.75
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 75.0
+		distance_max = 2500.0
+		rand_delay_min = 0.05
+		rand_delay_max = 0.12
+		soundevent_layer2 = "Damage_Melee.Gore"
+		soundevent_layer2_on = 1.0
+		limiter_on = 0.0
+		vsnd_files = 
+		[
+			"sounds/physics/damage/npc/rip01.vsnd",
+			"sounds/physics/damage/npc/rip02.vsnd",
+			"sounds/physics/damage/npc/rip03.vsnd",
+			"sounds/physics/damage/npc/rip04.vsnd",
+		]
+		vsnd_duration = 0.244626
+	}
+	Hero_Beastmaster.Wild_Axes = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 600.0
+		vsnd_files = "sounds/weapons/hero/beastmaster/wild_axes.vsnd"
+		vsnd_duration = 1.701701
+	}
+	Hero_Beastmaster.Wild_Axes_Damage = 
+	{
+		type = "dota_src1_3d"
+		volume_rand_min = -0.099976
+		volume_rand_max = 0.099976
+		volume = 0.699585
+		pitch_rand_min = -0.1
+		pitch_rand_max = 0.1
+		pitch = 1.0
+		soundlevel = 78.0
+		distance_max = 2500.0
+		event_type = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/shared/impacts/heavy_blade_impact1.vsnd",
+			"sounds/weapons/hero/shared/impacts/heavy_blade_impact2.vsnd",
+			"sounds/weapons/hero/shared/impacts/heavy_blade_impact3.vsnd",
+		]
+		vsnd_duration = 0.330499
+	}
+	Hero_Beastmaster.Call.Boar = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		vsnd_files = "sounds/weapons/hero/beastmaster/call_of_the_wild_boar.vsnd"
+		vsnd_duration = 2.812744
+	}
+	Hero_Beastmaster.Call.Hawk = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		vsnd_files = "sounds/weapons/hero/beastmaster/call_of_the_wild_hawk.vsnd"
+		vsnd_duration = 2.956712
+	}
+	Hero_Beastmaster.Primal_Roar = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Ultimates"
+		spread_radius = 900.0
+		vsnd_files = "sounds/weapons/hero/beastmaster/primal_roar.vsnd"
+		vsnd_duration = 2.66932
+	}
+	Hero_Beastmaster.Footsteps = 
+	{
+		type = "dota_src1_3d_footsteps"
+		volume = 0.399902
+		pitch_rand_min = -0.025
+		pitch_rand_max = 0.025
+		pitch = 0.925
+		soundlevel = 72.0
+		distance_max = 2000.0
+		event_type = 4.0
+		vsnd_files = 
+		[
+			"sounds/physics/footsteps/hero/shared/general01.vsnd",
+			"sounds/physics/footsteps/hero/shared/general02.vsnd",
+			"sounds/physics/footsteps/hero/shared/general03.vsnd",
+			"sounds/physics/footsteps/hero/shared/general04.vsnd",
+			"sounds/physics/footsteps/hero/shared/general05.vsnd",
+			"sounds/physics/footsteps/hero/shared/general06.vsnd",
+			"sounds/physics/footsteps/hero/shared/general07.vsnd",
+		]
+		vsnd_duration = 0.453787
+	}
+	Hero_Beastmaster_Boar.Footsteps = 
+	{
+		type = "dota_src1_3d"
+		volume_rand_min = -0.049988
+		volume_rand_max = 0.049988
+		volume = 0.349792
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.05
+		soundlevel = 72.0
+		distance_max = 2000.0
+		event_type = 4.0
+		vsnd_files = 
+		[
+			"sounds/physics/footsteps/hero/chen/footstep01.vsnd",
+			"sounds/physics/footsteps/hero/chen/footstep02.vsnd",
+			"sounds/physics/footsteps/hero/chen/footstep03.vsnd",
+			"sounds/physics/footsteps/hero/chen/footstep04.vsnd",
+			"sounds/physics/footsteps/hero/chen/footstep05.vsnd",
+			"sounds/physics/footsteps/hero/chen/footstep06.vsnd",
+			"sounds/physics/footsteps/hero/chen/footstep07.vsnd",
+		]
+		vsnd_duration = 0.134603
+	}
+	Hero_Beastmaster.Death = 
+	{
+		type = "dota_null_start"
+	}
+	Hero_Beastmaster_Boar.Death = 
+	{
+		type = "dota_src1_3d"
+		volume = 0.599609
+		pitch = 1.0
+		soundlevel = 75.0
+		distance_max = 2000.0
+		event_type = 4.0
+		vsnd_files = "sounds/physics/deaths/specials/beastmaster_boar_death.vsnd"
+		vsnd_duration = 0.90068
+	}
+	Hero_Beastmaster_Bird.Death = 
+	{
+		type = "dota_src1_3d"
+		volume = 0.699707
+		pitch = 1.0
+		soundlevel = 75.0
+		distance_max = 2000.0
+		event_type = 4.0
+		vsnd_files = "sounds/physics/deaths/specials/beastmaster_hawk_death.vsnd"
+		vsnd_duration = 1.595351
+	}
+	Beastmaster_Boar.Attack = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 78.0
+		distance_max = 2500.0
+		event_type = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/creep/good/range_projectile_launch.vsnd",
+			"sounds/weapons/creep/good/range_projectile_launch2.vsnd",
+			"sounds/weapons/creep/good/range_projectile_launch3.vsnd",
+			"sounds/weapons/creep/good/range_projectile_launch4.vsnd",
+		]
+		vsnd_duration = 0.502721
+	}
+	Beastmaster_Boar.ProjectileImpact = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 72.0
+		distance_max = 2500.0
+		limiter_on = 0.0
+		vsnd_files = 
+		[
+			"sounds/weapons/creep/good/range_projectile_impact.vsnd",
+			"sounds/weapons/creep/good/range_projectile_impact2.vsnd",
+			"sounds/weapons/creep/good/range_projectile_impact3.vsnd",
+			"sounds/weapons/creep/good/range_projectile_impact4.vsnd",
+		]
+		vsnd_duration = 0.578322
+	}
+	Hero_Beastmaster.Primal_Roar.ti7 = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Ultimates"
+		spread_radius = 900.0
+		soundevent_layer2 = "Hero_Beastmaster.Primal_Roar.ti7_layer"
+		soundevent_layer2_on = 1.0
+		vsnd_files = "sounds/weapons/hero/beastmaster/primal_roar.vsnd"
+		vsnd_duration = 2.66932
+	}
+	Hero_Beastmaster.Primal_Roar.ti7_layer = 
+	{
+		type = "dota_update_default"
+		volume = 0.8
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.0
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Ultimates"
+		spread_radius = 300.0
+		vsnd_files = "sounds/weapons/hero/beastmaster/primal_ti7_layer.vsnd"
+		vsnd_duration = 2.096327
+	}
+	Hero_Beastmaster.Taunt.TI9 = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch = 1.0
+		soundlevel = 81.0
+		distance_max = 2500.0
+		volume_fade_out = 1.0
+		vsnd_files = "sounds/weapons/hero/beastmaster/taunt_ti9.vsnd"
+		vsnd_duration = 3.942381
+	}
+	Hero_Beastmaster.Hawk.Reveal = 
+	{
+		type = "dota_src1_3d"
+		volume_rand_min = -0.5
+		volume_rand_max = 0.0
+		volume = 0.5
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 75.0
+		distance_max = 2000.0
+		volume_fade_out = 0.5
+		volume_use_FOW = 1.0
+		vsnd_files = "sounds/weapons/hero/beastmaster/hawk_reveal.vsnd"
+		vsnd_duration = 2.706167
+	}
+	Hero_Beastmaster.Hawk.Target = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		soundlevel = 75.0
+		distance_max = 2000.0
+		mixgroup = "Weapons"
+		vsnd_files = "sounds/weapons/hero/beastmaster/hawk_target.vsnd"
+		vsnd_duration = 2.223492
+	}
+	Hero_Beastmaster.DrumsOfSlom.Strike = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch = 0.66
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		soundlevel = 81.0
+		distance_max = 2000.0
+		mixgroup = "Weapons"
+		vsnd_files = "sounds/weapons/hero/beastmaster/drum_strike.vsnd"
+		vsnd_duration = 3.262109
+	}
+	Hero_Beastmaster.InnerBeast.Berserk = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		vsnd_files = "sounds/weapons/hero/beastmaster/inner_beast_cast.vsnd"
+		vsnd_duration = 2.495782
+	}
+}

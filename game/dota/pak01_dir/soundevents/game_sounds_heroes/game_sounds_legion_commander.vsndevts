@@ -1,0 +1,302 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
+{
+	Hero_LegionCommander.PreAttack = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 75.0
+		distance_max = 1500.0
+		event_type = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/phantom_lancer/preattack01.vsnd",
+			"sounds/weapons/hero/phantom_lancer/preattack02.vsnd",
+			"sounds/weapons/hero/phantom_lancer/preattack03.vsnd",
+		]
+		vsnd_duration = 0.56619
+	}
+	Hero_LegionCommander.Attack = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 78.0
+		distance_max = 2500.0
+		soundevent_layer2 = "Damage_Melee.Gore"
+		soundevent_layer2_on = 1.0
+		event_type = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/sven/attack01.vsnd",
+			"sounds/weapons/hero/sven/attack02.vsnd",
+			"sounds/weapons/hero/sven/attack03.vsnd",
+			"sounds/weapons/hero/sven/attack04.vsnd",
+		]
+		vsnd_duration = 0.710884
+	}
+	Hero_LegionCommander.Attack.Gore = 
+	{
+		type = "dota_src1_3d"
+		volume_rand_min = -0.149902
+		volume_rand_max = 0.149902
+		volume = 0.449707
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 78.0
+		distance_max = 2500.0
+		limiter_on = 0.0
+		vsnd_files = 
+		[
+			"sounds/physics/damage/npc/spatter01.vsnd",
+			"sounds/physics/damage/npc/spatter02.vsnd",
+			"sounds/physics/damage/npc/spatter03.vsnd",
+			"sounds/physics/damage/npc/spatter04.vsnd",
+		]
+		vsnd_duration = 0.451429
+	}
+	Hero_LegionCommander.Overwhelming.Cast = 
+	{
+		type = "dota_update_default"
+		volume = 0.5
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 72.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		vsnd_files = "sounds/weapons/hero/legion_commander/overwhelming_cast.vsnd"
+		vsnd_duration = 1.196825
+	}
+	Hero_LegionCommander.Overwhelming.Location = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 72.0
+		mixgroup = "Weapons"
+		spread_radius = 900.0
+		vsnd_files = "sounds/weapons/hero/legion_commander/overwhelming_location.vsnd"
+		vsnd_duration = 2.023628
+	}
+	Hero_LegionCommander.Overwhelming.Hero = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 0.95
+		soundlevel = 72.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/legion_commander/overwhelming_target01.vsnd",
+			"sounds/weapons/hero/legion_commander/overwhelming_target02.vsnd",
+		]
+		vsnd_duration = 1.720544
+	}
+	Hero_LegionCommander.Overwhelming.Creep = 
+	{
+		type = "dota_update_default"
+		volume = 0.5
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.15
+		soundlevel = 72.0
+		mixgroup = "Weapons"
+		spread_radius = 100.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/legion_commander/overwhelming_target01.vsnd",
+			"sounds/weapons/hero/legion_commander/overwhelming_target02.vsnd",
+		]
+		vsnd_duration = 1.720544
+	}
+	Hero_LegionCommander.Overwhelming.Buff = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		vsnd_files = "sounds/weapons/hero/legion_commander/overwhelming_buff.vsnd"
+		vsnd_duration = 1.934649
+	}
+	Hero_LegionCommander.PressTheAttack = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 600.0
+		limiter_on = 1.0
+		limiter_event_name = "Hero_LegionCommander.PressTheAttack"
+		limiter_max = 0.0
+		limiter_match_entity = 0.0
+		vsnd_files = "sounds/weapons/hero/legion_commander/press_cast.vsnd"
+		vsnd_duration = 3.955692
+	}
+	Hero_LegionCommander.Courage = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 78.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		vsnd_files = "sounds/weapons/hero/legion_commander/moc.vsnd"
+		vsnd_duration = 1.191633
+	}
+	Hero_LegionCommander.Duel.Cast = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		vsnd_files = "sounds/weapons/hero/legion_commander/duel_cast.vsnd"
+		vsnd_duration = 4.167075
+	}
+	Hero_LegionCommander.Duel.Cast.Arcana = 
+	{
+		type = "dota_update_default"
+		volume = 0.799805
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Ultimates"
+		spread_radius = 300.0
+		vsnd_files = "sounds/weapons/hero/legion_commander/duel_cast_arcana.vsnd"
+		vsnd_duration = 5.981111
+	}
+	Hero_LegionCommander.Duel.FP = 
+	{
+		type = "dota_update_default"
+		volume = 0.799805
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Ultimates"
+		volume_fade_in = 0.8
+		volume_fade_out = 1.0
+		spread_radius = 600.0
+		vsnd_files = "sounds/weapons/hero/legion_commander/duel_fp.vsnd"
+		vsnd_duration = 6.730499
+	}
+	Hero_LegionCommander.Duel = 
+	{
+		type = "dota_update_default"
+		volume = 0.799805
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Ultimates"
+		volume_fade_out = 1.0
+		spread_radius = 300.0
+		vsnd_files = "sounds/weapons/hero/legion_commander/duel.vsnd"
+		vsnd_duration = 6.730499
+	}
+	Hero_LegionCommander.Duel.Victory = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 1200.0
+		vsnd_files = "sounds/weapons/hero/legion_commander/duel_victory.vsnd"
+		vsnd_duration = 3.543084
+	}
+	Hero_LegionCommander.Footsteps = 
+	{
+		type = "dota_src1_3d_footsteps"
+		volume = 0.299805
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 72.0
+		distance_max = 2000.0
+		event_type = 4.0
+		vsnd_files = 
+		[
+			"sounds/physics/footsteps/hero/shared/general01.vsnd",
+			"sounds/physics/footsteps/hero/shared/general02.vsnd",
+			"sounds/physics/footsteps/hero/shared/general03.vsnd",
+			"sounds/physics/footsteps/hero/shared/general04.vsnd",
+			"sounds/physics/footsteps/hero/shared/general05.vsnd",
+			"sounds/physics/footsteps/hero/shared/general06.vsnd",
+			"sounds/physics/footsteps/hero/shared/general07.vsnd",
+		]
+		vsnd_duration = 0.453787
+	}
+	Hero_LegionCommander.Death = 
+	{
+		type = "dota_src1_3d"
+		volume = 0.599609
+		pitch = 1.0
+		soundlevel = 75.0
+		distance_max = 2000.0
+		event_type = 4.0
+		vsnd_files = "sounds/physics/deaths/specials/phantomlancer_death.vsnd"
+		vsnd_duration = 1.4039
+	}
+	Hero_LegionCommander.Overwhelming.Location.ti7 = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 72.0
+		mixgroup = "Weapons"
+		spread_radius = 900.0
+		vsnd_files = "sounds/weapons/hero/legion_commander/overwhelming_location_ti7.vsnd"
+		vsnd_duration = 2.027755
+	}
+	Hero_LegionCommander.Taunt.TI9 = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch = 1.0
+		soundlevel = 81.0
+		distance_max = 2500.0
+		event_type = 1.0
+		volume_fade_out = 1.0
+		vsnd_files = "sounds/weapons/hero/legion_commander/taunt_ti9.vsnd"
+		vsnd_duration = 5.331791
+	}
+	Hero_LegionCommander.Bellow.Cast = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		volume_fade_out = 0.2
+		spread_radius = 300.0
+		block_duration = 5.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/axe/berserkers_shoutmask.vsnd",
+		]
+		vsnd_duration = 1.423991
+	}
+}

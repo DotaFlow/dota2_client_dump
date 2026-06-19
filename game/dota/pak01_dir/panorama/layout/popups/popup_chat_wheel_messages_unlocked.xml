@@ -1,0 +1,36 @@
+<!-- xml reconstructed by Source 2 Viewer - https://valveresourceformat.github.io -->
+<root>
+	<styles>
+		<include src="s2r://panorama/styles/dotastyles.vcss_c" />
+		<include src="s2r://panorama/styles/popups/popups_shared.vcss_c" />
+		<include src="s2r://panorama/styles/popups/popup_chat_wheel_messages_unlocked.vcss_c" />
+	</styles>
+	<PopupChatWheelMessagesUnlocked class="PopupPanel Hidden RarityArcana" popupbackground="dim" oncancel="UIPopupButtonClicked()">
+		<DOTAScenePanel id="BackgroundFXLarge" map="scenes/item_received" camera="shot_camera" particleonly="true" />
+		<Panel id="MainSectionContainer" class="LeftRightFlow">
+			<Panel id="Body">
+				<DOTAScenePanel id="BackgroundFXWindow" map="scenes/item_received" camera="shot_camera" particleonly="true" />
+				<Label id="ItemPanelTitle" class="PopupTitle" text="#dota_chatwheel_unlock_popup_title" />
+				<Label class="PopupSubTitle" text="{s:subtitle}" />
+				<Panel id="IconContainer" hittest="false">
+					<Panel class="ReceivedItemIcon">
+						<Panel id="MainImage" />
+					</Panel>
+				</Panel>
+				<Panel id="ItemContainer">
+					<Panel id="HorizontalBand">
+						<Panel id="ChatWheelMessages" />
+					</Panel>
+				</Panel>
+				<Panel class="PopupButtonRow">
+					<Button class="PopupButton" onactivate="UIPopupButtonClicked()">
+						<Label text="#DOTA_Popup_Item_Received_Button_Accept" />
+					</Button>
+					<Button class="PopupButton" onactivate="DOTAShowSettingsRebornPopupSection(&apos;#dota_settings_communicationwheels&apos;, &apos;#dota_settings_chatwheel1&apos;)">
+						<Label text="#dota_chatwheel_customize" />
+					</Button>
+				</Panel>
+			</Panel>
+		</Panel>
+	</PopupChatWheelMessagesUnlocked>
+</root>

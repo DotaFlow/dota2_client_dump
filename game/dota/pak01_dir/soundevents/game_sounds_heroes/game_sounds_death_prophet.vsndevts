@@ -1,0 +1,334 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
+{
+	Hero_DeathProphet.PreAttack = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 0.95
+		soundlevel = 72.0
+		distance_max = 1500.0
+		event_type = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/pugna/preattack.vsnd",
+		]
+		vsnd_duration = 0.539637
+	}
+	Hero_DeathProphet.Attack = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 75.0
+		distance_max = 2500.0
+		event_type = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/death_prophet/attack1.vsnd",
+			"sounds/weapons/hero/death_prophet/attack2.vsnd",
+			"sounds/weapons/hero/death_prophet/attack3.vsnd",
+		]
+		vsnd_duration = 0.985941
+	}
+	Hero_DeathProphet.ProjectileImpact = 
+	{
+		type = "dota_src1_3d"
+		volume = 0.699707
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 72.0
+		distance_max = 1000.0
+		limiter_on = 0.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/pugna/projectile_impact01.vsnd",
+			"sounds/weapons/hero/pugna/projectile_impact02.vsnd",
+		]
+		vsnd_duration = 0.746984
+	}
+	Hero_DeathProphet.CarrionSwarm = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 800.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/death_prophet/carrionswarm.vsnd",
+		]
+		vsnd_duration = 1.706893
+	}
+	Hero_DeathProphet.CarrionSwarm.Damage = 
+	{
+		type = "dota_src1_3d"
+		volume_rand_min = -0.25
+		volume_rand_max = 0.25
+		volume = 0.75
+		pitch_rand_min = -0.1
+		pitch_rand_max = 0.1
+		pitch = 1.0
+		soundlevel = 75.0
+		distance_max = 2500.0
+		limiter_on = 0.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/death_prophet/swarm_impact01.vsnd",
+			"sounds/weapons/hero/death_prophet/swarm_impact02.vsnd",
+			"sounds/weapons/hero/death_prophet/swarm_impact03.vsnd",
+			"sounds/weapons/hero/death_prophet/swarm_impact04.vsnd",
+			"sounds/weapons/hero/death_prophet/swarm_impact05.vsnd",
+		]
+		vsnd_duration = 1.431746
+	}
+	Hero_DeathProphet.Silence.Cast = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/death_prophet/silence_cast.vsnd",
+		]
+		vsnd_duration = 2.314014
+	}
+	Hero_DeathProphet.Silence = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 600.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/death_prophet/silence.vsnd",
+		]
+		vsnd_duration = 3.210091
+	}
+	Hero_DeathProphet.Exorcism.Cast = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Ultimates"
+		spread_radius = 600.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/death_prophet/exorcism_cast.vsnd",
+		]
+		vsnd_duration = 5.829841
+	}
+	Hero_DeathProphet.Exorcism = 
+	{
+		type = "dota_update_default"
+		volume = 0.599609
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		volume_fade_in = 1.0
+		volume_fade_out = 2.0
+		spread_radius = 300.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/death_prophet/exorcism_loop.vsnd",
+		]
+		vsnd_duration = 8.519365
+	}
+	Hero_DeathProphet.Exorcism.Damage = 
+	{
+		type = "dota_src1_3d"
+		volume_rand_min = -0.25
+		volume_rand_max = 0.25
+		volume = 0.75
+		pitch_rand_min = -0.1
+		pitch_rand_max = 0.1
+		pitch = 0.9
+		soundlevel = 75.0
+		distance_max = 2500.0
+		limiter_on = 1.0
+		limiter_event_name = "Hero_DeathProphet.Exorcism.Damage"
+		limiter_max = 6.0
+		limiter_match_type = 0.0
+		limiter_match_entity = 0.0
+		limiter_match_substring = 0.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/death_prophet/exorcism_impact01.vsnd",
+			"sounds/weapons/hero/death_prophet/exorcism_impact02.vsnd",
+			"sounds/weapons/hero/death_prophet/exorcism_impact03.vsnd",
+			"sounds/weapons/hero/death_prophet/exorcism_impact04.vsnd",
+			"sounds/weapons/hero/death_prophet/exorcism_impact05.vsnd",
+			"sounds/weapons/hero/death_prophet/exorcism_impact06.vsnd",
+			"sounds/weapons/hero/death_prophet/exorcism_impact07.vsnd",
+			"sounds/weapons/hero/death_prophet/exorcism_impact08.vsnd",
+			"sounds/weapons/hero/death_prophet/exorcism_impact09.vsnd",
+			"sounds/weapons/hero/death_prophet/exorcism_impact10.vsnd",
+		]
+		vsnd_duration = 1.404807
+	}
+	Hero_DeathProphet.Exorcism.Heal = 
+	{
+		type = "dota_src1_3d"
+		volume_rand_min = -0.099976
+		volume_rand_max = 0.099976
+		volume = 0.89978
+		pitch_rand_min = -0.15
+		pitch_rand_max = 0.15
+		pitch = 1.25
+		soundlevel = 78.0
+		distance_max = 2000.0
+		limiter_on = 1.0
+		limiter_event_name = "Hero_DeathProphet.Exorcism.Heal"
+		limiter_max = 4.0
+		limiter_match_type = 0.0
+		limiter_match_entity = 1.0
+		limiter_match_substring = 0.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/death_prophet/exorcism_impact01.vsnd",
+			"sounds/weapons/hero/death_prophet/exorcism_impact02.vsnd",
+			"sounds/weapons/hero/death_prophet/exorcism_impact03.vsnd",
+			"sounds/weapons/hero/death_prophet/exorcism_impact04.vsnd",
+			"sounds/weapons/hero/death_prophet/exorcism_impact05.vsnd",
+			"sounds/weapons/hero/death_prophet/exorcism_impact06.vsnd",
+			"sounds/weapons/hero/death_prophet/exorcism_impact07.vsnd",
+			"sounds/weapons/hero/death_prophet/exorcism_impact08.vsnd",
+			"sounds/weapons/hero/death_prophet/exorcism_impact09.vsnd",
+			"sounds/weapons/hero/death_prophet/exorcism_impact10.vsnd",
+		]
+		vsnd_duration = 1.404807
+	}
+	Hero_DeathProphet.IdleLoop = 
+	{
+		type = "dota_update_default"
+		volume = 0.5
+		pitch = 1.0
+		soundlevel = 69.0
+		mixgroup = "Physics"
+		volume_move_vol = 0.2
+		volume_move_vel = 300.0
+		volume_move_filter_vel = 1.0
+		volume_falloff_min = 10.0
+		volume_falloff_max = 1000.0
+		vsnd_files = 
+		[
+			"sounds/physics/movement/hero/death_prophet/idle_loop.vsnd",
+		]
+		vsnd_duration = 5.269184
+	}
+	Hero_DeathProphet.Death = 
+	{
+		type = "dota_src1_3d"
+		volume = 0.8
+		pitch = 1.0
+		soundlevel = 81.0
+		distance_max = 2000.0
+		event_type = 4.0
+		vsnd_files = 
+		[
+			"sounds/physics/deaths/specials/deathprophet_death.vsnd",
+		]
+		vsnd_duration = 2.435374
+	}
+	Hero_DeathProphet.CarrionSwarm.Mortis = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 800.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/death_prophet/swarm_cast_mortis.vsnd",
+		]
+		vsnd_duration = 3.340952
+	}
+	Hero_DeathProphet.CarrionSwarm.Damage.Mortis = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.1
+		pitch_rand_max = 0.1
+		pitch = 1.0
+		soundlevel = 78.0
+		distance_max = 2500.0
+		limiter_on = 0.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/death_prophet/impact_mortis01.vsnd",
+			"sounds/weapons/hero/death_prophet/impact_mortis02.vsnd",
+			"sounds/weapons/hero/death_prophet/impact_mortis03.vsnd",
+			"sounds/weapons/hero/death_prophet/impact_mortis04.vsnd",
+			"sounds/weapons/hero/death_prophet/impact_mortis05.vsnd",
+			"sounds/weapons/hero/death_prophet/impact_mortis06.vsnd",
+		]
+		vsnd_duration = 1.992744
+	}
+	Hero_DeathProphet.SpiritSiphon.Cast = 
+	{
+		type = "dota_update_default"
+		volume = 0.8
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 0.9
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 100.0
+		volume_fade_out = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/death_prophet/spirit_siphon_cast.vsnd",
+		]
+		vsnd_duration = 4.98322
+	}
+	Hero_DeathProphet.SpiritSiphon.Target = 
+	{
+		type = "dota_update_default"
+		volume = 0.7
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 0.8
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		volume_fade_out = 0.5
+		spread_radius = 300.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/death_prophet/spirit_siphon_target.vsnd",
+		]
+		vsnd_duration = 5.017256
+	}
+	Hero_DeathProphet.TI8_taunt = 
+	{
+		type = "dota_src1_3d"
+		volume = 0.7
+		pitch = 1.0
+		soundlevel = 81.0
+		distance_max = 2500.0
+		event_type = 1.0
+		volume_fade_out = 0.5
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/death_prophet/ti8_taunt.vsnd",
+		]
+		vsnd_duration = 8.847937
+	}
+}

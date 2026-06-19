@@ -1,0 +1,128 @@
+/* Prettified by Source 2 Viewer - https://valveresourceformat.github.io */
+
+.TooltipProfileCard
+{
+	flow-children: down;
+}
+
+.ShowMiniShowcase #ProfileCard
+{
+	visibility: collapse;
+}
+
+#MiniShowcase
+{
+	visibility: collapse;
+}
+
+.ShowMiniShowcase #MiniShowcase
+{
+	visibility: visible;
+}
+
+.EventLevelContainer
+{
+	width: 100%;
+	flow-children: right;
+	max-height: 60px;
+	visibility: collapse;
+	border: 0.5px solid #1a160f;
+}
+
+.EventLevelContainer .EventLevelBackground
+{
+	width: 100%;
+	height: 100%;
+	ignore-parent-flow: true;
+	background-size: auto;
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	brightness: 0.2;
+}
+
+.ShowEventLevel .EventLevelContainer
+{
+	visibility: visible;
+}
+
+.EventLevelContainer #EventLevelShield
+{
+	ui-scale: 75%;
+	margin-left: 4px;
+}
+
+.EventLevelContainer .EventLevelLabel
+{
+	margin-top: 2px;
+	margin-left: 5px;
+	vertical-align: middle;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	font-family: titleFont;
+	font-size: 23px;
+	color: gradient( linear, 0% 0%, 0% 100%, from( #ffe8c6 ), to( #a08a68 ) );
+	text-shadow: 1.5px 1.5px black;
+}
+
+#PartySection
+{
+	background-color: #000000FF;
+	width: 100%;
+	padding: 4px;
+	visibility: collapse;
+}
+
+.ShowPartySection #PartySection
+{
+	visibility: visible;
+}
+
+#PartySection .Bans
+{
+	horizontal-align: center;
+	flow-children: right;
+	margin-bottom: 2px;
+}
+
+#PartySection Label
+{
+	vertical-align: center;
+	font-size: 14px;
+	text-transform: uppercase;
+	color: #556;
+	letter-spacing: 1px;
+}
+
+#PartySection .BannedHero.Empty
+{
+	visibility: collapse;
+}
+
+#PartySection DOTAHeroImage
+{
+	width: 32px;
+	height: 32px;
+	margin: 4px;
+}
+
+#PartySection .HasBansLabel
+{
+	visibility: visible;
+	margin-right: 4px;
+}
+
+#PartySection .NoBansLabel
+{
+	visibility: collapse;
+}
+
+.NoBans .Bans .HasBansLabel
+{
+	visibility: collapse;
+}
+
+.NoBans .Bans .NoBansLabel
+{
+	visibility: visible;
+}
+

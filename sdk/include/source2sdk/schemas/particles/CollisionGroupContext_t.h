@@ -1,5 +1,5 @@
 // MGetKV3ClassDefaults = {
-//	"m_nCollisionGroupNumber": -1
+//	"m_nCollisionGroupNumber": 0
 //}
 class CollisionGroupContext_t
 {

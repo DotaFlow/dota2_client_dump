@@ -1,0 +1,487 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
+{
+	Hero_Grimstroke.preAttack = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 72.0
+		distance_max = 1500.0
+		event_type = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/grimstroke/preattack01.vsnd",
+			"sounds/weapons/hero/grimstroke/preattack02.vsnd",
+		]
+		vsnd_duration = 1.141361
+	}
+	Hero_Grimstroke.Attack = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 75.0
+		distance_max = 2500.0
+		event_type = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/grimstroke/attack01.vsnd",
+			"sounds/weapons/hero/grimstroke/attack02.vsnd",
+		]
+		vsnd_duration = 0.99898
+	}
+	Hero_Grimstroke.projectileImpact = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 72.0
+		distance_max = 1000.0
+		limiter_on = 0.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/grimstroke/projectile_impact01.vsnd",
+			"sounds/weapons/hero/grimstroke/projectile_impact02.vsnd",
+		]
+		vsnd_duration = 1.264399
+	}
+	Hero_Grimstroke.DarkArtistry.PreCastPoint = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		volume_fade_out = 0.7
+		spread_radius = 300.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/grimstroke/dark_artistry_precast.vsnd",
+		]
+		vsnd_duration = 3.077211
+	}
+	Hero_Grimstroke.DarkArtistry.Cast = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		soundevent_layer2 = "Hero_Grimstroke.DarkArtistry.Cast.Layer"
+		soundevent_layer2_on = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/grimstroke/dark_artistry_cast.vsnd",
+		]
+		vsnd_duration = 4.628572
+	}
+	Hero_Grimstroke.DarkArtistry.Cast.Layer = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.1
+		pitch_rand_max = 0.1
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/grimstroke/dark_artistry_layer01.vsnd",
+			"sounds/weapons/hero/grimstroke/dark_artistry_layer02.vsnd",
+			"sounds/weapons/hero/grimstroke/dark_artistry_layer03.vsnd",
+			"sounds/weapons/hero/grimstroke/dark_artistry_layer04.vsnd",
+		]
+		vsnd_duration = 3.260453
+	}
+	Hero_Grimstroke.DarkArtistry.Projectile = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch = 1.0
+		soundlevel = 84.0
+		distance_max = 2500.0
+		mixgroup = "Weapons"
+		volume_use_FOW = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/grimstroke/dark_artistry_projectile.vsnd",
+		]
+		vsnd_duration = 3.002245
+	}
+	Hero_Grimstroke.DarkArtistry.Damage = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.1
+		pitch_rand_max = 0.1
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/grimstroke/dark_artistry_damage.vsnd",
+		]
+		vsnd_duration = 3.198004
+	}
+	Hero_Grimstroke.DarkArtistry.Damage.Creep = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.1
+		pitch_rand_max = 0.1
+		pitch = 1.0
+		soundlevel = 78.0
+		distance_max = 2500.0
+		limiter_on = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/grimstroke/dark_artistry_damage_creep.vsnd",
+		]
+		vsnd_duration = 2.343651
+	}
+	Hero_Grimstroke.InkCreature.Cast = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 78.0
+		distance_max = 2500.0
+		limiter_on = 0.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/grimstroke/ink_phantom_cast.vsnd",
+		]
+		vsnd_duration = 2.790204
+	}
+	Hero_Grimstroke.InkCreature.Spawn = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 78.0
+		mixgroup = "Weapons"
+		volume_fade_out = 0.25
+		distance_max = 2500.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/grimstroke/ink_phantom_spawn.vsnd",
+		]
+		vsnd_duration = 9.263764
+	}
+	Hero_Grimstroke.InkCreature.Attach = 
+	{
+		type = "dota_update_default"
+		volume_rand_min = -0.099976
+		volume_rand_max = 0.099976
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/grimstroke/ink_phantom_attach.vsnd",
+		]
+		vsnd_duration = 3.408798
+	}
+	Hero_Grimstroke.InkCreature.Attack = 
+	{
+		type = "dota_src1_3d"
+		volume_rand_min = -0.099976
+		volume_rand_max = 0.099976
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 78.0
+		distance_max = 2000.0
+		limiter_on = 0.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/grimstroke/phantom_attack01.vsnd",
+			"sounds/weapons/hero/grimstroke/phantom_attack02.vsnd",
+			"sounds/weapons/hero/grimstroke/phantom_attack03.vsnd",
+			"sounds/weapons/hero/grimstroke/phantom_attack04.vsnd",
+		]
+		vsnd_duration = 0.714422
+	}
+	Hero_Grimstroke.InkCreature.Damage = 
+	{
+		type = "dota_update_default"
+		volume = 0.6
+		volume_rand_min = -0.1
+		volume_rand_max = 0.1
+		pitch = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		soundlevel = 78.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/grimstroke/ink_phantom_damage.vsnd",
+		]
+		vsnd_duration = 2.566054
+	}
+	Hero_Grimstroke.InkCreature.Returned = 
+	{
+		type = "dota_update_default"
+		volume = 0.6
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/grimstroke/ink_phantom_return.vsnd",
+		]
+		vsnd_duration = 2.486916
+	}
+	Hero_Grimstroke.InkCreature.Death = 
+	{
+		type = "dota_update_default"
+		volume = 0.7
+		pitch = 1.0
+		pitch_rand_min = -0.1
+		pitch_rand_max = 0.1
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/grimstroke/ink_phantom_death.vsnd",
+		]
+		vsnd_duration = 2.197279
+	}
+	Hero_Grimstroke.InkSwell.Cast = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 600.0
+		volume_use_FOW = 1.0
+		volume_FOW_filter_vel = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/grimstroke/ink_swell_cast.vsnd",
+		]
+		vsnd_duration = 5.498503
+	}
+	Hero_Grimstroke.InkSwell.Damage = 
+	{
+		type = "dota_src1_3d"
+		volume_rand_min = -0.099976
+		volume_rand_max = 0.099976
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 78.0
+		distance_max = 2000.0
+		limiter_on = 0.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/grimstroke/phantom_attack01.vsnd",
+			"sounds/weapons/hero/grimstroke/phantom_attack02.vsnd",
+			"sounds/weapons/hero/grimstroke/phantom_attack03.vsnd",
+			"sounds/weapons/hero/grimstroke/phantom_attack04.vsnd",
+		]
+		vsnd_duration = 0.714422
+	}
+	Hero_Grimstroke.InkSwell.Stun = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 600.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/grimstroke/ink_swell_stun.vsnd",
+		]
+		vsnd_duration = 2.77703
+	}
+	Hero_Grimstroke.InkSwell.Target = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		soundlevel = 84.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/grimstroke/ink_swell_target.vsnd",
+		]
+		vsnd_duration = 2.507755
+	}
+	Hero_Grimstroke.SoulChain.Cast = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch = 1.0
+		soundlevel = 84.0
+		mixgroup = "Ultimates"
+		limiter_on = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/grimstroke/soul_chain_cast.vsnd",
+		]
+		vsnd_duration = 4.493333
+	}
+	Hero_Grimstroke.SoulChain.Target = 
+	{
+		type = "dota_update_default"
+		volume = 0.8
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Ultimates"
+		spread_radius = 600.0
+		volume_fade_in = 1.0
+		limiter_on = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/grimstroke/soul_chain_target.vsnd",
+		]
+		vsnd_duration = 5.988708
+	}
+	Hero_Grimstroke.SoulChain.Partner = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 600.0
+		limiter_on = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/grimstroke/soul_chain_partner.vsnd",
+		]
+		vsnd_duration = 6.090295
+	}
+	Hero_Grimstroke.SoulChain.Leash = 
+	{
+		type = "dota_update_default"
+		volume = 0.66
+		pitch = 1.0
+		pitch_rand_min = -0.01
+		pitch_rand_max = 0.01
+		soundlevel = 81.0
+		mixgroup = "Ultimates"
+		spread_radius = 300.0
+		volume_fade_out = 0.7
+		stop_at_time = 8.5
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/grimstroke/soul_chain_leash.vsnd",
+		]
+		vsnd_duration = 6.651383
+	}
+	Hero_Grimstroke.IdleLoop = 
+	{
+		type = "dota_update_default"
+		volume = 0.5
+		pitch = 1.0
+		soundlevel = 69.0
+		mixgroup = "Physics"
+		volume_move_vol = 0.3
+		volume_move_vel = 300.0
+		volume_move_filter_vel = 1.0
+		volume_falloff_min = 10.0
+		volume_falloff_max = 1000.0
+		vsnd_files = 
+		[
+			"sounds/physics/movement/hero/grimstroke/idle_loop.vsnd",
+		]
+		vsnd_duration = 3.557324
+	}
+	Hero_Grimstroke.Taunt.TI9 = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch = 1.0
+		soundlevel = 81.0
+		distance_max = 2500.0
+		event_type = 1.0
+		volume_fade_out = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/grimstroke/taunt_ti9.vsnd",
+		]
+		vsnd_duration = 2.995714
+	}
+	Hero_Grimstroke.InkOver.Target = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.1
+		pitch_rand_max = 0.1
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/grimstroke/ink_over.vsnd",
+		]
+		vsnd_duration = 3.991723
+	}
+	Hero_Grimstroke.DarkPortrait.Cast = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.5
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/grimstroke/ink_over.vsnd",
+		]
+		vsnd_duration = 3.991723
+	}
+	Hero_Grimstroke.DarkPortrait.Target = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.1
+		pitch_rand_max = 0.1
+		pitch = 1.25
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/grimstroke/ink_phantom_cast.vsnd",
+		]
+		vsnd_duration = 2.790204
+	}
+}

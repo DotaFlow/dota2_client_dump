@@ -1,0 +1,137 @@
+/* Prettified by Source 2 Viewer - https://valveresourceformat.github.io */
+
+DOTABPCrownfallQuestsPage
+{
+	background-image: url("s2r://panorama/images/events/crownfall/backgrounds/bg_png.vtex");
+	background-size: cover;
+	flow-children: right;
+}
+
+.ZooColumn
+{
+	flow-children: down;
+}
+
+.CrownfallButtonPrimary
+{
+	min-width: 200px;
+	transition-property: brightness, transform;
+	transition-duration: 0.1s;
+}
+
+.CrownfallButtonPrimary .ButtonLabel
+{
+	text-align: center;
+	color: white;
+	text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.8);
+	horizontal-align: center;
+	margin-top: 21px;
+	padding: 0px 48px;
+}
+
+.CrownfallButtonPrimary .ButtonParticles
+{
+	width: 100%;
+	height: 100%;
+	horizontal-align: center;
+	vertical-align: center;
+	opacity-mask: url("s2r://panorama/images/masks/sun_burst_png.vtex");
+}
+
+.CrownfallButtonPrimary .ButtonOutline,.CrownfallButtonPrimary .ButtonBackground
+{
+	flow-children: right;
+	width: 100%;
+}
+
+.CrownfallButtonPrimary .ButtonOutline .Edge,.CrownfallButtonPrimary .ButtonBackground .Edge
+{
+	width: 48px;
+	height: 80px;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.CrownfallButtonPrimary .ButtonOutline .Edge.Right,.CrownfallButtonPrimary .ButtonBackground .Edge.Right
+{
+	transform: scaleX( -1 );
+}
+
+.CrownfallButtonPrimary .ButtonOutline .Middle,.CrownfallButtonPrimary .ButtonBackground .Middle
+{
+	width: 24px;
+	height: 80px;
+	background-size: contain;
+}
+
+.CrownfallButtonPrimary .ButtonOutline .Fill,.CrownfallButtonPrimary .ButtonBackground .Fill
+{
+	width: fill-parent-flow( 1 );
+	height: 80px;
+	background-size: contain;
+}
+
+.CrownfallButtonPrimary .ButtonBackground
+{
+	wash-color: rgb(42, 123, 222);
+	transition-property: brightness, wash-color;
+	transition-duration: 0.1s;
+}
+
+.CrownfallButtonPrimary .ButtonBackground .Edge
+{
+	background-image: url("s2r://panorama/images/events/crownfall/buttons/button_primary_bg_edge_png.vtex");
+}
+
+.CrownfallButtonPrimary .ButtonBackground .Middle
+{
+	background-image: url("s2r://panorama/images/events/crownfall/buttons/button_primary_bg_middle_png.vtex");
+}
+
+.CrownfallButtonPrimary .ButtonBackground .Fill
+{
+	background-image: url("s2r://panorama/images/events/crownfall/buttons/button_primary_bg_fill_png.vtex");
+}
+
+.CrownfallButtonPrimary .ButtonOutline .Edge
+{
+	background-image: url("s2r://panorama/images/events/crownfall/buttons/button_primary_outline_edge_png.vtex");
+}
+
+.CrownfallButtonPrimary .ButtonOutline .Middle
+{
+	background-image: url("s2r://panorama/images/events/crownfall/buttons/button_primary_outline_middle_png.vtex");
+}
+
+.CrownfallButtonPrimary .ButtonOutline .Fill
+{
+	background-image: url("s2r://panorama/images/events/crownfall/buttons/button_primary_outline_fill_png.vtex");
+}
+
+.CrownfallButtonPrimary.Purple .ButtonBackground
+{
+	wash-color: rgb(102, 68, 186);
+}
+
+.CrownfallButtonPrimary:hover .ButtonBackground
+{
+	brightness: 2;
+}
+
+.CrownfallButtonPrimary:active
+{
+	transform: translateY( 1px );
+}
+
+.Emblem_1
+{
+	width: 600px;
+	height: 24px;
+}
+
+.Emblem_2
+{
+	width: 360px;
+	height: 40px;
+}
+

@@ -27,4 +27,9 @@ enum EBadgeType : uint32_t
 	k_EBadgeType_TI14_FinalsDay3 = 24,
 	k_EBadgeType_TI14_FinalsDay4 = 25,
 	k_EBadgeType_TI14_Special = 26,
+	k_EBadgeType_TI15_FinalsDay1 = 27,
+	k_EBadgeType_TI15_FinalsDay2 = 28,
+	k_EBadgeType_TI15_FinalsDay3 = 29,
+	k_EBadgeType_TI15_FinalsDay4 = 30,
+	k_EBadgeType_TI15_Special = 31,
 };

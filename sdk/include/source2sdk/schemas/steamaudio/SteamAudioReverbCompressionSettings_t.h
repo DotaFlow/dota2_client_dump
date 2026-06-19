@@ -1,5 +1,5 @@
 // MGetKV3ClassDefaults = {
-//	"m_bEnableCompression": true,
+//	"m_bEnableCompression": false,
 //	"m_flQuality": 0.950000
 //}
 class SteamAudioReverbCompressionSettings_t

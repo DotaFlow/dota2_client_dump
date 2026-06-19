@@ -1,0 +1,17 @@
+<!-- xml reconstructed by Source 2 Viewer - https://valveresourceformat.github.io -->
+<root>
+	<styles>
+		<include src="s2r://panorama/styles/dotastyles.vcss_c" />
+		<include src="s2r://panorama/styles/tooltips/tooltip_econ_set_preview.vcss_c" />
+	</styles>
+	<scripts>
+		<include src="s2r://panorama/scripts/tooltips/tooltip_econ_set_preview.vjs_c" />
+	</scripts>
+	<Panel class="EconSetPreviewContents" ontooltiploaded="setupTooltip()">
+		<Label class="ItemName" text="{g:dota_item_name:item_def}" />
+		<Panel id="Bubble">
+			<DOTAUIEconSetPreview id="SetPreview" antialias="true" oneconsetloaded="spinEconSet()" />
+			<Panel id="Reflection" />
+		</Panel>
+	</Panel>
+</root>

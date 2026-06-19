@@ -1,0 +1,27 @@
+<!-- xml reconstructed by Source 2 Viewer - https://valveresourceformat.github.io -->
+<root>
+	<styles>
+		<include src="s2r://panorama/styles/dotastyles.vcss_c" />
+		<include src="s2r://panorama/styles/dashboard.vcss_c" />
+		<include src="s2r://panorama/styles/dashboard_tabs_profile.vcss_c" />
+	</styles>
+	<DOTAProfileTabs class="SecondaryTabSet">
+		<DOTAAvatarImage id="ProfileTabsAvatarImage" />
+		<RadioButton id="Showcase" class="SecondaryTabButton" group="SecondaryTabGroup" text="#DOTA_Profile_ProfilePage" />
+		<Panel class="SelfOrFriendsOnly">
+			<Label class="SecondaryTabSeparator" text="/" />
+			<RadioButton id="Stats" class="SecondaryTabButton" group="SecondaryTabGroup" text="#DOTA_Profile_HistoryPage" />
+		</Panel>
+		<Panel class="SelfOnly">
+			<Label id="BattleStatsSeparator" class="SecondaryTabSeparator" text="/" />
+			<RadioButton id="BattleStats" class="SecondaryTabButton" group="SecondaryTabGroup" onactivate="DOTAShowProfileBattleStatsPage()">
+				<Panel class="PlusIcon SecondaryTabPrefixImage" />
+				<Label text="#DOTA_Profile_BattleStatsPage" />
+			</RadioButton>
+		</Panel>
+		<Label class="SecondaryTabSeparator" text="/" />
+		<RadioButton id="Trophies" class="SecondaryTabButton" group="SecondaryTabGroup" text="#DOTA_Profile_TrophyPage" />
+		<Label class="SecondaryTabSeparator" text="/" />
+		<RadioButton id="Tickets" class="SecondaryTabButton" group="SecondaryTabGroup" text="#DOTA_Profile_LeaguePassesPage" />
+	</DOTAProfileTabs>
+</root>

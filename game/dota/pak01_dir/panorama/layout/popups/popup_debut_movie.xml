@@ -1,0 +1,16 @@
+<!-- xml reconstructed by Source 2 Viewer - https://valveresourceformat.github.io -->
+<root>
+	<styles>
+		<include src="s2r://panorama/styles/dotastyles.vcss_c" />
+		<include src="s2r://panorama/styles/popups/popups_shared.vcss_c" />
+		<include src="s2r://panorama/styles/popups/popup_debut_movie.vcss_c" />
+	</styles>
+	<DOTADebutMoviePopup class="PopupPanel" oncancel="AddStyle( &apos;ShowCloseButton&apos; )">
+		<Panel id="MovieContainer">
+			<Movie id="DebutMovie" controls="none" autoplay="onload" disableactivatepause="true" />
+		</Panel>
+		<Panel id="MovieBg" />
+		<Panel id="TintBg" />
+		<Button id="CloseButton" class="CloseButton" onactivate="UIPopupButtonClicked()" />
+	</DOTADebutMoviePopup>
+</root>

@@ -1,0 +1,348 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
+{
+	Hero_TemplarAssassin.PreAttack = 
+	{
+		type = "dota_null_start"
+	}
+	Hero_TemplarAssassin.Attack = 
+	{
+		type = "dota_src1_3d"
+		volume = 0.599609
+		pitch = 1.0
+		soundlevel = 75.0
+		distance_max = 2500.0
+		event_type = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/templar_assassin/attack1.vsnd",
+			"sounds/weapons/hero/templar_assassin/attack2.vsnd",
+			"sounds/weapons/hero/templar_assassin/attack3.vsnd",
+			"sounds/weapons/hero/templar_assassin/attack4.vsnd",
+			"sounds/weapons/hero/templar_assassin/attack5.vsnd",
+			"sounds/weapons/hero/templar_assassin/attack6.vsnd",
+		]
+		vsnd_duration = 1.218095
+	}
+	Hero_TemplarAssassin.ProjectileImpact = 
+	{
+		type = "dota_src1_3d"
+		volume = 0.699707
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 72.0
+		distance_max = 1000.0
+		limiter_on = 0.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/enchantress/impact01.vsnd",
+			"sounds/weapons/hero/enchantress/impact02.vsnd",
+			"sounds/weapons/hero/enchantress/impact03.vsnd",
+		]
+		vsnd_duration = 0.365125
+	}
+	Hero_TemplarAssassin.Refraction = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/templar_assassin/refraction.vsnd",
+		]
+		vsnd_duration = 3.951293
+	}
+	Hero_TemplarAssassin.Refraction.Damage = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 78.0
+		distance_max = 2500.0
+		event_type = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/templar_assassin/attack1.vsnd",
+			"sounds/weapons/hero/templar_assassin/attack2.vsnd",
+			"sounds/weapons/hero/templar_assassin/attack3.vsnd",
+			"sounds/weapons/hero/templar_assassin/attack4.vsnd",
+			"sounds/weapons/hero/templar_assassin/attack5.vsnd",
+			"sounds/weapons/hero/templar_assassin/attack6.vsnd",
+		]
+		vsnd_duration = 1.218095
+	}
+	Hero_TemplarAssassin.Refraction.Absorb = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 78.0
+		distance_max = 2500.0
+		event_type = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/templar_assassin/refraction_absorb.vsnd",
+		]
+		vsnd_duration = 0.587415
+	}
+	Hero_TemplarAssassin.Meld = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		distance_max = 2500.0
+		limiter_on = 0.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/templar_assassin/meld.vsnd",
+		]
+		vsnd_duration = 2.235533
+	}
+	Hero_TemplarAssassin.Meld.Move = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 78.0
+		distance_max = 2500.0
+		limiter_on = 0.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/templar_assassin/meld_end.vsnd",
+		]
+		vsnd_duration = 1.463379
+	}
+	Hero_TemplarAssassin.Meld.Attack = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 78.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/templar_assassin/meld_attack.vsnd",
+		]
+		vsnd_duration = 1.226168
+	}
+	Hero_TemplarAssassin.PsiBlade = 
+	{
+		type = "dota_src1_3d"
+		volume_rand_min = -0.149902
+		volume_rand_max = 0.149902
+		volume = 0.749512
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		distance_max = 1000.0
+		limiter_on = 1.0
+		limiter_event_name = "Hero_TemplarAssassin.PsiBlade"
+		limiter_max = 4.0
+		limiter_match_type = 0.0
+		limiter_match_entity = 0.0
+		limiter_match_substring = 0.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/templar_assassin/psi_blade01.vsnd",
+			"sounds/weapons/hero/templar_assassin/psi_blade02.vsnd",
+			"sounds/weapons/hero/templar_assassin/psi_blade03.vsnd",
+			"sounds/weapons/hero/templar_assassin/psi_blade04.vsnd",
+		]
+		vsnd_duration = 0.704762
+	}
+	Hero_TemplarAssassin.Trap.Cast = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/templar_assassin/trap_cast.vsnd",
+		]
+		vsnd_duration = 1.782971
+	}
+	Hero_TemplarAssassin.Trap = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Weapons"
+		spread_radius = 300.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/templar_assassin/trap_spawn.vsnd",
+		]
+		vsnd_duration = 3.311111
+	}
+	Hero_TemplarAssassin.Trap.Trigger = 
+	{
+		type = "dota_update_default"
+		volume = 0.799805
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Ultimates"
+		spread_radius = 150.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/templar_assassin/trigger_trap.vsnd",
+		]
+		vsnd_duration = 1.912132
+	}
+	Hero_TemplarAssassin.Trap.Explode = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Ultimates"
+		spread_radius = 600.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/templar_assassin/trap_explode.vsnd",
+		]
+		vsnd_duration = 3.183537
+	}
+	Hero_TemplarAssassin.Footsteps = 
+	{
+		type = "dota_src1_3d_footsteps"
+		volume_rand_min = -0.049988
+		volume_rand_max = 0.049988
+		volume = 0.249939
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.1
+		soundlevel = 69.0
+		distance_max = 1000.0
+		event_type = 4.0
+		vsnd_files = 
+		[
+			"sounds/physics/footsteps/hero/shared/general01.vsnd",
+			"sounds/physics/footsteps/hero/shared/general02.vsnd",
+			"sounds/physics/footsteps/hero/shared/general03.vsnd",
+			"sounds/physics/footsteps/hero/shared/general04.vsnd",
+			"sounds/physics/footsteps/hero/shared/general05.vsnd",
+			"sounds/physics/footsteps/hero/shared/general06.vsnd",
+			"sounds/physics/footsteps/hero/shared/general07.vsnd",
+		]
+		vsnd_duration = 0.453787
+	}
+	Hero_TemplarAssassin.PsiBlade.Resonance = 
+	{
+		type = "dota_src1_3d"
+		volume_rand_min = -0.099976
+		volume_rand_max = 0.099976
+		volume = 0.799683
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 78.0
+		distance_max = 1000.0
+		limiter_on = 1.0
+		limiter_event_name = "Hero_TemplarAssassin.PsiBlade.Resonance"
+		limiter_max = 1.0
+		limiter_match_type = 0.0
+		limiter_match_entity = 0.0
+		limiter_match_substring = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/templar_assassin/psi_blade_resonance.vsnd",
+		]
+		vsnd_duration = 0.753379
+	}
+	Hero_TemplarAssassin.Taunt.TI10 = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch = 1.0
+		soundlevel = 84.0
+		distance_max = 2500.0
+		limiter_on = 1.0
+		volume_fade_out = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/templar_assassin/taunt_ti10.vsnd",
+		]
+		vsnd_duration = 3.776667
+	}
+	Hero_TemplarAssassin.HiddenReach.Cast = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch = 1.0
+		pitch_rand_min = 0.0
+		pitch_rand_max = 0.0
+		mixgroup = "Weapons"
+		soundlevel = 81.0
+		spread_radius = 1200.0
+		volume_fade_out = 1.0
+		delay = 0.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/void_spirit/dissimilate_cast.vsnd",
+		]
+		vsnd_duration = 2.122834
+	}
+	Hero_TemplarAssassin.HiddenReach.TeleportIn = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		mixgroup = "Weapons"
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/void_spirit/dissimilate_appear.vsnd",
+		]
+		vsnd_duration = 2.082993
+	}
+	Hero_TemplarAssassin.HiddenReach.Portals = 
+	{
+		type = "dota_src1_3d"
+		volume = 0.5
+		pitch = 0.9
+		pitch_rand_min = 0.0
+		pitch_rand_max = 0.1
+		mixgroup = "NoDuck"
+		soundlevel = 84.0
+		distance_max = 3000.0
+		volume_fade_in = 0.0
+		limiter_on = 0.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/void_spirit/dissimilate_portal01.vsnd",
+			"sounds/weapons/hero/void_spirit/dissimilate_portal02.vsnd",
+		]
+		vsnd_duration = 1.720136
+	}
+}
