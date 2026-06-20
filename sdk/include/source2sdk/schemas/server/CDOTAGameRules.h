@@ -25,7 +25,7 @@ class CDOTAGameRules : public CMultiplayRules
 	float32 m_flGoldTickTime;
 	bool m_bEnableSuggestAbilities;
 	bool m_bEnableSuggestItems;
-	bool m_bHackAllPlayersLoadedForDarkCarnivalPreLaunchModifierApplication;
+	bool m_bHackWhyAreYouGuysReadingOurVariableNames;
 	uint32 m_unFanfareGoodGuys;
 	uint32 m_unFanfareBadGuys;
 	GameTime_t m_flFanfareTime;
