@@ -169,6 +169,7 @@
  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
+ !"#$%&'()*+,-./0123`
  %02X
  %4hf
  %d %s is interpolating on %s %s\n
@@ -8854,21 +8855,18 @@ $playerteam
 05=k
 08bX
 09,h
-09E\t
 0: (V0) Legacy save format, 1: (V1) KeyValues3 save format, 2: (V2) KV3Transfer saves
 0: Normal, 1:RTTI Available Main Unavailable, 2: RTTI Locked Main Unavailable, 3: RTTI Locked Main Available, 4: RTTI Locked Main Locked
 0:%02d
 0;Q5[
 0<cz
 0=off, 1=on, 2=debug visualization
-0It\t
 0M2~@p
 0W/5
 0Z@q
 0\r0#0)070;0U0Y0[0g0q0y0}0
 0e\r8
 0pp@5tqE?|sO541
-0sA\t
 0tU+xc:
 0x%4.4x 
 0x%X
@@ -12431,6 +12429,7 @@ $playerteam
 16CModifierFactoryI25CDOTA_Modifier_Creep_SlowE
 16CModifierFactoryI25CDOTA_Modifier_DataDrivenE
 16CModifierFactoryI25CDOTA_Modifier_ForceStaffE
+16CModifierFactoryI25CDOTA_Modifier_ForebodingE
 16CModifierFactoryI25CDOTA_Modifier_Giant_MaulE
 16CModifierFactoryI25CDOTA_Modifier_HeroStatueE
 16CModifierFactoryI25CDOTA_Modifier_Item_AegisE
@@ -12463,6 +12462,7 @@ $playerteam
 16CModifierFactoryI26CDOTA_Modifier_Eul_CycloneE
 16CModifierFactoryI26CDOTA_Modifier_Filler_HealE
 16CModifierFactoryI26CDOTA_Modifier_Force_BootsE
+16CModifierFactoryI26CDOTA_Modifier_Foreboding2E
 16CModifierFactoryI26CDOTA_Modifier_Glyph_ResetE
 16CModifierFactoryI26CDOTA_Modifier_Invoker_EMPE
 16CModifierFactoryI26CDOTA_Modifier_Item_ArmletE
@@ -19527,6 +19527,7 @@ $playerteam
 25CDOTA_Modifier_Creep_Slow
 25CDOTA_Modifier_DataDriven
 25CDOTA_Modifier_ForceStaff
+25CDOTA_Modifier_Foreboding
 25CDOTA_Modifier_Giant_Maul
 25CDOTA_Modifier_HeroStatue
 25CDOTA_Modifier_Item_Aegis
@@ -20023,6 +20024,7 @@ $playerteam
 26CDOTA_Modifier_Eul_Cyclone
 26CDOTA_Modifier_Filler_Heal
 26CDOTA_Modifier_Force_Boots
+26CDOTA_Modifier_Foreboding2
 26CDOTA_Modifier_Glyph_Reset
 26CDOTA_Modifier_Invoker_EMP
 26CDOTA_Modifier_Item_Armlet
@@ -40448,6 +40450,8 @@ CDOTA_Modifier_Foragers_Kit
 CDOTA_Modifier_Foragers_Kit_Thinker
 CDOTA_Modifier_ForceStaff
 CDOTA_Modifier_Force_Boots
+CDOTA_Modifier_Foreboding
+CDOTA_Modifier_Foreboding2
 CDOTA_Modifier_ForestTrollHighPriest_HealAmp
 CDOTA_Modifier_ForestTrollHighPriest_HealAmp_Bonus
 CDOTA_Modifier_ForestTrollHighPriest_HealAutocast
@@ -68751,6 +68755,7 @@ JFIF extension marker: RGB thumbnail image, length %u
 JFIF extension marker: palette thumbnail image, length %u
 JFIF extension marker: type 0x%02x, length %u
 JM0L
+JMz7
 JOINT-ISO-ITU-T
 JPEG datastream contains no image
 JPEG parameter struct mismatch: library thinks size is %u, caller expects %u
@@ -98082,6 +98087,8 @@ dota_force_server_play
 dota_force_show_contextual_tips
 dota_force_tp_quality
 dota_force_tp_team
+dota_foreboding_modifier
+dota_foreboding_modifier2
 dota_fow_circle_test
 dota_fow_disable
 dota_fow_grid_size
@@ -104458,6 +104465,7 @@ g|MT
 h&eC
 h*Ax
 h0XB
+h12\t
 h2Wl
 h2n_\
 h5N.
@@ -104481,6 +104489,7 @@ hEntityB
 hF\rDz
 hFcg
 hHeroOwner
+hI0\t
 hIllusion
 hInitialTarget
 hJxRX@_
