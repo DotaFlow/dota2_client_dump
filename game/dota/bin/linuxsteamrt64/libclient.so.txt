@@ -169,7 +169,6 @@
  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
- !"#$%&'()*+,-./0123`
  %02X
  %4hf
  %d %s is interpolating on %s %s\n
@@ -848,6 +847,7 @@
 #DOTA_AutomaticSelectionPriority
 #DOTA_AutomaticSelectionPriority_ChoiceConfirm_%s
 #DOTA_AutomaticSelectionPriority_ChoiceResponse_UnknownError
+#DOTA_Axe_Missing
 #DOTA_BLOCKED
 #DOTA_BackpackExpander_Confirm
 #DOTA_BadGuys
@@ -6179,6 +6179,7 @@ $playerteam
 %s_hype
 %s_icon
 %s_icon_bg
+%s_image
 %s_info
 %s_league_%u
 %s_league_%u_%u
@@ -68474,7 +68475,7 @@ Item set %s: Item definition "%s" was not found
 Item set %s: No bundle definition specified or found.\n
 Item set %s: Set contains no items
 Item set %s: Set contains no localized name
-Item set %s: contains items from multiple different personas
+Item set %s: contains items from multiple different personas. Defined as %d by %s (%u), changed to %d by %s (%u)
 Item set %s: item definition %u "%s" appears multiple times
 Item view for type %d is not yet implemented.
 Item%d
@@ -68755,7 +68756,6 @@ JFIF extension marker: RGB thumbnail image, length %u
 JFIF extension marker: palette thumbnail image, length %u
 JFIF extension marker: type 0x%02x, length %u
 JM0L
-JMz7
 JOINT-ISO-ITU-T
 JPEG datastream contains no image
 JPEG parameter struct mismatch: library thinks size is %u, caller expects %u
@@ -71520,6 +71520,7 @@ Missing set portrait image for itemset %s, please run dota_show_set_portrait_gen
 Missing token
 Missing token %s
 Missing value for currency type %s for price point %u
+MissingAxe
 MissingCharges
 MissingComponent
 MissingHero
@@ -78243,6 +78244,7 @@ Prerequisite %s added by lesson %s doesn't exist!\n
 PreserveParticlesOnModelChanged
 PresetConfigs
 PressedNext
+PressingCeremonialReasons
 PressureDelay
 PrestigeRewardsPanel
 PrettyFont:%s:%d:%d
@@ -101370,6 +101372,7 @@ file://{images}/events/crownfall/store/carousel_icons/packs.png
 file://{images}/events/crownfall/store/carousel_icons/packs_druud.png
 file://{images}/events/crownfall/store/carousel_icons/packs_ice.png
 file://{images}/events/crownfall/store/carousel_icons/packs_skywrath.png
+file://{images}/events/dark_carnival/missing_axe_large.psd
 file://{images}/events/frostivus/2024/frostivus_flat_01.psd
 file://{images}/events/frostivus/2024/frostivus_flat_02.psd
 file://{images}/events/frostivus/2024/frostivus_flat_03.psd
@@ -101428,6 +101431,7 @@ file://{images}/masks/softedge_box.png
 file://{images}/players/%d.png
 file://{images}/players/%u.png
 file://{images}/players/portrait.png
+file://{images}/pressing_ceremonial_large.psd
 file://{images}/profile_badges/bg_%02d.psd
 file://{images}/profile_badges/bg_number_%02d.psd
 file://{images}/profile_badges/level_%02d.png
@@ -102568,6 +102572,7 @@ file://{resources}/layout/recent_armory_item.xml
 file://{resources}/layout/recent_armory_items_menu.xml
 file://{resources}/layout/recent_treasures.xml
 file://{resources}/layout/rubick_arcana_progress.xml
+file://{resources}/layout/scene_panel.xml
 file://{resources}/layout/season_reward_toast.xml
 file://{resources}/layout/selection_box.xml
 file://{resources}/layout/settings/ui_ability_bar_settings.xml
@@ -104465,10 +104470,10 @@ g|MT
 h&eC
 h*Ax
 h0XB
-h12\t
 h2Wl
 h2n_\
 h5N.
+h72\t
 hActivator
 hAlreadyHitList
 hAlreadyHitListReturning
@@ -104489,7 +104494,6 @@ hEntityB
 hF\rDz
 hFcg
 hHeroOwner
-hI0\t
 hIllusion
 hInitialTarget
 hJxRX@_
@@ -104497,6 +104501,7 @@ hListOfMeepos
 hMegameepoFrame
 hN2D
 hNeutralTarget
+hO0\t
 hOwner
 hPU3
 hPreviousMeepo
@@ -128158,6 +128163,7 @@ preservefadedtoasts
 presettle_cloth_iterations
 press_the_attack
 pressed
+pressing_ceremonial_large.psd
 prev_value
 prev_vote_0_count
 prev_vote_1_count

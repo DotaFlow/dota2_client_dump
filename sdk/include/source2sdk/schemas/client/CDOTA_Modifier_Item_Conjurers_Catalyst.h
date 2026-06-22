@@ -1,4 +1,4 @@
-class CDOTA_Modifier_Item_Conjurers_Catalyst : public CDOTA_Buff
+class CDOTA_Modifier_Item_Conjurers_Catalyst : public CDOTA_Buff_Item
 {
 	float32 damage_aoe;
 	float32 damage;
