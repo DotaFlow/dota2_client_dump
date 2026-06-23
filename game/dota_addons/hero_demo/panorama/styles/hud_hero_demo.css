@@ -1,0 +1,998 @@
+/* Prettified by Source 2 Viewer - https://valveresourceformat.github.io */
+
+@define topOffset: 116px;
+@define panelWidth: 280px;
+@define panelHeight: 575px;
+@define conncetedClientPanelHeight: 497px;
+.CustomHudRoot
+{
+	width: 100%;
+	height: 100%;
+}
+
+.DemoHud
+{
+	flow-children: right;
+	height: 100%;
+	width: 100%;
+}
+
+.ButtonPrimary:not(.Small)
+{
+	height: 30px;
+}
+
+.ButtonPrimary:not(.Small) Label
+{
+	font-size: 15px;
+	line-height: 19px;
+	letter-spacing: 1px;
+}
+
+.ButtonPrimary:not(.Small) Image
+{
+	horizontal-align: center;
+	width: 16px;
+	height: 16px;
+}
+
+.AdvancedButton Label
+{
+	color: LightestGrey;
+}
+
+.ControlPanel
+{
+	vertical-align: top;
+	horizontal-align: left;
+	flow-children: right;
+	margin-top: topOffset;
+	transition-property: background-color, transform;
+	transition-duration: 0.2s;
+	transition-timing-function: ease-in-out;
+	transition-timing-function: cubic-bezier(0, 0.9, 0, 0.9);
+}
+
+.Minimized .ControlPanel
+{
+	transform: translateX( -280px );
+}
+
+.HUDFlipped .ControlPanel
+{
+	horizontal-align: right;
+	flow-children: left;
+}
+
+.HUDFlipped .Minimized .ControlPanel
+{
+	transform: translateX( 280px );
+}
+
+.ControlPanelContainer
+{
+	width: 280px;
+	height: panelHeight;
+	flow-children: down;
+	overflow: squish scroll;
+	background-color: #1d1f20;
+	background-color: gradient( linear, 100% 0%, 0% 0%, from( #202527 ), to( #202224 ) );
+	border: 1px solid black;
+	z-index: 2;
+}
+
+.HUDFlipped .ControlPanelContainer
+{
+	background-color: gradient( linear, 0% 0%, 100% 0%, from( #202527 ), to( #202224 ) );
+}
+
+.ConnectedClient .ControlPanelContainer
+{
+	height: conncetedClientPanelHeight;
+}
+
+#ControlPanelSlideThumbContainer
+{
+	width: 40px;
+	height: 200px;
+	vertical-align: middle;
+}
+
+#ControlPanelSlideThumb
+{
+	width: 25px;
+	height: 120px;
+	vertical-align: middle;
+	transform: translateX( 0px );
+	background-color: gradient( linear, 0% 0%, 70% 0%, from( #111111 ), to( #3b3b3b ) );
+	border-top-right-radius: 8px;
+	border-bottom-right-radius: 12px;
+	box-shadow: #000000AA 1px 1px 6px;
+	transition-property: background-color;
+	transition-delay: 0.0s;
+	transition-duration: 0.2s;
+	transition-timing-function: ease-in-out;
+}
+
+.HUDFlipped #ControlPanelSlideThumbContainer
+{
+	transform: scaleX(-1);
+}
+
+.RightArrowButtonIcon
+{
+	width: 16px;
+	height: 16px;
+	vertical-align: middle;
+	horizontal-align: right;
+	background-image: url("s2r://panorama/images/control_icons/single_arrow_left_png.vtex");
+	background-size: contain;
+	background-repeat: no-repeat;
+	wash-color: #D0D0D0;
+	transform: translateX( -1px );
+	transition-property: transform, wash-color;
+	transition-delay: 0.0s;
+	transition-duration: 0.2s;
+	transition-timing-function: ease-in-out;
+}
+
+#ControlPanelSlideThumb:hover
+{
+	background-color: gradient( linear, 0% 0%, 70% 0%, from( #181818 ), to( #474747 ) );
+}
+
+#ControlPanelSlideThumb:hover .RightArrowButtonIcon
+{
+	transform: translateX( -4px );
+	wash-color: white;
+}
+
+.Minimized .ControlPanel .RightArrowButtonIcon
+{
+	transform: rotateZ(180deg) translateX( -8px );
+}
+
+.Minimized .ControlPanel #ControlPanelSlideThumb:hover .RightArrowButtonIcon
+{
+	transform: translateX( 6px ) rotateZ(180deg);
+	wash-color: white;
+}
+
+.ControlPanel. #ControlPanelSlideThumb:hover .RightArrowButtonIcon
+{
+	transform: translateX( 3px ) rotateZ(180deg);
+	wash-color: white;
+}
+
+#Header
+{
+	flow-children: right;
+	width: 100%;
+	height: fit-children;
+	margin: 12px 12px 6px 12px;
+}
+
+#PlayerHeroImage
+{
+	height: 40px;
+	width: 60px;
+	vertical-align: center;
+}
+
+.HeroDemoTextContainer
+{
+	flow-children: down;
+	width: fill-parent-flow( 1.0 );
+	margin: 0px 6px;
+	vertical-align: middle;
+}
+
+.ChangeLoadoutButton
+{
+	transform: translateY( -1px );
+	width: 100%;
+}
+
+.ChangeLoadoutButton Label
+{
+	text-decoration: underline;
+	font-size: 12px;
+	color: #d0d0d086;
+	transition-property: color;
+	transition-duration: 0.15s;
+	transition-timing-function: ease-in-out;
+}
+
+.ChangeLoadoutButton Label:hover
+{
+	color: white;
+}
+
+#HeroDemoHeroName
+{
+	height: 28px;
+	color: whitesmoke;
+	font-family: titleFont;
+	font-weight: semi-bold;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	line-height: 1.1;
+	text-overflow: shrink;
+	width: fill-parent-flow( 1.0 );
+	vertical-align: center;
+	text-shadow: 0px 2px 8px black;
+}
+
+.HorizontalRule
+{
+	width: 100%;
+	horizontal-align: center;
+	height: 1px;
+	background-color: #4e515599;
+	margin: 4px 12px;
+	margin-bottom: 0px;
+}
+
+.Category
+{
+	width: 100%;
+	flow-children: down;
+	margin: 6px 12px 0px 12px;
+}
+
+.AdvancedCategory
+{
+	width: 100%;
+	flow-children: down;
+	margin: 4px 6px;
+}
+
+.AdvancedCategory .HorizontalRule
+{
+	margin: 6px 0px;
+}
+
+.TimeScaleCategory Button
+{
+	tooltip-position: top;
+}
+
+.CategoryHeaderContainer
+{
+	width: 100%;
+	flow-children: right;
+	margin-bottom: 6px;
+}
+
+.CategoryHeaderContainer .CategoryHeader
+{
+	vertical-align: center;
+	width: fill-parent-flow(1);
+	font-size: 15px;
+	color: whitesmoke;
+	font-weight: semi-bold;
+	text-shadow: 0px 2px 10px black;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin-right: 4px;
+}
+
+.CategoryHeaderContainer .AdvancedButton
+{
+	vertical-align: center;
+}
+
+.CategoryHeaderContainer .AdvancedButton .AdvancedButtonArrow
+{
+	height: 14px;
+	width: 14px;
+	margin: 0px;
+	margin-left: 0px;
+	margin-right: -2px;
+}
+
+.HUDFlipped .CategoryHeaderContainer .AdvancedButton
+{
+	flow-children: left;
+}
+
+.HUDFlipped .CategoryHeaderContainer .AdvancedButton .AdvancedButtonArrow
+{
+	transform: scaleX( -1 );
+	margin-left: -2px;
+	margin-right: 0px;
+}
+
+.CategoryHeader
+{
+	text-transform: uppercase;
+	font-weight: semi-bold;
+	font-size: 15px;
+	letter-spacing: 1px;
+	color: whitesmoke;
+	text-shadow: 0px 2px 10px black;
+}
+
+.SubtitleHeader
+{
+	font-size: 16px;
+	color: LightGrey;
+	text-shadow: 0px 1px 6px black;
+	margin-bottom: 2px;
+}
+
+.CategoryButtonContainer
+{
+	flow-children: down;
+	width: 100%;
+}
+
+.InlineButtonLabel
+{
+	color: whitesmoke;
+	opacity: 0.8;
+	text-shadow: 0px 1px 4px #000000;
+	vertical-align: center;
+	font-size: 16px;
+	margin-right: 4px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.CheckboxesContainer
+{
+	width: 100%;
+	flow-children: down;
+	margin-bottom: 2px;
+}
+
+.CheckboxesContainer .Row
+{
+	margin: 0px 0px 4px;
+}
+
+.CreepsContainer
+{
+	flow-children: down;
+	width: 100%;
+	margin: 2px 0px;
+}
+
+.RunesContainer
+{
+	flow-children: right;
+	margin: 6px 0px 2px;
+}
+
+.Row
+{
+	flow-children: right;
+	width: 100%;
+	margin: 3px 0px;
+}
+
+.Row Button
+{
+	width: fill-parent-flow(1);
+	padding: 0px;
+}
+
+.CenterHorizontally
+{
+	horizontal-align: center;
+}
+
+.DemoButton
+{
+	background-color: #3e4144;
+	border: 1px solid #4e5155;
+	height: 30px;
+	width: fill-parent-flow( 1.0 );
+	transition-property: background-color, border, color;
+	transition-duration: 0.15s;
+	transition-timing-function: linear;
+}
+
+.DemoButton:disabled
+{
+	opacity: 0.25;
+}
+
+.DemoButton Label
+{
+	horizontal-align: center;
+	vertical-align: middle;
+	color: #D8DADE;
+	font-size: 16px;
+	text-transform: uppercase;
+	font-family: defaultFont;
+	font-weight: normal;
+	text-overflow: shrink;
+	letter-spacing: 1px;
+	text-align: center;
+}
+
+#SingleCreepWaveButton
+{
+	width: 40px;
+	height: 24px;
+	margin-left: 6px;
+}
+
+.ControlIcon
+{
+	width: 20px;
+	height: 20px;
+	vertical-align: middle;
+	horizontal-align: center;
+	wash-color: #D8DADE;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	transition-property: wash-color;
+	transition-duration: 0.2s;
+}
+
+.ControlIcon:hover
+{
+	wash-color: #fff;
+}
+
+.FreeSpellsIcon
+{
+	background-image: url("s2r://panorama/images/control_icons/24px/unusual.vsvg");
+}
+
+.CreepsIcon
+{
+	background-image: url("s2r://panorama/images/control_icons/24px/creeps.vsvg");
+}
+
+.TowersIcon
+{
+	background-image: url("s2r://panorama/images/control_icons/24px/towers.vsvg");
+}
+
+.NightIcon
+{
+	background-image: url("s2r://panorama/images/control_icons/24px/brightness.vsvg");
+}
+
+.AllVisionIcon
+{
+	background-image: url("s2r://panorama/images/control_icons/24px/spectator_hot_keys.vsvg");
+}
+
+.DisableXPIcon
+{
+	background-image: url("s2r://panorama/images/hud/facets/icons/xp_png.vtex");
+}
+
+.DisableRegenIcon
+{
+	background-image: url("s2r://panorama/images/hud/facets/icons/healing_png.vtex");
+}
+
+#RefreshButton
+{
+	width: 40px;
+	height: 24px;
+	vertical-align: middle;
+	margin-left: 6px;
+}
+
+#RefreshButton .RefreshIcon
+{
+	width: 100%;
+	height: 100%;
+	vertical-align: middle;
+	horizontal-align: center;
+	brightness: 0.8;
+	saturation: 0.6;
+	background-image: url("s2r://panorama/images/refresh_icon_png.vtex");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	transition-property: brightness, saturation;
+	transition-duration: 0.2s;
+}
+
+#RefreshButton:hover .RefreshIcon
+{
+	brightness: 1.5;
+	saturation: 1.0;
+}
+
+#RefreshButton:active .RefreshIcon
+{
+	brightness: 1.0;
+	saturation: 1.0;
+}
+
+.DemoButton .RuneImage
+{
+	background-color: #000000;
+	border: 3px solid #000000;
+	brightness: 1.0;
+	transition-property: brightness;
+	transition-duration: 0.15s;
+	transition-timing-function: ease-in-out;
+}
+
+.LeftButton
+{
+	margin-right: 3px;
+}
+
+#SpawnAllyButton
+{
+	border-radius: 3px 0px 0px 3px;
+}
+
+#SpawnEnemyButton
+{
+	border-radius: 0px;
+}
+
+#SpawnDummyButton
+{
+	border-radius: 0px 3px 3px 0px;
+}
+
+#LevelUpSelectedHeroesButton
+{
+	border-radius: 3px 0px 0px 3px;
+}
+
+#LevelMaxSelectedHeroesButton
+{
+	border-radius: 0px 3px 3px 0px;
+}
+
+.RuneButton
+{
+	margin-top: 2px;
+	height: 28px;
+	width: 28px;
+	saturation: 0.8;
+	brightness: 0.6;
+	transition-property: brightness, saturation, opacity;
+	transition-duration: 0.2s;
+	transition-timing-function: linear;
+}
+
+.RuneButton:hover
+{
+	brightness: 1.5;
+	saturation: 1.0;
+}
+
+.RuneButton:active
+{
+	brightness: 1.0;
+	saturation: 1.0;
+}
+
+.RuneButton DOTAEmoticon
+{
+	tooltip-position: top;
+	width: 100%;
+	height: 100%;
+}
+
+.DemoButton:hover
+{
+	background-color: gradient( linear, 0% 0%, 70% 0%, from( #676b70 ), to( #3e4144 ) );
+	border: 1px solid #686b70;
+}
+
+.DemoButton:hover Label
+{
+	color: #FFF;
+}
+
+.DemoButton:active
+{
+	background-color: #7E94B1;
+	pre-transform-scale2d: 1.02;
+}
+
+.Category .RuneImage:hover
+{
+	brightness: 2.5;
+}
+
+.Category .RuneImage:active
+{
+	brightness: 2.5;
+}
+
+#SelectHeroContainer
+{
+	vertical-align: center;
+	margin-left: 280px;
+	background-color: #000c;
+	opacity: 0.0;
+	transform: translateX( -60px ) translateY( -100px );
+	transition-property: opacity, transform;
+	transition-duration: 0.0s;
+}
+
+.HUDFlipped #SelectHeroContainer
+{
+	margin-left: 0px;
+	margin-right: 280px;
+	horizontal-align: right;
+	transform: translateX( 60px ) translateY( -100px );
+}
+
+#SelectHeroContainer.HeroPickerVisible
+{
+	opacity: 1.0;
+	transform: translateX( 0px ) translateY( -98px );
+	z-index: 10;
+}
+
+#SelectHeroContainer.PickMainHero
+{
+	vertical-align: top;
+	margin-top: 155px;
+}
+
+#ChooseHeroContainer
+{
+	flow-children: right;
+}
+
+#CancelButton
+{
+	horizontal-align: right;
+	width: 14px;
+	height: 14px;
+}
+
+.CloseButton
+{
+	padding-right: 3px;
+	padding-top: 3px;
+}
+
+.AdvancedSettingsContainer
+{
+	width: 290px;
+	overflow: clip;
+	z-index: 1;
+	margin-top: topOffset;
+	horizontal-align: left;
+	margin-left: 280px;
+}
+
+.HUDFlipped .AdvancedSettingsContainer
+{
+	horizontal-align: right;
+	margin-right: 280px;
+}
+
+#CloseButton
+{
+	horizontal-align: right;
+	ignore-parent-flow: true;
+	margin: 8px;
+	margin-right: 22px;
+	z-index: 3;
+	opacity: 0;
+	transition-property: opacity, transform;
+	transition-duration: 0.25s;
+	transition-timing-function: cubic-bezier(0, 0.9, 0, 0.9);
+	transition-delay: 0.15s;
+}
+
+#CloseButton Image
+{
+	width: 14px;
+	height: 14px;
+}
+
+.HUDFlipped #CloseButton
+{
+	horizontal-align: right;
+	margin-right: 12px;
+}
+
+#CloseButton.Visible
+{
+	opacity: 1.0;
+	transition-delay: 0s;
+	transition-duration: 0.05s;
+}
+
+.AdvancedSettings
+{
+	flow-children: down;
+	horizontal-align: left;
+	min-width: 280px;
+	height: panelHeight;
+	overflow: squish scroll;
+	padding: 6px;
+	background-color: #131414;
+	background-image: url("s2r://panorama/images/settings/settings_rock_texture_png.vtex");
+	background-size: cover;
+	background-img-opacity: 0.2;
+	opacity: 0.0;
+	z-index: 1;
+	border: 1px solid black;
+	border-right: 1px;
+	border-left: 0px;
+	transition-property: opacity, transform;
+	transition-duration: 0.15s;
+	transition-timing-function: cubic-bezier(0, 0.9, 0, 0.9);
+	transform: translateX( -24px );
+}
+
+.HUDFlipped .AdvancedSettings
+{
+	transform: translateX( 24px );
+	border-right: 0px;
+	border-left: 1px;
+	horizontal-align: right;
+}
+
+.ConnectedClient .AdvancedSettings
+{
+	height: conncetedClientPanelHeight;
+}
+
+.AdvancedSettings.AdvancedSettingsVisible
+{
+	opacity: 1.0;
+	transform: translateX( 0px );
+}
+
+.AdvancedSettings VerticalScrollBar
+{
+	width: 4px;
+}
+
+.NeutralContainer
+{
+	width: fit-children;
+}
+
+.NeutralRow
+{
+	width: fit-children;
+}
+
+.NeutralSpawnButton
+{
+	tooltip-position: top;
+	margin-right: 4px;
+	margin-bottom: 4px;
+}
+
+.NeutralsSpawningContainer
+{
+	flow-children: right-wrap;
+}
+
+.NormalCreepsTypeSelector
+{
+	margin: 4px 0px 8px;
+}
+
+.TabButtonGroup
+{
+	flow-children: right;
+	width: 100%;
+	border-radius: 48px;
+	padding: 1px;
+	background-color: rgb(8, 8, 8);
+	box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.01);
+	border: 1px solid black;
+}
+
+.TabButtonGroup .TabButton
+{
+	width: fill-parent-flow(1);
+	border-radius: 48px;
+	margin: 1px;
+	border: 1px solid;
+	border-brush: WhiteGradientBorderSoft;
+	transition-property: brightness, border, border-brush, background-color;
+	transition-duration: 0.05s, 0.1s;
+}
+
+.TabButtonGroup .TabButton .RadioBox
+{
+	visibility: collapse;
+}
+
+.TabButtonGroup .TabButton Label
+{
+	vertical-align: center;
+	horizontal-align: center;
+	font-size: 15px;
+	line-height: 19px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	margin: 1px 0px 2px;
+	text-shadow: 0px 1px 2px black;
+	transition-property: transform;
+	transition-duration: 0.05s;
+}
+
+.TabButtonGroup .TabButton:active
+{
+	brightness: 0.5;
+}
+
+.TabButtonGroup .TabButton:active Label
+{
+	transform: translateY( 1px );
+}
+
+.TabButtonGroup .TabButton:selected
+{
+	border-color: white;
+	background-color: LightGreyGradientBackgroundColor;
+}
+
+.NormalCreepsSpawningContainer
+{
+	flow-children: right;
+	horizontal-align: center;
+}
+
+.NeutralImage
+{
+	width: 58px;
+	height: width-percentage( 56.25% );
+}
+
+.NeutralSpacer
+{
+	width: 30px;
+	height: 30px;
+}
+
+.CustomHudRoot ToggleButton,.CustomHudRoot DOTASettingsCheckbox
+{
+	width: fill-parent-flow( 1.0 );
+	tooltip-position: top;
+	padding: 0px;
+}
+
+.CustomHudRoot ToggleButton Label,.CustomHudRoot DOTASettingsCheckbox Label
+{
+	letter-spacing: 0.5px;
+	color: LighterGrey;
+	margin-top: -1px;
+	margin-bottom: 1px;
+	font-size: 17px;
+}
+
+#Footer
+{
+	flow-children: right;
+	width: 100%;
+	margin: 8px 12px;
+}
+
+#Footer TextButton
+{
+	width: fill-parent-flow(1);
+}
+
+.SpeedControlButton
+{
+	tooltip-position: bottom;
+}
+
+#HeroFacetDropdown
+{
+	width: 24px;
+	height: 40px;
+	horizontal-align: center;
+	vertical-align: center;
+}
+
+.HeroDemoNameContainer
+{
+	width: 100%;
+	height: fit-children;
+	flow-children: right;
+}
+
+.HeroImageContainer
+{
+	flow-children: right;
+	border: 1px solid black;
+}
+
+.HeroDetailsContainer
+{
+	flow-children: down;
+	margin-bottom: 3px;
+	border: 1px solid #4e515599;
+	background-color: #0009;
+}
+
+.HeroDetailsContainer #SpawnHeroButton
+{
+	margin: 4px 6px;
+	margin-top: 6px;
+	border-radius: 3px;
+	flow-children: right;
+	background-color: gradient( linear, 0% 0%, 0% 100%, from( #373F43 ), to( #21272A ) );
+	border: 1px solid white;
+	border-brush: WhiteGradientBorderSoft;
+	box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.3);
+	transition-property: background-color, brightness;
+	transition-duration: 0.1s;
+}
+
+.HeroDetailsContainer #SpawnHeroButton:hover
+{
+	background-color: LightGreyGradientBackgroundColor;
+}
+
+.HeroDetailsContainer #SpawnHeroButton:active
+{
+	background-color: LightGreyGradientBackgroundColor_Inverted;
+	brightness: 0.6;
+}
+
+.HeroDetailsContainer #SpawnHeroButton:active Label
+{
+	transform: translateY( 0.5px );
+}
+
+.HeroDetailsContainer #SpawnHeroButton #HeroPickerImage
+{
+	height: 34px;
+	width: height-percentage( 177.77% );
+}
+
+.HeroDetailsContainer #SpawnHeroButton #SpawnHeroName
+{
+	font-family: titleFont;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: semi-bold;
+	color: whitesmoke;
+	text-shadow: 0px 1px 6px black;
+	width: fill-parent-flow( 1.0 );
+	padding: 0px;
+	vertical-align: middle;
+	margin: 0px 6px;
+	height: 22px;
+	font-size: 15px;
+	text-overflow: shrink;
+	text-align: left;
+	transition-property: transform;
+	transition-duration: 0.1s;
+}
+
+.HeroDetailsContainer #SpawnHeroButton .HeroPickerArrow
+{
+	vertical-align: center;
+	margin-right: 4px;
+	wash-color: #D8DADE;
+	width: 16px;
+	height: 16px;
+}
+
+.HeroDetailsContainer #SpawnHeroFacetPicker
+{
+	margin: 2px 3px;
+	margin-bottom: 6px;
+	horizontal-align: center;
+	width: 100%;
+}
+
+.GlobalSettingsLabel
+{
+	font-size: 16px;
+	color: whitesmoke;
+}
+

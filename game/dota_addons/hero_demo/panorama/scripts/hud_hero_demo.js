@@ -1,0 +1,718 @@
+function Init()
+{
+    var contextPanel = $.GetContextPanel();
+    var parent = contextPanel.GetParent();
+    var customRoot = parent.GetParent();
+    var hudRoot = customRoot.GetParent().FindChild( 'HUDElements' );
+    var menuButtons = hudRoot.FindChild( 'MenuButtons' );
+	menuButtons.AddClass( "HeroDemo" );
+
+	$.RegisterEventHandler( 'DOTAUIHeroPickerHeroSelected', $( '#SelectHeroContainer' ), SwitchToNewHero );
+	// $.RegisterEventHandler('DOTAHeroFacetDropdownFacetSelected', $('#HeroFacetDropdown'), SwitchToNewFacet);
+	$.RegisterEventHandler('DOTAHeroFacetPickerFacetSelected', $('#SpawnHeroFacetPicker'), SwitchSpawnHeroFacet);
+
+    var UiDefaults = CustomNetTables.GetTableValue( "game_global", "ui_defaults" );
+
+    if( UiDefaults )
+    {
+		$( '#SpawnCreepsButton' ).SetSelected( UiDefaults["SpawnCreepsEnabled"] );
+		$( '#TowersEnabledButton' ).SetSelected( UiDefaults["TowersEnabled"] );
+    }
+
+	//Axehack
+	var nHeroID = Players.GetSelectedHeroID( 0 )
+	if ( nHeroID == 2 )
+		nHeroID = 1;
+
+	SwitchToNewHero( nHeroID, 0);
+
+	if ( !Game.GetConvarBool("dota_hero_demo_is_hosting") )
+	{
+		$( '#MultiplayerCategory' ).AddClass("Hide");
+		$( '#MultiplayerCategoryRule' ).AddClass("Hide");
+		contextPanel.AddClass("ConnectedClient");
+	}
+
+	$( '#JoinPermissionsDropDown' ).SetSelectedIndex( Game.GetConvarInt( "dota_hero_demo_join_permissions" ) );
+	$( '#EnableXPButton' ).SetSelected( Game.GetConvarInt("dota_enable_xp_gain") );
+	$( '#EnableRegenButton' ).SetSelected( Game.GetConvarInt("dota_enable_regeneration") );
+
+	CreateNeutralSpawningButtons();
+}
+Init();
+
+
+function OnCreepTypeSelected( nCreepType )
+{
+	let normalCreeps = [
+		"npc_dota_creep_goodguys_melee",
+		"npc_dota_creep_goodguys_ranged",
+		"npc_dota_creep_goodguys_flagbearer",
+		"npc_dota_goodguys_siege",
+	];
+
+	let superCreeps = [
+		"npc_dota_creep_goodguys_melee_upgraded",
+		"npc_dota_creep_goodguys_ranged_upgraded",
+		"npc_dota_creep_goodguys_flagbearer_upgraded",
+		"npc_dota_goodguys_siege_upgraded",
+	];
+
+	let megaCreeps = [
+		"npc_dota_creep_goodguys_melee_upgraded_mega",
+		"npc_dota_creep_goodguys_ranged_upgraded_mega",
+		"npc_dota_creep_goodguys_flagbearer_upgraded_mega",
+		"npc_dota_goodguys_siege_upgraded_mega",
+	];
+
+	if ( nCreepType === 1 )
+	{
+		FillCreepSpawningButtons($("#NormalCreepsContainer"), normalCreeps, superCreeps);
+	}
+	else if ( nCreepType === 2 )
+	{
+		FillCreepSpawningButtons($("#NormalCreepsContainer"), normalCreeps, megaCreeps);
+	}
+	else
+	{
+		FillCreepSpawningButtons($("#NormalCreepsContainer"), normalCreeps, normalCreeps);
+	}
+}
+
+function CreateNeutralSpawningButtons()
+{
+	let normalCreeps = [
+		"npc_dota_creep_goodguys_melee",
+		"npc_dota_creep_goodguys_ranged",
+		"npc_dota_creep_goodguys_flagbearer",
+		"npc_dota_goodguys_siege",
+	];
+
+	FillCreepSpawningButtons($("#NormalCreepsContainer"), normalCreeps, normalCreeps);
+
+	var smallCampNeutrals = [
+		"npc_dota_neutral_kobold",
+		"npc_dota_neutral_kobold_tunneler",
+		"npc_dota_neutral_kobold_taskmaster",
+		"npc_dota_neutral_forest_troll_berserker",
+		"npc_dota_neutral_forest_troll_high_priest",
+
+		"npc_dota_neutral_gnoll_assassin",
+
+		"npc_dota_neutral_gnoll_assassin",
+
+		"npc_dota_neutral_ghost",
+		"npc_dota_neutral_fel_beast",
+
+		"npc_dota_neutral_harpy_scout",
+		"npc_dota_neutral_harpy_storm",
+
+		"npc_dota_neutral_tadpole",
+	]
+
+	FillUnitSpawningButtons($("#SmallCampsContainer"), smallCampNeutrals);
+
+	var mediumCampNeutrals = [
+		"npc_dota_neutral_alpha_wolf",
+		"npc_dota_neutral_giant_wolf",
+
+		"npc_dota_neutral_ogre_mauler",
+		"npc_dota_neutral_ogre_magi",
+
+		"npc_dota_neutral_mud_golem",
+
+		"npc_dota_neutral_froglet",
+		"npc_dota_neutral_froglet_mage",
+	]
+
+	FillUnitSpawningButtons($("#MediumCampsContainer"), mediumCampNeutrals);
+
+	var largeCampNeutrals = [
+		"npc_dota_neutral_centaur_khan",
+		"npc_dota_neutral_centaur_outrunner",
+
+		"npc_dota_neutral_polar_furbolg_ursa_warrior",
+		"npc_dota_neutral_polar_furbolg_champion",
+
+		"npc_dota_neutral_satyr_hellcaller",
+		"npc_dota_neutral_satyr_soulstealer",
+		"npc_dota_neutral_satyr_trickster",
+
+		"npc_dota_neutral_warpine_raider",
+
+		"npc_dota_neutral_wildkin",
+		"npc_dota_neutral_enraged_wildkin",
+
+		"npc_dota_neutral_dark_troll_warlord",
+		"npc_dota_neutral_dark_troll",
+
+
+		"npc_dota_neutral_grown_frog",
+		"npc_dota_neutral_grown_frog_mage",
+	]
+
+	FillUnitSpawningButtons($("#LargeCampsContainer"), largeCampNeutrals);
+
+	var ancientCampNeutrals = [
+		"npc_dota_neutral_black_dragon",
+		"npc_dota_neutral_black_drake",
+
+		"npc_dota_neutral_granite_golem",
+		"npc_dota_neutral_rock_golem",
+
+		"npc_dota_neutral_big_thunder_lizard",
+		"npc_dota_neutral_small_thunder_lizard",
+
+		"npc_dota_neutral_ice_shaman",
+		"npc_dota_neutral_frostbitten_golem",
+
+		"npc_dota_neutral_prowler_shaman",
+		"npc_dota_neutral_prowler_acolyte",
+
+		"npc_dota_neutral_ancient_frog",
+		"npc_dota_neutral_ancient_frog_mage",
+	]
+
+	FillUnitSpawningButtons($("#AncientCampsContainer"), ancientCampNeutrals);
+}
+
+function FillUnitSpawningButtons( container, vecNeutrals )
+{
+	container.RemoveAndDeleteChildren();
+
+	for ( var i in vecNeutrals)
+	{
+		let neutral = vecNeutrals[i];
+		let neutralPanel = $.CreatePanel( "Panel", container, neutral);
+		neutralPanel.BLoadLayoutSnippet("NeutralSpawner");
+		neutralPanel.FindChildTraverse("NeutralImage").SetImage("file://{images}/heroes/" + neutral + ".png");
+		neutralPanel.SetPanelEvent( "onmouseover", () => {  $.DispatchEvent( "UIShowTextTooltip", neutralPanel, "#" + neutral ) } );
+		neutralPanel.SetPanelEvent( 'onmouseout', function () { $.DispatchEvent( 'UIHideTextTooltip', neutralPanel ); } );
+		neutralPanel.SetPanelEvent( 'onactivate', function () { $.DispatchEvent( 'FireCustomGameEvent_Str', neutralPanel, "SpawnUnitButtonPressed", neutral ); } );
+	}
+}
+
+function FillCreepSpawningButtons( container, vecNeutrals, vecNeutralSpawnName )
+{
+	container.RemoveAndDeleteChildren();
+
+	for ( var i in vecNeutrals)
+	{
+		let neutral = vecNeutrals[i];
+		let neutralSpawn = vecNeutralSpawnName[i];
+		let neutralPanel = $.CreatePanel( "Panel", container, neutral);
+		neutralPanel.BLoadLayoutSnippet("NeutralSpawner");
+		neutralPanel.FindChildTraverse("NeutralImage").SetImage("file://{images}/heroes/" + neutral + ".png");
+		neutralPanel.SetPanelEvent( "onmouseover", () => {  $.DispatchEvent( "UIShowTextTooltip", neutralPanel, "#" + neutralSpawn ) } );
+		neutralPanel.SetPanelEvent( 'onmouseout', function () { $.DispatchEvent( 'UIHideTextTooltip', neutralPanel ); } );
+		neutralPanel.SetPanelEvent( 'onactivate', function () { $.DispatchEvent( 'FireCustomGameEvent_Str', neutralPanel, "SpawnUnitButtonPressed", neutralSpawn ); } );
+	}
+}
+
+function OnThink()
+{
+	var host_time_scale = Game.GetConvarFloat( "host_timescale" );
+	//$.Msg( "HOST TIME SCALE = " + host_time_scale );
+
+	var SpeedButton = $( '#SpeedResetButton' )    
+	if ( SpeedButton )
+	{
+		SpeedButton.SetDialogVariable( "speed", host_time_scale < 1.0 ? host_time_scale.toFixed(1) : host_time_scale );
+	}	
+	
+	$.Schedule( 0.1, OnThink );
+}
+$.Schedule( 0.0, OnThink );
+
+var bHeroPickerVisible = false;
+var bAdvancedSpawnSettingsVisible = false;
+var bAdvancedUnitSettingsVisible = false;
+var bAdvancedGlobalSettingsVisible = false;
+var bAdvancedMultiplayerSettingsVisible = false;
+
+function ToggleAdvancedSettings( nPanel )
+{
+	bAdvancedSpawnSettingsVisible = nPanel == 0 ? !bAdvancedSpawnSettingsVisible : false;
+	bAdvancedUnitSettingsVisible = nPanel == 1 ? !bAdvancedUnitSettingsVisible : false;
+	bAdvancedGlobalSettingsVisible = nPanel == 2 ? !bAdvancedGlobalSettingsVisible : false;
+	bAdvancedMultiplayerSettingsVisible = nPanel == 3 ? !bAdvancedMultiplayerSettingsVisible : false;
+	$('#AdvancedSpawnSettings').SetHasClass('AdvancedSettingsVisible', bAdvancedSpawnSettingsVisible);
+	$('#AdvancedUnitSettings').SetHasClass('AdvancedSettingsVisible', bAdvancedUnitSettingsVisible);
+	$('#AdvancedGlobalSettings').SetHasClass('AdvancedSettingsVisible', bAdvancedGlobalSettingsVisible);
+	$('#AdvancedPartySettings').SetHasClass('AdvancedSettingsVisible', bAdvancedMultiplayerSettingsVisible);
+
+	let bAnyAdvancedSettingsVisible = bAdvancedSpawnSettingsVisible || 
+										bAdvancedUnitSettingsVisible || 
+										bAdvancedGlobalSettingsVisible || 
+										bAdvancedMultiplayerSettingsVisible;
+
+	$('#CloseButton').SetHasClass("Visible", bAnyAdvancedSettingsVisible );
+
+	if ( bAnyAdvancedSettingsVisible )
+	{
+		$('#AdvancedSettingsContainer').SetFocus();
+	}
+}
+
+function CloseAdvancedSettings()
+{
+	ToggleAdvancedSettings(-1);
+}
+
+function ToggleHeroPicker( bMainHero )
+{
+	Game.EmitSound( "UI.Button.Pressed" );
+	SetHeroPickerVisible( !bHeroPickerVisible );
+}
+
+function EscapeHeroPickerSearch()
+{
+	if ( $( "#SelectHeroContainer" ).FindChildTraverse( "HeroSearchTextEntry" ).BHasKeyFocus() )
+	{
+		$( "#SelectHeroContainer" ).SetFocus();
+	}
+	else
+	{
+		SetHeroPickerVisible( false );
+	}
+}
+
+function CloseHeroPicker()
+{
+	SetHeroPickerVisible( false );
+}
+
+function SetHeroPickerVisible( bVisible )
+{
+	$.Msg("SetHeroPickerVisible " + bVisible);
+	if (!bVisible) {
+		$('#SelectHeroContainer').RemoveClass('HeroPickerVisible');
+		$("#SelectHeroContainer").FindChildTraverse("HeroSearchTextEntry").text = "";
+	}
+	if (bVisible) {
+		$('#SelectHeroContainer').AddClass('HeroPickerVisible');
+		$("#SelectHeroContainer").FindChildTraverse("HeroSearchTextEntry").SetFocus();
+	}
+	bHeroPickerVisible = bVisible;
+}
+
+function SwitchToNewHero( nHeroID, nHeroVariant )
+{
+	$.Msg( 'SwitchToNewHero - Hero = ' + nHeroID + ', Variant = ' + nHeroVariant );
+
+	var SpawnHeroFacetPicker = $('#SpawnHeroFacetPicker');
+	if (SpawnHeroFacetPicker != null) {
+		SpawnHeroFacetPicker.heroid = nHeroID;
+	}
+
+	var HeroPickerImage = $( '#HeroPickerImage' );
+	if ( HeroPickerImage != null )
+	{
+		HeroPickerImage.heroid = nHeroID;
+	}
+
+	var SpawnHeroButton = $( '#SpawnHeroButton' );
+	if ( SpawnHeroButton != null )
+	{
+		$.Msg( 'HERO NAME = ' + GameUI.GetHeroNameLocalizedForHeroID( nHeroID ) );
+		SpawnHeroButton.SetDialogVariable( "hero_name", GameUI.GetHeroNameLocalizedForHeroID( nHeroID ) );
+		SpawnHeroButton.SetDialogVariable( "hero_variant", nHeroVariant );
+	}
+
+	SetHeroPickerVisible( false );
+}
+
+function SwitchToNewFacet( nHeroID, nHeroFacet )
+{
+	$( '#SelectHeroContainer' ).SetHasClass( 'PickMainHero', true );
+
+	var PlayerHeroImage = $( '#PlayerHeroImage' );
+	if ( PlayerHeroImage != null )
+	{
+		// $.DispatchEvent( 'FireCustomGameEvent_Str', 'SelectMainHeroButtonPressed', String( nHeroID ) + ':' + String( nHeroFacet ) );	
+	}
+}
+
+function SwitchSpawnHeroFacet(nHeroID, nHeroFacet) {
+
+	var SpawnHeroFacetPicker = $('#SpawnHeroFacetPicker');
+	var nHeroFacetID = nHeroFacet & 0xFFFFFFFF;
+	if (SpawnHeroFacetPicker != null) {
+		$.Msg( 'SwitchSpawnHeroFacet ' + nHeroID + ' ' + nHeroFacetID );
+		// $.DispatchEvent( 'FireCustomGameEvent_Str', 'SelectSpawnHeroButtonPressed', String( nHeroID ) + ':' + String( nHeroFacetID ) );
+	}
+}
+
+
+function OnSetPlayerHeroID( event_data )
+{
+	$.Msg( "OnSetPlayerHeroID: ", event_data );
+	var PlayerHeroImage = $( '#PlayerHeroImage' );
+	if ( PlayerHeroImage != null )
+	{
+		PlayerHeroImage.heroid = event_data.hero_id;
+	}	
+
+	var HeroFacetPicker = $( '#HeroFacetDropdown' );
+	if( HeroFacetPicker != null )
+	{
+		HeroFacetPicker.Init( event_data.hero_id, event_data.hero_variant );
+	}
+
+	var HeroDemoButton = $( '#HeroDemoHeroName' );
+	if ( HeroDemoButton != null )
+	{
+		var heroName = Players.GetPlayerSelectedHero( 0 );
+		$.Msg( 'HERO NAME = ' + heroName );
+		HeroDemoButton.SetDialogVariable( "hero_name", GameUI.GetUnitNameLocalized( heroName ) );
+	}
+}
+GameEvents.Subscribe( "set_player_hero_id", OnSetPlayerHeroID );
+
+function OnSetMainHeroID( event_data )
+{
+	$.Msg( "OnSetMainHeroID: ", event_data );
+
+	$.DispatchEvent( "DOTADemoHeroEquippedItems", event_data.hero_name, event_data.hero_variant );
+}
+GameEvents.Subscribe( "set_main_hero_id", OnSetMainHeroID );
+
+function OnSetSpawnHeroID( event_data )
+{
+	$.Msg( "OnSetSpawnHeroID: ", event_data );
+	var HeroPickerImage = $( '#HeroPickerImage' );
+	if ( HeroPickerImage != null )
+	{
+		HeroPickerImage.heroid = event_data.hero_id;
+	}
+
+	var SpawnHeroButton = $( '#SpawnHeroButton' );
+	if ( SpawnHeroButton != null )
+	{
+		$.Msg( 'HERO NAME = ' + event_data.hero_name );
+		SpawnHeroButton.SetDialogVariable( "hero_name", GameUI.GetUnitNameLocalized( event_data.hero_name ) );
+		SpawnHeroButton.SetDialogVariable( "hero_variant", event_data.hero_variant );
+	}
+	if (event_data.initial_spawn) {
+		var SpawnHeroFacetPicker = $('#SpawnHeroFacetPicker');
+		if (SpawnHeroFacetPicker != null) {
+			SpawnHeroFacetPicker.heroid = event_data.hero_id;
+		}
+	}
+}
+GameEvents.Subscribe( "set_spawn_hero_id", OnSetSpawnHeroID );
+
+function SpawnAlly()
+{
+	var HeroPickerImage = $( '#HeroPickerImage' );
+	var SpawnHeroFacetPicker = $('#SpawnHeroFacetPicker');
+	var nHeroID = HeroPickerImage.heroid;
+	var nHeroFacet = SpawnHeroFacetPicker.facet;
+
+	$.Msg( 'spawning this thing ' + nHeroFacet );
+
+	$.DispatchEvent( 'FireCustomGameEvent_Str', 'SpawnAllyButtonPressed', String( nHeroID ) + ':' + String( nHeroFacet ) );	
+}
+
+function SpawnEnemy()
+{
+	var HeroPickerImage = $( '#HeroPickerImage' );
+	var SpawnHeroFacetPicker = $('#SpawnHeroFacetPicker');
+	var nHeroID = HeroPickerImage.heroid;
+	var nHeroFacet = SpawnHeroFacetPicker.facet;
+
+	$.DispatchEvent( 'FireCustomGameEvent_Str', 'SpawnEnemyButtonPressed', String( nHeroID ) + ':' + String( nHeroFacet ) );	
+}
+
+function SpawnSelf()
+{
+	var HeroPickerImage = $( '#HeroPickerImage' );
+	var SpawnHeroFacetPicker = $('#SpawnHeroFacetPicker');
+	var nHeroID = HeroPickerImage.heroid;
+	var nHeroFacet = SpawnHeroFacetPicker.facet;
+
+	$.DispatchEvent( "DOTADemoHeroEquippedItems", GameUI.GetHeroNameForHeroID( nHeroID ), nHeroFacet );
+}
+
+function ChangeTeam()
+{
+	var entities = Players.GetSelectedEntities( Players.GetLocalPlayer() );
+	var numEntities = Object.keys( entities ).length;
+
+    for ( var i = 0; i < numEntities; i++ )
+    {
+        var entindex = entities[ i ];
+        if ( entindex == -1 )
+            continue;
+	
+		$.DispatchEvent( 'FireCustomGameEvent_Str', 'ChangeTeamButtonPressed', String( entindex ) );	
+	}
+}
+
+function ToggleCategoryVisibility( str )
+{
+    //$.Msg( "^^^ToggleCategoryVisibility() - " + str )
+    $( str ).ToggleClass( 'CollapseCategory' )
+}
+
+
+function OnAddNewHeroEntry( event_data )
+{
+	$.Msg( "OnAddNewHeroEntry: ", event_data );
+
+	// disabling experiment to add the spawned hero to your selection set
+	//GameUI.SelectUnit( event_data.entindex, true );
+}
+GameEvents.Subscribe( "add_new_hero_entry", OnAddNewHeroEntry );
+
+function RemoveSelectedHeroes()
+{
+	var entities = Players.GetSelectedEntities( Players.GetLocalPlayer() );
+	var numEntities = Object.keys( entities ).length;
+
+	var bDeletionAttempted = false;
+    for ( var i = 0; i < numEntities; i++ )
+    {
+        var entindex = entities[ i ];
+        if ( entindex == -1 )
+            continue;
+
+		var PlayerOwnerID = Entities.GetPlayerOwnerID( entindex );
+		var bIsRealHero = Entities.IsRealHero( entindex );
+		if ( PlayerOwnerID == 0 && bIsRealHero )
+		{
+			$.Msg( 'Skipping ent! ' + entindex );
+			continue;	// don't delete the player!
+		}
+
+		bDeletionAttempted = true;
+		$.DispatchEvent( 'FireCustomGameEvent_Str', 'RemoveHeroButtonPressed', String( entindex ) );
+	}
+}
+
+function ToggleInvulnerability()
+{
+	var entities = Players.GetSelectedEntities( Players.GetLocalPlayer() );
+	$.Msg( "Entities = " + entities );
+
+	var numEntities = Object.keys( entities ).length;
+	$.Msg( "Num entities = " + numEntities );
+
+    for ( var i = 0; i < numEntities; i++ )
+    {
+        var entindex = entities[ i ];
+        if ( entindex == -1 )
+            continue;
+
+		$.DispatchEvent( 'FireCustomGameEvent_Str', 'ToggleInvulnerabilityHero', String( entindex ) );
+	}
+}
+
+function InvulnerableOn()
+{
+	var entities = Players.GetSelectedEntities( Players.GetLocalPlayer() );
+	$.Msg( "Entities = " + entities );
+
+	var numEntities = Object.keys( entities ).length;
+	$.Msg( "Num entities = " + numEntities );
+
+	for ( var i = 0; i < numEntities; i++ )
+	{
+		var entindex = entities[i];
+		if ( entindex == -1 )
+			continue;
+
+		$.DispatchEvent( 'FireCustomGameEvent_Str', 'InvulnOnHero', String( entindex ) );
+	}
+}
+
+function InvulnerableOff()
+{
+	var entities = Players.GetSelectedEntities( Players.GetLocalPlayer() );
+	$.Msg( "Entities = " + entities );
+
+	var numEntities = Object.keys( entities ).length;
+	$.Msg( "Num entities = " + numEntities );
+
+	for ( var i = 0; i < numEntities; i++ )
+	{
+		var entindex = entities[i];
+		if ( entindex == -1 )
+			continue;
+
+		$.DispatchEvent( 'FireCustomGameEvent_Str', 'InvulnOffHero', String( entindex ) );
+	}
+}
+
+function LevelUpSelectedHeroes()
+{
+	var entities = Players.GetSelectedEntities( Players.GetLocalPlayer() );
+	$.Msg( "Entities = " + entities );
+
+	var numEntities = Object.keys( entities ).length;
+	$.Msg( "Num entities = " + numEntities );
+
+    for ( var i = 0; i < numEntities; i++ )
+    {
+        var entindex = entities[ i ];
+        if ( entindex == -1 )
+            continue;
+
+		$.DispatchEvent( 'FireCustomGameEvent_Str', 'LevelUpHero', String( entindex ) );
+	}
+}
+
+function MaxLevelUpSelectedHeroes()
+{
+	var entities = Players.GetSelectedEntities( Players.GetLocalPlayer() );
+	$.Msg( "Entities = " + entities );
+
+	var numEntities = Object.keys( entities ).length;
+	$.Msg( "Num entities = " + numEntities );
+
+    for ( var i = 0; i < numEntities; i++ )
+    {
+        var entindex = entities[ i ];
+        if ( entindex == -1 )
+            continue;
+
+		$.DispatchEvent( 'FireCustomGameEvent_Str', 'MaxLevelUpHero', String( entindex ) );
+	}
+}
+
+function ResetSelectedHeroes()
+{
+	var entities = Players.GetSelectedEntities( Players.GetLocalPlayer() );
+	$.Msg( "Entities = " + entities );
+
+	var numEntities = Object.keys( entities ).length;
+	$.Msg( "Num entities = " + numEntities );
+
+	for ( var i = 0; i < numEntities; i++ )
+	{
+		var entindex = entities[i];
+		if ( entindex == -1 )
+			continue;
+
+		$.DispatchEvent( 'FireCustomGameEvent_Str', 'ResetHero', String( entindex ) );
+	}
+}
+
+function ShardSelectedHeroes()
+{
+	var entities = Players.GetSelectedEntities( Players.GetLocalPlayer() );
+	$.Msg( "Entities = " + entities );
+
+	var numEntities = Object.keys( entities ).length;
+	$.Msg( "Num entities = " + numEntities );
+
+    for ( var i = 0; i < numEntities; i++ )
+    {
+        var entindex = entities[ i ];
+        if ( entindex == -1 )
+            continue;
+
+		$.DispatchEvent( 'FireCustomGameEvent_Str', 'ShardHero', String( entindex ) );
+	}
+}
+
+function ScepterSelectedHeroes()
+{
+	var entities = Players.GetSelectedEntities( Players.GetLocalPlayer() );
+	$.Msg( "Entities = " + entities );
+
+	var numEntities = Object.keys( entities ).length;
+	$.Msg( "Num entities = " + numEntities );
+
+    for ( var i = 0; i < numEntities; i++ )
+    {
+        var entindex = entities[ i ];
+        if ( entindex == -1 )
+            continue;
+
+		$.DispatchEvent( 'FireCustomGameEvent_Str', 'ScepterHero', String( entindex ) );
+	}
+}
+
+function ToggleHeroActive()
+{
+	$.Msg( 'ToggleHeroActive()' )
+}
+
+function MouseOverRune( strRuneID, strRuneTooltip )
+{
+	var runePanel = $( '#' + strRuneID );
+	runePanel.StartAnimating();
+	$.DispatchEvent( 'UIShowTextTooltip', runePanel, strRuneTooltip );
+}
+
+function MouseOutRune( strRuneID )
+{
+	var runePanel = $( '#' + strRuneID );
+	runePanel.StopAnimating();
+	$.DispatchEvent( 'UIHideTextTooltip', runePanel );
+}
+
+function SlideThumbActivate()
+{
+	var slideThumb = $.GetContextPanel();
+	var bMinimized = slideThumb.BHasClass( 'Minimized' );
+
+	if ( bMinimized )
+	{
+		Game.EmitSound( "ui_settings_slide_out" );
+	}
+	else
+	{
+		Game.EmitSound( "ui_settings_slide_in" );
+	}
+
+	slideThumb.ToggleClass( 'Minimized' );
+}
+
+function SaveState()
+{
+	$.DispatchEvent( 'FireCustomGameEvent_Str', 'SaveState', null );
+}
+
+function RestoreState()
+{
+	$.DispatchEvent( 'FireCustomGameEvent_Str', 'ClearGameState', null );
+	$.DispatchEvent( 'FireCustomGameEvent_Str', 'RestoreState', null );
+}
+
+function Disconnect()
+{
+	if ( Players.GetLocalPlayer() == 0 )
+	{
+		$.DispatchEvent( 'FireCustomGameEvent_Str', 'LeaveButtonPressed', null );
+	}
+	else
+	{
+		Game.Disconnect();
+	}
+}
+
+function DisconnectFromServer()
+{
+	Game.Disconnect();
+}
+GameEvents.Subscribe( "disconnect", DisconnectFromServer );
+
+function UpdateGlobalSettings( event_data )
+{
+	$( '#FreeSpellsButton' ).SetSelected( event_data.free_spells_enabled );
+	$( '#SpawnCreepsButton' ).SetSelected( event_data.creeps_enabled );
+	$( '#TowersEnabledButton' ).SetSelected( event_data.towers_enabled );
+	$( '#NightEnabledButton' ).SetSelected( event_data.night_time );
+	$( '#EnableXPButton' ).SetSelected( event_data.enable_xp_gain );
+	$( '#EnableRegenButton' ).SetSelected( event_data.enable_regeneration );
+	$( '#AllVisionButton' ).SetSelected( event_data.all_vision );
+}
+GameEvents.Subscribe( "update_global_settings", UpdateGlobalSettings );
+
+function JoinPermissionsPopupChanged()
+{
+	let nPermissionValue = $( '#JoinPermissionsDropDown' ).GetSelected().id == "inviteonly" ? 0 : 1;
+	$.DispatchEvent( 'DOTADemoModeUpdateJoinPermissions', nPermissionValue );	
+}

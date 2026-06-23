@@ -1,0 +1,27 @@
+<!-- xml reconstructed by Source 2 Viewer - https://valveresourceformat.github.io -->
+<root>
+	<styles>
+		<include src="s2r://panorama/styles/tutorial_ingame.vcss_c" />
+	</styles>
+	<scripts>
+		<include src="s2r://panorama/scripts/custom_game/tutorial_alert_small.vjs_c" />
+	</scripts>
+	<Panel class="FullScreenLayout" onload="AddStyle(Visible)" hittest="false">
+		<Panel class="AlertRoot" hittest="false">
+			<Panel class="AlertMain">
+				<Panel id="TitleContainer" class="Alert">
+					<Panel id="TitleImage" class="Alert" />
+					<Label text="#TitleText" id="TitleText" class="Alert" />
+				</Panel>
+				<Panel id="BodyContainer">
+					<Panel id="TextContainerCentered">
+						<Panel id="Body">
+							<Label text="#BodyText" id="BodyText" class="FullBodyText" />
+						</Panel>
+					</Panel>
+				</Panel>
+			</Panel>
+		</Panel>
+		<Panel class="BodyImageRight" hittest="false" id="BodyImageRight" />
+	</Panel>
+</root>
