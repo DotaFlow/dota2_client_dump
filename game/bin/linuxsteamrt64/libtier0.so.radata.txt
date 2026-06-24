@@ -1,60 +1,11 @@
-!  always test dictionary efficiency on real samples \n
-!  consider increasing dictionary size, or produce denser dictionary (-s%u) \n
-!  consider increasing selectivity to produce larger dictionary (-s%u) \n
-!  consider increasing the number of samples (total size : %u MB)\n
-!  note : calculated dictionary significantly larger than requested (%u > %u) \n
-!  note : larger dictionaries are not necessarily better, test its efficiency on samples \n
-!  warning : selected content significantly smaller than requested (%u < %u) \n
-!1Aa
-!AxU
-!C2i
-!D8#
-!D9#
-!HcP\b9
-!L9e
-!Lb/
-!TdM
-!V_isempty( pSecretKey )
-!Y%E
-!YA1
-!YA1H
-!YA1I
-!YA1L
-!\fF\r
-!f.H
-!fD9#
-!ff.
-!link
-!o}zp
-"0x%llX"
-"E(H
-"V,u
-"YA1
-"YA1H
-"YA1L
-"[ARRAY]"
-"[BINARY BLOB]"
-"[EHANDLE]"
-"[POINTER]"
-"ff.
-"s\f7$
-"t"Y
-"t*U
-"v8H
 ##w\el
-#%&(38:HJLPSUVXZ\\^`cefksx}
 #%llu
-#+3;CScs
-#.zf
 #CLH
 #CtH
-#G<H
 #GDH
 #H\tD
 #I\tD
-#K$H
 #K$H9
-#V<H
 #YA1
 #YA1A
 #YA1H
@@ -63,3186 +14,33 @@
 #bML"
 #base
 #base is NULL
-#d{H\v
 #empty#
-#ff.
 #include
 #include is NULL
 #int#
 #nyf
-#p<H
 #r1H
-#r<H
 #t\bL
-#z<H
-$%L9
-$+L9e
-$2L9e
-$7SE
-$7SH
-$8'S
-$<"t/E19
-$@HcF
-$GfA
-$Gv"H
-$H3W`H
-$HcE
-$I9\a
-$IH)
-$K|/aC
-$ORIGIN
-$TUBk
-$YA1
-$\aL9
-$\bIc
-$_E^
-$`M9
-$eax
-$ebp
-$ebx
-$ecx
-$edi
-$edx
-$eflags
-$eip
-$esi
-$esp
-$fA9
-$fD9
-$fcw
-$ff.
-$ffn\brq7x;P
-$fs.base
-$fsw
-$gs.base
-$ldtr
-$lnw:
-$mm0
-$mm1
-$mm2
-$mm3
-$mm4
-$mm5
-$mm6
-$mm7
-$mt\vK
-$mxcsr
-$r10
-$r11
-$r12
-$r13
-$r14
-$r15
-$r`A
-$rax
-$rbp
-$rbx
-$rcx
-$rdi
-$rdx
-$rflags
-$rip
-$rsi
-$rsp
-$st0
-$st1
-$st2
-$st3
-$st4
-$st5
-$st6
-$st7
-$t2H
-$tyH
-$u6H
-$u:H
-$unused1
-$unused2
-$unused3
-$unused4
-$unused5
-$xmm0
-$xmm1
-$xmm10
-$xmm11
-$xmm12
-$xmm13
-$xmm14
-$xmm15
-$xmm2
-$xmm3
-$xmm4
-$xmm5
-$xmm6
-$xmm7
-$xmm8
-$xmm9
-$~kI
-%"83
-%$05
-%$15
-%$25
-%$35
-%$45
-%$55
-%$65
-%$75
-%$85
-%$95
-%$A5
-%$B5
-%$C5
-%$D5
-%$E5
-%$F5
-%$G5
-%$H5
-%$I5
-%$J5
-%$K5
-%$L5
-%$M5
-%$N5
-%$O5
-%$P5
-%$Q5
-%$R5
-%$S5
-%$T5
-%$U5
-%$V5
-%$W5
-%$X5
-%$Y5
-%$Z5
-%$_5
-%$a5
-%$b5
-%$c5
-%$d5
-%$e5
-%$f5
-%$g5
-%$h5
-%$i5
-%$j5
-%$k5
-%$l5
-%$m5
-%$n5
-%$o5
-%$p5
-%$q5
-%$r5
-%$s5
-%$t5
-%$u5
-%$v5
-%$w5
-%$x5
-%$y5
-%$z5
-%,05
-%,15
-%,25
-%,35
-%,45
-%,55
-%,65
-%,75
-%,85
-%,95
-%,A5
-%,B5
-%,C5
-%,D5
-%,E5
-%,F5
-%,G5
-%,H5
-%,I5
-%,J5
-%,K5
-%,L5
-%,M5
-%,N5
-%,O5
-%,P5
-%,Q5
-%,R5
-%,S5
-%,T5
-%,U5
-%,V5
-%,W5
-%,X5
-%,Y5
-%,Z5
-%,_5
-%,a5
-%,b5
-%,c5
-%,d5
-%,e5
-%,f5
-%,g5
-%,h5
-%,i5
-%,j5
-%,k5
-%,l5
-%,m5
-%,n5
-%,o5
-%,p5
-%,q5
-%,r5
-%,s5
-%,t5
-%,u5
-%,v5
-%,w5
-%,x5
-%,y5
-%,z5
-%-32s
-%-32s\n
-%-73
-%-y5DQ
-%.0f pct of time accounted for\n
-%.2f
-%0*llx bytes at %0*llx is the largest open user-space VA region%s\n
-%0*llx bytes of %s at %0*llx%s\n
-%0*llx: address after highest user-space virtual region\n
-%02X
-%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%x
-%02X%02X%02X%02X-%02X%02X-%02X%02X-%02X%02X-%02X%02X%02X%02X%02X%02X
-%02X%02X/
-%02d.%03H
-%02u/%02u/%04u
-%02u:%02u:%02u
-%02x
-%08x %s size %08x\n
-%10s:
-%10s: %11s %11s %11s %11s %11s\n
-%10s: %5i\n
-%10s: %5ld.%ld avg\n
-%10s: %5zu.%03zu s\n
-%10s: user: %zu.%03zu s, system: %zu.%03zu s, faults: %zu, rss:
-%12.3f %12.2f
-%12s
-%14.3f %12.2f
-%14s %10s
-%1k\t
-%2)5
-%24s
-%2d.%03dH)
-%3u:%3u bytes at pos %8u, savings %7u bytes |
-%4$5
-%4%5
-%4&5
-%4'5
-%4(5
-%4)5
-%4*5
-%4+5
-%4,5
-%4-5
-%4.5
-%4/5
-%405
-%415
-%425
-%435
-%445
-%455
-%465
-%475
-%485
-%495
-%4:5
-%4;5
-%4<5
-%4=5
-%4>5
-%4?5
-%4@5
-%4A5
-%4B5
-%4C5
-%4D5
-%4E5
-%4F5
-%4G5
-%4H5
-%4I5
-%4J5
-%4K5
-%4L5
-%4M5
-%4N5
-%4O5
-%4P5
-%4Q5
-%4R5
-%4S5
-%4T5
-%4U5
-%4V5
-%4W5
-%4X5
-%4Y5
-%4Z5
-%4[5
-%4]5
-%4^5
-%4_5
-%4`5
-%4a5
-%4b5
-%4c5
-%4d5
-%4e5
-%4f5
-%4g5
-%4h5
-%4i5
-%4j5
-%4k5
-%4l5
-%4m5
-%4n5
-%4o5
-%4p5
-%4q5
-%4r5
-%4s5
-%4t5
-%4u5
-%4v5
-%4w5
-%4x5
-%4y5
-%4z5
-%4{5
-%4|5
-%4}5
-%4~5
-%52.52s%12d%12.3f%12.3f%7.2f%12.3f%7.2f%12.3f%12.3f%12.3f%12.3f\n
-%6.3f: ThreadPoolTest: Testing with %d jobs! Sleep %d, interleave %d, prioritized %d \n
-%8.4f / %9.2f:  Writing profile data to '%s'\n
-%8.8x-%4.4x-%4.4x-%2.2x%2.2x-%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x
-%8x-%4x-%4x-%2x%2x-%2x%2x%2x%2x%2x%2x
-%9.2f
-%96/
-%<05
-%<15
-%<25
-%<35
-%<45
-%<55
-%<65
-%<75
-%<85
-%<95
-%<A5
-%<B5
-%<C5
-%<D5
-%<E5
-%<F5
-%<G5
-%<H5
-%<I5
-%<J5
-%<K5
-%<L5
-%<M5
-%<N5
-%<O5
-%<P5
-%<Q5
-%<R5
-%<S5
-%<T5
-%<U5
-%<V5
-%<W5
-%<X5
-%<Y5
-%<Z5
-%<_5
-%<a5
-%<b5
-%<c5
-%<d5
-%<e5
-%<f5
-%<g5
-%<h5
-%<i5
-%<j5
-%<k5
-%<l5
-%<m5
-%<n5
-%<o5
-%<p5
-%<q5
-%<r5
-%<s5
-%<t5
-%<u5
-%<v5
-%<w5
-%<x5
-%<y5
-%<z5
-%D$5
-%D%5
-%D&5
-%D'5
-%D(5
-%D)5
-%D*5
-%D+5
-%D,5
-%D-5
-%D.5
-%D/5
-%D05
-%D15
-%D25
-%D35
-%D45
-%D55
-%D65
-%D73
-%D75
-%D85
-%D95
-%D:5
-%D;5
-%D<5
-%D=5
-%D>5
-%D?5
-%D@5
-%DA5
-%DB5
-%DC5
-%DD5
-%DE5
-%DF5
-%DG5
-%DH5
-%DI5
-%DJ5
-%DK5
-%DL5
-%DM5
-%DN5
-%DO5
-%DP5
-%DQ5
-%DR5
-%DS5
-%DT5
-%DU5
-%DV5
-%DW5
-%DX5
-%DY5
-%DZ5
-%D[5
-%D]5
-%D^5
-%D_5
-%D`5
-%Da5
-%Db5
-%Dc5
-%Dd5
-%De5
-%Df5
-%Dg5
-%Dh5
-%Di5
-%Dj5
-%Dk5
-%Dl5
-%Dm5
-%Dn5
-%Do5
-%Dp5
-%Dq5
-%Dr5
-%Ds5
-%Dt5
-%Du5
-%Dv5
-%Dw5
-%Dx5
-%Dy5
-%Dz5
-%D{5
-%D|5
-%D}5
-%D~5
-%Hk\t
-%J0/
-%L#5
-%L$5
-%L%5
-%L&5
-%L'5
-%L(5
-%L)5
-%L*5
-%L+5
-%L,5
-%L-5
-%L.5
-%L/5
-%L05
-%L15
-%L25
-%L35
-%L45
-%L55
-%L65
-%L75
-%L85
-%L95
-%L:5
-%L;5
-%L<5
-%L=5
-%L>5
-%L?5
-%L@5
-%LA5
-%LB5
-%LC5
-%LD5
-%LE5
-%LF5
-%LG5
-%LH5
-%LI5
-%LJ5
-%LK5
-%LL5
-%LM5
-%LN5
-%LO5
-%LP5
-%LQ5
-%LR5
-%LS5
-%LT5
-%LU5
-%LV5
-%LW5
-%LX5
-%LY5
-%LZ5
-%L[5
-%L]5
-%L^5
-%L_5
-%L`5
-%La5
-%Lb5
-%Lc5
-%Ld5
-%Le5
-%Lf5
-%Lg5
-%Lh5
-%Li5
-%Lj5
-%Lk5
-%Ll5
-%Lm5
-%Ln5
-%Lo5
-%Lp5
-%Lq5
-%Lr5
-%Ls5
-%Lt5
-%Lu5
-%Lv5
-%Lw5
-%Lx5
-%Ly5
-%Lz5
-%L{5
-%L|5
-%L}5
-%L~5
-%O0\e
-%O3\e
-%O7/
-%R$5
-%S1/
-%T#5
-%T$5
-%T%5
-%T&5
-%T'5
-%T(5
-%T)5
-%T*5
-%T+5
-%T,5
-%T-5
-%T.5
-%T/5
-%T05
-%T15
-%T2"
-%T25
-%T35
-%T45
-%T55
-%T65
-%T75
-%T85
-%T95
-%T:5
-%T;5
-%T<5
-%T=5
-%T>5
-%T?5
-%T@5
-%TA5
-%TB5
-%TC5
-%TD5
-%TE5
-%TF5
-%TG5
-%TH5
-%TI5
-%TJ5
-%TK5
-%TL5
-%TM5
-%TN5
-%TO5
-%TP5
-%TQ5
-%TR5
-%TS5
-%TT5
-%TU5
-%TV5
-%TW5
-%TX5
-%TY5
-%TZ5
-%T[5
-%T]5
-%T^5
-%T_5
-%T`5
-%Ta5
-%Tb5
-%Tc5
-%Td5
-%Te5
-%Tf5
-%Tg5
-%Th5
-%Ti5
-%Tj5
-%Tk5
-%Tl5
-%Tm5
-%Tn5
-%To5
-%Tp5
-%Tq5
-%Tr5
-%Ts5
-%Tt5
-%Tu5
-%Tv5
-%Tw5
-%Tx5
-%Ty5
-%Tz5
-%T{5
-%T|5
-%T}5
-%T~5
-%V83
-%YA1A
-%YA1L
-%YA1f
-%\e93
-%\f05
-%\f15
-%\f25
-%\f35
-%\f45
-%\f55
-%\f65
-%\f75
-%\f85
-%\f95
-%\fA5
-%\fB5
-%\fC5
-%\fD5
-%\fE5
-%\fF5
-%\fG5
-%\fH5
-%\fI5
-%\fJ5
-%\fK5
-%\fL5
-%\fM5
-%\fN5
-%\fO5
-%\fP5
-%\fQ5
-%\fR5
-%\fS5
-%\fT5
-%\fU5
-%\fV5
-%\fW5
-%\fX5
-%\fY5
-%\fZ5
-%\f_5
-%\fa5
-%\fb5
-%\fc5
-%\fd5
-%\fe5
-%\ff5
-%\fg5
-%\fh5
-%\fi5
-%\fj5
-%\fk5
-%\fl5
-%\fm5
-%\fn5
-%\fo5
-%\fp5
-%\fq5
-%\fr5
-%\fs5
-%\ft5
-%\fu5
-%\fv5
-%\fw5
-%\fx5
-%\fy5
-%\fz5
-%_ m
-%d frames sampled for %.2f seconds\n
-%d#5
-%d$5
-%d%5
-%d&5
-%d'5
-%d(5
-%d)5
-%d*5
-%d+5
-%d,5
-%d-5
-%d.5
-%d/5
-%d05
-%d15
-%d25
-%d35
-%d45
-%d55
-%d65
-%d75
-%d85
-%d95
-%d:%02d.H
-%d:%02d:H
-%d:5
-%d;5
-%d<5
-%d=5
-%d>5
-%d?5
-%d@5
-%dA5
-%dB5
-%dC5
-%dD5
-%dE5
-%dF5
-%dG5
-%dH5
-%dI5
-%dJ5
-%dK5
-%dL5
-%dM5
-%dN5
-%dO5
-%dP5
-%dQ5
-%dR5
-%dS5
-%dT5
-%dU5
-%dV5
-%dW5
-%dX5
-%dY5
-%dZ5
-%d[5
-%d\r\n
-%d]5
-%d^5
-%d_5
-%d`5
-%da5
-%db5
-%dc5
-%dd5
-%de5
-%df5
-%dg5
-%dh5
-%di5
-%dj5
-%dk5
-%dl5
-%dm5
-%dn5
-%do5
-%dp5
-%dq5
-%dr5
-%ds5
-%dt5
-%du5
-%dv5
-%dw5
-%dx5
-%dy5
-%dz5
-%d{5
-%d|5
-%d}5
-%d~5
-%ff.
-%i%s
-%i0!
-%k2"
-%l#5
-%l$5
-%l%5
-%l&5
-%l'5
-%l(5
-%l)5
-%l*5
-%l+5
-%l,5
-%l-5
-%l.5
-%l/5
-%l05
-%l15
-%l25
-%l35
-%l45
-%l55
-%l65
-%l75
-%l85
-%l95
-%l:5
-%l;5
-%l<5
-%l=5
-%l>5
-%l?5
-%l@5
-%lA5
-%lB5
-%lC5
-%lD5
-%lE5
-%lF5
-%lG5
-%lH5
-%lI5
-%lJ5
-%lK5
-%lL5
-%lM5
-%lN5
-%lO5
-%lP5
-%lQ5
-%lR5
-%lS5
-%lT5
-%lU5
-%lV5
-%lW5
-%lX5
-%lY5
-%lZ5
-%l[5
-%l]5
-%l^5
-%l_5
-%l`5
-%la5
-%lb5
-%lc5
-%ld.%ld %-3s
-%ld5
-%le5
-%lf5
-%lg5
-%lh5
-%li5
-%lj5
-%lk5
-%ll5
-%lld
-%llu
-%llu %s entries but no formats were defined\n
-%lm5
-%ln5
-%lo5
-%lp5
-%lq5
-%lr5
-%ls [wstring, len = %d]
-%ls5
-%lt5
-%lu5
-%lv5
-%lw5
-%lx5
-%ly5
-%lz5
-%l{5
-%l|5
-%l}5
-%l~5
-%pz"
-%qN#
-%s %s -nominidumps
-%s %s has conflicting %s flags (child: %s%s, parent: %s%s, parent wins)\n
-%s %s has multiple help strings:\n\tparent (wins): "%s"\n\tchild: "%s"\n
-%s (before "%s")
-%s (tweaked to NOT wait for child outflows)
-%s + 0x%llx
-%s allocation count overflow
-%s allocation count overflow( %llu + %llu > %llu )\n
-%s allocation count overflow( %llu > %llu )\n
-%s bytes used out of %s bytes available (%.2f%%)
-%s called on a pool arena (no root available)\n
-%s is out of range for KeyValues, which doesn't support signed 64-bit numbers
-%s not expected here.  A valid JSON document should be a single object, which begins with '{' and ends with '}'
-%s not expected here.  Missing ',' or ']'?
-%s not expected here.  Missing ',' or '}'?
-%s not expected here.  Missing ':'?
-%s not expected here; expected string for key name or '}'
-%s not expected here; missing value?
-%s test: multithread interleaved push/pop, no affinity...
-%s test: multithread push, multithread pop, no affinity...
-%s test: multithread push, sequential pop, no affinity...
-%s test: multithread push, single thread pop, no affinity...
-%s test: sequential push, multithread pop, no affinity...
-%s test: single thread push, multithread pop, no affinity...
-%s test: single thread push/pop, in order...
-%s test: single thread push/pop, interleaved...
-%s total bytes in user-space regions (%s bytes in kernel-space regions)\n
-%s unable to allocate %u bytes\n
-%s%s
-%s%s%s
-%s%s\n
-%s.exe
-%s/source_engine_%u.lock
-%s: CDwarfVector count overflow\n
-%s: Invalid lock state %d\n
-%s: ThreadPoolTest: YieldWaitPerFrameJobs - Basic test (%d jobs executed)\n
-%s: ThreadPoolTest: YieldWaitPerFrameJobs - Dynamic spawn test (%d initial + %d spawned = %d total)\n
-%s: ThreadPoolTest: YieldWaitPerFrameJobs - Only per-frame jobs executed by main thread test\n
-%s: Unable to get executable filename (%d byte buffer).
-%s: Unable to load SDL\n
-%s: __pos (which is %zu) > __size (which is %zu)
-%s: __pos (which is %zu) > this->size() (which is %zu)
-%s: added string size %d overflows (added to %d)\n
-%s: allocation of %u too large, max %u\n
-%s: capacity request for %d can't be satisfied (max %d)\n
-%s: different number of names and flags\n
-%s: different number of names and pointers\n
-%s: element count overflow (%u)\n
-%s: invalid array remove count %u (current count %u)\n
-%s: invalid array remove point %u (current count %u)\n
-%s: invalid capacity %d requested\n
-%s: invalid flag byte count\n
-%s: invalid insert point %u (current count %u)\n
-%s: invalid nBufferChars %d\n
-%s: invalid nByteIndex %d (string %d)\n
-%s: invalid nChars %d (index %d, string %d)\n
-%s: invalid nChars %d (string %d)\n
-%s: invalid nIndex %d (string %d)\n
-%s: invalid nNewChars %d\n
-%s: invalid nOldChars %d (string %d)\n
-%s: invalid nStart %d (string %d)\n
-%s: invalid pointer byte count\n
-%s: invalid string pointer (string chars %d)\n
-%s: max element overflow, cur count %u + %u\n
-%s: member count overflow (%u)\n
-%s: no space for allocation of %u\n
-%s: out of memory, falling back to regular allocators\n
-%s: requested conversion of %d chars\n
-%s: string format requested %d chars\n
-%s: string length overflows (is %d, adding %d)\n
-%s: string length overflows (is %d, need %d unused)\n
-%s: unable to find %s in '%s'\n
-%s: unable to grow count by %u (currently %u)\n
-%s: unable to load '%s', error %d\n
-%s:%d: assertion failed: %s
-%s_%s
-%sthread 0x%tx:
-%t#5
-%t$5
-%t%5
-%t&5
-%t'5
-%t(5
-%t)5
-%t*5
-%t+5
-%t,5
-%t-5
-%t.5
-%t/5
-%t05
-%t15
-%t25
-%t35
-%t45
-%t55
-%t65
-%t75
-%t85
-%t95
-%t:5
-%t;5
-%t<5
-%t=5
-%t>5
-%t?5
-%t@5
-%tA5
-%tAA
-%tB5
-%tC5
-%tCHc
-%tD5
-%tE5
-%tF5
-%tG5
-%tH5
-%tI5
-%tJ5
-%tK5
-%tL5
-%tM5
-%tN5
-%tO5
-%tP5
-%tQ5
-%tR5
-%tS5
-%tT5
-%tU5
-%tV5
-%tW5
-%tX5
-%tY5
-%tZ5
-%t[5
-%t]5
-%t^5
-%t_5
-%t`5
-%ta5
-%tb5
-%tc5
-%td1
-%td5
-%te5
-%tf5
-%tg5
-%th5
-%ti5
-%tj5
-%tk5
-%tl5
-%tm5
-%tn5
-%to5
-%tp5
-%tq5
-%tr5
-%ts5
-%tt5
-%tu5
-%tv5
-%tw5
-%tx5
-%ty5
-%tz5
-%t{5
-%t|5
-%t}5
-%t~5
-%u CPU%s
-%u3\n
-%u\bH
-%u_%u_%u
-%|05
-%|15
-%|25
-%|35
-%|45
-%|55
-%|65
-%|75
-%|85
-%|95
-%|A5
-%|B5
-%|C5
-%|D5
-%|E5
-%|F5
-%|G5
-%|H5
-%|I5
-%|J5
-%|K5
-%|L5
-%|M5
-%|N5
-%|O5
-%|P5
-%|Q5
-%|R5
-%|S5
-%|T5
-%|U5
-%|V5
-%|W5
-%|X5
-%|Y5
-%|Z5
-%|_5
-%|a5
-%|b5
-%|c5
-%|d5
-%|e5
-%|f5
-%|g5
-%|h5
-%|i5
-%|j5
-%|k5
-%|l5
-%|m5
-%|n5
-%|o5
-%|p5
-%|q5
-%|r5
-%|s5
-%|t5
-%|u5
-%|v5
-%|w5
-%|x5
-%|y5
-%|z5
-&AElig;
-&Aacute;
-&Acirc;
-&Agrave;
-&Aring;
-&Atilde;
-&Auml;
-&Ccedil;
-&D9+A
-&D;p
-&ES\b
-&ETH;
-&Eacute;
-&Ecirc;
-&Egrave;
-&Euml;
-&HW]
-&Iacute;
-&Icirc;
-&Igrave;
-&Iuml;
-&L9't-A
-&Ntilde;
-&Oacute;
-&Ocirc;
-&Ograve;
-&Oslash;
-&Otilde;
-&Ouml;
-&RN(\b*V
-&THORN;
-&Uacute;
-&Ucirc;
-&Ugrave;
-&Uuml;
-&YA1
-&YA1A
-&YA1D
-&YA1E1
-&YA1H
-&YA1I
-&YA1L
-&Yacute;
-&[sR
-&aacute;
-&acirc;
-&acute;
-&aelig;
-&agrave;
-&amp;
-&apos;
-&aring;
-&atilde;
-&auml;
-&b5@G
-&brvbar;
-&ccedil;
-&cedil;
-&cent;
-&copy;
-&curren;
-&deg;
-&divide;
-&eacute;
-&ecirc;
-&egrave;
-&eth;
-&euml;
-&euro;
-&f_:
-&ff.
-&frac12;
-&frac14;
-&frac34;
-&gt;
-&iacute;
-&icirc;
-&iexcl;
-&igrave;
-&iquest;
-&iuml;
-&laquo;
-&ldquo;
-&lsquo;
-&lt;
-&macr;
-&mdash;
-&micro;
-&middot;
-&nbsp;
-&ndash;
-&not;
-&ntilde;
-&oacute;
-&ocirc;
-&ograve;
-&ordf;
-&ordm;
-&oslash;
-&otilde;
-&ouml;
-&para;
-&plusmn;
-&pound;
-&quot;
-&raquo;
-&rdquo;
-&reg;
-&rsquo;
-&sect;
-&shy;
-&sup1;
-&sup2;
-&sup3;
-&szlig;
-&t*D\t
-&t\bL
-&th\t
-&thorn;
-&times;
-&trade;
-&uacute;
-&ucirc;
-&ugrave;
-&uml;
-&uuml;
-&yacute;
-&yen;
-&yuml;
-'#aX
-',_JH
-'1C5
-':' not expected inside an array.  ('[]' used when '{}' was intended?)
-'YA1
-'false'
-'ff.
-'null'
-'sv]U&
-'t1H
-'tHH
-'t\bH
-'true'
-'u*1
-'xR\t-
-'~ZL
-(%i core%s
-(+EW
-(-AVX)
-(BG~
-(D8*t
-(D9/u
-(E19
-(E8(A
-(E9(u\fH
-(H;N(M
-(I+WhA
-(I+WhI
-(L9m
-(L9}
-(Missing)
-(None)
-(Unaccounted)
-(YA1
-(YA1D
-(YA1H
-(YA1I
-(YA1L
-(\b4\v
-(anonymous namespace)
-(b\\RP
-(bnH
-(d$5V
-(deleted)
-(fD9/u\nH
-(fE9(u
-(ff.
-(in large os pages)
-(including user space up to 63 bits)
-(kdz
-(main)
-(no name set)
-(no subprocess output produced)\n
-(none)
-(omitted %u following lines...)\n
-(omitted %u previous lines...)\n
-(once).
-(u*H
-(u?H
-(uJH
-(uMH
-(unknown)
-(v;f
-(vRff.
-(vcff.
-(vmff.
-(vuff.
-(v{UL
-(wPu@
-) : AssertMsg Failed in function
-) : Assertion Failed in function
-)05\t
-)1"Qd
-)147:;=IJ]
-)14:;EFIJ^de
-)14:EFIJNOde\\
-)55u'
-)57k&
-)=VLFJO
-)D$0
-)D$P
-)D$p
-)E8,$A
-)EIWde
-)EVs
-)HcB\bD9
-)T`D
-)YA1
-)YA1A
-)YA1H
-)YA1L
-)\r2w'
-)\rRx'
-)\rYh&
-)\rbi&
-)\rtk&
-)\rzw'
-)fE9,$
-)ff.
-)n/h%fPn
-)rv1
-)t\nA
-)tuM
-)uML
-)x:uG
-***** OUT OF MEMORY! /+/ Attempted allocation size: %llu ****\n
-***** OUT OF MEMORY! /+/ attempted allocation size: %llu ****\n
-***** OUT OF MEMORY! Attempted allocation size: %llu ****\n
-*5KS
-*9Xh
-*Cc46
-*D93A
-*F2\a1wsHp
-*H\tD
-*I\tD
-*N12_GLOBAL__N_121system_error_categoryE
-*N12_GLOBAL__N_122generic_error_categoryE
-*N24CParallelProcessLauncher18CParallelLambdaJobIZ21ParallelForSharedCodeEUliE_EE
-*NSt13__facet_shims12_GLOBAL__N_112collate_shimIcEE
-*NSt13__facet_shims12_GLOBAL__N_112collate_shimIwEE
-*NSt13__facet_shims12_GLOBAL__N_113messages_shimIcEE
-*NSt13__facet_shims12_GLOBAL__N_113messages_shimIwEE
-*NSt13__facet_shims12_GLOBAL__N_113numpunct_shimIcEE
-*NSt13__facet_shims12_GLOBAL__N_113numpunct_shimIwEE
-*NSt13__facet_shims12_GLOBAL__N_113time_get_shimIcEE
-*NSt13__facet_shims12_GLOBAL__N_113time_get_shimIwEE
-*NSt13__facet_shims12_GLOBAL__N_114money_get_shimIcEE
-*NSt13__facet_shims12_GLOBAL__N_114money_get_shimIwEE
-*NSt13__facet_shims12_GLOBAL__N_114money_put_shimIcEE
-*NSt13__facet_shims12_GLOBAL__N_114money_put_shimIwEE
-*NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIcLb0EEE
-*NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIcLb1EEE
-*NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIwLb0EEE
-*NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIwLb1EEE
-*YA1
-*YA1H
-*YA1I
-*YA1L
-*YA1SH
-*YA1f
-*Z22FiberPoolDefaultWorkerPvE23CFiberPoolDefaultWorker
-*Z22FiberPoolDefaultWorkerPvEUlvE_
-*ZN11CThreadPool11StopThreadsEbEUlvE_
-*ZNK17CUtlReportPrinter17PrintReportLambdaIZNKS_11PrintReportEi17LoggingSeverity_tRK9ReportOptEUlPKcE_EEvOT_S4_E20CReportOutput_Lambda
-*\rgH\v
-*ff.
-*fj\rv
-*l$0fE
-*nullptr*
-*q`r
-*u2H
-*u\fH
-*}y9
-+ %u header stack frames
-+ full mem debug
-+ light mem debug
-+ light verifier
-+ mem init
-+ stackstats
-++CCUNGH
-++CCUNGH9E
-+0HiM
-+7a_
-+80[
-+B$A
-+C$1
-+C$H
-+ChH
-+D9(u
-+D;2A
-+G$1
-+G(9
-+G\bH
-+H4H
-+J4H
-+J4M
-+K$x41
-+M A
-+N4A
-+O4H
-+W$x"1
-+YA1
-+YA1D
-+YA1H
-+YA1I
-+YA1L
-+YA1f
-+^yu\vD
-+fD9(u
-+ff.
-+inf
-+o*7
-+tPOu
-+t\bL
-+t\tH
-+u2H
-+y\bH
-+~xY6
-,  Features:
-, %uP/%uE cores
-, Frequency: %.01f %s
-, SMT/HT index %d
-, commit:
-, efficiency class %lld
-, max frequency %.01f %s
-,!Ic
-,!MbDg[
-,#L9
-,$E1
-,%03d
-,%mh
-,)Ud
-,,4d
-,0ATL
-,2ATSH
-,4M9
-,6a<
-,7ATSH
-,7IcM
-,<bk
-,?D1
-,AVI
-,CfA
-,Fff.
-,G\bH
-,G\b]H
-,IH)
-,IMc
-,Nw4B
-,YA1
-,YA1A
-,YA1H
-,YA1I
-,YA1L
-,\aM9
-,\bL9
-,\fIc
-,\nATI
-,\nM9
-,ff.
-,fp!
--+xX0123456789abcdef0123456789ABCDEF
--+xX0123456789abcdefABCDEF
--- Hierarchical Call Graph --\n
--- Profile scopes sorted by average time (including children) --
--- Profile scopes sorted by average time (without children) --
--- Profile scopes sorted by peak --
--- Profile scopes sorted by peak over average (including children) --
--- Profile scopes sorted by time (including children) --
--- Profile scopes sorted by time (without children) --
--- Summary --\n
---------------\n%3i convars/concommands for [%s]\n
---------------\n%3i total convars/concommands\n
---hint
--. +0123456789.
--0123456789
--19"
--1j,
--4E"
--5I&
--9w#
--;eU
--BH&
--Es!
--F8"
--J9"
--Kk,
--Ll\t
--MG&
--QC"
--RestartSelfFromAlternateLocation_RelaunchTime
--T0!
--V4\n
--XO+
--XnJ
--YA1
--YA1A
--YA1H
--YA1I
--YA1L
--ZK"
--aA"
--abandoned
--attachtodebugger
--breakimmediately
--cached
--dI"
--export:RunWithAlternateStack-export:JmpToAlternateStack
--extended
--f5+
--fI&
--ff.
--hA\b
--in-
--inf
--jD"
--noautoargs
--pb!
--qZ!
--retire
--rollback
--sH&
--sM*
--sa!
--tJH
--tO"
--t[\aj
--testscript
--testscript_inline
--u\bf
--ukH
--v4\n
--x2"
-.%0*llu
-.%03H
-.%x.%x.copy_tmp
-.+gQf
-.-mx
-../common/vsymbolmodule.cpp
-../public/tier0/globallist.h
-../public/tier0/quantizedfloatencoder.h
-../public/tier0/threadmutex.h
-../public/tier0/threadtoolstypes.h
-../public/tier0/tslist.h
-../public/tier0/utldict.h
-../public/tier0/utlrbtree.h
-../public/tier0/utlsymboltablelarge.h
-../thirdparty/fmt/format-inl.h
-../thirdparty/fmt/format.h
-.5xF
-.D;x
-.G\bz
-.J-b
-.YA1
-.YA1H
-.YA1I
-.YA1L
-.\az7u5
-.\r2D
-.bss
-.build-id/
-.cfa
-.cfaH
-.comment
-.copy_tmp
-.dSYM
-.data
-.data.rel.ro
-.dbg
-.debug
-.dynamic
-.dynstr
-.dynsym
-.eh_frame
-.eh_frame_hdr
-.ff.
-.fini
-.fini_array
-.gcc_except_table
-.gnu.hash
-.gnu.version
-.gnu.version_r
-.gnu_debuglink
-.gnu_debuglink doesn't have a 32-bit CRC\n
-.gnu_debuglink doesn't have a filename\n
-.gnu_debuglink doesn't have string terminator\n
-.got.plt
-.init
-.init_array
-.mdmp
-.note.gnu.build-id
-.note.stapsdt
-.pdb
-.plt.got
-.raSearch
-.raSearchStart
-.rela.dyn
-.rela.plt
-.relro_padding
-.rodata
-.rodata.cst16
-.rodata.cst2
-.rodata.cst4
-.rodata.cst8
-.rodata.str1.1
-.rodata.str1.8
-.rodata.str4.4
-.rodata.str4.8
-.shstrtab
-.so.
-.so.zip
-.sym
-.t+H
-.t\bH
-.t\bL
-.tbss
-.tdata
-.text
-.tm_clone_table
-.trA
-.txt
-.uAH
-.uCH
-.wM^
-/8R:5
-/E\br$
-/F v
-/F w
-/F\br2
-/G v
-/G vPM
-/G w
-/G\br\f
-/P8i
-/YA1
-/YA15ts
-/YA1H
-/YA1L
-/content/
-/debuginfo
-/dev/null
-/dev/random
-/dev/urandom
-/e%s%s
-/executable
-/ff.
-/fxLf
-/game/
-/mnt/
-/mnt/symbols_
-/proc/%u/maps
-/proc/%u/status
-/proc/%u/task
-/proc/cpuinfo
-/proc/self/cmdline
-/proc/self/exe
-/proc/self/statm
-/proc/self/status
-/proc/sys/vm/overcommit_memory
-/proc/version
-/sys/devices/system/clocksource/clocksource0/current_clocksource
-/sys/devices/system/cpu/cpu%u/cpufreq/cpuinfo_max_freq
-/sys/devices/system/cpu/cpu%u/topology/core_id
-/sys/devices/system/cpu/cpu%u/topology/physical_package_id
-/sys/devices/system/node/node%u
-/t3H
-/tO@
-/tRUE1
-/t^A
-/tmp
-/w$H
-/w-M
-/yDVm"
-/yQA
-/zz2:B"
-/~ZH
-0 0 0
-0 0 0 0
-0 0 0 255
-0+J0H
-00000000
-00000000-0000-0000-0000-000000000000
-00000000D
-00000000H
-0000H
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
-0123456789
-0123456789ABCDEF
-0123456789abcdef
-01234567H
-08,D
-092u
-0:b*
-0;FALSE;NO;OFF
-0<=D4v
-0<\tv
-0<\tw
-0<\tw0A
-0<\tw1Lc
-0<\twYH
-0<\twxH
-0>7R
-0@81t
-0@82
-0A81@
-0A9t$
-0D87t
-0D97u\bH
-0D;&}\rH
-0H#Z0t
-0H9U
-0H9W
-0I9U
-0S\tT
-0U@H
-0YA1
-0YA1H
-0YA1I
-0YA1L
-0\aw,a
-0\f9K
-0f92u\vH
-0fD97u\bH
-0ff.
-0t%H
-0t%H9
-0t(H9
-0t*Ic
-0t.H
-0t/H9
-0t0H9
-0t2I
-0t3I
-0t4P
-0t5I9
-0t=H
-0t?H
-0tFH
-0tK1
-0tNH9
-0tSI9
-0tTH9
-0t\aH
-0tbH9
-0tjH
-0toH
-0u\rH
-0u\tH
-0v\nHex<\rE
-0x%016llX
-0x%08X
-0x%llx
-0x%p
-0}\rI
-1.5.6
-1.8.2
-11eU%
-127.0.0.1
-190u
-190u\bH
-1;TRUE;YES;ON
-1@80
-1@82s\rE
-1@84
-1@84\a
-1D8p
-1D9*
-1DBlend
-1HQ."
-1H\tD
-1I9T$
-1I\tD
-1PP$\b
-1PSC
-1U =
-1YA1
-1YA1A
-1YA1H
-1YA1L
-1YA1M
-1YSUA
-1\aU\n7\a
-1\a\f\a\b
-1\vq\b
-1]t$
-1f90u
-1f90u\bH
-1ff.
-1r'\b
-1t?E1
-1wZL
-1wbIc
-1}\rI
-2"]x
-2(\f\n
-2,THh
-2.n<
-20:48:46
-2500
-267z(
-290u\bH
-290u\rI
-2>H\b
-2@80
-2@8p
-2A80@
-2A90u\bH
-2A^A_]
-2D80t!)
-2D81t
-2D87@
-2D90u\bH
-2H;p
-2I9FH
-2WDU
-2X2?=
-2YA1
-2YA1H
-2YA1L
-2aNuE
-2d.%03d
-2f90u
-2f90u\bH
-2fA90u\bH
-2fD90u\bH
-2fD97u\bH
-2t\vH
-2u-A
-2~\rI
-3%I\v
-3333333
-33333333H
-33s?
-3@80
-3A96u\bH
-3E19
-3E\\|!1H
-3F[;
-3G\bA
-3G\fA
-3L\e
-3Pzr)
-3R`w
-3VKH
-3VKtSw9
-3VKu(Hc
-3VKuYA
-3VKu\eM
-3YA1
-3YA1L
-3\f\a\b
-3_L\n
-3fA96u\bH
-3ff.
-3q"!
-3u+H
-3uEH
-3u|H
-3v4H
-3wl'
-4#D1
-4$92u\fI
-4$A86@
-4$A96
-4$E1
-4$E19
-4$H)
-4$H9
-4$H;t$\bu
-4$HcM
-4$Hcx
-4$f92u\rI
-4$fA96u\bI
-4'L9
-4(I9r
-4*E1
-4*I9s
-4+I9r
-4,L9
-4.Qbg\b
-40A8
-40A9
-40Hc
-41E847t
-43D1
-47A9
-47H\t
-47Mc
-4:H9
-4<H)
-4>I9u
-4>Y(<TR
-4@E1
-4@v"L
-4AH9
-4AV%
-4BfE
-4CfC
-4FA9
-4Fff.
-4Fv$H
-4JpI?=
-4PfE
-4R.=\b
-4RH)
-4YA1
-4YA1H
-4YA1I
-4YA1L
-4[A\\A]A^A_]
-4\aH)
-4\aH9
-4\aH9u
-4\aH9w
-4\aHr\b
-4\aI9
-4\aI9u
-4\aLc
-4\aM9
-4\ar\vI9
-4\bHc
-4\bMc
-4\n@84
-4\nD1
-4\nH)
-4\nH9
-4\nHc
-4\nIc
-4\tHc
-4\tY`PA
-4\vHc
-4\vL9
-4\vff.
-4^K\fOI
-4`!g
-4ff.
-4qI9
-4vE1
-4wH9
-5 4\n
-5!N\v
-5$S#
-5$^j
-5$v!
-5%k,
-5&M"
-5&YA1A
-5&YA1H
-5&YA1I
-5'C"
-5'g|
-5(Hf;
-5+WJ
-5+eS
-5,M\v
-5,Y-
-54 !
-54M"
-55M*
-58!\f
-59',
-59I"
-5?D"
-5@2!
-5BJ"
-5CCvar
-5D6!
-5ICvar
-5K<\t
-5N>"
-5Na!
-5P$!
-5TO"
-5UO"
-5U]_n
-5WE"
-5YA1
-5YA1H
-5YA1L
-5Yk\t
-5\tOZ
-5\vL"
-5]T"
-5_id
-5ale
-5ame
-5and
-5ata
-5ces
-5e_a
-5e_b
-5eed
-5ees
-5eld
-5els
-5ent
-5ers
-5exp
-5ff.
-5gin
-5gth
-5h)!
-5iV"
-5ife
-5ime
-5int
-5ion
-5ips
-5ist
-5ity
-5ive
-5k\b+
-5lay
-5led
-5les
-5max
-5min
-5ngs
-5nsfZ
-5nt0
-5nt1
-5ode
-5ope
-5pat
-5per
-5r:!
-5rB~YV
-5raw
-5set
-5t H
-5t3\f
-5tid
-5tor
-5uFH
-5ure
-5ut0
-5ut1
-5u|&
-5v*\f
-5y@"
-5ype
-5{M"
-5|R"
-6%uP
-64-bit DWARF format is not supported\n
-67VW
-6?r\ag
-6A94$
-6A_p
-6E19
-6H9E0siL
-6H9G
-6H9]
-6HK*\n
-6I9E
-6YA1
-6YA1A
-6YA1H
-6YA1L
-6YA1f
-6\b+l&
-6f"\e
-6fD9"
-6ff.
-6l3o
-6npVS
-6tJf
-6tWH
-6u\\H
-75\f.
-76m8s
-7<!w\bH
-7CSignalILi0EE
-7CSignalILi10EE
-7CSignalILi11EE
-7CSignalILi12EE
-7CSignalILi13EE
-7CSignalILi14EE
-7CSignalILi15EE
-7CSignalILi16EE
-7CSignalILi17EE
-7CSignalILi18EE
-7CSignalILi19EE
-7CSignalILi1EE
-7CSignalILi20EE
-7CSignalILi21EE
-7CSignalILi22EE
-7CSignalILi23EE
-7CSignalILi24EE
-7CSignalILi25EE
-7CSignalILi26EE
-7CSignalILi27EE
-7CSignalILi28EE
-7CSignalILi29EE
-7CSignalILi2EE
-7CSignalILi30EE
-7CSignalILi31EE
-7CSignalILi3EE
-7CSignalILi4EE
-7CSignalILi5EE
-7CSignalILi6EE
-7CSignalILi7EE
-7CSignalILi8EE
-7CSignalILi9EE
-7CThread
-7Cxl2i5n
-7E19
-7I9E
-7IcU
-7YA1
-7YA1H
-7YA1I
-7YA1L
-7eC|\r
-7jU'9
-7wpH
-8#Xl
-8/t\nH
-899u\bH
-899u\nH
-89:u
-89:u\nH
-89ABCDEFH
-8;-6
-8>G#g$
-8@%rax 8@%rdx
-8@-24(%rbp) 8@-32(%rbp)
-8@-48(%rbp) 8@%rax
-8@89
-8@8:
-8@8:t
-8@8<
-8A9:u\tH
-8A9>
-8A9M0
-8A9|$
-8A]A^]H
-8A^]H
-8Bu\rH
-8CProcess
-8D89t
-8D8:
-8D99u\bH
-8D9:u
-8D9}\v4
-8Dt\a
-8H9]
-8H9}
-8H\tD
-8HcG
-8IProcess
-8I\tD
-8Icr(H
-8Iu 1
-8Iu(A
-8L9]
-8Lt\a
-8McB
-8P\au\tH
-8Q"/
-8TRb
-8Tt\a
-8VBKVt#HcC
-8YA1H
-8Z~H
-8[A\\A]A^A_]
-8[A\\A]H\t
-8[]A\\A]A^A_
-8[th
-8[u\t
-8\bF\b\f
-8\btQH
-8\ex*
-8\nu\aD
-8_tW1
-8_uC
-8_uDL
-8f99
-8f99u\bH
-8f99u\vH
-8f9:
-8f9:u
-8f9:u\bH
-8f9:u\vH
-8fD99u\bH
-8fD9:u
-8ff.
-8jxH^
-8l\a1
-8t3H
-8ty+<u
-8v"H
-8v$H
-8}uDH
-8~Kf
-9!7J
-9/tzI
-90uX
-90uh
-90uk
-90ul
-90ur
-99Mc
-9@8z
-9A89@
-9C ~
-9C ~P
-9E8:A
-9E9:u
-9G(}iH
-9H9>r
-9IB\f
-9ICL
-9IMemAlloc
-9IPipeRead
-9QX*r
-9QZ^&
-9X\b~
-9YA1
-9YA1L
-9\a\n6,
-9\a~:Hc
-9\bu\nH
-9\bu\tI
-9\bu\vH
-9\bua
-9\buv
-9\f|K
-9^\bt
-9a&g
-9fE9:u\rH
-9ff.
-9g\e]
-9s>H
-9u\rA
-9u{H
-9vZ3
-9wRH
-9z\\u@
-: proc group %u:%u, physical ID %d, core ID %d
-:/t\eH
-:1X:
-:98u\vH
-:9>u\bH
-::<lambdL
-::string literal
-::{ default arg#
-:?EQ
-:@88
-:@8x
-:A98u\bH
-:D8;t
-:D8>u
-:D9>u\bH
-:E88A
-:E98u\fH
-:SF2
-:St\a
-:d3#P
-:f98u
-:f9>
-:f9>u\bH
-:fA98u\bH
-:fD9>u\bH
-:fE98u\rH
-:iEF
-:t0M
-:tfH
-:uSH
-:x\ng
-:~3H
-:~I4
-:~dm1\t
-;(uu
-;5'B
-;5w?
-;7tT
-;7tW
-;8O-
-;9;u
-;BXsxH
-;BbK
-;C\br
-;F@s
-;H\bs
-;H\bu\nH
-;Hc5
-;I99
-;P@r
-;SPr
-;Sxs)1
-;V\bD
-;VmHW
-;VmPe
-;VmRS
-;VmSi
-;W@s%1
-;WHs
-;YA1
-;\at"A
-;\btyD
-;\btzD
-;\nt\tH
-;_8s\fH
-;d15
-;ff.
-;k\br
-;oRp\b(
-;p8s\fH
-;p\bu
-;pdV
-;t7Ic
-;t\bI
-;v_D
-;w6H
-;wPn
-< u\fH
-<!-- kv3 encoding:%s:version{%s} format:%s:version{%s} -->\n
-<!-- schUH
-<!Ic
-<"t4</uJ
-<"u\nI
-<"uyA
-<#A9
-<#H9
-<$D92A
-<$E1
-<$H9
-<$Hc
-<$Hk
-<$t\bH
-<$t\nI
-<$uFH
-<$uYH
-<$~3Hc
-<(M9
-<-t\vH
-<-u\vA
-<.H9
-<.ucH
-</link>
-</pre>
-</script>
-</tGH
-</tQH
-</uo
-<0I9
-<0L1
-<0\nt
-<0tK<'t7H
-<0t\a
-<0uiI
-<1A8<7t
-<1H!
-<1Hc
-<1fI
-<2A\t
-<2tT<4tq<6
-<2w"I
-<3/u
-<3M9
-<3tj<4
-<4H)
-<4L9
-<6Ic
-<7AUI
-<7H9
-<7L)
-<7M)
-<8A8
-<8A9
-<8B8<
-<8Lc
-<:t\vH
-<<tyL
-<Au\eH
-<Bu5H
-<Cff.
-<EOF>
-<Et4
-<EtYA
-<Et\a
-<Et\bH
-<EtlH
-<Eu&H
-<Eu'H
-<Eu4H
-<EuP
-<Eu\eH
-<Fu\eH
-<Gu'1
-<Gu)
-<GuB
-<Gu\eH
-<G~_A
-<HuPH
-<ItT<E
-<Itm<Bu\vH
-<Iu(H
-<Iu/H
-<Iu5H
-<IuCH
-<IuEH
-<IuS
-<Iu\a
-<Iu\e
-<Jt\a
-<Lu\eH
-<Mu\eH
-<NULL>
-<No caller file>
-<No name>
-<Nu7H
-<Nu\eH
-<PfE
-<Pu(
-<Pu;ff.
-<Pu\e
-<QuOH
-<SfG
-<Su\eH
-<SudH
-<Tt%
-<Tt\n
-<Tu#H
-<Tu\eH
-<Uu\eH
-<UyRA
-<Xt%
-<Xt\fH
-<Xu;H
-<Xu\a
-<YA1H
-<Zt#H
-<Zu\eH
-<Zu\f
-<\aAUI
-<\aH9
-<\aHc
-<\aL9
-<\bA8
-<\bD9
-<\bH1
-<\bH9
-<\bff.
-<\bt$E
-<\bt[H
-<\btdA
-<\btnL
-<\bttA
-<\bu H
-<\bu I
-<\bu"I
-<\bu$E
-<\bu%E
-<\bu(E1
-<\bu(H
-<\bu/L
-<\bu0I
-<\bu4I
-<\buDI
-<\buFI
-<\buGI
-<\buKB\bD
-<\buKH
-<\buV
-<\bu\eI
-<\bu\t
-<\bu\vH
-<\bur
-<\bwg
-<\fIc
-<\nH9
-<\nI9
-<\nL9
-<\nt1H
-<\ntD
-<\nt\b
-<\nt\r
-<\rtq<\n
-<\ru\n
-<\tt'H
-<\tt,I
-<\tt8H
-<\ttHE1
-<\ttLH
-<\ttPH
-<\ttYw
-<\tt\a
-<\tt\bH
-<\tt\eH
-<\tt\n1
-<\tt\v1
-<\tt\vH
-<\ttl
-<\ttqE
-<\ttuH
-<\ttz
-<\tu"H
-<\tu/L
-<\tu1
-<\tu3E
-<\tu7E
-<\tu8E
-<\tuU
-<\tu\aH
-<\tu\aI
-<\tu\bI
-<\tu^E1
-<\tucf
-<\turL
-<\tvp
-<\tw(H
-<\tw)Lck
-<\tw?H
-<\twlH
-<_t\n
-<_t\vH
-<_u!H
-<_u#H
-<_u)H
-<_u4H
-<_u\eH
-<_u\t
-<_ugH
-<array: %u elements>
-<at\n
-<binary blob: %u bytes>
-<br>
-<br>E9
-<bu^
-<built-in>
-<ct\vH
-<cu3H
-<dS\fH\t\nFE\eH\bS
-<dt\b<p
-<du3H
-<du4H
-<ft\n
-<fuNH
-<g9;c
-<h1>
-<h2>
-<h3>
-<ht$<Hu
-<img src="
-<iu+H
-<iu4H
-<li>
-<link cmd="%s">
-<lu\eH
-<muQH
-<nt3<t
-<nu\a
-<nu\e
-<null>
-<number>
-<parse error>
-<pointer>
-<pre>
-<pt\vH
-<puJH
-<rt*<tt
-<ru\a
-<st!H
-<stdin>
-<stdout>
-<string>
-<suRH
-<table: %u members>
-<tfA
-<tu&H
-<tuDH
-<tu\eH
-<ul>
-<unable to create unique minidump file>
-<undefined>
-<unknown KV3 basic type '%s' (%d)>
-<unknown>
-<xFH4
-<xHi
-<xu\vL
-<{uY
-='2T
-=0u(
-=1H"
-=1g+
-=2=5
-=3l\t
-=4Y\e
-=6G"
-=6L"
-=9f!
-=;I4
-=<img src
-=AR'
-=AZ+
-=Authu\a
-=CSP1u(H
-=Fg!
-=GX'
-=Genut\n
-=Hy"
-=I9"
-=Ig+
-=Kc,
-=MK"
-=N$H
-=OM\v
-=Ol\t
-=P*M
-=PQ*
-=QJ"
-=QT"
-=Sb'
-=Sq)
-=USY1u+H
-=UUU
-=VKV
-=VU"
-=WZ"
-=XA"
-=X\nP
-=YA1
-=Yd!
-=Zf&
-=Zq&
-=Zy+
-=_X!
-=_X'
-=_k,
-=a8"
-=ag+
-=aw+
-=bM*
-=cw!
-=cy"
-=dn"M,
-=ff.
-=gF&
-=ha*
-=jj,
-=ki,
-=lO*
-=mp#
-=pP*
-=q3(
-=rr#
-=t7I
-=wX'
-=wu#
-=yg+
->/YA1
->5PJ>
->98t^H
->::operaH
->?Wn
->@8x
->A9>
->A9}
->ATSH
->D;7
->Ea$
->H9E(smL
->I9?
->Ic\vI)
->LZMA
->LZMAt
->LZSS
->LZSSt
->Y4Na\\~
->YA1
->YA1H
->YA1L
->ZF9
->[O8
->[\fOn
->f98t]H9
->fD9"
->jm\r
->kTA`
->l\fs
->t$A
->uaH
->vf,U
->~89
-?"trH
-?(3w
-?/t\eU1
 ?21CUtlCStringConversion
-?456789:;<=
-?9:u
-?<a href=
-?AWI
-?A_]
-?E19
-?H;E
-?L\tD
-?UH9
-?YA1
-?\\tFH
-?ff.
-?lk(
-?r*q
-?t!H
-?t!I
-?t#L
-?t$L
-?t(H
-?t(L
-?t*I
-?t+A
-?t-H
-?t1E
-?t3A
-?t3H
-?t5I
-?t7L
-?t<A
-?tJ1
-?tJI
-?tMH
-?tOL
-?tSH
-?tUH
-?t\aH
-?t\aL
-?t\bH
-?t\bM
-?t\eA
-?t\fL
-?t\vA
-?tdH
-?tiH
-?tiL
-?tkL
-?tmH
-?toH
-?txA
-?t|A
-?u H
-?u%H
-?u(H
-?u+L
-?u1L
-?u3A
-?uCA
-?uFL
-?uUA
-?u\nH
-?u^1
-?u^H
-?uqH
-?urL
-?usH
-?uxA
-?u|1
-?v H
-?v#H
-?v$L
-?v(A
-?v+H
-?v/H
-?v0H
-?v2H
-?v3H
-?v9H
-?v;H
-?vBE
-?vCH
-?vGH
-?vMM
-?vzf
-?v~H
-?w#D
-?w#H
-?w$H
-?w%I
-?w)H
-?w,H
-?w-H
-?w.M
-?w/H
-?w/I
-?w0D
-?w0H
-?w1H
-?w1I
-?w3A
-?w4H
-?w5K
-?w9H
-?w<D
-?w>D
-?wAH
-?wC=
-?wEA
-?wEH
-?wHA
-?wI=
-?wMH
-?wNA
-?wNH
-?wPH
-?wRA
-?wTA
-?w\bH
-?w\bL
-?w\fH
-?w\nH
-?w\rH
-?w\tH
-?w\vH
-?wkA
-?w~D
-@ H9
-@ L9
-@ Mc
-@(H9
-@(H9F(
-@(H9G(
-@,I1
-@-HQ
-@0H9
-@0H9E
-@0t"L
-@4A)
-@89E
-@8H9
-@8L9
-@@H9
-@@H9E
-@@L9
-@AUI
-@H.H
-@HH9
-@HHi
-@HL9
-@I,H
-@Lc|
-@PH9
-@PL9
-@P`D
-@X9E
-@XHc
-@XI9
-@\bA9
-@\bD9{
-@\bH+E
-@\bH9
 @\bH9E
-@\bHc
-@\bI9
-@\bL9
-@\bMc
-@\b\b0
-@\b\bH9]
-@\b\bJ
-@\b\bL9E
-@\b\bL9M
-@\b\bL9}
-@\f0H
-@\f2H
-@\f4H
-@\f6H
-@\f8H
 @\f@t3
-@\fBH
-@\fDH
-@\fFH
-@\fH9
-@\fHH
-@\fI9
-@\fJH
-@\fL9
-@\fLH
-@\fNH
-@\nf9
-@`9E
-@`H9
-@`Hc
-@aQY
-@ff.
-@hH9
-@hI9
-@hL9
-@o@H
-@pH9
-@pL9
-@pt]
-@t\nA
-@t\rH
 @t\tHc
-@t\vA
-@t\vC
-@t\vH
-@thH
-@tmH
-@u H
-@u!D
-@u!H
-@u/D
-@u1H
-@uLD
-@uOE
-@uOL
-@u\eE
-@u\r1
-@ujL
 @v:k\v
-@w+H
-@w\\L9
-@wdH
-@wkUL
-@w{H
-@xH9
-A H9
-A L9
-A rdD
-A#ALH
-A#ELH
-A#GLH
-A#GlH
-A#L$$H
-A#L$<H
-A#M$H
-A#OlD
-A#OlL
-A#q<H
-A#t$$H
-A#u$H
-A#wDH
-A#y<H
-A(H9
-A(H9F(
-A(H9F(r
-A(H9F(s
-A(H9F(sGI
-A)D$
-A)J\\A
-A)L$
-A+A$A
-A+D$
-A+D$$A
-A+D$$x<1
-A+D$PL
-A+D$\bA
-A+E$
-A+E$A
-A+E\b
-A+F$
-A+F$A
-A+G$A
-A+G\bA
-A+GhH
-A+L$8
-A+M\bI
-A+M\bM
-A+O$
-A+O\b
-A+T$$A
-A+U$A
-A+V$A
-A+W$
-A+W$A
-A->B
-A0H9
-A2T$
-A2fA
-A3;!
-A3A`
-A3B<
-A3P\b
-A3P`
-A3Q`
 A3S(A3S
-A3S(A3S D!
 A3S,A3S
-A3S,A3S$
 A3S0A3S
-A3S8
 A3S8A3S0
-A3S<
 A3S<A3S$A3S
 A3S<A3S4
-A3S\b
 A3S\bA3S0A3S(
-A3S\f
 A3s<A3s$A3s
 A3s<A3s4
 A3x\fB
-A3{(A3{
-A3{,A3{$
-A3{8A3{0
-A3{<A3{$A3{
-A3{\bA3{0A3{(
-A88@
-A8?,
-A8D$
-A8D$\bu
 A8E\tt
-A8\au
-A8\eA
-A8t$
-A8|$
-A92t
-A9D$
 A9E\bt?A
-A9F ~\bI
-A9Ftf
-A9G ~
 A9G\bA
-A9R@
-A9V H
-A9\\$PI
-A9\\$h
-A9\a~
-A9\f$
-A9\f6u\n
-A9]P
-A9]\b
-A9]\bL
-A9wP|!A
-A9wP|{A
-A;BXs)Hc
-A;D$
-A;D$Xs\bHc
-A;D$\bA
-A;D$\bs
-A;E(
-A;E@
-A;EP
-A;G\bA
-A;G\br
-A;Gp
-A;Gps[1
-A;Gp}
-A;M\f|\tM
 A;QPsT1
-A;R\fs
-A;U\b|
-A;V\btj
-A;WP
 A;WPs_1
-A;Wp
-A;\eu
-A;_\b
-A;w\bu
-A<9w
-A<9w)H
-A@H9
 A@HcQ8H
 AA40J6
 AAUATSH
@@ -3281,59 +79,22 @@ AE_VORTIGAUNT_ZAP_SHOOT
 AE_ZOMBIE_POPHEADCRAB
 AE_ZOMBIE_TOGGLE_HEAD
 AIWalkable
-AKST
 ANGLES
 ANIMATION_TYPE_FIT_LIFETIME
 ANIMATION_TYPE_FIXED_RATE
-APE1
-APH9
 APH9B\b
 APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %d!\n
-APWE
-AQAVM
-AQE1
-ARASL
-ARAVL
 ARCHIVE
-ARj4j
-ASCII
 ASCII//TRANSLIT
 ASYNC_FIRE_AND_FORGET
-ASj#j
-ATA)
-ATAW
-ATD)
-ATE1
-ATI)
-ATIc
-ATLc
-ATS1
-ATSA
-ATSD
-ATSH
 ATSHc7
-ATSIc
-ATSL
 ATStXD
 ATStZH
 ATStiH
 ATSu\a
 ATTEMPTED TO DECOMMIT OWNED MEMORY STACK SPACE\n
-ATUH
-ATUSH
-AT^jI
-ATfH
-ATfI
-AU19
-AUATA
-AUATD
 AUATE1
-AUATH
-AUATI
-AUATL
 AUATLc
-AUATM
-AUATS
 AUATSA
 AUATSE
 AUATSH
@@ -3342,14 +103,6 @@ AUATSI
 AUATSL
 AUATUS
 AUATUSH
-AUE1
-AULc
-AUMc
-AUSL
-AUfH
-AVARL
-AVATH
-AVAUA
 AVAUATA
 AVAUATE
 AVAUATE1
@@ -3367,25 +120,10 @@ AVAUATS~@L
 AVAUATUH
 AVAUATUS
 AVAUATUSH
-AVAUE
 AVAUE1
-AVAUI
-AVAUL
-AVAUM
 AVAUfH
-AVE1
-AVI)
-AVL)
-AVLc
-AVPH
-AVX2
 AVX512+VPCLMULQDQ
-AVfA
-AVfH
-AVfI
-AWATH
 AWAUATI
-AWAVA
 AWAVAUA
 AWAVAUATA
 AWAVAUATE
@@ -3408,67 +146,15 @@ AWAVAUI
 AWAVAUL
 AWAVAULc
 AWAVAUM
-AWAVE
 AWAVE1
-AWAVH
-AWAVI
-AWAVL
-AWAVM
 AWAVMc
-AWE1
-AWLc
-AWLk
-AWfA
-AWfH
-AWfI
-AXAY
-AXAYH
 AXAYH9
-AXAYI
-AXHc
-AYAZ
-AYAZf
 AYAZu\a
-AYL)
-AZA[
 AZA[A9
 AZA[H9
-AZH)
-A[A]H
-A[H)
-A\\A]A^A_
-A\\A]A^A_]
-A\\A]A^A_]H
-A\\A]H
-A\\A^A_]
-A\\H
-A\\H\t
-A\\L\t
-A\\fH
-A\a@H
-A\a@I
-A\bD)
-A\bH)
-A\bH+A
-A\bH9
-A\bI9F\b
-A\bL9
-A\bMc
 A\brbH
-A\bt\tH9
-A\f\a\b
 A\rEyL
-A\tI9
-A]A^
-A]A^A_[]
-A]A^A_]
-A]A^A_]H
-A]DG
-A^A_]
-A^A_]H
-A`H9
 AbsolutePoseControl
-Abstract origin attr value (0x%llx) out of range\n
 Abstract origin attr without reference value (form 0x%x)\n
 Acceleration_Forward
 Acceleration_Heading
@@ -3477,19 +163,9 @@ Acceleration_Sideways
 AddLayer
 AddPage
 Address range refers to non-existent CU at 0x%llx\n
-Aff.
-AhE1
-Ai47
-Ai<<
-AiD$
-AiD\a\b
-AiT\a\b
-Align
 AlignedByteArray not properly aligned\n
 AllProjects_FatalWriteMiniDump
 AllProjects_FatalWriteMiniDumpOrBreak
-Alloc
-Alloc exceeded allocation limit /+/ %llu > %llu
 AllocUnlocked
 Allocation error : not enough memory
 Always Ignore
@@ -3501,11 +177,9 @@ Android 5.0
 Android 5.1
 Android 6.0
 Android 7.0
-Android 7.1.1
 Android 8 MR1
 Android 8.0
 Android 9.0
-Anim
 AnimAddLayer
 AnimAlign
 AnimAutoLayer
@@ -3536,20 +210,14 @@ Animation
 AnimationList
 AnimationSystemUtils_001
 AnimationSystem_001
-ApH9
-ApL9
 AppendConcat
 AppendFormatV
 ApplyDiffs
-Apr  7 2026
-April
 Assert
 AssertMsg_ConditionFailed_Internal
 AssertMsg_ConditionFailed_State
 Assert_ConditionFailed
 Assertion Failed
-Assertion Failed in function %s():
-Assertion Failure: %s (%d)\n\t%s\n
 AssertionFailureListenerMiniDumpContext_t
 AssertsGetCount
 AssertsMarkFrame
@@ -3561,48 +229,15 @@ AssetSystemTest001
 AssignRangeMultipler with bitcount=32!\n
 AssignRangeMultiplier
 AsyncScheduledFunctions
-Attempted to add job '%s' to pool that has already been completed [status=%i]\n
 August
 AuthenticAMD
 Authenticate
 AutoLayer
 Available flags to search for: \n
-Average %.2f fps, %.2f ms per frame\n
-Avg Time/Call (%s)
-Avg Time/Frame (%s)
-B +B
-B E1
-B H)
-B L9
-B fA
-B"_\r
-B&Y~4
-B(H9F(r
-B(H9F(s
-B(L9
 B,XV4w1
-B->C
-B0A3B
-B0E1
-B0fD
-B0fD9
 B1gN-m
-B?@H
 B@HcR8L
-B@ll
-BGFj
-BH4E
-BI\aH
-BOOL
-BREAKPAD CFI UNWIND: unwind frame to IP 0x%llx, FP 0x%llx, SP 0x%llx\n
 BREAKPAD WIN FPO UNWIND: general use of base pointer not supported\n
-BREAKPAD WIN FPO UNWIND: local size 0x%x, saved register size 0x%x, %s frame register\n
-BREAKPAD WIN FPO UNWIND: unwind frame to IP 0x%llx, FP 0x%llx, SP 0x%llx\n
-BREAKPAD WIN PROG UNWIND: failed to evaluate '%s'\n
-BREAKPAD WIN PROG UNWIND: unwind frame to IP 0x%llx, FP 0x%llx, SP 0x%llx\n
-BREAKPAD:   can't open cached file\n
-BREAKPAD:   can't open file\n
-BREAKPAD:   can't verify cached file\n
 BREAKPAD:   invalid file content\n
 BREAKPAD:   invalid file header\n
 BREAKPAD:   mismatch (non-windows breakpad found for windows binary)\n
@@ -3611,68 +246,19 @@ BREAKPAD:   mismatched alt debug ID\n
 BREAKPAD:   mismatched debug ID\n
 BREAKPAD:   success\n
 BREAKPAD:   unable to read file header\n
-BREAKPAD:   unknown CPU architecture '%s'\n
-BREAKPAD:   unsupported STACK entry of type '%s'\n
 BREAKPAD:   unsupported WIN FPO frame with a program\n
 BREAKPAD:   unsupported WIN frame type 0x%x\n
 BREAKPAD:   unsupported WIN frame without a program\n
-BREAKPAD:   unsupported file element '%s'\n
-BREAKPAD: copying '%s' into cache as '%s'\n
-BREAKPAD: reopen cached file '%s'\n
-BREAKPAD: search for '%s'\n
-BREAKPAD: try and open '%s'\n
 BREAKPAD_SYMBOL_PATH
-BTcq
-B\a@H
-B\aHc
-B\b5?
-B\b6?
-B\b7?
-B\b8?
-B\b9?
-B\bA?
-B\bC?
-B\bD9
-B\bD?
-B\bE?
-B\bF?
-B\bH#
-B\bH)
-B\bH9
-B\bH?
 B\bHc48I
 B\bHct8
-B\bI9
-B\bI?
-B\bJ?
-B\bK?
-B\bL?
-B\bM?
-B\bN?
 B\bNcT
-B\bO?
-B\bP?
-B\bQ?
-B\bR?
-B\b\bA
-B\b\bH
-B\bf9
-B\bfA
-B\fH9
-B\fZ{<c
-B\f\a\b
-B_?F
-B`tr
 Bad Shortcut
 Bad exponent in floating point number
 Bad expression operator: '%c%c', expected C style boolean expression operator.
-Bad expression token: %c in expression "%s"
 Bad header (unrecognized encoding specifier)
-Bad header format (expected ':'
-Bad header format (expected '<!--'
 Bad header format (expected 'encoding'
 Bad header format (expected 'format'
-Bad header format (expected 'kv3'
 Bad header format (expected 'version'
 Bad header format (expected encoding name)
 Bad header format (expected encoding uuid)
@@ -3683,7 +269,6 @@ Bad header format (no closing marker)
 Bad header: invalid binary marker
 Bad header: invalid compression header
 Bad header: unrecognized encoding id
-Bad keyname: '%s'
 Bad node link detected\n
 Bad value
 BakedLODBuilderMgr001
@@ -3692,73 +277,25 @@ BaseIKRule
 BasePhysicsShape
 BenchmarkService001
 BentNormalData
-Bff.
 BinaryProperties_GetValue
 BlendLayer
 BlendLayerBase
 BlendLayerPoseParam
 BlendList
-Blob size is larger than remaining bytes.  Blob %i/%i Blob Size: %u Bytes Remaining: %d\n
-Block
 Block-level external sequence producer returned an error code
 BodyGroup
 BodyGroupChoice
-Bone
 Boundary_Radius
-Break
 Break on unknown stall cause
 BreakCommand
 BreakPieceEmbedded
 BreakPieceExternal
-Breaking content into %u epochs of size %u\n
-Buffers extend past the end of the input (%llu bytes)\n
-Build ID too large, %d bytes\n
 Build ID too large\n
 Building dictionary\n
 BuiltDebug
-B}tn<z
-C +C
-C D9
-C E1
-C H9
-C fA;G
-C$D9
-C( H
 C(9C8uL
-C(A9
-C(D)
-C(D9
-C(E19
-C(H9
 C(H9CPt
-C(L)
-C(Mc
-C(fB
-C(knN
-C,D9
-C,E3C
-C,^y
-C->D
-C->E
-C-Yn
-C.s:
-C/@H
-C0E3C
-C2Ai
-C4~q=
-C5yr
-C8+C(D9
-C8+C(H
-C84&t
-C8E1
-C8H#
-C8I;D$8
-C8fB
 C8t\bH
-C8v,~\a
-C9H=
-C<tBf
-C<t\v=
 CAddAnimNode
 CAimMatrixAnimNode
 CAndCondition
@@ -4055,7 +592,6 @@ CCurrentVelocityMetric
 CCycleCondition
 CCycleControlAnimNode
 CCycleControlClipAnimNode
-CDEuS
 CDampedPathAnimMotor
 CDefaultKeyValuesErrorSpew
 CDefaultLoggingResponsePolicy
@@ -4074,15 +610,7 @@ CEntityHandle::IsInvalidHandleIndex
 CEnumAnimParameter
 CExecMultiWorkerJob
 CExpressionAction
-CFA advance has a zero size\n
-CFA advances off the end of the FDE\n
-CFA cfa_offset but the CFA is not currently a val offset (op %u)\n
-CFA cfa_offset_sf but the CFA is not currently a val offset (op %u)\n
-CFA cfa_register but the CFA is not currently a val offset (op %u)\n
 CFA location set does not advance\n
-CFA location set off the end of the FDE\n
-CFA offset set to invalid value (%llu)\n
-CFA register set to invalid value (%llu)\n
 CFA set_loc uses an invalid address\n
 CFI def_cfa_expression not supported\n
 CFI restore_state without pushed state\n
@@ -4109,18 +637,11 @@ CGroundIKSolveAnimNode
 CGroupAnimNode
 CGroupInputAnimNode
 CGroupOutputAnimNode
-CHEAT
-CHI9
-CHfA
 CHitReactAnimNode
 CIE aug data missing LSDA encoding\n
 CIE aug data missing personality routine encoding\n
 CIE aug data missing pointer encoding\n
-CIE aug data too large (%llu bytes)\n
-CIE code alignment (%llu) too large\n
 CIE count overflow\n
-CIE data alignment (%lld) out of range\n
-CIE return register (%llu) too large\n
 CInputStreamAnimNode
 CIntAnimParameter
 CInterlockedIntT<int,4>::AtomicAdd
@@ -4148,11 +669,9 @@ CLoggingSystem::LogDirect
 CLookAtAnimNode
 CLookComponent
 CLookComponentUpdater
-CMOV
 CMemAllocSystemInitialize
 CMemPassAllocTI23LLA_AddAlignedSelectorsI33LowLevelAllocationScheme_mimallocEE
 CMemStdPurePassThroughAlloc
-CMemoryStack %s ran out of reserved memory (%u/%ukb committed) when attempting to commit %ukb additional\n
 CMemoryStack %s\n
 CMiniDumpCommentBuilderBase
 CMotionBase
@@ -4187,14 +706,12 @@ COLLISION_MODE_INITIAL_TRACE_DOWN
 COLLISION_MODE_PER_FRAME_PLANESET
 COLLISION_MODE_PER_PARTICLE_TRACE
 COLLISION_MODE_USE_NEAREST_TRACE
-COLOR
 COMBAT_INTERRUPTABILITY
 COMPACT UNWIND: can't read register saved at 0x%llx\n
 COMPACT UNWIND: can't read return address saved at 0x%llx\n
 COMPACT UNWIND: failed to read indirect stack size from 0x%llx\n
 COMPACT UNWIND: failed to recover previous stack frame\n
 COMPACT UNWIND: invalid unwind mode 0x%08x\n
-COMPACT UNWIND: unwind frame to IP 0x%llx, FP 0x%llx, SP 0x%llx\n
 COMPARISONVALUETYPE_CONTROLVALUE
 COMPARISONVALUETYPE_FIXEDVALUE
 COMPARISONVALUETYPE_PARAMETER
@@ -4202,9 +719,6 @@ COM_TimestampedLog
 CONTENT
 COneTimeEvent
 COrCondition
-CPH9
-CPHcU
-CPI;
 CPU_MHZ
 CParallelProcessorAbstractI18CParallelProcessorIi27CMemberFuncJobItemProcessorIi10CCallQueueS2_ELi1EEE
 CParallelProcessorAbstract_Base
@@ -4242,8 +756,6 @@ CRigidBodyWeightList
 CRigidBodyWeightListConstPtr
 CRigidBodyWeightListPtr
 CRootAnimNode
-CSP1
-CSP1H
 CScriptEditManager
 CScriptEditManagerConstPtr
 CScriptEditManagerPtr
@@ -4389,13 +901,9 @@ CUtlString::{ctor}
 CUtlStringTokenSystem
 CUtlStringTokenSystem could not open database file "%s" for writing. Aborting update operation\n
 CUtlStringTokenSystem could not update token database "%s" because the file is read-only.\n
-CUtlStringTokenSystem: Encountered string token collision: "%s" and "%s" both hash to %X!\n
 CUtlSymbolLarge::IsNullString
 CUtlSymbolLarge::IsValid
 CUtlSymbolTableLarge element limit of %u exceeded\n
-CV5\v
-CV@@R
-CVAR_
 CVBinaryModule
 CVBreakpadSymbolModule
 CVDebugLiveProcessTarget
@@ -4419,68 +927,13 @@ CVProfileOutputColumn_Sum
 CVSymbolModule
 CVectorAnimParameter
 CWayPointHelperAnimNode
-CXH#
-CXL;
-CZ(:
 CZeroPoseAnimNode
-C\a@H
-C\a@I
-C\a@L
-C\a@t
-C\a@t\fH
-C\a@u
 C\a@u:H
-C\aL9
-C\at<
-C\bA8G\b
-C\bA;
-C\bD9`\b
-C\bD9`\b~
 C\bD9p
-C\bD;p
-C\bD;x\b}
-C\bE)
-C\bE1
 C\bE3C4E3C
-C\bE9
-C\bE;}
-C\bH)
-C\bH9
-C\bH9K\b
-C\bHc
-C\bI9
-C\bI9G\b
-C\bI;C
-C\bJct8\b
-C\bL9
 C\bLcu
-C\bM9
-C\bMc
 C\bZYt
-C\b\bA
-C\b\bI
-C\b\bL9M
-C\b\bL9e
-C\b\bM
-C\bfA
-C\bfB
-C\bx.D9`
-C\fA9
-C\fD;%
-C\fE1
-C\fE1\t
-C\fH9
-C\fI9
-C\fL9
-C\f\a\b
-C\ff9
 C\ff9C
-C\ft%1
-C\f~f=UUU
-C\nL9
-C\rL9
-C\tL9
-C\vL9
 C_INIT_AddVectorToVector
 C_INIT_AgeNoise
 C_INIT_CreateFromCPs
@@ -4622,26 +1075,14 @@ C_OP_SetSingleControlPointPosition
 C_OP_StopAfterCPDuration
 C_OP_TwistAroundAxis
 C_OP_WorldTraceConstraint
-C`H#
-Called Resume() on a thread that is not suspended!\n
-Can't allocate %d elements, will overflow.  Current count %d elements\n
-Can't change '%s' right now.\n
-Can't convert an empty string to bool\n
 Can't convert an empty string to float64\n
 Can't convert an empty string to int64\n
 Can't convert an empty string to uint64\n
-Can't open file (%s) passed to -testscript
 Can't specify both a CPU architecture and slice index\n
-Can't write binary data to a text buffer.
-Cannot Start Process '%s'
-Cannot copy '%s' to '%s'.
 Cannot create Dictionary from provided samples
 Cannot flush timstamped event log with no listener!
 Cannot mix and match tag specifiers with channel name specifiers.\n
-Cannot register same format from/to a KV3 conversion (from '%s' to '%s')
 Cannot register two timestamped event listeners!
-Cannot save KV3 JSON to a non-text buffer!
-Cannot save KV3 text to a non-text buffer!
 Cannot save as KV3_FORMAT_LOAD_WITH_NO_UPCONVERSION.
 Capture
 CatchAndWriteMiniDump
@@ -4649,10 +1090,6 @@ CatchAndWriteMiniDumpEx
 CatchAndWriteMiniDumpExForVoidPtrFn
 CatchAndWriteMiniDumpExReturnsInt
 CatchAndWriteMiniDumpForVoidPtrFn
-CdZ\b
-Cff.
-ChH#E
-ChL9
 Channel Name
 CharacterSetBuild
 CheckForUnsafeInputString
@@ -4670,9 +1107,6 @@ ClothShapeCapsule
 ClothShapeList
 ClothShapeSphere
 CmpJob
-CnC\e
-Color
-Color has extra '%s' after values\n
 Command
 CommandLine
 CommandProcedure
@@ -4683,7 +1117,6 @@ Compact unwind index entries are not sorted\n
 Compact unwind info can't hold a header\n
 Compact unwind info is too large to save\n
 Compilation units ran off the end of .debug_info\n
-Compressed entry encoding index out of range (%u)\n
 Compressed entry table is not sorted\n
 Compression unsupported for format %u\n
 Computing frequencies\n
@@ -4752,14 +1185,8 @@ Coroutine_GetCurrentlyActive
 Coroutine_IsActive()
 Coroutine_Launch_ASM
 Coroutine_YieldToMain
-Could not execute the command:\n   %s\nOS error message:\n   "%s"\n
-Could not read from pipe associated with command %s\nOS error message:\n   "%s"\n
-Couldn't open '%s' for writing!\n
-Couldn't window icon! %s\n
-Count
 Cover must have at least one input file\n
 Cover parameters incorrect\n
-CpH#E
 CreateCommandLine
 CreateDisposableKeyValuesSystem
 CreateInterface
@@ -4768,364 +1195,45 @@ CreateNewThreadPool
 CreateSimpleProcess
 CreateSimpleThread
 CreateUniqueId
-Cupv
-CxI9
-CxL9
-Cycle or diamond double-reference to '%s'
 CycleOverride
-Czf%
-D \a\b
-D \bE
-D \bH
-D"A/oyu
-D#%9
-D#C$H
-D#K$A
-D#K$H
-D#k<H
-D$ 1
-D$ A
-D$ D
-D$ E
-D$ H
-D$ H9
-D$ HcE
-D$ I
-D$ I+GhH
-D$ I9
-D$ Ic
-D$ IcT$
-D$ J
-D$ L
-D$ M
-D$ N
-D$ f
-D$ fA;D$\ftBH
-D$$A
-D$$H
-D$$Mcn4
-D$$fA
-D$(A
-D$(A9D$8tmIc
-D$(B
-D$(H
-D$(H9
-D$(I
-D$(K
-D$(L
-D$(N
-D$(f
-D$,1
-D$,A
-D$,H
-D$,I
-D$01
-D$0A
-D$0E
-D$0H
-D$0I
-D$0fA
-D$0u
-D$1A
-D$4A
-D$4H
-D$6A
-D$81
-D$8A
-D$8D
-D$8H
-D$8I
-D$8M
-D$8O
-D$8w
-D$<A
-D$<I
-D$@9
-D$@E
-D$@H
-D$@Hc
-D$@I
-D$@L
-D$DA
-D$DI
-D$DL
-D$Du\eA
-D$GM
-D$H1
 D$H2CH
-D$HA
-D$HH
-D$HL
-D$HM
-D$PA
-D$PD9
-D$PH
-D$PH9
-D$PHc
-D$PI
-D$Pd
-D$Pf
-D$TA
-D$X9C\b
-D$XD
-D$XH
-D$XIct$P
-D$XL
-D$XLc
-D$Xf
-D$\a1
-D$\a@H
-D$\a@I
-D$\a@u
-D$\aH
-D$\b1
-D$\b1\t
-D$\b9X\b
-D$\b9X\b~
-D$\b9X\b~&
-D$\b;X\b
-D$\bA
-D$\bA9
-D$\bATL
-D$\bAWL
-D$\bB
-D$\bD
-D$\bD9p
-D$\bD;h\b
-D$\bE
-D$\bE1
-D$\bE9
-D$\bE9|$(u
-D$\bH
-D$\bH)
-D$\bHc
-D$\bI
-D$\bI9L$\b
-D$\bI9M\b
-D$\bJ
-D$\bL
-D$\bLch\bE
-D$\bM
-D$\bN
-D$\b\b
-D$\b\bL9m
-D$\b\bL9u
-D$\bf
-D$\bfI
-D$\bt8L
-D$\bu
-D$\bv
-D$\bx
-D$\bx.D9H
-D$\bx.D;h
-D$\bx\eD9h\b~
-D$\eA
-D$\f1
-D$\fA
-D$\fD
-D$\fE
-D$\fE1
-D$\fE9
-D$\fH
-D$\fHc
-D$\fI
-D$\fL
-D$\f[L
-D$\ff
-D$\ft5L
-D$\nH
-D$\r\b
-D$`H
-D$`H9
-D$`I
-D$d=
-D$h%
-D$hD
-D$hH
-D$hI+D$pA;
-D$hL
-D$hM
-D$o@I
-D$pH
-D$pI
-D$pL
-D$tL
-D$xH
-D$xI
-D(\bE;
-D(\fA
-D(\fH9
-D(\fI
-D(\nf
-D)(E
-D)IM
-D)OL
-D)\tE
-D+#E
-D+R D
-D+sH
-D.rA
-D0#H
-D0\bE;l$\bshA
-D0\fA
-D0\nf
 D0\nfA
-D0\nu
-D1\t\aA
-D2\b1
-D33E
 D3I F3
 D3I0F3
-D3\bA
-D3\bH
-D3g`A
-D6)z
-D7$H
-D8 t\aH9
-D8"u\aD
-D8+u
 D84\at
-D8@H
-D8L3
 D8O\vu
-D8\eA
-D8\nH
-D8\nu
-D9(~+H
-D9+}
-D92O
 D96~ZL
-D97~\rH
-D9D8
-D9KO(
 D9KO(A
-D9\au
-D9\bu\fH
-D9\tE
-D9`\b~
 D9i\br
-D9o0
-D9q\bs-H
-D9sx
-D9sxu
-D9x H
-D9{0
-D:\b9
-D:p\n
-D;#r
-D;%ov#
-D;&u
-D;*D
-D;*O
-D;*u
-D;0H
-D;0}
-D;2O
-D;2}\rH
-D;3}
-D;8I
-D;8u
-D;;M
-D;>u
-D;C\b
-D;H\b
-D;K\b
-D;c(D
-D;cP|
-D;h8s\fH
-D;h\b
-D;h\bt
-D;j\b
-D;k@
-D;s\bsm
-D<08
 DAMAGEORDEATH_INTERRUPTABILITY
-DB@@
 DEATH_INTERRUPTABILITY
 DEBUG_EXITPROCESS
 DEFAULT_WRITE_PATH
-DEMO
 DEVELOPMENTONLY
-DFE1N
-DG@H9
-DIF\b
 DISCARD
 DONTRECORD
 DP\bATI9
 DP\ff#E
 DP\ff9E
-DP\ff\tE
-DWARF
-DWARF UNWIND: CFA op %u not supported\n
 DWARF UNWIND: CFA relative to unknown register %u\n
-DWARF UNWIND: CFA rule op %u, offset %d\n
-DWARF UNWIND: CFA set to 0x%llx (from val-offset DWARF reg %s (%u) + %d)\n
-DWARF UNWIND: DWARF reg %s (%u) now 0x%llx (from DWARF reg %s (%u))\n
-DWARF UNWIND: DWARF reg %s (%u) now 0x%llx (from mem-offset DWARF reg %s (%u) / 0x%llx + %d)\n
-DWARF UNWIND: DWARF reg %s (%u) now 0x%llx (from val-offset DWARF reg %s (%u) + %d)\n
-DWARF UNWIND: DWARF reg %s (%u) now undefined\n
 DWARF UNWIND: bad mem-offset rule ref register %u\n
 DWARF UNWIND: bad register rule ref register %u\n
 DWARF UNWIND: bad rule register %u\n
 DWARF UNWIND: bad val-offset rule ref register %u\n
 DWARF UNWIND: bad val-offset rule register %u\n
-DWARF UNWIND: rule for DWARF reg %s (%u), op %u, ref DWARF reg %s (%u), offset %d\n
-DWARF UNWIND: unable to read mem-offset value from 0x%llx (DWARF reg %s (%u) / 0x%llx + %d)\n
 DWARF UNWIND: unhandled rule op %u\n
-DWARF UNWIND: unwind frame to IP 0x%llx, FP 0x%llx, SP 0x%llx\n
 DWARF UNWIND: unwind table build failed\n
-DWARF UNWIND: unwind table doesn't contain a row for VA 0x%llx\n
-DWARF UNWIND: unwound IP to 0x%llx but that's not in any module, aborting\n
 DWARF WARNING: arange terminator not at the end of a set\n
 DWARF deferred symbols
 DWARF:
-DWARF:   %s build ID does not match %s, ignoring\n
-DWARF:   %s does not have a matching CPU arch slice, ignoring\n
-DWARF:   %s does not have debug info, ignoring\n
-DWARF:   '%s' is zero-length, ignoring\n
-DWARF:   can't open %s\n
-DWARF:   can't parse debug info from %s\n
-DWARF:   can't read header from %s\n
-DWARF:   found matching build ID in %s\n
-DWARF:   no files match prefix %s\n
-DWARF: %s %s\n
-DWARF: %s does not have debug info, ignoring\n
-DWARF: '%s' is already in cache as '%s' but cache lookup failed?\n
-DWARF: Attempt %d to find debug info for %s:\n
-DWARF: Attempting to retrieve debug server file '%s', caching as '%s'\n
-DWARF: Copying '%s' into cache as '%s'\n
-DWARF: FAILURE: debug info could not be found for %s, result %d\n
-DWARF: a matching primary %s was found for %s, using for extra info\n
-DWARF: a matching primary could not be found for %s, result %d\n
-DWARF: cache required to query '%s', ignoring\n
 DWARF: explicit primary %s does not have debug info, failing\n
 DWARF: found matching debug info in %s\n
 DWARF: separate debug info file is stripped, try and find the primary file\n
 DWARF: starting prefix match for %s\n
 DWARF: unable to find debug info for %s, attempting to fall back to the primary file regardless of debug info\n
 DWARF: unable to find matching separate debug info for %s, check the primary file for debug info\n
-DWARF: virtual extent too large (0x%llx), not supported\n
 DWARF_LOCAL_TRANSLATE
 DWARF_SYMBOL_PATH
-DWh0
-D[Z\r
-D\a D)
-D\a I
-D\a L
-D\a\bH
-D\b H
-D\b \b
-D\b2f
-D\b\bA
-D\b\f9
-D\f\a\b
-D\rNu
-D\r\bM
-D\t\bC
-D\t\bH
-D\t\bL
-D\v\bI
-D`T\f
 Data corruption detected
 Debug server download process failed with exit code %d
 Debug server download running more than %u seconds, aborted
@@ -5150,186 +1258,44 @@ DevWarning
 Developer
 DeveloperConsole
 DeveloperVerbose
-Dff.
 Dictionary is corrupted
 Dictionary mismatch
-Diff
 Discard data buffer mismatch\n
-Dk(s
 DkE~:i
-DmeC
 DnGi<S
 DoAssertDialog: invalid Assert response returned from dialog/vxconsole - breaking to debugger
-Double-register of KV3 conversion (from '%s' to '%s')
 Download process succeeded but didn't write a local file
-Ds~E
-Du1H
-DuLH
-Du\nA
 Dumps information about all logging channels.
-Duplicate abbrev code 0x%x at 0x%x\n
-Dvlo
 DynamicConfigList
 D|WELy
-E A9E
-E H;E(
-E H;E(t
-E H;E(t"H
-E H;E(t&H
-E L)
-E Mc
-E PL
-E#D$<H
-E#eLL
-E#olH
-E&LG
-E(9M
 E(A9E8t^Ic
-E(D!
-E(Hc
-E(Ic
-E(NcD\b\bA
-E)nT
-E+e(A9
-E+l$(H
-E.h4;
-E/|n
-E0fH
-E1:\b
-E1:\f
-E1>\n
-E1>\t
-E1\bE
 E1\bGAL
-E1\r~
-E1\vH
-E1\v}
 E3A0E3A
-E3C8A
-E3C<A
 E3J\bA
 E3J\bE3J0E3J(A
 E3J\fA
 E3K0E3K
 E3S,E3S
-E3S,E3S$A
 E3S<E3S4A
 E3S\fA
 E3\vE3K8A
 E4A;E0
-E5;%
-E5Cw#
-E8,$u
-E8H9
-E8\bI
-E9"K
-E9.L
-E9.~>I
-E94$~
-E9<$
-E9NF
-E9e\b
-E9t$
-E9ux
-E9|$
-E9|$\b
-E9~d
-E;'M
-E;4$
-E;7L
-E;e0
-E;g\bH
-E;h\b
-E;h\f
-E;l$
-E;n\b
-E;o\b
-E;o\bH
-E;t$
-E;u@
-E;w\b|
-E='W
-E>B\v
 E@IcU8H
-E@|o
-EBf%
-EIde
 ELF DWARF symbols
 ELF fallback symbols
-EMPTY - ok for slot zero only!
 ENABLE_ASSERT_DIALOG_PRINT
 ENGLISH
 ENTITY_NAME
-EP[A\\A]
-ERROR: %s\n
 ERROR: CUtlSymbolTableLarge element limit of %u exceeded\n
 ERROR: DWARF breakpad CFI is incomplete, breakpad symbols are incomplete\n
 EXECUTE_PER_TICK
 EXPORTSYSTEM_INTERFACE_VERSION_001
-E\a@H
-E\a@I
-E\a@M
-E\bA9
-E\bA9G\b
-E\bD;;B
-E\bE)O\b
-E\bE1
-E\bE9
-E\bHc
-E\bI+E
-E\bI9
-E\bIc
 E\bIcM
-E\bL)
-E\bLcp\b
-E\bLcx\bL
-E\bLk
-E\bM9
-E\bMk
-E\bZY
-E\b\bAi
-E\b\bD
-E\b\bH
-E\b\bH9]
-E\b\bL9E
-E\b\bL9e
-E\b\bL9}
-E\b]H
-E\bfA
-E\bfI
-E\bu$L
-E\bx*D;p
-E\bx.D9p
-E\bx.D;p
-E\bx\eD9p\b~
-E\bx\eD;p\b}
-E\f>d
-E\fIc
-E\f\a\b
-E\f\a\b,
-E\ffA
-E\fu\bI
-E\fu\rI
-E\nH9
-E\rs)
 E\rt:E
-E\vC\b
-E\vE\t
-E\vPH
-E\vPL
-E`HcP
-E`tb1
 EarlyInit_Tier0
-EcT3
 EconItemToolModel_001
 EditorDynamicConfig
-Eff.
-EhL)
-Ei\vd
 EmptyAnim
-Enabling flag '%s' on channel '%s'.\n
-End of input was reached and '[' was not matched by ']'
-End of input was reached and '{' was not matched by '}'
 Engine2/MapMaxCoord
 EngineServiceMgr001
 EnsureAddedCapacity
@@ -5337,106 +1303,42 @@ EnsureCapacity
 EnsureElementCapacity
 EnsureMemberCapacity
 EnsureUnusedCapacity
-Entry '%s' already has a name (ignoring update to '%s')\n
-EpIc
 Epu\fA
-Error
 Error (generic)
-Error parsing string '%s' as double, parsed to: '%s'\n
-Error parsing string '%s' as float64\n
-Error parsing string '%s' as int, parsed to: '%s'\n
-Error parsing string '%s' as int\n
-Error parsing string '%s' as uint, parsed to: '%s'\n
-Error parsing string '%s' as uint\n
 Error reading args file\n
 Evictions/Min
-Ex\\1
 Exceeded blob count
 Exception
 Exit Process
 Exiting due to logging LR_ABORT request.\n
-Expected "="after member '%s'
-Expected '#'
-Expected '&' and instance name or 'NULL'
-Expected ',' or '%s'
-Expected ':' after member name '%s'
-Expected '=' after member name '%s'
-Expected '['
-Expected '[' or '('
-Expected '{'
-Expected ( <count> )
 Expected <member name> after type
-Expected []
-Expected closing parenthesis ')' in expression "%s"
-Expected hex byte (eg. 00-FF)
-Expected member name or '}'
 Expected object member name to be a string literal.
-Expected string (member name) or '}'
-Expected syntax is 'Name{ args... }'
 Expected token
 Expected type of next member
 Expected value after =
-Expected value or ']'
 Expected value.
 Expected {
 Expected }
 External sequences are not valid
-E}aj
-F H)
-F Ic
-F fA
-F#47
-F$A9
-F(H9B(
-F(H9B(r
 F(H9FPt\rD
-F(H9G(
-F(H9G(r
-F(H9G(sFH
-F(H9G(sFI
-F*.f
 F/@uqA
-F/\tFDb
 F8I9F@
 F8I9FH
-F?@I
 F@IcV8
 F@IcV8H
-FAIL: !IsEmpty()\n
-FAIL: !Validate()\n
 FAIL: Not all items popped\n
 FAILED
 FASTCOVER must have at least one input file\n
 FASTCOVER parameters incorrect\n
-FATAL
 FATAL ERH
 FATAL ERROR:
-FAYz
-FCMOV
 FCVAR_ARCHIVE
 FCVAR_CHEAT
 FCVAR_DONTRECORD
 FCVAR_PER_USER
 FCVAR_REPLICATED
-FDA9
-FDE aug data too large (%llu bytes)\n
-FDE encoded pointer 0x%llx out of range (base 0x%llx)\n
-FDE size 0x%llx out of range (start RVA 0x%x)\n
-FDE table ID 0x%x doesn't refer to a CIE\n
 FFFFFFFFI
-FGNOXZ\\^~
 FH~4Ic
-FILE
-FLH9
-FLL9
-FLLc
-FLOAT
-FP[A\\A]
-FRAME UNWIND: doesn't appear to have a valid frame (frame ptr 0x%llx)\n
-FRAME UNWIND: doesn't appear to have a valid frame (unable to read previous frame ptr at 0x%llx)\n
-FRAME UNWIND: doesn't appear to have a valid frame (unable to read previous instr ptr at 0x%llx)\n
-FRAME UNWIND: unwind frame to IP 0x%llx, FP 0x%llx, SP 0x%llx\n
-FRAME UNWIND: unwind frame to IP 0x%x, FP 0x%x, SP 0x%x\n
 FRENCH
 FSE_normalizeCount error with litLengthCount \n
 FSE_normalizeCount error with matchLengthCount \n
@@ -5444,62 +1346,10 @@ FSE_normalizeCount error with offcodeCount \n
 FSE_writeNCount error with litlengthNCount \n
 FSE_writeNCount error with matchLengthNCount \n
 FSE_writeNCount error with offcodeNCount \n
-FUNC
-FXHc
-FXJc
-F\a@H
-F\a@I
-F\a@L
-F\a@u
-F\b9X\b
-F\b9X\b~
 F\bD9h
-F\bD9h\b~
-F\bD;h\b}
-F\bD;x\b}
-F\bE1
 F\bE1:
-F\bE9
-F\bH)
-F\bH+
-F\bH9
-F\bH9G\bu
-F\bHc
-F\bHi
-F\bI9
-F\bL)
-F\bM)
-F\b\bA
-F\b\bD
-F\b\bH9E
-F\b\bH9]
-F\b\bL9E
-F\b\bL9M
-F\b\bL9e
-F\b\bL9}
-F\bfA
-F\bfD
-F\br'H
-F\bu\\I
-F\fA9
-F\fD)
-F\fH9
-F\fHc
-F\fI+GhA
-F\fI9
-F\fIc
-F\f\a\b
-F\ffA
 F\fsiA
-F\fu\rI
-F\rA9
 F\rt8E
-F\rt\tE
-F\rtzL9}
-F\rt{L9}
-F\t\bu7
-F\vA9
-F\vHc
 FaceTo
 Facing_Heading
 Failed during call to CDirWatcher::SetDirToWatch for directory '%s'\n
@@ -5510,24 +1360,13 @@ Failed to allocate parameters\n
 Failed to allocate scratch buffers \n
 Failed to allocate scratch buffers\n
 Failed to assign bool literal value
-Failed to convert KV3 to string; error: %s\n
 Failed to initialize context\n
-Failed to parse initial ConVar '%s'[%d] from string '%s'\n
 Failed to select dictionary\n
 Failed to write
 Fatal Error
 February
-Fff.
 Fiber Job
 Fiber Pool Default Worker
-Field %s has inverted min/max values![%f->%f]\n
-Field %s tried to quantize an out-of-range value (%f, range is %f->%f) clamping.\n
-Field %s tried to quantize an out-of-range value (%f, range is %f->%f), clamping.\n
-Field %s was flagged QFE_ENCODE_INTEGERS_EXACTLY, but didn't specify enough bits, upping bitcount from %d to %d for range [%f->%f]\n
-Field %s was flagged to both round up and down, these flags are mutually exclusive [%f->%f]\n
-Field %s was flagged to encode zero exactly, but min/max range doesn't span zero [%f->%f]\n
-File
-File: %s\nLine: %i\nExpr: %s
 FileSystem
 Final compact unwind index entry is not a last-address marker\n
 Find concommands by flags.
@@ -5550,79 +1389,31 @@ Finger_Splay_MiddleRing
 Finger_Splay_RingPinky
 Finger_Splay_ThumbIndex
 FioGetFileType
-First character of flag specifier must be + or -.\n
-Flags
 FlattenedSerializersVersion001
-Float array has extra '%s' after values\n
-Float array only parsed %u value(s) when expecting %u\n
-Float value %f above maximum %f\n
-Float value %f below minimum %f\n
 Flow_Generic
-Flushed '%s' cache\n
 Flushes the specified cache
 Folder
 FontManager_001
 Force compiler to keep computations alive: %g\n
 FormatV
-Found Application AutoArgs file '%s'\n
-Found a '%s' token implying the start of a conditional.  KV3 doesn't support this - use bIgnoreConditionals or modify the source file.
-Found duplicate member '%s'
 Found existing value when inserting into dict - replacing existing value with new value. If this is intended behavior, use InsertOrReplace. If leaving existing values alone is intended, use InsertIfNotFound.
 Found existing value when inserting into tree - replacing existing value with new value. If this is intended behavior, use InsertOrReplace. If leaving existing values alone is intended, use InsertIfNotFound. If duplicate entries are intended, use InsertWithDupes.
 Found extraneous tokens past end of KV3 document.
-Found leading plus sign while parsing string '%s' as float64, ignoring it\n
 Frame Boundary
 Frame index is too large
 Frame requires too much memory for decoding
 FrameTotal
-Free
 FreeCommandLine
 Friday
-Ft8=
-FxL9
-G +G
-G 9G
-G D)
-G D9
-G E1
-G H)
-G H9\at
-G Hc
-G L9
-G fA
-G(H)
-G(H+G
-G(H9A(
-G(H9F(
-G(Hc
-G(I)
-G(L)
-G,3s
-G,L1
-G->B
-G/@H
-G0L9
-G0Lc]
 G0t\vA
-G43S
-G4;G0
 G4A;G0
-G8+G(9
 G8E1:\f
-G8H9
-G8fB
-G<@t
-G?@H
-GAME
 GAMECONSOLE
 GAMEDLL
-GBE1
-GCC: (SteamRT 14.2.0-19~steamrt3.1+bsrt3.1) 14.2.0
 GCoroutineMgr().IsValidCoroutine( hCoroutine )
 GENERAL_INTERRUPTABILITY
 GERMAN
 GHHcw@
-GL7LH
 GLIBCXX_TUNABLES
 GLIBC_2.11
 GLIBC_2.12
@@ -5642,79 +1433,19 @@ GLIBC_2.3.4
 GLIBC_2.7
 GLIBC_2.8
 GLIBC_2.9
-GPH)
-GPH9
-GPHc
-GT}VD
-GXL9
-G\\E1
-G\a@H
-G\a@I
-G\a@M
-G\a@f
-G\a@t\e
-G\a@u
 G\a@u5E1
 G\a@uVD
-G\a@u\tH
 G\a@un
 G\a@usH
-G\a@u}
-G\aH9
-G\b+G
-G\b9X\b~
-G\bA)
-G\bA9
-G\bD9h\b
-G\bD9h\b~
-G\bD;p
-G\bE1
-G\bE9
-G\bH9
-G\bH;G
-G\bHc
-G\bI)
-G\bI9
-G\bI;G
-G\bL)
-G\bM)
-G\bMc
-G\bQ?
-G\bUH
-G\b\bA
-G\b\bH
-G\b\bH9]
-G\b\bL9E
-G\b\bL9e
-G\b\bL9m
-G\b]L
-G\bf9F\b
-G\bfA
-G\bfD
-G\bt$A
-G\bx);p
-G\bx.D9H
-G\b~\bE
-G\fIc
-G\f\a\b
 G\ft#H
-G\fu\bI
-G\fu\rI
-G\fu\tI
-G\fu}f
 G\rtEE
 G\rtKA
 G\rtLA
 G\rtME
-G\tI9
-G`Ai
-G`D9
-G`Di
 GameBlackboard
 GameResourceServiceClientV001
 GameResourceServiceServerV001
 GameUIService_001
-GbbE
 General
 GenerateHashFromUniqueId
 GenericGameData
@@ -5751,333 +1482,63 @@ GetThreadedLoadLibraryFunc
 GetTotalTranslation_SourceState()
 GetTotalTranslation_TargetState()
 GetWin32ConsoleCursorColumnIndex
-Gf\ft
-Gff.
-Gi:%5
 GlobPool
 Goal_Distance
-Gp8)>
-GpH9
-Group
 GrowByChunks
 GrowCount
-Gt^_E
-Gu1H
-Gv;?
-Gw<H
-GxfI
-Gz\b>
 H E3H\fE3H4E3H,A
-H H)
-H H9
-H#C M
-H#C@
-H#CH
-H#CP
-H#D$
-H#H0
-H#Sx
-H$6t\e\t
-H$vm
-H&S0g`\v
-H'vG
-H(H)
-H(I+
-H(I;
-H(VVH
-H)K1A
-H)KE
-H*0"ZOW
-H*v!
-H+A\bH
-H+B\b
-H+C\bH
-H+E\t
-H+E\tE
-H+F\bH
-H+G0
-H+G\bH
-H+K@H
-H+U(H9
-H+W\b9
-H+\f\aH
-H.f}
-H0H)
-H2fA
-H3G`H
-H3W`H
-H3w`H
-H8H)
-H8I;
-H90t
-H90tN
-H92r
-H9=!
-H9B r
-H9B s
 H9C fH
-H9C(
-H9C@
 H9C\bt9H
 H9F\bH
 H9F\bt
 H9G\bL
 H9H fH
-H9H\b
-H9H\bt\nH9Z\b
 H9J\bu
-H9Kps
-H9N\b
-H9P(
-H9P\b
 H9S8u0
-H9S@H
-H9Sps
-H9V8
-H9X H
-H9X s
-H9\ar
-H9\at
 H9\atNUH
-H9\nu
-H9q\b
 H9q\bH
-H9r r
-H9r\b
-H9x s
-H;5wG"
-H;8t
-H;8t\r
-H;A\b
-H;C H
-H;C(
-H;C@
-H;C@H
-H;CH
-H;C\b
-H;C\bH
-H;E s\a
-H;G r1
-H;G\bH
-H;H\bH
-H;H\bs\r
-H;Khs
-H;Q\bs\r
-H;Q`
-H;S(t+
-H;S\b
-H;X H
-H;X\bt%H
-H;p r$
-H;x s\e1
-H;{hs
-H;~p
-H=?B
-H>*SL>\a
-H@H)
 HEAP WARNING: memory block at %p appears to be corrupt\n
 HEAP WARNING: memory block at %p is unexpectedly allocated\n
 HEAP WARNING: memory block at %p is unexpectedly free\n
 HEAP WARNING: memory block at %p is unexpectedly unrecognized\n
 HEAP WARNING: memory pointer %p is invalid\n
 HH:MM:SS.z
-HHH)
-HHHc
-HHHi
-HHcW
 HIGHDPI
 HLcg@L
-HOME
-HPH)
 HPH9Z\b
 HUF_buildCTable error \n
 HUF_writeCTable error \n
-HXH)
-H[A\\A]A^A_]
-H[]A\\A]A^A_
 H\ayLH
-H\b'\tu\v?A*
-H\bD9
-H\bH)
-H\bH9
 H\bI9M
-H\bL9
-H\bd\t
-H\bfA
-H\by/H
-H\fL9
-H\f\a\b
-H\vN\bH
-H\vN\bI
-H\vq\bL9
-H^T+
 HammerMapLoader001
-Hc01
-Hc0A
-Hc0H
-Hc1H
-Hc1I
-Hc3H
 Hc4\nH
-Hc5r
-Hc6D
-Hc6H
-Hc7H
-Hc7H9
-Hc8E
-Hc8E;
-Hc8H
-Hc9H
-Hc:E
-Hc=E
-Hc?D
-Hc@<
-Hc@\b
-HcB\b
 HcB\bH
-HcC$H
-HcC$I)
 HcC0H9
-HcC<A
-HcCHH
-HcCHL
-HcC\b
 HcC\bH
 HcC\bM
-HcC\f;
 HcC\fH
-HcD>
-HcG0I
-HcG\f;
-HcH\b
 HcJ\bI
-HcK@
-HcK`1
 HcL7\bH
 HcO\b9
-HcP\b
 HcP\b9
 HcP\bH
-HcP\f
-HcQXH
 HcQ\bH
-HcS$H
 HcS(H9
 HcS\bA9
 HcS\bH
 HcS\bL
 HcS\bM
-HcS\f
 HcS\fH
-HcVHH
 HcV\fA
-HcW\b
-HcWd1
-HcX8
-Hc\aA
-Hc\aH
-Hc\bH
 Hc\bHc@
-Hc\eI
-Hc\nH
-Hc\r
-Hc\rc
-Hc\tD
-Hc\tH
-Hc\vH
-Hc\vL
-Hcs(H
 Hcw\bH
 Header of Literals' block doesn't respect format specification
 Heap: standard allocator
 Heap: standard allocator pass-through to low-level\n
 Help Text
 HelpSystem_001
-Hff.
-Hh0u
-HhH9
-High PC attr without addr value (form %u)\n
-Hit Rate %
-Hit end of input before closing quote (%c)
-Hit end of line before closing quote (%c)
 Hits/Min
-Hj`F
-Ho*[8'
-Ho^+
 HostStateMgr001
-Ht"H
-Hv9M
-I#G M
-I#\aM
-I$H)
-I+2A
-I+4$H
-I+6A
-I+7A
-I+>A
-I+A\bI
-I+D$\b9
-I+E f
-I+E\bI
-I+F\bI
-I+G f
-I+G\bI
-I+GhA
-I+GhH
-I+L$ ff.
-I+L$@H
-I+M@L
-I+P\bI
-I+T$
-I+T$\bI
-I+\aI
-I+\f$A
-I+\f$H
-I+\nA
-I+t$ M
-I0s|D
-I3@`H
-I3P`H
-I4I)
-I9A s
-I9AH
-I9D$0
-I9F(
-I9F(I
-I9G0
-I9L$
-I9L$\b
-I9N(
-I9N\b
-I9N\br\n
-I9T$
-I9VH
-I9t$
-I9|$
-I9~(u
-I;A0
-I;B N
-I;D$
-I;D$8M
-I;D$HH
-I;D$HM
-I;D$\bH
-I;F r
-I;F(I
-I;F8H
-I;F@
-I;FHH
-I;FHM
-I;FPI
-I;F\b
-I;F\bH
-I;F\bu
-I;G8r
-I;G@H
-I;IH
-I;IhL
-I;_`
-I</w
 IAnimAction
 IAnimClipData
 IAnimClipDataManager
@@ -6181,7 +1642,6 @@ ICommandLine
 ICommentAnimNode
 IConditionContainer
 IContainerAnimNode
-ID%s:
 IEEE 754r decimal floating point (128 bits)
 IEEE 754r decimal floating point (32 bits)
 IEEE 754r decimal floating point (64 bits)
@@ -6193,16 +1653,13 @@ IFiberJobPool
 IFiberThreadWorkerPool
 IForceSignalNumberIntoCallStack
 IFormatOutputStream
-IG,H
 IGlobalSymbolMap
 IGraphMotionItem
-IId*j
 IJumpHelperAnimNode
 IKChain
 IKChainOld
 IKData
 IKLock
-IKRig
 IKRigBiped
 IKRigBug
 IKRigSimple
@@ -6236,10 +1693,8 @@ IMotionParameter
 IMotionParameterManager
 IMovementComponent
 IMultipleWorkerJob
-INFO
 INHERITABLE_BOOL_INHERIT
 INHERITABLE_BOOL_TRUE
-INIT
 INOWY^_
 INTEGER
 INodeBlend2DItem
@@ -6266,89 +1721,21 @@ ITALIAN
 ITestScriptMgr
 IThreadPool
 IUtlStringTokenSystem
-IXHc
-I\\zH6
-I\bH9
-I\bL9
-I\br[H
-I\fL9
-I\f\a\b
-I`1S
-Ic0H
-Ic1H
-Ic1I
-Ic2E
-Ic2H
-Ic2L
-Ic3H
-Ic3I
-Ic7H
-Ic9I
-Ic;E
-Ic;I
-IcD$
-IcE,A;E(
-IcE0D
-IcEHI
-IcETH
 IcE\bIc
 IcE\bL
-IcF(I
-IcFPA
-IcFTH
-IcF\f
-IcG\b
-IcL$
-IcL$(
-IcL$\bA9
-IcL$\bHc
-IcL$`Ic
-IcM\b
 IcM\bI
 IcN\bA9
 IcN\fA
-IcNdH
-IcO8
 IcQ\bM
-IcT$
-IcT$\bI
-IcT$\bL
 IcV\bH
 IcV\bI
-IcW\b
 IcW\bI
-IcYhI
-Ic\a9
-Ic\aD
-Ic\aI
 Ic\bE9
-Ic\bI
-Ic\f$9
-Ic\f$u\f
-Ic\nH\t
-Ic\tH
-Ic\vE
-Ic]\bA;]
-Ic^8A
-Ic_8
 Ic_xA;
-IcrxH
-Ict$
 Ict$0I
-Ict$\fA
-Ict$d
 Ict$dH
 Ict$dM
-Ict\t
-Icu\b
 Icu\bI
-IcvHI
-Icv\b
-Icwd1
-IcwdH
-IcwdM
-Ic|$
-Iff.
 Ignore
 Ignore All Asserts
 Ignore For 24 Hours
@@ -6357,12 +1744,8 @@ IgnoreAssertForADay
 IgnoreAssertsInCurrentFile
 IgnoreAssertsNearby
 IkLockLocal
-Illegal char string format specifier '%c' (%d) in '%s'
-Illegal wchar_t string format specifier '%c' (%d) in '%s'
 Import_GetICVarFactory
 InDefault
-Incomplete binary block: blob %i/%i, ret=%zx, input %u/%u\n
-Incomplete binary block: output %u/%u bytes, input %u/%u bytes\n
 Incorrect accel\n
 Incorrect k\n
 Incorrect parameters\n
@@ -6372,7 +1755,6 @@ Indirect FDE pointer encoding is not supported\n
 Inflow_
 Inflow_Generic
 Inflow_Method
-Init
 InitMiniDumpReportOptions
 InitWin32ConsoleColorContext
 Initial CFA instructions advance location\n
@@ -6384,316 +1766,76 @@ InputSystemVersion001
 Insert
 InsertMultipleBefore
 InstallProgressReportHandler
-Int array has extra '%s' after values\n
-Int array only parsed %u value(s) when expecting %u\n
-Int value %lld above maximum %lld\n
-Int value %lld below minimum %lld\n
 Intentionally vague touch behavior for %p\n
 Internal error reading fat arch header\n
 Internal_Coroutine_Continue
 Interpolation
-Invalid CIE address size %u (ptr size %u)\n
-Invalid CIE segment size %u\n
-Invalid CU-relative offset 0x%llx (form 0x%x)\n
-Invalid Color channel %u value %d\n
 Invalid ELF Phdr\n
 Invalid ELF Shdr\n
 Invalid ELF program header %d\n
 Invalid ELF string section size 0x%llx\n
-Invalid FDE table ID 0x%x at offset 0x%x\n
-Invalid LSDA index offset (0x%x)\n
 Invalid Mach-O header\n
-Invalid Mach-O segment %d\n
 Invalid abbrev children setting %d\n
-Invalid alignment value %llu, must be a power of two\n
 Invalid alignment value %llu\n
 Invalid arange debug info offset\n
 Invalid arange header address size\n
 Invalid arange header segment size\n
-Invalid arange range, start 0x%llx - size 0x%llx, table at offset 0x%x\n
-Invalid arange start address 0x%llx (base 0x%llx), table at offset 0x%x\n
 Invalid attr line_strp offset 0x%llx\n
 Invalid attr strp offset 0x%llx\n
 Invalid attribute value 0x%llx\n
-Invalid code point \\u%04x
-Invalid common encodings block location (0x%x : 0x%x)\n
 Invalid compilation unit abbrev offset\n
 Invalid compilation unit header address size\n
 Invalid compressed buffer size
-Invalid data for member '%s'
 Invalid data.
 Invalid extended instruction size\n
-Invalid file index %d\n
 Invalid form value 0x%llx\n
 Invalid header
-Invalid high PC offset 0x%llx (low PC RVA 0x%x)\n
-Invalid high PC value 0x%llx (base 0x%llx)\n
 Invalid include directory index\n
-Invalid index block location (0x%x : 0x%x)\n
 Invalid indirect form 0x%llx\n
 Invalid line header address size\n
 Invalid line header segment size\n
 Invalid line header size\n
-Invalid low PC value 0x%llx (base 0x%llx)\n
-Invalid member name '%s'
-Invalid number (%u) of fat binary architectures\n
-Invalid number starting with '%s'
-Invalid personality array block location (0x%x : 0x%x)\n
-Invalid range end value 0x%llx (base 0x%llx)\n
-Invalid range start value 0x%llx (base 0x%llx)\n
 Invalid range with start greater than end\n
-Invalid register number (%llu)\n
 Invalid second level encodings table count (0x%x)\n
 Invalid second level encodings table offset (0x%x)\n
-Invalid second level entry table count (0x%x)\n
-Invalid second level entry table offset (0x%x)\n
-Invalid second level page kind (%u)\n
-Invalid second level page offset (0x%x)\n
 Invalid set_address instruction\n
 Invalid set_discriminator size\n
 Invalid source header %s format content type %llu\n
-Invalid source header %s format form %llu\n
 Invalid statement list line info offset 0x%llx\n
 Invalid uniform array count
-Invalid value "%s"
 InvalidateUniqueId
 InvokeMiniDumpHandler
 IsModelDocFormat
 IsRunningFromAlternateLocation
 IsUniqueIdEqual
 IsUniqueIdValid
-It A
 IterateCapturedStackAnnotations
-IuTH
-IuYH
-Iu\vA
-Iu^H
-I}LM
-J tCE
-J$t2E
-J(t!E
-J0fA
 J8E3J$E3J\fE3J
-J8v*H
-J<E3J(E3J
 JAPANESE
 JArray
-JIxX
-JJK1
-JL^r
-JLfD
-JPH;X\btZH;
-JPH;x\b
 JSON error, unterminated element:
-JXE1
-J\bD1
-J\bH)
-J\bH+J
-J\bL9
-J\fL9
-J\f\a\b
-J\tL9
 January
-Jb:+X
-JcL/\b
-JcT\b\bH
-Jct)\bH
 Jct0\b
-Jg$&
 JmpToAlternateStack
 Jobs/Coroutines
-Ju\eH
-July
-June
-K 1\tKXH
-K A9
-K tVH
-K(Hc
-K)C_
-K,E3K
 K4E3K E3K\bE3\vA
-K9sH
-K<'wQ
-K=#R2&
-K=\r\f
-K@E1
-KC\fA
-KDHc
-KD\b1
-KHHc
-KL2H
-KLfD
-KM^bM
 KOREAN
-KPH;K(r$
-KPu4
 KV Conditional Evaluation Error
 KV Conditional: Unknown symbol %s\n
 KV3 EHANDLEs cannot be serialized
 KV3 pointers cannot be serialized
-KXHc
-K\\\bSp
-K\bE1
-K\bE9
-K\bH9
-K\bI9
-K\bIc
-K\bL9
-K\bMc
-K\bf9
-K\bt\nL9
-K\f)I
-K\fHk
-K\f\a\b
 K\ftOH
-K\vt!H
-K_ p
-K_4I
-Keeping "%s" cvar value, specified on cmdline\n
 KeyValueCache001
-KeyValues Error: %s in file %s\n
 KeyValues::ParseIncludedKeys: Couldn't load included keyvalue file %s\n
-KeyValues::SaveToFile: couldn't open file "%s" in path "%s".\n
 KeyValuesFromJSON
 KeyValuesSystem
 KeyValuesToJSON
-Kff.
-KhH9
-KiQN
-Kp0qb
-Ksa}?
-Kv{TV*
-KxI!
-L \bI
-L"@D9
-L#@D9
-L$ A
-L$ A9
-L$ AWH
-L$ D
-L$ H
-L$ H9
-L$ Lc
-L$ M
-L$ f
-L$ t
-L$$A
-L$(1
-L$(A
-L$(E1
-L$(H
-L$(L
-L$,A
-L$,L
-L$0A
-L$0H
-L$0I
-L$4H
-L$4I
-L$8A
-L$8H
-L$8L
-L$@A
-L$@H
-L$DA
-L$HA
 L$HD9odM
-L$HH
-L$HL
-L$LH
-L$Lf
-L$LfD
-L$PH
-L$T1
-L$X1
-L$XH
-L$\b1
-L$\bA
-L$\bD
-L$\bE
-L$\bH
-L$\bH=
-L$\bI
-L$\bJ
-L$\bL
-L$\bM
-L$\b[H
-L$\bt
-L$\bt\a
-L$\bu
-L$\fA
-L$\fH
-L$\fI
-L$\nH
-L$`A
-L$`H
-L$`M
-L$pM
-L$xA)
-L$xH
-L$xI
-L%-a
-L( fB
-L(@t
-L)@M9
-L)@t
-L)G\bD
-L)\fE9
-L)\t\aH
-L*@D9
-L*@t
-L+@t
-L0@I
-L1@I
-L1@t
-L2@H
-L2@I
-L3G`I
-L3g`I
-L7@I
-L8@t
 L9#t(A
-L9#u
-L90r
-L92@
 L98tnA
-L9:r
-L9;u
-L9@t
-L9P r
 L9\at2H
-L9\nr
-L9c@
-L9j\b
-L9k\b
-L9k\br}
 L9k\bs
 L9v\bu
-L:@I
-L:@t
-L;%q
-L;%v
-L;'t
-L;5ZM
-L;@I
-L;@t
-L;E(
-L;M(
-L;R(
-L;b A
-L;c(
-L;c(tR
-L;c0
-L;c8
-L;c@
-L;cH
-L;c\b
-L;g0
-L;s\bt(H
-L;s\bu
-L;{\bH
-L=<br>
-L>@H
 LC_ADDRESS
 LC_COLLATE
 LC_CTYPE
@@ -6706,11 +1848,7 @@ LC_NUMERIC
 LC_PAPER
 LC_TELEPHONE
 LC_TIME
-LEpB
-LH@I
 LINKED_CONCOMMAND
-LINUX
-LI\aH
 LOADING
 LODGroup
 LOG_ASSERT
@@ -6721,109 +1859,35 @@ LOG_DEVELOPER_VERBOSE
 LOG_GENERAL
 LOG_SYMBOLS
 LOG_VPROF
-L\a H
-L\a L
-L\ahH
-L\e0H
-L\e@A
 L\e@E9
-L\e@I
-L\e@t
-L\f\a\b
-L\n3E)
 L\n@E9
-L\n@H
-L\n@I
-L\n\bD
-L\ng{
-L\r\bH
-L\t-\t
-L\t\t)
-L\v@A
 L\v@E9
-L\v@H
-L\v@I
-Last %u output lines:\n
-Last %u stderr lines:\n
 Launch Debugger
-Lc G;
-Lc H
-Lc L
-Lc!I
-Lc"H
 Lc#D;c
-Lc#I
-Lc#Lc
-Lc#f
-Lc%W
-Lc&G;
-Lc(H
-Lc+1
 Lc5RH"
-Lc7E9
-Lc?E9
 Lc@\bL
 LcB\bA
 LcC\bL
 LcK\bHc
 LcL2\bI
-Lc\aA
-Lc\aE
-Lc\bH
-Lce:
-Lcg0A
 Lcg\bA
 Lcg\bH
-Lch\b
 Lck E9
-Lck t
-LckP
-Lcp`H
-Lcs8C
-Lcs8D
-LcsHA
-Lcs\b
-Lcw A
 Lcw\bH
-Lcx(
 Lc{@A9
-Lc{xA
 Leaked KeyValues blocks: %d\n
 LengthOfMatchingPaths
 LerpCPs
 LerpTransforms
-Lff.
-Li\a<
-Lightweight memory verifier is ON (allocation sizes %s, %uMiB reserved, %s, %s)\n
-Line %d at "%s":
-Line %d:
-Line %d: %s
-Line %d: Invalid literal value "%s"
-Line %d: Invalid value "%s"
-Line info at 0x%x refers to non-existent CU, ignoring\n
 LinearDelta
 Linkage name without string value\n
-Linux
-Linux 2.2
-Linux 2.4
-Linux 2.6
 Linux 3.10
-Linux 3.2
-Linux 3.5
-Linux 3.6
-Linux 4.0
 Linux 4.18
-Linux 4.5
-Linux 5.0
 LoadBitString
-LoadFromBuffer: expected '{', found '%s'
-Loaded %s, got %p\n
 Loading multi-line string literals with metadata support enabled is not currently supported.
 Localize_001
-Lock
 Lock Body Facing
 LockForWrite
-Log Function Help: \n    log_verbosity <channel specifiers> <verbosity>\n    log_color <channel specifiers> <hex color>\n    log_flags <channel specifiers> <+/-flag>\nAll functions are case insensitive.\n\nA channel specifier is either:\n1) tag specifiers: +/-tag1 +/-tag2 ...      // Narrows down to channels with & without given tags.\n2) channel names: name1 name2 ...           // Lists channels by name.\n\nverbosity: off, essential, default,         // Sets how verbose a channel is allowed to be.\n           detailed, max                    // 'off' turns all spew off\n                                            // 'essential' turns on vital logs\n                                            // 'default' turns on most messages\n                                            // 'detailed' allows for walls of text that are usually useful\n                                            // 'max' allows everything\nhex color: RRGGBBAA                         // A hexadecimal color value in the order RGBA.\nflag: <+/->DoNotEcho                        // Enable/disable a flag to turn off echoing to the console.\n      <+/->ConsoleOnly                      // Enable/disable a flag to send text only to the console.\ne.g.\n    log_verbosity +console -developer verbose   // Sets minimum spew level of channels with the tag\n                                            // 'console' but without the tag 'developer' to 'verbose'.\n\n    log_color renderdebug bsp 4080C0FF      // Sets the 'renderdebug' and 'bsp' channels to the RGBA color (64, 128, 192, 255).\n\n    log_flags +developer +donotecho         // Turns on the LCF_DO_NOT_ECHO flag for all channels with the 'developer' tag.\n\n
 Log verbosity levels are locked.\n
 LoggingSystem_AddLogCapture
 LoggingSystem_AddLogCaptureString
@@ -6882,30 +1946,6 @@ Look_Pitch
 Low PC attr without addr value\n
 Low-level allocator: mimalloc\n
 Lowest-level allocator stats:\n
-LrUg
-LrwcE
-LuEH
-LuOH
-L|]C5;
-M E+M
-M H9
-M Hc
-M Ic
-M QL
-M tzA
-M$H9
-M(H9
-M0H9
-M1!/\f\v~Y
-M15I?
-M8MF
-M9,$t
-M9,$u
-M9~x
-M;f0
-M;f0s
-M;f\bu
-M@fA
 MATCHFRAMEWORK_001
 MD5Final
 MD5Init
@@ -6913,25 +1953,10 @@ MD5Update
 MD5_Print
 MD5_ProcessSingleBuffer
 MD5_PseudoRandom
-MDMP
 MENUBAR_ITEM
-MFUL
-MGiI
-MLfD
 MOBILE
 MODEL_PROCESSING_SERVICES_INTERFACE_001
 MODULE
-MQ[~
-MXu;
-MY6*
-M\bE1
-M\bI9G\bM
-M\bIc
-M\bL)
-M\bM9
-M\bfE
-M\f\a\b
-M\vU
 Mac OS
 MacOS 10.10
 MacOS 10.11
@@ -6944,11 +1969,8 @@ MacOS 10.17
 MacOS 10.18
 MacOS 10.4
 MacOS 10.5
-MacOS 10.5.8
 MacOS 10.6
-MacOS 10.6.3
 MacOS 10.6.4 with Apple's Snow Leopard Graphics Update
-MacOS 10.6.7
 MacOS 10.7
 MacOS 10.8
 MacOS 10.9
@@ -6965,36 +1987,11 @@ MailMiniDump
 MakeStringToken
 Malformed attribute list terminator\n
 MapListService_001
-March
 MatchTargetOrientation
 MaterialUtils_001
-Mc&A
-Mc&D9
-Mc&M
-Mc'D9
-Mc'E9
-Mc,$A
-Mc,$f
-Mc4$A
-Mc7E
-Mc>A
-Mc>M
-Mc?I
-Mc?M
 McA\bA
-McD$
 McD$PA
-McT$
-Mc\aH
-Mc\bA
-Mc\tE
-Mc_(
-Mcl$
 Mct$xA
-McuhE
-Mc|$
-Mc}XA
-Mc}XD
 MemAlloc_AllocFunc
 MemAlloc_CallocFunc
 MemAlloc_FreeFunc
@@ -7019,9 +2016,7 @@ MinidumpSetMiniDumpComment
 MinidumpUserStreamInfoAppend
 MinidumpUserStreamInfoGet
 MinidumpUserStreamInfoSetHeader
-Missing file '%s'
 ModelDocUtils001
-Module %s is a debug build\n
 Monday
 MorphCombinationShapeList
 MorphControlList
@@ -7036,8 +2031,6 @@ MorphStereoControlList
 MorphSuppressedShape
 Move_Heading
 Move_Speed
-Mu,H
-Mu\bH
 Multiple -testscript commandline arguments are from different directories. The current system only supports 1 directory. Currently "%s"
 Multiple abstract origin attrs\n
 Multiple call file attrs\n
@@ -7050,15 +2043,9 @@ Multiple low PC attrs\n
 Multiple name attrs\n
 Multiple ranges attrs\n
 Multiple sibling attrs\n
-Multiple specific types given, '%s' and also '%s'
 Multiple specification attrs\n
 Multiple statement lists\n
-MxIc
-N fA
-N&B:
-N0H9
 N0Mcn B
-N0thL
 N10__cxxabiv115__forced_unwindE
 N10__cxxabiv117__class_type_infoE
 N10__cxxabiv119__foreign_exceptionE
@@ -7076,24 +2063,16 @@ N14ThreadPoolTest9CCountJobE
 N17CUtlReportPrinter13IReportOutputE
 N3fmt3v1212format_errorE
 N3fmt3v1212format_facetISt6localeEE
-N5pB
 N9__gnu_cxx20recursive_init_errorE
 N9__gnu_cxx24__concurrence_lock_errorE
 N9__gnu_cxx26__concurrence_unlock_errorE
-N@I)
 NH#V<H
-NJ2"v
-NLfD
 NOTE: this is the total bytes of the regions above, not the growth since the old snapshot\n
 NOTHING
 NOTIFY
-NOZ[\a\b
 NO_GAME_ASSERT_DIALOG
 NO_RAISE_ON_ASSERT
 NPCAbilityHint
-NPCs
-NPHc
-NS+|
 NSt3_V214error_categoryE
 NSt6locale5facet6__shimE
 NSt6locale5facetE
@@ -7125,24 +2104,10 @@ NSt7__cxx119money_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEEE
 NSt7__cxx119money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEEE
 NSt7__cxx119money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEEE
 NSt7__cxx119money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEEE
-NT\rk
-NULL
-N\aA9
-N\bA9
-N\bH=
-N\bI)
-N\bf9O\bu
-N\blR(g
-N\fH=
-N\f\a\b
 N\ftyD
-N\nH=
-N\tA9
-Name
 Name attr without string value\n
 NavGameTest001
 NavMesh
-NdP#
 NetworkClientService_001
 NetworkMessagesVersion001
 NetworkP2PService_001
@@ -7151,28 +2116,16 @@ NetworkService_001
 NetworkSystemVersion001
 Networking
 NeverNetwork
-New FDs were %d and %d\n
 Newline in string literal
 NextBot
-Nff.
-NgmkC
-Nk GN{`
-NkE1
 No Buffer
-No closing */ before end of file
 No error detected
 No samples\n
-No unwind info found in FDE\n
-No valid CFA rule defined by FDE (op %u, refreg 0x%x)\n
-No valid format conversion from '%s' to '%s'
-No%>M
 NoPoseControl
-None
 Not enough data for 1-byte element array
 Not enough data for 2-byte element array
 Not enough data for 4-byte element array
 Not enough data for 8-byte element array
-Not enough data for CIE/FDE\n
 Not enough data for arange set header\n
 Not enough data for compilation unit header\n
 Not enough data for compilation unit size\n
@@ -7184,51 +2137,13 @@ NoteAlloc
 Notes:
 November
 Number contains invalid character 0x%02x
-Number contains invalid character 0x%02x ('%c')
-N}zhA
-O H9
-O I9
-O Vq
-O t`
-O"H+w0H
-O(A)
-O(D3C\fE
-O(H)
-O(M9
-O*9y]
-O4M)
 O8A9GX
-O8L9
-O?[4
-ODdb
-OHHc
-OHL9
-OInH&
-OPHc
-OS type: %s (%d)\n
-OS: %s\n
 OSTypesAreCompatible
 OVERRIDE_MINIDUMP_PATH
-OXHc
 O\b9q(uE;W@tMIk
-O\b;q
-O\bD;D
-O\bE)
-O\bE1
-O\bH9
-O\bH;N\bu
-O\bH;\r1
-O\bH=
-O\bL9
-O\f\a\b
-O\ffE
-O\ft@
-O\n\f\a\b
-O\tH)
 October
 Offset
 Offset Code Frequencies : \n
-OhfE
 OnCanceled
 OnFailedToPerform
 OnFinished
@@ -7236,12 +2151,8 @@ Operation made no progress over multiple calls, due to input being empty
 Operation made no progress over multiple calls, due to output buffer being full
 Operation not authorized at current processing stage
 Operation on NULL destination buffer
-Ou,H
-Ou0H
 Out of keyvalue string space
 Out of logging channels.\n
-Out of range abbrev code %llu\n
-Out of range abbrev tag %llu\n
 Out of range compilation unit code %llu\n
 OutDefault
 Outflow_
@@ -7252,34 +2163,6 @@ Outflow_NPCScriptedFaceEntity
 Outflow_NPCScriptedMoveTo
 Outflow_NPCUseScriptedAbility
 Outflow_Simultaneous
-OxHc
-O|#O
-O|%Z
-O}\r\b
-P A9_
-P A9_\b
-P A;
-P D;
-P E1
-P E9n\b
-P E;
-P E;eH|
-P E;eP|
-P H9
-P Hc
-P I9
-P Icu
-P L9
-P M9
-P ff.
-P(H9
-P(YX
-P3~@
-P8I9
-P8L9
-P8fA
-P@H9
-PAQE1
 PARTICLE_DEPTH_FEATHERING_OFF
 PARTICLE_DEPTH_FEATHERING_ON_OPTIONAL
 PARTICLE_DIR_NOISE_CURL
@@ -7315,15 +2198,9 @@ PARTICLE_VRHAND_CP
 PARTICLE_VRHAND_CP_OBJECT
 PARTICLE_VRHAND_LEFT
 PARTICLE_VRHAND_RIGHT
-PASL
 PASSED
 PAUAWL
-PAUSD
-PAVH
-PAVL
-PA\ec
 PCLMULQDQ
-PE;&
 PER_USER
 PFTest
 PF_BIAS_TYPE_EXPONENTIAL
@@ -7350,21 +2227,12 @@ PF_TYPE_PARTICLE_NUMBER_NORMALIZED
 PF_TYPE_PARTICLE_SPEED
 PF_TYPE_RANDOM_BIASED
 PF_TYPE_RANDOM_UNIFORM
-PH9s
-PHHc
-PHIc
-PHL9
 PHLcC\bL
 PM_TYPE_CONTROL_POINT
 POLISH
 PORTUGUESE
-POSIX
-PP9~
-PPI;^\b
 PRIVATE
 PROTECTED
-PSAWD
-PSAWL
 PT_TYPE_CONTROL_POINT
 PT_TYPE_CONTROL_POINT_RANGE
 PT_TYPE_INVALID
@@ -7385,59 +2253,23 @@ PVEC_TYPE_LITERAL_COLOR
 PVEC_TYPE_PARTICLE_VECTOR
 PVEC_TYPE_RANDOM_UNIFORM
 PVEC_TYPE_RANDOM_UNIFORM_OFFSET
-PXL9
-P[A\\A]A^A_]
-P\aRD
-P\afI
 P\bA3P4A3P
-P\bD9
-P\bH9
-P\bIk
-P\bL9
-P\bRD
-P\bfB
-P\bfD
-P\bfF
-P\fH9
-P\fH;
-P\fK`:
-P\fL9
-P\f\a\b
-P\fs\f
-P\tD9
-P\tf.
-P`Ai
-P`D9
-P`E9
-P`L9
-P`fI
-Pa\vB
 PanoramaPanel
 PanoramaTextServices001
 PanoramaUIClient001
 PanoramaUIEngine001
 ParallelForSharedCode
-Parameter file '%s' not found, skipping...\n
 Parameter is out of bound
-Parent and child ConVars with different default values! %s child: %s parent: %s (parent wins)\n
 Particle Simulation
 Particle/Effect_Rendering
 ParticleSystemMgr003
 PathStatus_GoalHasChanged
 PathStatus_HasPath
 PathStatus_WaypointIsGoal
-Pe#\n
-Pe6^
-Peak
-Peak %.2f ms frame\n
 Peak resident virtual bytes: %s\n
 Peak total virtual bytes: %s\n
-Peak working set: %s\n
 PerFrameTest_Basic
 PerFrameTest_OnlyPerFrameExecuted
-Pff.
-PhH9
-PhL9
 PhysicsBodyMarkup
 PhysicsBoneMarkup
 PhysicsBuilderMgr001
@@ -7609,7 +2441,6 @@ Plat_LoadSDL
 Plat_MSTime
 Plat_MSTime64
 Plat_MessageBox
-Plat_MessageBox() called in headless mode:\n\tTitle: %s\n\tMessage: %s\n
 Plat_MicroSecTickDiff
 Plat_MicroSecTickDiffF
 Plat_MilliSecTickDiff
@@ -7710,12 +2541,9 @@ Plat_gmtime64
 Plat_localtime64
 Plat_mktime64
 Plat_timegm64
-PnN%
-Po5H
 PopCoroutineStack
 PopThread
 PostProcessingSystem_001
-PpM)
 Prediction
 PreviewAttachmentModel
 PreviewBoneAttachedModel
@@ -7725,76 +2553,19 @@ PreviewPresetList
 Print the current number of FDs reported by getrlimit
 Program launched from bad shortcut. Please delete this shortcut or unpin from the taskbar.
 PropertyEditorSystem_001
-Pu(I
-Pu4H
 PulseEntFireMode_t::HANDLE
-Push
 PushPopThread
 PushThread
-Q H9
-Q+g~
-Q/L)
-Q0I9
-Q@A!
-Q@H9
-QHH9
-Q\bA]A^A_
-Q\bH+T
-Q\bH9
-Q\bH9V\bu
-Q\bHc
-Q\bL9V\bu
 Q\br_I
-Q\fH9
-Q\f\a\b
-Q\tMc
-Q]XV
-Q^3-
-Q`AiE
-QbOd
-Qff.
-QguI
 Qkkbal
-Qob]
 Qt_GetCustomAllocators
-R H9
-R I9
-R fD
-R,S\t
-R0E1
-R1h58
-R4|i
-R6\r.
-R6\r.H
-R8H9
-R;cv
 RAISE_ON_ASSERT
-RAUI
-RD;|
 RD?4KF?=GH?9FJ?8HL?
-RDTSC
 RDTSCP
-RE9T
-RE9\\
 RELEASE
 REPLICATED
-RLfD
-RM9\\
-RN\t{EQ
-RSDS
 RUSSIAN
-RVfQp
-R\\;P0s"
-R\bH9
-R\bH=
-R\bHc
-R\bI9
-R\bLc
 R\bs3L
-R\e \f
-R\f\a\b
-R]\rX
-R`t H
 RaiseException
 RandomFloat
 RandomFloatExp
@@ -7802,47 +2573,14 @@ RandomGaussianFloat
 RandomInt
 RandomSeed
 RandomizeBits
-Range end value 0x%llx out of virtual bound 0x%x\n
 Range length overflows\n
 Range list entry without a default base address\n
 Range list outside of .debug_ranges\n
 Range list outside of .debug_rnglists\n
 Range list without .debug_ranges\n
 Range list without .debug_rnglists\n
-Range start value 0x%llx out of virtual bound 0x%x\n
 Ranges attr without a section offset\n
-Read off the end of DWARF CFI\n
-Read off the end of a CIE (EH data)\n
-Read off the end of a CIE (address size)\n
-Read off the end of a CIE (aug data length)\n
-Read off the end of a CIE (aug data)\n
-Read off the end of a CIE (augmentation string)\n
-Read off the end of a CIE (code align)\n
-Read off the end of a CIE (data align)\n
-Read off the end of a CIE (initial instr)\n
-Read off the end of a CIE (return reg)\n
-Read off the end of a CIE (segment size)\n
-Read off the end of a CIE\n
-Read off the end of a FDE (aug data length)\n
-Read off the end of a FDE (aug data)\n
-Read off the end of a FDE (encoded pointer)\n
-Read off the end of a FDE (instr)\n
-Read off the end of a range list\n
-Read off the end of abbrev attr data\n
-Read off the end of abbrev data\n
-Read off the end of arange data\n
 Read off the end of compilation unit debug info\n
-Read off the end of frame data (table ID)\n
-Read off the end of frame data (table size)\n
-Read off the end of line data\n
-Read off the end of source %s data\n
-Read off the end of source header data (%s entry count)\n
-Read off the end of source header data (%s format count)\n
-Read off the end of source header data (%s format entry)\n
-Read off the end of the compilation unit debug info (depth %u, %u byte overflow)\n
-Read off the end of the file name table\n
-Read off the end of the include path table\n
-Read off the end of the opcode size table\n
 Read past the end of rnglists data\n
 RecursiveLoadFromBuffer:  got EOF instead of keyname
 RecursiveLoadFromBuffer:  got NULL key
@@ -7851,7 +2589,6 @@ RecursiveLoadFromBuffer:  got empty keyname
 RecursiveLoadFromBuffer:  got } in key
 RecursiveLoadFromBuffer:  recursion overflow
 Reference data buffer mismatch\n
-Register offset set to invalid value (%llu)\n
 RegisterAssertionFailureListener
 RegisterConCommand: Unknown error registering con command "%s"!\n
 RegisterConVar: Unknown error registering convar "%s"!\n
@@ -7867,7 +2604,6 @@ RemoveAt
 RemoveAtUTF8
 RemoveBoneAndChildren
 RemoveMultiple
-Removing string token database entry "%s" for reason "%s"\n
 RenderDevice003
 RenderDeviceMgr001
 RenderHardwareConfig002
@@ -7878,7 +2614,6 @@ ReplaceAt
 ReportOutOfMemory
 ReportProgress
 Requests/Min
-Reset stats for '%s' cache\n
 Reset stats for all CUtlLRUCaches\n
 Resets stats for the specified CUtlLRUCaches (or all if none specified)
 Resident virtual bytes: %s\n
@@ -7896,17 +2631,10 @@ RestartSelf_TestIfInternalArg
 RestoreStack
 RestoreWin32ConsoleColor
 Restored data doesn't match checksum
-Restoring saved stack over RestoreStackFrame (%p, %p, %p, %p)\n
 ReturnJobManualEventToPool
 ReverseChars
-Rff.
-Rg|/
-RhH9
-RhL9
-Root
 Root_Motion_Speed
 Root_Motion_Turn_Speed
-RpL9
 RtlEnterCriticalSection
 RtlpEnterCriticalSectionContended
 RtlpWaitOnCriticalSection
@@ -7915,34 +2643,9 @@ RunTSQueueTests
 RunThreadPoolPerFrameTests
 RunThreadPoolTests
 RunWithAlternateStack
-Running %s...\n
 S A3S\fA3S4A3S,
-S H9
-S Hc
-S I9
-S M9
-S$19\b
-S$A3S
-S&.l
-S(19
-S(A3S
-S(E3S
-S(L9
-S*f9
-S+Ot
-S,A+
-S,A3S
-S0A3S
-S0E1
 S4A3S A3S\bA3
 S8A3S$A3S\fA3S
-S8D)
-S;uD
-S<A3S(A3S
-S<D)
-S>T7W>
-S>ph/
-S@H9
 SAWAVAUATH
 SAWAVAUH
 SCAN UNWIND: found reasonable frame pointer 0x%llx below retaddr, using\n
@@ -8113,7 +2816,6 @@ SDL_modff
 SDL_roundf
 SDL_setenv_unsafe
 SDL_wcslen
-SDrC1
 SEQUENCE_COMBINE_MODE_ALPHA_FROM0_RGB_FROM_1
 SEQUENCE_COMBINE_MODE_ALPHA_FROM1_RGB_FROM_0
 SEQUENCE_COMBINE_MODE_REPLICATEALPHA1
@@ -8122,8 +2824,6 @@ SEQUENCE_COMBINE_MODE_USE_SEQUENCE_1
 SEQUENCE_COMBINE_MODE_WEIGHTED_BLEND
 SERVER_CANNOT_QUERY
 SERVER_CAN_EXECUTE
-SHH9
-SIF2
 SIGABRT
 SIGALRM
 SIGBUS
@@ -8134,7 +2834,6 @@ SIGFPE
 SIGHUP
 SIGILL
 SIGINT
-SIGIO
 SIGIOT
 SIGKILL
 SIGPIPE
@@ -8158,24 +2857,15 @@ SIGVTALRM
 SIGWINCH
 SIGXCPU
 SIGXFSZ
-SKhe~
-SKyu
-SL;o
-SLfD
 SPANISH
-SPH;
 SPONLY
 SPRITECARD_TEXTURE_ANIMMOTIONVEC
 SPRITECARD_TEXTURE_CHANNEL_MIX_A
 SPRITECARD_TEXTURE_CHANNEL_MIX_RGB
 SPRITECARD_TEXTURE_CHANNEL_MIX_RGBA
 SPRITECARD_TEXTURE_NORMALMAP
-SSE2
 SSE4.1
 SSE4.2
-STACK
-STACK CFI %x
-STACK CFI INIT %x %x
 STATETAGBEHAVIOR_ACTIVE_WHILE_CURRENT
 STATETAGBEHAVIOR_ACTIVE_WHILE_FULLY_BLENDED
 STATETAGBEHAVIOR_FIRE_ON_ENTER
@@ -8186,34 +2876,10 @@ STRING
 STUB_GetStatStructName
 SUBMODEL_AS_BODYGROUP_SUBMODEL
 SUBMODEL_AS_MESHGROUP_MASK
-SU^X
-S\aHc
 S\bA3S4A3S
-S\bA9
-S\bD)
-S\bD9b\b~o
-S\bD9r\b
-S\bD9r\b~
-S\bE1
-S\bH)
-S\bH+S
-S\bH=
-S\bHc
-S\bHi
-S\bI9
 S\bIcC
-S\bL)
-S\bLc
-S\b\tP\b
-S\bfA
-S\bt"A
-S\bt\bA
 S\fA3S8A3S A3S
-S\f\a\b
 S\fuDH
-S\n19\n
-S`w]
-SaR|
 Saturday
 SaveBitString
 SaveNonVolatileRegs
@@ -8223,10 +2889,7 @@ SceneUtils_001
 SchemaSystem_001
 SchemaTestExternal_One_001
 SchemaTestExternal_Two_001
-Scrub system off - not a dev build
 Scrubber: not a dev build\n
-Section data cannot fit in memory (%llu bytes)\n
-Selected dict at position %u, of length %u : saves %u (ratio: %.2f)  \n
 SendActionToAssertDialog
 SendMiniDumpReport
 September
@@ -8243,7 +2906,6 @@ Server Simulation
 ServerEntity
 ServerPointEntity
 ServerToolsInfo_001
-Set '%s' cache to size %d\n
 Set the color of a logging channel.
 Set the flags on a logging channel.
 Set the spew level of a logging channel.
@@ -8256,20 +2918,13 @@ SetPtr
 SetThreadedLoadLibraryFunc
 SetWin32ConsoleColor
 Sets the specified cache to the specified size
-Setting channel '%s' color to %s.\n
-Setting channel '%s' verbosity to '%s'.\n
 SetupWin32ConsoleIO
 Severity
-Sff.
-ShL9
-Short read of args file %d < %lld\n
 ShouldAllowRestart
 Show all convars which are not at their default values (optional restricted to specific flags).
 Show the list of convars/concommands.
-Sibling attr value (0x%llx) out of range\n
 Sibling attr without reference value (form 0x%x)\n
 SignHash
-Size
 SkipBlanks
 Skuz\a
 Sleeping
@@ -8285,10 +2940,8 @@ SoundOpSystemEdit001
 SoundOperators
 SoundService_001
 SoundSystem001
-Source %s entry dir index (%llu) out of range (%u)\n
 Source %s entry has multiple dir index values\n
 Source %s entry has multiple path values\n
-Source %s entry is a dir index but no dirs were given\n
 Source %s entry path not provided\n
 Source buffer is wrong
 Source file not found.
@@ -8313,17 +2966,13 @@ Source2Server001
 Source2V8System001
 SourceStateBlendWeight
 SpecialCommand_Test_SetEvent <event name> : requires an event name.
-Specific type %s cannot be a basic type %s
-Specification attr value (0x%llx) out of range\n
 Specification attr without reference value (form 0x%x)\n
 Specified maxSymbolValue is too small
-Speed
 SpeedIn
 SpeedOut
 Spews information about all CUtlLRUCaches
 SplitNameAndKV3Args
 Spring
-Sr]?
 Src size is incorrect
 St10bad_typeid
 St10ctype_base
@@ -8417,7 +3066,6 @@ St8time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE
 St8time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE
 St8time_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
 St8time_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
-St9H
 St9bad_alloc
 St9exception
 St9money_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE
@@ -8426,8 +3074,6 @@ St9money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
 St9money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
 St9time_base
 St9type_info
-St>H
-St\aD
 Stack unwinding
 StackContext_SetContextReturn_To_JmpToAlternateStack
 StackMarkup_RestoreState
@@ -8447,14 +3093,12 @@ StackTools_InstallModuleMappingListener
 StackTools_RemoveModuleMappingListener
 StackTools_VerifyLoadedModuleMappings
 Standard memory allocator initialized with non-pass-through options\n
-Start a test script running..
 StartLoop
 StateComparisonValue_FixedValue
 StateComparisonValue_Parameter
 StateComparisonValue_StateValue
 Statement list without data4/sec_offset value\n
 StatsService_001
-Steam
 SteamAudio001
 Step_CallExternalMethod
 Step_CallMethod
@@ -8463,144 +3107,26 @@ Step_EntFire
 Step_Generic
 Step_SetVar
 Step_Timeline
-Stop has been called on thread.\n
 StrReplaceChar
-String %d: ref:%d %s\n
-String '%s' can't be converted to bool\n
 String value for Color only had %u channels\n
 String value for QAngle only had %u components\n
 String value for Quaternion only had %u components\n
 String value for Vector only had %u components\n
 String value for Vector2D only had %u components\n
 String value for Vector4D only had %u components\n
-SuTH
-Subprocess '%s' failed with exit code %d\n
 Subtract
-Sum (%s)
 Sunday
-Sxf9
-Symbol name index invalid (%lld)\n
 Symbol name index too large\n
 Symbol nesting too deep\n
 Symbols
-T#tU
-T$ A
-T$ H
-T$ I
-T$ L
-T$ L9
-T$ M9
-T$ f
-T$ u
-T$$A
-T$(1
-T$(A
-T$(H
-T$(I
-T$(L
-T$(fH
-T$,A
-T$,I
-T$,M
-T$01
-T$0D
-T$0H
-T$0H9
-T$0I9
-T$0L
-T$0u
-T$4H
-T$8E
-T$8H
-T$8[H
-T$<D
-T$@A
-T$@H
-T$@H9
-T$@I
-T$HE1
-T$HH
-T$HH9
-T$Lf
-T$PE
-T$PH
-T$PI
-T$PL
-T$PN
-T$Pu5
-T$XH
-T$XI
-T$\a1
-T$\b1
-T$\b9Z\b
-T$\bA
-T$\bB
-T$\bD
-T$\bD9
-T$\bE
-T$\bE1
-T$\bH
-T$\bHc
-T$\bI
-T$\bI9
-T$\bJ
-T$\bL
-T$\bL9
-T$\bLcm
-T$\bM
-T$\btaH
-T$\bu
-T$\buGH
-T$\bv
-T$\f1
-T$\f9
-T$\fA
-T$\fD
-T$\fE
-T$\fH
-T$\fL
-T$\n1
-T$\nA9
-T$\t1
-T$\vL
-T$`H
-T$dA
-T$dD
-T$hH
-T$pH
-T$pI
-T$pu
-T%k$
-T&`w
-T*0A
-T0\b1
 TCHINESE
-TEMP
-TESTSCRIPT: CheckPoint -> '%s'.\n
-TESTSCRIPT: waiting for checkpoint '%s'%s\n
-TH\fH
-TK\eR
 TLS init function for
 TLS wrapper function for
-TM$\t1;
 TMPDIR
-TSList cannot hold more that %d nodes\n
 TSPointerList Nodes
-TUUUv
-TX\rH
-T\a\bH
-T\adL
-T\b f
-T\b0f
-T\f\a\b
-T\n\fA
-T\r&Z
-T\t\fA
 Table has potentially invalid member names and cannot be persisted
-Tags
 TargetStateBlendWeight
 Target_Move_Speed
-Test bucket %d has an invalid value %d\n
 TestFormatA
 TestFormatB
 TestFormatC
@@ -8618,19 +3144,15 @@ Test_Loop
 Test_Loop <loop name> - loop back to the specified loop start point unconditionally.
 Test_Loop: requires a loop name.
 Test_LoopCount
-Test_LoopCount <loop name> <count> - loop back to the specified loop start point the specified # of times.
 Test_LoopCount: requires a loop name and number of times to loop.
 Test_LoopForNumSeconds
-Test_LoopForNumSeconds <loop name> <time> - loop back to the specified start point for the specified # of seconds.
 Test_LoopLoopForNumSeconds: requires a loop name and number of seconds to loop.
 Test_RandomChance
-Test_RandomChance <percent chance, 0-100> <token1> <token2...> - Roll the dice and maybe run the command following the percentage chance.
 Test_RandomChance: requires percentage chance parameter (0-100) followed by command to execute.
 Test_Run
 Test_RunFrame
 Test_SetEvent
 Test_StartLoop
-Test_StartLoop <loop name> - Denote the start of a loop. Really just defines a named point you can jump to.
 Test_StartLoop: requires a loop name.
 Test_StartScript
 Test_StartScript: requires filename of script to start (file must be under testscripts directory).\n
@@ -8638,16 +3160,8 @@ Test_Wait
 Test_Wait: requires seconds parameter.
 Test_WaitForCheckPoint
 Test_WaitForCheckPoint <checkpoint name> [once]: requires checkpoint name.
-Testing on %u samples of total size %u\n
-Tests done, purging test memory...
 TextLayout_001
-TfAX
-Tff.
-The specific type '%s' cannot be persisted
-The specific type '%u' cannot be persisted
 This convar is being accessed prior to ConVar_Register being called
-Thread pool %s requested %d threads, using %u from %u set(s)\n
-Thread(%p/0x%llx)
 ThreadCloseProcess
 ThreadGetCurrentHandle
 ThreadGetCurrentId
@@ -8676,13 +3190,8 @@ ThreadMultiWaitObjectSetDestroy
 ThreadMultiWaitObjectSetGetCount
 ThreadNanoSleep
 ThreadOpenProcess
-ThreadPoolTest:         %d threads -- %d (%d) jobs processed in %fms, %fms to suspend (%f/%f)\n
-ThreadPoolTest:     NO Sleep\n
 ThreadPoolTest:   NOT to completion\n
-ThreadPoolTest:   Non-per-frame jobs executed by the time the per-frame jobs finished: %d (main thread: %d)\n
-ThreadPoolTest:   Per-frame jobs executed: %d (main thread: %d)\n
 ThreadPoolTest:   To completion\n
-ThreadPoolTest: ===== RunThreadPoolPerFrame Tests Complete =====\n\n
 ThreadPoolTest: Job distribution speed\n
 ThreadPoolTest: Jobs doing work, %s main thread\n
 ThreadPoolTest: YieldWaitPerFrameJobs - Basic test\n
@@ -8716,15 +3225,9 @@ TimestampedEvent_RegisterListenerAndFlushBuffer
 TmG\eV
 ToLowerFast
 ToUpperFast
-Too few compact unwind index entries (0x%x)\n
-Too many %s entries (%llu)\n
-Too many CIE initial instructions (%u)\n
-Too many FDE instructions (%u)\n
-Too many channel specifiers (max: %d).\n
 ToolFramework2_002
 ToolSceneNodeFactory_001
 ToolService_001
-Tools
 ToolsStallMonitor
 ToolsStallMonitorInternal_BeginScope
 ToolsStallMonitorInternal_EndScope
@@ -8733,16 +3236,10 @@ ToolsStallMonitor_SetDisplayImageRGBA
 ToolsStallMonitor_SetMainThreadWindow
 ToolsStallMonitor_Shutdown
 Total committed memory: %d KB\n
-Total number of testing samples is %u and is invalid.
-Total number of testing samples is %u and is invalid.\n
-Total number of training samples is %u and is invalid.
 Total number of training samples is %u and is invalid\n
-Total samples size is too large (%u MB), maximum size is %u MB\n
-Total used memory:      %d KB\n
 Total virtual bytes: %s\n
 TracerPiATSH
 Trailing Data
-Training on %u samples of total size %u\n
 TransferMemory
 Transform
 TranslateStackInfo
@@ -8751,73 +3248,27 @@ TrimRight
 TruncateAt
 Truncated data
 Trying %u different sets of parameters\n
-Tu&H
 Tuesday
-TurH
 Two Bone
-Two KV3 format GUIDs with the same human-friendly name ('%s')
-U 1\tU
-U HcE(D
-U Icu
-U M9
-U(Hc
-U(fB
-U1(\\Q
-U19\v
-U@H9
-UCS-2
-UE19
-UE1\t
-UHH9
-UJ2k
-ULfD
 UNLOGGED
-UNWIND %u: unwind IP 0x%llx (%s); FP 0x%llx; SP 0x%llx\n
-UNWIND: unable to find debug info for %s\n
 UNWIND: unable to init dbghelp for process\n
 UNWIND: unable to load dbghelp\n
 UNhkk%
 UPDATE_STRING_TOKEN_DATABASE
-URdN
-USED
-USER
 USERINFO
-USY1A
-USY1L
-UTF-8
 UUID_1.0
 UUUUUUUUH
 UXfP\f
-U\b9Z\b~N
-U\bA+M0Ei
 U\bBHH
 U\bBIH
-U\bD9
-U\bE1
-U\bH9
-U\bH=
-U\bM9
-U\fH9
-U\f\a\b
-U\nHc
 U\tBHH
 U\tBLH
-U\v@\b
-U`w]
-Uff.
-Uint value %llu above maximum %llu\n
-Uint value %llu below minimum %llu\n
 UnRegisterGlobalObject
 Unable to convert value type and flags 0x%x
-Unable to create a pipe, %d\n
-Unable to create event, error %d\n
-Unable to create semaphore, error %d\n
-Unable to create thread in %s\n
 Unable to determine CPU Frequency\n
 Unable to determine ELF default base address\n
 Unable to determine Mach-O default base address\n
 Unable to determine buffer encoding.
-Unable to exec '%s'\n
 Unable to load SDL\n
 Unable to read .gnu_debuglink\n
 Unable to read ELF note\n
@@ -8834,25 +3285,14 @@ Unable to read header
 Unable to read module header\n
 Unable to read module magic\n
 Unable to read module section at file offset 0x%x\n
-Unable to reload DWARF module for '%s'\n
-Unable to run '%s', error %u
 Unable to seek to .gnu_debuglink\n
-Unable to seek to ELF note\n
-Unable to seek to ELF phoff\n
 Unable to seek to ELF section header strings\n
-Unable to seek to ELF shoff\n
 Unable to seek to Mach-O load commands\n
-Unable to seek to Macho-O slice base\n
-Unable to seek to module section at file offset 0x%x\n
-Unable to traverse directory '%s' - check permissions
-Unable to write file '%s'\n
 Unaccounted
 Unexpected EOF while parsing number
 Unexpected augmentation string byte 0x%x (shouldn't have augmentation data)\n
 Unexpected augmentation string byte 0x%x\n
 Unexpected character 0x%02x
-Unexpected character 0x%02x ('%c')
-Unexpected duplicate table entry name '%s'\n
 Unexpected end of file
 Unexpected high PC attr in addition to ranges\n
 Unexpected high PC attr without a low PC attr\n
@@ -8863,10 +3303,8 @@ Unhandled rnglists op %u\n
 UnicodeCaseConvert
 UniqueIdFromString
 UniqueIdToString
-Unkn
 Unknown
 Unknown (invalid)
-Unknown CIE version %u\n
 Unknown arange header version\n
 Unknown compilation unit abbrev code\n
 Unknown compilation unit header version %u\n
@@ -8882,11 +3320,8 @@ Unlock
 Unrecognized ELF class\n
 Unrecognized ELF data layout or version\n
 Unrecognized Mach-O header magic\n
-Unrecognized flag name '%s'
-Unrecognized flag: %s.\n
 Unrecognized module magic\n
 Unrecognized severity: %s.\n
-Unrecognized type '%d'
 Unrecognized verbosity: %s.\n
 UnregisterAssertionFailureListener
 UnregisterMobileEventListener
@@ -8896,13 +3331,10 @@ Unspecified error code
 Unsupported ELF compression type %u\n
 Unsupported ELF machine type %d\n
 Unsupported Mach-O machine type %d\n
-Unsupported allocation alignment (%llu), max is %u\n
 Unsupported binary encoding id.
 Unsupported combination of parameters
-Unsupported compact unwind version %u (expected %u)\n
 Unsupported compilation unit type %u\n
 Unsupported define_file instruction\n
-Unsupported escape character '\\%c'
 Unsupported frame parameter
 Unsupported inline attr value %llu\n
 Unsupported max Symbol Value : too large
@@ -8913,33 +3345,17 @@ Unsupported text encoding id.
 Unused augmentation data, %llu bytes\n
 UploadFilesToAnalyzer
 UploadTracyFile
-Usage:  find <string> [<string>...]\n
-Usage:  findflags <string>\n
-Usage:  help <cvarname>\n
 Usage: lrucache_flush [name]\n
 Usage: lrucache_set_size [name] [size]\n
-Ut#H
-Ut3H
 UtlVectorMemory_Alloc
 UtlVectorMemory_AllocAligned
 UtlVectorMemory_CalcNewAllocationCount
 UtlVectorMemory_FailedAllocation
-UuLH
-UxM+} H
-V 1\a
-V Ic
-V%V\n
-V0I9
-V2g%7
-V8H9
-V@HcC
 VALVE_CLOCK_SPEED_CALCULATION
 VALVE_TESTMODE
-VATP
 VApplication001
 VAsyncFileSystem2_001
 VAvi001
-VBKV
 VBik001
 VCONSOLE_FUZZY_MATCHING
 VCONSOLE_SET_FOCUS
@@ -8950,9 +3366,6 @@ VCRT_isprint
 VCRT_tolower
 VCRT_toupper
 VConComm001
-VC|n
-VDebug -
-VDp\r\a
 VECTOR2
 VECTOR3
 VECTOR4
@@ -8960,20 +3373,13 @@ VERSION=1\n
 VERSIONCONTROL=p4\n
 VEngineCvar007
 VFileSystem017
-VGAME
-VIj\f
-VLfD
-VMAP
 VMaterialSystem2_001
 VMediaFoundation001
 VP4003
-VPHcE
 VPLATFORM
 VPROJECT
 VPhysics2_Interface_001
 VProcessUtils002
-VProf
-VProf spike "%s" from %f to %f ms\n
 VProfLite started.\n
 VProfLite stopped.\n
 VProfLite_Clear
@@ -8998,25 +3404,9 @@ VStringTokenSystem001
 VTT for
 VTT structure for
 VUUUD)
-VUUUH
-VUUUL
 VWebm001
-V\bH9
-V\bH=
-V\bHc
-V\bHcB\b
-V\bHi
-V\bL)
 V\bL9R
-V\bfD
-V\bfH
-V\fA)
-V\fHk
-V\f\a\b
 V\ft:L
-V\nI)
-V\rD8
-V\rH}
 V_:X1:
 V_AbbreviatePathInPlace
 V_AddBackSlashesToSpecialChars
@@ -9222,7 +3612,6 @@ V_cosd
 V_cosf
 V_coshd
 V_coshf
-V_dup
 V_exp2d
 V_exp2f
 V_expd
@@ -9398,102 +3787,29 @@ V_wcstod
 V_wcstoi64
 V_wcstoui64
 ValidateStringFormatSpecifiers
-Value
 Value_Generic
 VariableDefinition
 VariantIndex
-Vc0a
 Version not supported
-Vff.
-Vgh$
-Virtual Memory %s Report for PID %u\n
 Virtual memory regions sorted by size:\n
-Virtual reservation exceeded limit /+/ %llu > %llu
 VisBuilder_001
 VisibilityInputs
 VoidFnPtrLookup_Tier0
 Vrad3_001
-Vt(H
-Vtube
-W 19\t
-W H9
-W H;
-W Ic
-W L9
-W M9
-W!48E
-W!gS
-W(fD
-W(fH
-W)lQ
 W/q#IX
-W4vC
-W83{
-W8H9
-WAPM
 WARNING
-WARNING: %s Denied a request to load '%s'\n
 WARNING: %u CFI problems encountered\n
 WARNING: CDirWatcher not implemented\n
-WARNING: Command buffer full... ignoring!\n%s\n
-WARNING: Command too long... ignoring!\n%s\n
-WARNING: Large alloc of %llu bytes of memory (limit %llu)
 WARNING: Large virtual reservation of %llu bytes of memory (limit %llu)
-WARNING: Path suffix '%s' cannot be prefixed with '%s'\n
-WARNING: Suffix '%s' is a current-drive-root path (has a leading slash), cannot be prefixed with '%s'. Is the leading slash intentional and necessary?\n
-WARNING: Suffix '%s' is a drive-relative path, cannot be prefixed with '%s'\n
-WARNING: Suffix '%s' is an absolute path, cannot be prefixed with '%s'\n
-WARNING: The maximum dictionary size %u is too large compared to the source size %u! size(source)/size(dictionary) = %f, but it should be >= 10! This may lead to a subpar dictionary! We recommend training on sources at least 10x, and preferably 100x the size of the dictionary! \n
 WARNING: Unable to build frame unwind table for FDE at 0x%x\n
-WARNING: Unable to copy '%s' into symbol cache at '%s', error %u\n
 WARNING: Unable to initialize verifier allocator\n
-WARNING: Unable to rename temporary symbol cache file '%s' to final '%s'\n
-WARNING: Unable to retrieve '%s' into symbol cache at '%s', download error: '%s'\n
-WARNING: minidump path in '%s' doesn't exist and can't be created\n
 WARNING: there were errors during information capture, this report may be incomplete\n
-WARNING: total wall clock time was %.2f seconds, results may be invalid\n
 WARNING: truncated input line\n
 WARNING: unable to link multiple ConCommands named %s because both are not marked FCVAR_LINKED_CONCOMMAND\n
-WARNING: unable to parse line: '%s'
 WARNING: zero-length line in maps\n
-WAVL
-WIN32
 WINDOWS
-WINXP
-WITH
-WLfD
-WORLD
 WPH;8H
-WPfD
-WVm.
-W\a\f\a\b
-W\b9t\n\br
-W\b;Z\b
-W\bD9r\b~0
-W\bD;r\b}4
-W\bE1
-W\bH)
-W\bH;
-W\bH;W
-W\bH=
-W\bHc
-W\bL9
-W\bLc
-W\bM9
-W\b\tP\b
-W\bt!H
-W\buM
-W\bv{H
 W\bwNf
-W\fL9
-W\f\a\b
-W\nD;R\\D
-W\r$r
-W\r-w
-W\rsR
-W\tI9
-W`D9
-W`Lc
 WaitForAllDone
 Warning
 Warning: Skipping command %s\n
@@ -9502,7 +3818,6 @@ Waypoint_Distance
 Waypoint_Heading
 Wednesday
 WeightList
-Wi*\e
 Windows
 Windows 10
 Windows 11
@@ -9525,79 +3840,20 @@ Windows ME
 Windows NT
 Windows Vista
 Windows XP
-Working set: %s\n
 WorldRendererMgr001
 Worldsize_Init
-Wrote
-WxIc
-WyQ=@
-Wz41
-X D9
-X E8
-X360
 X360GUEST
 X360HIDEF
 X360LODEF
 X360SPLITSCREEN
 X360WIDE
-X@E)
-X@E1
-XB H
-XD;e
-XD;}
 XEDVEj*g\r
 XIcxHH
 XLco D9
-XQ>D>\e
-XS&Y+
-XXXXXX: found leading plus sign while parsing string '%s' as float64, ignoring it\n
-XZE1
-X[A\\A]A^A_]
-X\b1>
-X\bA9
-X\bH9
-X\bI)
-X\bM)
-X\bfD
-X\f\a\b
-X\ri
-X`h3
-Xff.
-Xi#/H
-Xp!Fd
-XsBI
-Xt&H
-X|(SS
-Y$D1
-Y1f\a
-Y5us
-YA1H
-YA1I
-YA1L
-YBJ\t
-Y\aUH
-Y\a\f\a\b
-Y\bE1
-Y\bL9
 Y\bruI
-Y\f\a\b
-Y\r)w
 Y\trH5
-Y\v\eE
-YaG>"
-Yff.
 Yt7Mce
-Ytk1
-Yu\bH
-Yw\tH
 Yx\ax7
-Y}h4.Y0
-Z"0*
-Z* ,\t\a\vm8
-Z.xgU
-Z/K]
-Z>\be_
-Z@\fL
 ZDICT_addEntropyTablesFromBuffer
 ZDICT_finalizeDictionary
 ZDICT_getDictHeaderSize
@@ -9610,7 +3866,6 @@ ZDICT_trainFromBuffer
 ZDICT_trainFromBuffer_cover
 ZDICT_trainFromBuffer_fastCover
 ZDICT_trainFromBuffer_legacy
-ZP\bf
 ZSTD_CCtxParams_getParameter
 ZSTD_CCtxParams_init
 ZSTD_CCtxParams_init_advanced
@@ -9785,582 +4040,19 @@ ZSTD_toFlushNow
 ZSTD_versionNumber
 ZSTD_versionString
 ZSTD_writeSkippableFrame
-ZX\ff
-ZYA9
-Z\bA)
-Z\bA9
-Z\bL9
-Z\er"
-Z\f\a\b
-Z`fD
-Zgq)
-Zjz\v
-Zt)\v}HZr
-Z~xF
-[!gn
-[%llu]
-[/code]
-[/img]
-[/list]
-[/url]
-[A9D
-[AVH
-[A\\A]A^A_]H
-[A\\A]Hi
-[ConsoleOnly]
-[DoNotEcho]
-[E19
-[H\t
-[J4&
-[Running headless mode, no notes collected.]
-[\bE1
-[\bH9
-[\bI9
-[\bL9
-[\bfA
-[\fHk
-[`n>P\ts
-[`wU
-[abi
-[abi:
-[clone
-[code]
-[friend]
-[h1R
-[h1]
-[h2]
-[h3]
-[iA\f
-[img srcH
-[img srcHc
-[img]
-[list]
-[t(H
-[url=http://
-[url=https://
-\\$HE1
-\\$HH9
-\\$hE1
-\\0\bD
-\\2\bA9
-\\D2%4
-\\EB-m
-\\E\bfI
-\\QSX9
-\\tXA
-\\u must be followed by exactly 4 hex digits
-\\u00
-\\u0000
-\\uiH9
-\\ww_,
-\a+Pd
-\a52F*
-\a9iN
-\a<\rw
-\aA3P\bA
-\aA]A^]H
-\aD;r
-\aE:6
-\aH\tD
-\aHcG
-\aHcP\b9
-\aI\tD
-\aIcE
-\aLZSSI
-\aUHc
-\a\a\a\a\a\a
-\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a
-\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a
-\a\a\a\a\b\b\b\t\t\t\n\n\n\n\v\v\v\f\f\f\r\r\r\r
-\a\a\b\b\t
-\a\b\n\v
-\a\b\t\b
-\a\b\t\n\v\f\r
-\a\b\t\n\v\r
-\a\f\a\b
-\a\n;>fi
-\a\t6=>V
-\a\tL:D1
-\a`Mr
-\alq:B6
-\ar6D
-\at2H
-\at5I
-\atQv
-\at\a]
-\at\tH
-\atdH
-\atff
-\atjHc
-\atlA
-\atpH
-\atqL
-\atvA
-\at~A
-\au A
-\au"f
-\au"fA
-\au'H
-\au(A
-\au.fA
-\au3fA
-\au6f
-\au=A
-\auZf%
-\au\bH
-\au\t:A
-\au\vH
-\auqH
-\autL
-\avBH
-\avCL
-\avMH
-\av\eL
-\aw%I
-\awJH
-\awYA
-\aw\tA
-\aw]H
-\awaH
-\ax=9v
-\axTL
-\axXL
-\ax\\L
-\axjL
-\ax|H
-\a~0L
-\a~1L
-\a~2L
-\a~3L
-\a~7H
-\a~7ff.
-\a~AH
-\b$Tj
-\b+\eH
-\b0F!
-\b5$YA1
-\b8\nu
-\b9H\b
-\b9\bu
-\b9\bu\rI
-\b9\bu\tI
-\b9\nu\bH
-\bA+GhE1
-\bA3x\fA#x
-\bASL
-\bATI
-\bATL
-\bAUATSH
-\bA\v
-\bA\v@
-\bA\vV\n
-\bA\v`
-\bB"t/0H
-\bCQt
-\bD9}
-\bD;2
-\bD;;I
-\bD;a$
-\bD;g
-\bE1\v}
-\bE;4$M
-\bE;7
-\bE;u
-\bE\vG\n
-\bE\vJ\n
-\bE\vX
-\bF\rm
-\bF\vA
-\bGAL
-\bH)K\t
-\bH9B\bt\rD
-\bH9M
-\bH9]
-\bH9z\btYD
-\bH\v
-\bH\v8
-\bH\vu
-\bHcG0
-\bHc\a
-\bHc\r
-\bHc_
-\bI\vL
-\bJVd
-\bJ\vL
-\bK)A
-\bK\vG
-\bL+x
-\bL9U
-\bL9e
-\bL9m
-\bL9u
-\bL9}
-\bLc'D;g
-\bLcnxL
-\bLc~\bD;y
-\bPWL
-\bPaEa \f
-\bPn0
-\bQAV
-\b\\Xj
-\b\au(
-\b\bB\b
-\b\bP\b\f
-\b\b\b\a\b\t\n\v
-\b\f\a\b
-\bf9\bu
-\bf9\bu\vI
-\bf9\nu\bH
-\bfA9\nu\nH
-\bff.
-\bh\n!
-\br9H
-\bs)A
-\bt!L
-\bt&H
-\bt,H
-\bt-H
-\bt.D
-\bt2H
-\bt<1
-\bt=H
-\btII
-\btPHc
-\bt\\L
-\bt\bI
-\bt\fH
-\btfH
-\btp;
-\btqA
-\bu#H
-\bu#H;L
-\bu6A
-\bu:I
-\bu>I
-\buGH
-\buWI
-\buXH
-\buaH
-\bup<\b
-\buv1
-\buyH
-\bu~D
-\bw$A
-\bw,H
-\bwUL
-\by\r_
-\e #'*-02579;=@ACEGIKLNPQSTVWYZ[]^`abcefghjklmnpqrstuvwxyz{|}~
-\e!MU
-\e%Uu
-\e1'D
-\e1A26b
-\eCHiM
-\eCHiu
-\eDx,2$E
-\eE;u
-\eG,X,L
-\eM(D
-\e[1;33mASSERT: \e[1;31m%s\e[1;32m:%i:\e[1;31m%s\e[0m\n
-\e\e\f\a\b
-\e\f\a\b
-\e_rG"
-\efD9
-\eff.
-\et<H
-\etTH
-\euYH
-\euvHc
-\ew'L
-\ew\n1
-\f"b\b
-\f$8\n
-\f$9\n
-\f$Hc
-\f$Hk
-\f$Ic
-\f$L9
-\f$L9M
-\f$f9\n
-\f$upE
-\f+H1
-\f.L9
-\f.L9M
-\f0;O
-\f0Hc
-\f0\f\r
-\f1I!
-\f2I9
-\f3;L
-\f3D;1u
-\f6\aU
-\f8H9
-\f9H\t
-\f;fE1
-\f@Hc
-\f@Ic
-\fAfA
-\fCfA
-\fCff.
-\fD9}
-\fH9IU
-\fHcB\f
-\fHcP\f
-\fHcP\fD
-\fHcS\f
-\fIHc
-\fIHc\f
-\fIcL$\fA
-\fIcN\fA
-\fIfF
-\fIr~
-\fJfE
-\fKfE
-\fM=_
-\fRE1
-\f\aH9
-\f\aI9
-\f\aL9
-\f\aPI73\r3\a.\b\n
-\f\a\b
-\f\asWD
-\f\bL9
-\f\emN
-\f\f\f\f\f\f\f\f
-\f\nD9
-\f\nH9
-\f\tHc
-\f\vH9M
-\f\vM9
-\ffD9
-\ffX_
-\fff.
-\ft4H
-\ft5H
-\ft<H
-\ftEL;ch
-\ftdH
-\fw!X|
-\n %u segments found, of total size %u \n
-\n%.3f: Testing %d threads:\n
-\n%d total counted strings.
-\n4:
-\n4Zv
-\n4_l8S
-\n8\bt
-\n8\f\a
-\n9\bu
-\n9\nu\nI
-\n<\et
-\n<\eu
-\nA9\b
-\nA9\bu\bH
-\nAbortMessage({
-\nConsole History (reversed)\n\n
-\nCwf\rE
-\nCwf\rER
-\nE3J,E3J
-\nE9\nu\fH
-\nH9M
-\nLightweight verifier:\n
-\nOS malloc info:\n
-\nOS memory stats:\n
-\nThreadPoolTest: ===== RunThreadPoolPerFrame Tests =====\n
-\nX$4
-\n\f\a\b
-\n\f\a\bA\v
-\n\f\a\bE\v
-\n\f\a\bH\v
-\n\n%s\n\n
-\n\nCMiniDumpComment encountered an error while generating the comment
-\n\n\n\n\n\n\n\n
-\nf9\bu
-\nf9\nu
-\nfA9\bu\bH
-\nfE9\nu\fH
-\niqy7
-\ns\bn
-\nt)iJ\b
-\nt2L9
-\nt<A
-\nt@f
-\ntA1
-\ntV;
-\nt\bI
-\nt\fA
-\nt\rH
-\ntcL;cX
-\nteH
-\ntmH
-\nu,H
-\nu.ff.
-\nu^f
-\nzB>z]
-\nzZ\f+
-\r"?Tn
-\r"\vd
-\r%70s\r
-\r%79s\r
-\r*E\v
-\r0O"
-\r2i+
-\r4D"
-\rC1]
-\rDJ$
-\rI\b-
-\rK/7s`3b
-\rVi(
-\rW2!
-\r\a\v\b\n\t
-\r\tX"
-\r\v\n\b\a
-\r_Q"
-\raR"
-\re\e"
-\ri0"
-\rmj>zjZ
-\rny\f
-\rp\b-
-\rs2"
-\rt A
-\rt#H9
-\rt6L;cp
-\t4l?
-\t6RtcZO"
-\t9\bu
-\t=Vx
-\tA8M
-\tA9M
-\tA9\b
-\tC8~
-\tI\nA
-\tP\bH
-\tP\bI
-\tS0H
-\t\f\a\b
-\t\n\r
-\t\r\n
-\t`M1k
-\ta\n\f\a\bA\v
-\tf9\bu\vI
-\tfA9M
-\tjE1
-\tt(.H
-\tt*H
-\tt6Hc
-\ttLI
-\ttWE
-\tt\eH
-\ttc;
-\ttrL;cP
-\tttH
-\tu+H
-\tu.H
-\tu9H
-\tu:H
-\tuBH
-\tunf)
-\tv A
-\tv*H
-\tv:A
-\tw!H
-\tw"A
-\tw$A
-\tw0A
-\tw21
-\tw3A
-\tw>ff.
-\twFI
-\twL1
-\twMI
-\twPE1
-\twT'
-\tw\vH
-\twcE1
-\t}q,s
-\v#iz
-\v0FV
-\v9\bu
-\v9\nu
-\v<nO
-\vD9\n
-\vE(L
-\vH,\vRQ
-\vH9M
-\vL9M
-\v\a\f\r\n
-\v\exo\n}
-\v\f\a\b
-\v\v\v\v\v\v\v\v
-\vd9x3&@
-\vf9\b
-\vf9\bu
-\vf9\n
-\vf9\nu
-\vfUE
-\vt!f
-\vt"E
-\vtI;
-\vtQH
-\vtTL;c`
-\vt\af
-\vt\eH
-\vu!E
-\vu"E
-\vu4M
-\vu9A
-\vw%H
-\vwMH
-] H9
-]0A9
-]8E1
-]A\\A]A^A_
-]I\vb
-]IcM\bHc
-]P4H
-][GH
-]\bHcC\b=
-]g"J
-]iZl\r
-]k_\fW
-]u\fH
-]u\vH
-]vH4
-]xEc
-^!pu
-^$s_
-^0IcF(L
-^6o}
-^GP~
-^[L6
-^\bE1
-^]dB
-^oEZ_
-^p8G
-^u;H
-^wQA
-^xM>3,^y
-_ HcG
-_ ff.
-_%d_%02d%02d_%02d%02d%02d_%d
-_%llx_%x
 _-report-_
-_4L)
-_@u(L
-_AXM
 _CCallStackStatsGatherer_GetSharedGlobalInstance
 _CCallStackStatsGatherer_Internal_DumpStatsToFile
 _CCallStackStatsGatherer_ReleaseSharedGlobalInstance
 _Complex
 _CxxThrowException
 _DOD3D
-_Er!
 _Error_AlwaysSpewCallStack_Enable
 _Error_AlwaysSpewCallStack_Length
 _FindGlobalSymbol
 _FindGlobalSymbolByHash
 _Float
 _GLOBAL_
-_HE1
 _H^zvd
 _ITM_RU1
 _ITM_RU8
@@ -10407,9 +4099,6 @@ _V_wcsncat_cch
 _V_wcsncpy_bytes
 _Warning_AlwaysSpewCallStack_Enable
 _Warning_AlwaysSpewCallStack_Length
-_XE1
-_XtK
-_Yr\v
 _Z10DevWarningPKcz
 _Z10FioGetSizeiPy
 _Z10FioSetSizeiy
@@ -15830,25 +9519,16 @@ _ZdlPvS_
 _ZdlPvSt11align_val_t
 _ZdlPvm
 _ZdlPvmSt11align_val_t
-_Znam
 _ZnamPv
 _ZnamRKSt9nothrow_t
 _ZnamSt11align_val_t
 _ZnamSt11align_val_tRKSt9nothrow_t
-_Znwm
 _ZnwmPv
 _ZnwmRKSt9nothrow_t
 _ZnwmSt11align_val_t
 _ZnwmSt11align_val_tRKSt9nothrow_t
 _\aFiYW
-_\b W
-_\b9Z\bD
-_\bH9
-_\bHcC\b=
-_\bI9
-_\f\a\b
 _\ftOA
-_\rXf
 __RTDynamicCast
 __ctype_get_mb_cur_max
 __cxa_allocate_dependent_exception
@@ -15925,68 +9605,22 @@ _breakpad_macho_
 _breakpad_sym_
 _class
 _editor
-_elf_
-_exit
-_ff.
 _macho_
 _purecall
 _root_keyname
 _setjmp
-_t3H
 _test_conversion_counter
-_u&H
-_u0H
-_u2H
-_u\rH
-_wWT+
-_x86
-_zV\\O
-_}4(
-_~6\f
-`0Hc
-`0Ic@(M
-`1MR
-`=hD
-`?E1
-`Dx@
-`H\b
-`\bE1
-`\bE9
-`\bL9
-`b8f
-`d\nb
-`ff.
-`uVH
-`uuH
-`zs[
-a5T)
 a?y#c?sIe?
-aC.B
-aG0"
-a\bH)
-a\bHc
-a\f\a\b
 abandoned_page_purge
 abandoned_page_reset
 abandoned_reclaim_on_free
-abort
-aciL
-acos
-acosf
 active
-aff.
-after alignment, the size of the arena becomes too small (memory at %p with size %zu)\n
 ai_model_info
-alarm
 alignof
-allocation request is too large (%zu bytes)\n
 allocator
 allow_large_os_pages
 allowstatic
-alnum
-alpha
 alphasort64
-amaY1
 anchor_angles
 anchor_position
 android*
@@ -16028,48 +9662,30 @@ animgraph7
 animgraph8
 animgraph9
 appears in lower database
-aq8D
 archive
 arena_eager_commit
 arena_purge_mult
 arena_reserve
 arenas
 argument not found
-arm64
-array
 asctime_r
-asin
-asinf
 assert
 assert_cast
 assert_dialog.cpp
 at offset
-atan
-atan2
 atan2f
-atanf
-ator ()
 attach
 attach_point
 attachment
 attachment_offset
 attachment_type
 attributeAware
-auto
-auto:
 auto_unragdoll_duration
 autoargs
-b!q&
-b*X:
-b9AU
-b@fD
 bForceLookAtPath
 bIB\bf
-bKill
-bPfA
 bReacquireAfterBreak
 bUpdate
-b\f\a\b
 backtrace
 bad_function_call
 base64_decode
@@ -16086,7 +9702,6 @@ basic_string::_S_construct null not valid
 basic_string::_S_create
 basic_string::append
 basic_string::assign
-basic_string::at: __n (which is %zu) >= this->size() (which is %zu)
 basic_string::basic_string
 basic_string::compare
 basic_string::copy
@@ -16096,7 +9711,6 @@ basic_string::replace
 basic_string::resize
 basic_string::substr
 basic_string_view::substr
-bff.
 bin/linuxsteamrt64/libtier0.so
 bin\\stringtokendatabase.txt
 binary
@@ -16116,20 +9730,15 @@ blake3_hasher_init_keyed
 blake3_hasher_reset
 blake3_hasher_update
 blake3_version
-blank
 blendamount
-block
 blockLOS
 block_inflow_always
 block_outflow_always
 bmit fulH
 body_type
-bone
 bone_name
 bone_names
 bonemerge
-bool
-bool8
 boolean
 borrow
 bounds
@@ -16142,76 +9751,44 @@ breakable_skin
 breakpad
 breakpad symbols
 broadcast
-bt3V
-btowc
 buildid/
 burst_randomize
 burst_scale
-byte
-bytes
-c M9
-c(M9
-cO^c
-c\bH#
-c\bHi
-c\bL9
-c\b\t0
-c\f\a\b
-cable
 cache*
 calloc
-cannot commit OS memory (error: %d (0x%x), address: %p, size: 0x%zx bytes)\n
 cannot create shim for unknown locale::facet
-cannot decommit OS memory (error: %d (0x%x), address: %p, size: 0x%zx bytes)\n
-cannot reset OS memory (error: %d (0x%x), address: %p, size: 0x%zx bytes)\n
 cannot switch from automatic to manual argument indexing
 cannot switch from manual to automatic argument indexing
 cantdie
 carry_type
-catch
 center
 channels
-char
 char16_t
 char32_t
-char8
 char8_t
-chdir
-cheat
 check_nofilefd
 checksum_blake3.cpp
-chest
 children
-chmod
-cl-,
 cl_language
-class
 clearerr
 client
 clientcmd_can_execute
-clock
 clock_gettime
-clone
-close
 closedir
 cloth_collide
 cloth_collision_layer0
 cloth_collision_layer1
 cloth_collision_layer2
 cloth_collision_layer3
-cntrl
 co_await
 collision_group
 collision_prop
-color
 color32
 colorWeight
-commit mask overflow: idx=%zu count=%zu start=%zx end=%zx p=0x%p size=%zu fullsize=%zu\n
 commits
 committed
 composite
 consoleonly
-const
 const_cast
 constrainedEventID
 construction virtual table for derived
@@ -16222,77 +9799,20 @@ coroutine.cpp
 coroutine.m_pStackHigh <= coroutinePrev.m_pStackHigh
 corrupted entry
 corrupted thread-free list\n
-cosf
-cosh
-coshf
-could not allocate contiguous huge OS page %zu at %p\n
 covariant return thunk to
 covariant virtual thunk to
-cpsr
 cpu MHz
-crash
 create_particle
 ctime_r
-curl --connect-timeout 5 --no-progress-meter --max-time %u -s -o "%s" %s
 current
-curve
-cv*Ii
-cv8H
-cv9H
-cvJH
 cvNff.
-cvTH
-cvZH
-cv[I
-cvaH
 cvar.cpp
 cvarlist
-cvarlist:  [log logfile] [ partial ]\n
-cvjL
-cvkH
-cvoH
-cvrH
-cvvH
-cvwH
-cv|H
-cw&H
-d"\bD
-d"\bD)
-d"\bM
-d$ A
-d$(H
-d$(I
-d$0E
-d$0H9
-d$8H
-d$8L
-d$8M
-d$HH
-d$HM
-d$\bH
-d$\bI9
-d$\bL
-d$\bM
-d$hA
-d$xM
-d4[I\e
-d=%u\n
-dH9\f%
 dI4m)KZ
-dIDo
-dQy/
-d\a+p\e
-d\f@H
-d\fV\n
-d\f\a\b
-d\vg6
 damage
 darwin
 darwin/
-de2?/
-deZ[
 debris
-debug level : %d\n
 debug_abbrev
 debug_aranges
 debug_frame
@@ -16313,11 +9833,7 @@ decltype(nullptr)
 decommit_extend_delay
 default
 default %s
-delay
 delete
-delete[]
-delta
-demo
 deprecated_page_reset
 deprecated_segment_cache
 deprecated_segment_reset
@@ -16330,20 +9846,17 @@ dictBufferCapacity must be at least %u\n
 diff buff needs increase
 diff buffer overrun
 differences
-digit
 dioxXu
 directory
 disabled
 disallow_arena_alloc
 disallow_os_alloc
 diuoxXfFeEgGaAcsp?
-dixXu
 dl_iterate_phdr
 dladdr1
 dlclose
 dlerror
 dlopen
-dlsym
 dmg.bullets
 dmg.club
 dmg.explosive
@@ -16353,49 +9866,20 @@ domain_value
 done\n
 donotecho
 double
-dr^x
-ds\fw
-dt H
-dt&H
-dt&I
-dt9I
-dtBH
-dtMH
-dtaI
-dtiI
-dtsI
-dtzI
-dt{I
-dt}I
-dup2
-dupe
 duration
-dw\rH
-dxXu
 dynamic_cast
 dynamic_interaction
 dynstr
 dynsym
 dzpKp\nZ
-e SH
-e)\v3"
 e8KPlY
 eCombat
-eD\tK
 eDamageOrDeath
 eDeath
 eGeneral
-eHE1
-eVu#
-eVzp
-e\b;\vA
-e\bA+M0Ai
-e\f\a\b
 eager_commit
 eager_commit_delay
 eager_region_commit
-ee\ef
-eff.
 eh_frame
 ehandle
 elapsed
@@ -16410,12 +9894,10 @@ entityName
 entityType
 entity_name
 environ
-environment option "mimalloc_%s" is deprecated -- use "mimalloc_%s" instead.\n
 environment option mimalloc_%s has an invalid value.\n
 epoll_create1
 epoll_ctl
 epoll_wait
-error
 essential
 eventID
 event_class
@@ -16429,10 +9911,7 @@ execlp
 execute_per_tick
 execvpe
 exitprocess_%d
-exp2
-exp2f
 expand 32-byte k
-expf
 explosion_behavior
 explosion_buildup
 explosion_delay
@@ -16440,91 +9919,20 @@ explosion_type
 explosive_damage
 explosive_radius
 expression_value
-extractbuildid -multi %u -getsrcmapopt - "%s"
-extractbuildid -multi %u -setdbg "%s" "%s"
-extractbuildid -multi %u -setsrcmap "%s" "%s"
-f)K H
-f-=v
-f9$"
-f99t
-f9C\n
-f9K\n
-f9T3
-f9\bu
-f9\bu\fH
-f9\bu\nI
-f9\bu\vH
-f9\nu
-f9t\v
-f;2H
-f;7t2
-f;C\fsb
-f;Cxr
-f;Cxs$f
-f;Kx
 f;Kxs0H
-f;\bt
-f;\bu
-f;\ntzfD
-f>SH
-fA)~ I
-fA9E
-fA9L$
-fA9\e
-fA9x
-fA9|
-fA;E
-fA;L$
-fA;T$
 fD9\au
-fD9\bu\tH
-fD9\e
-fD9`
-fD9a
-fD;'
-fD;0
-fD;`
-fD;`0
-fD;`2
-fD;e
-fD;g
-fD;k
-fD;p
-fD;q
-fE9'L
-fE9f
-fE;&L
 fE;uxA
-fP~V
-f\bE1
-f\bH9
-f\f\a\b
-face
 faceMergeAngle
-failed to bind huge (1GiB) pages to numa node %d (error: %d (0x%x))\n
-failed to dlopen "%s" error=%s\n
-failed to dlopen %s error=%s\n
-failed to reserve %zu GiB huge pages\n
-failed to reserve %zu KiB memory\n
-false
 fchmod
 fclose
-fcntl(%d) for %s failed\n
 fcntl64
 fdatasync
 fdopen
-feof
 ferror
-fff.
 fflush
-fgetc
-fgets
-file
 fileio.cpp
 fileno
-find
 findflags
-finding patterns ... \n
 fixedlength
 flDurationSec
 flMaxDistance
@@ -16532,63 +9940,25 @@ flMinDistance
 flSearchRadius
 flStopRadius
 flYawTolerance
-flags
-float
-float( %f )
 float32
 float64
 fopen64
 for forH
-force
 forced
 forced dump\n
-fork
 format
 format specifier requires numeric argument
-found %3u matches of length >= %i at pos %7u
-fp>x
 fprintf
-fputc
-fputs
-fqUn
-frame
 frame_end
-fread
-free
 freopen64
-frexp
 frexpf
 friction
-fseek
 fseeko64
-ftell
 ftello64
 ftruncate64
-fu`z
 fullbody
 fwrite
-f{C}M
-f{l]
-f|TGm
-g E9
-g fA
 g&yR?V
-g)/l
-g,AiD
-g8SH
-g@SH
-g@SM
-gBfE
-gC\bru&o
-gHSH
-gXH9
-g\bH)
-g\bL9
-g\bSH
-g\b[L
-g\bfH
-g\fSH
-g\f\a\b
 g_BitBuf_BitWriteMasks
 g_BitBuf_ExtraMasks
 g_BitStringEndMasks
@@ -16606,15 +9976,10 @@ g_pFiberJobPool
 g_pMemAlloc
 g_pScheduledFunctions
 g_pThreadPool
-g`SH
-game
-game/
 game/bin
 game/bin/linuxsteamrt64
-game\\..\\autoargs
 game_class
 game_keys
-gcc.gnu.H
 generic
 generic_collect
 getcwd
@@ -16627,27 +9992,19 @@ getloadavg
 getpid
 getpriority
 getpwuid
-getrlimit failed, %d\n
-getrlimit reports a soft max of %s FDs, hard max of %s\n
 getrlimit64
 getrusage
 getsockname
 gettimeofday
 getuid
 gfFeEaAG
-gfff
-gfffH
 gfffffffH
 gfffffffL
-gg~\e|
 gh spaceH
 glibcxx.eh_pool
 global constructors keyed to
 global destructors keyed to
-glow
 gmtime_r
-gqr<
-graph
 gravity
 guard after
 guard before
@@ -16660,48 +10017,11 @@ guarded_min
 guarded_precise
 guarded_sample_rate
 guarded_sample_seed
-gvTH
-gvoA
-g{:P
-g~A>
-h<\b~hH
-h>~9
-hAATL
-hC[J
 hEntity
 hEntityNPC
 hEntityTarget
-hHcE
-hPU3
 hTarget
-h[A\\A]A^A_]
-h\bH)
-h\bI9
-h\bM9
-h\bfE
 h\bucA
-h\f H
-h\f"H
-h\f$H
-h\f&H
-h\f(H
-h\f*H
-h\f,H
-h\f.H
-h\f0H
-h\f2H
-h\f4H
-h\f6H
-h\f8H
-h\f:H
-h\f<H
-h\f>H
-h\f\a\b
-h\f\bH
-h\f\fH
-h\f\nH
-haA9
-half
 handindex
 hardware
 header crc mismatch
@@ -16709,51 +10029,27 @@ headtype
 health
 health_override
 heap stats
-help
 help text
-help:  no cvar or command named %s\n
 hidden alias for
 hljztL
 holdevent
-https://H
-huge OS page allocation timed out (after allocating %zu page(s))\n
 hurt_me
 hurt_them
-hypot
 hypotf
-i$Xj
-i&Ma.
-i8P/\f_
-i91k
-i=2\f
-iD\a\b
-iDq_
-iPLq
 i\bATSH
-i\bM9
-i\f\a\b
-i]Wb
-iconv
 iconv_close
 iconv_open
-ieg!
 ignored_assertions.txt
 ih0sUr
 ikdata
 iklockleftarm
 iklockrightarm
-ikrig
 incorrect data check
 incorrect header check
 incorrect length check
 incremental_shapes
 inherit_owner_joints
-init
 initializer for module
-int16
-int32
-int64
-int8
 int:transient:1
 internal error: failed to visit all abandoned segments due to failure to acquire the OS visitor lock
 internal error: failed to visit all abandoned segments due to failure to acquire the visitor lock
@@ -16761,12 +10057,10 @@ internal error: lock cannot be acquired\n
 invalid
 invalid bit length repeat
 invalid block type
-invalid code -- missing end-of-block
 invalid code lengths set
 invalid distance code
 invalid distance too far back
 invalid distances set
-invalid fill character '{'
 invalid format specifier
 invalid format specifier for char
 invalid format string
@@ -16776,9 +10070,6 @@ invalid precision
 invalid stored block lengths
 invalid window size
 invert_orientation
-ioctl
-ios*
-iqy7
 is_debris
 is_ragdoll
 isalnum
@@ -16794,123 +10085,23 @@ iswlower
 iswpunct
 iswspace
 iswupper
-it1L
-it9L
-itAL
-itIL
-itsL
-ityL
-itzL
-iu+-
-izc}
-i{.x
-j2c0
-j@fD
-jF\\i
-jIcL$\bHc
-j\a\f\a\b
-j\ajU
 j\bATS
-j\bI9
-j\bL)
-j\bM9
-j\f\a\b
-j\n\r^
 java Class for
 java resource
-jnhB
 jointWeightWeight
-jwK\v\n
-k(fE9
-k=%u\n
-k@_a
 kIcE\b1
 kIcM\bHc
-kM`~
-kN*s;
-kXE1
-kXu"
-kX~H1
-k\bfI
-k\fE9
-k\f\a\b
-k\ft(H
-k\ft)H
 k\ftOH
-k\rD8
 keyvalues3_kv1textwriter.cpp
 keyvaluessystem.cpp
-khE1
-kill
-knv\e
-kpD9
-ktE\t
 kv3format_manager.cpp
-kw\eH
-l bug reH
-l!;b\tF
-l$ A
-l$ H
-l$ I
-l$ M
-l$0t
-l$4H
-l$8E
-l$8H
-l$8I
-l$8L
-l$HE1
-l$HI
-l$HM
-l$PI
-l$PM
-l$\bA
-l$\bD
-l$\bH
-l$\bI
-l$\bI9
-l$\bL
-l$\bM
-l$\bfH
-l$\fA
-l$\fE
-l$`A
-l$`L
-l$|I
-l%PA
-l,\fH)
-l.\fdw
-l0\bH
-l6qnk
-l<}2l
-lDa>
-lJD"h
-lL`^N
-lQ?2
-l\a\bH
-l\ah)
-l\ahD)
-l\b I
-l\b\bH
-l\bhA)
-l\f\a\b
-l\nhD)
-l\t\bH
-l\v(
-labM
 large_os_pages
-lcQe
-ld-linux-x86-64.so.2
-ldexp
 ldexpf
 lease suH
 length
 lerp_curve
-lf<:
 libSDL3.so.0
-libc.so.6
 libdl.so.2
-libm.so.6
 libpthread.so.0
 libstdcxx
 libtier0.so
@@ -16918,10 +10109,8 @@ libtier0.so.dbg
 libuuid.so.1
 limit_os_alloc
 linked
-linux
 linux*
 linux/
-list %u best segments \n
 literal
 live process inspection, process
 locale::_Impl::_M_replace_facet
@@ -16937,44 +10126,28 @@ lockBorder
 lockRotationAlpha
 lock_facing
 lockbodyfacing
-log10
 log10f
-log2
-log2f
 log_color
 log_dumpchannels
 log_flags
 log_level
-log_level is deprecated, please use log_verbosity. Severity '%s' translates to verbosity '%s'.\n
 log_verbosity
-logf
 logging.cpp
-long
 long double
 long long
 longjmp
 lookat
-loop
 loop_break_on_damage
 loop_break_on_flashlight
 loop_in_action
 loopback
 looping
-lower
-lp\n)\a
 lrucache_flush
 lrucache_reset_stats
 lrucache_set_size
 lrucache_stats
 lseek64
-lva=
-m/w0
 m?H5p?
-mS<S
-mSx@
-mXr4
-m\f\a\b
-m\t=\e
 m_AllowedSurfaceProperties
 m_Arg0
 m_Arg0Name
@@ -17020,7 +10193,6 @@ m_Emitters
 m_EndEffectorBone
 m_EndEffectorRotationFixUpMode
 m_EndEffectorTargetBone
-m_Ent
 m_EntityNPC
 m_EntityTarget
 m_EntityType
@@ -17033,7 +10205,6 @@ m_ExpectedArg1Type
 m_ExpectedArgs
 m_ExpectedRuntimeType
 m_Expression
-m_Flags compared different! %d != %d.
 m_FloatComponentX
 m_FloatComponentY
 m_FloatComponentZ
@@ -17201,7 +10372,6 @@ m_components
 m_conditionList
 m_conditions
 m_constValue
-m_cubSavedStack < ( 64 * 1024 )
 m_data
 m_eBehavior
 m_eMode
@@ -17353,7 +10523,6 @@ m_hNormalTexture
 m_hProjectedMaterial
 m_hSnapshot
 m_hTexture
-m_id
 m_inputConnection
 m_inputConnection1
 m_inputConnection2
@@ -17365,14 +10534,12 @@ m_modelInput
 m_modelName
 m_motions
 m_motors
-m_nActive == 0
 m_nAlphaMax
 m_nAlphaMin
 m_nAnimationType
 m_nAttributeToWrite
 m_nBehaviorVersion
 m_nBiasType
-m_nCP
 m_nCPField
 m_nCPInput
 m_nCPin
@@ -17412,7 +10579,6 @@ m_nMinParticlesToEmit
 m_nModelCP
 m_nNoHitResult
 m_nNoiseType
-m_nOffset compared different! %d != %d.
 m_nOpEndCapState
 m_nOpScaleCP
 m_nOpStrengthScaleSeed
@@ -17444,7 +10610,6 @@ m_nSortMethod
 m_nStartCP
 m_nSubModelFieldType
 m_nSwitchValue
-m_nTab compared different! %d != %d.
 m_nTextureChannels
 m_nTextureType
 m_nTraceDirectionAttribute
@@ -17486,7 +10651,6 @@ m_speedFunction
 m_spline
 m_subtractChildID
 m_subtractInputConnection
-m_tag
 m_tagBehaviors
 m_tagID
 m_tags
@@ -17526,7 +10690,6 @@ m_vecTailColorScale
 m_vecTexturesInput
 m_vecTraceDir
 m_velocityInput
-macos
 madvise
 mallinfo
 mallinfo.arena: %s\n
@@ -17546,8 +10709,6 @@ material
 materials/particle/base_projected.vmat
 materials/particle/base_sprite.vtex
 matrix3x4
-max %s
-max. %s
 maxHullVertices
 maxMeshVertices
 maxVerticesPerHull
@@ -17558,7 +10719,6 @@ max_warnings
 mbrtowc
 mbsnrtowcs
 mbsrtowcs
-mem tracking: %s\n
 mem_helpers.cpp
 memcheck
 memchr
@@ -17573,27 +10733,18 @@ memstack.cpp
 memstats_%d.txt
 memstd.cpp
 menubar_item
-mesh
 mesh_name
 mesh_references
 meshes
 message
-mg\n\vs
 mimalloc:
 mimalloc: error:
 mimalloc: warning:
 mimalloc_
-min %s
-min. %s
 min_angle
-minimum ratio : %u \n
-missing '}' in format string
-mkdir
 mkostemps64
 mktime
 mmap64
-mmaps
-model
 model_name
 modeldoc0
 modeldoc1
@@ -17637,71 +10788,31 @@ modeldoc6
 modeldoc7
 modeldoc8
 modeldoc9
-modf
-modff
-mold 2.36.0 (compatible with GNU ld)
 moredetailed
 moveto
 mprotect
 mt19937
 multiplayer_break
 munmap
-m{?B
-m}I`
-n M9
-n6%!
-n<D1
-n@@f
-n@Hf
-n@hA
-nBPf
-nBits != 32
-nD$<f
-nHPf
-nHdf
 nInterruptability
-nMax
-nMin
 nOffset < m_nAllocationSize
 nOverrideCPField
-nPLf
 nSwitchValue
 nTries < 10000000
-nXAO
-n\aP}
-n\anw
-n\bD9
 n\bIcN
-n\bfA
-n\bt\tL
-n\f"pA3Q
-n\f"pA3Q2
-n\fJo
-n\f\a\b
-n\f\fH
-n\tW=
-n\v!\r
-n\vD9
-n_<R
-n_?{\fi
-name
 nanosleep
 nav_attribute_avoid
 nav_data
-new[]
 next_element_id
 nexttoken
-nh\ff
 no guard
 no results\n
 no symbols
 no7=?BE
 noexcept
 noicon
-nolog
 non-transaction clone for
 non-virtual thunk to
-none
 norecord
 normal
 normalWeight
@@ -17712,237 +10823,57 @@ not found
 not in a module
 notify
 notify-send
-nown
-np\bf
-nsion (PH
-nu,H
-null
-numa node %i: reserved %zu GiB huge pages (of the %zu GiB requested)\n
 numa nodes
 number is too big
 numsegments
-o t\rA
-o$D3K\bE
-o%!d
-o%!v
-o%+c
-o%1g
-o%9h
-o%Ai
-o%Au
-o%Ud
-o%\tc
 o(ATSH
-o(I9
-o(\a,nG
-o-!h
-o-)i
-o-)u
-o-=d
-o-Zs
-o-\td
-o-\tv
-o-qd
-o-qg
-o-yh
-o0fH
-o21o
-o2fD
-o5Og
-o5Yh
-o5\a-
-o5\tf
-o5\ti
-o5ai
-o5id
-o5ij
-o5lf
-o9fE
-o<>A
-o=)d
-o=/v
-o=7c
-o=9g
-o=Ah
-o=Ii
-o=Ou
-o=Vs
-o=]d
-o@ f
-o@\bH
-o@\bI
 o@\nfD
-oA\bI
-oB0D
-oB@fD
-oBPf
-oB\bA
-oB\bH
-oB\bI
-oCHH
-oC\bH
-oCxf
-oD$$f
-oD$\bH
-oD$`
-oD)q
-oE f
-oF D
 oG\bHc
-oH\bA
-oHt@o
-oI fE
-oJ f
-oJ0f
-oJ0fA
-oJ80]
-oJ@f
-oJPf
-oJ`f
-oJpf
-oK8f
-oL$P
 oLD\bf
 oLG\bf
-oM\b9
-oN8H
-oPATI
-oR f
-oSHf
-oT$@I
-oV\bI
-oW [f
-oW f
-oW fD
-oW@H
-oX f
-oX fA
-oZ`fA
-oZpfD
-o[Xf
-o[xH
 o\bATA
 o\bATI
 o\bATL
 o\bATSH
-o\bE1
 o\bIcE
-o\bfA
-o\f$H
-o\f7A
-o\f\aA
-o\f\a\b
-o\f\af
-o\f\vf
-o\rD8
-o\ru}
-o\v\a\n'
-o`0f
-o`ATI
-o`D9
-ob@fD
-obPfD
-ob`f
 obj_count
 obj_size
-oc8H
-ochf
-oe5)f
-off.
-oh0f
-oj0fA
-oj@f
-ojpfD
-ok8f
-ok\n
-om2`\tr
-once
-open
 open primary file
-open(%s) failed\n
 open64
 opendir
 operation
 operator
 operator""
-option '%s': %ld %s\n
-orPfD
 org/bugsH
 origin_max_delta
 origin_relative
-osHf
 os_tag
-osx*
-ou2H
 out of order
-oz0fA
-oz`fA
-ozpfA
-o{Xf
-o~,|zE
-o~0f
-p $A
-p D9
-p Hc
-p fD
-p&S@
-p,xj
-p0t!L
-p4 add -t binary "%s"
-p4 edit -t binary "%s"
-p8E1
-p< tgv]<0uIL
-p< tgv]<0ulH
-p< thv^<0uOI
-p< tpvV<0uJI
-p< u
-p<,D6
 pAbilityName
 pClass
 pFrameBottom > m_pStackHigh || pFrameTop < m_pStackLow
-pLI9
 pMessage
-pName
 pParam
 pSearchFromEntity
 pStartEntity
 pSwitchValue
 pTraceString
-p[A\\A]A^A_]
-p\bD9
-p\bH)
-p\bHc
-p\bI9
-p\bM9
-p\bfA
-p\fH9
 p\fZ:7V
-p\f\a\b
-p\tL)
-page with tag %u cannot be reclaimed by a heap with the same tag (using heap tag %u instead)\n
-pages
 panorama
-param
 param2
 parent_bone
 particle
 particles/
 pass\n
-pb>pAf>
 pclose
-peak
 peak_frame
 peak_scale
 per_user
 persistent
-pht`A
 physgun_interactions
 physical id
 physics_joint_modification_mode
 physicsmode
-pipe
-pitch
-pl@Aw
 place high
 place low
 placement_attach
@@ -17956,17 +10887,11 @@ pnFuT8^a
 point0
 point1
 pointer
-poll
-popen
-port at H
 pose_control
 pose_control_type
 posix_fadvise64
-powf
-prctl
 pread64
 preferred_carryangles
-print
 printf
 process
 process done: 0x%zx\n
@@ -17975,7 +10900,6 @@ process_vm_readv
 processor
 prop_data
 prop_physics
-prot
 pthread_attr_destroy
 pthread_attr_init
 pthread_attr_setstacksize
@@ -18006,118 +10930,34 @@ pthread_self
 pthread_setaffinity_np
 pthread_setname_np
 pthread_setspecific
-ptr( 0x%p )
 ptrace
-punct
 purge_decommits
 purge_delay
 purge_extend_delay
 purged
 purges
-puts
 pwrite64
-pxb^
-p|H8
-q M9
-q(Lc
-q4M.\a1
-qB,2V
-qIcL$(Ic
-qJK8
-qPH;B\bt
-q\bH)
-q\bHc
-q\b\f\a\b
-q\fA1
-q\fH9
-q\fL9
-q\f\a\b
-q\f\a\b$
-q\nXA
 qangle
 qemError
-qhH9
-qsort
 qsort_r
 quantizedfloatencoderregistry.cpp
 quaternion
 queue force advance\n
 queue max wait\n
-r H)
-r L9
-r Lc
-r!L9
-r"H9
-r"L9
-r#H9
 r#HcJ\bH
-r#I9
-r#L9
-r#UL
-r%H9
-r%I9
-r%kf
-r&L\t
-r(L9Z(u
-r)H;5
-r)L9
-r*A9
-r*H9
-r+A9
-r+H)
-r-H;5vG"
-r-M9
-r.L)
-r/H9
-r/L9
-r0H9
-r6H9
-r6L)
-r6ff.
-r8H)
-r;M9
-r=D9
-r>H;
-rDff.
-rFL)
-rGI9
-rNH)
-rNt?
-rQL9
-rRUH
-rUH9
-rVM9
-rZD;f
-r\bE9
-r\bHc
-r\fH9
-r\fL9
-r\f\a\b
-r\n,}v
-r\rH;5cM"
-r\t H
-r\tA;
-r\tD9
-r\tH9
-r\tL9
-r\vH;
 radius
 radius0
 radius1
 ragdoll
 ragdoll_applies_bind_pose_root
-raise
 random_device could not be read
 random_device: getentropy failed
 random_device: rdrand failed
 random_device: rdseed failed
 random_device::random_device(const std::string&): device not available
 random_device::random_device(const std::string&): unsupported token
-rdff.
 rdrand
-rdrnd
 rdseed
-read
 readdir64
 readlink
 realloc
@@ -18140,8 +10980,6 @@ reserve_huge_os_pages
 reserve_huge_os_pages_at
 reserve_os_memory
 reserved
-reserved %zu KiB memory%s\n
-reset
 reset_decommits
 reset_delay
 resets
@@ -18153,138 +10991,19 @@ rethrow
 retry_on_oom
 retval
 rewind
-rg/bugs/H
-rg3o
-rgL;-
-riH)
-rjI9
-rkfH
-rmdir
-roH9
-roH;
 rootNode
 rotation
 rotation_vector
 rotation_xyz
-round
 roundf
-rpD9
-rpH;C r\nH
-ruhE
-rvH)
-rwL9
-r{H9
-r{I)
-r}L9
-s A)
 s A3s\fA3s4A3s,
-s E8
-s Ic
-s!D8@
-s!H)
 s%Hc2A
-s%ff.
-s&L9
-s'ff.
-s(A3s
-s(D8
-s(I9
-s*I9
-s+I9
-s,H9
-s,ff.
-s-H9
-s/ff.
-s0H9
-s0I9
-s0M9
-s0f.
-s1H9
 s1Y3JrMH]
-s2f.
-s3E9
-s3M9
-s3o\\
-s4D:o\au.D:g\bu(D:w\tu"D8_\nu
-s4H9
-s4L9u
-s4M9
-s6M9
-s7D8@
-s7H9
-s7H9]
-s7M9
-s7ff.
 s8A3s$A3s\fA3s
-s8H9
-s9D9
-s:H)
-s;H9
-s;L9
-s;M9
-s<I9
-s<M9
-s=AJ
-s=M9
-s>D9
-s>E1
-s>L9
-s@E1
-s@fA
-s@fD
-sA<\r
-sAH9
-sCL9
-sDHcE
 sDHcS\bL
-sEHc
-sHE1
-sHH9
-sHHi
-sHfA
-sK9gh
-sKfA
-sMD8@
-sP<\f
-sPE1
-sPH9
-sQH9
-sSff.
-sTHcp
-sVwES
-sZL;%
-s[D;#E
-s\aH9
-s\bE)
-s\bE1
-s\bE9
-s\bH)
-s\bHc
-s\bHi
-s\bI9
-s\bL9
 s\bLc#Ic
-s\bfA
-s\bfE
-s\bt D
-s\bt/H
 s\btGD
-s\eHc8D;
-s\f\a\b
 s\nD9m
-s\nE;e
-s\rD8
-s\tA9
-s\tH9
-s\tI9
-s\tI;
-s\tI;7
-s\tL9
-s^M9
-sample set too large : reduced to %u MB ...\n
-sbE1
-scD8@
-scH9
 scandir64
 sched_setaffinity
 sched_yield
@@ -18293,12 +11012,10 @@ script
 scrubber
 searches
 secondary
-secure level: %d\n
 secure_getenv
 segments
 semctl
 semget
-semop
 sendfile64
 sequence_name
 server_can_execute
@@ -18307,9 +11024,7 @@ setenv
 setlocale
 setpriority
 setvbuf
-sff.
 shapeType
-short
 show_errors
 show_stats
 sigaction
@@ -18321,44 +11036,29 @@ simplification_params
 simplify_params
 sincos
 sincosf
-sinf
 singleplayer
-sinh
-sinhf
-size
 sizeof
-sizeof...
-sk;N
-skD!
 smallComponentSize
 small_element_threshold
 smartprop0
 smartprop1
 smartprop2
 snprintf
-sorting %u files of total size %u MB ...\n
 soundevent
 source line
 source_filename
 sourcemappings
-spHc
-space
 spawn_entity
 spawn_motion_disabled
-speed
 sprintf
-srv*
 srv*http:
 srv*https:
-st\vH
 stapsdt
 start_frame
 start_scale
 start_time
 static_cast
-statistics ... \n
 statvfs64
-std::
 std::allocator
 std::bad_alloc
 std::bad_array_new_length
@@ -18372,7 +11072,6 @@ std::basic_istream<char, std::char_traits<char> >
 std::basic_ostream< char, std::char_traits< char > >
 std::basic_ostream<char, std::char_traits<char> >
 std::basic_string
-std::basic_string< char, std::char_traits< char >, std::allocator< char > >
 std::basic_string<char, std::char_traits<char>, std::allocator<char> >
 std::bfloat16_t
 std::exception
@@ -18382,7 +11081,6 @@ std::nullptr_t
 std::ostream
 std::string
 stderr
-stdin
 stdout
 steam://openurl/
 steam://openurl_external/
@@ -18420,18 +11118,10 @@ strtold_l
 strtoll
 strtoul
 strtoull
-su*H
-su,H
-su`H
 subclass
 suppress
 suppressed_shapes
 surface_prop
-sw1\a
-swE1
-swHc
-sxuVL
-syD8@
 symbol
 symlink
 symtab
@@ -18439,411 +11129,20 @@ syscall
 sysconf
 sysinfo
 system
-s{D!
-t D9
-t H9
-t Hc
-t L)
-t LcM
-t \bL
-t f.
-t!9P
-t!D9
-t!Hc
-t!M1
-t![L
-t!fA
-t"<\ntW
-t"<\tt
-t"L!
-t"fA
-t#H)
-t#H9
-t#H;
-t#H=
-t#Hc
-t#Hk
-t#UH
-t#fA
-t#tvI
-t$ 1
-t$ 9
-t$ A
-t$ D
-t$ E1
-t$ H
-t$ I
-t$ Ic
-t$ L
-t$$H
-t$(E
-t$(H
-t$(I
-t$(IcD$ A9
-t$(f
-t$0A\\H
-t$0H
-t$0I
-t$4H
-t$8M
-t$8fA
-t$8fE
-t$<D9
-t$<E
-t$<\nu
-t$?H
-t$@H
-t$@I
-t$@fA
-t$@u
-t$DHc
-t$HA
-t$HH
-t$HL
-t$Hc
-t$HfA
-t$I9
-t$LH
-t$LL
-t$Lf
-t$PA
-t$PI9
-t$PL
-t$Pf
-t$X%
-t$XH9
-t$XIc
-t$\b1
-t$\bA
-t$\bA9
-t$\bA\\H
-t$\bB
-t$\bD
-t$\bD9
-t$\bE
-t$\bE9
-t$\bH
-t$\bHc
-t$\bI
-t$\bIc
-t$\bJ
-t$\bL
-t$\bL9
-t$\bM
-t$\bfA
-t$\bt5Lc#
-t$\bu
-t$\fD
-t$\fE
-t$\fH
-t$\fM
-t$`H
-t$`I
-t$fA
-t$xD
-t$xH
-t%H)
-t%ff.
-t&H9
-t&M)
-t&f.
-t&ff.
-t'94
-t';4
-t'A94
-t'A;4
-t'D;#u
-t'E1
-t'L;cx
-t'Mk
-t'UH
-t)D9
-t)L+
-t)ff.
-t*9E
-t*Hc
-t*M9
-t+A8
-t+Hk
-t+UH
-t+fA
-t+ff.
-t,ff.
-t-E1
-t-Hc
-t-L9
-t-Lc
-t.D9
-t.H9
-t.UH
-t.ff.
-t/94
-t/D;*u
-t/H9
-t/H;r r)H
-t/\bL
-t/ff.
-t0<\r
-t0Hi
-t0I9
-t0UH
-t0\bH
-t0fH
-t0ff.
-t1D9
-t1E1
-t1\bH
-t1f.
-t1ff.
-t3;4
-t3D9
-t3H9=$
-t4L9
-t4[L
-t4ff.
-t59P
-t5H;
-t5Hc
-t5Ic
-t5M9
-t5\bH
-t63D)
-t6E1
-t6Hc
-t6ff.
-t6iP
-t7<.u
-t7<0u\n
-t7A94
-t7A;4
-t7H)
 t7f9\bH
-t7ff.
-t8E1
-t8H;
-t8Hc
-t8L1
-t8Lc
-t8M1
-t8fE
-t9E1
-t9E9
-t9H)
-t9UH
-t9\bI
-t:H9
-t:I9
-t:fA
-t:ff.
-t;H;
-t;Lc
-t;UH
-t;\bH
-t;ff.
-t<E1
-t<L+
-t<UH
-t<ff.
-t=Ic
-t=Ic\f$A
-t>,YA1L
-t>E1
-t>L9
-t>M1
-t>UH
-t>ff.
-t?I9
 t?f90H
-tAE1
-tAH)
-tAH9
-tA~EH
-tA~OH
-tBE1
-tBL9
-tBL9+
-tBUH
-tBf.
-tByN
-tCL9
-tCM9
-tCUH
-tD19
-tDE1
-tDHc
-tDff.
-tE[D
-tEff.
-tFA9
-tFH9
-tFUH
-tF_i
-tG;4
-tG</u
-tGH9
-tGHc
-tGL9
-tH</
-tH<ttD<Lt@<lt<
-tHD9
-tHHcU
-tHI9
-tHL1
-tHfI
-tI<\at%<
-tID9
-tIIc
-tIM1
-tI[D
-tJ<[
-tJUH
-tKM9
-tKUH
-tLHc
-tLL1
-tMA9
-tMHc
 tMIcV\bI
-tNA9
-tND9
-tNE1
-tNHc
-tNUL
-tO9P
-tOE1
-tOHc
-tOL)
-tPE1
-tPH9
-tPHcE
 tPMc4$A
-tPw.
-tQI9
-tQL1
-tQfA
-tRHcU
-tRLc
-tRUH
-tS<-
-tSH+
-tSH9
-tSI9
-tSIc
-tSU1
-tSUH
-tSff.
-tT<?I
-tTH9
-tTL1
-tTM1
-tUL9
-tVMc
-tW<\tu\b
-tWA9
-tWA;P
 tXHcW\b
-tXI1
-tYE9
-tYH9
-tYHcC
-tZE1
-tZH;
-t[E1
-t[E;e
-t[L9
-t[Lc
-t[UH
-t[UH+
-t\\E9!L
-t\\I9
-t\\L1
-t\\M1
-t\a0f
 t\aC8t
-t\aI;
-t\aL9
-t\aL9*r
-t\aM+
-t\a\bf
-t\afA
-t\b%I
-t\b<E
-t\bE1
-t\b\b1
-t\b\bH
-t\b\nL9
-t\bfA
-t\eH+
-t\eU1
-t\ef.
-t\fA9\aH
-t\fE1
-t\fH
-t\fHc
-t\fHk
-t\fY\a\f
-t\f\a\b
-t\nH9
-t\nHc
-t\nIc
-t\nL;P
-t\r9P
 t\rD9kP
-t\rH;
-t\rL)
-t\rM)
 t\t90u
-t\tA9
-t\tD9
-t\tE)
-t\tH9
-t\tL9
-t\tfA
-t\thD
-t\v<n
-t\vC:|
-t\vHc
 t\vL9shs
-t\vM9
-t\vUH
-t\vfA
-t\vfD
-t]L)
-t]fA
-t^I9
-t^L9e
-t^UH
-t_94
-t`H1
-t`HcE
-t`HcG\f;
-t`I1
-t`L9
-t`M1
-t`ff.
-t`~N
-table
 tableLog requires too much memory : unsupported
-tafA
 tail_frame
-tanf
-tanh
-tanhf
 targetError
 targetTrianglePercent
 target_segments_per_thread
-ta~gH
-tb97
-tb[L
-tcH1
-tcL9
-tcUH
-tdA;\eu
-tdI9
-tdLc
-tdff.
-teH9
-teI9
 template
 template parameter object for
 terminate called after throwing an instance of '
@@ -18851,259 +11150,49 @@ terminate called recursively\n
 terminate called without an active exception\n
 test_angles_relative
 testscript_debug
-text
 texturescale
-tfff.
-tg;2
-tg;4
-tgL)
-tgf.
-thD9
-the arena size is too small (memory at %p with size %zu)\n
 thin_element_threshold
-this
 threads
 threadtools.cpp
-throw
-ti9P
-tiI9
-tiIc
-tiIcE
-tier0
 tier0_strtools.cpp
-tif.
-time
 timegm
 timestamped.log
-tj19
-tjHc
-tjIc
-tkUH
-tkf.
-tl<Eth<.
-tl@8
-tlE1
 tmD9w\bu
-tmIc
-tnHc
-tnHcE
-tnHi
-toD;*u
-toH9
-toL9
 tolower
 too many length or distance symbols
 tools_stall_monitor_break_on_unknown_cause
-total
 total#
 touched
 toupper
-tow%A
 towlower
 towupper
-tpM1
-tpM9
-tpfA
-tqIcE
-tqM9
-tqUH
-trH9
-trHc
 transaction clone for
 transaction_safe
 transform
-true
 trying split debug file
-trying to free an already freed arena block: %p, size %zu\n
-trying to free from an invalid arena block: %p, size %zu, memid: 0x%zx\n
-trying to free from an invalid arena: %p, size %zu, memid: 0x%zx\n
-ts<+u\r
-tsHc
-tsHcC
 tsc\ntV
-tt</tp<\\u
-tt@8
 ttHc\r
-ttUH
-tuH9
-tuUH
 turn_rate
-tvIc
-tvM9
-tv\nF
 twD;#u
-twE9
-twHc
-twM1
-txE1
-txfD;
-tyfD
-type
 type info for
 type info name for
 typeinfo fn for
 typeinfo for
 typeinfo name for
 typename
-tzset
-t{Hc
-t{IcT$ ;U
-t{UH
-t|Hc
-t|L9
-t}A9
-t}M1
-t}ff.
-t~Hc
-t~I9
-u A9
-u fA
-u!H9
-u"H9
-u$IcF A;F\b}
-u%H9
-u(H)
-u(H9
-u(I9
-u(IcE A;E\b}
-u(M9
-u(h$
-u)A9
-u)L9M
-u)ff.
-u*H;L
-u*ff.
-u+A)
-u+E9
-u+UH
-u+ff.
-u,D9}
-u.@t
-u.Hc
-u/HcC ;C\b}&
-u/I9
-u/UH
-u/ff.
-u01?
 u0IcE(Ic
-u0M9
 u1HcsTH
-u3E1
-u5ff.
-u64( %lld = 0x%llX )
-u71\b
-u7ff.
-u8E19
-u8Hc
-u8M9
-u9<\nt5
-u9L9
-u9U1
-u:UH
-u:fA
-u;H9
-u=Hc
-u@IcE
-uBLc#
-uDE1
-uEE9
-uHE9
-uHL9
-uHUH
-uIE1
-uJHc
-uJIc
-uJf.
-uKE9
-uKH9
-uKf.
-uLf.
-uNIc
-uNL9
-uOUH
-uO]O<I
-uP< ~L
-uQASA
-uRDZZ
-uSkR
-uTA9
-uUf.
-uVI9
-uYzH
-uZF)
-uZL9
-uZUH
-u[I9
-u\\I9
-u\aHc
-u\aIc
-u\aL)b
-u\aM+
-u\b<0
-u\b<\nu
-u\bA9
-u\bA\\H
-u\bD9<
-u\bE9
-u\bH9
 u\bH9r
-u\bHc
-u\bHk
-u\bL)
-u\bfA
 u\bt_H
-u\bu\vE1
-u\eA8D$\bt>H
-u\eE1
-u\eHc
-u\eff.
-u\f\a\b
-u\f\a\b$
-u\nH9
 u\nHcV@
-u\nI9
-u\nL9}
-u\n[1
-u\rD9
-u\tE9
-u\tE9>
-u\tH9
-u\tI9
 u\tdRk
-u\t}\tu
-u\vD9
-u\vH
-u\vM$
-u_M)
-ubf.
 uc;G@tnMk
-ucL)
 uchar32
-udL#
-uff.
-ugUH
-ugc:
 uhA9u(L
-uint
 uint16
 uint32
 uint64
-uint8
-ujQD
-ulH)
-umL#
-unable to allocate OS memory (error: %d (0x%x), addr: %p, size: 0x%zx bytes, align: 0x%zx, commit: %d, allow large: %d)\n
-unable to allocate aligned OS memory directly, fall back to over-allocation (size: 0x%zx bytes, address: %p, alignment: 0x%zx, commit: %d)\n
-unable to allocate huge (1GiB) page, trying large (2MiB) pages instead (errno: %i)\n
-unable to allocate huge OS page (error: %d (0x%x), address: %p, size: %zx bytes)\n
-unable to allocate memory (%zu bytes)\n
-unable to allocate thread local heap metadata (%zu bytes)\n
-unable to create temp directory under '%s'\n
-unable to create temp file under '%s'\n
-unable to directly request hinted aligned OS memory (error: %d (0x%x), size: 0x%zx bytes, alignment: 0x%zx, hint address: %p)\n
-unable to free OS memory (error: %d (0x%x), size: 0x%zx bytes, address: %p)\n
 unable to use secure randomness\n
-uname
 uname -mrsv
 ungetc
 unholsterweapon
@@ -19113,7 +11202,6 @@ unknown compression method
 unknown format specifier
 unknown header flags set
 unlink
-unmatched '}' in format string
 unrecognized_severity
 unsetenv
 unsigned
@@ -19125,86 +11213,24 @@ unsigned long long
 unsigned short
 unspecified
 unwind_info
-uoM9
-uoUH
-up1\a
-upM)
 update
-upper
-uqA9
-urH9
-ur\bC
 use_additional_offset
 use_numa_nodes
-user
 userinfo
-uses
-using %zd numa regions\n
 usleep
 utlmemoryarena.cpp
 utlvectormemory.cpp
-uu\\T
-uuaH
 uuid_generate
 uuids/
-uvL#
 uvWeight
-uxr>b*L
-uzE9
-u{D9
-u{Lc}
 u}Mc9A
-v fD9
-v"ff.
-v#D9
-v%H9
-v&H9
-v(I9w(
-v,Ii
-v,n%\nDH
-v.sH
-v4~\n
-v6L9
-v6ff.
-v73G
-v7ff.
-v8A9
-v8fA
-v8fE
-v8ff.
-v8~\n
-v<E1
-v>H+
-v@fA
 vARr5U)e
-vBff.
-vC {E
-vH7B
-vHfA
-vHff.
-vNHi
-vPHi
 vPL93H
-vQA8
-vQO+t
-vSA)
 vV<0uJI
-v\a=_
-v\bA9
 v\bAUI
-v\bE9
-v\bH)
-v\bfA
 v\bttH
-v\eD9
-v\f\a\b
-v^ff.
 valgrind
-value
 vanmgrph
-vcd1
-vcd2
-vcd3
 vconsole_fuzzy
 vconsole_set_focus
 vector
@@ -19217,26 +11243,17 @@ vector::_M_realloc_append
 verbose
 version
 vfprintf
-vg`>
-vhH9
 virtual table for
 virtual thunk to
 visit_abandoned
 visualizeEdges
-vk<7
-vkA8
-vkff.
 vmdl;vmdl_prefab
 vmdlkeys0
 vmdlkeys1
 vmdlkeys2
 vmdlkeys3
 vmdlkeys4
-void
 volatile
-vpE1
-vpcf
-vpcf1
 vpcf10
 vpcf11
 vpcf12
@@ -19247,7 +11264,6 @@ vpcf16
 vpcf17
 vpcf18
 vpcf19
-vpcf2
 vpcf20
 vpcf21
 vpcf22
@@ -19258,7 +11274,6 @@ vpcf26
 vpcf27
 vpcf28
 vpcf29
-vpcf3
 vpcf30
 vpcf31
 vpcf32
@@ -19269,7 +11284,6 @@ vpcf36
 vpcf37
 vpcf38
 vpcf39
-vpcf4
 vpcf40
 vpcf41
 vpcf42
@@ -19280,7 +11294,6 @@ vpcf46
 vpcf47
 vpcf48
 vpcf49
-vpcf5
 vpcf50
 vpcf51
 vpcf52
@@ -19291,7 +11304,6 @@ vpcf56
 vpcf57
 vpcf58
 vpcf59
-vpcf6
 vpcf60
 vpcf61
 vpcf62
@@ -19299,10 +11311,6 @@ vpcf63
 vpcf64
 vpcf65
 vpcf66
-vpcf7
-vpcf8
-vpcf9
-vpk:
 vprof.cpp
 vpulse
 vpulse1
@@ -19326,90 +11334,23 @@ vpulse_c1
 vpulse_c2
 vr_carry_type
 vsmart;vsmart_template
-vsnap
 vsnprintf
 vswprintf
 vtable for
-vtest
-vtune
-vuTH
-vw3G
-vxH)
-w ATL
-w D3k
-w H9
-w!hy
-w(19\t
-w(A9
-w(E1
-w(H)
 w+OQvr
-w,A1
-w-ff.
-w03C
-w0E1
-w22n
-w3Xc
-w5ff.
-w8L9
-w=I9
-w>I9
-w@ATI
 w@AUATI
-w@fA
-wC<g
-wFD9
-wOR\\
-wP<X
-wPH=
-wPHi
-wPN5
-wWH9
-wXHi
 wXIcGP9
-wXR\r
-wY<0
-wYHi
-w[<gvPH
-w\aL)
-w\aM)
 w\bATI
 w\bAUL
-w\bD)
-w\bD9
-w\bH)
-w\bH9
-w\bHc
-w\bI9
-w\bIc
-w\bL)
-w\bL9
-w\bfA
-w\bfD
-w\bfH
 w\brHH
-w\br]H
 w\btCI
-w\e<gw
-w\f1\v
-w\f\a\b
 w\ftFL
-w\tH9
-w\tI9
-w\tM9
-w_Hc
-w`A)
-wa=jv\a
-wait
 waitpid
 wakeup job
 warning
 warning : ZSTD_compressBegin_usingCDict failed \n
-warning : could not compress sample size %u \n
 warning : pathological dataset : literals are not compressible : samples are noisy or too regular \n
 wayland
-wc*[
-wcD<e
 wchar_t
 wcrtomb
 wcschr
@@ -19422,12 +11363,8 @@ wcsnrtombs
 wcstod
 wcstoll
 wcstoull
-wctob
 weldPositionTolerance
 weldVertices
-wff.
-what():
-width
 width/precision is not integer
 width/precision is out of range
 windows
@@ -19438,427 +11375,12 @@ wmemcmp
 wmemcpy
 wmemmove
 wmemset
-wo=N
 workSpace buffer is not large enough
 wqBv/?
-write
-wsE1
-wsbdp
-wsj=
-x A9
-x!A9
-x$D9
-x$I9
-x%E;gp}
-x&A9
-x)Hc
-x*Hc
-x+Hc
-x,iT
-x.E;up}(I
-x1ff.
-x2Hc
-x2Lc
-x4Hc
-x5\f)
-x6A9
-x6Lc
-x7Ic
-x7Lc
 x86_64
-x9Lc
-x;Mc
-x?Hc
-x?Lc
-xA&5 H
-xAHc
-xAIc
-xBLc
-xCLc
-xDHc
-xEHc
-xFHc
-xGHc
-xGHcI
-xHHc
-xHLc
-xIHc
-xIHcI
-xKA9V ~EI
-xLA9
-xLLc
-xOHc
-xPLc
-xQff.
-xSLc
-xTHc
-xYiu
-x[A\\A]A^A_]
-x[HcI
-x\\\r0
-x\a@8{\a
-x\b;7
-x\b@8{\b
-x\bE1
-x\bH9
-x\bL9
-x\bMc
-x\btc
 x\btcA
-x\by`"
-x\eA9
-x\fD9
-x\fD;}
-x\fE9
-x\f\a\b
-x\f\a\b$
-x\f\a\b(
-x\ffA
-x\nA;Ep
-x\nD;M
-x\nD;e
-x\nD;}
-x\rE9
-x\t@8{\t
-x]HcI
-x^HcI
-x_Mc
-x`Ic
-x`tm6
 xdigit
-xff.
-xgEV
-xq7V
-xq8sJ
-xsM9
-xtUH
-xu37
-xuRCk
-xwuUH
-x|Lc
-x~Hc
-x~\f5
-y0H9
-y9*O
-y:H9U
-y@I)
-yTu=
-y\bH9
-y\bI9
-y\bIc
-y\fMc
-y\f\a\b
-y\vI9
 yaw_end
 yaw_start
-yl\nv
-yv1p
-y|H|
-z A9
-z A;w\bu
-z D9
-z \r;S
-z'.0
-z'u%
-z(u&
-z*u(
-z0u.
-z1u/f
-z2u0
-z3zr
-z8ji
-z8u6
-zN,W
-zP6\e
-zPLR
-zQ3W
-z\\E1
 z\bATL
-z\bH9
-z\bH;{hs
-z\bI9
-z\bL9
-z\bP?
-z\bQ?
 z\btbf
-z\f\a\b
-z\nu\b
-z]5T
-z`%1Is}
-zbu`
-zc%C1
-zhuf
-zk&_
-zp/hG<
-zpun
-zs}O
-zturL
-zxAi
-{ Hc
-{ lambda
-{ parm#
-{$D9
-{(Ic
-{4A3{ A3{\bD!
-{8L9
-{8XZH
-{@fI
-{PA9
-{To\v
-{VI!
-{YIN?
-{Zoh
-{\bD;w
-{\bE1
-{\bHc
-{\bHcU
-{\bI9
-{\bL9
-{\bM9
-{\bMi
-{\bd:u
-{\bt!D
-{\bt2H
-{\bu%H
-{\bu,1\t
-{\f@8x\f
-{\fA3{8A3{ A3{
-{\fHc
-{\n@8x\n
-{\r@8x\r
-{\v@8x\v
-{ch\e\ni
-{default arg#
-{ff.
-{hE1
-{lambda
-{parm#
-{t7A
-{uJf
-{unnamed type
-{unnamed type#
-{wvj
-| D9
-|#L9
-|$01
-|$019
-|$09
-|$0H
-|$0H9{0
-|$0HcK\b
-|$0I
-|$0u
-|$8H
-|$8I
-|$8L
-|$BI
-|$Bf
-|$HA
-|$HD
-|$HH
-|$HL
-|$HM
-|$PE
-|$PH
-|$PM
-|$PfA
-|$XD
-|$XH
-|$\bD9
-|$\bHc
-|$\bHi
-|$\bI9
-|$\bL9
-|$\rD8
-|$pH
-|,D9
-|0 1
-|0\bM
-|0\bfA
-|1\bH
-|1\bt,I
-|9D)
-|=>A.g"0FF
-|?p\eu
-|ED9k0D
-|FE9f
-|VLc
-|XYd
-|Y~ZE
-|\aLD
-|\e0Hc
-|jPZ
-} \bsJ
-}$E1
-}'E;7}_I
-}(Hc
-}(JcD
-}0ff.
-}1ff.
-}2ox
-}3ff.
-}7ff.
-}E;n u
-}FHcs
-}P\bL
-}SL9
-}XD)
-}Z^V
-}\bD;g
-}\bE1
-}\bHi
-}\bI9
-}\bI9~0u
-}\bIc
-}\bsu
-}\fHc
-}\n tT
-}\t:u\fA
-}\tH9
-}\tzt
-}]M9
-}^jI
-}hUH
-}iU1
-}pUH
-}t-M
-}t\nA
-}w+D
-}w3H
-}wA9
-}wDD
-}wFH
-}wZI
-~ ATM
-~ L;c8
-~ PH
-~"E1
-~"Hc
-~#Hc
-~$1z
-~$H9C8
-~%E1
-~%Hc
-~&E1
-~'E1
-~(I9z(
-~)E1
-~)Hc
-~*A9
-~*E1
-~*Ic
-~.Hcu
-~.kg
-~/A9
-~/xs
-~0Hc
-~0Mk
-~0ff.
-~1Hc
-~1Hk
-~1Ic
-~2L;c0
-~2Lc
-~3Hk
-~3ff.
-~4Lc
-~4Mc
-~4ff.
-~5Hc
-~6H9C0
-~6ff.
-~7Hc
-~7ff.
-~8#x,8
-~8ff.
-~9ff.
-~:E1
-~:Ic
-~;E1
-~;Ic
-~<UH
-~<fA
-~=Ic
-~>Hc
-~?Hc
-~@Lc
-~AHc
-~AIc
-~B0f
-~B\bfA
-~B\fu
-~CHc
-~CHi
-~D8\bfA;M@sjfA
-~DSTRCT
-~D\b0fD;
-~E\bf
-~FMc
-~IHc
-~Iff.
-~KHc
-~LIc
-~LcE
-~ME1
-~NX4
-~OHc
-~PE1
-~PL9s\b
-~R8X
-~RHc
-~SLc
-~TIc
-~WHc
-~XHi
-~YE1
-~YHc
-~Yf,=M
-~ZHc
-~[E1
-~\aN;L
-~\b94
-~\bHc
-~\bHk
-~\bI9
-~\bIc
-~\bMc
-~\brZH
-~\fH"bJ
-~\r53
-~\rD8
-~\rH9
-~\tC0H
-~\tH9
-~\tI9
-~\tIc
-~\teI
-~\vA9
-~]E1
-~]iJ
-~_Hc
-~a\ef
-~bHc
-~cIc
-~cU4
-~dE1
-~eLc
-~fHc
-~fIc
-~g9A\a
-~iIc
-~jHc
-~kHcE
-~mA|
-~nHc
-~nUH
-~pE1
-~qHc
-~sHcE
-~tE)
-~tE9
-~viF
-~xHc
-~zA9
-~{ywusrpnljhfdb`^][YWUSRPNLJIGECB@>=;976421/.,*)'%$"!
-~|I9
-~~E1
