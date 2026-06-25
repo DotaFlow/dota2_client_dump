@@ -1,20 +1,21 @@
 !\b\rA
 !\n\vs
 !ff.
-!link
+!w H
 "ff.
+#G<H
 #N{`
 #ff.
-$$M9
+$Hc=
 $ORIGIN
 %d %d %d
 %d %d %d %d
-%f %f
-%f %f %f
-%f %f %f %f
 %ff.
 %lld
 %llu
+%s %s
+%s %s %s
+%s %s %s %s
 %s allocation count overflow
 %s allocation count overflow( %llu + %llu > %llu )\n
 %s called on a pool arena (no root available)\n
@@ -22,18 +23,22 @@ $ORIGIN
 %s: __pos (which is %zu) > this->size() (which is %zu)
 %s: allocation of %u too large, max %u\n
 %s: element count overflow (%u)\n
+%s: invalid insert point %u (current count %u)\n
+%s: max element overflow, cur count %u + %u\n
 %s: member count overflow (%u)\n
 %s: no space for allocation of %u\n
 &G\al
 &S0g"
 &YA1
 '@k-
-'ff.
 (...
+(LcO
+([A\\A]A^A_]
 ([A\\A]]
 ([]A\\A]A^A_
 ([]A\\A]A^A_ÐAWH
 (anonymous namespace)
+(ff.
 (u*H
 (u?H
 (uMH
@@ -44,27 +49,25 @@ $ORIGIN
 )D$P
 )D$`
 )D$p
-)EЀ=u
 *! DM
 *N12_GLOBAL__N_121system_error_categoryE
 *N12_GLOBAL__N_122generic_error_categoryE
-*ff.
 *u2H
 *u\fH
 ++CCUNGH
 ++CCUNGH9E
-+ff.
 +u2H
 ,$E1
 ,7IcM
 ,BJ`Bb
+,G\b]H
+,G\bÐUH
 ,Nw4ק
 --disallow-code-generation-from-strings
 --jitless
 --stack-size=%d
 -in-
 ...)
-../public/tier0/utlrbtree.h
 .G\bz
 .V\n}\by
 .\az'u%
@@ -105,6 +108,7 @@ $ORIGIN
 .tm_clone_table
 /dev/random
 /dev/urandom
+/src/
 /w$H
 /w-M
 0 0 0
@@ -112,25 +116,36 @@ $ORIGIN
 0 0 0 255
 0.iZ
 0123456789
+0[A\\A]A^]
+0[A\\A]A^]Ð
 0[A\\]
 0n\ft
-0t$H
+0t'H
+0t'I
 0t*Ic
-0tcH9
-0tjH
+0t/H9
+0t0H
+0t:I
+0t=H
+0t?H
+0tDH
+0tFH
+0tJH
+0tOI
+0tSH9
+0tZH
+0t\bH
+0t\fH
+0tgH
 0u\rH
 0u\tH
 1%Qd
-1B+D1
 1J\e/
-1\v=0V
-1\v=5W
-1\v=@U
-1\v=XV
-1\v=\bV
-1\v=\rW
-1\v=hU
-1\v=}V
+1\v=0
+1\v==
+1\v=X
+1\v=\b
+1\v=e
 2GrM
 2t\vH
 3\f\a\b
@@ -139,31 +154,37 @@ $ORIGIN
 3u|H
 4$H;t$\bu
 4Na\\
+4\bI9
 5t H
 5uFH
 6f}<d~
-7<!w\n1
+7<!w
 8@%rax 8@%rdx
 8@-24(%rbp) 8@-32(%rbp)
 8@-48(%rbp) 8@%rax
-8Hcʉ
+8[A\\A]A^A_]
+8[A\\A]A^A_]ËG<
 8[A\\A]]
 8[]A\\A]A^A_
 8\btQH
-9mZH
+9X\b~
 :=pq@Є
 :a\vj
 :uSH
 ;H\bu\nH
 ;J(:
+;W@s
 ;\btzD
 ;k\br
 ;w*j
+;}>L
 <$E1
+<$E1>vjs
 <$uFH
 <$uYH
 <$űU
 <&\bv"
+<*t-H
 <*t\a
 <.t$H
 <.u\a
@@ -171,7 +192,6 @@ $ORIGIN
 </~\vH
 <0_u
 <0uiI
-<:H9
 <:t\vH
 <=u\a
 <Au\eH
@@ -215,12 +235,16 @@ $ORIGIN
 <Zt#H
 <Zu\eH
 <Zu\f
-<\bt11
+<\bt#H
+<\bu(1
+<\bu(H
 <\bu/L
-<\buAH
-<\buKH
+<\buV
+<\buVH
 <\bu\t
-<\tw6H
+<\bu\vH
+<\bwbH
+<\tv|
 <_t\n
 <_t\vH
 <_u!H
@@ -241,10 +265,12 @@ $ORIGIN
 <du4H
 <ft\n
 <fuNH
+<ht$<Hu
 <iu+H
 <iu4H
 <lu\eH
 <muQH
+<no failure reason set>
 <nu\a
 <nu\e
 <pt\vH
@@ -264,25 +290,26 @@ $ORIGIN
 >uaH
 ?H;E
 ?ff.
-?t~H
+?toH
+?t{H
 @  0
 @ $\t
 @(H9
 @89E
 @8\v@%$
 @AUI
-@E;e
+@E;,$|
+@E;7|
 @[A\\]
 @\b D
-@\bD;x
 @\bH+E
 @\bH9
 @\bHc
+@\bL9
 @\f\a\b
 @\v7\a
 @hH9
 @pH9
-@pHǀ
 @t\aƃ
 @t\bAƀ
 @t\nA
@@ -295,48 +322,58 @@ $ORIGIN
 @xH9
 @ހ*(y>.(p
 A DP
-A#w<H
-A0Hc
+A#q<H
+A#y<H
+A+L$8
 A9D$
+A;D$@
 A;D$\bs
 A;w\bu
 APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %d!\n
+ATLc
 ATSH
-ATSHcG\bH
 ATSL
 ATUH
 ATUSH
 AU19
-AUATA
+AUATI
 AUATL
-AUATM
 AUATS
 AUATSH
 AUATUS
 AUATUSH
+AUE1
+AVAUA
 AVAUATA
 AVAUATI
+AVAUATS
 AVAUATSH
 AVAUATUH
 AVAUATUS
 AVAUATUSH
+AVAUH
 AVAUI
 AVAUL
 AWAVA
 AWAVAUA
 AWAVAUATA
+AWAVAUATI
 AWAVAUATS
 AWAVAUATSH
 AWAVAUATUSH
 AWAVAUI
-AWAVE
 AWAVH
 AWAVI
 AWAVL
 AWE1
-AWfH
+AYAZ
+AYAZH
 A\\A]A^A_
+A\\A]A^Hi
 A\\A]A^]
+A\\A]]
+A\\A]]Ð
+A\\A]]ÐH
 A\f\a\b
 AddPage
 AlignedByteArray not properly aligned\n
@@ -357,13 +394,12 @@ BUYbD
 B\bHc48I
 B\bHct8
 B\bNcT
+B\btO
 B\f\a\b
 Bad KV3 data for resource '%s': %s\n
 BakedLODBuilderMgr001
 BenchmarkService001
 BinaryProperties_GetValue
-C(Jct8\b
-C(Mc
 C1 E
 C8HǄ$
 CBaseAppSystemI16ISource2V8SystemE
@@ -372,6 +408,7 @@ CJavaScriptTypeManager
 CKV3ResourceBlockHelper
 CModuleMetadataProvider_ResourceManifests
 CPostConnectCallback
+CRC32_ProcessBuffer
 CSchemaInstallCallback
 CSource2V8System
 CTier0AppSystemI16ISource2V8SystemLx0EE
@@ -379,15 +416,18 @@ CTier1AppSystemI16ISource2V8SystemLx0EE
 CTier2AppSystemI16ISource2V8SystemLx0EE
 CTypeScriptTypeManager
 CUtlSymbolTableLarge element limit of %u exceeded\n
-C\bD;p\b
-C\bD;p\b}
+C\a@H
+C\a@u
+C\bD9`\b
+C\bE1
 C\f\a\b
+CharacterSetBuild
+ClientLocalServerAccess001
 ClientServerSharedHandleSystem001
 ClientToolsInfo_001
 CommandLine
+CpHǃ
 CreateInterface
-CƉ\aA
-D PH
 D$ D
 D$ H
 D$ I
@@ -403,24 +443,29 @@ D$0H
 D$0I
 D$8H
 D$8O
+D$@1
+D$@A
+D$DI
 D$GM
+D$PD9
 D$XH
 D$Xf
 D$\bA
 D$\bB
+D$\bD
 D$\bH
 D$\bI
 D$\bL
 D$\bM
 D$\bf
+D$\bfH
+D$\bx
 D$\fA
-D$\fM
 D$`H
 D$`H9
 D)Ήp\bD
-D;8|
-D;p\b
-DATAAVH
+D9(t
+D9`\b~
 DATAH
 DF128_
 DF16_
@@ -430,27 +475,28 @@ DF32x
 DF64_
 DF64x
 D\f\a\b
+D\tډЉ
 Default size of stack region v8 is allowed to use (in kBytes)
 DemoUpconverterVersion001
 Disable runtime allocation of executable memory for V8.
 Du1H
 DuLH
 Dump output of v8::Isolate::GetHeapStatistics.
+E#l$<Mc
 E.hL
 E1:\b
-E1>vjs
+E1:\f
 E1>vts
-E9f\b
-E;&|
+E1\tE
 E;/|
-E;4$|
-E;7|
+E;>|
+E;l$ s
 ERROR: CUtlSymbolTableLarge element limit of %u exceeded\n
 EXPORTSYSTEM_INTERFACE_VERSION_001
 E\bA9G\b
-E\bD;p\b
 E\bE)O\b
 E\f\a\b
+E\vM̸
 EarlyInit_Tier0
 EconItemToolModel_001
 EngineServiceMgr001
@@ -480,9 +526,9 @@ FixupResourceName: Illegal full path passed in ("%s")!\n
 FixupResourceName: Illegal path, missing extension passed in ("%s")!\n
 FlattenedSerializersVersion001
 FontManager_001
-Found existing value when inserting into tree - replacing existing value with new value. If this is intended behavior, use InsertOrReplace. If leaving existing values alone is intended, use InsertIfNotFound. If duplicate entries are intended, use InsertWithDupes.
 F؟2h
 G &@Z
+G(Hc
 GCC: (SteamRT 14.2.0-19~steamrt3.1+bsrt3.1) 14.2.0
 GLIBCXX_TUNABLES
 GLIBC_2.14
@@ -491,7 +537,9 @@ GLIBC_2.2.5
 GLIBC_2.25
 GLIBC_2.3
 GLIBC_2.3.2
+G\a@A
 G\a@H
+G\bIc
 G\f\a\b
 GameResourceServiceClientV001
 GameResourceServiceServerV001
@@ -500,60 +548,56 @@ GetDefaultMiniDumpTypeFlags
 GetResourceManifestCount
 GetResourceManifests
 Gff.
-GЉS$D
-H#1H
+GЉS$A
 H#D$
 H(H)
 H0H)
 H8H)
-H9\atNUH
+H9\atVUH
 H@H)
 HHH)
 HPH)
 HXH)
 H[A\\A]A^A_]
-H[A\\A]A^A_]ÐIcr\bD
 H[A\\A]]
 H[]A\\A]A^A_
-H\bLc0
 H\f\a\b
 HammerMapLoader001
 Hard limit for the v8 heap size (in mBytes)
 Hc7E1ۃ
+Hc;L9
 HcL7\bH
 HcP\b
-HcR\b
-HcW\b
-Hcs0
-Hcs0D9
+HcU܅
+HcW\bH
 HcЋE
-Hcҍ4
+Hcҍ<
 HelpSystem_001
 HostStateMgr001
 Ht"H
-HtԀ#
+I9ߋ=|\b
 IAppSystem
 IAsyncProcessedDataResult
 IPulseSystem_001
 IResourceTypeManager
 ISource2V8System
 I\f\a\b
+Ic6M
 IcD$
-IcF4
+IcD$4
 IcT$
 IcT$\bI
+Ic\vD9
 Inert VModuleMetadata
 InputService_001
 InputStackSystemVersion001
 InputSystemVersion001
-Insert
+InsertMultipleBefore
 InstallSchemaBindings
 InvokeMiniDumpHandler
 IuTH
 IuYH
 Iu^H
-I}LM
-J(Lc
 JArray
 J\f\a\b
 Ju\eH
@@ -562,32 +606,38 @@ KRr=
 K\bL9
 K\f\a\b
 KeyValueCache001
+KeyValues3: pre-allocated array memory is too small for %u elements (%u bytes available, %u bytes needed)\n
+KeyValues3: pre-allocated table memory is too small for %u members (%u bytes available, %u bytes needed)\n
 KxHǃ
 L$ A
 L$ D
 L$ H9
 L$(1
+L$(K
 L$,L
 L$8L
+L$HH
+L$Pu5A
 L$X1
 L$XH
 L$\bD
 L$\bE
 L$\bH
+L$\bHc
 L$\bI
 L$\bL
 L$`H
 L$`M
-L9.A
 L90r
-L98taA
+L92u
 L9:r
 L9\nr
 LI\aH
+LOG_CONSOLE
 L\f\a\b
 L\r\bH
-Lc/E9
-Lc0H
+Lcg\bH
+LocalServerClientAccess001
 Localize_001
 LoggingSystem_IsChannelEnabled
 LoggingSystem_Log
@@ -608,6 +658,7 @@ ModelDocUtils001
 Mu,H
 MȉUċE
 MԉUЋE
+N(Lc
 N10__cxxabiv115__forced_unwindE
 N10__cxxabiv117__class_type_infoE
 N10__cxxabiv117__pbase_type_infoE
@@ -621,7 +672,6 @@ N10__cxxabiv129__pointer_to_member_type_infoE
 N9__gnu_cxx20recursive_init_errorE
 N9__gnu_cxx24__concurrence_lock_errorE
 N9__gnu_cxx26__concurrence_unlock_errorE
-NH#V<H
 NSt3_V214error_categoryE
 N\f\a\b
 NavGameTest001
@@ -631,11 +681,17 @@ NetworkP2PService_001
 NetworkServerService_001
 NetworkService_001
 NetworkSystemVersion001
+OHHc
+OPD9
 O\bE)
-O\bH9
+O\bHc
+O\bHcփ
 O\f\a\b
 P D;
+P E1
 P Hǃ
+P L9
+P@[A\\]
 PDF128_
 PDF16_
 PDF16b
@@ -657,29 +713,33 @@ PKDi
 PKDn
 PKDs
 PKDu
+P\b1ɐH
 P\f\a\b
 PanoramaTextServices001
 PanoramaUIClient001
 PanoramaUIEngine001
 ParticleSystemMgr003
 PhysicsBuilderMgr001
+Plat_ExitProcess
 Plat_FatalError
+Plat_GetEnv
+Plat_GetExeModule
+Plat_GetModuleFilename
+Plat_GetModuleProcAddress
 Plat_GetTime
 Plat_IsInDebugSession
 Plat_NonFatalErrorFunc
 PostProcessingSystem_001
-Ppt\vH
 PropertyEditorSystem_001
 Pu(I
 Pu4H
 Q\bA]A^A_
 Q\f\a\b
-QxI9
-RE9T
+R L9
+RE9\\
 RESOURCE_TYPE_JAVASCRIPT
 RESOURCE_TYPE_TYPESCRIPT
 R\bI9
-R\bLc
 R\f\a\b
 RegisterConCommand: Unknown error registering con command "%s"!\n
 RegisterConVar: Unknown error registering convar "%s"!\n
@@ -695,10 +755,12 @@ ResourceManifestRegistry001
 ResourceSystem013
 Root
 Rx=3
-S(Lc
+S0I9
+SHcں\n
 SN䇜4
 STATǅ
-S\bA9
+S\bJct2\b
+S\bJct2\bH
 S\f\a\b
 SceneSystem_002
 SceneUtils_001
@@ -747,26 +809,29 @@ St9exception
 St9type_info
 StatsService_001
 SteamAudio001
+Su1H
 SuTH
 T$ )
 T$ H
 T$ I
 T$ L
 T$ f
+T$$A
+T$$L
 T$(I
 T$0H
-T$0H9
 T$0L
 T$8H
 T$@A
 T$@H
+T$HH
 T$PI
-T$XL
 T$\bA
 T$\bD
 T$\bH
 T$\bI
 T$\bL
+T$\b[A\\]
 TLS init function for
 TLS wrapper function for
 T\f\a\b
@@ -777,16 +842,18 @@ ToolFramework2_002
 ToolSceneNodeFactory_001
 ToolService_001
 Tu&H
-U0I9
 UE19
 UE1\t
 U\bM9
 U\f\a\b
 Ut#H
 Ut3H
+UtlRBTree_FailedInsertDuplicate
+UtlVectorMemory_Alloc
+UtlVectorMemory_CalcNewAllocationCount
+UtlVectorMemory_FailedAllocation
 UuLH
 UȉȈE
-UȋE\vU
 UԉP,H
 U؉ȈE
 V8 Near Heap Limit: cur=%llu, init=%llu, max=%llu
@@ -815,12 +882,17 @@ VScriptManager010
 VStringTokenSystem001
 VTT for
 VUUUH
-VUUUL
 VWebm001
 V\f\a\b
+V_DoubleToString_Unsafe
+V_FixDoubleSlashes
+V_FloatToString_Unsafe
 V_GetFileExtension
+V_Int64ToString_Unsafe
 V_IsAbsolutePath
+V_PathContainsPath
 V_RemoveDotSlashes
+V_StringParseError
 V_StringToBool
 V_StringToColor
 V_StringToFloat32
@@ -835,40 +907,46 @@ V_StringToUint64
 V_StringToVector
 V_StringToVector2D
 V_StringToVector4D
+V_StringToVectorWS
+V_UInt32ToString_Unsafe
+V_UInt64ToString_Unsafe
+V_UnqualifiedFileName
+V_fpclassifyd
+V_fread
+V_isnand
 V_qsort_s
+V_stricmp_fast
 VisBuilder_001
 Vrad3_001
 Vt(H
 V}hZ
 W H;
+W\bB!D
 W\f\a\b
 Warning
 WorldRendererMgr001
 X D9
 X@ H
 XD^$,
-X[A\\A]A^A_]
 X[A\\A]]
 X\e1)
 X\f\a\b
 YO]zP6\e
-Y\bE1
 Y\f\a\b
-ZP\bf
-ZX\ff
 Z\f\a\b
 [!g4G
 [...]=
+[A\\A
 [A\\A]A^A_]
+[A\\A]A^A_]Ë
+[A\\A]A^A_]Ð
 [A\\A]A^A_]ÐH
-[A\\A]A^Hi
+[A\\A]A^A_]ÐI
 [A\\A]A^]
-[A\\A]A^]ÐD
 [A\\A]]
-[A\\A]]ÿ
 [A\\]
 [A\\]Hk
-[Eiҕ
+[A\\]ÐH
 [\f\a\b
 []A\\
 []A\\A]
@@ -885,8 +963,12 @@ Z\f\a\b
 \\$(I
 \\$0D
 \\$0H
-\\$\bE
+\\$@%
+\\$HD
+\\$\bA
+\\$\bE1
 \\$\bH
+\\$\bI
 \\$\bM
 \\\a\b1
 \\\f\a\b
@@ -895,62 +977,17 @@ Z\f\a\b
 \aI\tD
 \aI\tƄ
 \a\a\a\b\b\a\a\a
-\at5I
+\atWI
 \atff
 \ayT,(#
-\b ㄼ𠏌S
-\b 㾈𡠞X
-\b 䂌𡩾^
-\b 䧨𣃊
-\b 䩴𣇒
-\b 䬰𣏮i
-\b 俠𣽌Õ
-\b 倄𣿾ć
-\b 勐𤟖P
-\b 摼𦡈j
-\b 溠𨀄\\
-\b 濴𨍢
-\b 炀𨑪
-\b 焼𨚆i
-\b 痨𩟜Õ
-\b 瘌𩢎ć
-\b 聠𪚰)
-\b$㇄𠑢
-\b$㖀𠢅
-\b$㘰𠥫
-\b$㛀𠩏
-\b$㝐𠬳
-\b$㟠𠰗
-\b$㡰𠳻
-\b$㤠𠷡
-\b$㦰𠻅
-\b$㩀𠾩
-\b$㽠𡞐¶
-\b$䏔𡶔ı
-\b$䚼𢘂ą
-\b$䬈𣍴¢
-\b$嶠𥨚
-\b$擔𦥺Ä
-\b$擼𦨖Ø
-\b$攤𦫆Å
-\b$敌𦭤
-\b$整𦯘
-\b$斜𦱐x
-\b$昐𦸚
-\b$昸𦹾ǒ
-\b$槀𧔎Ɓ
-\b$沜𧨎ɉ
-\b$焔𨘌¢
-\b$眴𩳲
+\a~.D
+\a~7D
 \b(@*
-\b(㑌𠛞Ń
-\b(㼜𡚲ĉ
-\b(劌𤝄¾
-\b(眈𩱠¾
 \bA\v
 \bA\v@
 \bA\vV\n
 \bA\v`
+\bE1\t
 \bE\vG\n
 \bE\vJ\n
 \bE\vX
@@ -958,26 +995,33 @@ Z\f\a\b
 \bH\v
 \bH\v8
 \bH\vu
+\bHcO
 \bI\vL
 \bJ\vL
 \bK\vG
+\bL9m
+\bLi?:
 \b[A\\A]A^A_]
+\b[A\\A]A^A_]Ð
+\b[A\\A]A^A_]ÐI
 \b[A\\A]]
+\b[A\\A]]Ð
 \b[]A\\A]
-\bu+H
-\buU1
-\bupD
-\bus1
-\b~(H
+\bt5H
+\bt<H
+\btsE
+\buv1
+\b~wH
 \bۮ\r_
 \eF:¥FV\rH}
 \e\e\f\a\b
 \e\f\a\b
+\eff.
+\etFH
 \euYH
 \euvHc
 \f\a\b
 \f\a\b$
-\f\bA;A
 \n\f\a\b
 \n\f\a\bA\v
 \n\f\a\bE\v
@@ -988,18 +1032,16 @@ Z\f\a\b
 \ta\n\f\a\bA\v
 \tu+H
 \t~,H
-\v0谰𡧈
-\vH艠𫜌
 \vQ[J
 \v\a$c
 ]A\\A]A^A_
 ]A\\L
-]\bE1
 ]\f\a\b
 ]u\fH
 ^*ܖJ
 ^\f\a\b
 ^u;H
+_(E1
 _Complex
 _Float
 _GLOBAL_
@@ -1011,18 +1053,26 @@ _ITM_memcpyRnWt
 _ITM_memcpyRtWn
 _ITM_registerTMCloneTable
 _Imaginary
+_V_SetExtension
+_V_StripLastDir
+_V_strEndsWith
+_V_strncmp
 _V_strncpy
+_V_strnicmp_fast
+_Z14V_stristr_fastPKcS0_
 _Z18__test_and_acquirePl
 _Z20_txnal_cow_string_D1Pv
-_Z22Assert_ConditionFailedRK34_AssertCompileTimeConstantStruct_tPKcz
+_Z23FormatArgumentsToBufferP19IFormatOutputStreamPKcPK28CTypeErasedFormattingWrapperi
 _Z23_txnal_cow_string_c_strPKv
 _Z23_txnal_sso_string_c_strPKv
 _Z26_txnal_logic_error_get_msgPv
 _Z27_txnal_cow_string_D1_commitPv
+_Z28Assert_ConditionFailed_FatalRK34_AssertCompileTimeConstantStruct_t
 _Z28Assert_ConditionFailed_FatalRK34_AssertCompileTimeConstantStruct_tPKcz
 _Z28_txnal_runtime_error_get_msgPv
 _Z35_txnal_cow_string_C1_for_exceptionsPvPKcS_
 _Z7LoadKV3P9CKV3ArenaP10CUtlStringP10CUtlBufferRK7KV3ID_tPKcj
+_Z9V_strnlenPKci
 _ZGTtNKSt11logic_error4whatEv
 _ZGTtNKSt13bad_exception4whatEv
 _ZGTtNKSt13bad_exceptionD1Ev
@@ -1094,13 +1144,24 @@ _ZGTtNSt16invalid_argumentD1Ev
 _ZGTtNSt16invalid_argumentD2Ev
 _ZGTtdlPv
 _ZGTtnam
+_ZN10CUtlBuffer10ParseTokenEPK14characterset_tPcib
+_ZN10CUtlBuffer14EnsureCapacityEi
+_ZN10CUtlBuffer18AddNullTerminationEv
 _ZN10CUtlBuffer21CheckArbitraryPeekGetEiRi
 _ZN10CUtlBuffer3GetEPvi
+_ZN10CUtlBuffer7SeekPutENS_10SeekType_tEi
 _ZN10CUtlBuffer8CheckGetEi
 _ZN10CUtlBufferC1EPKviNS_13BufferFlags_tE
 _ZN10CUtlBufferC1EiiNS_13BufferFlags_tE
 _ZN10CUtlString15FreeMemoryBlockEv
 _ZN10CUtlString3SetEPKc
+_ZN10CUtlString5PurgeEv
+_ZN10CUtlString6AppendEPKc
+_ZN10CUtlString6AppendEPKci
+_ZN10CUtlString6FormatEPKcz
+_ZN10CUtlString7AcquireEP13CBufferStringb
+_ZN10CUtlStringC1ERK13CBufferString
+_ZN10CUtlStringaSERK13CBufferString
 _ZN10__cxxabiv111__terminateEPFvvE
 _ZN10__cxxabiv112__unexpectedEPFvvE
 _ZN10__cxxabiv115__forced_unwindD0Ev
@@ -1139,14 +1200,41 @@ _ZN10__cxxabiv123__fundamental_type_infoD2Ev
 _ZN10__cxxabiv129__pointer_to_member_type_infoD0Ev
 _ZN10__cxxabiv129__pointer_to_member_type_infoD1Ev
 _ZN10__cxxabiv129__pointer_to_member_type_infoD2Ev
+_ZN12CSplitString5SplitEPKciPS1_ib
+_ZN13CBufferString10ExtendPathEPKccb
+_ZN13CBufferString10FixSlashesEc
+_ZN13CBufferString10TruncateAtEib
+_ZN13CBufferString11ShortenPathEb
 _ZN13CBufferString11ToLowerFastEi
+_ZN13CBufferString12AppendConcatEiPKPKcPKib
+_ZN13CBufferString12AppendFormatEPKcz
+_ZN13CBufferString12SetExtensionEPKcb
 _ZN13CBufferString13AppendFormatVEPKcP13__va_list_tag
+_ZN13CBufferString13FixupPathNameEc
+_ZN13CBufferString14RemoveFirstDirEPS_
+_ZN13CBufferString15ComposeFileNameEPKcS1_c
+_ZN13CBufferString15ExtractFilePathEPKcb
+_ZN13CBufferString16MakeAbsolutePathEPKcS1_
+_ZN13CBufferString16MakeRelativePathEPKcS1_b
+_ZN13CBufferString16RemoveDotSlashesEc
+_ZN13CBufferString18StripTrailingSlashEv
 _ZN13CBufferString5PurgeEi
 _ZN13CBufferString6FormatEPKcz
 _ZN13CBufferString6InsertEiPKcib
+_ZN13CBufferString7ReplaceEPKcS1_b
 _ZN13CBufferString8MoveFromERS_
 _ZN13CBufferString8RemoveAtEii
 _ZN13CBufferString9SetLengthEibPi
+_ZN15CUtlBinaryBlock9SetLengthEi
+_ZN15CUtlSymbolTable9AddStringEPKcPb
+_ZN15CUtlSymbolTableC1Eiib
+_ZN15CUtlSymbolTableD1Ev
+_ZN19IFormatOutputStream11FormatArrayE28CTypeErasedFormattingWrapper20CFormatStringElementPPKvib
+_ZN19IFormatOutputStream13Format2DTableE28CTypeErasedFormattingWrapper20CFormatStringElementPPKvii
+_ZN19IFormatOutputStream15PutRepeatedCharEci
+_ZN19IFormatOutputStream16FormatEnumHelperE20CFormatStringElementiSt16initializer_listISt4pairIiPKcEE
+_ZN19IFormatOutputStream16FormatMaskHelperEiSt16initializer_listISt4pairIiPKcEE
+_ZN19IFormatOutputStream17OutputIndentationEv
 _ZN2v811ArrayBuffer9Allocator10ReallocateEPvmm
 _ZN2v814HeapStatisticsC1Ev
 _ZN2v819HeapSpaceStatisticsC1Ev
@@ -1226,6 +1314,7 @@ _ZN9__gnu_cxxmiIPKcSsEENS_17__normal_iteratorIT_T0_E15difference_typeERKS6_S9_
 _ZN9__gnu_cxxmiIPcNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEENS_17__normal_iteratorIT_T0_E15difference_typeERKSB_SE_
 _ZN9__gnu_cxxmiIPcSsEENS_17__normal_iteratorIT_T0_E15difference_typeERKS5_S8_
 _ZN9__gnu_cxxneIPcSsEEbRKNS_17__normal_iteratorIT_T0_EES7_
+_ZNK10CUtlString14StripExtensionEv
 _ZNK10CUtlString27IsEqual_FastCaseInsensitiveEPKc
 _ZNK10__cxxabiv117__class_type_info10__do_catchEPKSt9type_infoPPvj
 _ZNK10__cxxabiv117__class_type_info11__do_upcastEPKS0_PKvRNS0_15__upcast_resultE
@@ -1248,6 +1337,8 @@ _ZNK10__cxxabiv122__base_class_type_info13__is_public_pEv
 _ZNK10__cxxabiv122__base_class_type_info14__is_virtual_pEv
 _ZNK10__cxxabiv122__base_class_type_info8__offsetEv
 _ZNK10__cxxabiv129__pointer_to_member_type_info15__pointer_catchEPKNS_17__pbase_type_infoEPPvj
+_ZNK13CBufferString8FormatToEP19IFormatOutputStream20CFormatStringElement
+_ZNK15CUtlSymbolTable6StringE10CUtlSymbol
 _ZNK9__gnu_cxx17__normal_iteratorIPKcNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE4baseEv
 _ZNK9__gnu_cxx17__normal_iteratorIPKcSsE4baseEv
 _ZNK9__gnu_cxx17__normal_iteratorIPcNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE4baseEv
@@ -1695,7 +1786,6 @@ _ZNSt13runtime_errorD1Ev
 _ZNSt13runtime_errorD2Ev
 _ZNSt13runtime_erroraSEOS_
 _ZNSt13runtime_erroraSERKS_
-_ZNSt14__shared_countILN9__gnu_cxx12_Lock_policyE2EEaSERKS2_
 _ZNSt14overflow_errorC1EPKc
 _ZNSt14overflow_errorC1ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
 _ZNSt14overflow_errorC1ERKSs
@@ -1720,9 +1810,6 @@ _ZNSt15underflow_errorC2ERKSs
 _ZNSt15underflow_errorD0Ev
 _ZNSt15underflow_errorD1Ev
 _ZNSt15underflow_errorD2Ev
-_ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE10_M_destroyEv
-_ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE10_M_releaseEv
-_ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE19_M_release_last_useEv
 _ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE24_M_release_last_use_coldEv
 _ZNSt16invalid_argumentC1EPKc
 _ZNSt16invalid_argumentC1ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
@@ -1986,6 +2073,7 @@ _ZStplIcSt11char_traitsIcESaIcEENSt7__cxx1112basic_stringIT_T0_T1_EES5_RKS8_
 _ZStplIcSt11char_traitsIcESaIcEESbIT_T0_T1_EPKS3_RKS6_
 _ZStplIcSt11char_traitsIcESaIcEESbIT_T0_T1_ERKS6_S8_
 _ZStplIcSt11char_traitsIcESaIcEESbIT_T0_T1_ES3_RKS6_
+_ZTI19IFormatOutputStream
 _ZTIDF128_
 _ZTIDF16_
 _ZTIDF16b
@@ -2098,7 +2186,6 @@ _ZTISt15underflow_error
 _ZTISt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE
 _ZTISt16invalid_argument
 _ZTISt17bad_function_call
-_ZTISt19_Sp_make_shared_tag
 _ZTISt20bad_array_new_length
 _ZTISt8bad_cast
 _ZTISt9bad_alloc
@@ -2328,6 +2415,7 @@ _ZnwmPv
 _ZnwmRKSt9nothrow_t
 _ZnwmSt11align_val_t
 _ZnwmSt11align_val_tRKSt9nothrow_t
+_\bE1
 _\f\a\b
 __cxa_allocate_dependent_exception
 __cxa_allocate_exception
@@ -2369,7 +2457,9 @@ __vector(
 _rGN
 _u&H
 _u\rH
+`[A\\A]A^]
 `[A\\]
+`\f[A\\]
 `\f\a\b
 `c̺".B^
 a\f\a\b
@@ -2425,7 +2515,6 @@ d$8L
 d$HH
 d$HM
 d$hA
-d\b\bH
 d\f\a\b
 d\vg݆
 decimal128
@@ -2440,12 +2529,15 @@ delete[]
 deleted virtual method called\n
 dl_iterate_phdr
 double
+dt(H
+dtRH
 dynamic_cast
 eWbg
 e\f\a\b
 f#H.f}
 f\a\ah0
-f\bH9
+f\bE1
+f\bL9
 f\f\a\b
 false
 float
@@ -2467,10 +2559,10 @@ gh spaceH
 glibcxx.eh_pool
 global constructors keyed to
 global destructors keyed to
+group
 guard variable for
-gv"H
 h[A\\A]A^A_]
-h[A\\A]A^A_]ÿ
+h[A\\A]A^A_]Ã
 h\bucA
 h\f\a\b
 half
@@ -2489,13 +2581,15 @@ java resource
 k\f\a\b
 l bug reH
 l$ A
-l$(f
 l$8E
 l$8L
 l$HE1
 l$HM
 l$\bH
 l$\bI
+l$\bI9
+l$\bL
+l2\bH
 l\f\a\b
 ld-linux-x86-64.so.2
 lease suH
@@ -2527,6 +2621,7 @@ mt19937
 mѼʥFX
 n.w(
 n\f\a\b
+name
 new[]
 noexcept
 non-transaction clone for
@@ -2576,11 +2671,13 @@ realloc
 reference temporary #
 reinterpret_cast
 requires
+resource_manifests
+resources
 resourcesystem
 restrict
 rethrow
 rg/bugs/H
-s(HcC A9
+rlHc
 sFa\np
 s\f\a\b
 secure_getenv
@@ -2589,6 +2686,8 @@ signed char
 sizeof
 sizeof...
 slP¦
+source_file
+source_line
 sprintf
 stapsdt
 static_cast
@@ -2610,6 +2709,7 @@ std::istream
 std::ostream
 std::string
 stderr
+stdin
 strchr
 strcmp
 strcpy
@@ -2619,38 +2719,42 @@ string literal
 string::string
 strlen
 strncmp
+strstr
 strtoul
 su*H
 su,H
 su`H
 syscall
 system
+t!Hc
 t$ 1
 t$ A
 t$ L
-t$(1
 t$(E)
 t$(H
 t$0H
+t$DHc
 t$Pf
+t$\bA
 t$\bH
-t$\bI
+t$\bIc
 t$\bL
+t$\b[A\\A]A^]
 t$\fM
+t$`H
+t1UH
+t3Hc
 t4ff.
-t8E1
-t9Hc
 t:ff.
 t;ff.
-t<E1
 t@</
-t@E1
-tAE1
-tAËG\b
 tD94\au
+tFE1
+tGE1
 tH</
 tSff.
-tTUH
+tTE9
+tTE9a
 tX+E
 tYHcC
 t\a1ɀ
@@ -2658,44 +2762,51 @@ t\aL9*r
 t\bAƇ
 t\f\a\b
 t\f\a\b$
+t\n[A\\]
+t]Hc
+t]f.
 t`ff.
-tcHc
+tb97
 tdff.
+te1Ʌ
 template
 template parameter object for
 terminate called after throwing an instance of '
 terminate called recursively\n
 terminate called without an active exception\n
 tfff.
+tg91
 this
 throw
-tl1Ʌ
-tm1Ʌ
+ti1Ʌ
 tmIc
 tmvV2g%
-tnE1
+toHc
+tqE1
 transaction clone for
 transaction_safe
 true
 ts1Ʌ
+tsE1
 tsHcC
 tvIc
 typeinfo fn for
 typeinfo for
 typeinfo name for
 typename
-tzE1
 u Zġ<
-u'[A\\A]A^]
 u/UH
-u1<gw
-u3<gw
 u9L9
+uGUH
+uQf.
 u\bH9
 u\f\a\b
+uaI9
+ugf.
 uint16
 uint32
 uint64
+unable to register all schema data: %s\n
 unsigned
 unsigned __int128
 unsigned char
@@ -2733,34 +2844,35 @@ v8system
 v8system.cpp
 vV<0uJI
 vXlL`^
-v\bH9
 v\f\a\b
+v^<7
 vector2
 vector3
 vector4
-vh<7
+vectorws
 virtual thunk to
 void
 volatile
 vtable for
 vuTH
+w1<g
+w6<\b
 wC<g
+wP<X
 w\f\a\b
 w\rBƄ
+w]<g
 wchar_t
 what():
+wq<\b
 write
-x0H9
-xBHc
+xEHc
 x[A\\A]A^A_]
 x\byL
 x\f\a\b
 y)x\f
 y*s;
-y0I9
 y4.Y0⎡n
-y\bH9
-y\bIc
 y\f\a\b
 z A9
 z A;w\bu
@@ -2769,6 +2881,10 @@ z*u(
 zPLR
 z\f\a\b
 zƥF Lq
+{(Hc
+{\b/H
+{\b1ҹ
+{\bt$H
 {\f\a\b
 {]6@
 {`1S
@@ -2778,20 +2894,23 @@ zƥF Lq
 {unnamed type#
 |$ L
 |$(1
+|$(I
 |$(L
+|$(M
 |$01
 |$019
 |$8L
+|$@D
+|$@L
 |$PH
+|$\b1
+|$\b1ɉ
 |$\b;
+|$\bA
 |$\bD9
 |$\bH
 |$\bI
 |$\bL
-|$\b辕
-|1\bH
-|7\bH
-|\bLi?:
 |\f\a\b
 }\bI9
 }\f\a\b
@@ -2799,36 +2918,35 @@ zƥF Lq
 }\tzt
 }؉uԁ}ԃ
 }؉uԋU
-~ ff.
-~!E1
-~"ff.
+~#ff.
 ~1Hc
 ~>Hc
+~HHc
 ~IHcǃ
-~LHc
-~PHcǃ
-~THcǃ
+~MHcǃ
+~QHcǃ
 ~VHcǃ
+~YHc
+~\\UHc
 ~\f\a\b
 ~\teI
 ~kHcE
-~mf.
 ~vHcG\bL
 ~zIc
 ůЏ);p
-ƐL;0A
 ȉE\bE)O\b
-ȋ\r;H
+ɉ\b~PH
+ɉ\r3\b
 ʈsFE1N(
 ͗ʒ+T
 ЉE܋E
-ЋC$A
 А:6LD
 ҉D$,D
 ӝ&B-
 ׄV5\v
 ۉZ\fH
+ېHcÅ
 ݩ4`!g
 މẺu
 މE؉u
-뚍J(Lc
+돍N(Lc

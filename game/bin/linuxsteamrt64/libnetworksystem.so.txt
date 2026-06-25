@@ -83,7 +83,6 @@
  volatile
  was modified concurrently during serialization.
 !is_large()
-!link
 !m_NetworkChangeTagCallback.IsEmpty()
 !m_bNeedsSort
 " because it is missing required fields: 
@@ -200,12 +199,12 @@ $ORIGIN
 %d,'%s','%s',%d\n
 %d:  %s %s [ptr 0x%p] 0x%p (%s) (%s *) %s '%s'
 %d:  %s (%s) [ptr 0x%p] %s%s '%s'
-%f %f %f %f
 %gms
 %lld
 %llu
 %s %-32s : %s at '%s'\n
 %s %-32s : %s\n
+%s %s %s %s
 %s %s %s offset %u, temporarily adding to ignore list\n
 %s %s = %s\n
 %s %s preserve field %i %s at offset %u, removing from ignore list\n
@@ -227,6 +226,7 @@ $ORIGIN
 %s ambiguous, field exists in serializer '%s' field %d\n
 %s does not support allocation from networking\n
 %s does not support deallocation from networking\n
+%s encoding as %d bits '
 %s has %d permutations\n
 %s has tick %d, but this network network frame already set tick to %d\n
 %s rebuild %s::%s at %u\n
@@ -263,7 +263,9 @@ $ORIGIN
 %s: element count overflow (%u)\n
 %s: field %s has MNetworkSendProxyRecipientsFilter but is not declared using CNetworkVarEmbeddedNotFlattened\n
 %s: field %s has MNetworkSendProxyRecipientsFilter but type '%s' is not declared DECLARE_EMBEDDED_NETWORKVAR_NOTFLATTENED()\n
+%s: invalid insert point %u (current count %u)\n
 %s: max array count of %d, removing callback for invalid element %d\n
+%s: max element overflow, cur count %u + %u\n
 %s: member count overflow (%u)\n
 %s: no space for allocation of %u\n
 %s: rebasing delegate [ 0x%p -> 0x%p ]\n
@@ -366,9 +368,7 @@ $ORIGIN
 ../public/networksystem/serializedentity.h
 ../public/tier0/quantizedfloatencoder.h
 ../public/tier0/utldict.h
-../public/tier0/utlrbtree.h
 ../public/tier0/utlsortvector.h
-../public/tier0/utlsymboltablelarge.h
 ./google/protobuf/arena.h
 ./google/protobuf/arena_impl.h
 ./google/protobuf/arenastring.h
@@ -400,6 +400,7 @@ $ORIGIN
 .placeholder.proto
 /dev/random
 /dev/urandom
+/src/
 0 0 0
 0 0 0 0
 0 0 0 255
@@ -561,6 +562,7 @@ $ORIGIN
 27CNetWhyFieldExcludedFunctor
 27CSVCMsg_FlattenedSerializer
 27CSVCMsg_GameEventList_key_t
+27CUserMessage_UserSentBugBug
 27NetMessageConnectionCrashed
 27vcon_NetworkEncodingStats_t
 28CBaseVModuleMetadataProvider
@@ -614,13 +616,13 @@ $ORIGIN
 52CSource2Metrics_MatchPerfSummary_Notification_Client
 8CMsgRGBA
 8CNetChan
-8CUtlSlot
 : Tried to copy from a message with a different type. to: 
 : failed to parse contents
 ::Storage_t
 ::google::protobuf::FieldDescriptorProto_Label_IsValid(value)
 ::google::protobuf::FieldDescriptorProto_Type_IsValid(value)
 <classname> <fieldname>:  spew why field was excluded from networking for classname.
+<empty member name>
 <no failure reason set>
 <undefined>
 <unknown>
@@ -676,7 +678,6 @@ AssetSystemTest001
 AssignRangeMultipler with bitcount=32!\n
 AssignRangeMultiplier
 AssignSharedChangeCallbackIndex
-AssociateNetMessageGroupIdWithChannelCategory: Couldn't find or create group %s!\n
 AssociateNetMessageGroupIdWithChannelCategory: Trying to use an unregistered netchannel category!\n
 AssociateNetMessageWithAllChannelCategories: Passed in an invalid net message handle!\n
 AssociateNetMessageWithChannelCategoryAbstract: Passed in an invalid net message handle!\n
@@ -706,15 +707,19 @@ BuildOutputString:  change %s to %d\n
 Byte size calculation and serialization were inconsistent.  This may indicate a bug in protocol buffers or it may be caused by concurrent modification of 
 CANCELLED
 CAtomicMutex::AcquireLock(unsigned long long)
+CBufferString::AppendConcat(int, char const* const*, int const*, bool)
 CBufferString::AppendFormat(char const*, ...)
 CBufferString::AppendFormatV(char const*, __va_list_tag*)
 CBufferString::AppendRepeat(char, int, bool)
 CBufferString::EndsWith(CBufferString const&) const
 CBufferString::EndsWith(char const*) const
+CBufferString::FixSlashes(char)
 CBufferString::Format(char const*, ...)
 CBufferString::Insert(int, char const*, int, bool)
+CBufferString::MoveFrom(CBufferString&)
 CBufferString::Purge(int)
 CBufferString::Relinquish(CBufferString::EAllocationOption_t)
+CBufferString::RemoveAt(int, int)
 CBufferString::Replace(char const*, char const*, bool)
 CBufferString::SetLength(int, bool, int*)
 CBufferString::StartsWith(CBufferString const&) const
@@ -724,6 +729,8 @@ CBufferString::Trim(char const*)
 CBufferString::TrimTail(char const*)
 CBufferString::TruncateAt(int, bool)
 CBuildNetworkSerializerHierarchyOrder::ComputeDepth
+CCharBufferFormatOutputStream::PutC(char)
+CCharBufferFormatOutputStream::Terminate()
 CCommand::Tokenize: Encountered command which overflows the tokenizer buffer.. Skipping!\n
 CDeltaCalculator::ErrorMsg %s %d\n
 CDeltaCalculator::ErrorMsg: %s\n
@@ -741,6 +748,7 @@ CFieldPath tracing ended\n
 CFieldPath tracing started\n
 CFlattenedSerializer::ApplyOverrides_R
 CFlattenedSerializer::BuildDeltaProperties using %d bytes for encoding %d/%s\n
+CFlattenedSerializer::BuildOverrideField:  Problem initializing replacement field %s::%s\n
 CFlattenedSerializer::Decode
 CFlattenedSerializer::DumpSerializedEntityToConsole
 CFlattenedSerializer::Encode failure for entity %d\n
@@ -770,6 +778,7 @@ CGridStringPrinter::DelimitedHeader(char, char const*, ...)
 CGridStringPrinter::DelimitedPrint(char, char const*, ...)
 CGridStringPrinter::NumRows() const
 CGridStringPrinter::SetColumnHeader(int, char const*)
+CGridStringPrinter::SetColumnJustification(int, bool)
 CGridStringPrinter::SetString(int, int, char const*)
 CGridStringPrinter::SimpleSpew(int, char const*) const
 CGridStringPrinter::Spew(int, char const*) const
@@ -935,6 +944,7 @@ CHECK failed: (value) >= (0x80):
 CHECK failed: (value.size()) <= (kInt32MaxSize): 
 CHECK failed: (was_message_owned) == (IsMessageOwned()): 
 CHECK failed: *from != nullptr: 
+CHECK failed: *ptr: 
 CHECK failed: *to == nullptr: 
 CHECK failed: Arena::InternalGetOwningArena(lhs) != Arena::InternalGetOwningArena(rhs): 
 CHECK failed: Arena::InternalGetOwningArena(lhs) != nullptr || Arena::InternalGetOwningArena(rhs) != nullptr: 
@@ -1093,6 +1103,7 @@ CPPTYPE_MESSAGE
 CPPTYPE_STRING
 CPPTYPE_UINT32
 CPPTYPE_UINT64
+CRC32_ProcessBuffer
 CRC64_ProcessBuffer
 CSerializedEntities::CompareSerializedEntities field %d path's differ from %s '%s' to %s '%s'\n
 CSerializedEntities::CompareSerializedEntities from field %s '%s' not present in to\n
@@ -1125,15 +1136,22 @@ CThreadSyncObject::~CThreadSyncObject()
 CTransform
 CTransformWS
 CUniformRandomStreamImpl<CThreadNullMutex>::CUniformRandomStreamImpl(int)
+CUniformRandomStreamImpl<CThreadNullMutex>::RandomFloat(float, float)
 CUtlBinaryBlock
 CUtlBinaryBlock::Set(void const*, int)
+CUtlBinaryBlock::SetLength(int)
+CUtlBuffer::AccessPut(int)
 CUtlBuffer::AddNullTermination()
 CUtlBuffer::CUtlBuffer(int, int, CUtlBuffer::BufferFlags_t)
 CUtlBuffer::CUtlBuffer(void const*, int, CUtlBuffer::BufferFlags_t)
+CUtlBuffer::CheckArbitraryPeekGet(int, int&)
+CUtlBuffer::CheckGet(int)
+CUtlBuffer::CheckPut(int)
 CUtlBuffer::ParseToken(characterset_t const*, char*, int, bool)
 CUtlBuffer::Printf(char const*, ...)
 CUtlBuffer::Put(void const*, int)
 CUtlBuffer::PutString(char const*)
+CUtlBuffer::SetBufferType(bool, bool)
 CUtlLinkedList overflow! (exhausted index range)\n
 CUtlMemoryPoolBase::Alloc()
 CUtlMemoryPoolBase::CUtlMemoryPoolBase(int, int, int, MemoryPoolGrowType_t, char const*, MemAllocAttribute_t)
@@ -1143,10 +1161,12 @@ CUtlMemoryPoolBase::IterateAllocationsUnsafe(void (*)(void*, void*), void*)
 CUtlMemoryPoolBase::~CUtlMemoryPoolBase()
 CUtlScratchMemoryPool::AllocAligned(int, int)
 CUtlString
+CUtlString::Acquire(CBufferString*, bool)
 CUtlString::DottedAppend(char const*) const
 CUtlString::Format(char const*, ...)
 CUtlString::FormatV(char const*, __va_list_tag*)
 CUtlString::FreeMemoryBlock()
+CUtlString::GetForModify()
 CUtlString::IsEqual_CaseSensitive(char const*) const
 CUtlString::IsEqual_FastCaseInsensitive(char const*) const
 CUtlString::Purge()
@@ -1159,6 +1179,7 @@ CUtlString::Trim(char const*)
 CUtlString::TrimRight(char const*)
 CUtlString::TrimRight(char)
 CUtlString::operator+(CUtlString const&) const
+CUtlString::operator+(char const*) const
 CUtlString::operator+=(CUtlString const&)
 CUtlString::operator+=(char const*)
 CUtlString::operator=(CBufferString const&)
@@ -1175,6 +1196,7 @@ CUtlSymbolTable::~CUtlSymbolTable()
 CUtlSymbolTableLarge element limit of %u exceeded\n
 CUtlVector
 CUtlVectorEmbeddedNetworkVar
+CVProfile::FindBudgetGroupName(char const*)
 CVariableBitStringBase::FreeInts()
 CVariableBitStringBase::Resize(int)
 C_NetworkUtlVectorBase
@@ -1213,11 +1235,13 @@ Captures low-level data to replay path culling algorithm behavior in controlled 
 Cast of %s loses value information (returning %s)\n
 Cbasic_ios::clear
 ChangeAccessorFieldPathIndex_t
+CharacterSetBuild
 Checking for missing CNetworkVar* declarations\n
 Class data is a '%s', not a table\n
 Class,Field,Field Path,Decode Count,Total Bits,Avg Bits,Total Index Bits,Avg Index Bits,Priority,=SUM(E:E),Full Name,Notes\n
 Clear all simulated network conditions
 ClearField
+ClientLocalServerAccess001
 ClientServerSharedHandleSystem001
 ClientToolsInfo_001
 CloseSocket
@@ -1317,7 +1341,6 @@ Error parsing text-format
 Error processing network message %s! Channel is closing!\n
 Error reporting not implemented.
 Error while parsing option value for "
-Error:  SkipPropData_ with invalid GetFieldAndBaseDepthByPath result (result.m_pField == nullptr), %s unable to find field for path '%s', reading field %d starting at bit %d!
 Error: Components count + networkable data type must be the same for all instances of network field serializer (%s)!\n
 Error: Duplicate network array field serializer registered (%s)!\n
 Error: Duplicate network field change callback registered (%s)!\n
@@ -1372,6 +1395,7 @@ Failed to create poll group for socket '%s'?\n
 Failed to install message handler for message %s in channel %s!\n
 Failed to open P2P network socket '%s'\n
 Failed to open UDP network socket '%s'\n
+Failed to save unsupported class
 Failed to set SteamNetworkingSockets option '%s'\n
 Failed to start listening for SDR on port %d.  Waiting and will retry\n
 FakeJitter
@@ -1416,6 +1440,7 @@ FieldDescriptorProto.extendee set for non-extension field.
 FieldDescriptorProto.oneof_index $0 is out of range for type "$1".
 FieldDescriptorProto.oneof_index should not be set for extensions.
 FieldOptions
+FieldPathEncodeFinish
 FieldSize
 Fields in the same oneof must be defined consecutively. "$0" cannot be defined before the completion of the "$1" oneof definition.
 Fields of oneofs must themselves have label LABEL_OPTIONAL.
@@ -1437,8 +1462,12 @@ First argument to SwapFields() (of type "
 FlattenedSerializersVersion001
 FontManager_001
 For servers behind NAT/DHCP meant to be exposed to the public internet, this is the public facing ip address string: ("x.x.x.x" )
+FormatArgumentsToBuffer(IFormatOutputStream*, char const*, CTypeErasedFormattingWrapper const*, int)
+FormatTo(IFormatOutputStream*, CFormatStringElement, bool)
+FormatTo(IFormatOutputStream*, CFormatStringElement, float)
+FormatTo(IFormatOutputStream*, CFormatStringElement, int)
+FormatTo(IFormatOutputStream*, CFormatStringElement, std::basic_string_view<char, std::char_traits<char>>)
 Found existing value when inserting into dict - replacing existing value with new value. If this is intended behavior, use InsertOrReplace. If leaving existing values alone is intended, use InsertIfNotFound.
-Found existing value when inserting into tree - replacing existing value with new value. If this is intended behavior, use InsertOrReplace. If leaving existing values alone is intended, use InsertIfNotFound. If duplicate entries are intended, use InsertWithDupes.
 Found invalid proto option data for: 
 Friday
 GAME
@@ -1541,6 +1570,7 @@ InputStackSystemVersion001
 InputSystemVersion001
 Insert
 InsertIfNotFound
+InsertMultipleBefore
 InstallSchemaBindings
 Insufficient memory to compile regular expression
 Insufficient memory to determine regex match
@@ -1588,13 +1618,27 @@ June
 Key in map fields cannot be enum types.
 Key in map fields cannot be float/double, bytes or message types.
 KeyValueCache001
+KeyValues3: pre-allocated array memory is too small for %u elements (%u bytes available, %u bytes needed)\n
+KeyValues3: pre-allocated table memory is too small for %u members (%u bytes available, %u bytes needed)\n
+KeyValues::CreateNewKey()
 KeyValues::FindKey(char const*) const
 KeyValues::FindKey(char const*, bool)
+KeyValues::GetDataType(char const*) const
+KeyValues::GetFirstSubKey()
 KeyValues::GetFirstTrueSubKey()
 KeyValues::GetFloat(char const*, float) const
 KeyValues::GetInt(char const*, int) const
 KeyValues::GetName() const
+KeyValues::GetNextKey()
 KeyValues::GetNextTrueSubKey()
+KeyValues::GetPtr(char const*, void*) const
+KeyValues::GetUint64(char const*, unsigned long long) const
+KeyValues::KeyValues(char const*, IKeyValuesSystem*, bool)
+KeyValues::SetFloat(char const*, float)
+KeyValues::SetInt(char const*, int)
+KeyValues::SetString(char const*, char const*)
+KeyValues::SetUint64(char const*, unsigned long long)
+KeyValues::operator new(unsigned long)
 LC_ADDRESS
 LC_COLLATE
 LC_CTYPE
@@ -1607,20 +1651,24 @@ LC_NUMERIC
 LC_PAPER
 LC_TELEPHONE
 LC_TIME
+LOG_CONSOLE
 LOG_GENERAL
 Latency. . . . . . . . : %7dms%7dms%7dms   net_fakelag\n
 Leaked channel %s remote %s\n
 Like net_showmsg, but only spew reliable messages
 List all registered net messages
 LoadKV3(KeyValues3*, CUtlString*, CUtlBuffer*, KV3ID_t const&, char const*, unsigned int)
+LocalServerClientAccess001
 Localize_001
 Log network processing
 Log packets to files
+LoggingSystem_GetChannelColor
 LoggingSystem_GetChannelVerbosity
 LoggingSystem_IsChannelEnabled
 LoggingSystem_Log
 LoggingSystem_Log(int, LoggingSeverity_t, LoggingMetaData_t const*, char const*, ...)
 LoggingSystem_Log(int, LoggingSeverity_t, LoggingRareOptions_t const&, char const*, ...)
+LoggingSystem_LogDirect(int, LoggingSeverity_t, Color, LoggingMetaData_t const*, char const*)
 LoggingSystem_RegisterLoggingChannel
 Logic problem? szsrc = 
 Loss . . . . . . . . . : %8.2f%%%8.2f%%%9s   net_fakeloss\n
@@ -1837,6 +1885,8 @@ N6google8protobuf8internal30RepeatedPtrFieldStringAccessorE
 N6google8protobuf8internal31RepeatedPtrFieldMessageAccessorE
 N6google8protobuf8internal33RandomAccessRepeatedFieldAccessorE
 N6snappy15ByteArraySourceE
+N6snappy22UncheckedByteArraySinkE
+N6snappy4SinkE
 N6snappy6SourceE
 N9__gnu_cxx13stdio_filebufIcSt11char_traitsIcEEE
 N9__gnu_cxx13stdio_filebufIwSt11char_traitsIwEEE
@@ -1952,6 +2002,9 @@ No steam client; SDR features will be unavailable\n
 Non-primitive types can't be packed.
 Non-repeated Any specified multiple times.
 Non-repeated field "
+NonTopoComplex
+NonTopoComplexPack4Bits
+NonTopoPenultimatePluseOne
 Not allowed to change net_fakejitter\n
 Not allowed to change net_fakelag\n
 Not allowed to change net_fakeloss\n
@@ -2027,7 +2080,9 @@ Plat_CPUTickFrequency
 Plat_ExitProcess
 Plat_FatalError
 Plat_FloatTime
+Plat_GetExeModule
 Plat_GetLocalTime
+Plat_GetModuleProcAddress
 Plat_GetTime
 Plat_IsInDebugSession
 Plat_IsInTestMode
@@ -2035,8 +2090,22 @@ Plat_NonFatalErrorFunc
 Plat_RelativeTicks
 Plat_TickDiffMilliSecF
 Plat_USTime
+PlusFour
+PlusN
+PlusOne
+PlusThree
+PlusTwo
 Pointers cannot be used as numeric values
 Polymorphic
+PopAllButOnePlusN
+PopAllButOnePlusNPack3Bits
+PopAllButOnePlusNPack6Bits
+PopAllButOnePlusOne
+PopNAndNonTopographical
+PopNPlusN
+PopNPlusOne
+PopOnePlusN
+PopOnePlusOne
 PostProcessingSystem_001
 Print current ping times to SDR points of presence, and selected route
 Print current simulated network condifions
@@ -2050,6 +2119,28 @@ Protobuf: %s(%d): %s\n
 Protocol Buffer map usage error:\n
 Protocol Buffer reflection usage error:\n  Method      : google::protobuf::Reflection::
 PublicUniverse
+PushN
+PushNAndNonTopographical
+PushOneLeftDeltaNRightNonZero
+PushOneLeftDeltaNRightNonZeroPack6Bits
+PushOneLeftDeltaNRightNonZeroPack8Bits
+PushOneLeftDeltaNRightZero
+PushOneLeftDeltaOneRightNonZero
+PushOneLeftDeltaOneRightZero
+PushOneLeftDeltaZeroRightNonZero
+PushOneLeftDeltaZeroRightZero
+PushThreeLeftDeltaN
+PushThreeLeftDeltaOne
+PushThreeLeftDeltaZero
+PushThreePack5LeftDeltaN
+PushThreePack5LeftDeltaOne
+PushThreePack5LeftDeltaZero
+PushTwoLeftDeltaN
+PushTwoLeftDeltaOne
+PushTwoLeftDeltaZero
+PushTwoPack5LeftDeltaN
+PushTwoPack5LeftDeltaOne
+PushTwoPack5LeftDeltaZero
 QAngle
 Quaternion
 QuaternionStorage
@@ -2454,6 +2545,7 @@ Usage: net_captureculldata <file path>\n
 Usage: net_option <setting> [<value>]\n
 Usage:\nnet_fakejitter [send|recv] AVG [PCT] [MAX]\nnet_fakejitter [send|recv] PROFILE\n\nsend|recv  If present, applies the changes to the specified direction only.\nAVG        Mean delay, for packets that are jittered, in ms.  The random\n           delay is chosen using the exponential distribution.\nPCT        Percentage of packets (0...100) that will receive a random delay.\nMAX        Clamp random jitter delay to MAX ms.\nPROFILE    One of: off, low, med, high, huge\n\nUse net_fakestatus to display current simulated network conditions.\n
 Using Valve ICE implementation\n
+UtlRBTree_FailedInsertDuplicate
 UtlVectorMemory_Alloc
 UtlVectorMemory_CalcNewAllocationCount
 UtlVectorMemory_FailedAllocation
@@ -2507,10 +2599,14 @@ VTT for std::istream
 VTT for std::ostream
 VWebm001
 V_DoubleToString_Unsafe
+V_FloatToString_Unsafe
+V_InitJSONConfig
 V_Int32ToString_Unsafe
 V_Int64ToString_Unsafe
+V_IsAbsolutePath
 V_LZ4_compress_fast
 V_LZ4_decompress_safe
+V_ParseJSONBuffer
 V_PrettifyNum
 V_StringParseError
 V_StringToBool
@@ -2527,16 +2623,37 @@ V_StringToUint64
 V_StringToVector
 V_StringToVector2D
 V_StringToVector4D
+V_StringToVectorWS
+V_UInt32ToString_Unsafe
 V_UInt64ToString_Unsafe
+V_acosd
+V_acosf
+V_asinf
 V_atan2f
+V_atanf
 V_atoi
+V_atoi64
 V_atoui64
+V_cosd
+V_cosf
+V_expf
+V_fmodf
+V_fpclassifyd
+V_isnand
+V_logf
+V_powd
+V_powf
 V_qsort_s
 V_sincosf
+V_sind
+V_sinf
 V_snprintf
 V_sscanf
 V_stricmp_fast
 V_stristr_fast(char const*, char const*)
+V_strnlen(char const*, int)
+V_strtok
+V_tanf
 V_vsnprintf
 Validate
 ValidateSerializedEntity:  %s [ent %d] invalid change '%s' for field %s (value '%s') on array that has metadata with only %d array elements!\n
@@ -2623,6 +2740,8 @@ _ITM_memcpyRtWn
 _ITM_registerTMCloneTable
 _MakeGlobalSymbol
 _MakeGlobalSymbolCaseSensitive
+_V_strncat
+_V_strncmp
 _V_strncpy
 _V_strnicmp_fast
 _ZNKSt13__facet_shims12__any_stringcvNSt7__cxx1112basic_stringIT_St11char_traitsIS3_ESaIS3_EEEB5cxx11IcEEv
@@ -2861,6 +2980,7 @@ __wcscoll_l
 __wcsftime_l
 __wcsxfrm_l
 __wctype_l
+_class
 _txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
 _txnal_cow_string_D1(void*)
 _txnal_cow_string_D1_commit(void*)
@@ -2965,6 +3085,14 @@ bool __gnu_cxx::operator==<wchar_t const*, wchar_t*, std::__cxx11::basic_string<
 bool __gnu_cxx::operator==<wchar_t*, std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>>(__gnu_cxx::__normal_iterator<wchar_t*, std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>> const&, __gnu_cxx::__normal_iterator<wchar_t*, std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>> const&)
 bool __gnu_cxx::operator==<wchar_t*, std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>>(__gnu_cxx::__normal_iterator<wchar_t*, std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>> const&, __gnu_cxx::__normal_iterator<wchar_t*, std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>> const&)
 bool google::protobuf::internal::RepeatedFieldRefIterator<T>::operator!=(const google::protobuf::internal::RepeatedFieldRefIterator<T>&) const [with T = google::protobuf::Message]
+bool std::__detail::_Compiler<std::regex_traits<char>>::_M_expression_term<false, false>(std::__detail::_Compiler<std::regex_traits<char>>::_BracketState&, std::__detail::_BracketMatcher<std::regex_traits<char>, false, false>&)
+bool std::__detail::_Compiler<std::regex_traits<char>>::_M_expression_term<false, false>(std::__detail::_Compiler<std::regex_traits<char>>::_BracketState&, std::__detail::_BracketMatcher<std::regex_traits<char>, false, false>&)::'lambda'(char)::operator()(char) const
+bool std::__detail::_Compiler<std::regex_traits<char>>::_M_expression_term<false, true>(std::__detail::_Compiler<std::regex_traits<char>>::_BracketState&, std::__detail::_BracketMatcher<std::regex_traits<char>, false, true>&)
+bool std::__detail::_Compiler<std::regex_traits<char>>::_M_expression_term<false, true>(std::__detail::_Compiler<std::regex_traits<char>>::_BracketState&, std::__detail::_BracketMatcher<std::regex_traits<char>, false, true>&)::'lambda'(char)::operator()(char) const
+bool std::__detail::_Compiler<std::regex_traits<char>>::_M_expression_term<true, false>(std::__detail::_Compiler<std::regex_traits<char>>::_BracketState&, std::__detail::_BracketMatcher<std::regex_traits<char>, true, false>&)
+bool std::__detail::_Compiler<std::regex_traits<char>>::_M_expression_term<true, false>(std::__detail::_Compiler<std::regex_traits<char>>::_BracketState&, std::__detail::_BracketMatcher<std::regex_traits<char>, true, false>&)::'lambda'(char)::operator()(char) const
+bool std::__detail::_Compiler<std::regex_traits<char>>::_M_expression_term<true, true>(std::__detail::_Compiler<std::regex_traits<char>>::_BracketState&, std::__detail::_BracketMatcher<std::regex_traits<char>, true, true>&)
+bool std::__detail::_Compiler<std::regex_traits<char>>::_M_expression_term<true, true>(std::__detail::_Compiler<std::regex_traits<char>>::_BracketState&, std::__detail::_BracketMatcher<std::regex_traits<char>, true, true>&)::'lambda'(char)::operator()(char) const
 bool std::__exchange<bool, bool>(bool&, bool&&)
 bool std::has_facet<std::__cxx11::collate<char>>(std::locale const&)
 bool std::has_facet<std::__cxx11::collate<wchar_t>>(std::locale const&)
@@ -3013,7 +3141,6 @@ bool std::operator!=<wchar_t, std::char_traits<wchar_t>>(std::istreambuf_iterato
 bool std::operator==<__mbstate_t>(std::fpos<__mbstate_t> const&, std::fpos<__mbstate_t> const&)
 bool std::operator==<char, std::char_traits<char>, std::allocator<char>>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, char const*)
 bool std::operator==<char, std::char_traits<char>, std::allocator<char>>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)
-bool std::operator==<char, std::char_traits<char>, std::allocator<char>>(std::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)
 bool std::operator==<char, std::char_traits<char>>(std::istreambuf_iterator<char, std::char_traits<char>> const&, std::istreambuf_iterator<char, std::char_traits<char>> const&)
 bool std::operator==<wchar_t, std::char_traits<wchar_t>>(std::istreambuf_iterator<wchar_t, std::char_traits<wchar_t>> const&, std::istreambuf_iterator<wchar_t, std::char_traits<wchar_t>> const&)
 bool&& std::forward<bool>(std::remove_reference<bool>::type&)
@@ -3183,6 +3310,7 @@ fseeko64
 ftello64
 fwrite
 g_BitBuf_BitWriteMasks
+g_BitBuf_ExtraMasks
 g_flTValues0To1Inclusive<float vector[4]>
 g_flTValues0To1Inclusive<float>
 g_nSequentialBytes<int vector[4]>
@@ -3433,7 +3561,6 @@ len >= input_len
 length_ >= n
 less-than-sign
 libc.so.6
-libm.so.6
 libnetworksystem.so
 libpthread.so.0
 libsteam_api.so
@@ -3543,7 +3670,6 @@ net_skip_redundant_change_callbacks
 net_spewcounts
 net_spewserializer
 net_status
-net_use_delta_property_fastpath
 net_use_packet_compression
 net_validatemessages
 net_validatemessages = %d\n
@@ -3559,6 +3685,7 @@ netadr_t::SetFromString(char const*, bool)
 netadr_t::SetIP(unsigned int)
 netadr_t::SetPort(unsigned short)
 netadr_t::SetType(netadrtype_t)
+netadr_t::ToSockadr(sockaddr*) const
 netadr_t::ToString(bool) const
 netadr_t::ToString(char*, unsigned int, bool) const
 netadr_t::operator<(netadr_t const&) const
@@ -3684,6 +3811,7 @@ punct
 pure virtual method called\n
 putc
 putwc
+p}?8CUtlSlot
 qangle
 qangle_pitch_yaw
 qangle_precise
@@ -3713,6 +3841,8 @@ reliable_bits
 render_interpolation_fraction
 repeated
 required
+resource_manifests
+resources
 right-curly-bracket
 right-parenthesis
 right-square-bracket
@@ -3751,6 +3881,8 @@ sizeof...
 skip
 slash
 source2_steam_stats.proto
+source_file
+source_line
 space
 sprintf
 start
@@ -3834,6 +3966,11 @@ std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_destroy()
 std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release()
 std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release_last_use()
 std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release_last_use_cold()
+std::_Sp_counted_ptr<std::nullptr_t, (__gnu_cxx::_Lock_policy)2>::_M_dispose()
+std::_Sp_counted_ptr_inplace<std::__detail::_NFA<std::regex_traits<char>>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_destroy()
+std::_Sp_counted_ptr_inplace<std::__detail::_NFA<std::regex_traits<char>>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_dispose()
+std::_Sp_counted_ptr_inplace<std::__detail::_NFA<std::regex_traits<char>>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_get_deleter(std::type_info const&)
+std::_Sp_counted_ptr_inplace<std::__detail::_NFA<std::regex_traits<char>>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::~_Sp_counted_ptr_inplace()
 std::_Sp_make_shared_tag::_S_ti()::__tag
 std::_Tuple_impl<0ul, std::thread::_State*, std::default_delete<std::thread::_State>>::_M_head(std::_Tuple_impl<0ul, std::thread::_State*, std::default_delete<std::thread::_State>> const&)
 std::_Tuple_impl<0ul, std::thread::_State*, std::default_delete<std::thread::_State>>::_M_head(std::_Tuple_impl<0ul, std::thread::_State*, std::default_delete<std::thread::_State>>&)
@@ -4716,12 +4853,61 @@ std::__detail::_AnyMatcher<std::regex_traits<char>, false, false, false>::operat
 std::__detail::_AnyMatcher<std::regex_traits<char>, false, false, true>::operator()(char) const::__nul
 std::__detail::_AnyMatcher<std::regex_traits<char>, false, true, false>::operator()(char) const::__nul
 std::__detail::_AnyMatcher<std::regex_traits<char>, false, true, true>::operator()(char) const::__nul
+std::__detail::_BracketMatcher<std::regex_traits<char>, false, false>::_M_ready()
+std::__detail::_BracketMatcher<std::regex_traits<char>, false, false>::~_BracketMatcher()
+std::__detail::_BracketMatcher<std::regex_traits<char>, false, true>::_M_make_range(char, char)
+std::__detail::_BracketMatcher<std::regex_traits<char>, false, true>::_M_ready()
+std::__detail::_BracketMatcher<std::regex_traits<char>, false, true>::~_BracketMatcher()
+std::__detail::_BracketMatcher<std::regex_traits<char>, true, false>::_M_ready()
+std::__detail::_BracketMatcher<std::regex_traits<char>, true, false>::~_BracketMatcher()
+std::__detail::_BracketMatcher<std::regex_traits<char>, true, true>::_M_make_range(char, char)
+std::__detail::_BracketMatcher<std::regex_traits<char>, true, true>::_M_ready()
+std::__detail::_BracketMatcher<std::regex_traits<char>, true, true>::~_BracketMatcher()
+std::__detail::_Compiler<std::regex_traits<char>>::_M_alternative()
+std::__detail::_Compiler<std::regex_traits<char>>::_M_assertion()
+std::__detail::_Compiler<std::regex_traits<char>>::_M_atom()
+std::__detail::_Compiler<std::regex_traits<char>>::_M_bracket_expression()
+std::__detail::_Compiler<std::regex_traits<char>>::_M_cur_int_value(int)
+std::__detail::_Compiler<std::regex_traits<char>>::_M_disjunction()
+std::__detail::_Compiler<std::regex_traits<char>>::_M_pop()
+std::__detail::_Compiler<std::regex_traits<char>>::_M_quantifier()
+std::__detail::_Compiler<std::regex_traits<char>>::_M_quantifier()::'lambda'()::operator()() const
+std::__detail::_Compiler<std::regex_traits<char>>::_M_try_char()
+std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_M_dfs(std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_Match_mode, long)
+std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_M_handle_alternative(std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_Match_mode, long)
+std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_M_handle_backref(std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_Match_mode, long)
+std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_M_handle_repeat(std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_Match_mode, long)
+std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_M_handle_word_boundary(std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_Match_mode, long)
+std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_M_is_line_terminator(char) const
 std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_M_is_word(char) const::__s
+std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_M_lookahead(long)
+std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_M_rep_once_more(std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_Match_mode, long)
+std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, true>::_M_dfs(std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, true>::_Match_mode, long)
+std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, true>::_M_handle_backref(std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, true>::_Match_mode, long)
+std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, true>::_M_is_line_terminator(char) const
 std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, true>::_M_is_word(char) const::__s
+std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, true>::_M_lookahead(long)
+std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, true>::_M_rep_once_more(std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, true>::_Match_mode, long)
+std::__detail::_NFA<std::regex_traits<char>>::_M_insert_dummy()
+std::__detail::_NFA<std::regex_traits<char>>::_M_insert_matcher(std::function<bool (char)>)
+std::__detail::_NFA<std::regex_traits<char>>::_M_insert_repeat(long, long, bool)
+std::__detail::_NFA<std::regex_traits<char>>::_M_insert_state(std::__detail::_State<char>)
+std::__detail::_NFA<std::regex_traits<char>>::_M_insert_subexpr_begin()
+std::__detail::_NFA<std::regex_traits<char>>::_M_insert_subexpr_end()
 std::__detail::_Prime_rehash_policy::_M_need_rehash(unsigned long, unsigned long, unsigned long) const
 std::__detail::_Prime_rehash_policy::_M_next_bkt(unsigned long) const
+std::__detail::_RegexTranslatorBase<std::regex_traits<char>, false, true>::_M_transform(char) const
+std::__detail::_RegexTranslatorBase<std::regex_traits<char>, true, true>::_M_transform(char) const
+std::__detail::_Scanner<char>::_M_advance()
+std::__detail::_Scanner<char>::_M_eat_class(char)
+std::__detail::_Scanner<char>::_M_eat_escape_awk()
 std::__detail::_Scanner<char>::_M_eat_escape_ecma()
 std::__detail::_Scanner<char>::_M_eat_escape_posix()
+std::__detail::_Scanner<char>::_M_scan_in_brace()
+std::__detail::_Scanner<char>::_M_scan_in_bracket()
+std::__detail::_Scanner<char>::_M_scan_normal()
+std::__detail::_State<char>::~_State()
+std::__detail::_StateSeq<std::regex_traits<char>>::_M_clone()
 std::__detail::__prime_list
 std::__facet_shims::__any_string& std::__facet_shims::__any_string::operator=<char>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)
 std::__facet_shims::__any_string& std::__facet_shims::__any_string::operator=<char>(std::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)
@@ -4793,10 +4979,7 @@ std::__ptr_traits_ptr_to<wchar_t const*, wchar_t const, false>::pointer_to(wchar
 std::__ptr_traits_ptr_to<wchar_t*, wchar_t, false>::pointer_to(wchar_t&)
 std::__shared_count<(__gnu_cxx::_Lock_policy)2>::_M_swap(std::__shared_count<(__gnu_cxx::_Lock_policy)2>&)
 std::__shared_count<(__gnu_cxx::_Lock_policy)2>::__shared_count()
-std::__shared_count<(__gnu_cxx::_Lock_policy)2>::operator=(std::__shared_count<(__gnu_cxx::_Lock_policy)2> const&)
 std::__shared_count<(__gnu_cxx::_Lock_policy)2>::~__shared_count()
-std::__shared_mutex_pthread::lock()
-std::__shared_mutex_pthread::lock_shared()
 std::__shared_ptr<std::thread::_Impl_base, (__gnu_cxx::_Lock_policy)2>::__shared_ptr()
 std::__shared_ptr<std::thread::_Impl_base, (__gnu_cxx::_Lock_policy)2>::__shared_ptr(std::__shared_ptr<std::thread::_Impl_base, (__gnu_cxx::_Lock_policy)2>&&)
 std::__shared_ptr<std::thread::_Impl_base, (__gnu_cxx::_Lock_policy)2>::get() const
@@ -5945,6 +6128,8 @@ std::ctype_byname<wchar_t>::ctype_byname(std::string const&, unsigned long)
 std::ctype_byname<wchar_t>::~ctype_byname()
 std::default_delete<std::thread::_State>& std::__get_helper<1ul, std::default_delete<std::thread::_State>>(std::_Tuple_impl<1ul, std::default_delete<std::thread::_State>, >&)
 std::default_delete<std::thread::_State>::operator()(std::thread::_State*) const
+std::deque<std::__detail::_StateSeq<std::regex_traits<char>>, std::allocator<std::__detail::_StateSeq<std::regex_traits<char>>>>::_M_reallocate_map(unsigned long, bool)
+std::deque<std::__detail::_StateSeq<std::regex_traits<char>>, std::allocator<std::__detail::_StateSeq<std::regex_traits<char>>>>::push_back(std::__detail::_StateSeq<std::regex_traits<char>> const&)
 std::domain_error::domain_error(char const*)
 std::domain_error::domain_error(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)
 std::domain_error::domain_error(std::string const&)
@@ -6744,7 +6929,6 @@ std::pair<bool, unsigned long>::pair<bool, int, true>(bool&&, int&&)
 std::pair<bool, unsigned long>::pair<bool, unsigned long, true>(bool&&, unsigned long&&)
 std::pair<std::basic_string_view<char, std::char_traits<char>>, int>::pair<char const (&) [10], int&, true>(char const (&) [10], int&)
 std::pair<std::basic_string_view<char, std::char_traits<char>>, int>::pair<char const (&) [9], int, true>(char const (&) [9], int&&)
-std::piecewise_construct
 std::random_device::_M_fini()
 std::random_device::_M_getentropy() const
 std::random_device::_M_getval()
@@ -6760,6 +6944,7 @@ std::range_error::range_error(std::string const&)
 std::range_error::~range_error()
 std::regex_error::regex_error(std::regex_constants::error_type)
 std::regex_error::~regex_error()
+std::regex_traits<char>::_RegexMask std::regex_traits<char>::lookup_classname<char const*>(char const*, char const*, bool) const
 std::regex_traits<char>::_RegexMask std::regex_traits<char>::lookup_classname<char const*>(char const*, char const*, bool) const::__classnames
 std::remove_reference<_IO_FILE*&>::type&& std::move<_IO_FILE*&>(_IO_FILE*&)
 std::remove_reference<__gnu_cxx::stdio_sync_filebuf<char, std::char_traits<char>>&>::type&& std::move<__gnu_cxx::stdio_sync_filebuf<char, std::char_traits<char>>&>(__gnu_cxx::stdio_sync_filebuf<char, std::char_traits<char>>&)
@@ -6840,7 +7025,9 @@ std::shared_ptr<std::thread::_Impl_base>::shared_ptr(std::shared_ptr<std::thread
 std::shared_ptr<std::thread::_Impl_base>::~shared_ptr()
 std::string
 std::string std::__str_concat<std::string>(std::string::value_type const*, std::string::size_type, std::string::value_type const*, std::string::size_type, std::string::allocator_type const&)
+std::string std::regex_traits<char>::lookup_collatename<char const*>(char const*, char const*) const
 std::string std::regex_traits<char>::lookup_collatename<char const*>(char const*, char const*) const::__collatenames
+std::string std::regex_traits<char>::transform_primary<char*>(char*, char*) const
 std::string& std::string::assign<char*>(char*, char*)
 std::string::_Alloc_hider::_Alloc_hider(char*, std::allocator<char> const&)
 std::string::_Alloc_hider::_Alloc_hider(std::string::_Alloc_hider&&)
@@ -7129,6 +7316,7 @@ std::unique_ptr<std::thread::_State, std::default_delete<std::thread::_State>>::
 std::unique_ptr<std::thread::_State, std::default_delete<std::thread::_State>>::release()
 std::unique_ptr<std::thread::_State, std::default_delete<std::thread::_State>>::unique_ptr<std::default_delete<std::thread::_State>, void>(std::thread::_State*)
 std::unique_ptr<std::thread::_State, std::default_delete<std::thread::_State>>::~unique_ptr()
+std::vector<char, std::allocator<char>>::vector(std::vector<char, std::allocator<char>> const&)
 std::vector<std::Catalog_info*, std::allocator<std::Catalog_info*>>::_M_check_len(unsigned long, char const*) const
 std::vector<std::Catalog_info*, std::allocator<std::Catalog_info*>>::_M_erase(__gnu_cxx::__normal_iterator<std::Catalog_info**, std::vector<std::Catalog_info*, std::allocator<std::Catalog_info*>>>)
 std::vector<std::Catalog_info*, std::allocator<std::Catalog_info*>>::_M_realloc_append(std::Catalog_info* const&)
@@ -7147,7 +7335,9 @@ std::vector<std::Catalog_info*, std::allocator<std::Catalog_info*>>::push_back(s
 std::vector<std::Catalog_info*, std::allocator<std::Catalog_info*>>::size() const
 std::vector<std::Catalog_info*, std::allocator<std::Catalog_info*>>::vector()
 std::vector<std::Catalog_info*, std::allocator<std::Catalog_info*>>::~vector()
+std::vector<std::regex_traits<char>::_RegexMask, std::allocator<std::regex_traits<char>::_RegexMask>>::vector(std::vector<std::regex_traits<char>::_RegexMask, std::allocator<std::regex_traits<char>::_RegexMask>> const&)
 std::vector<std::string, std::allocator<std::string>>::vector(std::vector<std::string, std::allocator<std::string>> const&)
+std::vector<std::sub_match<char const*>, std::allocator<std::sub_match<char const*>>>::vector(std::vector<std::sub_match<char const*>, std::allocator<std::sub_match<char const*>>> const&)
 std::wcerr
 std::wcin
 std::wclog
@@ -7347,7 +7537,7 @@ typeinfo for signed char const*
 typeinfo for signed char*
 typeinfo for std::_Mutex_base<(__gnu_cxx::_Lock_policy)2>
 typeinfo for std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>
-typeinfo for std::_Sp_make_shared_tag
+typeinfo for std::_Sp_counted_ptr_inplace<std::__detail::_NFA<std::regex_traits<char>>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>
 typeinfo for std::_V2::error_category
 typeinfo for std::__codecvt_abstract_base<char, char, __mbstate_t>
 typeinfo for std::__codecvt_abstract_base<char16_t, char, __mbstate_t>
@@ -7913,6 +8103,7 @@ vector::_M_insert_aux
 vector::_M_range_insert
 vector::_M_realloc_append
 vector::reserve
+vectorws
 vertical-line
 vertical-tab
 virtual thunk to 
@@ -7975,6 +8166,16 @@ void std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocat
 void std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>::_M_construct<wchar_t*>(wchar_t*, wchar_t*, std::forward_iterator_tag)::_Guard::~_Guard()
 void std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>::_M_construct_aux<wchar_t*>(wchar_t*, wchar_t*, std::__false_type)
 void std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>::insert<__gnu_cxx::__normal_iterator<wchar_t*, std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>>>(__gnu_cxx::__normal_iterator<wchar_t*, std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>>, __gnu_cxx::__normal_iterator<wchar_t*, std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>>, __gnu_cxx::__normal_iterator<wchar_t*, std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>>)
+void std::__detail::_Compiler<std::regex_traits<char>>::_M_insert_bracket_matcher<false, false>(bool)
+void std::__detail::_Compiler<std::regex_traits<char>>::_M_insert_bracket_matcher<false, true>(bool)
+void std::__detail::_Compiler<std::regex_traits<char>>::_M_insert_bracket_matcher<true, false>(bool)
+void std::__detail::_Compiler<std::regex_traits<char>>::_M_insert_bracket_matcher<true, true>(bool)
+void std::__detail::_Compiler<std::regex_traits<char>>::_M_insert_char_matcher<true, false>()
+void std::__detail::_Compiler<std::regex_traits<char>>::_M_insert_char_matcher<true, true>()
+void std::__detail::_Compiler<std::regex_traits<char>>::_M_insert_character_class_matcher<false, false>()
+void std::__detail::_Compiler<std::regex_traits<char>>::_M_insert_character_class_matcher<false, true>()
+void std::__detail::_Compiler<std::regex_traits<char>>::_M_insert_character_class_matcher<true, false>()
+void std::__detail::_Compiler<std::regex_traits<char>>::_M_insert_character_class_matcher<true, true>()
 void std::__facet_shims::__collate_transform<char>(std::integral_constant<bool, false>, std::locale::facet const*, std::__facet_shims::__any_string&, char const*, char const*)
 void std::__facet_shims::__collate_transform<char>(std::integral_constant<bool, true>, std::locale::facet const*, std::__facet_shims::__any_string&, char const*, char const*)
 void std::__facet_shims::__collate_transform<wchar_t>(std::integral_constant<bool, false>, std::locale::facet const*, std::__facet_shims::__any_string&, wchar_t const*, wchar_t const*)
@@ -8004,6 +8205,8 @@ void std::__ostream_fill<char, std::char_traits<char>>(std::basic_ostream<char, 
 void std::__ostream_fill<wchar_t, std::char_traits<wchar_t>>(std::basic_ostream<wchar_t, std::char_traits<wchar_t>>&, long)
 void std::__ostream_write<char, std::char_traits<char>>(std::basic_ostream<char, std::char_traits<char>>&, char const*, long)
 void std::__ostream_write<wchar_t, std::char_traits<wchar_t>>(std::basic_ostream<wchar_t, std::char_traits<wchar_t>>&, wchar_t const*, long)
+void std::deque<long, std::allocator<long>>::_M_push_back_aux<long const&>(long const&)
+void std::deque<std::__detail::_StateSeq<std::regex_traits<char>>, std::allocator<std::__detail::_StateSeq<std::regex_traits<char>>>>::_M_push_back_aux<std::__detail::_StateSeq<std::regex_traits<char>> const&>(std::__detail::_StateSeq<std::regex_traits<char>> const&)
 void std::locale::_Impl::_M_init_facet<std::__cxx11::collate<char>>(std::__cxx11::collate<char>*)
 void std::locale::_Impl::_M_init_facet<std::__cxx11::collate<wchar_t>>(std::__cxx11::collate<wchar_t>*)
 void std::locale::_Impl::_M_init_facet<std::__cxx11::messages<char>>(std::__cxx11::messages<char>*)
@@ -8055,8 +8258,10 @@ void std::locale::_Impl::_M_init_facet_unchecked<std::time_get<wchar_t, std::ist
 void std::swap<char, std::char_traits<char>, std::allocator<char>>(std::basic_string<char, std::char_traits<char>, std::allocator<char>>&, std::basic_string<char, std::char_traits<char>, std::allocator<char>>&)
 void std::swap<std::_Rb_tree_color>(std::_Rb_tree_color&, std::_Rb_tree_color&)
 void std::swap<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>(std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>&, std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>&)
+void std::vector<std::regex_traits<char>::_RegexMask, std::allocator<std::regex_traits<char>::_RegexMask>>::_M_realloc_append<std::regex_traits<char>::_RegexMask const&>(std::regex_traits<char>::_RegexMask const&)
 vsnprintf
 vtable for 
+vtable for CCharBufferFormatOutputStream
 vtable for __cxxabiv1::__class_type_info
 vtable for __cxxabiv1::__forced_unwind
 vtable for __cxxabiv1::__foreign_exception
@@ -8073,6 +8278,7 @@ vtable for __gnu_cxx::stdio_filebuf<char, std::char_traits<char>>
 vtable for __gnu_cxx::stdio_filebuf<wchar_t, std::char_traits<wchar_t>>
 vtable for __gnu_cxx::stdio_sync_filebuf<char, std::char_traits<char>>
 vtable for __gnu_cxx::stdio_sync_filebuf<wchar_t, std::char_traits<wchar_t>>
+vtable for std::_Sp_counted_ptr_inplace<std::__detail::_NFA<std::regex_traits<char>>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>
 vtable for std::_V2::error_category
 vtable for std::__codecvt_abstract_base<char, char, __mbstate_t>
 vtable for std::__codecvt_abstract_base<char16_t, char, __mbstate_t>

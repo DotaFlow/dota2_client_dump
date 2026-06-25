@@ -68,7 +68,6 @@
 !expected_len || s->s3->previous_server_finished_len
 !fUY\n
 !hcK+dbF&
-!link
 !m_bNeedsSort
 !m_nPackFileNumber
 !s8p
@@ -171,7 +170,6 @@ $hRh
 %d.%d.%d.%d/%d.%d.%d.%d
 %daE<<0\f6
 %eyu~
-%f %f %f %f
 %ld bytes leaked in %d chunks\n
 %lld
 %lli
@@ -179,6 +177,7 @@ $hRh
 %lu:%s:%s:%d:%s\n
 %s %2d %02d:%02d:%02d %d%s
 %s %2d %02d:%02d:%02d%.*s %d%s
+%s %s %s %s
 %s %s HTTP/1.0\r\n
 %s %s%lu (%s0x%lx)\n
 %s PARAMETERS
@@ -199,7 +198,11 @@ $hRh
 %s: __pos (which is %zu) > __size (which is %zu)
 %s: __pos (which is %zu) > this->size() (which is %zu)
 %s: allocation of %u too large, max %u\n
+%s: element count overflow (%u)\n
 %s: file too large\n
+%s: invalid insert point %u (current count %u)\n
+%s: max element overflow, cur count %u + %u\n
+%s: member count overflow (%u)\n
 %s: no space for allocation of %u\n
 %s: unable to grow count by %u (currently %u)\n
 %s:%d: rec->data != rec->input\n
@@ -316,7 +319,6 @@ $hRh
 ../common/opensslwrapper.cpp
 ../public/tier0/check_cast.h
 ../public/tier0/threadtoolstypes.h
-../public/tier0/utlrbtree.h
 ../public/tier0/utlsortvector.h
 ../public/vpklib/packedstore.h
 ..uR5&m
@@ -328,6 +330,7 @@ $hRh
 .dx_LV9
 .lbN
 .pp@0
+.vpk
 .x7B
 .yAu[7
 /'/)/A/E/K/M/Q/W/o/u/}/
@@ -341,6 +344,7 @@ $hRh
 /dev/urandom
 /etc/egd-pool
 /etc/entropy
+/src/
 /usr/local/ssl
 /usr/local/ssl/cert.pem
 /usr/local/ssl/certs
@@ -418,6 +422,7 @@ $hRh
 2)252Y2]2c2k2o2u2w2{2
 2)Ab`
 2+~,@\r;Zj09
+20CFioMemoryMappedFile
 20CPostConnectCallback
 20t\f
 22CSchemaInstallCallback
@@ -426,7 +431,6 @@ $hRh
 27;C
 27d7
 28CBaseVModuleMetadataProvider
-28CFioReadOnlyMemoryMappedFile
 28CPackedStoreMemoryMappedFile
 28Vm
 2:3maJ
@@ -632,6 +636,7 @@ $hRh
 <YGr+
 <YVtV&
 <invalid>
+<no failure reason set>
 <undefined>
 <unsupported>
 =!=-=3=7=?=C=o=s=u=y={=
@@ -878,7 +883,6 @@ Addreffing existing VPK file: %s\n
 Affiliation Changed
 Ag*g*
 AlignedByteArray not properly aligned\n
-Alignment
 Alloc
 AnimGraphEditorUtils001
 AnimationSystemUtils_001
@@ -1126,6 +1130,7 @@ CBufferString::EnsureCapacity(int, char**, bool, bool)
 CBufferString::EnsureTrailingSlash(char, bool)
 CBufferString::ExtendPath(char const*, char, bool)
 CBufferString::ExtractFileBase(char const*, bool)
+CBufferString::ExtractFileExtension(char const*)
 CBufferString::ExtractFilePath(char const*, bool)
 CBufferString::ExtractFirstDir(char const*)
 CBufferString::FixSlashes(char)
@@ -1133,15 +1138,21 @@ CBufferString::FixupPathName(char)
 CBufferString::Format(char const*, ...)
 CBufferString::Insert(int, char const*, int, bool)
 CBufferString::MakeAbsolutePath(char const*, char const*)
+CBufferString::MakeRelativePath(char const*, char const*, bool)
+CBufferString::MoveFrom(CBufferString&)
 CBufferString::Purge(int)
+CBufferString::Relinquish(CBufferString::EAllocationOption_t)
 CBufferString::RemoveAt(int, int)
 CBufferString::RemoveDotSlashes(char)
+CBufferString::RemoveFirstDir(CBufferString*)
+CBufferString::Replace(char const*, char const*, bool)
 CBufferString::SetLength(int, bool, int*)
 CBufferString::ShortenPath(bool)
 CBufferString::StartsWith(char const*) const
 CBufferString::StripExtension(bool)
 CBufferString::StripTrailingSlash()
 CBufferString::ToLowerFast(int)
+CBufferString::TruncateAt(int, bool)
 CCountedStringPool_CI::CCountedStringPool_CI()
 CCountedStringPool_CI::~CCountedStringPool_CI()
 CCrypto::GenerateSHA256Digest
@@ -1298,6 +1309,7 @@ COpenSSLContext
 CPBQ
 CPackedStore
 CR&C
+CRC32_ProcessBuffer
 CRL Sign
 CRL has expired
 CRL is not yet valid
@@ -1314,6 +1326,7 @@ CRYPTO_get_new_dynlockid
 CRYPTO_get_new_lockid
 CRYPTO_set_ex_data
 CSPName
+CSplitString::Split(char const*, int, char const**, int, bool)
 CT Certificate SCTs
 CT Precertificate Poison
 CT Precertificate SCTs
@@ -1343,10 +1356,21 @@ CThreadSemaphore::~CThreadSemaphore()
 CThreadSyncObject::Wait(unsigned int)
 CThreadSyncObject::WaitImpl(unsigned int)
 CThreadSyncObject::~CThreadSyncObject()
+CUtlBinaryBlock::SetLength(int)
+CUtlBuffer::ActivateByteSwapping(bool)
+CUtlBuffer::AddNullTermination()
 CUtlBuffer::CUtlBuffer(int, int, CUtlBuffer::BufferFlags_t)
+CUtlBuffer::CUtlBuffer(void const*, int, CUtlBuffer::BufferFlags_t)
+CUtlBuffer::CheckGet(int)
+CUtlBuffer::CheckPut(int)
 CUtlBuffer::EnsureCapacity(int)
+CUtlBuffer::Get(void*, int)
+CUtlBuffer::ParseToken(characterset_t const*, char*, int, bool)
+CUtlBuffer::Put(void const*, int)
 CUtlBuffer::PutString(char const*)
+CUtlBuffer::SeekGet(CUtlBuffer::SeekType_t, int)
 CUtlBuffer::SeekPut(CUtlBuffer::SeekType_t, int)
+CUtlBuffer::SetBufferType(bool, bool)
 CUtlBuffer::SetExternalBuffer(void*, int, int, CUtlBuffer::BufferFlags_t)
 CUtlFilenameSymbolTable::FindFileName(char const*) const
 CUtlFilenameSymbolTable::FindOrAddFileName(char const*)
@@ -1355,17 +1379,23 @@ CUtlScratchMemoryPool::AllocAligned(int, int)
 CUtlScratchMemoryPool::CUtlScratchMemoryPool(unsigned int, unsigned int, void*, bool)
 CUtlScratchMemoryPool::Purge()
 CUtlScratchMemoryPool::~CUtlScratchMemoryPool()
+CUtlString::Acquire(CBufferString*, bool)
+CUtlString::Append(char const*)
 CUtlString::Append(char const*, int)
 CUtlString::CUtlString(CBufferString const&)
 CUtlString::DirName() const
+CUtlString::Format(char const*, ...)
 CUtlString::FreeMemoryBlock()
 CUtlString::GetBaseFilename() const
 CUtlString::GetExtensionAlloc() const
 CUtlString::IsEqual_FastCaseInsensitive(char const*) const
+CUtlString::PathJoin(char const*, char const*)
+CUtlString::Purge()
 CUtlString::Right(int) const
 CUtlString::Set(char const*)
 CUtlString::SetDirect(char const*, int)
 CUtlString::Slice(int, int) const
+CUtlString::StripExtension() const
 CUtlString::StripTrailingSlash()
 CUtlString::Trim(char const*)
 CUtlString::UnqualifiedFilenameAlloc() const
@@ -1394,9 +1424,11 @@ Certificate:\n
 Cessation Of Operation
 ChGg
 Char=
+CharacterSetBuild
 Chunk hash not found.
 ClQ(|
 Clear the list of files that have been opened.
+ClientLocalServerAccess001
 ClientServerSharedHandleSystem001
 ClientToolsInfo_001
 Close
@@ -1648,7 +1680,6 @@ DTLSv1
 DTLSv1.2
 DVCS
 Data Encipherment
-DataOffset
 DcO/lcK+hSK
 Dd g4X3
 Decipher Only
@@ -1662,7 +1693,6 @@ Digital Signature
 DirName
 DirName: 
 Directory
-DirectoryEntries
 DnRv
 Domain
 Dq;n
@@ -1915,6 +1945,8 @@ Email address mismatch
 Encipher Only
 Encryption
 EngineServiceMgr001
+EnsureElementCapacity
+EnsureMemberCapacity
 EnsureUnusedCapacity
 Enter PEM pass phrase:
 Enterprises
@@ -2014,7 +2046,6 @@ Flush
 Fm{#t
 FontManager_001
 Fop]
-Found existing value when inserting into tree - replacing existing value with new value. If this is intended behavior, use InsertOrReplace. If leaving existing values alone is intended, use InsertIfNotFound. If duplicate entries are intended, use InsertWithDupes.
 F|w)a]c
 G0Tv~:
 G1b1
@@ -2101,6 +2132,7 @@ Generator (hybrid):
 Generator (uncompressed):
 GetBLAKE3HashContents
 GetCPUInformation
+GetDefaultMiniDumpTypeFlags
 GetFileTime
 GetHashType() == ChunkHashFraction_t::EHashType::BLAKE3
 GetHashType() == ChunkHashFraction_t::EHashType::MD5
@@ -2178,6 +2210,12 @@ IDEA-CBC
 IDEA-CFB
 IDEA-ECB
 IDEA-OFB
+IFormatOutputStream::Format2DTable(CTypeErasedFormattingWrapper, CFormatStringElement, void const**, int, int)
+IFormatOutputStream::FormatArray(CTypeErasedFormattingWrapper, CFormatStringElement, void const**, int, bool)
+IFormatOutputStream::FormatEnumHelper(CFormatStringElement, int, std::initializer_list<std::pair<int, char const*>>)
+IFormatOutputStream::FormatMaskHelper(int, std::initializer_list<std::pair<int, char const*>>)
+IFormatOutputStream::OutputIndentation()
+IFormatOutputStream::PutRepeatedChar(char, int)
 IMPLICIT
 INTEGER
 INT_CTX_NEW
@@ -2212,11 +2250,12 @@ Inhibit Policy Mapping
 InputService_001
 InputStackSystemVersion001
 InputSystemVersion001
-Insert
+InsertMultipleBefore
 InstallSchemaBindings
 International Organizations
 Invalid certificate verification context
 Invalidity Date
+InvokeMiniDumpHandler
 IquO
 Issuer certificate lookup error
 Iw,e=2-b[
@@ -2269,6 +2308,9 @@ Key Agreement
 Key Compromise
 Key Encipherment
 KeyValueCache001
+KeyValues3: pre-allocated array memory is too small for %u elements (%u bytes available, %u bytes needed)\n
+KeyValues3: pre-allocated table memory is too small for %u members (%u bytes available, %u bytes needed)\n
+KeyValues::FindKey(char const*) const
 KeyValues::GetDataType(char const*) const
 KeyValues::GetFirstSubKey()
 KeyValues::GetName() const
@@ -2293,17 +2335,19 @@ LBN6
 LG.HK
 LINEBUFFER_CTRL
 LOAD_IV
+LOG_CONSOLE
+LOG_GENERAL
 LONG
 LONG_C2I
 LT[N
 LXKQ
 LY\r5
 LbWf
-Length
 LengthOfMatchingPaths
 Load certs from files in a directory
 Load file into cache
 LocalKeySet
+LocalServerClientAccess001
 Localize_001
 LoggingSystem_IsChannelEnabled
 LoggingSystem_Log
@@ -2811,17 +2855,20 @@ Permanent Identifier
 Permitted
 PhysicsBuilderMgr001
 Plat_CreateDirectory
+Plat_ExitProcess
 Plat_FatalError
 Plat_FileSize
 Plat_FloatTime
 Plat_GetCurrentDirectory
+Plat_GetEnv
+Plat_GetExeModule
 Plat_GetFileType
 Plat_GetModuleFilename
+Plat_GetModuleProcAddress
 Plat_GetTime
 Plat_IsFile
 Plat_IsInDebugSession
 Plat_LoadModule
-Plat_NeedsLowFragmentation
 Plat_NonFatalErrorFunc
 Plat_RelativeTicks
 Plat_RemoveDirectory
@@ -2840,7 +2887,6 @@ Policy Qualifier User Notice
 Polynomial:
 PostProcessingSystem_001
 Pr"V
-PreloadDirectoryEntries
 Prime:
 Private
 Private Key
@@ -3443,6 +3489,7 @@ Unused
 UnzipFile
 Use native FS or STDIO
 Ut]<E
+UtlRBTree_FailedInsertDuplicate
 UtlVectorMemory_Alloc
 UtlVectorMemory_CalcNewAllocationCount
 UtlVectorMemory_FailedAllocation
@@ -3502,16 +3549,21 @@ VTT for
 VWebm001
 VY5[;o
 V\rKk
+V_DoubleToString_Unsafe
 V_FixDoubleSlashes
+V_FloatToString_Unsafe
 V_GetErrno
 V_GetFileExtension
 V_Int16ToString_Unsafe
 V_Int32ToString_Unsafe
+V_Int64ToString_Unsafe
 V_IsAbsolutePath
 V_IsFakePath
 V_MakeAbsolutePathBuffer
 V_MakeAbsoluteVPKPathNameBuffer
+V_PathContainsPath
 V_SetErrno
+V_StringParseError
 V_StringToBool
 V_StringToColor
 V_StringToFloat32
@@ -3526,25 +3578,37 @@ V_StringToUint64
 V_StringToVector
 V_StringToVector2D
 V_StringToVector4D
+V_StringToVectorWS
 V_StripFilename
+V_UInt32ToString_Unsafe
+V_UInt64ToString_Unsafe
 V_UnqualifiedFileName
 V_atoi
 V_a|I
 V_fclose
+V_fdopen
 V_ferror
 V_fflush
 V_fopen
 V_fopenUTF8
+V_fpclassifyd
 V_fprintf
 V_fread
+V_fseek
 V_fseeki64
+V_ftell
 V_ftelli64
 V_fwrite
+V_isnand
+V_mkstemps
 V_qsort
 V_qsort_s
 V_setvbuf
+V_snprintf
+V_sscanf
 V_stricmp_fast
 V_stristr_fast(char const*, char const*)
+V_strlower_fast
 V_strnlen(char const*, int)
 V_strtoui64
 V_vsnprintf
@@ -3555,7 +3619,6 @@ Verify error:
 Verify failure\n
 VerifySingleChunk
 Verifying - %s
-Version
 Vg3LE
 VggjeK uO5n
 VisBuilder_001
@@ -3798,11 +3861,6 @@ Z0zd
 Z7"c
 Z72\v
 ZH^r
-ZIP_EndOfCentralDirRecord
-ZIP_FileHeader
-ZIP_LocalFileHeader
-ZIP_PreloadDirectoryEntry
-ZIP_PreloadHeader
 ZL9L
 ZLIB
 ZLONG
@@ -3929,9 +3987,14 @@ _ITM_memcpyRnWt
 _ITM_memcpyRtWn
 _ITM_registerTMCloneTable
 _Lx6
+_V_ComposeFileName
 _V_FileBase
 _V_StringAfterPrefix
+_V_StripLastDir
+_V_binarytohex
 _V_hextobinary
+_V_strEndsWith
+_V_strncat
 _V_strncmp
 _V_strncpy
 _V_strnicmp_fast
@@ -3990,6 +4053,7 @@ __errno_location
 __float128
 __fprintf_chk
 __fxstat
+__fxstat64
 __gcclibcxx_demangle_callback
 __gmon_start__
 __gnu_cxx::__concat_size_t(char*, unsigned long, unsigned long)
@@ -4528,7 +4592,6 @@ cast5-ecb
 cast5-ofb
 ccs received early
 cdP%
-centralDirectorySize
 cert
 cert already in hash table
 cert cb error
@@ -4642,7 +4705,6 @@ coefficient:
 cofactor
 color
 command not supported
-commentLength
 common libcrypto routines
 common ok and cancel characters
 commonName
@@ -4650,13 +4712,11 @@ comp
 compatible
 compressed length too long
 compressed-data
-compressedSize
 compression disabled
 compression failure
 compression id not within private range
 compression library error
 compressionAlgorithm
-compressionMethod
 conf_api.c
 conf_def.c
 conf_lib.c
@@ -4703,7 +4763,6 @@ countryName
 covariant return thunk to 
 cpLm
 cq#p
-crc32
 critical
 critical,
 crl already delta
@@ -4943,7 +5002,6 @@ directory services - algorithms
 dirname error
 disabled for fips
 discriminant is zero
-diskNumberStart
 distinguishedName
 distpoint
 distpoint already set
@@ -5234,9 +5292,7 @@ extension not found
 extension setting not supported
 extension value error
 extensions
-externalFileAttribs
 extra data in message
-extraFieldLength
 eyBH_
 eyj5yR
 f#9i\n
@@ -5269,8 +5325,6 @@ field too large
 fieldID
 fieldType
 file:
-fileCommentLength
-fileNameLength
 filename too big
 fileno
 fileno_unlocked
@@ -5288,7 +5342,6 @@ fips mode not supported
 fips2
 first num too large
 first octet invalid
-flags
 float
 float32
 float64
@@ -5374,6 +5427,7 @@ got a fin before a ccs
 got next proto before a ccs
 got next proto without seeing extension
 gp\r3
+group
 group2pkparameters failure
 group=
 guard variable for 
@@ -5777,7 +5831,6 @@ int_thread_get (err.c)
 integer not ascii format
 integer too large for long
 internal error
-internalFileAttribs
 international-organizations
 internationaliSDNNumber
 invalid
@@ -6025,7 +6078,6 @@ lM2p
 language
 last octet invalid
 lastModifiedBy
-lastModifiedDate
 lastModifiedTime
 lastUpdate
 lcO/<1\r=,!\r-@@@
@@ -6207,8 +6259,6 @@ n6j/
 n:2C[
 n@PK
 nCRD
-nCentralDirectoryEntries_ThisDisk
-nCentralDirectoryEntries_Total
 nSRecord
 nStf,a
 nSw}Z\tu
@@ -6390,8 +6440,6 @@ null parameter
 null ssl ctx
 null ssl method passed
 number=%d, address=%08lX\n
-numberOfTheDiskWithStartOfCentralDirectory
-numberOfThisDisk
 nyYn
 o$g31\f
 o&1m&
@@ -6835,7 +6883,6 @@ reference temporary #
 registeredAddress
 reinterpret_cast
 reject
-relativeOffsetOfLocalHeader
 relativename
 removeFromCRL
 renegotiate ext too long
@@ -6851,6 +6898,8 @@ requireExplicitPolicy
 required cipher missing
 required compresssion algorithm missing
 reserved
+resource_manifests
+resources
 responderId
 response
 response contains no revocation data
@@ -7232,6 +7281,8 @@ sn_d.
 snmpv2
 so=H*m
 socket
+source_file
+source_line
 spkac
 sprintf
 srtp could not allocate profiles
@@ -7382,18 +7433,13 @@ sslv3 alert unsupported certificate
 sslv3 rollback attack
 stLDp
 stack.c
-startOfCentralDirOffset
 stat
 stateOrProvinceName
 static_cast
 status expired
 status not yet valid
 status too old
-std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_destroy()
-std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release()
-std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release_last_use()
 std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release_last_use_cold()
-std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_weak_release()
 std::_Sp_make_shared_tag::_S_ti()::__tag
 std::_V2::error_category::_M_message(int) const
 std::_V2::error_category::_M_message[abi:cxx11](int) const
@@ -7600,9 +7646,6 @@ std::__new_allocator<char>::deallocate(char*, unsigned long)
 std::__new_allocator<char>::~__new_allocator()
 std::__ptr_traits_ptr_to<char const*, char const, false>::pointer_to(char const&)
 std::__ptr_traits_ptr_to<char*, char, false>::pointer_to(char&)
-std::__shared_count<(__gnu_cxx::_Lock_policy)2>::__shared_count(std::__weak_count<(__gnu_cxx::_Lock_policy)2> const&, std::nothrow_t)
-std::__shared_mutex_pthread::lock()
-std::__shared_mutex_pthread::lock_shared()
 std::__sso_string::__sso_string()
 std::__sso_string::__sso_string(char const*, unsigned long)
 std::__sso_string::__sso_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)
@@ -8183,6 +8226,7 @@ typeinfo fn for
 typeinfo for 
 typeinfo for CThread
 typeinfo for CThreadSyncObject
+typeinfo for IFormatOutputStream
 typeinfo for __cxxabiv1::__class_type_info
 typeinfo for __cxxabiv1::__forced_unwind
 typeinfo for __cxxabiv1::__foreign_exception
@@ -8193,7 +8237,6 @@ typeinfo for __gnu_cxx::__concurrence_unlock_error
 typeinfo for __gnu_cxx::recursive_init_error
 typeinfo for std::_Mutex_base<(__gnu_cxx::_Lock_policy)2>
 typeinfo for std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>
-typeinfo for std::_Sp_make_shared_tag
 typeinfo for std::_V2::error_category
 typeinfo for std::bad_alloc
 typeinfo for std::bad_array_new_length
@@ -8301,11 +8344,11 @@ unable to listen socket
 unable to load ssl2 md5 routines
 unable to load ssl3 md5 routines
 unable to load ssl3 sha1 routines
+unable to register all schema data: %s\n
 unable to verify the first certificate
 unacceptable policy
 unauthAttrs
 unauth_attr
-uncompressedSize
 undefined
 undefined generator
 undefined order
@@ -8498,10 +8541,9 @@ variable has no value
 vector2
 vector3
 vector4
+vectorws
 verification failure
 version
-versionMadeBy
-versionNeededToExtract
 virtual thunk to 
 vm:u
 void

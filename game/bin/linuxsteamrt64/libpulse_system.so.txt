@@ -1,4 +1,4 @@
-  C%d:I%-2d {F=%-10d,V=%-10d} 
+  C%d:I%-2d {F=%-10d,V=%-10d,S=%-20.20s} 
   CallInfo%d: %s\n
   Cell%d - NULL\n
   Cell%d EditorID:%d [%s]: %s\n
@@ -45,7 +45,6 @@
  transaction_safe
  volatile
 !g_pPulseSystem->GetWeakHandleTable()->AnyHandlesAllocated()
-!link
 $ORIGIN
 %d %d %d %d
 %d CallInfos:\n
@@ -57,9 +56,9 @@ $ORIGIN
 %d Vars:\n
 %d instruction(s)\n
 %d register(s) %d byte(s)\n
-%f %f %f %f
 %lld
 %llu
+%s %s %s %s
 %s '%s' (%s)
 %s (uid=%d)
 %s - Blackboard reference %s: %u (%s) type mismatches
@@ -70,6 +69,7 @@ $ORIGIN
 %s allocation count overflow( %llu + %llu > %llu )\n
 %s allocation count overflow( add %llu + current %llu > max %llu )\n
 %s called on a pool arena (no root available)\n
+%s%02d:%02d
 %s: __pos (which is %zu) > __size (which is %zu)
 %s: __pos (which is %zu) > this->size() (which is %zu)
 %s: allocation of %u too large, max %u\n
@@ -82,6 +82,9 @@ $ORIGIN
 %s: no space for allocation of %u\n
 %s::%s (%u)
 %s::%s (Entity Output Handler)
+%s:autowake
+%s:interrupt
+%s:wait
 (Expecting %s)
 (Expecting EOF)
 (None)
@@ -90,35 +93,43 @@ $ORIGIN
 (debug)
 (end of input).\n\t This indicates a poorly specified lexer RULE\n\t or unterminated input element such as: "STRING["]\n
 (null)
-*** Test failure: "%s"
 *MOVE=>
 *N12_GLOBAL__N_121system_error_categoryE
 *N12_GLOBAL__N_122generic_error_categoryE
-*N30PulseBindingSchemaEnumTraits_tI20PulseTestEnumColor_tEUlvE1_E
-*N30PulseBindingSchemaEnumTraits_tI20PulseTestEnumColor_tEUlvE2_E
-*N30PulseBindingSchemaEnumTraits_tI20PulseTestEnumShape_tEUlvE3_E
-*N30PulseBindingSchemaEnumTraits_tI20PulseTestEnumShape_tEUlvE4_E
+*N30PulseBindingSchemaEnumTraits_tI20PulseTestEnumColor_tEUlvE3_E
+*N30PulseBindingSchemaEnumTraits_tI20PulseTestEnumColor_tEUlvE4_E
+*N30PulseBindingSchemaEnumTraits_tI20PulseTestEnumFlags_tEUlvE7_E
+*N30PulseBindingSchemaEnumTraits_tI20PulseTestEnumFlags_tEUlvE8_E
+*N30PulseBindingSchemaEnumTraits_tI20PulseTestEnumShape_tEUlvE5_E
+*N30PulseBindingSchemaEnumTraits_tI20PulseTestEnumShape_tEUlvE6_E
+*N30PulseBindingSchemaEnumTraits_tI23PulseTestEnumFlagsAlt_tEUlvE10_E
+*N30PulseBindingSchemaEnumTraits_tI23PulseTestEnumFlagsAlt_tEUlvE9_E
+*N30PulseBindingSchemaEnumTraits_tI25PulseCursorWakePriority_tEUlvE1_E
+*N30PulseBindingSchemaEnumTraits_tI25PulseCursorWakePriority_tEUlvE2_E
 *N30PulseBindingSchemaEnumTraits_tI27PulseCursorCancelPriority_tEUlvE0_E
 *N30PulseBindingSchemaEnumTraits_tI27PulseCursorCancelPriority_tEUlvE_E
+*N30PulseBindingSchemaEnumTraits_tI27PulseDurationStringFormat_tEUlvE0_E
+*N30PulseBindingSchemaEnumTraits_tI27PulseDurationStringFormat_tEUlvE_E
 , at offset %d
 , near %s
 - Graph Def '
 -Stop: 
 -end of input-(
+-memory-
 -unknown source-
 -unknown source-(
+. Dead
 . Req FAIL
 . Req PASS
-. Retired
 . Tag Added: '%s'
 . Tag Removed: '%s'
 ../../_build_/pulse_system/_vpc_pulse_system/default/linuxsteamrt64/_schema_/release/../../../../../../../src/pulse_system/pulse_test_domain.cpp
 ../public/tier0/check_cast.h
 ../public/tier0/utlmap.h
-../public/tier0/utlrbtree.h
 /data/src/mathlib/extended/generic_expr.g
 /dev/random
 /dev/urandom
+/src/
 0 0 0
 0 0 0 0
 0 0 0 255
@@ -154,6 +165,7 @@ $ORIGIN
 20CPostConnectCallback
 20CPulseCell_BaseState
 20CPulseCell_BaseValue
+20CPulseCell_TestEnums
 20FakeEntityDerivedA_t
 20FakeEntityDerivedB_t
 20IPulseBlackboardView
@@ -168,6 +180,7 @@ $ORIGIN
 22CPulseCell_Value_Curve
 22CPulseGraphLoadContext
 22CSchemaInstallCallback
+22CSimpleLoggingListener
 22PulseSystemEventBase_t
 23CBasePulseGraphInstance
 23CGenericExpr_IntLiteral
@@ -202,6 +215,7 @@ $ORIGIN
 26CPulseInstanceSaveAPI_NoOp
 26CPulseTurtleGraphicsCursor
 27CPulseCell_Inflow_GraphHook
+27CPulseCell_TestYieldForever
 28CBaseVModuleMetadataProvider
 28CPulseCell_Step_PublicOutput
 28CPulseCell_Value_RandomFloat
@@ -246,8 +260,10 @@ $ORIGIN
 34IKV3TransferInterface_EHandle_Save
 34IKV3TransferInterface_ResourceLoad
 34IPulseGraphInstance_TurtleGraphics
+35CPulseCell_TestYieldWithObservables
 35IKV3TransferInterface_GameTime_Load
 35IKV3TransferInterface_GameTime_Save
+36CPulseCell_IntervalTimer_DebugInfo_t
 36CPulseCell_Outflow_TestExplicitYesNo
 36CPulseCell_Step_TestDomainTracepoint
 36CPulseCell_WaitForCursorsWithTagBase
@@ -256,6 +272,7 @@ $ORIGIN
 37CSchemaRegistration_pulse_runtime_lib
 37IKV3TransferInterface_Worldspace_Load
 37IKV3TransferInterface_Worldspace_Save
+38CPulseCell_TestWaitWithAutoTracepoints
 38CPulseCell_Val_TestDomainGetEntityName
 38CPulseGraphInstance_TestDomain_Derived
 39CKV3TransferInterface_EHandle_Load_NoOp
@@ -293,6 +310,7 @@ $ORIGIN
 <missing 
 <no failure reason set>
 <no text for the token>
+<non-RTTI type>
 <none>
 <none>\n
 <pointer>
@@ -301,6 +319,8 @@ $ORIGIN
 <unknown KV3 basic type '%s' (%d)>
 <unknown>
 == PulseGraphDef ==\n
+>fff>fff>fff>fff>
+?16ILoggingListener
 A default string (set)
 A string associated with this Cursor, to use later for remote Kill or Wait requests. Cursors can have any number of Tags associated with them.
 A testing-only domain for target-owned graphs.
@@ -329,7 +349,6 @@ APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %d!\n
 ASYNC_FIRE_AND_FORGET
 AValueChanged
 AZeroed
-Abort
 Abs Float
 Abs Int
 Absolute value (float)
@@ -337,15 +356,16 @@ Absolute value (int)
 Activate
 Actually dude, we didn't seem to be expecting anything here, or at least\n
 Add R%d <- R%d + R%d
-Add the array 'b' to the end of 'a'.
 AddPage
 Adjust heading (positive = right, negative = left)
+After the real remainder, how many additional digits should we continue to append to create additional visual movement?
 AlignedByteArray not properly aligned\n
 All values connected to this node must be 'observable'. Variables on this graph will be automatically promoted to observable. Other value nodes must take an explicit context, look for those nodes with a corresponding icon.
 Alloc
 An example of requirement data with ports
 And R%d <- R%d && R%d
 Angle
+Anim Sequence
 AnimGraphEditorUtils001
 AnimationSystemUtils_001
 AnimationSystem_001
@@ -361,44 +381,32 @@ Arc Tan
 Arc Tangent of input value. Input can be any real number. Output in radians, from -
 ArcCos input out of range (-1, 1)
 ArcSin input out of range (-1, 1)
-Are we currently running unit tests?
 Array
-Array Append
-Array Concatenate
-Array Count
-Array Find Element Matching
-Array First N Elements
-Array Insert
-Array Remove Element Matching
-Array Remove Index
-Array Remove Invalid Elements
-Array Set Count
-Array Shuffle
-Array support.
-Assert True
 AssertCastImpl
 Assert_ConditionFailed(_AssertCompileTimeConstantStruct_t const&)
 Assert_ConditionFailed(_AssertCompileTimeConstantStruct_t const&, char const*, ...)
 Assert_ConditionFailed_Fatal(_AssertCompileTimeConstantStruct_t const&)
+Assert_ConditionFailed_Fatal(_AssertCompileTimeConstantStruct_t const&, char const*, ...)
 AssetBrowserSystem_001
 AssetPreviewSystem_001
 AssetRenameSystem_001
 AssetSystem001
 AssetSystemTest001
-Async Fire C%d:I%d
-Asynchronous - returns and continues despite the called method yielding
+Async Call Method (Child Cursor) C%d:I%d
+Async Outflow (Child Cursor) C%d:I%d
+Asynchronous - This node executes independently using a new Cursor. Formerly 'Fire and Forget'. Equivalent to scheduling using an additional 'Fire Child Cursors' node.
 BACKSLASH_CHAR
 BLACK
 BLUE
 Bad FLC data for resource '%s': %s\n
 Bad KV3 data for resource '%s': %s\n
 Bad array index %d (array has %d elements)
-Bad count in ArraySetCount (%d)
-Bad max in ArrayFirstNElements (%d)
-Bad reinterpret on ArrayAppend
-Bad reinterpret on ArrayInsert
-Bad reinterpret on ArrayRemoveElementMatching
 BakedLODBuilderMgr001
+Base Flow  Cancel After
+Base Flow  Cancel Elegantly
+Base Flow  Cancel Immediately
+Base Flow  Wake Elegantly
+Base Flow  Wake Immediately
 Base Pulse Domain
 Base recognizer function 'alreadyParsedRule' called by unknown parser type - provide override for this function\n
 Base recognizer function 'consumeUntil' called by unknown parser type - provide override for this function\n
@@ -417,7 +425,6 @@ Base-10 logarithm
 Base-2 logarithm
 BaseDomain
 Basic Function
-Basic math support.
 Begin testing a condition composed of Observable values. Continues checking until canceled.
 Begin testing a condition composed of Observable variable references. Continues checking until true.
 BenchmarkService001
@@ -450,25 +457,43 @@ CBasePulseGraphInstance::Shutdown( %s; %p ) %s\n
 CBasePulseGraphInstance::StartGraphReload( %p ) %s\n
 CBasePulseGraphInstance::~CBasePulseGraphInstance( %p )\n
 CBufferString
+CBufferString::AppendConcat(int, char const* const*, int const*, bool)
 CBufferString::AppendFormat(char const*, ...)
 CBufferString::AppendFormatV(char const*, __va_list_tag*)
+CBufferString::ComposeFileName(char const*, char const*, char)
+CBufferString::DefaultExtension(char const*)
+CBufferString::ExtendPath(char const*, char, bool)
+CBufferString::ExtractFileBase(char const*, bool)
+CBufferString::ExtractFilePath(char const*, bool)
 CBufferString::FixSlashes(char)
 CBufferString::FixupPathName(char)
 CBufferString::Format(char const*, ...)
+CBufferString::FormatTo(IFormatOutputStream*, CFormatStringElement) const
 CBufferString::Insert(int, char const*, int, bool)
+CBufferString::MakeAbsolutePath(char const*, char const*)
+CBufferString::MakeRelativePath(char const*, char const*, bool)
 CBufferString::MoveFrom(CBufferString&)
 CBufferString::Purge(int)
 CBufferString::RemoveAt(int, int)
+CBufferString::RemoveDotSlashes(char)
+CBufferString::RemoveFirstDir(CBufferString*)
 CBufferString::Replace(char const*, char const*, bool)
 CBufferString::SetExtension(char const*, bool)
 CBufferString::SetLength(int, bool, int*)
 CBufferString::SetPtr(char*, int, int, bool, bool)
+CBufferString::ShortenPath(bool)
+CBufferString::StartsWith(char const*) const
+CBufferString::StripExtension(bool)
+CBufferString::StripTrailingSlash()
 CBufferString::ToLowerFast(int)
 CBufferString::TrimTail(char const*)
 CBufferString::TruncateAt(int, bool)
 CColorGradient
+CCommand::Tokenize: Encountered command which overflows the tokenizer buffer.. Skipping!\n
 CELL_INVOKE
 CEntityNameString
+CFilterString::CFilterString(char const*, FilterStringOp_t, FilterStringCase_t)
+CFilterString::DoesMatchString(char const*) const
 CGlobalSymbol
 CGlobalSymbolCaseSensitive
 CHUNK_LEAP
@@ -476,26 +501,18 @@ CHUNK_LEAP_COND
 CIRCLE
 CKV3MemberNameSet
 CKV3MemberNameWithStorage
+CKeyValues_Data::Internal_GetString(char const*, char*, unsigned long)
 CLOSE_BRACE
 CLOSE_BRACKET
 CLOSE_PAREN
+CMemAllocSystemInitialize
 COMMA
+COM_TimestampedLog
 CONVERT_VALUE
 COPY
 COUNT
 CPiecewiseCurve
-CPulseArraylib
-CPulseArraylib::ArrayAppend
-CPulseArraylib::ArrayConcatenate
-CPulseArraylib::ArrayCount
-CPulseArraylib::ArrayFindElementMatching
-CPulseArraylib::ArrayFirstNElements
-CPulseArraylib::ArrayInsert
-CPulseArraylib::ArrayRemoveElementMatching
-CPulseArraylib::ArrayRemoveIndex
-CPulseArraylib::ArrayRemoveInvalidElements
-CPulseArraylib::ArraySetCount
-CPulseArraylib::ArrayShuffle
+CPulseBreakpointLocation
 CPulseCell_Base
 CPulseCell_BaseFlow
 CPulseCell_BaseLerp
@@ -504,6 +521,11 @@ CPulseCell_BaseRequirement
 CPulseCell_BaseState
 CPulseCell_BaseValue
 CPulseCell_BaseYieldingInflow
+CPulseCell_BaseYieldingInflow::BaseFlow_CancelAfter
+CPulseCell_BaseYieldingInflow::BaseFlow_CancelElegantly
+CPulseCell_BaseYieldingInflow::BaseFlow_CancelImmediately
+CPulseCell_BaseYieldingInflow::BaseFlow_WakeElegantly
+CPulseCell_BaseYieldingInflow::BaseFlow_WakeImmediately
 CPulseCell_BooleanSwitchState
 CPulseCell_BooleanSwitchState::Activate
 CPulseCell_CursorQueue
@@ -559,12 +581,28 @@ CPulseCell_Outflow_CycleRandom::Run
 CPulseCell_Outflow_CycleShuffled
 CPulseCell_Outflow_CycleShuffled::InstanceState_t
 CPulseCell_Outflow_CycleShuffled::Run
+CPulseCell_Outflow_ListenForAnimgraphTag::Cancel
+CPulseCell_Outflow_ListenForEntityOutput::Cancel
+CPulseCell_Outflow_NPCAccompanyEntity::Cancel
+CPulseCell_Outflow_NPCFollowTarget::Cancel
+CPulseCell_Outflow_NPCLeadPlayer::Cancel
+CPulseCell_Outflow_NPCScriptedIdle::Cancel
+CPulseCell_Outflow_NPCScriptedIdle::CancelElegantly
+CPulseCell_Outflow_NPCScriptedMoveTo::Cancel
+CPulseCell_Outflow_NPCUseScriptedAbility::Cancel
+CPulseCell_Outflow_PlaySequence::Cancel
+CPulseCell_Outflow_PlaySequence::CancelAtInterrupt
+CPulseCell_Outflow_PlayVCD::Cancel
+CPulseCell_Outflow_PlayVCD::CancelAtInterrupt
+CPulseCell_Outflow_PlayVOLine::Cancel
+CPulseCell_Outflow_ScriptedSequence::Cancel
 CPulseCell_Outflow_TestExplicitYesNo
 CPulseCell_Outflow_TestExplicitYesNo::Run
 CPulseCell_Outflow_TestRandomYesNo
 CPulseCell_Outflow_TestRandomYesNo::Run
 CPulseCell_PickBestOutflowSelector
 CPulseCell_PickBestOutflowSelector::ProcessSelector
+CPulseCell_PlaySequence::Cancel
 CPulseCell_Step_CallExternalMethod
 CPulseCell_Step_CallExternalMethod '%s'
 CPulseCell_Step_CallExternalMethod::Run
@@ -581,10 +619,18 @@ CPulseCell_Step_TestDomainEntFire
 CPulseCell_Step_TestDomainEntFire::Run
 CPulseCell_Step_TestDomainTracepoint
 CPulseCell_Step_TestDomainTracepoint::Run
+CPulseCell_TestEnums
+CPulseCell_TestEnums::CompareValues
+CPulseCell_TestWaitWithAutoTracepoints
+CPulseCell_TestWaitWithAutoTracepoints::Wait
 CPulseCell_TestWaitWithCursorState
 CPulseCell_TestWaitWithCursorState::CursorState_t
-CPulseCell_TestWaitWithCursorState::FailImmediately
+CPulseCell_TestWaitWithCursorState::InstanceState_t
 CPulseCell_TestWaitWithCursorState::Wait
+CPulseCell_TestYieldForever
+CPulseCell_TestYieldForever::Run
+CPulseCell_TestYieldWithObservables
+CPulseCell_TestYieldWithObservables::Run
 CPulseCell_Test_MultiInflow_NoDefault
 CPulseCell_Test_MultiInflow_NoDefault::InflowA
 CPulseCell_Test_MultiInflow_NoDefault::InflowB
@@ -604,7 +650,6 @@ CPulseCell_Test_MultiOutflow_WithParams_Yielding::OnOut1
 CPulseCell_Test_MultiOutflow_WithParams_Yielding::OnYieldResume1
 CPulseCell_Test_MultiOutflow_WithParams_Yielding::OnYieldResume2
 CPulseCell_Test_MultiOutflow_WithParams_Yielding::Start
-CPulseCell_Test_MultiOutflow_WithParams_Yielding::Stop
 CPulseCell_Test_NoInflow
 CPulseCell_Timeline
 CPulseCell_Timeline::Start
@@ -628,7 +673,6 @@ CPulseCell_Value_TestValue50::Eval
 CPulseCell_WaitForCursorsWithTag
 CPulseCell_WaitForCursorsWithTag::Wait
 CPulseCell_WaitForCursorsWithTagBase
-CPulseCell_WaitForCursorsWithTagBase::CursorState_t
 CPulseCell_WaitForObservable
 CPulseCell_WaitForObservable::Cancel
 CPulseCell_WaitForObservable::Start
@@ -637,9 +681,9 @@ CPulseCursorFuncs::AnyOtherCursorsHaveTag
 CPulseCursorFuncs::CursorHasTag
 CPulseCursorFuncs::KillAllOtherCursors
 CPulseCursorFuncs::KillCursorsWithTag
-CPulseCursorFuncs::KillThisCursorAndCancel
 CPulseCursorFuncs::RemoveTagFromCursor
 CPulseCursorFuncs::TagCursor
+CPulseCursorFuncs::WakeCursorsWithTag
 CPulseExecCursor
 CPulseGraphDef
 CPulseGraphExecutionHistory
@@ -693,6 +737,7 @@ CPulseMathlib::MakeTransform
 CPulseMathlib::MakeVector
 CPulseMathlib::MakeVector2D
 CPulseMathlib::MakeVector4D
+CPulseMathlib::MakeVectorFromAngle
 CPulseMathlib::MakeWorldTransform
 CPulseMathlib::MakeWorldVector
 CPulseMathlib::MaxFloat
@@ -722,12 +767,16 @@ CPulseMathlib::SplitWorldVector
 CPulseMathlib::SqrFloat
 CPulseMathlib::SqrInt
 CPulseMathlib::Sqrt
-CPulseMathlib::StringLength
 CPulseMathlib::StringsAreEqualCaseSensitive
 CPulseMathlib::Tan
 CPulseMathlib::VectorToWorldVector
 CPulseMathlib::WorldVectorToVector
+CPulseObservableExpression
 CPulseRuntimeMethodArg
+CPulseStringlib
+CPulseStringlib::FormatDurationStringFromSeconds
+CPulseStringlib::StringLength
+CPulseStringlib::StringsAreEqualCaseSensitive
 CPulseSystem: Detected NULL RESOURCE_TYPE_PULSE_GRAPH_DEF, skipping type manager registration.\n
 CPulseSystem::Internal_InstanceCreated( %s, %p )\n
 CPulseSystem::Internal_InstanceDestroyed( %s, %p )\n
@@ -736,6 +785,7 @@ CPulseTestFuncs_LibraryA::AGreaterThan5
 CPulseTestFuncs_LibraryA::AValueChanged
 CPulseTestFuncs_LibraryA::AZeroed
 CPulseTestFuncs_LibraryA::GetEnumColorValue
+CPulseTestFuncs_LibraryA::GetEnumFlagsValue
 CPulseTestFuncs_LibraryA::GetEnumShapeValue
 CPulseTestFuncs_LibraryA::GetFloatValue
 CPulseTestFuncs_LibraryA::GetIntValue
@@ -748,6 +798,7 @@ CPulseTestFuncs_LibraryA::LibrarySpawnFakeEntity
 CPulseTestFuncs_LibraryA::PrintStringWithEditorSuggestions
 CPulseTestFuncs_LibraryA::PrintStringWithLeafSuggestions
 CPulseTestFuncs_LibraryA::SetEnumColor
+CPulseTestFuncs_LibraryA::SetEnumFlags
 CPulseTestFuncs_LibraryA::SetEnumShape
 CPulseTestFuncs_LibraryA::SetFloatValue
 CPulseTestFuncs_LibraryA::SetFloatValueOptional
@@ -771,12 +822,6 @@ CPulseTestFuncs_LibraryA::TestOptionalParameters_AfterDefaultsAdded
 CPulseTestFuncs_LibraryA::TestOptionalParameters_AfterReorderSparseDefaults
 CPulseTestFuncs_LibraryA::TestOptionalParameters_BeforeDefaultsAdded
 CPulseTestFuncs_LibraryA::TestOptionalParameters_BeforeReorderSparseDefaults
-CPulseTestScriptLib
-CPulseTestScriptLib::AssertTrue
-CPulseTestScriptLib::IndicateTestFailure
-CPulseTestScriptLib::IsInTestMode
-CPulseTestScriptLib::RegisterTestCheckpoint
-CPulseTestScriptLib::TestModeAssertTrue
 CPulseTurtleGraphicsCursor
 CPulseTurtleGraphicsCursor::Move
 CPulseTurtleGraphicsCursor::PenDown
@@ -800,13 +845,24 @@ CPulse_PublicOutput
 CPulse_RegisterInfo
 CPulse_ResumePoint
 CPulse_Variable
+CRC32_ProcessBuffer
+CREATE_CHILD_CURSOR_OUTFLOW
 CSplitString::Split(char const*, int, char const**, int, bool)
 CStrongHandle
+CTSListBase::CTSListBase()
+CTSListBase::Detach()
+CTSListBase::InternalPop()
+CTSListBase::InternalPush(TSLNodeBase_t*)
 CTestDomainDerived_Cursor
 CTestDomainDerived_Cursor::GetCursorValueA
 CTestDomainDerived_Cursor::GetCursorValueB
 CTestDomainDerived_Cursor::SetCursorValueA
 CTestDomainDerived_Cursor::SetCursorValueB
+CThreadEvent::CThreadEvent(bool)
+CThreadEvent::Set()
+CThreadSyncObject::Wait(unsigned int)
+CThreadSyncObject::WaitImpl(unsigned int)
+CThreadSyncObject::~CThreadSyncObject()
 CURSOR_ADD_TAG
 CURSOR_REMOVE_TAG
 CURSOR_RETIRED
@@ -815,8 +871,18 @@ CURVE_TANGENT_LINEAR
 CURVE_TANGENT_MIRROR
 CURVE_TANGENT_SINE
 CURVE_TANGENT_SPLINE
+CUniformRandomStreamImpl<CThreadNullMutex>::RandomFloat(float, float)
+CUtlBinaryBlock::SetLength(int)
+CUtlBuffer::AddNullTermination()
 CUtlBuffer::CUtlBuffer(int, int, CUtlBuffer::BufferFlags_t)
 CUtlBuffer::CUtlBuffer(void const*, int, CUtlBuffer::BufferFlags_t)
+CUtlBuffer::CheckArbitraryPeekGet(int, int&)
+CUtlBuffer::CheckGet(int)
+CUtlBuffer::CheckPut(int)
+CUtlBuffer::EnsureCapacity(int)
+CUtlBuffer::ParseToken(characterset_t const*, char*, int, bool)
+CUtlBuffer::Printf(char const*, ...)
+CUtlBuffer::SeekPut(CUtlBuffer::SeekType_t, int)
 CUtlBuffer::SetExternalBuffer(void*, int, int, CUtlBuffer::BufferFlags_t)
 CUtlLeanVector
 CUtlOrderedMap
@@ -824,19 +890,29 @@ CUtlScratchMemoryPool::AllocAligned(int, int)
 CUtlString
 CUtlString::Acquire(CBufferString*, bool)
 CUtlString::Append(char const*)
+CUtlString::Append(char const*, int)
 CUtlString::CUtlString(CBufferString const&)
 CUtlString::Format(char const*, ...)
+CUtlString::FormatV(char const*, __va_list_tag*)
 CUtlString::FreeMemoryBlock()
 CUtlString::GetBaseFilename() const
+CUtlString::GetExtensionAlloc() const
 CUtlString::GetForModify()
 CUtlString::IsEqual_CaseSensitive(char const*) const
 CUtlString::IsEqual_FastCaseInsensitive(char const*) const
+CUtlString::PathJoin(char const*, char const*)
 CUtlString::Purge()
 CUtlString::Set(char const*)
 CUtlString::SetDirect(char const*, int)
+CUtlString::StripExtension() const
+CUtlString::operator+(char const*) const
 CUtlString::operator+=(char const*)
+CUtlString::operator=(CBufferString const&)
+CUtlString::operator==(CUtlString const&) const
+CUtlStringList::SplitString(char const*, char const* const*, int)
 CUtlSymbolTable::AddString(char const*, bool*)
 CUtlSymbolTable::CUtlSymbolTable(int, int, bool)
+CUtlSymbolTable::Find(char const*) const
 CUtlSymbolTable::RemoveAll()
 CUtlSymbolTable::String(CUtlSymbol) const
 CUtlSymbolTable::~CUtlSymbolTable()
@@ -846,9 +922,6 @@ CUtlVectorFixedGrowable
 Call C%d:I%d (%s)
 Called to invoke the graph
 Called when timer reaches the duration OR is stopped. NOTE: This will run a little while AFTER the last interval fires unless they line up perfectly.
-Cancel
-Cancel any waiting cursors.
-Cancel observing.
 CancelOnSucceeded
 Canceled
 Cannot allocate abstract class
@@ -876,15 +949,18 @@ Clamp value to range (float)
 Clamp value to range (int)
 Class data is a '%s', not a table\n
 Class does not allow allocation from its schema binding
+ClientLocalServerAccess001
 ClientServerSharedHandleSystem001
 ClientToolsInfo_001
 Code
 Color
 CommandLine
 Commit Step
-Compare strings with case sensitivity, in contrast to normal string equality which is case-insensitive
+Compare Values
+Compare strings with case sensitivity, in contrast to normal string equality which is case-insensitive.
+CompletedNormally
 Component Func
-Computes 2 ( 2.71...) raised to a power
+Computes 2 raised to a power
 Computes e ( 2.71...) raised to a power
 Condition to evaluate when any of its dependent values change.
 Convert %s R%d <- %s R%d
@@ -894,7 +970,6 @@ Convert from a local-space to a world-space vector
 Convert from a raw floating-point time to a Game Time that will be saved/loaded appropriately
 Convert from a world-space to local-space vector
 Convert radians (0-pi) to degrees (0-180)
-Copy 'element' to the end of 'a', increasing its count by one.
 Copy R%d <- R%d
 Cosine of angle. Input in radians, output in radians
 Could not execute '%s' because this graph domain does not support the required IPulseHost
@@ -946,6 +1021,7 @@ Destroy a fake entity from a static library function.
 DestroyAll
 DestroyFakeEntity( handle %d)\n
 Detach R%d
+DevMsg(char const*, ...)
 Did not execute '%s' because the 'Target' object was missing
 Disallowed variable name: %s
 Div R%d <- R%d / R%d
@@ -981,7 +1057,9 @@ EQ_VEC3
 EQ_VEC3WS
 EQ_VEC4
 ERROR: CUtlSymbolTableLarge element limit of %u exceeded\n
-ERROR: Resource name "%s" has the incorrect extension "%s" for the specified resource type (expected "%s")!\n
+ERROR:NoEnum:%s:%d
+ERROR:NoEnumerator:%s:%d
+ERROR:NoFlags:%s:%d
 ESCAPE_CHAR
 ESCAPE_CODE
 EXPONENT
@@ -999,6 +1077,7 @@ EntFire,%s,%s,%s
 Entity Handle
 Entity Name
 EntityName
+Enum flags '%s' invalid value '%s'
 Enumeration '%s' does not have a value '%s'
 Eq R%d <- R%d == R%d
 Eval
@@ -1013,21 +1092,23 @@ External system requesting an int from the test graph
 External system requesting an int from the test graph (variant)
 ExtractModuleMetadata
 Extraneous token
-Fail Immediately
-Failed
+FIRST
 Failed to allocate a lexer for '%s'. (Out of memory?)
 Failed to allocate a parser for '%s'. (Out of memory?)
-Failed to allocate an instance of a class
-Failed to allocate an instance of class '%s'
+Failed to allocate a token stream for '%s'. (Out of memory?)
+Failed to allocate an instance of a class of type '%s'
+Failed to allocate an instance of class '%s' (type '%s')
 Failed to apply FLC data to resource '%s': %s\n
 Failed to load %s: %s
 Failed to load: '%s' graph not found\n
+Failed to save unsupported class
 FailedReload
 Fake Ent-Fire
 FakeEntityDerivedA_tAPI
 FakeEntityDerivedA_tAPI::DerivedFuncA
 FakeEntityDerivedB_tAPI
-FakeEntityDerivedB_tAPI::DerivedFuncB
+FakeEntityDerivedB_tAPI_NEW_NAME
+FakeEntityDerivedB_tAPI_NEW_NAME::DerivedFuncB
 FakeEntity_t::s_InstanceCount == 0
 FakeEntity_t::s_InstanceCount > 0
 FakeEntity_tAPI
@@ -1042,16 +1123,16 @@ Find Fake Entity
 Find a spawned entity by name.
 Find all the yielded cursors on this graph and cancel them.
 Find all the yielded cursors on this graph with the matching tag and cancel them.
-Find first element 'a' which compare equal to 'element' and return its index.
+Find all the yielded cursors on this graph with the matching tag and wake them.
 FindElement
-Fire And Forget
+FioReadFileToBuffer(char const*, CUtlBuffer*, int)
 Fire input {m_Input}
-Fired immediately when this node begins for chaining purposes.
 Fired when A becomes 0 from any other number.
 Fired when A exceeds 5.
 Fired when the observable boolean is false, and killed when true.
 Fired when the observable boolean is true, and killed when false.
 Fired whenever the global A value changes.
+First
 FixupResourceName: Illegal full path passed in ("%s")!\n
 FixupResourceName: Illegal path, missing extension passed in ("%s")!\n
 FlattenedSerializersVersion001
@@ -1061,7 +1142,10 @@ Float( %f )
 Floor - round float down to nearest integer
 Floor Float
 FontManager_001
-Found existing value when inserting into tree - replacing existing value with new value. If this is intended behavior, use InsertOrReplace. If leaving existing values alone is intended, use InsertIfNotFound. If duplicate entries are intended, use InsertWithDupes.
+Format Duration String From Seconds
+FormatArgumentsToBuffer(IFormatOutputStream*, char const*, CTypeErasedFormattingWrapper const*, int)
+FormatTo(IFormatOutputStream*, CFormatStringElement, float)
+FormatTo(IFormatOutputStream*, CFormatStringElement, int)
 Frac
 Fractional component (ie. returns 0.34 for 12.34)
 Free
@@ -1099,6 +1183,7 @@ GenerateVector
 Get Cursor Value A
 Get Cursor Value B
 Get Enum Color Value
+Get Enum Flags Value
 Get Enum Shape Value
 Get Fake Entity Name
 Get Float Value
@@ -1112,6 +1197,7 @@ Get the 'ValueA' number off the cursor.
 Get the 'ValueB' number off the cursor.
 Get the 'ValueX' number off the graph instance.
 Get the global color enum value.
+Get the global flags enum value.
 Get the global float value.
 Get the global int value.
 Get the global shape enum value.
@@ -1123,6 +1209,7 @@ GetArrayElement R%d <- R%d[ R%d ]
 GetBlackboardReference R%d <- BR%d (%s)
 GetCPUInformation
 GetConst R%d <- C%d (%s)
+GetDefaultMiniDumpTypeFlags
 GetDomainValue R%d <- DV%d (%s)
 GetInlineConst R%d <- C%d (%s)
 GetResourceManifestCount
@@ -1132,6 +1219,9 @@ GetVar R%d <- V%d (%s)
 GetVar R%d <=MOVE*V%d (%s)
 Gradient
 Green
+HPulseCell
+HPulseCellBase
+HYieldedCursor
 HammerMapLoader001
 HandleInt
 HandleIntDerived
@@ -1140,6 +1230,12 @@ HelpSystem_001
 HostStateMgr001
 I could not work out what I was expecting, like so many of us these days!\n
 ID_CHAR
+IFormatOutputStream::Format2DTable(CTypeErasedFormattingWrapper, CFormatStringElement, void const**, int, int)
+IFormatOutputStream::FormatArray(CTypeErasedFormattingWrapper, CFormatStringElement, void const**, int, bool)
+IFormatOutputStream::FormatEnumHelper(CFormatStringElement, int, std::initializer_list<std::pair<int, char const*>>)
+IFormatOutputStream::FormatMaskHelper(int, std::initializer_list<std::pair<int, char const*>>)
+IFormatOutputStream::OutputIndentation()
+IFormatOutputStream::PutRepeatedChar(char, int)
 IKV3TransferInterface_EHandle_Load
 IKV3TransferInterface_EHandle_Save
 IKV3TransferInterface_GameTime_Load
@@ -1158,15 +1254,8 @@ IPulseReloadListener
 IPulseSystem_001
 If (R%d) Jump to Instr I%d
 If (R%d) Leap to Chunk C%d
-If -1 timer will continue forever
 If specified, each wait interval will vary randomly between WaitInterval this value
 If this cursor spawns other work via Fire And Forget, should this Tag be inherited?
-Immediate Wake
-Immediately reactivate any waiting cursors regardless of how long they have been waiting.
-Indicate Test Failure
-Indicate that a checkpoint has been reached.
-Indicates a test failure if Value is false.
-Indicates a test failure if value is false; only tested when running unit tests
 Inert VModuleMetadata
 Inflow A
 Inflow B
@@ -1176,8 +1265,6 @@ InfoForResourceTypeIPulseGraphDef
 InputService_001
 InputStackSystemVersion001
 InputSystemVersion001
-Insert
-Insert 'element' in the given index in 'a', increasing its count by one and moving the elements after index.
 InsertBeforeGetPtr
 InsertMultipleBefore
 InstallSchemaBindings
@@ -1185,13 +1272,16 @@ Integer
 Integer Divide
 Integer division - unlike the divide (/) node, this will truncate any remainder (floor) and return an integer.
 Internal cursor flow error: halting due to leaf cell bug!
+InterruptElegantly
+InterruptImmediately
 Interval Timer
 Invalid
+Invalid use of KV3 specific type %s with basic type %s, must be basic type %s
 Invoke '%s' failed with code %d
 Invoke Cell%d [eid=%d] %s%s
 Invoke Lib %s
 Invoke binding %d (%s) not found, converting to NOP\n
-Is In Test Mode
+InvokeMiniDumpHandler
 Is Valid Vector
 Is Valid World Vector
 IsValidIndex( i )
@@ -1200,21 +1290,43 @@ JUMP
 JUMP_COND
 Jump to Instr I%d
 JumpOrLeap( C%d:I%d )
+KV3 instances cannot be set to an unspecified specific type
 Keep a history of all instructions run on a per graph basis.
 Keep running normally.
 KeyValueCache001
 KeyValues3
+KeyValues3: pre-allocated array memory is too small for %u elements (%u bytes available, %u bytes needed)\n
+KeyValues3: pre-allocated table memory is too small for %u members (%u bytes available, %u bytes needed)\n
+KeyValues::FindAndDeleteSubKey(char const*)
+KeyValues::FindKey(char const*) const
+KeyValues::FindKey(char const*, bool)
+KeyValues::GetFirstValue()
+KeyValues::GetInt(char const*, int) const
+KeyValues::GetName() const
+KeyValues::GetNextValue()
+KeyValues::KeyValues(char const*, IKeyValuesSystem*, bool)
+KeyValues::LoadFromBuffer(char const*, CUtlBuffer&, IFileSystem*, char const*, bool (*)(char const*, void*), IKeyValuesErrorSpew*, void*, char const*)
+KeyValues::LoadFromFile(IFileSystem*, char const*, char const*, bool (*)(char const*, void*), void*, char const*)
+KeyValues::MergeFrom(KeyValues const*, KeyValues::MergeKeyValuesOp_t)
+KeyValues::SetInt(char const*, int)
+KeyValues::operator delete(void*)
+KeyValues::operator new(unsigned long)
+KeyValues::~KeyValues()
+KeyValuesSystem
+Kill After.
 Kill All Other Cursors
 Kill Cursors With Tag
-Kill This Cursor And Cancel
-Kill after current node.
-Kill elegantly.
-Kill immediately.
+Kill Elegantly.
+Kill Immediately.
 LAST_SERIALIZED_CODE
 LIBRARY_INVOKE
 LINE_CONTINUATION
 LITERAL_FALSE
 LITERAL_TRUE
+LOG_CONSOLE
+LOG_DEVELOPER
+LOG_DEVELOPER_CONSOLE
+LOG_GENERAL
 LTE_FLOAT
 LTE_GAMETIME
 LTE_INT
@@ -1235,32 +1347,49 @@ Lexer encountered %d error(s)
 Library Destroy Fake Entity
 Library Find Fake Entity By Name
 Library Spawn Fake Entity
-Library for interacting with a few global test values.
-Library for interacting with pulse cursors.
 Limit Count
 Line: 
 Linear
 List all the active pulse graph instances
 LoadKV3(CKV3Arena*, CUtlString*, CUtlBuffer*, KV3ID_t const&, char const*, unsigned int)
 LoadKV3(KeyValues3*, CUtlString*, CUtlBuffer*, KV3ID_t const&, char const*, unsigned int)
+LoadKV3(KeyValues3*, CUtlString*, char const*, KV3ID_t const&, char const*, unsigned int)
+LoadKV3FromKV1Text_Translated(KeyValues3*, CUtlString*, char const*, KV1TextEscapeBehavior_t, KV1ToKV3Translation_t const*, int, char const*, bool, unsigned int)
+LoadKV3Text_NoHeader(KeyValues3*, CUtlString*, char const*, KV3ID_t const&, char const*, unsigned int)
+LocalServerClientAccess001
 Localize_001
 Log10
 Log2
+LoggingSystem_CurrentStateIndex
+LoggingSystem_GetChannel
 LoggingSystem_IsChannelEnabled
 LoggingSystem_Log
 LoggingSystem_Log(int, LoggingSeverity_t, Color, char const*, ...)
 LoggingSystem_Log(int, LoggingSeverity_t, LoggingMetaData_t const*, Color, char const*, ...)
 LoggingSystem_Log(int, LoggingSeverity_t, LoggingMetaData_t const*, char const*, ...)
+LoggingSystem_Log(int, LoggingSeverity_t, LoggingRareOptions_t const&, char const*, ...)
+LoggingSystem_PopLoggingState
+LoggingSystem_PushLoggingState
+LoggingSystem_RegisterBackdoorLoggingListener
 LoggingSystem_RegisterLoggingChannel
+LoggingSystem_RegisterLoggingListener
+LoggingSystem_ResetBackdoorLoggingState
+LoggingSystem_ResetCurrentLoggingState
+LoggingSystem_SetChannelVerbosity
+LoggingSystem_UnregisterLoggingListener
+LooksLikeKV3TextData(void const*, int, KV3ID_t*, char*, int)
 Lower pen.
 MATCHFRAMEWORK_001
 MAtomicTransfersAsPlainString
+MCustomFGDMetadata
 MEnumFlagsWithOverlappingBits
 MEnumeratorIsNotAFlag
 MFgdFromSchemaCompletelySkipField
 MGetKV3ClassDefaults
 MIsBoxedIntegerType
 ML_COMMENT
+MM:SS with leading zeros
+MM_SS_LEADING_ZERO
 MODEL_PROCESSING_SERVICES_INTERFACE_001
 MOD_FLOAT
 MOD_INT
@@ -1277,9 +1406,9 @@ MPulseEditorCanvasItemSpecKV3
 MPulseEditorHeaderIcon
 MPulseEditorHeaderText
 MPulseExpressionAlias
+MPulseFGDSkipField
 MPulseFunctionHiddenInTool
 MPulseLegacyName
-MPulsePolymorphicDependentArg
 MPulsePolymorphicDependentReturn
 MPulseRequirementCheck
 MPulseRequirementCommit
@@ -1292,12 +1421,14 @@ Make Angle From Forward Vector
 Make Color
 Make Transform
 Make Vector
+Make Vector From Angle
 Make Vector2 D
 Make Vector4 D
 Make World Transform
 Make World Vector
 Make a Color from component parts
 Make a Transform from component parts.
+Make a Vector from an Angle
 Make a Vector from component parts.
 Make a Vector2D from component parts.
 Make a World Vector from component parts.
@@ -1370,6 +1501,7 @@ NE_VEC2
 NE_VEC3
 NE_VEC3WS
 NE_VEC4
+NONE
 NO_FLAGS
 NSt3_V214error_categoryE
 NSt6thread6_StateE
@@ -1377,6 +1509,7 @@ NULL CELL
 NULL_ENT
 Natural logarithm (base e)
 NavGameTest001
+Need to specify a pulse file to open.\n
 Neg R%d <- -R%d
 Neq R%d <- R%d != R%d
 NetworkClientService_001
@@ -1411,11 +1544,10 @@ OnOut1
 OnOut2
 OnYieldResume1
 OnYieldResume2
-OngoingNotify
 Only wrote %d (of %d) values when saving map!
 Opaque Handle
 Open a specific graph instance by id
-Optional. After taking an OnCanceled outflow, signal to any observers that this cursor is now canceled. Equivalent to not handling the original cancel outflow. If you don't use this, handling OnCanceled will be treated as success.
+Opens the specified pulse used in this map in the editor.\n\tArguments: <pulse_file>
 Optional. Type 'Any'. An associated value, e.g. the Entity Handle which is responsible for this Cursor. The Tag is defined by the unique combination of Name and Value.
 Or R%d <- R%d || R%d
 Origin
@@ -1428,6 +1560,7 @@ POS_INTLITERAL
 PRIVATE
 PULSE_CALL_ASYNC_FIRE
 PULSE_CALL_SYNC
+PVAL_ANIM_SEQUENCE
 PVAL_ANY
 PVAL_ARRAY
 PVAL_BOOL
@@ -1458,6 +1591,7 @@ PVAL_TYPESAFE_INT
 PVAL_TYPESAFE_INT64
 PVAL_UNKNOWN
 PVAL_VARIANT
+PVAL_VDATA_CHOICE
 PVAL_VEC2
 PVAL_VEC3
 PVAL_VEC3_WORLDSPACE
@@ -1471,6 +1605,7 @@ PanoramaUIEngine001
 Parent Map
 Parent Map Entity
 Parent Map: %s\n
+Parent VData
 Parent VMDL
 Parent XML
 Parent XML Panel
@@ -1483,12 +1618,47 @@ Pen Down
 Pen Up
 PhysicsBuilderMgr001
 Pitch
+Plat_CheckSDL
+Plat_CreateWindow
+Plat_DebugString
+Plat_DemangleRawTypeName
+Plat_DisableIOBuffering
+Plat_ExitProcess
 Plat_FatalError
+Plat_FileExists
 Plat_FloatTime
+Plat_GetCurrentDirectory
+Plat_GetDesktopBounds
+Plat_GetEnv
+Plat_GetExeModule
+Plat_GetGameDirectory
+Plat_GetLocalTime
+Plat_GetModuleFilename
+Plat_GetModuleInterfaceFactory
+Plat_GetModuleProcAddress
 Plat_GetTime
+Plat_IgnoreContentAsserts
+Plat_InitializeCOM
+Plat_IsDirectory
 Plat_IsInDebugSession
 Plat_IsInTestMode
+Plat_IsRunningOnCustomerMachine
+Plat_LoadModule
+Plat_LoadModuleRaw
+Plat_LoadSDL
+Plat_MessageBox
 Plat_NonFatalErrorFunc
+Plat_NotifyOSAppIsNotHung
+Plat_Printf
+Plat_RedirectThisProcessStdioToFile(int, unsigned int)
+Plat_RelativeTicks
+Plat_SetActiveWindow
+Plat_SetGameDirectories
+Plat_ShutdownCOM
+Plat_TickDiffMilliSecF
+Plat_UnloadModule
+Plat_UnloadSDL
+Plat_UpdateThisProcessStdioRedirect(int, int)
 Pointers cannot be used as numeric values
 PostProcessingSystem_001
 Preventing new cursor (%s)
@@ -1502,6 +1672,9 @@ Prints the execution history of a graph by filename or instanceid
 Private
 Probable infinite loop detected! Terminating pulse cursor after %d consecutive instructions (%s)
 Probable runaway cursor creation detected! Permanently disabling this graph instance (%s)
+Proceed Elegantly.
+Proceed Immediately
+Proceed Immediately.
 Process Selector
 PropertyEditorSystem_001
 Pulse
@@ -1510,13 +1683,14 @@ Pulse: %s
 PulseApiFeature_t
 PulseBestOutflowRules_t
 PulseCursorCancelPriority_t
-PulseCursorExecResult_t
 PulseCursorID_t
+PulseCursorWakePriority_t
 PulseCursorYieldToken_t
 PulseDebugLog: Calling external method on non-existent entity or game blackboard
 PulseDebugLog: Calling external method on non-existent entity or game blackboard\n
 PulseDocNodeID_t
 PulseDomainValueType_t
+PulseDurationStringFormat_t
 PulseGraphExecutionHistoryCursorDesc_t
 PulseGraphExecutionHistoryEntry_t
 PulseGraphExecutionHistoryNodeDesc_t
@@ -1525,7 +1699,6 @@ PulseInstructionCode_t
 PulseMethodCallMode_t
 PulseNodeDynamicOutflows_t
 PulseNodeDynamicOutflows_t::DynamicOutflow_t
-PulseObservableBoolExpression_t
 PulseRegisterMap_t
 PulseRuntimeBlackboardReferenceIndex_t
 PulseRuntimeCallInfoIndex_t
@@ -1546,6 +1719,8 @@ PulseSystemEventObservableVariableListenerNotify_t
 PulseSystemEventObservableVariableSourceChanged_t
 PulseSystemEventYieldResume_t
 PulseTestEnumColor_t
+PulseTestEnumFlagsAlt_t
+PulseTestEnumFlags_t
 PulseTestEnumShape_t
 PulseValueType_t
 PulseVariableKeysSource_t
@@ -1564,13 +1739,11 @@ Random Integer
 Random World Position
 RandomFloat
 RandomInt
-Randomizes the order of items in the array (Knuth/Fisher-Yates Shuffle)
 Randomly taken half of the time
 Reciprocoal square root (1/sqrt)
 Recognition Exception
 Recognition exception
 Record that the function was called
-Register Test Checkpoint
 RegisterChoice_CPulseTestFuncs_LibraryA_PrintStringWithLeafSuggestions
 RegisterConCommand: Unknown error registering con command "%s"!\n
 RegisterConVar: Unknown error registering convar "%s"!\n
@@ -1581,15 +1754,13 @@ Reloading
 Remap Clamped Float
 Remap and clamp input value from input range to output range (float)
 Remove Tag From Cursor
-Remove all elements from 'a' which are invalid instances.
-Remove all elements from 'a' which compare equal to 'element'.
-Remove the element at the given index in 'a', decreasing its count by one and moving the elements after index.
 Remove the given tag from this cursor. If other cursors are waiting on us, they will resume.
 RenderDevice003
 RenderDeviceMgr001
 RenderHardwareConfig002
 RenderService_001
 RenderUtils_001
+Request elegant wind-down of any associated work (e.g. vcd interrupt), then proceed afterwards.
 Request elegant wind-down of any associated work (e.g. vcd interrupt).
 Resource
 Resource Name
@@ -1597,9 +1768,7 @@ ResourceCompilerSystem001
 ResourceHandleUtils001
 ResourceManifestRegistry001
 ResourceSystem013
-Resume
 Return the input string, use the code default if none was supplied.
-Return the number of elements in the array.
 Returns -1 or 0 or 1 based on the sign of the argument
 Returns -1.0 or 0.0 or 1.0 based on the sign of the argument
 Returns a random position centered on vCenter with random min and max radius
@@ -1609,7 +1778,6 @@ Returns interpolated value between A and B based on frac 0.0 - 1.0 (world vector
 Returns the constant pi (3.14...)
 Returns true if the Vector is valid
 Returns true if the World Vector is valid
-Returns up to the maximum requested elements. Never grows the array (unlike SetCount).
 Roll
 Root
 Round - round float up or down to integer
@@ -1623,6 +1791,7 @@ SCALE_VEC2
 SCALE_VEC3
 SCALE_VEC4
 SCOPE_QUALIFIER
+SECOND
 SEMICOLON
 SET_BLACKBOARD_REFERENCE
 SET_VAR
@@ -1659,6 +1828,7 @@ Schema Enum
 SchemaSystem_001
 SchemaTestExternal_One_001
 SchemaTestExternal_Two_001
+Second
 Select Best Exit
 Select Example Criteria
 SerializedEntitiesVersion001
@@ -1668,6 +1838,7 @@ Set Color
 Set Cursor Value A
 Set Cursor Value B
 Set Enum Color
+Set Enum Flags
 Set Enum Shape
 Set Float Value
 Set Float Value Optional
@@ -1680,14 +1851,15 @@ Set the 'ValueB' number on the cursor.
 Set the 'ValueX' number on the graph instance.
 Set the current color
 Set the global color enum value.
+Set the global color flags value.
 Set the global color shape value.
 Set the global float value (with default).
 Set the global float value.
 Set the global int value.
 Set the global string value (with default).
 Set the global string value.
-Set the number of elements in the array.
 Set the test value as an int
+SetAssertionPrompt
 SetBlackboardReference BR%d (%s) <- R%d 
 SetVar V%d (%s) <- R%d
 SetVarArrayElement1D V%d (%s) [ R%d ] <- R%d R%d
@@ -1742,6 +1914,7 @@ Split a Vector into component parts.
 Split a Vector2D into component parts.
 Split a World Vector into component parts.
 Split an Angle into component parts.
+SplitNameAndKV3Args
 Sqr Float
 Sqr Int
 Sqrt
@@ -1773,23 +1946,22 @@ Start
 Start a timer with the specified duration, fire the OnInterval output 
 StatsService_001
 SteamAudio001
-Stop
-Stop Timer
 Stop Waiting
-Stop any active timers - the completed outflow will still fire
+Stop the node action without any wind-down, then proceed afterwards.
 Stop without any wind-down.
 String
 String Length
 String( %s )
 Strings Are Equal Case Sensitive
 Sub R%d <- R%d - R%d
-Succeeded
-Synchronous - wait for the method to fully complete before returning
+Synchronous - Wait for this node to fully complete before proceeding.
+THIRD
 TLS init function for 
 TLS wrapper function for 
 TOK_COLON
 TRIANGLE
 Tag Cursor
+TagsRemoved
 Tangent of angle. Input in radians, output in radians
 Terminate()
 TernaryConditional
@@ -1800,12 +1972,12 @@ Test Compiled Params  After Type Changes
 Test Compiled Params  Before Type Changes
 Test Domain
 Test Domain Entity
+Test Enums
 Test Function Renamed   With Args  New
 Test Function Renamed  New
 Test Function Renamed  Old
 Test Function Renamed  With Args  Old
 Test Handle
-Test Mode Assert True
 Test Observable False
 Test Observable True
 Test Optional Parameters  After Defaults Added
@@ -1816,7 +1988,6 @@ Test node that just generates the integer 50. Nothing to see here!
 Test node that picks between two outflows as specified in the test domain.
 Test node that randomly picks between two outflows.
 Test step with return value
-TestCheckpoint: %s
 TestClock_AutoRun
 TestClock_ExplicitStepped
 TestComponent_t
@@ -1834,12 +2005,15 @@ TestFunctionRenamed_WithArgs_New
 TestFunctionRenamed_WithArgs_Old
 TestScriptMgr001
 Test_ValidateCursorValues
-Testing script helpers.
 TextLayout_001
+Third
 This convar is being accessed prior to ConVar_Register being called
+This is the overall duration. If -1 timer will continue forever. During this duration, we will fire a new child cursor at each Interval.
 ThreadAtomicNotifyOne(unsigned int const*)
 ThreadGetCurrentId
 Time since the start of the timer
+TimestampedEvent
+TimestampedEventMsgV
 ToolFramework2_002
 ToolSceneNodeFactory_001
 ToolService_001
@@ -1850,9 +2024,9 @@ Triangle
 Tried to load a polymorphic pointer with no '%s' key
 Tried to load resource reference '%s' from a value without a resource reference specific type.
 Turn
+Turn a time in seconds into a display string. NOT localized.
 Turtle Graphics Domain
 TurtleGraphics
-TwNV
 Typesafe Int
 Typesafe Int64
 UNKNOWN
@@ -1867,13 +2041,15 @@ Unexpected node
 Unexpected token
 Unexpected token '%s' %s
 Unknown
+Unknown KV3 specific type %u
+Unknown format type
 Unknown property %s
 Unknown variable %s
 Unsupported KV3 basic type '%s' (%d)!
 Unsupported version %d for resource '%s' (Expected %d)\n
 Unwanted token '%s' %s
 Usage: pulse_debug_print <vpulse_resource>
-Used to flag a test as having failed.
+UtlRBTree_FailedInsertDuplicate
 UtlVectorMemory_Alloc
 UtlVectorMemory_CalcNewAllocationCount
 UtlVectorMemory_FailedAllocation
@@ -1882,6 +2058,8 @@ VAsyncFileSystem2_001
 VAvi001
 VBik001
 VConComm001
+VDATA
+VData Choice
 VEngineCvar007
 VFileSystem017
 VMAP
@@ -1899,16 +2077,21 @@ VScriptManager010
 VStringTokenSystem001
 VTT for 
 VWebm001
+V_AreSlashesCorrect
 V_DoubleToString_Unsafe
+V_FixDoubleSlashes
 V_FloatToString_Unsafe
 V_GetFileExtension
+V_GetFileExtensionSafe
 V_Get_stderr
 V_Get_stdout
 V_Int16ToString_Unsafe
 V_Int32ToString_Unsafe
 V_Int64ToString_Unsafe
 V_IsAbsolutePath
+V_PathContainsPath
 V_RemoveDotSlashes
+V_SplitString(char const*, char const*, CUtlVector<CUtlString, int, CUtlVectorMemory_Growable<CUtlString, int, 0ul>>&, bool)
 V_StringParseError
 V_StringToBool
 V_StringToColor
@@ -1925,7 +2108,9 @@ V_StringToUint8
 V_StringToVector
 V_StringToVector2D
 V_StringToVector4D
+V_StringToVectorWS
 V_StripExcessTrailingZeros
+V_TryAndMakeFriendlyNameFromCppName
 V_UInt16ToString_Unsafe
 V_UInt32ToString_Unsafe
 V_UInt64ToString_Unsafe
@@ -1933,35 +2118,50 @@ V_UInt8ToString_Unsafe
 V_UnicodeLength(char const*)
 V_UnqualifiedFileName
 V_acosd
+V_acosf
 V_asind
+V_asinf
 V_atan2f
 V_atand
+V_atanf
 V_atof
 V_atofloat32
 V_atoi
 V_cosd
+V_cosf
 V_exp2f
 V_expf
+V_fclose
 V_fflush
+V_fileno
 V_fmodd
 V_fmodf
+V_fopen
+V_fopenUTF8
 V_fpclassifyd
 V_fprintf
+V_fread
+V_ftell
 V_fwrite
 V_isnand
 V_log10f
 V_log2f
 V_logf
+V_powd
 V_powf
 V_qsort_s
 V_roundf
 V_sincosf
 V_sind
+V_sinf
 V_snprintf
+V_sscanf
 V_stricmp_fast
 V_stristr_fast(char const*, char const*)
 V_strnlen(char const*, int)
 V_tand
+V_tanf
+V_vsnprintf
 Value 0-1 how far along duration (always 0 if duration is -1)
 Variant
 Vector
@@ -1974,21 +2174,29 @@ Vrad3_001
 WARNING: Pulse failed to restore yielded cursor - error with cell state (%d:%s)\n
 WARNING: Pulse failed to restore yielded cursor - no yielding cell or landing pad (%d:%s)\n
 WARNING: Pulse failed to save yielded cursor - no yielding cell or landing pad (C%d:I%d)\n
+WARNING: Resource name "%s" has the incorrect extension "%s" for the specified resource type (expected "%s")!\n
 WHITE
 Wait
 Wait For Completion
 Wait For Cursors With Tag
 Wait Until
+Wait and Trace
 Wait for a duration, firing a child cursor at regular (or randomized) intervals
 Wait, Resume=%s
+Wake Cursors With Tag
+WakeElegantly
+WakeImmediate
 Warning
 When we start waiting, how should we handle existing cursors?
+While False
+While True
 While active, manage child cursors based on the results of a boolean condition. When the observable result changes, the prior cursor will be canceled and the appropriate outflow will fire a new child cursor. Will monitor continuously until externally canceled.
 White
 World Transform
 World Vector
 World Vector To Vector
 WorldRendererMgr001
+Worldsize_Init
 X to the Y power
 Yield, Resume=%s
 [ Chunk%d ]
@@ -2022,13 +2230,16 @@ _ITM_registerTMCloneTable
 _MakeGlobalSymbol
 _MakeGlobalSymbolCaseSensitive
 _Target
+_V_SetExtension
+_V_StringAfterPrefix
+_V_StripLastDir
+_V_strEndsWith
 _V_strncmp
 _V_strncpy
+_V_strnicmp_fast
 __CursorQueue__
-__ExternalMethodParent__
 __FireCursorsParent__
 __State_Child_Condition__
-__State_Child_Subgraph__
 __TimelineParent__
 __ctype_b_loc
 __ctype_toupper_loc
@@ -2083,6 +2294,7 @@ __cxxabiv1::__vmi_class_type_info::~__vmi_class_type_info()
 __dynamic_cast
 __errno_location
 __float128
+__fxstat64
 __gcclibcxx_demangle_callback
 __gmon_start__
 __gnu_cxx::__concat_size_t(char*, unsigned long, unsigned long)
@@ -2124,10 +2336,12 @@ __gnu_cxx::recursive_init_error::recursive_init_error()
 __gnu_cxx::recursive_init_error::~recursive_init_error()
 __gxx_personality_v0
 __int128
+__m_BaseFlow_WhileActive__
 __pthread_key_create
 __test_and_acquire(long*)
 __test_graph_%d.vpulse
 __tls_get_addr
+__xstat64
 _cells
 _class
 _txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
@@ -2137,8 +2351,6 @@ _txnal_cow_string_c_str(void const*)
 _txnal_logic_error_get_msg(void*)
 _txnal_runtime_error_get_msg(void*)
 _txnal_sso_string_c_str(void const*)
-a:fulltype
-a:typeparam
 abort
 acos
 active_frame
@@ -2146,6 +2358,7 @@ alignof
 allocator
 alpha
 angle
+angles
 arg1
 arg2
 arg3
@@ -2155,7 +2368,7 @@ asin
 atan
 auto
 auto:
-bFailOnCancel
+bFail
 bInAutoWakeList
 bInherit
 bValue
@@ -2196,6 +2409,7 @@ bool __gnu_cxx::operator==<char const*, std::string>(__gnu_cxx::__normal_iterato
 bool __gnu_cxx::operator==<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>> const&, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>> const&)
 bool __gnu_cxx::operator==<char*, std::string>(__gnu_cxx::__normal_iterator<char*, std::string> const&, __gnu_cxx::__normal_iterator<char*, std::string> const&)
 bool std::operator==<char, std::char_traits<char>, std::allocator<char>>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, char const*)
+bool8
 boolean
 byte
 ceil
@@ -2218,12 +2432,14 @@ char* std::string::_S_construct_aux<char const*>(char const*, char const*, std::
 char* std::string::_S_construct_aux<char*>(char*, char*, std::allocator<char> const&, std::__false_type)
 char16_t
 char32_t
+char8
 char8_t
 clamp
 client.dll
 close
 co_await 
 color
+color32
 const_cast
 construction vtable for 
 control_storage
@@ -2247,13 +2463,18 @@ delete[]
 dl_iterate_phdr
 double
 dynamic_cast
-element
+ehandle
+entity_name
 execution_history
+exp2
 expr
 fakeEnt.m_nHandle.WeakHandle() == PULSE_WEAK_HANDLE_INVALID
 fake_derived_a
 fake_derived_b
 false
+fclose
+fflush
+fileno
 flDegrees
 flDistance
 flDuration
@@ -2277,6 +2498,7 @@ flPitch
 flRadians
 flRoll
 flScale
+flSeconds
 flTime
 flVal
 flValue
@@ -2287,6 +2509,7 @@ flWaitIntervalHigh
 flWaitValue
 flWakeTime
 flYaw
+flags
 flc_columns
 flc_count
 flc_file_ids
@@ -2317,6 +2540,7 @@ getentropy
 glibcxx.eh_pool
 global constructors keyed to 
 global destructors keyed to 
+group
 guard variable for 
 hEntity
 hInstance
@@ -2336,6 +2560,8 @@ int&& std::forward<int>(std::remove_reference<int>::type&)
 int16
 int32
 int64
+int8
+interrupt_priority
 invalid
 ioctl
 is also the end of the line, so you must check your lexer rules\n
@@ -2347,21 +2573,22 @@ length3d
 lerp
 lexer->mTokens(): Error: No lexer rules were added to the lexer yet!\n
 libc.so.6
-libm.so.6
 libpthread.so.0
 libpulse_system.so
 libtier0.so
 listeners
+localize
 log10
 log2
 long
 long double
 long long
 looks like this:\n\t\t%.*s\n
-m_Always
 m_Args
 m_AsyncChild1
 m_AsyncChild2
+m_BaseFlow_OnAfterCancel
+m_BaseFlow_WhileActive
 m_BlackboardReferences
 m_BlackboardResource
 m_BlackboardResourceName
@@ -2403,12 +2630,15 @@ m_Input
 m_InstructionDebugInfos
 m_Instructions
 m_InvokeBindings
+m_LiveFloatValue
+m_LiveStringValue
+m_Metadata
 m_MethodName
 m_MissingRetvalDefault
 m_Name
 m_No
+m_NodeID
 m_NodeName
-m_OnCanceled
 m_OnFinished
 m_OnInterval
 m_OnTrue
@@ -2437,6 +2667,7 @@ m_RequiredRuntimeType
 m_RequirementNodeIDs
 m_ResumePoint
 m_ReturnType
+m_SequencePoint
 m_SequencePointName
 m_Shuffle
 m_SourceEntity
@@ -2449,6 +2680,7 @@ m_TagValue
 m_TargetEntity
 m_TargetInput
 m_TimelineEvents
+m_TracePrefix
 m_Tracepoints
 m_Type
 m_UnknownKeys
@@ -2456,9 +2688,9 @@ m_UnyieldResume
 m_Value
 m_Vars
 m_WaitComplete
-m_WakeCancel
 m_WakeFail
 m_WakeResume
+m_WatchForStringValue
 m_WhenFalse
 m_WhenTrue
 m_Yes
@@ -2488,7 +2720,6 @@ m_bTagSelfWhenComplete
 m_bTestYesOrNoPath
 m_bWaitForChildOutflows
 m_curValue
-m_externalMethodTargetGraph
 m_flFloatValue1
 m_flFloatValue2
 m_flHeadingDeg
@@ -2500,14 +2731,19 @@ m_flTimeFromPrevious
 m_flWaitInterval
 m_flWaitIntervalHigh
 m_flWakeTime
+m_flWatchForFloatValue
 m_hBlackboardResource
 m_hCursor
+m_hCursorOnOtherGraph
 m_hDef
 m_hGraph
 m_hGraphInstance
 m_hInstance
 m_hListenerInstance
 m_hObserver
+m_hSelfCellInstance
+m_hSelfCellInstanceUntyped
+m_hSelfCursor
 m_mapCellDesc
 m_mapCursorDesc
 m_nAsyncCallMode
@@ -2515,6 +2751,7 @@ m_nBlackboardIndex
 m_nBlackboardReference
 m_nBlackboardReferenceIdx
 m_nCallInfoIndex
+m_nCellID
 m_nCellIndex
 m_nCheckType
 m_nChunk
@@ -2533,6 +2770,7 @@ m_nDesiredKillPriority
 m_nDestChunk
 m_nDestInstruction
 m_nDomainValueIdx
+m_nDummy
 m_nEditorNodeID
 m_nFlowNodeID
 m_nGraphID
@@ -2549,6 +2787,8 @@ m_nNextShuffle
 m_nNextValidateIndex
 m_nNodeID
 m_nOutgoingTangent
+m_nReferenceColor
+m_nReferenceFlags
 m_nReg
 m_nReg0
 m_nReg1
@@ -2573,6 +2813,7 @@ m_vDomainMins
 m_vPos
 m_vecHistory
 malloc
+matrix3x4
 memchr
 memcmp
 memcpy
@@ -2582,19 +2823,20 @@ mold 2.36.0 (compatible with GNU ld)
 mt19937
 nAsyncRet1
 nColor
-nCount
 nCursorID
 nDenominator
 nEditorID
+nFlags
+nFormat
 nHandle
-nIndex
 nKillPriority
 nLastValidEntryIdx
 nMax
-nMaxElements
 nMin
 nNumerator
 nParam
+nRemainderDigits
+nRemainderNoiseDigits
 nRetValue
 nRetValue2
 nRetiredAtNodeID
@@ -2602,9 +2844,11 @@ nShape
 nSpawnNodeID
 nTestStep
 nValue
+nWakePriority
 nWhichOutflowA
 nWhichOutflowB
 nYieldArg1
+name
 nanosleep
 near '%c' :\n
 near char(%#02X) :\n
@@ -2625,6 +2869,7 @@ observable_true
 observer_cursors
 open
 open_asset %s
+open_current_map_pulse_in_tool
 operator
 operator 
 operator delete(void*)
@@ -2649,9 +2894,7 @@ operator new[](unsigned long, std::nothrow_t const&)
 operator"" 
 origin
 pAsyncRet2
-pCheckpointName
 pClass
-pDescription
 pEnt
 pMessage
 pName
@@ -2666,9 +2909,11 @@ pTraceStringA
 pTraceStringB
 pValue
 pYieldArg2
+panorama
 param
 parent_cursor_id
 pending_events
+pointer
 polymorphic_arg
 port_name
 previous_value
@@ -2680,6 +2925,7 @@ pthread_join
 pthread_mutex_lock
 pthread_mutex_unlock
 pthread_once
+pthread_sigmask
 public_output::%s
 public_output::%s::%s
 pulse_debug_print
@@ -2696,6 +2942,7 @@ pulse_system
 pulse_system.dll
 pulse_test_example_suggestion
 qangle
+quaternion
 rad2deg
 random_device could not be read
 random_device: getentropy failed
@@ -2714,9 +2961,16 @@ registers
 reinterpret_cast
 remap
 requested_cancel
+resource
+resource_manifests
+resource_name
 resourcecompiler.dll
+resources
 resourcesystem
+return_values
+return_values_enabled
 retval
+rotation_vector
 round
 rsqrt
 saturate
@@ -2729,10 +2983,14 @@ server.dll
 shape
 short
 show_vpulse_file
+sigfillset
 sign
 signed char
 sizeof 
 sizeof...
+soundevent
+source_file
+source_line
 sprintf
 sqrt
 stack
@@ -2743,7 +3001,6 @@ std::_Head_base<0ul, std::thread::_State*, false>::_M_head(std::_Head_base<0ul, 
 std::_Head_base<0ul, std::thread::_State*, false>::_M_head(std::_Head_base<0ul, std::thread::_State*, false>&)
 std::_Head_base<1ul, std::default_delete<std::thread::_State>, true>::_Head_base()
 std::_Head_base<1ul, std::default_delete<std::thread::_State>, true>::_M_head(std::_Head_base<1ul, std::default_delete<std::thread::_State>, true>&)
-std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_destroy()
 std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release()
 std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release_last_use()
 std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release_last_use_cold()
@@ -2960,7 +3217,6 @@ std::__ptr_traits_ptr_to<char const*, char const, false>::pointer_to(char const&
 std::__ptr_traits_ptr_to<char*, char, false>::pointer_to(char&)
 std::__shared_count<(__gnu_cxx::_Lock_policy)2>::_M_swap(std::__shared_count<(__gnu_cxx::_Lock_policy)2>&)
 std::__shared_count<(__gnu_cxx::_Lock_policy)2>::__shared_count()
-std::__shared_count<(__gnu_cxx::_Lock_policy)2>::operator=(std::__shared_count<(__gnu_cxx::_Lock_policy)2> const&)
 std::__shared_count<(__gnu_cxx::_Lock_policy)2>::~__shared_count()
 std::__shared_ptr<std::thread::_Impl_base, (__gnu_cxx::_Lock_policy)2>::__shared_ptr()
 std::__shared_ptr<std::thread::_Impl_base, (__gnu_cxx::_Lock_policy)2>::__shared_ptr(std::__shared_ptr<std::thread::_Impl_base, (__gnu_cxx::_Lock_policy)2>&&)
@@ -3344,6 +3600,7 @@ std::this_thread::__sleep_for(std::chrono::duration<long, std::ratio<1l, 1l>>, s
 std::thread::_M_start_thread(std::shared_ptr<std::thread::_Impl_base>)
 std::thread::_M_start_thread(std::shared_ptr<std::thread::_Impl_base>, void (*)())
 std::thread::_M_start_thread(std::unique_ptr<std::thread::_State, std::default_delete<std::thread::_State>>, void (*)())
+std::thread::_M_thread_deps_never_run()
 std::thread::_State* const& std::__get_helper<0ul, std::thread::_State*, std::default_delete<std::thread::_State>>(std::_Tuple_impl<0ul, std::thread::_State*, std::default_delete<std::thread::_State>> const&)
 std::thread::_State*& std::__get_helper<0ul, std::thread::_State*, std::default_delete<std::thread::_State>>(std::_Tuple_impl<0ul, std::thread::_State*, std::default_delete<std::thread::_State>>&)
 std::thread::_State::~_State()
@@ -3376,6 +3633,8 @@ std::unique_ptr<std::thread::_State, std::default_delete<std::thread::_State>>::
 std::unique_ptr<std::thread::_State, std::default_delete<std::thread::_State>>::unique_ptr<std::default_delete<std::thread::_State>, void>(std::thread::_State*)
 std::unique_ptr<std::thread::_State, std::default_delete<std::thread::_State>>::~unique_ptr()
 stderr
+stdin
+stdout
 strBindingName
 strCellDesc
 strValue
@@ -3386,9 +3645,12 @@ strerror_r
 string
 string literal
 string::string
+string_token
 strlen
 strncmp
+strstr
 strtoul
+subclass
 suggestion_name
 syscall
 system
@@ -3409,6 +3671,7 @@ this
 thread-local initialization routine for g_pThreadLocalStackAllocator
 throw
 throw 
+tier0
 tools/images/pulse_editor/cursor_kill.png
 tools/images/pulse_editor/cursor_tag.png
 tools/images/pulse_editor/cursor_wait_zone.png
@@ -3459,6 +3722,8 @@ transform
 true
 typeinfo fn for 
 typeinfo for 
+typeinfo for CThreadSyncObject
+typeinfo for IFormatOutputStream
 typeinfo for __cxxabiv1::__class_type_info
 typeinfo for __cxxabiv1::__forced_unwind
 typeinfo for __cxxabiv1::__foreign_exception
@@ -3469,7 +3734,6 @@ typeinfo for __gnu_cxx::__concurrence_unlock_error
 typeinfo for __gnu_cxx::recursive_init_error
 typeinfo for std::_Mutex_base<(__gnu_cxx::_Lock_policy)2>
 typeinfo for std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>
-typeinfo for std::_Sp_make_shared_tag
 typeinfo for std::_V2::error_category
 typeinfo for std::bad_alloc
 typeinfo for std::bad_array_new_length
@@ -3523,10 +3787,12 @@ typeinfo name for std::thread::_State
 typeinfo name for std::type_info
 typeinfo name for std::underflow_error
 typename
+uchar32
 uint
 uint16
 uint32
 uint64
+uint8
 unFlags
 unable to register all schema data: %s\n
 unknown
@@ -3538,6 +3804,7 @@ unsigned long
 unsigned long const& std::min<unsigned long>(unsigned long const&, unsigned long const&)
 unsigned long long
 unsigned short
+unspecified
 vCenter
 vForward
 value
@@ -3545,9 +3812,13 @@ vecAncestorCursorIDs
 vecValue
 vecValueA
 vecValueB
+vector
 vector2
+vector2d
 vector3
 vector4
+vector4d
+vectorws
 virtual thunk to 
 void
 void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_construct<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>>(__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>, __gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>, std::forward_iterator_tag)
@@ -3598,6 +3869,8 @@ yield_token
 { className = 'IsStateNode' item_factory = 'BooleanSwitchState' }
 { className = 'IsWaitNode IsControlFlowNode' item_factory = 'InflowWait' }
 { className='IsControlFlowNode AllOutflowsInSpecialSection IsSelectorNode' create_special_outflows_section=true }
+{ item_factory = 'IntervalTimer' }
+{ standard_yielding_flow = true }
 {default arg#
 {lambda
 {parm#

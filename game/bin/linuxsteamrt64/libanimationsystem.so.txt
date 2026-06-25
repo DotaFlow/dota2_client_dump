@@ -11,7 +11,7 @@
   %i bytes : %s %f : (%s)\n
   %i bytes : %s : (%s)\n
   Actual   : 
-  C%d:I%-2d {F=%-10d,V=%-10d} 
+  C%d:I%-2d {F=%-10d,V=%-10d,S=%-20.20s} 
   CallInfo%d: %s\n
   Cell%d - NULL\n
   Cell%d EditorID:%d [%s]: %s\n
@@ -106,7 +106,6 @@
  volatile
  was modified concurrently during serialization.
 !is_large()
-!link
 " because it is missing required fields: 
 " conflicts with field "
 " conflicts with the existing symbol "
@@ -232,12 +231,12 @@ $ORIGIN
 %d.Transform( %s, Vector( %.2f, %.2f, %.2f ), DegreeEuler( %.2f %.2f %.2f ) )\n
 %d.Worldspace( %s, %d, %.2f )
 %d.Worldspace( %s, %d, %.2f )\n
-%f %f %f %f
 %lld
 %llu
+%s %s %s %s
+%s %s: %s - %s - %s\n
 %s '%s' (%s)
 %s (%.2f, %.2f, %.2f)
-%s (%d) - %s\n
 %s (Color)
 %s (Material)
 %s - %.1f%%, %.2fs, frame %.1f %s
@@ -251,6 +250,7 @@ $ORIGIN
 %s allocation count overflow( add %llu + current %llu > max %llu )\n
 %s called on a pool arena (no root available)\n
 %s follows %s
+%s%02d:%02d
 %s: __pos (which is %zu) > __size (which is %zu)
 %s: __pos (which is %zu) > this->size() (which is %zu)
 %s: allocation of %u too large, max %u\n
@@ -261,6 +261,7 @@ $ORIGIN
 %s: max element overflow, cur count %u + %u\n
 %s: member count overflow (%u)\n
 %s: no space for allocation of %u\n
+%s: unable to grow count by %u (currently %u)\n
 %s::%s (%u)
 %s::%s (Entity Output Handler)
 %s\n%2.f - Pos: %.2f, Orient: %.2f
@@ -281,7 +282,6 @@ $ORIGIN
 )", which is not defined. The innermost scope is searched first in name resolution. Consider using a leading '.'(i.e., "(.
 ).  Contact the program author for an update.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
 ** Invalid ID **
-*** Test failure: "%s"
 ***\nShared activity collision with private activity! %s<->%s [%i]\n***\n
 ***\nShared<->Private Activity collision!\n***\n
 ***\nShared<->Private Event collision!\n***\n
@@ -291,8 +291,12 @@ $ORIGIN
 *N12_GLOBAL__N_122generic_error_categoryE
 *N22CAnimParameterInstanceUlPKS_E_E
 *N22CConcreteAnimParameterUlPK18CAnimParameterBaseE_E
+*N30PulseBindingSchemaEnumTraits_tI25PulseCursorWakePriority_tEUlvE1_E
+*N30PulseBindingSchemaEnumTraits_tI25PulseCursorWakePriority_tEUlvE2_E
 *N30PulseBindingSchemaEnumTraits_tI27PulseCursorCancelPriority_tEUlvE0_E
 *N30PulseBindingSchemaEnumTraits_tI27PulseCursorCancelPriority_tEUlvE_E
+*N30PulseBindingSchemaEnumTraits_tI27PulseDurationStringFormat_tEUlvE0_E
+*N30PulseBindingSchemaEnumTraits_tI27PulseDurationStringFormat_tEUlvE_E
 *N34PulseBindingResourceHandleTraits_tI11CWeakHandleI25InfoForResourceTypeCModelEEUlvE0_E
 *N34PulseBindingResourceHandleTraits_tI11CWeakHandleI25InfoForResourceTypeCModelEEUlvE1_E
 *N34PulseBindingResourceHandleTraits_tI11CWeakHandleI25InfoForResourceTypeCModelEEUlvE2_E
@@ -358,6 +362,7 @@ $ORIGIN
 *ZN18CBoolAnimParameter22GetAttributeTable_ImplEP10CUtlVectorIP13IBaseToolAttri25CUtlVectorMemory_GrowableIS2_iLm0EEEE21CAttr_m_bDefaultValue
 *ZN18CEnumAnimParameter22GetAttributeTable_ImplEP10CUtlVectorIP13IBaseToolAttri25CUtlVectorMemory_GrowableIS2_iLm0EEEE19CAttr_m_enumOptions
 *ZN18CEnumAnimParameter22GetAttributeTable_ImplEP10CUtlVectorIP13IBaseToolAttri25CUtlVectorMemory_GrowableIS2_iLm0EEEE20CAttr_m_defaultValue
+*ZN18CNewParticleEffect12StopEmissionEbbbbEUlvE_
 *ZN18IKSolverSettings_t22GetAttributeTable_ImplEP10CUtlVectorIP13IBaseToolAttri25CUtlVectorMemory_GrowableIS2_iLm0EEEE18CAttr_m_SolverType
 *ZN18IKSolverSettings_t22GetAttributeTable_ImplEP10CUtlVectorIP13IBaseToolAttri25CUtlVectorMemory_GrowableIS2_iLm0EEEE22CAttr_m_nNumIterations
 *ZN18IKSolverSettings_t22GetAttributeTable_ImplEP10CUtlVectorIP13IBaseToolAttri25CUtlVectorMemory_GrowableIS2_iLm0EEEE36CAttr_m_EndEffectorRotationFixUpMode
@@ -436,6 +441,7 @@ $ORIGIN
 -Stop: 
 -end of input-(
 -inf
+-memory-
 -unknown source-
 -unknown source-(
 .  Please update your library.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
@@ -444,7 +450,6 @@ $ORIGIN
 ../public/mathlib/range.h
 ../public/tier0/utldict.h
 ../public/tier0/utlmap.h
-../public/tier0/utlrbtree.h
 ./animationsystem.cpp
 ./google/protobuf/arena.h
 ./google/protobuf/arena_impl.h
@@ -477,6 +482,7 @@ $ORIGIN
 /data/src/mathlib/extended/generic_expr.g
 /dev/random
 /dev/urandom
+/src/
 0 0 0
 0 0 0 0
 0 0 0 255
@@ -522,6 +528,8 @@ $ORIGIN
 13CDemoSaveGame
 13CDemoSyncTick
 13CMorphSetData
+13CNmFootIKNode
+13CNmFootIKTask
 13CNmSampleTask
 13CNmSoundEvent
 13CStrideStatus
@@ -588,6 +596,7 @@ $ORIGIN
 15CPulseCell_Base
 15CRagdollAnimTag
 15CRootUpdateNode
+15CStdFunctionJob
 15CTier0AppSystemI16IAnimationSystemLx0EE
 15CTier1AppSystemI16IAnimationSystemLx0EE
 15CTier2AppSystemI16IAnimationSystemLx0EE
@@ -608,6 +617,7 @@ $ORIGIN
 16CMorphConstraint
 16CMoverUpdateNode
 16CNmBlendTaskBase
+16CNmBodyGroupNode
 16CNmBoolValueNode
 16CNmConstBoolNode
 16CNmFloatEaseNode
@@ -762,7 +772,6 @@ $ORIGIN
 18CNmCachedFloatNode
 18CNmChainLookatNode
 18CNmChainLookatTask
-18CNmChainSolverTask
 18CNmClipTypeManager
 18CNmConstTargetNode
 18CNmConstVectorNode
@@ -808,6 +817,7 @@ $ORIGIN
 19CCompressedFullBool
 19CCompressedFullChar
 19CFloatAnimParameter
+19CFootLockUpdateNode
 19CGenericExpr_Binary
 19CHitReactUpdateNode
 19CModelConfigElement
@@ -1141,7 +1151,6 @@ $ORIGIN
 25CCompressedStaticVector4D
 25CDemoStringTables_items_t
 25CDemoStringTables_table_t
-25CDirectPlaybackUpdateNode
 25CFootAdjustmentUpdateNode
 25CFootCycleMetricEvaluator
 25CFootLockAnimNodeInstance
@@ -1614,8 +1623,11 @@ $ORIGIN
 35IKV3TransferInterface_GameTime_Load
 35IKV3TransferInterface_GameTime_Save
 36CAnimationGraphVisualizationRegistry
+36CKV3Transfer_UtlSymbolLargeInterfaceI24CUtlSymbolTableLargeBaseILb0ELm2048E16CThreadNullMutex18CMemAllocAllocatorEE
 36CModelConfigElement_SetMaterialGroup
+36CPulseCell_IntervalTimer_DebugInfo_t
 36CPulseCell_WaitForCursorsWithTagBase
+36IKV3TransferInterface_UtlSymbolLarge
 37CFootLockAnimationGraphVisualizerInfo
 37CNmFootstepEventPercentageThroughNode
 37CParticleCollectionRendererFloatInput
@@ -1647,6 +1659,7 @@ $ORIGIN
 456789:;<=
 488:1: POS_FLOATLITERAL : ( ( DIGIT )+ '.' ( DIGIT )* ( EXPONENT )? | '.' ( DIGIT )+ ( EXPONENT )? | ( DIGIT )+ EXPONENT );
 48CModelConfigElement_SetBodygroupOnAttachedModels
+4fff>fff>fff>fff>
 52CModelConfigElement_SetMaterialGroupOnAttachedModels
 8CNmEvent
 8CReceipt
@@ -1698,6 +1711,7 @@ $ORIGIN
 <missing 
 <no failure reason set>
 <no text for the token>
+<non-RTTI type>
 <none>
 <none>\n
 <pair_a> 
@@ -1879,7 +1893,6 @@ ASCII
 ASCII//TRANSLIT
 ASYNC_FIRE_AND_FORGET
 ATTACHMENT_INFLUENCE_FLAGS_NONE
-Abort
 Abs Float
 Abs Int
 Absolute
@@ -1906,7 +1919,6 @@ Actual Target
 Actually dude, we didn't seem to be expecting anything here, or at least\n
 Add Correction Delta
 Add R%d <- R%d + R%d
-Add the array 'b' to the end of 'a'.
 Add to Current Value Raw
 Add to Initial Value
 AddAllocatedMessage
@@ -1929,7 +1941,9 @@ Additive
 Additive Blend
 Additive Blend (Masked): %.2f%%
 Additive Blend: %.2f%%
+AdditiveBlendTask - Trying to perform an additive blend using a parent space pose
 Adjusted foot position; offset: %.2f
+After the real remainder, how many additional digits should we continue to append to create additional visual movement?
 AimCameraOpFixedSettings_t
 AimMatrixBlendMode
 AimMatrixBlendMode_Additive
@@ -1955,6 +1969,7 @@ Angle
 AngleHorizontal
 AngleVertical
 Anim Clip
+Anim Sequence
 AnimComponentID
 AnimGraph
 AnimGraph Choice Node failed to pick a new choice without repeating.  Check the weights on the Choice node.\n
@@ -2025,32 +2040,22 @@ Arc Tan
 Arc Tangent of input value. Input can be any real number. Output in radians, from -
 ArcCos input out of range (-1, 1)
 ArcSin input out of range (-1, 1)
-Are we currently running unit tests?
 Array
-Array Append
-Array Concatenate
-Array Count
-Array Find Element Matching
-Array First N Elements
-Array Insert
-Array Remove Element Matching
-Array Remove Index
-Array Remove Invalid Elements
-Array Set Count
-Array Shuffle
-Array support.
-Assert True
 Assert_ConditionFailed(_AssertCompileTimeConstantStruct_t const&, char const*, ...)
 Assert_ConditionFailed_Fatal(_AssertCompileTimeConstantStruct_t const&)
+Assert_ConditionFailed_Fatal(_AssertCompileTimeConstantStruct_t const&, char const*, ...)
+AssetBrowse( %s )
 AssetBrowse( vpcf )
+AssetBrowse()
 AssetBrowserSystem_001
 AssetPreviewSystem_001
 AssetRenameSystem_001
 AssetSystem001
 AssetSystemTest001
 AsymmetricSpring
-Async Fire C%d:I%d
-Asynchronous - returns and continues despite the called method yielding
+Async Call Method (Child Cursor) C%d:I%d
+Async Outflow (Child Cursor) C%d:I%d
+Asynchronous - This node executes independently using a new Cursor. Formerly 'Fire and Forget'. Equivalent to scheduling using an additional 'Fire Child Cursors' node.
 Attachment
 Attachment (Control Point 1)
 Attachment Type
@@ -2080,13 +2085,13 @@ Bad KV3 data for resource '%s': %s\n
 Bad KV3 data in control block for '%s': %s\n
 Bad array index %d (array has %d elements)
 Bad block type for embedded animation data\n
-Bad count in ArraySetCount (%d)
 Bad data block index for vagrp embedded animation data (%d)\n
-Bad max in ArrayFirstNElements (%d)
-Bad reinterpret on ArrayAppend
-Bad reinterpret on ArrayInsert
-Bad reinterpret on ArrayRemoveElementMatching
 BakedLODBuilderMgr001
+Base Flow  Cancel After
+Base Flow  Cancel Elegantly
+Base Flow  Cancel Immediately
+Base Flow  Wake Elegantly
+Base Flow  Wake Immediately
 Base Pulse Domain
 Base Sequence
 Base Sequence Frame
@@ -2106,7 +2111,6 @@ Base recognizer function recoverFromMismatchedToken called by unknown parser typ
 Base-10 logarithm
 Base-2 logarithm
 BaseDomain
-Basic math support.
 Begin testing a condition composed of Observable values. Continues checking until canceled.
 Begin testing a condition composed of Observable variable references. Continues checking until true.
 Beginning
@@ -2146,6 +2150,7 @@ BlendSpace_Model
 BlendSpace_Model_RotationOnly
 BlendSpace_Model_TranslationOnly
 BlendSpace_Parent
+BlendTask - Trying to perform an blend with mismatched pose types (additive/parent-space)
 Block Selection
 BlockTransition
 Blocked
@@ -2155,7 +2160,7 @@ Body Group Settings
 Body Group Tag
 BodyGroup
 BodyGroup Option
-BodyGroup: %s => %d
+BodyGroup: Group = %s, Choice = %s
 BodyGroupOption
 Bone
 Bone %d to %d
@@ -2190,7 +2195,7 @@ Box - Ground
 Breakpoint Log [%u]
 Breakpoint Log [%u] - %s
 Byte size calculation and serialization were inconsistent.  This may indicate a bug in protocol buffers or it may be caused by concurrent modification of 
-C19CFootLockUpdateNode
+C25CDirectPlaybackUpdateNode
 CANCELLED
 CActionComponentUpdater
 CAddUpdateNode
@@ -2294,27 +2299,41 @@ CBonePositionMetricEvaluator
 CBoneVelocityMetricEvaluator
 CBoolAnimParameter
 CBufferString
+CBufferString::AppendConcat(int, char const* const*, int const*, bool)
 CBufferString::AppendFormat(char const*, ...)
 CBufferString::AppendFormatV(char const*, __va_list_tag*)
+CBufferString::ComposeFileName(char const*, char const*, char)
 CBufferString::EnsureCapacity(int, char**, bool, bool)
+CBufferString::ExtendPath(char const*, char, bool)
 CBufferString::ExtractFileBase(char const*, bool)
+CBufferString::ExtractFilePath(char const*, bool)
 CBufferString::FixSlashes(char)
 CBufferString::FixupPathName(char)
 CBufferString::Format(char const*, ...)
+CBufferString::FormatTo(IFormatOutputStream*, CFormatStringElement) const
 CBufferString::Insert(int, char const*, int, bool)
+CBufferString::MakeAbsolutePath(char const*, char const*)
+CBufferString::MakeRelativePath(char const*, char const*, bool)
 CBufferString::MoveFrom(CBufferString&)
 CBufferString::Purge(int)
 CBufferString::RemoveAt(int, int)
+CBufferString::RemoveDotSlashes(char)
+CBufferString::RemoveFirstDir(CBufferString*)
 CBufferString::Replace(char const*, char const*, bool)
 CBufferString::SetExtension(char const*, bool)
 CBufferString::SetLength(int, bool, int*)
 CBufferString::SetPtr(char*, int, int, bool, bool)
+CBufferString::ShortenPath(bool)
 CBufferString::StripExtension(bool)
+CBufferString::StripTrailingSlash()
 CBufferString::ToLowerFast(int)
 CBufferString::TrimTail(char const*)
 CBufferString::TruncateAt(int, bool)
 CCPPScriptComponentUpdater
 CCachedPose
+CCallQueue::ParallelCallQueued(char const*, IThreadPool*)
+CCharBufferFormatOutputStream::PutC(char)
+CCharBufferFormatOutputStream::Terminate()
 CChoiceInstanceData
 CChoiceUpdateNode
 CChoreoInstanceData
@@ -2345,7 +2364,6 @@ CCompressedStaticVector2D
 CCompressedStaticVector3
 CCompressedStaticVector4D
 CCompressor
-CCompressorGroup
 CConcreteAnimParameter
 CConstraintSlave
 CConstraintTarget
@@ -2399,6 +2417,7 @@ CFootStride
 CFootTrajectories
 CFootTrajectory
 CFootstepLandedAnimTag
+CFormatStringElement::CFormatStringElement(char const*)
 CFutureFacingMetricEvaluator
 CFutureVelocityMetricEvaluator
 CGlobalSymbol
@@ -2565,6 +2584,7 @@ CHECK failed: (value) >= (0x80):
 CHECK failed: (value.size()) <= (kInt32MaxSize): 
 CHECK failed: (was_message_owned) == (IsMessageOwned()): 
 CHECK failed: *from != nullptr: 
+CHECK failed: *ptr: 
 CHECK failed: *to == nullptr: 
 CHECK failed: Arena::InternalGetOwningArena(lhs) != Arena::InternalGetOwningArena(rhs): 
 CHECK failed: Arena::InternalGetOwningArena(lhs) != nullptr || Arena::InternalGetOwningArena(rhs) != nullptr: 
@@ -2695,6 +2715,7 @@ CJiggleBoneUpdateNode
 CJumpHelperUpdateNode
 CKV3MemberNameSet
 CKV3MemberNameWithStorage
+CKeyValues_Data::Internal_GetString(char const*, char*, unsigned long)
 CLIENT: Activity %d is %s\n
 CLODComponentUpdater
 CLOSE_BRACE
@@ -2766,6 +2787,7 @@ CNmBlend2DNode::CDefinition
 CNmBlendTask
 CNmBlendTaskBase
 CNmBodyGroupEvent
+CNmBodyGroupNode::CDefinition
 CNmBoneMaskBlendNode::CDefinition
 CNmBoneMaskNode::CDefinition
 CNmBoneMaskSelectorNode::CDefinition
@@ -2782,7 +2804,6 @@ CNmCachedTargetNode::CDefinition
 CNmCachedVectorNode::CDefinition
 CNmChainLookatNode::CDefinition
 CNmChainLookatTask
-CNmChainSolverTask
 CNmClip
 CNmClip::ModelSpaceSamplingChainLink_t
 CNmClipNode::CDefinition
@@ -2812,6 +2833,9 @@ CNmExternalPoseNode::CDefinition
 CNmFixedWeightBoneMaskNode::CDefinition
 CNmFloatAngleMathNode::CDefinition
 CNmFloatAngleMathNode::Operation_t
+CNmFloatChannelData
+CNmFloatChannelData::ChannelSettings_t
+CNmFloatChannelSet_t
 CNmFloatClampNode::CDefinition
 CNmFloatComparisonNode::CDefinition
 CNmFloatComparisonNode::Comparison_t
@@ -2832,6 +2856,8 @@ CNmFollowBoneNode::CDefinition
 CNmFollowBoneTask
 CNmFootEvent
 CNmFootEventConditionNode::CDefinition
+CNmFootIKNode::CDefinition
+CNmFootIKTask
 CNmFootstepEventIDNode::CDefinition
 CNmFootstepEventPercentageThroughNode::CDefinition
 CNmFrameSnapEvent
@@ -3004,18 +3030,7 @@ CPlayerInputAnimMotorUpdater
 CPointConstraint
 CPoseHandle
 CProductQuantizer
-CPulseArraylib
-CPulseArraylib::ArrayAppend
-CPulseArraylib::ArrayConcatenate
-CPulseArraylib::ArrayCount
-CPulseArraylib::ArrayFindElementMatching
-CPulseArraylib::ArrayFirstNElements
-CPulseArraylib::ArrayInsert
-CPulseArraylib::ArrayRemoveElementMatching
-CPulseArraylib::ArrayRemoveIndex
-CPulseArraylib::ArrayRemoveInvalidElements
-CPulseArraylib::ArraySetCount
-CPulseArraylib::ArrayShuffle
+CPulseBreakpointLocation
 CPulseCell_Base
 CPulseCell_BaseFlow
 CPulseCell_BaseLerp
@@ -3024,6 +3039,11 @@ CPulseCell_BaseRequirement
 CPulseCell_BaseState
 CPulseCell_BaseValue
 CPulseCell_BaseYieldingInflow
+CPulseCell_BaseYieldingInflow::BaseFlow_CancelAfter
+CPulseCell_BaseYieldingInflow::BaseFlow_CancelElegantly
+CPulseCell_BaseYieldingInflow::BaseFlow_CancelImmediately
+CPulseCell_BaseYieldingInflow::BaseFlow_WakeElegantly
+CPulseCell_BaseYieldingInflow::BaseFlow_WakeImmediately
 CPulseCell_BooleanSwitchState
 CPulseCell_BooleanSwitchState::Activate
 CPulseCell_CursorQueue
@@ -3074,8 +3094,24 @@ CPulseCell_Outflow_CycleRandom::Run
 CPulseCell_Outflow_CycleShuffled
 CPulseCell_Outflow_CycleShuffled::InstanceState_t
 CPulseCell_Outflow_CycleShuffled::Run
+CPulseCell_Outflow_ListenForAnimgraphTag::Cancel
+CPulseCell_Outflow_ListenForEntityOutput::Cancel
+CPulseCell_Outflow_NPCAccompanyEntity::Cancel
+CPulseCell_Outflow_NPCFollowTarget::Cancel
+CPulseCell_Outflow_NPCLeadPlayer::Cancel
+CPulseCell_Outflow_NPCScriptedIdle::Cancel
+CPulseCell_Outflow_NPCScriptedIdle::CancelElegantly
+CPulseCell_Outflow_NPCScriptedMoveTo::Cancel
+CPulseCell_Outflow_NPCUseScriptedAbility::Cancel
+CPulseCell_Outflow_PlaySequence::Cancel
+CPulseCell_Outflow_PlaySequence::CancelAtInterrupt
+CPulseCell_Outflow_PlayVCD::Cancel
+CPulseCell_Outflow_PlayVCD::CancelAtInterrupt
+CPulseCell_Outflow_PlayVOLine::Cancel
+CPulseCell_Outflow_ScriptedSequence::Cancel
 CPulseCell_PickBestOutflowSelector
 CPulseCell_PickBestOutflowSelector::ProcessSelector
+CPulseCell_PlaySequence::Cancel
 CPulseCell_Step_CallExternalMethod
 CPulseCell_Step_CallExternalMethod '%s'
 CPulseCell_Step_CallExternalMethod::Run
@@ -3100,7 +3136,6 @@ CPulseCell_Value_RandomInt::Eval
 CPulseCell_WaitForCursorsWithTag
 CPulseCell_WaitForCursorsWithTag::Wait
 CPulseCell_WaitForCursorsWithTagBase
-CPulseCell_WaitForCursorsWithTagBase::CursorState_t
 CPulseCell_WaitForObservable
 CPulseCell_WaitForObservable::Cancel
 CPulseCell_WaitForObservable::Start
@@ -3109,9 +3144,9 @@ CPulseCursorFuncs::AnyOtherCursorsHaveTag
 CPulseCursorFuncs::CursorHasTag
 CPulseCursorFuncs::KillAllOtherCursors
 CPulseCursorFuncs::KillCursorsWithTag
-CPulseCursorFuncs::KillThisCursorAndCancel
 CPulseCursorFuncs::RemoveTagFromCursor
 CPulseCursorFuncs::TagCursor
+CPulseCursorFuncs::WakeCursorsWithTag
 CPulseExecCursor
 CPulseGraphDef
 CPulseGraphExecutionHistory
@@ -3152,6 +3187,7 @@ CPulseMathlib::MakeTransform
 CPulseMathlib::MakeVector
 CPulseMathlib::MakeVector2D
 CPulseMathlib::MakeVector4D
+CPulseMathlib::MakeVectorFromAngle
 CPulseMathlib::MakeWorldTransform
 CPulseMathlib::MakeWorldVector
 CPulseMathlib::MaxFloat
@@ -3181,18 +3217,16 @@ CPulseMathlib::SplitWorldVector
 CPulseMathlib::SqrFloat
 CPulseMathlib::SqrInt
 CPulseMathlib::Sqrt
-CPulseMathlib::StringLength
 CPulseMathlib::StringsAreEqualCaseSensitive
 CPulseMathlib::Tan
 CPulseMathlib::VectorToWorldVector
 CPulseMathlib::WorldVectorToVector
+CPulseObservableExpression
 CPulseRuntimeMethodArg
-CPulseTestScriptLib
-CPulseTestScriptLib::AssertTrue
-CPulseTestScriptLib::IndicateTestFailure
-CPulseTestScriptLib::IsInTestMode
-CPulseTestScriptLib::RegisterTestCheckpoint
-CPulseTestScriptLib::TestModeAssertTrue
+CPulseStringlib
+CPulseStringlib::FormatDurationStringFromSeconds
+CPulseStringlib::StringLength
+CPulseStringlib::StringsAreEqualCaseSensitive
 CPulseValueFullType
 CPulse_BlackboardReference
 CPulse_CallInfo
@@ -3209,6 +3243,8 @@ CPulse_ResumePoint
 CPulse_Variable
 CQuaternionAnimParameter
 CRC32_ProcessBuffer
+CRC64_ProcessBuffer
+CREATE_CHILD_CURSOR_OUTFLOW
 CRagdollAnimTag
 CRagdollComponentUpdater
 CRagdollUpdateNode
@@ -3286,10 +3322,20 @@ CTargetSelectorUpdateNode
 CTargetWarpUpdateNode
 CTaskHandshakeAnimTag
 CTaskStatusAnimTag
+CThreadMultiWaitEvent::CThreadMultiWaitEvent(bool)
+CThreadMultiWaitEvent::Reset()
+CThreadMultiWaitEvent::Set()
+CThreadMultiWaitEvent::~CThreadMultiWaitEvent()
 CThreadRWLock_FastRead::CThreadRWLock_FastRead()
+CThreadRWLock_FastRead::EncounteredComplexReadLockOperation(unsigned int, bool, char const*, int)
+CThreadRWLock_FastRead::HaveWriteLock_BlockReadsNow(bool)
+CThreadRWLock_FastRead::UnlockReadAccounting(char const*, int, unsigned int)
+CThreadRWLock_FastRead::UnlockWrite(char const*, int)
 CThreadSemaphore::~CThreadSemaphore()
+CThreadSyncObject::Wait(unsigned int)
 CThreadSyncObject::WaitImpl(unsigned int)
 CThreadSyncObject::~CThreadSyncObject()
+CThreadedJob::Abort(bool)
 CThreadedJob::WaitOrImmediatelyExecute()
 CTiltTwistConstraint
 CTimeRemainingMetricEvaluator
@@ -3313,23 +3359,33 @@ CUniformRandomStreamImpl<CAtomicMutex>::CUniformRandomStreamImpl()
 CUniformRandomStreamImpl<CAtomicMutex>::RandomFloat(float, float)
 CUniformRandomStreamImpl<CAtomicMutex>::RandomInt(int, int)
 CUniformRandomStreamImpl<CAtomicMutex>::SetSeed(int)
+CUniformRandomStreamImpl<CThreadNullMutex>::CUniformRandomStreamImpl(int)
+CUniformRandomStreamImpl<CThreadNullMutex>::RandomFloat(float, float)
+CUniformRandomStreamImpl<CThreadNullMutex>::RandomInt(int, int)
 CUtlBinaryBlock
 CUtlBinaryBlock::Set(void const*, int)
 CUtlBinaryBlock::SetLength(int)
 CUtlBinaryBlock::operator=(CUtlBinaryBlock&&)
+CUtlBuffer::AccessPut(int)
 CUtlBuffer::AddNullTermination()
 CUtlBuffer::CUtlBuffer(int, int, CUtlBuffer::BufferFlags_t)
 CUtlBuffer::CUtlBuffer(void const*, int, CUtlBuffer::BufferFlags_t)
 CUtlBuffer::CheckArbitraryPeekGet(int, int&)
 CUtlBuffer::CheckGet(int)
 CUtlBuffer::CheckPut(int)
+CUtlBuffer::EnsureCapacity(int)
+CUtlBuffer::Get(void*, int)
 CUtlBuffer::GetString(CBufferString*)
+CUtlBuffer::ParseToken(characterset_t const*, char*, int, bool)
 CUtlBuffer::Printf(char const*, ...)
 CUtlBuffer::Put(void const*, int)
 CUtlBuffer::PutString(char const*)
 CUtlBuffer::SeekGet(CUtlBuffer::SeekType_t, int)
 CUtlBuffer::SeekPut(CUtlBuffer::SeekType_t, int)
+CUtlBuffer::SetBigEndian(bool)
+CUtlBuffer::SetBufferType(bool, bool)
 CUtlBuffer::SetExternalBuffer(void*, int, int, CUtlBuffer::BufferFlags_t)
+CUtlBuffer::SetOverflowFuncs(bool (CUtlBuffer::*)(int), bool (CUtlBuffer::*)(int))
 CUtlHashtable
 CUtlLeanVector
 CUtlLeanVectorFixedGrowable
@@ -3340,10 +3396,12 @@ CUtlScratchMemoryPool::~CUtlScratchMemoryPool()
 CUtlString
 CUtlString::Acquire(CBufferString*, bool)
 CUtlString::Append(char const*)
+CUtlString::Append(char const*, int)
 CUtlString::CUtlString(CBufferString const&)
 CUtlString::Format(char const*, ...)
 CUtlString::FormatV(char const*, __va_list_tag*)
 CUtlString::FreeMemoryBlock()
+CUtlString::GetBaseFilename() const
 CUtlString::GetEmptyString()
 CUtlString::GetForModify()
 CUtlString::IsEqual_CaseSensitive(char const*) const
@@ -3352,6 +3410,7 @@ CUtlString::Purge()
 CUtlString::Set(char const*)
 CUtlString::SetDirect(char const*, int)
 CUtlString::SetLength(int)
+CUtlString::StripExtension() const
 CUtlString::ToUpperFast()
 CUtlString::operator+(CUtlString const&) const
 CUtlString::operator+(char const*) const
@@ -3361,7 +3420,7 @@ CUtlString::operator=(CBufferString const&)
 CUtlString::operator==(CUtlString const&) const
 CUtlString::operator[](int) const
 CUtlStringToken
-CUtlStringToken::Make(char const*, bool)
+CUtlStringToken::Make(char const*)
 CUtlSymbolTable::AddString(char const*, bool*)
 CUtlSymbolTable::CUtlSymbolTable(int, int, bool)
 CUtlSymbolTable::Find(char const*) const
@@ -3376,6 +3435,10 @@ CVariableBitStringBase::FreeInts()
 CVariableBitStringBase::Resize(int)
 CVectorAnimParameter
 CVectorQuantizer
+CVertexKDTree::BuildMidpoint(float const*, int, int)
+CVertexKDTree::BuildMidpointFromVertexSubSet(float const*, int, int const*, int)
+CVertexKDTree::FindVertsInBox(CUtlVectorFixedGrowable<float const*, 64ul, int>&, Vec3D<float> const&, Vec3D<float> const&, int) const
+CVertexKDTree::Nearest(Vec3D<float> const&, CUtlVectorFixedGrowable<float const*, 64ul, int>&) const
 CVirtualAnimParameter
 CWarpSectionAnimTag
 CWarpSectionAnimTagBase
@@ -3394,11 +3457,7 @@ Can't get here: failed to get default value as string
 Can't happen
 Can't print proto content: proto type 
 Can't reach
-Cancel
-Cancel any waiting cursors.
-Cancel observing.
 CancelOnSucceeded
-Canceled
 Cannot allocate abstract class
 Cannot call BuildFile on a DescriptorPool that uses a DescriptorDatabase.  You must instead find a way to get your file into the underlying database.
 Cannot construct abstract class
@@ -3424,8 +3483,8 @@ Cannot register variable %s: only float variables can have multiple components
 Cannot reinterpret instance (actual: %s) from (original) %s to (desired) %s
 Cannot skip field value, unexpected token: 
 Cant find specified alignment bone ID ('%s') for target warp node
-Cant find specified bone ID ('%s') for chain end
-Cant find specified bone ID ('%s') for two bone effector node
+Cant find specified bone IDs or there are not enough bones in the specified chains ('%s, %s') for two bone effector node
+Cant find specified effector bone ID ('%s') for lookat
 Capsule - Centered
 Capsule - Generic
 Capsule - Ground
@@ -3444,7 +3503,6 @@ Ceiling Float
 Center 1
 Center 2
 Chain Lookat
-Chain Solver
 ChainToSolveData_t
 CharacterSetBuild
 Check Requirement
@@ -3478,10 +3536,12 @@ Classic perlin 2-bone solver
 ClearField
 Client Simulate
 ClientAndServer
+ClientLocalServerAccess001
 ClientOnly
 ClientServerSharedHandleSystem001
 ClientSimulate
 ClientToolsInfo_001
+Clip Selector: Failed to select a valid option!
 Cloth Settings Tag
 Code
 CollectionFloatInput()
@@ -3493,9 +3553,9 @@ Command
 CommandLine
 Comment
 Commit Step
-Compare strings with case sensitivity, in contrast to normal string equality which is case-insensitive
+Compare strings with case sensitivity, in contrast to normal string equality which is case-insensitive.
 Complexity of regex match exceeded implementation limits
-Computes 2 ( 2.71...) raised to a power
+Computes 2 raised to a power
 Computes e ( 2.71...) raised to a power
 Condition to evaluate when any of its dependent values change.
 Conditionally Allowed
@@ -3516,13 +3576,11 @@ Convert from a local-space to a world-space vector
 Convert from a raw floating-point time to a Game Time that will be saved/loaded appropriately
 Convert from a world-space to local-space vector
 Convert radians (0-pi) to degrees (0-180)
-Copy 'element' to the end of 'a', increasing its count by one.
 Copy R%d <- R%d
 Cosine of angle. Input in radians, output in radians
 Could not create an instance of 
 Could not execute '%s' because this graph domain does not support the required IPulseHost
 Could not find type "
-Couldn't find bone mask with ID: %s
 Couldn't load KV3 for resource: %s
 Couldn't parse default value "
 Count
@@ -3544,6 +3602,7 @@ Current pivot orientation
 CurrentStateID
 Cursor Has Tag
 Cursor Queue
+Cursor[ ptr:%p | id:%d | graph:%p ]: CPulseExecCursor()\n
 Cursor[ ptr:%p | id:%d | graph:%p ]: Completed with result:%d\n
 Cursor[ ptr:%p | id:%d | graph:%p ]: Observer notifying cell ptr:%p id:%d of result:%d from Subject:%d\n
 Cursor[ ptr:%p | id:%d | graph:%p ]: Register observer:%d\n
@@ -3554,6 +3613,8 @@ Curve
 Custom
 CycleControlClipNode
 Cyclic Coordinate Descent solver - A solver that can handle any number of bones and works by iteratively solving for the rotation of each bone in the chain.
+Cylinder - Centered (SLOW PERF)
+Cylinder - Ground (SLOW PERF)
 DATA_LOSS
 DEADLINE_EXCEEDED
 DEFAULT_WRITE_PATH
@@ -3582,6 +3643,9 @@ Darken
 Data breakpoint [%s]
 Data breakpoint [%s] - %s
 Data breakpoint hit
+Data_Branch1xy
+Data_Branch1zBranch2x
+Data_Branch2yz
 Debug Hold Forward
 Debug Hold Left
 Debug Hold Up
@@ -3603,10 +3667,12 @@ DeltaOrientationZ
 Demo Settings Component
 DemoFile
 DemoUpconverterVersion001
+DestroyThreadPool
 Detach From Owner
 Detach R%d
 DevMsg
 DevMsg(char const*, ...)
+DevWarning
 DevWarning(char const*, ...)
 Did not execute '%s' because the 'Target' object was missing
 Different skeleton for referenced graph detected, this is not allowed. Trying to use '%s' within '%s'\n
@@ -3648,6 +3714,8 @@ Dpad Down
 Dpad Left
 Dpad Right
 Dpad Up
+DrawDebug
+DualHull
 Dump all new particles, optional name substring.
 Dump all simulating particles, optional name substring.
 DynamicMeshDeformParams_t
@@ -3681,7 +3749,9 @@ EQ_VEC3WS
 EQ_VEC4
 ERROR
 ERROR: CUtlSymbolTableLarge element limit of %u exceeded\n
-ERROR: Resource name "%s" has the incorrect extension "%s" for the specified resource type (expected "%s")!\n
+ERROR:NoEnum:%s:%d
+ERROR:NoEnumerator:%s:%d
+ERROR:NoFlags:%s:%d
 ESCAPE_CHAR
 ESCAPE_CODE
 EXPONENT
@@ -3765,11 +3835,11 @@ EnumOptions
 EnumValueOptions
 Enums must contain at least one value.
 Eq R%d <- R%d == R%d
+Error
 Error in SolveCubic\n
 Error parsing text-format 
 Error reporting not implemented.
 Error while parsing option value for "
-Error: %s (%d) - %s\n
 Eval
 Evaluate the curve at the specified input position
 Evaluate the gradient at a position between 0 and 1
@@ -3817,15 +3887,6 @@ Extraneous token
 FABRIK
 FAILED_PRECONDITION
 FATAL
-FIELD_BOOLEAN
-FIELD_COLOR32
-FIELD_FLOAT32
-FIELD_INT32
-FIELD_QUATERNION
-FIELD_SCALE32
-FIELD_VECTOR
-FIELD_VECTOR2D
-FIELD_VECTOR4D
 FLAG0_SHIFT_BREAKABLE_FORCE
 FLAG0_SHIFT_BREAKABLE_TORQUE
 FLAG0_SHIFT_CONSTRAIN
@@ -3943,15 +4004,16 @@ FacingMode_Path
 FacingPosition
 Fade in time of the animation
 Fade out time of the animation
-Failed
 Failed to allocate a lexer for '%s'. (Out of memory?)
 Failed to allocate a parser for '%s'. (Out of memory?)
-Failed to allocate an instance of a class
-Failed to allocate an instance of class '%s'
+Failed to allocate a token stream for '%s'. (Out of memory?)
+Failed to allocate an instance of a class of type '%s'
+Failed to allocate an instance of class '%s' (type '%s')
 Failed to apply FLC data to resource '%s': %s\n
 Failed to call CBaseIntrospectedToKV3TypeManager::Init
 Failed to compile Fuse script: %s\n
 Failed to load Animation Graph Resource: %s\n
+Failed to save unsupported class
 Failed to select a valid option!
 Fallback hinge
 Falling Speed Scale
@@ -3998,7 +4060,7 @@ Files with optimize_for = LITE_RUNTIME cannot define services unless you set bot
 Final pivot orientation
 Find all the yielded cursors on this graph and cancel them.
 Find all the yielded cursors on this graph with the matching tag and cancel them.
-Find first element 'a' which compare equal to 'element' and return its index.
+Find all the yielded cursors on this graph with the matching tag and wake them.
 FindElement
 Finger Curl - Index
 Finger Curl - Middle
@@ -4018,8 +4080,7 @@ FingerSplay_Index_Middle
 FingerSplay_Middle_Ring
 FingerSplay_Ring_Pinky
 FingerSplay_Thumb_Index
-Fire And Forget
-Fired immediately when this node begins for chaining purposes.
+Fired
 Fired when the observable boolean is false, and killed when true.
 Fired when the observable boolean is true, and killed when false.
 First argument to Swap() (of type "
@@ -4043,6 +4104,7 @@ Float( %f )
 Floor
 Floor - round float down to nearest integer
 Floor Float
+FoliageAnimation
 Follow Bone
 FollowAttachmentData
 FollowAttachmentSettings_t
@@ -4056,6 +4118,7 @@ Foot 6
 Foot 7
 Foot 8
 Foot Cycle
+Foot IK
 Foot Locking
 Foot Position
 FootAdjust:m_bReverseOrder
@@ -4086,10 +4149,18 @@ Force Facing
 Force Latest Value
 ForceDisable
 ForceEnable
+Format Duration String From Seconds
+FormatArgumentsToBuffer(IFormatOutputStream*, char const*, CTypeErasedFormattingWrapper const*, int)
+FormatTo(IFormatOutputStream*, CFormatStringElement, bool)
+FormatTo(IFormatOutputStream*, CFormatStringElement, double)
+FormatTo(IFormatOutputStream*, CFormatStringElement, float)
+FormatTo(IFormatOutputStream*, CFormatStringElement, int)
+FormatTo(IFormatOutputStream*, CFormatStringElement, std::basic_string_view<char, std::char_traits<char>>)
+FormatTo(IFormatOutputStream*, CFormatStringElement, unsigned int)
+FormatTo(IFormatOutputStream*, CFormatStringElement, void const*)
 Forward Speed
 ForwardSpeed
 Found existing value when inserting into dict - replacing existing value with new value. If this is intended behavior, use InsertOrReplace. If leaving existing values alone is intended, use InsertIfNotFound.
-Found existing value when inserting into tree - replacing existing value with new value. If this is intended behavior, use InsertOrReplace. If leaving existing values alone is intended, use InsertIfNotFound. If duplicate entries are intended, use InsertWithDupes.
 Found invalid proto option data for: 
 Frac
 Fractional component (ie. returns 0.34 for 12.34)
@@ -4119,6 +4190,7 @@ GLIBC_2.17
 GLIBC_2.18
 GLIBC_2.2.5
 GLIBC_2.25
+GLIBC_2.27
 GLIBC_2.3
 GLIBC_2.3.2
 GLIBC_2.3.4
@@ -4143,10 +4215,12 @@ GetCPUInformation
 GetConst R%d <- C%d (%s)
 GetCurrentGraphTimingInfo
 GetCycle
+GetDefaultMiniDumpTypeFlags
 GetDomainValue R%d <- DV%d (%s)
 GetDouble
 GetEnumValue
 GetFloat
+GetGameInfoBool(char const*, bool)
 GetInlineConst R%d <- C%d (%s)
 GetInt32
 GetInt64
@@ -4189,6 +4263,8 @@ Goal Position
 GoalDistance
 GoalPosition
 Gradient
+Gradient()
+Graph
 Graph Writable
 GraphNodes
 GreaterThan
@@ -4197,6 +4273,7 @@ GreaterThanEqualToEventIndex
 GridBlendNode
 Group
 Groups are not supported in proto3 syntax.
+GrowCount
 HAC K  Unused Binding
 HELPER_BONE
 HITGROUP_INVALID
@@ -4223,7 +4300,14 @@ However the end effector ends up after the solve, it's rotation will remain unch
 Hybrid RT + Depth Buffer
 I could not work out what I was expecting, like so many of us these days!\n
 IAnimationGraphInstance
+ID Selector: Failed to select a valid option for ID: %s!
 ID_CHAR
+IFormatOutputStream::Format2DTable(CTypeErasedFormattingWrapper, CFormatStringElement, void const**, int, int)
+IFormatOutputStream::FormatArray(CTypeErasedFormattingWrapper, CFormatStringElement, void const**, int, bool)
+IFormatOutputStream::FormatEnumHelper(CFormatStringElement, int, std::initializer_list<std::pair<int, char const*>>)
+IFormatOutputStream::FormatMaskHelper(int, std::initializer_list<std::pair<int, char const*>>)
+IFormatOutputStream::OutputIndentation()
+IFormatOutputStream::PutRepeatedChar(char, int)
 IK Chain
 IK Chains
 IK Solve
@@ -4259,6 +4343,7 @@ IKV3TransferInterface_GameTime_Load
 IKV3TransferInterface_GameTime_Save
 IKV3TransferInterface_ResourceLoad
 IKV3TransferInterface_ResourceSave
+IKV3TransferInterface_UtlSymbolLarge
 IKV3TransferInterface_Worldspace_Load
 IKV3TransferInterface_Worldspace_Save
 IMMEDIATE_HALT
@@ -4280,7 +4365,6 @@ IPulseReloadListener
 IPulseSystem_001
 If (R%d) Jump to Instr I%d
 If (R%d) Leap to Chunk C%d
-If -1 timer will continue forever
 If specified, each wait interval will vary randomly between WaitInterval this value
 If this cursor spawns other work via Fire And Forget, should this Tag be inherited?
 IgnoreInactiveEvents
@@ -4297,8 +4381,6 @@ IkTarget_Bone
 IkTarget_Parameter_ModelSpace
 IkTarget_Parameter_WorldSpace
 Illegal jstype for int64, uint64, sint64, fixed64 or sfixed64 field: 
-Immediate Wake
-Immediately reactivate any waiting cursors regardless of how long they have been waiting.
 Import 
 Import "
 In the Air
@@ -4316,17 +4398,15 @@ InQuad
 InQuart
 InQuint
 InSine
+Inactive
 Index must be -1 for non-repeated fields
 Index must be -1 for singular fields.
 Index must be in range of repeated field values. 
 Index out-of-bounds (field is empty).
 IndexAndPercentage
 IndexOnly
-Indicate Test Failure
-Indicate that a checkpoint has been reached.
-Indicates a test failure if Value is false.
-Indicates a test failure if value is false; only tested when running unit tests
 Inert VModuleMetadata
+Info
 InfoForResourceTypeCAnimData
 InfoForResourceTypeCAnimationGroup
 InfoForResourceTypeCModel
@@ -4346,11 +4426,11 @@ InputService_001
 InputStackSystemVersion001
 InputSystemVersion001
 Insert
-Insert 'element' in the given index in 'a', increasing its count by one and moving the elements after index.
 InsertBeforeGetPtr
 InsertMultipleBefore
 InstallSchemaBindings
 Instant Stop
+InstantiateNode
 Insufficient memory to compile regular expression
 Insufficient memory to determine regex match
 Int Parameter
@@ -4366,11 +4446,12 @@ Internal cursor flow error: halting due to leaf cell bug!
 Interpolate
 Interpolation
 Interpreting non ascii codepoint %d.
+InterruptElegantly
+InterruptImmediately
 Interval Timer
 Invalid
 Invalid '?', '*', or '+' in regular expression
 Invalid back reference in regular expression
-Invalid chain end bone ID ('%s') specified, there are not enough bones in the chain to solve the IK request
 Invalid character class in regular expression
 Invalid character range in regular expression
 Invalid collating element in regular expression
@@ -4384,7 +4465,9 @@ Invalid escape sequence in string literal.
 Invalid file descriptor data passed to EncodedDescriptorDatabase::Add().
 Invalid float number: 
 Invalid input detected for target selector
+Invalid input target bone ID ('%s') specified
 Invalid key for map field.
+Invalid left effector bone ID ('%s') specified, there are not enough bones in the chain to solve the IK request
 Invalid message set extension.
 Invalid number of parameters.  Specify a flag you want to toggle.
 Invalid package name: 
@@ -4392,11 +4475,13 @@ Invalid property specification
 Invalid proto descriptor for file "
 Invalid public dependency index.
 Invalid range in '{}' in regular expression
+Invalid right effector bone ID ('%s') specified, there are not enough bones in the chain to solve the IK request
 Invalid string value %s -- pick another one!\n
 Invalid strings::Substitute() format string: "
 Invalid symbol name: 
 Invalid target detected for warp node!
 Invalid target provided to target selector!
+Invalid use of KV3 specific type %s with basic type %s, must be basic type %s
 Invalid value for boolean field "
 Invalid weak dependency index.
 Invalid wire type for CPPTYPE_INT32: 
@@ -4409,7 +4494,7 @@ InverseSourceCycle
 Invoke '%s' failed with code %d
 Invoke Cell%d [eid=%d] %s%s
 Invoke Lib %s
-Is In Test Mode
+InvokeMiniDumpHandler
 Is Valid Vector
 Is Valid World Vector
 IsSet()
@@ -4437,6 +4522,7 @@ JumpCorrectionMethod
 JumpOrLeap( C%d:I%d )
 Jumping
 June
+KV3 instances cannot be set to an unspecified specific type
 KV3 save transfer failed: %s
 Keep a history of all instructions run on a per graph basis.
 Keep running normally.
@@ -4444,12 +4530,33 @@ Key in map fields cannot be enum types.
 Key in map fields cannot be float/double, bytes or message types.
 KeyValueCache001
 KeyValues3
+KeyValues3: pre-allocated array memory is too small for %u elements (%u bytes available, %u bytes needed)\n
+KeyValues3: pre-allocated table memory is too small for %u members (%u bytes available, %u bytes needed)\n
+KeyValues::CreateNewKey()
+KeyValues::FindKey(char const*) const
+KeyValues::FindKey(char const*, bool)
+KeyValues::GetDataType(char const*) const
+KeyValues::GetFirstSubKey()
+KeyValues::GetFloat(char const*, float) const
+KeyValues::GetInt(char const*, int) const
+KeyValues::GetName() const
+KeyValues::GetNextKey()
+KeyValues::GetPtr(char const*, void*) const
+KeyValues::GetUint64(char const*, unsigned long long) const
+KeyValues::KeyValues(char const*, IKeyValuesSystem*, bool)
+KeyValues::LoadFromFile(IFileSystem*, char const*, char const*, bool (*)(char const*, void*), void*, char const*)
+KeyValues::SetFloat(char const*, float)
+KeyValues::SetInt(char const*, int)
+KeyValues::SetString(char const*, char const*)
+KeyValues::SetUint64(char const*, unsigned long long)
+KeyValues::operator new(unsigned long)
+KeyValues::operator=(KeyValues const&)
+KeyValues::~KeyValues()
+Kill After.
 Kill All Other Cursors
 Kill Cursors With Tag
-Kill This Cursor And Cancel
-Kill after current node.
-Kill elegantly.
-Kill immediately.
+Kill Elegantly.
+Kill Immediately.
 LAST_SERIALIZED_CODE
 LC_ADDRESS
 LC_COLLATE
@@ -4471,6 +4578,7 @@ LITERAL_TRUE
 LOD %i
 LOD Component
 LOD Off
+LOG_CONSOLE
 LOG_GENERAL
 LTE_FLOAT
 LTE_GAMETIME
@@ -4491,6 +4599,15 @@ Left Trigger
 LeftFootDown
 LeftFootPassing
 LeftPhase
+LegacyAnimFieldType_t::BOOLEAN
+LegacyAnimFieldType_t::COLOR32
+LegacyAnimFieldType_t::FLOAT32
+LegacyAnimFieldType_t::INT32
+LegacyAnimFieldType_t::QUATERNION
+LegacyAnimFieldType_t::SCALE32
+LegacyAnimFieldType_t::VECTOR2D
+LegacyAnimFieldType_t::VECTOR3D
+LegacyAnimFieldType_t::VECTOR4D
 Length
 Length (magnitude) of Vector
 Length (magnitude) of Vector2D
@@ -4505,8 +4622,9 @@ LessEq R%d <- R%d <= R%d
 LessThan
 LessThanEqual
 Lexer encountered %d error(s)
-Library for interacting with pulse cursors.
 Lighten
+LightmapUV
+LightmapUVW
 Limit Count
 LimitSearchToSourceState
 Line: 
@@ -4523,13 +4641,18 @@ LoadKV3FromKV1Text(KeyValues3*, CUtlString*, char const*, KV1TextEscapeBehavior_
 LoadKV3Object error: %s\n
 LoadKV3Text_NoHeader(KeyValues3*, CUtlString*, char const*, KV3ID_t const&, char const*, unsigned int)
 Local Space
+LocalServerClientAccess001
 Localize_001
 Log10
 Log2
+LoggingSystem_FindChannel
+LoggingSystem_GetChannelColor
+LoggingSystem_GetChannelVerbosity
 LoggingSystem_IsChannelEnabled
 LoggingSystem_Log
 LoggingSystem_Log(int, LoggingSeverity_t, Color, char const*, ...)
 LoggingSystem_Log(int, LoggingSeverity_t, LoggingMetaData_t const*, Color, char const*, ...)
+LoggingSystem_LogDirect(int, LoggingSeverity_t, Color, LoggingMetaData_t const*, char const*)
 LoggingSystem_RegisterLoggingChannel
 Logic problem? szsrc = 
 Look At Target Forward
@@ -4571,6 +4694,7 @@ MESH_BUFFER_USAGE_NONE
 MESH_BUFFER_USAGE_RT_PROXY
 MESH_BUFFER_USAGE_VB
 MESH_BUFFER_USAGE_VERTEX_ALBEDO
+MESH_BUFFER_USAGE_VERTEX_EMISSIVE
 MESH_DRAW_FLAGS_CAN_BATCH_WITH_DYNAMIC_SHADER_CONSTANTS
 MESH_DRAW_FLAGS_DRAW_LAST
 MESH_DRAW_FLAGS_NONE
@@ -4588,6 +4712,8 @@ MIsBoxedIntegerType
 MIsStringAndTokenType
 MKV3TransferName
 ML_COMMENT
+MM:SS with leading zeros
+MM_SS_LEADING_ZERO
 MModelGameData
 MODEL_BONE_FLEX_INVALID
 MODEL_BONE_FLEX_TX
@@ -4635,9 +4761,9 @@ MPulseCursorTerminates
 MPulseEditorCanvasItemSpecKV3
 MPulseEditorHeaderIcon
 MPulseExpressionAlias
+MPulseFGDSkipField
 MPulseFunctionHiddenInTool
-MPulsePolymorphicDependentArg
-MPulsePolymorphicDependentReturn
+MPulseLegacyName
 MPulseRequirementCheck
 MPulseRequirementCommit
 MPulseSignatureForOutflow
@@ -4655,12 +4781,14 @@ Make Angle From Forward Vector
 Make Color
 Make Transform
 Make Vector
+Make Vector From Angle
 Make Vector2 D
 Make Vector4 D
 Make World Transform
 Make World Vector
 Make a Color from component parts
 Make a Transform from component parts.
+Make a Vector from an Angle
 Make a Vector from component parts.
 Make a Vector2D from component parts.
 Make a World Vector from component parts.
@@ -4808,6 +4936,7 @@ ModelMeshBufferUsage_t
 ModelSkeletonData_t
 ModelSkeletonData_t::BoneFlags_t
 ModelSpace
+ModelSpaceBlendTask - Trying to perform a model-space blend using an additive pose
 Monday
 Monitor Observable
 MoodAnimationLayer_t
@@ -5239,6 +5368,7 @@ N12CNmGraphNode11CDefinitionE
 N12CNmScaleNode11CDefinitionE
 N12CNmStateNode11CDefinitionE
 N12CNmValueNode11CDefinitionE
+N13CNmFootIKNode11CDefinitionE
 N14CNmBlend1DNode11CDefinitionE
 N14CNmBlend2DNode11CDefinitionE
 N14CNmConstIDNode11CDefinitionE
@@ -5249,6 +5379,7 @@ N15CNmCachedIDNode11CDefinitionE
 N15CNmIDSwitchNode11CDefinitionE
 N15CNmSelectorNode11CDefinitionE
 N15CNmZeroPoseNode11CDefinitionE
+N16CNmBodyGroupNode11CDefinitionE
 N16CNmBoolValueNode11CDefinitionE
 N16CNmConstBoolNode11CDefinitionE
 N16CNmFloatEaseNode11CDefinitionE
@@ -5625,6 +5756,22 @@ NSt7__cxx119money_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEEE
 NSt7__cxx119money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEEE
 NSt7__cxx119money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEEE
 NSt7__cxx119money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEEE
+NSt8__detail11_AnyMatcherISt12regex_traitsIcELb0ELb0ELb0EEE
+NSt8__detail11_AnyMatcherISt12regex_traitsIcELb0ELb0ELb1EEE
+NSt8__detail11_AnyMatcherISt12regex_traitsIcELb0ELb1ELb0EEE
+NSt8__detail11_AnyMatcherISt12regex_traitsIcELb0ELb1ELb1EEE
+NSt8__detail11_AnyMatcherISt12regex_traitsIcELb1ELb0ELb0EEE
+NSt8__detail11_AnyMatcherISt12regex_traitsIcELb1ELb0ELb1EEE
+NSt8__detail11_AnyMatcherISt12regex_traitsIcELb1ELb1ELb0EEE
+NSt8__detail11_AnyMatcherISt12regex_traitsIcELb1ELb1ELb1EEE
+NSt8__detail12_CharMatcherISt12regex_traitsIcELb0ELb0EEE
+NSt8__detail12_CharMatcherISt12regex_traitsIcELb0ELb1EEE
+NSt8__detail12_CharMatcherISt12regex_traitsIcELb1ELb0EEE
+NSt8__detail12_CharMatcherISt12regex_traitsIcELb1ELb1EEE
+NSt8__detail15_BracketMatcherISt12regex_traitsIcELb0ELb0EEE
+NSt8__detail15_BracketMatcherISt12regex_traitsIcELb0ELb1EEE
+NSt8__detail15_BracketMatcherISt12regex_traitsIcELb1ELb0EEE
+NSt8__detail15_BracketMatcherISt12regex_traitsIcELb1ELb1EEE
 NSt8ios_base7failureB5cxx11E
 NSt8ios_base7failureE
 NULL CELL 
@@ -5686,7 +5833,6 @@ No DATA block for resource '%s'\n
 No DATA block for resource\n
 No ID Set
 No Orientation Warp Event Found!
-No animation set for clip node!
 No closing */ before end of file
 No data
 No default value
@@ -5694,6 +5840,7 @@ No effector bone ID specified in input target
 No expression!
 No field named "uninterpreted_option" in the Options proto.
 No input data for '%s'. (Empty buffer.)
+No input target bone ID specified
 No valid warp events detected! Either no events present or start time is after warp events.
 NoDamping
 Node
@@ -5707,6 +5854,7 @@ Normalize Vector
 Normalize Vector a
 Not R%d <- !R%d
 Not Set
+Not enough bones, there are not enough bones in the chain to achieve the requested chain length, chain is limited to %d bones
 Not implemented field number 
 Not safe to 'new' this class due to alignment requirements
 Not supported.
@@ -5741,7 +5889,6 @@ OneBone
 OneBone_Translate
 Oneof must have at least one field.
 OneofOptions
-OngoingNotify
 Only wrote %d (of %d) values when saving map!
 Opaque Handle
 OperatorAnd
@@ -5750,7 +5897,6 @@ Option "
 Option field "
 Option must have a name.
 Option must not use reserved name "uninterpreted_option".
-Optional. After taking an OnCanceled outflow, signal to any observers that this cursor is now canceled. Equivalent to not handling the original cancel outflow. If you don't use this, handling OnCanceled will be treated as success.
 Optional. Type 'Any'. An associated value, e.g. the Entity Handle which is responsible for this Cursor. The Tag is defined by the unique combination of Name and Value.
 Or R%d <- R%d || R%d
 Orientation Warp failed since there is not enough time left to warp or we're past the warp event!
@@ -5777,6 +5923,8 @@ Overlay
 Overlay Blend
 Overlay Blend (Masked): %.2f%%
 Overlay Blend: %.2f%%
+OverlayBlendTask - Trying to perform an overlay blend with mismatched pose types ( additive/parent-space )
+OverlayProjectionDirection
 Override Sound
 PANEL_ID
 PARENT
@@ -5951,6 +6099,7 @@ PT_TYPE_INVALID
 PT_TYPE_NAMED_VALUE
 PULSE_CALL_ASYNC_FIRE
 PULSE_CALL_SYNC
+PVAL_ANIM_SEQUENCE
 PVAL_ANY
 PVAL_ARRAY
 PVAL_BOOL
@@ -5981,6 +6130,7 @@ PVAL_TYPESAFE_INT
 PVAL_TYPESAFE_INT64
 PVAL_UNKNOWN
 PVAL_VARIANT
+PVAL_VDATA_CHOICE
 PVAL_VEC2
 PVAL_VEC3
 PVAL_VEC3_WORLDSPACE
@@ -6019,23 +6169,28 @@ Panorama Panel Handle
 PanoramaTextServices001
 PanoramaUIClient001
 PanoramaUIEngine001
+ParallelForSharedCode
 ParamList
 ParamSpanSample_t
 ParamSpan_t
 Parameter
 Parameter (Model Space)
 Parameter (World Space)
+Parameterized Clip Selector: Failed to select a valid option!
+Parameterized Selector: Failed to select a valid option!
 Parameters
 Parent
 Parent Map
 Parent Map Entity
 Parent Map: %s\n
 Parent Space
+Parent VData
 Parent VMDL
 Parent XML
 Parent XML Panel
 ParentAttachmentName()
 Parser encountered %d error(s)
+Particle (%s) (%s)
 Particle Binding
 Particle Binding (Real)
 Particle Object
@@ -6071,6 +6226,7 @@ PerParticleFloatInput()
 PerParticleVecInput()
 PerTickSettings
 PerTickSettings_t
+PerVertexLighting
 PercentageOnly
 PercentageThroughState
 PercentageThroughSyncEvent
@@ -6086,15 +6242,25 @@ PhysSoftbodyDesc_t
 Physics
 PhysicsBuilderMgr001
 Pitch
+PivotPaint
 Plane normal
 Planted Turn
+Plat_CPUTickFrequency
+Plat_DemangleRawTypeName
+Plat_ExitProcess
 Plat_FatalError
 Plat_FloatTime
+Plat_GetEnv
+Plat_GetExeModule
+Plat_GetModuleFilename
+Plat_GetModuleProcAddress
+Plat_GetRawCallStack
 Plat_GetTime
 Plat_IsInDebugSession
-Plat_IsInTestMode
 Plat_IsRunningOnCustomerMachine
 Plat_NonFatalErrorFunc
+Plat_RelativeTicks
+Plat_UUIDFromString
 Play on Client
 Play on Server
 Playback:m_SequenceCycleZeroTime
@@ -6121,8 +6287,14 @@ Priority
 Private
 Prl Eval
 Procedural Only
+Proceed Elegantly.
+Proceed Immediately
+Proceed Immediately.
 Process Selector
 Profile Name
+Program has invalid instruction %i
+Program uses more temp variables than are supported. Needs %i, max is %i
+PropWorldOrigin
 PropertyEditorSystem_001
 Proto file starts with 0xEF but not UTF-8 BOM. Only UTF-8 is accepted for proto file.
 Protobuf: %s(%d): %s\n
@@ -6134,13 +6306,14 @@ Pulse: %s
 PulseApiFeature_t
 PulseBestOutflowRules_t
 PulseCursorCancelPriority_t
-PulseCursorExecResult_t
 PulseCursorID_t
+PulseCursorWakePriority_t
 PulseCursorYieldToken_t
 PulseDebugLog: Calling external method on non-existent entity or game blackboard
 PulseDebugLog: Calling external method on non-existent entity or game blackboard\n
 PulseDocNodeID_t
 PulseDomainValueType_t
+PulseDurationStringFormat_t
 PulseGraphExecutionHistoryCursorDesc_t
 PulseGraphExecutionHistoryEntry_t
 PulseGraphExecutionHistoryNodeDesc_t
@@ -6149,7 +6322,6 @@ PulseInstructionCode_t
 PulseMethodCallMode_t
 PulseNodeDynamicOutflows_t
 PulseNodeDynamicOutflows_t::DynamicOutflow_t
-PulseObservableBoolExpression_t
 PulseRegisterMap_t
 PulseRuntimeBlackboardReferenceIndex_t
 PulseRuntimeCallInfoIndex_t
@@ -6183,6 +6355,7 @@ RENDERMESH_SLOT_PER_INSTANCE
 RENDERMESH_SLOT_PER_VERTEX
 RENDER_BUFFER_ACCELERATION_STRUCTURE
 RENDER_BUFFER_BYTEADDRESS_BUFFER
+RENDER_BUFFER_DYNAMIC_ZERO_COPY
 RENDER_BUFFER_IMMOVABLE_ALLOCATION
 RENDER_BUFFER_POOL_ALLOCATED
 RENDER_BUFFER_SHADER_BINDING_TABLE
@@ -6243,7 +6416,6 @@ Random Integer
 Random World Position
 RandomFloat
 RandomInt
-Randomizes the order of items in the array (Knuth/Fisher-Yates Shuffle)
 Range_t
 Raytracing TLAS
 Reach destination when root motion ends
@@ -6266,10 +6438,8 @@ Recursion limit at end of parse should be
 Reference Pose Task
 Referenced clip resource failed to load or is invalid: %s
 Referenced graph resource failed to load or is invalid: %s
-Register Test Checkpoint
 RegisterConCommand: Unknown error registering con command "%s"!\n
 RegisterConVar: Unknown error registering convar "%s"!\n
-RegisterStringToken
 Reinterpret Instance %s R%d <- %s R%d
 Release
 ReleaseLast
@@ -6281,9 +6451,6 @@ Remap Value Component
 Remap and clamp input value from input range to output range (float)
 RemapFloatInput()
 Remove Tag From Cursor
-Remove all elements from 'a' which are invalid instances.
-Remove all elements from 'a' which compare equal to 'element'.
-Remove the element at the given index in 'a', decreasing its count by one and moving the elements after index.
 Remove the given tag from this cursor. If other cursors are waiting on us, they will resume.
 RemoveLast
 RenderBufferFlags_t
@@ -6301,8 +6468,8 @@ RenderSlotType_t
 RenderUtils_001
 Repeated fields can't have default values.
 Replace
+Request elegant wind-down of any associated work (e.g. vcd interrupt), then proceed afterwards.
 Request elegant wind-down of any associated work (e.g. vcd interrupt).
-Requested Target
 Requested next step
 Requested size is too large to fit into size_t.
 Requesting a negative velocity is not supported!
@@ -6319,8 +6486,6 @@ ResourceCompilerSystem001
 ResourceHandleUtils001
 ResourceManifestRegistry001
 ResourceSystem013
-Resume
-Return the number of elements in the array.
 ReturnJobManualEventToPool
 Returns -1 or 0 or 1 based on the sign of the argument
 Returns -1.0 or 0.0 or 1.0 based on the sign of the argument
@@ -6331,7 +6496,6 @@ Returns interpolated value between A and B based on frac 0.0 - 1.0 (world vector
 Returns the constant pi (3.14...)
 Returns true if the Vector is valid
 Returns true if the World Vector is valid
-Returns up to the maximum requested elements. Never grows the array (unlike SetCount).
 Right
 Right Shoulder
 Right Trigger
@@ -6419,6 +6583,10 @@ Saturate (clamps float between 0 and 1)
 Saturday
 Save a named value of any type on the cursor.
 SaveKV3(KV3ID_t const&, KV3ID_t const&, KeyValues3 const*, CUtlString*, CUtlBuffer*, unsigned int)
+SaveKV3Text_NoHeader(KeyValues3 const*, CUtlString*, CBufferString*, unsigned int)
+SaveKV3Text_NoHeader(KeyValues3 const*, CUtlString*, CUtlBuffer*, unsigned int)
+SaveKV3Text_NoHeader(KeyValues3 const*, CUtlString*, CUtlString*, unsigned int)
+SaveKV3Text_ToString(KV3ID_t const&, KeyValues3 const*, CUtlString*, CUtlString*, unsigned int)
 Scale
 Scale Animation Motion
 Scale Current Value Raw
@@ -6446,6 +6614,7 @@ Second argument to Swap() (of type "
 Second argument to SwapFields() (of type "
 Select Best Exit
 Selected Option
+Selector: Failed to select a valid option!
 SelectorInstanceData_t
 SelectorNode
 SelectorTagBehavior_OffBeforeFinished
@@ -6486,7 +6655,6 @@ ServerToolsInfo_001
 ServiceOptions
 Set Frames Manually
 Set Value
-Set the number of elements in the array.
 SetAllocatedMessage
 SetBlackboardReference BR%d (%s) <- R%d 
 SetBool
@@ -6515,6 +6683,9 @@ Sets the mood's animation buckets to be active when the character is talking
 SharedMovementGait_t
 SheetSequenceIntegerId_t
 Should not reach here.
+Should we straighten face island if the displacement is this much? (inches)
+Should we try to straighten an island of faces deviating from their average normal (tangent)?
+Should we try to straighten two faces connected to this edge? (tangent)
 Shuffle
 Sign Float
 Sign Int
@@ -6610,6 +6781,7 @@ Split a Vector into component parts.
 Split a Vector2D into component parts.
 Split a World Vector into component parts.
 Split an Angle into component parts.
+SplitNameAndKV3Args
 Spring
 Spring Frequency Max
 Spring Frequency Min
@@ -6760,6 +6932,7 @@ St20__codecvt_utf16_baseIwE
 St20bad_array_new_length
 St21__ctype_abstract_baseIcE
 St21__ctype_abstract_baseIwE
+St23_Sp_counted_ptr_inplaceINSt8__detail4_NFAISt12regex_traitsIcEEESaIvELN9__gnu_cxx12_Lock_policyE2EE
 St23__codecvt_abstract_baseIDiDu11__mbstate_tE
 St23__codecvt_abstract_baseIDic11__mbstate_tE
 St23__codecvt_abstract_baseIDsDu11__mbstate_tE
@@ -6882,13 +7055,13 @@ StepPhase_OnGround
 Steps Remaining
 Stiffness
 Stop
-Stop Timer
 Stop Waiting
 Stop When Graph Destroyed
-Stop any active timers - the completed outflow will still fire
 Stop on Tag End
+Stop the node action without any wind-down, then proceed afterwards.
 Stop without any wind-down.
 Stop/Start Planted Turn
+StrReplaceChar
 Strafe
 Strafe Speed
 StrafeSpeed
@@ -6901,7 +7074,6 @@ StringPrintfVector currently only supports up to
 Strings Are Equal Case Sensitive
 Sub R%d <- R%d - R%d
 Subtract
-Succeeded
 Suggested field numbers for 
 Sunday
 SurfacePropertiesList
@@ -6912,7 +7084,7 @@ Symbol name "
 SyncChildren
 Synchronize Children
 Synchronized
-Synchronous - wait for the method to fully complete before returning
+Synchronous - Wait for this node to fully complete before proceeding.
 Synthetic oneofs must be after all other oneofs
 TAG_
 THEM
@@ -6923,9 +7095,11 @@ TOK_COLON
 TWIST
 Tag Cursor
 Tag End Stop is Instant
+TagActionStatus
 TagSpan_t
 TagStatus
 Tags
+TanFrameQuat
 Tangent of angle. Input in radians, output in radians
 Target
 Target Coords
@@ -6943,6 +7117,7 @@ Target Warp: XY warp curve blowout detected! Falling back to LERP!
 Target Warp: trying to XY warp a section with no displacement, falling back to LERP!
 Target Warp: trying to XY warp to under the distance threshold, falling back to LERP!
 Target warp exceed accurate sampling error threshold! Switching to inaccurate sampling!
+TargetCastForModify
 TargetMoveHeading
 TargetMoveSpeed
 TargetSelectorAngleMode_t
@@ -6951,14 +7126,12 @@ TargetSelectorNode
 TargetWarpAngleMode_t
 TargetWarpCorrectionMethod
 TargetWarpTimingMethod
+Task
 Task Handshake Tag
 Terminate()
 TernaryConditional
 Test Handle
-Test Mode Assert True
-TestCheckpoint: %s
 TestScriptMgr001
-Testing script helpers.
 TextBlock()
 TextLayout_001
 The JSON camel-case name of field "
@@ -6971,11 +7144,15 @@ The type parameter T in RepeatedFieldRef<T> API doesn't match
 This ZeroCopyOutputStream doesn't support aliasing. Reaching here usually means a ZeroCopyOutputStream implementation bug.
 This can't happen; base64 decoder state = 
 This convar is being accessed prior to ConVar_Register being called
+This is the overall duration. If -1 timer will continue forever. During this duration, we will fire a new child cursor at each Interval.
 This program requires version 
 This program was compiled against version 
 This shouldn't be called if all the sizes are equal.
 ThreadAtomicNotifyOne(unsigned int const*)
 ThreadGetCurrentId
+ThreadInMainThread
+ThreadMultiWait
+ThreadMultiWaitObjectSetDestroy
 Thursday
 Tilt
 Tilt bone after tilt.
@@ -6998,6 +7175,7 @@ ToolService_001
 TraceSettings_t
 Transform
 TransformInput()
+TranslateStackInfo
 Translation Error Range
 TranslationOnly
 Tried to load a polymorphic pointer with no '%s' key
@@ -7008,9 +7186,11 @@ True
 Trying to set an offset on an unset node!
 Tuesday
 Turn
+Turn a time in seconds into a display string. NOT localized.
 TurnHelperNode
 Two Bone
 Two Bone + Translate
+Two Bone IK
 TwoBone
 TwoBoneIKSettings_t
 TwoBone_Translate
@@ -7027,6 +7207,12 @@ UNIMPLEMENTED
 UNKNOWN
 UNKNOWN_ENUM_VALUE_%s_%d
 UNRECOGNIZED
+UPSCALER_AMD_FSR2
+UPSCALER_AMD_FSR3
+UPSCALER_COUNT
+UPSCALER_INTEL_XESS
+UPSCALER_NONE
+UPSCALER_NVIDIA_DLSS
 UTF-8
 UnInvalid
 UnNegate
@@ -7044,10 +7230,12 @@ Unexpected token '%s' %s
 Unimplemented type: 
 Uninterpreted option is missing name or value.
 Unknown
+Unknown KV3 specific type %u
 Unknown Morph Control :: %s WeightList :: %s Model :: %s\n
 Unknown binary operator
 Unknown enumeration value of "
 Unknown error
+Unknown format type
 Unknown function "%s"
 Unknown property %s
 Unknown unary operator
@@ -7067,13 +7255,14 @@ Unsupported version %d for resource '%s' (Expected %d)\n
 Unsupported: type mismatch
 Unwanted token '%s' %s
 UpdateContext
+UpscalerType_t
 Use Child1
 Use Child2
 Use the parent bone's orientation as the end effector's orientation.
 UseChild1
 UseChild2
-Used to flag a test as having failed.
 User Defined Values
+UtlRBTree_FailedInsertDuplicate
 UtlVectorMemory_Alloc
 UtlVectorMemory_CalcNewAllocationCount
 UtlVectorMemory_FailedAllocation
@@ -7082,6 +7271,10 @@ VAsyncFileSystem2_001
 VAvi001
 VBik001
 VConComm001
+VDATA
+VData Choice
+VDataChoice( %s )
+VDataChoice()
 VERTEX_ALBEDO_565
 VERTEX_ALBEDO_8888
 VERTEX_ALBEDO_NONE
@@ -7135,15 +7328,20 @@ VTT for std::istream
 VTT for std::ostream
 VWebm001
 V_DoubleToString_Unsafe
+V_FixDoubleSlashes
 V_FloatToString_Unsafe
 V_GetFileExtension
 V_Get_stderr
 V_IndexAfterPrefix
+V_InitJSONConfig
 V_Int16ToString_Unsafe
 V_Int32ToString_Unsafe
 V_Int64ToString_Unsafe
 V_Int8ToString_Unsafe
 V_IsAbsolutePath
+V_ParseJSONBuffer
+V_PathContainsPath
+V_PrettifyMem
 V_RemoveDotSlashes
 V_StringParseError
 V_StringToBool
@@ -7162,23 +7360,29 @@ V_StringToUint8
 V_StringToVector
 V_StringToVector2D
 V_StringToVector4D
+V_StringToVectorWS
 V_StripExcessTrailingZeros
+V_TryAndMakeFriendlyNameFromCppName
 V_UInt16ToString_Unsafe
 V_UInt32ToString_Unsafe
 V_UInt64ToString_Unsafe
 V_UInt8ToString_Unsafe
 V_UnicodeLength(char const*)
 V_UnqualifiedFileName
+V_ZSTD_decompress
 V_acosd
 V_acosf
 V_asind
 V_asinf
+V_atan2d
 V_atan2f
 V_atand
 V_atanf
 V_atof
 V_atofloat32
 V_atoi
+V_atoi64
+V_atoui64
 V_cosd
 V_cosf
 V_coshf
@@ -7188,14 +7392,19 @@ V_fmodd
 V_fmodf
 V_fpclassifyd
 V_fprintf
+V_fread
+V_frexpf
+V_isEntirelyWhitespace
 V_isnand
 V_log10f
 V_log2_uint
 V_log2f
+V_logd
 V_logf
 V_modff
 V_powd
 V_powf
+V_qsort
 V_qsort_s
 V_roundf
 V_sincosf
@@ -7206,6 +7415,7 @@ V_snprintf
 V_sscanf
 V_stricmp_fast
 V_stristr_fast(char const*, char const*)
+V_strlower_fast
 V_strnlen(char const*, int)
 V_strtok
 V_tand
@@ -7246,6 +7456,11 @@ VectorWS
 Velocity
 VelocityMetricMode
 VertexAlbedoFormat_t
+VertexElementAnnotation
+VertexGenericIntegerData
+VertexPaintBlendParams
+VertexPaintBlendParams1
+VertexPaintTintColor
 VertexSet
 VeryFast
 Virtual 2-bone
@@ -7263,15 +7478,18 @@ WARNING: Invalid resource version (%d): %s\n
 WARNING: Pulse failed to restore yielded cursor - error with cell state (%d:%s)\n
 WARNING: Pulse failed to restore yielded cursor - no yielding cell or landing pad (%d:%s)\n
 WARNING: Pulse failed to save yielded cursor - no yielding cell or landing pad (C%d:I%d)\n
+WARNING: Resource name "%s" has the incorrect extension "%s" for the specified resource type (expected "%s")!\n
 Wait
 Wait For Completion
 Wait For Cursors With Tag
 Wait Until
 Wait for a duration, firing a child cursor at regular (or randomized) intervals
 Wait, Resume=%s
+Wake Cursors With Tag
+WakeElegantly
+WakeImmediate
 Warning
 Warning parsing text-format 
-Warning: %s (%d) - %s\n
 Warp
 Warp Orientation
 Warp Position
@@ -7302,6 +7520,8 @@ WeightedRandomNoRepeat
 Weights
 When scaling an animation, grab the scale value as in int. Used for gestures/postures to control number of looping sections
 When we start waiting, how should we handle existing cursors?
+While False
+While True
 While active, manage child cursors based on the results of a boolean condition. When the observable result changes, the prior cursor will be canceled and the appropriate outflow will fire a new child cursor. Will monitor continuously until externally canceled.
 Width
 Will offset the warped root motion if we are pass warp events
@@ -7408,9 +7628,14 @@ _ITM_registerTMCloneTable
 _MakeGlobalSymbol
 _MakeGlobalSymbolCaseSensitive
 _Target
+_V_SetExtension
+_V_StringAfterPrefix
+_V_StripLastDir
+_V_strEndsWith
 _V_strncat
 _V_strncmp
 _V_strncpy
+_V_strnicmp_fast
 _ZNKSt13__facet_shims12__any_stringcvNSt7__cxx1112basic_stringIT_St11char_traitsIS3_ESaIS3_EEEB5cxx11IcEEv
 _ZNKSt13__facet_shims12__any_stringcvNSt7__cxx1112basic_stringIT_St11char_traitsIS3_ESaIS3_EEEB5cxx11IwEEv
 _ZSt10__exchangeIP8_IO_FILEDnET_RS3_OT0_
@@ -7419,10 +7644,8 @@ _ZSt10__exchangeIPNSt8ios_base14_Callback_listEDnET_RS4_OT0_
 _ZSt10__exchangeIPcDnET_RS2_OT0_
 _ZSt10__exchangeIPwDnET_RS2_OT0_
 __CursorQueue__
-__ExternalMethodParent__
 __FireCursorsParent__
 __State_Child_Condition__
-__State_Child_Subgraph__
 __TimelineParent__
 __assert_fail
 __ctype_b_loc
@@ -7631,6 +7854,7 @@ __gnu_cxx::stdio_sync_filebuf<wchar_t, std::char_traits<wchar_t>>::~stdio_sync_f
 __gxx_personality_v0
 __int128
 __iswctype_l
+__m_BaseFlow_WhileActive__
 __memcpy_chk
 __newlocale
 __nl_langinfo_l
@@ -7664,21 +7888,22 @@ _txnal_cow_string_c_str(void const*)
 _txnal_logic_error_get_msg(void*)
 _txnal_runtime_error_get_msg(void*)
 _txnal_sso_string_c_str(void const*)
-a:fulltype
-a:typeparam
 abort
 accessor_ == other.accessor_
 acos
 acosf
 active_frame
 activity
+alert
 alignof 
 allocator
 allowed in proto3.
 alnum
 alpha
 always_run
+ampersand
 angle
+angles
 anim
 anim_data_block
 anim_decode_forcewritealltransforms
@@ -7707,8 +7932,12 @@ animgraph_slowdownonslopes_enabled
 animgraph_verify_dirty_netvar_optimization
 animgraphlib
 animlib
+animpose.cpp
+animskeleton.cpp
+apostrophe
 array
 asin
+asterisk
 atan
 attachment
 attachment_point
@@ -7725,10 +7954,11 @@ auto
 auto:
 auto_unragdoll_duration
 bInherit
-bValue
 bWasAnObservableComputation
 b_action_restart
 b_movement_type_restart
+backslash
+backspace
 bad_function_call
 basic_filebuf::_M_convert_to_external conversion error
 basic_filebuf::underflow codecvt::max_length() is not valid
@@ -7758,6 +7988,7 @@ basic_string::replace
 basic_string::resize
 basic_string::substr
 basic_string_view::substr
+bentnormal
 biased
 binary
 binary_auto
@@ -7769,6 +8000,9 @@ bind_textdomain_codeset
 bindtextdomain
 blank
 blend_anim_events
+blendindices
+blendweight
+blendweights
 bodygroup
 bone
 bone_setup.cpp(645):  Model %s : sequence %d out of range
@@ -7798,6 +8032,10 @@ bool __gnu_cxx::operator==<wchar_t const*, wchar_t*, std::__cxx11::basic_string<
 bool __gnu_cxx::operator==<wchar_t*, std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>>(__gnu_cxx::__normal_iterator<wchar_t*, std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>> const&, __gnu_cxx::__normal_iterator<wchar_t*, std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>> const&)
 bool __gnu_cxx::operator==<wchar_t*, std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>>(__gnu_cxx::__normal_iterator<wchar_t*, std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>> const&, __gnu_cxx::__normal_iterator<wchar_t*, std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>> const&)
 bool google::protobuf::internal::RepeatedFieldRefIterator<T>::operator!=(const google::protobuf::internal::RepeatedFieldRefIterator<T>&) const [with T = google::protobuf::Message]
+bool std::__detail::_Compiler<std::regex_traits<char>>::_M_expression_term<false, false>(std::__detail::_Compiler<std::regex_traits<char>>::_BracketState&, std::__detail::_BracketMatcher<std::regex_traits<char>, false, false>&)
+bool std::__detail::_Compiler<std::regex_traits<char>>::_M_expression_term<false, true>(std::__detail::_Compiler<std::regex_traits<char>>::_BracketState&, std::__detail::_BracketMatcher<std::regex_traits<char>, false, true>&)
+bool std::__detail::_Compiler<std::regex_traits<char>>::_M_expression_term<true, false>(std::__detail::_Compiler<std::regex_traits<char>>::_BracketState&, std::__detail::_BracketMatcher<std::regex_traits<char>, true, false>&)
+bool std::__detail::_Compiler<std::regex_traits<char>>::_M_expression_term<true, true>(std::__detail::_Compiler<std::regex_traits<char>>::_BracketState&, std::__detail::_BracketMatcher<std::regex_traits<char>, true, true>&)
 bool std::__exchange<bool, bool>(bool&, bool&&)
 bool std::has_facet<std::__cxx11::collate<char>>(std::locale const&)
 bool std::has_facet<std::__cxx11::collate<wchar_t>>(std::locale const&)
@@ -7846,20 +8084,23 @@ bool std::operator!=<wchar_t, std::char_traits<wchar_t>>(std::istreambuf_iterato
 bool std::operator==<__mbstate_t>(std::fpos<__mbstate_t> const&, std::fpos<__mbstate_t> const&)
 bool std::operator==<char, std::char_traits<char>, std::allocator<char>>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, char const*)
 bool std::operator==<char, std::char_traits<char>, std::allocator<char>>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)
-bool std::operator==<char, std::char_traits<char>, std::allocator<char>>(std::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)
 bool std::operator==<char, std::char_traits<char>>(std::istreambuf_iterator<char, std::char_traits<char>> const&, std::istreambuf_iterator<char, std::char_traits<char>> const&)
 bool std::operator==<wchar_t, std::char_traits<wchar_t>>(std::istreambuf_iterator<wchar_t, std::char_traits<wchar_t>> const&, std::istreambuf_iterator<wchar_t, std::char_traits<wchar_t>> const&)
 bool&& std::forward<bool>(std::remove_reference<bool>::type&)
+bool8
 boolean
 break
 btowc
 bulletimpact
 byte
 bytes
+calloc
 can't reach here.
 cannot create shim for unknown locale::facet
+cannot create std::deque larger than max_size()
 cannot create std::vector larger than max_size()
 cantdie
+carriage-return
 ceil
 cell_info
 char
@@ -7885,7 +8126,9 @@ char* std::string::_S_construct_aux<char*>(char*, char*, std::allocator<char> co
 char16_t
 char32_t
 char32_t const& std::min<char32_t>(char32_t const&, char32_t const&)
+char8
 char8_t
+circumflex
 cl_aggregate_particles
 cl_particle_batch_mode
 cl_particle_fallback_base
@@ -7897,7 +8140,6 @@ cl_particle_sim_fallback_threshold_ms
 cl_particle_simulate
 cl_particles_dumplist
 cl_particles_dumpsimlist
-cl_skel_constraints_enable
 clamp
 class 
 close
@@ -7905,9 +8147,14 @@ close() failed:
 cntrl
 co_await 
 code
+colon
 color
+color32
+comma
 comment
+commercial-at
 components
+compressedtangentframe
 concept
 config
 const char* Reflection::Internal::GetFuncName() [with T = AnimParamType_t]
@@ -8225,6 +8472,7 @@ covariant return thunk to
 criteria
 current_status
 cursor_id
+curvature
 cycle
 damage
 data_ == other.data_
@@ -8248,6 +8496,7 @@ detach_from_owner
 dgettext
 digit
 dl_iterate_phdr
+dollar-sign
 double
 duration
 dynamic_cast
@@ -8258,6 +8507,7 @@ eAnimationMovementHeadingAtEnd
 eAnimationOnly
 eAnimationOrProcedural
 eCenteredCapsule
+eCenteredCylinder
 eCount
 eDeploy
 eDrop
@@ -8266,6 +8516,7 @@ eFast
 eGenericCapsule
 eGroundBox
 eGroundCapsule
+eGroundCylinder
 eHolster
 eIdleTurn
 eInactive
@@ -8302,14 +8553,19 @@ e_action_desired_shared
 e_movement_type_desired
 e_movement_type_desired_shared
 editor
+ehandle
+eight
 elasticity
-element
 embedded_animation
 emptyanimwithnoeffect
 endframe
+entity_name
 enum
+equals-sign
 eventindex
+exclamation-mark
 exp2
+expf
 expr
 expression
 extend .$0 {\n
@@ -8328,8 +8584,8 @@ fcntl
 fdopen
 fetched: %s : %.3f\n
 fflush
-fieldtype_t
 fileno
+five
 fixed32
 fixed64
 flActivationDistance
@@ -8373,6 +8629,7 @@ flRadius
 flRelaxationFactor
 flRoll
 flScale
+flSeconds
 flSlack
 flSpringConstant
 flSpringDamping
@@ -8405,6 +8662,8 @@ float64
 floor
 fopen
 force
+form-feed
+four
 fputc
 fputs
 frac
@@ -8418,7 +8677,8 @@ fseeko64
 ftello64
 fwrite
 g_BitBuf_BitWriteMasks
-g_bUpdateStringTokenDatabase
+g_BitBuf_ExtraMasks
+g_flConfigMaxCoord
 g_flTValues0To1Inclusive<float vector[4]>
 g_flTValues0To1Inclusive<float>
 g_nSequentialBytes<int vector[4]>
@@ -8555,6 +8815,9 @@ google::protobuf::internal::ExtensionSet::KeyValue* google::protobuf::internal::
 google::protobuf::internal::ExtensionSet::KeyValue* google::protobuf::internal::ExtensionSet::flat_end()
 graph
 graph/animgraph_instance.cpp
+graph/nodes/animgraphnode_chainlookat.cpp
+grave-accent
+greater-than-sign
 group
 guard variable for 
 guard variable for std::__cxx11::collate<char>::id
@@ -8573,6 +8836,10 @@ guard variable for std::__cxx11::numpunct<char>::id
 guard variable for std::__cxx11::numpunct<wchar_t>::id
 guard variable for std::__cxx11::time_get<char, std::istreambuf_iterator<char, std::char_traits<char>>>::id
 guard variable for std::__cxx11::time_get<wchar_t, std::istreambuf_iterator<wchar_t, std::char_traits<wchar_t>>>::id
+guard variable for std::__detail::_AnyMatcher<std::regex_traits<char>, false, false, false>::operator()(char) const::__nul
+guard variable for std::__detail::_AnyMatcher<std::regex_traits<char>, false, false, true>::operator()(char) const::__nul
+guard variable for std::__detail::_AnyMatcher<std::regex_traits<char>, false, true, false>::operator()(char) const::__nul
+guard variable for std::__detail::_AnyMatcher<std::regex_traits<char>, false, true, true>::operator()(char) const::__nul
 guard variable for std::__timepunct<char>::id
 guard variable for std::__timepunct<wchar_t>::id
 guard variable for std::collate<char>::id
@@ -8606,8 +8873,13 @@ headtype
 hidden
 hidden alias for 
 hsequence
+hullivr_edge_merge_tan
+hullivr_faceisland_merge_disp
+hullivr_faceisland_merge_tan
+hullivr_version
 hurt_me
 hurt_them
+hyphen
 i < length_
 iconv
 iconv_close
@@ -8671,7 +8943,9 @@ int&& std::forward<int>(std::remove_reference<int>::type&)
 int16
 int32
 int64
+int8
 internal error in map key sorting
+interrupt_priority
 invalid
 invert_orientation
 ioctl
@@ -8688,7 +8962,6 @@ json_name = "
 jstype is only allowed on int64, uint64, sint64, fixed64 or sfixed64 fields.
 kAnimGraphSaveRestoreVersion
 keyvalues
-keyvalues3.cpp
 kv3:ParticleParamID_t
 labelled_debug_helper_arc_segments
 labelled_debug_helper_enabled
@@ -8697,11 +8970,15 @@ labelled_debug_helper_show_position
 labelled_debug_helper_show_text
 labelled_debug_helper_skeleton_show_bone_names
 ld-linux-x86-64.so.2
+left-curly-bracket
+left-parenthesis
+left-square-bracket
 len >= input_len
 length2d
 length3d
 length_ >= n
 lerp
+less-than-sign
 lexer->mTokens(): Error: No lexer rules were added to the lexer yet!\n
 libanimationsystem.so
 libc.so.6
@@ -8713,6 +8990,7 @@ locale::_S_normalize_category category not found
 locale::facet::_S_create_c_locale name not valid
 locale::facet::_S_lc_ctype_c_locale duplocale error
 locale::facet::_S_lc_ctype_c_locale newlocale error
+localize
 log10
 log2
 long
@@ -8726,9 +9004,10 @@ long std::__copy_streambufs_eof<wchar_t, std::char_traits<wchar_t>>(std::basic_s
 long std::__exchange<long, int>(long&, int&&)
 looks like this:\n\t\t%.*s\n
 lower
+lowprecisionuv
+lowprecisionuv1
 lseek
 m_AdditionalExtRefs
-m_Always
 m_AnimCaptures
 m_AnimOverlay
 m_AnimStrayRadii
@@ -8744,6 +9023,8 @@ m_AttachmentType
 m_AttributeName
 m_AttributeType
 m_AxialEdges
+m_BaseFlow_OnAfterCancel
+m_BaseFlow_WhileActive
 m_BindPose
 m_BlackboardReferences
 m_BlackboardResource
@@ -8751,6 +9032,7 @@ m_BodyGroupName
 m_BodyGroupsHiddenInTools
 m_BodygroupOnOtherModels
 m_Bone
+m_BoneMergeLinks
 m_BoneName
 m_BoundValuePath
 m_Bounds
@@ -8906,6 +9188,7 @@ m_MaterialGroupName
 m_MaterialGroupOnOtherModels
 m_Materials
 m_Mesh
+m_Metadata
 m_MethodName
 m_ModelBindPose
 m_ModelName
@@ -8916,12 +9199,12 @@ m_NamedValue
 m_NestedElements
 m_NodeBases
 m_NodeCollisionRadii
+m_NodeID
 m_NodeIntegrator
 m_NodeInvMasses
 m_NodeName
 m_NodeStrayBoxes
 m_Nodes
-m_OnCanceled
 m_OnFinished
 m_OnInterval
 m_OnTrue
@@ -8968,6 +9251,7 @@ m_SDFRigids
 m_SelfCollisionLayers
 m_SequenceCycleZeroTime
 m_SequenceKeys
+m_SequencePoint
 m_SequencePointName
 m_Shuffle
 m_SimStateBones
@@ -8997,6 +9281,7 @@ m_Stops
 m_SwingLimit
 m_Tag
 m_TagName
+m_TagStatus
 m_TagValue
 m_TaperedCapsuleRigids
 m_TaperedCapsuleStretches
@@ -9431,7 +9716,6 @@ m_boneToWeightIndices
 m_boneTransforms
 m_bones
 m_bonesHash
-m_boolCompressor
 m_break
 m_bulletImpact
 m_bundleDatas
@@ -9439,12 +9723,13 @@ m_bundleTypes
 m_cRenderColor
 m_capsules
 m_centroidVectors
-m_chainEndBoneID
-m_chainForwardDir
-m_chainStartTransformMS
+m_chainWeights
+m_channelIDs
+m_channelSettings
 m_children
 m_choiceChangeMethod
 m_choiceMethod
+m_choiceName
 m_choicePreviousCycle
 m_clampRange
 m_clipName
@@ -9454,15 +9739,14 @@ m_cmdLayerArray
 m_code
 m_codeIndices
 m_collisionAttributes
-m_colorCompressor
 m_comparisionIDs
 m_comparisionOperator
 m_comparison
 m_componentID
 m_componentName
 m_components
-m_compressedFloatCurveData
-m_compressedFloatCurveOffsets
+m_compressedData
+m_compressedOffsets
 m_compressedPoseData
 m_compressedPoseOffsets
 m_conditionNodeIndices
@@ -9495,8 +9779,6 @@ m_dataSet
 m_dataSlotIdx
 m_debugEffectorBoneID
 m_debugPartNames
-m_debugRequestedTargetTransformMS
-m_debugTotalChainLength
 m_decodeKey
 m_decodeOps
 m_decodedAnims
@@ -9552,8 +9834,8 @@ m_eTimingSource
 m_eType
 m_eType != eGenericCapsule
 m_eType != eGroundBox
-m_eType != eGroundCapsule && m_eType != eCenteredCapsule
-m_eType != eGroundCapsule && m_eType != eGenericCapsule && m_eType != eCenteredCapsule
+m_eType != eGroundCapsule && m_eType != eCenteredCapsule && m_eType != eCenteredCylinder && m_eType != eGroundCylinder
+m_eType != eGroundCapsule && m_eType != eGenericCapsule && m_eType != eCenteredCapsule && m_eType != eCenteredCylinder && m_eType != eGroundCylinder
 m_easingOp
 m_effectForConfig
 m_effectorBoneID
@@ -9561,13 +9843,18 @@ m_effectorTarget
 m_elasticity
 m_elems
 m_embeddedKeyvalues
+m_enabledNodeIdx
 m_end
 m_endCycle
 m_endEffectorAttachment
+m_endEffectorBoneID
+m_endEffectorForwardAxis
+m_endEffectorOffset
 m_endEffectorType
 m_endTime
 m_entryEvents
 m_enumOptions
+m_event
 m_eventArray
 m_eventConditionRules
 m_eventID
@@ -9578,9 +9865,9 @@ m_executeEvents
 m_exitEvents
 m_expressionString
 m_externalGraphSlots
-m_externalMethodTargetGraph
 m_externalPoseSlots
 m_fDefaultValue
+m_fEmissiveFactor
 m_fExpirationTime
 m_fFallingSpeedScale
 m_fMaxValue
@@ -9636,6 +9923,7 @@ m_flBoneWeightArray
 m_flBoundaryRadius
 m_flCapsuleHeight
 m_flCapsuleRadius
+m_flChainRotationWeight
 m_flClipStartTime
 m_flComparand
 m_flComparisonValue
@@ -9720,8 +10008,6 @@ m_flHipDipDelay
 m_flHipDipImpactScale
 m_flHipDipSpringStrength
 m_flHipShiftScale
-m_flHorizontalAngleDegrees
-m_flHorizontalAngleLimitDegrees
 m_flHysteresisInnerAngle
 m_flHysteresisOuterAngle
 m_flIkRotation_MaxQuantizationError
@@ -9868,7 +10154,6 @@ m_flRangeLength
 m_flRangeStart
 m_flRealTime
 m_flRecordingTime
-m_flReferencePoseTwistWeight
 m_flRemap
 m_flReselectionTimeWindow
 m_flRodVelocitySmoothRate
@@ -9911,6 +10196,7 @@ m_flStretchExtensionScale
 m_flStrideCurveLimitScale
 m_flStrideCurveScale
 m_flSurfaceArea
+m_flTagStartAnimTime
 m_flTargetFacing
 m_flTargetMoveSpeed
 m_flTargetOffset
@@ -9952,8 +10238,6 @@ m_flValueX
 m_flValueY
 m_flVar1
 m_flVar2
-m_flVerticalAngleDegrees
-m_flVerticalAngleLimitDegrees
 m_flVolume
 m_flWaitInterval
 m_flWaitIntervalHigh
@@ -9972,8 +10256,8 @@ m_flags
 m_flexController
 m_flexControllerToken
 m_flexControllers
-m_floatCurveDefs
-m_floatCurveIDs
+m_floatChannelData
+m_floatChannelSets
 m_followAttachmentNodePaths
 m_followTargetBone
 m_foot
@@ -10009,6 +10293,7 @@ m_hBasePoseCacheHandle
 m_hBlackboardResource
 m_hBlendParameter
 m_hBuffer
+m_hCursorOnOtherGraph
 m_hDesiredMoveHeadingParameter
 m_hFallbackTargetPositionParam
 m_hGraph
@@ -10113,7 +10398,6 @@ m_inputValueYNodeIdx
 m_inputValueZNodeIdx
 m_inputVectorValueNodeIdx
 m_instanceData
-m_intCompressor
 m_internalOps
 m_invBindPose
 m_iszName
@@ -10125,6 +10409,9 @@ m_keyValueText
 m_keyValues
 m_layerAnimations
 m_layerDefinition
+m_leftEffectorBoneID
+m_leftTarget
+m_leftTargetTransform
 m_linearLimitDamping
 m_linearLimitRestitution
 m_linearLimitSpring
@@ -10149,7 +10436,6 @@ m_localSynthAnimDescArray
 m_localToWorldTransform
 m_lodBoneCounts
 m_lodGroupSwitchDistances
-m_lookatTarget
 m_mWorldFromLocal
 m_manualTurnOffset
 m_mapCellDesc
@@ -10157,6 +10443,7 @@ m_mapCursorDesc
 m_maskDefinitions
 m_maskNodeIndices
 m_material
+m_materialGroupToken
 m_materialGroups
 m_materials
 m_maxAngularVelocityRadians
@@ -10229,12 +10516,13 @@ m_nCallInfoIndex
 m_nCameraJointIndex
 m_nCellIndex
 m_nCentroids
-m_nChainEndBoneIdx
 m_nChainIndex
 m_nChainLength
+m_nChainLength > 1 && m_nChainLength < 8
 m_nChannelElements
 m_nCheckType
 m_nChild
+m_nChildNode
 m_nChildNodeIdx
 m_nChoice
 m_nChunk
@@ -10246,7 +10534,6 @@ m_nCollisionAttributeIndex
 m_nCollisionMask
 m_nCollisionPlaneIndex
 m_nComparandValueNodeIdx
-m_nCompressorIndex
 m_nConditionNodeIdx
 m_nConfig
 m_nConfigCount
@@ -10294,10 +10581,8 @@ m_nEffectorTargetBoneIdx
 m_nEffectorTargetNodeIdx
 m_nElementCount
 m_nElementIndexArray
-m_nElementMask
 m_nElementMaskArray
 m_nElementSizeInBytes
-m_nElementUniqueID
 m_nEnableNodeIdx
 m_nEnabledNodeIdx
 m_nEndBoneIndex
@@ -10335,7 +10620,6 @@ m_nGroomGroupID
 m_nGroup
 m_nGroupId
 m_nGroupSize
-m_nGroupValue
 m_nGuideHairCount
 m_nGuideHairIndices_nSurfaceTriIndex
 m_nHairCount
@@ -10369,6 +10653,9 @@ m_nLastReadByInstruction
 m_nLayerBoneMaskNodeIdx
 m_nLayerRootMotionWeightNodeIdx
 m_nLayerWeightNodeIdx
+m_nLeftEffectorBoneIdx
+m_nLeftTargetBoneIdx
+m_nLeftTargetNodeIdx
 m_nLimitCount
 m_nLineNumber
 m_nLocalBaseReference
@@ -10411,7 +10698,6 @@ m_nNoiseModifier
 m_nNoiseOctaves
 m_nNoiseTurbulence
 m_nNoiseType
-m_nNumBonesInChain
 m_nNumChannels
 m_nNumFrames
 m_nNumIterations
@@ -10429,6 +10715,7 @@ m_nParameterNodeIdx
 m_nParent
 m_nParentBoneIdx
 m_nParentChainLinkIdx
+m_nParentHash
 m_nParticle
 m_nPeakFrame
 m_nPelvisJointIndex
@@ -10451,6 +10738,9 @@ m_nReg2
 m_nReserved
 m_nReservedUint8
 m_nResetTimeValueNodeIdx
+m_nRightEffectorBoneIdx
+m_nRightTargetBoneIdx
+m_nRightTargetNodeIdx
 m_nRigidBLASIndex
 m_nRodVelocitySmoothIterations
 m_nRootMotionWeightValueNodeIdx
@@ -10482,6 +10772,7 @@ m_nSourceStateNodeIdx
 m_nSphereRigidIndex
 m_nSplitScreenUser
 m_nSrcChunk
+m_nSrcDrawIndex
 m_nSrcInstruction
 m_nSrcResult
 m_nStackDepthWhenAdded
@@ -10508,7 +10799,6 @@ m_nTargetValueNodeIdx
 m_nTickCount
 m_nToolMaterialHash
 m_nToolsVBBlock
-m_nTotalElementCount
 m_nTotalSegmentCount
 m_nTotalVertexCount
 m_nTrackReadOffset
@@ -10535,6 +10825,10 @@ m_nVertexAlbedoOffset
 m_nVertexAlbedoStride
 m_nVertexAlbedoVB
 m_nVertexCount
+m_nVertexEmissiveFormat
+m_nVertexEmissiveOffset
+m_nVertexEmissiveStride
+m_nVertexEmissiveVB
 m_nVertexOffset
 m_nVertexSet
 m_nWeight
@@ -10619,6 +10913,7 @@ m_parameterValues
 m_parameterization
 m_parameters
 m_params
+m_params.m_nNumBonesInChain < 8
 m_paramsModified
 m_parent
 m_parentBoneName
@@ -10673,7 +10968,6 @@ m_qOffset
 m_qParentBindRotation
 m_quantizer
 m_quat
-m_quaternionCompressor
 m_ragdollNodePaths
 m_range
 m_ranges
@@ -10700,9 +10994,13 @@ m_resetCycleValue
 m_residualQuantizer
 m_resonant
 m_resources
+m_rightEffectorBoneID
+m_rightTarget
+m_rightTargetTransform
 m_rigidMeshParts
 m_rnShape
 m_rolling
+m_rootBvhNodes
 m_rootHeightDamping
 m_rootMotion
 m_rootMotionBlend
@@ -10763,6 +11061,7 @@ m_selectableSamples
 m_sequenceName
 m_sequenceParams
 m_sequences
+m_setID
 m_settings
 m_settingsGroups
 m_shapeMarkups
@@ -10826,7 +11125,6 @@ m_syncTrack
 m_szChannelClass
 m_szDescription
 m_szElementNameArray
-m_szElementNames
 m_szFacs
 m_szGrouping
 m_szName
@@ -11001,9 +11299,6 @@ m_vecPairedSequences
 m_vecRootMax
 m_vecRootMin
 m_vecSize
-m_vector2DCompressor
-m_vector4DCompressor
-m_vectorCompressor
 m_vectorType
 m_vehicleParams
 m_vertexBuffers
@@ -11024,6 +11319,7 @@ malloc
 map keys are not unique
 map<$0, $1>
 map_entry should not be set explicitly. Use map<KeyType, ValueType> instead.
+matrix3x4
 matrix3x4_t
 matrix3x4a_t
 maxStretch
@@ -11065,14 +11361,13 @@ nDummy
 nEditorID
 nEnd
 nFlags
-nIndex
+nFormat
 nKillPriority
 nLastValidEntryIdx
 nListBegin
 nListEnd
 nMapOffset
 nMax
-nMaxElements
 nMin
 nNameHash
 nNode
@@ -11087,6 +11382,8 @@ nNodeY1
 nNumerator
 nParentNode
 nProbeNode
+nRemainderDigits
+nRemainderNoiseDigits
 nReserved
 nRetiredAtNodeID
 nScaleSourceNode
@@ -11097,13 +11394,17 @@ nValue
 nVertexBase
 nVertexCount
 nVertexMapIndex
+nWakePriority
 name
 near '%c' :\n
 near char(%#02X) :\n
 new 
 new[]
+newline
 next
+nextafterf
 nexttoken
+nine
 no samples
 node_id
 noexcept
@@ -11116,9 +11417,11 @@ non-virtual thunk to std::basic_iostream<wchar_t, std::char_traits<wchar_t>>::~b
 non-virtual thunk to std::basic_stringstream<char, std::char_traits<char>, std::allocator<char>>::~basic_stringstream()
 non-virtual thunk to std::basic_stringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>::~basic_stringstream()
 none
+normal
 npcphysicshull{}
 null
 nullptr output boolean given.
+number-sign
 numframes
 obj_count
 obj_size
@@ -11155,13 +11458,15 @@ operator new[](unsigned long, void*)
 operator"" 
 option json_name is not allowed on extension fields.
 optional
+optionallycompressedtangentframe
+options.m_pBoneWeights->Count() >= m_boneIDs.Count()
+options.m_pBoneWeights->Count() >= m_pSkeleton->GetNumBones()
 origin
 output specified is nullptr
-pCheckpointName
-pDescription
 pMessage
 pTagName
 package $0;\n\n
+panorama
 param
 parameters
 parent to constrained
@@ -11169,12 +11474,18 @@ parent_cursor_id
 parse
 parsing
 particleslib
+percent-sign
+period
+phys_res
 physics
 please implement MergeFrom for your type.
+plus-sign
+pointer
 poll
-polymorphic_arg
 port_name
 position
+posix_memalign
+posxyz
 preview
 previous_status
 print
@@ -11198,6 +11509,9 @@ putc
 putwc
 qAdjust
 qangle
+quaternion
+question-mark
+quotation-mark
 r_freezeparticles
 r_limit_particle_job_duration
 r_particle_max_detail_level
@@ -11231,11 +11545,21 @@ repeated
 requested_cancel
 required
 resonant
+resource
+resource_manifests
+resource_name
+resources
 resourcesystem
+return_values
+return_values_enabled
 retval
+right-curly-bracket
+right-parenthesis
+right-square-bracket
 rolling
 root
 rootMotionToWarp\t\t\t\t[%f] [%s]
+rotation_vector
 round
 rsqrt
 sName
@@ -11247,17 +11571,20 @@ scriptsToRun
 secondary
 secure_getenv
 self
+semicolon
 sequence_tag_spans
 serialize
 serializing
 service $0 {\n
 setlocale
 setvbuf
+seven
 sfixed32
 sfixed64
 short
 sign
 signed char
+sincosf
 sinh
 sint32
 sint64
@@ -11267,12 +11594,16 @@ sizeof
 sizeof...
 skel_constraints_enable
 skidstop
+slash
 slow
 smoothstep
 softcontactdampingratio
 softcontactfrequency
 solidCollisionAtZeroWeight
 sound_base
+soundevent
+source_file
+source_line
 space
 speed
 speedFunction
@@ -11304,6 +11635,38 @@ std::Catalogs::_M_get(int) const
 std::Catalogs::~Catalogs()
 std::_CatalogIdComp::operator()(std::Catalog_info const*, int) const
 std::_Fnv_hash_bytes(void const*, unsigned long, unsigned long)
+std::_Function_handler<bool (char), std::__detail::_AnyMatcher<std::regex_traits<char>, false, false, false>>::_M_invoke(std::_Any_data const&, char&&)
+std::_Function_handler<bool (char), std::__detail::_AnyMatcher<std::regex_traits<char>, false, false, false>>::_M_manager(std::_Any_data&, std::_Any_data const&, std::_Manager_operation)
+std::_Function_handler<bool (char), std::__detail::_AnyMatcher<std::regex_traits<char>, false, false, true>>::_M_invoke(std::_Any_data const&, char&&)
+std::_Function_handler<bool (char), std::__detail::_AnyMatcher<std::regex_traits<char>, false, false, true>>::_M_manager(std::_Any_data&, std::_Any_data const&, std::_Manager_operation)
+std::_Function_handler<bool (char), std::__detail::_AnyMatcher<std::regex_traits<char>, false, true, false>>::_M_invoke(std::_Any_data const&, char&&)
+std::_Function_handler<bool (char), std::__detail::_AnyMatcher<std::regex_traits<char>, false, true, false>>::_M_manager(std::_Any_data&, std::_Any_data const&, std::_Manager_operation)
+std::_Function_handler<bool (char), std::__detail::_AnyMatcher<std::regex_traits<char>, false, true, true>>::_M_invoke(std::_Any_data const&, char&&)
+std::_Function_handler<bool (char), std::__detail::_AnyMatcher<std::regex_traits<char>, false, true, true>>::_M_manager(std::_Any_data&, std::_Any_data const&, std::_Manager_operation)
+std::_Function_handler<bool (char), std::__detail::_AnyMatcher<std::regex_traits<char>, true, false, false>>::_M_invoke(std::_Any_data const&, char&&)
+std::_Function_handler<bool (char), std::__detail::_AnyMatcher<std::regex_traits<char>, true, false, false>>::_M_manager(std::_Any_data&, std::_Any_data const&, std::_Manager_operation)
+std::_Function_handler<bool (char), std::__detail::_AnyMatcher<std::regex_traits<char>, true, false, true>>::_M_invoke(std::_Any_data const&, char&&)
+std::_Function_handler<bool (char), std::__detail::_AnyMatcher<std::regex_traits<char>, true, false, true>>::_M_manager(std::_Any_data&, std::_Any_data const&, std::_Manager_operation)
+std::_Function_handler<bool (char), std::__detail::_AnyMatcher<std::regex_traits<char>, true, true, false>>::_M_invoke(std::_Any_data const&, char&&)
+std::_Function_handler<bool (char), std::__detail::_AnyMatcher<std::regex_traits<char>, true, true, false>>::_M_manager(std::_Any_data&, std::_Any_data const&, std::_Manager_operation)
+std::_Function_handler<bool (char), std::__detail::_AnyMatcher<std::regex_traits<char>, true, true, true>>::_M_invoke(std::_Any_data const&, char&&)
+std::_Function_handler<bool (char), std::__detail::_AnyMatcher<std::regex_traits<char>, true, true, true>>::_M_manager(std::_Any_data&, std::_Any_data const&, std::_Manager_operation)
+std::_Function_handler<bool (char), std::__detail::_BracketMatcher<std::regex_traits<char>, false, false>>::_M_invoke(std::_Any_data const&, char&&)
+std::_Function_handler<bool (char), std::__detail::_BracketMatcher<std::regex_traits<char>, false, false>>::_M_manager(std::_Any_data&, std::_Any_data const&, std::_Manager_operation)
+std::_Function_handler<bool (char), std::__detail::_BracketMatcher<std::regex_traits<char>, false, true>>::_M_invoke(std::_Any_data const&, char&&)
+std::_Function_handler<bool (char), std::__detail::_BracketMatcher<std::regex_traits<char>, false, true>>::_M_manager(std::_Any_data&, std::_Any_data const&, std::_Manager_operation)
+std::_Function_handler<bool (char), std::__detail::_BracketMatcher<std::regex_traits<char>, true, false>>::_M_invoke(std::_Any_data const&, char&&)
+std::_Function_handler<bool (char), std::__detail::_BracketMatcher<std::regex_traits<char>, true, false>>::_M_manager(std::_Any_data&, std::_Any_data const&, std::_Manager_operation)
+std::_Function_handler<bool (char), std::__detail::_BracketMatcher<std::regex_traits<char>, true, true>>::_M_invoke(std::_Any_data const&, char&&)
+std::_Function_handler<bool (char), std::__detail::_BracketMatcher<std::regex_traits<char>, true, true>>::_M_manager(std::_Any_data&, std::_Any_data const&, std::_Manager_operation)
+std::_Function_handler<bool (char), std::__detail::_CharMatcher<std::regex_traits<char>, false, false>>::_M_invoke(std::_Any_data const&, char&&)
+std::_Function_handler<bool (char), std::__detail::_CharMatcher<std::regex_traits<char>, false, false>>::_M_manager(std::_Any_data&, std::_Any_data const&, std::_Manager_operation)
+std::_Function_handler<bool (char), std::__detail::_CharMatcher<std::regex_traits<char>, false, true>>::_M_invoke(std::_Any_data const&, char&&)
+std::_Function_handler<bool (char), std::__detail::_CharMatcher<std::regex_traits<char>, false, true>>::_M_manager(std::_Any_data&, std::_Any_data const&, std::_Manager_operation)
+std::_Function_handler<bool (char), std::__detail::_CharMatcher<std::regex_traits<char>, true, false>>::_M_invoke(std::_Any_data const&, char&&)
+std::_Function_handler<bool (char), std::__detail::_CharMatcher<std::regex_traits<char>, true, false>>::_M_manager(std::_Any_data&, std::_Any_data const&, std::_Manager_operation)
+std::_Function_handler<bool (char), std::__detail::_CharMatcher<std::regex_traits<char>, true, true>>::_M_invoke(std::_Any_data const&, char&&)
+std::_Function_handler<bool (char), std::__detail::_CharMatcher<std::regex_traits<char>, true, true>>::_M_manager(std::_Any_data&, std::_Any_data const&, std::_Manager_operation)
 std::_Hash_bytes(void const*, unsigned long, unsigned long)
 std::_Ios_Openmode std::__exchange<std::_Ios_Openmode, std::_Ios_Openmode>(std::_Ios_Openmode&, std::_Ios_Openmode&&)
 std::_Ios_Openmode&& std::forward<std::_Ios_Openmode>(std::remove_reference<std::_Ios_Openmode>::type&)
@@ -11322,8 +11685,12 @@ std::_Setfill<char> std::setfill<char>(char)
 std::_Setfill<wchar_t> std::setfill<wchar_t>(wchar_t)
 std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_destroy()
 std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release()
-std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release_last_use()
 std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release_last_use_cold()
+std::_Sp_counted_ptr<std::nullptr_t, (__gnu_cxx::_Lock_policy)2>::_M_dispose()
+std::_Sp_counted_ptr_inplace<std::__detail::_NFA<std::regex_traits<char>>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_destroy()
+std::_Sp_counted_ptr_inplace<std::__detail::_NFA<std::regex_traits<char>>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_dispose()
+std::_Sp_counted_ptr_inplace<std::__detail::_NFA<std::regex_traits<char>>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_get_deleter(std::type_info const&)
+std::_Sp_counted_ptr_inplace<std::__detail::_NFA<std::regex_traits<char>>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::~_Sp_counted_ptr_inplace()
 std::_Sp_make_shared_tag::_S_ti()::__tag
 std::_V2::error_category::_M_message(int) const
 std::_V2::error_category::_M_message[abi:cxx11](int) const
@@ -12197,8 +12564,65 @@ std::__cxx11::time_get_byname<wchar_t, std::istreambuf_iterator<wchar_t, std::ch
 std::__cxx11::time_get_byname<wchar_t, std::istreambuf_iterator<wchar_t, std::char_traits<wchar_t>>>::time_get_byname(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, unsigned long)
 std::__cxx11::time_get_byname<wchar_t, std::istreambuf_iterator<wchar_t, std::char_traits<wchar_t>>>::~time_get_byname()
 std::__destroy_ios_failure(void*)
+std::__detail::_AnyMatcher<std::regex_traits<char>, false, false, false>::operator()(char) const::__nul
+std::__detail::_AnyMatcher<std::regex_traits<char>, false, false, true>::operator()(char) const::__nul
+std::__detail::_AnyMatcher<std::regex_traits<char>, false, true, false>::operator()(char) const::__nul
+std::__detail::_AnyMatcher<std::regex_traits<char>, false, true, true>::operator()(char) const::__nul
+std::__detail::_BracketMatcher<std::regex_traits<char>, false, false>::_M_ready()
+std::__detail::_BracketMatcher<std::regex_traits<char>, false, false>::~_BracketMatcher()
+std::__detail::_BracketMatcher<std::regex_traits<char>, false, true>::_M_make_range(char, char)
+std::__detail::_BracketMatcher<std::regex_traits<char>, false, true>::_M_ready()
+std::__detail::_BracketMatcher<std::regex_traits<char>, false, true>::~_BracketMatcher()
+std::__detail::_BracketMatcher<std::regex_traits<char>, true, false>::_M_ready()
+std::__detail::_BracketMatcher<std::regex_traits<char>, true, false>::~_BracketMatcher()
+std::__detail::_BracketMatcher<std::regex_traits<char>, true, true>::_M_make_range(char, char)
+std::__detail::_BracketMatcher<std::regex_traits<char>, true, true>::_M_ready()
+std::__detail::_BracketMatcher<std::regex_traits<char>, true, true>::~_BracketMatcher()
+std::__detail::_Compiler<std::regex_traits<char>>::_M_alternative()
+std::__detail::_Compiler<std::regex_traits<char>>::_M_assertion()
+std::__detail::_Compiler<std::regex_traits<char>>::_M_atom()
+std::__detail::_Compiler<std::regex_traits<char>>::_M_bracket_expression()
+std::__detail::_Compiler<std::regex_traits<char>>::_M_cur_int_value(int)
+std::__detail::_Compiler<std::regex_traits<char>>::_M_disjunction()
+std::__detail::_Compiler<std::regex_traits<char>>::_M_pop()
+std::__detail::_Compiler<std::regex_traits<char>>::_M_quantifier()
+std::__detail::_Compiler<std::regex_traits<char>>::_M_quantifier()::'lambda'()::operator()() const
+std::__detail::_Compiler<std::regex_traits<char>>::_M_try_char()
+std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_M_dfs(std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_Match_mode, long)
+std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_M_handle_alternative(std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_Match_mode, long)
+std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_M_handle_backref(std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_Match_mode, long)
+std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_M_handle_repeat(std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_Match_mode, long)
+std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_M_handle_word_boundary(std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_Match_mode, long)
+std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_M_is_line_terminator(char) const
+std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_M_is_word(char) const::__s
+std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_M_lookahead(long)
+std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_M_rep_once_more(std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_Match_mode, long)
+std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, true>::_M_dfs(std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, true>::_Match_mode, long)
+std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, true>::_M_handle_backref(std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, true>::_Match_mode, long)
+std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, true>::_M_is_line_terminator(char) const
+std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, true>::_M_is_word(char) const::__s
+std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, true>::_M_lookahead(long)
+std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, true>::_M_rep_once_more(std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, true>::_Match_mode, long)
+std::__detail::_NFA<std::regex_traits<char>>::_M_insert_dummy()
+std::__detail::_NFA<std::regex_traits<char>>::_M_insert_matcher(std::function<bool (char)>)
+std::__detail::_NFA<std::regex_traits<char>>::_M_insert_repeat(long, long, bool)
+std::__detail::_NFA<std::regex_traits<char>>::_M_insert_state(std::__detail::_State<char>)
+std::__detail::_NFA<std::regex_traits<char>>::_M_insert_subexpr_begin()
+std::__detail::_NFA<std::regex_traits<char>>::_M_insert_subexpr_end()
 std::__detail::_Prime_rehash_policy::_M_need_rehash(unsigned long, unsigned long, unsigned long) const
 std::__detail::_Prime_rehash_policy::_M_next_bkt(unsigned long) const
+std::__detail::_RegexTranslatorBase<std::regex_traits<char>, false, true>::_M_transform(char) const
+std::__detail::_RegexTranslatorBase<std::regex_traits<char>, true, true>::_M_transform(char) const
+std::__detail::_Scanner<char>::_M_advance()
+std::__detail::_Scanner<char>::_M_eat_class(char)
+std::__detail::_Scanner<char>::_M_eat_escape_awk()
+std::__detail::_Scanner<char>::_M_eat_escape_ecma()
+std::__detail::_Scanner<char>::_M_eat_escape_posix()
+std::__detail::_Scanner<char>::_M_scan_in_brace()
+std::__detail::_Scanner<char>::_M_scan_in_bracket()
+std::__detail::_Scanner<char>::_M_scan_normal()
+std::__detail::_State<char>::~_State()
+std::__detail::_StateSeq<std::regex_traits<char>>::_M_clone()
 std::__detail::__prime_list
 std::__facet_shims::__any_string& std::__facet_shims::__any_string::operator=<char>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)
 std::__facet_shims::__any_string& std::__facet_shims::__any_string::operator=<char>(std::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)
@@ -12268,7 +12692,6 @@ std::__ptr_traits_ptr_to<char const*, char const, false>::pointer_to(char const&
 std::__ptr_traits_ptr_to<char*, char, false>::pointer_to(char&)
 std::__ptr_traits_ptr_to<wchar_t const*, wchar_t const, false>::pointer_to(wchar_t const&)
 std::__ptr_traits_ptr_to<wchar_t*, wchar_t, false>::pointer_to(wchar_t&)
-std::__shared_count<(__gnu_cxx::_Lock_policy)2>::operator=(std::__shared_count<(__gnu_cxx::_Lock_policy)2> const&)
 std::__sso_string::__sso_string()
 std::__sso_string::__sso_string(char const*, unsigned long)
 std::__sso_string::__sso_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)
@@ -13389,6 +13812,8 @@ std::ctype_byname<wchar_t>::ctype_byname(char const*, unsigned long)
 std::ctype_byname<wchar_t>::ctype_byname(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, unsigned long)
 std::ctype_byname<wchar_t>::ctype_byname(std::string const&, unsigned long)
 std::ctype_byname<wchar_t>::~ctype_byname()
+std::deque<std::__detail::_StateSeq<std::regex_traits<char>>, std::allocator<std::__detail::_StateSeq<std::regex_traits<char>>>>::_M_reallocate_map(unsigned long, bool)
+std::deque<std::__detail::_StateSeq<std::regex_traits<char>>, std::allocator<std::__detail::_StateSeq<std::regex_traits<char>>>>::push_back(std::__detail::_StateSeq<std::regex_traits<char>> const&)
 std::domain_error::domain_error(char const*)
 std::domain_error::domain_error(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)
 std::domain_error::domain_error(std::string const&)
@@ -14199,6 +14624,8 @@ std::range_error::range_error(std::string const&)
 std::range_error::~range_error()
 std::regex_error::regex_error(std::regex_constants::error_type)
 std::regex_error::~regex_error()
+std::regex_traits<char>::_RegexMask std::regex_traits<char>::lookup_classname<char const*>(char const*, char const*, bool) const
+std::regex_traits<char>::_RegexMask std::regex_traits<char>::lookup_classname<char const*>(char const*, char const*, bool) const::__classnames
 std::remove_reference<_IO_FILE*&>::type&& std::move<_IO_FILE*&>(_IO_FILE*&)
 std::remove_reference<__gnu_cxx::stdio_sync_filebuf<char, std::char_traits<char>>&>::type&& std::move<__gnu_cxx::stdio_sync_filebuf<char, std::char_traits<char>>&>(__gnu_cxx::stdio_sync_filebuf<char, std::char_traits<char>>&)
 std::remove_reference<__gnu_cxx::stdio_sync_filebuf<wchar_t, std::char_traits<wchar_t>>&>::type&& std::move<__gnu_cxx::stdio_sync_filebuf<wchar_t, std::char_traits<wchar_t>>&>(__gnu_cxx::stdio_sync_filebuf<wchar_t, std::char_traits<wchar_t>>&)
@@ -14271,6 +14698,9 @@ std::set_terminate(void (*)())
 std::set_unexpected(void (*)())
 std::string
 std::string std::__str_concat<std::string>(std::string::value_type const*, std::string::size_type, std::string::value_type const*, std::string::size_type, std::string::allocator_type const&)
+std::string std::regex_traits<char>::lookup_collatename<char const*>(char const*, char const*) const
+std::string std::regex_traits<char>::lookup_collatename<char const*>(char const*, char const*) const::__collatenames
+std::string std::regex_traits<char>::transform_primary<char*>(char*, char*) const
 std::string& std::string::assign<char*>(char*, char*)
 std::string::_Alloc_hider::_Alloc_hider(char*, std::allocator<char> const&)
 std::string::_Alloc_hider::_Alloc_hider(std::string::_Alloc_hider&&)
@@ -14538,6 +14968,7 @@ std::underflow_error::underflow_error(std::__cxx11::basic_string<char, std::char
 std::underflow_error::underflow_error(std::string const&)
 std::underflow_error::~underflow_error()
 std::unexpected()
+std::vector<char, std::allocator<char>>::vector(std::vector<char, std::allocator<char>> const&)
 std::vector<std::Catalog_info*, std::allocator<std::Catalog_info*>>::_M_check_len(unsigned long, char const*) const
 std::vector<std::Catalog_info*, std::allocator<std::Catalog_info*>>::_M_erase(__gnu_cxx::__normal_iterator<std::Catalog_info**, std::vector<std::Catalog_info*, std::allocator<std::Catalog_info*>>>)
 std::vector<std::Catalog_info*, std::allocator<std::Catalog_info*>>::_M_realloc_append(std::Catalog_info* const&)
@@ -14556,7 +14987,9 @@ std::vector<std::Catalog_info*, std::allocator<std::Catalog_info*>>::push_back(s
 std::vector<std::Catalog_info*, std::allocator<std::Catalog_info*>>::size() const
 std::vector<std::Catalog_info*, std::allocator<std::Catalog_info*>>::vector()
 std::vector<std::Catalog_info*, std::allocator<std::Catalog_info*>>::~vector()
+std::vector<std::regex_traits<char>::_RegexMask, std::allocator<std::regex_traits<char>::_RegexMask>>::vector(std::vector<std::regex_traits<char>::_RegexMask, std::allocator<std::regex_traits<char>::_RegexMask>> const&)
 std::vector<std::string, std::allocator<std::string>>::vector(std::vector<std::string, std::allocator<std::string>> const&)
+std::vector<std::sub_match<char const*>, std::allocator<std::sub_match<char const*>>>::vector(std::vector<std::sub_match<char const*>, std::allocator<std::sub_match<char const*>>> const&)
 std::wcerr
 std::wcin
 std::wclog
@@ -14585,10 +15018,12 @@ string
 string length exceeds max size
 string literal
 string::string
+string_token
 strings::Substitute format string invalid: asked for "$
 strlen
 strncmp
 strpbrk
+strrchr
 strstr
 strtod
 strtof
@@ -14598,6 +15033,7 @@ strtoll
 strtoul
 strtoull
 struct 
+subclass
 subtype mismatch
 suppress
 surfacePropertyName
@@ -14611,13 +15047,17 @@ tagCount
 tagName
 tagValue
 tags
+tangent
+tangentu_signv
 tanh
 target
+tasksystem/tasks/animtask_chainlookat.cpp
 template
 template parameter object for 
 terminate called after throwing an instance of '
 terminate called recursively\n
 terminate called without an active exception\n
+texcoord
 text
 text format contains deprecated field "
 the actual field type (for enums T should be the generated enum 
@@ -14626,8 +15066,10 @@ thickness
 this
 this 
 thread-local initialization routine for g_pThreadLocalStackAllocator
+three
 throw
 throw 
+tilde
 tmFrame2
 to constrain
 tools/images/pulse_editor/cursor_kill.png
@@ -14691,6 +15133,7 @@ type.googleprod.com/
 typeinfo fn for 
 typeinfo for 
 typeinfo for CThreadSyncObject
+typeinfo for IFormatOutputStream
 typeinfo for _Float128
 typeinfo for _Float128 const*
 typeinfo for _Float128*
@@ -14781,7 +15224,7 @@ typeinfo for signed char const*
 typeinfo for signed char*
 typeinfo for std::_Mutex_base<(__gnu_cxx::_Lock_policy)2>
 typeinfo for std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>
-typeinfo for std::_Sp_make_shared_tag
+typeinfo for std::_Sp_counted_ptr_inplace<std::__detail::_NFA<std::regex_traits<char>>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>
 typeinfo for std::_V2::error_category
 typeinfo for std::__codecvt_abstract_base<char, char, __mbstate_t>
 typeinfo for std::__codecvt_abstract_base<char16_t, char, __mbstate_t>
@@ -14828,6 +15271,22 @@ typeinfo for std::__cxx11::time_get<char, std::istreambuf_iterator<char, std::ch
 typeinfo for std::__cxx11::time_get<wchar_t, std::istreambuf_iterator<wchar_t, std::char_traits<wchar_t>>>
 typeinfo for std::__cxx11::time_get_byname<char, std::istreambuf_iterator<char, std::char_traits<char>>>
 typeinfo for std::__cxx11::time_get_byname<wchar_t, std::istreambuf_iterator<wchar_t, std::char_traits<wchar_t>>>
+typeinfo for std::__detail::_AnyMatcher<std::regex_traits<char>, false, false, false>
+typeinfo for std::__detail::_AnyMatcher<std::regex_traits<char>, false, false, true>
+typeinfo for std::__detail::_AnyMatcher<std::regex_traits<char>, false, true, false>
+typeinfo for std::__detail::_AnyMatcher<std::regex_traits<char>, false, true, true>
+typeinfo for std::__detail::_AnyMatcher<std::regex_traits<char>, true, false, false>
+typeinfo for std::__detail::_AnyMatcher<std::regex_traits<char>, true, false, true>
+typeinfo for std::__detail::_AnyMatcher<std::regex_traits<char>, true, true, false>
+typeinfo for std::__detail::_AnyMatcher<std::regex_traits<char>, true, true, true>
+typeinfo for std::__detail::_BracketMatcher<std::regex_traits<char>, false, false>
+typeinfo for std::__detail::_BracketMatcher<std::regex_traits<char>, false, true>
+typeinfo for std::__detail::_BracketMatcher<std::regex_traits<char>, true, false>
+typeinfo for std::__detail::_BracketMatcher<std::regex_traits<char>, true, true>
+typeinfo for std::__detail::_CharMatcher<std::regex_traits<char>, false, false>
+typeinfo for std::__detail::_CharMatcher<std::regex_traits<char>, false, true>
+typeinfo for std::__detail::_CharMatcher<std::regex_traits<char>, true, false>
+typeinfo for std::__detail::_CharMatcher<std::regex_traits<char>, true, true>
 typeinfo for std::__ios_failure
 typeinfo for std::__iosfail_type_info
 typeinfo for std::__moneypunct_cache<char, false>
@@ -15064,6 +15523,7 @@ typeinfo name for signed char const*
 typeinfo name for signed char*
 typeinfo name for std::_Mutex_base<(__gnu_cxx::_Lock_policy)2>
 typeinfo name for std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>
+typeinfo name for std::_Sp_counted_ptr_inplace<std::__detail::_NFA<std::regex_traits<char>>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>
 typeinfo name for std::_Sp_make_shared_tag
 typeinfo name for std::_V2::error_category
 typeinfo name for std::__codecvt_abstract_base<char, char, __mbstate_t>
@@ -15111,6 +15571,22 @@ typeinfo name for std::__cxx11::time_get<char, std::istreambuf_iterator<char, st
 typeinfo name for std::__cxx11::time_get<wchar_t, std::istreambuf_iterator<wchar_t, std::char_traits<wchar_t>>>
 typeinfo name for std::__cxx11::time_get_byname<char, std::istreambuf_iterator<char, std::char_traits<char>>>
 typeinfo name for std::__cxx11::time_get_byname<wchar_t, std::istreambuf_iterator<wchar_t, std::char_traits<wchar_t>>>
+typeinfo name for std::__detail::_AnyMatcher<std::regex_traits<char>, false, false, false>
+typeinfo name for std::__detail::_AnyMatcher<std::regex_traits<char>, false, false, true>
+typeinfo name for std::__detail::_AnyMatcher<std::regex_traits<char>, false, true, false>
+typeinfo name for std::__detail::_AnyMatcher<std::regex_traits<char>, false, true, true>
+typeinfo name for std::__detail::_AnyMatcher<std::regex_traits<char>, true, false, false>
+typeinfo name for std::__detail::_AnyMatcher<std::regex_traits<char>, true, false, true>
+typeinfo name for std::__detail::_AnyMatcher<std::regex_traits<char>, true, true, false>
+typeinfo name for std::__detail::_AnyMatcher<std::regex_traits<char>, true, true, true>
+typeinfo name for std::__detail::_BracketMatcher<std::regex_traits<char>, false, false>
+typeinfo name for std::__detail::_BracketMatcher<std::regex_traits<char>, false, true>
+typeinfo name for std::__detail::_BracketMatcher<std::regex_traits<char>, true, false>
+typeinfo name for std::__detail::_BracketMatcher<std::regex_traits<char>, true, true>
+typeinfo name for std::__detail::_CharMatcher<std::regex_traits<char>, false, false>
+typeinfo name for std::__detail::_CharMatcher<std::regex_traits<char>, false, true>
+typeinfo name for std::__detail::_CharMatcher<std::regex_traits<char>, true, false>
+typeinfo name for std::__detail::_CharMatcher<std::regex_traits<char>, true, true>
 typeinfo name for std::__ios_failure
 typeinfo name for std::__iosfail_type_info
 typeinfo name for std::__moneypunct_cache<char, false>
@@ -15257,6 +15733,7 @@ typeinfo name for wchar_t
 typeinfo name for wchar_t const*
 typeinfo name for wchar_t*
 typename
+uchar32
 uint
 uint16
 uint32
@@ -15264,8 +15741,10 @@ uint32_t google::protobuf::UnknownField::fixed32() const
 uint64
 uint64_t google::protobuf::UnknownField::fixed64() const
 uint64_t google::protobuf::UnknownField::varint() const
+uint8
 unFlags
 unable to register all schema data: %s\n
+underscore
 ungetc
 ungetwc
 unimplemented type: 
@@ -15288,6 +15767,7 @@ unsigned long long
 unsigned long std::__exchange<unsigned long, int>(unsigned long&, int&&)
 unsigned long&& std::forward<unsigned long>(std::remove_reference<unsigned long>::type&)
 unsigned short
+unspecified
 unused
 upper
 use_layer_sequence
@@ -15316,15 +15796,20 @@ vecValueA
 vecValueB
 vector
 vector2
+vector2d
 vector3
 vector4
+vector4d
 vector::_M_default_append
 vector::_M_emplace_back_aux
 vector::_M_insert_aux
 vector::_M_range_insert
 vector::_M_realloc_append
 vector::reserve
+vectorws
 vehicleparams
+vertical-line
+vertical-tab
 very_fast
 virtual thunk to 
 virtual thunk to std::basic_fstream<char, std::char_traits<char>>::~basic_fstream()
@@ -15386,7 +15871,16 @@ void std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocat
 void std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>::_M_construct<wchar_t*>(wchar_t*, wchar_t*, std::forward_iterator_tag)::_Guard::~_Guard()
 void std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>::_M_construct_aux<wchar_t*>(wchar_t*, wchar_t*, std::__false_type)
 void std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>::insert<__gnu_cxx::__normal_iterator<wchar_t*, std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>>>(__gnu_cxx::__normal_iterator<wchar_t*, std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>>, __gnu_cxx::__normal_iterator<wchar_t*, std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>>, __gnu_cxx::__normal_iterator<wchar_t*, std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>>)
-void std::__detail::__to_chars_10_impl<unsigned int>(char*, unsigned int, unsigned int)
+void std::__detail::_Compiler<std::regex_traits<char>>::_M_insert_bracket_matcher<false, false>(bool)
+void std::__detail::_Compiler<std::regex_traits<char>>::_M_insert_bracket_matcher<false, true>(bool)
+void std::__detail::_Compiler<std::regex_traits<char>>::_M_insert_bracket_matcher<true, false>(bool)
+void std::__detail::_Compiler<std::regex_traits<char>>::_M_insert_bracket_matcher<true, true>(bool)
+void std::__detail::_Compiler<std::regex_traits<char>>::_M_insert_char_matcher<true, false>()
+void std::__detail::_Compiler<std::regex_traits<char>>::_M_insert_char_matcher<true, true>()
+void std::__detail::_Compiler<std::regex_traits<char>>::_M_insert_character_class_matcher<false, false>()
+void std::__detail::_Compiler<std::regex_traits<char>>::_M_insert_character_class_matcher<false, true>()
+void std::__detail::_Compiler<std::regex_traits<char>>::_M_insert_character_class_matcher<true, false>()
+void std::__detail::_Compiler<std::regex_traits<char>>::_M_insert_character_class_matcher<true, true>()
 void std::__facet_shims::__collate_transform<char>(std::integral_constant<bool, false>, std::locale::facet const*, std::__facet_shims::__any_string&, char const*, char const*)
 void std::__facet_shims::__collate_transform<char>(std::integral_constant<bool, true>, std::locale::facet const*, std::__facet_shims::__any_string&, char const*, char const*)
 void std::__facet_shims::__collate_transform<wchar_t>(std::integral_constant<bool, false>, std::locale::facet const*, std::__facet_shims::__any_string&, wchar_t const*, wchar_t const*)
@@ -15416,6 +15910,8 @@ void std::__ostream_fill<char, std::char_traits<char>>(std::basic_ostream<char, 
 void std::__ostream_fill<wchar_t, std::char_traits<wchar_t>>(std::basic_ostream<wchar_t, std::char_traits<wchar_t>>&, long)
 void std::__ostream_write<char, std::char_traits<char>>(std::basic_ostream<char, std::char_traits<char>>&, char const*, long)
 void std::__ostream_write<wchar_t, std::char_traits<wchar_t>>(std::basic_ostream<wchar_t, std::char_traits<wchar_t>>&, wchar_t const*, long)
+void std::deque<long, std::allocator<long>>::_M_push_back_aux<long const&>(long const&)
+void std::deque<std::__detail::_StateSeq<std::regex_traits<char>>, std::allocator<std::__detail::_StateSeq<std::regex_traits<char>>>>::_M_push_back_aux<std::__detail::_StateSeq<std::regex_traits<char>> const&>(std::__detail::_StateSeq<std::regex_traits<char>> const&)
 void std::locale::_Impl::_M_init_facet<std::__cxx11::collate<char>>(std::__cxx11::collate<char>*)
 void std::locale::_Impl::_M_init_facet<std::__cxx11::collate<wchar_t>>(std::__cxx11::collate<wchar_t>*)
 void std::locale::_Impl::_M_init_facet<std::__cxx11::messages<char>>(std::__cxx11::messages<char>*)
@@ -15467,8 +15963,10 @@ void std::locale::_Impl::_M_init_facet_unchecked<std::time_get<wchar_t, std::ist
 void std::swap<char, std::char_traits<char>, std::allocator<char>>(std::basic_string<char, std::char_traits<char>, std::allocator<char>>&, std::basic_string<char, std::char_traits<char>, std::allocator<char>>&)
 void std::swap<std::_Rb_tree_color>(std::_Rb_tree_color&, std::_Rb_tree_color&)
 void std::swap<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>(std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>&, std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>&)
+void std::vector<std::regex_traits<char>::_RegexMask, std::allocator<std::regex_traits<char>::_RegexMask>>::_M_realloc_append<std::regex_traits<char>::_RegexMask const&>(std::regex_traits<char>::_RegexMask const&)
 vsnprintf
 vtable for 
+vtable for CCharBufferFormatOutputStream
 vtable for __cxxabiv1::__class_type_info
 vtable for __cxxabiv1::__forced_unwind
 vtable for __cxxabiv1::__foreign_exception
@@ -15485,6 +15983,7 @@ vtable for __gnu_cxx::stdio_filebuf<char, std::char_traits<char>>
 vtable for __gnu_cxx::stdio_filebuf<wchar_t, std::char_traits<wchar_t>>
 vtable for __gnu_cxx::stdio_sync_filebuf<char, std::char_traits<char>>
 vtable for __gnu_cxx::stdio_sync_filebuf<wchar_t, std::char_traits<wchar_t>>
+vtable for std::_Sp_counted_ptr_inplace<std::__detail::_NFA<std::regex_traits<char>>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>
 vtable for std::_V2::error_category
 vtable for std::__codecvt_abstract_base<char, char, __mbstate_t>
 vtable for std::__codecvt_abstract_base<char16_t, char, __mbstate_t>
@@ -15681,6 +16180,7 @@ xdigit
 yaw_end
 yaw_start
 yield_token
+zero
 zero dir
 { KV3DefaultTestFnName = 'CParticleModelInputDefaultTestFunc' }
 { KV3DefaultTestFnName = 'CParticleTransformInputDefaultTestFunc' }
@@ -15690,6 +16190,8 @@ zero dir
 { className = 'IsStateNode' item_factory = 'BooleanSwitchState' }
 { className = 'IsWaitNode IsControlFlowNode' item_factory = 'InflowWait' }
 { className='IsControlFlowNode AllOutflowsInSpecialSection IsSelectorNode' create_special_outflows_section=true }
+{ item_factory = 'IntervalTimer' }
+{ standard_yielding_flow = true }
 {default arg#
 {lambda
 {parm#

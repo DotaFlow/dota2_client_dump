@@ -12,23 +12,30 @@
  throw
  transaction_safe
  volatile
-!link
 $ORIGIN
 %2.2d:%2.2d:%2.2d.%3.3d
 %d %d %d %d
-%f %f %f %f
 %lld
 %llu
+%s %s %s %s
+%s allocation count overflow
+%s allocation count overflow( %llu + %llu > %llu )\n
 %s: __pos (which is %zu) > __size (which is %zu)
 %s: __pos (which is %zu) > this->size() (which is %zu)
+%s: allocation of %u too large, max %u\n
+%s: element count overflow (%u)\n
+%s: invalid insert point %u (current count %u)\n
+%s: max element overflow, cur count %u + %u\n
+%s: member count overflow (%u)\n
+%s: no space for allocation of %u\n
 (anonymous namespace)
 *N12_GLOBAL__N_121system_error_categoryE
 *N12_GLOBAL__N_122generic_error_categoryE
 -nofocus
 ../public/tier0/tslist.h
-../public/tier0/utlrbtree.h
 /dev/random
 /dev/urandom
+/src/
 0 0 0
 0 0 0 0
 0 0 0 255
@@ -39,6 +46,7 @@ $ORIGIN
 13ConCommandRef
 14CBaseAppSystemI10IAppSystemE
 14CBaseAppSystemI9IVConCommE
+14IErrorListener
 15CTier0AppSystemI9IVConCommLx0EE
 15CTier1AppSystemI9IVConCommLx0EE
 15CTier2AppSystemI9IVConCommLx0EE
@@ -54,6 +62,8 @@ $ORIGIN
 21IVConCommDataReceived
 22CSchemaInstallCallback
 22IModuleMappingListener
+23CKV3TransferContextBase
+23CKV3TransferSaveContext
 23CVConActiveStateMessage
 23CVConChannelPokeMessage
 23CVConsoleConVarListener
@@ -67,6 +77,7 @@ $ORIGIN
 9IVConComm
 <Unknown Shutdown Context>
 <Unknown>
+<no failure reason set>
 <undefined>
 =============== End VConsole Buffered Messages ===============\n
 =============== Prior Messages Discarded at %d bytes ===============\n
@@ -74,11 +85,12 @@ $ORIGIN
 ==============================================================\n
 ==========================================================\n
 APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %d!\n
+AddPage
 AlignedByteArray not properly aligned\n
+Alloc
 AnimGraphEditorUtils001
 AnimationSystemUtils_001
 AnimationSystem_001
-Assert_ConditionFailed(_AssertCompileTimeConstantStruct_t const&, char const*, ...)
 Assert_ConditionFailed_Fatal(_AssertCompileTimeConstantStruct_t const&, char const*, ...)
 AssetBrowserSystem_001
 AssetPreviewSystem_001
@@ -89,19 +101,24 @@ BakedLODBuilderMgr001
 BenchmarkService001
 BinaryProperties_GetValue
 CAtomicMutex::AcquireLock(unsigned long long)
+CBufferString::AppendConcat(int, char const* const*, int const*, bool)
+CBufferString::AppendFormat(char const*, ...)
 CBufferString::AppendFormatV(char const*, __va_list_tag*)
+CBufferString::FixSlashes(char)
 CBufferString::Format(char const*, ...)
 CBufferString::Insert(int, char const*, int, bool)
+CBufferString::MoveFrom(CBufferString&)
 CBufferString::Purge(int)
+CBufferString::RemoveAt(int, int)
 CBufferString::RemoveToFileBase(bool)
+CBufferString::Replace(char const*, char const*, bool)
+CBufferString::ToLowerFast(int)
+CBufferString::TrimTail(char const*)
+CBufferString::TruncateAt(int, bool)
 CCommand::Tokenize: Encountered command which overflows the tokenizer buffer.. Skipping!\n
-CCountedStringPool_CI::CCountedStringPool_CI()
-CCountedStringPool_CI::ReferenceStringHandle(char const*)
-CCountedStringPool_CI::SaveToBuffer(CUtlBuffer&) const
-CCountedStringPool_CI::~CCountedStringPool_CI()
 CKeyValues_Data::Internal_GetString(char const*, char*, unsigned long)
-CLZSS::Compress(unsigned char*, int, unsigned int*, bool)
 CRC32_ProcessBuffer
+CSplitString::Split(char const*, int, char const**, int, bool)
 CTSListBase::CTSListBase()
 CTSListBase::Detach()
 CTSListBase::InternalPop()
@@ -123,12 +140,19 @@ CThreadEvent::Set()
 CThreadSyncObject::Wait(unsigned int)
 CThreadSyncObject::WaitImpl(unsigned int)
 CThreadSyncObject::~CThreadSyncObject()
+CUtlBinaryBlock::SetLength(int)
+CUtlBuffer::AddNullTermination()
 CUtlBuffer::CUtlBuffer(int, int, CUtlBuffer::BufferFlags_t)
 CUtlBuffer::CUtlBuffer(void const*, int, CUtlBuffer::BufferFlags_t)
+CUtlBuffer::EnsureCapacity(int)
+CUtlBuffer::Get(void*, int)
 CUtlBuffer::ParseToken(characterset_t const*, char*, int, bool)
 CUtlBuffer::Printf(char const*, ...)
 CUtlBuffer::Put(void const*, int)
 CUtlBuffer::PutString(char const*)
+CUtlBuffer::SeekGet(CUtlBuffer::SeekType_t, int)
+CUtlScratchMemoryPool::AllocAligned(int, int)
+CUtlString::Acquire(CBufferString*, bool)
 CUtlString::Format(char const*, ...)
 CUtlString::FreeMemoryBlock()
 CUtlString::GetForModify()
@@ -137,6 +161,11 @@ CUtlString::Purge()
 CUtlString::Set(char const*)
 CUtlString::SetDirect(char const*, int)
 CUtlString::operator=(CBufferString const&)
+CUtlSymbolTable::AddString(char const*, bool*)
+CUtlSymbolTable::CUtlSymbolTable(int, int, bool)
+CUtlSymbolTable::String(CUtlSymbol) const
+CUtlSymbolTable::~CUtlSymbolTable()
+CUtlSymbolTableLarge element limit of %u exceeded\n
 CVirtualMachineCallStackTranslationEncoder::EnumerateEncodingIndices(bool (*)(CVirtualMachineCallStackTranslationEncoder*, unsigned int, char const*, char const*, unsigned int, void*), void*)
 CVirtualMachineCallStackTranslationEncoder::GetIndexBitMask()
 CVirtualMachineCallStackTranslationEncoder::GetIndexBitShift()
@@ -145,8 +174,10 @@ CVirtualMachineCallStackTranslationEncoder::GetLineOffsetBitShift()
 CVirtualMachineCallStackTranslationEncoder::GetLineOffsetPostShiftedSignBitMask()
 CVirtualMachineCallStackTranslationEncoder::GetVMID()
 Cannot recover from failed socket shutdown. (error %d)
+CharacterSetBuild
 Clear buffered logging
 Clearing %d buffered messages of %d bytes\n
+ClientLocalServerAccess001
 ClientServerSharedHandleSystem001
 ClientToolsInfo_001
 Clients %d of %d:\n
@@ -155,14 +186,19 @@ Connection in progress...\n
 Connection will timeout in %d seconds...\n
 CreateInterface
 DemoUpconverterVersion001
+Double-save to Member '%s'
+ERROR: CUtlSymbolTableLarge element limit of %u exceeded\n
 EXPORTSYSTEM_INTERFACE_VERSION_001
 EarlyInit_Tier0
 EconItemToolModel_001
 EngineServiceMgr001
+EnsureElementCapacity
+EnsureMemberCapacity
+EnsureUnusedCapacity
 ExtractModuleMetadata
+Failed to save unsupported class
 FlattenedSerializersVersion001
 FontManager_001
-Found existing value when inserting into tree - replacing existing value with new value. If this is intended behavior, use InsertOrReplace. If leaving existing values alone is intended, use InsertIfNotFound. If duplicate entries are intended, use InsertWithDupes.
 GCC: (SteamRT 14.2.0-19~steamrt3.1+bsrt3.1) 14.2.0
 GLIBCXX_TUNABLES
 GLIBC_2.14
@@ -174,6 +210,7 @@ GLIBC_2.3.2
 GameResourceServiceClientV001
 GameResourceServiceServerV001
 GameUIService_001
+GetDefaultMiniDumpTypeFlags
 GetResourceManifestCount
 GetResourceManifests
 HammerMapLoader001
@@ -185,18 +222,23 @@ Init
 InputService_001
 InputStackSystemVersion001
 InputSystemVersion001
-Insert
+InsertMultipleBefore
 InstallSchemaBindings
 Invalid connection type.
+InvokeMiniDumpHandler
 JArray
 KeyValueCache001
+KeyValues3: pre-allocated array memory is too small for %u elements (%u bytes available, %u bytes needed)\n
+KeyValues3: pre-allocated table memory is too small for %u members (%u bytes available, %u bytes needed)\n
 KeyValues::CopySubkeys(KeyValues*) const
 KeyValues::FindKey(char const*) const
 KeyValues::KeyValues(char const*, IKeyValuesSystem*, bool)
 KeyValues::RecursiveSaveToFile(CUtlBuffer&, int, bool, bool) const
 KeyValues::SetString(char const*, char const*)
 KeyValues::~KeyValues()
+LOG_CONSOLE
 List connections
+LocalServerClientAccess001
 Localize_001
 LoggingSystem_FindChannel
 LoggingSystem_GetChannel
@@ -215,6 +257,7 @@ LoggingSystem_SetChannelFlags
 LoggingSystem_SetChannelVerbosity
 MATCHFRAMEWORK_001
 MODEL_PROCESSING_SERVICES_INTERFACE_001
+MPropertyFriendlyName
 Make VConsole Foreground(): ReturnToWindow:0x%p, Timeout:%d, UseHostPath:%d\n
 MapListService_001
 MaterialUtils_001
@@ -245,9 +288,12 @@ PanoramaUIClient001
 PanoramaUIEngine001
 ParticleSystemMgr003
 PhysicsBuilderMgr001
+Plat_ExitProcess
 Plat_FatalError
 Plat_FloatTime
+Plat_GetExeModule
 Plat_GetModuleFilename
+Plat_GetModuleProcAddress
 Plat_GetTime
 Plat_IsInDebugSession
 Plat_IsRunningOnCustomerMachine
@@ -270,6 +316,7 @@ ResourceCompilerSystem001
 ResourceHandleUtils001
 ResourceManifestRegistry001
 ResourceSystem013
+SaveKV3(KV3ID_t const&, KV3ID_t const&, KeyValues3 const*, CUtlString*, CUtlBuffer*, unsigned int)
 SceneSystem_002
 SceneUtils_001
 SchemaSystem_001
@@ -312,6 +359,7 @@ St8bad_cast
 St9bad_alloc
 St9exception
 St9type_info
+Stack depth limit hit (%d)
 StackTools_EnumerateKnownLoadedModules
 StackTools_EnumerateVirtualMachineEncoders
 StackTools_InstallModuleMappingListener
@@ -332,6 +380,7 @@ ToolFramework2_002
 ToolSceneNodeFactory_001
 ToolService_001
 Unknown protocol.
+UtlRBTree_FailedInsertDuplicate
 UtlVectorMemory_Alloc
 UtlVectorMemory_CalcNewAllocationCount
 UtlVectorMemory_FailedAllocation
@@ -342,6 +391,8 @@ VBik001
 VConComm
 VConComm Discarding Oversized Outgoing Message: '%s' (%d bytes)\n
 VConComm failed to get expected listening endpoint on port %d!\n
+VConComm failed to initialize server side TCP socket!\n
+VConComm failed to initialize socket services!\n
 VConComm failed to listen on port %d with %d connections!\nExisting Process:\n%s\n
 VConComm001
 VConCommThread_PC
@@ -362,6 +413,11 @@ VScriptManager010
 VStringTokenSystem001
 VTT for 
 VWebm001
+V_DoubleToString_Unsafe
+V_FloatToString_Unsafe
+V_Int64ToString_Unsafe
+V_IsAbsolutePath
+V_StringParseError
 V_StringToBool
 V_StringToColor
 V_StringToFloat32
@@ -376,8 +432,20 @@ V_StringToUint64
 V_StringToVector
 V_StringToVector2D
 V_StringToVector4D
+V_StringToVectorWS
+V_UInt32ToString_Unsafe
+V_UInt64ToString_Unsafe
+V_fclose
+V_fopenUTF8
+V_fpclassifyd
+V_fread
+V_fseek
+V_ftell
+V_fwrite
+V_isnand
 V_qsort_s
 V_stricmp_fast
+V_strnlen(char const*, int)
 VisBuilder_001
 Vrad3_001
 Waiting For VConsole To Connect...\n
@@ -396,6 +464,7 @@ _ITM_deregisterTMCloneTable
 _ITM_memcpyRnWt
 _ITM_memcpyRtWn
 _ITM_registerTMCloneTable
+_V_strncmp
 _V_strncpy
 __cxa_allocate_dependent_exception
 __cxa_allocate_exception
@@ -491,6 +560,7 @@ __int128
 __pthread_key_create
 __test_and_acquire(long*)
 __tls_get_addr
+_class
 _txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
 _txnal_cow_string_D1(void*)
 _txnal_cow_string_D1_commit(void*)
@@ -529,6 +599,7 @@ basic_string::replace
 basic_string::resize
 basic_string::substr
 basic_string_view::substr
+binary_bc
 bind
 bool
 bool __gnu_cxx::__is_null_pointer<__gnu_cxx::__normal_iterator<char*, std::string>>(__gnu_cxx::__normal_iterator<char*, std::string>)
@@ -568,6 +639,7 @@ close
 co_await 
 color
 commandline
+connect
 const_cast
 construction vtable for 
 covariant return thunk to 
@@ -598,6 +670,7 @@ getentropy
 glibcxx.eh_pool
 global constructors keyed to 
 global destructors keyed to 
+group
 guard variable for 
 half
 hardware
@@ -621,6 +694,22 @@ listen
 long
 long double
 long long
+m_bCanAutoComplete
+m_bCommand
+m_bIsDefault
+m_bIsFlagsEnum
+m_nFlags
+m_nType
+m_szDefault
+m_szFriendlyName
+m_szGroupName
+m_szHelpString
+m_szMax
+m_szMin
+m_szName
+m_szValue
+m_vecDetails
+m_vecEnum
 malloc
 memchr
 memcmp
@@ -630,6 +719,13 @@ memset
 mold 2.36.0 (compatible with GNU ld)
 mt19937
 nTries < 10000000
+name
+netadr_t::SetFromString(char const*, bool)
+netadr_t::SetIP(unsigned int)
+netadr_t::SetPort(unsigned short)
+netadr_t::SetType(netadrtype_t)
+netadr_t::ToSockadr(sockaddr*) const
+netadr_t::ToString(char*, unsigned int, bool) const
 new 
 new[]
 noexcept
@@ -680,6 +776,8 @@ realloc
 recv
 reference temporary #
 reinterpret_cast
+resource_manifests
+resources
 secure_getenv
 send
 setsockopt
@@ -689,6 +787,8 @@ signed char
 sizeof 
 sizeof...
 socket
+source_file
+source_line
 sprintf
 static_cast
 std::_V2::error_category::_M_message(int) const
@@ -1270,6 +1370,7 @@ string literal
 string::string
 strlen
 strncmp
+strstr
 strtoul
 syscall
 system
@@ -1383,6 +1484,7 @@ typename
 uint16
 uint32
 uint64
+unable to register all schema data: %s\n
 unsigned
 unsigned __int128
 unsigned char
@@ -1399,6 +1501,7 @@ vconcomm.cpp
 vector2
 vector3
 vector4
+vectorws
 virtual thunk to 
 void
 void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_construct<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>>(__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>, __gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>, std::forward_iterator_tag)

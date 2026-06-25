@@ -59,7 +59,6 @@
 !  warning : selected content significantly smaller than requested (%u < %u) \n
 !AxU
 !V_isempty( pSecretKey )
-!link
 "%s","%s",%s,"%s"\n
 "0x%llX"
 "[ARRAY]"
@@ -192,7 +191,7 @@ $xmm9
 %llu
 %llu %s entries but no formats were defined\n
 %llu,%u,%u,%s\r\n
-%ls [wstring, len = %d]
+%s %s %s %s
 %s %s %s %s\n
 %s %s -nominidumps
 %s %s has conflicting %s flags (child: %s%s, parent: %s%s, parent wins)\n
@@ -203,6 +202,7 @@ $xmm9
 %s (before "%s")
 %s (tweaked to NOT wait for child outflows)
 %s + 0x%llx
+%s [wstring, len = %d]
 %s allocation count overflow
 %s allocation count overflow( %llu + %llu > %llu )\n
 %s allocation count overflow( %llu > %llu )\n
@@ -478,6 +478,7 @@ $xmm9
 -retire
 -rollback
 -testscript
+-testscript requires -insecure
 -testscript_inline
 .%0*llu
 .%x.%x.copy_tmp
@@ -485,15 +486,12 @@ $xmm9
 ...........| 
 ..........| 
 .........| 
-../common/vsymbolmodule.cpp
 ../public/tier0/globallist.h
 ../public/tier0/quantizedfloatencoder.h
 ../public/tier0/threadmutex.h
 ../public/tier0/threadtoolstypes.h
 ../public/tier0/tslist.h
 ../public/tier0/utldict.h
-../public/tier0/utlrbtree.h
-../public/tier0/utlsymboltablelarge.h
 ../thirdparty/fmt/format-inl.h
 ../thirdparty/fmt/format.h
 .DZP(7'
@@ -553,11 +551,13 @@ $xmm9
 0123456789
 0123456789ABCDEF
 0123456789abcdef
+06:06:24
 0;FALSE;NO;OFF
 0U@H
 0x%016llX
 0x%p
-1.5.6
+1.2.11
+1.5.7
 1.8.2
 10CJobThread
 10ConCommand
@@ -627,13 +627,13 @@ $xmm9
 1icl
 1wsHp
 2,THh
-20:48:46
 20CKeyValuesSystemBase
 20CRefCountServiceBaseI6CRefMTE
 20CThreadedTraverseJob
-20IMobileEventListener
 21CCountedStringPool_CI
 21CPooledStdFunctionJob
+21CThreadedDependentJob
+21CUtlCStringConversion
 21CUtlStringTokenSystem
 21CVDebugProcessorAMD64
 21IKeyValuesDumpContext
@@ -662,6 +662,7 @@ $xmm9
 27CMiniDumpCommentBuilderBase
 27CVProfileOutputColumn_Count
 27IKeyValuesDumpContextAsText
+28CThreadedJobWithDependencies
 28CUtlBufferFormatOutputStream
 28~v
 29CCharBufferFormatOutputStream
@@ -671,7 +672,6 @@ $xmm9
 30CAsyncScheduledFunctionManager
 31CBufferStringFormatOutputStream
 31CParallelProcessorAbstract_Base
-31CTier0MasterMobileEventListener
 31IForceSignalNumberIntoCallStack
 35CKeyValuesDumpContextToBufferString
 37CKeyValuesDumpContextToLoggingChannel
@@ -680,6 +680,7 @@ $xmm9
 3o=q
 3wl'
 40CVProfileOutputColumn_AverageTimePerCall
+40EnumerateAbsPathsInDirRecursiveVisitor_t
 41CVProfileOutputColumn_AverageTimePerFrame
 4JpI?=
 4^K\fOI
@@ -777,10 +778,10 @@ $xmm9
 <unknown KV3 basic type '%s' (%d)>
 <unknown>
 =9tau
+=JRJ
 >5PJ>
 >ZF9
 >vf,U
-?21CUtlCStringConversion
 ?456789:;<=
 @aQY
 AA40J6
@@ -847,6 +848,8 @@ Align
 AlignedByteArray not properly aligned\n
 AllProjects_FatalWriteMiniDump
 AllProjects_FatalWriteMiniDumpOrBreak
+AllProjects_FatalWritePureCallMiniDump
+AllProjects_FatalWriteStackBufferOverrunMiniDump
 Alloc
 Alloc exceeded allocation limit /+/ %llu > %llu
 AllocUnlocked
@@ -898,7 +901,6 @@ AnimationSystem_001
 AppendConcat
 AppendFormatV
 ApplyDiffs
-Apr  7 2026
 April
 Assert
 AssertMsg_ConditionFailed_Internal
@@ -922,6 +924,7 @@ AssetSystemTest001
 AssignRangeMultipler with bitcount=32!\n
 AssignRangeMultiplier
 AsyncScheduledFunctions
+AttachmentHandle_t::operator==
 Attempted to add job '%s' to pool that has already been completed [status=%i]\n
 August
 AuthenticAMD
@@ -1051,6 +1054,7 @@ CAnimDocSequenceBlend2DItem
 CAnimDocTagSpan
 CAnimDocTagSpanConstPtr
 CAnimDocTagSpanPtr
+CAnimGraph2ParamRefBase<*>::Set
 CAnimGraphDoc_Action
 CAnimGraphDoc_ActionConstPtr
 CAnimGraphDoc_ActionPtr
@@ -1224,6 +1228,7 @@ CAnimGraphDoc_TwoBoneIKNode
 CAnimGraphDoc_WayPointHelperNode
 CAnimGraphDoc_ZeroPoseNode
 CAnimGraphGeneralSettings
+CAnimGraphParamRefBase<*>::Set
 CAnimGraphSettingsManager
 CAnimInputDamping
 CAnimMotorBase
@@ -1274,6 +1279,8 @@ CAuthPhysBody
 CAuthPhysJoint
 CAutoLockMutexTrait<CThreadMutex>::Lock
 CAutoLockT<CThreadMutex,CAutoLockMutexTrait<CThreadMutex> >::{ctor}
+CBaseEntity::GetAbsOrigin
+CBaseEntity::GetSubclassName
 CBindPoseAnimNode
 CBlake3HashContext::CBlake3HashContext()
 CBlake3HashContext::Finalize(unsigned char*, unsigned long)
@@ -1322,6 +1329,7 @@ CBufferString::GetAllocChars(int, int)
 CBufferString::GetInsertPtr(int, int, bool, int*)
 CBufferString::GetReplacePtr(int, int, int, bool, int*)
 CBufferString::GrowByChunks(int, int)
+CBufferString::Insert
 CBufferString::Insert(int, char const*, int, bool)
 CBufferString::Length
 CBufferString::MakeAbsolutePath(char const*, char const*)
@@ -1344,6 +1352,7 @@ CBufferString::Replace(char, char)
 CBufferString::ReplaceAt(int, char const*, int, bool)
 CBufferString::ReplaceAt(int, int, char const*, int, bool)
 CBufferString::ReverseChars(int, int)
+CBufferString::Set
 CBufferString::SetExtension(char const*, bool)
 CBufferString::SetLength(int, bool, int*)
 CBufferString::SetPtr(char*, int, int, bool, bool)
@@ -1365,8 +1374,8 @@ CBufferString::TruncateAt(char const*, bool)
 CBufferString::TruncateAt(int, bool)
 CBufferString::UnicodeCaseConvert(int, EStringConvertErrorPolicy)
 CBufferStringFormatOutputStream::PutC(char)
-CByteswap::SwapFieldToTargetEndian(void*, void*, typedescription_t*)
-CByteswap::SwapFieldsToTargetEndian(void*, void*, datamap_t*)
+CBufferStringFormatOutputStream::~CBufferStringFormatOutputStream()
+CBufferStringN<*>::operator=
 CCallQueue::ParallelCallQueued(char const*, IThreadPool*)
 CCallStackCapture::CCallStackCapture(int (*)(unsigned long long, void**, int, int), unsigned int, unsigned int)
 CCallStackCapture::Capture(int (*)(unsigned long long, void**, int, int), unsigned int, unsigned int)
@@ -1392,6 +1401,7 @@ CCharBufferFormatOutputStream::PutC(char)
 CCharBufferFormatOutputStream::PutS(std::basic_string_view<char, std::char_traits<char>>)
 CCharBufferFormatOutputStream::RemainingCapacity() const
 CCharBufferFormatOutputStream::Terminate()
+CCharBufferFormatOutputStream::~CCharBufferFormatOutputStream()
 CChoiceAnimNode
 CChoreoAnimNode
 CCircularBuffer::Advance(int)
@@ -1485,6 +1495,8 @@ CEntityHandle::Get
 CEntityHandle::GetEntityIdentity
 CEntityHandle::GetInstance
 CEntityHandle::IsInvalidHandleIndex
+CEntityKeyValues::FindKey
+CEntityKeyValues::GetMemberKV3
 CEnumAnimParameter
 CEnvironmentBlock::CEnvironmentBlock()
 CEnvironmentBlock::CaptureProcessEnvironment()
@@ -1573,6 +1585,8 @@ CFormatStringElement::EnforceTypeAndSize(char const*, char const*)
 CFormatStringElement::ParseElement(char const*)
 CFutureFacingMetric
 CFutureVelocityMetric
+CGlobalSymbol::CalculateDefaultHash
+CGlobalSymbol::{ctor}
 CGraphMotionItem
 CGridStringPrinter::Clear()
 CGridStringPrinter::DelimitedHeader(char, char const*, ...)
@@ -1601,6 +1615,7 @@ CGroupAnimNode
 CGroupInputAnimNode
 CGroupOutputAnimNode
 CHEAT
+CHandle<*>::Get
 CHitReactAnimNode
 CIE aug data missing LSDA encoding\n
 CIE aug data missing personality routine encoding\n
@@ -1760,6 +1775,9 @@ CMotionVariantGroup
 CMovementComponent
 CMovementComponentUpdater
 CMoverAnimNode
+CNetworkHandleBase<*>::Get
+CNetworkVarBase<*>::Set
+CNetworkVarBase<*>::operator=
 CNodeBlend2DItem
 COLLISION_MODE_INITIAL_TRACE_DOWN
 COLLISION_MODE_PER_FRAME_PLANESET
@@ -1802,6 +1820,7 @@ CPathString::Set(char const*)
 CPathString::Set(char const*, char const*)
 CPathString::~CPathString()
 CPlayerInputAnimMotor
+CPoolAllocator::ActivePoolHighWatermark() const
 CPoolAllocator::Allocate(unsigned int, unsigned int)
 CPoolAllocator::CPoolAllocator(unsigned int)
 CPoolAllocator::Debug_GetAllocationsSnapshot(CUtlVector<CPoolAllocator::Handle_t, int, CUtlVectorMemory_Growable<CPoolAllocator::Handle_t, int, 0ul>>*) const
@@ -1824,6 +1843,7 @@ CRC32_ProcessBuffer
 CRC64_ProcessBuffer
 CRagdollAnimNode
 CRecursionCallStackMarker::CRecursionCallStackMarker(bool)
+CResourceName::operator==
 CRigidBodyWeightList
 CRigidBodyWeightListConstPtr
 CRigidBodyWeightListPtr
@@ -1947,6 +1967,7 @@ CStateMachineAnimNode
 CStateStatusCondition
 CStdIOFormatOutputStream::PutC(char)
 CStdIOFormatOutputStream::PutS(std::basic_string_view<char, std::char_traits<char>>)
+CStdIOFormatOutputStream::~CStdIOFormatOutputStream()
 CStepsRemainingMetric
 CStopAtGoalAnimNode
 CStrAutoEncode::Clear()
@@ -1970,6 +1991,7 @@ CStringPool_CI::Count() const
 CStringPool_CI::Find(char const*)
 CStringPool_CI::Purge()
 CStringPool_CI::~CStringPool_CI()
+CStrongHandle<*>::GetHandle
 CSubGraphAnimNode
 CSubGraphManager
 CSubGraphManagerConstPtr
@@ -1983,8 +2005,11 @@ CTSListBase::InternalPop
 CTSListBase::InternalPop()
 CTSListBase::InternalPush(TSLNodeBase_t*)
 CTSListBase::Pop
+CTSListBase::~CTSListBase()
 CTSQueue
 CTSQueue corruption
+CTSQueue<*>::Pop
+CTSQueue<*>::PopItem
 CTagCondition
 CTestScriptMgr: not initialized.
 CTestScriptMgr::InsertCommandsBeforeCheckpoint() adding to tail\n
@@ -2014,6 +2039,13 @@ CThread::Terminate(int)
 CThread::ThreadProc(void*)
 CThread::WaitForCreateComplete(CThreadEvent*)
 CThread::~CThread()
+CThreadBackgroundWorkGate::CThreadBackgroundWorkGate()
+CThreadBackgroundWorkGate::OnBeginBackgroundWork()
+CThreadBackgroundWorkGate::OnEndBackgroundWork()
+CThreadBackgroundWorkGate::PauseRequested() const
+CThreadBackgroundWorkGate::PauseWork()
+CThreadBackgroundWorkGate::ResumeWork()
+CThreadBackgroundWorkGate::~CThreadBackgroundWorkGate()
 CThreadBarrier::ArriveAndWait()
 CThreadBarrier::CThreadBarrier(unsigned int)
 CThreadBarrier::~CThreadBarrier()
@@ -2083,7 +2115,6 @@ CThreadSyncObject::IsSemaphoreOrphanedInternal(int, int)
 CThreadSyncObject::OpenSemaphoreInternal(char const*, bool)
 CThreadSyncObject::ReleaseSemaphoreInternal(int, int)
 CThreadSyncObject::ResetThreadSyncObjectInternal()
-CThreadSyncObject::SaveNameToFile(char const*)
 CThreadSyncObject::SignalThreadSyncObjectInternal()
 CThreadSyncObject::Wait(unsigned int)
 CThreadSyncObject::WaitForMultiple(int, CThreadSyncObject**, bool, unsigned int)
@@ -2092,11 +2123,16 @@ CThreadSyncObject::WaitImpl(unsigned int)
 CThreadSyncObject::Wait_NoDiagnostics(unsigned int)
 CThreadSyncObject::operator!() const
 CThreadSyncObject::~CThreadSyncObject()
+CThreadedDependentJob::ReleaseUpstreamDependency()
+CThreadedDependentJob::Wait()
 CThreadedJob::Abort(bool)
 CThreadedJob::WaitOrImmediatelyExecute()
+CThreadedJobWithDependencies::DoExecuteInternal()
+CThreadedJobWithDependencies::Wait()
 CTimeCondition
 CTimeRemainingMetric
 CToggleComponentAction
+CTransform::operator*
 CTurnHelperAnimNode
 CTwoBoneIKAnimNode
 CURVE_TANGENT_LINEAR
@@ -2209,8 +2245,10 @@ CUtlBuffer::VaScanf(char const*, __va_list_tag*)
 CUtlBuffer::WriteToFile(char const*, bool)
 CUtlBuffer::WriteToFileIfDifferent(char const*)
 CUtlBufferFormatOutputStream::PutC(char)
+CUtlBufferFormatOutputStream::~CUtlBufferFormatOutputStream()
 CUtlCharConversion::CUtlCharConversion(char, char const*, int, CUtlCharConversion::ConversionArray_t const*)
 CUtlCharConversion::FindConversion(char const*, int*)
+CUtlDict<*>::Insert
 CUtlFilenameSymbolTable::FindFileName(char const*) const
 CUtlFilenameSymbolTable::FindOrAddFileName(char const*)
 CUtlFilenameSymbolTable::RemoveAll()
@@ -2219,6 +2257,10 @@ CUtlFilenameSymbolTable::SaveToBuffer(CUtlBuffer&)
 CUtlFilenameSymbolTable::SpewStrings()
 CUtlFilenameSymbolTable::String(unsigned int const&, CBufferString*)
 CUtlFilenameSymbolTable::String(unsigned int const&, char*, int)
+CUtlHashtable<*>::Find
+CUtlHashtable<*>::FindGetPtr
+CUtlHashtable<*>::FirstHandle
+CUtlHashtable<*>::NextHandle
 CUtlInplaceBuffer::CUtlInplaceBuffer(CUtlBuffer::BufferFlags_t)
 CUtlInplaceBuffer::InplaceGetLinePtr()
 CUtlInplaceBuffer::InplaceGetLinePtr(char**, int*)
@@ -2226,6 +2268,12 @@ CUtlLRUCacheBase::Flush(char const*)
 CUtlLRUCacheBase::ResetCacheStats(char const*)
 CUtlLRUCacheBase::SetCacheSize(char const*, int)
 CUtlLRUCacheBase::SpewStats()
+CUtlLeanVectorBase<*>::Base
+CUtlLeanVectorBase<*>::NumAllocated
+CUtlLeanVectorFixedGrowableBase<*>::EnsureCapacity
+CUtlLeanVectorFixedGrowableBase<*>::NumAllocated
+CUtlLeanVectorImpl<*>::EmplaceTail
+CUtlLeanVectorImpl<*>::IsValidIndex
 CUtlLinkedList overflow! (exhausted index range)\n
 CUtlMemoryArena
 CUtlMemoryArena::Alloc(unsigned int)
@@ -2260,9 +2308,11 @@ CUtlScratchMemoryPool::Init(unsigned int, unsigned int, void*, bool)
 CUtlScratchMemoryPool::Purge()
 CUtlScratchMemoryPool::TotalMemFree() const
 CUtlScratchMemoryPool::~CUtlScratchMemoryPool()
+CUtlStingTokenSystem
 CUtlString::AbsPath(char const*) const
 CUtlString::Acquire(CBufferString*, bool)
 CUtlString::AllocMemoryBlock(unsigned int)
+CUtlString::Append
 CUtlString::Append(char const*)
 CUtlString::Append(char const*, int)
 CUtlString::CUtlString(CBufferString const&)
@@ -2280,6 +2330,7 @@ CUtlString::GetBaseFilename() const
 CUtlString::GetEmptyString()
 CUtlString::GetExtensionAlloc() const
 CUtlString::GetForModify()
+CUtlString::IsEmpty
 CUtlString::IsEqual_CaseSensitive(char const*) const
 CUtlString::IsEqual_FastCaseInsensitive(char const*) const
 CUtlString::Left(int) const
@@ -2297,6 +2348,7 @@ CUtlString::Replace(char, char) const
 CUtlString::Right(int) const
 CUtlString::Set
 CUtlString::Set(char const*)
+CUtlString::SetDirect
 CUtlString::SetDirect(char const*, int)
 CUtlString::SetLength(int)
 CUtlString::Slice(int, int) const
@@ -2319,6 +2371,7 @@ CUtlString::operator const char *
 CUtlString::operator+(CUtlString const&) const
 CUtlString::operator+(char const*) const
 CUtlString::operator+(int) const
+CUtlString::operator+=
 CUtlString::operator+=(CBufferString const&)
 CUtlString::operator+=(CUtlString const&)
 CUtlString::operator+=(char const*)
@@ -2331,6 +2384,7 @@ CUtlString::operator==(CBufferString const&) const
 CUtlString::operator==(CUtlString const&) const
 CUtlString::operator[](int) const
 CUtlString::{ctor}
+CUtlString::{dtor}
 CUtlStringAndToken::IsEqual_CaseSensitive(char const*) const
 CUtlStringAndToken::IsEqual_FastCaseInsensitive(char const*) const
 CUtlStringAndTokenWithStorage::Format(char const*, ...)
@@ -2338,14 +2392,15 @@ CUtlStringAndTokenWithStorage::KV3TransferLoad(CKV3TransferLoadContext*)
 CUtlStringAndTokenWithStorage::KV3TransferSave(CKV3TransferSaveContext*) const
 CUtlStringList::SplitString(char const*, char const* const*, int)
 CUtlStringToken::FormatTo(IFormatOutputStream*, CFormatStringElement) const
-CUtlStringToken::Make(char const*, bool)
+CUtlStringToken::Make(char const*)
 CUtlStringToken::TrackTokenCreation(char const*, char const*)
-CUtlStringTokenSystem could not open database file "%s" for writing. Aborting update operation\n
-CUtlStringTokenSystem could not update token database "%s" because the file is read-only.\n
 CUtlStringTokenSystem: Encountered string token collision: "%s" and "%s" both hash to %X!\n
 CUtlSymbol::FormatTo(IFormatOutputStream*, CFormatStringElement) const
+CUtlSymbolLarge::CalculateDefaultHash
+CUtlSymbolLarge::Hash
 CUtlSymbolLarge::IsNullString
 CUtlSymbolLarge::IsValid
+CUtlSymbolTable::AddString
 CUtlSymbolTable::AddString(char const*, bool*)
 CUtlSymbolTable::AddString(char const*, int, bool*)
 CUtlSymbolTable::AllocSize() const
@@ -2353,6 +2408,7 @@ CUtlSymbolTable::CUtlSymbolTable(int, int, bool)
 CUtlSymbolTable::Find(char const*) const
 CUtlSymbolTable::Find(char const*, int) const
 CUtlSymbolTable::GetElements(int, int, CUtlSymbol*) const
+CUtlSymbolTable::Hash_t::HashString
 CUtlSymbolTable::Purge()
 CUtlSymbolTable::RemoveAll()
 CUtlSymbolTable::RestoreFromBuffer(CUtlBuffer&)
@@ -2361,6 +2417,12 @@ CUtlSymbolTable::SetPageSize(unsigned int)
 CUtlSymbolTable::String(CUtlSymbol) const
 CUtlSymbolTable::~CUtlSymbolTable()
 CUtlSymbolTableLarge element limit of %u exceeded\n
+CUtlSymbolTableLargeBase<*>::AddString
+CUtlVectorBase<*>::Element
+CUtlVectorBase<*>::IsValidIndex
+CUtlVectorBase<*>::operator[]
+CUtlVectorEmbeddedNetworkVar<*>::IsValidIndex
+CUtlVectorMemory_Growable<*>::operator[]
 CV@@R
 CVAR_
 CVBreakpadSymbolModule::CVBreakpadSymbolModule()
@@ -2467,6 +2529,9 @@ CVirtualMemorySnapshot::Purge()
 CVirtualMemorySnapshot::Report(int) const
 CVirtualMemorySnapshot::~CVirtualMemorySnapshot()
 CWayPointHelperAnimNode
+CWeakHandle<*>::GetData
+CWeakHandle<*>::operator->
+CWeakHandleBase::GetBaseChecked
 CZeroPoseAnimNode
 C_INIT_AddVectorToVector
 C_INIT_AgeNoise
@@ -2644,6 +2709,7 @@ Client Input/Output
 Client Physics
 Client Rendering
 Client Simulation
+ClientLocalServerAccess001
 ClientServerSharedHandleSystem001
 ClientToolsInfo_001
 Client_Animation
@@ -2729,10 +2795,12 @@ CopyDependencyToAlternateLocation
 CopyUniqueId
 Corefile
 Coroutine[%s] performance problem: excessive stack size (%d bytes)
+Coroutine_Cancel
 Coroutine_Continue
 Coroutine_Create
 Coroutine_Finish
 Coroutine_GetCurrentlyActive
+Coroutine_IsActive
 Coroutine_IsActive()
 Coroutine_Launch_ASM
 Coroutine_YieldToMain
@@ -2758,7 +2826,6 @@ D"A/oyu
 DAMAGEORDEATH_INTERRUPTABILITY
 DEATH_INTERRUPTABILITY
 DEBUG_EXITPROCESS
-DEFAULT_WRITE_PATH
 DEMO
 DEVELOPMENTONLY
 DISCARD
@@ -2830,6 +2897,7 @@ Decompression failure
 Default
 DefaultConditionalErrorProc
 DefaultConditionalSymbolProc
+DefaultHashFunctor<*>::operator()
 DemoUpconverterVersion001
 Dependency Copy Error
 Destination buffer is too small
@@ -2848,6 +2916,7 @@ Diff
 Discard data buffer mismatch\n
 Dk(s
 DmeC
+DoAssertDialog
 DoAssertDialog: invalid Assert response returned from dialog/vxconsole - breaking to debugger
 Double-register of KV3 conversion (from '%s' to '%s')
 Download process succeeded but didn't write a local file
@@ -2880,6 +2949,7 @@ Enabling flag '%s' on channel '%s'.\n
 End of input was reached and '[' was not matched by ']'
 End of input was reached and '{' was not matched by '}'
 Engine2/MapMaxCoord
+Engine2/MaxObjectPosition
 EngineServiceMgr001
 EnsureAddedCapacity
 EnsureCapacity
@@ -2891,9 +2961,9 @@ Error
 Error (generic)
 Error parsing string '%s' as double, parsed to: '%s'\n
 Error parsing string '%s' as float64\n
-Error parsing string '%s' as int, parsed to: '%s'\n
+Error parsing string '%s' as int. Stopped parsing at: '%s'\n
 Error parsing string '%s' as int\n
-Error parsing string '%s' as uint, parsed to: '%s'\n
+Error parsing string '%s' as uint. Stopped parsing at: '%s'\n
 Error parsing string '%s' as uint\n
 Error reading args file\n
 Evictions/Min
@@ -3020,6 +3090,7 @@ FioCreateFile(char const*, EFioAccessFlags, EFioShareFlags, EFioCreateMode, unsi
 FioCreatePipe(int*, int*, int)
 FioCreateSymbolicLink(char const*, char const*, bool)
 FioDuplicate(int, bool, int*)
+FioEnumerateAbsPathsInDirRecursive(char const*, CUtlHashtable<CUtlString, empty_t, DefaultHashFunctor<CUtlString>, DefaultEqualFunctor<CUtlString>, CUtlLeanVector<CUtlHashtableEntry<CUtlString, empty_t>, int, CMemAllocAllocator>, true>*)
 FioFileTimeToTimeT(unsigned long long)
 FioFindFileInDirCaseInsensitive(char const*, CBufferString*, bool)
 FioFlush(int)
@@ -3094,7 +3165,6 @@ FrameTotal
 Free
 FreeCommandLine
 Friday
-GAME
 GAMECONSOLE
 GAMEDLL
 GCC: (SteamRT 14.2.0-19~steamrt3.1+bsrt3.1) 14.2.0
@@ -3127,6 +3197,7 @@ GameResourceServiceClientV001
 GameResourceServiceServerV001
 GameUIService_001
 General
+GenerateDefaultRandomSeed
 GenerateHashFromUniqueId
 GenericGameData
 GenuineIntel
@@ -3145,7 +3216,6 @@ GetGameInfoBool(char const*, bool)
 GetGameInfoFloat(char const*, float)
 GetGameInfoInt(char const*, int)
 GetGameInfoKey(char const*)
-GetGameInfoPlatformSpecificBool(char const*, bool)
 GetGameInfoString(char const*, char const*, char*, unsigned long)
 GetGameInfoUint64(char const*, unsigned long long)
 GetInsertPtr
@@ -3188,6 +3258,7 @@ HH:MM:SS.z
 HIGHDPI
 HOME
 HUF_writeCTable error \n
+Hammer/GameDefaultFarZ
 HammerMapLoader001
 Header of Literals' block doesn't respect format specification
 Heap: standard allocator
@@ -3306,13 +3377,20 @@ IEEE 754r decimal floating point (32 bits)
 IEEE 754r decimal floating point (64 bits)
 IEEE 754r half-precision floating point (16 bits)
 IErrorListener::ReportError
+IFormatOutputStream::BeginItem()
+IFormatOutputStream::EndItem()
 IFormatOutputStream::Format2DTable(CTypeErasedFormattingWrapper, CFormatStringElement, void const**, int, int)
 IFormatOutputStream::FormatArray(CTypeErasedFormattingWrapper, CFormatStringElement, void const**, int, bool)
 IFormatOutputStream::FormatEnumHelper(CFormatStringElement, int, std::initializer_list<std::pair<int, char const*>>)
 IFormatOutputStream::FormatMaskHelper(int, std::initializer_list<std::pair<int, char const*>>)
+IFormatOutputStream::IsFull() const
 IFormatOutputStream::OutputIndentation()
 IFormatOutputStream::PutRepeatedChar(char, int)
 IFormatOutputStream::PutS(std::basic_string_view<char, std::char_traits<char>>)
+IFormatOutputStream::RemainingCapacity() const
+IFormatOutputStream::SetAnchor()
+IFormatOutputStream::SetTargetLine(int)
+IFormatOutputStream::Terminate()
 IGraphMotionItem
 IJumpHelperAnimNode
 IKChain
@@ -3337,9 +3415,6 @@ IKeyValuesDumpContextAsText::KvWriteIndent(int)
 IKeyValuesDumpContextAsText::KvWriteValue(KeyValues*, int)
 ILookComponent
 IMemAlloc::DumpStats: could not open output file %s
-IMobileEventListener::OnEnterHibernationState()\n
-IMobileEventListener::OnExitHibernationState()\n
-IMobileEventListener::OnLowMemoryNotification()\n
 IMotionGraphPreviewNode
 IMotionItem
 IMotionItemGroup
@@ -3480,6 +3555,7 @@ Invalid source header %s format content type %llu\n
 Invalid source header %s format form %llu\n
 Invalid statement list line info offset 0x%llx\n
 Invalid uniform array count
+Invalid use of KV3 specific type %s with basic type %s, must be basic type %s
 Invalid value "%s"
 InvalidateUniqueId
 InvokeMiniDumpHandler
@@ -3502,18 +3578,27 @@ JmpToAlternateStack
 Jobs/Coroutines
 JsonEscape(char const*)
 July
+Jun 25 2026
 June
 KM^bM
 KOREAN
 KV Conditional Evaluation Error
 KV Conditional: Unknown symbol %s\n
 KV3 EHANDLEs cannot be serialized
+KV3 instances cannot be set to an unspecified specific type
 KV3 pointers cannot be serialized
 KVPacker::ReadAsBinary(KeyValues*, CUtlBuffer&)
 KVPacker::WriteAsBinary(KeyValues*, CUtlBuffer&)
-Keeping "%s" cvar value, specified on cmdline\n
 KeyValueCache001
 KeyValues Error: %s in file %s\n
+KeyValues3: pre-allocated array memory is too small for %u elements (%u bytes available, %u bytes needed)\n
+KeyValues3: pre-allocated table memory is too small for %u members (%u bytes available, %u bytes needed)\n
+KeyValues3::FindMember
+KeyValues3::GetBasicType
+KeyValues3::Internal_AssertIsTable
+KeyValues3::Internal_FindMember
+KeyValues3::Internal_Type
+KeyValues3::IsNull
 KeyValues::AddFloat(char const*, float)
 KeyValues::AddInt(char const*, int)
 KeyValues::AddKey(char const*)
@@ -3640,6 +3725,7 @@ LOG_DEVELOPER_VERBOSE
 LOG_GENERAL
 LOG_SYMBOLS
 LOG_VPROF
+LOWVIOLENCE
 Last %u output lines:\n
 Last %u stderr lines:\n
 Launch Debugger
@@ -3687,6 +3773,7 @@ LoadKV3FromOldSchemaText(KeyValues3*, CUtlString*, CUtlBuffer*, KV3ID_t const&, 
 LoadKV3Text_NoHeader(KeyValues3*, CUtlString*, char const*, KV3ID_t const&, char const*, unsigned int)
 Loaded %s, got %p\n
 Loading multi-line string literals with metadata support enabled is not currently supported.
+LocalServerClientAccess001
 Localize_001
 Lock
 Lock Body Facing
@@ -3786,7 +3873,6 @@ MENUBAR_ITEM
 MFUL
 MGiI
 MMX 
-MOBILE
 MODEL_PROCESSING_SERVICES_INTERFACE_001
 MODULE
 Mac OS
@@ -3897,6 +3983,7 @@ N14ThreadPoolTest16CPerFrameTestJobE
 N14ThreadPoolTest24CSpawningPerFrameTestJobE
 N14ThreadPoolTest9CCountJobE
 N17CUtlReportPrinter13IReportOutputE
+N20CDirTreeWatchManager7VisitorE
 N3fmt3v1212format_errorE
 N3fmt3v1212format_facetISt6localeEE
 N5pB
@@ -4171,6 +4258,7 @@ Plat_DebugPrint
 Plat_DebugPrintV
 Plat_DebugString
 Plat_DebugString_Buffered
+Plat_DemangleRawTypeName
 Plat_DesktopNotify
 Plat_DestroyGameInstanceMutex
 Plat_DestroyWindow
@@ -4201,7 +4289,6 @@ Plat_GetCurrentDate
 Plat_GetCurrentDirectory
 Plat_GetCurrentDisplayMode
 Plat_GetCurrentFrame
-Plat_GetCurrentHibernationState
 Plat_GetCurrentRSS
 Plat_GetDPI
 Plat_GetDebugMonitor
@@ -4218,7 +4305,6 @@ Plat_GetGlobalListRegistry
 Plat_GetLastDllLoadDenial
 Plat_GetLastGameInstanceMutex
 Plat_GetLocalTime
-Plat_GetMasterMobileEventHandler
 Plat_GetMemPageSize
 Plat_GetMiniDumpErrorString
 Plat_GetModuleAddressInformation
@@ -4246,7 +4332,6 @@ Plat_GetProcAddresses
 Plat_GetRawCallStack
 Plat_GetRegisteredModules
 Plat_GetShellWindow
-Plat_GetSteamLoginWithAccessCode
 Plat_GetSystemLoad
 Plat_GetTempDirectory
 Plat_GetThisProcessStdioRedirectFlags
@@ -4264,14 +4349,6 @@ Plat_HasClipboardText
 Plat_HasEnteredFatalState
 Plat_HasEnv
 Plat_HookSpecialThread
-Plat_IAPConsumePurchase
-Plat_IAPGetPricingAsync
-Plat_IAPPurchaseSku
-Plat_IAPQueryExistingPurchases
-Plat_IAPSetHandler
-Plat_IAPUpdateConsumedStatus
-Plat_IAPUpdatePricing
-Plat_IAPUpdatePurchaseStatus
 Plat_IgnoreContentAsserts
 Plat_InitializeCOM
 Plat_InstallControlCHandler
@@ -4309,13 +4386,11 @@ Plat_MicroSecTickDiffF
 Plat_MilliSecTickDiff
 Plat_MilliSecTickDiffF
 Plat_MinimizeWindow
-Plat_NeedsLowFragmentation
 Plat_NonFatalErrorFunc
 Plat_NotifyOSAppIsNotHung
 Plat_OnExecutableExitingMain
 Plat_OsSpecificHandleToPlatWindow
 Plat_Printf
-Plat_QueueSteamLoginWithAccessCode
 Plat_ReconfigureWindow
 Plat_RedirectThisProcessStdioToFile(int, unsigned int)
 Plat_RefreshDPI
@@ -4357,7 +4432,6 @@ Plat_SetFileReadOnly
 Plat_SetForegroundWindow
 Plat_SetFullscreenMinimizeOnFocusLoss
 Plat_SetGameDirectories
-Plat_SetGlobalSafeAreaInsets
 Plat_SetIsConsoleApplication
 Plat_SetModuleFilename
 Plat_SetMouseCapture
@@ -4486,6 +4560,7 @@ Read off the end of the file name table\n
 Read off the end of the include path table\n
 Read off the end of the opcode size table\n
 Read past the end of rnglists data\n
+ReadLiteralValue
 RecursiveLoadFromBuffer:  got EOF instead of keyname
 RecursiveLoadFromBuffer:  got NULL key
 RecursiveLoadFromBuffer:  got conditional between key and value
@@ -4499,7 +4574,6 @@ RegisterConCommand: Unknown error registering con command "%s"!\n
 RegisterConVar: Unknown error registering convar "%s"!\n
 RegisterGlobalObject
 RegisterLoggingChannel
-RegisterMobileEventListener
 RegisterStringToken
 Regular entry table is not sorted\n
 Release
@@ -4509,7 +4583,6 @@ RemoveAt
 RemoveAtUTF8
 RemoveBoneAndChildren
 RemoveMultiple
-Removing string token database entry "%s" for reason "%s"\n
 RenderDevice003
 RenderDeviceMgr001
 RenderHardwareConfig002
@@ -4529,6 +4602,7 @@ Resets stats for the specified CUtlLRUCaches (or all if none specified)
 Resident virtual bytes: %s\n
 ResourceCompilerSystem001
 ResourceHandleUtils001
+ResourceId_t::operator==
 ResourceManifestRegistry001
 ResourceSystem013
 ResourceTypeIndex_t::operator==
@@ -4550,6 +4624,7 @@ Root_Motion_Turn_Speed
 RtlEnterCriticalSection
 RtlpEnterCriticalSectionContended
 RtlpWaitOnCriticalSection
+RunSync
 RunTSListTests
 RunTSQueueTests
 RunThreadPoolPerFrameTests
@@ -4864,6 +4939,7 @@ SignHash
 Size
 SkipBlanks
 Skuz
+Sleep randomly 0..net_async_job_random_sleep ms in the parallel server jobs; sleep is per job
 Sleeping
 Slope_Angle
 Slope_Angle_Forward
@@ -5037,6 +5113,7 @@ StackTools_InstallModuleMappingListener
 StackTools_RemoveModuleMappingListener
 StackTools_VerifyLoadedModuleMappings
 Standard memory allocator initialized with non-pass-through options\n
+Start
 Start a test script running..
 StartLoop
 StartProcessInfo_t::CloseIo()
@@ -5130,6 +5207,7 @@ TfAX
 The specific type '%s' cannot be persisted
 The specific type '%u' cannot be persisted
 This convar is being accessed prior to ConVar_Register being called
+This mode cannot generate an uncompressed block
 Thread pool %s requested %d threads, using %u from %u set(s)\n
 Thread(%p/0x%llx)
 ThreadAtomicNotifyAll(unsigned int const*)
@@ -5186,6 +5264,7 @@ ThreadShellExecute
 ThreadShellExecuteEx
 ThreadSleep
 ThreadSpin
+ThreadStartFuzzer
 ThreadTerminateProcessCode
 ThreadWaitForProcessExit
 ThreadWrapProcessId
@@ -5248,7 +5327,6 @@ UNWIND: unable to find debug info for %s\n
 UNWIND: unable to init dbghelp for process\n
 UNWIND: unable to load dbghelp\n
 UNhkk%
-UPDATE_STRING_TOKEN_DATABASE
 URdN
 USED
 USER
@@ -5316,6 +5394,7 @@ UniqueIdToString
 Unknown
 Unknown (invalid)
 Unknown CIE version %u\n
+Unknown KV3 specific type %u
 Unknown arange header version\n
 Unknown compilation unit abbrev code\n
 Unknown compilation unit header version %u\n
@@ -5331,14 +5410,13 @@ Unlock
 Unrecognized ELF class\n
 Unrecognized ELF data layout or version\n
 Unrecognized Mach-O header magic\n
-Unrecognized flag name '%s'
 Unrecognized flag: %s.\n
 Unrecognized module magic\n
 Unrecognized severity: %s.\n
+Unrecognized specific type '%s'
 Unrecognized type '%d'
 Unrecognized verbosity: %s.\n
 UnregisterAssertionFailureListener
-UnregisterMobileEventListener
 Unresolved object reference '%s'
 Unserialize
 Unspecified error code
@@ -5360,6 +5438,7 @@ Unsupported parameter
 Unsupported primitive value type %u
 Unsupported text encoding id.
 Unused augmentation data, %llu bytes\n
+UpdateStringChars
 UploadFilesToAnalyzer
 UploadTracyFile
 Usage:  find <string> [<string>...]\n
@@ -5367,6 +5446,7 @@ Usage:  findflags <string>\n
 Usage:  help <cvarname>\n
 Usage: lrucache_flush [name]\n
 Usage: lrucache_set_size [name] [size]\n
+UtlRBTree_FailedInsertDuplicate
 UtlVectorMemory_Alloc
 UtlVectorMemory_AllocAligned
 UtlVectorMemory_CalcNewAllocationCount
@@ -5418,24 +5498,34 @@ VProfLite_SetEnabled
 VProfLite_SetExclusivePercentiles
 VProfScopeHelper<0, false>::EnterScopeInternal(char const*, CUtlSourceLocation const&)
 VProfScopeHelper<0, false>::EnterScopeInternalBudgetFlags(char const*, VProfBudgetGroupCallSite&, CUtlSourceLocation const&)
+VProfScopeHelper<0, false>::EnterScopeInternalBudgetFlags(char const*, VProfBudgetGroupCallSite&, CUtlSourceLocation const&)::arExitFuncTable
 VProfScopeHelper<0, true>::EnterScopeInternal(char const*, CUtlSourceLocation const&)
 VProfScopeHelper<0, true>::EnterScopeInternalBudgetFlags(char const*, VProfBudgetGroupCallSite&, CUtlSourceLocation const&)
+VProfScopeHelper<0, true>::EnterScopeInternalBudgetFlags(char const*, VProfBudgetGroupCallSite&, CUtlSourceLocation const&)::arExitFuncTable
 VProfScopeHelper<1, false>::EnterScopeInternal(char const*, CUtlSourceLocation const&)
 VProfScopeHelper<1, false>::EnterScopeInternalBudgetFlags(char const*, VProfBudgetGroupCallSite&, CUtlSourceLocation const&)
+VProfScopeHelper<1, false>::EnterScopeInternalBudgetFlags(char const*, VProfBudgetGroupCallSite&, CUtlSourceLocation const&)::arExitFuncTable
 VProfScopeHelper<1, true>::EnterScopeInternal(char const*, CUtlSourceLocation const&)
 VProfScopeHelper<1, true>::EnterScopeInternalBudgetFlags(char const*, VProfBudgetGroupCallSite&, CUtlSourceLocation const&)
+VProfScopeHelper<1, true>::EnterScopeInternalBudgetFlags(char const*, VProfBudgetGroupCallSite&, CUtlSourceLocation const&)::arExitFuncTable
 VProfScopeHelper<2, false>::EnterScopeInternal(char const*, CUtlSourceLocation const&)
 VProfScopeHelper<2, false>::EnterScopeInternalBudgetFlags(char const*, VProfBudgetGroupCallSite&, CUtlSourceLocation const&)
+VProfScopeHelper<2, false>::EnterScopeInternalBudgetFlags(char const*, VProfBudgetGroupCallSite&, CUtlSourceLocation const&)::arExitFuncTable
 VProfScopeHelper<2, true>::EnterScopeInternal(char const*, CUtlSourceLocation const&)
 VProfScopeHelper<2, true>::EnterScopeInternalBudgetFlags(char const*, VProfBudgetGroupCallSite&, CUtlSourceLocation const&)
+VProfScopeHelper<2, true>::EnterScopeInternalBudgetFlags(char const*, VProfBudgetGroupCallSite&, CUtlSourceLocation const&)::arExitFuncTable
 VProfScopeHelper<3, false>::EnterScopeInternal(char const*, CUtlSourceLocation const&)
 VProfScopeHelper<3, false>::EnterScopeInternalBudgetFlags(char const*, VProfBudgetGroupCallSite&, CUtlSourceLocation const&)
+VProfScopeHelper<3, false>::EnterScopeInternalBudgetFlags(char const*, VProfBudgetGroupCallSite&, CUtlSourceLocation const&)::arExitFuncTable
 VProfScopeHelper<3, true>::EnterScopeInternal(char const*, CUtlSourceLocation const&)
 VProfScopeHelper<3, true>::EnterScopeInternalBudgetFlags(char const*, VProfBudgetGroupCallSite&, CUtlSourceLocation const&)
+VProfScopeHelper<3, true>::EnterScopeInternalBudgetFlags(char const*, VProfBudgetGroupCallSite&, CUtlSourceLocation const&)::arExitFuncTable
 VProfScopeHelper<4, false>::EnterScopeInternal(char const*, CUtlSourceLocation const&)
 VProfScopeHelper<4, false>::EnterScopeInternalBudgetFlags(char const*, VProfBudgetGroupCallSite&, CUtlSourceLocation const&)
+VProfScopeHelper<4, false>::EnterScopeInternalBudgetFlags(char const*, VProfBudgetGroupCallSite&, CUtlSourceLocation const&)::arExitFuncTable
 VProfScopeHelper<4, true>::EnterScopeInternal(char const*, CUtlSourceLocation const&)
 VProfScopeHelper<4, true>::EnterScopeInternalBudgetFlags(char const*, VProfBudgetGroupCallSite&, CUtlSourceLocation const&)
+VProfScopeHelper<4, true>::EnterScopeInternalBudgetFlags(char const*, VProfBudgetGroupCallSite&, CUtlSourceLocation const&)::arExitFuncTable
 VProfService_001
 VProf_AssignNextTimespanId
 VProf_EnterScopeAdHoc
@@ -5585,6 +5675,7 @@ V_StringToUint8
 V_StringToVector
 V_StringToVector2D
 V_StringToVector4D
+V_StringToVectorWS
 V_StripAndPreserveHTML
 V_StripAndPreserveHTMLCore
 V_StripExcessTrailingZeros
@@ -5711,6 +5802,7 @@ V_exp2f
 V_expd
 V_expf
 V_fclose
+V_fcntl
 V_fdopen
 V_feof
 V_ferror
@@ -5733,6 +5825,7 @@ V_frexpf
 V_fscanf
 V_fseek
 V_fseeki64
+V_fstat
 V_ftell
 V_ftelli64
 V_fwrite
@@ -5744,6 +5837,7 @@ V_isalpha_str_fast
 V_isbreakablewspace
 V_isbreakablewspace32
 V_isdigit_str
+V_isempty
 V_isfinited
 V_isinfd
 V_isnand
@@ -5891,6 +5985,7 @@ Value_Generic
 VariableDefinition
 VariantIndex
 Vc0a
+VectorWS::operator-
 Version not supported
 Vgh$
 Virtual Memory %s Report for PID %u\n
@@ -5934,6 +6029,7 @@ WINXP
 WITH
 WORLD
 WVm.
+Wait
 WaitForAllDone
 Warning
 Warning: Skipping command %s\n
@@ -6046,6 +6142,7 @@ ZSTD_compressCCtx
 ZSTD_compressContinue
 ZSTD_compressEnd
 ZSTD_compressSequences
+ZSTD_compressSequencesAndLiterals
 ZSTD_compressStream
 ZSTD_compressStream2
 ZSTD_compressStream2_simpleArgs
@@ -6236,7 +6333,6 @@ _ITM_deregisterTMCloneTable
 _ITM_memcpyRnWt
 _ITM_memcpyRtWn
 _ITM_registerTMCloneTable
-_Linux
 _MakeGlobalSymbol
 _MakeGlobalSymbolCaseSensitive
 _V_AppendSlash
@@ -6427,6 +6523,7 @@ __newlocale
 __nl_langinfo_l
 __oldschema_object_name
 __pthread_key_create
+__report_gsfailure
 __restrict
 __strcoll_l
 __strftime_l
@@ -6529,7 +6626,6 @@ animgraph6
 animgraph7
 animgraph8
 animgraph9
-appears in lower database
 aq8D
 archive
 arena_eager_commit
@@ -6544,7 +6640,6 @@ asin
 asinf
 assert
 assert_cast
-assert_dialog.cpp
 atan
 atan2
 atan2f
@@ -6592,10 +6687,7 @@ basic_string::resize
 basic_string::substr
 basic_string_view::substr
 bin/linuxsteamrt64/libtier0.so
-bin\stringtokendatabase.txt
-binary
 binary_auto
-binary_bc
 binary_blob
 binary_lz4
 binary_zstd
@@ -6718,6 +6810,7 @@ cannot commit OS memory (error: %d (0x%x), address: %p, size: 0x%zx bytes)\n
 cannot create shim for unknown locale::facet
 cannot decommit OS memory (error: %d (0x%x), address: %p, size: 0x%zx bytes)\n
 cannot reset OS memory (error: %d (0x%x), address: %p, size: 0x%zx bytes)\n
+cannot reuse OS memory (error: %d (0x%x), address: %p, size: 0x%zx bytes)\n
 cannot switch from automatic to manual argument indexing
 cannot switch from manual to automatic argument indexing
 cantdie
@@ -6788,7 +6881,6 @@ control_point
 core id
 coroutine.cpp
 coroutine.m_pStackHigh <= coroutinePrev.m_pStackHigh
-corrupted entry
 corrupted thread-free list\n
 cosf
 cosh
@@ -6804,7 +6896,6 @@ curl --connect-timeout 5 --no-progress-meter --max-time %u -s -o "%s" %s
 current   
 curve
 cvar list\n--------------\n
-cvar.cpp
 cvarlist
 cvarlist:  [log logfile] [ partial ]\n
 d4[I
@@ -6882,7 +6973,6 @@ donotecho
 double
 ds\fw
 dup2
-dupe
 duration
 dxXu
 dynamic_cast
@@ -7023,8 +7113,10 @@ g_VProfNodeSpikeMultiplier
 g_VProfNodeSpikeReporting
 g_VProfSignalSpike
 g_bPlatCPUTicksAreReliable
-g_bUpdateStringTokenDatabase
 g_flConfigMaxCoord
+g_flConfigMaxObjectPosition
+g_flThreadedJobWaitTimeAccumulator
+g_flToolsDefaultFarZ
 g_pFiberJobPool
 g_pMemAlloc
 g_pScheduledFunctions
@@ -7219,6 +7311,7 @@ iswlower
 iswpunct
 iswspace
 iswupper
+item_definition_index_t::{ctor}
 izc}
 java Class for 
 java resource 
@@ -7226,9 +7319,11 @@ jointWeightWeight
 jwK\v\n
 k*WBjL
 keyvalues3_kv1textwriter.cpp
+keyvalues3_textreader.cpp
 keyvaluessystem.cpp
 kill
 kv3format_manager.cpp
+l"ej
 l6qnk
 l<}2l
 lDa>
@@ -7318,6 +7413,7 @@ m_ArgName
 m_Args
 m_Attributes
 m_Bone
+m_Byteswap compared different!
 m_ChainData
 m_Children
 m_Choices
@@ -7373,6 +7469,7 @@ m_ForceGenerators
 m_FullType
 m_GenericNodeType
 m_GenericPorts
+m_GetOverflowFunc compared different!
 m_IKChains
 m_IkChain
 m_IkChains
@@ -7408,6 +7505,7 @@ m_ParamStopRadius
 m_ParameterName
 m_Parameters
 m_PreEmissionOperators
+m_PutOverflowFunc compared different!
 m_Renderers
 m_RequiredAttributes
 m_ReturnValue
@@ -7872,6 +7970,7 @@ mallinfo.smblks: %s\n
 mallinfo.uordblks: %s\n
 mallinfo.usmblks: %s\n
 malloc
+malloc is redirected.\n
 master_morph_weight
 material
 materials/particle/base_projected.vmat
@@ -7888,15 +7987,14 @@ max_warnings
 mbrtowc
 mbsnrtowcs
 mbsrtowcs
+mcjohn
 mem tracking: %s\n
-mem_helpers.cpp
 memcheck
 memchr
 memcmp
 memcpy
 memcpy_repmovs
 memmove
-mempool.cpp
 memset
 memset_repstos
 memstack.cpp
@@ -7986,6 +8084,7 @@ name
 nanosleep
 nav_attribute_avoid
 nav_data
+net_async_job_random_sleep
 netadr_t::Clear()
 netadr_t::CompareAdr(netadr_t const&, bool) const
 netadr_t::CompareClassBAdr(netadr_t const&) const
@@ -8078,9 +8177,6 @@ origin_max_delta
 origin_relative
 os_tag
 osx*
-out of order
-p4 add -t binary "%s"
-p4 edit -t binary "%s"
 pAbilityName
 pClass
 pFrameBottom > m_pStackHigh || pFrameTop < m_pStackLow
@@ -8091,11 +8187,15 @@ pParam
 pSearchFromEntity
 pStartEntity
 pSwitchValue
+pTarget
 pTraceString
 pV }S
 page with tag %u cannot be reclaimed by a heap with the same tag (using heap tag %u instead)\n
 pages
 panorama
+panorama::CPanel2D::MarkPanelDirty
+panorama::CPanel2D::SetHasClass
+panorama::CPanel2D::SetVisible
 param
 param2
 parent_bone
@@ -8217,6 +8317,7 @@ read
 readdir64
 readlink
 realloc
+realpath
 recenter_on_parent_bone
 reference temporary #
 reference temporary for 
@@ -8350,6 +8451,9 @@ std::Catalogs::_M_erase(int)
 std::Catalogs::_M_get(int) const
 std::Catalogs::~Catalogs()
 std::_CatalogIdComp::operator()(std::Catalog_info const*, int) const
+std::_Func_class<*>::operator()
+std::_Ptr_base<*>::_Copy_construct_from
+std::_Ptr_base<*>::_Incref
 std::_Rb_tree_black_count(std::_Rb_tree_node_base const*, std::_Rb_tree_node_base const*)
 std::_Rb_tree_decrement(std::_Rb_tree_node_base const*)
 std::_Rb_tree_decrement(std::_Rb_tree_node_base*)
@@ -8379,6 +8483,7 @@ std::_Vector_base<std::Catalog_info*, std::allocator<std::Catalog_info*>>::_Vect
 std::_Vector_base<std::Catalog_info*, std::allocator<std::Catalog_info*>>::_Vector_impl::~_Vector_impl()
 std::_Vector_base<std::Catalog_info*, std::allocator<std::Catalog_info*>>::_Vector_impl_data::_Vector_impl_data()
 std::_Vector_base<std::Catalog_info*, std::allocator<std::Catalog_info*>>::~_Vector_base()
+std::_Xbad_function_call
 std::__at_thread_exit(std::__at_thread_exit_elt*)
 std::__codecvt_abstract_base<char, char, __mbstate_t>::__codecvt_abstract_base(unsigned long)
 std::__codecvt_abstract_base<char, char, __mbstate_t>::~__codecvt_abstract_base()
@@ -9271,8 +9376,6 @@ std::__ptr_traits_ptr_to<char const*, char const, false>::pointer_to(char const&
 std::__ptr_traits_ptr_to<char*, char, false>::pointer_to(char&)
 std::__ptr_traits_ptr_to<wchar_t const*, wchar_t const, false>::pointer_to(wchar_t const&)
 std::__ptr_traits_ptr_to<wchar_t*, wchar_t, false>::pointer_to(wchar_t&)
-std::__shared_mutex_pthread::lock()
-std::__shared_mutex_pthread::lock_shared()
 std::__sso_string::__sso_string()
 std::__sso_string::__sso_string(char const*, unsigned long)
 std::__sso_string::__sso_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)
@@ -9689,7 +9792,6 @@ std::basic_string_view<char, std::char_traits<char>>::basic_string_view(char con
 std::basic_string_view<char, std::char_traits<char>>::basic_string_view(char const*, unsigned long)
 std::basic_string_view<char, std::char_traits<char>>::compare(std::basic_string_view<char, std::char_traits<char>>) const
 std::basic_string_view<char, std::char_traits<char>>::compare(unsigned long, unsigned long, char const*, unsigned long) const
-std::basic_string_view<char, std::char_traits<char>>::find(char, unsigned long) const
 std::basic_string_view<char, std::char_traits<char>>::size() const
 std::basic_string_view<char, std::char_traits<char>>::substr(unsigned long, unsigned long) const
 std::bfloat16_t
@@ -10526,6 +10628,7 @@ std::runtime_error::what() const
 std::runtime_error::~runtime_error()
 std::set_terminate(void (*)())
 std::set_unexpected(void (*)())
+std::shared_ptr<*>::{ctor}
 std::string
 std::string std::__str_concat<std::string>(std::string::value_type const*, std::string::size_type, std::string::value_type const*, std::string::size_type, std::string::allocator_type const&)
 std::string::_Alloc_hider::_Alloc_hider(char*, std::allocator<char> const&)
@@ -10835,7 +10938,6 @@ string pointer is null
 string::string
 string_token
 stringparse.cpp
-stringtokendatabase.txt
 strlen
 strncasecmp
 strncmp
@@ -10887,7 +10989,6 @@ this
 this 
 thread-local initialization routine for g_CurrentStackContextStartData
 threads
-threadtools.cpp
 throw
 throw 
 tier0
@@ -10960,6 +11061,7 @@ typeinfo for CKeyValuesDumpContextToLoggingChannel
 typeinfo for CMiniDumpCommentBuilderBase
 typeinfo for CStdIOFormatOutputStream
 typeinfo for CThread
+typeinfo for CThreadCrossProcessMutex
 typeinfo for CThreadEvent
 typeinfo for CThreadSemaphore
 typeinfo for CThreadSyncObject
@@ -11345,6 +11447,7 @@ vector3
 vector4
 vector4d
 vector::_M_realloc_append
+vectorws
 verbose
 version
 vfprintf
@@ -11572,6 +11675,8 @@ vtable for CKeyValuesDumpContextToLoggingChannel
 vtable for CMiniDumpCommentBuilderBase
 vtable for CStdIOFormatOutputStream
 vtable for CThread
+vtable for CThreadCrossProcessMutex
+vtable for CThreadEvent
 vtable for CThreadSemaphore
 vtable for CThreadSyncObject
 vtable for CUtlBufferFormatOutputStream
@@ -11787,6 +11892,7 @@ yaw_end
 yaw_start
 z3zr
 z8ji
+z:KEZ
 zN,W
 zQ3W
 z]5T

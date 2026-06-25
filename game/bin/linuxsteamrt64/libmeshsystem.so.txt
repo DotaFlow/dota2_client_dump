@@ -14,12 +14,11 @@
  volatile
 !!SyncExtref!!%s
 !!SyncExtref_Material!!%s
-!link
 $ORIGIN
 %d %d %d %d
-%f %f %f %f
 %lld
 %llu
+%s %s %s %s
 %s (Color)
 %s (Material)
 %s allocation count overflow
@@ -56,10 +55,9 @@ $ORIGIN
 *ZN21RayTracingEnvironment10RefineNodeEiPKiiPK16TriangleBounds_t5Vec3DIfES6_iP21CUtlMultiJobProcessorEUlvE0_
 *ZN21RayTracingEnvironment10RefineNodeEiPKiiPK16TriangleBounds_t5Vec3DIfES6_iP21CUtlMultiJobProcessorEUlvE_
 *ZN21RayTracingEnvironment26SetupAccelerationStructureEvEUlvE_
-../../public/tier0/tslist.h
 ../public/scenesystem/memoryvertex.h(145): 
+../public/tier0/tslist.h
 ../public/tier0/utldict.h
-../public/tier0/utlrbtree.h
 .vmdl
 /dev/random
 /dev/urandom
@@ -67,7 +65,6 @@ $ORIGIN
 0 0 0
 0 0 0 0
 0 0 0 255
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789
 10CMeshUtils
 10CModel_Imp
@@ -136,9 +133,11 @@ $ORIGIN
 23CKV3TransferLoadContext
 23CKV3TransferSaveContext
 23CSyncModelResourceUtils
+23IRD_ResourceExtrefUtils
 24CSceneSkeletonObjectDesc
 25CBoneConstraintDotToMorph
 25IAsyncProcessedDataResult
+25IRD_AsyncProcessDataUtils
 25IVPhysicsLegacyKeyHandler
 26CSpaceAgnosticBoneAccessor
 27CModelConfigElement_Command
@@ -170,6 +169,7 @@ $ORIGIN
 <binary blob: %u bytes>
 <empty member name>
 <no failure reason set>
+<non-RTTI type>
 <pair_a> 
 <pair_b> 
 <pointer>
@@ -189,7 +189,6 @@ AllocateAndLoad failed for '%s' (%s)\n
 AllocateAndLoad failed for '%s'\n
 AllocateResource: Error creating data for %s!\n
 AllocateResource: Error loading async data for %s
-AlphaTestZPrepass
 AnimComponentID
 AnimGraphEditorUtils001
 AnimNodeID
@@ -206,6 +205,7 @@ AnimationSystem_001
 AppendDrawCallMeshHelper
 Assert_ConditionFailed(_AssertCompileTimeConstantStruct_t const&)
 Assert_ConditionFailed(_AssertCompileTimeConstantStruct_t const&, char const*, ...)
+Assert_ConditionFailed_Fatal(_AssertCompileTimeConstantStruct_t const&)
 Assert_ConditionFailed_Fatal(_AssertCompileTimeConstantStruct_t const&, char const*, ...)
 AssetBrowserSystem_001
 AssetPreviewSystem_001
@@ -253,7 +253,6 @@ BakedLODBuilderMgr001
 BaseSceneObjectDesc
 BenchmarkService001
 BinaryProperties_GetValue
-BindlessResources
 Body
 BoneConstraintList
 BoneConstraintRbf :: Cannot find input bone "%s" :: %s\n
@@ -261,7 +260,6 @@ BoneConstraintRbf :: Cannot find output bone "%s" :: %s\n
 BoneConstraintRbf :: Invalid input %d or output %d bone count :: %s\n
 BoneConstraintRbf :: input bone count %d != input pose count %d :: %s\n
 BoneConstraintRbf :: output bone count %d != output pose count %d :: %s\n
-BoundingBoxBloat
 Box - Ground
 CAimConstraint
 CAnimAttachment
@@ -285,16 +283,27 @@ CBoneConstraintRbf
 CBufferString::AppendConcat(int, char const* const*, int const*, bool)
 CBufferString::AppendFormat(char const*, ...)
 CBufferString::AppendFormatV(char const*, __va_list_tag*)
+CBufferString::ComposeFileName(char const*, char const*, char)
+CBufferString::ExtendPath(char const*, char, bool)
+CBufferString::ExtractFilePath(char const*, bool)
 CBufferString::FixSlashes(char)
 CBufferString::FixupPathName(char)
 CBufferString::Format(char const*, ...)
+CBufferString::FormatTo(IFormatOutputStream*, CFormatStringElement) const
 CBufferString::Insert(int, char const*, int, bool)
+CBufferString::MakeAbsolutePath(char const*, char const*)
+CBufferString::MakeRelativePath(char const*, char const*, bool)
 CBufferString::MoveFrom(CBufferString&)
 CBufferString::Purge(int)
 CBufferString::RemoveAt(int, int)
+CBufferString::RemoveDotSlashes(char)
+CBufferString::RemoveFirstDir(CBufferString*)
+CBufferString::Replace(char const*, char const*, bool)
 CBufferString::SetExtension(char const*, bool)
 CBufferString::SetLength(int, bool, int*)
 CBufferString::SetPtr(char*, int, int, bool, bool)
+CBufferString::ShortenPath(bool)
+CBufferString::StripTrailingSlash()
 CBufferString::ToLowerFast(int)
 CBufferString::TrimTail(char const*)
 CBufferString::TruncateAt(char const*, bool)
@@ -317,6 +326,7 @@ CFootMotion
 CFootStride
 CFootTrajectories
 CFootTrajectory
+CFormatStringElement::CFormatStringElement(char const*)
 CGlobalSymbol
 CHitBox
 CHitBoxSet
@@ -352,6 +362,7 @@ CMorphData
 CMorphRectData
 CMorphSetData
 CNPCPhysicsHull
+CONTENT
 COrientConstraint
 CParentAttachmentName
 CParentConstraint
@@ -362,6 +373,7 @@ CPhysSurfacePropertiesSoundNames
 CPhysSurfacePropertiesVehicle
 CPointConstraint
 CRC32_ProcessBuffer
+CRC64_ProcessBuffer
 CRenderBufferBinding
 CRenderGroom
 CRenderMesh
@@ -383,10 +395,25 @@ CThreadMultiWaitEvent::~CThreadMultiWaitEvent()
 CTiltTwistConstraint
 CTransform
 CTwistConstraint
+CUniformRandomStreamImpl<CThreadNullMutex>::CUniformRandomStreamImpl(int)
+CUniformRandomStreamImpl<CThreadNullMutex>::RandomFloat(float, float)
 CUtlBinaryBlock::Set(void const*, int)
 CUtlBinaryBlock::SetLength(int)
+CUtlBinaryBlock::operator=(CUtlBinaryBlock&&)
+CUtlBuffer::AddNullTermination()
 CUtlBuffer::CUtlBuffer(int, int, CUtlBuffer::BufferFlags_t)
 CUtlBuffer::CUtlBuffer(void const*, int, CUtlBuffer::BufferFlags_t)
+CUtlBuffer::CheckArbitraryPeekGet(int, int&)
+CUtlBuffer::CheckGet(int)
+CUtlBuffer::CheckPut(int)
+CUtlBuffer::EnsureCapacity(int)
+CUtlBuffer::Get(void*, int)
+CUtlBuffer::ParseToken(characterset_t const*, char*, int, bool)
+CUtlBuffer::Printf(char const*, ...)
+CUtlBuffer::Put(void const*, int)
+CUtlBuffer::PutString(char const*)
+CUtlBuffer::SeekGet(CUtlBuffer::SeekType_t, int)
+CUtlBuffer::SeekPut(CUtlBuffer::SeekType_t, int)
 CUtlLeanVector
 CUtlLeanVectorFixedGrowable
 CUtlMemoryPoolBase::Alloc()
@@ -394,15 +421,25 @@ CUtlMemoryPoolBase::CUtlMemoryPoolBase(int, int, int, MemoryPoolGrowType_t, char
 CUtlMemoryPoolBase::Free(void*)
 CUtlMemoryPoolBase::~CUtlMemoryPoolBase()
 CUtlScratchMemoryPool::AllocAligned(int, int)
+CUtlScratchMemoryPool::CUtlScratchMemoryPool(unsigned int, unsigned int, void*, bool)
+CUtlScratchMemoryPool::~CUtlScratchMemoryPool()
 CUtlString
 CUtlString::Acquire(CBufferString*, bool)
+CUtlString::Append(char const*)
+CUtlString::Append(char const*, int)
 CUtlString::CUtlString(CBufferString const&)
 CUtlString::Format(char const*, ...)
+CUtlString::FormatV(char const*, __va_list_tag*)
 CUtlString::FreeMemoryBlock()
+CUtlString::IsEqual_CaseSensitive(char const*) const
 CUtlString::IsEqual_FastCaseInsensitive(char const*) const
 CUtlString::Purge()
 CUtlString::Set(char const*)
 CUtlString::SetDirect(char const*, int)
+CUtlString::SetLength(int)
+CUtlString::StripExtension() const
+CUtlString::operator+(char const*) const
+CUtlString::operator+=(char const*)
 CUtlString::operator=(CBufferString const&)
 CUtlString::operator==(CUtlString const&) const
 CUtlSymbolTable::AddString(char const*, bool*)
@@ -413,8 +450,13 @@ CUtlSymbolTable::~CUtlSymbolTable()
 CUtlSymbolTableLarge element limit of %u exceeded\n
 CUtlVector
 CVPhysXSurfacePropertiesList
+CVariableBitStringBase::FreeInts()
+CVariableBitStringBase::Resize(int)
+CVertexKDTree::BuildMidpoint(float const*, int, int)
+CVertexKDTree::BuildMidpointFromVertexSubSet(float const*, int, int const*, int)
+CVertexKDTree::FindVertsInBox(CUtlVectorFixedGrowable<float const*, 64ul, int>&, Vec3D<float> const&, Vec3D<float> const&, int) const
+CVertexKDTree::Nearest(Vec3D<float> const&, CUtlVectorFixedGrowable<float const*, 64ul, int>&) const
 Cables
-CanBatchWithDynamicShaderConstants
 Cannot allocate abstract class
 Cannot deallocate abstract class
 Capsule - Centered
@@ -427,6 +469,7 @@ CharacterSetBuild
 Class data is a '%s', not a table\n
 Class does not allow allocation from its schema binding
 Class does not allow deallocation from its schema binding
+ClientLocalServerAccess001
 ClientServerSharedHandleSystem001
 ClientToolsInfo_001
 Color
@@ -435,6 +478,8 @@ Control block error for '%s'\n
 ConvertKV3Format
 CreateInterface
 CreateMeshInstance
+Cylinder - Centered (SLOW PERF)
+Cylinder - Ground (SLOW PERF)
 D16_UNORM
 D24_UNORM_S8_UINT
 D32_FLOAT
@@ -444,17 +489,12 @@ Data_Branch1xy
 Data_Branch1zBranch2x
 Data_Branch2yz
 DebugPrintKV3(KeyValues3 const*)
-DecalSheetTexture
 DemoUpconverterVersion001
-DepthPassBatchID
-DisableLODBlending
 DistanceFieldList_t
-DoNotCastShadows
-DoNotRenderIntoSST
 Double-save to Member '%s'
+DualHull
 DynamicMeshDeformParams_t
 ERROR: CUtlSymbolTableLarge element limit of %u exceeded\n
-ERROR: Resource name "%s" has the incorrect extension "%s" for the specified resource type (expected "%s")!\n
 EXPORTSYSTEM_INTERFACE_VERSION_001
 EarlyInit_Tier0
 EconItemToolModel_001
@@ -541,10 +581,11 @@ FLEX_OP_SIN
 FLEX_OP_SQRT
 FLEX_OP_SUB
 FORCE_UINT
-Failed to allocate an instance of a class
-Failed to allocate an instance of class '%s'
+Failed to allocate an instance of a class of type '%s'
+Failed to allocate an instance of class '%s' (type '%s')
 Failed to call CBaseIntrospectedToKV3TypeManager::Init
 Failed to load distance field KV3 data.\n
+Failed to save unsupported class
 Fast
 FixupResourceName: Illegal full path passed in ("%s")!\n
 FixupResourceName: Illegal path, missing extension passed in ("%s")!\n
@@ -553,10 +594,14 @@ FlexOpCode_t
 FoliageAnimation
 FontManager_001
 Force a reload of a vmdl resource
-ForceZPrepass
-ForwardLayerOnly
+FormatArgumentsToBuffer(IFormatOutputStream*, char const*, CTypeErasedFormattingWrapper const*, int)
+FormatTo(IFormatOutputStream*, CFormatStringElement, bool)
+FormatTo(IFormatOutputStream*, CFormatStringElement, double)
+FormatTo(IFormatOutputStream*, CFormatStringElement, float)
+FormatTo(IFormatOutputStream*, CFormatStringElement, int)
+FormatTo(IFormatOutputStream*, CFormatStringElement, unsigned int)
+FormatTo(IFormatOutputStream*, CFormatStringElement, void const*)
 Found existing value when inserting into dict - replacing existing value with new value. If this is intended behavior, use InsertOrReplace. If leaving existing values alone is intended, use InsertIfNotFound.
-Found existing value when inserting into tree - replacing existing value with new value. If this is intended behavior, use InsertOrReplace. If leaving existing values alone is intended, use InsertIfNotFound. If duplicate entries are intended, use InsertWithDupes.
 Found translucent and opaque grooms in the same groom group. This is not allowed.\n
 G8R8_G8B8_UNORM
 GAME
@@ -566,6 +611,7 @@ GLIBC_2.14
 GLIBC_2.17
 GLIBC_2.2.5
 GLIBC_2.25
+GLIBC_2.27
 GLIBC_2.3
 GLIBC_2.3.2
 GameResourceServiceClientV001
@@ -573,6 +619,7 @@ GameResourceServiceServerV001
 GameStartup
 GameUIService_001
 GetCPUInformation
+GetDefaultMiniDumpTypeFlags
 GetGameInfoBool(char const*, bool)
 GetResourceManifestCount
 GetResourceManifests
@@ -580,11 +627,16 @@ GetThreadLocalStackAllocator
 GrowCount
 HELPER_BONE
 HITGROUP_INVALID
-HairShader
 HammerMapLoader001
 Height
 HelpSystem_001
 HostStateMgr001
+IFormatOutputStream::Format2DTable(CTypeErasedFormattingWrapper, CFormatStringElement, void const**, int, int)
+IFormatOutputStream::FormatArray(CTypeErasedFormattingWrapper, CFormatStringElement, void const**, int, bool)
+IFormatOutputStream::FormatEnumHelper(CFormatStringElement, int, std::initializer_list<std::pair<int, char const*>>)
+IFormatOutputStream::FormatMaskHelper(int, std::initializer_list<std::pair<int, char const*>>)
+IFormatOutputStream::OutputIndentation()
+IFormatOutputStream::PutRepeatedChar(char, int)
 IKV3TransferInterface_ResourceLoad
 IKV3TransferInterface_ResourceSave
 INPUT_LAYOUT_VARIATION_DEFAULT
@@ -612,7 +664,7 @@ InsertBeforeGetPtr
 InsertMultipleBefore
 InstallSchemaBindings
 Instant Stop
-IsSceneAnimatableObject
+InvokeMiniDumpHandler
 JArray
 JIGGLE_BONE
 JOINT_FLAGS_BODY1_FIXED
@@ -621,6 +673,17 @@ JOINT_FLAGS_USE_BLOCK_SOLVER
 KV3 load transfer failed for mesh '%s': %s\n
 KeyValueCache001
 KeyValues3
+KeyValues3: pre-allocated array memory is too small for %u elements (%u bytes available, %u bytes needed)\n
+KeyValues3: pre-allocated table memory is too small for %u members (%u bytes available, %u bytes needed)\n
+KeyValues::GetFirstSubKey()
+KeyValues::GetInt(char const*, int) const
+KeyValues::GetName() const
+KeyValues::GetNextKey()
+KeyValues::KeyValues(char const*, IKeyValuesSystem*, bool)
+KeyValues::LoadFromFile(IFileSystem*, char const*, char const*, bool (*)(char const*, void*), void*, char const*)
+KeyValues::operator=(KeyValues const&)
+KeyValues::~KeyValues()
+LOG_CONSOLE
 LOG_GENERAL
 Lean
 LightmapUV
@@ -629,11 +692,13 @@ LoadKV3(CKV3Arena*, CUtlString*, CUtlBuffer*, KV3ID_t const&, char const*, unsig
 LoadKV3(KeyValues3*, CUtlString*, CUtlBuffer*, KV3ID_t const&, char const*, unsigned int)
 LoadKV3(KeyValues3*, CUtlString*, char const*, KV3ID_t const&, char const*, unsigned int)
 LoadKV3FromKV1Text_Translated(KeyValues3*, CUtlString*, char const*, KV1TextEscapeBehavior_t, KV1ToKV3Translation_t const*, int, char const*, bool, unsigned int)
+LoadKV3Text_NoHeader(KeyValues3*, CUtlString*, char const*, KV3ID_t const&, char const*, unsigned int)
 LoadModelSyncNoExtrefs - AllocateResource failed\n
 LoadModelSyncNoExtrefs - AsyncProcessData failed\n
 LoadModelSyncNoExtrefs - Load & compile failed.\n
 LoadModelSyncNoExtrefs - Load failed.\n
 LoadModelSyncNoExtrefs - Model is incompatible version\n
+LocalServerClientAccess001
 Localize_001
 LoggingSystem_IsChannelEnabled
 LoggingSystem_Log
@@ -652,6 +717,7 @@ MESH_BUFFER_USAGE_NONE
 MESH_BUFFER_USAGE_RT_PROXY
 MESH_BUFFER_USAGE_VB
 MESH_BUFFER_USAGE_VERTEX_ALBEDO
+MESH_BUFFER_USAGE_VERTEX_EMISSIVE
 MESH_DRAW_FLAGS_CAN_BATCH_WITH_DYNAMIC_SHADER_CONSTANTS
 MESH_DRAW_FLAGS_DRAW_LAST
 MESH_DRAW_FLAGS_NONE
@@ -694,11 +760,14 @@ MapListService_001
 MaterialGroup_t
 MaterialUtils_001
 Medium
+MemAlloc_AllocFunc
+MemAlloc_FreeFunc
 MemAlloc_StrDupFunc
 Mesh needs recompiling: '%s' (invalid version: %d)\nBrowse to the corresponding model in asset browser, right click and select Full Recompile.
 MeshDrawPrimitiveFlags_t
 MeshSystem
 MeshSystem/UseIndexBufferPool
+MeshSystem/UseVertexBufferPool
 MeshSystem001
 MeshUtils001
 Missing buffers for mesh (%s: %d)\n
@@ -751,8 +820,6 @@ NSt3_V214error_categoryE
 NULL RenderMesh with valid handle\n
 Name
 NavGameTest001
-NeedsDynamicShadows
-NeedsLightProbe
 NetworkClientService_001
 NetworkMessagesVersion001
 NetworkP2PService_001
@@ -761,7 +828,6 @@ NetworkService_001
 NetworkSystemVersion001
 No DATA block for resource '%s'\n
 No DATA block for resource\n
-NoZPrepass
 None
 Not safe to 'new' this class due to alignment requirements
 ORIENT
@@ -772,10 +838,10 @@ POINT
 POSE_SPACE_BONE
 POSE_SPACE_MORPH
 PackedAABB_t
-PackedBlobNormal
 PanoramaTextServices001
 PanoramaUIClient001
 PanoramaUIEngine001
+ParallelForSharedCode
 ParentAttachmentName()
 ParticleSystemMgr003
 Particles
@@ -793,10 +859,17 @@ PhysicsBuilderMgr001
 PivotPaint
 Planted Turn
 Plat_CPUTickFrequency
+Plat_DemangleRawTypeName
+Plat_ExitProcess
 Plat_FatalError
+Plat_GetEnv
+Plat_GetExeModule
+Plat_GetModuleFilename
+Plat_GetModuleProcAddress
 Plat_GetTime
 Plat_IsInDebugSession
 Plat_NonFatalErrorFunc
+Plat_RelativeTicks
 Pointers cannot be used as numeric values
 PooledLayout
 PosXyz
@@ -876,6 +949,7 @@ RENDERMESH_SLOT_PER_INSTANCE
 RENDERMESH_SLOT_PER_VERTEX
 RENDER_BUFFER_ACCELERATION_STRUCTURE
 RENDER_BUFFER_BYTEADDRESS_BUFFER
+RENDER_BUFFER_DYNAMIC_ZERO_COPY
 RENDER_BUFFER_IMMOVABLE_ALLOCATION
 RENDER_BUFFER_POOL_ALLOCATED
 RENDER_BUFFER_SHADER_BINDING_TABLE
@@ -918,6 +992,7 @@ RESOURCE_TYPE_RENDERMESH_INTERNAL
 ROTATION
 Radius
 RandomFloat
+RandomInt
 RayTracingEnvironment::RefineNode
 RayTracingEnvironment::RefineNodeJob
 RegisterConCommand: Unknown error registering con command "%s"!\n
@@ -951,6 +1026,9 @@ RnSoftbodySpring_t
 RnSphereDesc_t
 Root
 SSE and SSE2 are required.
+SaveKV3Text_NoHeader(KeyValues3 const*, CUtlString*, CUtlBuffer*, unsigned int)
+SaveKV3Text_NoHeader(KeyValues3 const*, CUtlString*, CUtlString*, unsigned int)
+SaveKV3Text_ToString(KV3ID_t const&, KeyValues3 const*, CUtlString*, CUtlString*, unsigned int)
 SceneSystem/ComputeShaderSkinning
 SceneSystem_002
 SceneUtils_001
@@ -965,6 +1043,9 @@ SerializedEntitiesVersion001
 ServerToolsInfo_001
 SharedMovementGait_t
 SheetSequenceIntegerId_t
+Should we straighten face island if the displacement is this much? (inches)
+Should we try to straighten an island of faces deviating from their average normal (tangent)?
+Should we try to straighten two faces connected to this edge? (tangent)
 Shuffle
 SkeletonAnimCapture_t
 SkeletonAnimCapture_t::Bone_t
@@ -1030,6 +1111,7 @@ TextLayout_001
 This convar is being accessed prior to ConVar_Register being called
 ThreadAtomicNotifyOne(unsigned int const*)
 ThreadGetCurrentId
+ThreadInMainThread
 ThreadMultiWait
 ThreadMultiWaitObjectSetDestroy
 ToolFramework2_002
@@ -1045,13 +1127,20 @@ Turn
 Type
 TypeManager
 UNKNOWN
+UPSCALER_AMD_FSR2
+UPSCALER_AMD_FSR3
+UPSCALER_COUNT
+UPSCALER_INTEL_XESS
+UPSCALER_NONE
+UPSCALER_NVIDIA_DLSS
 USAGE: print_model_bind_pose <vmdl_name> [bone_name]\n
 Unable to load tools vb block (%s: %d)\n
 Unable to read resource file %s!\n
 Unknown
 Unsupported KV3 basic type '%s' (%d)!
 Untested code path - Morph layers without morphset/flex rules. Will try to map model flex controllers directly to cloth morph layers
-UseShadowFastPath
+UpscalerType_t
+UtlRBTree_FailedInsertDuplicate
 UtlVectorMemory_Alloc
 UtlVectorMemory_CalcNewAllocationCount
 UtlVectorMemory_FailedAllocation
@@ -1092,6 +1181,7 @@ VStringTokenSystem001
 VTT for 
 VWebm001
 V_DoubleToString_Unsafe
+V_FixDoubleSlashes
 V_FixSlashes
 V_FloatToString_Unsafe
 V_GetFileExtension
@@ -1100,6 +1190,8 @@ V_Int32ToString_Unsafe
 V_Int64ToString_Unsafe
 V_Int8ToString_Unsafe
 V_IsAbsolutePath
+V_PathContainsPath
+V_PrettifyMem
 V_RemoveDotSlashes
 V_StringParseError
 V_StringToBool
@@ -1118,33 +1210,50 @@ V_StringToUint8
 V_StringToVector
 V_StringToVector2D
 V_StringToVector4D
+V_StringToVectorWS
 V_UInt16ToString_Unsafe
 V_UInt32ToString_Unsafe
 V_UInt64ToString_Unsafe
 V_UInt8ToString_Unsafe
+V_UnqualifiedFileName
 V_ZSTD_decompress
+V_acosd
 V_acosf
 V_asinf
+V_atan2d
 V_atan2f
+V_atanf
 V_atofloat32
 V_atoi
+V_cosd
 V_cosf
 V_expf
+V_fmodf
+V_fpclassifyd
+V_fread
+V_frexpf
+V_isnand
 V_logf
+V_powd
 V_powf
+V_qsort
 V_qsort_s
+V_roundf
 V_sincosf
+V_sind
 V_sinf
 V_snprintf
 V_sscanf
 V_stricmp_fast
 V_stristr_fast(char const*, char const*)
 V_strlower_fast
+V_strnlen(char const*, int)
+V_tanf
+V_vsnprintf
 Vector
 Vector4D
 VectorAligned
 VertexAlbedoFormat_t
-VertexAnimationMotionVectors
 VertexElementAnnotation
 VertexGenericIntegerData
 VertexPaintBlendParams
@@ -1157,13 +1266,13 @@ VsInputSignatureElement_t
 VsInputSignature_t
 WARNING: Failed to convert introspected block for file: %s\n
 WARNING: Invalid resource version (%d): %s\n
+WARNING: Resource name "%s" has the incorrect extension "%s" for the specified resource type (expected "%s")!\n
 WARNING: Trying to create a CRenderContextPtr without a valid context.\n
 WARNING: Unrecognized bone "%s"\n
 Warning
 Whether to support legacy (pre-modeldoc) models
 Width
 WorldRendererMgr001
-WriteDepthBeforeAlphaBlending
 X24_TYPELESS_G8_UINT
 X32_TYPELESS_G8X24_UINT
 ZN37CTypesafeIntrospectedToKV3TypeManagerILy1818520950E15PermModelData_tE15AllocateAndLoadER23CKV3TransferLoadContextPK21ResourceBindingBase_tP29IRD_RegisterResourceDataUtilsE15CAllocatorUtils
@@ -1183,7 +1292,13 @@ _ITM_memcpyRnWt
 _ITM_memcpyRtWn
 _ITM_registerTMCloneTable
 _MakeGlobalSymbol
+_MakeGlobalSymbolCaseSensitive
+_V_SetExtension
+_V_StringAfterPrefix
+_V_StripLastDir
+_V_strEndsWith
 _V_strncat
+_V_strncmp
 _V_strncpy
 _V_strnicmp_fast
 __cxa_allocate_dependent_exception
@@ -1293,7 +1408,6 @@ abort
 acosf
 alignof 
 allocator
-alphatest
 angularburst
 anim_data_block
 anim_graph_resource
@@ -1309,7 +1423,6 @@ auto
 auto:
 bOwnVBAndIB == m_bOwnVBAndIB && m_pFixedMeshDataOverride
 bShaderBlended
-bWantsFBCopyTexture
 bad_function_call
 basic_iostream
 basic_istream
@@ -1342,7 +1455,6 @@ bodygroup_choice
 bodygroup_driven_morph_list
 bodygroup_name
 bone
-boneColor
 bool
 bool __gnu_cxx::__is_null_pointer<__gnu_cxx::__normal_iterator<char*, std::string>>(__gnu_cxx::__normal_iterator<char*, std::string>)
 bool __gnu_cxx::__is_null_pointer<char const>(char const*)
@@ -1362,6 +1474,7 @@ burst
 burstRandomize
 byte
 cables_list
+calloc
 cannot create std::vector larger than max_size()
 chancetospawn
 char
@@ -1409,9 +1522,9 @@ description
 distancefield_data_block
 dl_iterate_phdr
 double
-drawLast
 dynamic_cast
 eCenteredCapsule
+eCenteredCylinder
 eCount
 eDeploy
 eDrop
@@ -1419,6 +1532,7 @@ eFast
 eGenericCapsule
 eGroundBox
 eGroundCapsule
+eGroundCylinder
 eHolster
 eIdleTurn
 eInstantStop
@@ -1444,9 +1558,8 @@ embedded_animation
 embedded_distancefield
 embedded_meshes
 embedded_physics
-environmentmapped
-environmentmappeddynamic
 error.vmesh
+expf
 eye_data
 eye_data_list
 f4MaxDist
@@ -1500,6 +1613,7 @@ fputs
 free
 friction
 fwrite
+g_flConfigMaxCoord
 g_flTValues0To1Inclusive<float vector[4]>
 g_flTValues0To1Inclusive<float>
 g_hSkeletonMeshLayout
@@ -1527,6 +1641,10 @@ hardware
 health
 hidden
 hidden alias for 
+hullivr_edge_merge_tan
+hullivr_faceisland_merge_disp
+hullivr_faceisland_merge_tan
+hullivr_version
 impactHardThreshold
 impacthard
 impactsoft
@@ -1568,6 +1686,7 @@ m_AxialEdges
 m_BindPose
 m_BodyGroupsHiddenInTools
 m_BodygroupOnOtherModels
+m_BoneMergeLinks
 m_Bounds
 m_BoxRigids
 m_CRC
@@ -1841,11 +1960,12 @@ m_eRbfType
 m_eType
 m_eType != eGenericCapsule
 m_eType != eGroundBox
-m_eType != eGroundCapsule && m_eType != eCenteredCapsule
-m_eType != eGroundCapsule && m_eType != eGenericCapsule && m_eType != eCenteredCapsule
+m_eType != eGroundCapsule && m_eType != eCenteredCapsule && m_eType != eCenteredCylinder && m_eType != eGroundCylinder
+m_eType != eGroundCapsule && m_eType != eGenericCapsule && m_eType != eCenteredCapsule && m_eType != eCenteredCylinder && m_eType != eGroundCylinder
 m_elasticity
 m_elems
 m_embeddedKeyvalues
+m_fEmissiveFactor
 m_feet
 m_flAddWorldCollisionRadius
 m_flAlongDamping
@@ -2010,6 +2130,7 @@ m_lodBoneCounts
 m_lodGroupSwitchDistances
 m_mWorldFromLocal
 m_material
+m_materialGroupToken
 m_materialGroups
 m_materials
 m_maxForce
@@ -2047,6 +2168,7 @@ m_nBoneWeightCount
 m_nBoxRigidIndex
 m_nBufferUsage
 m_nChild
+m_nChildNode
 m_nChoice
 m_nCollisionAttributeIndex
 m_nCollisionMask
@@ -2104,6 +2226,7 @@ m_nPackedSurfaceNormalOs
 m_nPackedSurfaceTangentOs
 m_nParent
 m_nParentBoneNameHash
+m_nParentHash
 m_nParticle
 m_nPrimitiveCount
 m_nPrimitiveType
@@ -2134,6 +2257,7 @@ m_nSlaveChannel
 m_nSlot
 m_nSlotType
 m_nSphereRigidIndex
+m_nSrcDrawIndex
 m_nStartIndex
 m_nStartIndexOffset
 m_nStaticNodeFlags
@@ -2160,6 +2284,10 @@ m_nVertexAlbedoOffset
 m_nVertexAlbedoStride
 m_nVertexAlbedoVB
 m_nVertexCount
+m_nVertexEmissiveFormat
+m_nVertexEmissiveOffset
+m_nVertexEmissiveStride
+m_nVertexEmissiveVB
 m_nVertexOffset
 m_nWidth
 m_nXLeftDst
@@ -2214,6 +2342,7 @@ m_resonant
 m_rigidMeshParts
 m_rnShape
 m_rolling
+m_rootBvhNodes
 m_roughThreshold
 m_roughnessFactor
 m_rtProxyDrawCalls
@@ -2311,11 +2440,6 @@ m_vertexBuffers
 m_wheelDrag
 m_wheelFrictionScale
 malloc
-mapbuilder.blocklight
-mapbuilder.detail
-mapbuilder.nodraw
-mapbuilder.sky
-mapbuilder.visblocker
 materialgroup_driven_morph_list
 materialgroup_name
 materials/tools/show_skeleton.vmat
@@ -2336,7 +2460,7 @@ mesh_index
 meshinstance_imp.cpp
 meshsystem
 meshsystem.cpp
-meshsystem.cpp(117): GetErrorModel() called before error model exists!\n
+meshsystem.cpp(118): GetErrorModel() called before error model exists!\n
 meshutils.cpp
 model
 model_default_preview_sequence_name
@@ -2392,6 +2516,7 @@ nVertexMapIndex
 name
 new 
 new[]
+nextafterf
 noexcept
 non-transaction clone for 
 non-virtual thunk to 
@@ -2425,13 +2550,14 @@ operator new[](unsigned long, std::align_val_t, std::nothrow_t const&)
 operator new[](unsigned long, std::nothrow_t const&)
 operator"" 
 optionallycompressedtangentframe
-overlay
 particles_list
 phys_data_block
+phys_res
 physics
 placementattachment
 placementbone
 position
+posix_memalign
 posxyz
 print_model_bind_pose
 projectedDecal
@@ -2473,6 +2599,7 @@ secure_getenv
 seqgroup_data_block
 short
 signed char
+sincosf
 sizeof 
 sizeof...
 skidstop
@@ -2484,9 +2611,6 @@ source_line
 sprintf
 staticImpactVolume
 static_cast
-std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_destroy()
-std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release()
-std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release_last_use()
 std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release_last_use_cold()
 std::_Sp_make_shared_tag::_S_ti()::__tag
 std::_V2::error_category::_M_message(int) const
@@ -2694,7 +2818,6 @@ std::__new_allocator<char>::deallocate(char*, unsigned long)
 std::__new_allocator<char>::~__new_allocator()
 std::__ptr_traits_ptr_to<char const*, char const, false>::pointer_to(char const&)
 std::__ptr_traits_ptr_to<char*, char, false>::pointer_to(char&)
-std::__shared_count<(__gnu_cxx::_Lock_policy)2>::operator=(std::__shared_count<(__gnu_cxx::_Lock_policy)2> const&)
 std::__sso_string::__sso_string()
 std::__sso_string::__sso_string(char const*, unsigned long)
 std::__sso_string::__sso_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)
@@ -2752,10 +2875,8 @@ std::basic_ostream<char, std::char_traits<char> >
 std::basic_string
 std::basic_string<char, std::char_traits<char>, std::allocator<char> >
 std::basic_string<char, std::char_traits<char>, std::allocator<char>> std::operator+<char, std::char_traits<char>, std::allocator<char>>(char const*, std::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)
-std::basic_string<char, std::char_traits<char>, std::allocator<char>> std::operator+<char, std::char_traits<char>, std::allocator<char>>(char const*, std::basic_string<char, std::char_traits<char>, std::allocator<char>>&&)
 std::basic_string<char, std::char_traits<char>, std::allocator<char>> std::operator+<char, std::char_traits<char>, std::allocator<char>>(char, std::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)
 std::basic_string<char, std::char_traits<char>, std::allocator<char>> std::operator+<char, std::char_traits<char>, std::allocator<char>>(std::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)
-std::basic_string<char, std::char_traits<char>, std::allocator<char>> std::operator+<char, std::char_traits<char>, std::allocator<char>>(std::basic_string<char, std::char_traits<char>, std::allocator<char>>&&, char const*)
 std::basic_string<char, std::char_traits<char>, std::allocator<char>>::basic_string()
 std::basic_string<char, std::char_traits<char>, std::allocator<char>>::basic_string(char const*, std::allocator<char> const&)
 std::basic_string<char, std::char_traits<char>, std::allocator<char>>::basic_string(char const*, unsigned long, std::allocator<char> const&)
@@ -2772,7 +2893,6 @@ std::basic_string<char, std::char_traits<char>, std::allocator<char>>::basic_str
 std::basic_string<char, std::char_traits<char>, std::allocator<char>>::basic_string<__gnu_cxx::__normal_iterator<char*, std::string>>(__gnu_cxx::__normal_iterator<char*, std::string>, __gnu_cxx::__normal_iterator<char*, std::string>, std::allocator<char> const&)
 std::basic_string<char, std::char_traits<char>, std::allocator<char>>::basic_string<char const*>(char const*, char const*, std::allocator<char> const&)
 std::basic_string<char, std::char_traits<char>, std::allocator<char>>::basic_string<char*>(char*, char*, std::allocator<char> const&)
-std::basic_string<char, std::char_traits<char>, std::allocator<char>>::basic_string<std::allocator<char>>(char const*, std::allocator<char> const&)
 std::basic_string<char, std::char_traits<char>, std::allocator<char>>::~basic_string()
 std::basic_string_view<char, std::char_traits<char>>::_S_compare(unsigned long, unsigned long)
 std::basic_string_view<char, std::char_traits<char>>::basic_string_view(char const*)
@@ -3064,6 +3184,7 @@ std::underflow_error::underflow_error(std::string const&)
 std::underflow_error::~underflow_error()
 std::unexpected()
 stderr
+stdin
 strain
 strchr
 strcmp
@@ -3095,9 +3216,6 @@ thread-local initialization routine for g_pThreadLocalStackAllocator
 throw
 throw 
 tmFrame2
-tools.light_volume_boundary
-tools.reference_notrace
-tools.toolsmaterial
 tools_vb_block
 transaction clone for 
 transaction clone for operator delete(void*)
@@ -3135,11 +3253,10 @@ transaction clone for std::runtime_error::~runtime_error()
 transaction clone for std::underflow_error::underflow_error(char const*)
 transaction clone for std::underflow_error::underflow_error(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)
 transaction clone for std::underflow_error::~underflow_error()
-translucent
-transmissive
 true
 typeinfo fn for 
 typeinfo for 
+typeinfo for IFormatOutputStream
 typeinfo for __cxxabiv1::__class_type_info
 typeinfo for __cxxabiv1::__forced_unwind
 typeinfo for __cxxabiv1::__foreign_exception
@@ -3150,7 +3267,6 @@ typeinfo for __gnu_cxx::__concurrence_unlock_error
 typeinfo for __gnu_cxx::recursive_init_error
 typeinfo for std::_Mutex_base<(__gnu_cxx::_Lock_policy)2>
 typeinfo for std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>
-typeinfo for std::_Sp_make_shared_tag
 typeinfo for std::_V2::error_category
 typeinfo for std::bad_alloc
 typeinfo for std::bad_array_new_length
@@ -3215,7 +3331,6 @@ unsigned long
 unsigned long const& std::min<unsigned long>(unsigned long const&, unsigned long const&)
 unsigned long long
 unsigned short
-userdefinedsheets
 vCenter
 vCenterOfMass
 vLocalMax
@@ -3232,6 +3347,7 @@ vector2
 vector3
 vector4
 vector::_M_default_append
+vectorws
 vehicleparams
 very_fast
 virtual thunk to 
@@ -3249,8 +3365,8 @@ void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<cha
 void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_construct<char*>(char*, char*, std::forward_iterator_tag)
 void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_construct<char*>(char*, char*, std::forward_iterator_tag)::_Guard::_Guard(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>*)
 void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_construct<char*>(char*, char*, std::forward_iterator_tag)::_Guard::~_Guard()
-void std::__detail::__to_chars_10_impl<unsigned int>(char*, unsigned int, unsigned int)
 vphysics2
+vsnprintf
 vtable for 
 vtable for __cxxabiv1::__class_type_info
 vtable for __cxxabiv1::__forced_unwind

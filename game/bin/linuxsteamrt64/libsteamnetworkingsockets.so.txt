@@ -207,7 +207,6 @@
 "u\n"CMsgSteamDatagramCertificateSigned
 #%d POP '%s' not previously sent
 #%d route %s-%s was not sent
-#%u %s '%s'
 #:*S8,}gNzl
 #Q7z
 #SteamNetSockets_AppClose_Normal
@@ -390,6 +389,7 @@ $d`D-laM
 %s sent routing secret in msg 0x%02x.  Marking as fully trusted.  (Previous trust was %d)\n
 %s set to_virtual_port in rendezvous when connecting by FakeIP; ignored
 %s#%d (via %s %s)
+%s#%u %s '%s'
 %s%02X
 %s%02x
 %s%lld
@@ -571,7 +571,7 @@ $d`D-laM
 ,AckPeerRoutes 
 ,AlsoSentViaRelay
 ,Reason=
-,RoutesChanged
+,RoutesChanged(peer_acked=%d,current=%d)
 ,\n$encryption_your_public_key_lead_byte
 ,\n(k_ESteamDatagramMsg_TicketDecryptRequest
 ,name:
@@ -739,7 +739,6 @@ $d`D-laM
 0123456789abcdef
 08bX
 0Z@q
-0\7!6w#
 0\n(legacy_authorized_client_identity_binary
 0\n,k_ESteamDatagramMsg_GameserverSessionRequest
 0\r0#0)070;0U0Y0[0g0q0y0}0
@@ -1508,6 +1507,7 @@ Assertion Failed: g_vecSharedClusterDataInConfigOrder.size() == g_SteamDatagramN
 Assertion Failed: g_vecSharedClusterDataInConfigOrder.size() == m_vecClusters.size()
 Assertion Failed: gapFilled->first < gapFilled->second
 Assertion Failed: gapFilled->first <= nSegBegin
+Assertion Failed: gapFilled->second > nSegBegin
 Assertion Failed: hAPICall != k_uAPICallInvalid
 Assertion Failed: has_element( m_vecLinkedConnections, pConn )
 Assertion Failed: identity.m_cbSize <= sizeof( identity.m_genericBytes )
@@ -1892,10 +1892,7 @@ Assertion Failed: nRemoteVirtualPort == k_nVirtualPort_Messages
 Assertion Failed: nRemoteVirtualPort >= -1 && nRemoteVirtualPort <= 0xffff
 Assertion Failed: nSDR_POPID
 Assertion Failed: nScore >= 0 || m_vecAvailableTransports.size() == 1
-Assertion Failed: nSegBegin < gapFilled->second
 Assertion Failed: nSegBegin < nSegEnd
-Assertion Failed: nSegBegin > gapFilled->first
-Assertion Failed: nSegEnd < gapFilled->second
 Assertion Failed: nSize >= 0
 Assertion Failed: nTotalPenalty >= 0
 Assertion Failed: nTotalWeightActiveLanes == 0
@@ -1988,7 +1985,6 @@ Assertion Failed: pMsg->m_linksSecondaryQueue.m_pQueue == nullptr
 Assertion Failed: pMsg->m_linksSecondaryQueue.m_pQueue == pCheckQueue
 Assertion Failed: pMsg->m_nMessageNumber > nLastMsgNumForUnreliable
 Assertion Failed: pMsg->m_pfnFreeData == CSteamNetworkingMessage::DefaultFreeData
-Assertion Failed: pMsgInsertBefore->m_links.m_pQueue == &m_queueRecvMessages
 Assertion Failed: pMsgInsertBefore->m_linksSecondaryQueue.m_pQueue == nullptr
 Assertion Failed: pNextForTarget->m_pPrevTaskForTarget == pTask
 Assertion Failed: pNextForTarget->m_pTarget == pTarget
@@ -2071,6 +2067,7 @@ Assertion Failed: pszFmt && *pszFmt
 Assertion Failed: pszVal && *pszVal
 Assertion Failed: ptr + escape_overhead < s
 Assertion Failed: ptr < end && *ptr == '\"'
+Assertion Failed: ptr->m_links.m_pQueue == &m_queueRecvMessages
 Assertion Failed: pubData
 Assertion Failed: pubKey
 Assertion Failed: pubKey != nullptr
@@ -3529,7 +3526,6 @@ ExtensionRangeOptions
 Extensions in proto3 are only allowed for defining options.
 Extensions of MessageSets must be optional messages.
 Extensions to non-lite types can only be declared in non-lite files.  Note that you cannot extend a non-lite type to contain a lite type, but the reverse is allowed.
-Extra control data returned besides TOS?  0x%x/0x%x
 Extra text starting with character 0x%02x='%c'
 ExtractSubrange() when arena is non-NULL is only supported when 
 F6tr
@@ -3587,7 +3583,7 @@ Failed to parse gameserver identity.  %s
 Failed to parse result JSON.  Line %d, offset %d: %s
 Failed to parse string
 Failed to send P2P signal
-Failed to serialize identity to %s message.  %s
+Failed to serialize identity to message.  %s
 Failed to set cached certificate.  %s
 Failed to set socket for IPv6 only (IPV6_V6ONLY=1).  Error code 0x%08X.  Continuing anyway.\n
 Failed to set socket for dual stack (IPV6_V6ONLY=0).  Error code 0x%08X.
@@ -3705,7 +3701,6 @@ Files that do not use optimize_for = LITE_RUNTIME cannot import files which do u
 Files with optimize_for = LITE_RUNTIME cannot define services unless you set both options cc_generic_services and java_generic_services to false.
 FinalizeLocalCrypto
 FindServerDataForCluster
-Fingerprint check failed: %x vs. %x
 First argument to Swap() (of type "
 First argument to SwapFields() (of type "
 Flags
@@ -3825,7 +3820,6 @@ GetUInt32
 GetUInt64
 Giving up on %s after %d consecutive ping timeouts
 Google.Protobuf.Reflection
-Got %s expected %s\n
 Got SDR network config.  %s
 Got a rendezvous candidate at "%s"\n
 Got callback for wrong request?
@@ -3926,8 +3920,8 @@ ITU-T
 I\nlQ
 I\tHA\t981G'dc
 IdempotencyLevel
+Identity %s isn't valid for Messages sessions.
 Identity is blank
-Identity isn't valid for Messages sessions.
 If you specify a port for SDR_IP/SDR_IP6, you must specify the same port for both
 Ignoring Empty POP '%s'
 Ignoring P2P CMsgSteamDatagramConnectRequest from %s to FakeIP %s.  Invalid from_fake_ip '%s'
@@ -4226,7 +4220,8 @@ Message from relay session %u mapped to %s, but that connection has no Transport
 Message is too deep, the parser exceeded the configured recursion limit of 
 Message missing required fields: 
 Message of type "
-Message size %d is too big.  Max is %d
+Message size %d is too big.  Max internal size is %d
+Message size %u is too big.  Max is %d
 Message type "
 MessageLite at 0x
 MessageOptions
@@ -5224,7 +5219,6 @@ ReleaseLast
 ReleaseLast() called on a RepeatedPtrField that is on an arena, 
 ReleaseMessage
 Reliable message number lurch.  Last reliable %lld, offset %llu, highest seen %lld
-Reliable message size %d too large.
 Reliable message size too large.  (%llu<<5 + %d)
 ReliableMessage
 ReliableRTO
@@ -5393,6 +5387,7 @@ SNP decode first reliable stream pos underflow.  %llx mod %llx, expected next %l
 SNP decode overrun %d bytes for %s segment data.
 SNP decode overrun, %d bytes for %s
 SNP decode unreliable msgnum underflow.  %llx mod %llx, highest seen %llx
+SNP stop waiting advanced past sentinel gap.  This should never happen!
 SNP stop waiting reduced %lld (pkt %lld) -> %lld (pkt %lld)
 SNP_SendPacket
 SPEED
@@ -5780,6 +5775,7 @@ Unauthenticated connections not allowed.
 Unencrypted
 Unencrypted addresses only allowed to 'dev' POPID
 Unexpected AvailAnyRouterCommunication %d
+Unexpected IPV6_TCLASS cmsg_len %lld
 Unexpected IP_TOS cmsg_len %lld
 Unexpected NoConnection
 Unexpected P2PSessionError %d
@@ -9115,7 +9111,7 @@ length is greater than %ld\n
 length too long
 length_ >= n
 level_add_node
-lib Feb 10 2026 01:04:29
+lib Apr 30 2026 04:22:17
 lib(%lu)
 libc.so.6
 libm.so.6
@@ -10444,6 +10440,7 @@ socket() call failed.  Error code 0x%08x.
 socketpair
 socketpair() call failed.  Error code 0x%08x.
 sockopt(IPPROTO_IP, IP_RECVTOS, 1) failed (0x%x), will not be able to read TOS\n
+sockopt(IPPROTO_IPV6, IPV6_RECVTCLASS, 1) failed (0x%x), will not be able to read TOS for IPv6 packets\n
 source_code_info
 span
 spkac
@@ -10590,6 +10587,7 @@ steamnetworkingsockets_messages.proto
 steamnetworkingsockets_messages_certs.proto
 steamnetworkingsockets_messages_udp.proto
 stop_waiting offset
+stop_waiting past sentinel gap
 stop_waiting pktNum %llu offset %llu
 store init error
 str:

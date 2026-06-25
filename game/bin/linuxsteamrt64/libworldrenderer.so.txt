@@ -35,7 +35,6 @@
  throw
  transaction_safe
  volatile
-!link
 !m_boolDone
 !m_boolOpaque
 !m_boolPunchThroughPixels
@@ -52,11 +51,11 @@ $ORIGIN
 %d %d %d %d
 %d (s/n %d)
 %daT
-%f %f %f %f
 %g %g %g %g
 %lld
 %llu
 %s  '%s' --> '%s' : %s (%s) [delay=%.2f;times=%d;type=%d]\n
+%s %s %s %s
 %s - Blackboard reference %s: %u (%s) type mismatches
 %s - Could not find blackboard instance for %s
 %s - Could not find blackboard reference %s: %u (%s)
@@ -109,6 +108,8 @@ $ORIGIN
 *N12_GLOBAL__N_121future_error_categoryE
 *N12_GLOBAL__N_121system_error_categoryE
 *N12_GLOBAL__N_122generic_error_categoryE
+*N30PulseBindingSchemaEnumTraits_tI25PulseCursorWakePriority_tEUlvE1_E
+*N30PulseBindingSchemaEnumTraits_tI25PulseCursorWakePriority_tEUlvE2_E
 *N30PulseBindingSchemaEnumTraits_tI27PulseCursorCancelPriority_tEUlvE0_E
 *N30PulseBindingSchemaEnumTraits_tI27PulseCursorCancelPriority_tEUlvE_E
 *NSt13__facet_shims12_GLOBAL__N_112collate_shimIcEE
@@ -128,7 +129,23 @@ $ORIGIN
 *NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIwLb0EEE
 *NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIwLb1EEE
 *St19_Sp_counted_deleterIPhZN3Etc13EncodeMipmapsEPfjjNS1_5Image6FormatENS1_11ErrorMetricEfjjjjPNS1_8RawImageEPibEUlS0_E_SaIvELN9__gnu_cxx12_Lock_policyE2EE
+*ZN13CSOAContainer10FilterFromERKS_iiiiiPKfbEUlvE0_
+*ZN13CSOAContainer10FilterFromERKS_iiiiiPKfbEUlvE_
+*ZN13CSOAContainer17SrgbGammaToLinearEiEUlvE_
+*ZN13CSOAContainer17SrgbLinearToGammaEiEUlvE_
+*ZN13CSOAContainer21GenerateDistanceFieldEiiiP8Rect3D_tEUlvE_
+*ZN13CSOAContainer24IIRGaussianApproximationEjfEUliiE0_
+*ZN13CSOAContainer24IIRGaussianApproximationEjfEUliiE1_
+*ZN13CSOAContainer24IIRGaussianApproximationEjfEUliiE_
+*ZN13CSOAContainer28QuarterSizeAttrWithBoxFilterERKS_iiP10CCallQueueEUlvE0_
+*ZN13CSOAContainer28QuarterSizeAttrWithBoxFilterERKS_iiP10CCallQueueEUlvE_
+*ZN13CSOAContainer32Normalized3x3SobelEdgeFilterFromERKS_iiibEUlvE0_
+*ZN13CSOAContainer32Normalized3x3SobelEdgeFilterFromERKS_iiibEUlvE_
+*ZN13CSOAContainer37Normalize3ComponentVectorInAttributesEiii5Vec3DIfEbbEUlvE0_
+*ZN13CSOAContainer37Normalize3ComponentVectorInAttributesEiii5Vec3DIfEbbEUlvE_
 *ZN13CSOAContainer8FillAttrEifEUlvE_
+*ZN13CSOAContainer9FilterInYEi9IntAABB_tiPKfbEUlvE_
+*ZN13CSOAContainer9FilterInZEi9IntAABB_tiPKfbEUlvE_
 *ZN17CWorldRendererMgr15UnmountWorldVPKEPKcbEUlvE_
 *ZN17CWorldRendererMgr22HandleGrassLoadRequestEP18GrassLoadRequest_tEUlP18IAsyncReadRequest220AsyncRequestStatus_tE_
 *ZN3Etc13EncodeMipmapsEPfjjNS_5Image6FormatENS_11ErrorMetricEfjjjjPNS_8RawImageEPibEUlPhE_
@@ -140,18 +157,17 @@ $ORIGIN
 -+xX0123456789abcdefABCDEF
 --%s is at refcount %d\n
 --forward-all-args--
---single-literal--
+--old-connection-literal--
 -0123456789
 -Stop: 
 -end of input-(
+-memory-
 -unknown source-
 -unknown source-(
 ../../public/tier0/tslist.h
 ../public/tier0/threadtoolstypes.h
 ../public/tier0/utldict.h
 ../public/tier0/utlmap.h
-../public/tier0/utlrbtree.h
-../public/tier0/utlsymboltablelarge.h
 .vpk
 .vwnod
 /data/src/mathlib/extended/generic_expr.g
@@ -181,14 +197,12 @@ $ORIGIN
 0 0 0 255
 0 = Density corresponds to blade existance, 1 = Density corresponds to blade height, 2 = Both 0 and 1
 0 = Off, 1 = Low, 2 = Med, 3 = high, 4 = ultra
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789
 10CEntityMgr
 10ConCommand
 10IAppSystem
 11CGrassWorld
 11CRefCountedI20CRefCountServiceBaseI6CRefMTEE
-11CRenderMesh
 12CSceneObject
 12CThreadEvent
 13CScriptScopeTI22CDefScriptAccessorBaseLb1EE
@@ -209,7 +223,6 @@ $ORIGIN
 15CTier1AppSystemI17IWorldRendererMgrLx0EE
 15CTier2AppSystemI17IWorldRendererMgrLx0EE
 15CTier3AppSystemI17IWorldRendererMgrLx0EE
-15ISaveRestoreOps
 15IWorldReference
 16CEntityComponent
 16CGenericExprPart
@@ -222,7 +235,6 @@ $ORIGIN
 17CWorldRendererMgr
 17IPulseHost_Cursor
 17IWorldRendererMgr
-18CDefSaveRestoreOps
 18CGenericExpr_Unary
 18CWorldVPKReference
 18IPulseHost_Unknown
@@ -268,6 +280,7 @@ $ORIGIN
 26CPulseInstanceLoadAPI_NoOp
 26CPulseInstanceSaveAPI_NoOp
 26ICommandCompletionCallback
+26IKV3TransferSaveRestoreOps
 27CSchemaRegistration_entity2
 27CVoxelVisibilityTypeManager
 28CBaseVModuleMetadataProvider
@@ -328,6 +341,7 @@ $ORIGIN
 <no failure reason set>
 <no targetname>
 <no text for the token>
+<non-RTTI type>
 <none>
 <pointer>
 <table: %u members>
@@ -572,15 +586,17 @@ ASCII//TRANSLIT
 ASEs implemented
 ATI1N
 ATI2N
-ATTACHMENT_INFLUENCE_FLAGS_NONE
 AYUVToNV12
 AYUVToNV21
 AYUVToUVRow_C
 AYUVToVURow_C
 AYUVToYRow_C
-Abort
+Activate
 Actually dude, we didn't seem to be expecting anything here, or at least\n
+Add an output
+AddOutput
 AddPage
+AddResource
 Adds an I/O connection that will call the named function on the passed entity when the specified output fires.
 Adds an I/O connection that will call the named function on this entity when the specified output fires.
 AggregateInstanceStream
@@ -594,6 +610,7 @@ AggregateSceneObjectDesc
 AggregateSceneObject_t
 AggregateVertexAlbedoStreamOnDiskData_t
 AggregateVertexColorStream
+AggregateVertexEmissiveStreamOnDiskData_t
 AlignedByteArray not properly aligned\n
 Alloc
 AllocateAndLoad failed for '%s' (%s)\n
@@ -608,6 +625,7 @@ Android420ToARGBMatrix
 Android420ToI420
 Android420ToI420Rotate
 Angle
+Anim Sequence
 AnimGraphEditorUtils001
 AnimationSystemUtils_001
 AnimationSystem_001
@@ -650,6 +668,11 @@ Bad type %d in saved CVariant\n
 BakedLODBuilderMgr001
 BakedLightingInfo_t
 BakedLightingInfo_t::BakedShadowAssignment_t
+Base Flow  Cancel After
+Base Flow  Cancel Elegantly
+Base Flow  Cancel Immediately
+Base Flow  Wake Elegantly
+Base Flow  Wake Immediately
 Base Pulse Domain
 Base recognizer function 'alreadyParsedRule' called by unknown parser type - provide override for this function\n
 Base recognizer function 'consumeUntil' called by unknown parser type - provide override for this function\n
@@ -696,28 +719,39 @@ Broken promise
 ByteToFloat
 ByteToFloatRow_C
 CAtomicMutex::AcquireLock(unsigned long long)
-CBaseConstraint
 CBasePulseGraphInstance
 CBufferString::AppendConcat(int, char const* const*, int const*, bool)
 CBufferString::AppendFormat(char const*, ...)
 CBufferString::AppendFormatV(char const*, __va_list_tag*)
+CBufferString::ComposeFileName(char const*, char const*, char)
+CBufferString::EndsWith(char const*) const
+CBufferString::ExtendPath(char const*, char, bool)
 CBufferString::ExtractFileBase(char const*, bool)
 CBufferString::ExtractFilePath(char const*, bool)
 CBufferString::FixSlashes(char)
 CBufferString::FixupPathName(char)
 CBufferString::Format(char const*, ...)
+CBufferString::FormatTo(IFormatOutputStream*, CFormatStringElement) const
 CBufferString::Insert(int, char const*, int, bool)
+CBufferString::MakeAbsolutePath(char const*, char const*)
+CBufferString::MakeRelativePath(char const*, char const*, bool)
 CBufferString::MoveFrom(CBufferString&)
 CBufferString::Purge(int)
 CBufferString::RemoveAt(int, int)
+CBufferString::RemoveDotSlashes(char)
+CBufferString::RemoveFirstDir(CBufferString*)
 CBufferString::Replace(char const*, char const*, bool)
 CBufferString::SetExtension(char const*, bool)
 CBufferString::SetLength(int, bool, int*)
 CBufferString::SetPtr(char*, int, int, bool, bool)
+CBufferString::ShortenPath(bool)
+CBufferString::StripTrailingSlash()
 CBufferString::ToLowerFast(int)
 CBufferString::TrimTail(char const*)
 CBufferString::TruncateAt(int, bool)
 CCallQueue::ParallelCallQueued(char const*, IThreadPool*)
+CCharBufferFormatOutputStream::PutC(char)
+CCharBufferFormatOutputStream::Terminate()
 CEmptyEntityInstance
 CEntityAttributeTable
 CEntityComponent
@@ -726,28 +760,51 @@ CEntityHandle
 CEntityIOOutput
 CEntityIdentity
 CEntityIdentity *
+CEntityIdentity::SetEntityName called, but there is no entity name string table pointer!\n
 CEntityInstance
 CEntityInstance: Root class for all entities
 CEntityKeyValues
 CEntityKeyValues::LegacyUnserialize: Unable to read from a text-based utlbuffer!\n
+CEntityKeyValues::LegacyUnserializeKeys - Unrecognized key type (%d)!\n
 CEntityKeyValues::LoadFromContext: Invalid version! Expected %d, encountered %d!\n
 CEntityKeyValues::Unserialize: Invalid version! Expected %d, encountered %d!\n
-CEntityKeyValues::Unserialize: Unsupported keyvalue variant type (%d)!\n
 CEntityOutputTemplate
+CFormatStringElement::CFormatStringElement(char const*)
 CGrassTileObjectDesc
+CGridStringPrinter::DelimitedHeader(char, char const*, ...)
+CGridStringPrinter::DelimitedPrint(char, char const*, ...)
+CGridStringPrinter::SetColumnHeader(int, char const*)
+CGridStringPrinter::SetColumnJustification(int, bool)
+CGridStringPrinter::SetString(int, int, char const*)
+CGridStringPrinter::Spew(int, char const*) const
 CHandle
+CKeyValues_Data::Internal_GetString(char const*, char*, unsigned long)
 CLOSE_BRACE
 CLOSE_BRACKET
 CLOSE_PAREN
 CMemAllocSystemInitialize
+CMemoryStack::CMemoryStack()
+CMemoryStack::Init(char const*, unsigned int, unsigned int, unsigned int, unsigned int)
+CMemoryStack::MaybeCommitTo(unsigned char*)
+CMemoryStack::Purge(bool)
+CMemoryStack::~CMemoryStack()
+CNativeOutputs
 CNetworkSerializerClassInfo::Get( %s ) failed!\n
 CNetworkUtlVectorBase
 CNetworkVarChainer
 COMMA
+COM_TimestampedLog
 CPulseCell_Base
 CPulseCell_BaseFlow
+CPulseCell_BaseLerp
 CPulseCell_BaseRequirement
 CPulseCell_BaseYieldingInflow
+CPulseCell_BaseYieldingInflow::BaseFlow_CancelAfter
+CPulseCell_BaseYieldingInflow::BaseFlow_CancelElegantly
+CPulseCell_BaseYieldingInflow::BaseFlow_CancelImmediately
+CPulseCell_BaseYieldingInflow::BaseFlow_WakeElegantly
+CPulseCell_BaseYieldingInflow::BaseFlow_WakeImmediately
+CPulseCell_FireCursors::Cancel
 CPulseCell_Inflow_BaseEntrypoint
 CPulseCell_Inflow_EntOutputHandler
 CPulseCell_Inflow_EventHandler
@@ -763,23 +820,29 @@ CPulseCell_Inflow_Yield
 CPulseCell_Inflow_Yield::Abort
 CPulseCell_Inflow_Yield::Pause
 CPulseCell_Inflow_Yield::Resume
-CPulseCell_InlineNodeSkipSelector
-CPulseCell_InlineNodeSkipSelector::ProcessSelector
-CPulseCell_IsRequirementValid
-CPulseCell_IsRequirementValid::CheckRequirement
-CPulseCell_IsRequirementValid::Criteria_t
-CPulseCell_LimitCount
-CPulseCell_LimitCount::CheckRequirement
-CPulseCell_LimitCount::CommitStep
-CPulseCell_LimitCount::Criteria_t
+CPulseCell_IntervalTimer::StopTimer
 CPulseCell_Outflow_CycleOrdered
 CPulseCell_Outflow_CycleOrdered::Run
 CPulseCell_Outflow_CycleRandom
 CPulseCell_Outflow_CycleRandom::Run
 CPulseCell_Outflow_CycleShuffled
 CPulseCell_Outflow_CycleShuffled::Run
-CPulseCell_PickBestOutflowSelector
-CPulseCell_PickBestOutflowSelector::ProcessSelector
+CPulseCell_Outflow_ListenForAnimgraphTag::Cancel
+CPulseCell_Outflow_ListenForEntityOutput::Cancel
+CPulseCell_Outflow_NPCAccompanyEntity::Cancel
+CPulseCell_Outflow_NPCFollowTarget::Cancel
+CPulseCell_Outflow_NPCLeadPlayer::Cancel
+CPulseCell_Outflow_NPCScriptedIdle::Cancel
+CPulseCell_Outflow_NPCScriptedIdle::CancelElegantly
+CPulseCell_Outflow_NPCScriptedMoveTo::Cancel
+CPulseCell_Outflow_NPCUseScriptedAbility::Cancel
+CPulseCell_Outflow_PlaySequence::Cancel
+CPulseCell_Outflow_PlaySequence::CancelAtInterrupt
+CPulseCell_Outflow_PlayVCD::Cancel
+CPulseCell_Outflow_PlayVCD::CancelAtInterrupt
+CPulseCell_Outflow_PlayVOLine::Cancel
+CPulseCell_Outflow_ScriptedSequence::Cancel
+CPulseCell_PlaySequence::Cancel
 CPulseCell_Step_CallExternalMethod
 CPulseCell_Step_CallExternalMethod::Run
 CPulseCell_Step_CallExternalMethod::StopWaiting
@@ -787,24 +850,27 @@ CPulseCell_Step_DebugLog
 CPulseCell_Step_DebugLog::Run
 CPulseCell_Step_PublicOutput
 CPulseCell_Step_PublicOutput::Run
+CPulseCell_Timeline::Stop
 CPulseCell_Value_RandomFloat
 CPulseCell_Value_RandomFloat::Eval
 CPulseCell_Value_RandomInt
 CPulseCell_Value_RandomInt::Eval
+CPulseCell_WaitForObservable::Cancel
 CPulseExecCursor
 CPulseRuntimeMethodArg
 CPulseValueFullType
+CPulse_ResumePoint
 CRC32_ProcessBuffer
+CRC64_ProcessBuffer
 CRenderBufferBinding
-CRenderGroom
-CRenderMesh
-CRenderSkeleton
 CSOAContainer::SetAttributeType - ERROR, trying to change type of previously-defined attribute %d!\n
-CSceneObjectData
 CScriptComponent
 CScriptComponent::Storage_t
 CScriptComponentReferenced
 CScriptComponentReferencedPtr
+CScriptKeyValues
+CScriptNativeOutputs
+CScriptPrecacheContext
 CSplitString::Split(char const*, int, char const**, int, bool)
 CStrongHandle
 CStrongHandleCopyable
@@ -813,6 +879,10 @@ CTSListBase::Detach()
 CTSListBase::InternalPop()
 CTSListBase::InternalPush(TSLNodeBase_t*)
 CTSQueue corruption
+CThreadMultiWaitEvent::CThreadMultiWaitEvent(bool)
+CThreadMultiWaitEvent::Reset()
+CThreadMultiWaitEvent::Set()
+CThreadMultiWaitEvent::~CThreadMultiWaitEvent()
 CThreadRWLock_FastRead::CThreadRWLock_FastRead()
 CThreadRWLock_FastRead::EncounteredComplexReadLockOperation(unsigned int, bool, char const*, int)
 CThreadRWLock_FastRead::HaveWriteLock_BlockReadsNow(bool)
@@ -823,54 +893,96 @@ CThreadSemaphore::~CThreadSemaphore()
 CThreadSyncObject::Wait(unsigned int)
 CThreadSyncObject::WaitImpl(unsigned int)
 CThreadSyncObject::~CThreadSyncObject()
+CUniformRandomStreamImpl<CThreadNullMutex>::CUniformRandomStreamImpl(int)
+CUniformRandomStreamImpl<CThreadNullMutex>::RandomFloat(float, float)
+CUniformRandomStreamImpl<CThreadNullMutex>::RandomInt(int, int)
 CUtlBinaryBlock
 CUtlBinaryBlock::Set(void const*, int)
 CUtlBinaryBlock::SetLength(int)
 CUtlBinaryBlock::operator=(CUtlBinaryBlock&&)
-CUtlBuffer::AccessGet(int)
 CUtlBuffer::AddNullTermination()
 CUtlBuffer::CUtlBuffer(int, int, CUtlBuffer::BufferFlags_t)
 CUtlBuffer::CUtlBuffer(void const*, int, CUtlBuffer::BufferFlags_t)
 CUtlBuffer::CheckArbitraryPeekGet(int, int&)
 CUtlBuffer::CheckGet(int)
+CUtlBuffer::CheckPut(int)
 CUtlBuffer::EnsureCapacity(int)
+CUtlBuffer::Get(void*, int)
+CUtlBuffer::GetOverflow(int)
 CUtlBuffer::GetString(CBufferString*)
+CUtlBuffer::ParseToken(characterset_t const*, char*, int, bool)
+CUtlBuffer::PeekGet(int, int)
 CUtlBuffer::PeekStringLength()
+CUtlBuffer::Printf(char const*, ...)
+CUtlBuffer::Put(void const*, int)
+CUtlBuffer::PutString(char const*)
 CUtlBuffer::SeekGet(CUtlBuffer::SeekType_t, int)
+CUtlBuffer::SeekPut(CUtlBuffer::SeekType_t, int)
+CUtlBuffer::SetBigEndian(bool)
 CUtlBuffer::SetExternalBuffer(void*, int, int, CUtlBuffer::BufferFlags_t)
+CUtlBuffer::SetOverflowFuncs(bool (CUtlBuffer::*)(int), bool (CUtlBuffer::*)(int))
+CUtlBuffer::WriteToFile(char const*, bool)
 CUtlLeanVector
-CUtlLeanVectorFixedGrowable
+CUtlMemoryPoolBase::Alloc()
+CUtlMemoryPoolBase::CUtlMemoryPoolBase(int, int, int, MemoryPoolGrowType_t, char const*, MemAllocAttribute_t)
+CUtlMemoryPoolBase::ClearDestruct(void (*)(void*))
+CUtlMemoryPoolBase::~CUtlMemoryPoolBase()
 CUtlOrderedMap
 CUtlScratchMemoryPool::AllocAligned(int, int)
+CUtlScratchMemoryPool::CUtlScratchMemoryPool()
+CUtlScratchMemoryPool::CUtlScratchMemoryPool(unsigned int, unsigned int, void*, bool)
+CUtlScratchMemoryPool::FreeToAllocPoint(UtlScratchMemoryPoolMark_t)
+CUtlScratchMemoryPool::GetCurrentAllocPoint() const
+CUtlScratchMemoryPool::Init(unsigned int, unsigned int, void*, bool)
+CUtlScratchMemoryPool::~CUtlScratchMemoryPool()
 CUtlString
 CUtlString::Acquire(CBufferString*, bool)
 CUtlString::Append(char const*)
+CUtlString::Append(char const*, int)
+CUtlString::CUtlString(CBufferString const&)
 CUtlString::FixSlashes(char)
 CUtlString::Format(char const*, ...)
+CUtlString::FormatV(char const*, __va_list_tag*)
 CUtlString::FreeMemoryBlock()
+CUtlString::GetBaseFilename() const
 CUtlString::GetForModify()
+CUtlString::IsEqual_CaseSensitive(char const*) const
 CUtlString::IsEqual_FastCaseInsensitive(char const*) const
+CUtlString::Left(int) const
 CUtlString::Purge()
 CUtlString::RemoveFromStart(char const*, bool) const
 CUtlString::Replace(char const*, char const*, bool) const
 CUtlString::Set(char const*)
 CUtlString::SetDirect(char const*, int)
+CUtlString::SetLength(int)
 CUtlString::Slice(int, int) const
 CUtlString::StripExtension() const
 CUtlString::TrimRight(char const*)
+CUtlString::operator+(char const*) const
 CUtlString::operator+=(char const*)
+CUtlString::operator=(CBufferString const&)
+CUtlString::operator==(CUtlString const&) const
+CUtlStringAndTokenWithStorage::KV3TransferLoad(CKV3TransferLoadContext*)
 CUtlStringToken
+CUtlStringTokenNoRegistration
 CUtlSymbolLarge
 CUtlSymbolTable::AddString(char const*, bool*)
 CUtlSymbolTable::CUtlSymbolTable(int, int, bool)
 CUtlSymbolTable::Find(char const*) const
 CUtlSymbolTable::RemoveAll()
+CUtlSymbolTable::String(CUtlSymbol) const
 CUtlSymbolTable::~CUtlSymbolTable()
 CUtlSymbolTableLarge element limit of %u exceeded\n
 CUtlVector
 CUtlVectorEmbeddedNetworkVar
+CVariableBitStringBase::FreeInts()
+CVariableBitStringBase::Resize(int)
 CVariantBase
 CVariantDefaultAllocator
+CVertexKDTree::BuildMidpoint(float const*, int, int)
+CVertexKDTree::BuildMidpointFromVertexSubSet(float const*, int, int const*, int)
+CVertexKDTree::FindVertsInBox(CUtlVectorFixedGrowable<float const*, 64ul, int>&, Vec3D<float> const&, Vec3D<float> const&, int) const
+CVertexKDTree::Nearest(Vec3D<float> const&, CUtlVectorFixedGrowable<float const*, 64ul, int>&) const
 CVoxelVisibility
 CWorld::CacheNodes
 CWorldNode::GrassFileCreateManifest
@@ -880,19 +992,21 @@ CWorldRendererMgr::ServiceWorldRequests long frame: %fms\n
 C_NetworkUtlVectorBase
 C_UtlVectorEmbeddedNetworkVar
 CallScriptFunction
-Cancel any waiting cursors.
 CancelOnSucceeded
 Cannot allocate abstract class
 Cannot convert KV3 type '%s' (%u) to a string token
+Cannot destruct abstract class
 Cannot reference domain '%s' from '%s'\n
 Cannot reinterpret instance (actual: %s) from (original) %s to (desired) %s
+Cannot run script: NULL script name\n
 Cast of %s loses value information (returning %s)\n
 ChangeAccessorFieldPathIndex_t
 CharacterSetBuild
-Check Requirement
 ClampFloatToZero_SSE2
 Class data is a '%s', not a table\n
 Class does not allow allocation from its schema binding
+Class does not allow destruction from its schema binding
+ClientLocalServerAccess001
 ClientServerSharedHandleSystem001
 ClientToolsInfo_001
 ClutterSceneObjectDesc
@@ -900,7 +1014,6 @@ ClutterSceneObject_t
 ClutterTile_t
 Color
 CommandLine
-Commit Step
 Complexity of regex match exceeded implementation limits
 ComputeCumulativeSumRow_C
 ComputeCumulativeSumRow_SSE2
@@ -908,6 +1021,9 @@ Conflicting regex grammar options
 ConnectOutput
 ConnectOutputToScript
 ConnectOutputToScriptSelf
+Container to hold context published to precache functions in script
+Container to hold keyvalues published to spawn functions in script
+Container to hold outputs published by script to game
 Convert16To8Plane
 Convert16To8Row_AVX2
 Convert16To8Row_Any_AVX2
@@ -920,6 +1036,7 @@ Convert8To16Row_Any_AVX2
 Convert8To16Row_Any_SSE2
 Convert8To16Row_C
 Convert8To16Row_SSE2
+ConvertKV3Format
 ConvertToLSBPlane_16
 ConvertToMSBPlane_16
 CopyPlane
@@ -935,10 +1052,12 @@ Could not decode alpha data.
 Could not execute '%s' because this graph domain does not support the required IPulseHost
 Couldn't ReadTexturePixels when creating grass.\n
 CpuId
+CreateEntity
 CreateInterface
 Creating %i scene objects for node %i\n
 CumulativeSumToAverageRow_C
 CumulativeSumToAverageRow_SSE2
+Cursor[ ptr:%p | id:%d | graph:%p ]: CPulseExecCursor()\n
 Cursor[ ptr:%p | id:%d | graph:%p ]: Completed with result:%d\n
 Cursor[ ptr:%p | id:%d | graph:%p ]: Observer notifying cell ptr:%p id:%d of result:%d from Subject:%d\n
 Cursor[ ptr:%p | id:%d | graph:%p ]: Register observer:%d\n
@@ -969,39 +1088,41 @@ DXT1_ONEBITALPHA
 DXT3
 DXT5
 DXT5_NM
-D_ALPHA_TEST
-D_BAKE_GRASS
-D_DENSITY_MODE
-D_VERTEX_LIGHTING
-D_WORLDSPACE_TEXCOORDS
 Data breakpoint [%s]
 Data breakpoint [%s] - %s
 Data breakpoint hit
+Data_Branch1xy
+Data_Branch1zBranch2x
+Data_Branch2yz
+DebugBreak
 DebugPrintKV3(KeyValues3 const*)
 December
 DefaultTime
 Delete this entity
 Deletion List:\n
 DemoUpconverterVersion001
-DensityArray
 Destroy
 DevMsg
+DevMsg(char const*, ...)
 Did not execute '%s' because the 'Target' object was missing
 Disallowed variable name: %s
 DisconnectOutput
 DisconnectOutputFromScript
 DisconnectOutputFromScriptSelf
 DisconnectRedirectedOutput
+DispatchActivate
+DispatchPrecache
+DispatchSpawn
+DispatchUpdateOnRemove
 Divide by zero!
 DivideRow_16_AVX2
 DivideRow_16_Any_AVX2
 DivideRow_16_C
 Do not stop the current yielding node, but do not continue to the next node afterwards.
-DotaForward
 Double-save to Member '%s'
+DualHull
 Dump all of the worlds that we know about
 Dump the contents of an entity lump
-DynamicMeshDeformParams_t
 E<G&Iw
 ENTITY_DORMANT
 ENTITY_IO_TARGET_EHANDLE
@@ -1011,7 +1132,9 @@ ENTITY_IO_TARGET_INVALID
 ENTITY_NOT_DORMANT
 ENTITY_SUSPENDED
 ERROR: CUtlSymbolTableLarge element limit of %u exceeded\n
-ERROR: Resource name "%s" has the incorrect extension "%s" for the specified resource type (expected "%s")!\n
+ERROR:NoEnum:%s:%d
+ERROR:NoEnumerator:%s:%d
+ERROR:NoFlags:%s:%d
 ESCAPE_CHAR
 ESCAPE_CODE
 ETC1
@@ -1034,11 +1157,10 @@ Entity Name
 Entity System
 EntityDormancyType_t
 EntityIOConnectionData_t
-EntityIOConnectionDesc_t
-EntityIOConnection_t
 EntityIOQueuePrioritizedEvent_t
 EntityIOTargetType_t
 EntityKeyValueData_t
+Error running script named %s\n
 Etc::DifferentialTrys::DifferentialTrys(Etc::ColorFloatRGBA, Etc::ColorFloatRGBA, const unsigned int*, const unsigned int*, unsigned int, int, int)
 Etc::Image::EncodingStatus Etc::Image::Encode(Etc::Image::Format, Etc::ErrorMetric, float, unsigned int, unsigned int)
 Etc::IndividualTrys::IndividualTrys(Etc::ColorFloatRGBA, Etc::ColorFloatRGBA, const unsigned int*, const unsigned int*, unsigned int)
@@ -1046,17 +1168,17 @@ Eval
 ExtraVertexStreamOverride_t
 ExtractModuleMetadata
 Extraneous token
-FadeParams
 Failed to activate script entity %s of type %s: script entity instance is null\n
 Failed to allocate a lexer for '%s'. (Out of memory?)
 Failed to allocate a parser for '%s'. (Out of memory?)
-Failed to allocate an instance of a class
-Failed to allocate an instance of class '%s'
+Failed to allocate a token stream for '%s'. (Out of memory?)
+Failed to allocate an instance of a class of type '%s'
 Failed to call CBaseIntrospectedToKV3TypeManager::Init
 Failed to load geometry for level %s\n
 Failed to load nested keys: %s\n
 Failed to mount world vpk file %s, file could not be found.\n
 Failed to precache script entity %s of type %s: script entity instance is null\n
+Failed to save unsupported class
 Failed to spawn script entity %s of type %s: script entity instance is null\n
 Failed to update on remove script entity %s of type %s: script entity instance is null\n
 Features
@@ -1080,10 +1202,17 @@ FloatBitMap_t::LoadFromBuffer: Received improper buffer size, skipping!\n
 FloatBitMap_t::LoadFromBuffer: Unsupported color format, skipping!\n
 FloatBitMap_t::LoadFromFloatBitmap: Received improper bitmap size, skipping!\n
 FloatBitMap_t::WriteToBuffer: Received improper buffer size %s (expecting %s), skipping!\n
+FoliageAnimation
 FontManager_001
-Forward
+FormatArgumentsToBuffer(IFormatOutputStream*, char const*, CTypeErasedFormattingWrapper const*, int)
+FormatTo(IFormatOutputStream*, CFormatStringElement, bool)
+FormatTo(IFormatOutputStream*, CFormatStringElement, double)
+FormatTo(IFormatOutputStream*, CFormatStringElement, float)
+FormatTo(IFormatOutputStream*, CFormatStringElement, int)
+FormatTo(IFormatOutputStream*, CFormatStringElement, std::basic_string_view<char, std::char_traits<char>>)
+FormatTo(IFormatOutputStream*, CFormatStringElement, unsigned int)
+FormatTo(IFormatOutputStream*, CFormatStringElement, void const*)
 Found existing value when inserting into dict - replacing existing value with new value. If this is intended behavior, use InsertOrReplace. If leaving existing values alone is intended, use InsertIfNotFound.
-Found existing value when inserting into tree - replacing existing value with new value. If this is intended behavior, use InsertOrReplace. If leaving existing values alone is intended, use InsertIfNotFound. If duplicate entries are intended, use InsertWithDupes.
 Frame not displayable.
 Frame setup failed
 Friday
@@ -1099,6 +1228,7 @@ GLIBC_2.17
 GLIBC_2.18
 GLIBC_2.2.5
 GLIBC_2.25
+GLIBC_2.27
 GLIBC_2.3
 GLIBC_2.3.2
 GLIBC_2.4
@@ -1124,13 +1254,17 @@ Get the entity name w/help if not defined (i.e. classname/etc)
 GetARGBBlend
 GetCPUInformation
 GetClassNameAsCStr
+GetClassNameOverride
 GetClassname
 GetDebugName
+GetDefaultMiniDumpTypeFlags
 GetEntityHandle
 GetEntityIndex
 GetEntityNameAsCStr
+GetGameInfoBool(char const*, bool)
 GetIntAttr
 GetName
+GetNativeOutputsForClass
 GetOrCreatePrivateScriptScope
 GetOrCreatePublicScriptScope
 GetPrivateScriptScope
@@ -1138,6 +1272,7 @@ GetPublicScriptScope
 GetResourceManifestCount
 GetResourceManifests
 GetThreadLocalStackAllocator
+GetValue
 GetVariantSaveDataOps
 GetXCR0
 Gf95)1&!\ry9I
@@ -1145,11 +1280,8 @@ GrassCopyTexture.vtex
 GrassDensity.vtex
 GrassDepth.vtex
 GrassObject
-GrassParamsPerQuadSlice_t
 GrassQuad.vtex
-GrassQuadArray
 GrassQuadSpecular.vtex
-GrassQuadSpecularArray
 GrassRenderTexture.vtex
 GrassSkewBrightness.vtex
 GrassTileDataVB
@@ -1190,7 +1322,6 @@ HalfMergeUVRow_C
 HalfMergeUVRow_SSSE3
 HammerMapLoader001
 HardCancel
-HeightArray
 HelpSystem_001
 Hitbox indexing is incorrect for set %s, hitbox %s. Hitboxes will not be setup properly.\n
 HostStateMgr001
@@ -1397,6 +1528,12 @@ I444ToNV12
 I444ToNV21
 IA88
 ID_CHAR
+IFormatOutputStream::Format2DTable(CTypeErasedFormattingWrapper, CFormatStringElement, void const**, int, int)
+IFormatOutputStream::FormatArray(CTypeErasedFormattingWrapper, CFormatStringElement, void const**, int, bool)
+IFormatOutputStream::FormatEnumHelper(CFormatStringElement, int, std::initializer_list<std::pair<int, char const*>>)
+IFormatOutputStream::FormatMaskHelper(int, std::initializer_list<std::pair<int, char const*>>)
+IFormatOutputStream::OutputIndentation()
+IFormatOutputStream::PutRepeatedChar(char, int)
 IKV3TransferInterface_AllowRawStringTokenTransfer
 IKV3TransferInterface_EHandle_Load
 IKV3TransferInterface_EHandle_Save
@@ -1404,6 +1541,7 @@ IKV3TransferInterface_GameTime_Load
 IKV3TransferInterface_GameTime_Save
 IKV3TransferInterface_ResourceLoad
 IKV3TransferInterface_ResourceSave
+IKV3TransferInterface_UtlSymbolLarge
 IKV3TransferInterface_Worldspace_Load
 IKV3TransferInterface_Worldspace_Save
 IMAGE_FORMAT_IMC2
@@ -1414,8 +1552,7 @@ IPulseInstanceSaveAPI
 IPulseReloadListener
 IPulseSystem_001
 Ik6 
-Immediate Wake
-Immediately reactivate any waiting cursors regardless of how long they have been waiting.
+IncludeScript stack overflow\n
 Inconsistent treatment of '%s' (existing key is %s)!\n
 Incorrect keyframe parameters.
 Inert VModuleMetadata
@@ -1425,7 +1562,9 @@ InfoForResourceTypeCRenderMesh
 InfoForResourceTypeCTextureBase
 InfoForResourceTypeIMaterial2
 InfoForResourceTypeVMapResourceData_t
+Init
 InitCpuFlags
+Initialize with number of outputs
 InitializeDummyRow
 InputService_001
 InputStackSystemVersion001
@@ -1445,6 +1584,9 @@ InterpolateRow_Any_AVX2
 InterpolateRow_Any_SSSE3
 InterpolateRow_C
 InterpolateRow_SSSE3
+InterruptElegantly
+InterruptImmediately
+Invalid
 Invalid '?', '*', or '+' in regular expression
 Invalid back reference in regular expression
 Invalid character class in regular expression
@@ -1452,7 +1594,9 @@ Invalid character range in regular expression
 Invalid collating element in regular expression
 Invalid escape in regular expression
 Invalid range in '{}' in regular expression
+Invalid use of KV3 specific type %s with basic type %s, must be basic type %s
 Invoke '%s' failed with code %d
+InvokeMiniDumpHandler
 IsValidIndex( i )
 J400ToARGB
 J400ToARGBRow_Any_SSE2
@@ -1471,15 +1615,37 @@ JArray
 January
 July
 June
+KV3 instances cannot be set to an unspecified specific type
 KV3 load transfer failed for resource '%s': %s
 Keep a history of all instructions run on a per graph basis.
 Keep running normally.
 KeyValueCache001
 KeyValues3
+KeyValues3: pre-allocated array memory is too small for %u elements (%u bytes available, %u bytes needed)\n
+KeyValues3: pre-allocated table memory is too small for %u members (%u bytes available, %u bytes needed)\n
+KeyValues::FindKey(char const*) const
+KeyValues::FindKey(char const*, bool)
+KeyValues::GetColor(char const*, Color const&) const
+KeyValues::GetDataType(char const*) const
+KeyValues::GetFirstTrueSubKey()
+KeyValues::GetFirstValue()
+KeyValues::GetFloat(char const*, float) const
 KeyValues::GetInt(char const*, int) const
-Kill after current node.
-Kill elegantly.
-Kill immediately.
+KeyValues::GetName() const
+KeyValues::GetNextTrueSubKey()
+KeyValues::GetNextValue()
+KeyValues::GetPtr(char const*, void*) const
+KeyValues::GetUint64(char const*, unsigned long long) const
+KeyValues::KeyValues(char const*, IKeyValuesSystem*, bool)
+KeyValues::LoadFromBuffer(char const*, char const*, IFileSystem*, char const*, bool (*)(char const*, void*), IKeyValuesErrorSpew*, void*, char const*)
+KeyValues::SetString(char const*, char const*)
+KeyValues::operator delete(void*)
+KeyValues::operator new(unsigned long)
+KeyValues::operator=(KeyValues const&)
+KeyValues::~KeyValues()
+Kill After.
+Kill Elegantly.
+Kill Immediately.
 LC_ADDRESS
 LC_COLLATE
 LC_CTYPE
@@ -1496,28 +1662,41 @@ LINEAR_D24S8
 LINE_CONTINUATION
 LITERAL_FALSE
 LITERAL_TRUE
+LOG_CONSOLE
 LOG_GENERAL
 LegacyUnserialize
 Lexer encountered %d error(s)
 Lightmap set to use, only works on map load
 Lightmap version number is out of date! Reverting to dynamic lighting
+LightmapUV
+LightmapUVW
 Line: 
 List all known entity lumps
 List all world layers
 LoadFromKV3
 LoadKV3(CKV3Arena*, CUtlString*, CUtlBuffer*, KV3ID_t const&, char const*, unsigned int)
 LoadKV3(KeyValues3*, CUtlString*, CUtlBuffer*, KV3ID_t const&, char const*, unsigned int)
+LoadKV3(KeyValues3*, CUtlString*, char const*, KV3ID_t const&, char const*, unsigned int)
+LoadKV3FromKV1Text_Translated(KeyValues3*, CUtlString*, char const*, KV1TextEscapeBehavior_t, KV1ToKV3Translation_t const*, int, char const*, bool, unsigned int)
+LoadKV3Text_NoHeader(KeyValues3*, CUtlString*, char const*, KV3ID_t const&, char const*, unsigned int)
+LocalServerClientAccess001
 Localize_001
 LockForRead
+LoggingSystem_GetChannelColor
+LoggingSystem_GetChannelVerbosity
 LoggingSystem_IsChannelEnabled
 LoggingSystem_Log
+LoggingSystem_Log(int, LoggingSeverity_t, Color, char const*, ...)
 LoggingSystem_Log(int, LoggingSeverity_t, LoggingMetaData_t const*, Color, char const*, ...)
 LoggingSystem_Log(int, LoggingSeverity_t, LoggingMetaData_t const*, char const*, ...)
 LoggingSystem_Log(int, LoggingSeverity_t, LoggingRareOptions_t const&, char const*, ...)
+LoggingSystem_LogDirect(int, LoggingSeverity_t, Color, LoggingMetaData_t const*, char const*)
 LoggingSystem_RegisterLoggingChannel
+LooksLikeKV3TextData(void const*, int, KV3ID_t*, char*, int)
 Loongson-2K
 Loongson-3
 MATCHFRAMEWORK_001
+MCustomFGDMetadata
 MESH_DRAW_FLAGS_CAN_BATCH_WITH_DYNAMIC_SHADER_CONSTANTS
 MESH_DRAW_FLAGS_DRAW_LAST
 MESH_DRAW_FLAGS_NONE
@@ -1532,7 +1711,9 @@ MFgdFromSchemaCompletelySkipField
 MGetKV3ClassDefaults
 MIsBoxedFloatType
 MIsBoxedIntegerType
+MKV3TransferSaveOpsForField
 ML_COMMENT
+MNetworkChangeAccessorFieldPathIndex
 MNotSaved
 MODEL_PROCESSING_SERVICES_INTERFACE_001
 MPropertyDescription
@@ -1540,10 +1721,10 @@ MPropertyFriendlyName
 MPropertySuppressEnumerator
 MPulseCellInflow_IsDefault
 MPulseCursorTerminates
-MPulseRequirementCheck
-MPulseRequirementCommit
+MPulseFGDSkipField
+MPulseLegacyName
 MResourceTypeForInfoType
-MSaveOpsForField
+MakeStringToken
 MapListService_001
 March
 MaskCpuFlags
@@ -1715,9 +1896,26 @@ NSt7__cxx119money_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEEE
 NSt7__cxx119money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEEE
 NSt7__cxx119money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEEE
 NSt7__cxx119money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEEE
+NSt8__detail11_AnyMatcherISt12regex_traitsIcELb0ELb0ELb0EEE
+NSt8__detail11_AnyMatcherISt12regex_traitsIcELb0ELb0ELb1EEE
+NSt8__detail11_AnyMatcherISt12regex_traitsIcELb0ELb1ELb0EEE
+NSt8__detail11_AnyMatcherISt12regex_traitsIcELb0ELb1ELb1EEE
+NSt8__detail11_AnyMatcherISt12regex_traitsIcELb1ELb0ELb0EEE
+NSt8__detail11_AnyMatcherISt12regex_traitsIcELb1ELb0ELb1EEE
+NSt8__detail11_AnyMatcherISt12regex_traitsIcELb1ELb1ELb0EEE
+NSt8__detail11_AnyMatcherISt12regex_traitsIcELb1ELb1ELb1EEE
+NSt8__detail12_CharMatcherISt12regex_traitsIcELb0ELb0EEE
+NSt8__detail12_CharMatcherISt12regex_traitsIcELb0ELb1EEE
+NSt8__detail12_CharMatcherISt12regex_traitsIcELb1ELb0EEE
+NSt8__detail12_CharMatcherISt12regex_traitsIcELb1ELb1EEE
+NSt8__detail15_BracketMatcherISt12regex_traitsIcELb0ELb0EEE
+NSt8__detail15_BracketMatcherISt12regex_traitsIcELb0ELb1EEE
+NSt8__detail15_BracketMatcherISt12regex_traitsIcELb1ELb0EEE
+NSt8__detail15_BracketMatcherISt12regex_traitsIcELb1ELb1EEE
 NSt8ios_base7failureB5cxx11E
 NSt8ios_base7failureE
 NULL
+NULL VP8Io parameter in VP8Decode().
 NV12Copy
 NV12Mirror
 NV12Scale
@@ -1772,7 +1970,6 @@ NV21ToYUV24Row_C
 NV_NULL
 N_U9203
 NavGameTest001
-NeedsLightProbe
 NetworkClientService_001
 NetworkCodeGen
 NetworkMessagesVersion001
@@ -1785,9 +1982,11 @@ No DATA block for resource '%s'\n
 No DATA block for resource\n
 No associated state
 No closing */ before end of file
+No conversion from %s to bool now\n
 No conversion from %s to string at the moment!\n
 No data
 No expression!
+No free conversion of %s variant to HSCRIPT right now\n
 No input data for '%s'. (Empty buffer.)
 NodeData_t
 None
@@ -1821,6 +2020,7 @@ Only DXT1/DXT5 online texture compression supported.\n
 Opaque Handle
 Output aborted.
 Output unserialization of entities on map load. 0 - off, 1 - client/server, 2 - server, 3 - client
+OverlayProjectionDirection
 P010ToAR30Matrix
 P010ToARGBMatrix
 P010ToP410
@@ -1874,6 +2074,7 @@ POSIX
 POS_FLOATLITERAL
 POS_INTLITERAL
 PURH
+PVAL_ANIM_SEQUENCE
 PVAL_ANY
 PVAL_ARRAY
 PVAL_BOOL
@@ -1904,6 +2105,7 @@ PVAL_TYPESAFE_INT
 PVAL_TYPESAFE_INT64
 PVAL_UNKNOWN
 PVAL_VARIANT
+PVAL_VDATA_CHOICE
 PVAL_VEC2
 PVAL_VEC3
 PVAL_VEC3_WORLDSPACE
@@ -1913,33 +2115,48 @@ Panorama Panel Handle
 PanoramaTextServices001
 PanoramaUIClient001
 PanoramaUIEngine001
+ParallelForSharedCode
 Parser encountered %d error(s)
 Particle Object
 ParticleSystemMgr003
 Pause
 Pause the cursor at this point.
+PerVertexLighting
 PermEntityLumpData_t
 Physics
 PhysicsBuilderMgr001
+PivotPaint
 Plat_CPUTickFrequency
+Plat_DemangleRawTypeName
+Plat_ExitProcess
 Plat_FatalError
+Plat_FloatTime
 Plat_GetCrtEnv
+Plat_GetEnv
+Plat_GetExeModule
+Plat_GetModuleFilename
+Plat_GetModuleProcAddress
 Plat_GetTime
 Plat_IsInDebugSession
-Plat_NeedsLowFragmentation
 Plat_NonFatalErrorFunc
+Plat_RelativeTicks
 Pointers cannot be used as numeric values
 PostProcessingSystem_001
+Precache
+Precaches a specific resource
 Premature end-of-file encountered.
 Premature end-of-partition0 encountered.
 Preventing new cursor (%s)
 Print model load-time conversion info
-Process Selector
+Proceed Elegantly.
+Proceed Immediately.
 Promise already satisfied
+PropWorldOrigin
 PropertyEditorSystem_001
 Pulse
 Pulse: %s 
 PulseCursorCancelPriority_t
+PulseCursorWakePriority_t
 PulseDebugLog: Calling external method on non-existent entity or game blackboard
 PulseDebugLog: Calling external method on non-existent entity or game blackboard\n
 PulseDocNodeID_t
@@ -1989,20 +2206,6 @@ RAWToYJRow_C
 RAWToYJRow_SSSE3
 RAWToYRowMatrix_C
 RAWToYRow_C
-RENDER_PRIM_COMPUTE_SHADER
-RENDER_PRIM_HETEROGENOUS
-RENDER_PRIM_INSTANCED_QUADS
-RENDER_PRIM_LINES
-RENDER_PRIM_LINES_WITH_ADJACENCY
-RENDER_PRIM_LINE_STRIP
-RENDER_PRIM_LINE_STRIP_WITH_ADJACENCY
-RENDER_PRIM_MESH_SHADER
-RENDER_PRIM_POINTS
-RENDER_PRIM_TRIANGLES
-RENDER_PRIM_TRIANGLES_WITH_ADJACENCY
-RENDER_PRIM_TRIANGLE_STRIP
-RENDER_PRIM_TRIANGLE_STRIP_WITH_ADJACENCY
-RENDER_PRIM_TYPE_COUNT
 RENDER_SLOT_INVALID
 RENDER_SLOT_PER_INSTANCE
 RENDER_SLOT_PER_VERTEX
@@ -2085,10 +2288,12 @@ RTProxyGeometry
 RTProxyInstanceFlags_t
 RTProxyInstanceInfo_t
 RTProxyUniqueAlbedo
+RTProxyUniqueEmissive
 R_T5Y
 RandomFloat
 RandomInt
 RandomSeed
+Reads a spawn key
 Recognition Exception
 Recognition exception
 RedirectOutput
@@ -2104,10 +2309,10 @@ RenderDevice003
 RenderDeviceMgr001
 RenderHardwareConfig002
 RenderInputLayoutField_t
-RenderPrimitiveType_t
 RenderService_001
 RenderSlotType_t
 RenderUtils_001
+Request elegant wind-down of any associated work (e.g. vcd interrupt), then proceed afterwards.
 Request elegant wind-down of any associated work (e.g. vcd interrupt).
 Resource
 Resource Name
@@ -2118,7 +2323,6 @@ ResourceCompilerSystem001
 ResourceHandleUtils001
 ResourceManifestRegistry001
 ResourceSystem013
-Resume
 Retrieve the private per-instance script-side data associated with an entity
 Retrieve the public script-side data associated with an entity
 Retrieve, creating if necessary, the private per-instance script-side data associated with an entity
@@ -2141,6 +2345,11 @@ SRGBA8
 SSE and SSE2 are required.
 STRING_CHAR
 Saturday
+SaveKV3Text_NoHeader(KeyValues3 const*, CUtlString*, CBufferString*, unsigned int)
+SaveKV3Text_NoHeader(KeyValues3 const*, CUtlString*, CUtlBuffer*, unsigned int)
+SaveKV3Text_ToString(KV3ID_t const&, KeyValues3 const*, CUtlString*, CBufferString*, unsigned int)
+SaveKV3Text_ToString(KV3ID_t const&, KeyValues3 const*, CUtlString*, CUtlString*, unsigned int)
+SaveRestoreSpawnKeys
 Scale
 ScaleARGBCols64_C
 ScaleARGBColsUp2_C
@@ -2345,6 +2554,7 @@ SchemaSystem_001
 SchemaTestExternal_One_001
 SchemaTestExternal_Two_001
 Script failed to find output "%s"\n
+Script not found (%s) \n
 ScriptFireOutput
 ScriptGetEHandle
 ScriptGetEntityIndex
@@ -2363,8 +2573,10 @@ SetRow_Any_X86
 SetRow_C
 SetRow_ERMS
 SetRow_X86
+Should we straighten face island if the displacement is this much? (inches)
+Should we try to straighten an island of faces deviating from their average normal (tangent)?
+Should we try to straighten two faces connected to this edge? (tangent)
 Show or hide the specified world layer
-SkewBrightness
 SobelRow_Any_SSE2
 SobelRow_C
 SobelRow_SSE2
@@ -2398,6 +2610,7 @@ Source2Host001
 Source2ModTools001
 Source2Server001
 Source2V8System001
+Spawn
 SplitARGBPlane
 SplitARGBPlaneAlpha
 SplitARGBPlaneOpaque
@@ -2408,6 +2621,7 @@ SplitARGBRow_Any_SSSE3
 SplitARGBRow_C
 SplitARGBRow_SSE2
 SplitARGBRow_SSSE3
+SplitNameAndKV3Args
 SplitRGBPlane
 SplitRGBRow_Any_SSSE3
 SplitRGBRow_C
@@ -2457,19 +2671,11 @@ St12out_of_range
 St12system_error
 St13__ios_failure
 St13bad_exception
-St13basic_filebufIcSt11char_traitsIcEE
-St13basic_filebufIwSt11char_traitsIwEE
-St13basic_fstreamIcSt11char_traitsIcEE
-St13basic_fstreamIwSt11char_traitsIwEE
 St13basic_istreamIwSt11char_traitsIwEE
 St13basic_ostreamIwSt11char_traitsIwEE
 St13messages_base
 St13runtime_error
-St14basic_ifstreamIcSt11char_traitsIcEE
-St14basic_ifstreamIwSt11char_traitsIwEE
 St14basic_iostreamIwSt11char_traitsIwEE
-St14basic_ofstreamIcSt11char_traitsIcEE
-St14basic_ofstreamIwSt11char_traitsIwEE
 St14codecvt_bynameIcc11__mbstate_tE
 St14codecvt_bynameIwc11__mbstate_tE
 St14collate_bynameIcE
@@ -2524,6 +2730,7 @@ St23_Sp_counted_ptr_inplaceINSt13__future_base15_Deferred_stateINSt6thread8_Invo
 St23_Sp_counted_ptr_inplaceINSt13__future_base15_Deferred_stateINSt6thread8_InvokerISt5tupleIJMN3Etc5ImageEFvjjEPS6_ijEEEEvEESaISC_ELN9__gnu_cxx12_Lock_policyE2EE
 St23_Sp_counted_ptr_inplaceINSt13__future_base17_Async_state_implINSt6thread8_InvokerISt5tupleIJMN3Etc5ImageEFjjjjEPS6_jijEEEEjEESaISC_ELN9__gnu_cxx12_Lock_policyE2EE
 St23_Sp_counted_ptr_inplaceINSt13__future_base17_Async_state_implINSt6thread8_InvokerISt5tupleIJMN3Etc5ImageEFvjjEPS6_ijEEEEvEESaISC_ELN9__gnu_cxx12_Lock_policyE2EE
+St23_Sp_counted_ptr_inplaceINSt8__detail4_NFAISt12regex_traitsIcEEESaIvELN9__gnu_cxx12_Lock_policyE2EE
 St23__codecvt_abstract_baseIDiDu11__mbstate_tE
 St23__codecvt_abstract_baseIDic11__mbstate_tE
 St23__codecvt_abstract_baseIDsDu11__mbstate_tE
@@ -2570,7 +2777,7 @@ St9type_info
 Stack depth limit hit (%d)
 StatsService_001
 SteamAudio001
-Stop Waiting
+Stop the node action without any wind-down, then proceed afterwards.
 Stop without any wind-down.
 String
 String( %s )
@@ -2585,6 +2792,7 @@ T0d/
 TLS init function for 
 TLS wrapper function for 
 TOK_COLON
+TanFrameQuat
 TernaryConditional
 Test Handle
 TestScriptMgr001
@@ -2592,8 +2800,10 @@ TextLayout_001
 This convar is being accessed prior to ConVar_Register being called
 ThreadAtomicNotifyOne(unsigned int const*)
 ThreadGetCurrentId
+ThreadInMainThread
+ThreadMultiWait
+ThreadMultiWaitObjectSetDestroy
 Thursday
-TintArray
 ToolFramework2_002
 ToolSceneNodeFactory_001
 ToolService_001
@@ -2609,7 +2819,7 @@ TransposeWx8_Fast_Any_SSSE3
 TransposeWx8_Fast_SSSE3
 TransposeWx8_SSSE3
 TransposeWxH_C
-Tried to load a polymorphic pointer with no '%s' key
+Tried to destroy (from script) a networked entity (%d/%s) on the client, the server controls lifespan, ignoring\n
 Tried to load resource reference '%s' from a value without a resource reference specific type.
 Truncated header.
 Trying to find a flex controller (%s) that doesn't actually exist in the model.\n
@@ -2678,18 +2888,22 @@ Unexpected null character in regular expression
 Unexpected token
 Unexpected token '%s' %s
 Unknown
+Unknown KV3 specific type %u
 Unknown error
 Unknown lightmap texture: %s\n
 Unknown property %s
 Unknown variable %s
 Unlock
 UnmountWorldVPK() --%s is at refcount %d\n
+Unsupported ETC image format %d.\n
 Unsupported Grass File Version. Expected %d. Found %d\n
 Unsupported KV3 basic type '%s' (%d)!
 Unsupported number of values found in grass tile. Expected %d. Found %d\n
 Unwanted token '%s' %s
+UpdateOnRemove
 Usage: %s <world_name> <layer_name> <visible>\n
 Usage: %s <world_name> <lump_name>\n
+UtlRBTree_FailedInsertDuplicate
 UtlVectorMemory_Alloc
 UtlVectorMemory_CalcNewAllocationCount
 UtlVectorMemory_FailedAllocation
@@ -2698,6 +2912,7 @@ VAsyncFileSystem2_001
 VAvi001
 VBik001
 VConComm001
+VData Choice
 VERTEX_ALBEDO_565
 VERTEX_ALBEDO_8888
 VERTEX_ALBEDO_NONE
@@ -2721,16 +2936,10 @@ VScriptDbg
 VScriptManager010
 VStringTokenSystem001
 VTT for 
-VTT for std::basic_fstream<char, std::char_traits<char>>
-VTT for std::basic_fstream<wchar_t, std::char_traits<wchar_t>>
-VTT for std::basic_ifstream<char, std::char_traits<char>>
-VTT for std::basic_ifstream<wchar_t, std::char_traits<wchar_t>>
 VTT for std::basic_iostream<wchar_t, std::char_traits<wchar_t>>
 VTT for std::basic_istream<wchar_t, std::char_traits<wchar_t>>
 VTT for std::basic_istringstream<char, std::char_traits<char>, std::allocator<char>>
 VTT for std::basic_istringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>
-VTT for std::basic_ofstream<char, std::char_traits<char>>
-VTT for std::basic_ofstream<wchar_t, std::char_traits<wchar_t>>
 VTT for std::basic_ostream<wchar_t, std::char_traits<wchar_t>>
 VTT for std::basic_ostringstream<char, std::char_traits<char>, std::allocator<char>>
 VTT for std::basic_ostringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>
@@ -2741,8 +2950,11 @@ VTT for std::istream
 VTT for std::ostream
 VWebm001
 VZ#-DLU[3=h
+V_CompareNameWithWildcards
 V_CopyMemory3D
 V_DoubleToString_Unsafe
+V_FixDoubleSlashes
+V_FixSlashes
 V_FloatToString_Unsafe
 V_GetFileExtension
 V_Get_stderr
@@ -2751,6 +2963,8 @@ V_Int32ToString_Unsafe
 V_Int64ToString_Unsafe
 V_Int8ToString_Unsafe
 V_IsAbsolutePath
+V_PathContainsPath
+V_PrettifyMem
 V_PrettifyNum
 V_RemoveDotSlashes
 V_StringParseError
@@ -2758,6 +2972,7 @@ V_StringToBool
 V_StringToColor
 V_StringToFloat32
 V_StringToFloat64
+V_StringToFloatArray
 V_StringToInt16
 V_StringToInt32
 V_StringToInt64
@@ -2770,33 +2985,68 @@ V_StringToUint8
 V_StringToVector
 V_StringToVector2D
 V_StringToVector4D
+V_StringToVectorWS
 V_StripExcessTrailingZeros
+V_StripTrailingSlash
+V_TryAndMakeFriendlyNameFromCppName
 V_UInt16ToString_Unsafe
 V_UInt32ToString_Unsafe
 V_UInt64ToString_Unsafe
 V_UInt8ToString_Unsafe
+V_UnqualifiedFileName
+V_ZSTD_decompress
+V_acosd
+V_acosf
+V_asinf
+V_atan2d
+V_atan2f
+V_atanf
 V_atof
 V_atofloat32
 V_atoi
+V_cosd
+V_cosf
+V_expf
+V_fclose
 V_fmodd
 V_fmodf
+V_fopenUTF8
 V_fpclassifyd
 V_fprintf
+V_fputc
+V_fread
+V_frexpf
+V_fwrite
 V_isnand
+V_logf
+V_longjmp
+V_powd
 V_powf
 V_qsort
 V_qsort_s
+V_roundf
+V_setjmp
 V_sincosf
+V_sind
+V_sinf
 V_snprintf
 V_sscanf
 V_stricmp_fast
 V_stristr_fast(char const*, char const*)
 V_strnlen(char const*, int)
+V_strtok
+V_tanf
+V_vsnprintf
 Variant
 Vector
 Vector2D
 Vector4D
 VertexAlbedoFormat_t
+VertexElementAnnotation
+VertexGenericIntegerData
+VertexPaintBlendParams
+VertexPaintBlendParams1
+VertexPaintTintColor
 VisBuilder_001
 Void
 VoxelVisBlockOffset_t
@@ -2807,9 +3057,12 @@ WARNING: Invalid worldnode version '%d' for file: %s\n
 WARNING: Pulse failed to restore yielded cursor - error with cell state (%d:%s)\n
 WARNING: Pulse failed to restore yielded cursor - no yielding cell or landing pad (%d:%s)\n
 WARNING: Pulse failed to save yielded cursor - no yielding cell or landing pad (C%d:I%d)\n
+WARNING: Resource name "%s" has the incorrect extension "%s" for the specified resource type (expected "%s")!\n
 WARNING: Trying to create a CRenderContextPtr without a valid context.\n
 WDG,r3
 Wait
+WakeElegantly
+WakeImmediate
 Warning
 Warning: Error resource loaded for level %s\n
 WebPCopyPixels
@@ -2842,9 +3095,6 @@ WebPSafeFree
 WebPSafeMalloc
 WebPSetWorkerInterface
 Wednesday
-WindDir
-WindOffset
-WindStrengthFreq
 World '%s' Lump '%s' 
 World '%s' layer '%s' 
 World Transform
@@ -2887,6 +3137,13 @@ YUY2ToYRow_Any_AVX2
 YUY2ToYRow_Any_SSE2
 YUY2ToYRow_C
 YUY2ToYRow_SSE2
+ZN10MatrixMath11ScaleMatrixILb0E15CVariableMatrixEEvRT0_fEUliiE_
+ZN10MatrixMath11ScaleMatrixILb1E15CVariableMatrixEEvRT0_fEUliiE_
+ZN10MatrixMath14MatrixMultiplyILb0E15CVariableMatrixS1_EEvRK17CSparseMatrixBaseIfERKT0_PT1_EUliiE_
+ZN10MatrixMath14MatrixMultiplyILb1E15CVariableMatrixS1_EEvRK17CSparseMatrixBaseIfERKT0_PT1_EUliiE_
+ZN10MatrixMath17AddMatrixToMatrixILb0E15CVariableMatrixS1_EEvRKT0_PT1_EUliiE_
+ZN10MatrixMath17AddMatrixToMatrixILb1E15CVariableMatrixS1_EEvRKT0_PT1_EUliiE_
+ZN10MatrixMath23AddScaledMatrixToMatrixILb1E15CVariableMatrixS1_EEvfRKT0_PT1_EUliiE_
 ZN37CTypesafeIntrospectedToKV3TypeManagerILy431366240118E11WorldNode_tE15AllocateAndLoadER23CKV3TransferLoadContextPK21ResourceBindingBase_tP29IRD_RegisterResourceDataUtilsE15CAllocatorUtils
 ZN37CTypesafeIntrospectedToKV3TypeManagerILy431366240118E11WorldNode_tE24DeallocateDestroyCleanupEPvP25IResourceDeallocatorUtilsE17CDeallocatorUtils
 ZN37CTypesafeIntrospectedToKV3TypeManagerILy495874631030E20PermEntityLumpData_tE15AllocateAndLoadER23CKV3TransferLoadContextPK21ResourceBindingBase_tP29IRD_RegisterResourceDataUtilsE15CAllocatorUtils
@@ -2914,16 +3171,17 @@ _ITM_registerTMCloneTable
 _MakeGlobalSymbol
 _MakeGlobalSymbolCaseSensitive
 _Target
+_V_SetExtension
+_V_StringAfterPrefix
+_V_StripLastDir
+_V_strEndsWith
+_V_strncat
 _V_strncmp
 _V_strncpy
 _V_strnicmp_fast
 _ZNKSt13__facet_shims12__any_stringcvNSt7__cxx1112basic_stringIT_St11char_traitsIS3_ESaIS3_EEEB5cxx11IcEEv
 _ZNKSt13__facet_shims12__any_stringcvNSt7__cxx1112basic_stringIT_St11char_traitsIS3_ESaIS3_EEEB5cxx11IwEEv
-_ZSt10__exchangeIPKcDnET_RS3_OT0_
 _ZSt10__exchangeIPNSt8ios_base14_Callback_listEDnET_RS4_OT0_
-_ZSt10__exchangeIPcDnET_RS2_OT0_
-_ZSt10__exchangeIPwDnET_RS2_OT0_
-__ExternalMethodParent__
 __assert_fail
 __ctype_b_loc
 __ctype_get_mb_cur_max
@@ -2996,7 +3254,6 @@ __dynamic_cast
 __errno_location
 __float128
 __freelocale
-__fxstat
 __gcclibcxx_demangle_callback
 __gmon_start__
 __gnu_cxx::__concat_size_t(char*, unsigned long, unsigned long)
@@ -3078,6 +3335,7 @@ __gnu_cxx::recursive_init_error::~recursive_init_error()
 __gxx_personality_v0
 __int128
 __iswctype_l
+__m_BaseFlow_WhileActive__
 __newlocale
 __nl_langinfo_l
 __once_proxy
@@ -3098,6 +3356,7 @@ __wcsftime_l
 __wcsxfrm_l
 __wctype_l
 _class
+_setjmp
 _txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
 _txnal_cow_string_D1(void*)
 _txnal_cow_string_D1_commit(void*)
@@ -3110,26 +3369,27 @@ a_fDecodedAlpha >= 0.0f
 a_uiMultithreadingStride > 0
 a_uiRadius <= MAX_RADIUS
 abort
+acosf
 active_frame
+alert
 alignof 
 allocator
 alnum
 alpha
+ampersand
 an attr
+apostrophe
 array
+asterisk
 atomic, 
 attributes
 auto
 auto:
 background
+backslash
+backspace
 bad partition length
 bad_function_call
-basic_filebuf::_M_convert_to_external conversion error
-basic_filebuf::underflow codecvt::max_length() is not valid
-basic_filebuf::underflow error reading the file
-basic_filebuf::underflow incomplete character in file
-basic_filebuf::underflow invalid byte sequence in file
-basic_filebuf::xsgetn error reading the file
 basic_ios::clear
 basic_iostream
 basic_istream
@@ -3153,10 +3413,14 @@ basic_string::replace
 basic_string::resize
 basic_string::substr
 basic_string_view::substr
+bentnormal
 binary_blob
 bind_textdomain_codeset
 bindtextdomain
 blank
+blendindices
+blendweight
+blendweights
 bool
 bool __gnu_cxx::__is_null_pointer<__gnu_cxx::__normal_iterator<char*, std::string>>(__gnu_cxx::__normal_iterator<char*, std::string>)
 bool __gnu_cxx::__is_null_pointer<__gnu_cxx::__normal_iterator<wchar_t*, std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>>>(__gnu_cxx::__normal_iterator<wchar_t*, std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>>)
@@ -3181,7 +3445,10 @@ bool __gnu_cxx::operator==<wchar_t const*, std::basic_string<wchar_t, std::char_
 bool __gnu_cxx::operator==<wchar_t const*, wchar_t*, std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>>(__gnu_cxx::__normal_iterator<wchar_t const*, std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>> const&, __gnu_cxx::__normal_iterator<wchar_t*, std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>> const&)
 bool __gnu_cxx::operator==<wchar_t*, std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>>(__gnu_cxx::__normal_iterator<wchar_t*, std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>> const&, __gnu_cxx::__normal_iterator<wchar_t*, std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>> const&)
 bool __gnu_cxx::operator==<wchar_t*, std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>>(__gnu_cxx::__normal_iterator<wchar_t*, std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>> const&, __gnu_cxx::__normal_iterator<wchar_t*, std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>> const&)
-bool std::__exchange<bool, bool>(bool&, bool&&)
+bool std::__detail::_Compiler<std::regex_traits<char>>::_M_expression_term<false, false>(std::__detail::_Compiler<std::regex_traits<char>>::_BracketState&, std::__detail::_BracketMatcher<std::regex_traits<char>, false, false>&)
+bool std::__detail::_Compiler<std::regex_traits<char>>::_M_expression_term<false, true>(std::__detail::_Compiler<std::regex_traits<char>>::_BracketState&, std::__detail::_BracketMatcher<std::regex_traits<char>, false, true>&)
+bool std::__detail::_Compiler<std::regex_traits<char>>::_M_expression_term<true, false>(std::__detail::_Compiler<std::regex_traits<char>>::_BracketState&, std::__detail::_BracketMatcher<std::regex_traits<char>, true, false>&)
+bool std::__detail::_Compiler<std::regex_traits<char>>::_M_expression_term<true, true>(std::__detail::_Compiler<std::regex_traits<char>>::_BracketState&, std::__detail::_BracketMatcher<std::regex_traits<char>, true, true>&)
 bool std::has_facet<std::__cxx11::collate<char>>(std::locale const&)
 bool std::has_facet<std::__cxx11::collate<wchar_t>>(std::locale const&)
 bool std::has_facet<std::__cxx11::messages<char>>(std::locale const&)
@@ -3222,38 +3489,38 @@ bool std::has_facet<std::time_get<char, std::istreambuf_iterator<char, std::char
 bool std::has_facet<std::time_get<wchar_t, std::istreambuf_iterator<wchar_t, std::char_traits<wchar_t>>>>(std::locale const&)
 bool std::has_facet<std::time_put<char, std::ostreambuf_iterator<char, std::char_traits<char>>>>(std::locale const&)
 bool std::has_facet<std::time_put<wchar_t, std::ostreambuf_iterator<wchar_t, std::char_traits<wchar_t>>>>(std::locale const&)
-bool std::operator!=<__mbstate_t>(std::fpos<__mbstate_t> const&, std::fpos<__mbstate_t> const&)
 bool std::operator!=<char, std::char_traits<char>, std::allocator<char>>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, char const*)
 bool std::operator!=<char, std::char_traits<char>>(std::istreambuf_iterator<char, std::char_traits<char>> const&, std::istreambuf_iterator<char, std::char_traits<char>> const&)
 bool std::operator!=<wchar_t, std::char_traits<wchar_t>>(std::istreambuf_iterator<wchar_t, std::char_traits<wchar_t>> const&, std::istreambuf_iterator<wchar_t, std::char_traits<wchar_t>> const&)
 bool std::operator==<__mbstate_t>(std::fpos<__mbstate_t> const&, std::fpos<__mbstate_t> const&)
 bool std::operator==<char, std::char_traits<char>, std::allocator<char>>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, char const*)
 bool std::operator==<char, std::char_traits<char>, std::allocator<char>>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)
-bool std::operator==<char, std::char_traits<char>, std::allocator<char>>(std::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)
 bool std::operator==<char, std::char_traits<char>>(std::istreambuf_iterator<char, std::char_traits<char>> const&, std::istreambuf_iterator<char, std::char_traits<char>> const&)
 bool std::operator==<wchar_t, std::char_traits<wchar_t>>(std::istreambuf_iterator<wchar_t, std::char_traits<wchar_t>> const&, std::istreambuf_iterator<wchar_t, std::char_traits<wchar_t>> const&)
-bool&& std::forward<bool>(std::remove_reference<bool>::type&)
+bool8
 boolean
 bpp >= 1 && bpp <= 4
 btowc
 built-in, 
 byte
+calloc
 cannot create shim for unknown locale::facet
+cannot create std::deque larger than max_size()
+cannot create std::vector larger than max_size()
 cannot parse filter header
 cannot parse partitions
 cannot parse picture header
 cannot parse segment header
+carriage-return
 cell_info
 chandle, 
 char
 char const (&std::forward<char const (&) [10]>(std::remove_reference<char const (&) [10]>::type&)) [10]
 char const (&std::forward<char const (&) [9]>(std::remove_reference<char const (&) [9]>::type&)) [9]
 char const* std::__addressof<char const>(char const&)
-char const* std::__exchange<char const*, std::nullptr_t>(char const*&, std::nullptr_t&&)
 char const* std::addressof<char const>(char const&)
 char* std::__add_grouping<char>(char*, char, char const*, unsigned long, char const*, char const*)
 char* std::__addressof<char>(char&)
-char* std::__exchange<char*, std::nullptr_t>(char*&, std::nullptr_t&&)
 char* std::addressof<char>(char&)
 char* std::string::_S_construct<__gnu_cxx::__normal_iterator<char*, std::string>>(__gnu_cxx::__normal_iterator<char*, std::string>, __gnu_cxx::__normal_iterator<char*, std::string>, std::allocator<char> const&)
 char* std::string::_S_construct<__gnu_cxx::__normal_iterator<char*, std::string>>(__gnu_cxx::__normal_iterator<char*, std::string>, __gnu_cxx::__normal_iterator<char*, std::string>, std::allocator<char> const&, std::forward_iterator_tag)
@@ -3267,15 +3534,22 @@ char* std::string::_S_construct_aux<char*>(char*, char*, std::allocator<char> co
 char16_t
 char32_t
 char32_t const& std::min<char32_t>(char32_t const&, char32_t const&)
+char8
 char8_t
 character
+circumflex
 classname
 clock_gettime
 close
 cntrl
 co_await 
 codegen, 
+colon
 color
+color32
+comma
+commercial-at
+compressedtangentframe
 connections
 const_cast
 construction vtable for 
@@ -3285,7 +3559,7 @@ cpu model
 cpu_info_
 cstring
 cursor_id
-debug_chart_color
+curvature
 decimal128
 decimal32
 decimal64
@@ -3306,14 +3580,9 @@ depth >= 10
 depth >= 8
 dgettext
 digit
-direct_light_shadows
-directional_irradiance
-directional_irradiance_sh2_b
-directional_irradiance_sh2_dc
-directional_irradiance_sh2_g
-directional_irradiance_sh2_r
 dlBNvz!/u{1?cmR^
 dl_iterate_phdr
+dollar-sign
 double
 dqe-KO{/3
 dst_height > 0
@@ -3326,6 +3595,7 @@ dy != __null
 dynamic_cast
 effortblocks = %d\n
 ehandle
+eight
 ekv_%08x
 encodingTry.m_fError < 3.40282346638528859811704183484516925e+38F
 entindex
@@ -3335,10 +3605,14 @@ entity_log_load_unserialize
 entity_lump_list
 entity_lump_spew
 entity_lump_spew %s %s
+entity_name
 entitykeyvalues.cpp
 enum(signed), 
 enum, 
+equals-sign
+exclamation-mark
 exit
+expf
 expr
 f5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5Jx
 fMinAlpha <= fMaxAlpha
@@ -3351,12 +3625,11 @@ fWeightSumTop > 0.0f
 false
 fast
 fclose
-fdopen
-fflush
+feof
 fgets
-fileno
 filesystem_stdio
 final %s\n
+five
 fixed_array
 fixed_invtbl8
 fj".T\CMek2>x
@@ -3369,16 +3642,25 @@ float Etc::Block4x4Encoding::GetError()
 float32
 float64
 floatbitmap.cpp
-floatbitmap.cpp(993): Unsupported color format "%s", skipping!\n
+floatbitmap.cpp(1191): Unsupported color format "%s", skipping!\n
+floatbitmap.cpp(518): Conversion not supported yet!\n
 fopen
+fopen64
+form-feed
+four
 fputc
 fputs
+fread
 free
+fseek
 ft: %-60s %-40s : %-80.80s raw:%s\n
+ftell
 future
 fwrite
 g_BitBuf_BitWriteMasks
+g_BitBuf_ExtraMasks
 g_Mathlib_GammaToLinearByteTable
+g_flConfigMaxCoord
 g_flTValues0To1Inclusive<float vector[4]>
 g_flTValues0To1Inclusive<float>
 g_nSequentialBytes<int vector[4]>
@@ -3388,6 +3670,7 @@ g_nSequentialIndices<float>
 g_nSequentialIndices<int vector[4]>
 g_nSequentialIndices<int>
 g_pMemAlloc
+g_pThreadPool
 generic
 get_nprocs
 getentropy
@@ -3398,6 +3681,8 @@ global destructors keyed to
 globalsymbol
 graph
 grasstilesceneobject.cpp
+grave-accent
+greater-than-sign
 group
 guard variable for 
 guard variable for std::__cxx11::collate<char>::id
@@ -3416,6 +3701,10 @@ guard variable for std::__cxx11::numpunct<char>::id
 guard variable for std::__cxx11::numpunct<wchar_t>::id
 guard variable for std::__cxx11::time_get<char, std::istreambuf_iterator<char, std::char_traits<char>>>::id
 guard variable for std::__cxx11::time_get<wchar_t, std::istreambuf_iterator<wchar_t, std::char_traits<wchar_t>>>::id
+guard variable for std::__detail::_AnyMatcher<std::regex_traits<char>, false, false, false>::operator()(char) const::__nul
+guard variable for std::__detail::_AnyMatcher<std::regex_traits<char>, false, false, true>::operator()(char) const::__nul
+guard variable for std::__detail::_AnyMatcher<std::regex_traits<char>, false, true, false>::operator()(char) const::__nul
+guard variable for std::__detail::_AnyMatcher<std::regex_traits<char>, false, true, true>::operator()(char) const::__nul
 guard variable for std::__timepunct<char>::id
 guard variable for std::__timepunct<wchar_t>::id
 guard variable for std::collate<char>::id
@@ -3447,6 +3736,11 @@ height > 0
 hidden alias for 
 hscript
 hscript_lightbinding
+hullivr_edge_merge_tan
+hullivr_faceisland_merge_disp
+hullivr_faceisland_merge_tan
+hullivr_version
+hyphen
 iBlue >= 0 && iBlue <= 15
 iBlue >= 0 && iBlue <= 31
 iBlue1 >= (signed)(0+a_uiRadius) && iBlue1 <= (signed)(31 - a_uiRadius)
@@ -3495,13 +3789,15 @@ int&& std::forward<int>(std::remove_reference<int>::type&)
 int16
 int32
 int64
+int8
+integer
+interrupt_priority
 invalid
 ioctl
 ios_base::_M_grow_words allocation failed
 ios_base::_M_grow_words is not valid
 iostream
 iostream error
-irradiance
 is also the end of the line, so you must check your lexer rules\n
 java Class for 
 java resource 
@@ -3534,6 +3830,10 @@ keyValues3Data
 kv 0x%p AddRef refcount == %d\n
 kv 0x%p Release refcount == %d\n
 ld-linux-x86-64.so.2
+left-curly-bracket
+left-parenthesis
+left-square-bracket
+less-than-sign
 lexer->mTokens(): Error: No lexer rules were added to the lexer yet!\n
 libc.so.6
 libm.so.6
@@ -3546,6 +3846,7 @@ locale::_S_normalize_category category not found
 locale::facet::_S_create_c_locale name not valid
 locale::facet::_S_lc_ctype_c_locale duplocale error
 locale::facet::_S_lc_ctype_c_locale newlocale error
+localize
 long
 long const& std::min<long>(long const&, long const&)
 long double
@@ -3554,35 +3855,34 @@ long std::__copy_streambufs<char, std::char_traits<char>>(std::basic_streambuf<c
 long std::__copy_streambufs<wchar_t, std::char_traits<wchar_t>>(std::basic_streambuf<wchar_t, std::char_traits<wchar_t>>*, std::basic_streambuf<wchar_t, std::char_traits<wchar_t>>*)
 long std::__copy_streambufs_eof<char, std::char_traits<char>>(std::basic_streambuf<char, std::char_traits<char>>*, std::basic_streambuf<char, std::char_traits<char>>*, bool&)
 long std::__copy_streambufs_eof<wchar_t, std::char_traits<wchar_t>>(std::basic_streambuf<wchar_t, std::char_traits<wchar_t>>*, std::basic_streambuf<wchar_t, std::char_traits<wchar_t>>*, bool&)
-long std::__exchange<long, int>(long&, int&&)
+longjmp
 looks like this:\n\t\t%.*s\n
 loongson-ext
 loongson-mmi
 lower
-lseek
+lowprecisionuv
+lowprecisionuv1
 m_Args
 m_Attributes
 m_BLASes
+m_BaseFlow_OnAfterCancel
+m_BaseFlow_WhileActive
 m_Bounds
 m_BoundsWs
 m_BufferData
-m_CRC
 m_CScriptComponent
 m_ChildNodeIndices
-m_ConeAxis
-m_ConeCutoff
-m_CullingData
 m_DecodedSize
 m_Description
 m_EnclosedClusterListBlock
 m_EnclosedClustersBlock
 m_EntryChunk
 m_Format
-m_HitBoxes
 m_IBData
 m_Inparams
 m_InparamsWhichCanBeMoved
 m_InstanceAlbedoData
+m_InstanceEmissiveData
 m_InstanceOrientations32
 m_Instances
 m_MasksBlock
@@ -3591,12 +3891,10 @@ m_Name
 m_Names
 m_NodeBlock
 m_Outparams
-m_PackedAABB
 m_PathIndex
 m_RegionBlock
 m_RegisterMap
 m_ReturnType
-m_SourceFilename
 m_Type
 m_VBData
 m_Value
@@ -3607,71 +3905,39 @@ m_aggregateSceneObjects
 m_albedoFormat
 m_allFlags
 m_anyFlags
-m_attachments
 m_bAggregateInstanceStreams
 m_bBakedShadowsGamma20
-m_bBakedTwoSided
 m_bBuildBakedLighting
-m_bCanBatchWithDynamicShaderConstants
 m_bChildCursorsShouldInherit
 m_bCompressionEnabled
-m_bComputeDynamicMeshTensionAfterAnimation
-m_bDrawLast
-m_bEmbeddedMapMesh
-m_bEnableEyeBulgeDeformation
-m_bEnableSimulation
 m_bHasBakedGeometryFlag
-m_bHasBakedLightingFromLightMap
-m_bHasBakedLightingFromVertexStream
 m_bHasLightmaps
 m_bHasTransform
-m_bIgnoreRotation
-m_bInfluenceRootTransform
-m_bIsNotMatchedToMaterial
 m_bIsPublic
-m_bIsValid
-m_bLimitCountPasses
-m_bMarkedForRemoval
-m_bNoShadow
-m_bOnlyShadow
-m_bRecomputeSmoothNormalsAfterAnimation
 m_bRemoveWhenOutOfScope
 m_bSHLightmaps
-m_bSmoothNormalsAcrossUvSeams
-m_bTranslationOnly
-m_bUseCompressedNormalTangent
-m_bUseShadowFastPath
-m_bUseUV2ForCharting
 m_bakedLightingInfo
 m_bakedShadows
-m_bbox
-m_boneName
-m_boneParents
-m_bones
 m_boolDiff
 m_boolDiff == true
 m_boolTransparent
 m_boundLs
 m_builderParams
-m_cRenderColor
 m_childLumps
 m_clutterSceneObjects
 m_connections
-m_constraints
 m_designerName
-m_drawBounds
-m_drawCalls
-m_drawDesc
+m_emissiveFormat
 m_entityKeyValues
 m_entityLumps
 m_extraBufferBinding
 m_extraVertexStreamOverrides
 m_extraVertexStreams
 m_fDataObjectTypes
+m_fEmissiveFactor
 m_fError >= 0.0f
 m_fMaxObjectScale
 m_fSwitchDistances
-m_flAlpha
 m_flBeginCullSize
 m_flDelay
 m_flEndCullSize
@@ -3681,11 +3947,6 @@ m_flFireTime
 m_flGridSize
 m_flMinDrawVolumeSize
 m_flMinimumDistance
-m_flShapeRadius
-m_flSphereRadius
-m_flTensionCompressScale
-m_flTensionStretchScale
-m_flUvDensity
 m_flags
 m_fragmentTransforms
 m_grassFileName
@@ -3694,15 +3955,7 @@ m_hBuffer
 m_hCaller
 m_hEntTarget
 m_hGraph
-m_hSimParamsMat
 m_hTarget
-m_hairPositionOffsets
-m_hairs
-m_hitboxsets
-m_indexBuffer
-m_influenceFlags
-m_influenceNames
-m_influenceWeights
 m_inputLayoutFields
 m_inputName
 m_instancePositions
@@ -3710,61 +3963,38 @@ m_instanceScales
 m_instanceStream
 m_instanceStreams
 m_instanceTintSrgb
-m_invBindPose
 m_iszPrivateVScripts
 m_keyValuesData
 m_layerNames
 m_lightMaps
 m_lodSetups
 m_mWorldFromLocal
-m_material
 m_materialGroup
 m_materialOverrides
-m_meshDeformParams
-m_meshletPackedIVB
-m_meshlets
 m_mode == MODE_ETC1
 m_mode == MODE_H
 m_mode == MODE_PLANAR
 m_mode == MODE_T
-m_morphSet
 m_nAdditionalMeshDrawPrimitiveFlags
-m_nAppliedIndexOffset
-m_nAttachBoneIdx
-m_nAttachMeshDrawCallIdx
-m_nAttachMeshIdx
 m_nBLASCount
 m_nBLASIndex
 m_nBaseClusterCount
 m_nBaseVertex
 m_nBindOffsetBytes
-m_nBoneIndex
-m_nBoneNameHash
-m_nBoneWeightCount
 m_nChartPackIterations
 m_nCompileFingerprint
 m_nCompileTimestamp
 m_nCubeMapPrecomputedHandshake
 m_nCursorID
-m_nDataOffset_Segments
-m_nDepthVertexBufferIndex
 m_nDrawCallIndex
 m_nEditorNodeID
 m_nElementCount
 m_nElementSizeInBytes
 m_nFirstIndex
 m_nFirstInstance
-m_nFirstMeshlet
 m_nFlags
 m_nGraphID
-m_nGroomGroupID
-m_nGroupId
-m_nGuideHairCount
-m_nGuideHairIndices_nSurfaceTriIndex
-m_nHairCount
-m_nHitBoxIndex
 m_nIndexCount
-m_nInfluences
 m_nInstanceStreamOffset
 m_nLODGroupMask
 m_nLODOverride
@@ -3776,54 +4006,30 @@ m_nLightProbeVolumePrecomputedHandshake
 m_nLightmapGameVersionNumber
 m_nLightmapVersionNumber
 m_nMapHash
-m_nMax
-m_nMaxSegmentsPerHairStrand
-m_nMeshletPackedIVBIndex
-m_nMin
-m_nNameHash
-m_nNumMeshlets
 m_nObjectID
 m_nObjectTypeFlags
 m_nOffset
-m_nOutputID
 m_nOverlayRenderOrder
 m_nPVSBytesPerCluster
-m_nPackedBaseUv
-m_nPackedSurfaceNormalOs
-m_nPackedSurfaceTangentOs
 m_nParent
-m_nPrimitiveCount
-m_nPrimitiveType
 m_nPriority
-m_nRigidBLASIndex
 m_nRuntimeIndex
 m_nSceneObjectIndex
 m_nSemanticIndex
 m_nShadowChannel
-m_nShapeType
 m_nSkyVisibilityCluster
 m_nSlot
 m_nSlotType
 m_nStackDepthWhenAdded
-m_nStartIndex
-m_nStartIndexOffset
 m_nSubSceneObject
 m_nSunVisibilityCluster
-m_nTargetType
 m_nTimesToFire
-m_nTotalSegmentCount
-m_nTotalVertexCount
-m_nTriangleCount
-m_nTriangleOffset
 m_nVBByteOffset
 m_nVertexAlbedoByteOffset
-m_nVertexAlbedoFormat
-m_nVertexAlbedoOffset
 m_nVertexAlbedoStreamOffset
-m_nVertexAlbedoStride
-m_nVertexAlbedoVB
 m_nVertexCount
-m_nVertexOffset
+m_nVertexEmissiveByteOffset
+m_nVertexEmissiveStreamOffset
 m_nVisBlocks
 m_nVisClusterMemberCount
 m_nVisClusterMemberOffset
@@ -3840,7 +4046,6 @@ m_pBaseClassComponentHelper
 m_pCPPClassname
 m_pData
 m_pEntity
-m_pGroomData
 m_pInfo
 m_pMaterial
 m_pName
@@ -3854,33 +4059,21 @@ m_pSemanticName
 m_pTarget
 m_pTargetInput
 m_paramMap
-m_parentName
 m_paucEncodingBits == nullptr
 m_renderable
 m_renderableModel
-m_rigidMeshParts
 m_rtProxies
-m_rtProxyDrawCalls
-m_sBoneName
-m_sSurfaceProperty
 m_sceneObjectLayerIndices
 m_sceneObjects
 m_scriptClassName
-m_skeleton
 m_skin
-m_strandSegmentCountHist
 m_szShaderSemantic
-m_targetDesc
-m_targetInput
 m_targetName
 m_targetType
 m_tiles
 m_uiAddedBlocks < m_uiImageBlocks
 m_uiAddedBlocks == m_uiImageBlocks
 m_uiEncodingIterations == 0
-m_vGuideBary_vBaseBary
-m_vInfluenceOffsets
-m_vInfluenceRotations
 m_vLODOrigin
 m_vLightingOrigin
 m_vLightmapUvScale
@@ -3888,18 +4081,15 @@ m_vLinearTintColor
 m_vMaxBounds
 m_vMinBounds
 m_vOrigin
-m_vRootOffset_flLengthScale
 m_vTintColor
 m_vTransform
 m_vVertexExtentLs
 m_vVertexOriginLs
-m_valueOverride
 m_variantValue
-m_vecCenter
-m_vecSize
 m_vertexAlbedoStream
 m_vertexAlbedoStreams
-m_vertexBuffers
+m_vertexEmissiveStream
+m_vertexEmissiveStreams
 m_visClusterMembership
 m_worldGroupId
 m_worldLightingInfo
@@ -3912,6 +4102,7 @@ maps/%s/world.vwrld
 maps/%s/world_visibility.vvis
 maps\
 materials/grass/grasstile.vmat
+matrix3x4
 matrix3x4_t
 mbrtowc
 mbsnrtowcs
@@ -3942,19 +4133,23 @@ near char(%#02X) :\n
 net_array
 new 
 new[]
+newline
+nextafterf
+nexttoken
+nine
 no memory during frame initialization.
 node_id
 noexcept
 non-transaction clone for 
 non-virtual thunk to 
-non-virtual thunk to std::basic_fstream<char, std::char_traits<char>>::~basic_fstream()
-non-virtual thunk to std::basic_fstream<wchar_t, std::char_traits<wchar_t>>::~basic_fstream()
 non-virtual thunk to std::basic_iostream<char, std::char_traits<char>>::~basic_iostream()
 non-virtual thunk to std::basic_iostream<wchar_t, std::char_traits<wchar_t>>::~basic_iostream()
 non-virtual thunk to std::basic_stringstream<char, std::char_traits<char>, std::allocator<char>>::~basic_stringstream()
 non-virtual thunk to std::basic_stringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>::~basic_stringstream()
+normal
 null
 null VP8Io passed to VP8GetHeaders()
+number-sign
 o KPBf
 oY.o<
 obj_count
@@ -3987,16 +4182,24 @@ operator new[](unsigned long, std::nothrow_t const&)
 operator new[](unsigned long, void*)
 operator"" 
 opqMU
+optionallycompressedtangentframe
 output
 pMessage
+panorama
 param
 parent_cursor_id
 pass %u\n
 pbucket->plinkLast->GetNext() == nullptr
+percent-sign
+period
+phys_res
+plus-sign
+pointer
 pointer, 
-poll
 port_name
 position
+posix_memalign
+posxyz
 print
 printf
 pthread_cond_broadcast
@@ -4024,6 +4227,9 @@ pulse_save_execution_history_limit
 punct
 pure virtual method called\n
 qangle
+quaternion
+question-mark
+quotation-mark
 r_drawworld
 r_grass_allow_flattening
 r_grass_alpha_test
@@ -4060,25 +4266,40 @@ regex error
 registers
 reinterpret_cast
 requested_cancel
+resource
 resource_manifests
+resource_name
 resourcehandle
 resources
 resourcesystem
+return_values
+return_values_enabled
 retval
+right-curly-bracket
+right-parenthesis
+right-square-bracket
+rotation_vector
 roundf
 s5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5Jx
+sRGB
 sc_allow_precomputed_vismembers
 scale <= 32768
 scale >= 256
 scenesystem
+scripts/vscripts/
+scripts/vscripts/%s
 secure_getenv
+semicolon
 setlocale
-setvbuf
+seven
 short
 signed char
+sincosf
 sizeof 
 sizeof...
+slash
 slow
+soundevent
 source_file
 source_line
 space
@@ -4113,6 +4334,38 @@ std::Catalogs::_M_erase(int)
 std::Catalogs::_M_get(int) const
 std::Catalogs::~Catalogs()
 std::_CatalogIdComp::operator()(std::Catalog_info const*, int) const
+std::_Function_handler<bool (char), std::__detail::_AnyMatcher<std::regex_traits<char>, false, false, false>>::_M_invoke(std::_Any_data const&, char&&)
+std::_Function_handler<bool (char), std::__detail::_AnyMatcher<std::regex_traits<char>, false, false, false>>::_M_manager(std::_Any_data&, std::_Any_data const&, std::_Manager_operation)
+std::_Function_handler<bool (char), std::__detail::_AnyMatcher<std::regex_traits<char>, false, false, true>>::_M_invoke(std::_Any_data const&, char&&)
+std::_Function_handler<bool (char), std::__detail::_AnyMatcher<std::regex_traits<char>, false, false, true>>::_M_manager(std::_Any_data&, std::_Any_data const&, std::_Manager_operation)
+std::_Function_handler<bool (char), std::__detail::_AnyMatcher<std::regex_traits<char>, false, true, false>>::_M_invoke(std::_Any_data const&, char&&)
+std::_Function_handler<bool (char), std::__detail::_AnyMatcher<std::regex_traits<char>, false, true, false>>::_M_manager(std::_Any_data&, std::_Any_data const&, std::_Manager_operation)
+std::_Function_handler<bool (char), std::__detail::_AnyMatcher<std::regex_traits<char>, false, true, true>>::_M_invoke(std::_Any_data const&, char&&)
+std::_Function_handler<bool (char), std::__detail::_AnyMatcher<std::regex_traits<char>, false, true, true>>::_M_manager(std::_Any_data&, std::_Any_data const&, std::_Manager_operation)
+std::_Function_handler<bool (char), std::__detail::_AnyMatcher<std::regex_traits<char>, true, false, false>>::_M_invoke(std::_Any_data const&, char&&)
+std::_Function_handler<bool (char), std::__detail::_AnyMatcher<std::regex_traits<char>, true, false, false>>::_M_manager(std::_Any_data&, std::_Any_data const&, std::_Manager_operation)
+std::_Function_handler<bool (char), std::__detail::_AnyMatcher<std::regex_traits<char>, true, false, true>>::_M_invoke(std::_Any_data const&, char&&)
+std::_Function_handler<bool (char), std::__detail::_AnyMatcher<std::regex_traits<char>, true, false, true>>::_M_manager(std::_Any_data&, std::_Any_data const&, std::_Manager_operation)
+std::_Function_handler<bool (char), std::__detail::_AnyMatcher<std::regex_traits<char>, true, true, false>>::_M_invoke(std::_Any_data const&, char&&)
+std::_Function_handler<bool (char), std::__detail::_AnyMatcher<std::regex_traits<char>, true, true, false>>::_M_manager(std::_Any_data&, std::_Any_data const&, std::_Manager_operation)
+std::_Function_handler<bool (char), std::__detail::_AnyMatcher<std::regex_traits<char>, true, true, true>>::_M_invoke(std::_Any_data const&, char&&)
+std::_Function_handler<bool (char), std::__detail::_AnyMatcher<std::regex_traits<char>, true, true, true>>::_M_manager(std::_Any_data&, std::_Any_data const&, std::_Manager_operation)
+std::_Function_handler<bool (char), std::__detail::_BracketMatcher<std::regex_traits<char>, false, false>>::_M_invoke(std::_Any_data const&, char&&)
+std::_Function_handler<bool (char), std::__detail::_BracketMatcher<std::regex_traits<char>, false, false>>::_M_manager(std::_Any_data&, std::_Any_data const&, std::_Manager_operation)
+std::_Function_handler<bool (char), std::__detail::_BracketMatcher<std::regex_traits<char>, false, true>>::_M_invoke(std::_Any_data const&, char&&)
+std::_Function_handler<bool (char), std::__detail::_BracketMatcher<std::regex_traits<char>, false, true>>::_M_manager(std::_Any_data&, std::_Any_data const&, std::_Manager_operation)
+std::_Function_handler<bool (char), std::__detail::_BracketMatcher<std::regex_traits<char>, true, false>>::_M_invoke(std::_Any_data const&, char&&)
+std::_Function_handler<bool (char), std::__detail::_BracketMatcher<std::regex_traits<char>, true, false>>::_M_manager(std::_Any_data&, std::_Any_data const&, std::_Manager_operation)
+std::_Function_handler<bool (char), std::__detail::_BracketMatcher<std::regex_traits<char>, true, true>>::_M_invoke(std::_Any_data const&, char&&)
+std::_Function_handler<bool (char), std::__detail::_BracketMatcher<std::regex_traits<char>, true, true>>::_M_manager(std::_Any_data&, std::_Any_data const&, std::_Manager_operation)
+std::_Function_handler<bool (char), std::__detail::_CharMatcher<std::regex_traits<char>, false, false>>::_M_invoke(std::_Any_data const&, char&&)
+std::_Function_handler<bool (char), std::__detail::_CharMatcher<std::regex_traits<char>, false, false>>::_M_manager(std::_Any_data&, std::_Any_data const&, std::_Manager_operation)
+std::_Function_handler<bool (char), std::__detail::_CharMatcher<std::regex_traits<char>, false, true>>::_M_invoke(std::_Any_data const&, char&&)
+std::_Function_handler<bool (char), std::__detail::_CharMatcher<std::regex_traits<char>, false, true>>::_M_manager(std::_Any_data&, std::_Any_data const&, std::_Manager_operation)
+std::_Function_handler<bool (char), std::__detail::_CharMatcher<std::regex_traits<char>, true, false>>::_M_invoke(std::_Any_data const&, char&&)
+std::_Function_handler<bool (char), std::__detail::_CharMatcher<std::regex_traits<char>, true, false>>::_M_manager(std::_Any_data&, std::_Any_data const&, std::_Manager_operation)
+std::_Function_handler<bool (char), std::__detail::_CharMatcher<std::regex_traits<char>, true, true>>::_M_invoke(std::_Any_data const&, char&&)
+std::_Function_handler<bool (char), std::__detail::_CharMatcher<std::regex_traits<char>, true, true>>::_M_manager(std::_Any_data&, std::_Any_data const&, std::_Manager_operation)
 std::_Head_base<0ul, std::__future_base::_State_baseV2::_Make_ready*, false>::_Head_base()
 std::_Head_base<0ul, std::__future_base::_State_baseV2::_Make_ready*, false>::_M_head(std::_Head_base<0ul, std::__future_base::_State_baseV2::_Make_ready*, false> const&)
 std::_Head_base<0ul, std::__future_base::_State_baseV2::_Make_ready*, false>::_M_head(std::_Head_base<0ul, std::__future_base::_State_baseV2::_Make_ready*, false>&)
@@ -4123,8 +4376,6 @@ std::_Head_base<1ul, std::default_delete<std::__future_base::_State_baseV2::_Mak
 std::_Head_base<1ul, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>, true>::_M_head(std::_Head_base<1ul, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>, true>&)
 std::_Head_base<1ul, std::default_delete<std::thread::_State>, true>::_Head_base()
 std::_Head_base<1ul, std::default_delete<std::thread::_State>, true>::_M_head(std::_Head_base<1ul, std::default_delete<std::thread::_State>, true>&)
-std::_Ios_Openmode std::__exchange<std::_Ios_Openmode, std::_Ios_Openmode>(std::_Ios_Openmode&, std::_Ios_Openmode&&)
-std::_Ios_Openmode&& std::forward<std::_Ios_Openmode>(std::remove_reference<std::_Ios_Openmode>::type&)
 std::_Rb_tree_black_count(std::_Rb_tree_node_base const*, std::_Rb_tree_node_base const*)
 std::_Rb_tree_decrement(std::_Rb_tree_node_base const*)
 std::_Rb_tree_decrement(std::_Rb_tree_node_base*)
@@ -4144,6 +4395,11 @@ std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_get_use_count() const
 std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release_last_use()
 std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release_last_use_cold()
 std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_weak_release()
+std::_Sp_counted_ptr<std::nullptr_t, (__gnu_cxx::_Lock_policy)2>::_M_dispose()
+std::_Sp_counted_ptr_inplace<std::__detail::_NFA<std::regex_traits<char>>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_destroy()
+std::_Sp_counted_ptr_inplace<std::__detail::_NFA<std::regex_traits<char>>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_dispose()
+std::_Sp_counted_ptr_inplace<std::__detail::_NFA<std::regex_traits<char>>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_get_deleter(std::type_info const&)
+std::_Sp_counted_ptr_inplace<std::__detail::_NFA<std::regex_traits<char>>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::~_Sp_counted_ptr_inplace()
 std::_Tuple_impl<0ul, std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>::_M_head(std::_Tuple_impl<0ul, std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>> const&)
 std::_Tuple_impl<0ul, std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>::_M_head(std::_Tuple_impl<0ul, std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>&)
 std::_Tuple_impl<0ul, std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>::_Tuple_impl()
@@ -4176,32 +4432,7 @@ std::__at_thread_exit(std::__at_thread_exit_elt*)
 std::__atomic_futex_unsigned_base::_M_futex_notify_all(unsigned int*)
 std::__atomic_futex_unsigned_base::_M_futex_wait_until(unsigned int*, unsigned int, bool, std::chrono::duration<long, std::ratio<1l, 1l>>, std::chrono::duration<long, std::ratio<1l, 1000000000l>>)
 std::__atomic_futex_unsigned_base::_M_futex_wait_until_steady(unsigned int*, unsigned int, bool, std::chrono::duration<long, std::ratio<1l, 1l>>, std::chrono::duration<long, std::ratio<1l, 1000000000l>>)
-std::__basic_file<char>::__basic_file(pthread_mutex_t*)
-std::__basic_file<char>::__basic_file(std::__basic_file<char>&&, pthread_mutex_t*)
-std::__basic_file<char>::close()
-std::__basic_file<char>::fd()
-std::__basic_file<char>::file()
-std::__basic_file<char>::is_open() const
-std::__basic_file<char>::native_handle() const
-std::__basic_file<char>::open(char const*, std::_Ios_Openmode, int)
-std::__basic_file<char>::seekoff(long, std::_Ios_Seekdir)
-std::__basic_file<char>::showmanyc()
-std::__basic_file<char>::swap(std::__basic_file<char>&)
-std::__basic_file<char>::sync()
-std::__basic_file<char>::sys_open(_IO_FILE*, std::_Ios_Openmode)
-std::__basic_file<char>::sys_open(int, std::_Ios_Openmode)
-std::__basic_file<char>::xsgetn(char*, long)
-std::__basic_file<char>::xsputn(char const*, long)
-std::__basic_file<char>::xsputn_2(char const*, long, char const*, long)
-std::__basic_file<char>::~__basic_file()
 std::__codecvt_abstract_base<char, char, __mbstate_t>::__codecvt_abstract_base(unsigned long)
-std::__codecvt_abstract_base<char, char, __mbstate_t>::always_noconv() const
-std::__codecvt_abstract_base<char, char, __mbstate_t>::encoding() const
-std::__codecvt_abstract_base<char, char, __mbstate_t>::in(__mbstate_t&, char const*, char const*, char const*&, char*, char*, char*&) const
-std::__codecvt_abstract_base<char, char, __mbstate_t>::length(__mbstate_t&, char const*, char const*, unsigned long) const
-std::__codecvt_abstract_base<char, char, __mbstate_t>::max_length() const
-std::__codecvt_abstract_base<char, char, __mbstate_t>::out(__mbstate_t&, char const*, char const*, char const*&, char*, char*, char*&) const
-std::__codecvt_abstract_base<char, char, __mbstate_t>::unshift(__mbstate_t&, char*, char*, char*&) const
 std::__codecvt_abstract_base<char, char, __mbstate_t>::~__codecvt_abstract_base()
 std::__codecvt_abstract_base<char16_t, char, __mbstate_t>::__codecvt_abstract_base(unsigned long)
 std::__codecvt_abstract_base<char16_t, char, __mbstate_t>::~__codecvt_abstract_base()
@@ -4212,13 +4443,9 @@ std::__codecvt_abstract_base<char32_t, char, __mbstate_t>::~__codecvt_abstract_b
 std::__codecvt_abstract_base<char32_t, char8_t, __mbstate_t>::__codecvt_abstract_base(unsigned long)
 std::__codecvt_abstract_base<char32_t, char8_t, __mbstate_t>::~__codecvt_abstract_base()
 std::__codecvt_abstract_base<wchar_t, char, __mbstate_t>::__codecvt_abstract_base(unsigned long)
-std::__codecvt_abstract_base<wchar_t, char, __mbstate_t>::always_noconv() const
-std::__codecvt_abstract_base<wchar_t, char, __mbstate_t>::encoding() const
 std::__codecvt_abstract_base<wchar_t, char, __mbstate_t>::in(__mbstate_t&, char const*, char const*, char const*&, wchar_t*, wchar_t*, wchar_t*&) const
-std::__codecvt_abstract_base<wchar_t, char, __mbstate_t>::length(__mbstate_t&, char const*, char const*, unsigned long) const
 std::__codecvt_abstract_base<wchar_t, char, __mbstate_t>::max_length() const
 std::__codecvt_abstract_base<wchar_t, char, __mbstate_t>::out(__mbstate_t&, wchar_t const*, wchar_t const*, wchar_t const*&, char*, char*, char*&) const
-std::__codecvt_abstract_base<wchar_t, char, __mbstate_t>::unshift(__mbstate_t&, char*, char*, char*&) const
 std::__codecvt_abstract_base<wchar_t, char, __mbstate_t>::~__codecvt_abstract_base()
 std::__codecvt_utf16_base<char16_t>::do_always_noconv() const
 std::__codecvt_utf16_base<char16_t>::do_encoding() const
@@ -5035,6 +5262,63 @@ std::__cxx11::time_get_byname<wchar_t, std::istreambuf_iterator<wchar_t, std::ch
 std::__cxx11::time_get_byname<wchar_t, std::istreambuf_iterator<wchar_t, std::char_traits<wchar_t>>>::time_get_byname(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, unsigned long)
 std::__cxx11::time_get_byname<wchar_t, std::istreambuf_iterator<wchar_t, std::char_traits<wchar_t>>>::~time_get_byname()
 std::__destroy_ios_failure(void*)
+std::__detail::_AnyMatcher<std::regex_traits<char>, false, false, false>::operator()(char) const::__nul
+std::__detail::_AnyMatcher<std::regex_traits<char>, false, false, true>::operator()(char) const::__nul
+std::__detail::_AnyMatcher<std::regex_traits<char>, false, true, false>::operator()(char) const::__nul
+std::__detail::_AnyMatcher<std::regex_traits<char>, false, true, true>::operator()(char) const::__nul
+std::__detail::_BracketMatcher<std::regex_traits<char>, false, false>::_M_ready()
+std::__detail::_BracketMatcher<std::regex_traits<char>, false, false>::~_BracketMatcher()
+std::__detail::_BracketMatcher<std::regex_traits<char>, false, true>::_M_make_range(char, char)
+std::__detail::_BracketMatcher<std::regex_traits<char>, false, true>::_M_ready()
+std::__detail::_BracketMatcher<std::regex_traits<char>, false, true>::~_BracketMatcher()
+std::__detail::_BracketMatcher<std::regex_traits<char>, true, false>::_M_ready()
+std::__detail::_BracketMatcher<std::regex_traits<char>, true, false>::~_BracketMatcher()
+std::__detail::_BracketMatcher<std::regex_traits<char>, true, true>::_M_make_range(char, char)
+std::__detail::_BracketMatcher<std::regex_traits<char>, true, true>::_M_ready()
+std::__detail::_BracketMatcher<std::regex_traits<char>, true, true>::~_BracketMatcher()
+std::__detail::_Compiler<std::regex_traits<char>>::_M_alternative()
+std::__detail::_Compiler<std::regex_traits<char>>::_M_assertion()
+std::__detail::_Compiler<std::regex_traits<char>>::_M_atom()
+std::__detail::_Compiler<std::regex_traits<char>>::_M_bracket_expression()
+std::__detail::_Compiler<std::regex_traits<char>>::_M_cur_int_value(int)
+std::__detail::_Compiler<std::regex_traits<char>>::_M_disjunction()
+std::__detail::_Compiler<std::regex_traits<char>>::_M_pop()
+std::__detail::_Compiler<std::regex_traits<char>>::_M_quantifier()
+std::__detail::_Compiler<std::regex_traits<char>>::_M_quantifier()::'lambda'()::operator()() const
+std::__detail::_Compiler<std::regex_traits<char>>::_M_try_char()
+std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_M_dfs(std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_Match_mode, long)
+std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_M_handle_alternative(std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_Match_mode, long)
+std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_M_handle_backref(std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_Match_mode, long)
+std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_M_handle_repeat(std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_Match_mode, long)
+std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_M_handle_word_boundary(std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_Match_mode, long)
+std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_M_is_line_terminator(char) const
+std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_M_is_word(char) const::__s
+std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_M_lookahead(long)
+std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_M_rep_once_more(std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_Match_mode, long)
+std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, true>::_M_dfs(std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, true>::_Match_mode, long)
+std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, true>::_M_handle_backref(std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, true>::_Match_mode, long)
+std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, true>::_M_is_line_terminator(char) const
+std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, true>::_M_is_word(char) const::__s
+std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, true>::_M_lookahead(long)
+std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, true>::_M_rep_once_more(std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, true>::_Match_mode, long)
+std::__detail::_NFA<std::regex_traits<char>>::_M_insert_dummy()
+std::__detail::_NFA<std::regex_traits<char>>::_M_insert_matcher(std::function<bool (char)>)
+std::__detail::_NFA<std::regex_traits<char>>::_M_insert_repeat(long, long, bool)
+std::__detail::_NFA<std::regex_traits<char>>::_M_insert_state(std::__detail::_State<char>)
+std::__detail::_NFA<std::regex_traits<char>>::_M_insert_subexpr_begin()
+std::__detail::_NFA<std::regex_traits<char>>::_M_insert_subexpr_end()
+std::__detail::_RegexTranslatorBase<std::regex_traits<char>, false, true>::_M_transform(char) const
+std::__detail::_RegexTranslatorBase<std::regex_traits<char>, true, true>::_M_transform(char) const
+std::__detail::_Scanner<char>::_M_advance()
+std::__detail::_Scanner<char>::_M_eat_class(char)
+std::__detail::_Scanner<char>::_M_eat_escape_awk()
+std::__detail::_Scanner<char>::_M_eat_escape_ecma()
+std::__detail::_Scanner<char>::_M_eat_escape_posix()
+std::__detail::_Scanner<char>::_M_scan_in_brace()
+std::__detail::_Scanner<char>::_M_scan_in_bracket()
+std::__detail::_Scanner<char>::_M_scan_normal()
+std::__detail::_State<char>::~_State()
+std::__detail::_StateSeq<std::regex_traits<char>>::_M_clone()
 std::__exception_ptr::exception_ptr::_M_addref()
 std::__exception_ptr::exception_ptr::_M_get() const
 std::__exception_ptr::exception_ptr::_M_release()
@@ -5130,7 +5414,6 @@ std::__shared_count<(__gnu_cxx::_Lock_policy)2>::_M_get_use_count() const
 std::__shared_count<(__gnu_cxx::_Lock_policy)2>::_M_swap(std::__shared_count<(__gnu_cxx::_Lock_policy)2>&)
 std::__shared_count<(__gnu_cxx::_Lock_policy)2>::__shared_count()
 std::__shared_count<(__gnu_cxx::_Lock_policy)2>::__shared_count(std::__weak_count<(__gnu_cxx::_Lock_policy)2> const&, std::nothrow_t)
-std::__shared_count<(__gnu_cxx::_Lock_policy)2>::operator=(std::__shared_count<(__gnu_cxx::_Lock_policy)2> const&)
 std::__shared_count<(__gnu_cxx::_Lock_policy)2>::~__shared_count()
 std::__shared_ptr<std::__future_base::_State_baseV2, (__gnu_cxx::_Lock_policy)2>::__shared_ptr(std::__weak_ptr<std::__future_base::_State_baseV2, (__gnu_cxx::_Lock_policy)2> const&, std::nothrow_t)
 std::__shared_ptr<std::__future_base::_State_baseV2, (__gnu_cxx::_Lock_policy)2>::get() const
@@ -5274,120 +5557,6 @@ std::bad_typeid
 std::bad_typeid::bad_typeid()
 std::bad_typeid::what() const
 std::bad_typeid::~bad_typeid()
-std::basic_filebuf<char, std::char_traits<char>>::_M_allocate_internal_buffer()
-std::basic_filebuf<char, std::char_traits<char>>::_M_convert_to_external(char*, long)
-std::basic_filebuf<char, std::char_traits<char>>::_M_create_pback()
-std::basic_filebuf<char, std::char_traits<char>>::_M_destroy_internal_buffer()
-std::basic_filebuf<char, std::char_traits<char>>::_M_destroy_pback()
-std::basic_filebuf<char, std::char_traits<char>>::_M_get_ext_pos(__mbstate_t&)
-std::basic_filebuf<char, std::char_traits<char>>::_M_seek(long, std::_Ios_Seekdir, __mbstate_t)
-std::basic_filebuf<char, std::char_traits<char>>::_M_set_buffer(long)
-std::basic_filebuf<char, std::char_traits<char>>::_M_terminate_output()
-std::basic_filebuf<char, std::char_traits<char>>::basic_filebuf()
-std::basic_filebuf<char, std::char_traits<char>>::basic_filebuf(std::basic_filebuf<char, std::char_traits<char>>&&)
-std::basic_filebuf<char, std::char_traits<char>>::close()
-std::basic_filebuf<char, std::char_traits<char>>::close()::__close_sentry::__close_sentry(std::basic_filebuf<char, std::char_traits<char>>*)
-std::basic_filebuf<char, std::char_traits<char>>::close()::__close_sentry::~__close_sentry()
-std::basic_filebuf<char, std::char_traits<char>>::imbue(std::locale const&)
-std::basic_filebuf<char, std::char_traits<char>>::is_open() const
-std::basic_filebuf<char, std::char_traits<char>>::open(char const*, std::_Ios_Openmode)
-std::basic_filebuf<char, std::char_traits<char>>::open(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::_Ios_Openmode)
-std::basic_filebuf<char, std::char_traits<char>>::operator=(std::basic_filebuf<char, std::char_traits<char>>&&)
-std::basic_filebuf<char, std::char_traits<char>>::overflow(int)
-std::basic_filebuf<char, std::char_traits<char>>::pbackfail(int)
-std::basic_filebuf<char, std::char_traits<char>>::seekoff(long, std::_Ios_Seekdir, std::_Ios_Openmode)
-std::basic_filebuf<char, std::char_traits<char>>::seekpos(std::fpos<__mbstate_t>, std::_Ios_Openmode)
-std::basic_filebuf<char, std::char_traits<char>>::setbuf(char*, long)
-std::basic_filebuf<char, std::char_traits<char>>::showmanyc()
-std::basic_filebuf<char, std::char_traits<char>>::swap(std::basic_filebuf<char, std::char_traits<char>>&)
-std::basic_filebuf<char, std::char_traits<char>>::sync()
-std::basic_filebuf<char, std::char_traits<char>>::underflow()
-std::basic_filebuf<char, std::char_traits<char>>::xsgetn(char*, long)
-std::basic_filebuf<char, std::char_traits<char>>::xsputn(char const*, long)
-std::basic_filebuf<char, std::char_traits<char>>::~basic_filebuf()
-std::basic_filebuf<wchar_t, std::char_traits<wchar_t>>::_M_allocate_internal_buffer()
-std::basic_filebuf<wchar_t, std::char_traits<wchar_t>>::_M_convert_to_external(wchar_t*, long)
-std::basic_filebuf<wchar_t, std::char_traits<wchar_t>>::_M_create_pback()
-std::basic_filebuf<wchar_t, std::char_traits<wchar_t>>::_M_destroy_internal_buffer()
-std::basic_filebuf<wchar_t, std::char_traits<wchar_t>>::_M_destroy_pback()
-std::basic_filebuf<wchar_t, std::char_traits<wchar_t>>::_M_get_ext_pos(__mbstate_t&)
-std::basic_filebuf<wchar_t, std::char_traits<wchar_t>>::_M_seek(long, std::_Ios_Seekdir, __mbstate_t)
-std::basic_filebuf<wchar_t, std::char_traits<wchar_t>>::_M_set_buffer(long)
-std::basic_filebuf<wchar_t, std::char_traits<wchar_t>>::_M_terminate_output()
-std::basic_filebuf<wchar_t, std::char_traits<wchar_t>>::basic_filebuf()
-std::basic_filebuf<wchar_t, std::char_traits<wchar_t>>::basic_filebuf(std::basic_filebuf<wchar_t, std::char_traits<wchar_t>>&&)
-std::basic_filebuf<wchar_t, std::char_traits<wchar_t>>::close()
-std::basic_filebuf<wchar_t, std::char_traits<wchar_t>>::close()::__close_sentry::__close_sentry(std::basic_filebuf<wchar_t, std::char_traits<wchar_t>>*)
-std::basic_filebuf<wchar_t, std::char_traits<wchar_t>>::close()::__close_sentry::~__close_sentry()
-std::basic_filebuf<wchar_t, std::char_traits<wchar_t>>::imbue(std::locale const&)
-std::basic_filebuf<wchar_t, std::char_traits<wchar_t>>::is_open() const
-std::basic_filebuf<wchar_t, std::char_traits<wchar_t>>::open(char const*, std::_Ios_Openmode)
-std::basic_filebuf<wchar_t, std::char_traits<wchar_t>>::open(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::_Ios_Openmode)
-std::basic_filebuf<wchar_t, std::char_traits<wchar_t>>::operator=(std::basic_filebuf<wchar_t, std::char_traits<wchar_t>>&&)
-std::basic_filebuf<wchar_t, std::char_traits<wchar_t>>::overflow(unsigned int)
-std::basic_filebuf<wchar_t, std::char_traits<wchar_t>>::pbackfail(unsigned int)
-std::basic_filebuf<wchar_t, std::char_traits<wchar_t>>::seekoff(long, std::_Ios_Seekdir, std::_Ios_Openmode)
-std::basic_filebuf<wchar_t, std::char_traits<wchar_t>>::seekpos(std::fpos<__mbstate_t>, std::_Ios_Openmode)
-std::basic_filebuf<wchar_t, std::char_traits<wchar_t>>::setbuf(wchar_t*, long)
-std::basic_filebuf<wchar_t, std::char_traits<wchar_t>>::showmanyc()
-std::basic_filebuf<wchar_t, std::char_traits<wchar_t>>::swap(std::basic_filebuf<wchar_t, std::char_traits<wchar_t>>&)
-std::basic_filebuf<wchar_t, std::char_traits<wchar_t>>::sync()
-std::basic_filebuf<wchar_t, std::char_traits<wchar_t>>::underflow()
-std::basic_filebuf<wchar_t, std::char_traits<wchar_t>>::xsgetn(wchar_t*, long)
-std::basic_filebuf<wchar_t, std::char_traits<wchar_t>>::xsputn(wchar_t const*, long)
-std::basic_filebuf<wchar_t, std::char_traits<wchar_t>>::~basic_filebuf()
-std::basic_fstream<char, std::char_traits<char>>::basic_fstream()
-std::basic_fstream<char, std::char_traits<char>>::basic_fstream(char const*, std::_Ios_Openmode)
-std::basic_fstream<char, std::char_traits<char>>::basic_fstream(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::_Ios_Openmode)
-std::basic_fstream<char, std::char_traits<char>>::basic_fstream(std::basic_fstream<char, std::char_traits<char>>&&)
-std::basic_fstream<char, std::char_traits<char>>::close()
-std::basic_fstream<char, std::char_traits<char>>::is_open()
-std::basic_fstream<char, std::char_traits<char>>::is_open() const
-std::basic_fstream<char, std::char_traits<char>>::open(char const*, std::_Ios_Openmode)
-std::basic_fstream<char, std::char_traits<char>>::open(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::_Ios_Openmode)
-std::basic_fstream<char, std::char_traits<char>>::operator=(std::basic_fstream<char, std::char_traits<char>>&&)
-std::basic_fstream<char, std::char_traits<char>>::rdbuf() const
-std::basic_fstream<char, std::char_traits<char>>::swap(std::basic_fstream<char, std::char_traits<char>>&)
-std::basic_fstream<char, std::char_traits<char>>::~basic_fstream()
-std::basic_fstream<wchar_t, std::char_traits<wchar_t>>::basic_fstream()
-std::basic_fstream<wchar_t, std::char_traits<wchar_t>>::basic_fstream(char const*, std::_Ios_Openmode)
-std::basic_fstream<wchar_t, std::char_traits<wchar_t>>::basic_fstream(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::_Ios_Openmode)
-std::basic_fstream<wchar_t, std::char_traits<wchar_t>>::basic_fstream(std::basic_fstream<wchar_t, std::char_traits<wchar_t>>&&)
-std::basic_fstream<wchar_t, std::char_traits<wchar_t>>::close()
-std::basic_fstream<wchar_t, std::char_traits<wchar_t>>::is_open()
-std::basic_fstream<wchar_t, std::char_traits<wchar_t>>::is_open() const
-std::basic_fstream<wchar_t, std::char_traits<wchar_t>>::open(char const*, std::_Ios_Openmode)
-std::basic_fstream<wchar_t, std::char_traits<wchar_t>>::open(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::_Ios_Openmode)
-std::basic_fstream<wchar_t, std::char_traits<wchar_t>>::operator=(std::basic_fstream<wchar_t, std::char_traits<wchar_t>>&&)
-std::basic_fstream<wchar_t, std::char_traits<wchar_t>>::rdbuf() const
-std::basic_fstream<wchar_t, std::char_traits<wchar_t>>::swap(std::basic_fstream<wchar_t, std::char_traits<wchar_t>>&)
-std::basic_fstream<wchar_t, std::char_traits<wchar_t>>::~basic_fstream()
-std::basic_ifstream<char, std::char_traits<char>>::basic_ifstream()
-std::basic_ifstream<char, std::char_traits<char>>::basic_ifstream(char const*, std::_Ios_Openmode)
-std::basic_ifstream<char, std::char_traits<char>>::basic_ifstream(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::_Ios_Openmode)
-std::basic_ifstream<char, std::char_traits<char>>::basic_ifstream(std::basic_ifstream<char, std::char_traits<char>>&&)
-std::basic_ifstream<char, std::char_traits<char>>::close()
-std::basic_ifstream<char, std::char_traits<char>>::is_open()
-std::basic_ifstream<char, std::char_traits<char>>::is_open() const
-std::basic_ifstream<char, std::char_traits<char>>::open(char const*, std::_Ios_Openmode)
-std::basic_ifstream<char, std::char_traits<char>>::open(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::_Ios_Openmode)
-std::basic_ifstream<char, std::char_traits<char>>::operator=(std::basic_ifstream<char, std::char_traits<char>>&&)
-std::basic_ifstream<char, std::char_traits<char>>::rdbuf() const
-std::basic_ifstream<char, std::char_traits<char>>::swap(std::basic_ifstream<char, std::char_traits<char>>&)
-std::basic_ifstream<char, std::char_traits<char>>::~basic_ifstream()
-std::basic_ifstream<wchar_t, std::char_traits<wchar_t>>::basic_ifstream()
-std::basic_ifstream<wchar_t, std::char_traits<wchar_t>>::basic_ifstream(char const*, std::_Ios_Openmode)
-std::basic_ifstream<wchar_t, std::char_traits<wchar_t>>::basic_ifstream(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::_Ios_Openmode)
-std::basic_ifstream<wchar_t, std::char_traits<wchar_t>>::basic_ifstream(std::basic_ifstream<wchar_t, std::char_traits<wchar_t>>&&)
-std::basic_ifstream<wchar_t, std::char_traits<wchar_t>>::close()
-std::basic_ifstream<wchar_t, std::char_traits<wchar_t>>::is_open()
-std::basic_ifstream<wchar_t, std::char_traits<wchar_t>>::is_open() const
-std::basic_ifstream<wchar_t, std::char_traits<wchar_t>>::open(char const*, std::_Ios_Openmode)
-std::basic_ifstream<wchar_t, std::char_traits<wchar_t>>::open(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::_Ios_Openmode)
-std::basic_ifstream<wchar_t, std::char_traits<wchar_t>>::operator=(std::basic_ifstream<wchar_t, std::char_traits<wchar_t>>&&)
-std::basic_ifstream<wchar_t, std::char_traits<wchar_t>>::rdbuf() const
-std::basic_ifstream<wchar_t, std::char_traits<wchar_t>>::swap(std::basic_ifstream<wchar_t, std::char_traits<wchar_t>>&)
-std::basic_ifstream<wchar_t, std::char_traits<wchar_t>>::~basic_ifstream()
 std::basic_ios<char, std::char_traits<char>> const* std::__addressof<std::basic_ios<char, std::char_traits<char>> const>(std::basic_ios<char, std::char_traits<char>> const&)
 std::basic_ios<char, std::char_traits<char>>::_M_cache_locale(std::locale const&)
 std::basic_ios<char, std::char_traits<char>>::_M_setstate(std::_Ios_Iostate)
@@ -5569,32 +5738,6 @@ std::basic_istringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wcha
 std::basic_istringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>::str(std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>> const&)
 std::basic_istringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>::swap(std::basic_istringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>&)
 std::basic_istringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>::~basic_istringstream()
-std::basic_ofstream<char, std::char_traits<char>>::basic_ofstream()
-std::basic_ofstream<char, std::char_traits<char>>::basic_ofstream(char const*, std::_Ios_Openmode)
-std::basic_ofstream<char, std::char_traits<char>>::basic_ofstream(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::_Ios_Openmode)
-std::basic_ofstream<char, std::char_traits<char>>::basic_ofstream(std::basic_ofstream<char, std::char_traits<char>>&&)
-std::basic_ofstream<char, std::char_traits<char>>::close()
-std::basic_ofstream<char, std::char_traits<char>>::is_open()
-std::basic_ofstream<char, std::char_traits<char>>::is_open() const
-std::basic_ofstream<char, std::char_traits<char>>::open(char const*, std::_Ios_Openmode)
-std::basic_ofstream<char, std::char_traits<char>>::open(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::_Ios_Openmode)
-std::basic_ofstream<char, std::char_traits<char>>::operator=(std::basic_ofstream<char, std::char_traits<char>>&&)
-std::basic_ofstream<char, std::char_traits<char>>::rdbuf() const
-std::basic_ofstream<char, std::char_traits<char>>::swap(std::basic_ofstream<char, std::char_traits<char>>&)
-std::basic_ofstream<char, std::char_traits<char>>::~basic_ofstream()
-std::basic_ofstream<wchar_t, std::char_traits<wchar_t>>::basic_ofstream()
-std::basic_ofstream<wchar_t, std::char_traits<wchar_t>>::basic_ofstream(char const*, std::_Ios_Openmode)
-std::basic_ofstream<wchar_t, std::char_traits<wchar_t>>::basic_ofstream(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::_Ios_Openmode)
-std::basic_ofstream<wchar_t, std::char_traits<wchar_t>>::basic_ofstream(std::basic_ofstream<wchar_t, std::char_traits<wchar_t>>&&)
-std::basic_ofstream<wchar_t, std::char_traits<wchar_t>>::close()
-std::basic_ofstream<wchar_t, std::char_traits<wchar_t>>::is_open()
-std::basic_ofstream<wchar_t, std::char_traits<wchar_t>>::is_open() const
-std::basic_ofstream<wchar_t, std::char_traits<wchar_t>>::open(char const*, std::_Ios_Openmode)
-std::basic_ofstream<wchar_t, std::char_traits<wchar_t>>::open(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::_Ios_Openmode)
-std::basic_ofstream<wchar_t, std::char_traits<wchar_t>>::operator=(std::basic_ofstream<wchar_t, std::char_traits<wchar_t>>&&)
-std::basic_ofstream<wchar_t, std::char_traits<wchar_t>>::rdbuf() const
-std::basic_ofstream<wchar_t, std::char_traits<wchar_t>>::swap(std::basic_ofstream<wchar_t, std::char_traits<wchar_t>>&)
-std::basic_ofstream<wchar_t, std::char_traits<wchar_t>>::~basic_ofstream()
 std::basic_ostream<char, std::char_traits<char> >
 std::basic_ostream<char, std::char_traits<char>>& std::__ostream_insert<char, std::char_traits<char>>(std::basic_ostream<char, std::char_traits<char>>&, char const*, long)
 std::basic_ostream<char, std::char_traits<char>>& std::endl<char, std::char_traits<char>>(std::basic_ostream<char, std::char_traits<char>>&)
@@ -5792,7 +5935,6 @@ std::basic_string<char, std::char_traits<char>, std::allocator<char>> std::opera
 std::basic_string<char, std::char_traits<char>, std::allocator<char>> std::operator+<char, std::char_traits<char>, std::allocator<char>>(char const*, std::basic_string<char, std::char_traits<char>, std::allocator<char>>&&)
 std::basic_string<char, std::char_traits<char>, std::allocator<char>> std::operator+<char, std::char_traits<char>, std::allocator<char>>(char, std::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)
 std::basic_string<char, std::char_traits<char>, std::allocator<char>> std::operator+<char, std::char_traits<char>, std::allocator<char>>(std::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)
-std::basic_string<char, std::char_traits<char>, std::allocator<char>> std::operator+<char, std::char_traits<char>, std::allocator<char>>(std::basic_string<char, std::char_traits<char>, std::allocator<char>>&&, char const*)
 std::basic_string<char, std::char_traits<char>, std::allocator<char>>::basic_string()
 std::basic_string<char, std::char_traits<char>, std::allocator<char>>::basic_string(char const*, std::allocator<char> const&)
 std::basic_string<char, std::char_traits<char>, std::allocator<char>>::basic_string(char const*, unsigned long, std::allocator<char> const&)
@@ -6109,7 +6251,6 @@ std::chrono::duration<long, std::ratio<1l, 1l>>::count() const
 std::chrono::duration<long, std::ratio<1l, 1l>>::duration<long, void>(long const&)
 std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l>>>::time_point(std::chrono::duration<long, std::ratio<1l, 1000000000l>> const&)
 std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l>>>::time_point(std::chrono::duration<long, std::ratio<1l, 1000000000l>> const&)
-std::codecvt<char, char, __mbstate_t> const& std::__check_facet<std::codecvt<char, char, __mbstate_t>>(std::codecvt<char, char, __mbstate_t> const*)
 std::codecvt<char, char, __mbstate_t> const& std::use_facet<std::codecvt<char, char, __mbstate_t>>(std::locale const&)
 std::codecvt<char, char, __mbstate_t> const* std::__try_use_facet<std::codecvt<char, char, __mbstate_t>>(std::locale const&)
 std::codecvt<char, char, __mbstate_t>::codecvt(__locale_struct*, unsigned long)
@@ -6163,7 +6304,6 @@ std::codecvt<char32_t, char8_t, __mbstate_t>::do_out(__mbstate_t&, char32_t cons
 std::codecvt<char32_t, char8_t, __mbstate_t>::do_unshift(__mbstate_t&, char8_t*, char8_t*, char8_t*&) const
 std::codecvt<char32_t, char8_t, __mbstate_t>::id
 std::codecvt<char32_t, char8_t, __mbstate_t>::~codecvt()
-std::codecvt<wchar_t, char, __mbstate_t> const& std::__check_facet<std::codecvt<wchar_t, char, __mbstate_t>>(std::codecvt<wchar_t, char, __mbstate_t> const*)
 std::codecvt<wchar_t, char, __mbstate_t> const& std::use_facet<std::codecvt<wchar_t, char, __mbstate_t>>(std::locale const&)
 std::codecvt<wchar_t, char, __mbstate_t> const* std::__try_use_facet<std::codecvt<wchar_t, char, __mbstate_t>>(std::locale const&)
 std::codecvt<wchar_t, char, __mbstate_t>::codecvt(__locale_struct*, unsigned long)
@@ -6299,14 +6439,13 @@ std::default_delete<std::__future_base::_State_baseV2::_Make_ready>& std::__get_
 std::default_delete<std::__future_base::_State_baseV2::_Make_ready>::operator()(std::__future_base::_State_baseV2::_Make_ready*) const
 std::default_delete<std::thread::_State>& std::__get_helper<1ul, std::default_delete<std::thread::_State>>(std::_Tuple_impl<1ul, std::default_delete<std::thread::_State>, >&)
 std::default_delete<std::thread::_State>::operator()(std::thread::_State*) const
+std::deque<std::__detail::_StateSeq<std::regex_traits<char>>, std::allocator<std::__detail::_StateSeq<std::regex_traits<char>>>>::_M_reallocate_map(unsigned long, bool)
+std::deque<std::__detail::_StateSeq<std::regex_traits<char>>, std::allocator<std::__detail::_StateSeq<std::regex_traits<char>>>>::push_back(std::__detail::_StateSeq<std::regex_traits<char>> const&)
 std::domain_error::domain_error(char const*)
 std::domain_error::domain_error(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)
 std::domain_error::domain_error(std::string const&)
 std::domain_error::~domain_error()
-std::enable_if<std::__and_<std::__not_<std::__is_tuple_like<_IO_FILE*>>, std::is_move_constructible<_IO_FILE*>, std::is_move_assignable<_IO_FILE*>>::value, void>::type std::swap<_IO_FILE*>(_IO_FILE*&, _IO_FILE*&)
-std::enable_if<std::__and_<std::__not_<std::__is_tuple_like<__mbstate_t>>, std::is_move_constructible<__mbstate_t>, std::is_move_assignable<__mbstate_t>>::value, void>::type std::swap<__mbstate_t>(__mbstate_t&, __mbstate_t&)
 std::enable_if<std::__and_<std::__not_<std::__is_tuple_like<bool>>, std::is_move_constructible<bool>, std::is_move_assignable<bool>>::value, void>::type std::swap<bool>(bool&, bool&)
-std::enable_if<std::__and_<std::__not_<std::__is_tuple_like<char const*>>, std::is_move_constructible<char const*>, std::is_move_assignable<char const*>>::value, void>::type std::swap<char const*>(char const*&, char const*&)
 std::enable_if<std::__and_<std::__not_<std::__is_tuple_like<char*>>, std::is_move_constructible<char*>, std::is_move_assignable<char*>>::value, void>::type std::swap<char*>(char*&, char*&)
 std::enable_if<std::__and_<std::__not_<std::__is_tuple_like<char>>, std::is_move_constructible<char>, std::is_move_assignable<char>>::value, void>::type std::swap<char>(char&, char&)
 std::enable_if<std::__and_<std::__not_<std::__is_tuple_like<int>>, std::is_move_constructible<int>, std::is_move_assignable<int>>::value, void>::type std::swap<int>(int&, int&)
@@ -6321,7 +6460,6 @@ std::enable_if<std::__and_<std::__not_<std::__is_tuple_like<std::ios_base::_Word
 std::enable_if<std::__and_<std::__not_<std::__is_tuple_like<std::locale>>, std::is_move_constructible<std::locale>, std::is_move_assignable<std::locale>>::value, void>::type std::swap<std::locale>(std::locale&, std::locale&)
 std::enable_if<std::__and_<std::__not_<std::__is_tuple_like<std::ostream*>>, std::is_move_constructible<std::ostream*>, std::is_move_assignable<std::ostream*>>::value, void>::type std::swap<std::ostream*>(std::ostream*&, std::ostream*&)
 std::enable_if<std::__and_<std::__not_<std::__is_tuple_like<std::thread::_Impl_base*>>, std::is_move_constructible<std::thread::_Impl_base*>, std::is_move_assignable<std::thread::_Impl_base*>>::value, void>::type std::swap<std::thread::_Impl_base*>(std::thread::_Impl_base*&, std::thread::_Impl_base*&)
-std::enable_if<std::__and_<std::__not_<std::__is_tuple_like<unsigned long>>, std::is_move_constructible<unsigned long>, std::is_move_assignable<unsigned long>>::value, void>::type std::swap<unsigned long>(unsigned long&, unsigned long&)
 std::enable_if<std::__and_<std::__not_<std::__is_tuple_like<wchar_t*>>, std::is_move_constructible<wchar_t*>, std::is_move_assignable<wchar_t*>>::value, void>::type std::swap<wchar_t*>(wchar_t*&, wchar_t*&)
 std::enable_if<std::__and_<std::__not_<std::__is_tuple_like<wchar_t>>, std::is_move_constructible<wchar_t>, std::is_move_assignable<wchar_t>>::value, void>::type std::swap<wchar_t>(wchar_t&, wchar_t&)
 std::enable_if<std::__is_swappable<std::ios_base::_Words>::value, void>::type std::swap<std::ios_base::_Words, 8ul>(std::ios_base::_Words (&) [8ul], std::ios_base::_Words (&) [8ul])
@@ -6344,8 +6482,6 @@ std::exception::what() const
 std::exception::~exception()
 std::fpos<__mbstate_t>::fpos(long)
 std::fpos<__mbstate_t>::operator long() const
-std::fpos<__mbstate_t>::state() const
-std::fpos<__mbstate_t>::state(__mbstate_t)
 std::future_category()
 std::future_error: 
 std::future_error::what() const
@@ -6956,7 +7092,6 @@ std::numeric_limits<float>::max()
 std::numeric_limits<int>::max()
 std::numeric_limits<long double>::infinity()
 std::numeric_limits<long double>::max()
-std::numeric_limits<long>::max()
 std::numpunct<char> const& std::use_facet<std::numpunct<char>>(std::locale const&)
 std::numpunct<char> const* std::__try_use_facet<std::numpunct<char>>(std::locale const&)
 std::numpunct<char>::_M_initialize_numpunct(__locale_struct*)
@@ -7115,10 +7250,9 @@ std::range_error::range_error(std::string const&)
 std::range_error::~range_error()
 std::regex_error::regex_error(std::regex_constants::error_type)
 std::regex_error::~regex_error()
-std::remove_reference<_IO_FILE*&>::type&& std::move<_IO_FILE*&>(_IO_FILE*&)
-std::remove_reference<__mbstate_t&>::type&& std::move<__mbstate_t&>(__mbstate_t&)
+std::regex_traits<char>::_RegexMask std::regex_traits<char>::lookup_classname<char const*>(char const*, char const*, bool) const
+std::regex_traits<char>::_RegexMask std::regex_traits<char>::lookup_classname<char const*>(char const*, char const*, bool) const::__classnames
 std::remove_reference<bool&>::type&& std::move<bool&>(bool&)
-std::remove_reference<char const*&>::type&& std::move<char const*&>(char const*&)
 std::remove_reference<char&>::type&& std::move<char&>(char&)
 std::remove_reference<char*&>::type&& std::move<char*&>(char*&)
 std::remove_reference<int&>::type&& std::move<int&>(int&)
@@ -7126,24 +7260,15 @@ std::remove_reference<long&>::type&& std::move<long&>(long&)
 std::remove_reference<std::_Ios_Fmtflags&>::type&& std::move<std::_Ios_Fmtflags&>(std::_Ios_Fmtflags&)
 std::remove_reference<std::_Ios_Iostate&>::type&& std::move<std::_Ios_Iostate&>(std::_Ios_Iostate&)
 std::remove_reference<std::_Ios_Openmode&>::type&& std::move<std::_Ios_Openmode&>(std::_Ios_Openmode&)
-std::remove_reference<std::__basic_file<char>&>::type&& std::move<std::__basic_file<char>&>(std::__basic_file<char>&)
 std::remove_reference<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>&>::type&& std::move<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>&>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>&)
 std::remove_reference<std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>&>::type&& std::move<std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>&>(std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>&)
 std::remove_reference<std::__future_base::_State_baseV2::_Make_ready*&>::type&& std::move<std::__future_base::_State_baseV2::_Make_ready*&>(std::__future_base::_State_baseV2::_Make_ready*&)
 std::remove_reference<std::__shared_ptr<std::thread::_Impl_base, (__gnu_cxx::_Lock_policy)2>&>::type&& std::move<std::__shared_ptr<std::thread::_Impl_base, (__gnu_cxx::_Lock_policy)2>&>(std::__shared_ptr<std::thread::_Impl_base, (__gnu_cxx::_Lock_policy)2>&)
 std::remove_reference<std::allocator<char>&>::type&& std::move<std::allocator<char>&>(std::allocator<char>&)
 std::remove_reference<std::allocator<wchar_t>&>::type&& std::move<std::allocator<wchar_t>&>(std::allocator<wchar_t>&)
-std::remove_reference<std::basic_filebuf<char, std::char_traits<char>>&>::type&& std::move<std::basic_filebuf<char, std::char_traits<char>>&>(std::basic_filebuf<char, std::char_traits<char>>&)
-std::remove_reference<std::basic_filebuf<wchar_t, std::char_traits<wchar_t>>&>::type&& std::move<std::basic_filebuf<wchar_t, std::char_traits<wchar_t>>&>(std::basic_filebuf<wchar_t, std::char_traits<wchar_t>>&)
-std::remove_reference<std::basic_fstream<char, std::char_traits<char>>&>::type&& std::move<std::basic_fstream<char, std::char_traits<char>>&>(std::basic_fstream<char, std::char_traits<char>>&)
-std::remove_reference<std::basic_fstream<wchar_t, std::char_traits<wchar_t>>&>::type&& std::move<std::basic_fstream<wchar_t, std::char_traits<wchar_t>>&>(std::basic_fstream<wchar_t, std::char_traits<wchar_t>>&)
-std::remove_reference<std::basic_ifstream<char, std::char_traits<char>>&>::type&& std::move<std::basic_ifstream<char, std::char_traits<char>>&>(std::basic_ifstream<char, std::char_traits<char>>&)
-std::remove_reference<std::basic_ifstream<wchar_t, std::char_traits<wchar_t>>&>::type&& std::move<std::basic_ifstream<wchar_t, std::char_traits<wchar_t>>&>(std::basic_ifstream<wchar_t, std::char_traits<wchar_t>>&)
 std::remove_reference<std::basic_iostream<wchar_t, std::char_traits<wchar_t>>&>::type&& std::move<std::basic_iostream<wchar_t, std::char_traits<wchar_t>>&>(std::basic_iostream<wchar_t, std::char_traits<wchar_t>>&)
 std::remove_reference<std::basic_istringstream<char, std::char_traits<char>, std::allocator<char>>&>::type&& std::move<std::basic_istringstream<char, std::char_traits<char>, std::allocator<char>>&>(std::basic_istringstream<char, std::char_traits<char>, std::allocator<char>>&)
 std::remove_reference<std::basic_istringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>&>::type&& std::move<std::basic_istringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>&>(std::basic_istringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>&)
-std::remove_reference<std::basic_ofstream<char, std::char_traits<char>>&>::type&& std::move<std::basic_ofstream<char, std::char_traits<char>>&>(std::basic_ofstream<char, std::char_traits<char>>&)
-std::remove_reference<std::basic_ofstream<wchar_t, std::char_traits<wchar_t>>&>::type&& std::move<std::basic_ofstream<wchar_t, std::char_traits<wchar_t>>&>(std::basic_ofstream<wchar_t, std::char_traits<wchar_t>>&)
 std::remove_reference<std::basic_ostream<wchar_t, std::char_traits<wchar_t>>*&>::type&& std::move<std::basic_ostream<wchar_t, std::char_traits<wchar_t>>*&>(std::basic_ostream<wchar_t, std::char_traits<wchar_t>>*&)
 std::remove_reference<std::basic_ostringstream<char, std::char_traits<char>, std::allocator<char>>&>::type&& std::move<std::basic_ostringstream<char, std::char_traits<char>, std::allocator<char>>&>(std::basic_ostringstream<char, std::char_traits<char>, std::allocator<char>>&)
 std::remove_reference<std::basic_ostringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>&>::type&& std::move<std::basic_ostringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>&>(std::basic_ostringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>&)
@@ -7164,7 +7289,6 @@ std::remove_reference<std::string&>::type&& std::move<std::string&>(std::string&
 std::remove_reference<std::string::_Alloc_hider&>::type&& std::move<std::string::_Alloc_hider&>(std::string::_Alloc_hider&)
 std::remove_reference<std::thread::_Impl_base*&>::type&& std::move<std::thread::_Impl_base*&>(std::thread::_Impl_base*&)
 std::remove_reference<std::thread::_State*&>::type&& std::move<std::thread::_State*&>(std::thread::_State*&)
-std::remove_reference<unsigned long&>::type&& std::move<unsigned long&>(unsigned long&)
 std::remove_reference<wchar_t&>::type&& std::move<wchar_t&>(wchar_t&)
 std::remove_reference<wchar_t*&>::type&& std::move<wchar_t*&>(wchar_t*&)
 std::rethrow_exception(std::__exception_ptr::exception_ptr)
@@ -7195,6 +7319,9 @@ std::shared_ptr<std::thread::_Impl_base>::shared_ptr(std::shared_ptr<std::thread
 std::shared_ptr<std::thread::_Impl_base>::~shared_ptr()
 std::string
 std::string std::__str_concat<std::string>(std::string::value_type const*, std::string::size_type, std::string::value_type const*, std::string::size_type, std::string::allocator_type const&)
+std::string std::regex_traits<char>::lookup_collatename<char const*>(char const*, char const*) const
+std::string std::regex_traits<char>::lookup_collatename<char const*>(char const*, char const*) const::__collatenames
+std::string std::regex_traits<char>::transform_primary<char*>(char*, char*) const
 std::string& std::string::assign<char*>(char*, char*)
 std::string::_Alloc_hider::_Alloc_hider(char*, std::allocator<char> const&)
 std::string::_Alloc_hider::_Alloc_hider(std::string::_Alloc_hider&&)
@@ -7494,6 +7621,7 @@ std::unique_ptr<std::thread::_State, std::default_delete<std::thread::_State>>::
 std::unique_ptr<std::thread::_State, std::default_delete<std::thread::_State>>::release()
 std::unique_ptr<std::thread::_State, std::default_delete<std::thread::_State>>::unique_ptr<std::default_delete<std::thread::_State>, void>(std::thread::_State*)
 std::unique_ptr<std::thread::_State, std::default_delete<std::thread::_State>>::~unique_ptr()
+std::vector<char, std::allocator<char>>::vector(std::vector<char, std::allocator<char>> const&)
 std::vector<std::Catalog_info*, std::allocator<std::Catalog_info*>>::_M_check_len(unsigned long, char const*) const
 std::vector<std::Catalog_info*, std::allocator<std::Catalog_info*>>::_M_erase(__gnu_cxx::__normal_iterator<std::Catalog_info**, std::vector<std::Catalog_info*, std::allocator<std::Catalog_info*>>>)
 std::vector<std::Catalog_info*, std::allocator<std::Catalog_info*>>::_M_realloc_append(std::Catalog_info* const&)
@@ -7512,10 +7640,14 @@ std::vector<std::Catalog_info*, std::allocator<std::Catalog_info*>>::push_back(s
 std::vector<std::Catalog_info*, std::allocator<std::Catalog_info*>>::size() const
 std::vector<std::Catalog_info*, std::allocator<std::Catalog_info*>>::vector()
 std::vector<std::Catalog_info*, std::allocator<std::Catalog_info*>>::~vector()
-std::vector<std::string, std::allocator<std::string>>::~vector()
+std::vector<std::regex_traits<char>::_RegexMask, std::allocator<std::regex_traits<char>::_RegexMask>>::vector(std::vector<std::regex_traits<char>::_RegexMask, std::allocator<std::regex_traits<char>::_RegexMask>> const&)
+std::vector<std::string, std::allocator<std::string>>::push_back(std::string const&)
+std::vector<std::string, std::allocator<std::string>>::vector(std::vector<std::string, std::allocator<std::string>> const&)
+std::vector<std::sub_match<char const*>, std::allocator<std::sub_match<char const*>>>::vector(std::vector<std::sub_match<char const*>, std::allocator<std::sub_match<char const*>>> const&)
 std::weak_ptr<std::__future_base::_State_baseV2>::lock() const
 std::weak_ptr<std::__future_base::_State_baseV2>::~weak_ptr()
 stderr
+stdin
 strchr
 strcmp
 strcpy
@@ -7524,17 +7656,24 @@ strerror_r
 string
 string literal
 string::string
+string_t
+string_token
 strlen
 strncmp
+strncpy
+strnlen
 stronghandle, 
 strstr
 strtold_l
 strtoul
+subclass
 syscall
 system
 system_state
 table
 tags
+tangent
+tangentu_signv
 target
 target_type
 targetname
@@ -7546,11 +7685,14 @@ terminate called without an active exception\n
 texcoord
 this
 this 
+thisEntity
 thread initialization failed.
 thread-local initialization routine for CEntitySpawnHelper::tm_pCurEntityPtr
 thread-local initialization routine for g_pThreadLocalStackAllocator
+three
 throw
 throw 
+tilde
 times_to_fire
 transaction clone for 
 transaction clone for operator delete(void*)
@@ -7588,11 +7730,13 @@ transaction clone for std::runtime_error::~runtime_error()
 transaction clone for std::underflow_error::underflow_error(char const*)
 transaction clone for std::underflow_error::underflow_error(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)
 transaction clone for std::underflow_error::~underflow_error()
+transform
 true
 type
 typeinfo fn for 
 typeinfo for 
 typeinfo for CThreadSyncObject
+typeinfo for IFormatOutputStream
 typeinfo for _Float128
 typeinfo for _Float128 const*
 typeinfo for _Float128*
@@ -7677,7 +7821,7 @@ typeinfo for short*
 typeinfo for signed char
 typeinfo for signed char const*
 typeinfo for signed char*
-typeinfo for std::_Sp_make_shared_tag
+typeinfo for std::_Sp_counted_ptr_inplace<std::__detail::_NFA<std::regex_traits<char>>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>
 typeinfo for std::_V2::error_category
 typeinfo for std::__codecvt_abstract_base<char, char, __mbstate_t>
 typeinfo for std::__codecvt_abstract_base<char16_t, char, __mbstate_t>
@@ -7724,6 +7868,22 @@ typeinfo for std::__cxx11::time_get<char, std::istreambuf_iterator<char, std::ch
 typeinfo for std::__cxx11::time_get<wchar_t, std::istreambuf_iterator<wchar_t, std::char_traits<wchar_t>>>
 typeinfo for std::__cxx11::time_get_byname<char, std::istreambuf_iterator<char, std::char_traits<char>>>
 typeinfo for std::__cxx11::time_get_byname<wchar_t, std::istreambuf_iterator<wchar_t, std::char_traits<wchar_t>>>
+typeinfo for std::__detail::_AnyMatcher<std::regex_traits<char>, false, false, false>
+typeinfo for std::__detail::_AnyMatcher<std::regex_traits<char>, false, false, true>
+typeinfo for std::__detail::_AnyMatcher<std::regex_traits<char>, false, true, false>
+typeinfo for std::__detail::_AnyMatcher<std::regex_traits<char>, false, true, true>
+typeinfo for std::__detail::_AnyMatcher<std::regex_traits<char>, true, false, false>
+typeinfo for std::__detail::_AnyMatcher<std::regex_traits<char>, true, false, true>
+typeinfo for std::__detail::_AnyMatcher<std::regex_traits<char>, true, true, false>
+typeinfo for std::__detail::_AnyMatcher<std::regex_traits<char>, true, true, true>
+typeinfo for std::__detail::_BracketMatcher<std::regex_traits<char>, false, false>
+typeinfo for std::__detail::_BracketMatcher<std::regex_traits<char>, false, true>
+typeinfo for std::__detail::_BracketMatcher<std::regex_traits<char>, true, false>
+typeinfo for std::__detail::_BracketMatcher<std::regex_traits<char>, true, true>
+typeinfo for std::__detail::_CharMatcher<std::regex_traits<char>, false, false>
+typeinfo for std::__detail::_CharMatcher<std::regex_traits<char>, false, true>
+typeinfo for std::__detail::_CharMatcher<std::regex_traits<char>, true, false>
+typeinfo for std::__detail::_CharMatcher<std::regex_traits<char>, true, true>
 typeinfo for std::__future_base::_Result_base
 typeinfo for std::__ios_failure
 typeinfo for std::__iosfail_type_info
@@ -7743,20 +7903,12 @@ typeinfo for std::bad_cast
 typeinfo for std::bad_exception
 typeinfo for std::bad_function_call
 typeinfo for std::bad_typeid
-typeinfo for std::basic_filebuf<char, std::char_traits<char>>
-typeinfo for std::basic_filebuf<wchar_t, std::char_traits<wchar_t>>
-typeinfo for std::basic_fstream<char, std::char_traits<char>>
-typeinfo for std::basic_fstream<wchar_t, std::char_traits<wchar_t>>
-typeinfo for std::basic_ifstream<char, std::char_traits<char>>
-typeinfo for std::basic_ifstream<wchar_t, std::char_traits<wchar_t>>
 typeinfo for std::basic_ios<char, std::char_traits<char>>
 typeinfo for std::basic_ios<wchar_t, std::char_traits<wchar_t>>
 typeinfo for std::basic_iostream<wchar_t, std::char_traits<wchar_t>>
 typeinfo for std::basic_istream<wchar_t, std::char_traits<wchar_t>>
 typeinfo for std::basic_istringstream<char, std::char_traits<char>, std::allocator<char>>
 typeinfo for std::basic_istringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>
-typeinfo for std::basic_ofstream<char, std::char_traits<char>>
-typeinfo for std::basic_ofstream<wchar_t, std::char_traits<wchar_t>>
 typeinfo for std::basic_ostream<wchar_t, std::char_traits<wchar_t>>
 typeinfo for std::basic_ostringstream<char, std::char_traits<char>, std::allocator<char>>
 typeinfo for std::basic_ostringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>
@@ -7957,6 +8109,7 @@ typeinfo name for short*
 typeinfo name for signed char
 typeinfo name for signed char const*
 typeinfo name for signed char*
+typeinfo name for std::_Sp_counted_ptr_inplace<std::__detail::_NFA<std::regex_traits<char>>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>
 typeinfo name for std::_V2::error_category
 typeinfo name for std::__codecvt_abstract_base<char, char, __mbstate_t>
 typeinfo name for std::__codecvt_abstract_base<char16_t, char, __mbstate_t>
@@ -8003,6 +8156,22 @@ typeinfo name for std::__cxx11::time_get<char, std::istreambuf_iterator<char, st
 typeinfo name for std::__cxx11::time_get<wchar_t, std::istreambuf_iterator<wchar_t, std::char_traits<wchar_t>>>
 typeinfo name for std::__cxx11::time_get_byname<char, std::istreambuf_iterator<char, std::char_traits<char>>>
 typeinfo name for std::__cxx11::time_get_byname<wchar_t, std::istreambuf_iterator<wchar_t, std::char_traits<wchar_t>>>
+typeinfo name for std::__detail::_AnyMatcher<std::regex_traits<char>, false, false, false>
+typeinfo name for std::__detail::_AnyMatcher<std::regex_traits<char>, false, false, true>
+typeinfo name for std::__detail::_AnyMatcher<std::regex_traits<char>, false, true, false>
+typeinfo name for std::__detail::_AnyMatcher<std::regex_traits<char>, false, true, true>
+typeinfo name for std::__detail::_AnyMatcher<std::regex_traits<char>, true, false, false>
+typeinfo name for std::__detail::_AnyMatcher<std::regex_traits<char>, true, false, true>
+typeinfo name for std::__detail::_AnyMatcher<std::regex_traits<char>, true, true, false>
+typeinfo name for std::__detail::_AnyMatcher<std::regex_traits<char>, true, true, true>
+typeinfo name for std::__detail::_BracketMatcher<std::regex_traits<char>, false, false>
+typeinfo name for std::__detail::_BracketMatcher<std::regex_traits<char>, false, true>
+typeinfo name for std::__detail::_BracketMatcher<std::regex_traits<char>, true, false>
+typeinfo name for std::__detail::_BracketMatcher<std::regex_traits<char>, true, true>
+typeinfo name for std::__detail::_CharMatcher<std::regex_traits<char>, false, false>
+typeinfo name for std::__detail::_CharMatcher<std::regex_traits<char>, false, true>
+typeinfo name for std::__detail::_CharMatcher<std::regex_traits<char>, true, false>
+typeinfo name for std::__detail::_CharMatcher<std::regex_traits<char>, true, true>
 typeinfo name for std::__future_base::_Result_base
 typeinfo name for std::__ios_failure
 typeinfo name for std::__iosfail_type_info
@@ -8022,20 +8191,12 @@ typeinfo name for std::bad_cast
 typeinfo name for std::bad_exception
 typeinfo name for std::bad_function_call
 typeinfo name for std::bad_typeid
-typeinfo name for std::basic_filebuf<char, std::char_traits<char>>
-typeinfo name for std::basic_filebuf<wchar_t, std::char_traits<wchar_t>>
-typeinfo name for std::basic_fstream<char, std::char_traits<char>>
-typeinfo name for std::basic_fstream<wchar_t, std::char_traits<wchar_t>>
-typeinfo name for std::basic_ifstream<char, std::char_traits<char>>
-typeinfo name for std::basic_ifstream<wchar_t, std::char_traits<wchar_t>>
 typeinfo name for std::basic_ios<char, std::char_traits<char>>
 typeinfo name for std::basic_ios<wchar_t, std::char_traits<wchar_t>>
 typeinfo name for std::basic_iostream<wchar_t, std::char_traits<wchar_t>>
 typeinfo name for std::basic_istream<wchar_t, std::char_traits<wchar_t>>
 typeinfo name for std::basic_istringstream<char, std::char_traits<char>, std::allocator<char>>
 typeinfo name for std::basic_istringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>
-typeinfo name for std::basic_ofstream<char, std::char_traits<char>>
-typeinfo name for std::basic_ofstream<wchar_t, std::char_traits<wchar_t>>
 typeinfo name for std::basic_ostream<wchar_t, std::char_traits<wchar_t>>
 typeinfo name for std::basic_ostringstream<char, std::char_traits<char>, std::allocator<char>>
 typeinfo name for std::basic_ostringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>
@@ -8155,6 +8316,7 @@ typename
 typesafe_float, 
 typesafe_int, 
 t|AO
+uchar32
 uiTransparentPixels < PIXELS
 uint
 uint16
@@ -8164,6 +8326,7 @@ uint32_t libyuv::SumPixels_16(int, const uint32_t*)
 uint64
 uint8
 unable to register all schema data: %s\n
+underscore
 uninitialized __any_string
 unknown_variant_type
 unsigned
@@ -8175,8 +8338,8 @@ unsigned long
 unsigned long const& std::max<unsigned long>(unsigned long const&, unsigned long const&)
 unsigned long const& std::min<unsigned long>(unsigned long const&, unsigned long const&)
 unsigned long long
-unsigned long std::__exchange<unsigned long, int>(unsigned long&, int&&)
 unsigned short
+unspecified
 upper
 utl_vector, 
 utlstringtoken
@@ -8185,6 +8348,7 @@ value
 value_override
 values
 variant
+vector
 vector2
 vector2d
 vector3
@@ -8193,20 +8357,16 @@ vector4d
 vector::_M_realloc_append
 vectorws
 version
+vertical-line
+vertical-tab
 very_fast
 virtual thunk to 
-virtual thunk to std::basic_fstream<char, std::char_traits<char>>::~basic_fstream()
-virtual thunk to std::basic_fstream<wchar_t, std::char_traits<wchar_t>>::~basic_fstream()
-virtual thunk to std::basic_ifstream<char, std::char_traits<char>>::~basic_ifstream()
-virtual thunk to std::basic_ifstream<wchar_t, std::char_traits<wchar_t>>::~basic_ifstream()
 virtual thunk to std::basic_iostream<char, std::char_traits<char>>::~basic_iostream()
 virtual thunk to std::basic_iostream<wchar_t, std::char_traits<wchar_t>>::~basic_iostream()
 virtual thunk to std::basic_istream<char, std::char_traits<char>>::~basic_istream()
 virtual thunk to std::basic_istream<wchar_t, std::char_traits<wchar_t>>::~basic_istream()
 virtual thunk to std::basic_istringstream<char, std::char_traits<char>, std::allocator<char>>::~basic_istringstream()
 virtual thunk to std::basic_istringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>::~basic_istringstream()
-virtual thunk to std::basic_ofstream<char, std::char_traits<char>>::~basic_ofstream()
-virtual thunk to std::basic_ofstream<wchar_t, std::char_traits<wchar_t>>::~basic_ofstream()
 virtual thunk to std::basic_ostream<char, std::char_traits<char>>::~basic_ostream()
 virtual thunk to std::basic_ostream<wchar_t, std::char_traits<wchar_t>>::~basic_ostream()
 virtual thunk to std::basic_ostringstream<char, std::char_traits<char>, std::allocator<char>>::~basic_ostringstream()
@@ -8345,7 +8505,16 @@ void std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocat
 void std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>::_M_construct<wchar_t*>(wchar_t*, wchar_t*, std::forward_iterator_tag)::_Guard::~_Guard()
 void std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>::_M_construct_aux<wchar_t*>(wchar_t*, wchar_t*, std::__false_type)
 void std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>::insert<__gnu_cxx::__normal_iterator<wchar_t*, std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>>>(__gnu_cxx::__normal_iterator<wchar_t*, std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>>, __gnu_cxx::__normal_iterator<wchar_t*, std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>>, __gnu_cxx::__normal_iterator<wchar_t*, std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>>)
-void std::__detail::__to_chars_10_impl<unsigned int>(char*, unsigned int, unsigned int)
+void std::__detail::_Compiler<std::regex_traits<char>>::_M_insert_bracket_matcher<false, false>(bool)
+void std::__detail::_Compiler<std::regex_traits<char>>::_M_insert_bracket_matcher<false, true>(bool)
+void std::__detail::_Compiler<std::regex_traits<char>>::_M_insert_bracket_matcher<true, false>(bool)
+void std::__detail::_Compiler<std::regex_traits<char>>::_M_insert_bracket_matcher<true, true>(bool)
+void std::__detail::_Compiler<std::regex_traits<char>>::_M_insert_char_matcher<true, false>()
+void std::__detail::_Compiler<std::regex_traits<char>>::_M_insert_char_matcher<true, true>()
+void std::__detail::_Compiler<std::regex_traits<char>>::_M_insert_character_class_matcher<false, false>()
+void std::__detail::_Compiler<std::regex_traits<char>>::_M_insert_character_class_matcher<false, true>()
+void std::__detail::_Compiler<std::regex_traits<char>>::_M_insert_character_class_matcher<true, false>()
+void std::__detail::_Compiler<std::regex_traits<char>>::_M_insert_character_class_matcher<true, true>()
 void std::__facet_shims::__collate_transform<char>(std::integral_constant<bool, false>, std::locale::facet const*, std::__facet_shims::__any_string&, char const*, char const*)
 void std::__facet_shims::__collate_transform<char>(std::integral_constant<bool, true>, std::locale::facet const*, std::__facet_shims::__any_string&, char const*, char const*)
 void std::__facet_shims::__collate_transform<wchar_t>(std::integral_constant<bool, false>, std::locale::facet const*, std::__facet_shims::__any_string&, wchar_t const*, wchar_t const*)
@@ -8375,6 +8544,8 @@ void std::__ostream_fill<char, std::char_traits<char>>(std::basic_ostream<char, 
 void std::__ostream_fill<wchar_t, std::char_traits<wchar_t>>(std::basic_ostream<wchar_t, std::char_traits<wchar_t>>&, long)
 void std::__ostream_write<char, std::char_traits<char>>(std::basic_ostream<char, std::char_traits<char>>&, char const*, long)
 void std::__ostream_write<wchar_t, std::char_traits<wchar_t>>(std::basic_ostream<wchar_t, std::char_traits<wchar_t>>&, wchar_t const*, long)
+void std::deque<long, std::allocator<long>>::_M_push_back_aux<long const&>(long const&)
+void std::deque<std::__detail::_StateSeq<std::regex_traits<char>>, std::allocator<std::__detail::_StateSeq<std::regex_traits<char>>>>::_M_push_back_aux<std::__detail::_StateSeq<std::regex_traits<char>> const&>(std::__detail::_StateSeq<std::regex_traits<char>> const&)
 void std::locale::_Impl::_M_init_facet<std::__cxx11::collate<char>>(std::__cxx11::collate<char>*)
 void std::locale::_Impl::_M_init_facet<std::__cxx11::collate<wchar_t>>(std::__cxx11::collate<wchar_t>*)
 void std::locale::_Impl::_M_init_facet<std::__cxx11::messages<char>>(std::__cxx11::messages<char>*)
@@ -8426,9 +8597,11 @@ void std::locale::_Impl::_M_init_facet_unchecked<std::time_get<wchar_t, std::ist
 void std::swap<char, std::char_traits<char>, std::allocator<char>>(std::basic_string<char, std::char_traits<char>, std::allocator<char>>&, std::basic_string<char, std::char_traits<char>, std::allocator<char>>&)
 void std::swap<std::_Rb_tree_color>(std::_Rb_tree_color&, std::_Rb_tree_color&)
 void std::swap<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>(std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>&, std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>&)
+void std::vector<std::regex_traits<char>::_RegexMask, std::allocator<std::regex_traits<char>::_RegexMask>>::_M_realloc_append<std::regex_traits<char>::_RegexMask const&>(std::regex_traits<char>::_RegexMask const&)
 vpk:%s:
 vsnprintf
 vtable for 
+vtable for CCharBufferFormatOutputStream
 vtable for __cxxabiv1::__class_type_info
 vtable for __cxxabiv1::__forced_unwind
 vtable for __cxxabiv1::__foreign_exception
@@ -8441,6 +8614,7 @@ vtable for __cxxabiv1::__vmi_class_type_info
 vtable for __gnu_cxx::__concurrence_lock_error
 vtable for __gnu_cxx::__concurrence_unlock_error
 vtable for __gnu_cxx::recursive_init_error
+vtable for std::_Sp_counted_ptr_inplace<std::__detail::_NFA<std::regex_traits<char>>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>
 vtable for std::_V2::error_category
 vtable for std::__codecvt_abstract_base<char, char, __mbstate_t>
 vtable for std::__codecvt_abstract_base<char16_t, char, __mbstate_t>
@@ -8506,20 +8680,12 @@ vtable for std::bad_cast
 vtable for std::bad_exception
 vtable for std::bad_function_call
 vtable for std::bad_typeid
-vtable for std::basic_filebuf<char, std::char_traits<char>>
-vtable for std::basic_filebuf<wchar_t, std::char_traits<wchar_t>>
-vtable for std::basic_fstream<char, std::char_traits<char>>
-vtable for std::basic_fstream<wchar_t, std::char_traits<wchar_t>>
-vtable for std::basic_ifstream<char, std::char_traits<char>>
-vtable for std::basic_ifstream<wchar_t, std::char_traits<wchar_t>>
 vtable for std::basic_ios<char, std::char_traits<char>>
 vtable for std::basic_ios<wchar_t, std::char_traits<wchar_t>>
 vtable for std::basic_iostream<wchar_t, std::char_traits<wchar_t>>
 vtable for std::basic_istream<wchar_t, std::char_traits<wchar_t>>
 vtable for std::basic_istringstream<char, std::char_traits<char>, std::allocator<char>>
 vtable for std::basic_istringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>
-vtable for std::basic_ofstream<char, std::char_traits<char>>
-vtable for std::basic_ofstream<wchar_t, std::char_traits<wchar_t>>
 vtable for std::basic_ostream<wchar_t, std::char_traits<wchar_t>>
 vtable for std::basic_ostringstream<char, std::char_traits<char>, std::allocator<char>>
 vtable for std::basic_ostringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>
@@ -8599,13 +8765,11 @@ vtable for std::time_put_byname<char, std::ostreambuf_iterator<char, std::char_t
 vtable for std::time_put_byname<wchar_t, std::ostreambuf_iterator<wchar_t, std::char_traits<wchar_t>>>
 vtable for std::type_info
 vtable for std::underflow_error
-w+bx
 wchar_t
 wchar_t const* std::__addressof<wchar_t const>(wchar_t const&)
 wchar_t const* std::addressof<wchar_t const>(wchar_t const&)
 wchar_t* std::__add_grouping<wchar_t>(wchar_t*, wchar_t, char const*, unsigned long, wchar_t const*, wchar_t const*)
 wchar_t* std::__addressof<wchar_t>(wchar_t&)
-wchar_t* std::__exchange<wchar_t*, std::nullptr_t>(wchar_t*&, std::nullptr_t&&)
 wchar_t* std::addressof<wchar_t>(wchar_t&)
 wchar_t* std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>::_S_construct<__gnu_cxx::__normal_iterator<wchar_t*, std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>>>(__gnu_cxx::__normal_iterator<wchar_t*, std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>>, __gnu_cxx::__normal_iterator<wchar_t*, std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>>, std::allocator<wchar_t> const&)
 wchar_t* std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>::_S_construct<__gnu_cxx::__normal_iterator<wchar_t*, std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>>>(__gnu_cxx::__normal_iterator<wchar_t*, std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>>, __gnu_cxx::__normal_iterator<wchar_t*, std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>>, std::allocator<wchar_t> const&, std::forward_iterator_tag)
@@ -8634,19 +8798,19 @@ world_layer_list
 world_layer_set_visible
 world_layer_set_visible %s %s false
 world_layer_set_visible %s %s true
-worldnode.cpp(350): 
 worldrenderer
 worldrenderermgr.cpp
 worldspawn
 wpp >= 1 && wpp <= 2
 write
-writev
 wyS]
 x != __null
 x0Ysqx
 xdigit
 y != __null
 yield_token
+zero
+{ standard_yielding_flow = true }
 {default arg#
 {lambda
 {parm#

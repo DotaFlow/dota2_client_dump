@@ -369,6 +369,7 @@ $|9tJ
 %H:<qkv
 %H=Nt
 %JZ;2
+%K?Gw
 %P9b
 %T:0X
 %T;4J
@@ -388,7 +389,6 @@ $|9tJ
 %lZ=vI
 %lld
 %s9&3
-%s: HRTF data contains Ambisonic HRIRs of unsupported order: %d.
 %s: Invalid baked data type in identifier: %d
 %s: Invalid baked data variation in identifier: %d
 %s: Unsupported HRTF data format version: %d.
@@ -557,6 +557,7 @@ $|9tJ
 (;rH6;3
 (<C$\t<C6v;~
 (<iAP
+(>0Xu
 (AA=H
 (Af<Z
 (D4<I
@@ -1127,6 +1128,7 @@ $|9tJ
 0X;N
 0Xh:u95;
 0Xi;=
+0Xu?
 0Y:6
 0Y:p
 0Y;:N
@@ -6863,6 +6865,7 @@ $|9tJ
 <BZ45
 <C43
 <C45
+<C6H
 <C9n,.;8j
 <C<2sR
 <CGK=
@@ -7443,6 +7446,7 @@ $|9tJ
 =CYA>HM
 =CuO
 =D1y
+=D6F
 =DNw=
 =DwY=
 =Dyp
@@ -7736,6 +7740,7 @@ $|9tJ
 >F8N
 >G0Y>
 >G4B?
+>G8w
 >HL;h
 >Hmg?
 >IG4=>V
@@ -7908,6 +7913,7 @@ $|9tJ
 ?CnR
 ?D9m
 ?Dk;H
+?Et3?0
 ?Fa6Q
 ?G6?2
 ?Gn3?
@@ -7926,6 +7932,7 @@ $|9tJ
 ?PIM
 ?P]DSH
 ?Q6:jkf
+?S1P?55 
 ?Va3
 ?W1a>C
 ?Wnl
@@ -8229,6 +8236,7 @@ AVXI
 AW&qB>
 AW2;Y
 AWY<
+AY?f
 AZ;w
 A\f>az
 A\n7<Y
@@ -8591,6 +8599,7 @@ C4l9
 C5D<m
 C6-<S
 C6;g
+C6H?
 C7+U
 C7;5
 C7<G
@@ -8762,6 +8771,7 @@ C]k>2
 C`N3
 C`N3A
 Cb;M
+Cb?\vBN>
 Cbw;]
 CcZ;
 Cd;E
@@ -8862,6 +8872,7 @@ D59u>
 D5X=[
 D5o;
 D6;x
+D6F?
 D6M;
 D6r:w`w:
 D72[
@@ -9173,6 +9184,7 @@ E>aJ
 E>dm
 E>s.p
 E?9x
+E?X7
 E?tQ
 EA5;
 EA<wW
@@ -9542,6 +9554,7 @@ G89p
 G8BL
 G8PU
 G8\s
+G8w?x
 G9*X
 G98y
 G99g~
@@ -11071,16 +11084,20 @@ N3<k
 N3J3
 N3api10CSimulatorE
 N3api10ISimulatorE
+N3api11CCUDADeviceE
 N3api11CPathEffectE
 N3api11CProbeArrayE
 N3api11CProbeBatchE
 N3api11CStaticMeshE
+N3api11ICUDADeviceE
 N3api11IPathEffectE
 N3api11IProbeArrayE
 N3api11IProbeBatchE
 N3api11IStaticMeshE
 N3api12CEnergyFieldE
+N3api12COptiXDeviceE
 N3api12IEnergyFieldE
+N3api12IOptiXDeviceE
 N3api13CDirectEffectE
 N3api13CEmbreeDeviceE
 N3api13COpenCLDeviceE
@@ -11185,6 +11202,8 @@ N3ipl26BatchedReflectionSimulatorE
 N3ipl5SceneE
 N3ipl6ISceneE
 N3ipl7HRTFMapE
+N3ipl7deleterINS_11EnergyFieldEEE
+N3ipl7deleterINS_20IReflectionSimulatorEEE
 N3ipl7deleterINS_6ISceneEEE
 N3ipl8IHRTFMapE
 N3ipl9ExceptionE
@@ -13538,6 +13557,8 @@ SrY<%
 St11_Mutex_baseILN9__gnu_cxx12_Lock_policyE2EE
 St15_Sp_counted_ptrIPSsLN9__gnu_cxx12_Lock_policyE2EE
 St16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE
+St19_Sp_counted_deleterIPN3ipl11EnergyFieldENS0_7deleterIS1_EESaIvELN9__gnu_cxx12_Lock_policyE2EE
+St19_Sp_counted_deleterIPN3ipl20IReflectionSimulatorENS0_7deleterIS1_EESaIvELN9__gnu_cxx12_Lock_policyE2EE
 St19_Sp_counted_deleterIPN3ipl6ISceneENS0_7deleterIS1_EESaIvELN9__gnu_cxx12_Lock_policyE2EE
 St19_Sp_make_shared_tag
 St23_Sp_counted_ptr_inplaceI16ImpulseResponse2N3ipl9allocatorIS0_EELN9__gnu_cxx12_Lock_policyE2EE
@@ -13546,7 +13567,6 @@ St23_Sp_counted_ptr_inplaceIN3ipl10ProbeArrayENS0_9allocatorIS1_EELN9__gnu_cxx12
 St23_Sp_counted_ptr_inplaceIN3ipl10ProbeBatchENS0_9allocatorIS1_EELN9__gnu_cxx12_Lock_policyE2EE
 St23_Sp_counted_ptr_inplaceIN3ipl10StaticMeshENS0_9allocatorIS1_EELN9__gnu_cxx12_Lock_policyE2EE
 St23_Sp_counted_ptr_inplaceIN3ipl10ThreadPoolENS0_9allocatorIS1_EELN9__gnu_cxx12_Lock_policyE2EE
-St23_Sp_counted_ptr_inplaceIN3ipl11EnergyFieldENS0_9allocatorIS1_EELN9__gnu_cxx12_Lock_policyE2EE
 St23_Sp_counted_ptr_inplaceIN3ipl12DirectEffectENS0_9allocatorIS1_EELN9__gnu_cxx12_Lock_policyE2EE
 St23_Sp_counted_ptr_inplaceIN3ipl12EmbreeDeviceENS0_9allocatorIS1_EELN9__gnu_cxx12_Lock_policyE2EE
 St23_Sp_counted_ptr_inplaceIN3ipl12HRTFDatabaseENS0_9allocatorIS1_EELN9__gnu_cxx12_Lock_policyE2EE
@@ -13573,7 +13593,6 @@ St23_Sp_counted_ptr_inplaceIN3ipl17SimulationManagerENS0_9allocatorIS1_EELN9__gn
 St23_Sp_counted_ptr_inplaceIN3ipl18HybridReverbEffectENS0_9allocatorIS1_EELN9__gnu_cxx12_Lock_policyE2EE
 St23_Sp_counted_ptr_inplaceIN3ipl19EmbreeInstancedMeshENS0_9allocatorIS1_EELN9__gnu_cxx12_Lock_policyE2EE
 St23_Sp_counted_ptr_inplaceIN3ipl19IndirectPartitionerENS0_9allocatorIS1_EELN9__gnu_cxx12_Lock_policyE2EE
-St23_Sp_counted_ptr_inplaceIN3ipl19ReflectionSimulatorENS0_9allocatorIS1_EELN9__gnu_cxx12_Lock_policyE2EE
 St23_Sp_counted_ptr_inplaceIN3ipl20ImageSourceSimulatorENS0_9allocatorIS1_EELN9__gnu_cxx12_Lock_policyE2EE
 St23_Sp_counted_ptr_inplaceIN3ipl20NonUniformProbeBatchENS0_9allocatorIS1_EELN9__gnu_cxx12_Lock_policyE2EE
 St23_Sp_counted_ptr_inplaceIN3ipl21HybridReverbEstimatorENS0_9allocatorIS1_EELN9__gnu_cxx12_Lock_policyE2EE
@@ -13697,6 +13716,7 @@ T=zA
 T>Lu(
 T>tZ
 T?:Pq
+T?St
 TAQ;
 TAz<)o
 TB*=h
@@ -14619,6 +14639,7 @@ X\v>cH
 X]:Zi
 X^W;8
 X_<1x
+X_y>h
 X`O=Z
 Xa:ZP
 XbS;~Y
@@ -18061,6 +18082,7 @@ i>Vl
 i>XGG
 i?9A
 i?<Bu-8
+i?EQ
 iA<p5?
 iA=OQ
 iAU;v
@@ -18559,6 +18581,9 @@ iplBinauralEffectGetTailSize
 iplBinauralEffectRelease
 iplBinauralEffectReset
 iplBinauralEffectRetain
+iplCUDADeviceCreate
+iplCUDADeviceRelease
+iplCUDADeviceRetain
 iplCalculateRelativeDirection
 iplCompressedEnergyFieldsBlendAndDecompress
 iplCompressedEnergyFieldsCreate
@@ -18602,6 +18627,7 @@ iplEmbreeDeviceRelease
 iplEmbreeDeviceRetain
 iplEnergyFieldAdd
 iplEnergyFieldCopy
+iplEnergyFieldCopyDeviceToHost
 iplEnergyFieldCreate
 iplEnergyFieldGetBand
 iplEnergyFieldGetBinDuration
@@ -18688,6 +18714,9 @@ iplOpenCLDeviceListRelease
 iplOpenCLDeviceListRetain
 iplOpenCLDeviceRelease
 iplOpenCLDeviceRetain
+iplOptiXDeviceCreate
+iplOptiXDeviceRelease
+iplOptiXDeviceRetain
 iplOverlapSaveFIRCopy
 iplOverlapSaveFIRCreate
 iplOverlapSaveFIRGetBlock
@@ -19537,7 +19566,6 @@ ln;7M\r;
 ln=0!
 lnk=
 lo:Mh
-loadAmbisonicsHRIRs
 loadProbeBatch
 loadScene
 loadStaticMesh
@@ -19889,6 +19917,7 @@ n>J9H<
 n>WWK
 n>w3
 n?0ho?s
+n?Vp
 nA>Spz
 nB9I
 nB;L
@@ -20531,6 +20560,7 @@ pq;b
 pq>h
 pr ;U
 pr;L
+precached_ambisonics_order
 presplits
 probe.center.x
 probe.center.y
@@ -21879,6 +21909,7 @@ u>O;N
 u>P\tC
 u>Vb
 u?I9
+u?W^6
 uA9J
 uA;=Ne`=aE
 uB<_Kt
@@ -22885,6 +22916,7 @@ z+R<4T,
 z,9F
 z,;EAI
 z,;eM
+z-Q>Y
 z.:Xm
 z096?
 z0;{c

@@ -123,6 +123,7 @@
 
 		"DOTA_Purchase_One"		"Купить 1"
 		"DOTA_Purchase_Nine"	"Купить 9"
+		"DOTA_Purchase_Eleven"	"Купить 11"
 		"DOTA_Purchase_CC_Bundle"	"Купить 13"
 
 		"DOTA_Keybind_ALT"		"Alt"
@@ -512,8 +513,14 @@
 		"dota_chatwheel_header_crownfall_sprays"			"Павшая корона"
 		"dota_chatwheel_header_crownfall_sprays_desc"		"Даются за изучение карты события."
 
+		"dota_chatwheel_header_dark_carnival_cw"				"Тёмный карнавал"
+		"dota_chatwheel_header_dark_carnival_cw_desc"			"Даются в событии «Тёмный карнавал»."
+
 		"dota_chatwheel_header_monster_hunter_sprays"			"Monster Hunter"
 		"dota_chatwheel_header_monster_hunter_sprays_desc"		"Даются в событии, посвящённом Monster Hunter."
+		
+		"dota_chatwheel_header_dark_carnival_sprays"			"Тёмный карнавал"
+		"dota_chatwheel_header_dark_carnival_sprays_desc"		"Даются в событии «Тёмный карнавал»."
 
 
 		"dota_chatwheel_header_voice_of_god_cw"				"Голос The International"
@@ -961,11 +968,10 @@
 		"DOTA_Hotkeys_Tooltip_TalentUpgradeStatRight"  "Изучить правый талант."
 		"DOTA_Hotkeys_Tooltip_TalentUpgradeAttribute"  "Получить бонус к атрибутам в меню талантов."
 
-		"DOTA_Hotkeys_Tooltip_NeutralItemSelect1"	"Выбрать первый вариант в меню создания нейтрального предмета"
-		"DOTA_Hotkeys_Tooltip_NeutralItemSelect2"	"Выбрать второй вариант в меню создания нейтрального предмета"
-		"DOTA_Hotkeys_Tooltip_NeutralItemSelect3"	"Выбрать третий вариант в меню создания нейтрального предмета"
-		"DOTA_Hotkeys_Tooltip_NeutralItemSelect4"	"Выбрать четвёртый вариант в меню создания нейтрального предмета"
-		"DOTA_Hotkeys_Tooltip_NeutralItemSelect5"	"Выбрать пятый вариант в меню создания нейтрального предмета"
+		"DOTA_Hotkeys_Tooltip_NeutralItemSelect1"  "Выбрать первый вариант в меню создания нейтрального предмета"
+		"DOTA_Hotkeys_Tooltip_NeutralItemSelect2"  "Выбрать второй вариант в меню создания нейтрального предмета"
+		"DOTA_Hotkeys_Tooltip_NeutralItemSelect3"  "Выбрать третий вариант в меню создания нейтрального предмета"
+		"DOTA_Hotkeys_Tooltip_NeutralItemSelect4"  "Выбрать четвёртый вариант в меню создания нейтрального предмета"
 				
 		// Video
 		"DOTAUI_AspectNormal"			"4:3"
@@ -12020,6 +12026,7 @@
 		"DOTA_Style_Dragon_Knight_Griffin_Knight_0"		"Fire"
 		"DOTA_Style_Dragon_Knight_Griffin_Knight_1" 	"Corrosive"
 		"DOTA_Style_Dragon_Knight_Griffin_Knight_2" 	"Frost"
+		
 
 //DOTA_ITEM_STYLES_END
 //DOTA_ITEM_STYLE_END
@@ -18407,6 +18414,7 @@
 		"DOTA_PlusPostGame_GoldReceived_Buildings"	"Постройки"
 		"DOTA_PlusPostGame_GoldReceived_Abilities"	"Способности"
 		"DOTA_PlusPostGame_GoldReceived_Wards"		"Варды"
+		"DOTA_PlusPostGame_GoldReceived_Summons"		"Призванные существа"
 		"DOTA_PlusPostGame_GoldReceived_Other"		"Другое"
 
 		"DOTA_PlusPostGame_XPReceivedTitle"		"Полученный опыт"
@@ -18417,6 +18425,7 @@
 		"DOTA_PlusPostGame_XPReceived_Outpost"	"Аванпосты"
 		"DOTA_PlusPostGame_XPReceived_Other"	"Другое"
 		"DOTA_PlusPostGame_XPReceived_Abilities"	"Способности"
+		"DOTA_PlusPostGame_XPReceived_Summons"	"Призванные существа"
 		
 		"DOTA_PlusPostGame_DamageContributionDrilldownHeading"		"{s:ability_name} урона"
 		"DOTA_PlusPostGame_DamageContributionAttackHeading"			"Атака"
@@ -18504,6 +18513,7 @@
 	"DOTA_Combine"			"Ковать!"
 	"DOTA_Claim"			"Получить"
 	"DOTA_Claimed"			"Получено"
+	"DOTA_ClickToClaim"		"Нажмите, чтобы получить"
 	"DOTA_Vote"				"Голосовать"
 	"DOTA_NowAvailable"		"Новинка!"
 	"DOTA_Coming_Soon"		"Скоро"
@@ -18520,6 +18530,8 @@
 	"DOTA_ViewEvent"		"Показать событие"
 	"DOTA_BuyNow"			"Купить"
 	"DOTA_NewItemShort"		"Новый предмет"
+	"DOTA_ChargesLabel"		"Заряды"
+	"DOTA_LevelLabelWord"		"Уровень"
 
 	"DOTA_SortBy"						"Сортировать по"
 	"DOTA_SortOption_Relevance"			"по популярности"
@@ -23958,6 +23970,7 @@
 	"DOTA_tooltip_econ_item_expiry_restriction" "Действует до {t:s:expires_after_date_time} ({t:T:expires_after_date_time})"
 	"DOTA_tooltip_econ_item_transform_restriction" "Преобразится {t:s:expires_after_date_time} ({t:T:expires_after_date_time})"
 	"DOTA_tooltip_econ_item_trade_restriction_permanent" "Нельзя передать или продать"
+	"DOTA_tooltip_econ_item_trade_restriction_permanent_but_marketable" "Можно продать, нельзя обменять"
 	"DOTA_tooltip_econ_item_battle_pass_accessible" "Доступно до окончания действия боевого пропуска"
 	"DOTA_tooltip_econ_item_seasonal_accessible" "Доступно до окончания сезона"
 	"DOTA_tooltip_econ_item_trade_restriction_date" "Можно передать после {t:s:tradable_after_date_time}"
@@ -44071,6 +44084,10 @@
 		"DOTA_Collection_Previewing"				"Предпросмотр"
 		"DOTA_Armory_ContextMenu_SellOnMarket"		"Продать"
 
+		"DOTA_Armory_ItemQuantity"					"{d:ItemQuantity} шт."
+		"DOTA_Armory_ItemLevel"						"{d:ItemQuantity}-й уровень"
+		"DOTA_Item_QuantityAsLevel"					"%d-й уровень"
+
 		"DOTA_Collection_FirstTimeTitle"			"Мы улучшили ваш арсенал"
 		"DOTA_Collection_FirstTimeExplaination"		"Здесь вся ваша коллекция. Теперь здесь можно и <b>искать</b>, и <b>покупать</b>, и <b>надевать</b> предметы."
 		
@@ -44533,13 +44550,13 @@
 		"DOTA_FantasyCraft_Prefix_EleHero_Body"		"+{d:prefix_bonus}% при игре за водного, огненного или ледяного героя."
 		"DOTA_FantasyCraft_Prefix_Otherworldly_Body" "+{d:prefix_bonus}% при игре за нежить, демона или духа."
 		"DOTA_FantasyCraft_Prefix_Hairy_Body"		"+{d:prefix_bonus}% при игре за бородатого или мохнатого героя."
-		"DOTA_FantasyCraft_Prefix_RedHero_Body_MouseOver"		"+{d:prefix_bonus}% при игре за <a class=\"PrefixUnderline\" onmouseover=\"event:DOTAShowFantasy2025PlayerMiniTooltip( 1 )\" onmouseout=\"event:DOTAHideFantasy2025PlayerTooltip()\">красного героя</a>."
-		"DOTA_FantasyCraft_Prefix_Sad_Body_MouseOver"			"+{d:prefix_bonus}% при игре за <a class=\"PrefixUnderline\" onmouseover=\"event:DOTAShowFantasy2025PlayerMiniTooltip( 3 )\" onmouseout=\"event:DOTAHideFantasy2025PlayerTooltip()\">синего героя</a>."
-		"DOTA_FantasyCraft_Prefix_Beastial_Body_MouseOver"	"+{d:prefix_bonus}% при игре за <a class=\"PrefixUnderline\" onmouseover=\"event:DOTAShowFantasy2025PlayerMiniTooltip( 7 )\" onmouseout=\"event:DOTAHideFantasy2025PlayerTooltip()\">рогатого или крылатого героя</a>."
-		"DOTA_FantasyCraft_Prefix_GreenHero_Body_MouseOver"	"+{d:prefix_bonus}% при игре за <a class=\"PrefixUnderline\" onmouseover=\"event:DOTAShowFantasy2025PlayerMiniTooltip( 6 )\" onmouseout=\"event:DOTAHideFantasy2025PlayerTooltip()\">зелёного героя</a>."
-		"DOTA_FantasyCraft_Prefix_EleHero_Body_MouseOver"		"+{d:prefix_bonus}% при игре за <a class=\"PrefixUnderline\" onmouseover=\"event:DOTAShowFantasy2025PlayerMiniTooltip( 14 )\" onmouseout=\"event:DOTAHideFantasy2025PlayerTooltip()\">водного, огненного или ледяного героя</a>."
-		"DOTA_FantasyCraft_Prefix_Otherworldly_Body_MouseOver" "+{d:prefix_bonus}% при игре за <a class=\"PrefixUnderline\" onmouseover=\"event:DOTAShowFantasy2025PlayerMiniTooltip( 15 )\" onmouseout=\"event:DOTAHideFantasy2025PlayerTooltip()\">нежить, демона или духа</a>."
-		"DOTA_FantasyCraft_Prefix_Hairy_Body_MouseOver"		"+{d:prefix_bonus}% при игре за <a class=\"PrefixUnderline\" onmouseover=\"event:DOTAShowFantasy2025PlayerMiniTooltip( 16 )\" onmouseout=\"event:DOTAHideFantasy2025PlayerTooltip()\">бородатого или мохнатого героя</a>."
+		"DOTA_FantasyCraft_Prefix_RedHero_Body_MouseOver"		"+{d:prefix_bonus}% при игре за <a class=\"PrefixUnderline\" onmouseover=\"event:DOTAShowFantasy2026PlayerMiniTooltip( 1 )\" onmouseout=\"event:DOTAHideFantasy2026PlayerTooltip()\">красного героя</a>."
+		"DOTA_FantasyCraft_Prefix_Sad_Body_MouseOver"			"+{d:prefix_bonus}% при игре за <a class=\"PrefixUnderline\" onmouseover=\"event:DOTAShowFantasy2026PlayerMiniTooltip( 2 )\" onmouseout=\"event:DOTAHideFantasy2026PlayerTooltip()\">синего героя</a>."
+		"DOTA_FantasyCraft_Prefix_Beastial_Body_MouseOver"	"+{d:prefix_bonus}% при игре за <a class=\"PrefixUnderline\" onmouseover=\"event:DOTAShowFantasy2026PlayerMiniTooltip( 6 )\" onmouseout=\"event:DOTAHideFantasy2026PlayerTooltip()\">рогатого или крылатого героя</a>."
+		"DOTA_FantasyCraft_Prefix_GreenHero_Body_MouseOver"	"+{d:prefix_bonus}% при игре за <a class=\"PrefixUnderline\" onmouseover=\"event:DOTAShowFantasy2026PlayerMiniTooltip( 3 )\" onmouseout=\"event:DOTAHideFantasy2026PlayerTooltip()\">зелёного героя</a>."
+		"DOTA_FantasyCraft_Prefix_EleHero_Body_MouseOver"		"+{d:prefix_bonus}% при игре за <a class=\"PrefixUnderline\" onmouseover=\"event:DOTAShowFantasy2026PlayerMiniTooltip( 7 )\" onmouseout=\"event:DOTAHideFantasy2026PlayerTooltip()\">водного, огненного или ледяного героя</a>."
+		"DOTA_FantasyCraft_Prefix_Otherworldly_Body_MouseOver" "+{d:prefix_bonus}% при игре за <a class=\"PrefixUnderline\" onmouseover=\"event:DOTAShowFantasy2026PlayerMiniTooltip( 8 )\" onmouseout=\"event:DOTAHideFantasy2026PlayerTooltip()\">нежить, демона или духа</a>."
+		"DOTA_FantasyCraft_Prefix_Hairy_Body_MouseOver"		"+{d:prefix_bonus}% при игре за <a class=\"PrefixUnderline\" onmouseover=\"event:DOTAShowFantasy2026PlayerMiniTooltip( 9 )\" onmouseout=\"event:DOTAHideFantasy2026PlayerTooltip()\">бородатого или мохнатого героя</a>."
 		"DOTA_FantasyCraft_Suffix_Tormented_Body"	"+{d:suffix_bonus}%, если кто-либо из игроков умрёт от Терзателя."
 		"DOTA_FantasyCraft_Suffix_MostDeaths_Body"	"+{d:suffix_bonus}%, если у этого игрока больше всех смертей."
 		"DOTA_FantasyCraft_Suffix_NoKills_Body"		"+{d:suffix_bonus}%, если этот игрок не совершил ни одного убийства за игру."
@@ -45850,7 +45867,7 @@
 		"DOTA_CrownfallStore_DoubleDownTokens_Desc"		"Ваш шанс ускорить своё продвижение по званию. Предскажите победу в начале рейтинговой игры, и тогда полученный рейтинг увеличится в два раза. Будьте осторожны: потери в случае поражения также будут увеличены."
 		"DOTA_DoubleDown_RequiresCalibration"		"Вы ещё не откалибровались, поэтому удваивание рейтинга для вас недоступно."
 
-		"DOTA_CrownfallStore_ActPass_CheckingOwnership"	"Проверка на владение"
+		"DOTA_CrownfallStore_ActPass_CheckingOwnership"	"Проверка на владение..."
 		"DOTA_CrownfallStore_ActPass_LoadingFailed"	"Не удалось определить владение"
 		"DOTA_CrownfallStore_ActPass_AlreadyOwned"	"Уже имеется"
 		"DOTA_CrownfallStore_ActPass_ActivateNow"	"Активировать"
@@ -46083,13 +46100,14 @@
 		"DOTA_Overworld_Inventory_HeroTrayTitle_2"	"Зарабатывайте жетоны <span class=\"TokenName\">«{s:token_name_0}»</span> и <span class=\"TokenName\">«{s:token_name_1}»</span>, играя за этих героев:"
 		"DOTA_Overworld_Inventory_HeroTrayTitle_3"	"Зарабатывайте жетоны <span class=\"TokenName\">«{s:token_name_0}»</span>, <span class=\"TokenName\">«{s:token_name_1}»</span> и <span class=\"TokenName\">«{s:token_name_2}»</span>, играя за этих героев:"
 
-		"DOTA_Overworld_Inventory_HeroTrayNoHeroesForTokens"		"Нет героев с выбранной комбинацией жетонов."
-		"DOTA_Overworld_Inventory_HeroTrayTooManyTokens"		"Выбрано слишком много жетонов. Каждый герой даёт ровно три жетона."
-		"DOTA_Overworld_Inventory_HeroTrayPremium"		"Жетоны <b>исследователя</b> входят в <b>«{s:expansion_pack_name}»</b>, доступный в магазине «Павшей короны». Они используются для доступа к особым побочным заданиям с уникальными наградами."
-		"DOTA_Overworld_Inventory_HeroTrayHidden"		"Этот жетон выдаётся на поле случая на карте."
+		"DOTA_Overworld_Inventory_HeroTrayNoHeroesForTokens"		"Нет героев с выбранной комбинацией билетов."
+		"DOTA_Overworld_Inventory_HeroTrayTooManyTokens"		"Выбрано слишком много билетов. Каждый герой даёт ровно три билета."
+		"DOTA_Overworld_Inventory_HeroTrayPremium"		"Билеты <b>тайных комнат</b> входят в <b>«{s:expansion_pack_name}»</b>, доступный в магазине события. Они используются для доступа к особым комнатам с уникальными наградами."
+		"DOTA_Overworld_Inventory_HeroTrayHidden"		"Этот особый билет выдаётся на поле случая."
+		"DOTA_Overworld_Inventory_PathUnlocker"			"<b>Пропуск</b> позволяет открыть следующее поле, не расходуя другие билеты. Чтобы применить его, нажмите на кнопку <b>«ОДИН ПРОПУСК»</b> под требованием поля."
 		
 		"DOTA_Crownfall_Encounter_UnableToClaimReward"	"Не удалось получить награду"
-		"DOTA_Crownfall_Encounter_TokenExchangeFailed"	"Не удалось обменять жетоны"
+		"DOTA_Crownfall_Encounter_TokenExchangeFailed"	"Не удалось обменять билеты"
 		
 		"DOTA_Overworld_EncounterShortcuts"				"Важные места"
 		"DOTA_Overworld_EncounterShortcut_token_trader"		"Обменщик жетонов"
@@ -46105,6 +46123,10 @@
 		"DOTA_Crownfall_TooltipOverworldHero_Heading_1"	"Сыграйте за <span class=\"HeroName\">{s:hero_name}</span>, чтобы заработать жетоны <span class=\"TokenName\">«{s:token_name_0}»</span>."
 		"DOTA_Crownfall_TooltipOverworldHero_Heading_2"	"Сыграйте за <span class=\"HeroName\">{s:hero_name}</span>, чтобы заработать жетоны <span class=\"TokenName\">«{s:token_name_0}»</span> и <span class=\"TokenName\">«{s:token_name_1}»</span>."
 		"DOTA_Crownfall_TooltipOverworldHero_Heading_3"	"Сыграйте за <span class=\"HeroName\">{s:hero_name}</span>, чтобы заработать жетоны <span class=\"TokenName\">«{s:token_name_0}»</span>, <span class=\"TokenName\">«{s:token_name_1}»</span> и <span class=\"TokenName\">«{s:token_name_2}»</span>."
+
+		"DOTA_DarkCarnival_TooltipOverworldHero_Heading_1"	"Сыграйте за <span class=\"HeroName\">{s:hero_name}</span>, чтобы заработать билеты <span class=\"TokenName\">«{s:token_name_0}»</span>."
+		"DOTA_DarkCarnival_TooltipOverworldHero_Heading_2"	"Сыграйте за <span class=\"HeroName\">{s:hero_name}</span>, чтобы заработать билеты <span class=\"TokenName\">«{s:token_name_0}»</span> и <span class=\"TokenName\">«{s:token_name_1}»</span>."
+		"DOTA_DarkCarnival_TooltipOverworldHero_Heading_3"	"Сыграйте за <span class=\"HeroName\">{s:hero_name}</span>, чтобы заработать билеты <span class=\"TokenName\">«{s:token_name_0}»</span>, <span class=\"TokenName\">«{s:token_name_1}»</span> и <span class=\"TokenName\">«{s:token_name_2}»</span>."
 		
 		"DOTA_PlusPostGame_CrownfallProgress"			"Прогресс «Павшей короны»"
 		
@@ -46341,7 +46363,7 @@
 		"DOTA_Crownfall_Overworld_Inventory_FailedToLoad"	"Не удалось загрузить содержимое инвентаря."
 
 		"DOTA_Crownfall_Filters_TokensNeeded"	"Нужные жетоны"
-		"DOTA_Crownfall_Filters_TokensNeededShort"	"Жетоны:"
+		"DOTA_Crownfall_Filters_TokensNeededShort"	"Билеты"
 
 		"DOTA_Crownfall_ActPassDescription"		"Купите <b>«{s:premium_pack_name}»</b>, чтобы открыть доступ ко всем наградам."
 		"DOTA_Crownfall_ActPassButtonLabel"		"Подробности"
@@ -46499,8 +46521,8 @@
 		"DOTA_HUD_Pregame_TokenRewards"					"{s:act_number}: наградные жетоны"
 		"DOTA_HUD_Pregame_TurboTokenRewardsTooltip"		"За победу в режиме Turbo можно получить только 2 жетона. Выберите их."
 
-		"DOTA_HeroGrid_Overworld"						"Павшая корона"
-		"DOTA_HeroGrid_Overworld_Description"			"Выделить героев, игра за которых принесёт жетоны, нужные для продвижения по карте события. "
+		"DOTA_HeroGrid_Overworld"						"Тёмный карнавал"
+		"DOTA_HeroGrid_Overworld_Description"			"Выделить героев, игра за которых принесёт билеты, нужные для продвижения по карте события. "
 		
 		"DOTA_CrownfallLeaderboard_Act1_Title"			"Прогресс акта"
 		"DOTA_CrownfallLeaderboard_Act2_Title"			"Прогресс акта"
@@ -48329,7 +48351,7 @@
 		"dota_settings_bind_NeutralItemSelect2"					"Выбрать 2-й нейтральный предмет"
 		"dota_settings_bind_NeutralItemSelect3"					"Выбрать 3-й нейтральный предмет"
 		"dota_settings_bind_NeutralItemSelect4"					"Выбрать 4-й нейтральный предмет"
-		"dota_settings_bind_NeutralItemSelect5"					"Выбрать 5-й нейтральный предмет"
+		"dota_settings_bind_NeutralItemSelect5"					"Выбрать 5-й нейтральный предмет"		
 		
 		"dota_settings_bind_Inventory1"             "Применить первую ячейку инвентаря"
 		"dota_settings_bind_Inventory2"             "Применить вторую ячейку инвентаря"
@@ -49511,7 +49533,7 @@
 		
 		// Localized Hero Quick Search Alias
 		"npc_dota_hero_antimage__name_alias"						"AntiMage;am;wei;ам;антимаг;вэй"
-		"npc_dota_hero_axe__name_alias"						"Axe;акс;топор;могул-хан"
+		"npc_dota_hero_axe__name_alias"						"Axe;X;акс;топор;могул-хан;икс"
 		"npc_dota_hero_bane__name_alias"						"Bane;бейн;бэйн;атропос"
 		"npc_dota_hero_bloodseeker__name_alias"						"Bloodseeker;bs;бладсикер;блудсикер;бс;стригвир"
 		"npc_dota_hero_crystal_maiden__name_alias"						"Crystal;Maiden;cm;rylai;wolf;кристал;мэйденка;мейденка;цмка;рилай;волчица"
@@ -49520,7 +49542,7 @@
 		"npc_dota_hero_juggernaut__name_alias"						"Juggernaut;Yurnero;джаггернаут;джага;юрнеро"
 		"npc_dota_hero_mirana__name_alias"						"Mirana;Princess;Moon;potm;мирана;потма"
 		"npc_dota_hero_nevermore__name_alias"						"Shadow;Fiend;sf,nevermore;шадоу;шэдоу;шедоу;финд;сф;невермор"
-		"npc_dota_hero_morphling__name_alias"						"Morphling;морфлинг;водичка"
+		"npc_dota_hero_morphling__name_alias"						"Morphling;.wav;морфлинг;водичка"
 		"npc_dota_hero_phantom_lancer__name_alias"						"Phantom;Lancer;pl;Azwraith;фантом;фэнтом;лансер;лэнсер;пл;азраф"
 		"npc_dota_hero_puck__name_alias"						"Puck;Faerie Dragon;fd;пак"
 		"npc_dota_hero_pudge__name_alias"						"Pudge;Toy Butcher;падж;пудж;мясник;плюшевый;бучка;бачер;паджеро;пудге;пудочка"
@@ -49607,7 +49629,7 @@
 		"npc_dota_hero_centaur__name_alias"						"Centaur;Warrunner;centaur;кентавр-вождь;брэдводен"
 		"npc_dota_hero_magnataur__name_alias"						"Magnus;magnataur, magnus;магнус;автобус"
 		"npc_dota_hero_shredder__name_alias"						"Timbersaw;Rizzrack; Shredder; Timbersaw;тимберсо;риззрак;древопил"
-		"npc_dota_hero_bristleback__name_alias"						"Bristleback;Rigwarl;bb;бристлбэк;брислбэк;ёжик;ежик;ригварл"
+		"npc_dota_hero_bristleback__name_alias"						"Bristleback;Rigwarl;bb;Bristlebot;бристлбэк;брислбэк;ёжик;ежик;ригварл;бристлбот;брислбот"
 		"npc_dota_hero_tusk__name_alias"						"Tusk;Ymir;туск;таск;тусик;имир;бивень"
 		"npc_dota_hero_skywrath_mage__name_alias"						"Skywrath;Mage;sm;Dragonus;скайрас;мейдж;маг;драгонус;петух"
 		"npc_dota_hero_abaddon__name_alias"						"Abaddon;Abaddon;абаддон;аббадон"
@@ -49617,7 +49639,7 @@
 		"npc_dota_hero_earth_spirit__name_alias"						"Earth;Spirit;es;Kaolin;Earth;эрс спирит;ес;каолин;земеля;земля"
 		"npc_dota_hero_terrorblade__name_alias"						"Terrorblade;tb;террорблейд;тб"
 		"npc_dota_hero_phoenix__name_alias"						"Phoenix;ph;феникс"
-		"npc_dota_hero_oracle__name_alias"						"Oracle;ora,Nerif;оракл;оракул;нериф"
+		"npc_dota_hero_oracle__name_alias"						"Oracle;ora,Nerif;Zoracle;Xoracle;оракл;оракул;нериф"
 		"npc_dota_hero_techies__name_alias"						"Techies;Squee;Spleen;Spoon;текиз;текис;течис;течка;скви;сплин;спун;минёры;минеры"
 		"npc_dota_hero_winter_wyvern__name_alias"						"Winter;Wyvern;ww;Auroth;винтер вайверн;аурос;виверна"
 		"npc_dota_hero_arc_warden__name_alias"						"Arc;Warden;zet,aw;арк;варден;ворден;зет;самость"
@@ -50150,5 +50172,592 @@
 		"DOTA_Compendium2025_Rewards_DotaPlus:f"						"{d:reward_count} {reward_count, plural, one{месяц} few{месяца} many{месяцев} other{месяца}}"
 
 		"DOTA_Axe_Missing"			"Акс пропал и не может участвовать"
+	
+		//////////////////////////////////////////////////////
+		// DARK CARNIVAL MIDNIGHT RUN
+		//////////////////////////////////////////////////////
+		
+		// Dark Carnival 
+		
+		"DOTA_EventName_DarkCarnival"	"Тёмный карнавал"
+		"DOTA_DarkCarnival_EventTitle"		"Тёмный карнавал"
+		"DOTA_DarkCarnival_MidnightRun"		"Ночной побег"
+		
+		"DOTA_DarkCarnival_Filters_TicketsNeeded"	"Нужные билеты"
+		"DOTA_DarkCarnival_Filters_TicketsNeededShort"	"Билеты"
+
+		"DOTA_DarkCarnival_Splash_NewEvent"	"Новое событие"
+		"DOTA_DarkCarnival_Splash_EventDescription"		"Помогите Прохвостке и Тресдин сбежать с циркового поезда Магистра манежа и заработайте новые награды, играя в Доту."
+		"DOTA_DarkCarnival_Splash_EventDescriptionShort"		"Исследуйте цирковой поезд Магистра манежа и зарабатывайте новые награды, играя в Доту."
+		"DOTA_DarkCarnival_Splash_BackStory"		"Узнайте предысторию!"
+		"DOTA_DarkCarnival_Splash_ViewComic"		"Читать комикс"
+		"DOTA_DarkCarnival_Splash_ViewEvent"		"Открыть событие"
+
+		"DOTA_DarkCarnival_Store"		"Бутик безделушек"
+		"DOTA_DarkCarnival_Store_Description"		"Таинственные товары и добротные диковинки"
+		"DOTA_DarkCarnival_Store_AutomatonPersona"		"Личность-автоматон"
+		"DOTA_DarkCarnival_Store_Discount"		"Скидка"
+		"DOTA_DarkCarnival_Store_Discount_CoinCount"		"Скидочных монет: {d:coin_quantity}"
+		"DOTA_DarkCarnival_Store_AlreadyOwned"		"Есть у вас"
+		
+		"DOTA_DarkCarnival_Checkout_ConfirmPurchaseWithCoins"	"Совершив эту покупку, вы потратите {d:coin_cost} скидочных монет события. Вы уверены, что хотите продолжить?"
+		"DOTA_DarkCarnival_Checkout_InsufficientCoins"	"У вас недостаточно скидочных монет, чтобы совершить покупку."
+
+		"DOTA_DarkCarnival_Store_AnimName_Spawn"	"Появление"
+		"DOTA_DarkCarnival_Store_AnimName_Run"		"Передвижение"
+		"DOTA_DarkCarnival_Store_AnimName_Attack"	"Атака"
+		"DOTA_DarkCarnival_Store_AnimName_Death"	"Смерть"
+		"DOTA_DarkCarnival_Store_AnimName_Channel"	"Применение"
+		"DOTA_DarkCarnival_Store_AnimName_RareIdle"	"Бездействие, редкая"
+
+		"DOTA_DarkCarnival_Store_BuyTogether"	"Купить вместе"
+		"DOTA_DarkCarnival_Store_BuyRemaining"	"Купить оставшиеся"
+		"DOTA_DarkCarnival_Store_BuyTogether_NoneRemaining"	"Уже куплено"
+
+		"DOTA_DarkCarnival_Store_BuyTogether_Pack_All"	"Комплект тайных комнат и автоматоны"
+		"DOTA_DarkCarnival_Store_BuyTogether_Pack_4"	"Комплект тайных комнат и 4 автоматона"
+		"DOTA_DarkCarnival_Store_BuyTogether_Pack_3"	"Комплект тайных комнат и 3 автоматона"
+		"DOTA_DarkCarnival_Store_BuyTogether_Pack_2"	"Комплект тайных комнат и 2 автоматона"
+		"DOTA_DarkCarnival_Store_BuyTogether_Pack_1"	"Комплект тайных комнат и 1 автоматон"
+		"DOTA_DarkCarnival_Store_BuyTogether_Pack_0"	"Комплект тайных комнат"
+		
+		"DOTA_DarkCarnival_Store_BuyTogether_All"	"Все автоматоны"
+		"DOTA_DarkCarnival_Store_BuyTogether_4"		"4 автоматона"
+		"DOTA_DarkCarnival_Store_BuyTogether_3"		"3 автоматона"
+		"DOTA_DarkCarnival_Store_BuyTogether_2"		"2 автоматона"
+		"DOTA_DarkCarnival_Store_BuyTogether_1"		"1 автоматон"
+
+		"DOTA_DarkCarnival_Store_MidnightRunTreasure"		"Treasure of Wonders"
+		"DOTA_DarkCarnival_Store_SecretRoomPack"			"Комплект тайных комнат"
+		"DOTA_DarkCarnival_Store_MidnightRunBundle"			"Набор наград «Тёмного карнавала»"
+
+		"DOTA_DarkCarnival_Store_AutomatonPersona_SalesDescription_Axe"				"Акса-автоматона чуть не расплавили, ведь он — двигатель убийственной ярости с единственной целью: убить всех и вся. Если для вас это скорее особенность, чем недоработка, Акс-автоматон вам подойдёт."
+		"DOTA_DarkCarnival_Store_AutomatonPersona_SalesDescription_Bristleback"		"Иглогрив-автоматон работает исключительно на чистейших машинных маслах первого отжима и бочковой крепости, но не откажется и от чего-нибудь грошового и отработанного, если уж наливают. А чё, нормальное же пойло, давай его сюда."
+		"DOTA_DarkCarnival_Store_AutomatonPersona_SalesDescription_Oracle"			"Подобно трагической греческой героине, Оракул-автоматон проклят видеть будущее, но никак не влиять на него. В отличие от трагической греческой героини, его не слушают не из-за неверия пророчествам. Его не слушают, потому что он крайне бесит."
+		"DOTA_DarkCarnival_Store_AutomatonPersona_SalesDescription_LegionCommander"	"Тресдин-автоматон, как и её человеческий аналог, движима намерением давить врагов каблуком своего роботизированного сапога. Но, не в пример человеческому аналогу, она куда менее склонна останавливаться."
+		"DOTA_DarkCarnival_Store_AutomatonPersona_SalesDescription_Morphling"		"По сравнению со своим водным аналогом, Морфлинг-автоматон скорее олицетворяет жидкость в метафорическом смысле, а на деле скован из настоящей стали. До чего же техника дошла."
+		
+		"DOTA_Style_Dawnbreaker_Dark_Carnival_Weapon_0"	"Bar Belle"
+		"DOTA_Style_Dawnbreaker_Dark_Carnival_Weapon_1"	"Darkest Light"
+		"DOTA_Style_Dawnbreaker_Dark_Carnival_Weapon_2" "Star Power"
+		"DOTA_Style_Dawnbreaker_Dark_Carnival_Head_0" "Bar Belle"
+		"DOTA_Style_Dawnbreaker_Dark_Carnival_Head_1" "Darkest Light"
+		"DOTA_Style_Mirana_Dark_Carnival__Mount_0" "Roar of the Crowd"
+		"DOTA_Style_Mirana_Dark_Carnival__Mount_1" "In the Limelight"
+
+		"DOTA_DarkCarnival_Store_AutomatonPersona_Description_Includes_Axe"		"Акс-автоматон включает:"
+		"DOTA_DarkCarnival_Store_AutomatonPersona_Description_Point1_Axe"		"Новую модель, совсем как настоящую!"
+		"DOTA_DarkCarnival_Store_AutomatonPersona_Description_Point2_Axe"		"Возможность проверить свою силу на врагах с новыми эффектами Culling Blade!"
+		"DOTA_DarkCarnival_Store_AutomatonPersona_Description_Point3_Axe"		"Способность удивить противников новыми анимациями Counter Helix!"
+		"DOTA_DarkCarnival_Store_AutomatonPersona_Description_Point4_Axe"		"Новую роботизированную обработку для всех реплик героя! (Грамматика не улучшена.)"
+		"DOTA_DarkCarnival_Store_AutomatonPersona_Description_Point5_Axe"		"Аниматронику, поддерживающую все существующие насмешки!"
+
+		"DOTA_DarkCarnival_Store_AutomatonPersona_Description_Includes_LegionCommander"		"Тресдин-автоматон включает:"
+		"DOTA_DarkCarnival_Store_AutomatonPersona_Description_Point1_LegionCommander"		"Новый и улучшенный внешний вид, вселяющий страх во врагов!"
+		"DOTA_DarkCarnival_Store_AutomatonPersona_Description_Point2_LegionCommander"		"Шокирующие новые визуальные эффекты Overwhelming Odds и Duel!"
+		"DOTA_DarkCarnival_Store_AutomatonPersona_Description_Point3_LegionCommander"		"Плавные и изящные уникальные анимации движения!"
+		"DOTA_DarkCarnival_Store_AutomatonPersona_Description_Point4_LegionCommander"		"Новые цифровые улучшения для всех реплик героя!"
+		"DOTA_DarkCarnival_Store_AutomatonPersona_Description_Point5_LegionCommander"		"Аниматронику, поддерживающую все существующие насмешки!"
+
+		"DOTA_DarkCarnival_Store_AutomatonPersona_Description_Includes_Bristleback"		"Иглогрив-автоматон включает:"
+		"DOTA_DarkCarnival_Store_AutomatonPersona_Description_Point1_Bristleback"		"Новую металлическую конструкцию, устойчивую к алкоголю!"
+		"DOTA_DarkCarnival_Store_AutomatonPersona_Description_Point2_Bristleback"		"Совершенно безопасные визуальные эффекты, в том числе для наспинного выхлопа пламени!"
+		"DOTA_DarkCarnival_Store_AutomatonPersona_Description_Point3_Bristleback"		"Неорганические замещающие эффекты для Viscous Nasal Goo, Quill Spray и Hairball!"
+		"DOTA_DarkCarnival_Store_AutomatonPersona_Description_Point4_Bristleback"		"Новую роботизированную фильтрацию для всех реплик героя!"
+		"DOTA_DarkCarnival_Store_AutomatonPersona_Description_Point5_Bristleback"		"Внутренний привод, поддерживающий все существующие насмешки!"
+
+		"DOTA_DarkCarnival_Store_AutomatonPersona_Description_Includes_Oracle"			"Оракул-автоматон включает:"
+		"DOTA_DarkCarnival_Store_AutomatonPersona_Description_Point1_Oracle"			"Новую переливающуюся огоньками модель героя с особыми визуальными эффектами!"
+		"DOTA_DarkCarnival_Store_AutomatonPersona_Description_Point2_Oracle"			"Футуристические заменители для эффектов Fortune's End и Fate's Edict!"
+		"DOTA_DarkCarnival_Store_AutomatonPersona_Description_Point3_Oracle"			"Уникальные анимации, в том числе для передвижения и телепортации!"
+		"DOTA_DarkCarnival_Store_AutomatonPersona_Description_Point4_Oracle"			"Новую усовершенствованную обработку для всех реплик героя! (Точность прогнозов не улучшена.)"
+		"DOTA_DarkCarnival_Store_AutomatonPersona_Description_Point5_Oracle"			"Поддержку насмешек неавтоматизированного героя!"
+
+		"DOTA_DarkCarnival_Store_AutomatonPersona_Description_Includes_Morphling"		"Морфлинг-автоматон включает:"
+		"DOTA_DarkCarnival_Store_AutomatonPersona_Description_Point1_Morphling"			"Новую модель героя с плавными очертаниями и детальной проработкой!"
+		"DOTA_DarkCarnival_Store_AutomatonPersona_Description_Point2_Morphling"			"Новые визуальные эффекты Waveform!"
+		"DOTA_DarkCarnival_Store_AutomatonPersona_Description_Point3_Morphling"			"Уникальные анимации, в том числе для передвижения, разборки и не только!"
+		"DOTA_DarkCarnival_Store_AutomatonPersona_Description_Point4_Morphling"			"Новую механическую обработку для всех реплик героя!"
+
+		"DOTA_DarkCarnival_Store_AutomatonPersona_Description_AndMore"			"И многое другое!"
+		
+
+		"DOTA_DarkCarnival_Store_AutomatonBundle"						"Комплект автоматонов"
+		"DOTA_DarkCarnival_Store_AutomatonBundle_Description"			"Сэкономьте, купив сразу все 5 личностей-автоматонов"
+
+		"DOTA_DarkCarnival_Store_SecretRoomsPack_SalesDescription"			"Комплект тайных комнат"
+
+		"DOTA_DarkCarnival_Store_SecretRoomsPack_Included"						"В комплект входят:"
+		"DOTA_DarkCarnival_Store_SecretRoomsPack_Description_Point1"			"<b>Крипы «Тёмного карнавала»</b> (мечники, маги и катапульты!)"
+		"DOTA_DarkCarnival_Store_SecretRoomsPack_Description_Point2"			"<b>Комплект музыки «Тёмного карнавала»</b> (полностью новые музыкальные треки и мелодии!)"
+		"DOTA_DarkCarnival_Store_SecretRoomsPack_Description_Point3"			"2 <b>билета тайных комнат</b> (открывают в плавильном и грузовом вагонах секретные комнаты с отдельным сюжетом и наградами!)"
+
+		"DOTA_DarkCarnival_Store_SecretRoomsPack_Tooltip_TicketCount"			"2 шт."
+		"DOTA_DarkCarnival_Store_SecretRoomsPack_Tooltip_Tickets"				"Билеты тайных комнат"
+		"DOTA_DarkCarnival_Store_SecretRoomsPack_Tooltip_Creeps"				"Крипы «Тёмного карнавала»"
+
+		"DOTA_DarkCarnival_Store_SecretRoomsPack_GetAccess"					"Доступ к тайным комнатам"
+		"DOTA_DarkCarnival_Store_SecretRoomsPack_SecretRoom_SmelterCar"				"Плавильный вагон"
+		"DOTA_DarkCarnival_Store_SecretRoomsPack_SecretRoom_StorageCar"				"Грузовой вагон"
+
+		"DOTA_DarkCarnival_Store_MidnightRunBundle_SalesDescription"			"Набор наград «Тёмного карнавала»"
+		"DOTA_DarkCarnival_Store_MidnightRunBundle_Included"					"В набор наград входят:"
+		"DOTA_DarkCarnival_Store_MidnightRunBundle_DiscountCoinDescription"		"Получите БЕСПЛАТНО за 10 скидочных монет «Тёмного карнавала»"
+
+		"DOTA_DarkCarnival_Store_MidnightRunBundle_Description_Point1"			"30 <b>мешочков конфет</b>"
+		"DOTA_DarkCarnival_Store_MidnightRunBundle_Description_Point2"			"10 <b>замен в лавке конфет</b>"
+		"DOTA_DarkCarnival_Store_MidnightRunBundle_Description_Point3"			"3 <b>камня ясновидения</b>"
+		
+		"DOTA_DarkCarnival_Store_MidnightRunBundle_Tooltip_Count1"			"30 шт."
+		"DOTA_DarkCarnival_Store_MidnightRunBundle_Tooltip_Count2"			"10 шт."
+		"DOTA_DarkCarnival_Store_MidnightRunBundle_Tooltip_Count3"			"3 шт."
+		"DOTA_DarkCarnival_Store_MidnightRunBundle_Tooltip_Item1"			"Мешочки конфет"
+		"DOTA_DarkCarnival_Store_MidnightRunBundle_Tooltip_Item2"			"Замены в лавке конфет"
+		"DOTA_DarkCarnival_Store_MidnightRunBundle_Tooltip_Item3"			"Камни ясновидения"
+		
+		"DOTA_DarkCarnival_TicketsReceived"					"Получены билеты"
+		"DOTA_DarkCarnival_GiftFromFriend"					"Вам пришёл подарок от друга!"
+		
+		"DOTA_DarkCarnival_Chapter1"	"Глава 1"
+		"DOTA_DarkCarnival_Chapter2"	"Глава 2"
+		"DOTA_DarkCarnival_Chapter3"	"Глава 3"
+		
+		"DOTA_DarkCarnival_TimeUntilNextChapter"	"{s:next_chapter_name} через {s:time_until_next_unlock}"
+
+		"DOTA_DarkCarnival_ChapterLocked"	"Откроется через {s:time_until_unlock}"
+		"DOTA_DarkCarnival_ChapterReleaseDate" "{t:l:release_date}"
+		"DOTA_DarkCarnival_ChapterReleaseDate_TrainCar" "Будет доступно с {t:l:release_date}"
+		"DOTA_DarkCarnival_ChapterComplete" "Пройдено"
+		"DOTA_DarkCarnival_ChapterNotYetReleased" "Скоро"
+		
+		"DOTA_DarkCarnival_TooltipOverworldPath_Requirement_Token:f"		"{count} {count, plural, one{билет} few {билета} other{билетов}} <span class=\"TokenName\">«{name}»</span>"
+		"DOTA_DarkCarnival_FreeTicket"		"Начните свой путь с бесплатного билета."
+		"DOTA_DarkCarnival_ClaimTicket"		"Получить билет!"
+		"DOTA_DarkCarnival_TokensReceived"	"{s:event_title}: {s:act_title}"
+
+		"DOTA_DarkCarnival_FrontPage_VisitWebsite"	"Открыть сайт"
+		"DOTA_DarkCarnival_FrontPage_ViewComic"	"Читать комикс"
+		"DOTA_DarkCarnival_FrontPage_ViewEvent"	"Открыть событие"
+
+		"DOTA_DarkCarnival_FrontPage_SmallEventDescription"	"Получайте награды и смотрите, как Магистр манежа пытается украсть души для своего тёмного карнавала."
+		"DOTA_DarkCarnival_FrontPage_FirstTime_Claim"	"Получите бесплатную награду, чтобы начать!"
+		"DOTA_DarkCarnival_FrontPage_FirstTime_GetStarted"	"Начать"
+
+		"DOTA_DarkCarnival_FrontPage_EventProgress"	"Прогресс события"
+		"DOTA_DarkCarnival_FrontPage_CompleteCount"	"Пройдено: <b>{d:full_total_earned}</b> / {d:full_total_max}"
+		"DOTA_DarkCarnival_FrontPage_NextReward"	"След. награда"
+
+		"DOTA_DarkCarnival_StoreCell_Explore"	"Открыть магазин"
+		"DOTA_DarkCarnival_StoreCell_Description"	"Личности-автоматоны, новая сокровищница, набор тайных комнат и не только!"
+
+		"DOTA_DarkCarnival_Overworld_Progress"	"Прогресс"
+		
+		"DOTA_DarkCarnival_Overworld_Tokens"	"Билеты"
+		"DOTA_DarkCarnival_Overworld_Trade"		"Обмен"
+		"DOTA_DarkCarnival_Overworld_TokenTrader"		"Обмен билетов"
+		
+		"DOTA_DarkCarnival_Overworld_SecretRoomTokens"		"Билеты тайных комнат"
+
+		"DOTA_DarkCarnival_Overworld_PrisonCar"	"Тюремный вагон"
+		"DOTA_DarkCarnival_Overworld_SmeltingCar"	"Плавильный вагон"
+		"DOTA_DarkCarnival_Overworld_Blimp"	"Дирижабль"
+		"DOTA_DarkCarnival_Overworld_StorageCar"	"Грузовой вагон"
+		"DOTA_DarkCarnival_Overworld_CauldronCar"	"Котловой вагон"
+		"DOTA_DarkCarnival_Overworld_EngineCar"		"Головной вагон"
+
+		"DOTA_DarkCarnival_Encounter_Oracle"				"Оракул"
+		"DOTA_DarkCarnival_Encounter_Oracle_Description"	"Узнайте свою судьбу"
+		"DOTA_DarkCarnival_Encounter_PickLock"	"Взлом замка"
+		"DOTA_DarkCarnival_Encounter_PickLock_Description"	"Помогите Сларку выбраться из камеры!"
+		"DOTA_DarkCarnival_Encounter_SlarkJailbreak"				"Сапожный снос"
+		"DOTA_DarkCarnival_Encounter_SlarkJailbreak_Description"	"Добывайте драгоценности! Сносите стены сапогом!"
+		"DOTA_DarkCarnival_Encounter_FriendGifting"					"Подарки друзьям"
+		"DOTA_DarkCarnival_Encounter_FriendGifting_Description"		"Дарите ненужные билеты своим друзьям!"
+		"DOTA_DarkCarnival_Encounter_TicketSmelter"					"Плавильня билетов"
+		"DOTA_DarkCarnival_Encounter_TicketSmelter_Description"		"Переплавляйте то, что не следовало бы!"
+		"DOTA_DarkCarnival_Encounter_TicketSmelter_SmeltButton"		"Переплавить"
+		"DOTA_DarkCarnival_Encounter_TicketSmelter_Bristleback_Note"	"УШЁЛ ЗА КЛОУНОМ. ВЕРНУСЬ ЧЕРЕЗ ПЯТЬ МИНУТ. ЕСЛИ ПРИШЛИ НА ПЕРЕПЛАВКУ, ПЕРЕПЛАВЬТЕСЬ САМОСТОЯТЕЛЬНО. НЕ ПЕРЕПЛАВЛЯЙТЕ НИЧЕГО ДРУГОГО. НЕСАНКЦИОНИРОВАННАЯ ПЕРЕПЛАВКА КАРАЕТСЯ ПЕРЕПЛАВКОЙ."
+		"DOTA_DarkCarnival_Encounter_TicketSmelter_Bristleback_Name"	"– И. А." // Automaton Bristle Back
+		"DOTA_DarkCarnival_Encounter_TicketSmelter_Tooltip"			"Переплавьте лишние билеты в бонусные награды!"
+		"DOTA_DarkCarnival_Encounter_TicketSmelter_NothingLeft"		"Пока что в плавильне больше нет наград."
+		"DOTA_DarkCarnival_Encounter_TicketSmelter_SeeingStone:f"					"{d:num_seeing_stones} {num_seeing_stones, plural, one{камень ясновидения} few{камня ясновидения} other{камней ясновидения}}"
+
+		
+		"DOTA_CandyShopName_Dark_Carnival"		"Карнавальная лавка конфет"
+		"DOTA_DarkCarnival_View_Candyworks"		"Открыть лавку конфет"
+		"DOTA_DarkCarnivalStore_View"			"Открыть <b>магазин события</b>"
+		"DOTA_DarkCarnivalStore_CoinsInfo"		"Зарабатывайте скидочные монеты события, исследуя карту.<br><br>Во время события вы можете обменять <b>10 монет</b> на скидку примерно в <b>{s:regional_coin_currency}</b> на товары в магазине события стоимостью от <b>{s:regional_coin_currency}</b> (точный размер скидки зависит от региона и валюты).<br><br>Бесплатно вы можете получить <b>{d:total_free_coins}</b> монет (и ещё <b>{d:total_explorer_coins}</b>, купив «Комплект тайных комнат»)."
+		"DOTA_DarkCarnivalStore_ExtraRewards"		"Дополнительные награды:"
+		"DOTA_DarkCarnivalStore_ViewInOverworld"		"Показать на поезде"
+		
+		"DOTA_DarkCarnival_HowToPlay_Coins_2"	"Во время события вы можете обменять <b>10 скидочных монет</b> на скидку примерно в {s:regional_coin_currency} на товары стоимостью от {s:regional_coin_currency} в <b>магазине «Тёмного карнавала»</b>. Если выбранный предмет стоит ровно {s:regional_coin_currency}, скидка сделает его бесплатным."
+		"DOTA_DarkCarnival_TrainCarCompletion"	"Пройдено: <b>{d:basic_total_earned}</b> из {d:basic_total_max}"
+		"DOTA_DarkCarnival_ProgressAvailable"	"Доступен прогресс"
+		"DOTA_DarkCarnival_FortunesAvailable"	"Доступно пророчество"
+
+		"DOTA_DarkCarnival_OracleStory_RewardTooltip_FortuneCount"			"После <b>{d:fortunes_required}</b> пророчеств"
+		"DOTA_DarkCarnival_OracleStory_RewardTooltip_FortunesNeeded"		"Нужно ещё <b>{d:fortunes_needed}</b>"
+		"DOTA_DarkCarnival_OracleStory_RewardTooltip_ClaimPreviousNode"		"Сперва получите предыдущие награды"
+
+		"DOTA_DarkCarnivalLeaderboard_Act11_Title"	"Прогресс «Ночного побега»"
+
+		"DOTA_DarkCarnivalProfileCard_Act1"			"Ранг в «Ночном побеге»"
+
+		"DOTA_DarkCarnivalRewardType_Coins"					"Скидочные монеты"
+		"DOTA_DarkCarnivalRewardType_Candy"					"Мешочки конфет"
+		"DOTA_DarkCarnivalRewardType_Treasures"				"Сокровищницы"
+		"DOTA_DarkCarnivalRewardType_Goodies"				"Карнавальные сувениры"
+		"DOTA_DarkCarnivalRewardType_Oracle"				"Камни ясновидения"
+		"DOTA_DarkCarnivalRewardType_CompletionSet"			"Наборы за прохождение"
+
+		"DOTA_DarkCarnivalReward_Act1_Title"				"Награды «Ночного побега»"
+		"DOTA_DarkCarnivalReward_View_Treasure"				"Показать сокровищницу"
+
+		"DOTA_DarkCarnivalRewardType_Candy_Description"				"По многочисленным просьбам лавка конфет возвращается: превратите приторные причины появления пульпита в груду новых наборов, вардов, курьеров и не только."
+		"DOTA_DarkCarnivalRewardType_Treasures_Description"			"Наши герои выходят на арену в тематических костюмах — по-злодейски модных и по-цирковому роскошных. Откройте новую сокровищницу, содержащую 15 карнавальных наборов."
+		"DOTA_DarkCarnivalRewardType_Goodies_Description"			"Выразите себя декорациями для витрин, загрузочными экранами, граффити и смайликами."
+		"DOTA_DarkCarnivalRewardType_Oracle_Description"			"Оракул всегда готов вознаградить вас своими пророческими способностями в обмен на заветные камни ясновидения.<br/><br/>Получайте по камню каждый день за игру в Доту и собирайте их, продвигаясь по поезду."
+		"DOTA_DarkCarnivalRewardType_CompletionSet_Description"		"Погружайтесь в сюжет «Тёмного карнавала» и найдите четыре тематических набора, спрятанных в поезде Магистра."
+
+		"DOTA_DarkCarnivalReward_ShowcaseDecorations"		"Декорации для витрины"
+		"DOTA_DarkCarnivalReward_ShowcaseDecoration_Locked"		"Откройте эти декорации для витрины, исследуя карту."
+
+		"DOTA_DarkCarnival_SeeTheOracle"							"Посетить Оракула"
+		"DOTA_DarkCarnival_FreeTrackLabel"							"Основной сюжет"
+		"DOTA_DarkCarnival_SecretRoomLabel"							"Тайные комнаты"
+
+		"DOTA_DarkCarnival_RewardsPopupClaimedFree"					"<b>/ {d:main_nodes_total}</b><br>Основной сюжет"
+		"DOTA_DarkCarnival_RewardsPopupClaimedPaid"					"<b>/ {d:premium_nodes_total}</b><br>Тайные комнаты"
+
+		"DOTA_DarkCarnival_SecretAdmirer_Title"		"Подарки друзьям"
+		"DOTA_DarkCarnival_SecretAdmirer_TakeTickets"	"Получить билеты"
+		"DOTA_DarkCarnival_SecretAdmirer_GiftTitle"		"Выберите друга и билет"
+		"DOTA_DarkCarnival_SecretAdmirer_Gift_Tooltip"	"Вы можете дарить друзьям до 5 билетов в день."
+		"DOTA_DarkCarnival_SecretAdmirer_GiftNoneNeeded"		"Вашему другу не нужны билеты!"
+		"DOTA_DarkCarnival_SecretAdmirer_NoMoreAvailable"	"Лимит подарков на сегодня исчерпан"
+		"DOTA_DarkCarnival_SecretAdmirer_GiftAvailableTooltip"	"Вам пришёл подарок от друга!"
+
+		"DOTA_DarkCarnival_SecretRoomsPack_RequiredForRewardsClaims"		"Требуется комплект тайных комнат.<br>Нажмите, чтобы купить"
+		"DOTA_DarkCarnival_OverworldInventory_MultiselectInfo"	"Играйте в Доту, чтобы зарабатывать билеты вашего героя.<br/><br/>Нажмите на билет в инвентаре или на карте, чтобы увидеть, какие герои вам подойдут.<br/><br/>Нажимайте на билеты с зажатой клавишей SHIFT, чтобы выбрать сразу несколько."
+		"DOTA_DarkCarnival_Token_TheFool"			"Шут"
+		"DOTA_DarkCarnival_Token_TheMagician"		"Маг"
+		"DOTA_DarkCarnival_Token_TheHighPriestess"	"Верховная жрица"
+		"DOTA_DarkCarnival_Token_TheEmpress"		"Императрица"
+		"DOTA_DarkCarnival_Token_TheEmperor"		"Император"
+		"DOTA_DarkCarnival_Token_TheHierophant"		"Верховный жрец"
+		"DOTA_DarkCarnival_Token_TheLovers"			"Влюблённые"
+		"DOTA_DarkCarnival_Token_TheChariot"		"Колесница"
+		"DOTA_DarkCarnival_Token_Strength"			"Сила"
+		"DOTA_DarkCarnival_Token_TheHermit"			"Отшельник"
+		"DOTA_DarkCarnival_Token_WheelOfFortune"	"Колесо фортуны"
+		"DOTA_DarkCarnival_Token_Justice"		"Правосудие"
+		"DOTA_DarkCarnival_Token_TheHangedMan"	"Повешенный"
+		"DOTA_DarkCarnival_Token_Death"			"Смерть"
+		"DOTA_DarkCarnival_Token_Temperance"	"Умеренность"
+		"DOTA_DarkCarnival_Token_TheDevil"		"Дьявол"
+		"DOTA_DarkCarnival_Token_TheTower"		"Башня"
+		"DOTA_DarkCarnival_Token_TheStar"		"Звезда"
+		"DOTA_DarkCarnival_Token_TheMoon"		"Луна"
+		"DOTA_DarkCarnival_Token_TheSun"		"Солнце"
+		"DOTA_DarkCarnival_Token_Judgement"		"Cуд"
+		"DOTA_DarkCarnival_Token_TheWorld"		"Мир"
+		"DOTA_DarkCarnival_Token_Premium"		"Премиум"
+		"DOTA_DarkCarnival_Token_Oracle"		"Ясновидение"
+		"DOTA_DarkCarnival_Token_NodeUnlock"	"Пропуск"
+		"DOTA_DarkCarnival_Token_MinigameUnlock"	"Приз мини-иггры"
+		"DOTA_Overworld_Token_Random"			"Случайный билет"
+
+		"DOTA_DarkCarnival_InventoryPicker_Title"	"Выберите билеты из инвентаря"
+		"DOTA_DarkCarnival_NoTicketsAvailable"	"Нет доступных билетов"
+
+		"DOTA_DarkCarnival_Tarot_TheFool"			"Шут"
+		"DOTA_DarkCarnival_Tarot_TheMagician"		"Маг"
+		"DOTA_DarkCarnival_Tarot_TheHighPriestess"	"Верховная жрица"
+		"DOTA_DarkCarnival_Tarot_TheEmpress"		"Императрица"
+		"DOTA_DarkCarnival_Tarot_TheEmperor"		"Император"
+		"DOTA_DarkCarnival_Tarot_TheLovers"			"Влюблённые"
+		"DOTA_DarkCarnival_Tarot_Strength"			"Сила"
+		"DOTA_DarkCarnival_Tarot_TheStar"			"Звезда"
+		"DOTA_DarkCarnival_Tarot_TheHermit"			"Отшельник"
+		"DOTA_DarkCarnival_Tarot_WheelOfFortune"	"Колесо фортуны"
+		"DOTA_DarkCarnival_Tarot_Death"				"Смерть"
+		"DOTA_DarkCarnival_Tarot_TheDevil"			"Дьявол"
+
+		"DOTA_DarkCarnival_Intro_Welcome"	"Добро пожаловать на Тёмный карнавал"
+		"DOTA_DarkCarnival_Intro_Explore"	"Исследуйте поезд"
+		"DOTA_DarkCarnival_Intro_Explore_1"	"Открывайте поля на карте, чтобы продвигаться по сюжету «Тёмного карнавала» и получать награды, включая новые диалоги, косметические предметы, валюту события и мини-игры."
+		"DOTA_DarkCarnival_Intro_Explore_2"	"<b>Основной сюжет</b> карты, как и его награды, доступны всем абсолютно бесплатно."
+		"DOTA_DarkCarnival_Intro_Explore_3"	"Каждое поле открывается определёнными билетами, которые можно получить, просто играя в Dota 2."
+		
+		"DOTA_DarkCarnival_Intro_PlayDota"	"Билеты за игры"
+		"DOTA_DarkCarnival_Intro_PlayDota_1"	"К каждому герою привязаны <b>три билета</b>."
+		"DOTA_DarkCarnival_Intro_PlayDota_2"	"За каждую победу в <b>обычной игре</b> вы получите все три билета своего героя, а за поражение — только один из них, выбранный случайно. Победа в режиме <b>Turbo</b> принесёт вам два билета, а поражение — ноль."
+		"DOTA_DarkCarnival_Intro_PlayDota_2_Tooltip" "Билеты в режиме Ability Draft привязаны к самому герою, а не к выбранным способностям.<br/><br/>За победу в совместной игре против ботов даётся один билет."
+		"DOTA_DarkCarnival_Intro_PlayDota_3"	"Заработанные билеты хранятся в инвентаре, и их можно потратить на продвижение по карте. Если нужно, в меню обмена вы можете приобрести необходимые билеты за имеющиеся у вас."
+		
+		"DOTA_DarkCarnival_Intro_Oracle"	"Оракул"
+		"DOTA_DarkCarnival_Intro_Oracle_1"	"Первая за день игра в Доту принесёт вам <b>камень ясновидения</b>."
+		"DOTA_DarkCarnival_Intro_Oracle_2"	"Отдавайте камни ясновидения Оракулу и получайте дополнительные награды, в том числе билеты, конфеты, декорации для витрины, внутриигровые расходники и аксессуары."
+
+		"DOTA_DarkCarnival_Intro_Coins"		"Монеты"
+		"DOTA_DarkCarnival_Intro_Coins_1"		"Исследуя карту, вы будете зарабатывать <b>скидочные монеты «Тёмного карнавала»</b>."
+		"DOTA_DarkCarnival_Intro_Coins_2"		"Скидочные монеты действительны только до конца события. Точный размер скидки зависит от вашего региона и его валюты."
+		
+		"DOTA_DarkCarnival_Intro_Candyworks"		"Карнавальная лавка конфет"
+		"DOTA_DarkCarnival_Intro_Candyworks_1"		"Также во время продвижения по карте можно встретить мешочки конфет."
+		"DOTA_DarkCarnival_Intro_Candyworks_2"		"Добравшись до <b>карнавальной лавки конфет</b>, вы сможете обменять конфеты на различные предметы, сокровищницы или даже Arcana-предметы, если повезёт!"
+		"DOTA_DarkCarnival_Intro_Candyworks_3"		"<b>Замены</b> даются за <b>каждую победу</b> и позволяют обновить ассортимент лавки, если вам ничего в ней не нравится."
+		
+		"DOTA_DarkCarnival_Intro_Treasures"		"Сокровища и другие награды"
+		"DOTA_DarkCarnival_Intro_Treasures_1"		"Некоторые поля на карте принесут вам <b>сокровищницы Treasure of Wonders</b>, которые содержат новые наборы аксессуаров и открываются без ключа. Эти сокровищницы также можно купить в магазине «Тёмного карнавала»."
+		"DOTA_DarkCarnival_Intro_Treasures_2"		"Также на карте можно найти другие награды вроде тематических <b>смайликов, граффити, декораций для витрины</b> и <b>загрузочных экранов</b>."
+		"DOTA_DarkCarnival_Intro_Treasures_3"		"На нескольких особых полях даются уникальные аксессуары."
+
+		"DOTA_DarkCarnival_TarotCardTitle"						"Ваша коллекция таро"
+		"DOTA_DarkCarnival_TarotCardCollectionDescription"		"За каждую карту даётся своя награда.<br>Вытяните одну и ту же карту <b>3</b> раза, и сможете украсить ею витрину профиля."
+
+		"DOTA_Dark_Carnival_FortuneTellerDisabled"				"Оракул ещё не пробуждён."
+
+		"DOTA_DarkCarnival_Fortune_ExtraToken_StrengthHero"		"Победа за героя силы принесёт дополнительный билет."
+		"DOTA_DarkCarnival_Fortune_ExtraToken_IntelligenceHero"	"Победа за героя ловкости принесёт дополнительный билет."
+		"DOTA_DarkCarnival_Fortune_ExtraToken_AgilityHero"		"Победа за героя интеллекта принесёт дополнительный билет."
+		"DOTA_DarkCarnival_Fortune_ExtraToken_UniversalHero"	"Победа за универсального героя принесёт дополнительный билет."
+
+		"DOTA_DarkCarnival_FortuneReward_RandomToken"	"2 случайных билета"
+		"DOTA_DarkCarnival_FortuneReward_ExtraToken"	"Получите дополнительный билет"
+		"DOTA_DarkCarnival_FortuneReward_CandyBag"		"Мешочек конфет"
+		"DOTA_DarkCarnival_FortuneReward_DiscountCoin"	"Получите скидочную монету"
+		"DOTA_DarkCarnival_FortuneReward_Treasure"		"Получите сокровищницу"
+		"DOTA_DarkCarnival_FortuneReward_SmallEconItem"	"Получите граффити или смайлик"
+		"DOTA_DarkCarnival_FortuneReward_Rerolls"		"Замена в конфетной лавке"
+
+		"DOTA_DarkCarnival_Fortune_RevealFortuneButtonLabel"			"Получить пророчество: <span class=\"Numbers\">1</span> <Img class=\"ButtonIcon\" src=\"file://{images}/events/dark_carnival/oracle/oracle_coin.png\"/>"
+		"DOTA_DarkCarnival_Fortune_RevealNextFortuneButtonLabel"		"Ещё одно пророчество"
+
+		"DOTA_DarkCarnival_FortuneReward_k_eOverworldFortuneReward_ThreeRandomTokens"	"3 случайных билета"
+		"DOTA_DarkCarnival_FortuneReward_k_eOverworldFortuneReward_OracleCoin"			"1 камень ясновидения"
+		"DOTA_DarkCarnival_FortuneReward_k_eOverworldFortuneReward_CandyBagSmall"		"Маленький мешочек конфет"
+		"DOTA_DarkCarnival_FortuneReward_k_eOverworldFortuneReward_CandyBagLarge"		"Большой мешочек конфет"
+		"DOTA_DarkCarnival_FortuneReward_k_eOverworldFortuneReward_BalloonCharges"		"+1 уровень для воздушного шарика"
+		"DOTA_DarkCarnival_FortuneReward_k_eOverworldFortuneReward_FireworksCharges"	"+1 уровень для фейерверка"
+		"DOTA_DarkCarnival_FortuneReward_k_eOverworldFortuneReward_OneNodeUnlock"		"1 билет пропуска"
+		"DOTA_DarkCarnival_FortuneReward_k_eOverworldFortuneReward_TwoNodeUnlocks"		"2 билета пропуска"
+		"DOTA_DarkCarnival_FortuneReward_k_eOverworldFortuneReward_TwoLeastTokens"		"2 самых малочисленных билета"
+		"DOTA_DarkCarnival_FortuneReward_k_eOverworldFortuneReward_ThreeMostTokens"		"3 самых многочисленных билета"
+		"DOTA_DarkCarnival_FortuneReward_k_eOverworldFortuneReward_Rerolls"				"3 замены в лавке конфет"
+		"DOTA_DarkCarnival_FortuneReward_k_eOverworldFortuneReward_PieCharges"			"+1 уровень для пирога"
+		"DOTA_DarkCarnival_FortuneReward_k_eOverworldFortuneReward_LastHeroPlayedTokens"	"Билеты за последнюю игру"
+
+		"DOTA_DarkCarnival_FortuneTeller_BalloonChargesDescription"						"Бонусный уровень для сезонной способности, позволяющей призвать воздушные шарики во время игры.<br>С повышением уровня увеличивается число зарядов, виды шариков и не только!"
+		"DOTA_DarkCarnival_FortuneTeller_PieChargesDescription"							"Бонусный уровень для сезонной способности, позволяющей швырнуть пирогом в союзника или противника во время игры.<br>С повышением уровня увеличивается число зарядов, отскоков и не только!"
+		"DOTA_DarkCarnival_FortuneTeller_FireworksChargesDescription"					"Бонусный уровень для сезонной способности, позволяющей запустить фейерверк во время игры.<br>С повышением уровня увеличивается число зарядов, яркость и не только!"
+		"DOTA_DarkCarnival_FortuneTeller_PathUnlockDescription"							"Мгновенно открывает любое поле, не расходуя требуемые для него билеты."
+
+		"DOTA_DarkCarnival_FortuneTeller_TokensReceived"								"Вы получили от Оракула эти билеты:"
+
+		"DOTA_DarkCarnival_FortuneTeller_Welcome"										"Добро пожаловать к Оракулу"
+		"DOTA_DarkCarnival_FortuneTeller_WelcomeDescription"							"Получайте по одному камню ясновидения в день за игру в Доту. Обменивайте их на пророчества и награды!"
+		"DOTA_DarkCarnival_FortuneTeller_ResourceCount"									"Камней ясновидения: {d:ticket_count}"
+		"DOTA_DarkCarnival_FortuneTeller_DescriptionSubtitle"							"Зарабатывайте камни ясновидения, играя в Доту"
+		"DOTA_DarkCarnival_FortuneTeller_DailySeeingStoneTitle"							"Ежедневный камень ясновидения"
+		"DOTA_DarkCarnival_FortuneTeller_OverworldTokens"								"Билеты «Тёмного карнавала»"
+		"DOTA_DarkCarnival_FortuneTeller_StoryInformation"								"Получайте пророчества, чтобы узнать историю Оракула и получить дополнительные награды."
+
+		"DOTA_DarkCarnival_FortuneTeller_AvailableToEarn"								"Можно получить"
+		"DOTA_DarkCarnival_FortuneTeller_Earned"										"Получено"
+		"DOTA_DarkCarnival_FortuneTeller_SeeingStoneCountdown"							"Сброс через {t:d:t:m:countdown_time}"
+		"DOTA_DarkCarnival_FortuneTeller_ReadyToUnlock"									"Можно получить"
+
+		"DOTA_DarkCarnival_FortuneTeller_ClaimReward"									"Получить награду"
+		"DOTA_DarkCarnival_FortuneTeller_OracleStoryTitle"								"Узнайте историю Оракула"
+		"DOTA_DarkCarnival_FortuneTeller_TarotCardCollectionUnlocked:f"					"Открыто"
+		"DOTA_DarkCarnival_ItemRecieved_SeeingStone:f"									"{d:GrantPoints} {GrantPoints, plural, one{камень ясновидения} few{камня ясновидения} other{камней ясновидения}}"							
+
+		"DOTA_DarkCarnival_FortuneTeller_Reward"				"Награда карты «{s:reward_tarot_card_name}»"
+
+		"DOTA_DarkCarnival_Dashboard_GetFortune"				"Узнайте свою судьбу!"
+		"DOTA_DarkCarnival_FortuneDescription"					"%s1 %s2 %s3"
+
+		"DOTA_DarkCarnival_ClickToStart"						"Нажмите, чтобы начать"
+
+		"DOTA_PlusPostGame_DarkCarnivalProgress"			"Прогресс «Тёмного карнавала»"
+
+		"DOTA_DarkCarnival_NodeBreaker"						"Один пропуск <img class=\"NodeUnlockIcon\" src=\"file://{images}/events/dark_carnival/tokens/token_icons/node_unlock.svg\" />"
+		"DOTA_DarkCarnival_NodeBreaker_Tooltip"				"Использовать билет пропуска вместо других."
+		
+		// Dark Carnival candy shop
+		"DOTA_Dark_Carnival_CandyworksDisabled"				"Карнавальная лавка конфет откроется, когда вы посетите её на карте события."
+		"DOTA_Dark_Carnival_CandyworksExpired"				"Карнавальная лавка конфет закрыта, так как событие окончено."
+
+		"DOTA_CandyShop_Dark_Carnival_Upgrade_Shelf"		"+1 полка наград в лавке конфет"
+		"DOTA_CandyShop_Dark_Carnival_Upgrade_Trades"		"Больше опций обмена конфет"
+		"DOTA_CandyShop_Dark_Carnival_Upgrade_Inventory"	"Больше места в инвентаре конфет"
+
+		"DOTA_CandyShop_Dark_Carnival_Title"				"Карнавальная лавка конфет"
+		"DOTA_CandyShop_Dark_Carnival_Title_Short"			"Карнавальная лавка конфет"
+		"DOTA_CandyShop_Dark_Carnival_Subtitle"				"и редких сокровищ"
+		"DOTA_CandyShop_Dark_Carnival_Subheader"			"Сокровища за сласти! Клады за карамельки! "
+		"DOTA_CandyShop_Dark_Carnival_Description"			"Сизель и Квирт совершили пару очень неразумных сделок на рынке конфетных фьючерсов и теперь готовы приобрести сладости почти по любой цене. Ради этого они распродают оставшиеся сокровища: вы даёте им конфеты, а они — дают вам своё добро."
+		"DOTA_CandyShop_Dark_Carnival_Rules_01"				"Получайте мешочки конфет, изучая карту «Тёмного карнавала», или покупайте их в <b>магазине события</b>."
+		"DOTA_CandyShop_Dark_Carnival_Rules_02"				"Обменивайте комбинации конфет на награды, в том числе <b>скидочные монеты события</b> и предметы редкости <b>Immortal</b> и <b>Arcana</b>."
+		"DOTA_CandyShop_Dark_Carnival_Rules_03"				"Если вам не хватает каких-то ингредиентов, <b>обменяйте</b> одни конфеты на другие."
+		"DOTA_CandyShop_Dark_Carnival_Rules_04"				"Не нравятся предложения Сизеля и Квирта? <b>Замените</b> товары! Замены (не более 10 штук в неделю) даются за игру в Доту."
+		"DOTA_CandyShop_Dark_Carnival_Rules_05"				"Посетите больше конфетных лавок, чтобы получить для них <b>больше наград и возможностей</b>."
+
+		"DOTA_CandyShop_Dark_Carnival_Entry_Processing"		"Открываем лавку конфет"
+		"DOTA_CandyShop_Dark_Carnival_Entry_Failed_Title"	"Карнавальная лавка конфет закрыта"
+		"DOTA_CandyShop_Dark_Carnival_Entry_Failed_Desc"	"Повторите попытку позже (код ошибки: {d:error_code})"
+
+		"DOTA_CandyShop_Dark_Carnival_Visit_Title"			"Вы посетили новую лавку конфет"
+		"DOTA_CandyShop_Dark_Carnival_Visit_Description"	"Найдите их все, чтобы получить мощные бонусы!"
+		"DOTA_CandyShop_Dark_Carnival_Visit_Upgrade_1"		"+3 бесплатные конфеты за каждую лавку конфет"
+		"DOTA_CandyShop_Dark_Carnival_Visit_Upgrade_2"		"+1 полка предметов в лавке конфет"
+		"DOTA_CandyShop_Dark_Carnival_Visit_Upgrade_3"		"+1 опция обмена конфет"
+		"DOTA_CandyShop_Dark_Carnival_Visit_Upgrade_4"		"+10 ячеек в инвентаре"
+		"DOTA_CandyShop_Dark_Carnival_Entry"				"Зайти"
+		"DOTA_CandyShop_Dark_Carnival_Reroll_Tooltip"		"Ассортимент наград в лавке конфет можно заменить. Играйте в Доту, чтобы получить больше замен."
+		"DOTA_DarkCarnival_Reward_CandyShopShelfUpgrade"	"+1 полка наград в лавке конфет"
+		"DOTA_DarkCarnival_Reward_CandyShopRecipeUpgrade"	"+1 рецепт обмена в лавке конфет"
+		"DOTA_DarkCarnival_Reward_CandyShopInventoryUpgrade"	"Больше места в инвентаре конфет"
+		"DOTA_DarkCarnival_Reward_OracleCoin"				"Камень ясновидения"
+		
+		"DOTA_Dark_Carnival_Encounter_TokenTrader_TokensReceivedPopupTitle"		"Обмен завершён"
+		"DOTA_Dark_Carnival_Encounter_TokenExchangeFailed"						"Не удалось обменять билеты"
+		
+		"DOTA_Dark_Carnival_Encounter_TokenTrader_Trade"					"Обменять"
+		"DOTA_Dark_Carnival_Encounter_TokenTrader_Reset"					"Сбросить обмены"
+		"DOTA_Dark_Carnival_Encounter_TokenTrader_Trade3Title"				"Обменяйте <span class='Emphasis'>ТРИ ОДИНАКОВЫХ</span> билета"
+		"DOTA_Dark_Carnival_Encounter_TokenTrader_Trade4Title"				"Обменяйте <span class='Emphasis'>ЧЕТЫРЕ ЛЮБЫХ</span> билета"
+		"DOTA_Dark_Carnival_Encounter_TokenTrader_TradeAny2Title"			"Обменяйте <span class='Emphasis'>ДВА ЛЮБЫХ</span> билета"
+		"DOTA_Dark_Carnival_Encounter_TokenTrader_Trade3RandomTitle"		"Обменяйте <span class='Emphasis'>ТРИ ЛЮБЫХ</span> билета"
+		"DOTA_Dark_Carnival_Encounter_TokenTrader_Trade4RandomTitle"		"Обменяйте <span class='Emphasis'>ЧЕТЫРЕ ЛЮБЫХ</span> билета"
+		"DOTA_Dark_Carnival_Encounter_TokenTrader_TradeRandomDescription"	"Вы не получите те же билеты, которые обмениваете."
+		"DOTA_Dark_Carnival_Encounter_TokenTrader_TradeThreeScrapTitle"		"Обменяйте <span class='Emphasis'>{s:scrap_name} (3 шт.)</span>"
+		"DOTA_Dark_Carnival_Encounter_TokenTrader_TradeSixScrapTitle"		"Обменяйте <span class='Emphasis'>{s:scrap_name} (6 шт.)</span>"
+		"DOTA_Dark_Carnival_Encounter_TokenTrader_ChooseInventory"			"Выберите билеты из инвентаря"
+		"DOTA_Dark_Carnival_Encounter_TokenTrader_ChooseResultToken"		"Выберите нужный вам билет"
+		
+		"DOTA_Dark_Carnival_EncounterName_CandyShop"		"Карнавальная лавка конфет"
+		"DOTA_Dark_Carnival_EncounterDesc_CandyShop"		"Здесь можно потратить ваши вкусные конфеты."
+
+		"DOTA_CandyShop_Dark_Carnival_PostGame_RerollsEarned"		"Получено {s:weekly_earned_s}/{d:weekly_max} еженедельных замен"
+		"DOTA_CandyShop_Dark_Carnival_PostGame_RerollCap"			"Пока что вы не можете заработать больше замен."
+		"DOTA_CandyShop_Dark_Carnival_PostGame_RerollCapUnlocked"	"Тратьте замены в карнавальной лавке конфет"
+		"DOTA_CandyShop_Dark_Carnival_PostGame_ShopLocked"			"Найдите лавку конфет на карте «Тёмного карнавала»."
+		"DOTA_CandyShop_Dark_Carnival_PostGame_WeeklyProgressComplete"	"Заработайте ещё через <span class=\"ResetTime\">{t:d:t:T:countdown_time}</span>"
+		
+		"DOTA_DarkCarnival_RewardDecoration"				"Декорация для витрины"
+
+		"DOTA_CandyShop_Dark_Carnival_CandyType_1"			"Пинелинские шурупчики"
+		"DOTA_CandyShop_Dark_Carnival_CandyType_2"			"Сласти Дымной гавани"
+		"DOTA_CandyShop_Dark_Carnival_CandyType_3"			"Йорлакские зуболомы"
+		"DOTA_CandyShop_Dark_Carnival_CandyType_4"			"Свежедувы Голубого сердца"
+		"DOTA_CandyShop_Dark_Carnival_CandyType_5"			"Кондитерские катушки смышлёнцев"
+
+		"DOTA_Dark_Carnival_VisualNovel_Autoplay"			"Автовоспроизведение"
+
+		"DOTA_Dark_Carnival_PostGame_WinEarned"					"<b>Победа</b> за {g:dota_hero_name:hero_id} принесла вам следующие награды:"
+		"DOTA_Dark_Carnival_PostGame_LossEarned"				"Игра за {g:dota_hero_name:hero_id} принесла вам следующий случайный билет:"
+		"DOTA_Dark_Carnival_PostGame_TurboLossEarned"			"Игра за {g:dota_hero_name:hero_id} не принесла вам билетов."
+		"DOTA_Dark_Carnival_PostGame_UnclaimedMapProgress"		"Доступен прогресс карты!"
+		"DOTA_Dark_Carnival_PostGame_GoToOverworld"				"Открыть поезд"
+		"DOTA_Dark_Carnival_PostGame_TurboDisclaimer"			"За победу в Turbo даётся два случайных билета, а за поражение — ни одного."
+
+		"DOTA_Dark_Carnival_PostGame_FortuneTellerProgressEarned"		"Вы уже заработали свой ежедневный камень ясновидения."
+		"DOTA_Dark_Carnival_PostGame_FortuneTellerProgress"				"Сброс через <span class=\"ResetTime\">{t:d:t:m:countdown_time}</span>"
+		"DOTA_Dark_Carnival_PostGame_FortuneTellerMaxProgress"			"Уже получено {d:earned_coins}/{d:max_coins}. Сброс через <span class=\"ResetTime\">{t:d:t:m:countdown_time}</span>"
+		
+		"DOTA_Dark_Carnival_The_Train"									"Поезд"
+		"DOTA_Dark_Carnival_Store"										"Магазин события"
+		"DOTA_Dark_Carnival_Candyworks"									"Лавка конфет"
+		"DOTA_Dark_Carnival_The_Oracle"									"Оракул"
+
+		"DOTA_Dark_Carnival_OverworldCell_TokensNeeded"					"Билеты для следующей награды"
+
+		"npc_dota_hero_axe_carnival_cosmetic_group_name"				"Автоматон"
+		"npc_dota_hero_oracle_carnival_cosmetic_group_name"				"Автоматон"
+		"npc_dota_hero_legion_commander_carnival_cosmetic_group_name"	"Автоматон"
+		"npc_dota_hero_bristleback_carnival_cosmetic_group_name"		"Автоматон"
+		"npc_dota_hero_morphling_carnival_cosmetic_group_name"			"Автоматон"
+
+		
+		// Dark Carnival Lockpicking
+		"DOTA_DarkCarnival_Lockpicking_Paused"			"Пауза"
+		"DOTA_DarkCarnival_Lockpicking_LeaveGame"					"Выйти"
+		"DOTA_DarkCarnival_Lockpicking_ScoringTotal"	"Общий счёт"
+		"DOTA_DarkCarnival_Lockpicking_PlayAgain"		"Сыграть ещё"
+		"DOTA_DarkCarnival_Lockpicking_Title"			"Взлом замка"
+		"DOTA_DarkCarnival_Lockpicking_GameDesc"		"Помогите Сларку выбраться из камеры!"
+		"DOTA_DarkCarnival_Lockpicking_Leaderboard_HeaderFriends"	"Друзья"
+		"DOTA_DarkCarnival_Lockpicking_Leaderboard_Score"			"Счёт"
+		"DOTA_DarkCarnival_Lockpicking_Scoring"						"Подсчёт очков"
+		"DOTA_DarkCarnival_Lockpicking_Modes"						"Режимы"
+		"DOTA_DarkCarnival_Lockpicking_Rewards"						"Награды"
+		"DOTA_DarkCarnival_Lockpicking_Play"						"Играть"
+		"DOTA_DarkCarnival_Lockpicking_Leave"						"Уйти"
+		"DOTA_DarkCarnival_Lockpicking_Pause"						"Пауза"
+		"DOTA_DarkCarnival_Lockpicking_UnPause"						"Продолжить"
+		"DOTA_DarkCarnival_Lockpicking_Help"						"Справка"
+		"DOTA_DarkCarnival_Lockpicking_Won"							"Вы победили!"
+		"DOTA_DarkCarnival_Lockpicking_Lost"						"Вы проиграли..."
+		"DOTA_DarkCarnival_Lockpicking_ScoringUnlocks"				"Попадания ({d:unlock_count} x {d:score_per_unlock}):"
+		"DOTA_DarkCarnival_Lockpicking_Help_HowToPlay"				"Взломайте замок, как можно больше раз попав в отмеченные области за отведённое время."
+		"DOTA_DarkCarnival_Lockpicking_Help_Pick"					"Взлом"
+		"DOTA_DarkCarnival_Lockpicking_Help_Boost"					"Ускорение"
+		"DOTA_DarkCarnival_Lockpicking_Help_Pick_Details"			"Нажмите кнопку взлома, когда деление достигнет выделенной области.\n\nПромах ненадолго отключит взлом.\n\nСиние области дают дополнительное время."
+		"DOTA_DarkCarnival_Lockpicking_Help_Boost_Details"			"Удерживайте эту кнопку для ускорения."
+		"DOTA_DarkCarnival_Lockpicking_Scoring_SuccessfulPick"		"Каждое попадание"
+		"DOTA_DarkCarnival_EncounterStatus_Lockpicking"				"«Тёмный карнавал»: Взлом замка"
+		"DOTA_DarkCarnival_Lockpicking_HighScores"					"Рекорды"
+		"DOTA_DarkCarnival_Lockpicking_Resume"						"Продолжить [F9]"
+		"DOTA_DarkCarnival_Lockpicking_GameOver"					"Конец игры"
+		"DOTA_DarkCarnival_Lockpicking_Score"						"Счёт"
+		"DOTA_DarkCarnival_Lockpicking_TimeRemaining"				"Оставшееся время"
+
+		// Dark Carnival: Slark Jailbreak
+		"DOTA_DarkCarnival_SlarkJailbreak_Title"					"Сапожный снос"
+		"DOTA_DarkCarnival_SlarkJailbreak_GameDesc"					"Добывайте драгоценности! Сносите стены сапогом!"
+		"DOTA_DarkCarnival_EncounterStatus_SlarkBreakout"			"«Тёмный карнавал»: Сапожный снос"
+		"DOTA_DarkCarnival_SlarkJailbreak_Scoring_PerBlock"			"Уничтожение блока"
+		"DOTA_DarkCarnival_SlarkJailbreak_Scoring_PerBonusBlock"	"Уничтожение бонусного блока"
+		"DOTA_DarkCarnival_SlarkJailbreak_Scoring_PerLevel"			"Прохождение уровня"
+		"DOTA_DarkCarnival_SlarkJailbreak_ControlPaddle"			"Перемещение"
+		"DOTA_DarkCarnival_SlarkJailbreak_ControlLaunch"			"Бросок сапога"
+		"DOTA_DarkCarnival_SlarkJailbreak_Level"					"Уровень"
+		"DOTA_DarkCarnival_SlarkJailbreak_Lives"					"Сапоги"
+		"DOTA_DarkCarnival_SlarkJailbreak_Score"					"Счёт"
+		"DOTA_DarkCarnival_SlarkJailbreak_MoveHint"					"Выбрать позицию"
+		"DOTA_DarkCarnival_SlarkJailbreak_LaunchHint"				"Бросить сапог"
+
+		"DOTA_DarkCarnival_Minigames_NewHighScore"					"Новый рекорд!"
+		
+		"DOTA_Overworld_EncounterShortcut_lockpicking"		"Взлом замка"
+		"DOTA_Overworld_EncounterShortcut_slark_jailbreak"	"Сапожный снос"
+
+		"DOTA_Minigame_Encounter_RewardTitle"				"{d:reward_score_required}"
+
+		"DOTA_DarkCarnival_Overworld_Minigames"						"Мини-игры"
+
+		"DOTA_DarkCarnival_Overworld_Act1_Part2_Locked_Countdown"	"Откроется через {s:time_until_unlock}"
+		"DOTA_DarkCarnival_Overworld_Act1_Part3_Locked_Countdown"	"Откроется через {s:time_until_unlock}"
+
+		"DOTA_DarkCarnival_Overworld_UsePathUnlockTokenPopup_Title"		"Использовать билет пропуска?"
+		"DOTA_DarkCarnival_Overworld_UsePathUnlockTokenPopup_Question"	"Вы хотите открыть этот путь, потратив один билет пропуска?"
+
+		"DOTA_DarkCarnival_TooltipEligibleForEventProgress"				"Эта настройка подходит для прогресса в событии."
+
+		"DOTA_DarkCarnival_ChatWheelMessage"							"Сообщение для колеса чата"
+
+		"dota_chatwheel_translation_darkcarnival_money_and_bones"		"ДЕНЬГИ И КОСТИ! ДЕНЬГИ И КОСТИ!"
+		"dota_chatwheel_translation_darkcarnival_are_we_the_idiots"		"Это МЫ тупицы?"
+		"dota_chatwheel_translation_darkcarnival_wow"					"Ого!"
+		"dota_chatwheel_source_fishwitch"								"Гриндлплит"
+		"dota_chatwheel_source_hoodwink"								"Прохвостка"
+		"dota_chatwheel_source_clown"									"Кларенс"
+
+		"DOTA_Axe_Missing"			"Акс пропал и не может участвовать"
+
+		"DOTA_DarkCarnival_Overworld_Unlock"						"Открыть"
+
 	}
 } 

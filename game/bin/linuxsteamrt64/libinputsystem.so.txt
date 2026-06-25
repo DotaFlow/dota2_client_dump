@@ -12,16 +12,23 @@
  throw
  transaction_safe
  volatile
-!link
 $ORIGIN
 %d %d %d %d
-%f %f %f %f
 %lld
 %llu
+%s %s %s %s
+%s allocation count overflow
+%s allocation count overflow( %llu + %llu > %llu )\n
 %s: %s has no surfaces\n
 %s: __pos (which is %zu) > __size (which is %zu)
 %s: __pos (which is %zu) > this->size() (which is %zu)
+%s: allocation of %u too large, max %u\n
 %s: cursor has no surfaces\n
+%s: element count overflow (%u)\n
+%s: invalid insert point %u (current count %u)\n
+%s: max element overflow, cur count %u + %u\n
+%s: member count overflow (%u)\n
+%s: no space for allocation of %u\n
 'is NOT active'
 'is active'
 (anonymous namespace)
@@ -29,11 +36,11 @@ $ORIGIN
 *N12_GLOBAL__N_122generic_error_categoryE
 -------------------- PollInputState_SDL (frame %llu, elapsed ms = %.2f) --------------------\n
 --> SDL_PumpEvents - %d new events (elapsed time from last pump %.2f ms)\n
-../public/tier0/utlrbtree.h
 .bmp
 /cursor.res
 /dev/random
 /dev/urandom
+/src/
 0 0 0
 0 0 0 0
 0 0 0 255
@@ -55,6 +62,7 @@ $ORIGIN
 22CSchemaInstallCallback
 28CBaseVModuleMetadataProvider
 41CModuleMetadataProvider_ResourceManifests
+<no failure reason set>
 <undefined>
 ACTIVE
 ACUTE_ACCENT
@@ -82,14 +90,15 @@ A_WITH_DIAERESIS
 A_WITH_GRAVE
 A_WITH_RING_ABOVE
 A_WITH_TILDE
+AddPage
 AlignedByteArray not properly aligned\n
+Alloc
 Analog axis range before a button press is registered.
 AnimGraphEditorUtils001
 AnimationSystemUtils_001
 AnimationSystem_001
 App activation changed: %s\n
 Applying deferred input state reset\n
-Assert_ConditionFailed(_AssertCompileTimeConstantStruct_t const&, char const*, ...)
 AssetBrowserSystem_001
 AssetPreviewSystem_001
 AssetRenameSystem_001
@@ -116,12 +125,16 @@ CBufferString::AppendFormatV(char const*, __va_list_tag*)
 CBufferString::FixSlashes(char)
 CBufferString::Format(char const*, ...)
 CBufferString::Insert(int, char const*, int, bool)
+CBufferString::MoveFrom(CBufferString&)
 CBufferString::Purge(int)
+CBufferString::RemoveAt(int, int)
+CBufferString::Replace(char const*, char const*, bool)
 CBufferString::SetExtension(char const*, bool)
 CBufferString::SetLength(int, bool, int*)
 CBufferString::ShortenPath(bool)
 CBufferString::StripExtension(bool)
 CBufferString::ToLowerFast(int)
+CBufferString::TruncateAt(int, bool)
 CEDILLA
 CENT_SIGN
 CInputStackSystem:  %s IME %s\n
@@ -141,22 +154,35 @@ COLON
 COMPUTER
 COPY
 COPYRIGHT_SIGN
+CRC32_ProcessBuffer
 CRSEL
+CSplitString::Split(char const*, int, char const**, int, bool)
 CTRL
 CURRENCYSUBUNIT
 CURRENCYUNIT
 CURRENCY_SIGN
+CUtlBinaryBlock::SetLength(int)
+CUtlBuffer::AddNullTermination()
 CUtlBuffer::CUtlBuffer(int, int, CUtlBuffer::BufferFlags_t)
+CUtlBuffer::CUtlBuffer(void const*, int, CUtlBuffer::BufferFlags_t)
+CUtlBuffer::ParseToken(characterset_t const*, char*, int, bool)
 CUtlBuffer::Put(void const*, int)
+CUtlString::Acquire(CBufferString*, bool)
+CUtlString::Format(char const*, ...)
 CUtlString::FreeMemoryBlock()
 CUtlString::IsEqual_FastCaseInsensitive(char const*) const
+CUtlString::Purge()
 CUtlString::Set(char const*)
 CUtlSymbolTable::AddString(char const*, bool*)
 CUtlSymbolTable::CUtlSymbolTable(int, int, bool)
 CUtlSymbolTable::Find(char const*) const
 CUtlSymbolTable::RemoveAll()
+CUtlSymbolTable::String(CUtlSymbol) const
 CUtlSymbolTable::~CUtlSymbolTable()
+CUtlSymbolTableLarge element limit of %u exceeded\n
 C_WITH_CEDILLA
+CharacterSetBuild
+ClientLocalServerAccess001
 ClientServerSharedHandleSystem001
 ClientToolsInfo_001
 CommandLine
@@ -176,6 +202,7 @@ DemoUpconverterVersion001
 Disconnecting SDL joystick %d %s (%d)\n
 EJECT
 ENTER
+ERROR: CUtlSymbolTableLarge element limit of %u exceeded\n
 ESCAPE
 EURO_SIGN
 EXCLAIM
@@ -190,6 +217,9 @@ EarlyInit_Tier0
 EconItemToolModel_001
 Enable joystick input
 EngineServiceMgr001
+EnsureElementCapacity
+EnsureMemberCapacity
+EnsureUnusedCapacity
 ExtractModuleMetadata
 FEMININE_ORDINAL_INDICATOR
 FIND
@@ -198,7 +228,6 @@ Failed to load image for cursor from %s: %s\n
 Failed to scale image for cursor to %d,%d (hot %d,%d; scaling %g): %s
 FlattenedSerializersVersion001
 FontManager_001
-Found existing value when inserting into tree - replacing existing value with new value. If this is intended behavior, use InsertOrReplace. If leaving existing values alone is intended, use InsertIfNotFound. If duplicate entries are intended, use InsertWithDupes.
 GCC: (SteamRT 14.2.0-19~steamrt3.1+bsrt3.1) 14.2.0
 GLIBCXX_TUNABLES
 GLIBC_2.14
@@ -211,6 +240,7 @@ GREATER
 GameResourceServiceClientV001
 GameResourceServiceServerV001
 GameUIService_001
+GetDefaultMiniDumpTypeFlags
 GetGameInfoBool(char const*, bool)
 GetResourceManifestCount
 GetResourceManifests
@@ -279,8 +309,9 @@ InputSystem
 InputSystem/ButtonCodeIsScanCode
 InputSystem/LockButtonCodeIsScanCode
 InputSystemVersion001
-Insert
+InsertMultipleBefore
 InstallSchemaBindings
+InvokeMiniDumpHandler
 JArray
 JOY1
 JOY10
@@ -388,6 +419,8 @@ KP_TAB
 KP_VERTICALBAR
 KP_XOR
 KeyValueCache001
+KeyValues3: pre-allocated array memory is too small for %u elements (%u bytes available, %u bytes needed)\n
+KeyValues3: pre-allocated table memory is too small for %u members (%u bytes available, %u bytes needed)\n
 KeyValues::FindKey(char const*, bool)
 KeyValues::GetInt(char const*, int) const
 KeyValues::KeyValues(char const*, IKeyValuesSystem*, bool)
@@ -400,9 +433,11 @@ LEFTARROW
 LEFTPAREN
 LEFT_CURLY_BRACKET
 LEFT_POINTING_DOUBLE_ANGLE_QUOTATION_MARK
+LOG_CONSOLE
 LWIN
 L_SHOULDER
 L_TRIGGER
+LocalServerClientAccess001
 Localize_001
 LoggingSystem_IsChannelEnabled
 LoggingSystem_Log
@@ -489,10 +524,13 @@ PanoramaUIClient001
 PanoramaUIEngine001
 ParticleSystemMgr003
 PhysicsBuilderMgr001
+Plat_ExitProcess
 Plat_FatalError
 Plat_FloatTime
 Plat_GetCurrentFrame
 Plat_GetDesktopResolution
+Plat_GetExeModule
+Plat_GetModuleProcAddress
 Plat_GetTime
 Plat_GetWindowClientBounds
 Plat_GetWindowClientSize
@@ -742,6 +780,7 @@ U_WITH_DIAERESIS
 U_WITH_GRAVE
 UpdateCursorClipOnFocusChange:  %s SDL_SetWindowGrab on 0x%p (%s) %s\n
 Updates game keyboard layout to current windows keyboard setting.
+UtlRBTree_FailedInsertDuplicate
 UtlVectorMemory_Alloc
 UtlVectorMemory_CalcNewAllocationCount
 UtlVectorMemory_FailedAllocation
@@ -775,6 +814,11 @@ VWebm001
 V_AXIS
 V_AXIS_NEG
 V_AXIS_POS
+V_DoubleToString_Unsafe
+V_FloatToString_Unsafe
+V_Int64ToString_Unsafe
+V_IsAbsolutePath
+V_StringParseError
 V_StringToBool
 V_StringToColor
 V_StringToFloat32
@@ -789,11 +833,17 @@ V_StringToUint64
 V_StringToVector
 V_StringToVector2D
 V_StringToVector4D
+V_StringToVectorWS
+V_UInt32ToString_Unsafe
+V_UInt64ToString_Unsafe
 V_UTF8ToUTF32
 V_atoi
+V_fpclassifyd
+V_isnand
 V_qsort_s
 V_sscanf
 V_stricmp_fast
+V_strnlen(char const*, int)
 V_vsnprintf
 Valve_ButtonCodeName_
 VisBuilder_001
@@ -827,6 +877,8 @@ _ITM_memcpyRnWt
 _ITM_memcpyRtWn
 _ITM_registerTMCloneTable
 _V_FileBase
+_V_strncmp
+_V_strncpy
 _V_strnicmp_fast
 __UNKNOWN__
 __cxa_allocate_dependent_exception
@@ -1025,6 +1077,7 @@ getentropy
 glibcxx.eh_pool
 global constructors keyed to 
 global destructors keyed to 
+group
 guard variable for 
 half
 hardware
@@ -1067,6 +1120,7 @@ mold 2.36.0 (compatible with GNU ld)
 mouse %d %s (%d) at %g %g on window %d\n
 mouse motion %g %g at %g %g with buttons "%s" on window %d\n
 mt19937
+name
 new 
 new[]
 noexcept
@@ -1116,6 +1170,8 @@ read
 realloc
 reference temporary #
 reinterpret_cast
+resource_manifests
+resources
 scan
 scancode
 secure_getenv
@@ -1124,6 +1180,8 @@ shown
 signed char
 sizeof 
 sizeof...
+source_file
+source_line
 sprintf
 static_cast
 std::_V2::error_category::_M_message(int) const
@@ -1705,6 +1763,7 @@ string literal
 string::string
 strlen
 strncmp
+strstr
 strtoul
 syscall
 system
@@ -1813,6 +1872,7 @@ typename
 uint16
 uint32
 uint64
+unable to register all schema data: %s\n
 unknown event
 unset
 unsigned
@@ -1827,6 +1887,7 @@ using
 vector2
 vector3
 vector4
+vectorws
 virtual thunk to 
 visible
 void

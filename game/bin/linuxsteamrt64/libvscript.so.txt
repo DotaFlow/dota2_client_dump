@@ -26,12 +26,14 @@ $ORIGIN
 %02x
 %12.6f
 %d %d %d %d
-%f %f %f %f
 %g %g %g %g
 %lld
 %llu
 %s %p [%f %f %f]
+%s %s %s %s
 %s <null>
+%s allocation count overflow
+%s allocation count overflow( %llu + %llu > %llu )\n
 %s called with %d arguments - expected %d
 %s called with %d arguments - expected %d-%d
 %s connection attempt timed out\n
@@ -41,6 +43,12 @@ $ORIGIN
 %s parameter %d: expected %s but got %s.\n
 %s: __pos (which is %zu) > __size (which is %zu)
 %s: __pos (which is %zu) > this->size() (which is %zu)
+%s: allocation of %u too large, max %u\n
+%s: element count overflow (%u)\n
+%s: invalid insert point %u (current count %u)\n
+%s: max element overflow, cur count %u + %u\n
+%s: member count overflow (%u)\n
+%s: no space for allocation of %u\n
 %u nesting levels not completed\n
 '%s' expected
 '%s' expected (to close '%s' at line %d)
@@ -87,6 +95,7 @@ $ORIGIN
 /json/version
 /process/%u
 /process/%u/%s
+/src/
 /yQA
 0 0 0
 0 0 0 0
@@ -96,6 +105,7 @@ $ORIGIN
 0123456789ABCDEFPX
 0123456789abcdef
 0123456789abcdefpx
+1.2.5
 10B99CC24B46CCF94E0E371687C756DB
 10IAppSystem
 127.0.0.1
@@ -136,6 +146,7 @@ $ORIGIN
 <goto %s> jumps into the scope of local '%s'
 <name>
 <name> or '...' expected
+<no failure reason set>
 <null>
 <number>
 <pointer>
@@ -155,7 +166,9 @@ ACCEPT
 ANY)
 ANYCRLF)
 APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %d!\n
+AddPage
 AlignedByteArray not properly aligned\n
+Alloc
 AnimGraphEditorUtils001
 AnimationSystemUtils_001
 AnimationSystem_001
@@ -202,28 +215,40 @@ CBufferString::EnsureCapacity(int, char**, bool, bool)
 CBufferString::FixSlashes(char)
 CBufferString::Format(char const*, ...)
 CBufferString::Insert(int, char const*, int, bool)
+CBufferString::MoveFrom(CBufferString&)
 CBufferString::Purge(int)
 CBufferString::RemoveAt(int, int)
+CBufferString::Replace(char const*, char const*, bool)
 CBufferString::SetPtr(char*, int, int, bool, bool)
 CBufferString::StartsWith(char const*) const
 CBufferString::ToLowerFast(int)
+CBufferString::TruncateAt(int, bool)
 CDesc
 CKeyValues_Data::Internal_SetString(char const*)
 CMemAllocSystemInitialize
 COMMIT
+CRC32_ProcessBuffer
 CRC64_ProcessBuffer
 CRLF)
 CSHA1::Final()
 CSHA1::Reset()
 CSHA1::Update(void const*, unsigned int)
 CSS.
+CSplitString::Split(char const*, int, char const**, int, bool)
+CUniformRandomStreamImpl<CThreadNullMutex>::RandomFloat(float, float)
+CUtlBinaryBlock::SetLength(int)
 CUtlBuffer::AddNullTermination()
 CUtlBuffer::CUtlBuffer(int, int, CUtlBuffer::BufferFlags_t)
+CUtlBuffer::CUtlBuffer(void const*, int, CUtlBuffer::BufferFlags_t)
 CUtlBuffer::CheckPut(int)
+CUtlBuffer::EnsureCapacity(int)
+CUtlBuffer::Get(void*, int)
+CUtlBuffer::ParseToken(characterset_t const*, char*, int, bool)
 CUtlBuffer::Printf(char const*, ...)
 CUtlBuffer::Put(void const*, int)
 CUtlBuffer::PutFileContent(char const*)
 CUtlBuffer::PutString(char const*)
+CUtlBuffer::SeekGet(CUtlBuffer::SeekType_t, int)
 CUtlString::Acquire(CBufferString*, bool)
 CUtlString::Format(char const*, ...)
 CUtlString::FreeMemoryBlock()
@@ -238,10 +263,13 @@ CUtlSymbolTable::AddString(char const*, bool*)
 CUtlSymbolTable::CUtlSymbolTable(int, int, bool)
 CUtlSymbolTable::Find(char const*) const
 CUtlSymbolTable::RemoveAll()
+CUtlSymbolTable::String(CUtlSymbol) const
 CUtlSymbolTable::~CUtlSymbolTable()
+CUtlSymbolTableLarge element limit of %u exceeded\n
 CVariableBitStringBase::FreeInts()
 CVariableBitStringBase::Resize(int)
 CVirtualMachineCallStackTranslationEncoder::CVirtualMachineCallStackTranslationEncoder(char const*)
+CVirtualMachineCallStackTranslationEncoder::EncodeAsNativePointer(char const*, char const*, unsigned int)
 CVirtualMachineCallStackTranslationEncoder::~CVirtualMachineCallStackTranslationEncoder()
 Cabs
 Can't call %s:%s on an object of type %s
@@ -250,8 +278,10 @@ Cannot recover from failed socket shutdown. (error %d)
 Carian
 Chakma
 Cham
+CharacterSetBuild
 Cherokee
 ClearBit
+ClientLocalServerAccess001
 ClientServerSharedHandleSystem001
 ClientToolsInfo_001
 Close
@@ -295,6 +325,7 @@ DevMsg(char const*, ...)
 Devanagari
 DynASM 1.5.0
 EDesc
+ERROR: CUtlSymbolTableLarge element limit of %u exceeded\n
 ERROR: Debugger.getScriptSource: invalid scriptId '%s' requested
 ERROR: Debugger.getScriptSource: no scriptId given
 EXPORTSYSTEM_INTERFACE_VERSION_001
@@ -304,6 +335,9 @@ EconItemToolModel_001
 Egyptian_Hieroglyphs
 Emulation.
 EngineServiceMgr001
+EnsureElementCapacity
+EnsureMemberCapacity
+EnsureUnusedCapacity
 Epairs@
 Error text not found (please report)
 Error: Duplicate command handler registered (%s)!\n
@@ -322,6 +356,9 @@ Fassert
 Fipairs
 FlattenedSerializersVersion001
 FontManager_001
+FormatArgumentsToBuffer(IFormatOutputStream*, char const*, CTypeErasedFormattingWrapper const*, int)
+FormatTo(IFormatOutputStream*, CFormatStringElement, float)
+FormatTo(IFormatOutputStream*, CFormatStringElement, int)
 Forward
 GAME
 GCC: (SteamRT 14.2.0-19~steamrt3.1+bsrt3.1) 14.2.0
@@ -344,6 +381,7 @@ Generate a random floating point number within a range, inclusive
 Generate a random integer within a range, inclusive
 Georgian
 GetCPUInformation
+GetDefaultMiniDumpTypeFlags
 GetResourceManifestCount
 GetResourceManifests
 GetThreadLocalStackAllocator
@@ -383,6 +421,7 @@ InputStackSystemVersion001
 InputSystemVersion001
 Inscriptional_Pahlavi
 Inscriptional_Parthian
+InsertMultipleBefore
 Inspector WebSocket
 Inspector client connected on port %u\n
 Inspector message does not have a method or result\n
@@ -404,6 +443,7 @@ Invalid setBreakpointByUrl message
 Invalid setInstrumentationBreakpoint message
 Invalid setVariableValue message
 Invalid stack level (%d)
+InvokeMiniDumpHandler
 IsBitSet
 IsNull
 IsNull called without an object - did you call obj.IsNull() instead of obj:IsNull()?
@@ -417,6 +457,8 @@ Kannada
 Katakana
 Kayah_Li
 KeyValueCache001
+KeyValues3: pre-allocated array memory is too small for %u elements (%u bytes available, %u bytes needed)\n
+KeyValues3: pre-allocated table memory is too small for %u members (%u bytes available, %u bytes needed)\n
 KeyValues::AddKey(char const*)
 KeyValues::KeyValues(char const*, IKeyValuesSystem*, bool)
 KeyValues::SetColor(char const*, Color)
@@ -431,6 +473,7 @@ Khmer
 LIMIT_MATCH=
 LIMIT_RECURSION=
 LOADLIB: %s
+LOG_CONSOLE
 LUA Memory usage warning: The VM has hit a new high usage of %s bytes.\n
 LUA Memory usage: The VM has a usage of %s bytes.\n
 LUA_CPATH
@@ -450,6 +493,7 @@ LoadAndCompileScriptFile: No filesystem found\n
 LoadAndCompileScriptFile: Script file "%s" type does not match VM type\n
 LoadKV3FromJSON(KeyValues3*, CUtlString*, char const*, char const*, unsigned int)
 Local
+LocalServerClientAccess001
 Localize_001
 Log.
 Log.entryAdded
@@ -496,6 +540,7 @@ MeshSystem001
 MeshUtils001
 Message count limit of %d hit. Subsequent duplicate messages will be squelched.\n
 Miao
+Missing breakpoint data ( breakpoint with ID %s. )
 Missing breakpoint with given ID %s.
 ModelDocUtils001
 Mongolian
@@ -558,7 +603,10 @@ Phoenician
 PhysicsBuilderMgr001
 Plat_DebugPrint
 Plat_DebugString
+Plat_ExitProcess
 Plat_FatalError
+Plat_GetExeModule
+Plat_GetModuleProcAddress
 Plat_GetTime
 Plat_IsFile
 Plat_IsInDebugSession
@@ -758,6 +806,7 @@ Unexpected HTTP GET URL '%s'\n
 Unknown protocol.
 Upgrade
 Upvalue
+UtlRBTree_FailedInsertDuplicate
 UtlVectorMemory_Alloc
 UtlVectorMemory_CalcNewAllocationCount
 UtlVectorMemory_FailedAllocation
@@ -784,9 +833,13 @@ VScriptManager010
 VStringTokenSystem001
 VTT for 
 VWebm001
+V_DoubleToString_Unsafe
 V_FixSlashes
+V_FloatToString_Unsafe
+V_Int64ToString_Unsafe
 V_IsAbsolutePath
 V_PrettifyNum
+V_StringParseError
 V_StringToBool
 V_StringToColor
 V_StringToFloat32
@@ -801,13 +854,40 @@ V_StringToUint64
 V_StringToVector
 V_StringToVector2D
 V_StringToVector4D
+V_StringToVectorWS
+V_UInt32ToString_Unsafe
+V_UInt64ToString_Unsafe
 V_UnqualifiedFileName
+V_acosd
+V_acosf
+V_asinf
+V_atan2f
+V_atanf
 V_atoi
+V_cosd
+V_cosf
+V_expf
+V_fclose
+V_fmodf
+V_fopenUTF8
+V_fpclassifyd
+V_fread
+V_fseek
+V_ftell
+V_fwrite
+V_isnand
+V_logf
+V_powd
+V_powf
 V_qsort_s
 V_sincosf
+V_sind
+V_sinf
 V_snprintf
 V_stricmp_fast
 V_stristr_fast(char const*, char const*)
+V_strnlen(char const*, int)
+V_tanf
 V_vsnprintf
 Vc0a
 Vector
@@ -1187,6 +1267,7 @@ createEyieldFresume
 cstring
 currentline
 dQy/
+data error
 dead
 debug
 debugCommand
@@ -1270,6 +1351,7 @@ field '%s' missing in date table
 file
 file (%p)
 file (closed)
+file error
 file://
 file:///e:/work/valve/source2/main/game/core/scripts/vscripts/animationsystem/animationsysteminit.lua
 filename
@@ -1346,6 +1428,7 @@ gmatch
 goto
 gqr<
 graph
+group
 group name must start with a non-digit
 gsub
 guard variable for 
@@ -1372,6 +1455,7 @@ huge
 i91k
 i]Wb
 idekey
+incompatible version
 inconsistent NEWLINE options
 incorrect data check
 incorrect header check
@@ -1687,6 +1771,7 @@ name
 name conflict for module '%s'
 name is too long in (*MARK), (*PRUNE), (*SKIP), or (*THEN)
 namewhat
+need dictionary
 netadr_t::SetFromString(char const*, bool)
 netadr_t::SetIP(unsigned int)
 netadr_t::SetPort(unsigned short)
@@ -1827,7 +1912,9 @@ repeating a DEFINE group is not allowed
 require
 require('module').builtinModules\n
 reset
+resource_manifests
 resourcehandle
+resources
 response
 restart
 restartFrame
@@ -1913,6 +2000,8 @@ skip
 socket
 sort
 source
+source_file
+source_line
 space
 spare error
 sprintf
@@ -2521,6 +2610,7 @@ strchr
 strcmp
 strcpy
 stream
+stream end
 stream error
 strerror
 strerror_r
@@ -2702,6 +2792,7 @@ uint64
 uint8
 unable to dump given function
 unable to generate a unique filename
+unable to register all schema data: %s\n
 unbalanced pattern
 uncaught
 undefined label '%s'

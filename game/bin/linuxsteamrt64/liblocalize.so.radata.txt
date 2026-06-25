@@ -1,8 +1,8 @@
-!C+D!
-!Lc@
 !Zɗʪ3
 !\b\rA
 !ff.
+!gender: loc token %s does not have gender info
+!gender: loc token %s not found
 !plural: handler %s for %s does not have quantity handling
 !plural: loc token %s does not have a plural quantity
 !plural: loc token %s not found
@@ -20,9 +20,10 @@
 !vars2.GetLocVariable( "str" )->HasExternalValue()
 ".B^
 "@F(
-"ff.
+"B+D"
 "lang"\r\n{\r\n"Language" "English"\r\n"Tokens"\r\n{\r\n
 "˘loĄ
+#D;c
 #GameUI_Language_Brazilian
 #GameUI_Language_Bulgarian
 #GameUI_Language_Czech
@@ -133,23 +134,20 @@
 #Valve_SelectLanguage_Turkish
 #Valve_SelectLanguage_Ukrainian
 #Valve_SelectLanguage_Vietnamese
-#YA1L
-#\r("
 #ff.
+#tnI
 $!\b0\b
 $1.23
-$< w
-$A;D$
 $A;\\$
 $BJ Bb
-$IcƉ\f
+$Hc=p
 $ORIGIN
 $ff.
 $t\nI
 %02d
 %04d
 %04d_%02d_%02d_%02d_%02d_%02d
-%YA1H
+%YA1
 %YA1L
 %ff.
 %language%
@@ -169,31 +167,40 @@ $t\nI
 %s: __pos (which is %zu) > this->size() (which is %zu)
 %s: allocation of %u too large, max %u\n
 %s: contexts on loc tokens are no longer supported, use a MessageFormat string instead (token '%s')\n
+%s: element count overflow (%u)\n
+%s: invalid insert point %u (current count %u)\n
 %s: invalid usage char in '%s'\n
+%s: max element overflow, cur count %u + %u\n
+%s: member count overflow (%u)\n
 %s: no space for allocation of %u\n
-%s: unexpected language '%s'\n
 %s\n
 %s_[%s]
 %s_pw
 &6y\b
+&E;f
 &S0g
+&YA1
 &YA1A
+&ff.
 '`f\a\ah
 (! @L
 (%d)
 (%d,%d)
 (%s from %u files; %s not file-based)\n
 (...
+(Hcs
+(Ic]
 (L9m
-(L9}
+(L9u
 ([A\\A]A^A_]
 ([A\\A]A^A_]Ë
-([A\\A]A^A_]Ð
 ([A\\A]]
+([A\\A]]À
 ([A\\]
 ([]A\\A]A^A_
 ([]A\\A]A^A_ÐAWH
 (anonymous namespace)
+(ff.
 (u*H
 (u?H
 (uMH
@@ -204,29 +211,29 @@ $t\nI
 )D$P
 )D$`
 )D$p
-)Ic]
 )\euo
-)ff.
 )|&|f\v:
 *.txt
 *N12_GLOBAL__N_121system_error_categoryE
 *N12_GLOBAL__N_122generic_error_categoryE
+*ff.
 *u2H
 *u\fH
-*wIH
+*wFH
 *zP6\e
 *ρπb1
 ++CCUNGH
 ++CCUNGH9E
-+C\fA
 +Inf
 +Inftn
++P\fA
 +ff.
 +hM,E
 +u2H
 , L9
 ,$E1
 ,$E;l$
+,0IcE
 ,7IcM
 ,<zE
 -1,234
@@ -235,6 +242,7 @@ $t\nI
 -in-
 .)6Z
 ...)
+.Mce
 .V^طjA
 .bss
 .comment
@@ -263,6 +271,7 @@ $t\nI
 .relro_padding
 .rodata
 .rodata.cst16
+.rodata.cst4
 .rodata.cst8
 .rodata.str1.1
 .rodata.str1.8
@@ -274,74 +283,83 @@ $t\nI
 /dev/random
 /dev/urandom
 /resource/valve_
-/v0H
+/src/
+/v.I
 /v0I
-/v2H
-/v2I
 /w$H
 /w-M
 0123456789
 0<\nw
-0HcK
+0<\tvnH
+0<\tw
+0[A\\A]A^]Ð[D
 0[A\\]
 0nJ6
+0t'H
+0t'I
 0t*Ic
-0t5H
-0tfH
+0t0H
+0t:I
+0t=H
+0tDH
+0tFH
+0tJH
+0tOI
+0t\fH
+0tgH
 0u\rH
 0u\tH
 12.3456
 12.35
 12345
-1C+D1
-1\v=\b
-1\v=`
-1\v=}
+1\v;H
 1dT(
 1l`J
-1Ҁ=6
 2t\vH
 3.w(
 3E19
 3\f\a\b
-3ff.
 3u+H
 3uEH
 3u|H
+4$1Ɂ
 4$E19
-4$E;t$
 4$H;t$\bu
+4\bI9
 5&YA1A
 5/F_
 5t H
 5uFH
 6D9r\bt3H
-6E19
 6f}R
+7<!w
 7E19
 8&G\a؟2hL
 80u.
+81ɍW
 8@%rax 8@%rdx
 8@-24(%rbp) 8@-32(%rbp)
 8@-48(%rbp) 8@%rax
 8@ހ*
-8D;x
-8JcD 0
+8A^]H
+8HcʉU
 8[A\\A]A^A_]
+8[A\\A]A^A_]Ëu
 8[A\\A]]
 8[]A\\A]A^A_
 8\btQH
-8ontRf
-8twt#f
-8zero
 8{t2H
-8}t\e
+8{t:I
+8{tBI
+8}t#
+9B\btPH
 9CLocalize
 9ILocalize
-9X\bt
-9X\bt^H
-9{tJI
-9։S<
+9x0H
+9x\bt
+9x\btgH
+9{t9I
+9ƉC@u
 :6Lv
 :=pqf
 :foo
@@ -350,42 +368,41 @@ $t\nI
 :othe
 :shorthelp
 :uSH
-:{tQI
 ;(ήe
+;1ɍW
 ;H\bu\nH
 ;J4ק
 ;P\bs<1
-;[u3I
+;[t_H
 ;\bt$Hc@@
-;ff.
 ;k\br
 ;r\fu
 ;z\bu
+;}>L
 <"t3A
 <$E1
+<$Ic
+<$Lc
 <$[u
-<$gend
-<$plur
-<$sele
+<$t)E
 <$uFH
 <$uYH
 <$űU
-<${uC
+<${uB
 <%s>
 <&\bv"
 <*t-H
 <*t\a
+<,t\\<|t\\
 <-t\a
 <-t\b
 <-t\t
 <.t$H
 <.u\a
 <.ucH
-</tI<"
 </~\vH
-<0Ic\a9
-<0L9
 <0uiI
+<6Ic
 <:t\vH
 <=u\a
 <Au\eH
@@ -429,18 +446,21 @@ $t\nI
 <Zt#H
 <Zu\eH
 <Zu\f
-<\bHc\aA9
+<\bu(H
 <\bu/L
-<\bur
-<\fH9
-<\ttYw
+<\buV
+<\buVH
+<\bu\t
+<\bu\vH
+<\tu1
+<\tu\aH
 <_t\n
 <_t\vH
 <_u!H
 <_u#H
 <_u)H
-<_u2
 <_u4H
+<_u:
 <_u\eH
 <_u\t
 <_ugH
@@ -466,14 +486,16 @@ $t\nI
 <invalid duration format %d>
 <invalid floating-point number format %d>
 <invalid integral number format %d>
+<invalid ordinal format %d>
 <invalid precision %d>
 <iu+H
 <iu4H
 <localization entry added>
 <lu\eH
 <muQH
+<no failure reason set>
 <none>
-<ntO<\\t
+<ntP<\\t
 <nu\a
 <nu\e
 <pt\vH
@@ -488,57 +510,55 @@ $t\nI
 <tu\eH
 <unable to resolve compatibility token>
 <z~-H
-<}uՃ
+<z~ސL)
 =Authu\a
 =Genut\n
->ff.
+>HcщM
+>gend
+>plur
+>sele
 >uaH
 ?<%u
-?<=v
-?<=v<
-?<=v^
-?<=w
 ?<\\u
 ?A_]
 ?H;E
-?\tȈC
+?HcʉU
 ?ff.
+?many
+?othet\a1
 ?t(A
-?t1L
-?t5I
-?tCM
+?tBL
 ?tFL
+?tUH
 ?t\aH
-?toI
-?ttH
-?u3A
+?t]H
+?toH
+?twt%fA
 ?u4H
-?v\b%
-?v\f%
-?v\n%
+?uKA
+?uOA
 ?v\t%
-?w\bH
-?w\bL
-?~3H
+?zerotHA
 ?ϳj]
 @  0
+@(A9
 @(H9
+@,E9
+@83A
 @89E
-@8\v@%$
-@@Hǅ
+@8\v@&%
 @AUI
-@E;e
+@E;,$|
 @[A\\]
-@\\%1ҠR
 @\a@I
 @\b D
 @\bH+E
 @\bH9
 @\bHc
 @\bHcɋ
+@\bIcϾ
 @\bMc
 @\f\a\b
-@\tȈC
 @t\aƃ
 @t\bAƀ
 @t\nA
@@ -547,43 +567,51 @@ $t\nI
 @t\vC
 @uOE
 @uOH
+@uTA
+@u\eE
 @ujL
+@uk1
 A DP
 A#L$
+A#q<H
+A#y<H
 A+D$\fA
 A+E@
+A+\f$
 A9D$
-A9D$0
-A9E(
+A9G0
 A9L$
-A9]p
+A9\\$p
 A;@DA
-A;@\b
+A;A\b
 A;D$\b
 A;D$\bs
-A;F\b
 A;L$
-A;L$ t
-A;\\$0
+A;]0
 A;t$
 A;w\bu
 APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %d!\n
 ARS$
+ATLc
 ATS1
 ATSH
-ATSHcG\bH
+ATSHcރ
+ATSL
 ATSf
 ATUH
 ATUSH
 ATfH
 AU19
-AUATA
+AUATE1
+AUATH
 AUATI
 AUATL
 AUATS
+AUATS1
 AUATSH
 AUATUS
 AUATUSH
+AUE1
 AULc
 AUfH
 AVAUA
@@ -594,37 +622,41 @@ AVAUATSH
 AVAUATUH
 AVAUATUS
 AVAUATUSH
+AVAUE
 AVAUH
 AVAUI
 AVAUL
-AVAUM
+AVLc
 AVfI
 AWAVA
 AWAVAUA
 AWAVAUATA
-AWAVAUATD
 AWAVAUATI
 AWAVAUATS
+AWAVAUATSD
 AWAVAUATSH
 AWAVAUATUSH
 AWAVAUI
-AWAVE
-AWAVE1
 AWAVH
 AWAVI
 AWAVL
+AWAVLc
+AWAVM
 AWE1
 AWfH
-AYAZ
 AYu\r
 A\\A]A^
 A\\A]A^A_
 A\\A]A^A_]
+A\\A]A^A_]A
 A\\A]A^]
+A\\A]A^]Ð
 A\\A]]
 A\\A]]Ã
+A\\A]]Ð
+A\\A]]ÐH
 A\f\a\b
-A]A^]鞿
+A]A^]
 AddFileImpl
 AddPage
 AddTokenMiss
@@ -639,16 +671,16 @@ AssetPreviewSystem_001
 AssetRenameSystem_001
 AssetSystem001
 AssetSystemTest001
-AƄ$"
 AǄ$8
 AǄ$<
 AǄ$`
 AǄ$d
-B+L(
+B+D*
 B>l8~
 BNuƂ
 B\a@H
-B\bA9\a
+B\bA9E
+B\bIc
 B\f\a\b
 Badly formed loc var, format is {g:type:name} '%.*s'\n
 BakedLODBuilderMgr001
@@ -658,15 +690,14 @@ Brazilian
 Bulgarian
 C(A9
 C+D&\fA
-C0Mc
 C1 E
 C4Lcm
 C8HǄ$
 C@E19
+C@Hǃ
 CAssertErrorListener
 CBaseAppSystemI9ILocalizeE
 CBaseVModuleMetadataProvider
-CDv+
 CLP$
 CLocVariableSet
 CLocVariableSetBase
@@ -685,6 +716,7 @@ CLocalizeCompiledStringSinglePlain
 CModuleMetadataProvider_ResourceManifests
 COL$
 CPostConnectCallback
+CRC32_ProcessBuffer
 CRefCountServiceBaseI6CRefMTE
 CRefCounted1I23ILocalizeCompiledString20CRefCountServiceBaseI6CRefMTEE
 CSchemaInstallCallback
@@ -692,6 +724,7 @@ CSimpleErrorListener
 CTier0AppSystemI9ILocalizeLx0EE
 CTier1AppSystemI9ILocalizeLx0EE
 CTier2AppSystemI9ILocalizeLx0EE
+CUtlSymbolTableLarge element limit of %u exceeded\n
 CX[A\\]
 C\a@H
 C\a@I
@@ -699,20 +732,23 @@ C\a@L
 C\a@XZ
 C\a@t
 C\a@u
-C\a@u5
-C\a@u<
-C\a@uH
-C\a@uJ
-C\a@un
-C\bHc
+C\a@u$
+C\a@u\n1
+C\a@udf
+C\bD9`\b
+C\bE1
+C\bHǅ8
 C\b[A\\A]A^A_]
+C\b[A\\]
 C\f\a\b
+CharacterSetBuild
 CheckFindLocVar
 CheckInvalidParseLocVar
 CheckLocVarConstruct
 CheckLocVarResolve
 CheckParseLocVars
 CheckValidParseLocVar
+ClientLocalServerAccess001
 ClientServerSharedHandleSystem001
 ClientToolsInfo_001
 CommandLine
@@ -731,6 +767,7 @@ D$ H)
 D$ I
 D$ M
 D$ N
+D$$A
 D$(H
 D$(K
 D$(L
@@ -740,44 +777,50 @@ D$0H
 D$0I
 D$4%
 D$8H
-D$8L
 D$8O
 D$@f9B
-D$DH
 D$GM
 D$XH
-D$XL
 D$Xf
+D$\a@
+D$\a@I
+D$\a@t
+D$\a@uUA
 D$\bA
 D$\bB
+D$\bD
 D$\bH
 D$\bI
+D$\bIc\f$I
 D$\bL
+D$\bLc
 D$\bM
-D$\bMc
 D$\bf
 D$\bt6I
-D$\f=
+D$\bu
 D$\fA
 D$\fH
 D$\fI
 D$\ft
 D$`H
 D$`H9
+D$h u@H
+D$xH
 D&\bA
+D(\bH
+D)\tEȉ
 D)Ήp\bD
-D80A
-D9:t
-D9;~FM
+D6\bH
+D98u
+D9;~LM
 D9J\bu
-D9k@
+D9`\b~
 D9s(
-D; H
-D;/u
-D;:H
+D9ǉ}
+D;\au
 D;\nu
-D;k@
 D\f\a\b
+D\t\bL
 Danish
 DemoUpconverterVersion001
 Du1H
@@ -788,20 +831,23 @@ DuplicateTokensAssert
 DuplicateTokensFail
 DuplicateTokensWarning
 Dutch
-DЋ3E19
+DЋ3E1
 DыH\bAPAQD
-E)ǉE
 E19\b
 E1:\b
-E1ҋ7
-E5>"
+E1ҍA
+E1ۍF
+E1ۍG
+E4Hc
 E94$ǅ
-E9`@
-E9e\b
-E9p0
+E9h@
+E9l$
+E9w0
 E;,$
-E;`@
+E;>|
+E;h@
 E@f9B
+ERROR: CUtlSymbolTableLarge element limit of %u exceeded\n
 ERROR: Duplicate load of loc file '%s'\n
 ERROR: Duplicate string token '%s' found in %s (original in %s) - new value '%s', original value '%s'\n
 EXPORTSYSTEM_INTERFACE_VERSION_001
@@ -809,11 +855,14 @@ E\a@I
 E\bA9G\b
 E\bE)O\b
 E\f\a\b
+E\vM̸
+E\vučH
 EarlyInit_Tier0
 EconItemToolModel_001
-EhAZ
 EngineServiceMgr001
 English
+EnsureElementCapacity
+EnsureMemberCapacity
 EnsureUnusedCapacity
 Expected loc var ref %u of '%s' to be '%s', found '%s'\n
 Expecting %u loc var ref(s) in '%s', found %u\n
@@ -828,7 +877,10 @@ EȉPPH
 Eȋ@H
 Eȋ@L
 Eȋ@P
+EȋMĩ
 EȋUԉ
+E̋Mȩ
+E̋UȋMĩ
 EЋ7UE19
 EЋEȉ
 E؈P(H
@@ -839,16 +891,12 @@ E؋@(
 E؋@H
 E؋@T
 E؋PHH
-F4Hc
 F4Lc
-F@f9B
+F8L9
 FG@I
 F\a@H
 F\a@I
-F\a@tm
-F\bA\\A]A^A_]
-F\bD9`
-F\bHc
+F\bIc
 F\f\a\b
 Failed to read localization file %s\n
 FfP\f
@@ -860,11 +908,8 @@ FontManager_001
 French
 Full paths not allowed in localization file specification '%s'\n
 FyX#
-G0Hc
 G4Lc
 G6\f+
-G@@tg
-G@fD
 GCC: (SteamRT 14.2.0-19~steamrt3.1+bsrt3.1) 14.2.0
 GLIBCXX_TUNABLES
 GLIBC_2.14
@@ -875,7 +920,10 @@ GLIBC_2.3
 GLIBC_2.3.2
 G\a@H
 G\a@I
+G\a@tif
+G\a@uDA
 G\bHc
+G\bx);p
 G\f\a\b
 GameResourceServiceClientV001
 GameResourceServiceServerV001
@@ -884,22 +932,22 @@ Generic loc var missing a type in '%.*s'\n
 Generic loc var reference missing a name in '%.*s'\n
 Generic loc var reference modifiers '%s' ignored\n
 German
+GetDefaultMiniDumpTypeFlags
 GetResourceManifestCount
 GetResourceManifests
 Gff.
 Gh u\n
-Gh@tY
-Gh@t\\
+Gh@tT
 Greek
-GЉЉSt1҅
 H#D$
 H(H)
+H,E1ҁ
 H.f}
 H0H)
+H0Lc
 H8H)
 H92H
-H95)
-H9F\bA
+H9C\bA
 H;7u
 H=@B
 H@H)
@@ -909,43 +957,51 @@ HXH)
 H[A\\A]A^A_]
 H[A\\A]]
 H[]A\\A]A^A_
+H\bD9U
+H\bHcҋ4
 H\f\a\b
 HammerMapLoader001
-Hc3E)
+Hc;L9
+Hc=M
 Hc@@
 Hc@\b
-Hc@\bA
-HcA\b
-HcA\fA9
+HcA\bt
 HcB@
+HcB\f9
 HcB\fA9
-HcC\bt
-HcC\bt\bI
-HcD0
+HcC\bt\bM
+HcD8
+HcE҉M
+HcF@
+HcF@9
 HcG@
-HcG@A9
 HcG\bH
 HcH@9
 HcH\bH
+HcK\bH
 HcL7\bH
+HcO\bH
+HcP\b
 HcS\b
+HcS\bL
 HcT2\bt\aH
 HcUȉ
+HcU܅
 HcW\bH
-Hc\at
-HcʉU
+Hcp\bH
 HcЋE
-Hcй\b
-Hcҋ<
-Hcҋ\f
+Hcҋ4
+HcӉM
 HelpSystem_001
 HostStateMgr001
 Ht"H
 Hungarian
 I!F<I
-I9ľ\b
 I9ǋM
+I9ߋ=<
+I;L$
 IAppSystem
+IC,E9
 IErrorListener
 ILocVariableSource
 ILocalize::AddFile() failed to load file "%s".\n
@@ -954,119 +1010,112 @@ ILocalize_EconProvider
 IPulseSystem_001
 IRefCounted
 I\f\a\b
+Ic6M
+Ic@@
 Ic@\bH
 IcA@
+IcA\b9
 IcD$
 IcD$@
 IcD$\bH
-IcE\bE1
+IcD$\bHc
+IcE@9
+IcE\bA
 IcE\bIc
-IcF\fA9
-IcG@9
-IcG\b
-IcG\bH
+IcF@
+IcF\bE1
 IcL$
-IcL$41
-IcL$\bHc
 IcL$\f
 IcM\bI
 IcT$
+IcT$\bI
 IcT$\f
-IcU\bL
-IcV\f
-IcW\bI
-Ic[\bI
-Ic\aA
-Icz\bH
-Icŋ4
-IcƉ\f
-Icǉ4
+IcV\bL
+Ic\aA;G
+Icĉ\f
+Icċ4
+Icŋ<
 Improper termination of loc variable reference\n
 Indonesian
 Inert VModuleMetadata
 InputService_001
 InputStackSystemVersion001
 InputSystemVersion001
+InsertMultipleBefore
 InstallSchemaBindings
 Invalid loc variable reference pointer\n
 Invalid loc variable type for '%.*s' (%c)
+InvokeMiniDumpHandler
 Italian
 IuTH
 IuYH
 Iu^H
 JArray
-J\aA9
-J\bHc
 J\f9M
 J\f\a\b
 Japanese
 JcD \bt\aI
-JcD(\bt\aI
 JcD(\bt\bI
+JcD0\b
 Ju\eH
 K$\f9K
 K0I9
-K0Lc
+K0Ic
+K0Mc
+K\bHc
 K\bL9
 K\f\a\b
 KeyValueCache001
-Kff.
+KeyValues3: pre-allocated array memory is too small for %u elements (%u bytes available, %u bytes needed)\n
+KeyValues3: pre-allocated table memory is too small for %u members (%u bytes available, %u bytes needed)\n
 Kh\b1
 Korean
 KtLckp
 KxHǃ
-L$ 9
 L$ A
 L$ D
 L$ H9
+L$ L
 L$(1
 L$,L
+L$0H
 L$8HcA\b
 L$8L
 L$X1
 L$XH
 L$XL
+L$\b@
 L$\bA
 L$\bD
 L$\bE
 L$\bH
+L$\bH9
 L$\bI
 L$\bL
 L$\fA
-L$\fI
+L$\fH
 L$`H
 L$`M
 L*@1
-L9.A
 L90r
-L98taA
+L92u
 L9:r
 L9\nr
+L9˕@
 LANG
 LC_ALL
 LOCFAIL %s: '%s' combines :f with other flags\n
-LOCFAIL %s: '%s' gives multiple variants for :l\n
-LOCFAIL %s: '%s' gives multiple variants for :n\n
+LOCFAIL %s: '%s' has multiple parts\n
 LOCFAIL %s: '%s' has variants but does not have any token name variant flags (:g, :n, :p, etc.)\n
-LOCFAIL %s: '%s' indicates %u %s but needs %u valid %s\n
-LOCFAIL %s: '%s' indicates 1 plural but needs %u valid plural variants\n
 LOCFAIL %s: '%s' indicates a gender specifier but doesn't provide one\n
-LOCFAIL %s: '%s' indicates a plural specifier but doesn't provide one\n
-LOCFAIL %s: '%s' indicates gender but doesn't have valid gender flags\n
-LOCFAIL %s: '%s' indicates genders but doesn't have valid gender variants\n
-LOCFAIL %s: Too many variant values for '%s'\n
 LOCFAIL %s: Value for '%s' does not have required gender\n
-LOCFAIL %s: Value for '%s' does not have required plural form\n
-LOCFAIL %s: Value for '%s' has a plural form but the token doesn't have :l\n
+LOCFAIL %s: Value for '%s' has a plural quantity but the token doesn't have :l\n
 LOCFAIL %s: Value for '%s' has gendered variants but the token doesn't have :g or :n\n
-LOCFAIL %s: Value for '%s' has multiple variants with the same gender\n
-LOCFAIL %s: Value for '%s' must have all language-defined gender variants\n
 LOCFAIL %s: Value for '%s' must have the same gender for each variant\n
 LOCFAIL %s: Value for '%s' uses a gender not valid for the value language\n
 LOCFAIL: Ignoring unsupported encoding in localization file '%s'\n
 LOCFAIL: Tried to add a loc token with '#' starting the token name ('%s')\n
 LOCFAIL: Tried to add empty loc token\n
-LOCFAIL: the explicit plural flag 'l' can't be specified with the plural set flag 'p' (token %s in file %s)\n
 LOCFAIL: the explicit plural flag 'l' can't be specified without the gender flag 'n' (token %s in file %s)\n
 LOCWARN %s: value of '%s' matches English, possible unlocalized token\n
 LOC_Date_Today
@@ -1082,24 +1131,25 @@ LOC_Ordinal_Prefix_%u
 LOC_Ordinal_Prefix_Default
 LOC_Ordinal_Suffix_%u
 LOC_Ordinal_Suffix_Default
+LOG_CONSOLE
 L\f\a\b
 L\r\bH
 L`z/
 Language
 Latam_Spanish
-LcG\bI
+Lc#D;c
 LcO0E
-Lc`\f
+Lcg0E1
+Lcg0H
 Lcg\b1
 Lcg\bH
 LckpE1
 LckpL
+Lcn<I
 Lcop1
 LcopH
 Lcw0E1
 Lcw0L
-Lcz\bA
-Lff.
 List all loaded localization files
 List information on the given token
 Loaded localization files:\n
@@ -1114,6 +1164,7 @@ Loc variable reference incomplete\n
 Loc variable reference missing ':' after type\n
 Loc variable reference too large (%u chars)\n
 LocTest_
+LocalServerClientAccess001
 Localization System
 Localization stats for %s data:\n
 Localization watching these dirs for changes:\n
@@ -1127,20 +1178,24 @@ LoggingSystem_LogDirect
 LoggingSystem_RegisterLoggingChannel
 LuEH
 LuOH
-M9ǉ}
 MATCHFRAMEWORK_001
 MFTest of '%s' failed: got '%s', expected '%s'\n
 MODEL_PROCESSING_SERVICES_INTERFACE_001
-M\bE1
+M\b9H
+M\bH9H
 M\bM9
 M\buB
+M\f9H
 M\f\a\b
 M^$,
 MapListService_001
 MaterialUtils_001
+McD$
+McL$\bD9
+McT$
 McX@D9
 Mc\aE
-Mcd$
+Mc\vE9
 Mcl$01
 Mcl$0I
 MemAlloc_StrDupFunc
@@ -1152,6 +1207,7 @@ ModelDocUtils001
 Mu,H
 MȉUċE
 MԉUЋE
+N(Lc
 N10__cxxabiv115__forced_unwindE
 N10__cxxabiv117__class_type_infoE
 N10__cxxabiv119__foreign_exceptionE
@@ -1161,6 +1217,7 @@ N8H)
 N9__gnu_cxx20recursive_init_errorE
 N9__gnu_cxx24__concurrence_lock_errorE
 N9__gnu_cxx26__concurrence_unlock_errorE
+N<u!A
 NSt3_V214error_categoryE
 N\f\a\b
 NavGameTest001
@@ -1170,36 +1227,39 @@ NetworkP2PService_001
 NetworkServerService_001
 NetworkService_001
 NetworkSystemVersion001
+Nff.
 None
 Norwegian
 Not expecting to find a loc variable reference in '%s'\n
 Not expecting to find any loc var refs in '%s'\n
-O HcP\bH
-O f.
 O\bE)
-O\bIc
 O\f\a\b
 O\ft0L
 O}*I
+P 1ɺ
+P 1ɺ8
 P D;
-P E9
 P E;
+P HcU
 P Hǃ
 P Hǃ@
 P Hǃ\b
+P I9
 P IǄ$
 P IǄ$@
 P IǄ$\b
 P IǄ$h
-P L9}
-P M9
-P,E1ҁ
+P L9
+P,E1
 P0Mc
+P@[A\\]
+PDD9
 PERF WARNING: '%s' is in UTF-16 format, converting to UTF-8 will allow faster loading of it\n
 P[A\\]
-P\bH;
+P\b1ɐH
 P\bI9
-P\bIcċ4
+P\bI;
+P\bIcŋ4
 P\bL9
 P\f\a\b
 PanoramaTextServices001
@@ -1207,7 +1267,10 @@ PanoramaUIClient001
 PanoramaUIEngine001
 ParticleSystemMgr003
 PhysicsBuilderMgr001
+Plat_ExitProcess
 Plat_FatalError
+Plat_GetExeModule
+Plat_GetModuleProcAddress
 Plat_GetTime
 Plat_IsInDebugSession
 Plat_IsInTestMode
@@ -1218,16 +1281,19 @@ Plat_localtime64
 Polish
 Portuguese
 PostProcessingSystem_001
+PpE1
 PropertyEditorSystem_001
 Pu(I
 Pu4H
 Q \bLi?Ɨ
-QAVE
+Q"7H
 Q\bA]A^A_
+Q\bD9
 Q\f\a\b
-R Hc
+R I9
 R M9
-RE9T
+RE9\\
+R\bA9
 R\bI9
 R\bM9
 R\f\a\b
@@ -1246,12 +1312,11 @@ ResourceSystem013
 RkRԝ@)
 Romanian
 RunInternalTest_LocVariableResolve
-RunInternalTest_PluralGender
 Russian
-S Mc
-S,E1
-SHE1
+S0I9
+S0Mc
 SXt̉
+S\bHc
 S\f\a\b
 SceneSystem_002
 SceneUtils_001
@@ -1302,22 +1367,21 @@ SteamAudio001
 SteamInternal_ContextInit
 SteamInternal_FindOrCreateUserInterface
 SteamUtils010
+Su1H
 SuTH
 Swedish
-SxIc
 T$ )
+T$ A
 T$ H
 T$ I
 T$ L
 T$ f
+T$$A
 T$(H
 T$(I
 T$0H
-T$0H9
-T$0I9
 T$0L
 T$8H
-T$8HcB\b
 T$@A
 T$@H
 T$PI
@@ -1327,11 +1391,12 @@ T$\bH
 T$\bI
 T$\bJ
 T$\bL
+T$\b[A\\]
 TLS init function for
 TLS wrapper function for
-T\a M
 T\f\a\b
-T\v L
+T\t L
+T\v H
 TestScriptMgr001
 TextLayout_001
 Thai
@@ -1342,10 +1407,10 @@ ToolService_001
 Traditional_Chinese
 Tu&H
 Turkish
+U8HcB\b
 UE19
 UE1\t
 UE1ۉ
-UIcL$
 U\bH9
 U\bHǅ0
 U\bM9
@@ -1360,16 +1425,18 @@ Unlocalized token '%s'\n
 Usage: %s <token>\n
 Ut#H
 Ut3H
+UtlRBTree_FailedInsertDuplicate
 UtlVectorMemory_Alloc
 UtlVectorMemory_CalcNewAllocationCount
 UtlVectorMemory_FailedAllocation
 UuLH
 UȉȈE
+UȋMĩ
+ŰMȩ
 UԉP,H
 U؉ȈE
 U؋M܅
 V2g%
-V8H9
 VApplication001
 VAsyncFileSystem2_001
 VAvi001
@@ -1378,7 +1445,7 @@ VConComm001
 VEj*L
 VEngineCvar007
 VFileSystem017
-VHcK
+VHE1
 VMaterialSystem2_001
 VMediaFoundation001
 VP4003
@@ -1397,20 +1464,39 @@ VWebm001
 V\f\a\b
 V\rH}
 V_DoubleToString_Unsafe
+V_FloatToString_Unsafe
 V_Int64ToString_Unsafe
 V_IsAbsolutePath
 V_PathsMatch
 V_PrettifyNum
+V_StringParseError
+V_StringToBool
+V_StringToColor
+V_StringToFloat32
 V_StringToFloat64
+V_StringToInt16
 V_StringToInt32
+V_StringToInt64
 V_StringToInt64Limit
+V_StringToQAngle
+V_StringToUint16
+V_StringToUint32
+V_StringToUint64
+V_StringToVector
+V_StringToVector2D
+V_StringToVector4D
+V_StringToVectorWS
 V_UChar32ToUTF8
+V_UInt32ToString_Unsafe
 V_UInt64ToString_Unsafe
 V_UTF16ToUChar32
+V_UTF16ToUTF8
+V_UTF32ToUTF8
 V_UTF8ToUChar32
 V_UTF8ToUTF16
 V_UnqualifiedFileName
 V_fpclassifyd
+V_isnand
 V_powd
 V_qsort_s
 V_strStartsWith( pFound, pExpected )
@@ -1428,21 +1514,13 @@ Warning
 WorldRendererMgr001
 Wp|\b
 X D9
-X Hc
-X(Hc
-X0Hc
-X8Hc
 X<_H
-X@A9
-XLc D;`
 XYu\bH
 X[A\\A]A^A_]
 X[A\\A]]
 X\f\a\b
-YA1H
-YA1L
 Y\bD)
-Y\bE1
+Y\fIc
 Y\f\a\b
 Y}hN{`
 Z\f\a\b
@@ -1452,21 +1530,23 @@ ZġV5\v
 [!s:notpresent]
 [!s?t:str]
 [#Zs
-[,E1
 [...]=
+[A\\A
 [A\\A]A^A_]
-[A\\A]A^A_]Å
-[A\\A]A^A_]Ë
+[A\\A]A^A_]À:'
 [A\\A]A^A_]Ð
-[A\\A]A^A_]ÐB
+[A\\A]A^A_]ÐE
 [A\\A]A^A_]ÐH
 [A\\A]A^A_]ÐI
 [A\\A]A^]
 [A\\A]A^]Ð
+[A\\A]H
 [A\\A]]
 [A\\H
 [A\\]
-[A\\]ø
+[A\\]H
+[A\\]À
+[A\\]ÐH
 [E19
 [END]
 [\f\a\b
@@ -1485,12 +1565,16 @@ ZġV5\v
 \\$(I
 \\$0D
 \\$0H
-\\$8H
 \\$8I
-\\$\bE
+\\$\b1
+\\$\bE1
 \\$\bH
-\\$\bJ
+\\$\bI
+\\$\bI9
 \\$\bM
+\\$\bu
+\\$\fA
+\\$\fIc
 \\$`19\a
 \\$`E
 \\\f\a\b
@@ -1499,68 +1583,33 @@ ZġV5\v
 \\{s:foo}
 \\{s:foo} {s:bar}
 \\{s:foo} {} {,:} {s:} {s:bar} extra
-\a9B\btUH
-\a<:u\b
+\a< w
 \a<\rw
-\a<z~ݐI
+\a<z~
+\a<|t4
 \aH\tƄ
 \aH\tǄ
-\aHcB\f9
 \aHcG
 \aI\tD
 \aI\tƄ
 \a\a\a\b\b\a\a\a\a\a
-\a\tȈC
-\a\tЈC
+\at-H
+\atWI
+\at\f[
 \at\tH
 \at\tI
 \atff
+\atvE9
+\au4H
+\av\n1
 \axpL
-\axxL
-\b ⷌ𣡢S
-\b 㰘𤲴X
-\b 㴜𤼔^
-\b 䙸𦕠
-\b 䜄𦙨
-\b 䟀𦢄i
-\b 䱰𧏢Õ
-\b 䲔𧒔ć
-\b 你𧱬P
-\b 憌𩴔j
-\b 殰𫓐\\
-\b$㈐𣴛
-\b$㋀𣸁
-\b$㍐𣻥
-\b$㏠𣿉
-\b$㑰𤂭
-\b$㔀𤆑
-\b$㖰𤉷
-\b$㙀𤍛
-\b$㛐𤐿
-\b$㯰𤰦¶
-\b$䁤𥈪ı
-\b$䍌𥪘ą
-\b$䞘𦠊¢
-\b$媰𨻦
-\b$懤𩹆Ä
-\b$戌𩻢Ø
-\b$戴𩾒Å
-\b$扜𪀰
-\b$抄𪂤
-\b$抬𪄜x
-\b$挠𪋦
-\b$捈𪍊ǒ
-\b$曐𪧚Ɓ
-\b$榬𪻚ɉ
+\a~.D
+\a~7D
 \b&@Z鬑3E<~
-\b(ボ𣭴Ń
-\b(㮬𤭈ĉ
-\b(伜𧯚¾
 \bA\v
 \bA\v@
 \bA\vV\n
 \bA\v`
-\bE19
 \bE\vG\n
 \bE\vJ\n
 \bE\vX
@@ -1574,22 +1623,21 @@ ZġV5\v
 \bK\vG
 \bL9m
 \b[A\\A]A^A_]
-\b[A\\A]A^A_]Ë=
 \b[A\\A]A^A_]Ð
+\b[A\\A]A^A_]ÐI
 \b[A\\A]]
+\b[A\\A]]Ð
 \b[]A\\A]
-\b\tȈC
+\bt<H
+\bt\nHc@\fI
+\bu^A
+\buv1
 \by{\b
-\bÐHcp
 \e\e\f\a\b
 \e\f\a\b
 \eff.
 \euYH
 \euvHc
-\f0L9
-\f8I9
-\f:H9
-\f\aI9
 \f\a\b
 \f\a\b$
 \ft\nA
@@ -1606,23 +1654,18 @@ ZġV5\v
 \tu+H
 \tv,A
 \t~,H
-\vIcR
 \v\bQ<
 \vףp=\nףH
 ]A\\A]A^A_
 ]A\\L
-]\bE1
 ]\f\a\b
 ]`gD
 ]g"n
 ]u\fH
 ]u\vH
 ^*ܼDp
-^\bE1
 ^\f\a\b
-^ff.
 ^u;H
-_0ff.
 _Complex
 _Float
 _GLOBAL_
@@ -1655,6 +1698,7 @@ _Z28_txnal_runtime_error_get_msgPv
 _Z35_txnal_cow_string_C1_for_exceptionsPvPKcS_
 _Z7FioReadiPviPi
 _Z8FioClosei
+_Z9V_strnlenPKci
 _ZGTtNKSt11logic_error4whatEv
 _ZGTtNKSt13bad_exception4whatEv
 _ZGTtNKSt13bad_exceptionD1Ev
@@ -1726,10 +1770,15 @@ _ZGTtNSt16invalid_argumentD1Ev
 _ZGTtNSt16invalid_argumentD2Ev
 _ZGTtdlPv
 _ZGTtnam
+_ZN10CUtlBuffer10ParseTokenEPK14characterset_tPcib
+_ZN10CUtlBuffer18AddNullTerminationEv
+_ZN10CUtlBufferC1EPKviNS_13BufferFlags_tE
+_ZN10CUtlBufferC1EiiNS_13BufferFlags_tE
 _ZN10CUtlString12GetForModifyEv
 _ZN10CUtlString15FreeMemoryBlockEv
 _ZN10CUtlString3SetEPKc
 _ZN10CUtlString5PurgeEv
+_ZN10CUtlString6FormatEPKcz
 _ZN10CUtlString7AcquireEP13CBufferStringb
 _ZN10CUtlString9SetDirectEPKci
 _ZN10CUtlStringaSERK13CBufferString
@@ -1760,7 +1809,9 @@ _ZN11CDirWatcher13SetDirToWatchEPKcjbPvm
 _ZN11CDirWatcher14GetChangedFileEP13CBufferString
 _ZN11CDirWatcher4StopEv
 _ZN11CDirWatcherC1Ev
+_ZN12CSplitString5SplitEPKciPS1_ib
 _ZN13CBufferString10ExtendPathEPKccb
+_ZN13CBufferString10FixSlashesEc
 _ZN13CBufferString10TruncateAtEib
 _ZN13CBufferString11ShortenPathEb
 _ZN13CBufferString11ToLowerFastEi
@@ -1772,14 +1823,19 @@ _ZN13CBufferString14EnsureCapacityEiPPcbb
 _ZN13CBufferString18UnicodeCaseConvertEi25EStringConvertErrorPolicy
 _ZN13CBufferString21RemovePartialUTF8TailEb
 _ZN13CBufferString5PurgeEi
+_ZN13CBufferString6FormatEPKcz
 _ZN13CBufferString6InsertEiPKcib
 _ZN13CBufferString6SetPtrEPciibb
 _ZN13CBufferString7ReplaceEPKcS1_b
+_ZN13CBufferString8MoveFromERS_
 _ZN13CBufferString8RemoveAtEii
 _ZN13CBufferString8TrimTailEPKc
 _ZN15CKeyValues_Data18Internal_GetStringEPKcPcm
-_ZN15CUtlStringToken4MakeEPKcb
+_ZN15CUtlBinaryBlock9SetLengthEi
+_ZN15CUtlStringToken4MakeEPKc
+_ZN15CUtlSymbolTable11SetPageSizeEj
 _ZN15CUtlSymbolTable9AddStringEPKcPb
+_ZN15CUtlSymbolTable9AddStringEPKciPb
 _ZN15CUtlSymbolTableC1Eiib
 _ZN15CUtlSymbolTableC2Eiib
 _ZN15CUtlSymbolTableD1Ev
@@ -1848,6 +1904,7 @@ _ZN9__gnu_cxxmiIPcNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEENS_17__n
 _ZN9__gnu_cxxmiIPcSsEENS_17__normal_iteratorIT_T0_E15difference_typeERKS5_S8_
 _ZN9__gnu_cxxneIPcSsEEbRKNS_17__normal_iteratorIT_T0_EES7_
 _ZNK10CUtlString21IsEqual_CaseSensitiveEPKc
+_ZNK10CUtlString27IsEqual_FastCaseInsensitiveEPKc
 _ZNK10__cxxabiv117__class_type_info10__do_catchEPKSt9type_infoPPvj
 _ZNK10__cxxabiv117__class_type_info11__do_upcastEPKS0_PKvRNS0_15__upcast_resultE
 _ZNK10__cxxabiv117__class_type_info11__do_upcastEPKS0_PPv
@@ -1952,7 +2009,6 @@ _ZNKSt16initializer_listIcE3endEv
 _ZNKSt16initializer_listIcE4sizeEv
 _ZNKSt16initializer_listIcE5beginEv
 _ZNKSt17bad_function_call4whatEv
-_ZNKSt17basic_string_viewIcSt11char_traitsIcEE4findEcm
 _ZNKSt17basic_string_viewIcSt11char_traitsIcEE4sizeEv
 _ZNKSt17basic_string_viewIcSt11char_traitsIcEE6substrEmm
 _ZNKSt17basic_string_viewIcSt11char_traitsIcEE7compareES2_
@@ -2374,8 +2430,6 @@ _ZNSt20bad_array_new_lengthC2Ev
 _ZNSt20bad_array_new_lengthD0Ev
 _ZNSt20bad_array_new_lengthD1Ev
 _ZNSt20bad_array_new_lengthD2Ev
-_ZNSt22__shared_mutex_pthread11lock_sharedEv
-_ZNSt22__shared_mutex_pthread4lockEv
 _ZNSt3_V214error_categoryD0Ev
 _ZNSt3_V214error_categoryD1Ev
 _ZNSt3_V214error_categoryD2Ev
@@ -2716,6 +2770,7 @@ _ZnwmPv
 _ZnwmRKSt9nothrow_t
 _ZnwmSt11align_val_t
 _ZnwmSt11align_val_tRKSt9nothrow_t
+_\bE1
 _\f\a\b
 _\ft0L
 __cxa_allocate_dependent_exception
@@ -2753,9 +2808,10 @@ __tls_get_addr
 __vector(
 _u&H
 _u\rH
-`8Ic
 `IcE\b1
+`IcM\bHc
 `[A\\]
+`\f[A\\]
 `\f\a\b
 a\f\a\b
 abort
@@ -2795,8 +2851,7 @@ boolean
 brazilian
 bulgarian
 byte
-c0Mc
-c8H9
+c\b[L
 c\f\a\b
 catch
 char
@@ -2812,14 +2867,12 @@ construction vtable for
 covariant return thunk to
 cs_CZ
 cxHcSpM
-cxI9
 czech
 d$8H
 d$8L
 d$HH
 d$HM
 d$hA
-dHcM
 d\f\a\b
 d\vgFT2
 da_DK
@@ -2837,14 +2890,17 @@ delete[]
 dl_iterate_phdr
 double
 dr^>A|
+dtRH
 dump_loc_token
 dump_localization_files
 duplicate selector case
 dutch
 dynamic_cast
+e\bMc<$E9|$
 e\f\a\b
 el_GR
 en_US
+ends_witH9
 english
 english]
 es-419
@@ -2854,16 +2910,17 @@ external string val
 extstr
 f#`1S
 f4`!gb]
-f;\bH
 f;\vu
+f<\nwP
+fA96
 fA9@
 fA9D$
-fA9E
-fA9G
-fA9P
-f\bH9
+fA9F
+fA9p
+fA9v
+f\bE1
 f\bHc
-f\fE1
+f\bL9
 f\f\a\b
 false
 fi_FI
@@ -2879,10 +2936,8 @@ free
 french
 from file '%s'\n
 fwrite
-g(SH
-g,SE
+g0Hc
 g8Lck0I
-g\bH)
 g\f\a\b
 g_pMemAlloc
 gcc.gnu.H
@@ -2902,30 +2957,30 @@ glibcxx.eh_pool
 global constructors keyed to
 global destructors keyed to
 greek
+group
 guard variable for
+h,Ic
 h[A\\A]A^A_]
-h[A\\A]A^A_]Å
-h[A\\A]A^A_]Ë
-h[A\\A]A^A_]Ð
-h[A\\A]A^A_]ÿ
+h[A\\A]A^A_]Ã
 h\bucA
 h\f\a\b
 half
 hardware
 has gender\n
+has plural quantity\n
 hidden alias for
 https://H
 hu_HU
 hungarian
 i7m۶
 i=2\f`v
-iHcM
 i\f\a\b
 id_ID
 in hash as '%s'\n
 indonesian
 initializer for module
 instance %d:\n
+invalid plural predicate after '='
 ioctl
 it_IT
 italian
@@ -2936,30 +2991,29 @@ java Class for
 java resource
 jnx鸡
 k,Ic
-kIcM\bHc
+k\bIc@\bM
 k\f\a\b
 khD1
 ko_KR
 korean
 koreana
-kxL9
+ktIc
 l bug reH
 l$ A
-l$(f
 l$8E
 l$8L
 l$HE1
 l$HM
-l$\bA
 l$\bH
 l$\bI
+l$\bL
 l$\bM
-l(\bA
 l\f\a\b
 language '%s'\n
 latam
 ld-linux-x86-64.so.2
 lease suH
+lff.
 libc.so.6
 liblocalize.so
 liblocalize.so.dbg
@@ -2969,7 +3023,6 @@ libsteam_api.so
 libtier0.so
 loc_add.cpp
 loc_variables.cpp
-loc_variants.cpp
 localize
 localize_imp.cpp
 long
@@ -2977,7 +3030,6 @@ long double
 long long
 m\f\a\b
 malloc
-many
 mat expaH
 memchr
 memcmp
@@ -2995,15 +3047,15 @@ missing required '}' for plural match
 missing required '}' for select
 missing required comparison value for select
 missing required gender category
-missing required integer after '='
+missing required integer or predicate after '='
 missing required selection type (ie., 'plural') after comma
 missing required substitution variable name
 mold 2.36.0 (compatible with GNU ld)
 money
 mt19937
-nIcI
-n\bE1
+n0f.
 n\f\a\b
+name
 new[]
 nl_NL
 no language associated\n
@@ -3020,7 +3072,9 @@ not from a file\n
 not used
 nsion (PH
 nu,H
+o(ATA
 o\f\a\b
+o\rG.
 obj_count
 obj_size
 oe5X
@@ -3029,17 +3083,19 @@ operator
 operator""
 org/bugsH
 ota@
-other
 ou2H
 p Hc
 p(Hc
 p0Hc
+p0Ic@(9
 p8Hc
+p8Icƺ
 p< tgv]<0uIL
 p< tgv]<0ulH
 p< thv^<0uOI
 p< tpvV<0uJI
 p< u
+p@A9
 pAfter != nullptr && pAfter > pFound && pAfter[-1] == '}'
 pCompiled->IsValid()
 pExpected == nullptr
@@ -3050,8 +3106,6 @@ p\bIc
 p\f\a\b
 parse error: %s at position %lld (context: "%s>>>%s<<<%s")
 pl_PL
-plurals
-plurals*genders
 polish
 port at H
 portuguese
@@ -3068,6 +3122,7 @@ pthread_rwlock_unlock
 pthread_rwlock_wrlock
 q+")
 qIcL$
+q\fHc
 q\f\a\b
 r&L\t
 r\f\a\b
@@ -3089,9 +3144,12 @@ resource/countries_%language%.txt
 resource/valve_
 resource/valve_%language%.txt
 resource\\valve_
+resource_manifests
+resources
 restrict
 rethrow
 rg/bugs/H
+rlHc
 ro_RO
 romanian
 rph/Պ
@@ -3099,20 +3157,22 @@ ru_RU
 russian
 rҋCt
 rՐ0w
-s0H9
+s.f.
 s0HcC(9
 s3ff.
 s4ff.
-s6ff.
+s5ff.
 s8Mc
 s:x}
+s<D9s(A
+s<D;s(A
 s@E19
-sHff.
-sRff.
-sWff.
+sDff.
+sKff.
+sZff.
+s\bHc
 s\bIc
-s\bIc@\bM
-s\bIcŋ<
+s\bL9
 s\f\a\b
 schinese
 secure_getenv
@@ -3121,6 +3181,8 @@ short
 signed char
 sizeof
 sizeof...
+source_file
+source_line
 spanish
 sprintf
 stapsdt
@@ -3160,9 +3222,14 @@ su*H
 su,H
 su`H
 sv_SE
+swE1
 swedish
+sxHcCp9
+sxI9
 syscall
 system
+t!Hc
+t"<}u
 t"Hc}
 t"\f1
 t$ 1
@@ -3171,39 +3238,37 @@ t$ L
 t$(E)
 t$(H
 t$0H
-t$8E
+t$4I
 t$8H
-t$8HcF\b
-t$@I
+t$DA
 t$HH
 t$Pf
-t$XH
 t$\bH
-t$\bI
 t$\bL
-t$\bLc
+t$\bw
 t$\fM
 t$`H
 t$xH
-t)Ic]
-t.ff.
+t';:u
+t+D;\au
 t/H;
-t11\v=Y
+t0\bH
+t1UH
 t4ff.
-t8Hc
 t:ff.
 t;ff.
-t<E1
+t>Hǅ8
+t?<_to
 t@</
-tCE1
+tEE1
+tGE1
 tH</
-tI<_
-tIIc
 tJw8H
+tLIcP
 tSff.
-tTUH
-tUHc
+tTE9
 tYHcC
+t[ff.
 t\a1ɀ
 t\aL9*r
 t\aƃ%
@@ -3213,16 +3278,25 @@ t\f;:u
 t\f<\r~
 t\f\a\b
 t\f\a\b$
-t\rLc
-t\vZH
-t^ff.
-t`1҅
+t\nD;
+t\n[A\\]
+t\r;:u
+t\t;0u
+t\t;7u
+t\t;:u
+t\tHcx
+t\vE1
+t]Hc
+t^L9
 t`ff.
 tb97
 tc1Ʌ
-tcHc
+tcHcp
 tchinese
+tcǅ\b
+td1҅
 tdff.
+te1Ʌ
 template
 template parameter object for
 terminate called after throwing an instance of '
@@ -3230,52 +3304,59 @@ terminate called recursively\n
 terminate called without an active exception\n
 test
 tfff.
+tg91
+tg;0u
 th_TH
 thai
 this
 three
 throw
+tiUH
 time
+tk1Ʌ
 tkUH
 tlE1
-tm1Ʌ
 tmvh
-tordinalI9D$
+tnE9
+tordinalI9V
 total memory allocated: %s bytes\n
 tr_TR
 transaction clone for
 transaction_safe
 true
+ts1Ʌ
 tsHcC
 turkish
 tvJc
 twHc
+tyLc_0I
 typeinfo fn for
 typeinfo for
 typeinfo name for
 typename
-t{UH
-t|Lc_0E
+t{M9
+t}E1
 u"HcB\b1
 u%E1
+u&Hc
 u/UH
-u7[A\\A]A^]
+u5A;
+u8HcF\b
 u9L9
-u=ƅS
-uEUH
-uOI9
-u\b9p
-u\b<_
+u:ƅS
+uGUH
+uOIc
+uQf.
 u\bH9
-u\bH9p
 u\f\a\b
-u\n@:p
+u\n@8p
 u\nD:H
-u\nD;@
 u\t;H
 uaIcE
+ugf.
 uk_UA
 ukrainian
+unable to register all schema data: %s\n
 unknown
 unknown/unimplemented selection type
 unknown/unsupported gender category
@@ -3290,17 +3371,12 @@ unsigned long long
 unsigned short
 uuaH
 uzN;
-uȉ1A
 uЉЈE
-uҋuā
-uӋuā
-v4~\nǃ
+v(E9
 v9MО
 vV<0uJI
-v\b< w
 v\f\a\b
-valid for gender lookup\n
-valid for plural lookup\n
+v^<7
 value '%s'\n
 var.m_nModifiers == nModifiers
 var.m_type == varType
@@ -3322,20 +3398,23 @@ vars[i].m_variableName == expectedNames[i]
 vi_VN
 vietnamese
 virtual thunk to
-vk<7
+vjf.
 void
 volatile
 vtable for
 vuTH
+w1<g
+w4Hc
 w4t\a
 wC<g
-w[<gvPH
 w\bIc
 w\bt(A
 w\f\a\b
 w\rBƄ
 wchar_t
 what():
+with_000H9B
+wq<\b
 x !{q:badtype} x
 x STRING VAL external string val -1234 12345 12.346 $1.23 gen test mod AB x
 x STRING VAL external string val -1234 12345 12.346 $1.23 gen test x
@@ -3349,35 +3428,35 @@ x {s:u:str} {s:extstr} {d:r:i64} {u:u64} {f:3:f64} {m:money} {g:test:ab:gen} x
 x {s:u:str} {s:extstr} {d:r:i64} {u:u64} {f:3:f64} {m:money} {g:test:gen} x
 x {{s:one} x
 x"E1
-x0Ic
-x0Lc
-x@Hcډ
-xBHc
+x0I9
+x@A9
 xCHcI
-x\fIc
+xEHc
+xFHcډ
+x[A\\A]A^A_]
 x\f\a\b
-x\f\bH
-x\f\btyH
+x\f\bt
 y4Na\\zƥF
-y\bHǅ8
 y\f\a\b
 z A9
 z A;w\bu
 z&P,
 zPLR
 z\f\a\b
+z\f\bH
 z\f\bt
 zh_CN
 zh_TW
 {!:x}
+{,1Ɂ
 {,:}
-{0HǅP
+{0Hǅ
 {:¥F
 {@[A\\]
-{@uʋ
 {D:o:r:foo}
 {M:foo}
-{\bIc
+{\b1ҹ
+{\f\aI
 {\f\a\b
 {d:i64}
 {d:o:r:9:foo}
@@ -3431,77 +3510,77 @@ zh_TW
 {unnamed type#
 {zzz}
 {{s:foo}
+|$ H
 |$ L
 |$(1
 |$(L
 |$01
 |$019
-|$0H
-|$0L
 |$8L
-|$@I
 |$@M
-|$DI
 |$PH
-|$XH
+|$\b1
+|$\b1ɉ
 |$\b;
 |$\bA
+|$\bD
 |$\bD9
 |$\bH
 |$\bI
 |$\bL
-|$\bM
-|$\f\aA
-|WHc
-|\b@1
+|$\fHc
+|VHc
 |\f\a\b
+|lHcX\b
 }(ff.
-}\bH9x
 }\bI9
-}\f9x
 }\f\a\b
 }\f\a\b$
 }\r\n}\r\n
 }\tzt
-}eLc
+}mHc
 }rHc
-}tUH
+}tTH
 }y8(|
-}ȉ8H
 }ȉwh1
 }؉uԁ}ԃ
 }؉uԋU
-~ ff.
-~+ff.
+~#ff.
+~$Hc
 ~1Hc
 ~>Hc
 ~IHcǃ
 ~KHc
-~PHcǃ
-~\fHc
+~MHcǃ
+~VHcǃ
+~YHc
+~\\UHc
+~\b;W
+~\fE1
 ~\f\a\b
-~\rXz
 ~\tHc
 ~\teI
-~bIc
 ~e<|t
 ~kHcE
+~lMc
 ~oHc
 ~vE1
 ~zIc
-ƉC,E9
-ƐL;0A
 ȉE\bE)O\b
+ɉ\b~PH
+̀=zS
+ϋs,1Ɂ
 ЉE܋E
-ЋH\fH
 Џ);@
 ҉D$,D
 ҠT,(#
 ӝ&,L
 ۉZ\fH
+ېHcÅ
 ۮ\r_@
 މẺu
 މE؉u
 ߣ\b4.Y0
 㴌3dL
-댋3E19
+덋3E19
+돍N(Lc

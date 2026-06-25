@@ -1218,6 +1218,78 @@
 		]
 		vsnd_duration = 3.681315
 	}
+	FrostivusConsumable.Fireworks.ExplodeLevel2 = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		soundlevel = 81.0
+		distance_max = 2500.0
+		mixgroup = "Physics"
+		soundevent_layer2_on = 1.0
+		soundevent_layer2 = "FrostivusConsumable.Fireworks.Delay1"
+		vsnd_files = 
+		[
+			"sounds/misc/firework_explode.vsnd",
+		]
+		vsnd_duration = 3.681315
+	}
+	FrostivusConsumable.Fireworks.Delay1 = 
+	{
+		type = "dota_src1_3d"
+		volume = 0.75
+		pitch = 1.5
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		soundlevel = 75.0
+		distance_max = 2500.0
+		mixgroup = "Physics"
+		delay = 1.4
+		vsnd_files = 
+		[
+			"sounds/misc/firework_explode.vsnd",
+		]
+		vsnd_duration = 3.681315
+	}
+	FrostivusConsumable.Fireworks.ExplodeLevel3 = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		soundlevel = 81.0
+		distance_max = 2500.0
+		mixgroup = "Physics"
+		soundevent_layer2_on = 1.0
+		soundevent_layer2 = "FrostivusConsumable.Fireworks.Delay1"
+		soundevent_layer3_on = 1.0
+		soundevent_layer3 = "FrostivusConsumable.Fireworks.Delay2"
+		vsnd_files = 
+		[
+			"sounds/misc/firework_explode.vsnd",
+		]
+		vsnd_duration = 3.681315
+	}
+	FrostivusConsumable.Fireworks.Delay2 = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch = 0.9
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		soundlevel = 84.0
+		distance_max = 2500.0
+		mixgroup = "Physics"
+		delay = 2.25
+		vsnd_files = 
+		[
+			"sounds/misc/firework_explode.vsnd",
+		]
+		vsnd_duration = 3.681315
+	}
 	SeasonalConsumable.Dragon.Spawn = 
 	{
 		type = "dota_src1_3d"
@@ -2705,5 +2777,31 @@
 		delay = 0.15
 		vsnd_files = "sounds/misc/anniversary_hat_death.vsnd"
 		vsnd_duration = 0.744512
+	}
+	SeasonalConsumable.Pie.Projectile = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 1.0
+		soundlevel = 81.0
+		distance_max = 2500.0
+		mixgroup = "Weapons"
+		vsnd_files = "sounds/weapons/hero/ringmaster/pie_cast.vsnd"
+		vsnd_duration = 0.565306
+	}
+	SeasonalConsumable.Pie.Impact = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		pitch = 0.75
+		soundlevel = 81.0
+		distance_max = 2500.0
+		mixgroup = "Weapons"
+		vsnd_files = "sounds/misc/ti9_monkey_impact.vsnd"
+		vsnd_duration = 0.383129
 	}
 }

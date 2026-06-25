@@ -105,6 +105,7 @@ libvconcomm.so
 __gmon_start__
 _ITM_deregisterTMCloneTable
 _ITM_registerTMCloneTable
+__cxa_pure_virtual
 _ITM_RU1
 _ZGTtnam
 _ITM_memcpyRtWn
@@ -112,7 +113,6 @@ _ITM_RU8
 _ITM_addUserCommitAction
 _ITM_memcpyRnWt
 _ZGTtdlPv
-__cxa_pure_virtual
 __errno_location
 send
 close
@@ -122,128 +122,177 @@ __pthread_key_create
 open
 pthread_once
 recv
+connect
 __tls_get_addr
-_ZNK21CCountedStringPool_CI12SaveToBufferER10CUtlBuffer
-_Z17LoggingSystem_Logi17LoggingSeverity_t5ColorPKcz
-_ZN21CCountedStringPool_CI21ReferenceStringHandleEPKc
-_ZN12CThreadEvent5ResetEv
-LoggingSystem_ResetBackdoorLoggingState
-_ZNK9KeyValues7FindKeyEPKc
-_ZN11CTSListBase12InternalPushEP13TSLNodeBase_t
-_ZN17CThreadSyncObject8WaitImplEj
-V_StringToColor
-Plat_FatalError
-Plat_IsInDebugSession
-V_StringToVector2D
-V_StringToBool
-CommandLine
-LoggingSystem_IsChannelEnabled
-_ZN7CThread6OnExitEv
-LoggingSystem_FindChannel
-_ZN17CThreadSyncObjectD2Ev
-_ZN42CVirtualMachineCallStackTranslationEncoder7GetVMIDEv
-_ZN7CThread7IsAliveEv
-V_StringToVector4D
-_ZN42CVirtualMachineCallStackTranslationEncoder20GetLineOffsetBitMaskEv
-Plat_WindowToOsSpecificHandle
-StackTools_VerifyLoadedModuleMappings
-_ZN42CVirtualMachineCallStackTranslationEncoder24EnumerateEncodingIndicesEPFbPS_jPKcS2_jPvES3_
-_ZN10CUtlBufferC1EiiNS_13BufferFlags_tE
-V_StringToQAngle
-_ZN10CUtlBufferC1EPKviNS_13BufferFlags_tE
-V_StringToUint16
-V_StringToFloat32
-_Z17LoggingSystem_Logi17LoggingSeverity_tRK20LoggingRareOptions_t5ColorPKcz
-_ZN11CTSListBase11InternalPopEv
-LoggingSystem_RegisterLoggingChannel
-_ZN12CThreadEventC1Eb
-_ZN10CUtlString6FormatEPKcz
-_ZNK9KeyValues19RecursiveSaveToFileER10CUtlBufferibb
-_ZN7CThread4JoinEj
-_ZN12CAtomicMutex11AcquireLockEy
-_ZN42CVirtualMachineCallStackTranslationEncoder15GetIndexBitMaskEv
-StackTools_EnumerateKnownLoadedModules
-V_StringToUint32
-_Z28Assert_ConditionFailed_FatalRK34_AssertCompileTimeConstantStruct_tPKcz
-_ZNK10CUtlString27IsEqual_FastCaseInsensitiveEPKc
-UtlVectorMemory_Alloc
-StackTools_RemoveModuleMappingListener
-V_stricmp_fast
-ThreadSleep
-_ZN11CTSListBase6DetachEv
-V_StringToFloat64
-_ZN10CUtlString3SetEPKc
-_Z21ThreadAtomicNotifyOnePKj
-_Z30LoggingSystem_IsChannelEnabledi18LoggingVerbosity_t
-MemAlloc_StrDupFunc
-V_StringToUint64
-_ZN13CBufferString6FormatEPKcz
-_ZN17CThreadSyncObject4WaitEj
-Plat_NonFatalErrorFunc
-_ZN12CThreadEvent3SetEv
-_ZN7CThreadC2Ev
-_ZN5CLZSS8CompressEPhiPjb
-StackTools_EnumerateVirtualMachineEncoders
-Plat_GetTime
-CRC32_ProcessBuffer
-_ZN42CVirtualMachineCallStackTranslationEncoder16GetIndexBitShiftEv
-_ZN11CTSListBaseC1Ev
-_ZN10CUtlBuffer10ParseTokenEPK14characterset_tPcib
-_ZN13CBufferString13AppendFormatVEPKcP13__va_list_tag
-Plat_FloatTime
-UtlVectorMemory_CalcNewAllocationCount
-V_qsort_s
-_ZN7CThreadD2Ev
-_ZN9KeyValues9SetStringEPKcS1_
-_ZN9KeyValuesD1Ev
-LoggingSystem_GetChannel
-EarlyInit_Tier0
-_ZN10CUtlBuffer3PutEPKvi
-_ZN10CUtlString9SetDirectEPKci
-_ZN10CUtlBuffer9PutStringEPKc
-_ZN7CThread5StartEj20ThreadPriorityEnum_t
-ThreadSetDebugNameS2
-StackTools_InstallModuleMappingListener
-_ZN13CBufferString16RemoveToFileBaseEb
-LoggingSystem_SetChannelVerbosity
-LoggingSystem_SetChannelFlags
-LoggingSystem_GetNextChannelID
-_ZN7CThread5SleepEj
-V_StringToInt16
-_ZN10CUtlStringaSERK13CBufferString
-LoggingSystem_GetFirstChannelID
+_Z7SaveKV3RK7KV3ID_tS1_PK10KeyValues3P10CUtlStringP10CUtlBufferj
+LOG_CONSOLE
 ThreadGetCurrentId
-_ZN13CBufferString6InsertEiPKcib
-_Z17LoggingSystem_Logi17LoggingSeverity_tPK17LoggingMetaData_t5ColorPKcz
-_ZN42CVirtualMachineCallStackTranslationEncoder35GetLineOffsetPostShiftedSignBitMaskEv
-_ZTI17CThreadSyncObject
-_ZN10CUtlString5PurgeEv
-V_StringToInt32
-_ZN7CThread21WaitForCreateCompleteEP12CThreadEvent
-_ZNK9KeyValues11CopySubkeysEPS_
+V_StringToUint64
+Plat_NonFatalErrorFunc
 Plat_MSTime
-LoggingSystem_RegisterBackdoorLoggingListener
-UtlVectorMemory_FailedAllocation
-_ZTI7CThread
-V_StringToVector
-g_pMemAlloc
-_ZN9KeyValuesC1EPKcP16IKeyValuesSystemb
+_V_strncmp
+_ZN13CBufferString8RemoveAtEii
+_ZN7CThread6OnExitEv
+_Z30LoggingSystem_IsChannelEnabledi18LoggingVerbosity_t
+LoggingSystem_GetChannel
+_ZN13CBufferString12AppendConcatEiPKPKcPKib
+_ZN10CUtlBufferC1EiiNS_13BufferFlags_tE
+_ZNK9KeyValues19RecursiveSaveToFileER10CUtlBufferibb
+LoggingSystem_RegisterLoggingChannel
+_ZN11CTSListBaseC1Ev
 _ZN7CThread15IsThreadRunningEv
-_V_strncpy
-_ZN21CCountedStringPool_CIC1Ev
-_ZN10CUtlBuffer6PrintfEPKcz
-_ZN42CVirtualMachineCallStackTranslationEncoder21GetLineOffsetBitShiftEv
-V_StringToInt64
-_Z22Assert_ConditionFailedRK34_AssertCompileTimeConstantStruct_tPKcz
-_ZN13CBufferString5PurgeEi
-Plat_GetModuleFilename
-_ZN10CUtlString15FreeMemoryBlockEv
-_ZN10CUtlString12GetForModifyEv
-Warning
-_ZN21CCountedStringPool_CID1Ev
-_ZN15CKeyValues_Data18Internal_GetStringEPKcPcm
-LoggingSystem_Log
 Plat_IsRunningOnCustomerMachine
+_ZN10CUtlBuffer14EnsureCapacityEi
+_ZN15CKeyValues_Data18Internal_GetStringEPKcPcm
+_ZN7CThreadD2Ev
+Plat_GetModuleProcAddress
+V_StringToVector2D
+_ZN7CThread7IsAliveEv
+_ZN15CUtlBinaryBlock9SetLengthEi
+_ZN42CVirtualMachineCallStackTranslationEncoder35GetLineOffsetPostShiftedSignBitMaskEv
+_V_strncpy
+_Z21ThreadAtomicNotifyOnePKj
+_ZN15CUtlSymbolTable9AddStringEPKcPb
+CRC32_ProcessBuffer
+V_Int64ToString_Unsafe
+_ZN13CBufferString5PurgeEi
+Plat_WindowToOsSpecificHandle
+StackTools_RemoveModuleMappingListener
+V_fclose
+Plat_FatalError
+StackTools_EnumerateVirtualMachineEncoders
+_ZNK15CUtlSymbolTable6StringE10CUtlSymbol
+V_fseek
+_ZN13CBufferString7ReplaceEPKcS1_b
+V_stricmp_fast
+Plat_GetModuleFilename
+Plat_GetTime
+V_StringToVector4D
+V_UInt64ToString_Unsafe
+EarlyInit_Tier0
+_ZN10CUtlBuffer9PutStringEPKc
+_ZN9KeyValuesD1Ev
+V_StringToVector
+LoggingSystem_IsChannelEnabled
+_ZN13CBufferString10TruncateAtEib
+_ZN15CUtlSymbolTableD1Ev
+V_FloatToString_Unsafe
+_ZN10CUtlBuffer3PutEPKvi
+LoggingSystem_ResetBackdoorLoggingState
+_ZN13CBufferString8MoveFromERS_
+V_fread
+V_StringToInt16
+V_ftell
+LoggingSystem_FindChannel
+CommandLine
+V_IsAbsolutePath
+_ZN21CUtlScratchMemoryPool12AllocAlignedEii
+_ZN8netadr_t13SetFromStringEPKcb
+LoggingSystem_GetFirstChannelID
+Plat_IsInDebugSession
+V_StringToColor
+_ZN13CBufferString12AppendFormatEPKcz
+_ZN13CBufferString6InsertEiPKcib
+StackTools_EnumerateKnownLoadedModules
+_ZN7CThreadC2Ev
+V_StringToInt32
+CharacterSetBuild
+_ZN42CVirtualMachineCallStackTranslationEncoder15GetIndexBitMaskEv
+_ZN42CVirtualMachineCallStackTranslationEncoder21GetLineOffsetBitShiftEv
+V_StringToBool
+_Z17LoggingSystem_Logi17LoggingSeverity_tPK17LoggingMetaData_t5ColorPKcz
+_ZNK8netadr_t9ToSockadrEP8sockaddr
+_ZN42CVirtualMachineCallStackTranslationEncoder16GetIndexBitShiftEv
+LoggingSystem_Log
+V_fwrite
+_ZN9KeyValues9SetStringEPKcS1_
+_ZN10CUtlString9SetDirectEPKci
+_ZN42CVirtualMachineCallStackTranslationEncoder24EnumerateEncodingIndicesEPFbPS_jPKcS2_jPvES3_
+_ZN13CBufferString11ToLowerFastEi
+_ZN8netadr_t5SetIPEj
+UtlVectorMemory_CalcNewAllocationCount
+LoggingSystem_RegisterBackdoorLoggingListener
+V_StringToFloat32
+_Z17LoggingSystem_Logi17LoggingSeverity_t5ColorPKcz
+_ZN12CThreadEvent3SetEv
+UtlVectorMemory_FailedAllocation
+V_StringParseError
+Plat_GetExeModule
+V_StringToInt64
+_ZN10CUtlBuffer7SeekGetENS_10SeekType_tEi
+_ZN7CThread5SleepEj
+_ZN8netadr_t7SetTypeE12netadrtype_t
+MemAlloc_StrDupFunc
+_ZN11CTSListBase11InternalPopEv
+_ZN13CBufferString6FormatEPKcz
+_ZN42CVirtualMachineCallStackTranslationEncoder7GetVMIDEv
+_ZN42CVirtualMachineCallStackTranslationEncoder20GetLineOffsetBitMaskEv
+V_StringToFloat64
+_ZN10CUtlBuffer6PrintfEPKcz
+_ZN10CUtlString5PurgeEv
+V_qsort_s
+V_fpclassifyd
+_ZN12CAtomicMutex11AcquireLockEy
+InvokeMiniDumpHandler
+_ZNK9KeyValues11CopySubkeysEPS_
+_ZN9KeyValuesC1EPKcP16IKeyValuesSystemb
+_ZN10CUtlString3SetEPKc
+_ZN15CUtlSymbolTableC1Eiib
+_ZN12CThreadEventC1Eb
+_ZN10CUtlString12GetForModifyEv
+_ZN7CThread4JoinEj
+_ZN12CThreadEvent5ResetEv
+V_StringToVectorWS
+_Z28Assert_ConditionFailed_FatalRK34_AssertCompileTimeConstantStruct_tPKcz
+_ZN13CBufferString8TrimTailEPKc
+V_DoubleToString_Unsafe
+_Z9V_strnlenPKci
+Warning
+UtlRBTree_FailedInsertDuplicate
+StackTools_VerifyLoadedModuleMappings
+_ZNK8netadr_t8ToStringEPcjb
+V_isnand
+_ZN10CUtlStringaSERK13CBufferString
+UtlVectorMemory_Alloc
+_ZN12CSplitString5SplitEPKciPS1_ib
+StackTools_InstallModuleMappingListener
+_ZN10CUtlBuffer10ParseTokenEPK14characterset_tPcib
+_ZN10CUtlString7AcquireEP13CBufferStringb
+LoggingSystem_GetNextChannelID
+Plat_ExitProcess
+_ZN10CUtlBuffer3GetEPvi
+ThreadSleep
+LoggingSystem_SetChannelFlags
+_ZN10CUtlString6FormatEPKcz
+_ZN17CThreadSyncObject4WaitEj
+V_fopenUTF8
+g_pMemAlloc
+_ZTI7CThread
+_Z17LoggingSystem_Logi17LoggingSeverity_tRK20LoggingRareOptions_t5ColorPKcz
+_ZN11CTSListBase6DetachEv
+_ZTI17CThreadSyncObject
+_ZN13CBufferString13AppendFormatVEPKcP13__va_list_tag
+_ZN10CUtlBuffer18AddNullTerminationEv
+_ZNK10CUtlString27IsEqual_FastCaseInsensitiveEPKc
+V_StringToUint16
+GetDefaultMiniDumpTypeFlags
+_ZN13CBufferString16RemoveToFileBaseEb
+Plat_FloatTime
+_ZN7CThread5StartEj20ThreadPriorityEnum_t
+_ZN11CTSListBase12InternalPushEP13TSLNodeBase_t
+_ZN17CThreadSyncObjectD2Ev
+_ZN7CThread21WaitForCreateCompleteEP12CThreadEvent
+_ZN8netadr_t7SetPortEt
+V_StringToUint32
+V_UInt32ToString_Unsafe
+V_StringToQAngle
+_ZN13CBufferString10FixSlashesEc
+LoggingSystem_SetChannelVerbosity
+_ZN17CThreadSyncObject8WaitImplEj
+_ZNK9KeyValues7FindKeyEPKc
+_ZN10CUtlString15FreeMemoryBlockEv
+_ZN10CUtlBufferC1EPKviNS_13BufferFlags_tE
+ThreadSetDebugNameS2
 socket
 strcpy
 sprintf
@@ -258,6 +307,7 @@ getentropy
 strlen
 __cxa_atexit
 memset
+strstr
 bind
 read
 memcmp
@@ -1328,7 +1378,7 @@ GLIBC_2.14
 GLIBC_2.17
 GLIBC_2.25
 GLIBC_2.3.2
-\a\a\a\b\b\a\a\a\a
+\a\a\a\b\b\a\a\a\a\a
 \e\f\a\b
 zPLR
 \e\e\f\a\b
@@ -1391,64 +1441,18 @@ _\f\a\b
 s\f\a\b
 d\f\a\b
 y\f\a\b
-\b$㈰𠁭
-\b$㋠𠅓
-\b$㍰𠈷
-\b$㐀𠌛
-\b$㒐𠏿
-\b$㔠𠓣
-\b$㗐𠗉
-\b$㙠𠚭
-\b$㛰𠞑
 v\f\a\b
 G\f\a\b
 }\f\a\b$
-\b(㯌𠺚ĉ
-\b$㰐𠽸¶
-\b 㰸𡀆X
-\b 㴼𡉦^
 `\f\a\b
-\b$䂄𡕼ı
 \f\a\b
-\b$䍬𡷪ą
-\b 䚘𢢲
-\b 䜤𢦺
-\b$䞸𢭜¢
-\b 䟠𢯖i
-\b 䲐𣜴Õ
-\b 䲴𣟦ć
-\b(似𣼬¾
-\b 侀𣾾P
 z\f\a\b
-\b$嫐𥈸
-\b 憬𦁦j
-\b$戄𦆘Ä
-\b$戬𦈴Ø
-\b$扔𦋤Å
-\b$扼𦎂
-\b$护𦏶
-\b$拌𦑮x
 n\f\a\b
-\b$捀𦘸
-\b$捨𦚜ǒ
-\b$曰𦴬Ɓ
 }\f\a\b
-\b$槌𧈬ɉ
 x\f\a\b
-\b 毐𧠢\\
-\b 洤𧮀
-\b 涰𧲈
-\b$湄𧸪¢
-\b 湬𧺤i
-\b 猘𨿺Õ
-\b 猼𩂬ć
-\b(琸𩑾¾
-\b$瑤𩔐
 t\f\a\b$
-\b 綐𩻎)
 \bA\v
 \bE\vX
-\vH羐𪼤
 \n\f\a\bE\v
 \t\f\a\b
 \bH\v8
@@ -1467,6 +1471,41 @@ t\f\a\b$
 \bA\vV\n
 \bH\v
 \tV#{
+CBaseVModuleMetadataProvider
+IErrorListener
+ConCommandRef
+ConCommand
+ILoggingListener
+IAppSystem
+IModuleMappingListener
+CThreadEvent
+ICommandCompletionCallback
+IConVarListener
+ICommandCallback
+IVConCommDataReceived
+CBaseAppSystemI10IAppSystemE
+9IVConComm
+CKV3TransferSaveContext
+CServicePollThread
+CBaseAppSystemI9IVConCommE
+CTier0AppSystemI9IVConCommLx0EE
+CTier1AppSystemI9IVConCommLx0EE
+CTier2AppSystemI9IVConCommLx0EE
+CConCommandMemberAccessorI9CVConCommE
+9CVConComm
+CVConPingMessage
+CVConActiveStateMessage
+CVConUserNameMessage
+CVConChannelPokeMessage
+CVConsoleLoggingListener
+CVConsoleConVarListener
+CVConsoleModuleMappingListener
+CVConCommThread
+CVConCommThread_PC
+CKV3TransferContextBase
+CPostConnectCallback
+CModuleMetadataProvider_ResourceManifests
+CSchemaInstallCallback
 std::bad_alloc
 St9bad_alloc
 std::bad_array_new_length
@@ -1668,44 +1707,18 @@ system
 *N12_GLOBAL__N_122generic_error_categoryE
 St12system_error
 NSt3_V214error_categoryE
-CVConUserNameMessage
-CVConCommThread
-CVConCommThread_PC
-IModuleMappingListener
-IConVarListener
-IVConCommDataReceived
-CVConsoleModuleMappingListener
-CVConsoleConVarListener
-CVConChannelPokeMessage
-CVConPingMessage
-IAppSystem
-CBaseAppSystemI10IAppSystemE
-9IVConComm
-CBaseAppSystemI9IVConCommE
-CTier0AppSystemI9IVConCommLx0EE
-ConCommandRef
-CTier1AppSystemI9IVConCommLx0EE
-ICommandCompletionCallback
-ICommandCallback
-ConCommand
-CTier2AppSystemI9IVConCommLx0EE
-CConCommandMemberAccessorI9CVConCommE
-9CVConComm
-CThreadEvent
-CServicePollThread
-ILoggingListener
-CPostConnectCallback
-CSchemaInstallCallback
-CBaseVModuleMetadataProvider
-CModuleMetadataProvider_ResourceManifests
-CVConsoleLoggingListener
-CVConActiveStateMessage
 ?0 0 0
+name
 commandline
 RenderDeviceMgr001
 VBik001
+EnsureMemberCapacity
+source_file
+m_vecDetails
 AssetPreviewSystem_001
+%s %s %s
 vconcomm.cpp
+\t\r\n
 NetworkP2PService_001
 Source2ClientPrediction001
 ResourceHandleUtils001
@@ -1714,6 +1727,7 @@ Source2V8System001
 Release
 ResourceSystem013
 ParticleSystemMgr003
+LocalServerClientAccess001
 ClientToolsInfo_001
 VEngineCvar007
 SoundSystem001
@@ -1729,12 +1743,16 @@ SchemaTestExternal_Two_001
 TextLayout_001
 %2.2d:%2.2d:%2.2d.%3.3d
 VisBuilder_001
+vectorws
 VAvi001
-../public/tier0/utlrbtree.h
+/src/
 AssetBrowserSystem_001
 ResourceCompilerSystem001
 VRenderDeviceSetupV001
 RenderHardwareConfig002
+source_line
+<no failure reason set>
+AddPage
 clearall
 Source2ClientUI001
 RenderUtils_001
@@ -1743,17 +1761,21 @@ int32
 NetworkMessagesVersion001
 VP4003
 uint64
+InsertMultipleBefore
+%s %s %s %s
 uint32
 BakedLODBuilderMgr001
 WorldRendererMgr001
 VPhysics2_Interface_001
 StatsService_001
+m_szGroupName
 VFileSystem017
 clear
 ModelDocUtils001
 NavGameTest001
 GameResourceServiceClientV001
 SoundService_001
+(%d,%d)
 ResourceManifestRegistry001
 SerializedEntitiesVersion001
 Push
@@ -1763,10 +1785,14 @@ arg%d
 VProfService_001
 KeyValueCache001
 Source2GameClients001
+Double-save to Member '%s'
 DemoUpconverterVersion001
 vcon_clients
 VScriptManager010
+%s allocation count overflow
 vector4
+Stack depth limit hit (%d)
+resources
 VAsyncFileSystem2_001
 Inert VModuleMetadata
 MeshSystem001
@@ -1774,19 +1800,21 @@ arg0
 PanoramaTextServices001
 ....
 PropertyEditorSystem_001
+binary_bc
 Source2Host001
 ServerToolsInfo_001
 VScriptDbg
 InputSystemVersion001
 SteamAudio001
 PostProcessingSystem_001
-%f %f %f
-%f %f %f %f
 AnimationSystem_001
+m_bIsFlagsEnum
 color
 Localize_001
 AssetRenameSystem_001
+%s %s
 HelpSystem_001
+(%d)
 Source2EngineToClient001
 uint16
 <Unknown>
@@ -1798,13 +1826,17 @@ VConCommThread_PC
 InputStackSystemVersion001
 Source2Client002
 VApplication001
+MPropertyFriendlyName
+m_bIsDefault
 MaterialUtils_001
 VProcessUtils002
 VWebm001
 Unknown protocol.
 AssetSystemTest001
 NetworkServerService_001
+EnsureElementCapacity
 <Unknown Shutdown Context>
+group
 No VConsole, Ignoring.\n
 qangle
 %d %d %d %d
@@ -1815,28 +1847,36 @@ Source2Server001
 vconcomm
 Connection in progress...\n
 nTries < 10000000
+m_vecEnum
 PanoramaUIEngine001
-%f %f
+m_bCanAutoComplete
+m_szMax
+m_nFlags
 CTSQueue: Misaligned queue\n
-!link
 HostStateMgr001
 tier0
 TestScriptMgr001
+m_szDefault
 Vrad3_001
+m_szFriendlyName
 vc_exit %s
+m_szHelpString
 Invalid connection type.
 MATCHFRAMEWORK_001
+ClientLocalServerAccess001
 EngineServiceMgr001
 MeshUtils001
 string
 PhysicsBuilderMgr001
 float32
 GameUIService_001
+resource_manifests
 NetworkSystemVersion001
 List connections
 VStringTokenSystem001
 ../public/tier0/tslist.h
 Source2EngineToServer001
+_class
 FontManager_001
 NetworkClientService_001
 SoundOpSystem001
@@ -1851,13 +1891,17 @@ vcon_clear_buffered_log
 RenderService_001
 0 0 0 255
 %lld
+m_szMin
 Init
-Insert
+m_nType
 RenderDevice003
 VMaterialSystem2_001
+EnsureUnusedCapacity
+m_bCommand
 %llu
 SceneUtils_001
 IPulseSystem_001
+m_szValue
 EconItemToolModel_001
 NetworkService_001
 VMediaFoundation001
@@ -1865,21 +1909,30 @@ MapListService_001
 AssetSystem001
 SoundOpSystemEdit001
 vector2
+m_szName
+Alloc
 Source2GameEntities001
 CTSQueue corruption
 VScript
 RegisterConVar: Unknown error registering convar "%s"!\n
 Source2EngineToServerStringTable001
 RegisterConCommand: Unknown error registering con command "%s"!\n
+VConComm failed to initialize server side TCP socket!\n
 \t%s@%d.%d.%d.%d, connected: %s\n
 =============== End VConsole Buffered Messages ===============\n
+VConComm failed to initialize socket services!\n
 Message Version Mismatch: '%s', Expected %d, Got %d\n
+Failed to save unsupported class
 Rejecting registering message '%s'. Already registered to an alternate handler.\n
+%s: max element overflow, cur count %u + %u\n
+unable to register all schema data: %s\n
 =============== Prior Messages Discarded at %d bytes ===============\n
 =============== VConsole Buffered Messages ===============\n
+KeyValues3: pre-allocated array memory is too small for %u elements (%u bytes available, %u bytes needed)\n
 FlattenedSerializersVersion001
 ==========================================================\n
 ==============================================================\n
+%s: allocation of %u too large, max %u\n
 Clearing %d buffered messages of %d bytes\n
 EXPORTSYSTEM_INTERFACE_VERSION_001
 ClientServerSharedHandleSystem001
@@ -1887,21 +1940,459 @@ Make VConsole Foreground(): ReturnToWindow:0x%p, Timeout:%d, UseHostPath:%d\n
 VConsole client connection from %d.%d.%d.%d\n
 AlignedByteArray not properly aligned\n
 Cannot recover from failed socket shutdown. (error %d)
+CUtlSymbolTableLarge element limit of %u exceeded\n
+%s: member count overflow (%u)\n
 Xbox VDP is not supported on this platform.
+%s allocation count overflow( %llu + %llu > %llu )\n
 APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %d!\n
+%s: invalid insert point %u (current count %u)\n
 VConsole Rejecting Message: '%s', No Message Handler Claimed Ownership.\n
 VConComm failed to get expected listening endpoint on port %d!\n
+KeyValues3: pre-allocated table memory is too small for %u members (%u bytes available, %u bytes needed)\n
 This convar is being accessed prior to ConVar_Register being called
 CCommand::Tokenize: Encountered command which overflows the tokenizer buffer.. Skipping!\n
 MODEL_PROCESSING_SERVICES_INTERFACE_001
 Source2EngineToClientStringTable001
 VConComm Discarding Oversized Outgoing Message: '%s' (%d bytes)\n
+%s: element count overflow (%u)\n
 VConComm failed to listen on port %d with %d connections!\nExisting Process:\n%s\n
 Waiting For VConsole To Connect...\n
+%s: no space for allocation of %u\n
+ERROR: CUtlSymbolTableLarge element limit of %u exceeded\n
 Connection will timeout in %d seconds...\n
-Found existing value when inserting into tree - replacing existing value with new value. If this is intended behavior, use InsertOrReplace. If leaving existing values alone is intended, use InsertIfNotFound. If duplicate entries are intended, use InsertWithDupes.
 u/UH
+AVAUI
+3E19
+U؋M܅
+[A\\A]A^]
+A\\A]]
+\b[A\\A]]
+P\nt H
+x\fA\\A]A^A_]
+\b[A\\A]A^A_]
+\b\vv\aH
+\b\vv\vH
+AWAVE
+ATE1
+|$aA
+AINFH
+P(fA
+P(D9
+[A\\A]A^A_]
+AWAVI
+AUATSH
+Lc&H
+]ȉS\b
+Mc.f
+ADONf
+H\nfD
+P\f~pA
+CHANf
+[A\\A]A^A_]Ð
+}3ff.
+AUATI
+AVAUATI
+MODMI
+_ffA
+D$\bI
+wHfA
+([A\\A]A^A_]
+SVME
+ʈH.H
+AWAVAUI
+ATSL
+SVMII
+E\bfA
+([A\\A]A^I
+|\a\fA_]
+IcE\bIc
+`IcE\b1
+\f@Hc
+?v\t%
+AWAVAUATI
+D$\bL
+D$\bH
+CcfA
+\tCHH
+LccHH
+V D;cXD
+~MUH
+[A\\]
+[A\\A]]
+AVE1
+AUATS
+teHc
+r]1҅
+A\\A]A^]
+L$(t
+\\$(H
+D$ A
+AUATS1
+AWAVAUATSH
+Mċ\r^[
+AWAVL
+AUATE1
+[A\\A]A^]ÐH
+ATSH
+A\\]魺
+AWAVAUA
+<)ȹų
+AWAVA
+\b[A\\A]A^A_]ÐH
+AWAVAUATL
+~m1ېI
+DNMCD
+h[A\\A]A^A_]
+1ҾDNMCL
+@XH9
+A\\]Ð
 @\bH9
+\b[A\\A]]ÐM
+Lc6t
+,\bM9
+AWAVAUATM
+t$\fH
+EȾGNOPD
+B\bXZ
+]\bXZH
+A[A\\
+E1:\t
+wvUH
+fA9E
+=TNRP
+X[A\\A]A^A_]
+TNRPH
+tothread
+tothreadH
+AUATL
+ttHcЅɋ
+P Hǃ
+xxHcډ
+?AǄ$
+P IǄ$
+tE[A\\]ú
+G\a@H
+AVAUL
+P ǅh
+FONAH9
+AǄ$x
+AǄ$\b
+l$hI
+|$pI
+l$(I
+|$0I
+$wbI
+k\bH9
+Hc3L
+c\bL9
+S\bE)
+C\bHc
+K\bHc3
+C\bHc3Ic
+TNRPL
+ӾTNRPL
+uGE1
+M9w\bu
+D$\fA
+tothreadH9C\bto
+u"E1
+ȉB\bJ
+D:\fH
+H[A\\A]A^A_]
+TNRP
+tUMc
+\axvL
+`IcM\bHc
+AWAVH
+IcD$H
+xWHcʉ
+,IH)
+\\$PL
+t$PH
+|$@軈
+|$8詈
+|$0藈
+|$(腈
+?wQH
+BRVCM
+AYAZ
+BRVCL
+HcSH
+xXHcI
+ú{\\
+[A\\A]A^A_]ÐI
+BRVCD
+[A\\A]]Ð
+~2ff.
+X\rG
+@XL9
+D9-,
+?t$H
+SCFVH
+NRSU
+GNIP
+NAHC
+@`H9
+~TE1
+B\bHc48I
+B\bNcT
+;\btyD
+Hc7E1҃
+tmIc
+B\bHct8
+tvIc
+AVAUATSHcO
+l2\bH
+t+Hc
+S\bJct2\bH
+HcL2\bI
+S\bJct2\b
+Icv\b
+HcN\bI
+L9`\bt
+`\bIc
+A;\\$
+\au.A
+{\bMc
+s\bE9
+s\bJcL
+21ɉ4
+S\bHc
+S\bE9
+C\bKcD(
+S\bHcD
+S\bJc
+Hc\bH
+IcJ\b
+4 1\v
+t3Mc
+T$\bI
+AVAUM
+ATS1
+HcG M
+rSD9
+|$\bH
+ATSu
+\nuML
+h[A\\A]A^A_]ÐL
+uGUH
+=NAHC
+[A\\A]]郅
+HcS H
+HcЉC H
+\vv)E
+t]D)
+S u=
+[A\\A]A^A_]ÐH
+D$01
+|$8E
+D$(H
+\\$\bH
+\f$IcT$
+|$8L
+\\$\bI
+|$0L
+H;CHL
+o@ATI
+H;CH
+Su1H
+\\$\bE1
+@E;,$|
+t]Hc
+dtRH
+P@[A\\]
+IcM\bI
+AVAUATSH
+x[A\\A]A^A_]
+Hcʀ<
+xOt\vAǇ8
+LI\aH
+BI\aH
+z'u%
+.\az7u5
+z*u(
+.G\bz
+.\az'u%
+`[A\\A]A^]
+H[A\\A]]
+UE19
+F\a@H
+[A\\]Hk
+_\bE1
+L92u
+\b[A\\A]A^A_]ÐI
+sXu<
+tkHk
+0[A\\A]A^]
+D9h\b
+AVAUSH
+t'Hk
+[A]A^]
+AVAUATSL
+t#Mk
+D 0A\\A]A^]
+A\\A]A^]H
+D$0M
+l$X%
+tiHk
+t$\bL
+8[A\\A]A^]
+;X\b} A
+X\bHc
+t\n[A\\]
+RE9\\
+ɉ\b~PH
+P\b1ɐH
+AWAVAUATS
+tGE1
+(ff.
+A#y<H
+A#q<H
+ts1Ʌ
+~VHcǃ
+AVAUATS
+\atWI
+t$\bH
+IcT$\bI
+IcT$
+McD$
+N(Lc
+E\vM̸
+돍N(Lc
+S0I9
+\b[A\\A]]Ð
+uQf.
+`\f[A\\]
+ugf.
+wq<\b
+w6<\b
+<\tv|
+w]<g
+|$\b;
+D$\bB
+D$$A
+t$(H
+0t'H
+%ff.
+0t\fH
+P L9
+te1Ʌ
+~MHcǃ
+AVAUATA
+v^<7
+wC<g
+rlHc
+!w H
+w1<g
+7<!w
+\a~.D
+0t0H
+0tOI
+f\bE1
+T$$A
+E;>|
+D$0H
+A9D$
+T$ H
+D$ I
+0t=H
+0t'I
+0tJH
+\buv1
+0tFH
+0tDH
+<\bu\t
+t!Hc
+[A\\A
+<\bt#H
+<\bu(H
+T$\b[A\\]
+<\buVH
+HcP\b
+[A\\A]A^A_]鲑
+0t:I
+<\buV
+<\bu\vH
+C\bD9`\b
+{\b1ҹ
+C\bE1
+D9`\b~
+Lcg\bH
+tb97
+\b[A\\A]A^A_]Ð
+UE1\t
+@uOE
+VUUUH
+Ic6M
+f\bL9
+#ff.
+~#ff.
+~kHcE
+~IHcǃ
+~zIc
+}\bI9
+tg91
+A\\A]]ÐH
+|$\b1ɉ
+A\\A]]Ð
+0tZH
+0t?H
+R L9
+ti1Ʌ
+~QHcǃ
+A\\A]A^Hi
+<\tt-1
+\ft\n%
+@u\eE
+AWAVAUATA
+Hc;L9
+;}>L
+&YA1
+\bt<H
+ېHcÅ
+h[A\\A]A^A_]Ã
+HcU܅
+l$\bL
+8[A\\A]A^A_]
+\a~7D
+ATLc
+|$\bL
+@\bI9
+L$ H
+D$\a@I
+T$\bu
+\bG#+
+[A\\A]A^A_]Ð1Ʌ
+R\bI9
+E1:\b
+$Hc=
+|$\bI
+\bL9m
+I9ߋ=\\
+xEHc
+;H\bu\nH
+Hc=m
+~YHc
+\bLc'E
+\b[A\\A]]ÐH
+~\\UHc
+[A\\]ÐH
+tTE9
+?toH
+T$\bL
+4\bI9
+t1UH
+AUE1
+AVAUE1
+E9l$
+s0tt
+C4t!
+$tpA
+؋{,D
+[A\\A]A^A_]ú
+IcωC
+~'ff.
+C4tA
 <*t-H
 <Zt#H
 <_u\eH
@@ -1949,7 +2440,6 @@ nu,H
 vuTH
 <Iu\e
 Du1H
-ATSH
 <IuCH
 <Iu(H
 <Et\bH
@@ -2050,7 +2540,6 @@ Iu^H
 <Iu5H
 <_u#H
 <Iu\a
-[A\\]
 <.u\a
 <=u\a
 <:t\vH
@@ -2064,10 +2553,8 @@ E؈P)H
 UԉP,H
 ++CCUNGH
 EЋEȉ
-AUATSH
 X[A\\A]]
 ([A\\A]]
-H[A\\A]]
 8[A\\A]]
 0[A\\]
 uЉЈE
@@ -2101,7 +2588,6 @@ UȉȈE
 @t\nA
 D$\bA
 @t\bAƀ
-D$\bI
 Pu(I
 @ujL
 AVAUATUSH
@@ -2132,19 +2618,14 @@ T$\bH
 []A\\A]A^A_
 0t*Ic
 D$(t\bƄ$
-D$(H
 AWE1
 t@</
-[A\\A]A^A_]
 w\rBƄ
 tH</
 ?ff.
-AVAUATI
 ~\teI
 \aI\tƄ
 ([]A\\A]A^A_
-D$\bL
-D$\bH
 H(H)
 H0H)
 H8H)
@@ -2158,20 +2639,11 @@ AU19
 @t\aƃ
 C8HǄ$
 []A\\A]
-AWAVL
 ATUH
-T$\bL
-|$\bL
-AWAVA
 t\a1ɀ
 L\r\bH
-AWAVI
-AWAVH
-AWAVAUATSH
-AUATL
 ~1Hc
 |$\bD9
-|$\bI
 ([]A\\A]A^A_ÐAWH
 AVAUATUS
 ]A\\A]A^A_
@@ -2180,14 +2652,11 @@ W H;
 ]A\\L
 Q\bA]A^A_
 A\\A]A^A_
-H95i
 K\bL9
 r&L\t
 AUATUSH
 \b[]A\\A]
-[]A\\A]骾
 AVAUATUH
-|$\bH
 |$PH
 u9L9
 T$@A
@@ -2198,7 +2667,6 @@ l$8E
 t$(E)
 D$ D
 t$ L
-D$01
 |$019
 T$@H
 l$HM
@@ -2208,7 +2676,6 @@ H[]A\\A]A^A_
 \\$0H
 |$01
 L90r
-|$8L
 \\$0D
 L$\bI
 t:ff.
@@ -2218,7 +2685,6 @@ L$,L
 \\$ D
 T$\bD
 U\bM9
-D$0H
 T$8H
 t$0H
 l$8L
@@ -2238,7 +2704,6 @@ t$\fM
 tSff.
 z A;w\bu
 !ff.
-t$\bL
 |$(L
 A;w\bu
 tfff.
@@ -2253,7 +2718,6 @@ E\bE)O\b
 vV<0uJI
 p< u
 D$\bM
-t$\bH
 L$ D
 T$ I
 L$(1
@@ -2289,12 +2753,10 @@ D$ H
 t$ A
 T$ f
 u\bH9
-\\$\bH
 h\bucA
 |$ L
 L$`M
 D$GM
-t$(H
 d$HH
 L$8L
 D$8O
@@ -2309,7 +2771,6 @@ D$8H
 D$`H
 L$ H9
 d$HM
-D$ I
 D$ N
 D$ M
 \\$ M
@@ -2324,241 +2785,6 @@ l$\bH
 \euvHc
 L$X1
 ;k\br
-T$\bI
-@XH9
-u]Hc
-B\bHc48I
-B\bNcT
-;\btyD
-Hc7E1҃
-tmIc
-B\bHct8
-tvIc
-AVAUI
-ATSHcG\bH
-ɉ\r,e
-xBHc
-;H\bu\nH
-[A\\A]A^]
-\b[A\\A]]
-\eff.
-tWHc
-HcЀ<
-~"ff.
-x(t\nǅ
-?1ҹ\b
-?v\v%
-E1ɾDNMC
-P[A\\]ÐH
-P[A\\]
-AWAVAUATI
-<)ȹų
-L9.A
-"ff.
-t$\bI
-ƐL;0A
-AUATI
-L$(t
-\\$(H
-D$ A
-AWAVE
-ATE1
-|$aA
-AINFH
-P(fA
-P(D9
-Lc&H
-]ȉS\b
-Mc.f
-ADONf
-H\nfD
-P\f~pA
-CHANf
-([A\\A]A^A_]
-([A\\A]A^A_]Ð
-}3ff.
-AWAVAUATL
-E\bƅB
-CVRBH
-CVRBI
-S\nHc
-H[A\\A]A^A_]
-AWAVAUATM
-r'D9
-IcU D9
-L\n\bM
-\au'A
-} Ic
-Ic|\n\bH
-Icp\b
-Ic@\b
-Hcy\bH
-ATSL
-L9h\bt
-[A\\A]A^A_]ú
-*D;`
-d\b\bI
-:Ic\vA9
-<^vvH
-tJLc
-Icx\bH
-<^w\vL
-tothreadH
-G\bH#X0t
-AVAUATS1
-AUATS1
-H[A\\A]A^A_]Ð
-95B"
-AVAUA
-HcȉE
-MODME
-D$\bfA
-AWAVAUE1
-MODMH
-IcЋM
-{pE1
-SVMED
-SVMEf
-AWAVAUI
-SVMII
-HcۍH
-G\bfA
-T$\nH
-D$\fH
-8[A\\A]A^A_]
-AWAVAUA
-E1䈃q
-ATS1
-Lc6t
-$\bM9
-AUATE1
-[A\\A]A^]ÐH
-FONA
-<^w%H
-\b[A\\A]]ÐM
-fE9{
-t~HcЅɋ
-P Hǃ
-[A\\A]]
-tE[A\\]ú
-t&\bA
-Kct \b
-t&\fA9
-<&1\v
-t[Mc
-t$\bA
-Ict$\b
-t$\fI
-TNRP
-PRNTf
-A+D$\bA
-GNOPH
-tothreadD
-u\f1ɋE
-M9f\bu
-M9w\bthH
-l%\fM
-\nuML
-h[A\\A]A^A_]ÐI
-@\bL9
-AǄ$p
-IǄ$h
-IǄ$X
-(AǄ$
-AǄ$`
-IǄ$d
-X0A9
-AYAZA
-x|Lc
-%ff.
-\vv\vH
->PRNTtSD9
-tothread
-[A\\A]A^A_]ÐL
-AƄ$L
-HcK Ic
-~>ff.
-~&ff.
-SCFV
-NRSU
-GNIP
-NAHC
-@XL9
-'ff.
-LI\aH
-BI\aH
-z'u%
-.\az7u5
-z*u(
-.G\bz
-.\az'u%
-[A\\]Hk
-AVAUL
-oXATI
-teHk
-0[A\\A]A^]
-p\bMc
-|$\b;
-D$\bB
-F\a@H
-tTUH
-ZP\bf
-ZX\ff
-UE19
-[A\\A]A^A_]ÿ
-D$(1Ҿ
-l$8H
-D$0Lc
-$Ict$
-L$0M
-\\$\bI
-|$0H
-D$\bHcP\b
-I;D$HM
-T$89B
-\\$8H
-D$0Hc
-t$HfA
-IcL$ I
-t$0Hc
-Hcǉ}
-{\b\vM
-D$0v\f
-8CHAN
-t D)
-T$ t
-H;CHL
-C0Hc
-S8;B
-IcT$ H
-IcL$
-vk<7
-wC<g
-D$\fA
-tm1Ʌ
-~PHcǃ
-T$0I9
-l$\bA
-T$ H
-M\bE1
-E9e\b
-0t5H
-t.ff.
-T$0H9
-\\$\bE
-\b[A\\A]A^A_]
-l$(f
-]\bE1
-@E;e
-AVAUATSH
-L98taA
-AVAUATL
-X[A\\A]A^A_]
-R\bI9
-E1:\b
-G\a@H
-AVAUATS
-|$(H
 stapsdt
 libstdcxx
 catch
