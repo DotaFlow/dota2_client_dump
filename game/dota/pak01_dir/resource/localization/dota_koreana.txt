@@ -513,6 +513,9 @@
 		"dota_chatwheel_header_crownfall_sprays"			"왕권의 몰락 바닥그림"
 		"dota_chatwheel_header_crownfall_sprays_desc"		"왕권의 몰락 지도를 탐험하여 획득했습니다."
 
+		"dota_chatwheel_header_dark_carnival_cw"				"어둠의 카니발 휠 대화"
+		"dota_chatwheel_header_dark_carnival_cw_desc"			"어둠의 카니발 이벤트에서 획득했습니다."
+
 		"dota_chatwheel_header_monster_hunter_sprays"			"몬스터 헌터 바닥그림"
 		"dota_chatwheel_header_monster_hunter_sprays_desc"		"몬스터 헌터 이벤트에서 획득했습니다."
 		
@@ -46104,6 +46107,9 @@
 		"DOTA_Overworld_Inventory_HeroTrayTitle_2"	"다음 영웅을 플레이하고 <span class=\"TokenName\">{s:token_name_0}</span> 및 <span class=\"TokenName\">{s:token_name_1}</span> 주화 획득:"
 		"DOTA_Overworld_Inventory_HeroTrayTitle_3"	"다음 영웅을 플레이하고 <span class=\"TokenName\">{s:token_name_0}</span>, <span class=\"TokenName\">{s:token_name_1}</span>, <span class=\"TokenName\">{s:token_name_2}</span> 주화 획득:"
 
+		"DOTA_Overworld_Inventory_HeroTrayNoHeroesForTokens"		"선택한 이용권 조합을 제공하는 영웅이 없습니다."
+		"DOTA_Overworld_Inventory_HeroTrayTooManyTokens"		"선택한 이용권이 너무 많습니다. 각 영웅은 정확히 3장의 이용권을 제공합니다."
+		"DOTA_Overworld_Inventory_HeroTrayPremium"		"<b>비밀의 방</b> 이용권은 어둠의 카니발 상점에서 구매할 수 있는 <b>{s:expansion_pack_name}</b>에 포함되어 있습니다. 이 이용권을 사용하여 독특한 보상이 있는 특별 방을 해제할 수 있습니다."
 		"DOTA_Crownfall_Encounter_UnableToClaimReward"	"보상 요청 불가"
 		"DOTA_Overworld_EncounterShortcuts"				"지름길"
 		"DOTA_Overworld_EncounterShortcut_token_trader"		"주화 상인"
@@ -50175,7 +50181,7 @@
 
 		"DOTA_DarkCarnival_Store_AutomatonPersona"		"자동 기계 인격체"
 		"DOTA_DarkCarnival_Store_AlreadyOwned"		"소유함"
-
+		
 		"DOTA_DarkCarnival_Store_AnimName_Spawn"	"생성"
 		"DOTA_DarkCarnival_Store_AnimName_Run"		"달리기"
 		"DOTA_DarkCarnival_Store_AnimName_Attack"	"공격"
@@ -50205,67 +50211,248 @@
 		"DOTA_DarkCarnival_Overworld_Tokens"	"이용권"
 		"DOTA_DarkCarnival_Overworld_Trade"		"교환"
 		"DOTA_DarkCarnival_Encounter_Oracle"				"예지자"
-"DOTA_CandyShopName_Dark_Carnival"		"카니발 사탕전문점"
+"DOTA_DarkCarnival_Encounter_TicketSmelter_NothingLeft"		"현재 이용권 용광로에서 만들어 낼 수 있는 모든 것을 녹였습니다."
+		"DOTA_DarkCarnival_Encounter_TicketSmelter_SeeingStone:f"					"{num_seeing_stones, plural, one{예견석 {d:num_seeing_stones}개} other{예견석 {d:num_seeing_stones}개}}"
+
+		
+		"DOTA_CandyShopName_Dark_Carnival"		"카니발 사탕전문점"
+		"DOTA_DarkCarnival_View_Candyworks"		"카니발 사탕전문점 보기"
+		"DOTA_DarkCarnivalStore_View"			"<b>어둠의 카니발 상점</b> 보기"
+		"DOTA_DarkCarnivalStore_CoinsInfo"		"어둠의 카니발 지도를 탐험하면 어둠의 카니발 할인 동전을 획득합니다.<br><br>이벤트가 끝날 때까지, <b>할인 동전 10개</b>를 교환하여 어둠의 카니발 상점에서 가격이 <b>{s:regional_coin_currency}</b> 이상인 모든 품목에 약 <b>{s:regional_coin_currency}</b>의 할인 혜택을 받을 수 있습니다. (정확한 할인 금액은 지역 및 통화에 따라 다릅니다.)<br><br>할인 동전 <b>{d:total_free_coins}개</b>는 무료로 획득하며, 비밀의 방 팩을 이용하면 <b>{d:total_explorer_coins}개</b>를 추가로 획득할 수 있습니다."
+		"DOTA_DarkCarnivalStore_ExtraRewards"		"추가 보상:"
+		"DOTA_DarkCarnivalStore_ViewInOverworld"		"열차에서 보기"
+		
+		"DOTA_DarkCarnival_HowToPlay_Coins_2"	"<b>할인 동전 10개</b>를 모으면, 교환하여 <b>어둠의 카니발 상점</b>에서 가격이 {s:regional_coin_currency} 이상인 모든 품목에 약 {s:regional_coin_currency}의 할인을 받을 수 있습니다. (가격이 {s:regional_coin_currency}을(를) 초과하는 아이템이나 번들은 무료가 됩니다.)"
+		"DOTA_DarkCarnival_TrainCarCompletion"	"<b>{d:basic_total_earned}</b> / {d:basic_total_max} 완료"
 		"DOTA_DarkCarnival_ProgressAvailable"	"진행 가능"
+		"DOTA_DarkCarnival_FortunesAvailable"	"운세 이용 가능 x{d:ticket_count}장"
+
+		"DOTA_DarkCarnival_OracleStory_RewardTooltip_FortuneCount"			"운세 <b>x{d:fortunes_required}개</b> 밝히기"
+		"DOTA_DarkCarnival_OracleStory_RewardTooltip_FortunesNeeded"		"<b>{d:fortunes_needed}</b>개 더 필요"
+		"DOTA_DarkCarnival_OracleStory_RewardTooltip_ClaimPreviousNode"		"먼저 이전 보상을 받으세요"
+
+		"DOTA_DarkCarnivalLeaderboard_Act11_Title"	"한밤의 질주 진행도"
+
+		"DOTA_DarkCarnivalProfileCard_Act1"			"한밤의 질주 순위"
+
+		"DOTA_DarkCarnivalRewardType_Coins"					"할인 동전"
 		"DOTA_DarkCarnivalRewardType_Candy"					"사탕 자루"
 		"DOTA_DarkCarnivalRewardType_Treasures"				"보물"
 		"DOTA_DarkCarnivalRewardType_Goodies"				"카니발 특전 물품"
+		"DOTA_DarkCarnivalRewardType_Oracle"				"예견석"
+		"DOTA_DarkCarnivalRewardType_CompletionSet"			"지도 완료 세트"
+
+		"DOTA_DarkCarnivalReward_Act1_Title"				"한밤의 질주 보상"
 		"DOTA_DarkCarnivalReward_View_Treasure"				"보물 보기"
 
+		"DOTA_DarkCarnivalRewardType_Candy_Description"				"많은 분의 요청에 힘입어, 사탕전문점이 돌아왔습니다. 충치를 유발하는 달콤한 것들의 여분을 새로운 영웅 세트, 와드, 짐꾼, 그 외 여러 가지로 바꿀 수 있도록 도와줄 겁니다."
+		"DOTA_DarkCarnivalRewardType_Treasures_Description"			"우리 영웅들이 어둠의 카니발을 주제로 한 복장을 유행에 맞춰 사악한 서커스 분위기로 공들여 차려 입고 중앙 무대로 나섭니다. 카니발을 주제로 한 15가지 아이템 세트를 가득 담아 새롭게 선보이는 보물을 풀어보세요."
+		"DOTA_DarkCarnivalRewardType_Goodies_Description"			"전시대 장식, 로딩 화면, 바닥그림, 이모티콘으로 자신을 마음껏 표현해 보세요."
+		"DOTA_DarkCarnival_SeeTheOracle"							"예지자 보기"
+		"DOTA_DarkCarnival_FreeTrackLabel"							"주 이야기"
+		"DOTA_DarkCarnival_SecretRoomLabel"							"비밀의 방"
+
+		"DOTA_DarkCarnival_SecretRoomsPack_RequiredForRewardsClaims"		"비밀의 방 팩이 필요합니다.<br>클릭하여 구매"
+		"DOTA_DarkCarnival_OverworldInventory_MultiselectInfo"	"도타를 플레이하고 영웅에 따라 이용권을 획득하세요.<br/><br/>보관함이나 지도에서 이용권을 클릭하면 해당 이용권을 획득할 수 있는 영웅이 누구인지 확인할 수 있습니다.<br/><br/>SHIFT를 길게 누르면 동시에 여러 이용권이 선택됩니다."
 		"DOTA_DarkCarnival_Token_TheFool"			"바보"
+		"DOTA_DarkCarnival_Token_TheMagician"		"마술사"
+		"DOTA_DarkCarnival_Token_TheHighPriestess"	"대여사제"
+		"DOTA_DarkCarnival_Token_TheEmpress"		"여제"
+		"DOTA_DarkCarnival_Token_TheEmperor"		"황제"
+		"DOTA_DarkCarnival_Token_TheHierophant"		"교황"
 		"DOTA_DarkCarnival_Token_TheLovers"			"연인"
+		"DOTA_DarkCarnival_Token_TheChariot"		"전차"
 		"DOTA_DarkCarnival_Token_Strength"			"힘"
+		"DOTA_DarkCarnival_Token_TheHermit"			"은자"
+		"DOTA_DarkCarnival_Token_WheelOfFortune"	"운명의 바퀴"
 		"DOTA_DarkCarnival_Token_Death"			"죽음"
 		"DOTA_DarkCarnival_Token_TheTower"		"탑"
+		"DOTA_DarkCarnival_Token_TheSun"		"태양"
 		"DOTA_DarkCarnival_Token_Judgement"		"심판"
 		"DOTA_DarkCarnival_Token_TheWorld"		"세계"
 		"DOTA_DarkCarnival_Token_Premium"		"프리미엄"
+		"DOTA_DarkCarnival_NoTicketsAvailable"	"쓸 수 있는 이용권 없음"
+
+		"DOTA_DarkCarnival_Tarot_TheFool"			"바보"
+		"DOTA_DarkCarnival_Tarot_TheMagician"		"마술사"
+		"DOTA_DarkCarnival_Tarot_TheHighPriestess"	"대여사제"
+		"DOTA_DarkCarnival_Tarot_TheEmpress"		"여제"
 		"DOTA_DarkCarnival_Tarot_TheLovers"			"연인"
 		"DOTA_DarkCarnival_Tarot_Strength"			"힘"
+		"DOTA_DarkCarnival_Tarot_TheHermit"			"은자"
+		"DOTA_DarkCarnival_Tarot_WheelOfFortune"	"운명의 바퀴"
 		"DOTA_DarkCarnival_Tarot_Death"				"죽음"
+		"DOTA_DarkCarnival_Intro_PlayDota"	"도타를 플레이하고 이용권을 획득"
 		"DOTA_DarkCarnival_Intro_Oracle"	"예지자"
 		"DOTA_DarkCarnival_Intro_Coins"		"동전"
+		"DOTA_DarkCarnival_Intro_Coins_2"		"어둠의 카니발 할인 동전은 어둠의 카니발 이벤트 기간에만 교환할 수 있습니다. 정확한 할인액은 지역 및 통화에 따라 다릅니다."
+		
 		"DOTA_DarkCarnival_Intro_Candyworks"		"카니발 사탕전문점"
+		"DOTA_DarkCarnival_Intro_Candyworks_1"		"지도에서 다른 경로를 탐험하면 사탕 자루를 획득할 수 있습니다."
+		"DOTA_DarkCarnival_Intro_Candyworks_2"		"지도에서 <b>카니발 사탕전문점</b>으로 진행하고 나면, 사탕을 다양한 아이템이나 보물로 교환할 수 있습니다. 운이 좋으면, 신비 아이템을 구할 수도 있습니다!"
+		"DOTA_DarkCarnival_Intro_Candyworks_3"		"현재 사탕전문점에서 제시하는 항목 중 원하는 게 없다면, <b>재배정</b>을 사용하여 새로운 항목을 생성할 수 있습니다. <b>매치에서 승리</b>할 때마다 <b>재배정 기회를 더 획득</b>합니다."
+		
 		"DOTA_DarkCarnival_Intro_Treasures"		"보물 및 기타 보상"
+		"DOTA_DarkCarnival_Intro_Treasures_1"		"지도상의 일부 장소에서는 어둠의 카니발 <b>경이의 보물</b>이 보상으로 지급됩니다. 해당 보물에는 처음 선보이는 치장 세트가 들어 있으며 곧바로 열 수 있습니다. 보물은 어둠의 카니발 상점에서 추가로 구매할 수 있습니다."
+		"DOTA_DarkCarnival_FortuneReward_SmallEconItem"	"바닥그림 및 이모티콘 획득"
+		"DOTA_DarkCarnival_FortuneReward_Rerolls"		"달콤 상점 재배정"
+
+		"DOTA_DarkCarnival_Fortune_RevealFortuneButtonLabel"			"운세 보기 <Img class=\"ButtonIcon\" src=\"file://{images}/events/dark_carnival/oracle/oracle_coin.png\"/> <span class=\"Numbers\">x1</span>"
+		"DOTA_DarkCarnival_Fortune_RevealNextFortuneButtonLabel"		"다음 운세 x1"
+
+		"DOTA_DarkCarnival_FortuneReward_k_eOverworldFortuneReward_ThreeRandomTokens"	"무작위 이용권 3장"
+		"DOTA_DarkCarnival_FortuneReward_k_eOverworldFortuneReward_OracleCoin"			"예견석 1개"
+		"DOTA_DarkCarnival_FortuneReward_k_eOverworldFortuneReward_CandyBagSmall"		"작은 사탕 주머니"
+		"DOTA_DarkCarnival_FortuneReward_k_eOverworldFortuneReward_CandyBagLarge"		"큰 사탕 주머니"
+		"DOTA_DarkCarnival_FortuneReward_k_eOverworldFortuneReward_BalloonCharges"		"풍선 능력 레벨 +1"
+		"DOTA_DarkCarnival_FortuneReward_k_eOverworldFortuneReward_FireworksCharges"	"불꽃놀이 능력 레벨 +1"
+		"DOTA_DarkCarnival_FortuneReward_k_eOverworldFortuneReward_OneNodeUnlock"		"경로 해제 1개"
+		"DOTA_DarkCarnival_FortuneReward_k_eOverworldFortuneReward_TwoNodeUnlocks"		"경로 해제 2개"
+		"DOTA_DarkCarnival_FortuneReward_k_eOverworldFortuneReward_TwoLeastTokens"		"가장 적게 보유한 이용권 2장"
+		"DOTA_DarkCarnival_FortuneReward_k_eOverworldFortuneReward_ThreeMostTokens"		"가장 많이 보유한 이용권 3장"
+		"DOTA_DarkCarnival_FortuneReward_k_eOverworldFortuneReward_Rerolls"				"사탕전문점 재배정 3회"
+		"DOTA_DarkCarnival_FortuneReward_k_eOverworldFortuneReward_PieCharges"			"던질 수 있는 파이 능력 레벨 +1"
+		"DOTA_DarkCarnival_FortuneReward_k_eOverworldFortuneReward_LastHeroPlayedTokens"	"마지막으로 플레이한 영웅의 이용권"
+
+		"DOTA_DarkCarnival_FortuneTeller_BalloonChargesDescription"						"게임 중에 풍선을 생성할 수 있는 시즌 카니발 풍선 능력의 1레벨을 얻습니다.<br>레벨이 높을수록 추가 충전, 풍선 종류 등을 해제할 수 있습니다!"
+		"DOTA_DarkCarnival_FortuneTeller_PieChargesDescription"							"게임 중에 친구나 적에게 파이를 던질 수 있는 시즌 카니발 파이 능력의 1레벨을 얻습니다.<br>레벨이 높을수록 추가 충전, 튕기는 파이 등을 해제할 수 있습니다!"
+		"DOTA_DarkCarnival_FortuneTeller_FireworksChargesDescription"					"게임 중에 불꽃놀이를 발사할 수 있는 시즌 카니발 불꽃놀이 능력 1레벨을 얻습니다. 레벨이 높을수록 추가 충전, 더 밝게 터지는 불꽃놀이 등을 해제할 수 있습니다!"
+		"DOTA_DarkCarnival_FortuneTeller_PathUnlockDescription"							"보통 요구되는 이용권을 소모하지 않고 어떤 노드든 즉시 해제합니다."
+
+		"DOTA_DarkCarnival_FortuneTeller_TokensReceived"								"예지자에게서 이 이용권을 받았습니다."
+
+		"DOTA_DarkCarnival_FortuneTeller_Welcome"										"예지자의 공간에 잘 오셨습니다"
+		"DOTA_DarkCarnival_FortuneTeller_WelcomeDescription"							"도타 게임을 플레이하여 하루에 한 번 예견석 한 개를 획득하세요. 이곳에서 사용하면 운세를 확인하고 보상을 받을 수 있습니다!"
+		"DOTA_DarkCarnival_FortuneTeller_ResourceCount"									"예견석 x{d:ticket_count}개"
+		"DOTA_DarkCarnival_FortuneTeller_DescriptionSubtitle"							"도타 게임을 플레이하여 예견석 획득"
+		"DOTA_DarkCarnival_FortuneTeller_DailySeeingStoneTitle"							"일일 예견석"
+		"DOTA_DarkCarnival_FortuneTeller_OverworldTokens"								"어둠의 카니발 이용권"
+		"DOTA_DarkCarnival_FortuneTeller_StoryInformation"								"계속해서 예지자 이야기를 진행해 나가면서 운세를 밝히고 추가 보상을 해제하세요."
+
+		"DOTA_DarkCarnival_FortuneTeller_AvailableToEarn"								"획득 가능"
 		"DOTA_DarkCarnival_FortuneTeller_Earned"										"획득"
+		"DOTA_DarkCarnival_FortuneTeller_SeeingStoneCountdown"							"{t:d:t:m:countdown_time} 후 초기화"
+		"DOTA_DarkCarnival_FortuneTeller_ReadyToUnlock"									"해제 준비 완료"
+
 		"DOTA_DarkCarnival_FortuneTeller_ClaimReward"									"보상 요청"
+		"DOTA_DarkCarnival_FortuneTeller_OracleStoryTitle"								"예지자의 이야기 따라가기"
+		"DOTA_DarkCarnival_FortuneTeller_TarotCardCollectionUnlocked:f"					"{unlocked, plural, other{장 해제됨}}"
+		"DOTA_DarkCarnival_ItemRecieved_SeeingStone:f"									"{GrantPoints, plural, one{예견석 {d:GrantPoints}개} other{예견석 {d:GrantPoints}개}}"							
+
+		"DOTA_DarkCarnival_FortuneTeller_Reward"				"{s:reward_tarot_card_name}의 보상"
+
+		"DOTA_DarkCarnival_Dashboard_GetFortune"				"운세를 밝혀내 보세요!"
 		"DOTA_DarkCarnival_FortuneDescription"					"%s1 %s2 %s3"
-"DOTA_CandyShop_Dark_Carnival_Upgrade_Trades"		"더 많은 사탕 거래 옵션"
+
+		"DOTA_DarkCarnival_ClickToStart"						"클릭하여 시작"
+
+		"DOTA_PlusPostGame_DarkCarnivalProgress"			"어둠의 카니발 이벤트 진행도"
+
+		"DOTA_DarkCarnival_NodeBreaker"						"해제 <img class=\"NodeUnlockIcon\" src=\"file://{images}/events/dark_carnival/tokens/token_icons/node_unlock.svg\" />x1개 사용"
+		"DOTA_DarkCarnival_NodeBreaker_Tooltip"				"다른 이용권 대신 경로 해제 이용권을 사용합니다."
+		
+		// Dark Carnival candy shop
+		"DOTA_Dark_Carnival_CandyworksDisabled"				"현재 카니발 사탕전문점은 닫혀 있습니다. 지도에서 해제하면 열립니다."
+		"DOTA_Dark_Carnival_CandyworksExpired"				"카니발 사탕전문점이 문을 닫았습니다. 이벤트가 완전히 종료되었습니다."
+
+		"DOTA_CandyShop_Dark_Carnival_Upgrade_Shelf"		"추가 카니발 사탕전문점 보상 선반"
+		"DOTA_CandyShop_Dark_Carnival_Upgrade_Trades"		"더 많은 사탕 거래 옵션"
 		"DOTA_CandyShop_Dark_Carnival_Upgrade_Inventory"	"추가 사탕 보관함 공간"
 
 		"DOTA_CandyShop_Dark_Carnival_Title"				"카니발 사탕전문점"
 		"DOTA_CandyShop_Dark_Carnival_Title_Short"			"카니발 사탕전문점"
 		"DOTA_CandyShop_Dark_Carnival_Subtitle"				"그리고 보물 전문점"
+		"DOTA_CandyShop_Dark_Carnival_Subheader"			"막대사탕으로 약탈품을! 초코볼로 전리품을!"
+		"DOTA_CandyShop_Dark_Carnival_Rules_01"				"사탕 자루를 어둠의 카니발 지도를 탐험하며 수집하거나 <b>어둠의 카니발 상점</b>에서 구매합니다."
+		"DOTA_CandyShop_Dark_Carnival_Rules_02"				"사탕 모둠을 교환하여 <b>왕권의 몰락 할인 동전</b>, <b>불멸 아이템</b>, <b>신비 아이템</b> 등 다양한 보상을 차지해 보세요."
 		"DOTA_CandyShop_Dark_Carnival_Rules_03"				"필요한 재료가 부족하면 보관함에 있는 조각을 없는 재료로 <b>교환</b>할 수 있습니다."
 		"DOTA_CandyShop_Dark_Carnival_Rules_04"				"시실과 퀄트의 제안이 맘에 들지 않나요? <b>도타를 플레이하고 재배정 기회를 받아</b> 품목을 바꿔보세요. 한 주당 최대 10회의 재배정 기회를 받을 수 있습니다."
+		"DOTA_CandyShop_Dark_Carnival_Rules_05"				"카니발 사탕전문점을 더 많이 방문하면 추가 보상과 거래로 <b>상점을 업그레이드</b>할 수 있습니다."
+
+		"DOTA_CandyShop_Dark_Carnival_Entry_Processing"		"카니발 사탕전문점 들어가는 중"
+		"DOTA_CandyShop_Dark_Carnival_Entry_Failed_Title"	"카니발 사탕전문점이 닫혔습니다"
 		"DOTA_CandyShop_Dark_Carnival_Entry_Failed_Desc"	"나중에 다시 시도하세요(오류: {d:error_code})"
 
+		"DOTA_CandyShop_Dark_Carnival_Visit_Title"			"새로운 카니발 사탕전문점 방문"
 		"DOTA_CandyShop_Dark_Carnival_Visit_Description"	"모든 상점을 방문하여 강력한 특전을 누리세요!"
+		"DOTA_CandyShop_Dark_Carnival_Visit_Upgrade_1"		"새로운 카니발 사탕전문점마다 무료 사탕 +3개"
+		"DOTA_CandyShop_Dark_Carnival_Visit_Upgrade_2"		"카니발 사탕전문점 아이템 추가 선반 +1개"
 		"DOTA_CandyShop_Dark_Carnival_Visit_Upgrade_3"		"사탕 교환 거래 추가 +1회"
 		"DOTA_CandyShop_Dark_Carnival_Visit_Upgrade_4"		"보관함 공간 추가 +10칸"
 		"DOTA_CandyShop_Dark_Carnival_Entry"				"어서 오세요"
+		"DOTA_CandyShop_Dark_Carnival_Reroll_Tooltip"		"사탕전문점 재배정을 사용하면 무작위로 선택된 전리품 모음이 나타납니다. 도타를 플레이하면 재배정 기회를 더 많이 얻을 수 있습니다."
+		"DOTA_DarkCarnival_Reward_CandyShopShelfUpgrade"	"카니발 사탕전문점 보상 추가 선반"
+		"DOTA_DarkCarnival_Reward_CandyShopRecipeUpgrade"	"카니발 사탕전문점 추가 조합법"
+		"DOTA_DarkCarnival_Reward_CandyShopInventoryUpgrade"	"카니발 사탕전문점 가방 추가 칸"
+		"DOTA_DarkCarnival_Reward_OracleCoin"				"예견석"
+		
 		"DOTA_Dark_Carnival_Encounter_TokenTrader_TokensReceivedPopupTitle"		"거래 성공"
+		"DOTA_Dark_Carnival_Encounter_TokenExchangeFailed"						"이용권 교환 실패"
+		
 		"DOTA_Dark_Carnival_Encounter_TokenTrader_Trade"					"교환"
 		"DOTA_Dark_Carnival_Encounter_TokenTrader_Reset"					"교환 재설정"
+		"DOTA_Dark_Carnival_Encounter_TokenTrader_Trade3Title"				"<span class='Emphasis'>같은 이용권 3장</span> 교환"
+		"DOTA_Dark_Carnival_Encounter_TokenTrader_Trade4Title"				"<span class='Emphasis'>아무 이용권 4장</span> 교환"
+		"DOTA_Dark_Carnival_Encounter_TokenTrader_TradeAny2Title"			"<span class='Emphasis'>아무 이용권 2장</span> 교환"
+		"DOTA_Dark_Carnival_Encounter_TokenTrader_Trade3RandomTitle"		"<span class='Emphasis'>아무 이용권 3장</span> 교환"
+		"DOTA_Dark_Carnival_Encounter_TokenTrader_Trade4RandomTitle"		"<span class='Emphasis'>아무 이용권 4장</span> 교환"
+		"DOTA_Dark_Carnival_Encounter_TokenTrader_TradeRandomDescription"	"교환한 것과 같은 이용권은 받지 않습니다."
+		"DOTA_Dark_Carnival_Encounter_TokenTrader_TradeThreeScrapTitle"		"<span class='Emphasis'>{s:scrap_name} 이용권 3장</span> 교환"
+		"DOTA_Dark_Carnival_Encounter_TokenTrader_TradeSixScrapTitle"		"<span class='Emphasis'>{s:scrap_name} 이용권 6장</span> 교환"
+		"DOTA_Dark_Carnival_Encounter_TokenTrader_ChooseInventory"			"보관함에서 이용권을 선택하세요"
+		"DOTA_Dark_Carnival_Encounter_TokenTrader_ChooseResultToken"		"받을 이용권을 선택하세요"
+		
 		"DOTA_Dark_Carnival_EncounterName_CandyShop"		"카니발 사탕전문점"
 		"DOTA_Dark_Carnival_EncounterDesc_CandyShop"		"온갖 맛있는 사탕을 쓸 수 있는 곳입니다."
 
 		"DOTA_CandyShop_Dark_Carnival_PostGame_RerollsEarned"		"주간 재배정 획득: {s:weekly_earned_s} / {d:weekly_max}"
 		"DOTA_CandyShop_Dark_Carnival_PostGame_RerollCap"			"지금은 재배정 기회를 더 획득할 수 없습니다."
+		"DOTA_CandyShop_Dark_Carnival_PostGame_RerollCapUnlocked"	"카니발 사탕전문점에서 재배정 기회 사용"
+		"DOTA_CandyShop_Dark_Carnival_PostGame_ShopLocked"			"어둠의 카니발 열차를 탐험하고 카니발 사탕전문점을 찾습니다."
 		"DOTA_CandyShop_Dark_Carnival_PostGame_WeeklyProgressComplete"	"<span class=\"ResetTime\">{t:d:t:T:countdown_time}</span> 후 추가 획득"
 		
 		"DOTA_DarkCarnival_RewardDecoration"				"전시대 장식"
 
+		"DOTA_CandyShop_Dark_Carnival_CandyType_1"			"솔여울 피스타치오 열매"
+		"DOTA_CandyShop_Dark_Carnival_CandyType_2"			"연무항 달달과자"
+		"DOTA_CandyShop_Dark_Carnival_CandyType_3"			"졸라크 돌사탕"
+		"DOTA_CandyShop_Dark_Carnival_CandyType_4"			"푸른심장 입가심나사"
+		"DOTA_CandyShop_Dark_Carnival_CandyType_5"			"단신족 달콤 코일"
+
+		"DOTA_Dark_Carnival_VisualNovel_Autoplay"			"자동 재생"
+
+		"DOTA_Dark_Carnival_PostGame_WinEarned"					"{g:dota_hero_name:hero_id}|으로|로| <b>승리</b>하여 다음 보상 획득:"
+		"DOTA_Dark_Carnival_PostGame_LossEarned"				"{g:dota_hero_name:hero_id}|으로|로| 승리하여 다음 이용권 중 무작위로 획득:"
+		"DOTA_Dark_Carnival_PostGame_TurboLossEarned"			"{g:dota_hero_name:hero_id}|으로|로| 진행한 게임에서 이용권을 획득하지 못했습니다."
 		"DOTA_Dark_Carnival_PostGame_UnclaimedMapProgress"		"지도 진행 가능!"
+		"DOTA_Dark_Carnival_PostGame_GoToOverworld"				"열차로 가기"
+		"DOTA_Dark_Carnival_PostGame_TurboDisclaimer"			"쾌속 매치에서는 승리 시 이용권 2장이 지급되며, 패배 시는 아무것도 지급되지 않습니다."
+
+		"DOTA_Dark_Carnival_PostGame_FortuneTellerProgressEarned"		"이미 일일 예견석을 획득했습니다."
+		"DOTA_Dark_Carnival_PostGame_FortuneTellerProgress"				"<span class=\"ResetTime\">{t:d:t:m:countdown_time}</span> 후 초기화"
+		"DOTA_Dark_Carnival_PostGame_FortuneTellerMaxProgress"			"이미 {d:earned_coins}/{d:max_coins}개를 획득했습니다. <span class=\"ResetTime\">{t:d:t:m:countdown_time}</span> 후 초기화됩니다"
+		
+		"DOTA_Dark_Carnival_The_Train"									"열차"
 		"DOTA_Dark_Carnival_Store"										"어둠의 카니발 상점"
 		"DOTA_Dark_Carnival_Candyworks"									"사탕전문점"
 		"DOTA_Dark_Carnival_The_Oracle"									"예지자"
 
+		"DOTA_Dark_Carnival_OverworldCell_TokensNeeded"					"다음 보상에 필요한 이용권"
+
+		"npc_dota_hero_axe_carnival_cosmetic_group_name"				"자동 기계"
+		"npc_dota_hero_oracle_carnival_cosmetic_group_name"				"자동 기계"
+		"npc_dota_hero_legion_commander_carnival_cosmetic_group_name"	"자동 기계"
+		"npc_dota_hero_bristleback_carnival_cosmetic_group_name"		"자동 기계"
+		"npc_dota_hero_morphling_carnival_cosmetic_group_name"			"자동 기계"
+
+		
 		// Dark Carnival Lockpicking
 		"DOTA_DarkCarnival_Lockpicking_Paused"			"일시 정지됨"
 		"DOTA_DarkCarnival_Lockpicking_LeaveGame"					"게임 나가기"
 		"DOTA_DarkCarnival_Lockpicking_ScoringTotal"	"총점"
 		"DOTA_DarkCarnival_Lockpicking_PlayAgain"		"다시 하기"
+		"DOTA_DarkCarnival_Lockpicking_Title"			"자물쇠 따기"
+		"DOTA_DarkCarnival_Lockpicking_GameDesc"		"슬라크가 감방에서 탈출하도록 도와줘야 합니다!"
 		"DOTA_DarkCarnival_Lockpicking_Leaderboard_HeaderFriends"	"친구"
 		"DOTA_DarkCarnival_Lockpicking_Leaderboard_Score"			"점수"
 		"DOTA_DarkCarnival_Lockpicking_Scoring"						"득점"
@@ -50278,14 +50465,60 @@
 		"DOTA_DarkCarnival_Lockpicking_Help"						"도움말"
 		"DOTA_DarkCarnival_Lockpicking_Won"							"승리했습니다!"
 		"DOTA_DarkCarnival_Lockpicking_Lost"						"패배했습니다..."
+		"DOTA_DarkCarnival_Lockpicking_ScoringUnlocks"				"따기 성공({d:unlock_count} x {d:score_per_unlock}):"
+		"DOTA_DarkCarnival_Lockpicking_Help_HowToPlay"				"시간이 다 가기 전에 최대한 많은 자물쇠를 성공적으로 따야 합니다."
 		"DOTA_DarkCarnival_Lockpicking_Help_Pick"					"따기"
+		"DOTA_DarkCarnival_Lockpicking_Help_Boost"					"속도 부스트(길게 누르기)"
+		"DOTA_DarkCarnival_Lockpicking_Help_Pick_Details"			"자물쇠 따개가 강조 표시된 막대에 도달하면 활성화됩니다.\n\n막대를 놓치면 짧은 시간 동안 따개가 비활성화됩니다.\n\n파란색 막대로는 추가 시간을 얻습니다."
+		"DOTA_DarkCarnival_Lockpicking_Help_Boost_Details"			"길게 눌러 속도 부스트를 계속 사용"
+		"DOTA_DarkCarnival_Lockpicking_Scoring_SuccessfulPick"		"따기 성공 1회당"
+		"DOTA_DarkCarnival_EncounterStatus_Lockpicking"				"어둠의 카니발: 자물쇠 따기"
+		"DOTA_DarkCarnival_Lockpicking_HighScores"					"최고 점수"
+		"DOTA_DarkCarnival_Lockpicking_Resume"						"재개하기 [F9]"
 		"DOTA_DarkCarnival_Lockpicking_GameOver"					"게임 종료"
 		"DOTA_DarkCarnival_Lockpicking_Score"						"점수"
 		"DOTA_DarkCarnival_Lockpicking_TimeRemaining"				"남은 시간"
-"DOTA_DarkCarnival_SlarkJailbreak_Level"					"레벨"
+
+		// Dark Carnival: Slark Jailbreak
+		"DOTA_DarkCarnival_SlarkJailbreak_Title"					"장화 파괴자"
+		"DOTA_DarkCarnival_SlarkJailbreak_GameDesc"					"전리품을 모으세요! 장화를 파괴하세요!"
+		"DOTA_DarkCarnival_EncounterStatus_SlarkBreakout"			"어둠의 카니발: 장화 파괴자"
+		"DOTA_DarkCarnival_SlarkJailbreak_Scoring_PerBlock"			"파괴한 벽돌 1개당"
+		"DOTA_DarkCarnival_SlarkJailbreak_Scoring_PerBonusBlock"	"파괴한 보너스 벽돌 1개당"
+		"DOTA_DarkCarnival_SlarkJailbreak_Scoring_PerLevel"			"완료한 1레벨당"
+		"DOTA_DarkCarnival_SlarkJailbreak_ControlPaddle"			"수레 이동"
+		"DOTA_DarkCarnival_SlarkJailbreak_ControlLaunch"			"장화 던지기"
+		"DOTA_DarkCarnival_SlarkJailbreak_Level"					"레벨"
 		"DOTA_DarkCarnival_SlarkJailbreak_Lives"					"장화"
 		"DOTA_DarkCarnival_SlarkJailbreak_Score"					"점수"
+		"DOTA_DarkCarnival_SlarkJailbreak_MoveHint"					"수레 위치 고정"
+		"DOTA_DarkCarnival_SlarkJailbreak_LaunchHint"				"장화 던지기"
+
+		"DOTA_DarkCarnival_Minigames_NewHighScore"					"새로운 최고 점수!"
+		
+		"DOTA_Overworld_EncounterShortcut_lockpicking"		"자물쇠 따기"
+		"DOTA_Overworld_EncounterShortcut_slark_jailbreak"	"장화 파괴자"
+
+		"DOTA_Minigame_Encounter_RewardTitle"				"{d:reward_score_required}점"
+
 		"DOTA_DarkCarnival_Overworld_Minigames"						"미니 게임"
+
+		"DOTA_DarkCarnival_Overworld_Act1_Part2_Locked_Countdown"	"{s:time_until_unlock} 후 해제됩니다"
+		"DOTA_DarkCarnival_Overworld_Act1_Part3_Locked_Countdown"	"{s:time_until_unlock} 후 해제됩니다"
+
+		"DOTA_DarkCarnival_Overworld_UsePathUnlockTokenPopup_Title"		"경로 해제 이용권 사용"
+		"DOTA_DarkCarnival_Overworld_UsePathUnlockTokenPopup_Question"	"경로 해제 이용권을 사용하여 이 경로를 즉시 해제하시겠습니까?"
+
+		"DOTA_DarkCarnival_TooltipEligibleForEventProgress"				"이벤트 진행도에 반영될 수 있는 설정입니다."
+
+		"DOTA_DarkCarnival_ChatWheelMessage"							"휠 대화 메시지"
+
+		"dota_chatwheel_translation_darkcarnival_money_and_bones"		"돈과 뼈! 돈과 뼈!"
+		"dota_chatwheel_translation_darkcarnival_are_we_the_idiots"		"그 멍청이들이 우리야?"
+		"dota_chatwheel_translation_darkcarnival_wow"					"와!"
+		"dota_chatwheel_source_fishwitch"								"그린들플릿"
+		"dota_chatwheel_source_hoodwink"								"후드윙크"
+		"dota_chatwheel_source_clown"									"클래런스"
 
 		"DOTA_Axe_Missing"			"도끼전사가 없어 참여할 수 없습니다"
 
