@@ -123,6 +123,7 @@
 
 		"DOTA_Purchase_One"		"購入1"
 		"DOTA_Purchase_Nine"	"購入9"
+		"DOTA_Purchase_Eleven"	"購入11"
 		"DOTA_Purchase_CC_Bundle"	"購入13"
 
 		"DOTA_Keybind_ALT"		"ALT"
@@ -512,9 +513,16 @@
 		"dota_chatwheel_header_crownfall_sprays"			"クラウンフォール・スプレー"
 		"dota_chatwheel_header_crownfall_sprays_desc"		"クラウンフォールマップを探索すると獲得。"
 
+		"dota_chatwheel_header_dark_carnival_cw"				"ダークカーニバルのチャットホイール"
+		"dota_chatwheel_header_dark_carnival_cw_desc"			"ダークカーニバルイベントで獲得しました。"
+
 		"dota_chatwheel_header_monster_hunter_sprays"			"モンスターハンタースプレー"
 		"dota_chatwheel_header_monster_hunter_sprays_desc"		"モンスターハンターイベントで獲得しました。"
 		
+		"dota_chatwheel_header_dark_carnival_sprays"			"ダークカーニバルスプレー"
+		"dota_chatwheel_header_dark_carnival_sprays_desc"		"ダークカーニバルイベントで獲得しました。"
+
+
 		"dota_chatwheel_header_voice_of_god_cw"				"The Internationalのボイス"
 		"dota_chatwheel_header_voice_of_god_cw_desc"		"The Internationalの会場アナウンサーによるボイスライン。"
 
@@ -18424,6 +18432,7 @@
 		"DOTA_PlusPostGame_GoldReceived_Buildings"	"建造物"
 		"DOTA_PlusPostGame_GoldReceived_Abilities"	"アビリティ"
 		"DOTA_PlusPostGame_GoldReceived_Wards"		"ワード"
+		"DOTA_PlusPostGame_GoldReceived_Summons"		"召喚"
 		"DOTA_PlusPostGame_GoldReceived_Other"		"その他"
 
 		"DOTA_PlusPostGame_XPReceivedTitle"		"獲得XP"
@@ -18434,6 +18443,8 @@
 		"DOTA_PlusPostGame_XPReceived_Outpost"	"アウトポスト"
 		"DOTA_PlusPostGame_XPReceived_Other"	"その他"
 		"DOTA_PlusPostGame_XPReceived_Abilities"	"アビリティ"
+		"DOTA_PlusPostGame_XPReceived_Summons"	"召喚"
+		
 		"DOTA_PlusPostGame_DamageContributionDrilldownHeading"		"{s:ability_name} ダメージ"
 		"DOTA_PlusPostGame_DamageContributionAttackHeading"			"攻撃"
 		"DOTA_PlusPostGame_DamageMitigationDrilldownHeading"		"ダメージ軽減："
@@ -18520,6 +18531,7 @@
 	"DOTA_Combine"			"結合"
 	"DOTA_Claim"			"受け取る"
 	"DOTA_Claimed"			"受取済み"
+	"DOTA_ClickToClaim"		"クリックして入手"
 	"DOTA_Vote"				"投票"
 	"DOTA_NowAvailable"		"新登場"
 	"DOTA_Coming_Soon"		"Coming Soon"
@@ -18536,6 +18548,9 @@
 	"DOTA_ViewEvent"		"イベントを表示"
 	"DOTA_BuyNow"			"今すぐ購入"
 	"DOTA_NewItemShort"		"新アイテム"
+	"DOTA_ChargesLabel"		"チャージ"
+	"DOTA_LevelLabelWord"		"レベル"
+
 	"DOTA_SortBy"						"並び替え"
 	"DOTA_SortOption_Relevance"			"関連性"
 	"DOTA_SortOption_Newest"			"新着順"
@@ -23972,6 +23987,7 @@
 	"DOTA_tooltip_econ_item_expiry_restriction" "有効期限：{t:T:expires_after_date_time} {t:s:expires_after_date_time}"
 	"DOTA_tooltip_econ_item_transform_restriction" "変化日時：{t:T:expires_after_date_time} {t:s:expires_after_date_time}"
 	"DOTA_tooltip_econ_item_trade_restriction_permanent" "トレード/売買不可"
+	"DOTA_tooltip_econ_item_trade_restriction_permanent_but_marketable" "マーケットで取引可能、トレード不可"
 	"DOTA_tooltip_econ_item_battle_pass_accessible" "今バトルパスシーズン中に利用可能"
 	"DOTA_tooltip_econ_item_seasonal_accessible" "シーズン終了まで利用可能"
 	"DOTA_tooltip_econ_item_trade_restriction_date" "{t:s:tradable_after_date_time}後にトレード可能"
@@ -38452,7 +38468,7 @@ The International 2015の優勝チームEGは、グループステージ開始�
 		"DOTA_CandyShop_ConfirmReroll_EmptyInventory"	"キャンディがないため、購入はできません。それでも棚にアイテムを補充しますか？"
 		"DOTA_CandyShop_RerollCharges"					"キャンディショップのリロールチャージ {d:quantity}"
 
-		"DOTA_CandyShop_CandySackInfo_Crownfall"		"クラウンフォールのマップロケーションをアンロックして、キャンディを獲得しよう。"
+		"DOTA_CandyShop_CandySackInfo_Crownfall"		"ダークカーニバルのマップロケーションをアンロックして、キャンディを獲得しよう。"
 		"DOTA_CandyShop_InventorySlotInfo_Crownfall"	"さらにキャンディショップを訪れて、インベントリを拡張しよう。"
 		"DOTA_CandyShop_View_Crownfall"					"キャンディワークスキャラバンを見る"
 
@@ -44091,6 +44107,10 @@ The International 2015の優勝チームEGは、グループステージ開始�
 		"DOTA_Collection_Previewing"				"プレビュー中"
 		"DOTA_Armory_ContextMenu_SellOnMarket"		"売却"
 
+		"DOTA_Armory_ItemQuantity"					"x{d:ItemQuantity}"
+		"DOTA_Armory_ItemLevel"						"レベル {d:ItemQuantity}"
+		"DOTA_Item_QuantityAsLevel"					"レベル %d"
+
 		"DOTA_Collection_FirstTimeTitle"			"保管庫をアップグレード"
 		"DOTA_Collection_FirstTimeExplaination"		"すべてのコレクションがここに表示されます。アイテムの<b>閲覧</b>、<b>購入</b>、<b>装備</b>を一元化しました。"
 		
@@ -44553,6 +44573,13 @@ The International 2015の優勝チームEGは、グループステージ開始�
 		"DOTA_FantasyCraft_Prefix_EleHero_Body"		"水生/妖精/氷のヒーロー使用時、+{d:prefix_bonus}%。"
 		"DOTA_FantasyCraft_Prefix_Otherworldly_Body" "アンデッド/デーモン/スピリットのヒーロー使用時、+{d:prefix_bonus}%。"
 		"DOTA_FantasyCraft_Prefix_Hairy_Body"		"ひげのある/ふさふさしたヒーロー使用時、+{d:prefix_bonus}%。"
+		"DOTA_FantasyCraft_Prefix_RedHero_Body_MouseOver"		"<a class=\"PrefixUnderline\" onmouseover=\"event:DOTAShowFantasy2026PlayerMiniTooltip( 1 )\" onmouseout=\"event:DOTAHideFantasy2026PlayerTooltip()\">レッドヒーロー</a>使用時、+{d:prefix_bonus}%。"
+		"DOTA_FantasyCraft_Prefix_Sad_Body_MouseOver"			"<a class=\"PrefixUnderline\" onmouseover=\"event:DOTAShowFantasy2026PlayerMiniTooltip( 2 )\" onmouseout=\"event:DOTAHideFantasy2026PlayerTooltip()\">ブルーヒーロー</a>使用時、+{d:prefix_bonus}%。"
+		"DOTA_FantasyCraft_Prefix_Beastial_Body_MouseOver"	"<a class=\"PrefixUnderline\" onmouseover=\"event:DOTAShowFantasy2026PlayerMiniTooltip( 6 )\" onmouseout=\"event:DOTAHideFantasy2026PlayerTooltip()\">角または翼を持つ</a>ヒーロー使用時、+{d:prefix_bonus}%。"
+		"DOTA_FantasyCraft_Prefix_GreenHero_Body_MouseOver"	"<a class=\"PrefixUnderline\" onmouseover=\"event:DOTAShowFantasy2026PlayerMiniTooltip( 3 )\" onmouseout=\"event:DOTAHideFantasy2026PlayerTooltip()\">グリーンヒーロー</a>使用時、+{d:prefix_bonus}%。"
+		"DOTA_FantasyCraft_Prefix_EleHero_Body_MouseOver"		"<a class=\"PrefixUnderline\" onmouseover=\"event:DOTAShowFantasy2026PlayerMiniTooltip( 7 )\" onmouseout=\"event:DOTAHideFantasy2026PlayerTooltip()\">水生/妖精/氷のヒーロー</a>使用時、+{d:prefix_bonus}%。"
+		"DOTA_FantasyCraft_Prefix_Otherworldly_Body_MouseOver" "<a class=\"PrefixUnderline\" onmouseover=\"event:DOTAShowFantasy2026PlayerMiniTooltip( 8 )\" onmouseout=\"event:DOTAHideFantasy2026PlayerTooltip()\">アンデッド/デーモン/スピリットのヒーロー</a>使用時. +{d:prefix_bonus}%。"
+		"DOTA_FantasyCraft_Prefix_Hairy_Body_MouseOver"		"<a class=\"PrefixUnderline\" onmouseover=\"event:DOTAShowFantasy2026PlayerMiniTooltip( 9 )\" onmouseout=\"event:DOTAHideFantasy2026PlayerTooltip()\">ひげのある/ふさふさしたヒーロー</a>使用時、+{d:prefix_bonus}%。"
 		"DOTA_FantasyCraft_Suffix_Tormented_Body"	"いずれかの選手がトーメンターにより死亡した場合、+{d:suffix_bonus}%。"
 		"DOTA_FantasyCraft_Suffix_MostDeaths_Body"	"この選手が試合内で最も死亡数が多い場合、+{d:suffix_bonus}%。"
 		"DOTA_FantasyCraft_Suffix_NoKills_Body"		"選手がキル0で試合終了した場合、+{d:suffix_bonus}%。"
@@ -45863,6 +45890,11 @@ The International 2015の優勝チームEGは、グループステージ開始�
 		"DOTA_CrownfallStore_DoubleDownTokens_Desc"		"MMR獲得量を2倍にするチャンスを増やそう。ランクマッチの開始時に勝利を予想しよう。ただし、慎重に選択すること。勝利するとそのマッチのMMRが2倍になるが、敗北すると2倍減少する。"
 		"DOTA_DoubleDown_RequiresCalibration"		"MMRのキャリブレーションが行われていません。レーティングのキャリブレーションが終了すると、ダブルダウンを利用できます。"
 
+		"DOTA_CrownfallStore_ActPass_CheckingOwnership"	"所有状況を確認中..."
+		"DOTA_CrownfallStore_ActPass_LoadingFailed"	"所有状況を判定できません"
+		"DOTA_CrownfallStore_ActPass_AlreadyOwned"	"所有済み"
+		"DOTA_CrownfallStore_ActPass_ActivateNow"	"今すぐ有効化"
+
 		"DOTA_CrownfallStore_StyleUnlockUnavailable"	"現在、このスタイルアンロックを入手する方法がありません。"
 
 		"DOTA_CrownfallStore_ArcanaStyleUnlock_1"	"第4幕のメインクエストを完了するとアンロックされます。"
@@ -46092,7 +46124,15 @@ The International 2015の優勝チームEGは、グループステージ開始�
 		"DOTA_Overworld_Inventory_HeroTrayTitle_3"	"以下のヒーローをプレイして、トークン「<span class=\"TokenName\">{s:token_name_0}</span>」「<span class=\"TokenName\">{s:token_name_1}</span>」「<span class=\"TokenName\">{s:token_name_2}</span>」を
 獲得："
 
+		"DOTA_Overworld_Inventory_HeroTrayNoHeroesForTokens"		"選択したチケットの組み合わせのヒーローはいません。"
+		"DOTA_Overworld_Inventory_HeroTrayTooManyTokens"		"選択したチケットが多すぎます。ヒーロー1体につきチケットは3枚です。"
+		"DOTA_Overworld_Inventory_HeroTrayPremium"		"<b>秘密の部屋</b>チケットはダークカーニバルストアで購入できる<b>{s:expansion_pack_name}</b>に含まれます。このチケットを使用すると、ユニークなリワードを獲得できる特殊な部屋をアンロックできます。"
+		"DOTA_Overworld_Inventory_HeroTrayHidden"		"この特殊チケットはある出会いによって獲得した。"
+		"DOTA_Overworld_Inventory_PathUnlocker"			"<b>パスアンロック</b>チケットでは、通常必要なトークンを使わずにノードを解除できる。ノードコストの下にある<b>今すぐアンロック</b>ボタンをクリックして使用しよう。"
+		
 		"DOTA_Crownfall_Encounter_UnableToClaimReward"	"リワードを受け取ることができない"
+		"DOTA_Crownfall_Encounter_TokenExchangeFailed"	"チケットの交換に失敗"
+		
 		"DOTA_Overworld_EncounterShortcuts"				"ショートカット"
 		"DOTA_Overworld_EncounterShortcut_token_trader"		"トークン商人"
 		"DOTA_Overworld_EncounterShortcut_snake_charmer"	"蛇使い"
@@ -46108,6 +46148,10 @@ The International 2015の優勝チームEGは、グループステージ開始�
 		"DOTA_Crownfall_TooltipOverworldHero_Heading_2"	"<span class=\"HeroName\">{s:hero_name}</span>をプレイして、トークン「<span class=\"TokenName\">{s:token_name_0}</span>」と「<span class=\"TokenName\">{s:token_name_1}</span>」を獲得しよう。"
 		"DOTA_Crownfall_TooltipOverworldHero_Heading_3"	"<span class=\"HeroName\">{s:hero_name}</span>をプレイして、トークン「<span class=\"TokenName\">{s:token_name_0}</span>」「<span class=\"TokenName\">{s:token_name_1}</span>」「<span class=\"TokenName\">{s:token_name_2}</span>」を獲得しよう。"
 
+		"DOTA_DarkCarnival_TooltipOverworldHero_Heading_1"	"<span class=\"HeroName\">{s:hero_name}</span>をプレイして、チケット「<span class=\"TokenName\">{s:token_name_0}</span>」を獲得しよう。"
+		"DOTA_DarkCarnival_TooltipOverworldHero_Heading_2"	"<span class=\"HeroName\">{s:hero_name}</span>をプレイして、チケット「<span class=\"TokenName\">{s:token_name_0}</span>」と「<span class=\"TokenName\">{s:token_name_1}</span>」を獲得しよう。"
+		"DOTA_DarkCarnival_TooltipOverworldHero_Heading_3"	"<span class=\"HeroName\">{s:hero_name}</span>をプレイして、チケット「<span class=\"TokenName\">{s:token_name_0}</span>」「<span class=\"TokenName\">{s:token_name_1}</span>」「<span class=\"TokenName\">{s:token_name_2}</span>」を獲得しよう。"
+		
 		"DOTA_PlusPostGame_CrownfallProgress"			"クラウンフォール イベント進捗状況"
 		
 		"DOTA_Crownfall_PostGame_WinEarned"					"{g:dota_hero_name:hero_id}で勝利して、次のトークンを獲得した："
@@ -46343,6 +46387,8 @@ The International 2015の優勝チームEGは、グループステージ開始�
 		"DOTA_Crownfall_Overworld_Inventory_FailedToLoad"	"インベントリの中身を読み込めませんでした。"
 
 		"DOTA_Crownfall_Filters_TokensNeeded"	"必要なトークン"
+		"DOTA_Crownfall_Filters_TokensNeededShort"	"トークン"
+
 		"DOTA_Crownfall_ActPassDescription"		"<b>{s:premium_pack_name}</b>を購入すると、すべてのリワードにアクセスできる。"
 		"DOTA_Crownfall_ActPassButtonLabel"		"詳細を表示"
 		"DOTA_Crownfall_ActPassButtonLabel_Embed"	"ストアで表示"
@@ -46499,6 +46545,9 @@ The International 2015の優勝チームEGは、グループステージ開始�
 		"DOTA_HUD_Pregame_TokenRewards"					"トークンリワードx{s:act_number}"
 		"DOTA_HUD_Pregame_TurboTokenRewardsTooltip"		"ターボゲームでは、勝利時にトークを2つ獲得できる。希望するトークンを選ぼう。"
 
+		"DOTA_HeroGrid_Overworld"						"ダークカーニバル"
+		"DOTA_HeroGrid_Overworld_Description"			"ダークカーニバルマップで有効なパスをアンロックできるヒーローのチケットをハイライト。 "
+		
 		"DOTA_CrownfallLeaderboard_Act1_Title"			"第1幕の進捗"
 		"DOTA_CrownfallLeaderboard_Act2_Title"			"第2幕の進捗"
 		"DOTA_CrownfallLeaderboard_Act3_Title"			"第3幕の進捗"
@@ -49510,6 +49559,7 @@ The International 2015の優勝チームEGは、グループステージ開始�
 		
 		// Localized Hero Quick Search Alias
 		"npc_dota_hero_antimage__name_alias"						"AntiMage;am;wei;アンチメイジ;antimeiji;anchimeiji;あんちめいじ;ウェイ;うぇい;uxei"
+		"npc_dota_hero_axe__name_alias"						"Axe;X;アックス;あっくす"
 		"npc_dota_hero_bane__name_alias"						"Bane;ベイン;べいん;beinn"
 		"npc_dota_hero_bloodseeker__name_alias"						"Bloodseeker;bs;ブラッドシーカー;ぶらっどしーかー;buraddoshi-ka-"
 		"npc_dota_hero_crystal_maiden__name_alias"						"Crystal;Maiden;cm;rylai;wolf;クリスタルメイデン;くりすたるめいでん;kurisutarumeiden;ライライ;らいらい;rairai;ウルフ;うるふ;uruhu;urufu"
@@ -49518,6 +49568,7 @@ The International 2015の優勝チームEGは、グループステージ開始�
 		"npc_dota_hero_juggernaut__name_alias"						"Juggernaut;Yurnero;ジャガーノート;じゃがーのーと;jyaga-notto;ユルネロ;ゆるねろ;yurunero"
 		"npc_dota_hero_mirana__name_alias"						"Mirana;Princess;Moon;potm;ミラーナ;みらーな;mira-na;プリンセス;purinsesu;ムーン;むーん;mu-nn"
 		"npc_dota_hero_nevermore__name_alias"						"Shadow;Fiend;sf,nevermore;シャドウ;しゃどう;syadou;フィーンド;ふぃーんど;fi-nndo;ネヴァーモア;ネヴァーモア;neva-moa"
+		"npc_dota_hero_morphling__name_alias"						"Morphling;モーフリング;もーふりんぐ;mo-hurinngu;.wav"
 		"npc_dota_hero_phantom_lancer__name_alias"						"Phantom;Lancer;pl;Azwraith;ファントム;ふぁんとむ;fanntomu;ランサー;らんさー;rannsa-;アズレイス;あずれいす;azureisu"
 		"npc_dota_hero_puck__name_alias"						"Puck;Faerie Dragon;fd;パック;ぱっく;pakku;フェアリードラゴン;ふぇありーどらごん;feari-doragonn"
 		"npc_dota_hero_pudge__name_alias"						"Pudge;Toy Butcher;パッジ;ぱっじ;pajji;トイブッチャー;といぶっちゃー;toibuccya-"
@@ -49604,6 +49655,7 @@ The International 2015の優勝チームEGは、グループステージ開始�
 		"npc_dota_hero_centaur__name_alias"						"Centaur;Warrunner;centaur;ケンタウロスウォーランナー;けんたうろすうぉーらんなー;kenntaurosuuxo-rannna-"
 		"npc_dota_hero_magnataur__name_alias"						"Magnus;magnataur, magnus;マグナス;まぐなす;magunasu"
 		"npc_dota_hero_shredder__name_alias"						"Timbersaw;Rizzrack; Shredder; Timbersaw;ティンバーソー;てぃんばーそー;texinnba-so-;リズラック;りずらっく;rizurakku;シュレッダー;しゅれっだー;syuredda-"
+		"npc_dota_hero_bristleback__name_alias"						"Bristleback;Rigwarl;bb;Bristlebot;ブリッスルバック;ぶりっするばっく;burixtusurubakku;リグワール;りぐわーる;riguwa-ru;ブリッスルボット;ぶりっするぼっと;burissurubotto"
 		"npc_dota_hero_tusk__name_alias"						"Tusk;Ymir;タスク;たすく;tasuku;ユミル;ゆみる;yumiru"
 		"npc_dota_hero_skywrath_mage__name_alias"						"Skywrath;Mage;sm;Dragonus;スカイラスメイジ;すかいらすめいじ;sukairasumeiji;ドラゴナス;どらごなす;doragonasu"
 		"npc_dota_hero_abaddon__name_alias"						"Abaddon;Abaddon;アバドン;あばどん;abadonn"
@@ -49613,6 +49665,7 @@ The International 2015の優勝チームEGは、グループステージ開始�
 		"npc_dota_hero_earth_spirit__name_alias"						"Earth;Spirit;es;Kaolin;Earth;アーススピリット;あーすすぴりっと;a-susupiritto;カオリン;かおりん;kaorinn"
 		"npc_dota_hero_terrorblade__name_alias"						"Terrorblade;tb;テラーブレイド;てらーぶれいど;tera-bureido"
 		"npc_dota_hero_phoenix__name_alias"						"Phoenix;ph;フェニックス;ふぇにっくす;fenikkusu"
+		"npc_dota_hero_oracle__name_alias"						"Oracle;ora,Nerif;Zoracle;Xoracle;オラクル;おらくる;orakuru;ネリフ;ねりふ;nerihu;ゾラクル;ぞらくる;zorakuru"
 		"npc_dota_hero_techies__name_alias"						"Techies;Squee;Spleen;Spoon;テッキーズ;てっきーず;tekki-zu;スクイー;すくいー;sukui-;スプリーン;すぷりーん;supuri-nn;スプーン;すぷーん;supu-nn"
 		"npc_dota_hero_winter_wyvern__name_alias"						"Winter;Wyvern;ww;Auroth;ウィンターワイバーン;うぃんたーわいばーん;uinnta-waiba-nn;アウロス;あうろす;aurosu"
 		"npc_dota_hero_arc_warden__name_alias"						"Arc;Warden;zet,aw;アークウォーデン;あーくうぉーでん;a-kuuxo-denn;ゼット;ぜっと;zetto"
@@ -50143,5 +50196,593 @@ The International 2015の優勝チームEGは、グループステージ開始�
 		"DOTA_Compendium2024_CompendiumLevelAmount:f"					"コンペンディアムレベル{d:compendium_levels}"
 		"DOTA_Compendium2024_CompendiumBoosterAmount:f"					"コンペンディアムブースター{d:compendium_boosters}"
 		"DOTA_Compendium2025_Rewards_DotaPlus:f"						"{d:reward_count}か月"
-}
+	
+		//////////////////////////////////////////////////////
+		// DARK CARNIVAL MIDNIGHT RUN
+		//////////////////////////////////////////////////////
+		
+		// Dark Carnival 
+		
+		"DOTA_EventName_DarkCarnival"	"ダークカーニバル"
+		"DOTA_DarkCarnival_EventTitle"		"ダークカーニバル"
+		"DOTA_DarkCarnival_MidnightRun"		"ミッドナイトラン"
+		
+		"DOTA_DarkCarnival_Filters_TicketsNeeded"	"要チケット"
+		"DOTA_DarkCarnival_Filters_TicketsNeededShort"	"チケット"
+
+		"DOTA_DarkCarnival_Splash_NewEvent"	"新イベント"
+		"DOTA_DarkCarnival_Splash_EventDescription"		"Dotaをプレイして、リングマスターのサーカス列車にいるフードウィンクとレギオンコマンダーを導き、新しいリワードをアンロックしよう。"
+		"DOTA_DarkCarnival_Splash_EventDescriptionShort"		"Dotaをプレイして、リングマスターのサーカス列車を探索し、新しいリワードをアンロックしよう。"
+		"DOTA_DarkCarnival_Splash_BackStory"		"バックストーリーをチェック！"
+		"DOTA_DarkCarnival_Splash_ViewComic"		"コミックを表示"
+		"DOTA_DarkCarnival_Splash_ViewEvent"		"イベントを表示"
+
+		"DOTA_DarkCarnival_Store"		"エンポリウム・オブ・キュリオシティズ"
+		"DOTA_DarkCarnival_Store_Description"		"奇妙な品と異国の珍品"
+		"DOTA_DarkCarnival_Store_AutomatonPersona"		"オートマトンのペルソナ"
+		"DOTA_DarkCarnival_Store_Discount"		"割引"
+		"DOTA_DarkCarnival_Store_Discount_CoinCount"		"{d:coin_quantity} 割引コイン"
+		"DOTA_DarkCarnival_Store_AlreadyOwned"		"所有済み"
+		
+		"DOTA_DarkCarnival_Checkout_ConfirmPurchaseWithCoins"	"この購入を完了するには、ダークカーニバル割引コインが{d:coin_cost}必要です。続行してもよろしいですか？"
+		"DOTA_DarkCarnival_Checkout_InsufficientCoins"	"購入を完了するのに必要なダークカーニバル割引コインが不足しています。"
+
+		"DOTA_DarkCarnival_Store_AnimName_Spawn"	"出現"
+		"DOTA_DarkCarnival_Store_AnimName_Run"		"走行"
+		"DOTA_DarkCarnival_Store_AnimName_Attack"	"攻撃"
+		"DOTA_DarkCarnival_Store_AnimName_Death"	"死神"
+		"DOTA_DarkCarnival_Store_AnimName_Channel"	"詠唱"
+		"DOTA_DarkCarnival_Store_AnimName_RareIdle"	"待機（レア）"
+
+		"DOTA_DarkCarnival_Store_BuyTogether"	"一緒に購入"
+		"DOTA_DarkCarnival_Store_BuyRemaining"	"残りを購入"
+		"DOTA_DarkCarnival_Store_BuyTogether_NoneRemaining"	"購入済み"
+
+		"DOTA_DarkCarnival_Store_BuyTogether_Pack_All"	"秘密の部屋パック&オートマトン"
+		"DOTA_DarkCarnival_Store_BuyTogether_Pack_4"	"秘密の部屋パック&オートマトン4体"
+		"DOTA_DarkCarnival_Store_BuyTogether_Pack_3"	"秘密の部屋パック&オートマトン3体"
+		"DOTA_DarkCarnival_Store_BuyTogether_Pack_2"	"秘密の部屋パック&オートマトン2体"
+		"DOTA_DarkCarnival_Store_BuyTogether_Pack_1"	"秘密の部屋パック&オートマトン1体"
+		"DOTA_DarkCarnival_Store_BuyTogether_Pack_0"	"秘密の部屋パック"
+		
+		"DOTA_DarkCarnival_Store_BuyTogether_All"	"すべてのオートマトン"
+		"DOTA_DarkCarnival_Store_BuyTogether_4"		"オートマトン4体"
+		"DOTA_DarkCarnival_Store_BuyTogether_3"		"オートマトン3体"
+		"DOTA_DarkCarnival_Store_BuyTogether_2"		"オートマトン2体"
+		"DOTA_DarkCarnival_Store_BuyTogether_1"		"オートマトン1体"
+
+		"DOTA_DarkCarnival_Store_MidnightRunTreasure"		"トレジャー・オブ・ワンダーズ"
+		"DOTA_DarkCarnival_Store_SecretRoomPack"			"秘密の部屋パック"
+		"DOTA_DarkCarnival_Store_MidnightRunBundle"			"ダークカーニバル・プライズパック"
+
+		"DOTA_DarkCarnival_Store_AutomatonPersona_SalesDescription_Axe"				"アックス・オートマトンはあやうく溶解されるところだった。「万物の死」というただ一つの目標を持つ、怒りの殺戮マシンだからだ。これを欠点ではなく特徴ととらえるなら、このオートマトンがしっくりくるだろう。"
+		"DOTA_DarkCarnival_Store_AutomatonPersona_SalesDescription_Bristleback"		"ブリッスルバック・オートマトンは高純度の樽出し原油でしか動かないが、注がれるものなら、エンジン内部に溜まった安物オイルでも拒まないだろう。「全然いいだろ？ 入れてくれ」"
+		"DOTA_DarkCarnival_Store_AutomatonPersona_SalesDescription_Oracle"			"オラクル・オートマトンははギリシャ悲劇に登場するヒロイン顔負けの呪いにより、未来を見ることができる。ただし、その未来を変えることはできない。ギリシャ悲劇のヒロインと違って、彼が軽視されるのは彼の予言が信用できないからではない。彼が極めてしゃくに障るからだ。"
+		"DOTA_DarkCarnival_Store_AutomatonPersona_SalesDescription_LegionCommander"	"レギオンコマンダー・オートマトンは、人間のレギオンコマンダーと同じく、敵をその機械の踵で踏みつけることに情熱を燃やしている。人間のレギオンコマンダーとは異なり、立ち止まろうとはしない。"
+		"DOTA_DarkCarnival_Store_AutomatonPersona_SalesDescription_Morphling"		"モーフリング・オートマトンは、水でできた体のモーフリングとは異なり、メタファーとして液体をほのめかすが、その体は触れる鋼でできている。技術はここまで進歩したのだ。"
+		
+		"DOTA_Style_Dawnbreaker_Dark_Carnival_Weapon_0"	"バー・ベル"
+		"DOTA_Style_Dawnbreaker_Dark_Carnival_Weapon_1"	"ダーケストライト"
+		"DOTA_Style_Dawnbreaker_Dark_Carnival_Weapon_2" "スターパワー"
+		"DOTA_Style_Dawnbreaker_Dark_Carnival_Head_0" "バー・ベル"
+		"DOTA_Style_Dawnbreaker_Dark_Carnival_Head_1" "ダーケストライト"
+		"DOTA_Style_Mirana_Dark_Carnival__Mount_0" "観衆の歓声"
+		"DOTA_Style_Mirana_Dark_Carnival__Mount_1" "スポットライトを浴びて"
+
+		"DOTA_DarkCarnival_Store_AutomatonPersona_Description_Includes_Axe"		"アックス・オートマトンの内容："
+		"DOTA_DarkCarnival_Store_AutomatonPersona_Description_Point1_Axe"		"新しいリアルなヒーローモデル！"
+		"DOTA_DarkCarnival_Store_AutomatonPersona_Description_Point2_Axe"		"新しいカリングブレイドのエフェクトで、敵に力を示せ！"
+		"DOTA_DarkCarnival_Store_AutomatonPersona_Description_Point3_Axe"		"新しいカウンターヘリックスのアニメーションで、敵を驚かせよう！"
+		"DOTA_DarkCarnival_Store_AutomatonPersona_Description_Point4_Axe"		"アックスの全ボイスラインを新しいロボット加工でアップデート！（文法の改善はありません）"
+		"DOTA_DarkCarnival_Store_AutomatonPersona_Description_Point5_Axe"		"アックスのアニマトロニクスはアックスの全挑発をサポート！"
+
+		"DOTA_DarkCarnival_Store_AutomatonPersona_Description_Includes_LegionCommander"		"レギオンコマンダー・オートマトンの内容："
+		"DOTA_DarkCarnival_Store_AutomatonPersona_Description_Point1_LegionCommander"		"新たな改良が施された外見が、敵に恐怖をもたらす！"
+		"DOTA_DarkCarnival_Store_AutomatonPersona_Description_Point2_LegionCommander"		"圧倒的な勝算と決闘のための衝撃的な新しいビジュアルエフェクト！"
+		"DOTA_DarkCarnival_Store_AutomatonPersona_Description_Point3_LegionCommander"		"スムーズで優雅なカスタム動作アニメーション！"
+		"DOTA_DarkCarnival_Store_AutomatonPersona_Description_Point4_LegionCommander"		"レギオンコマンダーの全ボイスラインをデジタル処理で強化！"
+		"DOTA_DarkCarnival_Store_AutomatonPersona_Description_Point5_LegionCommander"		"特殊アニマトロニクスはアックスの全挑発をサポート！"
+
+		"DOTA_DarkCarnival_Store_AutomatonPersona_Description_Includes_Bristleback"		"ブリッスルバック・オートマトンの内容："
+		"DOTA_DarkCarnival_Store_AutomatonPersona_Description_Point1_Bristleback"		"新しい耐アルコール金属構造！"
+		"DOTA_DarkCarnival_Store_AutomatonPersona_Description_Point2_Bristleback"		"背中から立ち上る炎のエキゾーストなど、完全に安全なアンビエント効果！"
+		"DOTA_DarkCarnival_Store_AutomatonPersona_Description_Point3_Bristleback"		"ネイザルグー、クイルスプレー、ヘアボール用の非生物学的代替エフェクト！"
+		"DOTA_DarkCarnival_Store_AutomatonPersona_Description_Point4_Bristleback"		"ブリッスルバックの全ボイスラインにロボット音声フィルターを適用！"
+		"DOTA_DarkCarnival_Store_AutomatonPersona_Description_Point5_Bristleback"		"内部ギアシステムがブリッスルバックの全挑発をサポート！"
+
+		"DOTA_DarkCarnival_Store_AutomatonPersona_Description_Includes_Oracle"			"オラクル・オートマトンの内容："
+		"DOTA_DarkCarnival_Store_AutomatonPersona_Description_Point1_Oracle"			"アンビエント効果付きの輝く新しいヒーローモデル！"
+		"DOTA_DarkCarnival_Store_AutomatonPersona_Description_Point2_Oracle"			"フォーチュンエンド、フェイトエディクト用の未来的な代替エフェクト！"
+		"DOTA_DarkCarnival_Store_AutomatonPersona_Description_Point3_Oracle"			"移動やテレポートを含む代替カスタムアニメーション！"
+		"DOTA_DarkCarnival_Store_AutomatonPersona_Description_Point4_Oracle"			"オラクルの全ボイスラインを高度処理でアップデート！（予言の精度は改善されていません）"
+		"DOTA_DarkCarnival_Store_AutomatonPersona_Description_Point5_Oracle"			"自動化されていないオラクルの挑発をサポート！"
+
+		"DOTA_DarkCarnival_Store_AutomatonPersona_Description_Includes_Morphling"		"モーフリング・オートマトンの内容："
+		"DOTA_DarkCarnival_Store_AutomatonPersona_Description_Point1_Morphling"			"滑らかなシェイプとディテールの新しいヒーローモデル！"
+		"DOTA_DarkCarnival_Store_AutomatonPersona_Description_Point2_Morphling"			"ウェーブフォームの新ヴィジュアルエフェクト！"
+		"DOTA_DarkCarnival_Store_AutomatonPersona_Description_Point3_Morphling"			"移動や分解などを含む代替カスタムアニメーション！"
+		"DOTA_DarkCarnival_Store_AutomatonPersona_Description_Point4_Morphling"			"モーフリングの全ボイスラインに新しい機械処理を適用！"
+
+		"DOTA_DarkCarnival_Store_AutomatonPersona_Description_AndMore"			"などなど！"
+		
+
+		"DOTA_DarkCarnival_Store_AutomatonBundle"						"オートマトンバンドル"
+		"DOTA_DarkCarnival_Store_AutomatonBundle_Description"			"オートマトンのペルソナを5つすべて購入すると割引"
+
+		"DOTA_DarkCarnival_Store_SecretRoomsPack_SalesDescription"			"秘密の部屋パック"
+
+		"DOTA_DarkCarnival_Store_SecretRoomsPack_Included"						"パック内容："
+		"DOTA_DarkCarnival_Store_SecretRoomsPack_Description_Point1"			"<b>ダークカーニバルクリープ</b>（近接、遠距離、シージ）！"
+		"DOTA_DarkCarnival_Store_SecretRoomsPack_Description_Point2"			"<b>ダークカーニバル・ミュージックパック</b>（全ミュージックとスティンガーの新しいトラック）！"
+		"DOTA_DarkCarnival_Store_SecretRoomsPack_Description_Point3"			"<b>秘密の部屋チケット</b>x2（溶鉱車両と倉庫車両の秘密の部屋、各車両とストーリーとリワードへのアクセスを付与）！"
+
+		"DOTA_DarkCarnival_Store_SecretRoomsPack_Tooltip_TicketCount"			"x2"
+		"DOTA_DarkCarnival_Store_SecretRoomsPack_Tooltip_Tickets"				"秘密の部屋チケット"
+		"DOTA_DarkCarnival_Store_SecretRoomsPack_Tooltip_Creeps"				"ダークカーニバル・クリープ"
+
+		"DOTA_DarkCarnival_Store_SecretRoomsPack_GetAccess"					"秘密の部屋へのアクセス"
+		"DOTA_DarkCarnival_Store_SecretRoomsPack_SecretRoom_SmelterCar"				"溶鉱車両"
+		"DOTA_DarkCarnival_Store_SecretRoomsPack_SecretRoom_StorageCar"				"倉庫車両"
+
+		"DOTA_DarkCarnival_Store_MidnightRunBundle_SalesDescription"			"ダークカーニバル・プライズパック"
+		"DOTA_DarkCarnival_Store_MidnightRunBundle_Included"					"プライズパックの内容："
+		"DOTA_DarkCarnival_Store_MidnightRunBundle_DiscountCoinDescription"		"ダークカーニバル割引コインを10枚集めると、無料で購入可能"
+
+		"DOTA_DarkCarnival_Store_MidnightRunBundle_Description_Point1"			"<b>キャンディバッグ</b> x30"
+		"DOTA_DarkCarnival_Store_MidnightRunBundle_Description_Point2"			"<b>キャンディワークスのリロール</b> x10"
+		"DOTA_DarkCarnival_Store_MidnightRunBundle_Description_Point3"			"<b>見通しの石</b> x3"
+		
+		"DOTA_DarkCarnival_Store_MidnightRunBundle_Tooltip_Count1"			"x30"
+		"DOTA_DarkCarnival_Store_MidnightRunBundle_Tooltip_Count2"			"x10"
+		"DOTA_DarkCarnival_Store_MidnightRunBundle_Tooltip_Count3"			"x3"
+		"DOTA_DarkCarnival_Store_MidnightRunBundle_Tooltip_Item1"			"キャンディバッグ"
+		"DOTA_DarkCarnival_Store_MidnightRunBundle_Tooltip_Item2"			"キャンディワークスのリロール"
+		"DOTA_DarkCarnival_Store_MidnightRunBundle_Tooltip_Item3"			"見通しの石"
+		
+		"DOTA_DarkCarnival_TicketsReceived"					"受け取り済みチケット"
+		"DOTA_DarkCarnival_GiftFromFriend"					"フレンドからギフトが届いた！"
+		
+		"DOTA_DarkCarnival_Chapter1"	"第1章"
+		"DOTA_DarkCarnival_Chapter2"	"第2章"
+		"DOTA_DarkCarnival_Chapter3"	"第3章"
+		"DOTA_DarkCarnivalNotification_MissingPostGameTickets"		"あなたのアカウントはダークカーニバルのバグの影響を受け、ゲーム終了後のチケットを受け取れませんでした。このバグは修正され、チケットが遡って付与されました。"
+		
+		"DOTA_DarkCarnival_TimeUntilNextChapter"	"{s:next_chapter_name}まで{s:time_until_next_unlock}"
+
+		"DOTA_DarkCarnival_ChapterLocked"	"{s:time_until_unlock}後にアンロック"
+		"DOTA_DarkCarnival_ChapterReleaseDate" "{t:l:release_date}"
+		"DOTA_DarkCarnival_ChapterReleaseDate_TrainCar" "{t:l:release_date}登場"
+		"DOTA_DarkCarnival_ChapterComplete" "完了"
+		"DOTA_DarkCarnival_ChapterNotYetReleased" "Coming Soon"
+		
+		"DOTA_DarkCarnival_TooltipOverworldPath_Requirement_Token:f"		"<span class=\"TokenName\">{count} {name}</span> {count, plural, other{チケット}}"
+		"DOTA_DarkCarnival_FreeTicket"		"無料のチケットでクエストを始めよう。"
+		"DOTA_DarkCarnival_ClaimTicket"		"チケットを受け取る！"
+		"DOTA_DarkCarnival_TokensReceived"	"{s:event_title}: {s:act_title}"
+
+		"DOTA_DarkCarnival_FrontPage_VisitWebsite"	"ウェブサイトを開く"
+		"DOTA_DarkCarnival_FrontPage_ViewComic"	"コミックを表示"
+		"DOTA_DarkCarnival_FrontPage_ViewEvent"	"イベントを表示"
+
+		"DOTA_DarkCarnival_FrontPage_SmallEventDescription"	"リワードを獲得し、ダークカーニバルで魂を捕らえようとするリングマスターのたくらみを見てみよう。"
+		"DOTA_DarkCarnival_FrontPage_FirstTime_Claim"	"無料のトレジャーを受け取って始めよう！"
+		"DOTA_DarkCarnival_FrontPage_FirstTime_GetStarted"	"はじめる"
+
+		"DOTA_DarkCarnival_FrontPage_EventProgress"	"イベント進捗"
+		"DOTA_DarkCarnival_FrontPage_CompleteCount"	"<b>{d:full_total_earned}</b> / {d:full_total_max} 完了"
+		"DOTA_DarkCarnival_FrontPage_NextReward"	"次のリワード"
+
+		"DOTA_DarkCarnival_StoreCell_Explore"	"ストアを探索"
+		"DOTA_DarkCarnival_StoreCell_Description"	"オートマトンのペルソナ、新しいトレジャー、秘密の部屋パックなどが登場！"
+
+		"DOTA_DarkCarnival_Overworld_Progress"	"進捗"
+		
+		"DOTA_DarkCarnival_Overworld_Tokens"	"チケット"
+		"DOTA_DarkCarnival_Overworld_Trade"		"トレード"
+		"DOTA_DarkCarnival_Overworld_TokenTrader"		"チケット商人"
+		
+		"DOTA_DarkCarnival_Overworld_SecretRoomTokens"		"秘密の部屋チケット"
+
+		"DOTA_DarkCarnival_Overworld_PrisonCar"	"監獄車両"
+		"DOTA_DarkCarnival_Overworld_SmeltingCar"	"溶鉱車両"
+		"DOTA_DarkCarnival_Overworld_Blimp"	"飛行船"
+		"DOTA_DarkCarnival_Overworld_StorageCar"	"倉庫車両"
+		"DOTA_DarkCarnival_Overworld_CauldronCar"	"大釜車両"
+		"DOTA_DarkCarnival_Overworld_EngineCar"		"機関車両"
+
+		"DOTA_DarkCarnival_Encounter_Oracle"				"オラクル"
+		"DOTA_DarkCarnival_Encounter_Oracle_Description"	"運命を占ってもらおう"
+		"DOTA_DarkCarnival_Encounter_PickLock"	"ロックピッキング"
+		"DOTA_DarkCarnival_Encounter_PickLock_Description"	"スラークの脱出を手助けしよう！"
+		"DOTA_DarkCarnival_Encounter_SlarkJailbreak"				"ブーツ壊し屋"
+		"DOTA_DarkCarnival_Encounter_SlarkJailbreak_Description"	"戦利品を集めよう！ ブーツを破壊しよう！"
+		"DOTA_DarkCarnival_Encounter_FriendGifting"					"フレンドへのギフト"
+		"DOTA_DarkCarnival_Encounter_FriendGifting_Description"		"不要なチケットをフレンドにギフトしよう！"
+		"DOTA_DarkCarnival_Encounter_TicketSmelter"					"チケット溶鉱炉"
+		"DOTA_DarkCarnival_Encounter_TicketSmelter_Description"		"溶かしてはいけないものを溶かしてみよう！"
+		"DOTA_DarkCarnival_Encounter_TicketSmelter_SmeltButton"		"溶解する"
+		"DOTA_DarkCarnival_Encounter_TicketSmelter_Bristleback_Note"	"道化師をもう一度捕まえに行く。5分で戻る。溶解されに来たなら、セルフでやってくれ。ほかのものは溶解しないこと。無許可の溶解は、溶解罰の対象となる。"
+		"DOTA_DarkCarnival_Encounter_TicketSmelter_Bristleback_Name"	"-A.Br.B." // Automaton Bristle Back
+		"DOTA_DarkCarnival_Encounter_TicketSmelter_Tooltip"			"余分なチケットを溶解して、ボーナスリワードに換えよう！"
+		"DOTA_DarkCarnival_Encounter_TicketSmelter_NothingLeft"		"チケット溶鉱炉で作成できるものをすべて作成しました。"
+		"DOTA_DarkCarnival_Encounter_TicketSmelter_SeeingStone:f"					"見通しの石 {d:num_seeing_stones}個"
+
+		
+		"DOTA_CandyShopName_Dark_Carnival"		"カーニバルキャンディワークス"
+		"DOTA_DarkCarnival_View_Candyworks"		"キャンディーワークスを表示する"
+		"DOTA_DarkCarnivalStore_View"			"<b>ダークカーニバルストア</b>を見る"
+		"DOTA_DarkCarnivalStore_CoinsInfo"		"ダークカーニバルマップを探索して、ダークカーニバル割引コインを手に入れよう。<br><br>イベント終了まで、クラウンフォールストアで<b>{s:regional_coin_currency}</b>以上のアイテムは<b>10コイン</b>につきおよそ<b>{s:regional_coin_currency}</b>の割引を受けることができる。（正確な割引率はリージョンと通貨により異なる）<br><br><b>{d:total_free_coins}</b>割引コインは無料で獲得でき、秘密の部屋パックでさらに<b>{d:total_explorer_coins}</b>コインが手に入る。"
+		"DOTA_DarkCarnivalStore_ExtraRewards"		"追加のリワード："
+		"DOTA_DarkCarnivalStore_ViewInOverworld"		"列車で表示"
+		
+		"DOTA_DarkCarnival_HowToPlay_Coins_2"	"<b>割引コインを10個</b>集めると、<b>ダークカーニバルストア</b>で{s:regional_coin_currency}以上の商品を購入する際、コインと引き換えにおよそ{s:regional_coin_currency}の割引を受けることができる。（{s:regional_coin_currency}のアイテムまたはバンドルは無料になる）"
+		"DOTA_DarkCarnival_TrainCarCompletion"	"<b>{d:basic_total_earned}</b> / {d:basic_total_max} 完了"
+		"DOTA_DarkCarnival_ProgressAvailable"	"進行可能"
+		"DOTA_DarkCarnival_FortunesAvailable"	"利用可能な占い x{d:ticket_count}"
+
+		"DOTA_DarkCarnival_OracleStory_RewardTooltip_FortuneCount"			"<b>{d:fortunes_required}</b>回占ってもらう"
+		"DOTA_DarkCarnival_OracleStory_RewardTooltip_FortunesNeeded"		"さらに<b>{d:fortunes_needed}</b>必要"
+		"DOTA_DarkCarnival_OracleStory_RewardTooltip_ClaimPreviousNode"		"前のリワードを先に入手しよう"
+
+		"DOTA_DarkCarnivalLeaderboard_Act11_Title"	"ミッドナイトランの進行状況"
+
+		"DOTA_DarkCarnivalProfileCard_Act1"			"ミッドナイトランのランク"
+
+		"DOTA_DarkCarnivalRewardType_Coins"					"割引コイン"
+		"DOTA_DarkCarnivalRewardType_Candy"					"キャンディサック"
+		"DOTA_DarkCarnivalRewardType_Treasures"				"トレジャー"
+		"DOTA_DarkCarnivalRewardType_Goodies"				"カーニバルのグッズ"
+		"DOTA_DarkCarnivalRewardType_Oracle"				"見通しの石"
+		"DOTA_DarkCarnivalRewardType_CompletionSet"			"マップコンプリートセット"
+
+		"DOTA_DarkCarnivalReward_Act1_Title"				"ミッドナイトランのリワード"
+		"DOTA_DarkCarnivalReward_View_Treasure"				"トレジャーを見る"
+
+		"DOTA_DarkCarnivalRewardType_Candy_Description"				"大好評につき、キャンディワークスが帰ってきた。虫歯のもとになる余ったお菓子を、新たなヒーローセット、ワード、クーリエなどの山へと変えるお手伝い。"
+		"DOTA_DarkCarnivalRewardType_Treasures_Description"			"ヒーローたちがダークカーニバルがテーマの装いでセンターリングに登場。身にまとうのは、邪悪でありながら華麗なサーカス衣装だ。カーニバルテーマのアイテムセット15種がぎっしり詰まった、完全新規のトレジャーを開封しよう。"
+		"DOTA_DarkCarnivalRewardType_Goodies_Description"			"ショーケースデコレーション、ロード画面、スプレー、絵文字で自分を表現しよう。"
+		"DOTA_DarkCarnivalRewardType_Oracle_Description"			"オラクルは貴重な「見通しの石」と引き換えに、予言の力を発揮してくれる。<br/><br/>石はDotaをプレイするだけで1日1つ獲得でき、列車内を進むことでさらに集めることができる。"
+		"DOTA_DarkCarnivalRewardType_CompletionSet_Description"		"ダークカーニバルのストーリーを進めて、リングマスターの列車に隠されたカーニバルのセット4種を発見しよう。"
+
+		"DOTA_DarkCarnivalReward_ShowcaseDecorations"		"ショーケースデコレーション"
+		"DOTA_DarkCarnivalReward_ShowcaseDecoration_Locked"		"マップを探索してショーケースデコレーションをアンロックしよう。"
+
+		"DOTA_DarkCarnival_SeeTheOracle"							"オラクルを訪ねる"
+		"DOTA_DarkCarnival_FreeTrackLabel"							"メインストーリー"
+		"DOTA_DarkCarnival_SecretRoomLabel"							"秘密の部屋"
+
+		"DOTA_DarkCarnival_RewardsPopupClaimedFree"					"<b>/ {d:main_nodes_total}</b><br>メインストーリー"
+		"DOTA_DarkCarnival_RewardsPopupClaimedPaid"					"<b>/ {d:premium_nodes_total}</b><br>秘密の部屋"
+
+		"DOTA_DarkCarnival_SecretAdmirer_Title"		"チケットのギフト"
+		"DOTA_DarkCarnival_SecretAdmirer_TakeTickets"	"チケットを受け取る"
+		"DOTA_DarkCarnival_SecretAdmirer_GiftTitle"		"フレンドとチケットを選択"
+		"DOTA_DarkCarnival_SecretAdmirer_Gift_Tooltip"	"1日5枚までフレンドにチケットをギフトできます。"
+		"DOTA_DarkCarnival_SecretAdmirer_GiftNoneNeeded"		"フレンドはチケットが必要ないようだ！"
+		"DOTA_DarkCarnival_SecretAdmirer_NoMoreAvailable"	"今日はこれ以上ギフトできません"
+		"DOTA_DarkCarnival_SecretAdmirer_GiftAvailableTooltip"	"フレンドからギフトが届いた！"
+
+		"DOTA_DarkCarnival_SecretRoomsPack_RequiredForRewardsClaims"		"秘密の部屋パックが必要です。<br>購入するにはクリック"
+		"DOTA_DarkCarnival_OverworldInventory_MultiselectInfo"	"Dotaをプレイして、ヒーローに応じたチケットを獲得しよう。<br/><br/>インベントリまたはマップ上のチケットをクリックして、このチケットを獲得できるヒーローを確認しよう。<br/><br/>Shiftキー長押しで、複数のチケットを一度に選択できる。"
+		"DOTA_DarkCarnival_Token_TheFool"			"愚者"
+		"DOTA_DarkCarnival_Token_TheMagician"		"魔術師"
+		"DOTA_DarkCarnival_Token_TheHighPriestess"	"女教皇"
+		"DOTA_DarkCarnival_Token_TheEmpress"		"女帝"
+		"DOTA_DarkCarnival_Token_TheEmperor"		"皇帝"
+		"DOTA_DarkCarnival_Token_TheHierophant"		"教皇"
+		"DOTA_DarkCarnival_Token_TheLovers"			"恋人"
+		"DOTA_DarkCarnival_Token_TheChariot"		"戦車"
+		"DOTA_DarkCarnival_Token_Strength"			"力"
+		"DOTA_DarkCarnival_Token_TheHermit"			"隠者"
+		"DOTA_DarkCarnival_Token_WheelOfFortune"	"運命の輪"
+		"DOTA_DarkCarnival_Token_Justice"		"正義"
+		"DOTA_DarkCarnival_Token_TheHangedMan"	"吊るされた男"
+		"DOTA_DarkCarnival_Token_Death"			"死神"
+		"DOTA_DarkCarnival_Token_Temperance"	"節制"
+		"DOTA_DarkCarnival_Token_TheDevil"		"悪魔"
+		"DOTA_DarkCarnival_Token_TheTower"		"塔"
+		"DOTA_DarkCarnival_Token_TheStar"		"星"
+		"DOTA_DarkCarnival_Token_TheMoon"		"月"
+		"DOTA_DarkCarnival_Token_TheSun"		"太陽"
+		"DOTA_DarkCarnival_Token_Judgement"		"審判"
+		"DOTA_DarkCarnival_Token_TheWorld"		"世界"
+		"DOTA_DarkCarnival_Token_Premium"		"プレミアム"
+		"DOTA_DarkCarnival_Token_Oracle"		"予見"
+		"DOTA_DarkCarnival_Token_NodeUnlock"	"パスのアンロック"
+		"DOTA_DarkCarnival_Token_MinigameUnlock"	"カーニバルゲームのアンロック"
+		"DOTA_Overworld_Token_Random"			"ランダムなチケット"
+
+		"DOTA_DarkCarnival_InventoryPicker_Title"	"インベントリからチケットを選択"
+		"DOTA_DarkCarnival_NoTicketsAvailable"	"利用可能なチケットがありません"
+
+		"DOTA_DarkCarnival_Tarot_TheFool"			"愚者"
+		"DOTA_DarkCarnival_Tarot_TheMagician"		"魔術師"
+		"DOTA_DarkCarnival_Tarot_TheHighPriestess"	"女教皇"
+		"DOTA_DarkCarnival_Tarot_TheEmpress"		"女帝"
+		"DOTA_DarkCarnival_Tarot_TheEmperor"		"皇帝"
+		"DOTA_DarkCarnival_Tarot_TheLovers"			"恋人"
+		"DOTA_DarkCarnival_Tarot_Strength"			"力"
+		"DOTA_DarkCarnival_Tarot_TheStar"			"星"
+		"DOTA_DarkCarnival_Tarot_TheHermit"			"隠者"
+		"DOTA_DarkCarnival_Tarot_WheelOfFortune"	"運命の輪"
+		"DOTA_DarkCarnival_Tarot_Death"				"死神"
+		"DOTA_DarkCarnival_Tarot_TheDevil"			"悪魔"
+
+		"DOTA_DarkCarnival_Intro_Welcome"	"ダークカーニバルへようこそ"
+		"DOTA_DarkCarnival_Intro_Explore"	"列車を探索"
+		"DOTA_DarkCarnival_Intro_Explore_1"	"マップのノードを解放してダークカーニバルのストーリーを進め、コンテンツをアンロックしよう。物語の断片、装飾アイテム、交換できる通貨、ミニゲームなどをアンロックできる。"
+		"DOTA_DarkCarnival_Intro_Explore_2"	"マップの<b>メインクエスト</b>（ストーリーやリワードを含む）は、誰でも無料でプレイできる。"
+		"DOTA_DarkCarnival_Intro_Explore_3"	"各ノードを解放するには、固有のチケットセットが必要だ。Dotaのゲームをプレイしてチケットを獲得しよう。"
+		
+		"DOTA_DarkCarnival_Intro_PlayDota"	"Dotaをプレイしてチケットを獲得"
+		"DOTA_DarkCarnival_Intro_PlayDota_1"	"どのヒーローも<b>チケット3枚</b>のセットを持っている。"
+		"DOTA_DarkCarnival_Intro_PlayDota_2"	"そのヒーローで<b>マッチに勝利</b>すると、各チケットを1枚獲得できる。敗北すると、3枚のうちの1枚をランダムに獲得できる。<b>ターボマッチ</b>では勝利時にチケットを2枚獲得でき、敗北時には何も獲得できない。"
+		"DOTA_DarkCarnival_Intro_PlayDota_2_Tooltip" "アビリティドラフトのゲームでは、選択したアビリティではなくヒーローの体に基づいてチケットが付与される。<br/><br/>Co-op BOTのゲームでは勝利するとチケットが1枚付与される。"
+		"DOTA_DarkCarnival_Intro_PlayDota_3"	"獲得したチケットは、マップでノードを解放するために使用するまで、インベントリに保持される。所持しているチケットは、チケット商人のところで欲しいチケットと交換することもできる。"
+		
+		"DOTA_DarkCarnival_Intro_Oracle"	"オラクル"
+		"DOTA_DarkCarnival_Intro_Oracle_1"	"その日最初にプレイするDotaで<b>見通しの石</b>を1つ獲得できる。"
+		"DOTA_DarkCarnival_Intro_Oracle_2"	"見通しの石をオラクルに渡すと、チケット、キャンディ、ショーケースデコレーション、ゲーム内消費アイテム、装飾アイテムなどの追加のリワードを獲得できる。"
+
+		"DOTA_DarkCarnival_Intro_Coins"		"コイン"
+		"DOTA_DarkCarnival_Intro_Coins_1"		"マップのパスを解放することで、<b>ダークカーニバル割引コイン</b>を獲得できる。"
+		"DOTA_DarkCarnival_Intro_Coins_2"		"ダークカーニバル割引コインはイベント期間中のみ利用できる。正確な割引率はリージョンと通貨により異なる。"
+		
+		"DOTA_DarkCarnival_Intro_Candyworks"		"カーニバルキャンディワークス"
+		"DOTA_DarkCarnival_Intro_Candyworks_1"		"マップのさまざまなパスを探索することで、キャンディサックを獲得できる。"
+		"DOTA_DarkCarnival_Intro_Candyworks_2"		"マップ上で<b>カーニバルキャンディワークス</b>まで進むと、キャンディをさまざまなアイテムやトレジャーと交換できる。運がよければアルカナもあるかも！"
+		"DOTA_DarkCarnival_Intro_Candyworks_3"		"キャンディワークスの商品に欲しいものがない場合、<b>リロール</b>を使って品揃えを更新できる。<b>マッチに勝利</b>するたびに<b>さらにリロールを獲得</b>できる。"
+		
+		"DOTA_DarkCarnival_Intro_Treasures"		"トレジャーとその他のリワード"
+		"DOTA_DarkCarnival_Intro_Treasures_1"		"マップ上にはダークカーニバルの<b>トレジャー・オブ・ワンダー</b>が獲得できる場所がある。トレジャーには新しい装飾セットが入っており、すぐに開封できる。ダークカーニバルストアでも、トレジャーをさらに購入できる。"
+		"DOTA_DarkCarnival_Intro_Treasures_2"		"その他の場所では、ダークカーニバルをテーマにした<b>絵文字、スプレー、ショーケースデコレーション、ロード画面</b>などその他のリワードを獲得できる。"
+		"DOTA_DarkCarnival_Intro_Treasures_3"		"一部の特別な場所では、ユニークな装飾アイテムが手に入る。"
+
+		"DOTA_DarkCarnival_TarotCardTitle"						"タロットコレクション"
+		"DOTA_DarkCarnival_TarotCardCollectionDescription"		"タロットでユニークなリワードを獲得できる。<br>同じカードを<b>3</b>回引くと、そのカードがショーケースデコレーションとしてアンロックされる。"
+
+		"DOTA_Dark_Carnival_FortuneTellerDisabled"				"オラクルはまだ目覚めていない。"
+
+		"DOTA_DarkCarnival_Fortune_ExtraToken_StrengthHero"		"ストレングスヒーローで勝利すると、追加のチケットを1枚獲得。"
+		"DOTA_DarkCarnival_Fortune_ExtraToken_IntelligenceHero"	"インテリジェンスヒーローで勝利すると、追加のチケットを1枚獲得。"
+		"DOTA_DarkCarnival_Fortune_ExtraToken_AgilityHero"		"アジリティヒーローで勝利すると、追加のチケットを1枚獲得。"
+		"DOTA_DarkCarnival_Fortune_ExtraToken_UniversalHero"	"ユニバーサルヒーローで勝利すると、追加のチケットを1枚獲得。"
+
+		"DOTA_DarkCarnival_FortuneReward_RandomToken"	"ランダムなチケット2枚"
+		"DOTA_DarkCarnival_FortuneReward_ExtraToken"	"追加のチケット1枚を獲得"
+		"DOTA_DarkCarnival_FortuneReward_CandyBag"		"キャンディサック"
+		"DOTA_DarkCarnival_FortuneReward_DiscountCoin"	"割引コインを獲得"
+		"DOTA_DarkCarnival_FortuneReward_Treasure"		"トレジャーを獲得"
+		"DOTA_DarkCarnival_FortuneReward_SmallEconItem"	"スプレーまたは絵文字を獲得"
+		"DOTA_DarkCarnival_FortuneReward_Rerolls"		"キャンディショップのリロール"
+
+		"DOTA_DarkCarnival_Fortune_RevealFortuneButtonLabel"			"占い <Img class=\"ButtonIcon\" src=\"file://{images}/events/dark_carnival/oracle/oracle_coin.png\"/> <span class=\"Numbers\">x1</span>"
+		"DOTA_DarkCarnival_Fortune_RevealNextFortuneButtonLabel"		"次の占い x1"
+
+		"DOTA_DarkCarnival_FortuneReward_k_eOverworldFortuneReward_ThreeRandomTokens"	"ランダムなチケット3枚"
+		"DOTA_DarkCarnival_FortuneReward_k_eOverworldFortuneReward_OracleCoin"			"見通しの石 1"
+		"DOTA_DarkCarnival_FortuneReward_k_eOverworldFortuneReward_CandyBagSmall"		"キャンディバッグ（小）"
+		"DOTA_DarkCarnival_FortuneReward_k_eOverworldFortuneReward_CandyBagLarge"		"キャンディバッグ（大）"
+		"DOTA_DarkCarnival_FortuneReward_k_eOverworldFortuneReward_BalloonCharges"		"風船のアビリティレベル +1"
+		"DOTA_DarkCarnival_FortuneReward_k_eOverworldFortuneReward_FireworksCharges"	"花火のアビリティレベル +1"
+		"DOTA_DarkCarnival_FortuneReward_k_eOverworldFortuneReward_OneNodeUnlock"		"パスのアンロック 1"
+		"DOTA_DarkCarnival_FortuneReward_k_eOverworldFortuneReward_TwoNodeUnlocks"		"パスのアンロック 2"
+		"DOTA_DarkCarnival_FortuneReward_k_eOverworldFortuneReward_TwoLeastTokens"		"最も所有率が低いチケット 2"
+		"DOTA_DarkCarnival_FortuneReward_k_eOverworldFortuneReward_ThreeMostTokens"		"最も所有率が高いチケット 3"
+		"DOTA_DarkCarnival_FortuneReward_k_eOverworldFortuneReward_Rerolls"				"キャンディワークスのリロール 3"
+		"DOTA_DarkCarnival_FortuneReward_k_eOverworldFortuneReward_PieCharges"			"投げられるパイのアビリティレベル +1"
+		"DOTA_DarkCarnival_FortuneReward_k_eOverworldFortuneReward_LastHeroPlayedTokens"	"最後にプレイしたヒーローのチケット"
+
+		"DOTA_DarkCarnival_FortuneTeller_BalloonChargesDescription"						"ゲーム中に風船を作ることができる「期間限定カーニバルの風船」のアビリティレベルを1上げる。<br>レベルが上がるとチャージ数、風船のタイプなどが増えていく！"
+		"DOTA_DarkCarnival_FortuneTeller_PieChargesDescription"							"ゲーム中、味方や敵に投げられる「期間限定カーニバルのパイ」のアビリティレベルを1上げる。<br>レベルが上がるとチャージ数、バウンドするパイなどが増えていく！"
+		"DOTA_DarkCarnival_FortuneTeller_FireworksChargesDescription"					"ゲーム中に花火を打ち上げられる「期間限定カーニバルの花火」のアビリティレベルを1上げる。レベルが上がるとチャージ数、より派手な花火などが増えていく！"
+		"DOTA_DarkCarnival_FortuneTeller_PathUnlockDescription"							"通常必要なチケットを消費せずに、即座にノードを解放する。"
+
+		"DOTA_DarkCarnival_FortuneTeller_TokensReceived"								"オラクルから受け取ったチケット。"
+
+		"DOTA_DarkCarnival_FortuneTeller_Welcome"										"オラクルへようこそ"
+		"DOTA_DarkCarnival_FortuneTeller_WelcomeDescription"							"Dotaをプレイすると、1日1回、見通しの石を1つ獲得できる。ここで石を使って、予言とリワードを獲得しよう！"
+		"DOTA_DarkCarnival_FortuneTeller_ResourceCount"									"見通しの石 x{d:ticket_count}"
+		"DOTA_DarkCarnival_FortuneTeller_DescriptionSubtitle"							"Dotaをプレイして見通しの石を獲得"
+		"DOTA_DarkCarnival_FortuneTeller_DailySeeingStoneTitle"							"今日の見通しの石"
+		"DOTA_DarkCarnival_FortuneTeller_OverworldTokens"								"ダークカーニバルチケット"
+		"DOTA_DarkCarnival_FortuneTeller_StoryInformation"								"占いを続けて、オラクルのストーリーを進め、追加のリワードをアンロックしよう。"
+
+		"DOTA_DarkCarnival_FortuneTeller_AvailableToEarn"								"獲得可能"
+		"DOTA_DarkCarnival_FortuneTeller_Earned"										"獲得しました"
+		"DOTA_DarkCarnival_FortuneTeller_SeeingStoneCountdown"							"リセットまで{t:d:t:m:countdown_time}"
+		"DOTA_DarkCarnival_FortuneTeller_ReadyToUnlock"									"アンロック可能"
+
+		"DOTA_DarkCarnival_FortuneTeller_ClaimReward"									"リワードを入手"
+		"DOTA_DarkCarnival_FortuneTeller_OracleStoryTitle"								"オラクルのストーリーを進める"
+		"DOTA_DarkCarnival_FortuneTeller_TarotCardCollectionUnlocked:f"					"{unlocked, plural, other{アンロック済み}}"
+		"DOTA_DarkCarnival_ItemRecieved_SeeingStone:f"									"{GrantPoints, plural, other{{d:GrantPoints} 見通しの石}}"							
+
+		"DOTA_DarkCarnival_FortuneTeller_Reward"				"{s:reward_tarot_card_name}のリワード"
+
+		"DOTA_DarkCarnival_Dashboard_GetFortune"				"運命を占ってもらおう！"
+		"DOTA_DarkCarnival_ClickToStart"						"クリックしてスタート"
+
+		"DOTA_PlusPostGame_DarkCarnivalProgress"			"ダークカーニバルイベント進捗状況"
+
+		"DOTA_DarkCarnival_NodeBreaker"						"アンロック<img class=\"NodeUnlockIcon\" src=\"file://{images}/events/dark_carnival/tokens/token_icons/node_unlock.svg\" />x1を使用"
+		"DOTA_DarkCarnival_NodeBreaker_Tooltip"				"他のチケットではなく、パスアンロックチケットを使用してください。"
+		
+		// Dark Carnival candy shop
+		"DOTA_Dark_Carnival_CandyworksDisabled"				"カーニバルキャンディワークスは現在閉鎖中です。マップでアンロックするとオープンします。"
+		"DOTA_Dark_Carnival_CandyworksExpired"				"カーニバルキャンディワークスは閉鎖しています。イベントは終了しました。"
+
+		"DOTA_CandyShop_Dark_Carnival_Upgrade_Shelf"		"追加のカーニバルキャンディワークスのリワード棚"
+		"DOTA_CandyShop_Dark_Carnival_Upgrade_Trades"		"その他のキャンディ交換オプション"
+		"DOTA_CandyShop_Dark_Carnival_Upgrade_Inventory"	"追加のキャンディ用インベントリスペース"
+
+		"DOTA_CandyShop_Dark_Carnival_Title"				"カーニバルキャンディワークス"
+		"DOTA_CandyShop_Dark_Carnival_Title_Short"			"カーニバルキャンディワークス"
+		"DOTA_CandyShop_Dark_Carnival_Subtitle"				"& トレジャーエンポリウム"
+		"DOTA_CandyShop_Dark_Carnival_Subheader"			"ロリポップをゲット！ ボンボンをいただき！"
+		"DOTA_CandyShop_Dark_Carnival_Description"			"シスィルとクワートはキャンディ先物市場で非常に愚かな取引をしてしまった。この際、どんな価格でもいいからキャンディを手に入れなくてはならない。そこで二人は隠し持っていたお宝を売却中だ。キャンディと引き換えにお宝を手に入れよう。"
+		"DOTA_CandyShop_Dark_Carnival_Rules_01"				"ダークカーニバルのマップを探索してキャンディサックを集めるか、<b>ダークカーニバルストア</b>で購入しよう。"
+		"DOTA_CandyShop_Dark_Carnival_Rules_02"				"キャンディコンボと引き換えに<b>ダークカーニバル割引コイン</b>、<b>イモータル</b>や<b>アルカナ</b>も含まれるリワードを獲得しよう。"
+		"DOTA_CandyShop_Dark_Carnival_Rules_03"				"必要な材料が足りない場合、スタッシュにある部品を使って、足りないものと<b>交換</b>できる。"
+		"DOTA_CandyShop_Dark_Carnival_Rules_04"				"シスィルとクワートの品揃えが気に入らない？ <b>Dotaをプレイしてリロールを獲得する</b>と、品揃えが更新される。1週間に最大10個のリロールを獲得できる。"
+		"DOTA_CandyShop_Dark_Carnival_Rules_05"				"カーニバルキャンディーワークスをさらに訪れて<b>ショップをアップグレード</b>しよう。リワードや交換品が追加される。"
+
+		"DOTA_CandyShop_Dark_Carnival_Entry_Processing"		"カーニバルキャンディワークスに入店中"
+		"DOTA_CandyShop_Dark_Carnival_Entry_Failed_Title"	"カーニバルキャンディワークスは閉鎖中"
+		"DOTA_CandyShop_Dark_Carnival_Entry_Failed_Desc"	"後でもう一度お試しください（エラー：{d:error_code}）"
+
+		"DOTA_CandyShop_Dark_Carnival_Visit_Title"			"新しいカーニバルキャンディワークスを訪れた"
+		"DOTA_CandyShop_Dark_Carnival_Visit_Description"	"すべてのロケーションに訪れて、強力な特典を獲得しよう！"
+		"DOTA_CandyShop_Dark_Carnival_Visit_Upgrade_1"		"新しいカーニバルキャンディワークスに行くたびに無料のキャンディ +3"
+		"DOTA_CandyShop_Dark_Carnival_Visit_Upgrade_2"		"カーニバルキャンディワークスのアイテム棚 +1"
+		"DOTA_CandyShop_Dark_Carnival_Visit_Upgrade_3"		"キャンディ交換取引 +1"
+		"DOTA_CandyShop_Dark_Carnival_Visit_Upgrade_4"		"インベントリスペース +10"
+		"DOTA_CandyShop_Dark_Carnival_Entry"				"いらっしゃい"
+		"DOTA_CandyShop_Dark_Carnival_Reroll_Tooltip"		"キャンディワークスでリロールするとリワードの品揃えがランダムに変更される。Dotaをプレイしてリロールを獲得しよう。"
+		"DOTA_DarkCarnival_Reward_CandyShopShelfUpgrade"	"追加のカーニバルキャンディワークスのリワード棚"
+		"DOTA_DarkCarnival_Reward_CandyShopRecipeUpgrade"	"追加のカーニバルキャンディワークスのレシピ"
+		"DOTA_DarkCarnival_Reward_CandyShopInventoryUpgrade"	"追加のカーニバルキャンディワークスのインベントリスロット"
+		"DOTA_DarkCarnival_Reward_OracleCoin"				"見通しの石"
+		
+		"DOTA_Dark_Carnival_Encounter_TokenTrader_TokensReceivedPopupTitle"		"トレード成功"
+		"DOTA_Dark_Carnival_Encounter_TokenExchangeFailed"						"チケットの交換に失敗"
+		
+		"DOTA_Dark_Carnival_Encounter_TokenTrader_Trade"					"トレード"
+		"DOTA_Dark_Carnival_Encounter_TokenTrader_Reset"					"トレードをリセット"
+		"DOTA_Dark_Carnival_Encounter_TokenTrader_Trade3Title"				"<span class='Emphasis'>同じチケット3枚</span>をトレード"
+		"DOTA_Dark_Carnival_Encounter_TokenTrader_Trade4Title"				"<span class='Emphasis'>任意のチケット4枚</span>をトレード"
+		"DOTA_Dark_Carnival_Encounter_TokenTrader_TradeAny2Title"			"<span class='Emphasis'>任意のチケット2枚</span>をトレード"
+		"DOTA_Dark_Carnival_Encounter_TokenTrader_Trade3RandomTitle"		"<span class='Emphasis'>任意のチケット3枚</span>をトレード"
+		"DOTA_Dark_Carnival_Encounter_TokenTrader_Trade4RandomTitle"		"<span class='Emphasis'>任意のチケット4枚</span>をトレード"
+		"DOTA_Dark_Carnival_Encounter_TokenTrader_TradeRandomDescription"	"トレードしたものと同じチケットを受け取ることはありません。"
+		"DOTA_Dark_Carnival_Encounter_TokenTrader_TradeThreeScrapTitle"		"<span class='Emphasis'>3枚の{s:scrap_name}</span>チケットをトレード"
+		"DOTA_Dark_Carnival_Encounter_TokenTrader_TradeSixScrapTitle"		"<span class='Emphasis'>6枚の{s:scrap_name}</span>チケットをトレード"
+		"DOTA_Dark_Carnival_Encounter_TokenTrader_ChooseInventory"			"インベントリからチケットを選択"
+		"DOTA_Dark_Carnival_Encounter_TokenTrader_ChooseResultToken"		"受け取るチケットを選択"
+		"DOTA_Dark_Carnival_Encounter_Generic_TokensReceivedPopupDesc"		"このチケットは受け取り済みです"
+		
+		"DOTA_Dark_Carnival_EncounterName_CandyShop"		"カーニバルキャンディワークス"
+		"DOTA_Dark_Carnival_EncounterDesc_CandyShop"		"おいしいキャンディをたっぷり使おう。"
+
+		"DOTA_CandyShop_Dark_Carnival_PostGame_RerollsEarned"		"獲得したウィークリーリロール {s:weekly_earned_s} / {d:weekly_max}"
+		"DOTA_CandyShop_Dark_Carnival_PostGame_RerollCap"			"今はこれ以上リロールを獲得できません。"
+		"DOTA_CandyShop_Dark_Carnival_PostGame_RerollCapUnlocked"	"カーニバルキャンディワークスでリロールを使用しよう"
+		"DOTA_CandyShop_Dark_Carnival_PostGame_ShopLocked"			"ダークカーニバルの列車を探索してカーニバルキャンディワークスを見つけよう。"
+		"DOTA_CandyShop_Dark_Carnival_PostGame_WeeklyProgressComplete"	"さらに獲得できるまで：<span class=\"ResetTime\">{t:d:t:T:countdown_time}</span>"
+		
+		"DOTA_DarkCarnival_RewardDecoration"				"ショーケースデコレーション"
+
+		"DOTA_CandyShop_Dark_Carnival_CandyType_1"			"ピネリン・ピスタチオナッツ"
+		"DOTA_CandyShop_Dark_Carnival_CandyType_2"			"スモークハーバー・スイートミート"
+		"DOTA_CandyShop_Dark_Carnival_CandyType_3"			"ヨエラク・ジョーブレイカー"
+		"DOTA_CandyShop_Dark_Carnival_CandyType_4"			"ブルーハート・ブレスボルト"
+		"DOTA_CandyShop_Dark_Carnival_CandyType_5"			"キーン・コンフェクショナリーコイル"
+
+		"DOTA_Dark_Carnival_VisualNovel_Autoplay"			"自動再生"
+
+		"DOTA_Dark_Carnival_PostGame_WinEarned"					"{g:dota_hero_name:hero_id}で<b>勝利</b>して、次のリワードを獲得した："
+		"DOTA_Dark_Carnival_PostGame_LossEarned"				"{g:dota_hero_name:hero_id}を使用したゲームで、次のチケットをランダムに獲得した："
+		"DOTA_Dark_Carnival_PostGame_TurboLossEarned"			"{g:dota_hero_name:hero_id}を使用したゲームでチケットを獲得できなかった。"
+		"DOTA_Dark_Carnival_PostGame_UnclaimedMapProgress"		"マップの進捗状況を確認できる！"
+		"DOTA_Dark_Carnival_PostGame_GoToOverworld"				"列車に乗る"
+		"DOTA_Dark_Carnival_PostGame_TurboDisclaimer"			"ターボマッチでは勝利時にチケットを2枚獲得でき、敗北時には何も獲得できない。"
+
+		"DOTA_Dark_Carnival_PostGame_FortuneTellerProgressEarned"		"今日の見通しの石は獲得済みです。"
+		"DOTA_Dark_Carnival_PostGame_FortuneTellerProgress"				"リセットまで<span class=\"ResetTime\">{t:d:t:m:countdown_time}</span>"
+		"DOTA_Dark_Carnival_PostGame_FortuneTellerMaxProgress"			"すでに{d:earned_coins}/{d:max_coins}獲得済み。リセットまで<span class=\"ResetTime\">{t:d:t:m:countdown_time}</span>"
+		
+		"DOTA_Dark_Carnival_The_Train"									"列車"
+		"DOTA_Dark_Carnival_Store"										"ダークカーニバルストア"
+		"DOTA_Dark_Carnival_Candyworks"									"キャンディワーク"
+		"DOTA_Dark_Carnival_The_Oracle"									"オラクル"
+
+		"DOTA_Dark_Carnival_OverworldCell_TokensNeeded"					"次のリワードに必要なチケット"
+
+		"npc_dota_hero_axe_carnival_cosmetic_group_name"				"オートマトン"
+		"npc_dota_hero_oracle_carnival_cosmetic_group_name"				"オートマトン"
+		"npc_dota_hero_legion_commander_carnival_cosmetic_group_name"	"オートマトン"
+		"npc_dota_hero_bristleback_carnival_cosmetic_group_name"		"オートマトン"
+		"npc_dota_hero_morphling_carnival_cosmetic_group_name"			"オートマトン"
+
+		
+		// Dark Carnival Lockpicking
+		"DOTA_DarkCarnival_Lockpicking_Paused"			"一時停止"
+		"DOTA_DarkCarnival_Lockpicking_LeaveGame"					"ゲームから退出"
+		"DOTA_DarkCarnival_Lockpicking_ScoringTotal"	"合計スコア"
+		"DOTA_DarkCarnival_Lockpicking_PlayAgain"		"もう一度プレイ"
+		"DOTA_DarkCarnival_Lockpicking_Title"			"ロックピッキング"
+		"DOTA_DarkCarnival_Lockpicking_GameDesc"		"スラークの脱出を手助けしよう！"
+		"DOTA_DarkCarnival_Lockpicking_Leaderboard_HeaderFriends"	"フレンド"
+		"DOTA_DarkCarnival_Lockpicking_Leaderboard_Score"			"スコア"
+		"DOTA_DarkCarnival_Lockpicking_Scoring"						"スコアリング"
+		"DOTA_DarkCarnival_Lockpicking_Modes"						"モード"
+		"DOTA_DarkCarnival_Lockpicking_Rewards"						"リワード"
+		"DOTA_DarkCarnival_Lockpicking_Play"						"プレイ"
+		"DOTA_DarkCarnival_Lockpicking_Leave"						"去る"
+		"DOTA_DarkCarnival_Lockpicking_Pause"						"ポーズ"
+		"DOTA_DarkCarnival_Lockpicking_UnPause"						"一時停止解除"
+		"DOTA_DarkCarnival_Lockpicking_Help"						"ヘルプ"
+		"DOTA_DarkCarnival_Lockpicking_Won"							"勝利！"
+		"DOTA_DarkCarnival_Lockpicking_Lost"						"敗北…"
+		"DOTA_DarkCarnival_Lockpicking_ScoringUnlocks"				"ピック成功（{d:unlock_count} x {d:score_per_unlock}）："
+		"DOTA_DarkCarnival_Lockpicking_Help_HowToPlay"				"時間切れになる前に、ピッキングをできるだけ多く成功させよう。"
+		"DOTA_DarkCarnival_Lockpicking_Help_Pick"					"ピック"
+		"DOTA_DarkCarnival_Lockpicking_Help_Boost"					"スピードブースト（長押し）"
+		"DOTA_DarkCarnival_Lockpicking_Help_Pick_Details"			"ハイライトされたバーに到達したら、ロックピックを起動しよう。\n\nバーから外れると、ロックピックが一時的に無効になる。\n\n青いバーで時間を延長できる。"
+		"DOTA_DarkCarnival_Lockpicking_Help_Boost_Details"			"長押しで連続スピードブースト。"
+		"DOTA_DarkCarnival_Lockpicking_Scoring_SuccessfulPick"		"ピッキング成功1回あたり"
+		"DOTA_DarkCarnival_EncounterStatus_Lockpicking"				"ダークカーニバル：ロックピッキング"
+		"DOTA_DarkCarnival_Lockpicking_HighScores"					"ハイスコア"
+		"DOTA_DarkCarnival_Lockpicking_Resume"						"再開 [F9]"
+		"DOTA_DarkCarnival_Lockpicking_GameOver"					"ゲームオーバー"
+		"DOTA_DarkCarnival_Lockpicking_Score"						"スコア"
+		"DOTA_DarkCarnival_Lockpicking_TimeRemaining"				"残り時間"
+
+		// Dark Carnival: Slark Jailbreak
+		"DOTA_DarkCarnival_SlarkJailbreak_Title"					"ブーツ壊し屋"
+		"DOTA_DarkCarnival_SlarkJailbreak_GameDesc"					"戦利品を集めよう！ ブーツを破壊しよう！"
+		"DOTA_DarkCarnival_EncounterStatus_SlarkBreakout"			"ダークカーニバル：ブーツ壊し屋"
+		"DOTA_DarkCarnival_SlarkJailbreak_Scoring_PerBlock"			"破壊したブロック1つあたり"
+		"DOTA_DarkCarnival_SlarkJailbreak_Scoring_PerBonusBlock"	"破壊したボーナスブロック1つあたり"
+		"DOTA_DarkCarnival_SlarkJailbreak_Scoring_PerLevel"			"クリアしたレベル1つあたり"
+		"DOTA_DarkCarnival_SlarkJailbreak_ControlPaddle"			"カートを移動"
+		"DOTA_DarkCarnival_SlarkJailbreak_ControlLaunch"			"ブーツを投げる"
+		"DOTA_DarkCarnival_SlarkJailbreak_Level"					"レベル"
+		"DOTA_DarkCarnival_SlarkJailbreak_Lives"					"ブーツ"
+		"DOTA_DarkCarnival_SlarkJailbreak_Life"						"ブーツ"
+		"DOTA_DarkCarnival_SlarkJailbreak_Score"					"スコア"
+		"DOTA_DarkCarnival_SlarkJailbreak_MoveHint"					"カート位置を固定"
+		"DOTA_DarkCarnival_SlarkJailbreak_LaunchHint"				"ブーツを投げる"
+
+		"DOTA_DarkCarnival_Minigames_NewHighScore"					"新しいハイスコア！"
+		
+		"DOTA_Overworld_EncounterShortcut_lockpicking"		"ロックピッキング"
+		"DOTA_Overworld_EncounterShortcut_slark_jailbreak"	"ブーツ壊し屋"
+
+		"DOTA_Minigame_Encounter_RewardTitle"				"{d:reward_score_required}"
+
+		"DOTA_DarkCarnival_Overworld_Minigames"						"ミニゲーム"
+
+		"DOTA_DarkCarnival_Overworld_Act1_Part2_Locked_Countdown"	"{s:time_until_unlock}後にアンロック"
+		"DOTA_DarkCarnival_Overworld_Act1_Part3_Locked_Countdown"	"{s:time_until_unlock}後にアンロック"
+
+		"DOTA_DarkCarnival_Overworld_UsePathUnlockTokenPopup_Title"		"パスアンロックチケットを使う"
+		"DOTA_DarkCarnival_Overworld_UsePathUnlockTokenPopup_Question"	"パスアンロックチケットを使用して、このパスを解放しますか？"
+
+		"DOTA_DarkCarnival_TooltipEligibleForEventProgress"				"この設定はイベント進行の対象となります。"
+
+		"DOTA_DarkCarnival_ChatWheelMessage"							"チャットホイールメッセージ"
+
+		"dota_chatwheel_translation_darkcarnival_money_and_bones"		"カネとホネ！ カネとホネ！"
+		"dota_chatwheel_translation_darkcarnival_are_we_the_idiots"		"間抜けどもだって？"
+		"dota_chatwheel_translation_darkcarnival_wow"					"おお！"
+		"dota_chatwheel_source_fishwitch"								"グリンドルプリット"
+		"dota_chatwheel_source_hoodwink"								"Hoodwink"
+		"dota_chatwheel_source_clown"									"クラレンス"
+
+		"DOTA_Axe_Missing"			"アックスは行方不明で参加できません"
+
+		"DOTA_DarkCarnival_Overworld_Unlock"						"アンロック"
+
+	}
 } 
