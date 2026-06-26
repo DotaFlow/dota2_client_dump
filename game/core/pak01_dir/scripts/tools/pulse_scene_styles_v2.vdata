@@ -494,6 +494,18 @@
 			ImageTint = "$GreyBright_Hover"
 		}
 	}
+	.LocalNameMultiReference = 
+	{
+		FixedSizeX = 18
+		FixedSizeY = 18
+		BackgroundImage = "tools/images/pulse_editor/multinamereference_from_this.png"
+		ImageTint = "#777"
+		InteractionPriority = "BASE"
+		"&:hover" = 
+		{
+			ImageTint = "$GreyBright_Hover"
+		}
+	}
 	.PortLabelIcon = 
 	{
 		MinSizeX = 18
@@ -897,7 +909,7 @@
 	}
 	.HeaderText.SubHeaderText = 
 	{
-		Font = "Dinish,10,-1,5,50,0,0,0,0,0,Italic"
+		Font = "Dinish,11,-1,5,50,0,0,0,0,0,Regular"
 	}
 	".ValueWithoutPortLabels .SubHeaderText" = 
 	{
@@ -1308,6 +1320,10 @@
 				.InflowPortPlugSpacer = 
 				{
 					Visibility = "COLLAPSE"
+				}
+				"&:last-child" = 
+				{
+					FixedSizeX = 25
 				}
 			}
 			.PortPlugCtn = 
@@ -1772,6 +1788,10 @@
 	{
 		BackgroundImage = "tools/images/pulse_editor/remoteflow_continue_sequence.png"
 	}
+	.RemoteFlowIndicator.MULTIPLE_TYPES = 
+	{
+		BackgroundImage = "tools/images/pulse_editor/remoteflow_collapsed_multitype.png"
+	}
 	.RemoteFlowIndicatorsContainer = 
 	{
 		Positioning = "OUTSIDE_PARENT"
@@ -1787,6 +1807,70 @@
 	{
 		Padding_Top = 15
 		VAlign = "BOTTOM"
+	}
+	.BreakpointContainerInflow = 
+	{
+		Positioning = "OUTSIDE_PARENT"
+		LayoutChildren = "VBOX"
+		Padding_Bottom = -12
+		VAlign = "TOP"
+		HAlign = "CENTER"
+	}
+	.BreakpointContainerOutflow = 
+	{
+		Positioning = "OUTSIDE_PARENT"
+		LayoutChildren = "VBOX"
+		Padding_Bottom = 0
+		VAlign = "TOP"
+		HAlign = "CENTER"
+	}
+	.BreakpointContainerPort = 
+	{
+		Positioning = "OUTSIDE_PARENT"
+		LayoutChildren = "VBOX"
+		Padding_Bottom = 0
+		VAlign = "BOTTOM"
+		HAlign = "CENTER"
+	}
+	.BreakpointContainerHeader = 
+	{
+		Positioning = "OUTSIDE_PARENT"
+		LayoutChildren = "VBOX"
+		Padding_Bottom = -16
+		VAlign = "TOP"
+		HAlign = "CENTER"
+	}
+	.BreakpointIndicator = 
+	{
+		FixedSizeX = 12
+		FixedSizeY = 12
+		InteractionPriority = "PORT"
+		PropagateClicksToNonOverlappingAncestors = true
+		"&:hover" = 
+		{
+			FixedSizeX = 16
+			FixedSizeY = 16
+		}
+		"&.ActiveBreakpoint" = 
+		{
+			BackgroundImage = "tools/images/pulse_editor/debugger_breakpoint.png"
+		}
+		"&.InactiveBreakpoint" = 
+		{
+			BackgroundImage = "tools/images/pulse_editor/debugger_breakpoint_disabled.png"
+		}
+		"&.NodeInGroup" = 
+		{
+			FixedSizeY = 8
+			"&.ActiveBreakpoint" = 
+			{
+				BackgroundImage = "tools/images/pulse_editor/debugger_breakpoint_half.png"
+			}
+			"&.InactiveBreakpoint" = 
+			{
+				BackgroundImage = "tools/images/pulse_editor/debugger_breakpoint_half_disabled.png"
+			}
+		}
 	}
 	.ReturnFlowIndicatorsContainer = 
 	{
@@ -1819,6 +1903,17 @@
 		Margin_Left = 10
 		InteractionPriority = "BASE"
 		BackgroundImage = "tools/images/pulse_editor/caller_indicator.png"
+	}
+	.CallerIndicatorMultiReference = 
+	{
+		HAlign = "LEFT"
+		FixedSizeX = 20
+		FixedSizeY = 20
+		Margin_Top = 0
+		Margin_Bottom = 0
+		Margin_Left = 10
+		InteractionPriority = "BASE"
+		BackgroundImage = "tools/images/pulse_editor/caller_indicator_multiref.png"
 	}
 	.CallerIndicator.SyncCall_SyncMethod = 
 	{
@@ -1972,6 +2067,12 @@
 				BorderRadius_BottomRight = 0
 			}
 		}
+		.OutflowRowRightHandSideGrowSpacer = 
+		{
+			HAlign = "STRETCH"
+			LayoutGrowFactor = 1
+			MinSizeX = 25
+		}
 		.SpecialMultipleOutflowsSectionPortChild = 
 		{
 			LayoutChildren = "VBOX"
@@ -2024,7 +2125,7 @@
 			BorderRadius_TopRight = 5
 			Margin_Right = 40
 		}
-		".OutflowPort:first-child, .OutflowPort:last-child" = 
+		".OutflowPort:first-child" = 
 		{
 			Margin_Top = "unset"
 			.PortEventOptionalSpacer = 
@@ -2380,7 +2481,7 @@
 			Foreground_Color = "$colorBase"
 			"&.SubHeaderText" = 
 			{
-				Font = "Dinish,10,-1,5,50,0,0,0,0,0,Italic"
+				Font = "Dinish,14,-1,5,100,0,0,0,0,0,Italic"
 				Foreground_Color = "$colorBase"
 			}
 		}
@@ -2537,6 +2638,22 @@
 				Foreground_Color = "$colorBase"
 			}
 		}
+		.OutflowPort.FireAndForget = 
+		{
+			Foreground_Color = "$GreenBright"
+			.PortPlug = 
+			{
+				Background_Color = "$GreenBright"
+			}
+		}
+		.OutflowPort.WaitForCompletion = 
+		{
+			Foreground_Color = "$YellowBright"
+			.PortPlug = 
+			{
+				Background_Color = "$YellowBright"
+			}
+		}
 		"&.HasSpecialMultipleOutflowsSection" = 
 		{
 			"&.IsSelectorNode" = 
@@ -2574,22 +2691,6 @@
 				.PortEventOptionalSpacer = 
 				{
 					Background_Color = "$flowColor"
-				}
-			}
-			"&.WaitForCompletion .OutflowPort.Port:nth-child(n+2), .OutflowPort.WaitForCompletion" = 
-			{
-				Foreground_Color = "$YellowBright"
-				.PortPlug = 
-				{
-					Background_Color = "$YellowBright"
-				}
-			}
-			"&.FireAndForget .OutflowPort.Port:nth-child(n+2), .OutflowPort.FireAndForget" = 
-			{
-				Foreground_Color = "$GreenBright"
-				.PortPlug = 
-				{
-					Background_Color = "$GreenBright"
 				}
 			}
 			.OutflowSectionLabelContainer = 
