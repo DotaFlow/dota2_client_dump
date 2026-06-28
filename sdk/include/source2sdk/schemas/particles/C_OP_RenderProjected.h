@@ -114,7 +114,6 @@
 //		"m_bRightEye": false
 //	},
 //	"m_bCannotBeRefracted": true,
-//	"m_bSkipRenderingOnMobile": false,
 //	"m_bProjectCharacter": false,
 //	"m_bProjectWorld": true,
 //	"m_bProjectWater": true,

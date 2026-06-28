@@ -4,6 +4,6 @@ class CDOTA_Modifier_Batrider_FlamingLasso : public CDOTA_Buff
 	int32 drag_distance;
 	int32 break_distance;
 	ParticleIndex_t m_nFXIndex;
-	Vector vPreviousLocation;
+	VectorWS vPreviousLocation;
 	CHandle< CDOTA_BaseNPC > m_hAnchor;
 };

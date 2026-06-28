@@ -24,7 +24,7 @@ class CDOTA_BaseNPC_Hero : public CDOTA_BaseNPC_Additive
 	int32 m_nLastHealedAmount;
 	float32 m_flLastHealedTime;
 	CHandle< CBaseEntity > m_hLastHealEntity;
-	Vector m_vRespawnPosition;
+	VectorWS m_vRespawnPosition;
 	CUtlVector< CDOTA_BaseNPC_Hero::sHeroDamageInfo > m_HeroDamageInfoArray;
 	CUtlVector< CDOTA_BaseNPC_Hero::sHeroRecentModifierInfo > m_vecRecentModifiers;
 	GameTime_t m_fMostRecentDamageTime;

@@ -15,7 +15,12 @@
 //	"m_vecRooms":
 //	[
 //	],
-//	"m_flTrainCarViewDistance": 100.000000
+//	"m_flTrainCarViewDistance": 100.000000,
+//	"m_flTrainCarViewOffset":
+//	[
+//		0.000000,
+//		0.000000
+//	]
 //}
 class CDOTAOverworldRoomGroup
 {
@@ -29,4 +34,5 @@ class CDOTAOverworldRoomGroup
 	Vector2D m_vSize;
 	CUtlVector< OverworldRoomID_t > m_vecRooms;
 	float32 m_flTrainCarViewDistance;
+	Vector2D m_flTrainCarViewOffset;
 };

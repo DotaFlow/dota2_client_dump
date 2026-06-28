@@ -7,9 +7,10 @@ class CDOTA_Modifier_Hoodwink_Bushwhack_Trap : public CDOTA_Buff
 	uint32 m_TreeId;
 	float32 m_flDamagePerTick;
 	int32 m_nDamageTicks;
+	int32 m_nTicksApplied;
 	GameTime_t m_flLastTick;
 	CHandle< CDOTA_TempTree > m_hTree;
 	CDOTA_Tree* m_pTree;
-	Vector m_vPullPosition;
+	VectorWS m_vPullPosition;
 	Vector m_vDir;
 };

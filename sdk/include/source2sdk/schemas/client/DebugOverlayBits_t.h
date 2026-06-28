@@ -121,4 +121,10 @@ enum DebugOverlayBits_t : uint64_t
 	// MPropertyFriendlyName = "NPC God Mode"
 	// MPropertyDescription = "This NPC will take no damage or react to it"
 	OVERLAY_NPC_GOD_MODE = 4398046511104,
+	// MPropertyFriendlyName = "NPC Anim AI Handshakes"
+	// MPropertyDescription = "show handshaking between AI and Animgraphs"
+	OVERLAY_NPC_ANIM_AI_HANDSHAKES_BIT = 8796093022208,
+	// MPropertyFriendlyName = "NPC Path Queries"
+	// MPropertyDescription = "show path query processing"
+	OVERLAY_NPC_PATH_QUERIES_BIT = 17592186044416,
 };

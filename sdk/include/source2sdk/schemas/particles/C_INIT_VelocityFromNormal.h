@@ -96,6 +96,7 @@
 //	"m_fSpeedMax": 0.000000,
 //	"m_bIgnoreDt": false
 //}
+// MGPUParticleFunction
 class C_INIT_VelocityFromNormal : public CParticleFunctionInitializer
 {
 	// MPropertyFriendlyName = "random speed min"

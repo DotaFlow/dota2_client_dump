@@ -4,7 +4,7 @@ class CDOTA_Modifier_Knockback : public CDOTA_Buff
 	int32 knockback_height;
 	float32 knockback_duration;
 	Vector m_vHorizOffset;
-	Vector m_vStartPosition;
+	VectorWS m_vStartPosition;
 	float32 m_flZDelta;
 	float32 m_fCurrentTimeHoriz;
 	float32 m_fCurrentTimeVert;

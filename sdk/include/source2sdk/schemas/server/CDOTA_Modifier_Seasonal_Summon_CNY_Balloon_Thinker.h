@@ -8,7 +8,7 @@ class CDOTA_Modifier_Seasonal_Summon_CNY_Balloon_Thinker : public CDOTA_Buff
 	float32 bounce_turn_angle;
 	float32 bounce_turn_angle_tree;
 	float32 bounce_delay;
-	Vector m_vLastPos;
+	VectorWS m_vLastPos;
 	Vector m_vDir;
 	float32 m_flSpeed;
 	float32 m_flDistRemaining;

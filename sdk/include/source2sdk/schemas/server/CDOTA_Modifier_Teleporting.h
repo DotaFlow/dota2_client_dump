@@ -9,6 +9,6 @@ class CDOTA_Modifier_Teleporting : public CDOTA_Buff
 	bool m_bPlayingCoopAnim;
 	bool m_bIsPlayingTauntGesture;
 	float32 m_fChannelTime;
-	Vector m_vStart;
-	Vector m_vEnd;
+	VectorWS m_vStart;
+	VectorWS m_vEnd;
 };

@@ -706,6 +706,7 @@
 //	"m_bEvenDistribution": false,
 //	"m_bXYVelocityOnly": true
 //}
+// MGPUParticleFunction
 class C_INIT_RingWave : public CParticleFunctionInitializer
 {
 	// MPropertyFriendlyName = "input transform"

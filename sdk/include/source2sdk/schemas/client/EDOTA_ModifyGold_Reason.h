@@ -22,4 +22,5 @@ enum EDOTA_ModifyGold_Reason : uint32_t
 	DOTA_ModifyGold_AbilityGold = 19,
 	DOTA_ModifyGold_WardKill = 20,
 	DOTA_ModifyGold_CourierKilledByThisPlayer = 21,
+	DOTA_ModifyGold_SummonKill = 22,
 };

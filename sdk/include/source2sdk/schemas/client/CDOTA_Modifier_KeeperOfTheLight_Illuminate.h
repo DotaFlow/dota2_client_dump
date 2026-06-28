@@ -10,9 +10,9 @@ class CDOTA_Modifier_KeeperOfTheLight_Illuminate : public CDOTA_Buff
 	float32 channel_vision_duration;
 	float32 channel_vision_step;
 	GameTime_t m_flLastChantTime;
-	Vector m_vNextVisionLocation;
+	VectorWS m_vNextVisionLocation;
 	Vector m_vCastDirection;
-	Vector m_vCastLoc;
+	VectorWS m_vCastLoc;
 	QAngle m_qCastAngle;
 	ParticleIndex_t m_nFXIndex;
 	bool m_bIsSpiritForm;

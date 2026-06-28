@@ -28,7 +28,7 @@ class CSurvivorsImperiaBoss : public CSurvivorsEnemy
 	int32 m_nMaxDemonPortalCount;
 	float32 m_flDemonPortalDeactivateRadius;
 	CUtlVector< CUtlString > m_vecDemonPortalSpawners;
-	CUtlVector< Vector > m_vecDemonPortalSpawnPositions;
+	CUtlVector< VectorWS > m_vecDemonPortalSpawnPositions;
 	int32 m_nNumMagicMissiles;
 	float32 m_flMagicMissileProjectileSpeed;
 	float32 m_flMagicMissileDamage;

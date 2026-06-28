@@ -8,10 +8,10 @@ class CDOTA_Modifier_Invoker_IceWall_VectorTarget_Thinker : public CDOTA_Buff
 	float32 tick_interval;
 	float32 wall_total_length;
 	float32 wall_width;
-	Vector m_vWallCenter;
+	VectorWS m_vWallCenter;
 	Vector m_vWallDirection;
-	Vector m_vWallRight;
-	Vector m_vWallLeft;
+	VectorWS m_vWallRight;
+	VectorWS m_vWallLeft;
 	ParticleIndex_t m_nParticleIndexA;
 	ParticleIndex_t m_nParticleIndexB;
 	bool m_bStartedExpanding;

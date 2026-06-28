@@ -1,9 +1,9 @@
 class CDOTA_Ability_Tinker_DeployTurrets : public CDOTABaseAbility
 {
-	Vector m_vDashPosition;
-	Vector m_vFacePosition;
-	Vector m_vEndpoint;
+	VectorWS m_vDashPosition;
+	VectorWS m_vFacePosition;
+	VectorWS m_vEndpoint;
 	Vector m_vSlashDir;
-	Vector m_vDashProjectileLocation;
+	VectorWS m_vDashProjectileLocation;
 	float32 missile_range;
 };

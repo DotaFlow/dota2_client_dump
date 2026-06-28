@@ -5,8 +5,8 @@ class CDOTA_Modifier_MonkeyKing_ArcToGround : public CDOTA_Buff
 	float32 attackspeed_duration;
 	float32 m_flOriginalZDelta;
 	float32 m_flZDelta;
-	Vector m_vStart;
-	Vector m_vTargetPos;
+	VectorWS m_vStart;
+	VectorWS m_vTargetPos;
 	float32 m_flSpeed;
 	bool m_bDroppedFromTree;
 	ParticleIndex_t m_nFXIndex;

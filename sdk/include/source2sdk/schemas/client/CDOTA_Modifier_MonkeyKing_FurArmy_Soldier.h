@@ -1,6 +1,6 @@
 class CDOTA_Modifier_MonkeyKing_FurArmy_Soldier : public CDOTA_Buff
 {
-	Vector m_vTargetPos;
+	VectorWS m_vTargetPos;
 	Vector m_vDirection;
 	int32 move_speed;
 	CHandle< C_BaseEntity > m_hThinker;

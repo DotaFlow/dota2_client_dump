@@ -1,3 +1,6 @@
+// MGetKV3ClassDefaults = {
+//	"_class": "CRenderComponent"
+//}
 class CRenderComponent : public CEntityComponent
 {
 	// MNotSaved

@@ -11,5 +11,5 @@ class CDOTA_Modifier_Rattletrap_Cog : public CDOTA_Buff
 	bool m_bCogsPullin;
 	int32 m_iCogIndex;
 	ParticleIndex_t m_nFXIndex;
-	Vector vCenter;
+	VectorWS vCenter;
 };

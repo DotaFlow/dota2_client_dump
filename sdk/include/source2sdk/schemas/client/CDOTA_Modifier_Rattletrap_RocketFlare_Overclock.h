@@ -5,5 +5,5 @@ class CDOTA_Modifier_Rattletrap_RocketFlare_Overclock : public CDOTA_Buff
 	int32 rocket_flare_rockets;
 	int32 m_nRocketsFired;
 	float32 radius;
-	Vector m_vOriginalTarget;
+	VectorWS m_vOriginalTarget;
 };

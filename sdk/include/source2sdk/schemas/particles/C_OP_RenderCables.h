@@ -114,7 +114,6 @@
 //		"m_bRightEye": false
 //	},
 //	"m_bCannotBeRefracted": true,
-//	"m_bSkipRenderingOnMobile": false,
 //	"m_flRadiusScale":
 //	{
 //		"m_nType": "PF_TYPE_LITERAL",
@@ -1103,6 +1102,7 @@
 //	"m_nMaxTesselation": 128,
 //	"m_nRoundness": 1,
 //	"m_nForceRoundnessFixed": false,
+//	"m_bOnlyRenderInEffectsBloomPass": false,
 //	"m_LightingTransform":
 //	{
 //		"m_nType": "PT_TYPE_INVALID",
@@ -1173,6 +1173,9 @@ class C_OP_RenderCables : public CParticleFunctionRenderer
 	int32 m_nRoundness;
 	// MPropertyFriendlyName = "force roundness factor fixed"
 	bool m_nForceRoundnessFixed;
+	// MPropertyFriendlyName = "Only Render in effects bloom pass"
+	// MPropertySortPriority = 1100
+	bool m_bOnlyRenderInEffectsBloomPass;
 	// MPropertyFriendlyName = "diffuse lighting origin"
 	// MParticleInputOptional
 	CParticleTransformInput m_LightingTransform;

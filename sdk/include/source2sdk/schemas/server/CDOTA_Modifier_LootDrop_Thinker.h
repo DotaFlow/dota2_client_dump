@@ -13,8 +13,8 @@ class CDOTA_Modifier_LootDrop_Thinker : public CDOTA_Buff
 	float32 m_flInitialHeight;
 	float32 m_flKnockbackDuration;
 	float32 m_flEndHeight;
-	Vector m_vStartPos;
-	Vector m_vEndPos;
+	VectorWS m_vStartPos;
+	VectorWS m_vEndPos;
 	float32 m_fPickupRadius;
 	CUtlString m_strTransitionEffect;
 };

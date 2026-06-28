@@ -16,6 +16,8 @@ class CBasePlayerController : public CBaseEntity
 	// MNotSaved
 	PlayerConnectedState m_iConnected;
 	// MNotSaved
+	PlayerConnectedState m_iMostConnected;
+	// MNotSaved
 	char[128] m_iszPlayerName;
 	// MNotSaved
 	CUtlString m_szNetworkIDString;

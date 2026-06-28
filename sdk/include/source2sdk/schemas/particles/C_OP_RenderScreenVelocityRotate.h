@@ -115,7 +115,6 @@
 //		"m_bRightEye": false
 //	},
 //	"m_bCannotBeRefracted": true,
-//	"m_bSkipRenderingOnMobile": false,
 //	"m_flRotateRateDegrees": 0.000000,
 //	"m_flForwardDegrees": -90.000000
 //}

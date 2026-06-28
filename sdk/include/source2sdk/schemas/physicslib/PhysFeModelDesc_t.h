@@ -64,6 +64,9 @@
 //	"m_DynKinLinks":
 //	[
 //	],
+//	"m_BoneMergeLinks":
+//	[
+//	],
 //	"m_AntiTunnelProbes":
 //	[
 //	],
@@ -281,6 +284,7 @@ class PhysFeModelDesc_t
 	CUtlVector< FeHingeLimit_t > m_HingeLimits;
 	CUtlVector< uint32 > m_AntiTunnelBytecode;
 	CUtlVector< FeDynKinLink_t > m_DynKinLinks;
+	CUtlVector< FeBoneMergeLink_t > m_BoneMergeLinks;
 	CUtlVector< FeAntiTunnelProbe_t > m_AntiTunnelProbes;
 	CUtlVector< uint16 > m_AntiTunnelTargetNodes;
 	CUtlVector< FeNodeStrayBox_t > m_NodeStrayBoxes;

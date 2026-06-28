@@ -7,8 +7,8 @@ class C_DOTA_Ability_StormSpirit_BallLightning : public C_DOTABaseAbility
 	int32 ball_lightning_travel_cost_base;
 	float32 ball_lightning_travel_cost_percent;
 	int32 m_iProjectileID;
-	Vector m_vStartLocation;
-	Vector m_vProjectileLocation;
+	VectorWS m_vStartLocation;
+	VectorWS m_vProjectileLocation;
 	float32 m_fDistanceAccumulator;
 	float32 m_fTalentDistanceAccumulator;
 	int32 scepter_remnant_interval;

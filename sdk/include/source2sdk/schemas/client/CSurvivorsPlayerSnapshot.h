@@ -6,12 +6,7 @@
 //	"m_vecPowerUps":
 //	[
 //	],
-//	"m_vOrigin":
-//	[
-//		0.000000,
-//		0.000000,
-//		0.000000
-//	]
+//	"m_vOrigin": null
 //}
 // MVDataRoot
 class CSurvivorsPlayerSnapshot
@@ -21,5 +16,5 @@ class CSurvivorsPlayerSnapshot
 	float32 m_flCurrentExp;
 	int32 m_nRerollsRemaining;
 	CUtlVector< CSurvivorsPowerUpSnapshot > m_vecPowerUps;
-	Vector m_vOrigin;
+	VectorWS m_vOrigin;
 };

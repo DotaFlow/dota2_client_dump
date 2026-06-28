@@ -28,10 +28,10 @@ class CNPCPhysicsHull
 	CGlobalSymbol m_sName;
 	// MPropertyFriendlyName = "Type"
 	NPCPhysicsHullType_t m_eType;
-	// MPropertySuppressExpr = "m_eType != eGroundCapsule && m_eType != eCenteredCapsule"
+	// MPropertySuppressExpr = "m_eType != eGroundCapsule && m_eType != eCenteredCapsule && m_eType != eCenteredCylinder && m_eType != eGroundCylinder"
 	// MPropertyFriendlyName = "Height"
 	float32 m_flCapsuleHeight;
-	// MPropertySuppressExpr = "m_eType != eGroundCapsule && m_eType != eGenericCapsule && m_eType != eCenteredCapsule"
+	// MPropertySuppressExpr = "m_eType != eGroundCapsule && m_eType != eGenericCapsule && m_eType != eCenteredCapsule && m_eType != eCenteredCylinder && m_eType != eGroundCylinder"
 	// MPropertyFriendlyName = "Radius"
 	float32 m_flCapsuleRadius;
 	// MPropertySuppressExpr = "m_eType != eGenericCapsule"

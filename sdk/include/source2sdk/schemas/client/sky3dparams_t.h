@@ -1,7 +1,8 @@
+// MGetKV3ClassDefaults = null
 class sky3dparams_t
 {
 	int16 scale;
-	Vector origin;
+	VectorWS origin;
 	// MNotSaved
 	bool bClip3DSkyBoxNearToWorldFar;
 	// MNotSaved

@@ -1,7 +1,7 @@
 class CDOTA_Modifier_Phoenix_IcarusDive : public CDOTA_Buff
 {
-	Vector m_vSource;
-	Vector m_vTarget;
+	VectorWS m_vSource;
+	VectorWS m_vTarget;
 	Vector m_vDirection;
 	QAngle m_angDirection;
 	float32 m_flCurrentTime;

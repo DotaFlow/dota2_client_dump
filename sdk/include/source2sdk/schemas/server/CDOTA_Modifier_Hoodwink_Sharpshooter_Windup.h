@@ -3,7 +3,7 @@ class CDOTA_Modifier_Hoodwink_Sharpshooter_Windup : public CDOTA_Buff
 	bool m_bReachedMax;
 	float32 m_flLastOverheadTime;
 	float32 m_flFacingTarget;
-	Vector m_vAimTarget;
+	VectorWS m_vAimTarget;
 	ParticleIndex_t m_nCrosshairFX;
 	CUtlVector< CHandle< CBaseEntity > > m_vecVisionThinkers;
 	float32 arrow_vision;

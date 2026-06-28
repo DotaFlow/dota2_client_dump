@@ -14,8 +14,8 @@ class CDOTA_Ability_Marci_Companion_Run : public CDOTABaseAbility
 	ParticleIndex_t m_nToBounceFXIndex;
 	ParticleIndex_t m_nToTargetFXIndex;
 	bool m_bIsAltCastState;
-	Vector m_vDashPosition;
-	Vector m_vFacePosition;
+	VectorWS m_vDashPosition;
+	VectorWS m_vFacePosition;
 	Vector m_vTravelDir;
 	float32 m_fTravelDistance;
 };

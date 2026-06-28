@@ -1,7 +1,7 @@
 class CGlobalLightBase
 {
 	bool m_bSpotLight;
-	Vector m_SpotLightOrigin;
+	VectorWS m_SpotLightOrigin;
 	QAngle m_SpotLightAngles;
 	Vector m_ShadowDirection;
 	Vector m_AmbientDirection;
@@ -35,10 +35,10 @@ class CGlobalLightBase
 	float32 m_flFoWDarkness;
 	bool m_bEnableSeparateSkyboxFog;
 	Vector m_vFowColor;
-	Vector m_ViewOrigin;
+	VectorWS m_ViewOrigin;
 	QAngle m_ViewAngles;
 	float32 m_flViewFoV;
-	Vector[8] m_WorldPoints;
+	VectorWS[8] m_WorldPoints;
 	Vector2D m_vFogOffsetLayer0;
 	Vector2D m_vFogOffsetLayer1;
 	CHandle< C_BaseEntity > m_hEnvWind;

@@ -111,6 +111,7 @@
 //	"m_nRTEnvCP": -1,
 //	"m_nComponent": 0
 //}
+// MGPUParticleFunction
 class C_INIT_RtEnvCull : public CParticleFunctionInitializer
 {
 	// MPropertyFriendlyName = "test direction"

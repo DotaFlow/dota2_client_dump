@@ -1,3 +1,4 @@
+// MGetKV3ClassDefaults = Could not parse KV3 Defaults
 class CGameSceneNode
 {
 	// MNotSaved
@@ -58,5 +59,4 @@ class CGameSceneNode
 	float32 m_flZOffset;
 	QAngle m_angLocalOrientation;
 	float32 m_flClientLocalScale;
-	Vector m_vRenderOrigin;
 };

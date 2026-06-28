@@ -1,6 +1,6 @@
 class CDOTA_Ability_Pudge_MeatHook : public C_DOTABaseAbility
 {
-	Vector m_vEndpoint;
+	VectorWS m_vEndpoint;
 	int32 m_nConsecutiveHits;
 	bool m_bIsVectorTargeted;
 	VectorWS m_vTurnLocation;

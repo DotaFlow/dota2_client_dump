@@ -44,6 +44,7 @@
 //	"m_nHealthBefore": 0,
 //	"m_flDamageDealt": 0.000000,
 //	"m_flPreModifiedDamage": 0.000000,
+//	"m_vDamagePosition": null,
 //	"m_nTotalledHealthLost": 0,
 //	"m_flTotalledDamageDealt": 0.000000,
 //	"m_flTotalledPreModifiedDamage": 0.000000,
@@ -62,6 +63,7 @@ class CTakeDamageResult
 	int32 m_nHealthBefore;
 	float32 m_flDamageDealt;
 	float32 m_flPreModifiedDamage;
+	VectorWS m_vDamagePosition;
 	int32 m_nTotalledHealthLost;
 	float32 m_flTotalledDamageDealt;
 	float32 m_flTotalledPreModifiedDamage;

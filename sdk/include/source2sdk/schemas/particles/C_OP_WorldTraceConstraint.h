@@ -414,6 +414,7 @@
 //	"m_bDecayBounce": false,
 //	"m_bKillonContact": false,
 //	"m_flMinSpeed": -1.000000,
+//	"m_bKillonContactBounce": false,
 //	"m_bSetNormal": false,
 //	"m_nStickOnCollisionField": 19,
 //	"m_flStopSpeed":
@@ -551,6 +552,9 @@ class C_OP_WorldTraceConstraint : public CParticleFunctionConstraint
 	bool m_bKillonContact;
 	// MPropertyFriendlyName = "minimum speed to kill on collision"
 	float32 m_flMinSpeed;
+	// MPropertyFriendlyName = "calculate bounce on killed particles (for child events)"
+	// MPropertySuppressExpr = "m_bKillonContact == false"
+	bool m_bKillonContactBounce;
 	// MPropertyFriendlyName = "Set Normal"
 	bool m_bSetNormal;
 	// MPropertyFriendlyName = "Stick On Collision Cache Field"

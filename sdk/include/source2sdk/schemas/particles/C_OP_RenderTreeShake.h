@@ -114,7 +114,6 @@
 //		"m_bRightEye": false
 //	},
 //	"m_bCannotBeRefracted": true,
-//	"m_bSkipRenderingOnMobile": false,
 //	"m_flPeakStrength": 9.000000,
 //	"m_nPeakStrengthFieldOverride": 19,
 //	"m_flRadius": 256.000000,

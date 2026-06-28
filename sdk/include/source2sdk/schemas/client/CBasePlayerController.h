@@ -20,6 +20,8 @@ class CBasePlayerController : public C_BaseEntity
 	// MNotSaved
 	PlayerConnectedState m_iConnected;
 	// MNotSaved
+	PlayerConnectedState m_iMostConnected;
+	// MNotSaved
 	char[128] m_iszPlayerName;
 	// MNotSaved
 	uint64 m_steamID;

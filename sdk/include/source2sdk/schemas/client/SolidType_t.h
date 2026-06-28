@@ -8,5 +8,6 @@ enum SolidType_t : uint8_t
 	SOLID_POINT = 5,
 	SOLID_VPHYSICS = 6,
 	SOLID_CAPSULE = 7,
-	SOLID_LAST = 8,
+	SOLID_CYLINDER = 8,
+	SOLID_LAST = 9,
 };

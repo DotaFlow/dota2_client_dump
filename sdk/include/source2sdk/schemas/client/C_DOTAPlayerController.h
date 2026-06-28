@@ -10,9 +10,9 @@ class C_DOTAPlayerController : public CBasePlayerController
 	bool m_bUsingCameraMan;
 	bool m_bUsingAssistedCameraOperator;
 	int32 m_nPlayerAssistFlags;
-	Vector m_vLatestEvent;
+	VectorWS m_vLatestEvent;
 	CHandle< C_DOTABaseAbility > m_hFreeDrawAbility;
-	Vector m_vLastFreeDrawPosition;
+	VectorWS m_vLastFreeDrawPosition;
 	PlayerID_t m_nPlayerID;
 	CHandle< C_BaseEntity > m_hAssignedHero;
 	CHandle< C_BaseEntity > m_hLastAssignedHero;

@@ -9,5 +9,5 @@ class CDOTA_Modifier_Kez_RavensVeil_Thinker : public CDOTA_Buff
 	int32 apply_parry_bonus;
 	float32 blind_duration;
 	float32 vuln_duration;
-	Vector m_vStartLoc;
+	VectorWS m_vStartLoc;
 };

@@ -7,7 +7,7 @@ class CDOTA_Modifier_Luna_Eclipse : public CDOTA_Buff
 	int32 m_iBeamDamage;
 	float32 beam_interval;
 	float32 stun_duration;
-	Vector vPosition;
+	VectorWS vPosition;
 	bool bAreaTarget;
 	int32 m_iTickCount;
 	ParticleIndex_t m_nMoonlightFXIndex;

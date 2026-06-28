@@ -98,6 +98,7 @@
 //	"m_bAdditive": false,
 //	"m_flNoiseAnimationTimeScale": 0.000000
 //}
+// MGPUParticleFunction
 class C_OP_Noise : public CParticleFunctionOperator
 {
 	// MPropertyFriendlyName = "output field"

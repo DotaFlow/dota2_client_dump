@@ -7,7 +7,7 @@ class CDOTA_Modifier_EarthSpirit_GeomagneticGrip : public CDOTA_Buff
 	float32 total_pull_distance;
 	float32 duration;
 	bool m_bUsedStone;
-	Vector m_vDestination;
-	Vector m_vLocation;
+	VectorWS m_vDestination;
+	VectorWS m_vLocation;
 	CUtlVector< CHandle< CBaseEntity > > m_hHitEntities;
 };

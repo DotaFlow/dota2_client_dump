@@ -1,7 +1,7 @@
 class CDOTA_Ability_DrowRanger_WaveOfSilence : public CDOTABaseAbility
 {
-	Vector m_vStartPosition;
-	Vector m_vEndPosition;
+	VectorWS m_vStartPosition;
+	VectorWS m_vEndPosition;
 	float32 wave_width;
 	float32 wave_speed;
 	float32 silence_duration;

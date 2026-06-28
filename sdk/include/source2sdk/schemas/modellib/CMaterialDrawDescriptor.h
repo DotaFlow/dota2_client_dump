@@ -15,6 +15,9 @@
 //	"m_rigidMeshParts":
 //	[
 //	],
+//	"m_rootBvhNodes":
+//	[
+//	],
 //	"m_nPrimitiveType": "RENDER_PRIM_TRIANGLES",
 //	"m_nBaseVertex": 0,
 //	"m_nVertexCount": 0,
@@ -46,6 +49,7 @@ class CMaterialDrawDescriptor
 	uint8 m_nDepthVertexBufferIndex;
 	uint8 m_nMeshletPackedIVBIndex;
 	CUtlLeanVector< CMaterialDrawDescriptor::RigidMeshPart_t > m_rigidMeshParts;
+	CUtlLeanVector< uint16 > m_rootBvhNodes;
 	RenderPrimitiveType_t m_nPrimitiveType;
 	int32 m_nBaseVertex;
 	int32 m_nVertexCount;

@@ -1,3 +1,17 @@
+// MGetKV3ClassDefaults = {
+//	"_class": "VPhysicsCollisionAttribute_t",
+//	"m_nInteractsAs": 0,
+//	"m_nInteractsWith": 0,
+//	"m_nInteractsExclude": 0,
+//	"m_nEntityId": 0,
+//	"m_nOwnerId": 0,
+//	"m_nHierarchyId": 0,
+//	"m_nDetailLayerMask": 0,
+//	"m_nDetailLayerMaskType": 0,
+//	"m_nTargetDetailLayer": 0,
+//	"m_nCollisionGroup": 0,
+//	"m_nCollisionFunctionMask": 0
+//}
 class VPhysicsCollisionAttribute_t
 {
 	uint64 m_nInteractsAs;

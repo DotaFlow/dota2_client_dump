@@ -11,7 +11,6 @@ class C_PointCommentaryNode : public CBaseAnimatingActivity
 	int32 m_iNodeNumber;
 	int32 m_iNodeNumberMax;
 	bool m_bListenedTo;
-	// MKV3TransferSaveOpsForField = "GetSoundSaveRestoreOps"
 	CSoundPatch* m_sndCommentary;
 	CHandle< C_BaseEntity > m_hViewPosition;
 	// MNotSaved

@@ -1,5 +1,5 @@
 class CDOTA_Ability_Disruptor_KineticFence : public CDOTABaseAbility
 {
-	Vector m_vEndpoint;
+	VectorWS m_vEndpoint;
 	CHandle< CDOTABaseAbility > m_hSourceAbility;
 };

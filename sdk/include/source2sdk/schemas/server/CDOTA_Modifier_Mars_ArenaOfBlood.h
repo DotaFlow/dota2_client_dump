@@ -7,5 +7,5 @@ class CDOTA_Modifier_Mars_ArenaOfBlood : public CDOTA_Buff
 	float32 spear_attack_interval;
 	bool pierces_debuff_immunity;
 	int32 m_hObstruction;
-	CUtlVector< Vector > m_vecAvoidLocations;
+	CUtlVector< VectorWS > m_vecAvoidLocations;
 };

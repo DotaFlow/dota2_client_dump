@@ -1,3 +1,4 @@
+// MGetKV3ClassDefaults = null
 class EngineCountdownTimer
 {
 	float32 m_duration;

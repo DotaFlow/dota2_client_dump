@@ -28,7 +28,7 @@ class CDOTACourierController
 	CUtlVector< bool > m_vecAutoState;
 	int32 m_nLastSecondCaptured;
 	int32 m_nMoveCount;
-	Vector m_vLastPos;
+	VectorWS m_vLastPos;
 	bool m_bDebugging;
 	bool m_bTriggerDebug;
 	DebugOverlayBits_t m_eDebugBits;

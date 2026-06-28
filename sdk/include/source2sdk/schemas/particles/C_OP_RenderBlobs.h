@@ -114,7 +114,6 @@
 //		"m_bRightEye": false
 //	},
 //	"m_bCannotBeRefracted": true,
-//	"m_bSkipRenderingOnMobile": false,
 //	"m_cubeWidth":
 //	{
 //		"m_nType": "PF_TYPE_LITERAL",

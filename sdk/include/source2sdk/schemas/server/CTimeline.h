@@ -1,3 +1,4 @@
+// MGetKV3ClassDefaults = null
 class CTimeline : public IntervalTimer
 {
 	float32[64] m_flValues;

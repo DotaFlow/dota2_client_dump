@@ -1,10 +1,10 @@
 class CDOTA_Modifier_Aghsfort_Hoodwink_ArcingBoomerang : public CDOTA_Buff
 {
-	Vector m_vLeftControl;
-	Vector m_vRightControl;
-	Vector m_vTargetLoc;
+	VectorWS m_vLeftControl;
+	VectorWS m_vRightControl;
+	VectorWS m_vTargetLoc;
 	VectorWS m_vOriginalTargetLoc;
-	Vector m_vSourceLoc;
+	VectorWS m_vSourceLoc;
 	float32 m_flBuffDuration;
 	GameTime_t m_flBuffDieTime;
 	bool m_bReturning;

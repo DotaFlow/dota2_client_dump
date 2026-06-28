@@ -7,6 +7,6 @@ class CDOTA_Modifier_Mars_Bulwark_Soldier_Thinker : public CDOTA_Buff
 	int32 knockback_distance;
 	CUtlVector< CHandle< C_BaseEntity > > m_hAllSoldiers;
 	GameTime_t m_flLastStationaryTime;
-	Vector m_vLastStationaryPosition;
+	VectorWS m_vLastStationaryPosition;
 	float32 stationary_attack_delay;
 };

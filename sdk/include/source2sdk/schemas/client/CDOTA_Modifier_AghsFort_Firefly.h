@@ -12,6 +12,6 @@ class CDOTA_Modifier_AghsFort_Firefly : public CDOTA_Buff
 	ParticleIndex_t m_nFXIndex;
 	ParticleIndex_t m_nFXIndexB;
 	GameTime_t m_flStartTime;
-	Vector m_vLastFirePoolLoc;
-	CUtlVector< Vector > m_vFirePoolLocations;
+	VectorWS m_vLastFirePoolLoc;
+	CUtlVector< VectorWS > m_vFirePoolLocations;
 };

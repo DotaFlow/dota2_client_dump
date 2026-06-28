@@ -15,7 +15,9 @@
 //	"m_nLightProbeVolumePrecomputedHandshake": 0,
 //	"m_nInstanceStreamOffset": 0,
 //	"m_nVertexAlbedoStreamOffset": 0,
-//	"m_instanceStreams": "AGGREGATE_INSTANCE_STREAM_NONE"
+//	"m_nVertexEmissiveStreamOffset": 0,
+//	"m_instanceStreams": "AGGREGATE_INSTANCE_STREAM_NONE",
+//	"m_fEmissiveFactor": 0.000000
 //}
 class AggregateMeshInfo_t
 {
@@ -30,5 +32,7 @@ class AggregateMeshInfo_t
 	int32 m_nLightProbeVolumePrecomputedHandshake;
 	uint32 m_nInstanceStreamOffset;
 	uint32 m_nVertexAlbedoStreamOffset;
+	uint32 m_nVertexEmissiveStreamOffset;
 	AggregateInstanceStream_t m_instanceStreams;
+	float32 m_fEmissiveFactor;
 };

@@ -21,7 +21,6 @@ class C_Beam : public C_BaseModelEntity
 	float32 m_fStartFrame;
 	float32 m_fSpeed;
 	float32 m_flFrame;
-	BeamClipStyle_t m_nClipStyle;
 	bool m_bTurnedOff;
 	VectorWS m_vecEndPos;
 	CHandle< C_BaseEntity > m_hEndEntity;

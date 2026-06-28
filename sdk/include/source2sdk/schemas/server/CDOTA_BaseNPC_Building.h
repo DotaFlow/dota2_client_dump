@@ -13,9 +13,9 @@ class CDOTA_BaseNPC_Building : public CDOTA_BaseNPC
 	char[32] m_HeroStatueInscription;
 	PlayerID_t m_iHeroStatueOwnerPlayerID;
 	Color m_ParticleTintColor;
-	CUtlSymbolLarge m_sDestroySnd;
-	CUtlSymbolLarge m_sDmgLvl1Snd;
-	CUtlSymbolLarge m_sDmgLvl2Snd;
+	CGameSoundEventName m_sDestroySnd;
+	CGameSoundEventName m_sDmgLvl1Snd;
+	CGameSoundEventName m_sDmgLvl2Snd;
 	CUtlSymbolLarge m_iszLinkedUnit;
 	CUtlSymbolLarge m_iszAmbientEffectName;
 	CUtlSymbolLarge m_iszDestructionEffectName;

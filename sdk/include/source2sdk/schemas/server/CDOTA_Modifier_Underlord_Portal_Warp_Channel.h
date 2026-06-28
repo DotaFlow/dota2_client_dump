@@ -7,7 +7,7 @@ class CDOTA_Modifier_Underlord_Portal_Warp_Channel : public CDOTA_Buff
 	ParticleIndex_t m_nfxPortal2;
 	CHandle< CBaseEntity > m_hPortal;
 	CHandle< CBaseEntity > m_hOtherPortal;
-	Vector m_vStartPosition;
+	VectorWS m_vStartPosition;
 	float32 m_flTotalTime;
 	float32 m_flElapsedTimePortion;
 	float32 animation_rate;

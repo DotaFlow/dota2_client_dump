@@ -2,7 +2,7 @@ class CDOTA_Modifier_Rattletrap_Hookshot : public CDOTA_Buff
 {
 	CUtlVector< CHandle< CBaseEntity > > m_hDamaged;
 	CHandle< CBaseEntity > m_hTarget;
-	Vector m_vStartPosition;
+	VectorWS m_vStartPosition;
 	int32 speed;
 	float32 stun_radius;
 	float32 radius_ally;

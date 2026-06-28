@@ -11,6 +11,6 @@ class CDOTABehaviorCommandVampireThrall
 	bool m_bIsAggressive;
 	float32 m_flTargetAngle;
 	Vector m_vFollowOffset;
-	Vector m_vMoveToPosition;
+	VectorWS m_vMoveToPosition;
 	CHandle< CBaseEntity > m_hMaster;
 };

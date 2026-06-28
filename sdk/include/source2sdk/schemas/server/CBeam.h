@@ -19,7 +19,6 @@ class CBeam : public CBaseModelEntity
 	float32 m_fStartFrame;
 	float32 m_fSpeed;
 	float32 m_flFrame;
-	BeamClipStyle_t m_nClipStyle;
 	bool m_bTurnedOff;
 	VectorWS m_vecEndPos;
 	CHandle< CBaseEntity > m_hEndEntity;

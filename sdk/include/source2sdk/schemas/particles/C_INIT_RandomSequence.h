@@ -100,6 +100,7 @@
 //	[
 //	]
 //}
+// MGPUParticleFunction
 class C_INIT_RandomSequence : public CParticleFunctionInitializer
 {
 	// MPropertyFriendlyName = "sequence min"

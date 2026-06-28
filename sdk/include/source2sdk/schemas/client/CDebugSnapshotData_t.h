@@ -9,7 +9,6 @@ class CDebugSnapshotData_t
 	CTransformWS m_userTransform;
 	CGenericShapeProxy m_userShape;
 	Color m_drawColor;
-	// MKV3TransferSaveOpsForField = "GetUtlVectorAllocateSaveOps< CDebugDrawHistoryData >"
 	CUtlVector< CDebugDrawHistoryData* > m_vecDebugOverlayData;
 	DebugSnapshotBaseStructuredData_t* m_pStructuredData;
 	CHandle< C_BaseEntity > m_hEntity;

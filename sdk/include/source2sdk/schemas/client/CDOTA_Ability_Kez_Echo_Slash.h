@@ -1,8 +1,8 @@
 class CDOTA_Ability_Kez_Echo_Slash : public C_DOTA_Ability_Kez_BaseAbility
 {
 	Vector m_vInitialDirection;
-	Vector m_vStartPos;
-	CTransform m_InitialTransform;
+	VectorWS m_vStartPos;
+	CTransformWS m_InitialTransform;
 	float32 katana_radius;
 	float32 katana_distance;
 	float32 travel_distance;

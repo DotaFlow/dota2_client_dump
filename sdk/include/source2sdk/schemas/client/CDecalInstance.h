@@ -10,6 +10,7 @@ class CDecalInstance
 	Vector m_vPositionLS;
 	Vector m_vPositionOS;
 	Vector m_vNormalLS;
+	Vector m_vNormalOS;
 	Vector m_vSAxisLS;
 	DecalFlags_t m_nFlags;
 	Color m_Color;

@@ -170,6 +170,7 @@
 //	},
 //	"m_bCullInside": false
 //}
+// MGPUParticleFunction
 class C_INIT_PlaneCull : public CParticleFunctionInitializer
 {
 	// MPropertyFriendlyName = "control point of plane"

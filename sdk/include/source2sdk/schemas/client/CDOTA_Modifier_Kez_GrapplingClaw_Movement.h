@@ -1,6 +1,6 @@
 class CDOTA_Modifier_Kez_GrapplingClaw_Movement : public CDOTA_Buff
 {
-	Vector m_vGrappleHookPos;
+	VectorWS m_vGrappleHookPos;
 	Vector m_vInitialDir;
 	Vector m_vHookDir;
 	Vector m_vLastVelocity;

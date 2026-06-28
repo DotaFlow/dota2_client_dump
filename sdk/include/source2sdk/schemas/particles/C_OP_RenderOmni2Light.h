@@ -114,7 +114,6 @@
 //		"m_bRightEye": false
 //	},
 //	"m_bCannotBeRefracted": true,
-//	"m_bSkipRenderingOnMobile": false,
 //	"m_nLightType": "PARTICLE_OMNI2_LIGHT_TYPE_POINT",
 //	"m_nMaxAllowed": 32,
 //	"m_vColorBlend":

@@ -114,7 +114,6 @@
 //		"m_bRightEye": false
 //	},
 //	"m_bCannotBeRefracted": true,
-//	"m_bSkipRenderingOnMobile": false,
 //	"m_nMaterialControlPoint": 0,
 //	"m_nProxyType": "MATERIAL_PROXY_STATUS_EFFECT",
 //	"m_MaterialVars":

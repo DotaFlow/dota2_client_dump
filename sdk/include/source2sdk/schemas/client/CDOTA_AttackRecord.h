@@ -48,8 +48,8 @@ class CDOTA_AttackRecord
 	float32 m_flDeadlyBlowDisplay;
 	int32 m_iProjectileSpeed;
 	Vector m_vForceDirectionOverride;
-	Vector m_vTargetLoc;
-	Vector m_vBlockLoc;
+	VectorWS m_vTargetLoc;
+	VectorWS m_vBlockLoc;
 	CUtlSymbolLarge m_iszAutoAttackRangedParticle;
 	CUtlSymbolLarge m_iszAutoAttackRangedParticleAdditionalEffect;
 	ParticleIndex_t m_iCustomFXIndex;

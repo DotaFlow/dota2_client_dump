@@ -38,10 +38,10 @@ class CDOTA_BaseNPC_Creature : public CDOTA_BaseNPC_Creep
 	bool m_bHasEscapeAbility;
 	CUtlVector< CreatureAbilityData_t > m_vEscapeAbilities;
 	CDOTABaseAbility* m_pLastUsedAbility;
-	Vector m_vDesiredCastLocation;
+	VectorWS m_vDesiredCastLocation;
 	CDOTA_BaseNPC* m_pDesiredNPCTarget;
 	CDOTA_BaseNPC* m_pEscortTarget;
-	Vector m_vLastDamageSource;
+	VectorWS m_vLastDamageSource;
 	bool m_bIsChampion;
 	CUtlVector< ItemDropData_t* > m_vItemDropData;
 	CUtlVector< WearableData_t > m_vecAttachWearableItemDefs;

@@ -6,6 +6,7 @@
 //	"m_nDamageType": "DMG_BLAST",
 //	"m_flBreakDamage": 0.000000,
 //	"m_flBreakDamageRadius": 24.000000,
+//	"m_hAttacker": null,
 //	"m_vWsBreakDamageOrigin": null,
 //	"m_vWsBreakDamageForce":
 //	[
@@ -23,6 +24,7 @@ class DestructiblePartDamageRequest_t
 	DamageTypes_t m_nDamageType;
 	float32 m_flBreakDamage;
 	float32 m_flBreakDamageRadius;
+	CHandle< C_BaseEntity > m_hAttacker;
 	VectorWS m_vWsBreakDamageOrigin;
 	Vector m_vWsBreakDamageForce;
 };

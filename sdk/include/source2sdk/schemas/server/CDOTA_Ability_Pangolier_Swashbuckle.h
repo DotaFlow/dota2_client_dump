@@ -10,8 +10,8 @@ class CDOTA_Ability_Pangolier_Swashbuckle : public CDOTABaseAbility, public CHor
 	float32 slow_duration;
 	VectorWS m_vDashPosition;
 	VectorWS m_vFacePosition;
-	Vector m_vEndpoint;
+	VectorWS m_vEndpoint;
 	Vector m_vSlashDir;
 	int32 m_nDashProjectileID;
-	Vector m_vDashProjectileLocation;
+	VectorWS m_vDashProjectileLocation;
 };

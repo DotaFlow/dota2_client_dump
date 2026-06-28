@@ -3,6 +3,7 @@ class CPathTrack : public CPointEntity
 	CHandle< CPathTrack > m_pnext;
 	CHandle< CPathTrack > m_pprevious;
 	CHandle< CPathTrack > m_paltpath;
+	float32 m_flSpeed;
 	float32 m_flRadius;
 	float32 m_length;
 	CUtlSymbolLarge m_altName;

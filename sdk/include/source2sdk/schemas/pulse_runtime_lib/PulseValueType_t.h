@@ -67,6 +67,10 @@ enum PulseValueType_t : uint32_t
 	// MPropertySuppressEnumerator
 	// MPropertyFriendlyName = "Particle Object"
 	PVAL_PARTICLE_EHANDLE = 30,
+	// MPropertyFriendlyName = "Anim Sequence"
+	PVAL_ANIM_SEQUENCE = 31,
+	// MPropertyFriendlyName = "VData Choice"
+	PVAL_VDATA_CHOICE = 32,
 	// MPropertySuppressEnumerator
-	PVAL_COUNT = 31,
+	PVAL_COUNT = 33,
 };

@@ -1,6 +1,6 @@
 class CDOTA_Ability_Invoker_IceWall : public CDOTA_Ability_Invoker_InvokedBase
 {
-	Vector m_vEndPosition;
+	VectorWS m_vEndPosition;
 	int32 num_wall_elements;
 	float32 wall_element_spacing;
 	float32 wall_element_radius;

@@ -4,7 +4,7 @@ class C_DOTA_Ability_Shredder_Chakram : public C_DOTABaseAbility
 	float32 speed;
 	float32 pass_slow_duration;
 	int32 pass_damage;
-	Vector m_vEndLocation;
+	VectorWS m_vEndLocation;
 	float32 m_fZCoord;
 	bool m_bIsReturning;
 	ParticleIndex_t m_nFXIndex;

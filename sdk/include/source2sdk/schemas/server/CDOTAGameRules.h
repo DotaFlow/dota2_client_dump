@@ -25,7 +25,6 @@ class CDOTAGameRules : public CMultiplayRules
 	float32 m_flGoldTickTime;
 	bool m_bEnableSuggestAbilities;
 	bool m_bEnableSuggestItems;
-	bool m_bHackWhyAreYouGuysReadingOurVariableNames;
 	uint32 m_unFanfareGoodGuys;
 	uint32 m_unFanfareBadGuys;
 	GameTime_t m_flFanfareTime;
@@ -273,7 +272,7 @@ class CDOTAGameRules : public CMultiplayRules
 	CUtlVector< CHandle< CBaseEntity > > m_Towers;
 	CUtlVector< CHandle< CDOTA_BaseNPC_Tower > >[10] m_TeamTowers;
 	CUtlVector< CHandle< CBaseEntity > > m_Outposts;
-	CUtlVector< Vector >[10] m_TeamTowerPositions;
+	CUtlVector< VectorWS >[10] m_TeamTowerPositions;
 	CUtlVector< int32 >[10] m_TeamTowerLevels;
 	CUtlVector< int32 >[10] m_TeamTowerLanes;
 	CUtlVector< CHandle< CDOTA_BaseNPC_Building > >[10] m_TeamBarracks;

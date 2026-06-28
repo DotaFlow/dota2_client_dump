@@ -15,8 +15,8 @@ class C_DOTA_Ability_EarthSpirit_RollingBoulder : public C_DOTABaseAbility
 	ParticleIndex_t m_nFXIndex;
 	bool m_boulderSetposBool;
 	int32 m_nProjectileID;
-	Vector m_vStartingLocation;
-	Vector m_vProjectileLocation;
+	VectorWS m_vStartingLocation;
+	VectorWS m_vProjectileLocation;
 	Vector m_vDir;
 	Vector m_vVel;
 	bool m_bUsedStone;

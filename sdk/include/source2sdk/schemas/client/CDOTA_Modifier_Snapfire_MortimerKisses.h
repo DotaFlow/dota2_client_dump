@@ -5,7 +5,7 @@ class CDOTA_Modifier_Snapfire_MortimerKisses : public CDOTA_Buff
 	ParticleIndex_t m_nBeamFXIndex;
 	CHandle< C_BaseEntity > m_hBeamEnd;
 	float32 m_flCurDistance;
-	Vector m_vAimTarget;
+	VectorWS m_vAimTarget;
 	float32 m_fLastTurnAmount;
 	int32 m_nProjectilesLaunched;
 	bool m_bDestroyOnNextThink;

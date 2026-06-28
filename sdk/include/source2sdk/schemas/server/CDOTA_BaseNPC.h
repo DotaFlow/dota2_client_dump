@@ -113,7 +113,7 @@ class CDOTA_BaseNPC : public NextBotCombatCharacter
 	CHandle< CBaseEntity > m_hAlertTarget;
 	CHandle< CBaseEntity > m_hForceAttackTarget;
 	bool m_bAllowAllyForceAttack;
-	Vector m_vTargetLastKnownPosition;
+	VectorWS m_vTargetLastKnownPosition;
 	GameTime_t m_flLastDamageTime;
 	GameTime_t m_flLastAttackTime;
 	GameTime_t m_flTimeSinceLastAbilityNag;
@@ -133,7 +133,7 @@ class CDOTA_BaseNPC : public NextBotCombatCharacter
 	float32 m_flTimeDisparityTolerance;
 	GameTime_t m_fAttackPhaseEndTime;
 	GameTime_t m_flPositionUpdateTime;
-	Vector m_vLastPositionSent;
+	VectorWS m_vLastPositionSent;
 	int32 m_iTaggedAsVisibleByTeam;
 	uint64 m_iIsControllableByPlayer64;
 	PlayerID_t m_nControllingPlayerID;
@@ -171,7 +171,7 @@ class CDOTA_BaseNPC : public NextBotCombatCharacter
 	bool m_bNeverMoveToClearSpace;
 	CHandle< CBaseEntity > m_hGoalEntity;
 	bool m_bMustReachEachGoalEntity;
-	Vector m_vInitialGoalPosition;
+	VectorWS m_vInitialGoalPosition;
 	CUnitOrders m_CurrentQueuedOrder;
 	CDOTA_UnitInventory m_Inventory;
 	CHandle< CBaseEntity > m_hItemToDrop;
@@ -195,9 +195,9 @@ class CDOTA_BaseNPC : public NextBotCombatCharacter
 	bool m_bIdleAcquireForceSet;
 	bool m_bCanFollowUnseenUnits;
 	bool m_bExpired;
-	Vector m_vCurrentMovementOrderDestination;
-	Vector m_vPreviousMovementOrderDestination;
-	Vector m_vResumePreviousMovementRequestLocation;
+	VectorWS m_vCurrentMovementOrderDestination;
+	VectorWS m_vPreviousMovementOrderDestination;
+	VectorWS m_vResumePreviousMovementRequestLocation;
 	bool m_bCurrentOrderIsMovement;
 	bool m_bPreviousOrderIsMovement;
 	bool m_bResumePreviousMovement;

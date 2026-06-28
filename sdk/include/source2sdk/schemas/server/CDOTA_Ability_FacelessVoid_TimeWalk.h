@@ -5,6 +5,6 @@ class CDOTA_Ability_FacelessVoid_TimeWalk : public CDOTABaseAbility, public CHor
 	int32 range;
 	float32 radius;
 	int32 m_nProjectileID;
-	Vector m_vProjectileLocation;
-	Vector m_vStartLocation;
+	VectorWS m_vProjectileLocation;
+	VectorWS m_vStartLocation;
 };

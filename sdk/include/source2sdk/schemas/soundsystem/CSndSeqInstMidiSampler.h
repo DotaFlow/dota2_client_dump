@@ -1,7 +1,6 @@
 // MGetKV3ClassDefaults = {
 //	"_class": "CSndSeqInstMidiSampler",
 //	"m_nType": "eSndSeqInstMidiSampler",
-//	"m_nPlayerType": "eSndSeqPlayerMidiSeq",
 //	"m_bStopCurrentEvents": false,
 //	"m_flBPM": 120.000000,
 //	"m_flBPMFactor": 2.000000,

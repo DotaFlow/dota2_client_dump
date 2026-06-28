@@ -94,6 +94,7 @@
 //	"m_flFadeInTime": 0.250000,
 //	"m_nFieldOutput": 7
 //}
+// MGPUParticleFunction
 class C_OP_FadeInSimple : public CParticleFunctionOperator
 {
 	// MPropertyFriendlyName = "proportional fade in time"

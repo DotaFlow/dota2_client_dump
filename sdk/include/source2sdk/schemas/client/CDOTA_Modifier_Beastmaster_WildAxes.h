@@ -1,9 +1,9 @@
 class CDOTA_Modifier_Beastmaster_WildAxes : public CDOTA_Buff
 {
-	Vector m_vLeftControl;
-	Vector m_vRightControl;
-	Vector m_vTargetLoc;
-	Vector m_vSourceLoc;
+	VectorWS m_vLeftControl;
+	VectorWS m_vRightControl;
+	VectorWS m_vTargetLoc;
+	VectorWS m_vSourceLoc;
 	float32 m_flAxeDuration;
 	GameTime_t m_flAxeDieTime;
 	bool m_bReturning;

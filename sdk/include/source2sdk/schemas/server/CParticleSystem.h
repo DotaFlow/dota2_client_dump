@@ -15,6 +15,8 @@ class CParticleSystem : public CBaseModelEntity
 	Vector[4] m_vServerControlPoints;
 	uint8[4] m_iServerControlPointAssignments;
 	CHandle< CBaseEntity >[64] m_hControlPointEnts;
+	bool m_bDataStringLocalized;
+	CUtlString m_strDataString;
 	bool m_bNoSave;
 	bool m_bNoFreeze;
 	bool m_bNoRamp;

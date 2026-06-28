@@ -19,6 +19,9 @@
 //	"m_secondarySkeletons":
 //	[
 //	],
+//	"m_floatChannelSets":
+//	[
+//	],
 //	"m_bIsPropSkeleton": false
 //}
 class CNmSkeleton
@@ -31,5 +34,6 @@ class CNmSkeleton
 	int32 m_numBonesToSampleAtLowLOD;
 	CUtlLeanVector< NmBoneMaskSetDefinition_t > m_maskDefinitions;
 	CUtlLeanVector< CNmSkeleton::SecondarySkeleton_t > m_secondarySkeletons;
+	CUtlLeanVector< CNmFloatChannelSet_t > m_floatChannelSets;
 	bool m_bIsPropSkeleton;
 };

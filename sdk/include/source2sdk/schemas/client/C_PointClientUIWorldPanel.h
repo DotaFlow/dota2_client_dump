@@ -17,6 +17,7 @@ class C_PointClientUIWorldPanel : public C_BaseClientUIEntity
 	float32 m_flWidth;
 	float32 m_flHeight;
 	float32 m_flDPI;
+	float32 m_flWindowUIScale;
 	float32 m_flInteractDistance;
 	float32 m_flDepthOffset;
 	uint32 m_unOwnerContext;
@@ -35,4 +36,5 @@ class C_PointClientUIWorldPanel : public C_BaseClientUIEntity
 	bool m_bOnlyRenderToTexture;
 	bool m_bDisableMipGen;
 	int32 m_nExplicitImageLayout;
+	bool m_bIgnoreParentOrientation;
 };

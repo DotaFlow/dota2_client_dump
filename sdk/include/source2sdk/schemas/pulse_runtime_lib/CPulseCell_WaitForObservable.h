@@ -1,6 +1,18 @@
 // MGetKV3ClassDefaults = {
 //	"_class": "CPulseCell_WaitForObservable",
 //	"m_nEditorNodeID": -1,
+//	"m_BaseFlow_OnAfterCancel":
+//	{
+//		"m_SourceOutflowName": "",
+//		"m_nDestChunk": -1,
+//		"m_nInstruction": -1
+//	},
+//	"m_BaseFlow_WhileActive":
+//	{
+//		"m_SourceOutflowName": "",
+//		"m_nDestChunk": -1,
+//		"m_nInstruction": -1
+//	},
 //	"m_Condition":
 //	{
 //		"m_EvaluateConnection":
@@ -30,6 +42,6 @@ class CPulseCell_WaitForObservable : public CPulseCell_BaseYieldingInflow
 {
 	// MPropertyDescription = "Condition to evaluate when any of its dependent values change."
 	// MPropertyFriendlyName = "Observable"
-	PulseObservableBoolExpression_t m_Condition;
+	CPulseObservableExpression< bool > m_Condition;
 	CPulse_ResumePoint m_OnTrue;
 };

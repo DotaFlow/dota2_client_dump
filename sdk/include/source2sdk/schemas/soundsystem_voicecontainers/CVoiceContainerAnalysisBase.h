@@ -1,6 +1,5 @@
 // MGetKV3ClassDefaults = {
 //	"_class": "CVoiceContainerAnalysisBase",
-//	"m_bRegenerateCurveOnCompile": false,
 //	"m_curve":
 //	{
 //		"m_spline":
@@ -27,8 +26,6 @@
 // MPropertyDescription = "Does Not Play Sound, member of CVoiceContainerDefaultDefault"
 class CVoiceContainerAnalysisBase
 {
-	// MPropertyFriendlyName = "Regenerate curve on compile"
-	bool m_bRegenerateCurveOnCompile;
 	// MPropertyFriendlyName = "Envelope Curve"
 	CPiecewiseCurve m_curve;
 };

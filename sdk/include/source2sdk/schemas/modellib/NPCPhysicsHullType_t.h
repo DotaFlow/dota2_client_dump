@@ -10,4 +10,8 @@ enum NPCPhysicsHullType_t : uint32_t
 	eGenericCapsule = 3,
 	// MPropertyFriendlyName = "Box - Ground"
 	eGroundBox = 4,
+	// MPropertyFriendlyName = "Cylinder - Ground (SLOW PERF)"
+	eGroundCylinder = 5,
+	// MPropertyFriendlyName = "Cylinder - Centered (SLOW PERF)"
+	eCenteredCylinder = 6,
 };

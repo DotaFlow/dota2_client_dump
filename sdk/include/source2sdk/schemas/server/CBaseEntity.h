@@ -49,10 +49,10 @@ class CBaseEntity : public CEntityInstance
 	uint8 m_ubInterpolationFrame;
 	VectorWS m_vPrevVPhysicsUpdatePos;
 	uint8 m_iTeamNum;
+	// MSaveBehavior (UNKNOWN FOR PARSER)
 	CUtlSymbolLarge m_iGlobalname;
 	// MNotSaved
 	int32 m_iSentToClients;
-	float32 m_flSpeed;
 	CUtlString m_sUniqueHammerID;
 	uint32 m_spawnflags;
 	GameTick_t m_nNextThinkTick;

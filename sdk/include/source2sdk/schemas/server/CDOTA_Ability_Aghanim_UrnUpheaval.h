@@ -1,6 +1,6 @@
 class CDOTA_Ability_Aghanim_UrnUpheaval : public CDOTABaseAbility
 {
-	Vector m_vPosition;
+	VectorWS m_vPosition;
 	float32 aoe;
 	float32 slow_rate;
 	float32 slow_rate_duration;

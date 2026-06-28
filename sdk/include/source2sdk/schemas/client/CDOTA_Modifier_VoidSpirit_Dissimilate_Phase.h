@@ -1,7 +1,7 @@
 class CDOTA_Modifier_VoidSpirit_Dissimilate_Phase : public CDOTA_Buff
 {
-	Vector m_vFirstPortalPos;
-	CUtlVector< Vector > m_vecDestinations;
+	VectorWS m_vFirstPortalPos;
+	CUtlVector< VectorWS > m_vecDestinations;
 	CUtlVector< ParticleIndex_t > m_vecDestinationParticles;
 	CUtlVector< ParticleIndex_t > m_vecDestinationParticles_EnemyTeam;
 	int32 m_nCurrentDestinationIndex;

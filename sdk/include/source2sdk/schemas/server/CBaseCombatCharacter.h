@@ -6,8 +6,7 @@ class CBaseCombatCharacter : public CBaseAnimatingOverlay
 	float32 m_impactEnergyScale;
 	bool m_bApplyStressDamage;
 	bool m_bDeathEventsDispatched;
-	// MNotSaved
-	CUtlVector< RelationshipOverride_t >* m_pVecRelationships;
+	CUtlVector< RelationshipOverride_t > m_vecRelationships;
 	CUtlSymbolLarge m_strRelationships;
 	Hull_t m_eHull;
 	uint32 m_nNavHullIdx;

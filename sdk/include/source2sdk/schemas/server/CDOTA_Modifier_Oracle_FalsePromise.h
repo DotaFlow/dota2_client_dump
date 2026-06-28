@@ -7,5 +7,7 @@ class CDOTA_Modifier_Oracle_FalsePromise : public CDOTA_Buff
 	ParticleIndex_t m_nFXIndexB;
 	float32 m_flRunningDmg;
 	float32 m_flRunningHealth;
+	float32 m_flExpectedFinalHeal;
 	int32 bonus_armor;
+	float32 heal_amp_pct;
 };

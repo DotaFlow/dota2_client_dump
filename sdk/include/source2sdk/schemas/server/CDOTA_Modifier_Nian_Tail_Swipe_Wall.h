@@ -1,6 +1,6 @@
 class CDOTA_Modifier_Nian_Tail_Swipe_Wall : public CDOTA_Buff
 {
-	Vector m_vWallStartPosition;
+	VectorWS m_vWallStartPosition;
 	Vector m_vWallDirection;
 	Vector m_vWallLeft;
 	int32 m_DamageAmount;

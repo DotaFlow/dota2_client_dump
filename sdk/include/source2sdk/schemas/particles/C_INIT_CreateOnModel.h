@@ -1024,6 +1024,7 @@
 //		}
 //	}
 //}
+// MGPUParticleFunction
 class C_INIT_CreateOnModel : public CParticleFunctionInitializer
 {
 	// MPropertyFriendlyName = "input model"
@@ -1032,6 +1033,7 @@ class C_INIT_CreateOnModel : public CParticleFunctionInitializer
 	// MParticleInputOptional
 	CParticleTransformInput m_transformInput;
 	// MPropertyFriendlyName = "force to be inside model"
+	// MPropertySuppressExpr = "is_gpu_particle_system"
 	int32 m_nForceInModel;
 	// MPropertyFriendlyName = "bias box distribution by volume"
 	bool m_bScaleToVolume;
@@ -1049,15 +1051,19 @@ class C_INIT_CreateOnModel : public CParticleFunctionInitializer
 	float32 m_flMaxBoneVelocity;
 	// MPropertyFriendlyName = "direction bias"
 	// MVectorIsCoordinate
+	// MPropertySuppressExpr = "is_gpu_particle_system"
 	CParticleCollectionVecInput m_vecDirectionBias;
 	// MPropertyFriendlyName = "hitbox set"
 	char[128] m_HitboxSetName;
 	// MPropertyFriendlyName = "bias in local space"
 	bool m_bLocalCoords;
 	// MPropertyFriendlyName = "use bones instead of hitboxes"
+	// MPropertySuppressExpr = "is_gpu_particle_system"
 	bool m_bUseBones;
 	// MPropertyFriendlyName = "Use renderable meshes instead of hitboxes"
+	// MPropertySuppressExpr = "is_gpu_particle_system"
 	bool m_bUseMesh;
 	// MPropertyFriendlyName = "hitbox shell thickness"
+	// MPropertySuppressExpr = "is_gpu_particle_system"
 	CParticleCollectionFloatInput m_flShellSize;
 };

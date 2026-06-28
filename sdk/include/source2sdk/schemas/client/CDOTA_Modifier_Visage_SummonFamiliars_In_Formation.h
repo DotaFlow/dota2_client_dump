@@ -5,7 +5,7 @@ class CDOTA_Modifier_Visage_SummonFamiliars_In_Formation : public CDOTA_Buff
 	int32 familiar_index;
 	int32 back_distance;
 	int32 side_distance;
-	Vector m_vecDesiredPosition;
+	VectorWS m_vecDesiredPosition;
 	float32 max_distance;
 	float32 return_distance;
 	float32 attack_range_buffer;

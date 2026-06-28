@@ -1,10 +1,13 @@
+// MGetKV3ClassDefaults = Could not parse KV3 Defaults
 class CModelState
 {
 	CStrongHandle< InfoForResourceTypeCModel > m_hModel;
 	CUtlSymbolLarge m_ModelName;
 	// MPhysPtr
 	IPhysAggregateInstance* m_pVPhysicsAggregate;
-	Vector m_vRootBoneOffset;
+	float32 m_flRootBoneOffset_x;
+	float32 m_flRootBoneOffset_y;
+	float32 m_flRootBoneOffset_z;
 	uint8 m_nRootBoneOffsetResetSerialNumber;
 	bool m_bClientClothCreationSuppressed;
 	uint8 m_nAnimStateNoInterpSerialNumber;

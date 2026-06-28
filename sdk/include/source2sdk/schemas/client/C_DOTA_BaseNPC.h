@@ -135,7 +135,6 @@ class C_DOTA_BaseNPC : public C_NextBotCombatCharacter
 	CUtlSymbolLarge m_szDefaultIdle;
 	CUtlSymbolLarge m_szDefaultRareIdle;
 	CountdownTimer m_damagetimer;
-	Vector m_vRenderOrigin;
 	float32 m_fZDelta;
 	GameTime_t m_flDeathTime;
 	bool m_bBaseStatsChanged;

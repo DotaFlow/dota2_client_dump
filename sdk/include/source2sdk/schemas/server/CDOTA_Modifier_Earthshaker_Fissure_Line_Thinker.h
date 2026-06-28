@@ -7,7 +7,7 @@ class CDOTA_Modifier_Earthshaker_Fissure_Line_Thinker : public CDOTA_Buff
 	float32 free_pathing_linger_duration;
 	float32 fissure_max_distance_moved;
 	GameTime_t m_flLastThinkTime;
-	Vector m_vFissureStart;
+	VectorWS m_vFissureStart;
 	Vector m_vFissureStep;
 	Vector m_vMoveDir;
 	int32 m_nSegments;

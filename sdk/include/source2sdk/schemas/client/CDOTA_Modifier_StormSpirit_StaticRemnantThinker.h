@@ -10,7 +10,7 @@ class CDOTA_Modifier_StormSpirit_StaticRemnantThinker : public CDOTA_Buff
 	int32 m_iDamageRadius;
 	bool m_bDoesMove;
 	bool m_bReachedTargetLocation;
-	Vector m_vTargetLocation;
+	VectorWS m_vTargetLocation;
 	GameTime_t m_flCreateTime;
 	GameTime_t m_flLastMoveTime;
 };

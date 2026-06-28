@@ -5,5 +5,5 @@ class CDOTA_Modifier_AbyssalUnderlord_DarkRift : public CDOTA_Buff
 	int32 duration;
 	ParticleIndex_t m_nfxAmbientFx;
 	bool bPointTarget;
-	Vector vDestination;
+	VectorWS vDestination;
 };

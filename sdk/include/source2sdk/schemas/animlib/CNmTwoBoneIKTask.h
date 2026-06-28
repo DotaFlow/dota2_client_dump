@@ -8,6 +8,6 @@ class CNmTwoBoneIKTask : public CNmPoseTask
 	float32 m_flBlendWeight;
 	bool m_bIsTargetInWorldSpace;
 	bool m_bIsRunningFromDeserializedData;
-	float32 m_flReferencePoseTwistWeight;
+	float32 m_flChainRotationWeight;
 	CGlobalSymbol m_debugEffectorBoneID;
 };

@@ -1,14 +1,14 @@
 class CDOTA_Ability_Pudge_MeatHook : public CDOTABaseAbility, public CHorizontalMotionController
 {
-	Vector m_vProjectileLocation;
+	VectorWS m_vProjectileLocation;
 	float32 hook_speed;
 	int32 hook_width;
 	int32 hook_distance;
 	bool m_bRetracting;
 	bool m_bDiedInHook;
 	CHandle< CBaseEntity > m_hVictim;
-	Vector m_vTargetPosition;
-	Vector m_vCasterPosition;
+	VectorWS m_vTargetPosition;
+	VectorWS m_vCasterPosition;
 	bool m_bChainDetached;
 	bool m_bForceSetToPudgePosition;
 	ParticleIndex_t m_iChainParticle;
@@ -17,7 +17,7 @@ class CDOTA_Ability_Pudge_MeatHook : public CDOTABaseAbility, public CHorizontal
 	int32 m_nManaCost;
 	CHandle< CBaseEntity > m_hSourceCaster;
 	int32 m_nNextConsecutiveHitCount;
-	Vector m_vEndpoint;
+	VectorWS m_vEndpoint;
 	int32 m_nConsecutiveHits;
 	bool m_bIsVectorTargeted;
 	VectorWS m_vTurnLocation;

@@ -2,9 +2,9 @@ class CDOTA_Ability_Dawnbreaker_Celestial_Hammer : public CDOTABaseAbility
 {
 	int32 m_nProjectileIndex;
 	int32 m_nReturnProjectileID;
-	Vector m_vEndLocation;
+	VectorWS m_vEndLocation;
 	float32 m_fZCoord;
-	Vector m_vLastTrailThinkerLocation;
+	VectorWS m_vLastTrailThinkerLocation;
 	bool m_bFlareDone;
 	bool m_bStartedCatchAnimation;
 	bool m_bIsReturning;

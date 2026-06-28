@@ -5,7 +5,7 @@ class CDOTA_Modifier_Kez_ShodoSai_Parry : public CDOTA_Buff
 	float32 m_flLastPoseX;
 	float32 m_flLastPoseY;
 	int32 m_nLastMaxDirection;
-	Vector m_vLastOrigin;
+	VectorWS m_vLastOrigin;
 	GameTime_t m_flLastGameTime;
 	int32 speed_penalty;
 	int32 forward_angle;

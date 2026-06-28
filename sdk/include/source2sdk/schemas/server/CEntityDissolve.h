@@ -7,7 +7,7 @@ class CEntityDissolve : public CBaseModelEntity
 	float32 m_flFadeOutStart;
 	float32 m_flFadeOutLength;
 	GameTime_t m_flStartTime;
-	EntityDisolveType_t m_nDissolveType;
+	EntityDissolveType_t m_nDissolveType;
 	VectorWS m_vDissolverOrigin;
 	uint32 m_nMagnitude;
 };

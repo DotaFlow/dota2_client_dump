@@ -13,7 +13,7 @@ class CDOTA_Modifier_Mars_Bulwark_Active : public CDOTA_Buff
 	float32 m_flLastPoseX;
 	float32 m_flLastPoseY;
 	int32 m_nLastMaxDirection;
-	Vector m_vLastOrigin;
+	VectorWS m_vLastOrigin;
 	GameTime_t m_flLastGameTime;
 	Vector m_vFacing;
 };

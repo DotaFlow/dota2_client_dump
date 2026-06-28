@@ -4,7 +4,6 @@
 class CSndSeqInstBaseSchema
 {
 	SndSeqInstrumentType_t m_nType;
-	SndSeqPlayerType_t m_nPlayerType;
 	bool m_bStopCurrentEvents;
 	float32 m_flBPM;
 	float32 m_flBPMFactor;

@@ -114,7 +114,6 @@
 //		"m_bRightEye": false
 //	},
 //	"m_bCannotBeRefracted": true,
-//	"m_bSkipRenderingOnMobile": false,
 //	"m_bOnlyRenderInEffectsBloomPass": false,
 //	"m_bOnlyRenderInEffectsWaterPass": false,
 //	"m_bUseMixedResolutionRendering": false,
@@ -2286,7 +2285,7 @@ class C_OP_RenderModels : public CParticleFunctionRenderer
 	bool m_bOnlyRenderInEffectsBloomPass;
 	// MPropertyFriendlyName = "Only Render in effects water pass"
 	// MPropertySortPriority = 1050
-	// MPropertySuppressExpr = "mod != csgo"
+	// MPropertySuppressExpr = "mod != csgo && mod != hlx"
 	bool m_bOnlyRenderInEffectsWaterPass;
 	// MPropertyFriendlyName = "Use Mixed Resolution Rendering"
 	// MPropertySortPriority = 1200

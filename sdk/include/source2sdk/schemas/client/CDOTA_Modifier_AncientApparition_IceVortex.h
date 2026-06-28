@@ -7,5 +7,5 @@ class CDOTA_Modifier_AncientApparition_IceVortex : public CDOTA_Buff
 	int32 movement_speed_pct;
 	int32 shard_attack_speed_reduction;
 	int32 damage_per_second;
-	Vector m_vCenter;
+	VectorWS m_vCenter;
 };

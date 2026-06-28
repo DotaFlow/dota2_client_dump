@@ -1,3 +1,13 @@
+// MGetKV3ClassDefaults = {
+//	"m_source": null,
+//	"m_target": null,
+//	"m_nHullIdx": -1,
+//	"m_vSourceAnchorPos": null,
+//	"m_vTargetAnchorPos": null,
+//	"m_nAreaSrc": 4294967295,
+//	"m_nAreaDst": 4294967295,
+//	"m_bAttached": false
+//}
 class DynamicVolumeDef_t
 {
 	CHandle< CBaseEntity > m_source;

@@ -1,7 +1,7 @@
 class CDOTA_Ability_Wisp_Tether : public CDOTABaseAbility, public CHorizontalMotionController
 {
 	CHandle< CBaseEntity > m_hTarget;
-	Vector m_vProjectileLocation;
+	VectorWS m_vProjectileLocation;
 	bool m_bProjectileActive;
 	int32 latch_distance;
 	int32 m_iProjectileIndex;

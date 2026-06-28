@@ -1,7 +1,7 @@
 class CDOTA_Modifier_Clinkz_BurningBarrage : public CDOTA_Buff
 {
 	int32 m_iArrowCount;
-	Vector m_vOriginalTarget;
+	VectorWS m_vOriginalTarget;
 	int32 arrow_width;
 	float32 arrow_speed;
 	float32 arrow_range_multiplier;

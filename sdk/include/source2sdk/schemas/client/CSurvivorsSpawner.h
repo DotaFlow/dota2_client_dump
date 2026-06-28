@@ -11,7 +11,7 @@ class CSurvivorsSpawner
 	CUtlString m_sSpawnInfoTargetName;
 	CUtlVector< int32 > m_vecOccupiedPositions;
 	float32 m_flPerpendicularWallSpacing;
-	Vector m_vSpawnerOrigin;
+	VectorWS m_vSpawnerOrigin;
 	bool m_bSpawningComplete;
 	bool m_bIsPersistant;
 	bool m_bResetSpawnIntervalOnKill;

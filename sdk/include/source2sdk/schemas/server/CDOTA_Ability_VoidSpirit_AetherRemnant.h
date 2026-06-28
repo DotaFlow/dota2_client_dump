@@ -6,5 +6,5 @@ class CDOTA_Ability_VoidSpirit_AetherRemnant : public CDOTABaseAbility
 	float32 projectile_speed;
 	VectorWS m_vDashPosition;
 	VectorWS m_vFacePosition;
-	Vector m_vEndpoint;
+	VectorWS m_vEndpoint;
 };

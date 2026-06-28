@@ -1,6 +1,6 @@
 class RegionTriggerBoxes_t
 {
 	AABB_t regionBox;
-	Vector vRegionBoxOrigin;
+	VectorWS vRegionBoxOrigin;
 	CUtlString strRegionName;
 };

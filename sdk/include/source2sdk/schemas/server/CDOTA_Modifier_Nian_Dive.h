@@ -2,9 +2,9 @@ class CDOTA_Modifier_Nian_Dive : public CDOTA_Buff
 {
 	float32 m_flTotalTimeInAir;
 	float32 m_flInitialVelocity;
-	Vector m_vStartPosition;
+	VectorWS m_vStartPosition;
 	Vector m_vTargetHorizontalDirection;
-	Vector m_vTargetPosition;
+	VectorWS m_vTargetPosition;
 	float32 m_flCurrentTimeHoriz;
 	float32 m_flCurrentTimeVert;
 	bool m_bInterrupted;

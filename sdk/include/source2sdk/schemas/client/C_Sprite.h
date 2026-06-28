@@ -25,4 +25,5 @@ class C_Sprite : public C_BaseModelEntity
 	int32 m_nSpriteWidth;
 	// MNotSaved
 	int32 m_nSpriteHeight;
+	float32 m_flSpeed;
 };

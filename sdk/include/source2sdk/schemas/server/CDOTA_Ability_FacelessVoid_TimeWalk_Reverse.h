@@ -2,6 +2,6 @@ class CDOTA_Ability_FacelessVoid_TimeWalk_Reverse : public CDOTABaseAbility, pub
 {
 	int32 speed;
 	int32 m_nProjectileID;
-	Vector m_vProjectileLocation;
-	Vector m_vStartLocation;
+	VectorWS m_vProjectileLocation;
+	VectorWS m_vStartLocation;
 };

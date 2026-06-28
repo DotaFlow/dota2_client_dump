@@ -114,7 +114,6 @@
 //		"m_bRightEye": false
 //	},
 //	"m_bCannotBeRefracted": true,
-//	"m_bSkipRenderingOnMobile": false,
 //	"m_hEffect": "",
 //	"m_nEventType": "PARTICLE_EVENT_TYPE_MASK_COLLISION",
 //	"m_vecCPs":

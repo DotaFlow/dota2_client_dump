@@ -1,7 +1,7 @@
 class CDOTA_Ability_Juggernaut_Trinity : public CDOTABaseAbility
 {
-	Vector m_vStartPos;
-	Vector m_vEndPos;
+	VectorWS m_vStartPos;
+	VectorWS m_vEndPos;
 	Vector m_vDirection;
 	int32 m_nCurrentJump;
 	int32 m_nProjectileID;

@@ -1,6 +1,6 @@
 class CDOTA_Ability_TrollWarlord_WhirlingAxes_Ranged : public CDOTABaseAbility
 {
-	Vector m_vStartPos;
+	VectorWS m_vStartPos;
 	int32 m_iArrowProjectile;
 	float32 axe_width;
 	float32 axe_speed;

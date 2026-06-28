@@ -1,7 +1,7 @@
 class CDOTA_Modifier_Broodmother_StickySnare : public CDOTA_Buff
 {
-	Vector m_vOrigin;
-	Vector m_vWallDirection;
+	VectorWS m_vOrigin;
+	VectorWS m_vWallDirection;
 	Vector m_vWallRight;
 	float32 width;
 	float32 root_duration;

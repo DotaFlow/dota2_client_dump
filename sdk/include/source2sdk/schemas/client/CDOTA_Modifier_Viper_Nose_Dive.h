@@ -2,8 +2,8 @@ class CDOTA_Modifier_Viper_Nose_Dive : public CDOTA_Buff
 {
 	float32 m_flPredictedTotalTime;
 	float32 m_flCurrentTimeVert;
-	Vector m_vTargetPos;
-	Vector m_vStart;
+	VectorWS m_vTargetPos;
+	VectorWS m_vStart;
 	float32 m_flZDelta;
 	float32 radius;
 	float32 corrosive_radius;

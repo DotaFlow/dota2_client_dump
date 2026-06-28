@@ -1,11 +1,11 @@
 class CDOTA_Modifier_ItemWiggle_Thinker : public CDOTA_Buff
 {
-	Vector m_vOriginalPosition;
+	VectorWS m_vOriginalPosition;
 	float32 m_flOriginalScale;
 	GameTime_t m_flLastChangeTime;
-	Vector m_vLastChangePosition;
+	VectorWS m_vLastChangePosition;
 	float32 m_flLastChangeScale;
-	Vector m_vTargetPosition;
+	VectorWS m_vTargetPosition;
 	float32 m_flTargetScale;
 	bool m_bFirstThink;
 	float32 m_flStartAmplitude;

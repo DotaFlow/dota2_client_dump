@@ -9,7 +9,7 @@ class CDOTA_Modifier_Marci_Lunge_TrackingMotion : public CDOTA_Buff
 	int32 impact_position_offset;
 	float32 m_flCastDistance;
 	ParticleIndex_t m_nAoEFXIndex;
-	Vector m_vDestination;
+	VectorWS m_vDestination;
 	CHandle< C_BaseEntity > m_hBounceEntity;
 	CHandle< C_BaseEntity > m_hBounceEntityClient;
 };

@@ -114,6 +114,7 @@
 //	],
 //	"m_bNormalize": false
 //}
+// MGPUParticleFunction
 class C_INIT_RemapInitialDirectionToTransformToVector : public CParticleFunctionInitializer
 {
 	// MPropertyFriendlyName = "transform input"

@@ -1,6 +1,12 @@
+// MGetKV3ClassDefaults = {
+//	"_class": "locksound_t",
+//	"sLockedSound": "",
+//	"sUnlockedSound": "",
+//	"flwaitSound": null
+//}
 class locksound_t
 {
-	CUtlSymbolLarge sLockedSound;
-	CUtlSymbolLarge sUnlockedSound;
+	CGameSoundEventName sLockedSound;
+	CGameSoundEventName sUnlockedSound;
 	GameTime_t flwaitSound;
 };

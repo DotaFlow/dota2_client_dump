@@ -114,7 +114,6 @@
 //		"m_bRightEye": false
 //	},
 //	"m_bCannotBeRefracted": true,
-//	"m_bSkipRenderingOnMobile": false,
 //	"m_bUseAlphaTestWindow": false,
 //	"m_bUseTexture": false,
 //	"m_flRadiusScale": 1.000000,

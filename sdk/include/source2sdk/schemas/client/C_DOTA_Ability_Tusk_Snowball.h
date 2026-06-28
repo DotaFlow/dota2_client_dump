@@ -12,7 +12,7 @@ class C_DOTA_Ability_Tusk_Snowball : public C_DOTABaseAbility
 	int32 snowball_speed;
 	int32 snowball_speed_bonus;
 	float32 snowball_duration;
-	Vector m_vProjectileLocation;
+	VectorWS m_vProjectileLocation;
 	CUtlVector< CHandle< C_BaseEntity > > m_hSnowballedUnits;
 	ParticleIndex_t m_nFXIndex;
 	CountdownTimer ctSnowball;

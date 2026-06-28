@@ -9,12 +9,7 @@
 //		"m_vecPowerUps":
 //		[
 //		],
-//		"m_vOrigin":
-//		[
-//			0.000000,
-//			0.000000,
-//			0.000000
-//		]
+//		"m_vOrigin": null
 //	},
 //	"m_enemiesSnapshot":
 //	[

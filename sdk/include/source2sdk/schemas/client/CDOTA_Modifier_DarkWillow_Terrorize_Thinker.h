@@ -8,7 +8,7 @@ class CDOTA_Modifier_DarkWillow_Terrorize_Thinker : public CDOTA_Buff
 	float32 destination_status_duration;
 	float32 initial_delay;
 	float32 starting_height;
-	Vector m_vAttackLocation;
+	VectorWS m_vAttackLocation;
 	bool m_bAttacking;
 	bool m_bReturning;
 	float32 m_fCurHeight;

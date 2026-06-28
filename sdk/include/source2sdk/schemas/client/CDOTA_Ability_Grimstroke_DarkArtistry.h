@@ -1,9 +1,9 @@
 class CDOTA_Ability_Grimstroke_DarkArtistry : public C_DOTABaseAbility
 {
 	Vector m_vCastDir;
-	Vector m_vVectorTargetEndpoint;
-	Vector m_vStartLoc;
-	Vector m_vCursorPosition;
+	VectorWS m_vVectorTargetEndpoint;
+	VectorWS m_vStartLoc;
+	VectorWS m_vCursorPosition;
 	Vector m_vVectorCastTargetDirection;
 	float32 m_fTimeRemaining;
 	int32 vector_distance_to_start_force_turning;

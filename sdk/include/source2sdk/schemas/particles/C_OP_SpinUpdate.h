@@ -92,6 +92,7 @@
 //	"m_bDisableOperator": false,
 //	"m_Notes": ""
 //}
+// MGPUParticleFunction
 class C_OP_SpinUpdate : public CSpinUpdateBase
 {
 };

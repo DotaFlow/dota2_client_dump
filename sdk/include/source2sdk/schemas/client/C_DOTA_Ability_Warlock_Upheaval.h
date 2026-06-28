@@ -1,6 +1,6 @@
 class C_DOTA_Ability_Warlock_Upheaval : public C_DOTABaseAbility
 {
-	Vector m_vPosition;
+	VectorWS m_vPosition;
 	float32 aoe;
 	int32 slow_per_second;
 	int32 aspd_per_second;

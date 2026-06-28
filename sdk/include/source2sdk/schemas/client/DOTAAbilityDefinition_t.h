@@ -1,13 +1,13 @@
 class DOTAAbilityDefinition_t
 {
-	char* m_pszAbilityName;
-	char* m_pszBaseAbilityName;
-	char* m_pszTextureName;
-	char* m_pszSharedCooldownName;
-	char* m_pszKeyOverride;
-	char* m_pszItemRecipeName;
-	char* m_pszLinkedAbility;
-	char* m_pszTooltipSummaryProperties;
+	CUtlString m_sAbilityName;
+	CUtlString m_sBaseAbilityName;
+	CUtlString m_sTextureName;
+	CUtlString m_sSharedCooldownName;
+	CUtlString m_sKeyOverride;
+	CUtlString m_sItemRecipeName;
+	CUtlString m_sLinkedAbility;
+	CUtlString m_sTooltipSummaryProperties;
 	int32 m_castActivity;
 	DotaGestureSlot_t m_castActivityGestureSlot;
 	KeyValues* m_pKVData;
@@ -23,6 +23,7 @@ class DOTAAbilityDefinition_t
 	int32 m_iFightRecapLevel;
 	int32 m_iTokenTier;
 	item_definition_index_t m_iAssociatedConsumableItemDef;
+	item_definition_index_t m_iAssociatedLevelItemDef;
 	uint32 m_nRequiredEffectsMask;
 	int32 m_iAssociatedEventID;
 	int32 m_iMaxLevel;
@@ -50,8 +51,8 @@ class DOTAAbilityDefinition_t
 	CUtlStringToken m_strScepterRequiredFacet;
 	CUtlStringToken m_strShardRequiredFacet;
 	CUtlStringToken m_strForbiddenTomeRequiredFacet;
-	char* m_strSubAbilityNames;
-	char* m_strFakeSubAbilityNames;
+	CUtlString m_strSubAbilityNames;
+	CUtlString m_strFakeSubAbilityNames;
 	bool m_bShowCooldownInTooltips;
 	bool m_bSharedWithTeammates;
 	int32 m_nCastRangeBuffer;
@@ -59,15 +60,15 @@ class DOTAAbilityDefinition_t
 	DOTASpecialAbility_t* m_pSpecialAbilities;
 	CUtlVector< DOTAOutgoingBonus_t > m_OutgoingBonuses;
 	CUtlOrderedMap< CUtlStringToken, DotaAbilityRelationship_t > m_mapRelationships;
-	char* m_pModelName;
-	char* m_pModelAlternateName;
-	char* m_pEffectName;
-	char* m_pPingOverrideText;
-	char* m_pszRequiredCustomShopName;
-	char* m_pszLinkedScepterAbility;
-	char* m_pszLinkedShardAbility;
-	char* m_pszLinkedForbiddenTomeAbility;
-	char* m_pszDependentOnAbility;
+	CUtlString m_sModelName;
+	CUtlString m_sModelAlternateName;
+	CUtlString m_sEffectName;
+	CUtlString m_sPingOverrideText;
+	CUtlString m_sRequiredCustomShopName;
+	CUtlString m_sLinkedScepterAbility;
+	CUtlString m_sLinkedShardAbility;
+	CUtlString m_sLinkedForbiddenTomeAbility;
+	CUtlString m_sDependentOnAbility;
 	int32 m_nKillToastOverride;
 	int32 m_iLevelsBetweenUpgrades;
 	int32 m_iRequiredLevel;

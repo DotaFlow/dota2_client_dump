@@ -3,7 +3,7 @@ class CDOTA_Modifier_KeeperOfTheLight_Radiant_Bind : public CDOTA_Buff
 	float32 slow;
 	int32 magic_resistance;
 	float32 stun_duration;
-	Vector vLastPos;
+	VectorWS vLastPos;
 	bool bResetPosition;
 	float32 m_fAccumulatedDistance;
 	ParticleIndex_t m_nFXIndex;

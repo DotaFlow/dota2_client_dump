@@ -114,7 +114,6 @@
 //		"m_bRightEye": false
 //	},
 //	"m_bCannotBeRefracted": true,
-//	"m_bSkipRenderingOnMobile": false,
 //	"m_nHand": "PARTICLE_VRHAND_LEFT",
 //	"m_nOutputHandCP": -1,
 //	"m_nOutputField": 0,

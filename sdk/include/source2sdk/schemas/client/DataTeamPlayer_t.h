@@ -8,6 +8,7 @@ class DataTeamPlayer_t
 	int32 m_iSharedGold;
 	int32 m_iHeroKillGold;
 	int32 m_iCreepKillGold;
+	int32 m_iSummonKillGold;
 	int32 m_iNeutralKillGold;
 	int32 m_iCourierGold;
 	int32 m_iBountyGold;
@@ -74,6 +75,7 @@ class DataTeamPlayer_t
 	float32[3] m_flOutgoingDamageByTypePostReduction;
 	OverworldID_t m_uSelectedOverworldID;
 	OverworldTokenID_t[3] m_uSelectedOverworldTokenRewards;
+	OverworldTarotCardID_t[3] m_uOverworldFortune;
 	int32 m_iCommandsIssued;
 	int32 m_iGoldSpentOnConsumables;
 	int32 m_iGoldSpentOnItems;

@@ -1,14 +1,14 @@
 class CDOTA_Modifier_Shredder_TwistedChakram : public CDOTA_Buff
 {
-	Vector m_vControlOne;
-	Vector m_vControlTwo;
-	Vector m_vControlThree;
-	Vector m_vControlFour;
-	Vector m_vTargetLoc;
-	Vector m_vOriginalTargetLoc;
-	Vector m_vSourceLoc;
-	Vector m_vMidPoint;
-	Vector m_vEndPoint;
+	VectorWS m_vControlOne;
+	VectorWS m_vControlTwo;
+	VectorWS m_vControlThree;
+	VectorWS m_vControlFour;
+	VectorWS m_vTargetLoc;
+	VectorWS m_vOriginalTargetLoc;
+	VectorWS m_vSourceLoc;
+	VectorWS m_vMidPoint;
+	VectorWS m_vEndPoint;
 	int32 m_nCurrentLeg;
 	float32 m_flTravelDuration;
 	GameTime_t m_flBoomerangDieTime;

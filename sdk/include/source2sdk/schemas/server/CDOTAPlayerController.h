@@ -25,7 +25,7 @@ class CDOTAPlayerController : public CBasePlayerController
 	int32[4] m_iMusicOperatorVals;
 	CountdownTimer m_MusicRestTime;
 	CHandle< CBaseEntity > m_hKillCamUnit;
-	Vector m_vecCrosshairTracePos;
+	VectorWS m_vecCrosshairTracePos;
 	CEntityIndex m_iCrosshairEntity;
 	PlayerID_t m_nPlayerID;
 	CHandle< CBaseEntity > m_hAssignedHero;

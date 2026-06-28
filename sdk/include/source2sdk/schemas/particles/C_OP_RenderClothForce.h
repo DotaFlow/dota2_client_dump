@@ -114,8 +114,7 @@
 //		"m_flRadiusScaleFOVBase": 0.000000,
 //		"m_bRightEye": false
 //	},
-//	"m_bCannotBeRefracted": true,
-//	"m_bSkipRenderingOnMobile": false
+//	"m_bCannotBeRefracted": true
 //}
 class C_OP_RenderClothForce : public CParticleFunctionRenderer
 {

@@ -6,7 +6,7 @@ class CDOTA_Modifier_Marci_Grapple_VictimMotion : public CDOTA_Buff
 	float32 air_duration;
 	int32 air_height;
 	int32 travel_distance;
-	Vector m_vDestination;
+	VectorWS m_vDestination;
 	float32 m_flStartZ;
 	float32 m_flCurTime;
 	float32 m_flJumpDuration;

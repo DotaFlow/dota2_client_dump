@@ -115,7 +115,6 @@
 //		"m_bRightEye": false
 //	},
 //	"m_bCannotBeRefracted": true,
-//	"m_bSkipRenderingOnMobile": false,
 //	"m_hMaterial": ""
 //}
 class C_OP_RenderPoints : public CParticleFunctionRenderer

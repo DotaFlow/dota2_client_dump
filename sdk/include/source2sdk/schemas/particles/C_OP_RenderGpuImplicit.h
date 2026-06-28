@@ -114,7 +114,6 @@
 //		"m_bRightEye": false
 //	},
 //	"m_bCannotBeRefracted": true,
-//	"m_bSkipRenderingOnMobile": false,
 //	"m_bUsePerParticleRadius": false,
 //	"m_nVertexCountKb": 0,
 //	"m_nIndexCountKb": 0,

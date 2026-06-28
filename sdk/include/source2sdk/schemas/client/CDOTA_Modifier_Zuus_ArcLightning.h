@@ -8,6 +8,6 @@ class CDOTA_Modifier_Zuus_ArcLightning : public CDOTA_Buff
 	int32 m_iCurJumpCount;
 	bool trigger_spell_absorb;
 	bool has_unlimited_jumps;
-	Vector m_vCurTargetLoc;
+	VectorWS m_vCurTargetLoc;
 	CUtlVector< CHandle< C_BaseEntity > > m_hHitEntities;
 };

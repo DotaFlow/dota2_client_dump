@@ -8,7 +8,8 @@
 //	],
 //	"m_VBData": "[BINARY BLOB]",
 //	"m_IBData": "[BINARY BLOB]",
-//	"m_InstanceAlbedoData": "[BINARY BLOB]"
+//	"m_InstanceAlbedoData": "[BINARY BLOB]",
+//	"m_InstanceEmissiveData": "[BINARY BLOB]"
 //}
 class AggregateRTProxySceneObject_t
 {
@@ -18,4 +19,5 @@ class AggregateRTProxySceneObject_t
 	CUtlBinaryBlock m_VBData;
 	CUtlBinaryBlock m_IBData;
 	CUtlBinaryBlock m_InstanceAlbedoData;
+	CUtlBinaryBlock m_InstanceEmissiveData;
 };

@@ -1,3 +1,4 @@
+// MGetKV3ClassDefaults = Could not parse KV3 Defaults
 class CSkeletonInstance : public CGameSceneNode
 {
 	CModelState m_modelState;
@@ -5,9 +6,9 @@ class CSkeletonInstance : public CGameSceneNode
 	bool m_bUseParentRenderBounds;
 	bool m_bDisableSolidCollisionsForHierarchy;
 	// MNotSaved
-	bitfield:1 m_bDirtyMotionType;
+	bool m_bDirtyMotionType;
 	// MNotSaved
-	bitfield:1 m_bIsGeneratingLatchedParentSpaceState;
+	bool m_bIsGeneratingLatchedParentSpaceState;
 	CUtlStringToken m_materialGroup;
 	uint8 m_nHitboxSet;
 };

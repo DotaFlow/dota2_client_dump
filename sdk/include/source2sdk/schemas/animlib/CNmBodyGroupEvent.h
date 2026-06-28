@@ -11,11 +11,11 @@
 //	"m_syncID": "",
 //	"m_target": "Self",
 //	"m_groupName": "",
-//	"m_nGroupValue": 0
+//	"m_choiceName": ""
 //}
 class CNmBodyGroupEvent : public CNmEvent
 {
 	CNmEventTargetEntity_t m_target;
 	CUtlString m_groupName;
-	int32 m_nGroupValue;
+	CUtlString m_choiceName;
 };

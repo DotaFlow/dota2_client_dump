@@ -7,6 +7,6 @@ class CDOTA_Modifier_MjollnirChain : public CDOTA_Buff
 	float32 chain_damage_per_charge;
 	float32 illusion_multiplier_pct;
 	int32 m_iCurJumpCount;
-	Vector m_vCurTargetLoc;
+	VectorWS m_vCurTargetLoc;
 	CUtlVector< CHandle< CBaseEntity > > m_hHitEntities;
 };

@@ -5,6 +5,6 @@ class CDOTA_Modifier_MaelstromChain : public CDOTA_Buff
 	int32 chain_damage;
 	float32 chain_delay;
 	int32 m_iCurJumpCount;
-	Vector m_vCurTargetLoc;
+	VectorWS m_vCurTargetLoc;
 	CUtlVector< CHandle< CBaseEntity > > m_hHitEntities;
 };

@@ -2,12 +2,12 @@ class CDOTA_Modifier_OgreSealTotem_Active : public CDOTA_Buff
 {
 	float32 m_flTotalTime;
 	float32 m_flInitialVelocity;
-	Vector m_vStartPosition;
+	VectorWS m_vStartPosition;
 	Vector m_vTargetHorizontalDirection;
 	float32 m_flCurrentTimeHoriz;
 	float32 m_flCurrentTimeVert;
 	bool m_bInterrupted;
-	Vector m_vLastOrderPos;
+	VectorWS m_vLastOrderPos;
 	bool m_bIssuedOrder;
 	int32 m_nCurrentBounce;
 	int32 leap_distance;

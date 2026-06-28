@@ -5,6 +5,9 @@
 //	"m_nLeagues":
 //	[
 //	],
+//	"m_vecTeams":
+//	[
+//	],
 //	"m_vecPlayers":
 //	[
 //	],
@@ -23,6 +26,7 @@ class FantasyLeagueData_t
 	FantasyCraftDataID_t m_nCraftingID;
 	// MPropertyDescription = "Which Leagues is this attached to"
 	CUtlVector< LeagueID_t > m_nLeagues;
+	CUtlVector< FantasyTeamData_t > m_vecTeams;
 	CUtlVector< FantasyRoleData_t > m_vecPlayers;
 	CUtlVector< FantasyPeriodData_t > m_vecPeriods;
 };

@@ -1,7 +1,7 @@
 class CDOTA_Modifier_Roshan_Grab_Self : public CDOTA_Buff
 {
 	CHandle< C_DOTA_BaseNPC > m_hTarget;
-	Vector m_vPulverizeCenter;
-	Vector m_vCasterStartPos;
+	VectorWS m_vPulverizeCenter;
+	VectorWS m_vCasterStartPos;
 	float32 interval;
 };

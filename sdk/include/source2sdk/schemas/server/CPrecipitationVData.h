@@ -1,6 +1,8 @@
 // MGetKV3ClassDefaults = {
 //	"_class": "CPrecipitationVData",
 //	"m_szParticlePrecipitationEffect": "",
+//	"m_szParticlePrecipitationPuddleEffect": "",
+//	"m_szParticlePrecipitationPostEffect": "",
 //	"m_flInnerDistance": 32.000000,
 //	"m_nAttachType": "PATTACH_ABSORIGIN_FOLLOW",
 //	"m_bBatchSameVolumeType": true,
@@ -16,6 +18,8 @@
 class CPrecipitationVData : public CEntitySubclassVDataBase
 {
 	CResourceNameTyped< CWeakHandle< InfoForResourceTypeIParticleSystemDefinition > > m_szParticlePrecipitationEffect;
+	CResourceNameTyped< CWeakHandle< InfoForResourceTypeIParticleSystemDefinition > > m_szParticlePrecipitationPuddleEffect;
+	CResourceNameTyped< CWeakHandle< InfoForResourceTypeIParticleSystemDefinition > > m_szParticlePrecipitationPostEffect;
 	float32 m_flInnerDistance;
 	ParticleAttachment_t m_nAttachType;
 	bool m_bBatchSameVolumeType;

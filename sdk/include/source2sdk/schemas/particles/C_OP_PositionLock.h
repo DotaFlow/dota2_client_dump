@@ -567,6 +567,7 @@
 //	"m_nFieldOutput": 0,
 //	"m_nFieldOutputPrev": 2
 //}
+// MGPUParticleFunction
 class C_OP_PositionLock : public CParticleFunctionOperator
 {
 	// MPropertyFriendlyName = "transform input"
@@ -576,20 +577,25 @@ class C_OP_PositionLock : public CParticleFunctionOperator
 	// MPropertyFriendlyName = "start fadeout max"
 	float32 m_flStartTime_max;
 	// MPropertyFriendlyName = "start fadeout exponent"
+	// MPropertySuppressExpr = "is_gpu_particle_system"
 	float32 m_flStartTime_exp;
 	// MPropertyFriendlyName = "end fadeout min"
 	float32 m_flEndTime_min;
 	// MPropertyFriendlyName = "end fadeout max"
 	float32 m_flEndTime_max;
 	// MPropertyFriendlyName = "end fadeout exponent"
+	// MPropertySuppressExpr = "is_gpu_particle_system"
 	float32 m_flEndTime_exp;
 	// MPropertyFriendlyName = "distance fade range"
+	// MPropertySuppressExpr = "is_gpu_particle_system"
 	float32 m_flRange;
 	// MPropertyFriendlyName = "distance fade bias"
+	// MPropertySuppressExpr = "is_gpu_particle_system"
 	CParticleCollectionFloatInput m_flRangeBias;
 	// MPropertyFriendlyName = "instant jump threshold"
 	float32 m_flJumpThreshold;
 	// MPropertyFriendlyName = "previous position scale"
+	// MPropertySuppressExpr = "is_gpu_particle_system"
 	float32 m_flPrevPosScale;
 	// MPropertyFriendlyName = "lock rotation"
 	bool m_bLockRot;

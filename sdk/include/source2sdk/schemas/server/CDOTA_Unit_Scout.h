@@ -6,5 +6,5 @@ class CDOTA_Unit_Scout : public CDOTA_BaseNPC_Additive
 	ScoutState_t m_nScoutState;
 	CHandle< CBaseEntity > m_hScoutStateEntity;
 	CUtlString m_strScoutModel;
-	Vector m_vSpawnLocation;
+	VectorWS m_vSpawnLocation;
 };

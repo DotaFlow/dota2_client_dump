@@ -1,7 +1,10 @@
 class CRagdollProp : public CBaseAnimGraph
 {
+	CPropDataComponent m_CPropDataComponent;
 	ragdoll_t m_ragdoll;
 	bool m_bStartDisabled;
+	float32 m_massScale;
+	float32 m_buoyancyScale;
 	CNetworkUtlVectorBase< bool > m_ragEnabled;
 	CNetworkUtlVectorBase< Vector > m_ragPos;
 	CNetworkUtlVectorBase< QAngle > m_ragAngles;

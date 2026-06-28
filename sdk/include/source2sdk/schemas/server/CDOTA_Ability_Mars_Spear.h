@@ -6,6 +6,6 @@ class CDOTA_Ability_Mars_Spear : public CDOTABaseAbility
 	int32 m_nTargetsImpaled;
 	int32 m_nMaxImpaleTargets;
 	bool m_bHadBulwarkEnabled;
-	Vector m_vLastTrailThinkerLocation;
+	VectorWS m_vLastTrailThinkerLocation;
 	bool bHasStartedBurning;
 };

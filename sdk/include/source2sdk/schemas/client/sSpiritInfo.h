@@ -1,6 +1,6 @@
 class sSpiritInfo
 {
-	Vector vTargetLoc;
+	VectorWS vTargetLoc;
 	CHandle< C_BaseEntity > hTarget;
 	bool bHit;
 	int32 iHealAmount;

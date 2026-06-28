@@ -351,18 +351,6 @@ cavern_crawl_ui_generate_path_pos (developmentonly clientdll)
 cc_emit (developmentonly clientdll defensive)
 	Emits a closed caption
 
-cc_findsound (developmentonly clientdll defensive)
-	Searches for soundname which emits specified text.
-
-cc_flush (developmentonly clientdll defensive)
-	Flushes async'd captions.
-
-cc_random (developmentonly clientdll defensive)
-	Emits a random caption
-
-cc_showblocks (developmentonly clientdll defensive)
-	Toggles showing which blocks are pending/loaded async.
-
 changelevel (release)
 	changelevel <mapname> :Multiplayer change level.
 
@@ -497,11 +485,6 @@ cl_ent_animgraph2_record (clientdll cheat)
 
 cl_ent_animgraph_debug (clientdll cheat)
 	Displays debug draws about the given entity(ies) animgraph
-	Arguments:   	{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}
-
-cl_ent_animgraph_record (clientdll cheat)
-	Toggles recording of animgraph replay of the given entity(s)
-	Arguments: entityName automaticallyOpenInAnimgraphEditor
 	Arguments:   	{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}
 
 cl_ent_attachments (clientdll cheat)
@@ -752,7 +735,7 @@ cl_pred_track_off (developmentonly clientdll defensive)
 	clear field track changes.
 
 cl_predictioncopy_describe (developmentonly clientdll defensive)
-	Describe datamap_t for entindex
+	Describe PredictionMap_t for entindex
 
 cl_predictioncopy_print (developmentonly clientdll defensive)
 	Print simple description of prediction copy fields for entindex
@@ -786,13 +769,6 @@ cl_resetfps (developmentonly clientdll defensive)
 
 cl_rr_dump_rules (clientdll cheat)
 	Print all response rules
-
-cl_rr_reloadresponsesystems (clientdll cheat)
-	Reload all response system scripts.
-
-cl_save_animgraph_recording (clientdll cheat)
-	Saves all active animgraph recordings to disk
-	Arguments: automaticallyOpenInAnimgraphEditor
 
 cl_script_add_debug_filter (clientdll cheat)
 	Add a filter to the game debug overlay
@@ -1182,6 +1158,9 @@ dota_bot_debug_grid_cycle (gamedll cheat)
 dota_bot_debug_minimap_cycle (gamedll cheat)
 	Cycles through different minimap debug modes.
 
+dota_bot_debug_reset_tasks (developmentonly gamedll cheat)
+	Force all bots to reselect their current task.
+
 dota_bot_disconnect_player (gamedll cheat)
 	Disconnects the player owner of all bots
 
@@ -1448,6 +1427,21 @@ dota_cycle_prev_selected (developmentonly clientdll defensive)
 
 dota_cycle_selected (developmentonly clientdll defensive)
 	<no description>
+
+dota_dark_carnival_candy_shop_show_page (developmentonly clientdll)
+	<no description>
+
+dota_dark_carnival_encounter_lockpicking (developmentonly clientdll)
+	<no description>
+
+dota_dark_carnival_encounter_slark_jailbreak (developmentonly clientdll)
+	<no description>
+
+dota_dark_carnival_encounter_slark_jailbreak_debug (developmentonly clientdll)
+	<no description>
+
+dota_dashboard_clear_page_cache (developmentonly clientdll)
+	Unloads all pages from history/cache.
 
 dota_dashboard_force_background_refresh (developmentonly clientdll)
 	<no description>
@@ -1935,11 +1929,11 @@ dota_server_lobby_debug (developmentonly gamedll defensive)
 dota_server_pause (developmentonly gamedll)
 	Tells the server to pause the game
 
+dota_set_ability_level (developmentonly gamedll)
+	Set level of this ability
+
 dota_set_bp_gift_level (developmentonly clientdll)
 	Set the number of gifts set to this account. Argument: [0-5], -1 to turn off
-
-dota_set_fantasy_role (developmentonly clientdll defensive)
-	<account_id> <fantasy_role> Set the fantasy role for a player on public
 
 dota_set_time (developmentonly gamedll cheat)
 	<no description>
@@ -2096,6 +2090,9 @@ dota_spawn_rune (gamedll client_can_execute)
 
 dota_spec_talentchanges_test (developmentonly clientdll)
 	Shows a test toast
+
+dota_spectate_next_ability_cast (developmentonly clientdll defensive)
+	Go to next ability cast
 
 dota_spectator_decreasereplayspeed (developmentonly clientdll defensive)
 	Decrease replay speed
@@ -2286,6 +2283,9 @@ dota_tormentor_spawn (gamedll cheat)
 dota_tracked_stats_dump (developmentonly gamedll)
 	[all|player|team|match] Dump currently tracked stats.
 
+dota_treasure_details_popup (developmentonly clientdll)
+	<no description>
+
 dota_tree_try_to_make_solid (developmentonly clientdll defensive)
 	<no description>
 
@@ -2436,15 +2436,6 @@ ent_animgraph2_record (gamedll cheat)
 ent_animgraph_debug (gamedll cheat)
 	Displays debug draws about the given entity(ies) animgraph
 	Arguments:   	{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}
-
-ent_animgraph_record (gamedll cheat)
-	Toggles recording of animgraph replay of the given entity(s)
-	Arguments: entityName automaticallyOpenInAnimgraphEditor
-	Arguments:   	{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}
-
-ent_animgraph_setvar (gamedll cheat)
-	Sets a variable on the animgraph of the given entity(s)
-	Arguments:   <varname>=<value>	<{entity_name} / {class_name} / {entity_index} / {no argument = pick what player is looking at}>
 
 ent_attachments (gamedll cheat)
 	Displays the attachment points on an entity.
@@ -2752,9 +2743,6 @@ force_assert (developmentonly)
 
 force_fatal_error (developmentonly)
 	Fire a fatal error
-
-force_hibernate (developmentonly)
-	Force toggle hibernation state
 
 fow_client_stats (clientdll cheat)
 	displays fog of war stats
@@ -3431,6 +3419,10 @@ open_asset (developmentonly defensive)
 open_current_map_in_hammer (developmentonly)
 	opens the current map in hammer.
 
+open_current_map_pulse_in_tool (developmentonly vconsole_fuzzy_matching)
+	Opens the specified pulse used in this map in the editor.
+	Arguments: <pulse_file>
+
 openshop_category (developmentonly clientdll defensive)
 	opens shop from clicks on the world shop model, specific tab request
 
@@ -3749,9 +3741,6 @@ rr_forceconcept (gamedll cheat)
 	USAGE: rr_forceconcept <target name or index> <concept> "criteria1:value1,criteria2:value2,..."
 	criteria values are optional.
 
-rr_reloadresponsesystems (gamedll cheat)
-	Reload all response system scripts.
-
 rs_dump_stats (developmentonly)
 	rs_dump_stats - Dump resourcesystem stats.
 
@@ -3760,10 +3749,6 @@ run_perftest (cheat dontrecord)
 
 save (developmentonly gamedll dontrecord defensive)
 	Save Game
-
-save_animgraph_recording (gamedll cheat)
-	Saves all active animgraph recordings to disk
-	Arguments: automaticallyOpenInAnimgraphEditor
 
 save_clear_subdirectory (developmentonly gamedll replicated defensive)
 	<no description>
@@ -3806,9 +3791,6 @@ sc_setclassflags (cheat)
 
 sc_showclasses (cheat)
 	List the object class names known by scenesystem
-
-scene_coordinator_add_request (developmentonly gamedll defensive)
-	Add a request to the scene coordinator
 
 scene_playvcd (gamedll cheat)
 	Play the given VCD as an instanced scripted scene.
@@ -4027,8 +4009,8 @@ slot9 (clientdll server_can_execute)
 snapto (developmentonly clientdll defensive)
 	<no description>
 
-snd_arrangement_start (cheat)
-	Starts the specified arrangement.
+snd__beatpattern_stop_track (cheat)
+	Stops the specified track
 
 snd_async_flush (developmentonly defensive)
 	Flush all unlocked async audio data
@@ -4041,6 +4023,24 @@ snd_async_showmem_music (developmentonly defensive)
 
 snd_async_showmem_summary (developmentonly defensive)
 	Show brief async memory stats
+
+snd_beatpattern_flush (cheat)
+	Purge and reload all beat pattern data and files.
+
+snd_beatpattern_print_activetracks (cheat)
+	List all active tracks
+
+snd_beatpattern_print_patterns (cheat)
+	List all available beat patterns
+
+snd_beatpattern_set_track_bpm (cheat)
+	Sets the tempo of the specified track
+
+snd_beatpattern_set_track_transpose (cheat)
+	Sets the transposition of the specified track
+
+snd_beatpattern_stop_all_tracks (cheat)
+	Stops all currently playing patterns
 
 snd_cast (cheat)
 	Casts a ray and starts a sound event where the ray hits. The sound event will retrigger periodically if cl_snd_cast_retrigger is set. The sound event will clear previous snd_cast events if cl_snd_cast_clear is set. Usage: snd_cast <eventname> [<retrigger time>] [<max distance>]. Arguments that are specified will become defaults for the remainder of the session.
@@ -4110,30 +4110,6 @@ snd_samplers_play_note (cheat)
 
 snd_samplers_stop_note (cheat)
 	Stop a note from a specified sampler
-
-snd_sequencer_print_activetracks (cheat)
-	List all active tracks
-
-snd_sequencer_print_arrangements (cheat)
-	List all available sequence arrangments
-
-snd_sequencer_print_sequences (cheat)
-	List all available midi sequences
-
-snd_sequencer_set_track_bpm (cheat)
-	Sets the tempo of the specified track
-
-snd_sequencer_set_track_transpose (cheat)
-	Sets the transposition of the specified track
-
-snd_sequencer_stop_all_tracks (cheat)
-	Stops all currently playing sequences
-
-snd_sequencer_stop_track (cheat)
-	Stops the specified track
-
-snd_sequencer_vmidi_flush (cheat)
-	Purge and reload all vmidi data and files.
 
 snd_set_physics_surface_properties (cheat)
 	Set physics surface properties for materials. Usage: <heuristic #> <commit>
@@ -4357,6 +4333,9 @@ ss_remove (developmentonly defensive)
 ss_teleport (developmentonly clientdll cheat)
 	Teleport other splitscreen player to my location.
 
+start_rec_mic (linked_concommand developmentonly defensive)
+	Start recording to a desired wav.
+
 startdemos (release)
 	Play demos in demo sequence.
 
@@ -4395,6 +4374,12 @@ steamvrevent_quit (developmentonly gamedll hidden defensive)
 
 stop (release)
 	Finish recording demo.
+
+stop_rec_mic (linked_concommand developmentonly defensive)
+	Stop recording to a desired wav.
+
+stop_rec_mic_all (linked_concommand developmentonly defensive)
+	Stop recording all mic streams.
 
 stopdemos (release)
 	Stop looping demos (current demo will complete).

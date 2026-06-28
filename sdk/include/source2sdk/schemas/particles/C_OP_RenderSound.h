@@ -114,7 +114,6 @@
 //		"m_bRightEye": false
 //	},
 //	"m_bCannotBeRefracted": true,
-//	"m_bSkipRenderingOnMobile": false,
 //	"m_flDurationScale": 1.000000,
 //	"m_flSndLvlScale": 75.000000,
 //	"m_flPitchScale": 100.000000,

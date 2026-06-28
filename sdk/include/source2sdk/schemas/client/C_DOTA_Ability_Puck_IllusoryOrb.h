@@ -4,9 +4,9 @@ class C_DOTA_Ability_Puck_IllusoryOrb : public C_DOTABaseAbility
 	CountdownTimer m_ViewerTimer;
 	float32 m_fTimeRemaining;
 	float32 m_fElapsedTime;
-	Vector m_vVectorTargetEndpoint;
+	VectorWS m_vVectorTargetEndpoint;
 	Vector m_vCurveAcceleration;
-	Vector m_vStartPosition;
+	VectorWS m_vStartPosition;
 	float32 orb_vision;
 	float32 max_distance;
 	float32 vision_duration;

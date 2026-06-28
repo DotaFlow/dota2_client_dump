@@ -5,6 +5,6 @@ class CDOTA_Modifier_Techies_StickyBomb_Chase : public CDOTA_Buff
 	float32 speed;
 	float32 pre_chase_time;
 	CHandle< CBaseEntity > m_hAttachTarget;
-	Vector m_vStartPosition;
+	VectorWS m_vStartPosition;
 	CountdownTimer m_MoveTime;
 };

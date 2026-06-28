@@ -12,7 +12,7 @@ class CDOTA_Ability_Tusk_Snowball : public CDOTABaseAbility, public CHorizontalM
 	int32 snowball_speed;
 	int32 snowball_speed_bonus;
 	float32 snowball_duration;
-	Vector m_vProjectileLocation;
+	VectorWS m_vProjectileLocation;
 	CUtlVector< CHandle< CBaseEntity > > m_hSnowballedUnits;
 	ParticleIndex_t m_nFXIndex;
 	CountdownTimer ctSnowball;
@@ -22,4 +22,5 @@ class CDOTA_Ability_Tusk_Snowball : public CDOTABaseAbility, public CHorizontalM
 	CHandle< CBaseEntity > m_hPrimaryTarget;
 	int32 m_nContainedValidUnits;
 	bool m_bEndingSnowball;
+	int32 m_nSnowballProjectileHandle;
 };

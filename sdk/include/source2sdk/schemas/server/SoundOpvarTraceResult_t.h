@@ -1,3 +1,8 @@
+// MGetKV3ClassDefaults = {
+//	"vPos": null,
+//	"bDidHit": false,
+//	"flDistSqrToCenter": 340282346638528859811704183484516925440.000000
+//}
 class SoundOpvarTraceResult_t
 {
 	VectorWS vPos;

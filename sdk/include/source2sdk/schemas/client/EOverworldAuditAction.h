@@ -20,4 +20,9 @@ enum EOverworldAuditAction : uint32_t
 	k_eOverworldAuditAction_DevSetFortune = 18,
 	k_eOverworldAuditAction_DevClearFortune = 19,
 	k_eOverworldAuditAction_RequestFortune = 20,
+	k_eOverworldAuditAction_ClaimFortuneReward = 21,
+	k_eOverworldAuditAction_DevGrantFortuneTellerCoin = 22,
+	k_eOverworldAuditAction_ClaimFortuneTellerStoryNodeReward = 23,
+	k_eOverworldAuditAction_MatchRewardsAbilityDraft = 24,
+	k_eOverworldAuditAction_MatchRewardsCoopBotMatch = 25,
 };

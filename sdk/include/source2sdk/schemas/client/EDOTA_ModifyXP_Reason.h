@@ -8,5 +8,6 @@ enum EDOTA_ModifyXP_Reason : uint32_t
 	DOTA_ModifyXP_Outpost = 5,
 	DOTA_ModifyXP_CatchUp = 6,
 	DOTA_ModifyXP_HeroAbility = 7,
-	DOTA_ModifyXP_MAX = 8,
+	DOTA_ModifyXP_SummonKill = 8,
+	DOTA_ModifyXP_MAX = 9,
 };

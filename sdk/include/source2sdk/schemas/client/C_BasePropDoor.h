@@ -15,5 +15,5 @@ class C_BasePropDoor : public C_DynamicProp
 	// MNotSaved
 	CHandle< C_BasePropDoor > m_hMaster;
 	// MNotSaved
-	Vector m_vWhereToSetLightingOrigin;
+	VectorWS m_vWhereToSetLightingOrigin;
 };

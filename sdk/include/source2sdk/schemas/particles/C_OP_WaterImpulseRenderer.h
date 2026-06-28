@@ -114,7 +114,6 @@
 //		"m_bRightEye": false
 //	},
 //	"m_bCannotBeRefracted": true,
-//	"m_bSkipRenderingOnMobile": false,
 //	"m_vecPos":
 //	{
 //		"m_nType": "PVEC_TYPE_PARTICLE_VECTOR",

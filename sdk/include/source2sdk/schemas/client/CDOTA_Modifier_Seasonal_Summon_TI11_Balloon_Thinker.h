@@ -11,7 +11,7 @@ class CDOTA_Modifier_Seasonal_Summon_TI11_Balloon_Thinker : public CDOTA_Buff
 	int32 max_bounces;
 	float32 max_model_scale;
 	float32 power_growth_exponent;
-	Vector m_vLastPos;
+	VectorWS m_vLastPos;
 	Vector m_vDir;
 	float32 m_flSpeed;
 	float32 m_flDistRemaining;

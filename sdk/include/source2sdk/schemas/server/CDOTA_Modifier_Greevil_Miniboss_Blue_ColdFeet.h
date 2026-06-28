@@ -1,6 +1,6 @@
 class CDOTA_Modifier_Greevil_Miniboss_Blue_ColdFeet : public CDOTA_Buff
 {
-	Vector m_vecStartPosition;
+	VectorWS m_vecStartPosition;
 	int32 m_nCurrentTick;
 	float32 damage;
 	int32 break_distance;

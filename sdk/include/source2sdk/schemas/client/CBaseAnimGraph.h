@@ -1,16 +1,12 @@
 class CBaseAnimGraph : public C_BaseModelEntity
 {
-	// MKV3TransferSaveOpsForField = "GetAnimGraphControllerManagerSaveRestoreOps"
 	CAnimGraphControllerManager m_graphControllerManager;
-	// MKV3TransferSaveOpsForField = "GetAnimGraphControllerPtrSaveRestoreOps"
-	CAnimGraphControllerBase* m_pMainGraphController;
+	CAnimGraphControllerPtr m_pMainGraphController;
 	bool m_bInitiallyPopulateInterpHistory;
 	bool m_bSuppressAnimEventSounds;
+	CEntityOutputTemplate< float32 > m_OnLayerCycleUpdated;
+	CEntityIOOutput m_OnExternalChoreoGraphChanged;
 	bool m_bAnimGraphUpdateEnabled;
-	float32 m_flMaxSlopeDistance;
-	// MNotSaved
-	VectorWS m_vLastSlopeCheckPos;
-	uint32 m_nAnimGraphUpdateId;
 	// MNotSaved
 	bool m_bAnimationUpdateScheduled;
 	// MNotSaved

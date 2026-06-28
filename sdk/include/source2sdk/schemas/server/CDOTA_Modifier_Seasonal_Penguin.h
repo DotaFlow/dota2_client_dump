@@ -1,15 +1,15 @@
 class CDOTA_Modifier_Seasonal_Penguin : public CDOTA_Buff
 {
 	float32 m_fLifetimeGained;
-	Vector m_vTargetPos;
+	VectorWS m_vTargetPos;
 	int32 m_nCurrentSpeed;
 	GameTime_t m_fLastBumpTime;
-	Vector m_vLastPos;
+	VectorWS m_vLastPos;
 	CHandle< CBaseEntity > m_hLastHit;
 	Vector m_vDir;
-	Vector m_vRunEndPos;
+	VectorWS m_vRunEndPos;
 	bool m_bIsInInitialRun;
-	Vector m_vJumpEndPos;
+	VectorWS m_vJumpEndPos;
 	bool m_bPlayedVroomSinceLastCrash;
 	ParticleIndex_t m_nVroomFX;
 	GameTime_t m_fLastSpeedStepTime;

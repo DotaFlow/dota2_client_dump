@@ -5,7 +5,6 @@
 //	"m_pTargetInput": "",
 //	"m_hActivator": null,
 //	"m_hCaller": null,
-//	"m_nOutputID": 0,
 //	"m_hEntTarget": null
 //}
 class EntityIOQueuePrioritizedEvent_t
@@ -16,8 +15,7 @@ class EntityIOQueuePrioritizedEvent_t
 	CUtlSymbolLarge m_pTargetInput;
 	CEntityHandle m_hActivator;
 	CEntityHandle m_hCaller;
-	int32 m_nOutputID;
 	CEntityHandle m_hEntTarget;
-	// MSaveOpsForField = "GetVariantSaveDataOps"
+	// MKV3TransferSaveOpsForField = "GetVariantSaveDataOps"
 	CVariantBase< CVariantDefaultAllocator > m_variantValue;
 };

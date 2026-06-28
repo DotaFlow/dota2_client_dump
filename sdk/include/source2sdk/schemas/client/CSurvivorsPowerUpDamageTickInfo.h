@@ -1,6 +1,6 @@
 class CSurvivorsPowerUpDamageTickInfo
 {
-	Vector vOrigin;
+	VectorWS vOrigin;
 	Vector vFacing;
 	float32 flTimeLeft;
 	float32 flMagicalDamage;

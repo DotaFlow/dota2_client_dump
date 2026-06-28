@@ -1,3 +1,4 @@
+// MGetKV3ClassDefaults = Could not parse KV3 Defaults
 class CGameSceneNode
 {
 	// MNotSaved
@@ -50,5 +51,4 @@ class CGameSceneNode
 	CUtlStringToken m_name;
 	CUtlStringToken m_hierarchyAttachName;
 	float32 m_flClientLocalScale;
-	Vector m_vRenderOrigin;
 };

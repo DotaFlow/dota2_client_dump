@@ -12,7 +12,8 @@
 //		0.000000,
 //		0.000000,
 //		0.000000
-//	]
+//	],
+//	"m_pPrecacheEntityKeys": null
 //}
 class entitytable_t
 {
@@ -25,6 +26,5 @@ class entitytable_t
 	CUtlSymbolLarge globalname;
 	CUtlSymbolLarge entityname;
 	Vector landmarkModelSpace;
-	// MKV3TransferSaveOpsForField = "GetEntityKeyValuesSaveRestoreOps"
 	CEntityKeyValues* m_pPrecacheEntityKeys;
 };

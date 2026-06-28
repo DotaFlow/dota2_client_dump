@@ -5,14 +5,14 @@ class CDOTABehaviorLargoFrogling : public CDOTABehaviorCompanion
 	CountdownTimer m_StuckTimer;
 	bool m_bHasVanished;
 	CountdownTimer m_VanishOnThreatTimer;
-	Vector m_vecFleeCurrentTarget;
+	VectorWS m_vecFleeCurrentTarget;
 	Vector m_vecFleeDirection;
 	Vector m_vecOldFleeDirection;
 	CountdownTimer m_FleePersistTimer;
 	CountdownTimer m_CombatRepositionTimer;
 	CHandle< CDOTA_BaseNPC > m_hNearestEnemyHero;
 	GameTime_t m_flLastInWater;
-	Vector m_vecHomeBasePosition;
+	VectorWS m_vecHomeBasePosition;
 	bool m_bReturnToBase;
 	CountdownTimer m_ReturnToBaseTimer;
 	PetCoopStates_t m_nCoopTeleportState;

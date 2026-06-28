@@ -13,7 +13,7 @@ class CDOTA_Modifier_Gyrocopter_Homing_Missile : public CDOTA_Buff
 	int32 m_nTeamNumber;
 	float32 speed;
 	CHandle< C_BaseEntity > m_hAttachTarget;
-	Vector m_vStartPosition;
+	VectorWS m_vStartPosition;
 	CountdownTimer m_EnemyVision;
 	CountdownTimer m_MoveTime;
 };

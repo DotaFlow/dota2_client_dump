@@ -219,6 +219,7 @@ class CParticleSystemDefinition : public IParticleSystemDefinition
 	int32 m_nMinimumFrames;
 	// MPropertyFriendlyName = "simulated on the GPU"
 	// MPropertySuppressExpr = "mod != hlx"
+	// MPropertyAutoRebuildOnChange
 	bool m_bIsGPUParticleSystem;
 	// MPropertyStartGroup = "Performance Options"
 	// MPropertyFriendlyName = "minimum CPU level"

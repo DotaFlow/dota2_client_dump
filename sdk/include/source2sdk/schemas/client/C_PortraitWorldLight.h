@@ -7,7 +7,7 @@ class C_PortraitWorldLight : public C_EnvDeferredLight
 	CHandle< C_PortraitWorldUnit > m_hTarget;
 	bool m_bShowGizmos;
 	CUtlStringToken m_hitboxSetName;
-	Vector m_vPreviousCenter;
+	VectorWS m_vPreviousCenter;
 	Vector m_vCenterVelocity;
 	float32 m_flPreviousBoundingSphereRadius;
 	float32 m_flBoundingSphereRadiusChangeSpeed;

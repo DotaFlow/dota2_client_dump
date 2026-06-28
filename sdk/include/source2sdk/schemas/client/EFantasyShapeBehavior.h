@@ -7,6 +7,7 @@ enum EFantasyShapeBehavior : uint32_t
 	k_eFantasyShapeBehavior_StealBonus = 3,
 	k_eFantasyShapeBehavior_OnlyOne = 4,
 	k_eFantasyShapeBehavior_NeedMultiples = 5,
+	k_eFantasyShapeBehavior_UniqueQualities = 6,
 	// MPropertySuppressEnumerator
-	k_eFantasyShapeBehavior_COUNT = 6,
+	k_eFantasyShapeBehavior_COUNT = 7,
 };

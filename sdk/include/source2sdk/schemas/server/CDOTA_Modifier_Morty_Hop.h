@@ -1,7 +1,7 @@
 class CDOTA_Modifier_Morty_Hop : public CDOTA_Buff
 {
-	Vector m_vStartPosition;
-	Vector m_vTargetPosition;
+	VectorWS m_vStartPosition;
+	VectorWS m_vTargetPosition;
 	float32 m_flCurrentTimeHoriz;
 	float32 m_flCurrentTimeVert;
 	float32 m_flZCoefficientA;

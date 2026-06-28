@@ -115,7 +115,6 @@
 //		"m_bRightEye": false
 //	},
 //	"m_bCannotBeRefracted": true,
-//	"m_bSkipRenderingOnMobile": false,
 //	"m_hMaterial": "",
 //	"m_flAnimationRate": 0.100000,
 //	"m_nAnimationType": "ANIMATION_TYPE_FIXED_RATE",

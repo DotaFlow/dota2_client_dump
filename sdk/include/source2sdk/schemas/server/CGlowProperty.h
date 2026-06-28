@@ -1,3 +1,7 @@
+// MGetKV3ClassDefaults = {
+//	"_class": "CGlowProperty",
+//	"m_iGlowType": 0
+//}
 class CGlowProperty
 {
 	// MNotSaved

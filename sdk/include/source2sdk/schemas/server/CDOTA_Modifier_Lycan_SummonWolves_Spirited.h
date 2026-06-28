@@ -4,7 +4,7 @@ class CDOTA_Modifier_Lycan_SummonWolves_Spirited : public CDOTA_Modifier_Invisib
 	int32 wolf_index;
 	int32 back_distance;
 	int32 side_distance;
-	Vector m_vecDesiredPosition;
+	VectorWS m_vecDesiredPosition;
 	int32 m_iBackOffsetFactor;
 	bool m_bRightWolf;
 	float32 invis_level;

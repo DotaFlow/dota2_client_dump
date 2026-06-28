@@ -1,9 +1,9 @@
 class CDOTA_Ability_AncientApparition_IceBlast : public C_DOTABaseAbility
 {
 	CountdownTimer m_PathTimer;
-	Vector m_vTarget;
-	Vector m_vStartPos;
-	Vector m_vLastTempViewer;
+	VectorWS m_vTarget;
+	VectorWS m_vStartPos;
+	VectorWS m_vLastTempViewer;
 	int32 m_iTrackerProjectile;
 	float32 path_radius;
 	float32 radius_min;

@@ -25,4 +25,5 @@ class CSprite : public CBaseModelEntity
 	int32 m_nSpriteWidth;
 	// MNotSaved
 	int32 m_nSpriteHeight;
+	float32 m_flSpeed;
 };

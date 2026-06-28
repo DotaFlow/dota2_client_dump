@@ -1,7 +1,7 @@
 class C_ColorCorrection : public C_BaseEntity
 {
 	// MNotSaved
-	Vector m_vecOrigin;
+	VectorWS m_vecOrigin;
 	// MNotSaved
 	float32 m_MinFalloff;
 	// MNotSaved

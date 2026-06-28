@@ -21,6 +21,7 @@ class CDynamicProp : public CBreakableProp
 	bool m_bFiredStartEndOutput;
 	// MNotSaved
 	bool m_bForceNpcExclude;
+	bool m_bCreateMovableSurfaceGraph;
 	// MNotSaved
 	bool m_bCreateNonSolid;
 	// MNotSaved

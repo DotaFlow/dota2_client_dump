@@ -1,8 +1,8 @@
 class CDOTA_Modifier_PrimalBeast_Pulverize_Self : public CDOTA_Buff
 {
 	CHandle< CDOTA_BaseNPC > m_hTarget;
-	Vector m_vPulverizeCenter;
-	Vector m_vCasterStartPos;
+	VectorWS m_vPulverizeCenter;
+	VectorWS m_vCasterStartPos;
 	float32 splash_radius;
 	float32 interval;
 	float32 ministun;

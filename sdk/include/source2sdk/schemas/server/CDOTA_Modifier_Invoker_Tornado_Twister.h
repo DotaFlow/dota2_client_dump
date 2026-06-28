@@ -5,5 +5,5 @@ class CDOTA_Modifier_Invoker_Tornado_Twister : public CDOTA_Buff
 	float32 twister_tick_rate;
 	int32 m_nTickCounter;
 	Vector m_vDirection;
-	Vector m_vSpawnPosition;
+	VectorWS m_vSpawnPosition;
 };

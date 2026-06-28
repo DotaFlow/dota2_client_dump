@@ -1,3 +1,4 @@
+// MGetKV3ClassDefaults = Could not parse KV3 Defaults
 class C_fogplayerparams_t
 {
 	CHandle< C_FogController > m_hCtrl;

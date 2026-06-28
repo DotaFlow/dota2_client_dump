@@ -29,6 +29,9 @@
 //	"m_vertexAlbedoStreams":
 //	[
 //	],
+//	"m_vertexEmissiveStreams":
+//	[
+//	],
 //	"m_layerNames":
 //	[
 //	],
@@ -72,6 +75,7 @@ class WorldNode_t
 	CUtlVector< WorldNodeOnDiskBufferData_t > m_extraVertexStreams;
 	CUtlVector< AggregateInstanceStreamOnDiskData_t > m_aggregateInstanceStreams;
 	CUtlVector< AggregateVertexAlbedoStreamOnDiskData_t > m_vertexAlbedoStreams;
+	CUtlVector< AggregateVertexEmissiveStreamOnDiskData_t > m_vertexEmissiveStreams;
 	CUtlVector< CUtlString > m_layerNames;
 	CUtlVector< uint8 > m_sceneObjectLayerIndices;
 	CUtlString m_grassFileName;
