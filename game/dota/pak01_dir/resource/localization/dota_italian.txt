@@ -46250,7 +46250,7 @@ Se ritieni di non aver potuto dedicare l'attenzione necessaria al raggiungimento
 		"DOTA_Overworld_Inventory_HeroTrayTooManyTokens"		"Troppi biglietti selezionati. Ogni Eroe fa ottenere esattamente 3 biglietti."
 		"DOTA_Overworld_Inventory_HeroTrayPremium"		"I biglietti <b>Stanza Segreta</b> fanno parte del <b>{s:expansion_pack_name}</b>, disponibile nel negozio del Circo degli orrori. Questi biglietti servono per sbloccare stanze speciali con ricompense esclusive."
 		"DOTA_Overworld_Inventory_HeroTrayHidden"		"Questo biglietto speciale è stato ottenuto da un incontro."
-		"DOTA_Overworld_Inventory_PathUnlocker"			"I biglietti <b>Cammino Sbloccabile</b> consentono di sbloccare una voce di dialogo senza consumare il biglietto normalmente richiesto. Per utilizzarli, clicca sul pulsante <b>SBLOCCA ORA</b> situato sotto il costo del nodo."
+		"DOTA_Overworld_Inventory_PathUnlocker"			"I biglietti <b>Percorso sbloccabile</b> consentono di sbloccare un nodo senza consumare il biglietto normalmente richiesto. Per utilizzarli, clicca sul pulsante <b>SBLOCCA ORA</b> situato sotto il costo del nodo."
 		
 		"DOTA_Crownfall_Encounter_UnableToClaimReward"	"Impossibile ottenere la ricompensa"
 		"DOTA_Crownfall_Encounter_TokenExchangeFailed"	"Impossibile scambiare i biglietti"
@@ -50469,6 +50469,8 @@ Se ritieni di non aver potuto dedicare l'attenzione necessaria al raggiungimento
 		"DOTA_DarkCarnival_Chapter3"	"Capitolo 3"
 		"DOTA_DarkCarnivalNotification_MissingPostGameTickets"		"Il tuo account è stato colpito da un bug nel Circo degli orrori: non hai ricevuto i biglietti alla fine della partita, mentre avresti dovuto. Il bug è stato corretto e i biglietti sono stati assegnati retroattivamente."
 		
+		"DOTA_DarkCarnival_TimeUntilNextChapter"	"{s:time_until_next_unlock} al {s:next_chapter_name}"
+
 		"DOTA_DarkCarnival_ChapterLocked"	"Disponibile tra {s:time_until_unlock}"
 		"DOTA_DarkCarnival_ChapterReleaseDate" "{t:l:release_date}"
 		"DOTA_DarkCarnival_ChapterReleaseDate_TrainCar" "Disponibile: {t:l:release_date}"
@@ -50489,8 +50491,14 @@ Se ritieni di non aver potuto dedicare l'attenzione necessaria al raggiungimento
 		"DOTA_DarkCarnival_FrontPage_FirstTime_GetStarted"	"Inizia ora"
 
 		"DOTA_DarkCarnival_FrontPage_EventProgress"	"Progresso dell'evento"
+		"DOTA_DarkCarnival_FrontPage_CompleteCount"	"<b>{d:full_total_earned}</b> / {d:full_total_max} completato"
 		"DOTA_DarkCarnival_FrontPage_NextReward"	"Prossima ricompensa"
 
+		"DOTA_DarkCarnival_StoreCell_Explore"	"Esplora il negozio"
+		"DOTA_DarkCarnival_StoreCell_Description"	"Scopri i Personaggi Automi, un nuovo tesoro, il Pacchetto Stanze Segrete e molto altro ancora!"
+
+		"DOTA_DarkCarnival_Overworld_Progress"	"Progresso"
+		
 		"DOTA_DarkCarnival_Overworld_Tokens"	"Biglietti"
 		"DOTA_DarkCarnival_Overworld_Trade"		"Scambia"
 		"DOTA_DarkCarnival_Overworld_TokenTrader"		"Mercante di biglietti"
@@ -50525,6 +50533,7 @@ Se ritieni di non aver potuto dedicare l'attenzione necessaria al raggiungimento
 		"DOTA_CandyShopName_Dark_Carnival"		"Dolceria del Circo"
 		"DOTA_DarkCarnival_View_Candyworks"		"Visita la Dolceria del Circo"
 		"DOTA_DarkCarnivalStore_View"			"Dai un'occhiata al <b>negozio del Circo degli orrori</b>"
+		"DOTA_DarkCarnivalStore_CoinsInfo"		"Ottieni Monete sconto del Circo degli Orrori esplorando la mappa del Circo degli orrori.<br><br>Fino al termine dell'evento, potrai scambiare <b>10 Monete sconto</b> per uno sconto di circa <b>{s:regional_coin_currency}</b> su qualsiasi acquisto nel negozio del Circo degli Orrori del valore di almeno <b>{s:regional_coin_currency}</b>. (L'importo esatto dello sconto varia in base alla regione e alla valuta.)<br><br> Puoi ottenere gratuitamente <b>{d:total_free_coins}</b> Monete sconto e altre <b>{d:total_explorer_coins}</b> tramite il Pacchetto Stanze Segrete."
 		"DOTA_DarkCarnivalStore_ExtraRewards"		"Ricompense extra:"
 		"DOTA_DarkCarnivalStore_ViewInOverworld"		"Vedi sul treno"
 		
@@ -50552,11 +50561,61 @@ Se ritieni di non aver potuto dedicare l'attenzione necessaria al raggiungimento
 		"DOTA_DarkCarnivalReward_View_Treasure"				"Mostra il tesoro"
 
 		"DOTA_DarkCarnivalRewardType_Candy_Description"				"Tornata a grande richiesta, la Dolceria è di nuovo qui per trasformare le tue scorte di dolciumi cariogeni in una montagna di nuovi set per gli Eroi, i Guardiani, i Corrieri e altro ancora."
+		"DOTA_DarkCarnivalRewardType_Treasures_Description"			"I nostri Eroi entrano in scena con abiti a tema Circo degli orrori, sfoggiando un elegante guardaroba circense dalle tinte sinistre. Scarta un nuovissimo tesoro traboccante di 15 set di oggetti a tema circo."
+		"DOTA_DarkCarnivalRewardType_Goodies_Description"			"Esprimi il tuo stile con decorazioni per la vetrina del profilo, schermate di caricamento, spray ed emoticon."
+		"DOTA_DarkCarnivalRewardType_Oracle_Description"			"L'Oracolo concede volentieri i suoi doni di preveggenza in cambio di queste preziose Gemme Veggenti.<br/><br/>Guadagna una gemma al giorno semplicemente giocando a Dota e trovane altre proseguendo lungo il treno."
+		"DOTA_DarkCarnivalRewardType_CompletionSet_Description"		"Esplora la storia del Circo degli orrori e porta alla luce quattro set a tema celati nel treno di Ringmaster."
+
+		"DOTA_DarkCarnivalReward_ShowcaseDecorations"		"Decorazioni della galleria"
+		"DOTA_DarkCarnivalReward_ShowcaseDecoration_Locked"		"Sblocca queste decorazioni della galleria esplorando la mappa."
+
+		"DOTA_DarkCarnival_SeeTheOracle"							"Visita l'Oracolo"
+		"DOTA_DarkCarnival_FreeTrackLabel"							"Storia principale"
+		"DOTA_DarkCarnival_SecretRoomLabel"							"Stanze Segrete"
+
+		"DOTA_DarkCarnival_RewardsPopupClaimedFree"					"<b>/ {d:main_nodes_total}</b><br>Storia principale"
+		"DOTA_DarkCarnival_RewardsPopupClaimedPaid"					"<b>/ {d:premium_nodes_total}</b><br>Stanze Segrete"
+
+		"DOTA_DarkCarnival_SecretAdmirer_Title"		"Regala i biglietti"
+		"DOTA_DarkCarnival_SecretAdmirer_TakeTickets"	"Accetta i biglietti"
+		"DOTA_DarkCarnival_SecretAdmirer_GiftTitle"		"Seleziona un amico e un biglietto"
+		"DOTA_DarkCarnival_SecretAdmirer_Gift_Tooltip"	"Puoi regalare ai tuoi amici fino a 5 biglietti al giorno."
+		"DOTA_DarkCarnival_SecretAdmirer_GiftNoneNeeded"		"Il tuo amico non ha bisogno di biglietti!"
+		"DOTA_DarkCarnival_SecretAdmirer_NoMoreAvailable"	"Non hai più doni disponibili per oggi"
+		"DOTA_DarkCarnival_SecretAdmirer_GiftAvailableTooltip"	"Un amico ti ha inviato un dono!"
+
+		"DOTA_DarkCarnival_SecretRoomsPack_RequiredForRewardsClaims"		"Richiede il Pacchetto Stanza Segreta.<br>Clicca per acquistarlo."
+		"DOTA_DarkCarnival_OverworldInventory_MultiselectInfo"	"Gioca a Dota per ottenere biglietti in base al tuo Eroe.<br/><br/>Clicca su un biglietto nell'inventario o sulla mappa per vedere quali Eroi possono ottenerlo.<br/><br/>Tieni premuto MAIUSC per selezionare più biglietti contemporaneamente."
+		"DOTA_DarkCarnival_Token_TheFool"			"Il Matto"
+		"DOTA_DarkCarnival_Token_TheMagician"		"Il Mago"
+		"DOTA_DarkCarnival_Token_TheHighPriestess"	"La Papessa"
+		"DOTA_DarkCarnival_Token_TheEmpress"		"L'Imperatrice"
+		"DOTA_DarkCarnival_Token_TheEmperor"		"L'Imperatore"
+		"DOTA_DarkCarnival_Token_TheHierophant"		"Il Papa"
+		"DOTA_DarkCarnival_Token_TheLovers"			"Gli Amanti"
+		"DOTA_DarkCarnival_Token_TheChariot"		"Il Carro"
+		"DOTA_DarkCarnival_Token_Strength"			"La Forza"
+		"DOTA_DarkCarnival_Token_TheHermit"			"L'Eremita"
+		"DOTA_DarkCarnival_Token_WheelOfFortune"	"La Ruota della Fortuna"
+		"DOTA_DarkCarnival_Token_Justice"		"La Giustizia"
+		"DOTA_DarkCarnival_Token_TheHangedMan"	"L'Appeso"
+		"DOTA_DarkCarnival_Token_Death"			"La Morte"
+		"DOTA_DarkCarnival_Token_Temperance"	"La Temperanza"
+		"DOTA_DarkCarnival_Token_TheDevil"		"Il Diavolo"
+		"DOTA_DarkCarnival_Token_TheTower"		"La Torre"
 		"DOTA_DarkCarnival_Token_TheStar"		"La Stella"
+		"DOTA_DarkCarnival_Token_TheMoon"		"La Luna"
+		"DOTA_DarkCarnival_Token_TheSun"		"Il Sole"
+		"DOTA_DarkCarnival_Token_Judgement"		"Il Giudizio"
 		"DOTA_DarkCarnival_Token_TheWorld"		"Il Mondo"
 		"DOTA_DarkCarnival_Token_Premium"		"Premium"
-		"DOTA_DarkCarnival_Token_NodeUnlock"	"Cammino sbloccabile"
+		"DOTA_DarkCarnival_Token_Oracle"		"Veggenza"
+		"DOTA_DarkCarnival_Token_NodeUnlock"	"Percorso sbloccabile"
+		"DOTA_DarkCarnival_Token_MinigameUnlock"	"Sblocca il gioco del Circo"
 		"DOTA_Overworld_Token_Random"			"Biglietto casuale"
+
+		"DOTA_DarkCarnival_InventoryPicker_Title"	"Scegli i biglietti dal tuo inventario"
+		"DOTA_DarkCarnival_NoTicketsAvailable"	"Nessun biglietto disponibile"
 
 		"DOTA_DarkCarnival_Tarot_TheFool"			"Il Matto"
 		"DOTA_DarkCarnival_Tarot_TheMagician"		"Il Mago"
@@ -50581,8 +50640,31 @@ Se ritieni di non aver potuto dedicare l'attenzione necessaria al raggiungimento
 		"DOTA_DarkCarnival_Intro_PlayDota_1"	"Ogni Eroe ha un set di <b>tre biglietti</b>."
 		"DOTA_DarkCarnival_Intro_PlayDota_2"	"Se <b>vinci una partita</b> con un determinato Eroe, otterrai tutti i biglietti ad esso associati. Se perdi, otterrai uno dei suoi tre biglietti in modo casuale. Le <b>partite in modalità Turbo</b> fanno ottenere due biglietti in caso di vittoria e nessun biglietto in caso di sconfitta."
 		"DOTA_DarkCarnival_Intro_PlayDota_2_Tooltip" "Nelle partite in modalità Ability Draft, i biglietti ottenuti dipendono dall'Eroe impersonato e non dalle abilità selezionate.<br/><br/>Le partite cooperative con i bot assegnano un biglietto in caso di vittoria."
+		"DOTA_DarkCarnival_Intro_PlayDota_3"	"I biglietti ottenuti rimarranno nel tuo inventario finché non li utilizzerai per sbloccare i nodi sulla mappa. Puoi anche utilizzare il Mercante di biglietti per scambiare i biglietti che possiedi con quelli di cui hai bisogno."
+		
 		"DOTA_DarkCarnival_Intro_Oracle"	"L'Oracolo"
+		"DOTA_DarkCarnival_Intro_Oracle_1"	"Ogni giorno, la tua prima partita ti farà ottenere una <b>Gemma Veggente</b>."
+		"DOTA_DarkCarnival_Intro_Oracle_2"	"Porta le Gemme Veggenti all'Oracolo per ottenere ricompense aggiuntive, tra cui biglietti, dolci, decorazioni della galleria, oggetti consumabili in gioco e oggetti cosmetici."
+
 		"DOTA_DarkCarnival_Intro_Coins"		"Monete"
+		"DOTA_DarkCarnival_Intro_Coins_1"		"Puoi ottenere <b>Monete sconto del Circo degli orrori</b> sbloccando percorsi sulla mappa."
+		"DOTA_DarkCarnival_Intro_Coins_2"		"Le monete del Circo degli orrori possono essere spese soltanto durante l'evento del Circo degli orrori. Lo sconto esatto varia in base alla regione e alla valuta."
+		
+		"DOTA_DarkCarnival_Intro_Candyworks"		"Visita la Dolceria del Circo"
+		"DOTA_DarkCarnival_Intro_Candyworks_1"		"Puoi ottenere Sacchetti di dolci esplorando diversi percorsi sulla mappa."
+		"DOTA_DarkCarnival_Intro_Candyworks_2"		"Quando incontrerai la <b>Dolceria del Circo</b> progredendo sulla mappa, potrai scambiare i tuoi dolci con svariati oggetti, tesori e persino set Arcani, se la fortuna ti assiste!"
+		"DOTA_DarkCarnival_Intro_Candyworks_3"		"Se nessuno degli articoli venduti dalla Dolceria è di tuo gradimento, puoi usare un <b>rifornimento</b> per generare nuove opzioni. Potrai<b>ottenere altri rifornimenti</b> ogni volta che <b>vinci una partita</b>."
+		
+		"DOTA_DarkCarnival_Intro_Treasures"		"Tesori e altre ricompense"
+		"DOTA_DarkCarnival_Intro_Treasures_1"		"Alcuni luoghi sulla mappa ti faranno ottenere un <b>Tesoro delle meraviglie</b>. Questi tesori contengono nuovissimi set di oggetti e possono essere aperti subito. Puoi acquistare altri tesori di questo tipo nel negozio del Circo degli orrori."
+		"DOTA_DarkCarnival_Intro_Treasures_2"		"Altri luoghi ti faranno ottenere altre ricompense, tra cui <b>emoticon, spray, decorazione della galleria,</b> e <b>schermate di caricamento</b> a tema Circo degli orrori."
+		"DOTA_DarkCarnival_Intro_Treasures_3"		"Alcuni luoghi speciali offrono oggetti cosmetici esclusivi."
+
+		"DOTA_DarkCarnival_TarotCardTitle"						"La tua collezione di tarocchi"
+		"DOTA_DarkCarnival_TarotCardCollectionDescription"		"Ogni tarocco conferisce una ricompensa unica.<br>Pesca lo stesso tarocco <b>3</b> volte per sbloccarlo come decorazione della galleria."
+
+		"DOTA_Dark_Carnival_FortuneTellerDisabled"				"L'Oracolo non si è ancora destato."
+
 		"DOTA_DarkCarnival_Fortune_ExtraToken_StrengthHero"		"Guadagna un biglietto extra se vinci con un Eroe di Forza."
 		"DOTA_DarkCarnival_Fortune_ExtraToken_IntelligenceHero"	"Guadagna un biglietto extra se vinci con un Eroe di Intelligenza."
 		"DOTA_DarkCarnival_Fortune_ExtraToken_AgilityHero"		"Guadagna un biglietto extra se vinci con un Eroe di Agilità."
@@ -50596,13 +50678,21 @@ Se ritieni di non aver potuto dedicare l'attenzione necessaria al raggiungimento
 		"DOTA_DarkCarnival_FortuneReward_SmallEconItem"	"Guadagna uno spray o un'emoticon"
 		"DOTA_DarkCarnival_FortuneReward_Rerolls"		"Un rifornimento della Dolceria"
 
+		"DOTA_DarkCarnival_Fortune_RevealFortuneButtonLabel"			"Svela la predizione <Img class=\"ButtonIcon\" src=\"file://{images}/events/dark_carnival/oracle/oracle_coin.png\"/> <span class=\"Numbers\">1</span>"
+		"DOTA_DarkCarnival_Fortune_RevealNextFortuneButtonLabel"		"Prossima predizione (1)"
+
 		"DOTA_DarkCarnival_FortuneReward_k_eOverworldFortuneReward_ThreeRandomTokens"	"3 biglietti casuali"
 		"DOTA_DarkCarnival_FortuneReward_k_eOverworldFortuneReward_OracleCoin"			"1 Gemma Veggente"
 		"DOTA_DarkCarnival_FortuneReward_k_eOverworldFortuneReward_CandyBagSmall"		"Sacchetto piccolo di dolci"
 		"DOTA_DarkCarnival_FortuneReward_k_eOverworldFortuneReward_CandyBagLarge"		"Sacchetto grande di dolci"
-		"DOTA_DarkCarnival_FortuneReward_k_eOverworldFortuneReward_OneNodeUnlock"		"1 cammino sbloccabile"
-		"DOTA_DarkCarnival_FortuneReward_k_eOverworldFortuneReward_TwoNodeUnlocks"		"2 cammini sbloccabili"
+		"DOTA_DarkCarnival_FortuneReward_k_eOverworldFortuneReward_BalloonCharges"		"+1 livello di abilità di Palloncino"
+		"DOTA_DarkCarnival_FortuneReward_k_eOverworldFortuneReward_FireworksCharges"	"+1 livello di abilità di Fuochi d'artificio"
+		"DOTA_DarkCarnival_FortuneReward_k_eOverworldFortuneReward_OneNodeUnlock"		"1 Percorso sbloccabile"
+		"DOTA_DarkCarnival_FortuneReward_k_eOverworldFortuneReward_TwoNodeUnlocks"		"2 Percorsi sbloccabili"
+		"DOTA_DarkCarnival_FortuneReward_k_eOverworldFortuneReward_TwoLeastTokens"		"I 2 biglietti meno posseduti"
+		"DOTA_DarkCarnival_FortuneReward_k_eOverworldFortuneReward_ThreeMostTokens"		"I 3 biglietti più posseduti"
 		"DOTA_DarkCarnival_FortuneReward_k_eOverworldFortuneReward_Rerolls"				"3 rifornimenti della Dolceria"
+		"DOTA_DarkCarnival_FortuneReward_k_eOverworldFortuneReward_PieCharges"			"+1 livello di abilità di Torta in faccia"
 		"DOTA_DarkCarnival_FortuneReward_k_eOverworldFortuneReward_LastHeroPlayedTokens"	"Biglietti dell'ultimo Eroe usato"
 
 		"DOTA_DarkCarnival_FortuneTeller_BalloonChargesDescription"						"Sali di livello con la tua abilità stagionale Palloncino circense, che ti permette di creare palloncini durante una partita.<br>Quando sali di livello, vengono sbloccate cariche aggiuntive, altri tipi di palloncini e molto altro!"
@@ -50613,12 +50703,15 @@ Se ritieni di non aver potuto dedicare l'attenzione necessaria al raggiungimento
 		"DOTA_DarkCarnival_FortuneTeller_TokensReceived"								"Hai ricevuto questi biglietti da Oracle."
 
 		"DOTA_DarkCarnival_FortuneTeller_Welcome"										"Benvenuto all'Oracolo"
+		"DOTA_DarkCarnival_FortuneTeller_WelcomeDescription"							"Guadagna una Gemma Veggente una volta al giorno giocando a Dota. Spendendola qui, riceverai la tua predizione e otterrai ricompense!"
+		"DOTA_DarkCarnival_FortuneTeller_ResourceCount"									"{d:ticket_count} Gemme Veggenti"
 		"DOTA_DarkCarnival_FortuneTeller_DescriptionSubtitle"							"Guadagna Gemme Veggenti giocando a Dota"
 		"DOTA_DarkCarnival_FortuneTeller_DailySeeingStoneTitle"							"Gemma Veggente giornaliera"
 		"DOTA_DarkCarnival_FortuneTeller_OverworldTokens"								"Biglietti del Circo degli orrori"
 		"DOTA_DarkCarnival_FortuneTeller_StoryInformation"								"Continua a svelare predizioni per avanzare nella storia dell'Oracolo e sbloccare ricompense aggiuntive."
 
 		"DOTA_DarkCarnival_FortuneTeller_AvailableToEarn"								"Ottenibile"
+		"DOTA_DarkCarnival_FortuneTeller_Earned"										"Ottenuto"
 		"DOTA_DarkCarnival_FortuneTeller_SeeingStoneCountdown"							"Si ripristina tra {t:d:t:m:countdown_time}"
 		"DOTA_DarkCarnival_FortuneTeller_ReadyToUnlock"									"Pronto allo sblocco"
 
@@ -50630,10 +50723,15 @@ Se ritieni di non aver potuto dedicare l'attenzione necessaria al raggiungimento
 		"DOTA_DarkCarnival_FortuneTeller_Reward"				"Ricompensa di {s:reward_tarot_card_name}"
 
 		"DOTA_DarkCarnival_Dashboard_GetFortune"				"Scopri il tuo destino!"
+		"DOTA_DarkCarnival_FortuneDescription"					"%s1 %s2 %s3"
+
 		"DOTA_DarkCarnival_ClickToStart"						"Clicca per iniziare"
 
 		"DOTA_PlusPostGame_DarkCarnivalProgress"			"Progresso dell'evento Circo degli orrori"
 
+		"DOTA_DarkCarnival_NodeBreaker"						"Usa 1 <img class=\"NodeUnlockIcon\" src=\"file://{images}/events/dark_carnival/tokens/token_icons/node_unlock.svg\" />sblocco"
+		"DOTA_DarkCarnival_NodeBreaker_Tooltip"				"Usa un biglietto Percorso sbloccabile invece degli altri biglietti."
+		
 		// Dark Carnival candy shop
 		"DOTA_Dark_Carnival_CandyworksDisabled"				"Al momento la Dolceria del Circo è chiusa. Si aprirà quando la sbloccherai sulla mappa."
 		"DOTA_Dark_Carnival_CandyworksExpired"				"La Dolceria del Circo è chiusa. L'evento non è più attivo."
@@ -50667,6 +50765,26 @@ Se ritieni di non aver potuto dedicare l'attenzione necessaria al raggiungimento
 		"DOTA_CandyShop_Dark_Carnival_Reroll_Tooltip"		"I rifornimenti della Dolceria del Circo ti permettono di ottenere una diversa selezione casuale di bottini. Gioca a Dota per ottenere più rifornimenti."
 		"DOTA_DarkCarnival_Reward_CandyShopShelfUpgrade"	"Scaffale di ricompense extra nella Dolceria del Circo"
 		"DOTA_DarkCarnival_Reward_CandyShopRecipeUpgrade"	"Ricetta extra nella Dolceria del Circo"
+		"DOTA_DarkCarnival_Reward_CandyShopInventoryUpgrade"	"Slot extra dell'inventario nella Dolceria del Circo"
+		"DOTA_DarkCarnival_Reward_OracleCoin"				"Gemma Veggente"
+		
+		"DOTA_Dark_Carnival_Encounter_TokenTrader_TokensReceivedPopupTitle"		"Scambio completato"
+		"DOTA_Dark_Carnival_Encounter_TokenExchangeFailed"						"Impossibile scambiare i biglietti"
+		
+		"DOTA_Dark_Carnival_Encounter_TokenTrader_Trade"					"Scambia"
+		"DOTA_Dark_Carnival_Encounter_TokenTrader_Reset"					"Ripristina gli scambi"
+		"DOTA_Dark_Carnival_Encounter_TokenTrader_Trade3Title"				"Scambia <span class='Emphasis'>3 biglietti UGUALI</span>"
+		"DOTA_Dark_Carnival_Encounter_TokenTrader_Trade4Title"				"Scambia <span class='Emphasis'>4 biglietti A TUA SCELTA</span>"
+		"DOTA_Dark_Carnival_Encounter_TokenTrader_TradeAny2Title"			"Scambia <span class='Emphasis'>2 biglietti A TUA SCELTA</span>"
+		"DOTA_Dark_Carnival_Encounter_TokenTrader_Trade3RandomTitle"		"Scambia <span class='Emphasis'>3 biglietti A TUA SCELTA</span>"
+		"DOTA_Dark_Carnival_Encounter_TokenTrader_Trade4RandomTitle"		"Scambia <span class='Emphasis'>4 biglietti A TUA SCELTA</span>"
+		"DOTA_Dark_Carnival_Encounter_TokenTrader_TradeRandomDescription"	"Non riceverai gli stessi biglietti che hai scambiato."
+		"DOTA_Dark_Carnival_Encounter_TokenTrader_TradeThreeScrapTitle"		"Scambia <span class='Emphasis'>3 biglietti {s:scrap_name}</span>"
+		"DOTA_Dark_Carnival_Encounter_TokenTrader_TradeSixScrapTitle"		"Scambia <span class='Emphasis'>6 biglietti {s:scrap_name}</span>"
+		"DOTA_Dark_Carnival_Encounter_TokenTrader_ChooseInventory"			"Scegli i biglietti dal tuo inventario"
+		"DOTA_Dark_Carnival_Encounter_TokenTrader_ChooseResultToken"		"Scegli un biglietto da ricevere"
+		"DOTA_Dark_Carnival_Encounter_Generic_TokensReceivedPopupDesc"		"Hai ricevuto questi biglietti"
+		
 		"DOTA_Dark_Carnival_EncounterName_CandyShop"		"Dolceria del Circo"
 		"DOTA_Dark_Carnival_EncounterDesc_CandyShop"		"Un luogo dove spendere i tuoi deliziosi dolci."
 
@@ -50682,6 +50800,8 @@ Se ritieni di non aver potuto dedicare l'attenzione necessaria al raggiungimento
 		"DOTA_CandyShop_Dark_Carnival_CandyType_2"			"Canditi di Porto Fumoso"
 		"DOTA_CandyShop_Dark_Carnival_CandyType_3"			"Spaccadenti del Joerlak"
 		"DOTA_CandyShop_Dark_Carnival_CandyType_4"			"Bulloni rinfrescanti del Cuoreblu"
+		"DOTA_CandyShop_Dark_Carnival_CandyType_5"			"Spire zuccherine degli Smilzi"
+
 		"DOTA_Dark_Carnival_VisualNovel_Autoplay"			"Riproduzione automatica"
 
 		"DOTA_Dark_Carnival_PostGame_WinEarned"					"La tua <b>vittoria</b> con {g:dota_hero_name:hero_id} ti ha fatto guadagnare le seguenti ricompense:"
@@ -50712,26 +50832,36 @@ Se ritieni di non aver potuto dedicare l'attenzione necessaria al raggiungimento
 		// Dark Carnival Lockpicking
 		"DOTA_DarkCarnival_Lockpicking_Paused"			"In pausa"
 		"DOTA_DarkCarnival_Lockpicking_LeaveGame"					"Esci dalla partita"
+		"DOTA_DarkCarnival_Lockpicking_ScoringTotal"	"Punteggio totale"
 		"DOTA_DarkCarnival_Lockpicking_PlayAgain"		"Gioca ancora"
 		"DOTA_DarkCarnival_Lockpicking_Title"			"Forza la serratura"
 		"DOTA_DarkCarnival_Lockpicking_GameDesc"		"Aiuta Slark a evadere dalla sua cella!"
 		"DOTA_DarkCarnival_Lockpicking_Leaderboard_HeaderFriends"	"Amici"
+		"DOTA_DarkCarnival_Lockpicking_Leaderboard_Score"			"Punti"
+		"DOTA_DarkCarnival_Lockpicking_Scoring"						"Punteggio"
 		"DOTA_DarkCarnival_Lockpicking_Modes"						"Modalità"
 		"DOTA_DarkCarnival_Lockpicking_Rewards"						"Ricompense"
 		"DOTA_DarkCarnival_Lockpicking_Play"						"Gioca"
 		"DOTA_DarkCarnival_Lockpicking_Leave"						"Esci"
 		"DOTA_DarkCarnival_Lockpicking_Pause"						"Metti in pausa"
 		"DOTA_DarkCarnival_Lockpicking_UnPause"						"Riprendi"
+		"DOTA_DarkCarnival_Lockpicking_Help"						"Aiuto"
 		"DOTA_DarkCarnival_Lockpicking_Won"							"Hai vinto!"
 		"DOTA_DarkCarnival_Lockpicking_Lost"						"Hai perso..."
 		"DOTA_DarkCarnival_Lockpicking_ScoringUnlocks"				"Scelte corrette ({d:unlock_count} x {d:score_per_unlock}):"
 		"DOTA_DarkCarnival_Lockpicking_Help_HowToPlay"				"Prova a forzare la serratura tutte le volte che vuoi prima che scada il tempo."
+		"DOTA_DarkCarnival_Lockpicking_Help_Pick"					"Forza"
 		"DOTA_DarkCarnival_Lockpicking_Help_Boost"					"Velocità aggiuntiva (TIENI PREMUTO)"
 		"DOTA_DarkCarnival_Lockpicking_Help_Pick_Details"			"Forza la serratura quando il grimaldello raggiunge la barra evidenziata.\n\nSe manca la barra, il grimaldello sarà brevemente disabilitato.\n\nLe barre blu fanno ottenere tempo aggiuntivo."
 		"DOTA_DarkCarnival_Lockpicking_Help_Boost_Details"			"Tieni premuto per un aumento continuo della velocità."
+		"DOTA_DarkCarnival_Lockpicking_Scoring_SuccessfulPick"		"Ogni forzatura riuscita"
+		"DOTA_DarkCarnival_EncounterStatus_Lockpicking"				"Circo degli orrori: forza la serratura"
 		"DOTA_DarkCarnival_Lockpicking_HighScores"					"Punteggi migliori"
 		"DOTA_DarkCarnival_Lockpicking_Resume"						"Riprendi [F9]"
 		"DOTA_DarkCarnival_Lockpicking_GameOver"					"Partita terminata"
+		"DOTA_DarkCarnival_Lockpicking_Score"						"Punti"
+		"DOTA_DarkCarnival_Lockpicking_TimeRemaining"				"Tempo rimanente"
+
 		// Dark Carnival: Slark Jailbreak
 		"DOTA_DarkCarnival_SlarkJailbreak_Title"					"Spaccastivali"
 		"DOTA_DarkCarnival_SlarkJailbreak_GameDesc"					"Raccogli bottino! Distruggi stivali!"
@@ -50742,6 +50872,9 @@ Se ritieni di non aver potuto dedicare l'attenzione necessaria al raggiungimento
 		"DOTA_DarkCarnival_SlarkJailbreak_ControlPaddle"			"Sposta carrello"
 		"DOTA_DarkCarnival_SlarkJailbreak_ControlLaunch"			"Lancia stivale"
 		"DOTA_DarkCarnival_SlarkJailbreak_Level"					"Livello"
+		"DOTA_DarkCarnival_SlarkJailbreak_Lives"					"Stivali"
+		"DOTA_DarkCarnival_SlarkJailbreak_Life"						"Stivale"
+		"DOTA_DarkCarnival_SlarkJailbreak_Score"					"Punti"
 		"DOTA_DarkCarnival_SlarkJailbreak_MoveHint"					"Blocca la posizione del carrello"
 		"DOTA_DarkCarnival_SlarkJailbreak_LaunchHint"				"Lancia stivale"
 
@@ -50757,7 +50890,23 @@ Se ritieni di non aver potuto dedicare l'attenzione necessaria al raggiungimento
 		"DOTA_DarkCarnival_Overworld_Act1_Part2_Locked_Countdown"	"Disponibile tra {s:time_until_unlock}"
 		"DOTA_DarkCarnival_Overworld_Act1_Part3_Locked_Countdown"	"Disponibile tra {s:time_until_unlock}"
 
+		"DOTA_DarkCarnival_Overworld_UsePathUnlockTokenPopup_Title"		"Usa il biglietto Percorso sbloccabile"
+		"DOTA_DarkCarnival_Overworld_UsePathUnlockTokenPopup_Question"	"Vuoi sbloccare subito questo percorso utilizzando un biglietto Percorso sbloccabile?"
+
+		"DOTA_DarkCarnival_TooltipEligibleForEventProgress"				"Questa impostazione è idonea per progredire nell'evento."
+
+		"DOTA_DarkCarnival_ChatWheelMessage"							"Messaggio per la chat radiale"
+
+		"dota_chatwheel_translation_darkcarnival_money_and_bones"		"DENARO E OSSA! DENARO E OSSA!"
+		"dota_chatwheel_translation_darkcarnival_are_we_the_idiots"		"Gli idioti saremmo noi?"
+		"dota_chatwheel_translation_darkcarnival_wow"					"Wow!"
+		"dota_chatwheel_source_fishwitch"								"Grindlplit"
+		"dota_chatwheel_source_hoodwink"								"Hoodwink"
+		"dota_chatwheel_source_clown"									"Clarence"
+
 		"DOTA_Axe_Missing"			"Manca Axe e non può partecipare"
 
-		}
+		"DOTA_DarkCarnival_Overworld_Unlock"						"Sblocca"
+
+	}
 } 
