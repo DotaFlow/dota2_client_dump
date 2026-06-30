@@ -50,6 +50,9 @@
 //	"m_unPathUnlockerTokenID": 0,
 //	"m_unFortuneCountForPermanentReward": 1,
 //	"m_unTimesFortuneCanBeSeenBeforeRepeats": 1,
+//	"m_vecFortuneWeightForUnseenAmount":
+//	[
+//	],
 //	"m_nMaxTokenCap": 0,
 //	"m_vecEventActionTriggers":
 //	[
@@ -182,6 +185,8 @@ class CDOTAOverworldDefinition
 	int32 m_unFortuneCountForPermanentReward;
 	// MPropertyDescription = "How many times each fortune can be revealed until all fortunes have been revealed this amount"
 	int32 m_unTimesFortuneCanBeSeenBeforeRepeats;
+	// MPropertyDescription = "What weight a fortune should have when being randomly selected based on how many times they can still be seen. The amount unseen is used as the index."
+	CUtlVector< int32 > m_vecFortuneWeightForUnseenAmount;
 	// MPropertyDescription = "Hard limit on per-token quantities. It's impossible to have more than this number of tokens."
 	int32 m_nMaxTokenCap;
 	CUtlVector< CDOTAEventActionTrigger > m_vecEventActionTriggers;
