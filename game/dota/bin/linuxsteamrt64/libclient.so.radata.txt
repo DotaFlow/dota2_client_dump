@@ -3115,6 +3115,7 @@
 #DOTA_Overworld_Inventory_HeroTrayScrap
 #DOTA_Overworld_Inventory_HeroTrayTooManyTokens
 #DOTA_Overworld_Inventory_PathUnlocker
+#DOTA_Overworld_Inventory_ScrapToken
 #DOTA_Overworld_ReplayDialog
 #DOTA_Overworld_RewardsStatus_Locked
 #DOTA_Overworld_RewardsStatus_Unlocked
@@ -3199,7 +3200,7 @@
 #DOTA_PlayTourneyStatus_StartingSoon
 #DOTA_PlayTourneyStatus_TooLate
 #DOTA_Play_RR_FiveStack
-#DOTA_Play_RR_HighDemand
+#DOTA_Play_RR_HighDemandAtLeastOne
 #DOTA_Play_RR_PartyEarningQP:f
 #DOTA_Play_RR_PartyMissingQP
 #DOTA_Play_RR_PartyMissingQP_Tooltip
@@ -7974,6 +7975,8 @@ $hRh
 *ZN45CDOTA_DB_Popup_BP_Crownfall_Encounter_Fishing8SetStateENS_23EncounterFishingState_tEEUlvE6_
 *ZN45CDOTA_DB_Popup_BP_Crownfall_Encounter_Fishing8SetStateENS_23EncounterFishingState_tEEUlvE7_
 *ZN45CDOTA_UI_International2025_PredictionRankings16UpdateDirtyPanelEvEUlPN8panorama8CPanel2DEiE_
+*ZN45CDOTA_UI_Tooltip_DarkCarnival_HeroHighlighter16UpdateDirtyPanelEvEUlP23CDOTA_UI_OverworldTokeniE_
+*ZN45CDOTA_UI_Tooltip_DarkCarnival_HeroHighlighter16UpdateDirtyPanelEvEUliE_
 *ZN46CDOTA_DB_Page_BP_Crownfall_CollectorsCacheVote16UpdateDirtyPanelEvEUlPN8panorama8CPanel2DEiE_
 *ZN46CDOTA_UI_International2025_FantasyCraft_Tablet16UpdateDirtyPanelEvEUlPN8panorama8CPanel2DEiE_
 *ZN46CDOTA_UI_Tooltip_DarkCarnival_StorePurchaseAll16UpdateDirtyPanelEvEUlPN8panorama8CPanel2DEiE_
@@ -8577,8 +8580,8 @@ $hRh
 ../../game/client/dota/panorama/dota_db_custom_lobby_list.cpp
 ../../game/client/dota/panorama/dota_db_lobby_browser_instance.cpp
 ../../game/client/dota/panorama/dota_db_play.cpp
-../../game/client/dota/panorama/dota_db_play.cpp:5123
-../../game/client/dota/panorama/dota_db_play.cpp:5170
+../../game/client/dota/panorama/dota_db_play.cpp:5125
+../../game/client/dota/panorama/dota_db_play.cpp:5172
 ../../game/client/dota/panorama/dota_event_user_data.cpp
 ../../game/client/dota/panorama/dota_event_user_data.h
 ../../game/client/dota/panorama/dota_guide_controller.cpp
@@ -28153,7 +28156,6 @@ $hRh
 43C_DOTA_Ability_Special_Bonus_Spell_Immunity
 43C_DOTA_Ability_Special_Bonus_Unique_Abaddon
 43IGameResourceManifestLoadCompletionCallback
-449\t
 44AI_GroundRootMotionMotor_DebugSnapshotData_t
 44CAvailablePrivateCoachingSessionSummaryCache
 44CBaseSerializerMatchToMetaReplayCompatHelper
@@ -28628,6 +28630,7 @@ $hRh
 45CDOTA_UI_International2025_PredictionRankings
 45CDOTA_UI_MonsterHunterInvestigationsContainer
 45CDOTA_UI_Popup_ConfirmUnlockDotaPlusChatWheel
+45CDOTA_UI_Tooltip_DarkCarnival_HeroHighlighter
 45CDotaMsgStructuredTooltipProperties_Attribute
 45CEnvSoundscapeProxyAlias_snd_soundscape_proxy
 45CGCClientJobCMsgGCGetHeroStatsHistoryResponse
@@ -29541,7 +29544,9 @@ $hRh
 4@AA
 4Ch;
 4F0I
+4J9\t
 4Mv8
+4Q9\t
 4Zis
 4\fPl
 4_bot
@@ -30707,6 +30712,7 @@ $hRh
 8GZS
 8HeroID_t
 8IRestore
+8J9\t
 8SIffK5W
 8TZvrv<
 8VectorWS
@@ -51442,7 +51448,6 @@ DISTANCE
 DIST_POINT
 DIST_POINT_NAME
 DIV_FLOAT
-DL9\t
 DLFCN_BIND_FUNC
 DLFCN_BIND_VAR
 DLFCN_LOAD
@@ -53610,6 +53615,7 @@ DOTAHideCompTI10PlayerCardsTooltip
 DOTAHideCrownfallStorePathfinderStickersTooltip
 DOTAHideCustomGameTooltip
 DOTAHideDarkCarnivalFortuneTellerStoryNodeTooltip
+DOTAHideDarkCarnivalHeroHighlighterTooltip
 DOTAHideDarkCarnivalStorePurchaseAllTooltip
 DOTAHideDerivedStatsTooltip
 DOTAHideDroppedItemLabelTooltip
@@ -55425,6 +55431,7 @@ DOTAShowDarkCarnivalBackgroundPage
 DOTAShowDarkCarnivalCandyShopPage
 DOTAShowDarkCarnivalFortuneTellerPage
 DOTAShowDarkCarnivalFortuneTellerStoryNodeTooltip
+DOTAShowDarkCarnivalHeroHighlighterTooltip
 DOTAShowDarkCarnivalOverworldNodePage
 DOTAShowDarkCarnivalOverworldPage
 DOTAShowDarkCarnivalOverworldPathPage
@@ -56279,6 +56286,7 @@ DOTATooltipCompTI10PlayerCards
 DOTATooltipCrownfallNode
 DOTATooltipCustomGame
 DOTATooltipDarkCarnivalFortuneTellerStoryNode
+DOTATooltipDarkCarnivalHeroHighlighter
 DOTATooltipDarkCarnivalNode
 DOTATooltipDarkCarnivalStorePurchaseAll
 DOTATooltipDashboardTip
@@ -65505,7 +65513,6 @@ HITGROUP_SPECIAL
 HITGROUP_STOMACH
 HITGROUP_UNUSED
 HITSTUN_ACTION_DEFINITION
-HJY\t
 HLTVSpectatorChannelChat
 HLine
 HLineFinals
@@ -67606,6 +67613,7 @@ If true, the minimap will show a simplified background image.  No longer used, p
 If true, then this anchor will be exposed externally to the entity that owns this VCD
 If true, we assume the client uses a fixed tickrate like the server (which may not always be true). If false, we recalculate the number of physics substeps in each client tick based on the actual elapsed time in the tick.
 If true, we can ping the map even if we have multiple keys pressed on the keyboard. Otherwise map pinging will only occur if alt is the only key pressed.
+If we should display that this reward is already owned in the user's inventory
 IfHasClassEvent
 IfHoverOtherEvent
 IfNotHasClassEvent
@@ -75486,6 +75494,7 @@ NoTeamMoveTo
 NoTeamSelect
 NoTeams
 NoText
+NoTicketsNeeded
 NoTier
 NoTitle
 NoTokenCost
@@ -76924,7 +76933,6 @@ PING_CONFIRMATION_STATE_ICON_TYPE_SMOKE
 PK14C_EconItemView
 PK17CDotaTI10Blessing
 PK18CMsgDOTATournament
-PK1\t
 PK20CMsgInGamePrediction
 PK21EconItemPreviewInfo_t
 PK23DOTAAbilityDefinition_t
@@ -77069,7 +77077,6 @@ PKEY_USAGE_PERIOD
 PKIX
 PKN11CUtlAtlas2DItE11EntryType_tE
 PKN8panorama19ILocalizationStringE
-PL9\t
 PLACEHOLDER_VALUE
 PLACEMENT
 PLANAR
@@ -85587,6 +85594,7 @@ T0.S
 T0d/
 T61STRING
 T72[t
+T99\t
 TACTICAL_SEARCH
 TALENT_CONTENT_STATUS_APPROVED
 TALENT_CONTENT_STATUS_EVALUATED
@@ -85972,6 +85980,7 @@ TauntList
 TauntModelContainer
 TauntPrediction
 TauntPreview
+Tb9\t
 Teal
 Team
 Team %d
@@ -89713,6 +89722,7 @@ XRJ2
 XWY]
 XYD%
 X\tQo
+Xb9\t
 Xd3h
 XfJ7
 Xin \t
@@ -96881,7 +96891,6 @@ d2pl
 d2sc
 d2scb
 d35P
-d49\t
 d4\tp
 d=%-2d hl=%ld l=%4ld 
 d=%-2d hl=%ld l=inf  
@@ -96890,6 +96899,7 @@ dDV8
 dHHp
 dITRedirect
 dNSDomain
+dO9\t
 dOj\f,
 dQy/
 dSAQuality
@@ -103033,6 +103043,7 @@ file://{resources}/layout/events/dark_carnival/popup_dark_carnival_rewards.xml
 file://{resources}/layout/events/dark_carnival/popup_dark_carnival_visual_novel.xml
 file://{resources}/layout/events/dark_carnival/tabs_dark_carnival.xml
 file://{resources}/layout/events/dark_carnival/tooltip_dark_carnival_fortune_teller_story_node.xml
+file://{resources}/layout/events/dark_carnival/tooltip_dark_carnival_hero_highlighter.xml
 file://{resources}/layout/events/dark_carnival/tooltip_dark_carnival_node.xml
 file://{resources}/layout/events/dark_carnival/tooltip_dark_carnival_store_purchase_all.xml
 file://{resources}/layout/events/dark_carnival/ui_button_dark_carnival.xml
@@ -105527,6 +105538,7 @@ hListOfMeepos
 hMegameepoFrame
 hN2D
 hNeutralTarget
+hO9\t
 hOwner
 hPU3
 hPreviousMeepo
@@ -111425,6 +111437,7 @@ l7@J
 lC57
 lDa>
 lDcW
+lJ9\t
 lM2p
 label
 label_item_def
@@ -113050,6 +113063,7 @@ m_bDiscontinuity
 m_bDispellable
 m_bDisplayAdditionalHeroes
 m_bDisplayCharges
+m_bDisplayIfAlreadyOwned
 m_bDisplayOverheadAlertOnReceived
 m_bDisplayOwnership
 m_bDissolveOnDeath
@@ -126668,7 +126682,6 @@ p4 add ..\..\..\content\dota\panorama\images\heroes\selection\%s.png\n
 p4 add ..\panorama\videos\heroes\%s.webm\n
 p4 edit ..\..\..\content\dota\panorama\images\heroes\selection\%s.png\n
 p4 edit ..\panorama\videos\heroes\%s.webm\n
-p49\t
 p4Z3
 p5Z3
 p5\nL,
@@ -126696,6 +126709,7 @@ pHitEntity
 pIp 
 pItemDef
 pItemName
+pJ9\t
 pKeyName
 pLayer->GetOwner() == this
 pLocalInventory->GetInventoryItemByItemID( msgItem.item_id() )
@@ -139096,15 +139110,14 @@ t1_lib.c
 t1_reneg.c
 t2U 
 t4O_
-t59\t
 t80z
 tA`KO/3G!\n7h=
 tGTS
-tI9\t
 tLY^m`6
 tLl 
 tLsq
 tNt5
+tQ9\t
 t_choreo_exit_warp
 t_choreo_target_warp
 t_x509.c
@@ -139815,6 +139828,7 @@ tlsv1 bad certificate status response
 tlsv1 certificate unobtainable
 tlsv1 unrecognized name
 tlsv1 unsupported extension
+tn9\t
 toLocalPlayer
 to_percentile
 toastExitDuration
@@ -143529,10 +143543,8 @@ x509_v3.c
 x509_vfy.c
 x509_vpm.c
 x509name.c
-x59\t
 x931
 xFKF
-xI9\t
 xOu\vsF
 xQfF
 xU<d
@@ -143553,6 +143565,7 @@ xiao8
 xj)9
 xmas
 xml_replacement
+xn9\t
 xp$=S
 xpH8
 xp_advantage_dire
