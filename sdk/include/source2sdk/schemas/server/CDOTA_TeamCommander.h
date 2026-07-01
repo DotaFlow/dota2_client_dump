@@ -47,6 +47,8 @@ class CDOTA_TeamCommander
 	CUtlVector< CHandle< CBaseEntity > > m_hProposedTeamfightUnits;
 	CHandle< CBaseEntity > m_hTeamfightTarget;
 	VectorWS m_vTeamfightTargetLoc;
+	DOTA_LANE m_eTeamDefenseLane;
+	GameTime_t m_flTeamDefenseStarted;
 	CountdownTimer m_WardCalculationTimer;
 	float32[24] m_fHeroSelectionTimes;
 	VectorWS m_vBaseLocation;
