@@ -4,4 +4,5 @@ class CDOTA_Modifier_Medusa_ManaShield : public CDOTA_Buff
 	float32 absorption_pct;
 	float32 damage_per_mana;
 	float32 illusion_percentage;
+	float32 m_flDamageAccumulator;
 };

@@ -4,6 +4,7 @@
 //	"m_sKey": "",
 //	"m_eAssociatedEvent": "EVENT_ID_NONE",
 //	"m_eProgressionType": "k_eOverworldProgressionType_NodesAndPaths",
+//	"m_unOverworldVersion": 0,
 //	"m_sTokenTraderEncounterName": "",
 //	"m_sNodeUnlockEventAction": "",
 //	"m_vGridOffset":
@@ -135,6 +136,7 @@ class CDOTAOverworldDefinition
 	// MPropertyDescription = "The event related to this overworld. Used for rewards and expiration."
 	EEvent m_eAssociatedEvent;
 	EOverworldProgressionType m_eProgressionType;
+	uint8 m_unOverworldVersion;
 	// MPropertyDescription = "Optional name of the token trader encounter. Useful if the encounter isn't attached to a node on the overworld."
 	CUtlString m_sTokenTraderEncounterName;
 	// MPropertyDescription = "An event action to grant whenever a node is unlocked."

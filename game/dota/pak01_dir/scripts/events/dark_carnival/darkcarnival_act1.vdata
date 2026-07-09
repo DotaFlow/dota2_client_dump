@@ -5,6 +5,7 @@
 	m_sKey = "darkcarnival_act1"
 	m_eAssociatedEvent = "EVENT_ID_DARK_CARNIVAL"
 	m_eProgressionType = "k_eOverworldProgressionType_NodesPathsAndRooms"
+	m_unOverworldVersion = 2
 	m_sTokenTraderEncounterName = "dark_carnival_token_trader"
 	m_sNodeUnlockEventAction = "nodes_unlocked_act_1"
 	m_vGridOffset = [ 0.0, 0.0 ]
@@ -23,24 +24,24 @@
 	[
 		{
 			m_strLocName = "#DOTA_DarkCarnival_Chapter1"
-			m_unReleaseTime = 0
-			m_unGroupID = 1
 			m_strVisualNovelName = "darkcarnival_act1_part1"
 			m_strRingmasterVisualNovelName = "darkcarnival_ringmaster_part1"
+			m_unReleaseTime = 0
+			m_unGroupID = 1
 		},
 		{
 			m_strLocName = "#DOTA_DarkCarnival_Chapter2"
-			m_unReleaseTime = 1783634400
-			m_unGroupID = 3
 			m_strVisualNovelName = "darkcarnival_act1_part2"
 			m_strRingmasterVisualNovelName = "darkcarnival_ringmaster_part2"
+			m_unReleaseTime = 1783634400
+			m_unGroupID = 3
 		},
 		{
 			m_strLocName = "#DOTA_DarkCarnival_Chapter3"
-			m_unReleaseTime = 1784844000
-			m_unGroupID = 5
 			m_strVisualNovelName = "darkcarnival_act1_part3"
 			m_strRingmasterVisualNovelName = "darkcarnival_ringmaster_part3"
+			m_unReleaseTime = 1784844000
+			m_unGroupID = 5
 		},
 	]
 	m_vecStartNodeIds = [ 1 ]
@@ -148,13 +149,13 @@
 	m_strNarrationVisualNovel = "darkcarnival_ringmaster_part1"
 	m_mapNarrationDialogues = 
 	{
+		"blimp-07" = "blimp-after"
 		"main-19" = "smelter-before"
 		"main-2" = "prison-1"
 		"smelter-01" = "smelter-escape"
 		"smelter-10" = "blimp-before"
 		"storage-02" = "tresdin-ganked"
 		"workshop-09" = "workshop"
-		"blimp-07" = "blimp-after"
 	}
 	m_Theme = 
 	{
@@ -2628,7 +2629,7 @@
 			m_unID = 39
 			m_sDialogueName = "blimp-01"
 			m_sEncounterName = ""
-			m_sRewardEventAction = "map_reward_candy_bag_small"
+			m_sRewardEventAction = "spray_act1_3"
 			m_vPos = [ 550.0, 1156.0 ]
 			m_eNodeFlags = ""
 			m_bSkipGrantingRewardOnUnlock = false
@@ -2664,7 +2665,7 @@
 			m_unID = 41
 			m_sDialogueName = "blimp-03"
 			m_sEncounterName = ""
-			m_sRewardEventAction = "spray_act1_3"
+			m_sRewardEventAction = "bex_showcase_decoration_1"
 			m_vPos = [ 800.0, 1156.0 ]
 			m_eNodeFlags = ""
 			m_bSkipGrantingRewardOnUnlock = false
@@ -2754,7 +2755,7 @@
 			m_unID = 46
 			m_sDialogueName = "storage-01"
 			m_sEncounterName = ""
-			m_sRewardEventAction = "map_reward_candy_bag_small"
+			m_sRewardEventAction = "spray_act1_7"
 			m_vPos = [ 122.0, 1438.0 ]
 			m_eNodeFlags = ""
 			m_bSkipGrantingRewardOnUnlock = false
@@ -2772,7 +2773,7 @@
 			m_unID = 47
 			m_sDialogueName = "storage-02"
 			m_sEncounterName = ""
-			m_sRewardEventAction = "map_reward_candy_bag_small"
+			m_sRewardEventAction = "ezzelweth_and_agnes_decoration_1"
 			m_vPos = [ 209.33334, 1438.0 ]
 			m_eNodeFlags = ""
 			m_bSkipGrantingRewardOnUnlock = false
@@ -2826,7 +2827,7 @@
 			m_unID = 50
 			m_sDialogueName = "storage-05"
 			m_sEncounterName = ""
-			m_sRewardEventAction = "spray_act1_7"
+			m_sRewardEventAction = "voiceline_act1_3"
 			m_vPos = [ 471.33337, 1438.0 ]
 			m_eNodeFlags = ""
 			m_bSkipGrantingRewardOnUnlock = false
@@ -2880,7 +2881,7 @@
 			m_unID = 53
 			m_sDialogueName = "workshop-01"
 			m_sEncounterName = ""
-			m_sRewardEventAction = "map_reward_candy_bag_small"
+			m_sRewardEventAction = "map_reward_store_coins_small"
 			m_vPos = [ 858.0, 1438.0 ]
 			m_eNodeFlags = ""
 			m_bSkipGrantingRewardOnUnlock = false
@@ -2898,7 +2899,7 @@
 			m_unID = 54
 			m_sDialogueName = "workshop-02"
 			m_sEncounterName = ""
-			m_sRewardEventAction = "map_reward_dark_carnival_act1b_emoticon"
+			m_sRewardEventAction = "map_reward_candy_bag_small"
 			m_vPos = [ 934.0, 1438.0 ]
 			m_eNodeFlags = ""
 			m_bSkipGrantingRewardOnUnlock = false
@@ -2916,7 +2917,7 @@
 			m_unID = 55
 			m_sDialogueName = "workshop-03"
 			m_sEncounterName = ""
-			m_sRewardEventAction = "map_reward_candy_bag_small"
+			m_sRewardEventAction = "map_reward_dark_carnival_act1b_emoticon"
 			m_vPos = [ 1010.0, 1438.0 ]
 			m_eNodeFlags = ""
 			m_bSkipGrantingRewardOnUnlock = false
@@ -3006,7 +3007,7 @@
 			m_unID = 60
 			m_sDialogueName = "workshop-06"
 			m_sEncounterName = ""
-			m_sRewardEventAction = "map_reward_candy_bag_small"
+			m_sRewardEventAction = "voiceline_act1_4"
 			m_vPos = [ 1532.4, 1438.0 ]
 			m_eNodeFlags = ""
 			m_bSkipGrantingRewardOnUnlock = false
@@ -3042,7 +3043,7 @@
 			m_unID = 62
 			m_sDialogueName = "workshop-08"
 			m_sEncounterName = ""
-			m_sRewardEventAction = "map_reward_candy_bag_small"
+			m_sRewardEventAction = "showcase_decoration_hoodwink_2"
 			m_vPos = [ 1697.2001, 1438.0 ]
 			m_eNodeFlags = ""
 			m_bSkipGrantingRewardOnUnlock = false
@@ -3097,7 +3098,7 @@
 			m_sDialogueName = "cauldron-01"
 			m_sEncounterName = ""
 			m_sRewardEventAction = "map_reward_candy_bag_small"
-			m_vPos = [ 218.0, 686.0 ]
+			m_vPos = [ 124.99999, 686.0 ]
 			m_eNodeFlags = ""
 			m_bSkipGrantingRewardOnUnlock = false
 			m_sHiddenWithoutEventAction = ""
@@ -3114,8 +3115,8 @@
 			m_unID = 66
 			m_sDialogueName = "cauldron-02"
 			m_sEncounterName = ""
-			m_sRewardEventAction = "map_reward_store_coins_small"
-			m_vPos = [ 310.0, 686.0 ]
+			m_sRewardEventAction = "map_reward_candy_bag_small"
+			m_vPos = [ 235.0, 686.0 ]
 			m_eNodeFlags = ""
 			m_bSkipGrantingRewardOnUnlock = false
 			m_sHiddenWithoutEventAction = ""
@@ -3133,7 +3134,7 @@
 			m_sDialogueName = "cauldron-03"
 			m_sEncounterName = ""
 			m_sRewardEventAction = "map_reward_candy_bag_small"
-			m_vPos = [ 402.0, 686.0 ]
+			m_vPos = [ 345.0, 686.0 ]
 			m_eNodeFlags = ""
 			m_bSkipGrantingRewardOnUnlock = false
 			m_sHiddenWithoutEventAction = ""
@@ -3151,7 +3152,7 @@
 			m_sDialogueName = "cauldron-04"
 			m_sEncounterName = ""
 			m_sRewardEventAction = "map_reward_oracle_coins"
-			m_vPos = [ 494.0, 686.0 ]
+			m_vPos = [ 455.0, 686.0 ]
 			m_eNodeFlags = ""
 			m_bSkipGrantingRewardOnUnlock = false
 			m_sHiddenWithoutEventAction = ""
@@ -3169,7 +3170,7 @@
 			m_sDialogueName = "cauldron-05"
 			m_sEncounterName = ""
 			m_sRewardEventAction = "map_reward_candy_bag_small"
-			m_vPos = [ 586.0, 686.0 ]
+			m_vPos = [ 565.0, 686.0 ]
 			m_eNodeFlags = ""
 			m_bSkipGrantingRewardOnUnlock = false
 			m_sHiddenWithoutEventAction = ""
@@ -3187,7 +3188,7 @@
 			m_sDialogueName = "cauldron-05-02"
 			m_sEncounterName = ""
 			m_sRewardEventAction = "spray_act1_5"
-			m_vPos = [ 678.0, 686.0 ]
+			m_vPos = [ 675.0, 686.0 ]
 			m_eNodeFlags = ""
 			m_bSkipGrantingRewardOnUnlock = false
 			m_sHiddenWithoutEventAction = ""
@@ -3223,7 +3224,7 @@
 			m_sDialogueName = "cauldron-07"
 			m_sEncounterName = ""
 			m_sRewardEventAction = "map_reward_dark_carnival_act1b_emoticon"
-			m_vPos = [ 982.0, 686.0 ]
+			m_vPos = [ 994.8, 686.0 ]
 			m_eNodeFlags = ""
 			m_bSkipGrantingRewardOnUnlock = false
 			m_sHiddenWithoutEventAction = ""
@@ -3241,7 +3242,7 @@
 			m_sDialogueName = "cauldron-08"
 			m_sEncounterName = ""
 			m_sRewardEventAction = "map_reward_store_coins_small"
-			m_vPos = [ 1074.0, 686.0 ]
+			m_vPos = [ 1099.6, 686.0 ]
 			m_eNodeFlags = ""
 			m_bSkipGrantingRewardOnUnlock = false
 			m_sHiddenWithoutEventAction = ""
@@ -3259,7 +3260,7 @@
 			m_sDialogueName = "cauldron-09"
 			m_sEncounterName = ""
 			m_sRewardEventAction = "map_reward_oracle_coins"
-			m_vPos = [ 1166.0, 686.0 ]
+			m_vPos = [ 1204.4, 686.0 ]
 			m_eNodeFlags = ""
 			m_bSkipGrantingRewardOnUnlock = false
 			m_sHiddenWithoutEventAction = ""
@@ -3277,7 +3278,7 @@
 			m_sDialogueName = "cauldron-10"
 			m_sEncounterName = ""
 			m_sRewardEventAction = "map_reward_loading_screen_axe"
-			m_vPos = [ 1258.0, 686.0 ]
+			m_vPos = [ 1309.2001, 686.0 ]
 			m_eNodeFlags = ""
 			m_bSkipGrantingRewardOnUnlock = false
 			m_sHiddenWithoutEventAction = ""
@@ -3295,7 +3296,7 @@
 			m_sDialogueName = ""
 			m_sEncounterName = "whack_a_mole"
 			m_sRewardEventAction = ""
-			m_vPos = [ 1350.0, 686.0 ]
+			m_vPos = [ 1414.0001, 686.0 ]
 			m_eNodeFlags = "Shortcut"
 			m_bSkipGrantingRewardOnUnlock = false
 			m_sHiddenWithoutEventAction = ""
@@ -3313,7 +3314,7 @@
 			m_sDialogueName = "cauldron-11"
 			m_sEncounterName = ""
 			m_sRewardEventAction = "map_reward_dark_carnival_act1b_emoticon"
-			m_vPos = [ 700.0, 1134.0 ]
+			m_vPos = [ 630.0, 1134.0 ]
 			m_eNodeFlags = ""
 			m_bSkipGrantingRewardOnUnlock = false
 			m_sHiddenWithoutEventAction = ""
@@ -3331,7 +3332,7 @@
 			m_sDialogueName = "cauldron-12"
 			m_sEncounterName = ""
 			m_sRewardEventAction = "map_reward_treasure_1"
-			m_vPos = [ 900.0, 1134.0 ]
+			m_vPos = [ 830.0, 1134.0 ]
 			m_eNodeFlags = ""
 			m_bSkipGrantingRewardOnUnlock = false
 			m_sHiddenWithoutEventAction = ""
@@ -3349,7 +3350,7 @@
 			m_sDialogueName = "engine-01"
 			m_sEncounterName = ""
 			m_sRewardEventAction = "map_reward_store_coins_medium"
-			m_vPos = [ 538.0, 814.0 ]
+			m_vPos = [ 498.0, 814.0 ]
 			m_eNodeFlags = ""
 			m_bSkipGrantingRewardOnUnlock = false
 			m_sHiddenWithoutEventAction = ""
@@ -3367,7 +3368,7 @@
 			m_sDialogueName = "engine-02"
 			m_sEncounterName = ""
 			m_sRewardEventAction = "map_reward_candy_bag_small"
-			m_vPos = [ 630.6667, 814.0 ]
+			m_vPos = [ 604.0, 814.0 ]
 			m_eNodeFlags = ""
 			m_bSkipGrantingRewardOnUnlock = false
 			m_sHiddenWithoutEventAction = ""
@@ -3385,7 +3386,7 @@
 			m_sDialogueName = "engine-03"
 			m_sEncounterName = ""
 			m_sRewardEventAction = "map_reward_oracle_coins"
-			m_vPos = [ 723.3334, 814.0 ]
+			m_vPos = [ 710.0, 814.0 ]
 			m_eNodeFlags = ""
 			m_bSkipGrantingRewardOnUnlock = false
 			m_sHiddenWithoutEventAction = ""
@@ -3403,7 +3404,7 @@
 			m_sDialogueName = "engine-04"
 			m_sEncounterName = ""
 			m_sRewardEventAction = "map_reward_candy_bag_small"
-			m_vPos = [ 816.00006, 814.0 ]
+			m_vPos = [ 816.0, 814.0 ]
 			m_eNodeFlags = ""
 			m_bSkipGrantingRewardOnUnlock = false
 			m_sHiddenWithoutEventAction = ""
@@ -3421,7 +3422,7 @@
 			m_sDialogueName = "engine-05"
 			m_sEncounterName = ""
 			m_sRewardEventAction = "map_reward_candy_bag_small"
-			m_vPos = [ 908.66675, 814.0 ]
+			m_vPos = [ 922.0, 814.0 ]
 			m_eNodeFlags = ""
 			m_bSkipGrantingRewardOnUnlock = false
 			m_sHiddenWithoutEventAction = ""
@@ -3439,7 +3440,7 @@
 			m_sDialogueName = "engine-06"
 			m_sEncounterName = ""
 			m_sRewardEventAction = "map_reward_candy_bag_small"
-			m_vPos = [ 1001.33344, 814.0 ]
+			m_vPos = [ 1028.0, 814.0 ]
 			m_eNodeFlags = ""
 			m_bSkipGrantingRewardOnUnlock = false
 			m_sHiddenWithoutEventAction = ""
@@ -3457,7 +3458,7 @@
 			m_sDialogueName = "engine-07"
 			m_sEncounterName = ""
 			m_sRewardEventAction = "map_reward_act1_final"
-			m_vPos = [ 1094.0001, 814.0 ]
+			m_vPos = [ 1134.0, 814.0 ]
 			m_eNodeFlags = "FinalNode"
 			m_bSkipGrantingRewardOnUnlock = false
 			m_sHiddenWithoutEventAction = ""
@@ -3564,7 +3565,7 @@
 			m_unID = 91
 			m_sDialogueName = "workshop-hidden-06"
 			m_sEncounterName = ""
-			m_sRewardEventAction = "map_reward_store_coins_big"
+			m_sRewardEventAction = "lorenzo_decoration_and_coins_secret_2"
 			m_vPos = [ 1209.0, 1886.0 ]
 			m_eNodeFlags = "Premium|SideQuest"
 			m_bSkipGrantingRewardOnUnlock = false
@@ -3582,7 +3583,7 @@
 			m_unID = 92
 			m_sDialogueName = "workshop-hidden-07"
 			m_sEncounterName = ""
-			m_sRewardEventAction = "map_reward_treasure_1"
+			m_sRewardEventAction = "tinker_and_treasure_decoration_secret_2"
 			m_vPos = [ 1319.0, 1886.0 ]
 			m_eNodeFlags = "Premium|SideQuest"
 			m_bSkipGrantingRewardOnUnlock = false
@@ -4425,7 +4426,7 @@
 			m_unNodeStart = 39
 			m_unNodeEnd = 40
 			m_strPathHiddenUntilEventAction = ""
-			m_unCost = 2
+			m_unCost = 3
 			m_splineInfo = 
 			{
 				m_flStartTangent = 0.5
@@ -4441,7 +4442,7 @@
 			m_unNodeStart = 40
 			m_unNodeEnd = 41
 			m_strPathHiddenUntilEventAction = ""
-			m_unCost = 2
+			m_unCost = 3
 			m_splineInfo = 
 			{
 				m_flStartTangent = 0.5
@@ -4457,7 +4458,7 @@
 			m_unNodeStart = 41
 			m_unNodeEnd = 42
 			m_strPathHiddenUntilEventAction = ""
-			m_unCost = 2
+			m_unCost = 3
 			m_splineInfo = 
 			{
 				m_flStartTangent = 0.5
@@ -4473,7 +4474,7 @@
 			m_unNodeStart = 42
 			m_unNodeEnd = 43
 			m_strPathHiddenUntilEventAction = ""
-			m_unCost = 2
+			m_unCost = 3
 			m_splineInfo = 
 			{
 				m_flStartTangent = 0.5
@@ -4489,7 +4490,7 @@
 			m_unNodeStart = 43
 			m_unNodeEnd = 44
 			m_strPathHiddenUntilEventAction = ""
-			m_unCost = 2
+			m_unCost = 3
 			m_splineInfo = 
 			{
 				m_flStartTangent = 0.5
@@ -4505,7 +4506,7 @@
 			m_unNodeStart = 44
 			m_unNodeEnd = 45
 			m_strPathHiddenUntilEventAction = ""
-			m_unCost = 2
+			m_unCost = 3
 			m_splineInfo = 
 			{
 				m_flStartTangent = 0.5
@@ -4521,7 +4522,7 @@
 			m_unNodeStart = 45
 			m_unNodeEnd = 46
 			m_strPathHiddenUntilEventAction = ""
-			m_unCost = 2
+			m_unCost = 3
 			m_splineInfo = 
 			{
 				m_flStartTangent = 0.5
@@ -4537,7 +4538,7 @@
 			m_unNodeStart = 46
 			m_unNodeEnd = 47
 			m_strPathHiddenUntilEventAction = ""
-			m_unCost = 2
+			m_unCost = 3
 			m_splineInfo = 
 			{
 				m_flStartTangent = 0.5
@@ -4553,7 +4554,7 @@
 			m_unNodeStart = 47
 			m_unNodeEnd = 48
 			m_strPathHiddenUntilEventAction = ""
-			m_unCost = 2
+			m_unCost = 3
 			m_splineInfo = 
 			{
 				m_flStartTangent = 0.5
@@ -4569,7 +4570,7 @@
 			m_unNodeStart = 48
 			m_unNodeEnd = 49
 			m_strPathHiddenUntilEventAction = ""
-			m_unCost = 2
+			m_unCost = 3
 			m_splineInfo = 
 			{
 				m_flStartTangent = 0.5
@@ -4601,7 +4602,7 @@
 			m_unNodeStart = 50
 			m_unNodeEnd = 51
 			m_strPathHiddenUntilEventAction = ""
-			m_unCost = 2
+			m_unCost = 3
 			m_splineInfo = 
 			{
 				m_flStartTangent = 0.5
@@ -4617,7 +4618,7 @@
 			m_unNodeStart = 51
 			m_unNodeEnd = 52
 			m_strPathHiddenUntilEventAction = ""
-			m_unCost = 2
+			m_unCost = 3
 			m_splineInfo = 
 			{
 				m_flStartTangent = 0.5
@@ -4665,7 +4666,7 @@
 			m_unNodeStart = 54
 			m_unNodeEnd = 55
 			m_strPathHiddenUntilEventAction = ""
-			m_unCost = 1
+			m_unCost = 3
 			m_splineInfo = 
 			{
 				m_flStartTangent = 0.5
@@ -4732,7 +4733,7 @@
 			m_unNodeStart = 58
 			m_unNodeEnd = 59
 			m_strPathHiddenUntilEventAction = ""
-			m_unCost = 2
+			m_unCost = 3
 			m_splineInfo = 
 			{
 				m_flStartTangent = 0.5
@@ -4780,7 +4781,7 @@
 			m_unNodeStart = 61
 			m_unNodeEnd = 62
 			m_strPathHiddenUntilEventAction = ""
-			m_unCost = 2
+			m_unCost = 3
 			m_splineInfo = 
 			{
 				m_flStartTangent = 0.5
@@ -4796,7 +4797,7 @@
 			m_unNodeStart = 62
 			m_unNodeEnd = 63
 			m_strPathHiddenUntilEventAction = ""
-			m_unCost = 2
+			m_unCost = 3
 			m_splineInfo = 
 			{
 				m_flStartTangent = 0.5
@@ -4844,7 +4845,7 @@
 			m_unNodeStart = 65
 			m_unNodeEnd = 66
 			m_strPathHiddenUntilEventAction = ""
-			m_unCost = 2
+			m_unCost = 3
 			m_splineInfo = 
 			{
 				m_flStartTangent = 0.5
@@ -4860,7 +4861,7 @@
 			m_unNodeStart = 66
 			m_unNodeEnd = 67
 			m_strPathHiddenUntilEventAction = ""
-			m_unCost = 2
+			m_unCost = 3
 			m_splineInfo = 
 			{
 				m_flStartTangent = 0.5
@@ -4876,7 +4877,7 @@
 			m_unNodeStart = 67
 			m_unNodeEnd = 68
 			m_strPathHiddenUntilEventAction = ""
-			m_unCost = 2
+			m_unCost = 3
 			m_splineInfo = 
 			{
 				m_flStartTangent = 0.5
@@ -4892,7 +4893,7 @@
 			m_unNodeStart = 68
 			m_unNodeEnd = 69
 			m_strPathHiddenUntilEventAction = ""
-			m_unCost = 2
+			m_unCost = 3
 			m_splineInfo = 
 			{
 				m_flStartTangent = 0.5
@@ -4908,7 +4909,7 @@
 			m_unNodeStart = 69
 			m_unNodeEnd = 70
 			m_strPathHiddenUntilEventAction = ""
-			m_unCost = 2
+			m_unCost = 3
 			m_splineInfo = 
 			{
 				m_flStartTangent = 0.5
@@ -4924,7 +4925,7 @@
 			m_unNodeStart = 70
 			m_unNodeEnd = 71
 			m_strPathHiddenUntilEventAction = ""
-			m_unCost = 2
+			m_unCost = 3
 			m_splineInfo = 
 			{
 				m_flStartTangent = 0.5
@@ -4940,7 +4941,7 @@
 			m_unNodeStart = 71
 			m_unNodeEnd = 72
 			m_strPathHiddenUntilEventAction = ""
-			m_unCost = 2
+			m_unCost = 3
 			m_splineInfo = 
 			{
 				m_flStartTangent = 0.5
@@ -4956,7 +4957,7 @@
 			m_unNodeStart = 72
 			m_unNodeEnd = 73
 			m_strPathHiddenUntilEventAction = ""
-			m_unCost = 2
+			m_unCost = 3
 			m_splineInfo = 
 			{
 				m_flStartTangent = 0.5
@@ -4972,7 +4973,7 @@
 			m_unNodeStart = 73
 			m_unNodeEnd = 74
 			m_strPathHiddenUntilEventAction = ""
-			m_unCost = 2
+			m_unCost = 3
 			m_splineInfo = 
 			{
 				m_flStartTangent = 0.5
@@ -4988,7 +4989,7 @@
 			m_unNodeStart = 74
 			m_unNodeEnd = 75
 			m_strPathHiddenUntilEventAction = ""
-			m_unCost = 2
+			m_unCost = 3
 			m_splineInfo = 
 			{
 				m_flStartTangent = 0.5
@@ -5004,7 +5005,7 @@
 			m_unNodeStart = 75
 			m_unNodeEnd = 76
 			m_strPathHiddenUntilEventAction = ""
-			m_unCost = 1
+			m_unCost = 2
 			m_splineInfo = 
 			{
 				m_flStartTangent = 0.5
@@ -5055,7 +5056,7 @@
 			m_unNodeStart = 78
 			m_unNodeEnd = 79
 			m_strPathHiddenUntilEventAction = ""
-			m_unCost = 2
+			m_unCost = 3
 			m_splineInfo = 
 			{
 				m_flStartTangent = 0.5
@@ -5534,7 +5535,7 @@
 			m_vecNodes = 
 			[
 				32, 33, 34, 35,
-				37, 36,
+				36, 37,
 			]
 			m_unUnlockedByNodeID = 0
 		},
@@ -5542,7 +5543,7 @@
 			m_unRoomID = 10
 			m_vPos = [ 416.0, 960.0 ]
 			m_vSize = [ 512.0, 480.0 ]
-			m_strBackgroundImage = panorama:"file://{images}/events/dark_carnival/overworld/act1/blimp1.psd"
+			m_strBackgroundImage = panorama:"file://{images}/events/dark_carnival/overworld/act1/blimp2.psd"
 			m_vecNodes = [ 39, 40, 41 ]
 			m_unUnlockedByNodeID = 0
 		},
@@ -5580,8 +5581,8 @@
 		},
 		{
 			m_unRoomID = 15
-			m_vPos = [ 128.0, 496.0 ]
-			m_vSize = [ 640.0, 416.0 ]
+			m_vPos = [ 32.0, 496.0 ]
+			m_vSize = [ 736.0, 416.0 ]
 			m_strBackgroundImage = panorama:"file://{images}/events/dark_carnival/overworld/act1/cauldron_room2.psd"
 			m_vecNodes = 
 			[
@@ -5593,7 +5594,7 @@
 		{
 			m_unRoomID = 16
 			m_vPos = [ 800.0, 496.0 ]
-			m_vSize = [ 640.0, 416.0 ]
+			m_vSize = [ 704.0, 416.0 ]
 			m_strBackgroundImage = panorama:"file://{images}/events/dark_carnival/overworld/act1/cauldron_room3.psd"
 			m_vecNodes = 
 			[
@@ -5604,7 +5605,7 @@
 		},
 		{
 			m_unRoomID = 17
-			m_vPos = [ 496.0, 944.0 ]
+			m_vPos = [ 426.0, 944.0 ]
 			m_vSize = [ 624.0, 416.0 ]
 			m_strBackgroundImage = panorama:"file://{images}/events/dark_carnival/overworld/act1/cauldron_room1.psd"
 			m_vecNodes = [ 77, 78 ]
@@ -5612,8 +5613,8 @@
 		},
 		{
 			m_unRoomID = 18
-			m_vPos = [ 448.0, 624.0 ]
-			m_vSize = [ 736.0, 416.0 ]
+			m_vPos = [ 408.0, 624.0 ]
+			m_vSize = [ 816.0, 416.0 ]
 			m_strBackgroundImage = panorama:"file://{images}/events/dark_carnival/overworld/act1/the_head1.psd"
 			m_vecNodes = 
 			[
@@ -5638,7 +5639,7 @@
 			m_unRoomID = 21
 			m_vPos = [ 416.0, 560.0 ]
 			m_vSize = [ 512.0, 384.0 ]
-			m_strBackgroundImage = panorama:"file://{images}/events/dark_carnival/overworld/act1/blimp2.psd"
+			m_strBackgroundImage = panorama:"file://{images}/events/dark_carnival/overworld/act1/blimp1.psd"
 			m_vecNodes = [ 42, 43, 44, 45 ]
 			m_unUnlockedByNodeID = 0
 		},
@@ -5686,7 +5687,7 @@
 			m_unRoomID = 27
 			m_vPos = [ 144.0, 960.0 ]
 			m_vSize = [ 224.0, 464.0 ]
-			m_strBackgroundImage = panorama:""
+			m_strBackgroundImage = panorama:"file://{images}/events/dark_carnival/overworld/act1/blimp3.psd"
 			m_vecNodes = [ 38 ]
 			m_unUnlockedByNodeID = 0
 		},
@@ -5722,14 +5723,20 @@
 					m_sRewardTitle = "#DOTA_DarkCarnival_Encounter_BlimpJump_ReachTheBlimpRewardTitle"
 				},
 				{
-					m_unRewardData = 20000
+					m_unRewardData = 10000
 					m_sEventAction = "encounter_act1_reward_blimpjump_2"
 					m_kvRewardExtraData = null
 					m_sRewardTitle = ""
 				},
 				{
-					m_unRewardData = 40000
+					m_unRewardData = 20000
 					m_sEventAction = "encounter_act1_reward_blimpjump_3"
+					m_kvRewardExtraData = null
+					m_sRewardTitle = ""
+				},
+				{
+					m_unRewardData = 30000
+					m_sEventAction = "encounter_act1_reward_blimpjump_4"
 					m_kvRewardExtraData = null
 					m_sRewardTitle = ""
 				},
@@ -5788,13 +5795,13 @@
 					m_sRewardTitle = ""
 				},
 				{
-					m_unRewardData = 3000
+					m_unRewardData = 8000
 					m_sEventAction = "encounter_act1_reward_crate_drop_2"
 					m_kvRewardExtraData = null
 					m_sRewardTitle = ""
 				},
 				{
-					m_unRewardData = 5000
+					m_unRewardData = 25000
 					m_sEventAction = "encounter_act1_reward_crate_drop_3"
 					m_kvRewardExtraData = null
 					m_sRewardTitle = ""
@@ -5959,7 +5966,7 @@
 			m_sTemplate = "secret_admirer"
 			m_sLocName = "#DOTA_DarkCarnival_Encounter_FriendGifting"
 			m_sLocDescription = "#DOTA_DarkCarnival_Encounter_FriendGifting_Description"
-			m_sImage = panorama:"file://{images}/events/dark_carnival/overworld/minigames/encounter_gifting.png"
+			m_sImage = panorama:"file://{images}/events/dark_carnival/overworld/gift_icon_large.png"
 			m_eRewardStyle = "k_eOverworldEncounterRewardStyle_ClaimCreditsRange"
 			m_vecRewards = 
 			[
@@ -6060,6 +6067,60 @@
 					{
 						m_unCostTokenIds = 
 						[
+							255, 255, 255, 255,
+							255, 255, 255, 255,
+							255, 255, 255, 255,
+							255, 255, 255, 255,
+							255, 255, 255, 255,
+						]
+					}
+					m_sRewardTitle = ""
+				},
+				{
+					m_unRewardData = 5
+					m_sEventAction = ""
+					m_kvRewardExtraData = 
+					{
+						m_unCostTokenIds = 
+						[
+							255, 255, 255, 255,
+							255, 255, 255, 255,
+							255, 255, 255, 255,
+							255, 255, 255, 255,
+							255, 255, 255, 255,
+							255, 255, 255, 255,
+						]
+					}
+					m_sRewardTitle = ""
+				},
+				{
+					m_unRewardData = 6
+					m_sEventAction = ""
+					m_kvRewardExtraData = 
+					{
+						m_unCostTokenIds = 
+						[
+							255, 255, 255, 255,
+							255, 255, 255, 255,
+							255, 255, 255, 255,
+							255, 255, 255, 255,
+							255, 255, 255, 255,
+							255, 255, 255, 255,
+							255, 255, 255, 255,
+						]
+					}
+					m_sRewardTitle = ""
+				},
+				{
+					m_unRewardData = 7
+					m_sEventAction = ""
+					m_kvRewardExtraData = 
+					{
+						m_unCostTokenIds = 
+						[
+							255, 255, 255, 255,
+							255, 255, 255, 255,
+							255, 255, 255, 255,
 							255, 255, 255, 255,
 							255, 255, 255, 255,
 							255, 255, 255, 255,

@@ -1820,10 +1820,14 @@
 #DOTA_DarkCarnivalLeaderboard_Act%u_Title
 #DOTA_DarkCarnivalReward_ShowcaseDecoration_Locked
 #DOTA_DarkCarnivalStore_Act%uPass_Name
+#DOTA_DarkCarnival_BlimpJump_InfiniteModeLocked
 #DOTA_DarkCarnival_ChapterReleaseDate_TrainCar
 #DOTA_DarkCarnival_ChatWheelMessage
 #DOTA_DarkCarnival_Checkout_ConfirmPurchaseWithCoins
 #DOTA_DarkCarnival_Checkout_InsufficientCoins
+#DOTA_DarkCarnival_CrateDrop_GameLost
+#DOTA_DarkCarnival_CrateDrop_GameWon
+#DOTA_DarkCarnival_EncounterStatus_CrateDrop
 #DOTA_DarkCarnival_EncounterStatus_Lockpicking
 #DOTA_DarkCarnival_EncounterStatus_SlarkBreakout
 #DOTA_DarkCarnival_EventTitle
@@ -2551,6 +2555,7 @@
 #DOTA_Hud_ManaReplacementDetail_Ward
 #DOTA_Hud_Paused
 #DOTA_Hud_Paused_Spectating
+#DOTA_Hud_Paused_Spectating_Local
 #DOTA_Hud_Skin_Default
 #DOTA_Hud_Unpausing
 #DOTA_ITEM_RECEIVED
@@ -5442,6 +5447,7 @@ $DETAIL1SCALE
 $DETAIL1TEXTURETRANSFORM
 $GIRu
 $HypYkf
+$INVALID
 $J6"t
 $JXsZ
 $ORIGIN
@@ -7110,6 +7116,7 @@ $hRh
 *N5GCSDK17GCClientJobLambdaIZN46CDOTA_DB_Page_BP_Crownfall_CollectorsCacheVote24EventVoteForSelectedItemEiEUlvE_EE
 *N5GCSDK17GCClientJobLambdaIZN46CDOTA_DB_Page_BP_International2024_Predictions15EventToggleHelpEvEUlvE_EE
 *N5GCSDK17GCClientJobLambdaIZN46CDOTA_DB_Page_International2025_SupportersClub22EventShowPurchasePopupEjEUlvE_EE
+*N5GCSDK17GCClientJobLambdaIZN46CDOTA_Popup_Dark_Carnival_Encounter_Blimp_Jump21PreloadImagesInFolderEPKcS3_EUlvE_EE
 *N5GCSDK17GCClientJobLambdaIZN46CDOTA_UI_BP_International2023_PredictionSeries18SetSelectableTeamsERK10CUtlVectorIji25CUtlVectorMemory_GrowableIjiLm0EEEEUlvE_EE
 *N5GCSDK17GCClientJobLambdaIZN46CDOTA_UI_BP_International2023_PredictionSeries19EventWinnerSelectedEiEUlvE_EE
 *N5GCSDK17GCClientJobLambdaIZN46CDOTA_UI_BP_International2023_PredictionSeries21EventPredictionPickedEjEUlvE_EE
@@ -7851,6 +7858,7 @@ $hRh
 *ZN35CDOTA_DB_Page_Tier_Treasure_Details21LoadItemPanelContentsEPN8panorama8CPanel2DEEUlPNS0_15CDelayLoadPanelEE_
 *ZN35CDOTA_DB_Page_Tier_Treasure_TradeUp18UpdatePreviewModelE23item_definition_index_tEUlP19CDOTA_UI_ScenePanelE_
 *ZN35CDOTA_UI_DarkCarnival_Overworld_Map18Update2DProjectionEvEUlvE_
+*ZN35CDOTA_UI_DarkCarnival_Overworld_Map20UpdateBackgroundTentEvEUlvE_
 *ZN35CDOTA_UI_DarkCarnival_Overworld_Map24InitOrUpdateNodesForRoomEPK18CDOTAOverworldRoombEUlPN8panorama8CPanel2DEiE_
 *ZN35CDOTA_UI_DarkCarnival_Overworld_Map25UpdateCharacterPanelStateEPN8panorama8CPanel2DEbEUlvE_
 *ZN36CDOTA_DB_FrontPageCell_Frostivus202416UpdateDirtyPanelEvEUlPN8panorama8CPanel2DEiE_
@@ -8573,6 +8581,7 @@ $hRh
 ../../game/client/dota/panorama/crownfall/survivors/dota_survivors_powerup_magic_missile.cpp
 ../../game/client/dota/panorama/crownfall/survivors/dota_survivors_projectile.cpp
 ../../game/client/dota/panorama/crownfall/survivors/dota_survivors_spawner.cpp
+../../game/client/dota/panorama/dark_carnival/crate_drop/dota_crate_drop_schema.cpp
 ../../game/client/dota/panorama/dark_carnival/lockpicking/dota_lockpicking_schema.cpp
 ../../game/client/dota/panorama/dark_carnival/slark_jailbreak/dota_slark_jailbreak_schema.cpp
 ../../game/client/dota/panorama/dota_db_chat.cpp
@@ -8874,6 +8883,7 @@ $hRh
 .vmdl
 .vpcf
 .vpk
+.vtex
 .x7B
 .yAu[7
 /'/)/A/E/K/M/Q/W/o/u/}/
@@ -17305,6 +17315,7 @@ $hRh
 20CDOTAChatChannelList
 20CDOTAClientMsg_Pause
 20CDOTACoachController
+20CDOTACrateDropSchema
 20CDOTAEventDefinition
 20CDOTAGameAccountPlus
 20CDOTAGuideController
@@ -18260,6 +18271,7 @@ $hRh
 22CScriptBindingPR_Items
 22CScrubEntityGameSystem
 22CServerOnlyModelEntity
+22CSetModelAsyncCallback
 22CSimpleLoggingListener
 22CStartupHookGameSystemI26GameEvent_RegisterInternalLi17408EE
 22CStartupHookGameSystemI34CDOTAPatchNotesTypeManagerInternalLi0EE
@@ -18506,6 +18518,8 @@ $hRh
 23CDOTAClientMsg_RollDice
 23CDOTAClientMsg_TipAlert
 23CDOTAConsumableEconItem
+23CDOTACrateDropHazardDef
+23CDOTACrateDropObjectDef
 23CDOTACustomShopItemInfo
 23CDOTADemoModeController
 23CDOTAEmoticonController
@@ -18886,6 +18900,8 @@ $hRh
 24CDOTAClientMsg_RankWager
 24CDOTAClientMsg_WorldLine
 24CDOTAClientMsg_XPAlert_t
+24CDOTACrateDropGameSystem
+24CDOTACrateDropPowerupDef
 24CDOTAFlipCoinChatCommand
 24CDOTAHeroEconItemAbility
 24CDOTAOverworldGameSystem
@@ -19250,6 +19266,7 @@ $hRh
 24CGameSystemStaticFactoryI24CCameraManagerGameSystemS0_E
 24CGameSystemStaticFactoryI24CDOTAArtilleryGameSystemS0_E
 24CGameSystemStaticFactoryI24CDOTACandyShopGameSystemS0_E
+24CGameSystemStaticFactoryI24CDOTACrateDropGameSystemS0_E
 24CGameSystemStaticFactoryI24CDOTAOverworldGameSystemS0_E
 24CGameSystemStaticFactoryI24CDOTAPingWheelGameSystemS0_E
 24CGameSystemStaticFactoryI24CDOTAPortraitWorldSystemS0_E
@@ -19569,6 +19586,7 @@ $hRh
 25CDOTAClientMsg_SwapAccept
 25CDOTAClientMsg_TimerAlert
 25CDOTAClientMsg_TipAlert_t
+25CDOTACrateDropPlatformDef
 25CDOTAFlappySkywrathSchema
 25CDOTAGCClientLobbyManager
 25CDOTAGuidePlaytimeTracker
@@ -20061,6 +20079,7 @@ $hRh
 26CDOTAClientMsg_RoshanTimer
 26CDOTAClientMsg_SwapRequest
 26CDOTAClientMsg_WorldLine_t
+26CDOTACrateDropDroppableDef
 26CDOTAFantasyCraftingSchema
 26CDOTAGuildSteamChatChannel
 26CDOTAHeroPickingController
@@ -20524,6 +20543,7 @@ $hRh
 27CDOTAClientMsg_SwapAccept_t
 27CDOTAClientMsg_TimerAlert_t
 27CDOTACompendiumSetSelection
+27CDOTACrateDropTrackLightDef
 27CDOTACrownfallCreditsSchema
 27CDOTADecorationEventManager
 27CDOTAFeaturedGamemodeSchema
@@ -21131,6 +21151,7 @@ $hRh
 28CDOTA_UI_Tooltip_NeutralItem
 28CDOTA_UI_Tooltip_ProfileCard
 28CDOTA_UI_Tooltip_RoshanTimer
+28CDarkCarnivalCrateDropEntity
 28CDefaultSoftbodyAttrExecutor
 28CDotaChoreoSceneCacheManager
 28CDotaHealthBarsLayerRenderer
@@ -23283,6 +23304,7 @@ $hRh
 32CDOTA_UI_Tooltip_TeamMiniProfile
 32CDOTA_Unit_Hero_AbyssalUnderlord
 32CDOTA_Widget_Watch_DPC_Standings
+32CDarkCarnivalCrateDropHPBarTicks
 32CDirtySpatialPartitionEntityList
 32CEconItemSearchQuery_Description
 32CEconTool_CompendiumSetSelection
@@ -26629,6 +26651,7 @@ $hRh
 39CDOTA_UI_Tooltip_Graph_PlayerHeroDamage
 39CDOTA_UI_Tooltip_MonsterHunterHeroAtlas
 39CDOTA_UI_Tooltip_PostGameDamageReceived
+39CDarkCarnivalCrateDropGameEffectsEntity
 39CEconItemSearchQuery_SocketRequiredHero
 39CEntityRenderBoundsRenderAttribCallback
 39CForcedPoseAnimationController_Override
@@ -28879,6 +28902,8 @@ $hRh
 46CDOTA_Modifier_Venomancer_NoxiousPlaguePrimary
 46CDOTA_Modifier_VoidSpirit_AetherRemnantThinker
 46CDOTA_Modifier_VoidSpirit_AstralStep_Intrinsic
+46CDOTA_Popup_Dark_Carnival_Encounter_Blimp_Jump
+46CDOTA_Popup_Dark_Carnival_Encounter_Crate_Drop
 46CDOTA_Popup_International_2025_PredictionsHelp
 46CDOTA_UI_BP_International2022_StickerStoreItem
 46CDOTA_UI_BP_International2023_PredictionSeries
@@ -29545,8 +29570,6 @@ $hRh
 4Ch;
 4F0I
 4Mv8
-4Q9\t
-4X9\t
 4Zis
 4\fPl
 4_bot
@@ -30712,7 +30735,6 @@ $hRh
 8GZS
 8HeroID_t
 8IRestore
-8Q9\t
 8SIffK5W
 8TZvrv<
 8VectorWS
@@ -33677,6 +33699,7 @@ ActorConfused
 ActorDazed
 ActorDepressed
 ActorExpression
+ActorGasp
 ActorHeart
 ActorHuff
 ActorName
@@ -34494,6 +34517,7 @@ Attempting to precache model for entity %d [%s] at %.2f %.2f %.2f, but model nam
 Attempting to precache resource, but resource name is NULL or empty\n
 Attempting to re-establish GC connection.\n
 Attempting to reset Dark Carnival overworld, error in clearing candy shop inventory, code %d
+Attempting to reset Dark Carnival overworld, error in resetting candy shop '%s'
 Attempting to select already-banned hero: %s!\n
 Attempting to select already-selected hero: %s!\n
 Attempting to set nonresident model '%s' for item ID %llu item Def %u (%s) owner %d\n
@@ -35345,6 +35369,7 @@ BlessingsEarnedContainer
 BlessingsList
 BlessingsProgressBar
 BlessingsSchema: %s\n
+BlimpJumpSounds
 Blit To Final
 Block%d
 Block%dCharacter%d
@@ -36306,6 +36331,28 @@ CDOTACoachController::CheckShowSessionRatingPopup
 CDOTACoachController::SubmitCoachRating
 CDOTAConductController::CheckFetchLatestScorecard
 CDOTACourierController
+CDOTACrateDropDroppableDef
+CDOTACrateDropGameDef
+CDOTACrateDropGameSystem
+CDOTACrateDropHazardDef
+CDOTACrateDropLevelDef
+CDOTACrateDropObjectDef
+CDOTACrateDropObjectDef failed to initialize\n
+CDOTACrateDropPlatformDef
+CDOTACrateDropPowerupDef
+CDOTACrateDropSchema Reloaded.\n
+CDOTACrateDropSchema: Circular dependency for object def %s, reached at %s
+CDOTACrateDropSchema: Couldn't load '%s'
+CDOTACrateDropSchema: Couldn't load resource %s
+CDOTACrateDropSchema: Duplicate level def id %u
+CDOTACrateDropSchema: Duplicate object def id %u
+CDOTACrateDropSchema: Duplicate object def name %s
+CDOTACrateDropSchema: Error finding parent %s for object def %s
+CDOTACrateDropSchema: failed to load game def file
+CDOTACrateDropSchema: failed to load levels file
+CDOTACrateDropSchema: failed to load objects file
+CDOTACrateDropTable
+CDOTACrateDropTrackLightDef
 CDOTACrownfallCreditsBlockDefinition
 CDOTACrownfallCreditsCharacterDefinition
 CDOTACrownfallCreditsDefinition
@@ -36453,6 +36500,8 @@ CDOTAMotionComicDefinition
 CDOTAMotionComicFrame
 CDOTAMotionComicGameSystem
 CDOTAMotionComicImageFrame
+CDOTAMotionComicSchema failed to initialize\n
+CDOTAMotionComicSchema: Couldn't load resource %s
 CDOTAMotionComicVideoFrame
 CDOTAMutationGameMode
 CDOTANewPlayerPoolGameMode
@@ -43279,6 +43328,7 @@ CDOTA_PanoramaScript_Particles
 CDOTA_PhantomAssassin_Gravestone
 CDOTA_PlayerChallengeInfo
 CDOTA_PlayerResource
+CDOTA_Popup_Dark_Carnival_Encounter_Blimp_Jump::PreloadImagesInFolder
 CDOTA_Popup_International2025_FantasyChoice::AddPlayerChoice no league data for league=%u
 CDOTA_Popup_International2025_FantasyChoice::AddPlayerChoice no league data for league=%u craftingId=%u
 CDOTA_Popup_International2025_FantasyChoice::OnShow called without AddPlayerChoice ever being called. league=%u
@@ -43567,6 +43617,8 @@ CDOTA_Visual_Novel_Popup_Button::EventActivated
 CDOTA_Widget_SeasonalEventDebug::GrantPoints
 CDOTA_Widget_Watch_DPC_Team_Schedule::EventToggleFavorite
 CDOTA_Wisp_Spirit
+CDarkCarnivalCrateDropEntity
+CDarkCarnivalCrateDropGameEffectsEntity
 CDebugDrawHistoryData
 CDebugLayout::AppendElementOpenTag
 CDebugLayout::AppendElementOpenTag - GetDebugPropertyInfo
@@ -50695,6 +50747,8 @@ CosmeticPicker_Contents_FadeDuration
 CosmeticsTable
 CosmicallyRareImage
 Cost
+Cost4
+Cost5
 CostTokensContainer
 Could not create an instance of 
 Could not decode alpha data.
@@ -50823,6 +50877,8 @@ CraftworksRecipeID_t
 CraftworksRecipeTierID_t
 CraftworksShowDebugContextMenu
 CraftworksUserDataUpdated
+Crate Drop
+CrateClearAbilityPanel
 CrateSell
 CrateTreasureVisible
 Crate_Tier1
@@ -52397,6 +52453,14 @@ DOTACrateAddItemToList
 DOTACrateChangeTier
 DOTACrateConfirmRecycle
 DOTACrateConfirmRecycle()
+DOTACrateDropLevelDefID_t
+DOTACrateDropObjectDefID_t
+DOTACrateDropOnAutoTransition
+DOTACrateDropOnCancel
+DOTACrateDropOnPlay
+DOTACrateDropShowMainMenuScreen
+DOTACrateDropToggleHelpPopup
+DOTACrateDropTogglePaused
 DOTACratePage
 DOTACrateRecycle
 DOTACrateRecycleBuyRemaining
@@ -52568,6 +52632,8 @@ DOTADailyHeroQuestStatus
 DOTADailyWeeklyChallengesUpdated
 DOTADamageFlag_t
 DOTADamageItemClicked
+DOTADarkCarnivalBlimpJumpExit
+DOTADarkCarnivalBlimpJumpRecordScore
 DOTADarkCarnivalButton
 DOTADarkCarnivalCandyShopOpenBag
 DOTADarkCarnivalCandyShopPage
@@ -52577,6 +52643,8 @@ DOTADarkCarnivalCandyShopRunExchange
 DOTADarkCarnivalCandyShopRunVariableExchange
 DOTADarkCarnivalCandyShopSimulateExchange
 DOTADarkCarnivalCompletionProgress
+DOTADarkCarnivalEncounterBlimpJump
+DOTADarkCarnivalEncounterCrateDrop
 DOTADarkCarnivalEncounterFortuneTeller
 DOTADarkCarnivalEncounterLockpickingPopup
 DOTADarkCarnivalEncounterMinigamePopup
@@ -52824,6 +52892,7 @@ DOTAEncounterFishingPlaySound
 DOTAEncounterFrame
 DOTAEncounterMinigameExit
 DOTAEncounterMinigameStart
+DOTAEncounterPreRender
 DOTAEncounterShmupComboDisplayComplete
 DOTAEncounterShmupDebugGoToMarker
 DOTAEncounterShmupDebugSetPlayMarker
@@ -52978,6 +53047,7 @@ DOTAFriendPicked
 DOTAFriendPicker
 DOTAFriendPickerAccepted
 DOTAFriendPickerCancelled
+DOTAFriendPickerOnRefresh
 DOTAFriendSelected
 DOTAFriendStatusChanged
 DOTAFriendToggleFavorite
@@ -54341,6 +54411,7 @@ DOTAOverworldNodeDebugShowEncounter
 DOTAOverworldOpenReceivedGiftTokens
 DOTAOverworldReleaseScheduledUnlock_t
 DOTAOverworldReloaded
+DOTAOverworldSecretAdmirerTokenSelected
 DOTAOverworldToken
 DOTAOverworldTokenHovered
 DOTAOverworldTokenTraderExecuteTrade
@@ -58921,6 +58992,7 @@ DanielJ
 Danish
 DarkCarnivalActivateOverworld
 DarkCarnivalCandyShop
+DarkCarnivalCrateDropHPBarTicks
 DarkCarnivalDiscountsContainer
 DarkCarnivalFeedback
 DarkCarnivalFortuneTeller
@@ -58959,10 +59031,13 @@ DarkCarnivalRewardVisual_t
 DarkCarnivalReward_itemdef_%u
 DarkCarnivalRewardsPopupSelectTab
 DarkCarnivalRingmasterVOSoundsP1
+DarkCarnivalRingmasterVOSoundsP2
 DarkCarnivalShowRewardsPopup
 DarkCarnivalSimulator
 DarkCarnivalSounds
 DarkCarnivalSoundsVNPart1
+DarkCarnivalSoundsVNPart2
+DarkCarnivalSoundsVOPart2
 DarkCarnivalStore
 DarkCarnivalStorePurchaseAllTooltip
 DarkCarnivalTabContent
@@ -59866,6 +59941,7 @@ DotaClearReflectionColorAndDepth
 DotaClearRefractionColorAndDepth
 DotaClearWaterStencil
 DotaConfirmBlessingsUnlock
+DotaCrateDrop_global_client
 DotaCrownfallCredits_global_client
 DotaCrystal
 DotaCustomUIType_t
@@ -60283,6 +60359,7 @@ Duplicate lootlist name (%s) found!
 Duplicate m_unRewardOptionID %u
 Duplicate match stat id %u (%s and %s)
 Duplicate match stat name %s (%u and %u)
+Duplicate motion comic name %s
 Duplicate notification '%s'
 Duplicate notification_id '%u'
 Duplicate opponent action definition id %u
@@ -60534,6 +60611,9 @@ ECustomGameWhitelistState
 EDH-DSS-DES-CBC3-SHA
 EDH-RSA-DES-CBC3-SHA
 EDIPARTYNAME
+EDOTACrateDropHazardType
+EDOTACrateDropObjectType
+EDOTACrateDropPowerupType
 EDOTADraftTriviaAnswerResult
 EDOTAFacetColor
 EDOTAFacetIcon
@@ -60761,9 +60841,11 @@ ERROR
 ERROR: CArtillerySchema Reload failed\n
 ERROR: CCraftworksSchema reload failed\n
 ERROR: CDOTABingoSchema Reload failed\n
+ERROR: CDOTACrateDropSchema Reload failed\n
 ERROR: CDOTACrownfallCreditsSchema Reload failed\n
 ERROR: CDOTALockpickingSchema Reload failed\n
 ERROR: CDOTAMinesweeperSchema Reload failed\n
+ERROR: CDOTAMotionComicSchema Reload failed\n
 ERROR: CDOTASlarkJailbreakSchema Reload failed\n
 ERROR: CMatch3Schema Reload failed\n
 ERROR: CMonsterHunterSchema reload failed\n
@@ -61723,7 +61805,6 @@ EventsOverlay
 Everything
 Everything is free, all shops are in range, and you can purchase for other heroes
 EverythingPurchased
-Evil Geniuses
 Ew`)9Q
 ExactlyAtEventIndex
 Example Name
@@ -62565,11 +62646,6 @@ FailedLoadingData
 Failure
 Fairy Shadow Realm Overlay Effect
 Faith
-Fake Lobby Name #1
-Fake Lobby Name #2
-Fake Lobby Name #3
-Fake Lobby Name #4
-Fake Lobby Name #5
 Fake client, simulated server side; don't send network messages to them
 Fake friend lobbies in custom game overview UI.
 Fake friends in custom game overview UI.
@@ -62995,6 +63071,7 @@ Finished removing sparse shadow tree data, shutting down\n
 Finished requesting news data\n
 FinishedAnimating
 FinishedItem
+FinishedLoading
 Finnish
 Finol
 FioClose(int)
@@ -66249,6 +66326,8 @@ HealthBarOffset
 HealthBars
 HealthBarsContainer
 HealthLabel
+HealthPanelOffsetX
+HealthPanelOffsetY
 HealthProgress
 HealthRegenRow
 HealthTicks
@@ -66402,6 +66481,7 @@ HeroDamageImg
 HeroDeathIcon
 HeroDeathRecord_t
 HeroDemoButton
+HeroDemoVideo
 HeroDetailsMaterial
 HeroDire%d
 HeroDisplayImage
@@ -66862,6 +66942,7 @@ HideKills
 HideLastHits
 HideLeftRightButtons
 HideLevel
+HideLevelIntroCaption
 HideLockedMessages
 HideLockedMessagesToggle
 HideMadstoneProgress
@@ -67811,6 +67892,7 @@ Indonesian
 Ineligible
 Inert VModuleMetadata
 Infinite time value
+InfiniteModeButton
 Infinity
 Inflictor is the entity that is dealing the damage.\nIt can be the attacker itself or a summoned unit, a projectile entity of some sort.\nIt is *MOST DEFINITELY NOT* the weapon or ability. Use Set/GetAbility for that.
 Info
@@ -68688,6 +68770,7 @@ IsFriend
 IsFrozen
 IsFullSetPicker
 IsFullyCompleted
+IsGameLoading
 IsGamePaused
 IsGeneratedByEconItem
 IsGlobalLoadout
@@ -69312,12 +69395,12 @@ Jq?a
 Jr\tA
 JsonObjectWriter was not fully closed.
 Juan Bot
+Jul  8 2026
 July
 Jump
 Jump to Instr I%d
 JumpAheadButton
 JumpOrLeap( C%d:I%d )
-Jun 25 2026
 June
 JungleCampsRadialTimer
 JungleCampsTimerText
@@ -69863,7 +69946,6 @@ LayerList
 LayerTop
 Layout File
 LayoutDirtied
-Lb9\t
 LbWf
 LeaderAvatar
 LeaderList
@@ -70039,8 +70121,11 @@ LevelComplete
 LevelForegroundImage
 LevelImage
 LevelIntro
+LevelIntroCaption
+LevelIntroCaption%d
 LevelIntroWeapons
 LevelLabel
+LevelNumber
 LevelNumberLabel
 LevelOutro
 LevelOwned
@@ -70068,6 +70153,7 @@ LevelUpBurstFXContainer
 LevelUpBurstFXContents
 LevelUpPowerUp
 LevelUpTab
+LevelWon
 LevelWonPointsRow
 LevelWonPointsRows
 LevelWonStar
@@ -72389,6 +72475,9 @@ Multipler on frametime, used for broadcasters only.
 Multipler on frametime.
 Multiplier on direction
 Multiplier on direction, used for broadcasters only.
+MultiplierPanel
+MultiplierPanelOffsetX
+MultiplierPanelOffsetY
 Multiplies the mouse Y axis for finer pitch vs yaw aim
 MultiplyRow_16_AVX2
 MultiplyRow_16_Any_AVX2
@@ -75143,7 +75232,6 @@ NeutralTier%d
 NeverConnected
 New Settings which have already been dismissed by the user
 New Settings which have already been seen by the user
-New awesome lobby name
 New child cursor starts here every time the wait interval elapses
 New connect: '%s'\n
 New map...\n
@@ -75438,6 +75526,7 @@ NoMoreNeeded
 NoMoreProgressAvailable
 NoMovement
 NoNamePlate
+NoNeededTokens
 NoNeutral
 NoNotes
 NoNotifications
@@ -76382,6 +76471,7 @@ Open lessons...\n
 OpenButton
 OpenCandyPackButton
 OpenFileForEditAtLineColumn
+OpenMenu
 OpenMicMuted
 OpenPackButton
 OpenPartyNotification
@@ -76638,6 +76728,7 @@ OverworldHeroTooltip
 OverworldID_t
 OverworldInactive
 OverworldInventory
+OverworldLevel
 OverworldMap::CharacterJoinParty
 OverworldMapRef
 OverworldNodeID_t
@@ -78573,6 +78664,7 @@ PortraitAnimationActivity
 PortraitAnimationCycle
 PortraitAnimationRate
 PortraitAnimationSequence
+PortraitBackground
 PortraitBackgroundColor1
 PortraitBackgroundColor2
 PortraitBackgroundColor3
@@ -78668,6 +78760,7 @@ PostNetworkDataReceived
 PostNetworkDataReceived tick %d, ack %d cmds
 PostProcessingSystem_001
 PostSocialFeedComment
+PotentialScoreLabel
 Power
 PowerBarCurrent
 PowerBarMax
@@ -79220,7 +79313,6 @@ PurchaseWithShardsRequiresSubscription
 Purchased
 PurchasingRareRelic
 PureDamageBar
-Purge stream
 Purple%d
 Push
 Push Tower - Bot
@@ -80990,6 +81082,7 @@ RoadToTIQuestDefinition_t
 RoadToTIQuestHeroSnippet
 RoadToTIQuestID_t
 Roam - %s
+RobotGiftButton
 RobotModelPreview
 RobotPage
 RobotPurchaseButton
@@ -83287,6 +83380,7 @@ SharedUnitControl
 SharedWithTeammates
 Shavian
 Shield
+ShieldBar
 ShieldBarLeft
 ShieldBarRight
 ShieldReady
@@ -83978,7 +84072,6 @@ Simulated GC communications failure is not active.\n
 SimulationButtons
 Sine
 Sine of angle. Input in radians, output in radians
-Sing Sing
 Single
 SingleAbility
 SingleCodeExecution
@@ -84175,7 +84268,6 @@ Some options could not be correctly parsed using the proto descriptors compiled 
 SomeItemContextMenuOpen
 SomePartHovered
 SomeTalentHovered
-Someone Else
 Someone just posted on your wall.
 SomethingClaimable
 SomethingHighlighted
@@ -85286,6 +85378,7 @@ StormSpirit\t
 Story unlocked!
 StoryAwardEconItem
 StoryComplete
+StoryModeButton
 StoryModeComplete
 StoryNodeTrackItem
 StoryNodeTrackItem%d
@@ -85593,7 +85686,6 @@ SystemInputLanguageChanged
 T*8U
 T0.S
 T0d/
-T19\t
 T61STRING
 T72[t
 TACTICAL_SEARCH
@@ -86451,7 +86543,6 @@ Thumbnail_%d
 ThumbnailsVisible
 Thunderwrath \t\t
 Thursday
-Ti9\t
 Tibetan
 Tick %d predicting command %d.\n{ %s }\n
 Tick %d. event %s\n
@@ -86461,6 +86552,7 @@ Tick: %d / Command: %d
 TickBox
 TicketPriceValid
 TicketQuantityDropDown
+TicketSmelter
 Tickets
 TicketsContainer
 TicketsContents
@@ -88311,6 +88403,7 @@ VN_DIALOGUE_EFFECT_ACTOR_ASLEEP
 VN_DIALOGUE_EFFECT_ACTOR_CONFUSED
 VN_DIALOGUE_EFFECT_ACTOR_DAZED
 VN_DIALOGUE_EFFECT_ACTOR_DEPRESSED
+VN_DIALOGUE_EFFECT_ACTOR_GASP
 VN_DIALOGUE_EFFECT_ACTOR_HEART
 VN_DIALOGUE_EFFECT_ACTOR_HUFF
 VN_DIALOGUE_EFFECT_ACTOR_NOISY
@@ -89725,7 +89818,6 @@ XYD%
 X\tQo
 Xd3h
 XfJ7
-Xi9\t
 Xin \t
 XjfR
 XqgA+
@@ -91188,6 +91280,7 @@ ability_category
 ability_chance_pct
 ability_charge_count
 ability_charges
+ability_cooldown
 ability_damage
 ability_datadriven
 ability_description
@@ -92334,6 +92427,7 @@ aspd_slow
 aspectRatio
 assassin_id
 assault
+assembly_multiplier
 assertion expected after (?(
 asset
 asset_modifier
@@ -92640,6 +92734,7 @@ automaton_bristleback
 automaton_legion_commander
 automaton_morphling
 automaton_oracle
+automaton_spawn_position
 autoplay
 autoplay_max
 autoplay_min
@@ -93368,6 +93463,7 @@ blessings_count
 blessings_remaining
 blessings_to_next
 blessings_total_count
+blimp_jump
 blind
 blind_debuff_duration
 blind_duration
@@ -94578,6 +94674,7 @@ cartTopSurgeImage
 cartWheelsFrameHeight
 cartWheelsFrameWidth
 cartWheelsImage
+cart_2d_tent
 cascadecrossfade
 cascadedistancefade
 cascaderenderstaticobj
@@ -96308,8 +96405,11 @@ craftingdragtarget
 craftingpanelid
 craftworks_id
 cramp
+crate_drop
 crate_tier
 crate_tier_description
+cratedrop
+crates_required
 createClientOnlyEntities
 create_surface_graph
 created_by
@@ -96630,6 +96730,7 @@ current_game_number
 current_heal_amp
 current_health_pct
 current_healthcost
+current_height
 current_hero
 current_hero_attempts
 current_hero_average_attempts
@@ -96652,6 +96753,7 @@ current_manacost
 current_mode
 current_movement_gait
 current_movement_gait_set
+current_multiplier
 current_music
 current_page
 current_player_count
@@ -96903,7 +97005,6 @@ dNSDomain
 dOj\f,
 dQy/
 dSAQuality
-dV9\t
 dWry
 dZ!2.
 d[kHy 
@@ -97088,6 +97189,23 @@ damage_window
 damagetype
 danish
 dark_carnival
+dark_carnival.crate_drop.sound.crate_scored
+dark_carnival.crate_drop.sound.hazard_explosion
+dark_carnival.crate_drop.sound.hazard_explosion_big
+dark_carnival.crate_drop.sound.hazard_explosion_goop
+dark_carnival.crate_drop.sound.platform_movement
+dark_carnival.crate_drop.sound.regen_activated
+dark_carnival.crate_drop.sound.score_ability_cast
+dark_carnival.crate_drop.sound.score_ability_cooldown
+dark_carnival.crate_drop.sound.shield_activated
+dark_carnival.crate_drop.sound.switch_tracks
+dark_carnival.crate_drop.vo.crate_lost
+dark_carnival.crate_drop.vo.hazard_applied
+dark_carnival.crate_drop.vo.hazard_spawned
+dark_carnival.crate_drop.vo.level_complete
+dark_carnival.crate_drop.vo.level_failed
+dark_carnival.crate_drop.vo.level_start
+dark_carnival.crate_drop.vo.powerup_applied
 dark_carnival.crow.zap
 dark_carnival.lockpicking.defeat
 dark_carnival.lockpicking.door_open
@@ -97101,6 +97219,10 @@ dark_carnival.lockpicking.slark_success
 dark_carnival.lockpicking.speed_up
 dark_carnival.lockpicking.underscore
 dark_carnival.lockpicking.victory
+dark_carnival.minigame_music.defeat
+dark_carnival.minigame_music.play
+dark_carnival.minigame_music.underscore
+dark_carnival.minigame_music.victory
 dark_carnival.oracle.reward
 dark_carnival.oracle.stinger
 dark_carnival.overworld.underscore
@@ -97120,10 +97242,13 @@ dark_carnival.slark_jailbreak.stage_complete
 dark_carnival.slark_jailbreak.start
 dark_carnival.slark_jailbreak.victory
 dark_carnival.smelter_smelt
+dark_carnival.tinker_ticket_gifting.received_open
+dark_carnival.tinker_ticket_gifting.teleport
 dark_carnival_2026_daily_fortune_teller_ticket
 dark_carnival_2026_weekly_candyshop_rerollcharges
 dark_carnival_act1_friend_gifting
 dark_carnival_candyworks
+dark_carnival_crate_drop_entity
 dark_carnival_fortune_teller
 dark_carnival_progress
 dark_carnival_token_trader
@@ -98519,6 +98644,7 @@ dota_courier_shield
 dota_crafting_xp
 dota_craftworks_test_quest_toast
 dota_craftworks_test_quest_toast <quest id> <old value> <new value>\n
+dota_crate_drop_effects
 dota_crate_treasure_use_alt_listview
 dota_create_item
 dota_create_minimap_ds
@@ -98620,6 +98746,8 @@ dota_dark_carnival_click_rooms_to_focus
 dota_dark_carnival_darken_path_ends
 dota_dark_carnival_debug_playtest
 dota_dark_carnival_disable_room_characters
+dota_dark_carnival_encounter_blimp_jump
+dota_dark_carnival_encounter_crate_drop
 dota_dark_carnival_encounter_lockpicking
 dota_dark_carnival_encounter_slark_jailbreak
 dota_dark_carnival_encounter_slark_jailbreak_debug
@@ -98635,6 +98763,7 @@ dota_dark_carnival_room_path_alpha
 dota_dark_carnival_sticky_tooltip_time_required
 dota_dark_carnival_store_fake_coins
 dota_dark_carnival_visual_novel_auto_advance_delay
+dota_dark_carnival_visual_novel_dialogue
 dota_dark_carnival_visual_novel_enable_auto_advance
 dota_dark_carnival_zoomed_in_mouse_pan_factor
 dota_darkcarnival_map_disable_camera_events
@@ -101330,6 +101459,7 @@ encode.c
 encoded
 encoding error
 encodingTry.m_fError < 3.40282346638528859811704183484516925e+38F
+encounter_act1_reward_blimpjump_1
 encounter_act4_spoonman_complete
 encounter_deaths
 encounter_description
@@ -102078,6 +102208,8 @@ fall2021_collectors_cache_voting
 fall_2021_progress
 fall_duration
 fallback_display_event
+fallen_crates
+fallen_crates_max
 falloff
 false
 false\n
@@ -103034,6 +103166,8 @@ file://{resources}/layout/events/dark_carnival/page_dark_carnival_fortune_teller
 file://{resources}/layout/events/dark_carnival/page_dark_carnival_overworld.xml
 file://{resources}/layout/events/dark_carnival/page_dark_carnival_simulator.xml
 file://{resources}/layout/events/dark_carnival/page_dark_carnival_store.xml
+file://{resources}/layout/events/dark_carnival/popup_dark_carnival_encounter_blimp_jump.xml
+file://{resources}/layout/events/dark_carnival/popup_dark_carnival_encounter_crate_drop.xml
 file://{resources}/layout/events/dark_carnival/popup_dark_carnival_encounter_lockpicking.xml
 file://{resources}/layout/events/dark_carnival/popup_dark_carnival_encounter_secret_admirer.xml
 file://{resources}/layout/events/dark_carnival/popup_dark_carnival_encounter_slark_jailbreak.xml
@@ -103827,6 +103961,7 @@ file://{resources}/videos/crownfall/fight_text_round2_%language%.webm
 file://{resources}/videos/crownfall/fight_text_round3_%language%.webm
 file://{resources}/videos/crownfall/overworld_intro_1_%language%.webm
 file://{resources}/videos/crownfall/overworld_intro_2_%language%.webm
+file://{resources}/videos/dark_carnival/automatons/%s_automaton_gameplay.webm
 file://{resources}/videos/diretide2020/%s.webm
 file://{resources}/videos/events/monster_hunter/crafting_video%s.webm
 file://{resources}/videos/heroes/%s.webm
@@ -104203,6 +104338,7 @@ floatbitmap.cpp(1191): Unsupported color format "%s", skipping!\n
 floatbitmap.cpp(518): Conversion not supported yet!\n
 floatbitmap.cpp(607): Conversion not supported yet!\n
 floor
+floor_trigger
 floorf
 floralwhite
 flow-children
@@ -104432,6 +104568,8 @@ fragment_impact_radius
 fragments
 fragments_owned
 frame
+frame_count
+frame_height
 frame_oversleep_time_50th_percentile
 frame_oversleep_time_95th_percentile
 frame_oversleep_time_max
@@ -104671,6 +104809,7 @@ game_count
 game_data_list{ key = 'CDestructiblePart' }
 game_description
 game_display_type
+game_effects_entity
 game_event_listener
 game_event_name
 game_flying
@@ -104748,6 +104887,7 @@ gameui_hide
 gank
 gascan
 gascylinder
+gasp
 gathered override for %s 0x%p : field %s flags %s\n
 gaussian
 gaussian( 
@@ -105553,7 +105693,6 @@ hTargets
 hThinkFunc
 hThinker
 hTombstone
-hV9\t
 hW*m
 hW1M
 hW_z
@@ -106254,8 +106393,6 @@ https://www.dota2.com/
 https://www.netflix.com/dotadragonsblood
 https://www.netflix.com/title/80994336
 https://www.twitch.tv/%s
-https://www.twitch.tv/purgegamers
-https://www.twitch.tv/sing_sing
 https://www.youtube.com/embed/%s?autoplay=1&amp;modestbranding=1&amp;rel=0&amp;theme=dark
 https://www.youtube.com/embed/%s?autoplay=1&modestbranding=1&rel=0&theme=dark
 https://www.youtube.com/embed/%s?controls=1&autoplay=1&mute=1
@@ -106965,6 +107102,8 @@ index,length,id,name,desc\n
 index,length,type,name,parent,index,creation,duration\n
 indexConvar
 indianred
+indicator
+indicator2
 indigo
 indirectCRL
 individual_odds
@@ -110635,6 +110774,21 @@ k_eCraftworksQuest_GiveCommend
 k_eCraftworksQuest_Invalid
 k_eCraftworksQuest_ReceiveCommend
 k_eCraftworksQuest_StatTracker
+k_eCrateDropHazardType_Bomb
+k_eCrateDropHazardType_Goop
+k_eCrateDropHazardType_Invalid
+k_eCrateDropHazardType_Nuke
+k_eCrateDropPowerupType_Invalid
+k_eCrateDropPowerupType_Regen
+k_eCrateDropPowerupType_Shield
+k_eCrateDropType_Droppable
+k_eCrateDropType_Hazard
+k_eCrateDropType_Invalid
+k_eCrateDropType_Object
+k_eCrateDropType_Platform
+k_eCrateDropType_Powerup
+k_eCrateDropType_TrackLight
+k_eCrateDropType_Trigger
 k_eDarkCarnivalRewardVisual_CandyBag
 k_eDarkCarnivalRewardVisual_Chest
 k_eDarkCarnivalRewardVisual_Chest_Small
@@ -111439,7 +111593,6 @@ lC57
 lDa>
 lDcW
 lM2p
-lQ9\t
 label
 label_item_def
 labelled_debug_helper_arc_segments
@@ -112992,6 +113145,7 @@ m_bCreateNonSolid
 m_bCreatedVisionThinkers
 m_bCreepHeroPickup
 m_bCreepSpawningEnabled
+m_bCurrentlyActivated
 m_bCurrentlyInAuraRange
 m_bCustomGame
 m_bCustomGameAllowBattleMusic
@@ -113237,6 +113391,7 @@ m_bHasAttachedParticles
 m_bHasAutoRemnantTalent
 m_bHasBeenDestroyed
 m_bHasBeenMagnetized
+m_bHasBeenTriggered
 m_bHasBonusRange
 m_bHasBreakPiecesOrCommands
 m_bHasBuiltWearableSpawnList
@@ -113289,6 +113444,8 @@ m_bHasUpgradeableAbilities
 m_bHasValidHistory
 m_bHasWeightsSet
 m_bHasWorldTreesChanged
+m_bHazardDefused
+m_bHazardRotationApplied
 m_bHealthCostRecursionBlock
 m_bHeightFogEnabled
 m_bHeroAssigned
@@ -113620,6 +113777,7 @@ m_bMarkForSell
 m_bMarkedForBuy
 m_bMarkedForDelete
 m_bMarkedForDeletion
+m_bMarkedForDestroy
 m_bMaster
 m_bMatchSignoutComplete
 m_bMatchStartOfTypeOnly
@@ -114323,6 +114481,7 @@ m_eFortuneRequirement
 m_eFortuneReward
 m_eGameMode
 m_eGemType
+m_eHazardType
 m_eHeroStickerQuality
 m_eHighlightCategory
 m_eHighlightCategory != k_eHighlightRole
@@ -114351,6 +114510,7 @@ m_eOptionType != k_eCandyShopRewardOptionType_SingleItem
 m_eOrigin
 m_ePersonaAuthor
 m_ePlayerDraftState
+m_ePowerupType
 m_ePrevPurchasableState
 m_eProgressionType
 m_ePurchasableAccumState
@@ -114605,11 +114765,13 @@ m_fadeMaxDist
 m_fadeMinDist
 m_failEffect
 m_falseValue
+m_flAbilityCooldown
 m_flAbilityMuteDuration
 m_flAbsScale
 m_flAbsorb
 m_flAbsorbRadius
 m_flAccel
+m_flAcceleration
 m_flAccumDamage
 m_flAccumDist
 m_flAccumulatedCaptureTime
@@ -114712,6 +114874,7 @@ m_flBaseHealth
 m_flBaseModelScale
 m_flBaseMovementSpeed
 m_flBasePickupRadius
+m_flBasePoints
 m_flBaseSpeed
 m_flBaseTeleportTime
 m_flBaseUnlockAppearRate
@@ -114818,6 +114981,7 @@ m_flCooldown
 m_flCooldownLength
 m_flCorrectionTime
 m_flCountdown
+m_flCrateSpawnInterval
 m_flCreateTime
 m_flCreationTime
 m_flCreepMinimapIconScale
@@ -115023,6 +115187,7 @@ m_flExperiencePerSecond
 m_flExpireTime
 m_flExplosionDamage
 m_flExplosionRadius
+m_flExplosionStrength
 m_flExplosionTerrainRadius
 m_flExposureAdaptationSpeedDown
 m_flExposureAdaptationSpeedUp
@@ -115058,6 +115223,7 @@ m_flFadeStartWeight
 m_flFadeTime
 m_flFadeTimeValue
 m_flFailedChordClickCooldown
+m_flFallCrateVOChance
 m_flFallDamageMult
 m_flFallDamagePerVelocity
 m_flFallVelocity
@@ -115078,6 +115244,7 @@ m_flFireAttackRadius
 m_flFireAttackSpeed
 m_flFireTime
 m_flFirstFloorTimeLimit
+m_flFirstRowOffset
 m_flFixedDirectionSpawnDistanceVariance
 m_flFixedRespawnTime
 m_flFluidDensity
@@ -115135,9 +115302,11 @@ m_flGGEndsAtTime
 m_flGameEndTime
 m_flGameHeight
 m_flGameLoadTime
+m_flGameOverTime
 m_flGameStartTime
 m_flGameTime
 m_flGameWidth
+m_flGameWonTime
 m_flGlowBackfaceMult
 m_flGlowProxySize
 m_flGlowStartTime
@@ -115147,6 +115316,8 @@ m_flGoalCaptureProgress
 m_flGoldRedistributeTime
 m_flGoldTickTime
 m_flGoldTime
+m_flGoopDuration
+m_flGoopSlow
 m_flGrabAttemptTime
 m_flGravityMult
 m_flGravityScale
@@ -115159,6 +115330,10 @@ m_flGustDirChange
 m_flGustDuration
 m_flGyroshellDurationRemaining
 m_flHDRColorScale
+m_flHazardExplosionRadius
+m_flHazardSpawnIntervalMax
+m_flHazardSpawnIntervalMin
+m_flHazardSpawnVOChance
 m_flHeadDamageMultiplier
 m_flHealAmount
 m_flHealDecayRate
@@ -115171,7 +115346,9 @@ m_flHealthRegen
 m_flHealthThinkRegen
 m_flHeartRadius
 m_flHeight
+m_flHeightBonusToastTime
 m_flHeightFogDepth
+m_flHeightVisualizationStep
 m_flHeroAdvanceTime
 m_flHeroDamage
 m_flHeroDeathTime
@@ -115198,6 +115375,7 @@ m_flIdleRunPoseDuration
 m_flIdleRunPoseStartTime
 m_flIncrementalEnrageTime
 m_flIndirectStrength
+m_flInertiaInv
 m_flInitialDelay
 m_flInitialEnrageTime
 m_flInitialSpeed
@@ -115308,9 +115486,11 @@ m_flLeftMove
 m_flLeftObjectOffset
 m_flLegDamageMultiplier
 m_flLerpFallbackDistanceThreshold
+m_flLevelIntroTime
 m_flLevelUpDelay
 m_flLevelUpKnockbackDistance
 m_flLevelUpKnockbackRadius
+m_flLevelWonTime
 m_flLife
 m_flLifeTime
 m_flLifetime
@@ -115441,6 +115621,8 @@ m_flMovementSpeed
 m_flMovementSpeedAmp
 m_flMovementSpeedMultiplierPerDeath
 m_flMovementSpeedPercentDamageMultiplier
+m_flMultiplierFactor
+m_flMultiplierStep
 m_flMultiplierToUse
 m_flMusicOperatorVals
 m_flMuzzleFlashBrightness
@@ -115473,6 +115655,7 @@ m_flNextHit
 m_flNextLightningEndTime
 m_flNextLightningSoundTime
 m_flNextLightningStartTime
+m_flNextPossibleTriggerTime
 m_flNextPreGameThink
 m_flNextPrimaryAttackTickRatio
 m_flNextRandAnim
@@ -115554,6 +115737,7 @@ m_flPlayerHealth
 m_flPlayerMaxHPMultiplier
 m_flPlayerPositionHistoryBufferDuration
 m_flPlayerReviveTimer
+m_flPoints
 m_flPortalHeightOffset
 m_flPortalPadding
 m_flPortalRadius
@@ -115561,6 +115745,8 @@ m_flPoseParameter
 m_flPosition
 m_flPositionScoreWeight
 m_flPositioningAngle
+m_flPowerupChance
+m_flPowerupInterval
 m_flPreGameStartTime
 m_flPreModifiedDamage
 m_flPreSimTime
@@ -115629,6 +115815,7 @@ m_flReflectionAmount
 m_flReflectionStartTime
 m_flRefresherLastCooldown
 m_flRefresherUseTime
+m_flRegenHealInterval
 m_flRelativeUpOffset
 m_flReloadTime
 m_flRemainingCountDownTime
@@ -115685,6 +115872,7 @@ m_flScepterTime
 m_flScepterVacuumDistance
 m_flScepterVacuumRadius
 m_flScrollSpeed
+m_flSecondRowOffset
 m_flSeconds
 m_flSeenTargetTime
 m_flSelectHeroHeldStartTime
@@ -115704,6 +115892,7 @@ m_flShadowFadeMaxDist
 m_flShadowFadeMinDist
 m_flShadowStrength
 m_flShardDamageMultiplier
+m_flShieldDuration
 m_flShieldRadius
 m_flShotCreationTime
 m_flShowParticleInterval
@@ -115882,13 +116071,17 @@ m_flTransitionTimestamp
 m_flTreeRegen
 m_flTreeTimeRemaining
 m_flTriggerCollisionRadiusPadding
+m_flTriggerDelay
 m_flTriggerDistance
+m_flTriggeredGravityScale
 m_flTrueSight
 m_flTrueValue
 m_flTurboMultiplier
 m_flTurnBoostProgress
 m_flTurnHistory
 m_flTurnRate
+m_flTutorialCrateSpawnInterval
+m_flTutorialStepInvervalTime
 m_flUnfilteredFrameTime
 m_flUnitOrdersSendTime
 m_flUnlockAppearIncreaseRate
@@ -115897,6 +116090,7 @@ m_flUnlockDelay
 m_flUpMove
 m_flUpOffset
 m_flUpgradeBlend
+m_flUpkickExplosionStrength
 m_flUseAngleTolerance
 m_flUseRange
 m_flUserSpecifiedTime
@@ -117208,6 +117402,8 @@ m_nCourierItemId
 m_nCourierState
 m_nCourierType
 m_nCraftingID
+m_nCratesForGameOver
+m_nCratesForNextLevel
 m_nCreationTick
 m_nCreepsHit
 m_nCritDmg
@@ -117318,6 +117514,7 @@ m_nDireSeriesWins
 m_nDireSilverCheers
 m_nDirectLight
 m_nDisableMode
+m_nDisableSpawnRotation
 m_nDisableTakePhysicsDamageSpawnFlag
 m_nDisadvantage
 m_nDisguiseEffectIndex
@@ -117438,6 +117635,7 @@ m_nFilterType
 m_nFinalAOEFXIndex
 m_nFireAttackCooldown
 m_nFirstPredictableCommand
+m_nFirstRowWeight
 m_nFirstTimeBonusLives
 m_nFissureEffectIndex
 m_nFlags
@@ -117666,6 +117864,7 @@ m_nMapVersion
 m_nMarginBottom
 m_nMarginTop
 m_nMaskNodeIdx
+m_nMassPriority
 m_nMaterial
 m_nMaxAbsorb
 m_nMaxActiveSlots
@@ -117675,6 +117874,7 @@ m_nMaxCPULevel
 m_nMaxCarry
 m_nMaxConcurrentManaPots
 m_nMaxConcurrentTimerIncreases
+m_nMaxCratesOnLevel
 m_nMaxDemonPortalCount
 m_nMaxGPULevel
 m_nMaxHPRegen
@@ -117751,6 +117951,7 @@ m_nNextSecondaryAttackTick
 m_nNextShuffle
 m_nNextThinkTick
 m_nNightModification
+m_nNoDraw
 m_nNoInterpolationTick
 m_nNodeID
 m_nNodeIdx
@@ -117938,6 +118139,7 @@ m_nReg
 m_nReg0
 m_nReg1
 m_nReg2
+m_nRegenInstances
 m_nReloads
 m_nRenderFX
 m_nRenderHeight
@@ -117976,6 +118178,9 @@ m_nRootMotionWeightValueNodeIdx
 m_nRootNodeIdx
 m_nRoshanRespawnPhase
 m_nRotOffTicksToDecrement
+m_nRotationChance
+m_nRotationSpeedMax
+m_nRotationSpeedMin
 m_nRuneCycle
 m_nRuneType
 m_nRunesActivated
@@ -117997,6 +118202,7 @@ m_nScorePerStageCleared
 m_nScorePerUnlock
 m_nScoutState
 m_nScreenFXIndex
+m_nSecondRowWeight
 m_nSecondaryAmmoType
 m_nSecondarySkeletonMasterCount
 m_nSegments
@@ -118198,6 +118404,7 @@ m_nTreeCount
 m_nTreeDisguise
 m_nTriangleIndex
 m_nTrueValueNodeIdx
+m_nTutorialObject
 m_nTutorialState
 m_nType
 m_nUIState
@@ -118605,6 +118812,7 @@ m_sBurningGroundBurnParticleName
 m_sBurningGroundDoTParticleName
 m_sBurningGroundImpactParticleName
 m_sButtonType
+m_sCatchSound
 m_sClassName
 m_sCollisionIndicatorEffect
 m_sComment
@@ -118625,11 +118833,13 @@ m_sDemonPortalsPortalParticle
 m_sDemonPortalsTelegraphParticle
 m_sDependentOnAbility
 m_sDescription
+m_sDestroySound
 m_sDialogueName
 m_sDifficultyName
 m_sDirectionalHelperParticle
 m_sDisplayName
 m_sDropSoundEvent
+m_sDropType
 m_sEffectName
 m_sEliteRoomChannelEffect
 m_sEliteRoomDirectionalArrowEffect
@@ -118637,6 +118847,7 @@ m_sEncounterName
 m_sEndTime
 m_sEnemyDisplayName
 m_sEnemyName
+m_sEntityClassName
 m_sEntityLumpName
 m_sEntityName
 m_sEventAction
@@ -118699,6 +118910,7 @@ m_sLocScepterAbilityDesc
 m_sLocShardAbilityDesc
 m_sLocTooltip
 m_sLocUnitsPluralizable
+m_sLoopSound
 m_sLootList
 m_sMagicMissileParticle
 m_sMapClassToAdd
@@ -118706,6 +118918,7 @@ m_sMapName
 m_sMapVisualsXmlPath
 m_sMinimapIconClass
 m_sMinimapIconSnippet
+m_sModel
 m_sModelAlternateName
 m_sModelName
 m_sModelNameAg2Override
@@ -118717,6 +118930,7 @@ m_sNodeUnlockEventAction
 m_sOnPickupOverheadEffect
 m_sOpponentName
 m_sOpponentScene
+m_sParentName
 m_sParticle
 m_sParticleEffect
 m_sParticleName
@@ -118737,6 +118951,7 @@ m_sReviveEffect
 m_sRewardClass
 m_sRewardEventAction
 m_sRewardTitle
+m_sSearchEntity
 m_sSequenceName
 m_sSharedCooldownName
 m_sSkinName
@@ -118748,6 +118963,7 @@ m_sSource
 m_sSpawnGroupName
 m_sSpawnInfoTargetName
 m_sSpawnParticle
+m_sSpawnSound
 m_sSpawnerName
 m_sStartTime
 m_sStasisTrapExplosion
@@ -119118,6 +119334,7 @@ m_unCraftworksID
 m_unCullingBladeItemDef
 m_unCurrentArcanaKillStreak
 m_unDataChangedCount
+m_unDefID
 m_unDefaultEventPoints
 m_unDefaultInventorySize
 m_unDefaultMaxRerollCharges
@@ -119191,6 +119408,7 @@ m_unOpponentID
 m_unOrders
 m_unOrientation
 m_unOverrideOrigin
+m_unOverworldVersion
 m_unOwnerContext
 m_unParticleID
 m_unPathUnlockerTokenID
@@ -119353,6 +119571,7 @@ m_vForce
 m_vForceDirectionOverride
 m_vFowColor
 m_vGrappleHookPos
+m_vGravity
 m_vGridOffset
 m_vHeightFogColor
 m_vHitEntities
@@ -119470,8 +119689,12 @@ m_vSkyboxTintColor
 m_vSortOrigin
 m_vSource
 m_vSourceLoc
+m_vSpawnMax
+m_vSpawnMin
 m_vSpawnOrigin
 m_vSpawnPos
+m_vSpawnVelocityMax
+m_vSpawnVelocityMin
 m_vSpawnerOrigin
 m_vSpiritStartPosition
 m_vStart
@@ -119610,6 +119833,9 @@ m_vecDestinationParticles
 m_vecDestinationParticles_EnemyTeam
 m_vecDestinations
 m_vecDisabledRandomHerosByPlayerID
+m_vecDropTableCrates
+m_vecDropTableHazards
+m_vecDropTablePowerups
 m_vecDrowRangerArcanaDeathTime
 m_vecDrowRangerArcanaKillTime
 m_vecDrowRangerArcanaTargetPlayerID
@@ -120471,6 +120697,8 @@ max_charges_per_kill
 max_collection_count
 max_combo
 max_cooldown
+max_crate_height
+max_crates_on_level
 max_damage
 max_damage_duration
 max_damage_initial
@@ -121111,6 +121339,12 @@ models/creeps/roshan/roshan.vmdl
 models/dev/error.vmdl
 models/development/invisiblebox.vmdl
 models/events/crownfall/survivors/skeleton_melee/skeleton_melee.vmdl
+models/events/dark_carnival/crate_drop_minigame/crate_drop_crate.vmdl
+models/events/dark_carnival/crate_drop_minigame/crate_drop_crate_tall.vmdl
+models/events/dark_carnival/crate_drop_minigame/crate_drop_crate_wide.vmdl
+models/events/dark_carnival/crate_drop_minigame/crate_drop_hazard.vmdl
+models/events/dark_carnival/crate_drop_minigame/crate_drop_platform.vmdl
+models/events/dark_carnival/crate_drop_minigame/crate_drop_tinker_shoulders.vmdl
 models/events/ti10/anniversary_10th/party_hat/party_hat.vmdl
 models/heroes/%s/%s.vmdl
 models/heroes/dragon_knight/dragon_knight_dragon.vmdl
@@ -124988,6 +125222,7 @@ nDamageflags
 nDataSize > 0
 nDefIndex
 nDenominator
+nDropWeight
 nEditorID
 nElementType
 nEntity
@@ -126701,6 +126936,7 @@ pData->GetDataDescMap() == pTemplateDataMap
 pDef != nullptr
 pDest
 pDifficultyLevel != nullptr
+pDropEffect
 pEventName
 pFilter
 pG_*h
@@ -126728,7 +126964,6 @@ pPanelArg
 pParam
 pParticleName
 pPowerUpDef
-pQ9\t
 pRTH
 pRevenant
 pSPo
@@ -126825,6 +127060,7 @@ panorama/images/%s_%s.vtex_c
 panorama/images/%s_png.vtex_c
 panorama/images/econ/leagues/subscriptions_
 panorama/images/econ/sets/v2/
+panorama/images/events/dark_carnival/blimp_jump/*.vtex_c
 panorama/images/hero_badges/*.vtex_c
 panorama/images/heroes/*.vtex_c
 panorama/images/heroes/icons/%s%s_png.vtex
@@ -126986,6 +127222,7 @@ particles/creatures/wildwing_tornado_blast_debuff.vpcf
 particles/dev/ambient_creature_converter.vpcf
 particles/dev/default_break_particles_contents.vpcf
 particles/dev/empty_particle.vpcf
+particles/dev/library/base_dust_hit.vpcf
 particles/econ/events/anniversary_10th/anniversary_10th_hat_ambient_npc_dota_hero_pangolier_gyroshell.vpcf
 particles/econ/events/diretide_2020/courier_spooky_ambient/courier_spooky_ambient.vpcf
 particles/econ/events/diretide_2020/hero_pumpkin_head/hero_pumpkin_head_ambient.vpcf
@@ -127175,6 +127412,20 @@ particles/events/crownfall/survivors/meteor_dot.vpcf
 particles/events/crownfall/survivors/rain_screen.vpcf
 particles/events/crownfall/survivors/status/status_effect_generic_hit.vpcf
 particles/events/crownfall/survivors/status/status_effect_player_hit.vpcf
+particles/events/dark_carnival/crate_drop_minigame/ability_regen.vpcf
+particles/events/dark_carnival/crate_drop_minigame/ability_shield.vpcf
+particles/events/dark_carnival/crate_drop_minigame/automaton_march.vpcf
+particles/events/dark_carnival/crate_drop_minigame/crate_count_points.vpcf
+particles/events/dark_carnival/crate_drop_minigame/crate_height_visual_fx.vpcf
+particles/events/dark_carnival/crate_drop_minigame/falling_object_spotlight.vpcf
+particles/events/dark_carnival/crate_drop_minigame/goop_debuff.vpcf
+particles/events/dark_carnival/crate_drop_minigame/hazard_explosion.vpcf
+particles/events/dark_carnival/crate_drop_minigame/hazard_explosion_goop.vpcf
+particles/events/dark_carnival/crate_drop_minigame/hazard_explosion_nuke.vpcf
+particles/events/dark_carnival/crate_drop_minigame/platform_fx.vpcf
+particles/events/dark_carnival/crate_drop_minigame/platform_track_switch_b.vpcf
+particles/events/dark_carnival/crate_drop_minigame/platform_track_switch_end_b.vpcf
+particles/events/dark_carnival/crate_drop_minigame/platform_wheel_fx.vpcf
 particles/events/monster_hunter/hunt_complete_fail.vpcf
 particles/events/monster_hunter/hunt_complete_victory.vpcf
 particles/events/monster_hunter/hunt_denied_fail.vpcf
@@ -128520,6 +128771,7 @@ personal_shield_runes_gained
 personal_stat_count
 personal_wisdom_runes_gained
 personal_xp_per_min
+personastyle
 perspective
 perspective-origin
 peru
@@ -128756,6 +129008,7 @@ placementattachment
 placementbone
 placements
 plague_ward
+platform
 platform_type
 play-button
 play-button-default
@@ -129139,6 +129392,7 @@ posxyz
 posy
 posz
 potential_drop_target
+potential_points
 potential_sets_for_purchases
 pounce_acceleration
 pounce_damage
@@ -131657,6 +131911,10 @@ scripts/events/crownfall/survivors_powerups.vdata
 scripts/events/crownfall/survivors_snapshots/
 scripts/events/crownfall/survivors_snapshots/*.*
 scripts/events/crownfall/survivors_spawners.vdata
+scripts/events/dark_carnival/crate_drop/crate_drop_game.vdata
+scripts/events/dark_carnival/crate_drop/crate_drop_levels.vdata
+scripts/events/dark_carnival/crate_drop/crate_drop_objects.vdata
+scripts/events/dark_carnival/dark_carnival_motion_comics_part2.vdata
 scripts/events/dark_carnival/darkcarnival_act1.vdata
 scripts/events/dark_carnival/lockpicking/game.vdata
 scripts/events/dark_carnival/slark_jailbreak/slark_jailbreak.vdata
@@ -131913,7 +132171,6 @@ secp224r1
 secp256k1
 secp384r1
 secp521r1
-secret
 secretBag
 secret_admirer
 secret_rooms_pack
@@ -133157,6 +133414,7 @@ snowball_speed_bonus
 snowball_windup_radius
 snowflake
 so=H*m
+so={x
 socket
 socket 1
 socket 10
@@ -133252,6 +133510,7 @@ soundevents/soundevents_crownfall.vsndevts
 soundevents/soundevents_crownfall_credits.vsndevts
 soundevents/soundevents_dark_carnival.vsndevts
 soundevents/soundevents_dark_carnival_vn_part1.vsndevts
+soundevents/soundevents_dark_carnival_vn_part2.vsndevts
 soundevents/soundevents_fighting_game.vsndevts
 soundevents/soundevents_match3.vsndevts
 soundevents/soundevents_minesweeper.vsndevts
@@ -133260,8 +133519,10 @@ soundevents/soundevents_techiemen.vsndevts
 soundevents/voscripts/game_sounds_vo_announcer.vsndevts
 soundevents/voscripts/game_sounds_vo_announcer_dota_fighter.vsndevts
 soundevents/voscripts/game_sounds_vo_announcer_killing_spree.vsndevts
+soundevents/voscripts/game_sounds_vo_dark_carnival_vn_part2.vsndevts
 soundevents/voscripts/game_sounds_vo_oracle_fortune.vsndevts
 soundevents/voscripts/game_sounds_vo_ringmaster_carnival_part1.vsndevts
+soundevents/voscripts/game_sounds_vo_ringmaster_carnival_part2.vsndevts
 soundfile
 soundlevel
 soundlevel not supported on sub-soundscapes\n
@@ -133330,6 +133591,7 @@ spawn_wearable_item_defs
 spawncount
 spawncreeps
 spawned a boss.\n
+spawned_crates
 spawnflags
 spawnlord_aura
 spawnlord_master_bash
@@ -138578,6 +138840,7 @@ stop_distance_range
 stop_immediately
 stop_instantly
 stop_on_seq_change
+stopped
 stoppoint
 stopsoundscape
 storage
@@ -139096,6 +139359,7 @@ system
 system lib
 system library
 system_state
+szDropName
 szIconImage
 szName
 szReplicateIconMod
@@ -139118,7 +139382,6 @@ tLY^m`6
 tLl 
 tLsq
 tNt5
-tX9\t
 t_choreo_exit_warp
 t_choreo_target_warp
 t_x509.c
@@ -139709,9 +139972,22 @@ timescale
 timestamp
 timestamp=%u
 timestampsign
+tinker
 tinker_defense_matrix
 tinker_deploy_turrets
 tinker_eureka
+tinker_gift_exhausted_01
+tinker_gift_exhausted_short_01
+tinker_gift_first_time
+tinker_gift_sent_long_01
+tinker_gift_sent_short_01
+tinker_gift_sent_short_02
+tinker_gift_sent_short_03
+tinker_gift_sent_short_04
+tinker_gift_token_short_01
+tinker_gift_token_short_02
+tinker_gift_token_short_03
+tinker_gift_token_short_04
 tinker_heat_seeking_missile
 tinker_innate_keen_teleport_gold_on_death
 tinker_innate_keen_teleport_xp_on_death
@@ -139979,6 +140255,8 @@ total_battle_level
 total_battle_points
 total_booster_count
 total_count
+total_crates_caught
+total_crates_lost
 total_damage
 total_damage_pct
 total_duration
@@ -140095,6 +140373,7 @@ tracer_player.vpcf
 track
 track0
 track_failure
+track_light
 tracking_event_action
 trackingaction
 trackingstyle
@@ -140354,7 +140633,6 @@ tsG7
 tsa name mismatch
 tsa untrusted
 tst info setup error
-tu9\t
 turbo
 turbo_mode
 turkish
@@ -140395,6 +140673,8 @@ tutorial
 tutorial_assist_game
 tutorial_basics
 tutorial_cleanup_post
+tutorial_crate_back
+tutorial_crate_front
 tutorial_done
 tutorial_first_node_reward
 tutorial_hightlight
@@ -143596,7 +143876,6 @@ xpos
 xqI9
 xrJ:DCG
 xsK;
-xu9\t
 xxBEAM_HOSExxunused
 xxH}
 xzxv
@@ -143712,6 +143991,7 @@ zz2K
 {d:event_level}
 {d:hero_damage}
 {d:hero_level}
+{d:level}
 {d:net_worth}
 {d:o:local_user_percentile}
 {d:value}
