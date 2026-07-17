@@ -40,6 +40,7 @@ class CDOTA_Bot
 	CountdownTimer m_InteralRatingsTimer;
 	CountdownTimer m_BuybackDelayTimer;
 	CountdownTimer m_CourierUsageTimer;
+	CountdownTimer m_ItemModeTimeout;
 	CountdownTimer m_AbilityMutedTimer;
 	CountdownTimer m_AbilityMutedCheckTimer;
 	GameTime_t m_HitByTowerTime;
