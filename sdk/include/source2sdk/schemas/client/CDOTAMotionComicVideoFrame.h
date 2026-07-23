@@ -1,6 +1,7 @@
 // MGetKV3ClassDefaults = {
 //	"_class": "CDOTAMotionComicVideoFrame",
 //	"m_flAutoAdvanceDelay": -1.000000,
+//	"m_bFireEventOnStart": false,
 //	"m_bLooping": false,
 //	"m_flAllowSkipAfterDelay": -1.000000,
 //	"m_sVideoPath": "",
