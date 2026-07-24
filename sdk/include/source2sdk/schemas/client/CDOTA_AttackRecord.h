@@ -57,4 +57,5 @@ class CDOTA_AttackRecord
 	KeyValues3 m_kvExtraData;
 	float32 m_flActualDamageDealtResult;
 	bool m_bTrackedRecord;
+	bool m_bDamageImpacted;
 };
