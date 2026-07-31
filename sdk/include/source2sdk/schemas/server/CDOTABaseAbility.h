@@ -38,6 +38,7 @@ class CDOTABaseAbility : public CBaseEntity
 	bool m_bStolen;
 	bool m_bReplicated;
 	bool m_bStealable;
+	bool m_bTransferred;
 	int32 m_nAbilityCurrentCharges;
 	float32 m_fAbilityChargeRestoreTimeRemaining;
 	bool m_bUpgradeRecommended;

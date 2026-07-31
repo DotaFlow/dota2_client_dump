@@ -21,6 +21,7 @@ class CDOTA_DataNonSpectator : public CBaseEntity
 	Vector2D[100] m_vPossibleWardPlacement;
 	float32[100] m_vPossibleWardRadii;
 	CUtlVectorEmbeddedNetworkVar< DOTATeleportInfo_t > m_vecTrackedTeleports;
+	CUtlVectorEmbeddedNetworkVar< DOTANeutralCampInfo_t > m_vecKnownCampStacks;
 	CRoshanPhaseInfo m_roshanSpawnInfo;
 	int32 m_nNextPowerRuneType;
 	int32 m_nNextPowerRuneSpawnIndex;

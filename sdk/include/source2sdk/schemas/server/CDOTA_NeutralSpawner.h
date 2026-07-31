@@ -23,6 +23,7 @@ class CDOTA_NeutralSpawner : public CPointEntity
 	CUtlVector< CHandle< CDOTA_BaseNPC > > m_Units;
 	int32 m_iNextTypeUnitCount;
 	bool[2] m_bSeenClearedByTeam;
+	int32[2] m_nStacksSeenByTeam;
 	CUtlSymbolLarge m_szVolumeName;
 	CUtlVector< CHandle< CBaseEntity > > m_hVolumes;
 	CEntityIOOutput m_OnSpawnerExhausted;

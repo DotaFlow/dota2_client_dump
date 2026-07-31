@@ -14,6 +14,7 @@ class C_DOTA_Ability_Tusk_Snowball : public C_DOTABaseAbility
 	float32 snowball_duration;
 	VectorWS m_vProjectileLocation;
 	CUtlVector< CHandle< C_BaseEntity > > m_hSnowballedUnits;
+	CUtlVector< CHandle< C_BaseEntity > > m_hEnemiesHit;
 	ParticleIndex_t m_nFXIndex;
 	CountdownTimer ctSnowball;
 	bool m_bSpeakAlly;

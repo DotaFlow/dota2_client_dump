@@ -36,6 +36,7 @@ class CDOTA_AttackRecord
 	bitfield:1 m_bForceAttackMissSound;
 	bitfield:1 m_bSuppressDamageSounds;
 	bitfield:1 m_bSuppressDamageEffects;
+	bitfield:1 m_bSuppressCleave;
 	int32 m_nBashSource;
 	int32 m_nCritSource;
 	int32 m_nAttackHeight;

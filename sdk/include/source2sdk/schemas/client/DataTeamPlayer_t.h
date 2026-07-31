@@ -69,6 +69,7 @@ class DataTeamPlayer_t
 	WeightedAbilitySuggestion_t[5] m_iSuggestedNeutralEnhancements;
 	HeroID_t[10] m_iSuggestedHeroes;
 	float32[10] m_flSuggestedHeroesWeights;
+	int32 m_iWisdomShrinesTaken;
 	float32[3] m_flDamageByTypeReceivedPreReduction;
 	float32[3] m_flDamageByTypeReceivedPostReduction;
 	float32[3] m_flOutgoingDamageByTypePreReduction;

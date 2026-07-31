@@ -5,6 +5,7 @@ class CDOTA_Modifier_Drow_Ranger_Multishot : public CDOTA_Buff
 	int32 arrow_width;
 	float32 arrow_speed;
 	float32 arrow_range_multiplier;
+	float32 arrow_range_base;
 	int32 wave_count;
 	int32 arrow_count_per_wave;
 	int32 arrow_angle;

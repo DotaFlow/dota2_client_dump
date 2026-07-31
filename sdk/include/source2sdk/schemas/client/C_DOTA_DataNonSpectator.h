@@ -20,6 +20,7 @@ class C_DOTA_DataNonSpectator : public C_BaseEntity
 	C_NetworkUtlVectorBase< AbilityID_t > m_vecNeutralItemsConsumed;
 	C_UtlVectorEmbeddedNetworkVar< PingConfirmationState_t > m_PingConfirmationStates;
 	C_NetworkUtlVectorBase< CHandle< C_BaseEntity > > m_vecKnownClearCamps;
+	C_UtlVectorEmbeddedNetworkVar< DOTANeutralCampInfo_t > m_vecKnownCampStacks;
 	Vector2D[100] m_vPossibleWardPlacement;
 	float32[100] m_vPossibleWardRadii;
 	C_UtlVectorEmbeddedNetworkVar< DOTATeleportInfo_t > m_vecTrackedTeleports;
