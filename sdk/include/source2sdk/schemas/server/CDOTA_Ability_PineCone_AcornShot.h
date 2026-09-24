@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_PineCone_AcornShot : public CDOTABaseAbility
 {
 	uint32 m_nAcornTree;

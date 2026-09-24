@@ -1,3 +1,4 @@
+// MNetworkNoBase
 class CDOTA_ItemStockInfo
 {
 	int32 iTeamNumber;

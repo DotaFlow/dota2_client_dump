@@ -22,6 +22,7 @@
 //	]
 //}
 // MPropertyFriendlyName = "Ground Root Motion Motor"
+// MHasKV3TransferPolymorphicClassname
 class AI_GroundRootMotionMotor_DebugSnapshotData_t : public DebugSnapshotBaseStructuredData_t
 {
 	CGlobalSymbol desired_movement_gait_set;

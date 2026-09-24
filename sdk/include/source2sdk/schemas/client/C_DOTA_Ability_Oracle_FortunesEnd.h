@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class C_DOTA_Ability_Oracle_FortunesEnd : public C_DOTABaseAbility
 {
 	int32 damage;

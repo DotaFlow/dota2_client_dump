@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_Lich_ChainFrost : public CDOTABaseAbility
 {
 	float32 jump_range;

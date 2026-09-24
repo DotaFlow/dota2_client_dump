@@ -1,3 +1,5 @@
+// MNetworkNoBase
+// MClassHasEntityLimitedDataDesc
 class CDotaSubquestAbilityCastCount : public CDotaSubquestBase
 {
 	int32 m_sAbilityNameSymbol;

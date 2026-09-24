@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTATurboGameMode : public CDOTABaseGameMode
 {
 	int32 m_nHighestLevelInCurrentGame;

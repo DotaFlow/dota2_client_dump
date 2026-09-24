@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class C_DOTA_Ability_Lich_FrostArmor : public C_DOTABaseAbility
 {
 };

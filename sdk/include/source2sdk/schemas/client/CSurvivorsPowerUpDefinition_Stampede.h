@@ -64,6 +64,7 @@
 //	"m_sParticle": ""
 //}
 // MVDataRoot
+// MHasKV3TransferPolymorphicClassname
 class CSurvivorsPowerUpDefinition_Stampede : public CSurvivorsPowerUpDefinition
 {
 	float32 m_flMovementSpeedPercentDamageMultiplier;

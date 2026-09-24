@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_AghsFort_Ravage_Potion : public CDOTA_Item
 {
 	CUtlVector< CHandle< CBaseEntity > > m_hEntsHit;

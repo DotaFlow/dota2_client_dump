@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Item_Bottomless_Chalice : public CDOTA_Item
 {
 	int32 m_iStoredRuneType;

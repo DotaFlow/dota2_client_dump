@@ -6,6 +6,7 @@
 //	"m_reversalSoundThresholdMedium": 0.000000,
 //	"m_reversalSoundThresholdLarge": 0.000000
 //}
+// MHasKV3TransferPolymorphicClassname
 class SimpleConstraintSoundProfile
 {
 	float32 m_flKeyPointMinSoundThreshold;

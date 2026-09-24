@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Unit_Hero_SkeletonKing : public CDOTA_BaseNPC_Hero
 {
 	int32 m_nSkeletonWarriors;

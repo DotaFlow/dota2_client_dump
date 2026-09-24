@@ -32,6 +32,7 @@
 //}
 // MPropertyFriendlyName = "Loop XFade"
 // MPropertyDescription = "Sample accurate looping with xfade capabilities."
+// MHasKV3TransferPolymorphicClassname
 class CVoiceContainerLoopXFade : public CVoiceContainerBase
 {
 	// MPropertyFriendlyName = "Vsnd Reference"

@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class C_DOTA_Hero_Recorder : public C_BaseEntity
 {
 	bool m_bStartRecording;

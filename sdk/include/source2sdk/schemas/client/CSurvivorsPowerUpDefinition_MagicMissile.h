@@ -72,6 +72,7 @@
 //	"m_sImpactParticle": ""
 //}
 // MVDataRoot
+// MHasKV3TransferPolymorphicClassname
 class CSurvivorsPowerUpDefinition_MagicMissile : public CSurvivorsPowerUpDefinition_ProjectileAttack
 {
 	float32 m_flShardDamageMultiplier;

@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_Axe_One_Man_Army : public CDOTABaseAbility
 {
 	float32 radius;

@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_BaseNPC : public NextBotCombatCharacter
 {
 	bool m_bPledgedOfrenda;

@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class C_DOTA_Ability_ChaosKnight_Reality_Rift : public C_DOTABaseAbility
 {
 	float32 m_flPercentage;

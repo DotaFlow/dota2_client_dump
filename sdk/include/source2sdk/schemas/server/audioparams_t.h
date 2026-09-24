@@ -16,6 +16,7 @@
 //	"soundscapeEntityListIndex": 0,
 //	"soundEventHash": 0
 //}
+// MHasKV3TransferPolymorphicClassname
 class audioparams_t
 {
 	VectorWS[8] localSound;

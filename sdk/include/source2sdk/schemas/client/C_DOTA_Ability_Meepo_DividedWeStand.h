@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class C_DOTA_Ability_Meepo_DividedWeStand : public C_DOTABaseAbility
 {
 	int32 m_nWhichDividedWeStand;

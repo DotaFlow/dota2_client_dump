@@ -1,3 +1,4 @@
+// MNetworkNoBase
 class CBeam : public CBaseModelEntity
 {
 	float32 m_flFrameRate;

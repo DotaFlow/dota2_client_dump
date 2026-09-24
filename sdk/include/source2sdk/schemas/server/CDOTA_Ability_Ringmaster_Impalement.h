@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_Ringmaster_Impalement : public CDOTABaseAbility
 {
 	VectorWS m_vStartPos;

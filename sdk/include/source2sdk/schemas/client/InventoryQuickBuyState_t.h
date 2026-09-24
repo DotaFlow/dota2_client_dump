@@ -1,3 +1,4 @@
+// MNetworkNoBase
 class InventoryQuickBuyState_t
 {
 	C_UtlVectorEmbeddedNetworkVar< QuickBuySlot_t > m_vecItemSlots;

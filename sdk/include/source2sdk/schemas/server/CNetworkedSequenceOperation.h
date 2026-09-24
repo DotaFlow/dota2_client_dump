@@ -9,6 +9,7 @@
 //	"m_flPrevCycleFromDiscontinuity": 0.000000,
 //	"m_flPrevCycleForAnimEventDetection": 0.000000
 //}
+// MHasKV3TransferPolymorphicClassname
 class CNetworkedSequenceOperation
 {
 	HSequence m_hSequence;

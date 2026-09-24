@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class C_DOTA_PortraitBuilding : public CBaseAnimatingActivity
 {
 	ParticleIndex_t m_nAmbientFXIndex;

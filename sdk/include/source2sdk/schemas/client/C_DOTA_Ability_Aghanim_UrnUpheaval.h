@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class C_DOTA_Ability_Aghanim_UrnUpheaval : public C_DOTABaseAbility
 {
 	VectorWS m_vPosition;

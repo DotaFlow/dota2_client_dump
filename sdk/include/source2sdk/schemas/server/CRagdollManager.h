@@ -1,3 +1,4 @@
+// MNetworkNoBase
 class CRagdollManager : public CBaseEntity
 {
 	int8 m_iCurrentMaxRagdollCount;

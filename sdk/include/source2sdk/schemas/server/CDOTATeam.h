@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTATeam : public CTeam
 {
 	int32 m_iHeroKills;

@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_Warlock_Upheaval : public CDOTABaseAbility
 {
 	VectorWS m_vPosition;

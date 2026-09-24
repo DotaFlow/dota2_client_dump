@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_Luna_MoonGlaive : public CDOTABaseAbility
 {
 	CUtlVector< CHandle< CBaseEntity > > m_vecMarkedUnits;

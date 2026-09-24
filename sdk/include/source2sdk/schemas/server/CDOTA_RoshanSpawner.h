@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_RoshanSpawner : public CPointEntity
 {
 	bool m_bIsRoshanAlive;

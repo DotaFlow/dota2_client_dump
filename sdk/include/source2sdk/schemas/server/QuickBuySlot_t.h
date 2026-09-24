@@ -1,3 +1,4 @@
+// MNetworkNoBase
 class QuickBuySlot_t
 {
 	AbilityID_t m_nAbilityID;

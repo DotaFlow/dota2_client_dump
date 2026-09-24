@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class C_DOTA_Item_RuneSpawner : public CBaseAnimatingActivity
 {
 	DOTA_RUNES m_nRuneType;

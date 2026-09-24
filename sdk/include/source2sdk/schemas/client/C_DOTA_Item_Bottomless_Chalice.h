@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class C_DOTA_Item_Bottomless_Chalice : public C_DOTA_Item
 {
 	int32 m_iStoredRuneType;

@@ -68,6 +68,7 @@
 //	"m_flDelayBetweenCounters": 0.000000
 //}
 // MVDataRoot
+// MHasKV3TransferPolymorphicClassname
 class CSurvivorsPowerUpDefinition_CounterHelix : public CSurvivorsPowerUpDefinition_AreaAttack_Circle
 {
 	float32 m_flChanceToCounter;

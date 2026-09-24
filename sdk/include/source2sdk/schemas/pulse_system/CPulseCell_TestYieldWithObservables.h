@@ -52,6 +52,7 @@
 //		"m_nInstruction": -1
 //	}
 //}
+// MHasKV3TransferPolymorphicClassname
 class CPulseCell_TestYieldWithObservables : public CPulseCell_BaseYieldingInflow
 {
 	float32 m_flWatchForFloatValue;

@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class C_DOTA_Ability_Nevermore_Shadowraze : public C_DOTABaseAbility
 {
 	ParticleIndex_t m_nFXIndex;

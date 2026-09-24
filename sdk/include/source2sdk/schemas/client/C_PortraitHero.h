@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class C_PortraitHero : public C_DOTA_BaseNPC
 {
 	HeroID_t m_nHeroID;

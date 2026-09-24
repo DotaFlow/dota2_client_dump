@@ -5,7 +5,7 @@
 //	"m_nType": "",
 //	"m_nState": ""
 //}
-// MDebugSnapshotDataSummaryFn (UNKNOWN FOR PARSER)
+// MDebugSnapshotDataSummaryFn
 class AI_DefaultNPC_DebugSnapshotData_t::PathQuery_t
 {
 	CGlobalSymbol m_nInitialMovementId;

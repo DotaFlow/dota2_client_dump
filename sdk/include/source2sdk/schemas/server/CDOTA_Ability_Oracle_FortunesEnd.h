@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_Oracle_FortunesEnd : public CDOTABaseAbility
 {
 	int32 damage;

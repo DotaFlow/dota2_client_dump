@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class C_DOTA_BaseNPC : public C_NextBotCombatCharacter
 {
 	bool m_bIsPhantom;

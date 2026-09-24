@@ -64,6 +64,7 @@
 //	"m_sExplosionParticle": ""
 //}
 // MVDataRoot
+// MHasKV3TransferPolymorphicClassname
 class CSurvivorsPowerUpDefinition_Spirits : public CSurvivorsPowerUpDefinition
 {
 	CResourceNameTyped< CWeakHandle< InfoForResourceTypeIParticleSystemDefinition > > m_sParticle;

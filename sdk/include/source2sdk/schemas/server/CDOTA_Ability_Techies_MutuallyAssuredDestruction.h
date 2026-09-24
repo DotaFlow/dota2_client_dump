@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_Techies_MutuallyAssuredDestruction : public CDOTABaseAbility
 {
 	float32 radius;

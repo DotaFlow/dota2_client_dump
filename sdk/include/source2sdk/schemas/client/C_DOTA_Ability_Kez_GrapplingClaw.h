@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class C_DOTA_Ability_Kez_GrapplingClaw : public C_DOTA_Ability_Kez_BaseAbility
 {
 	ParticleIndex_t m_nFXIndex;

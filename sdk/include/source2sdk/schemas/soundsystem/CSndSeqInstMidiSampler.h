@@ -18,6 +18,7 @@
 //	"m_hSoundEventHash": 0
 //}
 // MPropertyFriendlyName = "Midi Sampler"
+// MHasKV3TransferPolymorphicClassname
 class CSndSeqInstMidiSampler : public CSndSeqInstBaseSchema
 {
 	bool m_bIsSoundEvent;

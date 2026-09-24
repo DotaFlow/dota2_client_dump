@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_TrollWarlord_WhirlingAxes_Ranged : public CDOTABaseAbility
 {
 	VectorWS m_vStartPos;

@@ -36,6 +36,7 @@
 //	{
 //	}
 //}
+// MHasKV3TransferPolymorphicClassname
 class CBasePlayerWeaponVData
 {
 	// MPropertyDescription = "The name of the weapon entity to spawn for this NPC weapon."

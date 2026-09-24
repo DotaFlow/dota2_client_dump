@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class C_DOTA_Ability_Warlock_Upheaval : public C_DOTABaseAbility
 {
 	VectorWS m_vPosition;

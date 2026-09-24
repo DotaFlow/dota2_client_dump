@@ -70,6 +70,7 @@
 //	"m_sRemoteMineExplosion": ""
 //}
 // MVDataRoot
+// MHasKV3TransferPolymorphicClassname
 class CSurvivorsPowerUpDefinition_LandMine : public CSurvivorsPowerUpDefinition
 {
 	float32 m_flScepterVacuumRadius;

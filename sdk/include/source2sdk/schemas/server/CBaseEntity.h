@@ -49,7 +49,7 @@ class CBaseEntity : public CEntityInstance
 	uint8 m_ubInterpolationFrame;
 	VectorWS m_vPrevVPhysicsUpdatePos;
 	uint8 m_iTeamNum;
-	// MSaveBehavior (UNKNOWN FOR PARSER)
+	// MSaveBehavior = 1
 	CUtlSymbolLarge m_iGlobalname;
 	// MNotSaved
 	int32 m_iSentToClients;

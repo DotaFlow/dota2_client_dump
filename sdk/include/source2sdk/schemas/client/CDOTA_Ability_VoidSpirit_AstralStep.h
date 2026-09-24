@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_VoidSpirit_AstralStep : public C_DOTABaseAbility
 {
 	VectorWS m_vStartPos;

@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_Invoker_Tornado : public CDOTA_Ability_Invoker_InvokedBase
 {
 	float32 vision_distance;

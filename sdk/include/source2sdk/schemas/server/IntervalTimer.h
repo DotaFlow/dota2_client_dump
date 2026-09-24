@@ -1,4 +1,7 @@
 // MGetKV3ClassDefaults = null
+// MNetworkNoBase
+// MDisableDataDescValidation
+// MHasKV3TransferPolymorphicClassname
 class IntervalTimer
 {
 	GameTime_t m_timestamp;

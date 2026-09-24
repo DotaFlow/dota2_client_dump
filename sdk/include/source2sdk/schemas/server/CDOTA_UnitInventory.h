@@ -1,3 +1,4 @@
+// MNetworkNoBase
 class CDOTA_UnitInventory
 {
 	CUtlVector< sSharedCooldownInfo > m_SharedCooldownList;

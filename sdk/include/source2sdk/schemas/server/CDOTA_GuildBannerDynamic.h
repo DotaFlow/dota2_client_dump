@@ -1,4 +1,5 @@
 // MEntityAllowsPortraitWorldSpawn
+// MClassHasEntityLimitedDataDesc
 class CDOTA_GuildBannerDynamic : public CDynamicProp
 {
 	bool m_bRespawnClientEntity;

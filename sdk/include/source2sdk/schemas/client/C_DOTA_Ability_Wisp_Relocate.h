@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class C_DOTA_Ability_Wisp_Relocate : public C_DOTABaseAbility
 {
 	ParticleIndex_t m_nFXIndexEndTeam;

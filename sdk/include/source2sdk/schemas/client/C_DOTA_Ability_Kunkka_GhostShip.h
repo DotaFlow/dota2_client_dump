@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class C_DOTA_Ability_Kunkka_GhostShip : public C_DOTABaseAbility
 {
 	float32 buff_duration;

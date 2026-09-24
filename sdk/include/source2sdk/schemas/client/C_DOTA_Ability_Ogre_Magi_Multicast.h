@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class C_DOTA_Ability_Ogre_Magi_Multicast : public C_DOTABaseAbility
 {
 };

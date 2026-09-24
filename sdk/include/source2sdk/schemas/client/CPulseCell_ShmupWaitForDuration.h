@@ -21,6 +21,7 @@
 //	}
 //}
 // MPropertyFriendlyName = "Shmup Wait For Duration"
+// MHasKV3TransferPolymorphicClassname
 class CPulseCell_ShmupWaitForDuration : public CPulseCell_BaseYieldingInflow
 {
 	CPulse_ResumePoint m_WakeResume;

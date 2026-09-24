@@ -1,3 +1,4 @@
+// MDisableDataDescValidation
 class CDOTA_ActionRunner
 {
 	CModifierParams* m_pEventContext;

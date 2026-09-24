@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_VoidSpirit_ResonantPulse : public C_DOTABaseAbility
 {
 	bool m_bGrantedScepterCharges;

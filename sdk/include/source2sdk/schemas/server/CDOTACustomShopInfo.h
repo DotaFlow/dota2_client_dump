@@ -1,3 +1,4 @@
+// MNetworkNoBase
 class CDOTACustomShopInfo
 {
 	char[256] m_CustomShopName;

@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_ShadowShaman_Serpentine : public CDOTABaseAbility
 {
 	int32 length;

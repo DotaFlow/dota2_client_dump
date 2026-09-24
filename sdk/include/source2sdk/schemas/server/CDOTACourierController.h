@@ -1,3 +1,4 @@
+// MNetworkNoBase
 class CDOTACourierController
 {
 	bool m_bAutoCourierAutoBurst;

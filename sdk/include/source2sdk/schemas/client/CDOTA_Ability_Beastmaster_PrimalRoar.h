@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_Beastmaster_PrimalRoar : public C_DOTABaseAbility
 {
 	float32 duration;

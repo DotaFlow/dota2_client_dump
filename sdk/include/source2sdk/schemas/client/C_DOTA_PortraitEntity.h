@@ -1,4 +1,5 @@
 // MEntityAllowsPortraitWorldSpawn
+// MClassHasEntityLimitedDataDesc
 class C_DOTA_PortraitEntity : public C_DOTA_BaseNPC
 {
 	CountdownTimer m_PetIdleTimer;

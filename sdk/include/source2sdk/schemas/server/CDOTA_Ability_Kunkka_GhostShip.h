@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_Kunkka_GhostShip : public CDOTABaseAbility
 {
 	float32 buff_duration;

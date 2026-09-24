@@ -515,6 +515,7 @@
 //}
 // MPropertyFriendlyName = "Vsnd Radio Button"
 // MPropertyDescription = "Plays vsnds based on membership in a numbered index."
+// MHasKV3TransferPolymorphicClassname
 class CVoiceContainerVsndRadioButton : public CVoiceContainerBase
 {
 	// MPropertyFriendlyName = "Namespace"

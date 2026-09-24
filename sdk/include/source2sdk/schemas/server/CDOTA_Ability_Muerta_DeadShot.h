@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_Muerta_DeadShot : public CDOTABaseAbility
 {
 	float32 radius;

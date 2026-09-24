@@ -57,6 +57,7 @@
 //	"m_sDestroySound": "$INVALID",
 //	"m_sCatchSound": "$INVALID"
 //}
+// MHasKV3TransferPolymorphicClassname
 class CDOTACrateDropTrackLightDef : public CDOTACrateDropObjectDef
 {
 };

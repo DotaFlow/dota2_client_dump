@@ -11,6 +11,7 @@
 //	"m_syncID": "",
 //	"m_flBlendTimeSeconds": 0.100000
 //}
+// MHasKV3TransferPolymorphicClassname
 class CNmRootMotionEvent : public CNmEvent
 {
 	float32 m_flBlendTimeSeconds;

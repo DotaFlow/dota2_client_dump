@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Item_Trusty_Shovel : public CDOTA_Item
 {
 	VectorWS m_vChannelPos;

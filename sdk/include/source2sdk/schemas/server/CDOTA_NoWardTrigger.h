@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_NoWardTrigger : public CBaseTrigger
 {
 };

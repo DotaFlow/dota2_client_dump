@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class C_DOTA_Ability_Pangolier_Swashbuckle : public C_DOTABaseAbility
 {
 	float32 dash_speed;

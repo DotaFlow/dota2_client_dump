@@ -101,6 +101,7 @@
 //	"m_eSeparationLayer": "SMALL"
 //}
 // MVDataRoot
+// MHasKV3TransferPolymorphicClassname
 class CSurvivorsEnemyDefinition
 {
 	SurvivorsEnemyID_t m_unEnemyID;

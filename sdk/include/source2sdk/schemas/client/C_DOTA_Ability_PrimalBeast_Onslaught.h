@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class C_DOTA_Ability_PrimalBeast_Onslaught : public C_DOTABaseAbility
 {
 	float32 max_charge_time;

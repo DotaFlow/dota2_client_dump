@@ -10,6 +10,7 @@
 //	},
 //	"m_syncID": ""
 //}
+// MHasKV3TransferPolymorphicClassname
 class CNmOrientationWarpEvent : public CNmEvent
 {
 };

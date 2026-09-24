@@ -24,6 +24,7 @@
 //	"m_eSpawnPositionsLayer": "ENEMY_MAIN"
 //}
 // MVDataRoot
+// MHasKV3TransferPolymorphicClassname
 class CSurvivorsSpawnerDefinition
 {
 	CUtlString m_sEnemyName;

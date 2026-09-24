@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class C_DOTA_Ability_Skywrath_Mage_Arcane_Bolt : public C_DOTABaseAbility
 {
 	int32 bolt_vision;

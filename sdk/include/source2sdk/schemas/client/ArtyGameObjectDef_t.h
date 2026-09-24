@@ -46,6 +46,7 @@
 //}
 // MVDataRoot
 // MVDataNodeType = 1
+// MHasKV3TransferPolymorphicClassname
 class ArtyGameObjectDef_t
 {
 	ArtyGameObjectID_t m_unID;

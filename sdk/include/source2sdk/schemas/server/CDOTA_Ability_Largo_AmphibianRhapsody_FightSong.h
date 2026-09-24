@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_Largo_AmphibianRhapsody_FightSong : public CDOTA_Ability_Largo_AmphibianRhapsody_Song
 {
 	float32 radius;

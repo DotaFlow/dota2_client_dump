@@ -26,6 +26,7 @@
 //}
 // MPropertyFriendlyName = "Random Sampler Container"
 // MPropertyDescription = "Trash Synth"
+// MHasKV3TransferPolymorphicClassname
 class CVoiceContainerRandomSampler : public CVoiceContainerAsyncGenerator
 {
 	float32 m_flAmplitude;

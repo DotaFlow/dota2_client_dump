@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_Magnataur_Skewer : public C_DOTABaseAbility
 {
 	float32 skewer_radius;

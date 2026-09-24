@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_Generic_Hidden : public CDOTABaseAbility
 {
 };

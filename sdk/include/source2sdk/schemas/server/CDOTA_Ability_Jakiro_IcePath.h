@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_Jakiro_IcePath : public CDOTABaseAbility
 {
 	CHandle< CBaseEntity > m_hThinker;

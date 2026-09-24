@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_AncientApparition_IceBlast : public CDOTABaseAbility
 {
 	CountdownTimer m_PathTimer;

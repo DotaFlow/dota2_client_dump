@@ -1,3 +1,4 @@
+// MNetworkNoBase
 class C_DOTA_UnitInventory
 {
 	CUtlVector< sSharedCooldownInfo > m_SharedCooldownList;

@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class C_DOTA_Ability_Lina_DragonSlave : public C_DOTABaseAbility
 {
 	int32 dragon_slave_distance;

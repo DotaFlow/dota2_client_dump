@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class C_DOTA_Ability_DeathProphet_SpiritSiphon : public C_DOTABaseAbility
 {
 	VectorWS m_vStartPos;

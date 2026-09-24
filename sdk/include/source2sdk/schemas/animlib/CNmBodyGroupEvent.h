@@ -13,6 +13,7 @@
 //	"m_groupName": "",
 //	"m_choiceName": ""
 //}
+// MHasKV3TransferPolymorphicClassname
 class CNmBodyGroupEvent : public CNmEvent
 {
 	CNmEventTargetEntity_t m_target;

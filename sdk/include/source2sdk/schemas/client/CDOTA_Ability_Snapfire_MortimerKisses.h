@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_Snapfire_MortimerKisses : public C_DOTABaseAbility
 {
 	int32 m_nDamagePerProjectile;

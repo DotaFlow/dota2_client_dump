@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Item_MagicWand : public CDOTA_Item
 {
 	float32 charge_radius;

@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_Tinker_DeployTurrets : public CDOTABaseAbility
 {
 	VectorWS m_vDashPosition;

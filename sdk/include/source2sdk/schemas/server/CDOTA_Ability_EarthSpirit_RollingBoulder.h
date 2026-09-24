@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_EarthSpirit_RollingBoulder : public CDOTABaseAbility, public CHorizontalMotionController
 {
 	int32 radius;

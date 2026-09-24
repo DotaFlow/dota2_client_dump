@@ -25,6 +25,7 @@
 //		0.000000
 //	]
 //}
+// MHasKV3TransferPolymorphicClassname
 class CConstantForceController
 {
 	Vector m_linear;

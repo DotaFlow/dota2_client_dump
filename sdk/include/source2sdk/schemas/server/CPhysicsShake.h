@@ -7,6 +7,7 @@
 //		0.000000
 //	]
 //}
+// MHasKV3TransferPolymorphicClassname
 class CPhysicsShake
 {
 	Vector m_force;

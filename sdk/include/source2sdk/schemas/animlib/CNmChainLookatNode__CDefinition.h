@@ -24,6 +24,7 @@
 //	"m_nChainLength": 2,
 //	"m_bIsTargetInWorldSpace": false
 //}
+// MHasKV3TransferPolymorphicClassname
 class CNmChainLookatNode::CDefinition : public CNmPassthroughNode::CDefinition
 {
 	CGlobalSymbol m_endEffectorBoneID;

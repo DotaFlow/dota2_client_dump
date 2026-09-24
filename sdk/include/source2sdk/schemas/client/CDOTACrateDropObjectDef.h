@@ -58,6 +58,7 @@
 //	"m_sCatchSound": "$INVALID"
 //}
 // MVDataRoot
+// MHasKV3TransferPolymorphicClassname
 class CDOTACrateDropObjectDef
 {
 	DOTACrateDropObjectDefID_t m_unID;

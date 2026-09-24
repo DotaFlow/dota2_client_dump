@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_Special_Bonus_Cleave_150 : public CDOTABaseAbility
 {
 };

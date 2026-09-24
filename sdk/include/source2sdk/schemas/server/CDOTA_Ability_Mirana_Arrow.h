@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_Mirana_Arrow : public CDOTABaseAbility
 {
 	CHandle< CDOTABaseAbility > m_hSourceAbility;

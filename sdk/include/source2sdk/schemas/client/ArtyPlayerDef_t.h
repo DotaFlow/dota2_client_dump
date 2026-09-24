@@ -47,6 +47,7 @@
 //	"m_flMaxMana": 100.000000,
 //	"m_flMovementSpeed": 1.000000
 //}
+// MHasKV3TransferPolymorphicClassname
 class ArtyPlayerDef_t : public ArtyUnitDef_t
 {
 };

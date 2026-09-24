@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_NPCSpawner : public CPointEntity
 {
 	CUtlSymbolLarge m_szNPCScriptName;

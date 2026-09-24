@@ -1,3 +1,4 @@
+// MNetworkNoBase
 class CDOTA_AbilityDraftHeroState
 {
 	HeroID_t m_nHeroID;

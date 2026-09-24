@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class C_PortraitWorldLight : public C_EnvDeferredLight
 {
 	float32 m_flLatitude;

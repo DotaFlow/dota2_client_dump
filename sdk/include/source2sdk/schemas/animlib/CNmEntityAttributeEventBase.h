@@ -12,6 +12,7 @@
 //	"m_target": "Self",
 //	"m_attributeName": ""
 //}
+// MHasKV3TransferPolymorphicClassname
 class CNmEntityAttributeEventBase : public CNmEvent
 {
 	CNmEventTargetEntity_t m_target;

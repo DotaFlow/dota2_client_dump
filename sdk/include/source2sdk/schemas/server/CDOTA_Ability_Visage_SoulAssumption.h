@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_Visage_SoulAssumption : public CDOTABaseAbility
 {
 	float32 m_fDamage;

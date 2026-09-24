@@ -1,4 +1,5 @@
 // MEntityAllowsPortraitWorldSpawn
+// MClassHasEntityLimitedDataDesc
 class C_DOTA_BaseNPC_Building : public C_DOTA_BaseNPC
 {
 	int32 m_iDamageLevel;

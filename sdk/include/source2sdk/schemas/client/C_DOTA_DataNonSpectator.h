@@ -1,3 +1,5 @@
+// MNetworkNoBase
+// MClassHasEntityLimitedDataDesc
 class C_DOTA_DataNonSpectator : public C_BaseEntity
 {
 	C_UtlVectorEmbeddedNetworkVar< DataTeamPlayer_t > m_vecDataTeam;

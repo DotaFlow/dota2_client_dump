@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class C_DOTA_Ability_Nian_Waterball : public C_DOTABaseAbility
 {
 	CountdownTimer m_ctTimer;

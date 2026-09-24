@@ -1,3 +1,4 @@
+// MNetworkNoBase
 class CQuickBuyController
 {
 	PlayerID_t m_nPlayerID;

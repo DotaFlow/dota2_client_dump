@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTABotChallengeGameMode : public CDOTABaseGameMode
 {
 	bool m_bRuleMidLaneOnly;

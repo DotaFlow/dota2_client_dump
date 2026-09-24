@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class C_DOTA_Item : public C_DOTABaseAbility
 {
 	int32 m_CastAnimation;

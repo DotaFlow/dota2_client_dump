@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Unit_Hero_MonkeyKing : public CDOTA_BaseNPC_Hero
 {
 	uint32 m_nTreeDisguise;

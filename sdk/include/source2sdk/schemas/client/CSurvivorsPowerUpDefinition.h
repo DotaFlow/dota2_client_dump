@@ -62,6 +62,7 @@
 //	"m_unSpawnPickupOnKillID": 0
 //}
 // MVDataRoot
+// MHasKV3TransferPolymorphicClassname
 class CSurvivorsPowerUpDefinition
 {
 	SurvivorsPowerUpID_t m_unPowerUpID;

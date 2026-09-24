@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_Tidehunter_DeadInTheWater : public CDOTABaseAbility
 {
 	int32 radius;

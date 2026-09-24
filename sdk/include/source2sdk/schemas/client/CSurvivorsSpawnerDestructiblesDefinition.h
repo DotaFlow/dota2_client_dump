@@ -26,6 +26,7 @@
 //	"m_flDestroyDistance": 0.000000
 //}
 // MVDataRoot
+// MHasKV3TransferPolymorphicClassname
 class CSurvivorsSpawnerDestructiblesDefinition : public CSurvivorsSpawnerDefinition
 {
 	float32 m_flMinimumDistanceBetween;

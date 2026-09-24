@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class C_DOTA_Ability_Spectre_SpectralDagger : public C_DOTABaseAbility
 {
 	float32 dagger_path_duration;

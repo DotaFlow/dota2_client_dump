@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_Largo_AmphibianRhapsody : public CDOTABaseAbility
 {
 	float32 duration;

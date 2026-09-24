@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_DataSpectator : public CDOTA_DataNonSpectator
 {
 	CHandle< CBaseEntity > m_hPowerupRune_1;

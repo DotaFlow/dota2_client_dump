@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_Tusk_WalrusKick : public CDOTABaseAbility
 {
 	ParticleIndex_t m_nTargetFXIndex;

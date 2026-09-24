@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class C_DOTA_Ability_Necrolyte_Death_Seeker : public C_DOTABaseAbility
 {
 };

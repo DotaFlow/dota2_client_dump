@@ -45,6 +45,7 @@
 //	],
 //	"m_flNotchSize": 0.100000
 //}
+// MHasKV3TransferPolymorphicClassname
 class ArtyProgressBarDef_t : public ArtyGameObjectDef_t
 {
 	float32 m_flNotchSize;

@@ -1,3 +1,4 @@
+// MNetworkNoBase
 class CDOTAGameManager
 {
 	// MNotSaved

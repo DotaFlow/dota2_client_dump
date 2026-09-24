@@ -6,6 +6,7 @@
 //	"m_flVal": 0.000000,
 //	"m_vPos": null
 //}
+// MHasKV3TransferPolymorphicClassname
 class sndopvarlatchdata_t
 {
 	CUtlSymbolLarge m_iszStack;

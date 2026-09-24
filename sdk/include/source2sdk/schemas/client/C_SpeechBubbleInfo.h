@@ -1,3 +1,4 @@
+// MNetworkNoBase
 class C_SpeechBubbleInfo
 {
 	char[256] m_LocalizationStr;

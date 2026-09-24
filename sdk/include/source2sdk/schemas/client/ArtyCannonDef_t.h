@@ -53,6 +53,7 @@
 //		0.000000
 //	]
 //}
+// MHasKV3TransferPolymorphicClassname
 class ArtyCannonDef_t : public ArtyGameObjectDef_t
 {
 	bool m_bDirectAimAtTarget;

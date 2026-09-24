@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_Creature_Fire_Breath : public CDOTABaseAbility
 {
 	int32 speed;

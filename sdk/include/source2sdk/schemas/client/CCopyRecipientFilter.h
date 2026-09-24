@@ -6,6 +6,7 @@
 //	],
 //	"m_slotPlayerExcludedDueToPrediction": -1
 //}
+// MHasKV3TransferPolymorphicClassname
 class CCopyRecipientFilter
 {
 	int32 m_Flags;

@@ -1,4 +1,5 @@
 // MEntityAllowsPortraitWorldSpawn
+// MClassHasEntityLimitedDataDesc
 class CDarkCarnivalCrateDropEntity : public C_PhysicsProp
 {
 	DOTACrateDropObjectDefID_t m_unDefID;

@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class C_DOTA_Ability_Ringmaster_TameTheBeasts : public C_DOTABaseAbility
 {
 	VectorWS m_vCrackLocation;

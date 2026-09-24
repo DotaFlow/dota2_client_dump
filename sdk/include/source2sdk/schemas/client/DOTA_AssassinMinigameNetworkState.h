@@ -1,3 +1,4 @@
+// MNetworkNoBase
 class DOTA_AssassinMinigameNetworkState
 {
 	uint16 nAssassinState;

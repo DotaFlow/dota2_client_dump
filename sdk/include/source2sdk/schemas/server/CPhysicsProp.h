@@ -1,3 +1,4 @@
+// MDisableDataDescValidation
 class CPhysicsProp : public CBreakableProp
 {
 	CEntityIOOutput m_MotionEnabled;

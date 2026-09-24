@@ -15,6 +15,7 @@
 //	[
 //	]
 //}
+// MHasKV3TransferPolymorphicClassname
 class CCommentarySystem
 {
 	bool m_bCommentaryEnabledMidGame;

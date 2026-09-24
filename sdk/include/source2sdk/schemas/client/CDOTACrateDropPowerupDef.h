@@ -59,6 +59,7 @@
 //	"m_flBasePoints": 340282346638528859811704183484516925440.000000,
 //	"m_ePowerupType": "k_eCrateDropPowerupType_Invalid"
 //}
+// MHasKV3TransferPolymorphicClassname
 class CDOTACrateDropPowerupDef : public CDOTACrateDropDroppableDef
 {
 	EDOTACrateDropPowerupType m_ePowerupType;

@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_VengefulSpirit_WaveOfTerror : public CDOTABaseAbility
 {
 	float32 wave_width;

@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTABaseAbility : public CBaseEntity
 {
 	int32 m_iAbilityIndex;

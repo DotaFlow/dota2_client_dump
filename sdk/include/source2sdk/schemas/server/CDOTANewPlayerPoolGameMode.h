@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTANewPlayerPoolGameMode : public CDOTABaseGameMode
 {
 	int32 m_nHighestLevelInCurrentGame;

@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_Seasonal_TI11_Balloon : public C_DOTABaseAbility
 {
 	float32 charge_use_interval;

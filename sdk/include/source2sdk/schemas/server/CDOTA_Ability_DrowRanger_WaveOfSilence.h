@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_DrowRanger_WaveOfSilence : public CDOTABaseAbility
 {
 	VectorWS m_vStartPosition;

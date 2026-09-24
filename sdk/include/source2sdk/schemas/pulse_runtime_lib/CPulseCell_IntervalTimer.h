@@ -30,6 +30,7 @@
 // MPropertyDescription = "Wait for a duration, firing a child cursor at regular (or randomized) intervals"
 // MPulseEditorHeaderIcon = "tools/images/pulse_editor/node_timer.png"
 // MPulseEditorCanvasItemSpecKV3 = "{ item_factory = 'IntervalTimer' }"
+// MHasKV3TransferPolymorphicClassname
 class CPulseCell_IntervalTimer : public CPulseCell_BaseYieldingInflow
 {
 	// MPropertyDescription = "Called when timer reaches the duration OR is stopped. NOTE: This will run a little while AFTER the last interval fires unless they line up perfectly."

@@ -1,3 +1,4 @@
+// MNetworkNoBase
 class C_DOTA_CombatLogQueryProgress
 {
 	PlayerID_t m_nPlayerID;

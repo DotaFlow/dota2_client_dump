@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class NextBotCombatCharacter : public CBaseCombatCharacter
 {
 	uint8 m_nLod;

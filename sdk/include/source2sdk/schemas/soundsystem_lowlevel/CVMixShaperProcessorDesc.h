@@ -13,6 +13,7 @@
 //		"m_nOversampleFactor": 1
 //	}
 //}
+// MHasKV3TransferPolymorphicClassname
 class CVMixShaperProcessorDesc : public CVMixBaseProcessorDesc
 {
 	VMixShaperDesc_t m_desc;

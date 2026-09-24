@@ -71,12 +71,13 @@
 //	],
 //	"m_flCapsuleRadius": 0.000000
 //}
+// MHasKV3TransferPolymorphicClassname
 class CCollisionProperty
 {
 	VPhysicsCollisionAttribute_t m_collisionAttribute;
-	// MSaveBehavior (UNKNOWN FOR PARSER)
+	// MSaveBehavior = 1
 	Vector m_vecMins;
-	// MSaveBehavior (UNKNOWN FOR PARSER)
+	// MSaveBehavior = 1
 	Vector m_vecMaxs;
 	uint8 m_usSolidFlags;
 	SolidType_t m_nSolidType;

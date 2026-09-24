@@ -1,3 +1,4 @@
+// MNetworkNoBase
 class C_EnvDetailController : public C_BaseEntity
 {
 	float32 m_flFadeStartDist;

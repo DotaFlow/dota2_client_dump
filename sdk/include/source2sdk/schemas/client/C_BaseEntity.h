@@ -79,7 +79,7 @@ class C_BaseEntity : public CEntityInstance
 	uint32 m_spawnflags;
 	// MNotSaved
 	GameTick_t m_nNextThinkTick;
-	// MSaveBehavior (UNKNOWN FOR PARSER)
+	// MSaveBehavior = 2
 	uint32 m_fFlags;
 	// MNotSaved
 	Vector m_vecAbsVelocity;

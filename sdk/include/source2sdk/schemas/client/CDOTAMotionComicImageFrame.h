@@ -4,6 +4,7 @@
 //	"m_bFireEventOnStart": false,
 //	"m_Image": ""
 //}
+// MHasKV3TransferPolymorphicClassname
 class CDOTAMotionComicImageFrame : public CDOTAMotionComicFrame
 {
 	CPanoramaImageName m_Image;

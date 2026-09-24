@@ -7,6 +7,7 @@
 //	"m_nInputValueNodeIdx": -1,
 //	"m_bUseStartValue": false
 //}
+// MHasKV3TransferPolymorphicClassname
 class CNmFloatSpringNode::CDefinition : public CNmFloatValueNode::CDefinition
 {
 	float32 m_flStartValue;

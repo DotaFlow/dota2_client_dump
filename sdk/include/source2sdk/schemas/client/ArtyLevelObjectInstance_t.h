@@ -30,6 +30,7 @@
 //	[
 //	]
 //}
+// MHasKV3TransferPolymorphicClassname
 class ArtyLevelObjectInstance_t : public ArtyGameObjectInstance_t
 {
 	CUtlString m_szLeftBorderObject;

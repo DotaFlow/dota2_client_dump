@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_OgreBruiser_OgreSmash : public CDOTABaseAbility
 {
 	float32 radius;

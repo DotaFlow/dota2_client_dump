@@ -1,16 +1,16 @@
 class CFuncTrackChange : public CFuncPlatRot
 {
-	// MSaveBehavior (UNKNOWN FOR PARSER)
+	// MSaveBehavior = 1
 	CHandle< CPathTrack > m_trackTop;
-	// MSaveBehavior (UNKNOWN FOR PARSER)
+	// MSaveBehavior = 1
 	CHandle< CPathTrack > m_trackBottom;
-	// MSaveBehavior (UNKNOWN FOR PARSER)
+	// MSaveBehavior = 1
 	CHandle< CFuncTrackTrain > m_train;
-	// MSaveBehavior (UNKNOWN FOR PARSER)
+	// MSaveBehavior = 1
 	CUtlSymbolLarge m_trackTopName;
-	// MSaveBehavior (UNKNOWN FOR PARSER)
+	// MSaveBehavior = 1
 	CUtlSymbolLarge m_trackBottomName;
-	// MSaveBehavior (UNKNOWN FOR PARSER)
+	// MSaveBehavior = 1
 	CUtlSymbolLarge m_trainName;
 	TRAIN_CODE m_code;
 	int32 m_targetState;

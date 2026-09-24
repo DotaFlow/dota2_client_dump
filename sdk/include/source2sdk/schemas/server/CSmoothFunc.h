@@ -6,6 +6,7 @@
 //	"m_flSmoothRemainingTime": 0.000000,
 //	"m_nSmoothDir": 1
 //}
+// MHasKV3TransferPolymorphicClassname
 class CSmoothFunc
 {
 	float32 m_flSmoothAmplitude;

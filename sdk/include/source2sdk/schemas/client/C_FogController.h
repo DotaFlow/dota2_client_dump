@@ -1,4 +1,5 @@
 // MEntityAllowsPortraitWorldSpawn
+// MNetworkNoBase
 class C_FogController : public C_BaseEntity
 {
 	// MNotSaved

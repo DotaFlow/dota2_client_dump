@@ -1,3 +1,4 @@
+// MNetworkNoBase
 class C_RopeKeyframe : public C_BaseModelEntity
 {
 	// MNotSaved

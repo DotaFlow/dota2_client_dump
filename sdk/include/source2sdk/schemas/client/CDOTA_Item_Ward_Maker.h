@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Item_Ward_Maker : public C_DOTA_Item
 {
 	float32 sentry_refresh;

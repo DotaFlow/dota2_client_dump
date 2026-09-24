@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_TempTree : public CBaseAnimatingActivity
 {
 	GameTime_t m_fExpireTime;

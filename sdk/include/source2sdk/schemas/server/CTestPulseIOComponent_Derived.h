@@ -6,6 +6,7 @@
 //		"m_Value": ""
 //	}
 //}
+// MHasKV3TransferPolymorphicClassname
 class CTestPulseIOComponent_Derived : public CTestPulseIOComponent
 {
 };

@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CIngameEvent_MuertaReleaseSpring2023 : public CIngameEvent_Base
 {
 	bool m_bMiniGameActive;

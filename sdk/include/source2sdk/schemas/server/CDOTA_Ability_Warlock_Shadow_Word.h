@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_Warlock_Shadow_Word : public CDOTABaseAbility
 {
 };

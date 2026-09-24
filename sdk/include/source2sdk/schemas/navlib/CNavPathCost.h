@@ -17,6 +17,7 @@
 //	"m_bSupportsTransitions": false,
 //	"m_flTransitionPenalty": 200.000000
 //}
+// MHasKV3TransferPolymorphicClassname
 class CNavPathCost : public INavPathCost
 {
 	bool m_bAllowLadders;

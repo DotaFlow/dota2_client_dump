@@ -1,3 +1,4 @@
+// MNetworkNoBase
 class InventoryQuickBuyState_t
 {
 	CUtlVectorEmbeddedNetworkVar< QuickBuySlot_t > m_vecItemSlots;

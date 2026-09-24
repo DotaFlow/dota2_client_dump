@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_Nian_Whirlpool : public CDOTABaseAbility
 {
 	int32 pool_count;

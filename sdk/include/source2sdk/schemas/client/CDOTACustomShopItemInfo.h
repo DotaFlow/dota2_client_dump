@@ -1,3 +1,4 @@
+// MNetworkNoBase
 class CDOTACustomShopItemInfo
 {
 	AbilityID_t m_nAbilityID;

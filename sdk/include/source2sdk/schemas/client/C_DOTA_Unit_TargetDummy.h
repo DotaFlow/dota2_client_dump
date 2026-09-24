@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class C_DOTA_Unit_TargetDummy : public C_DOTA_BaseNPC_Hero
 {
 	float32 m_flDamageTaken;

@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_Treant_LifeBomb : public C_DOTABaseAbility
 {
 	ParticleIndex_t m_nFXIndex;

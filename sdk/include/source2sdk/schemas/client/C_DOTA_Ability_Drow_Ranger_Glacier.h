@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class C_DOTA_Ability_Drow_Ranger_Glacier : public C_DOTABaseAbility
 {
 	int32 shard_width;

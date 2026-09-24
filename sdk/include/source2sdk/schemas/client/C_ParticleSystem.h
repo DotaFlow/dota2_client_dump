@@ -1,4 +1,5 @@
 // MEntityAllowsPortraitWorldSpawn
+// MNetworkNoBase
 class C_ParticleSystem : public C_BaseModelEntity
 {
 	char[512] m_szSnapshotFileName;

@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_AncientApparition_IceAge : public CDOTABaseAbility
 {
 	float32 radius;

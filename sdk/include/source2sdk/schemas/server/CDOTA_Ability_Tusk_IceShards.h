@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_Tusk_IceShards : public CDOTABaseAbility
 {
 	int32 m_iProjectile;

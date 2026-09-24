@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_Invoker_Invoke : public CDOTABaseAbility
 {
 	int32 max_invoked_spells;

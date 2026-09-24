@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_EmberSpirit_FlameGuard : public CDOTABaseAbility
 {
 };

@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class C_DOTA_Ability_Mirana_Selemenes_Faithful : public C_DOTABaseAbility
 {
 };

@@ -11,6 +11,7 @@
 //	"m_nDisableTakePhysicsDamageSpawnFlag": 0,
 //	"m_nMotionDisabledSpawnFlag": 0
 //}
+// MHasKV3TransferPolymorphicClassname
 class CPropDataComponent : public CEntityComponent
 {
 	float32 m_flDmgModBullet;

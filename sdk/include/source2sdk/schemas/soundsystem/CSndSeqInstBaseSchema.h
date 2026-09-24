@@ -1,6 +1,7 @@
 // MGetKV3ClassDefaults = Could not parse KV3 Defaults
 // MPropertyAutoExpandSelf
 // MPropertyPolymorphicClass
+// MHasKV3TransferPolymorphicClassname
 class CSndSeqInstBaseSchema
 {
 	SndSeqInstrumentType_t m_nType;

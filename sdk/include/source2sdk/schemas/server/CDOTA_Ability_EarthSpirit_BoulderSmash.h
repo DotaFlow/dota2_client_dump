@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_EarthSpirit_BoulderSmash : public CDOTABaseAbility
 {
 	float32 speed;

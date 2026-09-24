@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_Dawnbreaker_Celestial_Hammer : public C_DOTABaseAbility
 {
 	int32 m_nProjectileIndex;

@@ -49,6 +49,7 @@
 //	"m_eSpawnedUnitTeam": "k_eThem",
 //	"m_szGameObject": ""
 //}
+// MHasKV3TransferPolymorphicClassname
 class ArtySpawnerDef_t : public ArtyGameObjectDef_t
 {
 	float32 m_flInitialDelay;

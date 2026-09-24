@@ -12,6 +12,7 @@
 //	"m_nCollisionGroup": 0,
 //	"m_nCollisionFunctionMask": 0
 //}
+// MHasKV3TransferPolymorphicClassname
 class VPhysicsCollisionAttribute_t
 {
 	uint64 m_nInteractsAs;

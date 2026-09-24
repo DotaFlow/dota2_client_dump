@@ -22,6 +22,7 @@
 //	}
 //}
 // MPropertyFriendlyName = "Wait and Trace"
+// MHasKV3TransferPolymorphicClassname
 class CPulseCell_TestWaitWithAutoTracepoints : public CPulseCell_BaseYieldingInflow
 {
 	CUtlString m_TracePrefix;

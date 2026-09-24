@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_Invoker_Innate_Mastermind : public CDOTABaseAbility
 {
 };

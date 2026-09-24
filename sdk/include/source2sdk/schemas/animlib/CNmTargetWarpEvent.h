@@ -12,6 +12,7 @@
 //	"m_rule": "WarpXYZ",
 //	"m_algorithm": "Bezier"
 //}
+// MHasKV3TransferPolymorphicClassname
 class CNmTargetWarpEvent : public CNmEvent
 {
 	NmTargetWarpRule_t m_rule;

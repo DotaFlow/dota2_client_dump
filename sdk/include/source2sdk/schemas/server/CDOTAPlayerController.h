@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTAPlayerController : public CBasePlayerController
 {
 	int32 m_iMinimapMove;

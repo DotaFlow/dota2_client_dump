@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTAInGamePredictionState : public C_BaseEntity
 {
 	bool m_bVotingClosed;

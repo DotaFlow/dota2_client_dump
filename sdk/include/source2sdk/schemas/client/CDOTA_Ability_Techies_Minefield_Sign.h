@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_Techies_Minefield_Sign : public C_DOTABaseAbility
 {
 	ParticleIndex_t m_nFXIndex;

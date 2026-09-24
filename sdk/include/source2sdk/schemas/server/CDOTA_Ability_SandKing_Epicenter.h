@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_SandKing_Epicenter : public CDOTABaseAbility
 {
 	ParticleIndex_t m_nFXEpicenterIndex;

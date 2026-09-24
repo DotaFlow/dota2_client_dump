@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_VoidSpirit_AetherRemnant : public CDOTABaseAbility
 {
 	float32 start_radius;

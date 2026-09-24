@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_BaseNPC_Hero : public CDOTA_BaseNPC_Additive
 {
 	float32 m_flStrength;

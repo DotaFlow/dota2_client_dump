@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class C_DOTA_Ability_DrowRanger_WaveOfSilence : public C_DOTABaseAbility
 {
 	float32 wave_width;

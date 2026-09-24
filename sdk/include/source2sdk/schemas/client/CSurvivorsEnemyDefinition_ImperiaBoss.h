@@ -143,6 +143,7 @@
 //	"m_sImperiaAmbientWings": ""
 //}
 // MVDataRoot
+// MHasKV3TransferPolymorphicClassname
 class CSurvivorsEnemyDefinition_ImperiaBoss : public CSurvivorsEnemyDefinition
 {
 	float32 m_flBurningGroundImpactDamage;

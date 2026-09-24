@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTAFogOfWarTempViewers : public CBaseEntity
 {
 	uint32 m_FoWTempViewerVersion;

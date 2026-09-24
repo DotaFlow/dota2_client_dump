@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class C_DOTA_Ability_Enigma_Malefice : public C_DOTABaseAbility
 {
 	float32 tick_rate;

@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_Nian_Apocalypse : public CDOTABaseAbility
 {
 	int32 area_of_effect;

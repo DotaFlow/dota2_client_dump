@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_Meepo_Fling : public CDOTABaseAbility
 {
 	CHandle< CBaseEntity > m_hHeldEntity;

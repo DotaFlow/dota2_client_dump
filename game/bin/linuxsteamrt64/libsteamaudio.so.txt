@@ -300,9 +300,6 @@ $ORIGIN
 -+xX0123456789abcdef0123456789ABCDEF
 -+xX0123456789abcdefABCDEF
 -0123456789
--24 24
--36 0
--36 3
 ../public/tier0/check_cast.h
 ../public/tier0/threadtoolstypes.h
 ../public/tier0/utlsortvector.h
@@ -321,16 +318,9 @@ $ORIGIN
 0 0 0
 0 0 0 0
 0 0 0 255
-0 14
-0 36
-0 360
-0 = use biquad instead of svf, 1 = use vectorized svf, 2 = use scalar svf
-0.1 16000
 0123456789
 0123456789ABCDEF
 0123456789abcdef
-0: Use order-truncated Ambisonics HRTF without correction. 1: Use diffuse field equalization to correct order-truncated Ambisonics HRTFs.
-0: distance ratio only. 1: deviation only (1/r). 2: deviation only (linear). 3: Mode 0 and Mode 1, 4: Mode 0 and Mode 2
 10IAppSystem
 11CRefCountedI20CRefCountServiceBaseI6CRefMTEE
 11CSteamAudio
@@ -971,7 +961,6 @@ $ORIGIN
 <undefined>
 <unknown KV3 basic type '%s' (%d)>
 <unknown>
-AABB_t
 AD Time Stamping
 AD_DVCS
 AES-128-CBC
@@ -1009,21 +998,12 @@ APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %d!\n
 ASCII
 ASCII//TRANSLIT
 ASN1 lib
-Above Threshold(dB)
 Acceptable OCSP Responses
 AddPage
-Adjust how much occlusion goes does with deviation angle.
-Adjust overall volume of the default HRTF by the specified gain (dB).
-Adjust scaling for reflection energy when combining it to calculate occlusion value.
-Adjust scaling of pathing energy by exponentiall scaling with pathing delta.
 Ag*g*
 AlignedByteArray not properly aligned\n
 Alloc
-Ambisonics order to use for convolution reverb. 0th order = 1 channel, 1st order = 4 channels.
-Ambisonics order to use for simulating reverb.
 AnimGraphEditorUtils001
-AnimationSystemUtils_001
-AnimationSystem_001
 Any Extended Key Usage
 Any language
 Apply Antialiasing
@@ -1040,7 +1020,6 @@ AssetRenameSystem_001
 AssetSystem001
 AssetSystemTest001
 Attack Time MS
-Attack time (ms)
 Attribute
 August
 Authority Information Access
@@ -1095,8 +1074,6 @@ Bandwidth
 Basic OCSP Response
 Bass Freq
 Bass Mono
-Below Threshold(dB)
-BenchmarkService001
 Big Number part of OpenSSL 1.0.2j  26 Sep 2016
 BinaryProperties_GetValue
 Biometric Info
@@ -1173,21 +1150,10 @@ CRLReason
 CRYPTO lib
 CSPName
 CSplitString::Split(char const*, int, char const**, int, bool)
-CSteamAudioAmbisonicsField
-CSteamAudioBakedDimensionsData
-CSteamAudioBakedMaterialsData
-CSteamAudioBakedOcclusionData
-CSteamAudioBakedPathingData
-CSteamAudioBakedReverbData
-CSteamAudioCompressedReverb
 CSteamAudioMovableBakedData
 CSteamAudioPartitioner
 CSteamAudioPartitioningTask
-CSteamAudioProbeData
-CSteamAudioProbeGrid
-CSteamAudioProbeLineSegment
 CSteamAudioReverbSimulator
-CSteamAudioSceneData
 CSteamAudioSource
 CT Certificate SCTs
 CT Precertificate Poison
@@ -1259,66 +1225,27 @@ CUtlSymbolTable::String(CUtlSymbol) const
 CUtlSymbolTable::~CUtlSymbolTable()
 CUtlSymbolTableLarge element limit of %u exceeded\n
 CUtlVector
-CVMixAutoFilterProcessorDesc
-CVMixBaseProcessorDesc
-CVMixBoxverb2ProcessorDesc
-CVMixBoxverbProcessorDesc
-CVMixConvolutionProcessorDesc
-CVMixDelayProcessorDesc
-CVMixDiffusorProcessorDesc
-CVMixDualCompressorProcessorDesc
-CVMixDynamics3BandProcessorDesc
-CVMixDynamicsCompressorProcessorDesc
-CVMixDynamicsProcessorDesc
-CVMixEQ8ProcessorDesc
-CVMixEffectChainProcessorDesc
-CVMixEnvelopeProcessorDesc
-CVMixFilterProcessorDesc
-CVMixFlangerProcessorDesc
-CVMixFreeverbProcessorDesc
-CVMixModDelayProcessorDesc
-CVMixOscProcessorDesc
-CVMixPannerProcessorDesc
-CVMixPitchShiftProcessorDesc
-CVMixPlateReverbProcessorDesc
-CVMixPresetDSPProcessorDesc
-CVMixShaperProcessorDesc
-CVMixSteamAudioDirectProcessorDesc
-CVMixSteamAudioHRTFProcessorDesc
-CVMixSteamAudioHybridReverbProcessorDesc
-CVMixSteamAudioPathingProcessorDesc
-CVMixStereoDelayProcessorDesc
-CVMixSubgraphSwitchProcessorDesc
-CVMixUtilityProcessorDesc
-CVMixVocoderProcessorDesc
 CVariableBitStringBase::FreeInts()
 CVariableBitStringBase::Resize(int)
 Cannot allocate abstract class
 Cast of %s loses value information (returning %s) in %s on %s:%u\n
 Cast of %s loses value information (returning %s)\n
 Cbasic_ios::clear
-Channels
 CharacterSetBuild
 Chunk hash not found.
 Class data is a '%s', not a table\n
 Class does not allow allocation from its schema binding
 ClientLocalServerAccess001
-ClientServerSharedHandleSystem001
-ClientToolsInfo_001
 Code Signing
-CommandLine
 Complexity
 Complexity of regex match exceeded implementation limits
 CompressBakedReverbInProbeBatch
-Compression Ratio
 Conflicting regex grammar options
 Content file %s is corrupt (Chunk: %s). Verify integrity of game files.\n
 Content file %s is corrupt. Hashing could not be verified. Verify integrity of game files.\n
 Content file %s is corrupt. Verify integrity of game files.\n
 Content file %s is corrupt; Chunk hash not found (expected: %d, found: %d)\n
 Content file %s is corrupt; signature couldn't be verified. Verify integrity of game files\n
-Continue using previous occlusion if probe lookup for occlusion fails.
-Continue using previous reverb if probe lookup for reverb fails.
 Could not load custom hrtf properties file. %s
 CreateInterface
 CreateSimpleThread
@@ -1355,9 +1282,7 @@ Damp
 Debug Band
 Debug Id
 DebugPrintKV3(KeyValues3 const*)
-Decay
 December
-Default
 Delay
 Delay Gain
 DemoUpconverterVersion001
@@ -1374,12 +1299,8 @@ Dimensions: Loaded baked data file (%s).\n
 Dimensions: Unable to load baked data file (%s).\n
 Direct Gain
 Directory
-Display baked data stats for the current mod.
 Domain
 Double-save to Member '%s'
-Downward Ratio
-Drive (dB)
-Dry/Wet
 E-mail Protection
 EC lib
 ENGINE lib
@@ -1450,16 +1371,7 @@ Element.VMixSubgraphSwitchDesc_t
 Element.VMixUtilityDesc_t
 Element.VMixVocoderDesc_t
 Enable Filter
-Enable SIMD code path for diffusor processor.
-Enable SIMD code path for shoebox reverb processor.
-Enable caching listener probe neighborhood for pathing.
-Enable custom HRTF loading.
 Enable multithreading to use std::thread
-Enable order-truncated Ambisonics HRTF loading.
-Enable perspective correction for 3D audio.
-Enabled
-Enables tracy profiling when baking steam audio data in Hammer.
-EngineServiceMgr001
 EnsureCapacity
 EnsureElementCapacity
 EnsureMemberCapacity
@@ -1475,25 +1387,6 @@ Extension Request
 ExtractDirectionalityFromEnergyField
 ExtractModuleMetadata
 FILE pointer
-FILTER_ALLPASS
-FILTER_BANDPASS
-FILTER_HIGHPASS
-FILTER_HIGH_SHELF
-FILTER_LOWPASS
-FILTER_LOW_SHELF
-FILTER_NOTCH
-FILTER_PASSTHROUGH
-FILTER_PEAKING_EQ
-FILTER_SLOPE_12dB
-FILTER_SLOPE_1POLE_12dB
-FILTER_SLOPE_1POLE_18dB
-FILTER_SLOPE_1POLE_24dB
-FILTER_SLOPE_1POLE_6dB
-FILTER_SLOPE_24dB
-FILTER_SLOPE_36dB
-FILTER_SLOPE_48dB
-FILTER_SLOPE_MAX
-FILTER_UNKNOWN
 FIPS routines
 Failed to allocate an instance of a class of type '%s'
 Failed to open file
@@ -1519,7 +1412,6 @@ FioClose(int)
 FioCreateFile(char const*, EFioAccessFlags, EFioShareFlags, EFioCreateMode, unsigned int, int*)
 FioGetSize(int, unsigned long long*)
 FioReadAt(int, unsigned long long, void*, int, int*)
-FlattenedSerializersVersion001
 Fld B Mod Gain
 Fld B Unvoiced Gain
 Fldb Compression Threshold
@@ -1529,7 +1421,6 @@ Fldb Knee Width
 Fldb Limiter Threshold
 Fldb Noise Gate Threshold
 Flxfade
-FontManager_001
 FormatArgumentsToBuffer(IFormatOutputStream*, char const*, CTypeErasedFormattingWrapper const*, int)
 FormatTo(IFormatOutputStream*, CFormatStringElement, bool)
 FormatTo(IFormatOutputStream*, CFormatStringElement, double)
@@ -1539,7 +1430,6 @@ FormatTo(IFormatOutputStream*, CFormatStringElement, std::basic_string_view<char
 FormatTo(IFormatOutputStream*, CFormatStringElement, unsigned int)
 Freq Range End
 Freq Range Start
-Frequency (Hz)
 Friday
 GAME
 GCC: (SteamRT 14.2.0-19~steamrt3.1+bsrt3.1) 14.2.0
@@ -1572,10 +1462,6 @@ GOST R 34.11-94 with GOST R 34.10-2001 Cryptocom
 GOST R 34.11-94 with GOST R 34.10-94
 GOST R 34.11-94 with GOST R 34.10-94 Cryptocom
 GOST R 3410-2001 Parameter Set Cryptocom
-GameResourceServiceClientV001
-GameResourceServiceServerV001
-GameUIService_001
-Generate Halton Sequence for a given order and number of samples.
 Generated %d probes with %.2f spacing and %.2f height.\n
 Generating Halton Sequence of %d order for %d samples.\n
 GetBLAKE3HashContents
@@ -1598,17 +1484,13 @@ HMAC routines
 HMAC-MD5
 HMAC-SHA1
 HammerMapLoader001
-Height
 HelpSystem_001
 High Cutoff Freq
-High Cutoff Freq (Hz)
-High EQ gain (dB)
 Hold Instruction Call Issuer
 Hold Instruction Code
 Hold Instruction None
 Hold Instruction Reject
 Hold Time MS
-HostStateMgr001
 IANA
 ICC or token signature
 IDEA-CBC
@@ -1628,34 +1510,20 @@ IPLStaticMesh
 IPSec End System
 IPSec Tunnel
 IPSec User
-IPulseSystem_001
 ISO Member Body
 ISO US Member Body
 ISO-US
 ITU-T
-If set, OBJ export and Hammer visualization only shows sound blocking geometry used for baking simulation and runtime queries.
-If set, all the probes near a source withing probe range are used to find paths instead of nearest probe.
-If set, baked dimensions data is loaded.
-If set, baked materials data is loaded.
-If set, baked occlusion data is loaded.
-If set, baked pathing data is loaded. Steam Audio Hammer entities can successfully use pathing in this case.
-If set, baked reverb data is loaded. Reset it to zero during an format changes of baked data until all data is updated.
 ImportDimensionsData
 ImportMaterialsData
 ImportOcclusionData
 ImportPathingData
 ImportReverbData
 Independent
-Index of active HRTF.
 Inert VModuleMetadata
 Inherit all
 Input Diffusion1
 Input Diffusion2
-Input Gain (dB)
-Input Pan
-InputService_001
-InputStackSystemVersion001
-InputSystemVersion001
 InsertMultipleBefore
 InstallSchemaBindings
 Insufficient memory to compile regular expression
@@ -1686,7 +1554,6 @@ Kd %f %f %f\n
 Key field (file) missing in custom hrtf properties file. Using default HRTF.
 Key field (normalization) missing in custom hrtf properties file. Setting it to no normalization.
 Key field (volume) missing in custom hrtf properties file. Setting it to 0 dB.
-KeyValueCache001
 KeyValues3: pre-allocated array memory is too small for %u elements (%u bytes available, %u bytes needed)\n
 KeyValues3: pre-allocated table memory is too small for %u members (%u bytes available, %u bytes needed)\n
 KeyValues::FindKey(char const*) const
@@ -1695,7 +1562,6 @@ KeyValues::GetInt(char const*, int) const
 KeyValues::KeyValues(char const*, IKeyValuesSystem*, bool)
 KeyValues::LoadFromFile(IFileSystem*, char const*, char const*, bool (*)(char const*, void*), void*, char const*)
 KeyValues::~KeyValues()
-Knee Width (dB)
 Ks %f %f %f\n
 LC_ADDRESS
 LC_COLLATE
@@ -1712,11 +1578,6 @@ LC_TIME
 LFO Amount
 LFO Rate
 LFO Shape
-LFO_SHAPE_NOISE
-LFO_SHAPE_SAW
-LFO_SHAPE_SINE
-LFO_SHAPE_SQUARE
-LFO_SHAPE_TRI
 LOG_CONSOLE
 LOG_GENERAL
 Late Reflections
@@ -1727,7 +1588,6 @@ LoadKV3Object error: %s\n
 Loaded custom HRTF [%s] with volume [%.2f dB] and normaliztion [%d]\n
 LocalKeySet
 LocalServerClientAccess001
-Localize_001
 LoggingSystem_GetChannelColor
 LoggingSystem_IsChannelEnabled
 LoggingSystem_Log
@@ -1735,8 +1595,6 @@ LoggingSystem_Log(int, LoggingSeverity_t, LoggingRareOptions_t const&, char cons
 LoggingSystem_LogDirect(int, LoggingSeverity_t, Color, LoggingMetaData_t const*, char const*)
 LoggingSystem_RegisterLoggingChannel
 Low Cutoff Freq
-Low Cutoff Freq (Hz)
-Low EQ gain (dB)
 MATCHFRAMEWORK_001
 MD5-SHA1
 MD5Final
@@ -1753,22 +1611,13 @@ MPropertyFriendlyName
 MPropertySuppressEnumerator
 Mail
 Management
-MapListService_001
 March
-MaterialUtils_001
 Materials: Cannot find baked data file: %s.\n
 Materials: Filesystem not initialized.\n
 Materials: Imported %d probes from baked file (%s).\n
 Materials: Loaded baked data file (%s).\n
 Materials: Unable to load baked data file (%s).\n
-Maximum gain any HRTF could have during volume normalization.
-Maximum number of probes to create when baking custom data (dimensions).
-Maximum number of probes to create when baking custom data (occlusion).
-Maximum number of probes to create when baking paths.
-Maximum number of probes to create when baking reverb.
-Maximum order for Ambisonics binaural rendering and Ambisonics panning.
 MemAlloc_StrDupFunc
-MeshSystem001
 MeshUtils001
 Microsoft CSP Name
 Microsoft Commercial Code Signing
@@ -1780,8 +1629,6 @@ Microsoft Server Gated Crypto
 Microsoft Smartcardlogin
 Microsoft Trust List Signing
 Microsoft Universal Principal Name
-Mid EQ gain (dB)
-Minimum distance (in meters) of a source from a surface for the purposes of energy calculations.
 Mismatched '(' and ')' in regular expression
 Mismatched '[' and ']' in regular expression
 Mismatched '{' and '}' in regular expression
@@ -1862,8 +1709,6 @@ NSt8__detail15_BracketMatcherISt12regex_traitsIcELb1ELb1EEE
 NSt8ios_base7failureB5cxx11E
 NSt8ios_base7failureE
 NULL
-Name
-NavGameTest001
 Netscape
 Netscape Base Url
 Netscape CA Policy Url
@@ -1878,17 +1723,9 @@ Netscape Renewal Url
 Netscape Revocation Url
 Netscape SSL Server Name
 Netscape Server Gated Crypto
-NetworkClientService_001
-NetworkMessagesVersion001
-NetworkP2PService_001
-NetworkServerService_001
-NetworkService_001
-NetworkSystemVersion001
 Nonce
-Normalize volume of default HRTF dataset across all directions.
 Not safe to 'new' this class due to alignment requirements
 November
-Number of rays to trace for estimating inside outside status of a probe.
 OBJ lib
 OCSP
 OCSP Archive Cutoff
@@ -1911,12 +1748,7 @@ Occlusion: Loaded baked data file (%s).\n
 Occlusion: Unable to load baked data file (%s).\n
 October
 Only Tails On Fade Out
-Output Balance
 Output Gain
-Output Gain (dB)
-Oversampling
-PANNER_TYPE_EQUAL_POWER
-PANNER_TYPE_LINEAR
 PBE-MD2-DES
 PBE-MD2-RC2-64
 PBE-MD5-DES
@@ -1943,13 +1775,9 @@ POSIX
 PSPECIFIED
 Packed store %s with refcount > 0.\n
 PanoramaTextServices001
-PanoramaUIClient001
-PanoramaUIEngine001
 Parallel
 ParallelForSharedCode
 Parse error on %s: %s\n
-ParticleSystemMgr003
-Path length of invalid path in inches. Set this to .0 to use direct distance as path length.
 Pathing...\n
 Pathing: Cannot find baked paths file: %s. Pathing disabled.\n
 Pathing: Cannot find baked paths file: %s.\n
@@ -1960,11 +1788,8 @@ Pathing: No probes found in baked data file. Pathing disabled.\n
 Pathing: Unable to load baked data file (%s).\n
 Pathing: Unable to read from baked data file (%s). Pathing disabled.\n
 Peak Mode
-Peak mode
 Permanent Identifier
-Perspective correction factor, ratio of screen size and view depth from screen, for 3D audio.
 Phase
-Phase (degrees)
 Phase Invert
 Phonon_Log
 PhysicsBuilderMgr001
@@ -1986,10 +1811,7 @@ Plat_TickDiffSecF
 Pointers cannot be used as numeric values
 Policy Qualifier CPS
 Policy Qualifier User Notice
-PostProcessingSystem_001
-Pre-delay (ms)
 Prefilter
-Private
 Proc Type
 PropertyEditorSystem_001
 Proxy Certificate Information
@@ -2037,13 +1859,9 @@ RegisterConCommand: Unknown error registering con command "%s"!\n
 RegisterConVar: Unknown error registering convar "%s"!\n
 Release
 Release Time MS
-Release time (ms)
 ReleaseThreadHandle
 RenderDevice003
-RenderDeviceMgr001
 RenderHardwareConfig002
-RenderService_001
-RenderUtils_001
 ResourceCompiler/SteamAudio/CustomDataDefaults/BakeDimensions
 ResourceCompiler/SteamAudio/CustomDataDefaults/BakeMaterials
 ResourceCompiler/SteamAudio/CustomDataDefaults/BakeOcclusion
@@ -2090,7 +1908,6 @@ ResourceCompiler/SteamAudio/ReverbDefaults/RebakeOption
 ResourceCompilerSystem001
 ResourceHandleUtils001
 ResourceManifestRegistry001
-ResourceSystem013
 Reverb: %d static probes. %d clustered probes. %d movable reverbs.\n
 Reverb: (Movable %d) %d static probes. %d clustered probes.\n
 Reverb: Cannot find baked reverb file: %s. Reverb disabled.\n
@@ -2122,56 +1939,24 @@ SNMPv2
 SSE and SSE2 are required.
 SSL lib
 SSL routines
-SUBGRAPH_INTERPOLATION_KEEP_LAST_SUBGRAPH_RUNNING
-SUBGRAPH_INTERPOLATION_TEMPORAL_CROSSFADE
-SUBGRAPH_INTERPOLATION_TEMPORAL_FADE_OUT
 SXNetID
 Saturday
 SaveKV3(KV3ID_t const&, KV3ID_t const&, KeyValues3 const*, CUtlString*, CUtlBuffer*, unsigned int)
-SceneSystem_002
-SceneUtils_001
-SchemaSystem_001
 SchemaTestExternal_One_001
 SchemaTestExternal_Two_001
 Secure Electronic Transactions
 Security
 Selected Attribute Types
 September
-SerializedEntitiesVersion001
-ServerToolsInfo_001
-Set the maximum update rate (in Hz) for reverb.
-Set the overlap fraction (0 to 1) for hybrid reverb.
-Set the transition time (in seconds) between convolution and parametric reverb.
 SetKV3FromProbeBatch
 SetProbeBatchFromKV3
 SetProbes
 SetSerializedData
-Sets the number of threads used for realtime reflection by Steam Audio.
-Shape
 Signature verification failed.
 Size
 Size Max
 Size Min
-Solo
-SoundOpSystem001
-SoundOpSystemEdit001
-SoundPicker()
-SoundService_001
-SoundSystem001
-SoundSystemLowLevel
-Source2Client002
-Source2ClientPrediction001
-Source2ClientUI001
-Source2EngineToClient001
-Source2EngineToClientStringTable001
-Source2EngineToServer001
-Source2EngineToServerStringTable001
-Source2GameClients001
-Source2GameEntities001
-Source2Host001
 Source2ModTools001
-Source2Server001
-Source2V8System001
 St10bad_typeid
 St10ctype_base
 St10money_base
@@ -2304,21 +2089,11 @@ St9time_base
 St9type_info
 Stack depth limit hit (%d)
 Stages
-StatsService_001
-SteamAudio
-SteamAudio001
-SteamAudioCustomDataDimensionsSettings_t
-SteamAudioCustomDataOcclusionSettings_t
-SteamAudioPathSettings_t
-SteamAudioReverbClusteringSettings_t
-SteamAudioReverbCompressionSettings_t
-SteamAudioReverbSettings_t
 Strength
 Strong Extranet ID
 Subgraphs
 Subject Information Access
 Sunday
-SurfacePropertiesList
 TLS Web Client Authentication
 TLS Web Server Authentication
 TLS init function for 
@@ -2326,20 +2101,8 @@ TLS wrapper function for
 TS lib
 Taps
 TargetCastForModify
-TestScriptMgr001
-TextBlock()
-TextLayout_001
 Tf %f %f %f\n\n
-The amount of directional detail in the rendered audio by Steam Audio.
-The amount of directional detail in the simulated by Steam Audio.
-The maximum number of rays that can be traced for volumetric occlusion by Steam Audio.
-The maximum number of simultaneous sources that can be modeled by Steam Audio.
-The maximum number of times any ray can bounce when using Steam Audio.
-The number of directions considered for ray bounce by Steam Audio.
-The number of rays to trace for reflection modeling by Steam Audio.
-The time delay between a sound being emitted and the last audible reflection in Steam Audio.
 This convar is being accessed prior to ConVar_Register being called
-This variable is checked by soundstack to globally enabling pathing for audio processing.
 ThreadAtomicNotifyOne(unsigned int const*)
 ThreadGetCurrentId
 ThreadInMainThread
@@ -2347,18 +2110,13 @@ ThreadInitOnceCall_Finish
 ThreadInitOnceCall_ShouldRun
 ThreadJoin
 ThreadSleep
-Threshold (dB)
-Threshold detection time (ms)
 Thursday
 Time Scale
 Time Stamping
-Toggles the speculative fix for low-frequency issues when using spatial blend.
 ToolFramework2_002
 ToolSceneNodeFactory_001
-ToolService_001
 Trust Root
 Tuesday
-Type
 UNDEF
 UTF-8
 Unable to create Ambisonics decode effect [%d]\n
@@ -2376,73 +2134,21 @@ Unknown error
 Unknown version %d for vpk %s
 Unrecognized EHashType found: %d
 Unsupported KV3 basic type '%s' (%d)!
-Upward Ratio
 Usage: snd_steamaudio_halton_sequence <order> <numsamples>.\n
-Use compressed reverb data if available.
 UtlRBTree_FailedInsertDuplicate
 UtlVectorMemory_Alloc
 UtlVectorMemory_CalcNewAllocationCount
 UtlVectorMemory_FailedAllocation
 VApplication001
-VAsyncFileSystem2_001
 VAvi001
 VBik001
-VConComm001
 VDataChoice( %s )
 VDataChoice()
-VEngineCvar007
-VFileSystem017
-VMIX_CHAN_LEFT
-VMIX_CHAN_MID_SIDE
-VMIX_CHAN_MONO
-VMIX_CHAN_RIGHT
-VMIX_CHAN_STEREO
-VMIX_CHAN_SWAP
-VMaterialSystem2_001
 VMediaFoundation001
-VMixAutoFilterDesc_t
-VMixBoxverbDesc_t
-VMixChannelOperation_t
-VMixConvolutionDesc_t
-VMixDelayDesc_t
-VMixDiffusorDesc_t
-VMixDualCompressorDesc_t
-VMixDynamics3BandDesc_t
-VMixDynamicsBand_t
-VMixDynamicsCompressorDesc_t
-VMixDynamicsDesc_t
-VMixEQ8Desc_t
-VMixEffectChainDesc_t
-VMixEnvelopeDesc_t
-VMixFilterDesc_t
-VMixFilterSlope_t
-VMixFilterType_t
-VMixFlangerDesc_t
-VMixFreeverbDesc_t
-VMixLFOShape_t
-VMixModDelayDesc_t
-VMixOscDesc_t
-VMixPannerDesc_t
-VMixPannerType_t
-VMixPitchShiftDesc_t
-VMixPlateverbDesc_t
-VMixPresetDSPDesc_t
-VMixShaperDesc_t
-VMixSubgraphSwitchDesc_t
-VMixSubgraphSwitchInterpolationType_t
-VMixUtilityDesc_t
-VMixVocoderDesc_t
 VP4003
 VPK directory for '%s' corrupt
-VPhysics2_Interface_001
-VProcessUtils002
 VProfScopeHelper<0, false>::EnterScopeInternalBudgetFlags(char const*, VProfBudgetGroupCallSite&, CUtlSourceLocation const&)
-VProfService_001
 VRenderDeviceSetupV001
-VScript
-VScriptDbg
-VScriptManager010
-VStringTokenSystem001
 VTT for 
 VTT for std::basic_fstream<char, std::char_traits<char>>
 VTT for std::basic_fstream<wchar_t, std::char_traits<wchar_t>>
@@ -2526,15 +2232,12 @@ V_strtok
 V_tand
 V_tanf
 V_tanhf
-Vector
 VerifySingleChunk
 VisBuilder_001
 Vrad3_001
 Warning
 Wednesday
 Wet Mix
-Width
-WorldRendererMgr001
 X500
 X500algorithms
 X509
@@ -2976,7 +2679,6 @@ biased
 bignum routines
 binary_auto
 binary_blob
-bind
 bind_textdomain_codeset
 bindtextdomain
 bio_lib.c
@@ -3183,14 +2885,12 @@ co_await
 code
 codeSigning
 colon
-color
 comma
 commercial-at
 common libcrypto routines
 commonName
 comp
 configuration file routines
-connect
 const_cast
 construction vtable for 
 content types
@@ -3250,7 +2950,6 @@ des-ede3-cfb1
 des-ede3-cfb8
 des-ede3-ofb
 des-ofb
-description
 destinationIndicator
 desx-cbc
 dgettext
@@ -3398,7 +3097,6 @@ g_nSequentialIndices<float>
 g_nSequentialIndices<int vector[4]>
 g_nSequentialIndices<int>
 g_pMemAlloc
-gain of wet signal (dB)
 gainReduction
 generate cryptogram
 generationQualifier
@@ -3743,11 +3441,9 @@ idea-cfb
 idea-ecb
 idea-ofb
 identified-organization
-info
 inhibitAnyPolicy
 initializer for module 
 initials
-input
 inputPeak
 int const& std::min<int>(int const&, int const&)
 int std::__exchange<int, int>(int&, int&&)
@@ -4007,198 +3703,16 @@ long std::__exchange<long, int>(long&, int&&)
 lower
 lseek
 mXRecord
-m_aabb
-m_bApplyAntialiasing
-m_bBassMono
-m_bEnable
-m_bEnableClustering
-m_bEnableCompression
-m_bEnableFilter
-m_bEnablePathing
-m_bEnableReflections
-m_bEnabled
-m_bExportScene
-m_bOnlyTailsOnFadeOut
-m_bParallel
-m_bPeakMode
-m_bPhaseInvert
-m_bSolo
-m_bandDesc
-m_clusteredProbes
-m_compressedClusteredData
-m_compressedData
-m_desc
-m_effectName
-m_feedbackFilter
-m_field
-m_filter
-m_filterType
-m_flAttackTimeMS
-m_flBandwidth
-m_flBassFreq
-m_flComplexity
-m_flCompressionRatio
-m_flCutoffFreq
-m_flDamp
-m_flDecay
-m_flDelay
-m_flDelayGain
-m_flDepth
-m_flDepthThreshold
-m_flDiffusion
-m_flDirectGain
-m_flEnvelopeAmount
-m_flFeedback
-m_flFeedbackDepth
-m_flFeedbackDiffusion1
-m_flFeedbackDiffusion2
-m_flFeedbackGain
-m_flFeedbackHeight
-m_flFeedbackScale
-m_flFeedbackWidth
-m_flFeedforwardGain
-m_flFreqRangeEnd
-m_flFreqRangeStart
-m_flGlideTime
-m_flHeight
-m_flHighCutoffFreq
-m_flHoldTimeMS
-m_flIRDuration
-m_flInputDiffusion1
-m_flInputDiffusion2
-m_flInputPan
-m_flInsideThreshold
-m_flInterpolationTime
-m_flLFOAmount
-m_flLFORate
-m_flLateReflections
-m_flLimiterRatio
-m_flLowCutoffFreq
-m_flModDepth
-m_flModRate
-m_flOutputBalance
-m_flOutputGain
-m_flOutsideThreshold
-m_flPhase
-m_flPitchShift
-m_flPreDelayMS
-m_flPrefilter
-m_flProbePathRange
-m_flProbeVisRadius
-m_flProbeVisThreshold
-m_flQ
-m_flQuality
-m_flRMSTimeMS
-m_flRatio
-m_flRatioAbove
-m_flRatioBelow
-m_flReleaseTimeMS
-m_flRoomSize
-m_flSize
-m_flSizeMax
-m_flSizeMin
-m_flSizeThreshold
-m_flSpacing
-m_flStrength
-m_flTaps
-m_flTimeScale
-m_flWetMix
-m_flWidth
-m_fldBModGain
-m_fldBUnvoicedGain
-m_fldbCompressionThreshold
-m_fldbDrive
-m_fldbGain
-m_fldbGainInput
-m_fldbGainOutput
-m_fldbHigh
-m_fldbKneeWidth
-m_fldbLimiterThreshold
-m_fldbLow
-m_fldbMid
-m_fldbNoiseGateThreshold
-m_fldbOutputGain
-m_fldbThresholdAbove
-m_fldbThresholdBelow
-m_flxfade
-m_freq
-m_grid
-m_interpolationMode
-m_movables
-m_nAmbisonicsOrder
-m_nAmbisonicsOrderInsideSizeField
-m_nAmbisonicsOrderOutsideField
-m_nBandCount
-m_nBands
-m_nBins
-m_nChannels
-m_nCubeMapResolution
-m_nDebugBand
-m_nDebugId
-m_nFilterSlope
-m_nFilterType
-m_nGrainSampleCount
-m_nLFOShape
-m_nNumBounces
-m_nNumRays
-m_nNumVisSamples
-m_nOp
-m_nOversampleFactor
-m_nProbes
-m_nProcType
-m_nQuality
-m_nReflectionBounces
-m_nReflectionRays
-m_nShape
-m_name
-m_nx
-m_ny
-m_nz
 m_pClusteredProbeBatch
-m_pCompressedData
-m_pProbeBatch
-m_pScene
-m_pStaticMesh
-m_probes
-m_reverbClusteringSettings
-m_reverbCompressionSettings
-m_reverbSettings
-m_scene
-m_settings
-m_stages
-m_subgraphs
-m_type
-m_vEnd
-m_vMaxBounds
-m_vMinBounds
-m_vStart
 m_vecAABBs
-m_vecClusterForProbe
-m_vecCompressedData
 m_vecData
-m_vecDictionary
-m_vecInOut
 m_vecInitialTransforms
-m_vecInsideSmallSizeField
-m_vecIntervals
 m_vecKeys
-m_vecLineSegments
-m_vecMaterialTokens
-m_vecMaterialWeights
-m_vecNumSingularValues
-m_vecOutsideField
-m_vecPathingDeviation
-m_vecPathingRatio
-m_vecProbeIndices
-m_vecProbes
-m_vecReflectionEnergy
-m_vecSize
 mail
 mailPreferenceOption
 malloc
 malloc failure
 manager
-maps
 maps/
 max_hrtf_normalization_volume_gain_db
 mbrtowc
@@ -4246,7 +3760,6 @@ mt19937
 mtllib %s\n\n
 munmap
 nSRecord
-name
 nameConstraints
 nanosleep
 nested asn1 error
@@ -4319,9 +3832,7 @@ operator""
 organizationName
 organizationalStatus
 organizationalUnitName
-oscType
 otherMailbox
-output
 outputPeak
 override_reconstruction_type
 owner
@@ -4330,7 +3841,6 @@ packedstore.cpp
 pagerTelephoneNumber
 passed a null parameter
 password based MAC
-path
 payment gateway capabilities
 pbeWithMD2AndDES-CBC
 pbeWithMD2AndRC2-CBC
@@ -4696,61 +4206,6 @@ singleLevelQuality
 sizeof 
 sizeof...
 slash
-snd_boxverb_simd
-snd_boxverb_simd_svf
-snd_diffusor_simd
-snd_hrtf_distance_behind
-snd_steamaudio_active_hrtf
-snd_steamaudio_ambisonics_correction_type
-snd_steamaudio_baked_data_stats
-snd_steamaudio_baked_occlusion_mode
-snd_steamaudio_baked_occlusion_pathing_deviation_slope
-snd_steamaudio_baked_occlusion_pathing_exponent
-snd_steamaudio_baked_occlusion_reflection_factor
-snd_steamaudio_default_hrtf_volume_gain
-snd_steamaudio_enable_compressed_reverb_lookup
-snd_steamaudio_enable_custom_hrtf
-snd_steamaudio_enable_editor_profiling
-snd_steamaudio_enable_occlusion_caching
-snd_steamaudio_enable_ordertruncated_ambisonics_hrtf
-snd_steamaudio_enable_pathing
-snd_steamaudio_enable_perspective_correction
-snd_steamaudio_enable_probeneighborhood_caching
-snd_steamaudio_enable_reverb_caching
-snd_steamaudio_enable_spatial_blend_fix
-snd_steamaudio_halton_sequence
-snd_steamaudio_hybrid_reverb_overlap
-snd_steamaudio_hybrid_reverb_transition_time
-snd_steamaudio_invalid_path_length
-snd_steamaudio_ir_duration
-snd_steamaudio_irradiancemindistance_reverb
-snd_steamaudio_load_dimensions_data
-snd_steamaudio_load_materials_data
-snd_steamaudio_load_occlusion_data
-snd_steamaudio_load_pathing_data
-snd_steamaudio_load_reverb_data
-snd_steamaudio_max_ambisonics_order
-snd_steamaudio_max_convolution_sources
-snd_steamaudio_max_hrtf_normalization_gain_db
-snd_steamaudio_max_occlusion_samples
-snd_steamaudio_max_probes_customdata
-snd_steamaudio_max_probes_customdata_dimensions
-snd_steamaudio_max_probes_customdata_materials
-snd_steamaudio_max_probes_pathing
-snd_steamaudio_max_probes_reverb
-snd_steamaudio_normalize_default_hrtf_volume
-snd_steamaudio_num_bounces
-snd_steamaudio_num_diffuse_samples
-snd_steamaudio_num_rays
-snd_steamaudio_num_threads
-snd_steamaudio_pathing_enable_source_probe_interp
-snd_steamaudio_pathing_order
-snd_steamaudio_pathing_order_rendering
-snd_steamaudio_perspective_correction_factor
-snd_steamaudio_reverb_order
-snd_steamaudio_reverb_order_rendering
-snd_steamaudio_reverb_update_rate
-snd_steamaudio_use_soundblocking_shapes_only
 snmpv2
 socket
 source_file
@@ -8270,7 +7725,6 @@ steamaudio_customdata_bake_materials
 steamaudio_customdata_bake_occlusion
 steamaudio_customdata_dimensions_inside_threshold
 steamaudio_customdata_dimensions_insidesize_order
-steamaudio_customdata_dimensions_numrays
 steamaudio_customdata_dimensions_outside_order
 steamaudio_customdata_dimensions_outside_threshold
 steamaudio_customdata_dimensions_size_threshold
@@ -8321,7 +7775,6 @@ street
 streetAddress
 strerror
 strerror_r
-string
 string literal
 string::string
 strlen
@@ -8341,7 +7794,6 @@ subtreeMaximumQuality
 subtreeMinimumQuality
 supportedAlgorithms
 supportedApplicationContext
-surfacePropertyName
 surname
 syscall
 sysconf
@@ -8412,7 +7864,6 @@ transaction clone for std::underflow_error::underflow_error(char const*)
 transaction clone for std::underflow_error::underflow_error(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)
 transaction clone for std::underflow_error::~underflow_error()
 transmissionCoefficients
-true
 trustRoot
 typeinfo fn for 
 typeinfo for 
@@ -9007,7 +8458,6 @@ void std::swap<std::_Rb_tree_color>(std::_Rb_tree_color&, std::_Rb_tree_color&)
 void std::swap<std::__detail::_List_node_base*>(std::__detail::_List_node_base*&, std::__detail::_List_node_base*&)
 void std::swap<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>(std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>&, std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>&)
 void std::vector<std::regex_traits<char>::_RegexMask, std::allocator<std::regex_traits<char>::_RegexMask>>::_M_realloc_append<std::regex_traits<char>::_RegexMask const&>(std::regex_traits<char>::_RegexMask const&)
-volume
 vsnprintf
 vtable for 
 vtable for CCharBufferFormatOutputStream

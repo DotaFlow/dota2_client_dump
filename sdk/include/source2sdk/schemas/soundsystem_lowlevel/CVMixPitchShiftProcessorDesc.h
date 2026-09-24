@@ -12,6 +12,7 @@
 //		"m_nProcType": 0
 //	}
 //}
+// MHasKV3TransferPolymorphicClassname
 class CVMixPitchShiftProcessorDesc : public CVMixBaseProcessorDesc
 {
 	VMixPitchShiftDesc_t m_desc;

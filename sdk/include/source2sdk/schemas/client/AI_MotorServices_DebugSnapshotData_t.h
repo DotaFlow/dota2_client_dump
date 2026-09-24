@@ -12,7 +12,7 @@
 //	]
 //}
 // MPropertyFriendlyName = "Motor Services"
-// MDebugSnapshotDataRenderFn (UNKNOWN FOR PARSER)
+// MDebugSnapshotDataRenderFn
 class AI_MotorServices_DebugSnapshotData_t
 {
 	CGlobalSymbol active_motor;

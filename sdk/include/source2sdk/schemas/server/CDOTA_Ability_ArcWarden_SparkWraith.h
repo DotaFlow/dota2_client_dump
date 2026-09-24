@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_ArcWarden_SparkWraith : public CDOTABaseAbility
 {
 	float32 duration;

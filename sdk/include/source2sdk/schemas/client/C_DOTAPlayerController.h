@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class C_DOTAPlayerController : public CBasePlayerController
 {
 	int32 m_iMinimapMove;

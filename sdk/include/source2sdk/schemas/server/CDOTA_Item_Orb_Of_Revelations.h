@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Item_Orb_Of_Revelations : public CDOTA_Item
 {
 	CountdownTimer m_ViewerTimer;

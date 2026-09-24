@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_Mars_Spear : public CDOTABaseAbility
 {
 	CUtlVector< CHandle< CBaseEntity > > hAlreadyHitList;

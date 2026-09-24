@@ -5,6 +5,7 @@
 //	"m_nNote": 60,
 //	"m_nVelocity": 127
 //}
+// MHasKV3TransferPolymorphicClassname
 class SndBeatEventKeyedMidiNotes_t : public SndBeatEventKeys_t
 {
 	// MPropertyFriendlyName = "Status"

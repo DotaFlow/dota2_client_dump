@@ -20,6 +20,7 @@
 //		"m_choiceName": ""
 //	}
 //}
+// MHasKV3TransferPolymorphicClassname
 class CNmBodyGroupNode::CDefinition : public CNmPassthroughNode::CDefinition
 {
 	int16 m_nEnabledNodeIdx;

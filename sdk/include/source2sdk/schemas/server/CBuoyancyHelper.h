@@ -19,6 +19,7 @@
 //	[
 //	]
 //}
+// MHasKV3TransferPolymorphicClassname
 class CBuoyancyHelper
 {
 	// MPhysPtr

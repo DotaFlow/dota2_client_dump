@@ -1,3 +1,4 @@
+// MNetworkNoBase
 class CSpeechBubbleInfo
 {
 	char[256] m_LocalizationStr;

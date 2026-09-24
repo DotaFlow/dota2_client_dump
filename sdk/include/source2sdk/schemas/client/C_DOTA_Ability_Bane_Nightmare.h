@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class C_DOTA_Ability_Bane_Nightmare : public C_DOTABaseAbility
 {
 	VectorWS m_vEndpoint;

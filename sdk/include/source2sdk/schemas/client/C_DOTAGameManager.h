@@ -1,3 +1,4 @@
+// MNetworkNoBase
 class C_DOTAGameManager
 {
 	// MNotSaved

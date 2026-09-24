@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class C_DOTA_Ability_Creature_Fire_Breath : public C_DOTABaseAbility
 {
 	int32 speed;

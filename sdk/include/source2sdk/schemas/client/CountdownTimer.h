@@ -1,4 +1,6 @@
 // MGetKV3ClassDefaults = null
+// MNetworkNoBase
+// MHasKV3TransferPolymorphicClassname
 class CountdownTimer
 {
 	float32 m_duration;

@@ -29,6 +29,7 @@
 //}
 // MPropertyFriendlyName = "LoopTrigger"
 // MPropertyDescription = "Continuously retriggers a sound and optionally fades to the new instance."
+// MHasKV3TransferPolymorphicClassname
 class CVoiceContainerLoopTrigger : public CVoiceContainerBase
 {
 	float32 m_flRetriggerTimeMin;

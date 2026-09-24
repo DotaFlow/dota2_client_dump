@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_Nian_Hurricane : public CDOTABaseAbility
 {
 	int32 min_distance;

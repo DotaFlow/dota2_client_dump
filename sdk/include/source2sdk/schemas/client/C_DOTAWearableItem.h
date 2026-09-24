@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class C_DOTAWearableItem : public C_EconWearable
 {
 	bool m_bOwnerModelChanged;

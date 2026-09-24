@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_AghsFort_Creature_Impale : public CDOTABaseAbility
 {
 	ParticleIndex_t m_nPreviewFX;

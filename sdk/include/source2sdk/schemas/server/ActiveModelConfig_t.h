@@ -9,6 +9,7 @@
 //	[
 //	]
 //}
+// MHasKV3TransferPolymorphicClassname
 class ActiveModelConfig_t
 {
 	ModelConfigHandle_t m_Handle;

@@ -10,6 +10,7 @@
 //	"m_flGustDuration": 0.000000,
 //	"m_iGustDirChange": 0
 //}
+// MHasKV3TransferPolymorphicClassname
 class C_EnvWindShared
 {
 	// MNotSaved

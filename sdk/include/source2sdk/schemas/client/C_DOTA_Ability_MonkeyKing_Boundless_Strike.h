@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class C_DOTA_Ability_MonkeyKing_Boundless_Strike : public C_DOTABaseAbility
 {
 	float32 strike_cast_range;

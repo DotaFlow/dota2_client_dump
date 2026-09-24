@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_Brewmaster_PrimalSplit : public CDOTABaseAbility
 {
 	CHandle< CBaseEntity > m_hPrimary;

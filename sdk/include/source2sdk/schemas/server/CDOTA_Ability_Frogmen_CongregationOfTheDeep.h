@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_Frogmen_CongregationOfTheDeep : public CDOTABaseAbility
 {
 	CUtlVector< CHandle< CBaseEntity > > hAlreadyHitList;

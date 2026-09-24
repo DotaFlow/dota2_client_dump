@@ -107,6 +107,7 @@
 //	[
 //	]
 //}
+// MHasKV3TransferPolymorphicClassname
 class CParticleSystemDefinition : public IParticleSystemDefinition
 {
 	// MPropertyFriendlyName = "version"

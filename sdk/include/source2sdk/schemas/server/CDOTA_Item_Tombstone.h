@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Item_Tombstone : public CDOTA_Item
 {
 	float32 m_flTimer;

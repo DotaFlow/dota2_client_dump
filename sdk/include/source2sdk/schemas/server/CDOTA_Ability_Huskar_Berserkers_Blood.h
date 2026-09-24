@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_Huskar_Berserkers_Blood : public CDOTABaseAbility
 {
 	bool activatable;

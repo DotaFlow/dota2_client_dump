@@ -68,6 +68,7 @@
 //	"m_flRotationDist": 0.000000
 //}
 // MVDataRoot
+// MHasKV3TransferPolymorphicClassname
 class CSurvivorsPowerUpDefinition_Snotty : public CSurvivorsPowerUpDefinition_AreaAttack_Circle
 {
 	float32 m_flRotationSpeedDeg;

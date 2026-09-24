@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_Lion_Impale : public CDOTABaseAbility
 {
 	float32 width;

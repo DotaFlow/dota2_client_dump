@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_Grimstroke_SoulChain : public CDOTABaseAbility
 {
 	float32 chain_duration;

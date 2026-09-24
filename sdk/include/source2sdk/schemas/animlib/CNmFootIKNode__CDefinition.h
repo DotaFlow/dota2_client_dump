@@ -11,6 +11,7 @@
 //	"m_blendMode": "Effector",
 //	"m_bIsTargetInWorldSpace": false
 //}
+// MHasKV3TransferPolymorphicClassname
 class CNmFootIKNode::CDefinition : public CNmPassthroughNode::CDefinition
 {
 	CGlobalSymbol m_leftEffectorBoneID;

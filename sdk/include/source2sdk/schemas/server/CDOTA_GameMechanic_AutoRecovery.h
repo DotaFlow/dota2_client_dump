@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_GameMechanic_AutoRecovery : public CServerOnlyEntity
 {
 	float32 m_flRecoveryDelay;

@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_Invoker_IceWall : public CDOTA_Ability_Invoker_InvokedBase
 {
 	VectorWS m_vEndPosition;

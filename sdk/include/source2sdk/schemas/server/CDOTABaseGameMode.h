@@ -1,3 +1,5 @@
+// MNetworkNoBase
+// MClassHasEntityLimitedDataDesc
 class CDOTABaseGameMode : public CBaseEntity
 {
 	CUtlString m_ForcedHUDSkin;

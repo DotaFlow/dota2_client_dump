@@ -6,6 +6,7 @@
 //	"m_choreoState": "STATE_PRE_SCRIPT",
 //	"m_flTimeStartedState": null
 //}
+// MHasKV3TransferPolymorphicClassname
 class CGameChoreoServices : public IChoreoServices
 {
 	CHandle< CBaseModelEntity > m_hOwner;

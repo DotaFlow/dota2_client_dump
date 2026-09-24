@@ -6,6 +6,7 @@
 //	"m_nNextSceneEventId": 0,
 //	"m_flAllowResponsesEndTime": null
 //}
+// MHasKV3TransferPolymorphicClassname
 class CChoreoComponent
 {
 	// MNotSaved

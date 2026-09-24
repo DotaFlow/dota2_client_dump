@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_BaseNPC_Creep : public CDOTA_BaseNPC_Additive
 {
 	CDOTA_CreepKillInfo m_KillInfo;

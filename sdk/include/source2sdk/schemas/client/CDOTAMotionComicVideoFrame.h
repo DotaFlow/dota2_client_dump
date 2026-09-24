@@ -7,6 +7,7 @@
 //	"m_sVideoPath": "",
 //	"m_sSoundEventName": ""
 //}
+// MHasKV3TransferPolymorphicClassname
 class CDOTAMotionComicVideoFrame : public CDOTAMotionComicFrame
 {
 	bool m_bLooping;

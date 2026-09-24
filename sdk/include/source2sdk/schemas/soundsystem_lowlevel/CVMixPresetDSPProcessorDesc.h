@@ -9,6 +9,7 @@
 //		"m_effectName": ""
 //	}
 //}
+// MHasKV3TransferPolymorphicClassname
 class CVMixPresetDSPProcessorDesc : public CVMixBaseProcessorDesc
 {
 	VMixPresetDSPDesc_t m_desc;

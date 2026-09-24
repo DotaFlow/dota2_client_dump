@@ -12,6 +12,7 @@
 //	"m_flRenderFxStartTime": null,
 //	"m_flRenderFxDuration": 0.000000
 //}
+// MHasKV3TransferPolymorphicClassname
 class CClientAlphaProperty : public IClientAlphaProperty
 {
 	uint16 m_nDistFadeStart;

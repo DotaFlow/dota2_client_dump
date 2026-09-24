@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_ScriptedSpawner : public CPointEntity
 {
 	CUtlSymbolLarge m_szNPCFirstWaypoint;

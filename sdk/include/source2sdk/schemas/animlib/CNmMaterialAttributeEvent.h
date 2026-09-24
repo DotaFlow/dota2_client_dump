@@ -89,6 +89,7 @@
 //		]
 //	}
 //}
+// MHasKV3TransferPolymorphicClassname
 class CNmMaterialAttributeEvent : public CNmEvent
 {
 	CNmEventTargetEntity_t m_target;

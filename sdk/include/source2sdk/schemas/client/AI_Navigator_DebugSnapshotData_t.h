@@ -10,7 +10,7 @@
 //	"s_arrival_movement_gait_set": ""
 //}
 // MPropertyFriendlyName = "Navigator"
-// MDebugSnapshotDataRenderFn (UNKNOWN FOR PARSER)
+// MDebugSnapshotDataRenderFn
 class AI_Navigator_DebugSnapshotData_t
 {
 	CGlobalSymbol s_movement_id;

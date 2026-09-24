@@ -12,6 +12,7 @@
 //	"m_animEventClassName": "",
 //	"m_KV": null
 //}
+// MHasKV3TransferPolymorphicClassname
 class CNmLegacyEvent : public CNmEvent
 {
 	CUtlString m_animEventClassName;

@@ -2,6 +2,7 @@
 //	"_class": "CGlowProperty",
 //	"m_iGlowType": 0
 //}
+// MHasKV3TransferPolymorphicClassname
 class CGlowProperty
 {
 	// MNotSaved

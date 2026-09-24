@@ -478,7 +478,6 @@ $ORIGIN
 ;J;J;J;J;J;J;J;J;J;J;J;J;J;J;J;Jx
 <<ERROR>>
 <?xml version="1.0" encoding="UTF-8"?>\n\t<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">\n\t\t<xs:complexType name="Internal_RootStyles">\n\t\t\t<xs:sequence>\n\t\t\t\t<xs:any minOccurs="0" maxOccurs="unbounded" processContents="skip"/>\n\t\t\t</xs:sequence>\n\t\t</xs:complexType>\n\t\t<xs:complexType name="Internal_RootScripts">\n\t\t\t<xs:sequence>\n\t\t\t\t<xs:any minOccurs="0" maxOccurs="unbounded" processContents="skip"/>\n\t\t\t</xs:sequence>\n\t\t</xs:complexType>\n\t\t<xs:complexType name="Internal_RootSnippets">\n\t\t\t<xs:sequence>\n\t\t\t\t<xs:any minOccurs="0" maxOccurs="unbounded" processContents="skip"/>\n\t\t\t</xs:sequence>\n\t\t</xs:complexType>\n\n\t\t<xs:complexType name="Internal_BaseType">\n\t\t\t<xs:choice minOccurs="0" maxOccurs="unbounded">\n\t\t\t\t%s\n\t\t\t</xs:choice>\n\n\t\t\t<!-- This isn't great... allows any attribute because we allow that in Panorama. Would love to fix. -->\n\t\t\t<xs:anyAttribute processContents="skip" />\n\t\t</xs:complexType>\n\n\t\t%s\n\n\t\t<xs:element name="root">\n\t\t\t<xs:complexType>\n\t\t\t\t<xs:sequence>\n\t\t\t\t\t<xs:element name="styles" type="Internal_RootStyles" minOccurs="0" maxOccurs="1" />\n\t\t\t\t\t<xs:element name="scripts" type="Internal_RootScripts" minOccurs="0" maxOccurs="1" />\n\t\t\t\t\t<xs:element name="snippets" type="Internal_RootSnippets" minOccurs="0"  maxOccurs="1" />\n\t\t\t\t\t<xs:choice minOccurs="1" maxOccurs="1">\n\t\t\t\t\t\t%s\n\t\t\t\t\t</xs:choice>\n\t\t\t\t</xs:sequence>\n\t\t\t</xs:complexType>\n\t\t</xs:element>\n\t</xs:schema>\n\t
-<ESymbolType> Dump all of the symbols in the Panorama symbol table
 <INVALID>
 <NULL>
 <array: %u elements>
@@ -511,7 +510,6 @@ $ORIGIN
 @import missing semicolon
 @keyframes
 A file with this name is already in the pool.
-A float representing a scale factor for transitions. 1.0 is normal, 2.0 would be twice as fast as normal, 0.5 half as fast
 A protocol message was rejected because it was too big (more than 
 A style file cannot import itself: %s trying to import '%s'
 A!;I2
@@ -838,8 +836,6 @@ AnimGraphEditorUtils001
 Animate FPS:
 AnimationEnd
 AnimationStart
-AnimationSystemUtils_001
-AnimationSystem_001
 Any Extended Key Usage
 Any language
 Application transferred too few scanlines
@@ -919,7 +915,6 @@ BakedLODBuilderMgr001
 Basic OCSP Response
 BeginDebuggerInspect
 BeginFrame
-BenchmarkService001
 Big Number part of OpenSSL 1.0.2j  26 Sep 2016
 BinaryProperties_GetValue
 Biometric Info
@@ -1332,7 +1327,6 @@ CLocalizationStringRaw::ApplyTextTransform
 CMAC
 CMS routines
 CMemAllocSystemInitialize
-COMPILER_CONDITIONAL
 CONF lib
 CONTENT
 CPPTYPE_BOOL
@@ -1578,15 +1572,12 @@ ClearField
 ClearPanelEvent
 ClearPanelEvents
 ClientLocalServerAccess001
-ClientServerSharedHandleSystem001
-ClientToolsInfo_001
 Clip-path not supported unless element string table supplied\n
 CloseDebuggerWindow
 Closed temporary file %s
 Closing joystick %i\n
 Code Signing
 Comma separated list of images or movies to draw in the background. Can specify "none" to not draw a background layer. Combined with background-position, background-size, background-texture-size and background-repeat values.<br><br><b>Example:</b><pre>background-image: url("file://{images}/default.tga"), url( "file://{movies}/Background1080p.webm" );</pre>
-CommandLine
 CompileScript
 Compiler.
 Compiler.If
@@ -1681,7 +1672,6 @@ DBM&(
 DCT coefficient out of range
 DCT scaled block size %dx%d not supported
 DEADLINE_EXCEEDED
-DEFINE
 DEPRECATED: Use $.CreatePanel which has the same signature and supports properties.
 DES-CBC
 DES-CDMF
@@ -1742,10 +1732,8 @@ Diffie-Hellman based MAC
 Diffie-Hellman routines
 Directory
 DirtyDialogVarsValue
-Disable descendant selector filtering
 Dispatch an event
 Dispatch an event to occur later
-Dispatch the event defined by the argument string. No creating panel is specified.
 DispatchEvent
 DispatchEventAsync
 DispatchEvent_Internal
@@ -1785,19 +1773,13 @@ Duplicate snippet name: %s
 E-mail Protection
 E<G&Iw
 EC lib
-ELayoutNodeType
 ENGINE lib
 ERROR
 ERROR: AsyncWebRequest has been removed.
 ERROR: CUtlSymbolTableLarge element limit of %u exceeded\n
-EStyleNodeType
 EVP lib
 EXPERIMENTAL: Sets a more-complex brush for the entire border paint area (ignores normal border color).<br><br><b>Examples:</b><pre>border-brush: gradient( linear, 0% 0%, 0% 100%, from( #fbfbfbff ), to( #c0c0c0c0 ) );\nborder-brush: gradient( linear, 0% 0%, 0% 100%, from( #fbfbfbff ), color-stop( 0.3, #ebebebff ), to( #c0c0c0c0 ) );\nborder-brush: gradient( radial, 50% 50%, 0% 0%, 80% 80%, from( #00ff00ff ), to( #0000ffff ) );</pre>
 EXPORTSYSTEM_INTERFACE_VERSION_001
-EXPRESSION
-EXPRESSION_CONCAT
-EXPRESSION_TEXT
-EXPRESSION_URL
 Each
 Each requires 2 parameters, an object or array and a function to call on each element
 EarlyInit_Tier0
@@ -1805,21 +1787,16 @@ EconItemToolModel_001
 Empty JPEG image (DNL not supported)
 Empty input file
 Enable multithreading to use std::thread
-Enable panorama joystick input
-Enable script caching to speed up recompiling scripts multiple times.
-Enable sending minidumps on JS Exceptions.
 End Of Image
 End-of-file inside block comment.
 EndFrame
 EndFrame - opacity lru
 EndFrame - rt cache cleanup
-EngineServiceMgr001
 EnsureCapacity
 EnsureElementCapacity
 EnsureMemberCapacity
 EnsureUnusedCapacity
 Enterprises
-Entry
 Enum name 
 Enum type "
 Enum value "$0" is reserved multiple times.
@@ -1930,7 +1907,6 @@ Failed to parse selector
 Failed to parse style value for %s
 Failed to save unsupported class
 Failed to serialize KV3 block: %s\n
-False
 FastHexToBuffer() wants non-negative integers, not 
 Features
 February
@@ -1989,19 +1965,12 @@ First argument to RegisterKeyBind must be a panel object or string (input namesp
 First argument to Schedule() must be a number as a delay in seconds
 First argument to Swap() (of type "
 First argument to SwapFields() (of type "
-Fix alignment issues
-Fix content size issues
 FixedDiv1_C
 FixedDiv1_X86
 FixedDiv_C
 FixedDiv_X86
 FixupResourceName: Illegal full path passed in ("%s")!\n
 FixupResourceName: Illegal path, missing extension passed in ("%s")!\n
-FlattenedSerializersVersion001
-FontManager_001
-Force desired layout traverse, even if the cached values are up to date.
-Force style invalidation of the entire panel subtree when adding / removing classes.
-Force style invalidation of the entire panel subtree when adding / removing style flags.
 FormatArgumentsToBuffer(IFormatOutputStream*, char const*, CTypeErasedFormattingWrapper const*, int)
 FormatTo(IFormatOutputStream*, CFormatStringElement, bool)
 FormatTo(IFormatOutputStream*, CFormatStringElement, float)
@@ -2060,16 +2029,12 @@ GOST R 34.11-94 with GOST R 34.10-2001 Cryptocom
 GOST R 34.11-94 with GOST R 34.10-94
 GOST R 34.11-94 with GOST R 34.10-94 Cryptocom
 GOST R 3410-2001 Parameter Set Cryptocom
-GameResourceServiceClientV001
-GameResourceServiceServerV001
-GameUIService_001
 GamepadInput
 GaussCol_C
 GaussCol_F32_C
 GaussPlane_F32
 GaussRow_C
 GaussRow_F32_C
-Generate the Layout XML Schema Definition for the current run-time (types are dependent on which game DLL is running).
 Get the current language
 Get the current panel context
 GetARGBBlend
@@ -2161,7 +2126,6 @@ Hold Instruction Call Issuer
 Hold Instruction Code
 Hold Instruction None
 Hold Instruction Reject
-HostStateMgr001
 Huffman code size table overflow
 Huffman table 0x%02x was not defined
 I010AlphaToARGBMatrix
@@ -2380,8 +2344,6 @@ IFormatOutputStream::PutRepeatedChar(char, int)
 IImageSource
 IMAGE_FORMAT_IMC2
 IMAGE_FORMAT_NV12
-IMPORT
-INCLUDE
 INFO
 INTERNAL
 INVALID_ARGUMENT
@@ -2389,12 +2351,10 @@ INVALID_CPPTYPE
 IPSec End System
 IPSec Tunnel
 IPSec User
-IPulseSystem_001
 ISO Member Body
 ISO US Member Body
 ISO-US
 ITU-T
-If non-empty, print debug info about async event queue and dispatch behavior for events containing the substring.
 IfHasClassEvent
 IfHoverOtherEvent
 IfNotHasClassEvent
@@ -2432,9 +2392,6 @@ Input size too large:
 InputFocusLost
 InputFocusSet
 InputFocusTopLevelChanged
-InputService_001
-InputStackSystemVersion001
-InputSystemVersion001
 Insert
 InsertAfterEqual
 InsertMultipleBefore
@@ -2559,13 +2516,10 @@ January
 Javascript
 July
 June
-KEYFRAMES
-KEYFRAME_SELECTOR
 KISA
 KNQ\r
 Key in map fields cannot be enum types.
 Key in map fields cannot be float/double, bytes or message types.
-KeyValueCache001
 KeyValues3: pre-allocated array memory is too small for %u elements (%u bytes available, %u bytes needed)\n
 KeyValues3: pre-allocated table memory is too small for %u members (%u bytes available, %u bytes needed)\n
 KeyValues::CreateNewKey()
@@ -2605,7 +2559,6 @@ LV_ESSENTIAL
 LV_HIGHEST_VERBOSITY
 LV_MAXIMUM
 LV_MORE_DETAILED
-Language
 Layout FPS:
 Layout FPS:\t%1.2f\nAnimate FPS:\t%1.2f\nRender FPS:\t%1.2f\n
 Layout XSD contents copied to clipboard.\n
@@ -2631,7 +2584,6 @@ Localize() got invalid optional panel value
 Localize() optional panel argument present but isn't a panel
 Localize() requires a string as its first argument
 Localize() requires at least one argument
-Localize_001
 Log a message
 Log a warning message to specified channel
 LogChannel
@@ -2666,7 +2618,6 @@ MapKey::GetStringValue
 MapKey::GetUInt32Value
 MapKey::GetUInt64Value
 MapKey::type MapKey is not initialized. 
-MapListService_001
 MapValueConstRef::GetBoolValue
 MapValueConstRef::GetDoubleValue
 MapValueConstRef::GetEnumValue
@@ -2690,7 +2641,6 @@ MapValueRef::SetUInt32Value
 MapValueRef::SetUInt64Value
 March
 MaskCpuFlags
-MaterialUtils_001
 Maximum supported image dimension is %u pixels
 MaybeAllocateAligned cannot fail here.
 MemAlloc_AllocFunc
@@ -2742,7 +2692,6 @@ MergeXRGBRow_Any_AVX2
 MergeXRGBRow_Any_SSE2
 MergeXRGBRow_C
 MergeXRGBRow_SSE2
-MeshSystem001
 MeshUtils001
 Message class "
 Message does not support reflection (type 
@@ -2767,8 +2716,6 @@ Microsoft Server Gated Crypto
 Microsoft Smartcardlogin
 Microsoft Trust List Signing
 Microsoft Universal Principal Name
-Minimum mouse movement in pixels before a move is treated as a drag scroll
-Minimum time that the mouse button must be down before a move is treated as a drag scroll
 MipsCpuCaps
 MirrorPlane
 MirrorRow_AVX2
@@ -2813,7 +2760,6 @@ MovePanelUp
 MoveRight
 MoveUp
 Multiple extension registrations for type "
-Multiplier for flick velocity off of actual measured velocity
 MultiplyRow_16_AVX2
 MultiplyRow_16_Any_AVX2
 MultiplyRow_16_C
@@ -3267,7 +3213,6 @@ NV21ToYUV24
 NV21ToYUV24Row_C
 NV_NULL
 N_U9203
-NavGameTest001
 Need space between identifier and decimal point.
 Need space between number and identifier.
 Need to increase size of static g_StylePropertyRegistrations (MAX_PANORAMA_STYLE_SYMBOLS) before registering more styles, failed on %s
@@ -3285,12 +3230,6 @@ Netscape Renewal Url
 Netscape Revocation Url
 Netscape SSL Server Name
 Netscape Server Gated Crypto
-NetworkClientService_001
-NetworkMessagesVersion001
-NetworkP2PService_001
-NetworkServerService_001
-NetworkService_001
-NetworkSystemVersion001
 Newline in string literal
 No associated state
 No closing */ before end of file
@@ -3302,7 +3241,6 @@ Non-primitive types can't be packed.
 Non-repeated Any specified multiple times.
 Non-repeated field "
 Nonce
-None
 Not a JPEG file: starts with 0x%02x 0x%02x
 Not a key frame.
 Not enough arguments to %s
@@ -3371,9 +3309,6 @@ P410ToARGBRow_Any_AVX2
 P410ToARGBRow_Any_SSSE3
 P410ToARGBRow_C
 P410ToARGBRow_SSSE3
-PANEL
-PANEL_ATTRIBUTE
-PANEL_ATTRIBUTE_VALUE
 PBE-MD2-DES
 PBE-MD2-RC2-64
 PBE-MD5-DES
@@ -3429,7 +3364,6 @@ PN8panorama27CVideoPlayerEventDispatcherE
 PN8panorama9IUIWindowE
 PNG\r\n
 POSIX
-PROPERTY
 PSPECIFIED
 PURH
 Package name is too long
@@ -3454,7 +3388,6 @@ PanelNeedsRepaint
 PanelRequestedSecondaryLayout
 PanelStyleChanged
 PanelStylesInvalidated
-Panorama
 Panorama Cache Summary:\n
 Panorama Image Decode
 Panorama Panel IDs must only contain letters, numbers, underscores, and hyphens.
@@ -3467,18 +3400,12 @@ Panorama/AllowCustomGameUI
 Panorama/RequireUIInSignedVPK
 PanoramaBasicQuad
 PanoramaBlurOutputTexture%dx%d
-PanoramaContent
 PanoramaDebuggerHotkey
 PanoramaFancyQuad
 PanoramaMovie.Default
-PanoramaScript
 PanoramaTextServices001
 PanoramaUI
-PanoramaUIClient001
-PanoramaUIEngine001
-PanoramaVideoPlayer
 ParallelForSharedCode
-ParticleSystemMgr003
 Pe6^
 PerformLayout
 Permanent Identifier
@@ -3513,15 +3440,10 @@ PlaySoundEffect
 Pointers cannot be used as numeric values
 Policy Qualifier CPS
 Policy Qualifier User Notice
-PostProcessingSystem_001
 Premature end of JPEG file
 Premature end of input file
 Premature end-of-file encountered.
 Premature end-of-partition0 encountered.
-Print internal panorama refcounts for every file
-Print the RenderOperation_t tree for the given root window; set to * to print all
-Prints out all valid panorama CSS properties and their documentation
-Private
 ProcessMouseTrackingResults
 ProcessRemoteInput
 Promise already satisfied
@@ -3598,10 +3520,6 @@ RC5-CBC
 RC5-CFB
 RC5-ECB
 RC5-OFB
-REFERENCE_COMPILED
-REFERENCE_CONTENT
-REFERENCE_PANEL
-REFERENCE_PASSTHROUGH
 RESOURCE_EXHAUSTED
 RESOURCE_TYPE_PANORAMA_DYNAMIC_IMAGES
 RESOURCE_TYPE_PANORAMA_LAYOUT
@@ -3672,7 +3590,6 @@ RGBColorTableRow_C
 RGBColorTableRow_X86
 RGBX8888
 RIPEMD160
-ROOT
 RSA Data Security, Inc.
 RSA Data Security, Inc. PKCS
 RSA lib
@@ -3703,7 +3620,6 @@ Read failed on temporary file
 Read from EMS failed
 Read from XMS failed
 ReadyForDisplay
-Recalculate
 Recursion limit at end of parse should be 
 Refresh
 Register a handler for an event that is not otherwise handled
@@ -3747,10 +3663,7 @@ Render Command Stats\n
 Render FPS:
 Render cmd %u unhandled!\n
 RenderDevice003
-RenderDeviceMgr001
 RenderHardwareConfig002
-RenderService_001
-RenderUtils_001
 Repeated fields can't have default values.
 Requested feature was omitted at compile time
 Requested size is too large to fit into size_t.
@@ -3765,7 +3678,6 @@ ResourceManifestRegistry001
 ResourceStatusChange: (CRC: Expected: 0x%8.8x, Got: 0x%8.8x), '%s'\n
 ResourceStatusChange:\tCRC matches, Ignoring '%s'\n
 ResourceStatusChange:\tReloadChangedFile '%s'\n
-ResourceSystem013
 Return the position of the mouse in the parent window.
 Return true if a file exists.  Path will usually start with 'file://{images}'
 Root
@@ -3785,8 +3697,6 @@ RunScriptInPanelContext was unable to compile provided script
 RunWorkItem
 S/MIME
 S/MIME Capabilities
-SCRIPTS
-SCRIPT_BODY
 SDL3_0.0.0
 SDL_AddEventWatch
 SDL_CloseGamepad
@@ -3832,16 +3742,12 @@ SHA512
 SKyu
 SMIME
 SMIME-CAPS
-SNIPPET
-SNIPPETS
 SNMPv2
 SSE and SSE2 are required.
 SSL lib
 SSL routines
 STEAMHTMLSURFACE_INTERFACE_VERSION_005
 STEAMHTTP_INTERFACE_VERSION003
-STYLES
-STYLE_SELECTOR
 SXNetID
 Sampling factors too large for interleaved scan
 Saturday
@@ -4043,12 +3949,9 @@ ScaleUVRowUp2_Linear_Any_SSSE3
 ScaleUVRowUp2_Linear_C
 ScaleUVRowUp2_Linear_SSSE3
 Scan script does not transmit all data
-SceneSystem_002
-SceneUtils_001
 Schedule
 Schedule a function to be called later
 Schedule() must be called with at least 2 arguments
-SchemaSystem_001
 SchemaTestExternal_One_001
 SchemaTestExternal_Two_001
 Scroll the panel down by one line.
@@ -4089,8 +3992,6 @@ Selected %d colors for quantization
 Selected Attribute Types
 Selector exceeds temp buffer size: %s
 September
-SerializedEntitiesVersion001
-ServerToolsInfo_001
 ServiceOptions
 Set focus to this panel.
 Set whether any child panels are :selected.
@@ -4198,24 +4099,8 @@ SobelYRow_C
 SobelYRow_SSE2
 SoftwareKeyboardVisibilityChanged
 Some options could not be correctly parsed using the proto descriptors compiled into this binary.\nUnparsed options: 
-SoundOpSystem001
-SoundOpSystemEdit001
-SoundService_001
-SoundSystem001
 Source of CopyFrom cannot be a descendant of the target.
-Source2Client002
-Source2ClientPrediction001
-Source2ClientUI001
-Source2EngineToClient001
-Source2EngineToClientStringTable001
-Source2EngineToServer001
-Source2EngineToServerStringTable001
-Source2GameClients001
-Source2GameEntities001
-Source2Host001
 Source2ModTools001
-Source2Server001
-Source2V8System001
 Specifies a 'wash' color, which means a color that will be blended over the panel and all it's children at composition time, tinting them.  The alpha value of the color determines the intensity of the tinting.<br><br><b>Example:</b><pre>wash-color: #39b0d325;</pre>
 Specifies a clip region within the panel, where contents will be clipped at render time. This clipping has no impact on layout, and is fast and supported for transitions/animations. Radial clip mode takes a center point, start angle and angular width of the revealed sector.<br><br><b>Example:</b><pre>clip: rect( 10%, 90%, 90%, 10% );\nclip: radial( 50% %50, 0deg, 90deg );</pre>
 Specifies a fixed time between frames in order to simulate a lower framerate for stylistic reasons. Default is 0s.<br><br><b>Examples:</b><pre>transition-frame-time: 0.2s;\ntransition-frame-time: 0.2s, 0.0s;</pre>
@@ -4269,7 +4154,6 @@ Specifies where to position a context menu relative to this panel. Valid options
 Specifies where to position a tooltip relative to this panel. Valid options include 'left', 'top', 'right', and 'bottom'. List up to 4 positions to determine the order that positions are tried if the tooltip doesn't fully fit on screen. Default is 'right left bottom top'. If less than 4 positions are specified, the tooltip first tries the opposite of the specified position along the same axis before switching to the other axis.<br><br><b>Examples:</b><pre>tooltip-position: bottom;\ntooltip-position: left bottom;</pre>
 Specifies where to position the body of a context menu relative to this panel. The first value controls how the body is aligned horizontally when the context menu is to the top or bottom of the panel, and the second value controls how the body is aligned vertically when the context menu is to the left or right of the panel. 0% means left/top aligned, 50% means center/middle aligned, and 100% means right/bottom aligned. Default is '50% 50%'.<br><br><b>Example:</b><pre>context-menu-body-position: 50% 100%;</pre>
 Specifies where to position the body of a tooltip relative to this panel. The first value controls how the body is aligned horizontally when the tooltip is to the top or bottom of the panel, and the second value controls how the body is aligned vertically when the tooltip is to the left or right of the panel. 0% means left/top aligned, 50% means center/middle aligned, and 100% means right/bottom aligned. Default is '50% 50%'.<br><br><b>Example:</b><pre>tooltip-body-position: 50% 100%;</pre>
-Specifies whether to short circuit applying styles when a parent is invisible.
 Specifies which properties should transition smoothly to new values if a class/pseudo class changes the styles.  Also specifies duration, timing function, and delay.  Valid timing functions are: ease, ease-in, ease-out, ease-in-out, linear.<br><br><b>Example:</b><pre>transition: position 2.0s ease-in-out 0.0s, perspective-origin 1.2s ease-in-out 0.8s;</pre>
 Specifies which properties should transition smoothly to new values if a class/pseudo class changes the styles.<br><br><b>Examples:</b><pre>transition: position, transform, background-color;</pre>
 SplitARGBPlane
@@ -4446,15 +4330,12 @@ Start Of Frame 0x%02x: width=%u, height=%u, components=%d
 Start Of Scan: %d components
 Start of Image
 Start-end tags mismatch
-StatsService_001
 SteamAPI_GetHSteamUser
 SteamAPI_RegisterCallResult
 SteamAPI_UnregisterCallResult
-SteamAudio001
 SteamInternal_ContextInit
 SteamInternal_FindOrCreateUserInterface
 SteamUtils010
-Stop
 StopVideo
 Streaming Gamepad
 String field
@@ -4492,14 +4373,12 @@ TabBackward
 TabForward
 Temp1%dx%d
 Temp2%dx%d
-TestScriptMgr001
 Text content inside of element is not permitted.
 TextEntryFocusChange(): Cleared for %s\n
 TextEntryFocusChange(): Set for %s\n
 TextEntryInvalid(): Cleared for %s\n
 TextInputFinished
 TextInputHandlerStateChange
-TextLayout_001
 The JSON camel-case name of field "
 The [proto3_optional=true] option may only be set on proto3fields, not 
 The extension 
@@ -4536,11 +4415,9 @@ ToggleConsole
 ToggleDebugger
 TogglePanelSelected
 ToggleStyle
-Toggledebugger key operation : 0 = open/inspect, 1 = open/close
 Too many color components: %d, max %d
 ToolFramework2_002
 ToolSceneNodeFactory_001
-ToolService_001
 TopLevelWindowClose
 TopLevelWindowVisibilityChanged
 Total No. of Svgs parsed: %d\n
@@ -4563,7 +4440,6 @@ Tried to register a non-generated type with the generated type registry.
 Trigger an assert
 TriggerClass
 TriggerStyle
-True
 Truncated header.
 Trust Root
 Trying to apply missing animation: %s
@@ -4585,7 +4461,6 @@ U422ToABGR
 U422ToARGB
 U444ToABGR
 U444ToARGB
-UIMemory
 UNAUTHENTICATED
 UNAVAILABLE
 UNDEF
@@ -4645,7 +4520,6 @@ Unexpected protocol specified in file reference; expected 'file://' or 's2r://'.
 Unexpected transform type
 Unimplemented type: 
 Uninterpreted option is missing name or value.
-Unknown
 Unknown APP0 marker (not JFIF), length %u
 Unknown APP14 marker (not Adobe), length %u
 Unknown Adobe color transform code %d
@@ -4686,17 +4560,11 @@ V8ParamToPanoramaType expected bool type to convert, but got something else (%s)
 V8ParamToPanoramaType expected object type to convert, but got something else
 V8ParamToPanoramaType expected object type to convert, but got something else (%s)
 VApplication001
-VAsyncFileSystem2_001
 VAvi001
 VBik001
-VConComm001
-VEngineCvar007
-VFileSystem017
 VGUI
 VGy#
-VMaterialSystem2_001
 VMediaFoundation001
-VNotify
 VNotify Abandoned (Not enabled)\n
 VP4003
 VP8CheckSignature
@@ -4704,15 +4572,8 @@ VP8GetCPUInfo
 VP8GetInfo
 VP8LCheckSignature
 VP8LGetInfo
-VPhysics2_Interface_001
-VProcessUtils002
 VProfScopeHelper<0, false>::EnterScopeInternalBudgetFlags(char const*, VProfBudgetGroupCallSite&, CUtlSourceLocation const&)
-VProfService_001
 VRenderDeviceSetupV001
-VScript
-VScriptDbg
-VScriptManager010
-VStringTokenSystem001
 VTT for 
 VTT for std::basic_fstream<char, std::char_traits<char>>
 VTT for std::basic_fstream<wchar_t, std::char_traits<wchar_t>>
@@ -4861,7 +4722,6 @@ WARNING: Image '%s' size too large (%d x %d with limit %d x %d), image load fail
 WARNING: Resource name "%s" has the incorrect extension "%s" for the specified resource type (expected "%s")!\n
 WARNING: Trying to create a CRenderContextPtr without a valid context.\n
 WDG,r3
-WHITESPACE
 Warning
 Warning parsing text-format 
 Warning: thumbnail image size does not match data length %u
@@ -4903,7 +4763,6 @@ WindowLostFocus
 WindowOffScreen
 WindowOnScreen
 WindowShown
-WorldRendererMgr001
 Write failed on temporary file --- out of disk space?
 Write to EMS failed
 Write to XMS failed
@@ -5303,7 +5162,6 @@ active
 ad dvcs
 ad_timestamping
 additional verification
-additive
 address=
 aes-128-cbc
 aes-128-cbc-hmac-sha1
@@ -5342,7 +5200,6 @@ aes-256-ofb
 aes-256-xts
 alert
 algorithm
-alias
 aliceblue
 align
 alignof 
@@ -5448,7 +5305,6 @@ bf-ofb
 bignum routines
 binary_auto
 binary_blob
-bind
 bind_textdomain_codeset
 bindtextdomain
 bio_lib.c
@@ -6032,7 +5888,6 @@ char32_t const& std::min<char32_t>(char32_t const&, char32_t const&)
 char8_t
 characteristic-two-field
 chartreuse
-child
 childfocusonhover
 chocolate
 circle
@@ -6061,7 +5916,6 @@ codeSigning
 col-resize
 collapse
 colon
-color
 color-stop
 color-stop( %s, 
 colorburn
@@ -6074,7 +5928,6 @@ comp
 composition-layer-texture-name
 condensed
 configuration file routines
-connect
 const google::protobuf::UnknownFieldSet& google::protobuf::UnknownField::group() const
 const google::protobuf::internal::ExtensionSet::Extension* google::protobuf::internal::ExtensionSet::FindOrNullInLargeMap(int) const
 const google::protobuf::internal::ExtensionSet::KeyValue* google::protobuf::internal::ExtensionSet::flat_begin() const
@@ -6193,7 +6046,6 @@ des-ede3-cfb8
 des-ede3-ofb
 des-ofb
 descendantfocus
-description
 destinationIndicator
 desx-cbc
 dgettext
@@ -6259,9 +6111,6 @@ dsa_with_SHA256
 dst_height > 0
 dst_width % 3 == 0
 dst_width > 0
-dump_panorama_css_properties
-dump_panorama_events
-dump_panorama_render_command_stats
 dvcs
 dx != __null
 dx == 65536 * 2
@@ -6271,7 +6120,6 @@ dynamic
 dynamic_cast
 dynlock
 e-resize
-eType
 eXIfoFFstIMEsPLTpHYshISTbKGDiTXtzTXttEXtsRGBsBITiCCPgAMAcHRMtRNSIDATPLTEIHDR
 eaFO
 ease
@@ -6294,7 +6142,6 @@ ellipsis
 elliptic curve routines
 emailAddress
 emailProtection
-enabled
 encrypted track 2
 engine
 engine routines
@@ -6446,7 +6293,6 @@ glibcxx.eh_pool
 global constructors keyed to 
 global destructors keyed to 
 gmtime_r
-gold
 goldenrod
 google.protobuf.
 google.protobuf.Any
@@ -6620,11 +6466,9 @@ half
 hardlight
 hardware
 header crc mismatch
-height
 height > 0
 height-percentage
 height-percentage( %s )
-help
 hidden alias for 
 hittest
 hittestchildren
@@ -6641,7 +6485,6 @@ holdInstructionCallIssuer
 holdInstructionCode
 holdInstructionNone
 holdInstructionReject
-hollow
 hollow 
 homePostalAddress
 homeTelephoneNumber
@@ -6926,7 +6769,6 @@ indianred
 indigo
 infinite
 infinity
-info
 inherit
 inhibitAnyPolicy
 initializer for module 
@@ -7252,7 +7094,6 @@ limegreen
 line
 line-height
 line-through
-linear
 linearGradient
 linearburn
 linen
@@ -7304,7 +7145,6 @@ margin-left
 margin-right
 margin-top
 maroon
-mat_viewportscale
 materials/panorama/panorama.vmat
 materials/panorama/panorama_fancyquad.vmat
 materialsystem2
@@ -7390,7 +7230,6 @@ multiply
 n-resize
 nSRecord
 nTries < 10000000
-name
 nameConstraints
 nanosleep
 navajowhite
@@ -7409,7 +7248,6 @@ no-drop
 no-repeat
 noCheck
 noRevAvail
-noclip
 noexcept
 non-transaction clone for 
 non-virtual thunk to 
@@ -7419,10 +7257,8 @@ non-virtual thunk to std::basic_iostream<char, std::char_traits<char>>::~basic_i
 non-virtual thunk to std::basic_iostream<wchar_t, std::char_traits<wchar_t>>::~basic_iostream()
 non-virtual thunk to std::basic_stringstream<char, std::char_traits<char>, std::allocator<char>>::~basic_stringstream()
 non-virtual thunk to std::basic_stringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>::~basic_stringstream()
-none
 none 
 nonzero
-normal
 not set
 not-allowed
 notready
@@ -7456,7 +7292,6 @@ obj_dat.c
 obj_lib.c
 obj_size
 object identifier routines
-offset
 offsetX
 offsetY
 okOP
@@ -7593,104 +7428,16 @@ panorama
 panorama/layout/custom_game/
 panorama/localization/panorama_%language%.txt
 panorama/panorama.vrman
-panorama_2d_translate_no_comp_layer
 panorama_GenerateLayoutXSD
-panorama_alignment_fixes
-panorama_allow_texture_composition_layer_fast_path
-panorama_allow_transitions
-panorama_apply_styles_for_invisible_parents
-panorama_assert_loading_panel_type
-panorama_box_shadow_no_comp_layer
-panorama_cache_command_list_repaint_threshold
-panorama_cache_command_list_size_threshold
-panorama_classes_force_invalidate
-panorama_clear_frames_on_device_restore
-panorama_comp_layer_lru_lifetime
-panorama_composition_atlas
 panorama_content
-panorama_content_size_fixes
-panorama_dash_gap_ratio
-panorama_dash_len
-panorama_debug_overlay_opacity
-panorama_debug_overlay_opacity_max
-panorama_debug_overlay_opacity_min
-panorama_debug_ready_for_display
-panorama_disable_blur
-panorama_disable_box_shadow
-panorama_disable_descendant_filtering
-panorama_disable_draw_fancy_quad
-panorama_disable_draw_text
-panorama_disable_draw_text_shadow
-panorama_disable_layer_cache
-panorama_disable_layer_clear
-panorama_disable_render_callbacks
-panorama_disable_render_target_cache
-panorama_disallow_hover_styles
-panorama_dispatch_event
-panorama_dragscroll_affordance
-panorama_dragscroll_mintime
-panorama_dragscroll_velocitymultiplier
-panorama_draw_fast_path_img_shadow
-panorama_draw_text_fast_path
-panorama_draw_text_fast_path_text_shadow
-panorama_dump_symbols
-panorama_enable_secondary_layout_pass
 panorama_fancyquad_gradienttexture.vtex
 panorama_fancyquad_vertexlayout
-panorama_force_active_controller_type
-panorama_force_desired_layout_traverse
-panorama_generate_layout_xsd
-panorama_highlight_bad_opacity_masks
-panorama_highlight_composition_layers
-panorama_highlight_slow_operations
-panorama_hsbc_through_fast_path
-panorama_joystick_axis_repeat_curve_time
-panorama_joystick_axis_repeat_interval_end
-panorama_joystick_axis_repeat_interval_start
-panorama_joystick_button_repeat_curve_time
-panorama_joystick_button_repeat_interval_end
-panorama_joystick_button_repeat_interval_start
-panorama_joystick_enabled
-panorama_js_minidumps
-panorama_large_dispatch_event_queue
-panorama_max_text_shadow_strength
-panorama_might_scroll_no_comp_layer
-panorama_min_comp_layer_cache_cost
-panorama_panel_occlusion
-panorama_print_cache_status
-panorama_print_render_tree
-panorama_print_svg_stats
-panorama_reload_animations
-panorama_render_target_cache_max_size
 panorama_rt_%s.vtex
 panorama_rt_composition_atlas%i.vtex
 panorama_rt_ds_%s.vtex
 panorama_rt_pp_%s.vtex
-panorama_script_cache_enabled
-panorama_show_fps
-panorama_show_fps_scale
-panorama_simple_borders_no_comp_layer
-panorama_skip_composition_layer_content_paint
-panorama_skip_composition_layer_content_paint_tint
-panorama_spew_async_event_substring
-panorama_spew_layout_invalidates
-panorama_stats_log_time
-panorama_streaming_load_local_images
-panorama_style_flag_force_invalidate
-panorama_suspend_animation
-panorama_suspend_paint
-panorama_temp_comp_layer_min_dimension
 panorama_text_pango
 panorama_texture.vtex
-panorama_toggledebugger_mode
-panorama_track_render_commands
-panorama_transform_parents_no_layer_for_perspective
-panorama_transforms_no_comp_layer
-panorama_transition_time_factor
-panorama_unlink_from_render_tree
-panorama_use_backbuffer_directly
-panorama_use_composite_cmd_for_cached_layers
-panorama_use_new_occlusion_invalidation
 panorama_video_tex_%s_%d_%d.vtex
 panoramasymbol
 panorma_vertex_texturedlayout
@@ -7703,7 +7450,6 @@ parsing
 pass-through
 passed a null parameter
 password based MAC
-path
 payment gateway capabilities
 pbeWithMD2AndDES-CBC
 pbeWithMD2AndRC2-CBC
@@ -7765,7 +7511,6 @@ policyMappings
 poll
 polygon
 polyline
-position
 postOfficeBox
 postalAddress
 postalCode
@@ -7785,7 +7530,6 @@ prime239v2
 prime239v3
 prime256v1
 print
-print panorama event types and their documentation
 printf
 private
 privateKeyUsagePeriod
@@ -7933,7 +7677,6 @@ saturation
 sbgp-autonomousSysNum
 sbgp-ipAddrBlock
 sbgp-routerIdentifier
-scale
 scale <= 32768
 scale >= 256
 scale3d
@@ -8181,8 +7924,6 @@ slateblue
 slategray
 slategrey
 slot, class
-snd_ui_positional
-snd_ui_spatialization_spread
 snippet
 snippets
 snmpv2
@@ -8190,7 +7931,6 @@ snow
 snprintf
 socket
 solid
-sound
 sound-out
 source2/renderer/source2surface.cpp
 source2/uirenderdevicesource2.cpp
@@ -8202,7 +7942,6 @@ space
 springgreen
 sprintf
 sqrtf
-square
 squish
 src_height != 0
 src_height == ((dst_height + 1) / 2)
@@ -11772,7 +11511,6 @@ stderr
 stdin
 stdout
 steelblue
-stop
 stop-color
 stop-opacity
 store
@@ -11789,7 +11527,6 @@ streetAddress
 strerror
 strerror_r
 stretch
-string
 string length exceeds max size
 string literal
 string::string
@@ -11939,7 +11676,6 @@ translatex
 translatey
 translatez
 transparent
-true
 trustRoot
 turquoise
 type or int32_t).
@@ -12728,7 +12464,6 @@ v8system
 vIK \f3
 vQO+t
 valid
-value
 valveextensions.proto
 vcss
 vcss_c
@@ -12743,7 +12478,6 @@ vector::_M_range_insert
 vector::_M_realloc_append
 vector::reserve
 vectorws
-version
 vertical
 vertical-align
 vertical-line
@@ -13197,7 +12931,6 @@ whirlpool
 white
 white-space
 whitesmoke
-width
 width-percentage
 width-percentage( %s )
 with a type that does not implement MergeFrom. This is unsafe; 

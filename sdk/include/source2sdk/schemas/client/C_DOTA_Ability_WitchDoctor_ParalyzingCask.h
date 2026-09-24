@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class C_DOTA_Ability_WitchDoctor_ParalyzingCask : public C_DOTABaseAbility
 {
 	int32 m_iBounces;

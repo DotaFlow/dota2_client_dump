@@ -5,6 +5,7 @@
 //	],
 //	"m_hOwner": null
 //}
+// MHasKV3TransferPolymorphicClassname
 class PhysicsRagdollPose_t
 {
 	CNetworkUtlVectorBase< CTransform > m_Transforms;

@@ -17,6 +17,7 @@
 //	"m_bSceneEntityDisabled": false,
 //	"m_nLastSpokenPriority": 0
 //}
+// MHasKV3TransferPolymorphicClassname
 class CAI_Expresser
 {
 	CUtlDict< GameTime_t > m_conceptCooldowns;

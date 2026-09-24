@@ -62,6 +62,7 @@
 //	"m_flUpkickExplosionStrength": 340282346638528859811704183484516925440.000000,
 //	"m_eHazardType": "k_eCrateDropHazardType_Invalid"
 //}
+// MHasKV3TransferPolymorphicClassname
 class CDOTACrateDropHazardDef : public CDOTACrateDropDroppableDef
 {
 	float32 m_flExplosionRadius;

@@ -1,3 +1,4 @@
+// MNetworkNoBase
 class CDOTA_AbilityDraftAbilityState
 {
 	AbilityID_t m_nAbilityID;

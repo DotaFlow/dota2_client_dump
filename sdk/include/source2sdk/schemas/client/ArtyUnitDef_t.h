@@ -47,6 +47,7 @@
 //	"m_flMaxMana": 100.000000,
 //	"m_flMovementSpeed": 1.000000
 //}
+// MHasKV3TransferPolymorphicClassname
 class ArtyUnitDef_t : public ArtyGameObjectDef_t
 {
 	bool m_bRotateReloadBar;

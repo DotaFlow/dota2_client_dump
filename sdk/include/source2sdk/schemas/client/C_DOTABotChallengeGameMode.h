@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class C_DOTABotChallengeGameMode : public C_DOTABaseGameMode
 {
 	bool m_bRuleAncientsDuel;

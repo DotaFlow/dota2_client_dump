@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class C_DOTA_Ability_QueenOfPain_SonicWave : public C_DOTABaseAbility
 {
 	GameTime_t m_fStartTime;

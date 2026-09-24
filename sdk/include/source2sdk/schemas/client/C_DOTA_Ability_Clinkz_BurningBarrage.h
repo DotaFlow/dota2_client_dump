@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class C_DOTA_Ability_Clinkz_BurningBarrage : public C_DOTABaseAbility
 {
 	VectorWS m_vStartPos;

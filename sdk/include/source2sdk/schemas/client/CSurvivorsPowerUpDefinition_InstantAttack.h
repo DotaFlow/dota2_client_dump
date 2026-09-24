@@ -64,6 +64,7 @@
 //	"m_sParticle": ""
 //}
 // MVDataRoot
+// MHasKV3TransferPolymorphicClassname
 class CSurvivorsPowerUpDefinition_InstantAttack : public CSurvivorsPowerUpDefinition
 {
 	ESurvivorsAttackTargeting m_eTargeting;

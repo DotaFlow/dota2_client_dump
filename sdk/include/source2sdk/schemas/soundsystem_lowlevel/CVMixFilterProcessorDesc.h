@@ -14,6 +14,7 @@
 //		"m_flQ": 0.707107
 //	}
 //}
+// MHasKV3TransferPolymorphicClassname
 class CVMixFilterProcessorDesc : public CVMixBaseProcessorDesc
 {
 	VMixFilterDesc_t m_desc;

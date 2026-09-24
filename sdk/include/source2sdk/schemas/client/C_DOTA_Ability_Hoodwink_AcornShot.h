@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class C_DOTA_Ability_Hoodwink_AcornShot : public C_DOTABaseAbility
 {
 	uint32 m_nAcornTree;

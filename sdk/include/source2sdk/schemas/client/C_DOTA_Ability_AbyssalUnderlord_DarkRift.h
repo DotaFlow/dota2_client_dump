@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class C_DOTA_Ability_AbyssalUnderlord_DarkRift : public C_DOTABaseAbility
 {
 	float32 teleport_delay;

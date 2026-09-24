@@ -1,3 +1,4 @@
+// MNetworkNoBase
 class CRopeKeyframe : public CBaseModelEntity
 {
 	uint16 m_RopeFlags;

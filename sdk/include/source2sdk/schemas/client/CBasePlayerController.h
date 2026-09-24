@@ -1,3 +1,4 @@
+// MNetworkNoBase
 class CBasePlayerController : public C_BaseEntity
 {
 	// MNotSaved

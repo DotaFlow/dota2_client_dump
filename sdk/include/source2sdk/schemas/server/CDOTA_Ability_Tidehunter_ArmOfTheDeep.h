@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_Tidehunter_ArmOfTheDeep : public CDOTABaseAbility
 {
 	CUtlVector< CHandle< CBaseEntity > > hAlreadyHitList;

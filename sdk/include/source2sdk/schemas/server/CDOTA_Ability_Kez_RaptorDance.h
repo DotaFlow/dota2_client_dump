@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_Kez_RaptorDance : public CDOTA_Ability_Kez_BaseAbility
 {
 	float32 radius;

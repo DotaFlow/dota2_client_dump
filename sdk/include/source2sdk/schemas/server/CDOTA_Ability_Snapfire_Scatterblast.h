@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_Snapfire_Scatterblast : public CDOTABaseAbility
 {
 	int32 damage;

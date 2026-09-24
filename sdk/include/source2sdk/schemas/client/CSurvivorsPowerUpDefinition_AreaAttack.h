@@ -66,6 +66,7 @@
 //	"m_sHitImpactParticle": ""
 //}
 // MVDataRoot
+// MHasKV3TransferPolymorphicClassname
 class CSurvivorsPowerUpDefinition_AreaAttack : public CSurvivorsPowerUpDefinition
 {
 	ESurvivorsAreaAttackOrigin m_eOrigin;

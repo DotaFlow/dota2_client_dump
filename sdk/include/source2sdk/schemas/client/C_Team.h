@@ -1,3 +1,4 @@
+// MNetworkNoBase
 class C_Team : public C_BaseEntity
 {
 	C_NetworkUtlVectorBase< CHandle< CBasePlayerController > > m_aPlayerControllers;

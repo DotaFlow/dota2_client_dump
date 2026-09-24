@@ -499,6 +499,7 @@
 //}
 // MPropertyFriendlyName = "Vsnd Trigger"
 // MPropertyDescription = "Plays vsnds based on trigger parameter changes."
+// MHasKV3TransferPolymorphicClassname
 class CVoiceContainerVsndTrigger : public CVoiceContainerBase
 {
 	// MPropertyFriendlyName = "Namespace"

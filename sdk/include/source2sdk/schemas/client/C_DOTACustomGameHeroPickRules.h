@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class C_DOTACustomGameHeroPickRules : public C_DOTABaseCustomHeroPickRules
 {
 	DOTACustomHeroPickRulesPhase_t m_Phase;

@@ -15,6 +15,7 @@
 //		"m_flMaxRadius": 200.000000
 //	}
 //}
+// MHasKV3TransferPolymorphicClassname
 class CPrecipitationVData : public CEntitySubclassVDataBase
 {
 	CResourceNameTyped< CWeakHandle< InfoForResourceTypeIParticleSystemDefinition > > m_szParticlePrecipitationEffect;

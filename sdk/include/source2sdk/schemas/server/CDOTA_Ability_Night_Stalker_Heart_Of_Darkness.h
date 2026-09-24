@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_Night_Stalker_Heart_Of_Darkness : public CDOTABaseAbility
 {
 	int32 m_nNightModification;

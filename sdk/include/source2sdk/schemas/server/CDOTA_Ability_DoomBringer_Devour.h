@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_DoomBringer_Devour : public CDOTABaseAbility
 {
 	bool m_bIsAltCastState;

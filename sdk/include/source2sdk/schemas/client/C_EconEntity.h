@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class C_EconEntity : public C_BaseAnimatingOverlay, public IHasAttributes
 {
 	CAttributeContainer m_AttributeManager;

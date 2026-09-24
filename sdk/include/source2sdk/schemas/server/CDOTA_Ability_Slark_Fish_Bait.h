@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_Slark_Fish_Bait : public CDOTABaseAbility
 {
 };

@@ -17,6 +17,7 @@
 //	"m_flYawOffset": 0.000000
 //}
 // MVDataRoot
+// MHasKV3TransferPolymorphicClassname
 class ArtyGameObjectInstance_t
 {
 	CUtlString m_szName;

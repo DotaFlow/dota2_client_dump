@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_Morty_Hop : public CDOTABaseAbility
 {
 	float32 max_distance;

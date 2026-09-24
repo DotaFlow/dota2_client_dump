@@ -1,3 +1,4 @@
+// MNetworkNoBase
 class CTormentorSpawnPhase
 {
 	ETormentorLocation m_eTormentorLocation;

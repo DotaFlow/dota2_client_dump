@@ -3,6 +3,7 @@
 //	"m_hOwner": null,
 //	"m_name": ""
 //}
+// MHasKV3TransferPolymorphicClassname
 class CGameSceneNodeHandle
 {
 	CEntityHandle m_hOwner;

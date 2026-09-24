@@ -33,6 +33,7 @@
 //	"enable": false,
 //	"blend": false
 //}
+// MHasKV3TransferPolymorphicClassname
 class fogparams_t
 {
 	Vector dirPrimary;

@@ -1,3 +1,5 @@
+// MNetworkNoBase
+// MClassHasEntityLimitedDataDesc
 class C_DOTABaseGameMode : public C_BaseEntity
 {
 	CUtlString m_ForcedHUDSkin;

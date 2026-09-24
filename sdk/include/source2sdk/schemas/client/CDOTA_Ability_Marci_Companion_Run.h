@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_Marci_Companion_Run : public C_DOTABaseAbility
 {
 	int32 m_nTrackingProjectileID;

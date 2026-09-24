@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_Bane_Nightmare : public CDOTABaseAbility
 {
 	int32 m_nNightmareSwapCount;

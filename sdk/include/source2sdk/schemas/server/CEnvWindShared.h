@@ -16,6 +16,7 @@
 //	{
 //	}
 //}
+// MHasKV3TransferPolymorphicClassname
 class CEnvWindShared
 {
 	// MNotSaved

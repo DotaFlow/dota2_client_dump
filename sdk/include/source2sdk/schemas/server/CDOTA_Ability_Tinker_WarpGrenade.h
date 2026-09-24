@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_Tinker_WarpGrenade : public CDOTABaseAbility
 {
 	float32 debuff_duration;

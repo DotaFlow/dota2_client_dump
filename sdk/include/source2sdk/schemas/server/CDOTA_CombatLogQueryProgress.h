@@ -1,3 +1,4 @@
+// MNetworkNoBase
 class CDOTA_CombatLogQueryProgress
 {
 	PlayerID_t m_nPlayerID;

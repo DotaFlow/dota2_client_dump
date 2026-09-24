@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_UpheavalUrn_Reincarnation : public CDOTABaseAbility
 {
 };

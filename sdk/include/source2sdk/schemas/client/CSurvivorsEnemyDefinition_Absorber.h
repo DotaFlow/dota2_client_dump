@@ -106,6 +106,7 @@
 //	"m_sAbsorbParticleName": ""
 //}
 // MVDataRoot
+// MHasKV3TransferPolymorphicClassname
 class CSurvivorsEnemyDefinition_Absorber : public CSurvivorsEnemyDefinition
 {
 	float32 m_flModelScaleIncreasePerAbsorb;

@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Unit_Scout : public CDOTA_BaseNPC_Additive
 {
 	bool m_bUnitRespawned;

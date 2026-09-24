@@ -1,3 +1,5 @@
+// MNetworkNoBase
+// MClassHasEntityLimitedDataDesc
 class CDotaQuest : public CBaseEntity
 {
 	char[256] m_pszQuestTitle;

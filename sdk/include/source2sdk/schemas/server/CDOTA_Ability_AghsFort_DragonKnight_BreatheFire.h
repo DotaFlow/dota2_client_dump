@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_AghsFort_DragonKnight_BreatheFire : public CDOTABaseAbility
 {
 	ParticleIndex_t m_nPreviewFX;

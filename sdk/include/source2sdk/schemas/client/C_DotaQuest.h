@@ -1,3 +1,5 @@
+// MNetworkNoBase
+// MClassHasEntityLimitedDataDesc
 class C_DotaQuest : public C_BaseEntity
 {
 	char[256] m_pszQuestTitle;

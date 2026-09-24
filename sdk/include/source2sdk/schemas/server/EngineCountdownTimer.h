@@ -1,4 +1,6 @@
 // MGetKV3ClassDefaults = null
+// MNetworkNoBase
+// MHasKV3TransferPolymorphicClassname
 class EngineCountdownTimer
 {
 	float32 m_duration;

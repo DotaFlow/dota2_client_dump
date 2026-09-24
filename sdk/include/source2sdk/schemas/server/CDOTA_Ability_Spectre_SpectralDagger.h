@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_Spectre_SpectralDagger : public CDOTABaseAbility
 {
 	float32 dagger_path_duration;

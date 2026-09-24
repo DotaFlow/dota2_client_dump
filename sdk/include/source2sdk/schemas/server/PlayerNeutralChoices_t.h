@@ -1,3 +1,4 @@
+// MNetworkNoBase
 class PlayerNeutralChoices_t
 {
 	AbilityID_t[45] m_vecTrinketChoices;

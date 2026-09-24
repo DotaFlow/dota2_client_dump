@@ -172,7 +172,6 @@ $ORIGIN
 0 0 0 0
 0 0 0 255
 0123456789
-0: Bilinear, 1: Trilinear, 2: Aniso 2x, 3: Aniso 4x, 4: Aniso 8x, 5: Aniso 16x
 1.2.11
 10ConCommand
 10IAppSystem
@@ -491,8 +490,6 @@ AddPage
 Adobe APP14 marker: version %d, flags 0x%04x 0x%04x, transform %d
 AlignedByteArray not properly aligned\n
 Alloc
-Allow immediately loading mips of textures (when possible) when their headers are loaded, saving IO & reducing latency.
-Alpha
 Alpha decoder initialization failed.
 Android420ToABGR
 Android420ToARGB
@@ -500,8 +497,6 @@ Android420ToARGBMatrix
 Android420ToI420
 Android420ToI420Rotate
 AnimGraphEditorUtils001
-AnimationSystemUtils_001
-AnimationSystem_001
 Application transferred too few scanlines
 Application transferred too many scanlines
 April
@@ -516,14 +511,12 @@ AssetPreviewSystem_001
 AssetRenameSystem_001
 AssetSystem001
 AssetSystemTest001
-Async Texture hookup uses its own threadpool instead of the global pool.
 AsyncHookUpTextureBits
 AsyncHookUpTextureBits Data
 AsyncHookUpTextureBits Disk
 AsyncTextureHookup
 At marker 0x%02x, recovery action %d
 August
-Automatically generate shader debug info on capture
 BC6H
 BGR565
 BGR888
@@ -546,8 +539,6 @@ Backing store not supported
 Bad VTEX data for '%s'\n
 Bad code word
 BakedLODBuilderMgr001
-BenchmarkService001
-Biases the mip level the texture streaming system choses to stream for each texture.
 BinaryProperties_GetValue
 BlendPlane
 BlendPlaneRow_AVX2
@@ -555,7 +546,6 @@ BlendPlaneRow_Any_AVX2
 BlendPlaneRow_Any_SSSE3
 BlendPlaneRow_C
 BlendPlaneRow_SSSE3
-Blue
 Bogus DAC index %d
 Bogus DAC value 0x%x
 Bogus DHT index %d
@@ -739,10 +729,7 @@ CharacterSetBuild
 ClampFloatToZero_SSE2
 Client Rendering
 ClientLocalServerAccess001
-ClientServerSharedHandleSystem001
-ClientToolsInfo_001
 Closed temporary file %s
-CommandLine
 Complexity of regex match exceeded implementation limits
 Component index %d: mismatching sampling ratio %d:%d, %d:%d, %c
 Compressed texture decoded in %.2f ms\n
@@ -817,13 +804,11 @@ DeviceID
 Didn't expect more than one scan
 Direct3D 11
 Discarding abandoned streaming texture load for %s\n
-Display GPU memory usage.
 DivideRow_16_AVX2
 DivideRow_16_Any_AVX2
 DivideRow_16_C
 Don't support DXLevel < 110
 Driver Name:  %s\nDriver Version: %s\nVendorId / DeviceId:  0x%x / 0x%x\nSubSystem / Rev:  0x%x / 0x%x\nDXLevel:  %d\nTexture memory:  %s\nGPU memory (use / budget): %s / %s\nVid:  %s, render at %i x %i, display at %i x %i, refresh rate %.2fHz (%uHz desktop)\n
-Dumps state of texture streaming at the next frame boundary.
 E<G&Iw
 ERROR: CUtlSymbolTableLarge element limit of %u exceeded\n
 ETC1
@@ -842,14 +827,12 @@ Empty JPEG image (DNL not supported)
 Empty input file
 Enable multithreading to use std::thread
 End Of Image
-EngineServiceMgr001
 EnsureElementCapacity
 EnsureMemberCapacity
 EnsureUnusedCapacity
 Etc::DifferentialTrys::DifferentialTrys(Etc::ColorFloatRGBA, Etc::ColorFloatRGBA, const unsigned int*, const unsigned int*, unsigned int, int, int)
 Etc::Image::EncodingStatus Etc::Image::Encode(Etc::Image::Format, Etc::ErrorMetric, float, unsigned int, unsigned int)
 Etc::IndividualTrys::IndividualTrys(Etc::ColorFloatRGBA, Etc::ColorFloatRGBA, const unsigned int*, const unsigned int*, unsigned int)
-Evict all resident texture.
 Exclusive Fullscreen
 ExtractModuleMetadata
 Failed to compute channel layout.\n
@@ -875,11 +858,9 @@ FixedDiv_C
 FixedDiv_X86
 FixupResourceName: Illegal full path passed in ("%s")!\n
 FixupResourceName: Illegal path, missing extension passed in ("%s")!\n
-FlattenedSerializersVersion001
 FloatBitMap_t::LoadFromBuffer: Received improper buffer size, skipping!\n
 FloatBitMap_t::LoadFromBuffer: Unsupported color format, skipping!\n
 FloatBitMap_t::WriteToBuffer: Received improper buffer size %s (expecting %s), skipping!\n
-FontManager_001
 FormatArgumentsToBuffer(IFormatOutputStream*, char const*, CTypeErasedFormattingWrapper const*, int)
 FormatTo(IFormatOutputStream*, CFormatStringElement, bool)
 FormatTo(IFormatOutputStream*, CFormatStringElement, float)
@@ -906,9 +887,6 @@ GLIBC_2.25
 GLIBC_2.3
 GLIBC_2.3.2
 GLIBC_2.4
-GameResourceServiceClientV001
-GameResourceServiceServerV001
-GameUIService_001
 GaussCol_C
 GaussCol_F32_C
 GaussPlane_F32
@@ -926,7 +904,6 @@ GetThreadLocalStackAllocator
 GetXCR0
 Gf95)1&!\ry9I
 Graphics Device changed, resetting video config\n
-Green
 H$6t
 H*0"ZOW
 H010ToAB30
@@ -960,7 +937,6 @@ HalfMergeUVRow_C
 HalfMergeUVRow_SSSE3
 HammerMapLoader001
 HelpSystem_001
-HostStateMgr001
 Huffman code size table overflow
 Huffman table 0x%02x was not defined
 I010AlphaToARGBMatrix
@@ -1174,11 +1150,6 @@ IFormatOutputStream::OutputIndentation()
 IFormatOutputStream::PutRepeatedChar(char, int)
 IMAGE_FORMAT_IMC2
 IMAGE_FORMAT_NV12
-INPUT_LAYOUT_VARIATION_DEFAULT
-INPUT_LAYOUT_VARIATION_MAX
-INPUT_LAYOUT_VARIATION_STREAM1_INSTANCEID
-INPUT_LAYOUT_VARIATION_STREAM1_INSTANCEID_MORPH_VERT_ID
-IPulseSystem_001
 IiGM>nw
 Ik6 
 Image data size is zero or too large: width = 
@@ -1190,10 +1161,6 @@ Inert VModuleMetadata
 InitCpuFlags
 InitializeDummyRow
 Input file read error
-InputLayoutVariation_t
-InputService_001
-InputStackSystemVersion001
-InputSystemVersion001
 InsertMultipleBefore
 InstallSchemaBindings
 Insufficient data length.\n
@@ -1269,7 +1236,6 @@ July
 June
 KNQ\r
 Keeping resolution of (%dx%d)\n
-KeyValueCache001
 KeyValues3: pre-allocated array memory is too small for %u elements (%u bytes available, %u bytes needed)\n
 KeyValues3: pre-allocated table memory is too small for %u members (%u bytes available, %u bytes needed)\n
 KeyValues::FindKey(HKeySymbol)
@@ -1320,7 +1286,6 @@ LoadKV3(CKV3Arena*, CUtlString*, CUtlBuffer*, KV3ID_t const&, char const*, unsig
 LoadStreamingData
 Loaded video settings config from '%s'\n
 LocalServerClientAccess001
-Localize_001
 LoggingSystem_GetChannelColor
 LoggingSystem_IsChannelEnabled
 LoggingSystem_IsChannelEnabled(int, LoggingVerbosity_t)
@@ -1346,12 +1311,9 @@ MN_DeallocateCacheableData
 MN_OnResourceLoadCompleted
 MN_OnResourceLoadFailed
 MODEL_PROCESSING_SERVICES_INTERFACE_001
-MapListService_001
 March
 MaskCpuFlags
-MaterialUtils_001
 MaxDeviceID
-Maximum resolution for top mip level in streaming textures
 Maximum supported image dimension is %u pixels
 MemAlloc_AllocFunc
 MemAlloc_CallocFunc
@@ -1404,7 +1366,6 @@ MergeXRGBRow_Any_AVX2
 MergeXRGBRow_Any_SSE2
 MergeXRGBRow_C
 MergeXRGBRow_SSE2
-MeshSystem001
 MeshUtils001
 MinDeviceID
 Minimum VRAM required: %s MB\n
@@ -1571,16 +1532,7 @@ NV21ToYUV24
 NV21ToYUV24Row_C
 NV_NULL
 N_U9203
-Name
-NavGameTest001
-NetworkClientService_001
-NetworkMessagesVersion001
-NetworkP2PService_001
-NetworkServerService_001
-NetworkService_001
-NetworkSystemVersion001
 No associated state
-None
 Not a JPEG file: starts with 0x%02x 0x%02x
 Not a key frame.
 Not implemented yet
@@ -1630,11 +1582,8 @@ PLANAR
 POSIX
 PURH
 PanoramaTextServices001
-PanoramaUIClient001
-PanoramaUIEngine001
 ParallelForSharedCode
 ParseEXRHeaderFromMemory() failed! Error message: %s\n
-ParticleSystemMgr003
 Pe6^
 PhysicsBuilderMgr001
 Plat_CPUTickFrequency
@@ -1663,12 +1612,10 @@ Plat_NonFatalErrorFunc
 Plat_OsSpecificHandleToPlatWindow
 Plat_ReconfigureWindow
 Plat_WindowToOsSpecificHandle
-PostProcessingSystem_001
 Premature end of JPEG file
 Premature end of input file
 Premature end-of-file encountered.
 Premature end-of-partition0 encountered.
-Print Vertex/Index/GPU buffers.
 Promise already satisfied
 PropertyEditorSystem_001
 Push
@@ -1718,45 +1665,6 @@ RAWToYJRow_SSSE3
 RAWToYRowMatrix_C
 RAWToYRow_C
 RENDERDOC_GetAPI
-RENDER_BUFFER_ACCELERATION_STRUCTURE
-RENDER_BUFFER_BYTEADDRESS_BUFFER
-RENDER_BUFFER_DYNAMIC_ZERO_COPY
-RENDER_BUFFER_IMMOVABLE_ALLOCATION
-RENDER_BUFFER_POOL_ALLOCATED
-RENDER_BUFFER_SHADER_BINDING_TABLE
-RENDER_BUFFER_STRUCTURED_BUFFER
-RENDER_BUFFER_UAV_DRAW_INDIRECT_ARGS
-RENDER_BUFFER_USAGE_CONDITIONAL_RENDERING
-RENDER_BUFFER_USAGE_INDEX_BUFFER
-RENDER_BUFFER_USAGE_NONE
-RENDER_BUFFER_USAGE_SHADER_RESOURCE
-RENDER_BUFFER_USAGE_UNORDERED_ACCESS
-RENDER_BUFFER_USAGE_VERTEX_BUFFER
-RENDER_MULTISAMPLE_16X
-RENDER_MULTISAMPLE_2X
-RENDER_MULTISAMPLE_4X
-RENDER_MULTISAMPLE_6X
-RENDER_MULTISAMPLE_8X
-RENDER_MULTISAMPLE_INVALID
-RENDER_MULTISAMPLE_NONE
-RENDER_MULTISAMPLE_TYPE_COUNT
-RENDER_PRIM_COMPUTE_SHADER
-RENDER_PRIM_HETEROGENOUS
-RENDER_PRIM_INSTANCED_QUADS
-RENDER_PRIM_LINES
-RENDER_PRIM_LINES_WITH_ADJACENCY
-RENDER_PRIM_LINE_STRIP
-RENDER_PRIM_LINE_STRIP_WITH_ADJACENCY
-RENDER_PRIM_MESH_SHADER
-RENDER_PRIM_POINTS
-RENDER_PRIM_TRIANGLES
-RENDER_PRIM_TRIANGLES_WITH_ADJACENCY
-RENDER_PRIM_TRIANGLE_STRIP
-RENDER_PRIM_TRIANGLE_STRIP_WITH_ADJACENCY
-RENDER_PRIM_TYPE_COUNT
-RENDER_SLOT_INVALID
-RENDER_SLOT_PER_INSTANCE
-RENDER_SLOT_PER_VERTEX
 RESOURCE_TYPE_TEXTURE
 RG11
 RG11_EAC
@@ -1827,25 +1735,6 @@ RGBColorTableRow_C
 RGBColorTableRow_X86
 RGBX8888
 RST%d
-RS_CMP_ALWAYS
-RS_CMP_CLOSER
-RS_CMP_CLOSER_EQUAL
-RS_CMP_CLOSER_FARTHER_FLAG
-RS_CMP_EQUAL
-RS_CMP_FARTHER
-RS_CMP_FARTHER_EQUAL
-RS_CMP_FUNC_MASK
-RS_CMP_GREATER
-RS_CMP_GREATER_EQUAL
-RS_CMP_LESS
-RS_CMP_LESS_EQUAL
-RS_CMP_NEVER
-RS_CMP_NOT_EQUAL
-RS_CULL_BACK
-RS_CULL_FRONT
-RS_CULL_NONE
-RS_FILL_SOLID
-RS_FILL_WIREFRAME
 R_T5Y
 RandomFloat
 Read failed on temporary file
@@ -1858,40 +1747,23 @@ RemoveTextureFromAnyQueues
 Render Device Empty\n
 Render system:  %s (initialized by %s)\n
 Render system:  %s\n
-RenderBufferFlags_t
 RenderDevice003
-RenderDeviceMgr001
 RenderDoc is not active, did you forget to add -renderdoc to the command-line? Is RenderDoc installed?\n
 RenderHardwareConfig002
-RenderInputLayoutField_t
-RenderMultisampleType_t
-RenderPrimitiveType_t
-RenderService_001
-RenderSlotType_t
-RenderSystem
 RenderSystem/AllowPartialMipChainImmediateTexLoads
 RenderSystem/MaxPreloadTextureResolution
 RenderSystem/MinStreamingPoolSizeMB
 RenderSystem/MinStreamingPoolSizeMBTools
-RenderUtils_001
 Rendersystem/SheetCacheTextureCols
 Rendersystem/SheetCacheTextureRows
 Requested feature was omitted at compile time
 ResourceCompilerSystem001
 ResourceHandleUtils001
 ResourceManifestRegistry001
-ResourceSystem013
 RotatePlane
 RotatePlane180
 RotatePlane270
 RotatePlane90
-RsBlendStateDesc_t
-RsComparison_t
-RsCullMode_t
-RsDepthStencilStateDesc_t
-RsFillMode_t
-RsRasterizerStateDesc_t
-RsStencilStateDesc_t
 SIGNED_R11
 SIGNED_RG11
 SKyu
@@ -2099,25 +1971,18 @@ ScaleUVRowUp2_Linear_Any_SSSE3
 ScaleUVRowUp2_Linear_C
 ScaleUVRowUp2_Linear_SSSE3
 Scan script does not transmit all data
-SceneSystem_002
-SceneUtils_001
-SchemaSystem_001
 SchemaTestExternal_One_001
 SchemaTestExternal_Two_001
-Screen Gamma (only in fullscreen modes)
 Seek failed on temporary file
 Selected %d colors for quantization
 September
-SerializedEntitiesVersion001
 SeriousWarning
-ServerToolsInfo_001
 SetPlane
 SetRow_Any_X86
 SetRow_C
 SetRow_ERMS
 SetRow_X86
 Setting max texture resolution to: %dx%d\n
-SheetSequenceIntegerId_t
 Size
 Smoothing not supported with nonstandard sampling ratios
 SobelRow_Any_SSE2
@@ -2133,23 +1998,7 @@ SobelXYRow_C
 SobelXYRow_SSE2
 SobelYRow_C
 SobelYRow_SSE2
-SoundOpSystem001
-SoundOpSystemEdit001
-SoundService_001
-SoundSystem001
-Source2Client002
-Source2ClientPrediction001
-Source2ClientUI001
-Source2EngineToClient001
-Source2EngineToClientStringTable001
-Source2EngineToServer001
-Source2EngineToServerStringTable001
-Source2GameClients001
-Source2GameEntities001
-Source2Host001
 Source2ModTools001
-Source2Server001
-Source2V8System001
 SplitARGBPlane
 SplitARGBPlaneAlpha
 SplitARGBPlaneOpaque
@@ -2316,8 +2165,6 @@ St9type_info
 Start Of Frame 0x%02x: width=%u, height=%u, components=%d
 Start Of Scan: %d components
 Start of Image
-StatsService_001
-SteamAudio001
 Streaming Validation: %s 
 Sunday
 Suspension not allowed here
@@ -2338,8 +2185,6 @@ TEXMAN: Deleting %d textures\n
 TEXMAN: Outstanding stream count %d -> %d (%s)\n
 TLS init function for 
 TLS wrapper function for 
-TestScriptMgr001
-TextLayout_001
 Texture Streaming:\n
 Texture data resident:  %s (panorama_rt %s; panorama_tex %s)\n
 Texture manager out of space! Can't allocate new texture!\n
@@ -2356,9 +2201,7 @@ Thursday
 Too many color components: %d, max %d
 ToolFramework2_002
 ToolSceneNodeFactory_001
-ToolService_001
 Total Size: %s (Count: %d)\n
-Total size of the texture pool in MB
 TransposePlane
 TransposeUVWx8_Any_SSE2
 TransposeUVWx8_C
@@ -2370,14 +2213,11 @@ TransposeWx8_Fast_Any_SSSE3
 TransposeWx8_Fast_SSSE3
 TransposeWx8_SSSE3
 TransposeWxH_C
-Triggers a RenderDoc capture
-Triggers a RenderDoc capture of a specific Window
 Truncated header.
 Trying to create a render target with invalid image format %s\n
 Trying to set dxlevel (%d) which is higher than the card can support (%d)!\n
 Trying to set dxlevel (%d) which is lower than the card can support (%d)!\n
 Tuesday
-Type
 U010ToAB30
 U010ToABGR
 U010ToAR30
@@ -2393,12 +2233,6 @@ U422ToARGB
 U444ToABGR
 U444ToARGB
 UNKNOWN
-UPSCALER_AMD_FSR2
-UPSCALER_AMD_FSR3
-UPSCALER_COUNT
-UPSCALER_INTEL_XESS
-UPSCALER_NONE
-UPSCALER_NVIDIA_DLSS
 UTF-8
 UUUU
 UV88
@@ -2435,7 +2269,6 @@ Unavailable
 Unexpected marker 0x%02x
 Unexpected null character in regular expression
 Unexpected resource version '%d' for '%s'\n
-Unknown
 Unknown APP0 marker (not JFIF), length %u
 Unknown APP14 marker (not Adobe), length %u
 Unknown Adobe color transform code %d
@@ -2448,8 +2281,6 @@ Unsupported JPEG process: SOF type 0x%02x
 Unsupported PSD color mode!\n
 Unsupported color conversion request
 Unsupported marker type 0x%02x
-Upper limit on texture pool size.
-UpscalerType_t
 Usage: %s <window_name>
 UserSettingsFileEx
 UserSettingsPathID
@@ -2458,16 +2289,11 @@ UtlVectorMemory_Alloc
 UtlVectorMemory_CalcNewAllocationCount
 UtlVectorMemory_FailedAllocation
 VApplication001
-VAsyncFileSystem2_001
 VAvi001
 VB Size: %s (Count: %d)\n
 VBPool
 VBik001
-VConComm001
-VEngineCvar007
-VFileSystem017
 VGy#
-VMaterialSystem2_001
 VMediaFoundation001
 VP4003
 VP8CheckSignature
@@ -2475,16 +2301,9 @@ VP8GetCPUInfo
 VP8GetInfo
 VP8LCheckSignature
 VP8LGetInfo
-VPhysics2_Interface_001
-VProcessUtils002
 VProfScopeHelper<0, false>::EnterScopeInternalBudgetFlags(char const*, VProfBudgetGroupCallSite&, CUtlSourceLocation const&)
 VProfScopeHelper<1, false>::EnterScopeInternalBudgetFlags(char const*, VProfBudgetGroupCallSite&, CUtlSourceLocation const&)
-VProfService_001
 VRenderDeviceSetupV001
-VScript
-VScriptDbg
-VScriptManager010
-VStringTokenSystem001
 VTT for 
 VTT for std::basic_iostream<wchar_t, std::char_traits<wchar_t>>
 VTT for std::basic_istream<wchar_t, std::char_traits<wchar_t>>
@@ -2610,8 +2429,6 @@ Video config version number changed ( '%s' is version %i, current version is %i 
 Virtual array controller messed up
 VisBuilder_001
 Vrad3_001
-VsInputSignatureElement_t
-VsInputSignature_t
 Vulkan
 WAITING_FOR_HOOKUP_JOB 
 WAITING_FOR_IO 
@@ -2652,7 +2469,6 @@ WebPSafeMalloc
 WebPSetWorkerInterface
 Wednesday
 Windowed
-WorldRendererMgr001
 Write failed on temporary file --- out of disk space?
 Write to EMS failed
 Write to XMS failed
@@ -3065,7 +2881,6 @@ close
 cntrl
 co_await 
 colon
-color
 comma
 commercial-at
 compression
@@ -3367,61 +3182,15 @@ longjmp
 loongson-ext
 loongson-mmi
 lower
-m_Value
-m_bAlphaToCoverageEnable
-m_bDepthClipEnable
-m_bDepthTestEnable
-m_bDepthWriteEnable
-m_bIndependentBlendEnable
-m_bMultisampleEnable
-m_bStencilEnable
-m_backStencilDepthFailOp
-m_backStencilFailOp
-m_backStencilFunc
-m_backStencilPassOp
-m_blendEnableBits
-m_blendOpAlphaBits
-m_blendOpBits
 m_boolDiff
 m_boolDiff == true
 m_boolTransparent
-m_depthFunc
-m_depth_elems
-m_destBlendAlphaBits
-m_destBlendBits
-m_elems
 m_fError >= 0.0f
-m_flDepthBiasClamp
-m_flSlopeScaledDepthBias
-m_frontStencilDepthFailOp
-m_frontStencilFailOp
-m_frontStencilFunc
-m_frontStencilPassOp
 m_mode == MODE_ETC1
 m_mode == MODE_H
 m_mode == MODE_PLANAR
 m_mode == MODE_T
-m_nCullMode
-m_nD3DSemanticIndex
-m_nDepthBias
-m_nFillMode
-m_nOffset
-m_nSemanticIndex
-m_nSlot
-m_nSlotType
-m_nStencilReadMask
-m_nStencilWriteMask
-m_pD3DSemanticName
-m_pName
-m_pSemantic
-m_pSemanticName
 m_paucEncodingBits == nullptr
-m_renderTargetWriteMaskBits
-m_srcBlendAlphaBits
-m_srcBlendBits
-m_srgbWriteEnableBits
-m_stencilState
-m_szShaderSemantic
 m_uiAddedBlocks < m_uiImageBlocks
 m_uiAddedBlocks == m_uiImageBlocks
 m_uiEncodingIterations == 0
@@ -3444,7 +3213,6 @@ min_processor_count
 mold 2.36.0 (compatible with GNU ld)
 mt19937
 nTries < 10000000
-name
 nanosleep
 new 
 new[]
@@ -3530,25 +3298,6 @@ pure virtual method called\n
 qangle
 question-mark
 quotation-mark
-r_async_shader_compile_notify_frequency
-r_fullscreen_gamma
-r_gpu_mem_stats
-r_max_texture_pool_size
-r_print_buffers
-r_renderdoc_auto_shader_pdbs
-r_renderdoc_capture_frame
-r_renderdoc_capture_window_vulkan
-r_renderdoc_open_captures
-r_renderdoc_validation_error_capture_limit
-r_texture_hookup_uses_threadpool
-r_texture_nonstreaming_load
-r_texture_pool_size
-r_texture_stream_max_resolution
-r_texture_stream_mip_bias
-r_texturefilteringquality
-r_textures_evict_all
-r_validate_texture_streaming
-r_wait_on_present
 random_device could not be read
 random_device: getentropy failed
 random_device: rdrand failed
@@ -6967,7 +6716,6 @@ strcpy
 strdup
 streaming
 strerror_r
-string
 string literal
 string::string
 strlen
@@ -7049,7 +6797,6 @@ transaction clone for std::underflow_error::underflow_error(char const*)
 transaction clone for std::underflow_error::underflow_error(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)
 transaction clone for std::underflow_error::~underflow_error()
 transparency
-true
 typeinfo fn for 
 typeinfo for 
 typeinfo for CThreadSyncObject
@@ -7451,7 +7198,6 @@ vector::_M_default_append
 vector::_M_range_check: __n (which is %zu) >= this->size() (which is %zu)
 vector::_M_realloc_append
 vectorws
-version
 vertical-line
 vertical-tab
 video.cfg

@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_Aghanim_Spear : public CDOTABaseAbility
 {
 	CUtlVector< CHandle< CBaseEntity > > hAlreadyHitList;

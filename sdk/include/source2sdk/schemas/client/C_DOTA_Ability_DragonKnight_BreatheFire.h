@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class C_DOTA_Ability_DragonKnight_BreatheFire : public C_DOTABaseAbility
 {
 	float32 start_radius;

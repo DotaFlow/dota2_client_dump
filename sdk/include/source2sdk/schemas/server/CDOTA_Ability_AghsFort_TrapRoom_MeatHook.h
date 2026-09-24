@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_AghsFort_TrapRoom_MeatHook : public CDOTABaseAbility, public CHorizontalMotionController
 {
 	VectorWS m_vProjectileLocation;

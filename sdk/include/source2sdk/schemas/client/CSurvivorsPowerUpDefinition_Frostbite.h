@@ -65,6 +65,7 @@
 //	"m_flScepterExplodeRadius": 0.000000
 //}
 // MVDataRoot
+// MHasKV3TransferPolymorphicClassname
 class CSurvivorsPowerUpDefinition_Frostbite : public CSurvivorsPowerUpDefinition_InstantAttack
 {
 	float32 m_flScepterExplodeRadius;

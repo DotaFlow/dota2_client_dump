@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_Lamp_Use : public CDOTABaseAbility
 {
 	GameTime_t m_flLastCaptureTime;

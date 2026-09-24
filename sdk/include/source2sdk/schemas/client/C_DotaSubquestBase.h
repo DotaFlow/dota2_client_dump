@@ -1,3 +1,5 @@
+// MNetworkNoBase
+// MClassHasEntityLimitedDataDesc
 class C_DotaSubquestBase : public C_BaseEntity
 {
 	char[256] m_pszSubquestText;

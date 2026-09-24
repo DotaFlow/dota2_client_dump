@@ -71,6 +71,7 @@
 //	"m_sArtilleryParticle": ""
 //}
 // MVDataRoot
+// MHasKV3TransferPolymorphicClassname
 class CSurvivorsPowerUpDefinition_MortimerKisses : public CSurvivorsPowerUpDefinition_AreaAttack_Circle
 {
 	float32 m_flMinRange;

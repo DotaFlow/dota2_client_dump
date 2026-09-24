@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class C_DOTA_Unit_Hero_Rubick : public C_DOTA_BaseNPC_Hero
 {
 	Vector m_stolenAbilityColorHSV1;

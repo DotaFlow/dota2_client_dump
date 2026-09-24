@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_Elder_Titan_ReturnSpirit : public C_DOTABaseAbility
 {
 };

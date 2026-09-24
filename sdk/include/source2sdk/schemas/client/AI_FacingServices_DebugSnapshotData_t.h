@@ -8,7 +8,7 @@
 //	"movement_id": ""
 //}
 // MPropertyFriendlyName = "Facing Services"
-// MDebugSnapshotDataRenderFn (UNKNOWN FOR PARSER)
+// MDebugSnapshotDataRenderFn
 class AI_FacingServices_DebugSnapshotData_t
 {
 	VectorWS npc_position;

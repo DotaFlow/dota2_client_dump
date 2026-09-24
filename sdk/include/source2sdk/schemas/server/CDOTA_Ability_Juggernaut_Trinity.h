@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_Juggernaut_Trinity : public CDOTABaseAbility
 {
 	VectorWS m_vStartPos;

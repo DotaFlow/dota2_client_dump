@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Item : public CDOTABaseAbility
 {
 	int32 m_iState;

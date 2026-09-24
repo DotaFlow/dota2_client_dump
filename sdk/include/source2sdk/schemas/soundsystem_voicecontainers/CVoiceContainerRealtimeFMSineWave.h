@@ -21,6 +21,7 @@
 //}
 // MPropertyFriendlyName = "TESTBED: FM Synth Container"
 // MPropertyDescription = "Real time FM Synthesis"
+// MHasKV3TransferPolymorphicClassname
 class CVoiceContainerRealtimeFMSineWave : public CVoiceContainerGenerator
 {
 	// MPropertyFriendlyName = "Frequency (Hz)"

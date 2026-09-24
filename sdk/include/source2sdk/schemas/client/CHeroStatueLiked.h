@@ -1,3 +1,4 @@
+// MNetworkNoBase
 class CHeroStatueLiked
 {
 	PlayerID_t m_iPlayerIDLiker;

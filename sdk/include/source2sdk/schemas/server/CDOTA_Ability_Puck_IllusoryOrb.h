@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_Puck_IllusoryOrb : public CDOTABaseAbility
 {
 	int32 m_iProjectile;

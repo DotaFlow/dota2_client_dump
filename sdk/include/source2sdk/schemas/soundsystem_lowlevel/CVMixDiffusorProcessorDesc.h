@@ -12,6 +12,7 @@
 //		"m_flOutputGain": 0.000000
 //	}
 //}
+// MHasKV3TransferPolymorphicClassname
 class CVMixDiffusorProcessorDesc : public CVMixBaseProcessorDesc
 {
 	VMixDiffusorDesc_t m_desc;

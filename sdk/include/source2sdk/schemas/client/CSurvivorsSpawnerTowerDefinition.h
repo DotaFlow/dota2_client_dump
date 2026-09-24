@@ -24,6 +24,7 @@
 //	"m_eSpawnPositionsLayer": "ENEMY_MAIN"
 //}
 // MVDataRoot
+// MHasKV3TransferPolymorphicClassname
 class CSurvivorsSpawnerTowerDefinition : public CSurvivorsSpawnerDefinition
 {
 };

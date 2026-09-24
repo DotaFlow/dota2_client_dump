@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class C_DOTA_Ability_EarthSpirit_BoulderSmash : public C_DOTABaseAbility
 {
 	float32 speed;

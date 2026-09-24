@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class C_DOTA_Ability_Nian_Hurricane : public C_DOTABaseAbility
 {
 	int32 min_distance;

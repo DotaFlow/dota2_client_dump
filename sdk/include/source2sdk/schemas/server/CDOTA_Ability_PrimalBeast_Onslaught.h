@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_PrimalBeast_Onslaught : public CDOTABaseAbility
 {
 	float32 max_charge_time;

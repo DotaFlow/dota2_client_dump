@@ -16,6 +16,7 @@
 //		"m_flHighCutoffFreq": 7500.000000
 //	}
 //}
+// MHasKV3TransferPolymorphicClassname
 class CVMixConvolutionProcessorDesc : public CVMixBaseProcessorDesc
 {
 	VMixConvolutionDesc_t m_desc;

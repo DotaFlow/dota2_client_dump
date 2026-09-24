@@ -10,6 +10,7 @@
 //	],
 //	"m_inertiaFactor": 0.000000
 //}
+// MHasKV3TransferPolymorphicClassname
 class CMotorController
 {
 	float32 m_speed;

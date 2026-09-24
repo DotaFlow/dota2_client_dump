@@ -1,3 +1,4 @@
+// MDisableDataDescValidation
 class CBreakableProp : public CBaseProp
 {
 	CPropDataComponent m_CPropDataComponent;

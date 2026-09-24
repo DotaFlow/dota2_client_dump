@@ -15,6 +15,7 @@
 //	"m_iszReversalSoundMedium": "",
 //	"m_iszReversalSoundLarge": ""
 //}
+// MHasKV3TransferPolymorphicClassname
 class ConstraintSoundInfo
 {
 	// MNotSaved

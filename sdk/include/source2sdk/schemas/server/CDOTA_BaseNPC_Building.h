@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_BaseNPC_Building : public CDOTA_BaseNPC
 {
 	int32 m_iDamageLevel;

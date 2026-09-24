@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class C_DOTA_Ability_Largo_CatchyLick : public C_DOTABaseAbility
 {
 	float32 damage;

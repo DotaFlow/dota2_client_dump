@@ -118,6 +118,7 @@
 //	"m_flCapsuleLength": 0.000000,
 //	"m_flMinRoughness": 0.000000
 //}
+// MHasKV3TransferPolymorphicClassname
 class CLightComponent : public CEntityComponent
 {
 	// MNotSaved

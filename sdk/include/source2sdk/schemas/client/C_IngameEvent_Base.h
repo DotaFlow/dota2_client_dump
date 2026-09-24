@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class C_IngameEvent_Base : public C_BaseEntity
 {
 	bool m_bInitialized;

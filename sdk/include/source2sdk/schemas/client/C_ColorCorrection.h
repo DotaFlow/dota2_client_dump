@@ -1,3 +1,4 @@
+// MNetworkNoBase
 class C_ColorCorrection : public C_BaseEntity
 {
 	// MNotSaved

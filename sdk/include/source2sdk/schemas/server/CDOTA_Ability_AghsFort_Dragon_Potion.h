@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_AghsFort_Dragon_Potion : public CDOTA_Item
 {
 	int32 bonus_movement_speed;

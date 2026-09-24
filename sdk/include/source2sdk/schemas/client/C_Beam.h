@@ -1,3 +1,4 @@
+// MNetworkNoBase
 class C_Beam : public C_BaseModelEntity
 {
 	float32 m_flFrameRate;

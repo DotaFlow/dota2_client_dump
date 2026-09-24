@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_FacelessVoid_TimeWalk_Reverse : public CDOTABaseAbility, public CHorizontalMotionController
 {
 	int32 speed;

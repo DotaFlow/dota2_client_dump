@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class C_DOTA_Ability_VengefulSpirit_WaveOfTerror : public C_DOTABaseAbility
 {
 	float32 wave_width;

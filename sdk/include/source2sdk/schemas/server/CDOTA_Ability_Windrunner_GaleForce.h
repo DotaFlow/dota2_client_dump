@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_Windrunner_GaleForce : public CDOTABaseAbility
 {
 	VectorWS m_vEndpoint;

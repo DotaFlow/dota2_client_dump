@@ -4,6 +4,7 @@
 //	"sUnlockedSound": "",
 //	"flwaitSound": null
 //}
+// MHasKV3TransferPolymorphicClassname
 class locksound_t
 {
 	CGameSoundEventName sLockedSound;

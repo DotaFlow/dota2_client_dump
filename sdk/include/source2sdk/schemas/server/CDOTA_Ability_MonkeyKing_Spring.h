@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_MonkeyKing_Spring : public CDOTABaseAbility
 {
 	VectorWS m_vPos;

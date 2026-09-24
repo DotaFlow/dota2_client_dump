@@ -104,6 +104,7 @@
 //	"m_sResurrectParticleName": ""
 //}
 // MVDataRoot
+// MHasKV3TransferPolymorphicClassname
 class CSurvivorsEnemyDefinition_Resurrector : public CSurvivorsEnemyDefinition
 {
 	int32 m_nNumResurrectionTimes;

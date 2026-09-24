@@ -11,6 +11,7 @@
 //		"m_flPhase": 0.000000
 //	}
 //}
+// MHasKV3TransferPolymorphicClassname
 class CVMixOscProcessorDesc : public CVMixBaseProcessorDesc
 {
 	VMixOscDesc_t m_desc;

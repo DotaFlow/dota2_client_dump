@@ -1,3 +1,4 @@
+// MClassHasEntityLimitedDataDesc
 class CDOTA_Ability_Grimstroke_SpiritWalk : public CDOTABaseAbility
 {
 	float32 buff_duration;
