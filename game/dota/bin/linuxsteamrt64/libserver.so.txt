@@ -1975,6 +1975,7 @@ $ORIGIN
 ../../public/tier0/threadtoolstypes.h
 ../../public/tier0/tslist.h
 ../../public/tier0/utldict.h
+../../public/tier0/utlqueue.h
 ../../public/tier0/utlsortvector.h
 ../../thirdparty/protobuf-3.21.8/src/google/protobuf/map.h
 ../../thirdparty/protobuf-3.21.8/src/google/protobuf/map_field.h
@@ -21179,6 +21180,7 @@ Attempted to create unknown modifier type %s!\n
 Attempted to destroy unknown modifier type %s!\n
 Attempted to find unknown particle system "%s"\n
 Attempted to generate query for an invalid player ID\n
+Attempted to pop off of an empty CUtlQueue. Please check before using this method.
 Attempted to salute for expired/not started event %u\n
 Attempted to salute for non-existent event %u\n
 Attempted to spawn a not-spawnable entity classname "%s"!\n
@@ -35083,6 +35085,7 @@ RemoveAllItemDrops
 RemoveAllModifiers
 RemoveAllModifiersOfName
 RemoveAllSpawnedUnits
+RemoveAtTail
 RemoveAttribute
 RemoveAvoidanceZone
 RemoveBroadcastTeamTarget
@@ -47851,6 +47854,7 @@ m_previousSample
 m_sphere
 m_spline
 m_strValue
+m_tail != QUEUE_ITERATOR_INVALID
 m_tangents
 m_unFrameFuncThreadID == unCurrentThread
 m_unNextFreeIndex < DOTA_PROJECTILES_ATTACK_RECORD_MAX
