@@ -9898,13 +9898,13 @@ lb_debug_shadow_atlas false (developmentonly cheat menubar_item)
 lb_debug_shadowtile_atlas false (developmentonly cheat menubar_item)
 	SceneSystem/LightBinner/Debug ShadowTile Atlas
 
-lb_debug_silhouette "" (developmentonly cheat menubar_item enum_value)
+lb_debug_silhouette "" (enum: ESilhouetteType_t, developmentonly cheat menubar_item enum_value)
 	SceneSystem/LightBinner/Debug Silhouettes
 
 lb_debug_silhouette_sum 1 (min: 1, max: 3, developmentonly cheat)
 	If we should draw normal silhouette or minkowski sum silhouette
 
-lb_debug_tiles "" (developmentonly cheat menubar_item enum_value)
+lb_debug_tiles "" (enum: ESilhouetteType_t, developmentonly cheat menubar_item enum_value)
 	SceneSystem/LightBinner/Debug Tiles
 
 lb_debug_visualize_fog_shadowed_lights 0 (developmentonly cheat menubar_item)
@@ -13495,10 +13495,10 @@ sc_view_profiler_frame_averaging 10 (developmentonly defensive)
 sc_visualize_batches 0 (developmentonly defensive)
 	color per batch
 
-sc_visualize_sceneobjects "SCENEOBJECT_VIS_NONE" (developmentonly menubar_item defensive enum_value)
+sc_visualize_sceneobjects "SCENEOBJECT_VIS_NONE" (enum: ESceneObjectVisualization, developmentonly menubar_item defensive enum_value)
 	SceneSystem/Visualize SceneObject Mode
 
-sc_visualize_sceneobjects_meshlets "SCENEOBJECT_MESHLET_VIS_NONE" (developmentonly menubar_item enum_value)
+sc_visualize_sceneobjects_meshlets "SCENEOBJECT_MESHLET_VIS_NONE" (enum: ESceneObjectMeshletVisualization, developmentonly menubar_item enum_value)
 	SceneSystem/Visualize Base SceneObject Meshlets
 
 scene_clientflex true (developmentonly gamedll clientdll replicated defensive)
