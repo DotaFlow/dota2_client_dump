@@ -351,6 +351,7 @@ $ORIGIN
 26CGameSystemEventDispatcher
 26IGameSystemEventDispatcher
 28CBaseVModuleMetadataProvider
+28QuantizedFloatEncoderAlias_t
 30CSVCMsgList_GameEvents_event_t
 32CNETMsg_SpawnGroup_LoadCompleted
 32CSVCMsg_GameSessionConfiguration
@@ -450,10 +451,14 @@ CBufferString::ToLowerFast(int)
 CBufferString::TrimTail(char const*)
 CBufferString::TruncateAt(int, bool)
 CCallQueue::ParallelCallQueued(char const*, IThreadPool*)
-CCharBufferFormatOutputStream::PutC(char)
-CCharBufferFormatOutputStream::Terminate()
 CDotaMapUtils: Failed to load tree map %s\n
 CFormatStringElement::CFormatStringElement(char const*)
+CGridStringPrinter::DelimitedHeader(char, char const*, ...)
+CGridStringPrinter::DelimitedPrint(char, char const*, ...)
+CGridStringPrinter::SetColumnHeader(int, char const*)
+CGridStringPrinter::SetColumnJustification(int, bool)
+CGridStringPrinter::SetString(int, int, char const*)
+CGridStringPrinter::Spew(int, char const*) const
 CHECK failed: !AllocPolicy(): 
 CHECK failed: !HasUnknownFieldsTag(): 
 CHECK failed: !InRealOneof(field): 
@@ -811,6 +816,7 @@ CUtlString::Set(char const*)
 CUtlString::SetDirect(char const*, int)
 CUtlString::SetLength(int)
 CUtlString::StripExtension() const
+CUtlString::TrimRight(char const*)
 CUtlString::operator+(char const*) const
 CUtlString::operator+=(char const*)
 CUtlString::operator=(CBufferString const&)
@@ -981,7 +987,6 @@ FormatTo(IFormatOutputStream*, CFormatStringElement, bool)
 FormatTo(IFormatOutputStream*, CFormatStringElement, double)
 FormatTo(IFormatOutputStream*, CFormatStringElement, float)
 FormatTo(IFormatOutputStream*, CFormatStringElement, int)
-FormatTo(IFormatOutputStream*, CFormatStringElement, std::basic_string_view<char, std::char_traits<char>>)
 FormatTo(IFormatOutputStream*, CFormatStringElement, unsigned int)
 FormatTo(IFormatOutputStream*, CFormatStringElement, void const*)
 Found invalid proto option data for: 
@@ -1098,8 +1103,6 @@ July
 June
 Key in map fields cannot be enum types.
 Key in map fields cannot be float/double, bytes or message types.
-KeyValues3: pre-allocated array memory is too small for %u elements (%u bytes available, %u bytes needed)\n
-KeyValues3: pre-allocated table memory is too small for %u members (%u bytes available, %u bytes needed)\n
 KeyValues::CreateNewKey()
 KeyValues::FindAndDeleteSubKey(char const*)
 KeyValues::FindKey(char const*) const
@@ -1153,12 +1156,10 @@ LoadKV3Text_NoHeader(KeyValues3*, CUtlString*, char const*, KV3ID_t const&, char
 LocalServerClientAccess001
 LoggingSystem_CurrentStateIndex
 LoggingSystem_GetChannel
-LoggingSystem_GetChannelColor
 LoggingSystem_IsChannelEnabled
 LoggingSystem_Log
 LoggingSystem_Log(int, LoggingSeverity_t, Color, char const*, ...)
 LoggingSystem_Log(int, LoggingSeverity_t, LoggingRareOptions_t const&, char const*, ...)
-LoggingSystem_LogDirect(int, LoggingSeverity_t, Color, LoggingMetaData_t const*, char const*)
 LoggingSystem_PopLoggingState
 LoggingSystem_PushLoggingState
 LoggingSystem_RegisterBackdoorLoggingListener
@@ -1493,7 +1494,7 @@ Plat_Printf
 Plat_RedirectThisProcessStdioToFile(int, unsigned int)
 Plat_RelativeTicks
 Plat_SetActiveWindow
-Plat_SetGameDirectories
+Plat_SetGameDirectory
 Plat_ShutdownCOM
 Plat_TickDiffMilliSecF
 Plat_UUIDToString
@@ -1561,8 +1562,10 @@ SetRepeatedUInt64
 SetString
 SetUInt32
 SetUInt64
+ShapeOffset
 Shared memory space %s (%i) still has %i references.\n
 Should not reach here.
+SmartPropsSystem_001
 Some options could not be correctly parsed using the proto descriptors compiled into this binary.\nUnparsed options: 
 Source of CopyFrom cannot be a descendant of the target.
 Source2ModTools001
@@ -2261,9 +2264,13 @@ bool __gnu_cxx::operator==<wchar_t*, std::__cxx11::basic_string<wchar_t, std::ch
 bool __gnu_cxx::operator==<wchar_t*, std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>>(__gnu_cxx::__normal_iterator<wchar_t*, std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>> const&, __gnu_cxx::__normal_iterator<wchar_t*, std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>> const&)
 bool google::protobuf::internal::RepeatedFieldRefIterator<T>::operator!=(const google::protobuf::internal::RepeatedFieldRefIterator<T>&) const [with T = google::protobuf::Message]
 bool std::__detail::_Compiler<std::regex_traits<char>>::_M_expression_term<false, false>(std::__detail::_Compiler<std::regex_traits<char>>::_BracketState&, std::__detail::_BracketMatcher<std::regex_traits<char>, false, false>&)
+bool std::__detail::_Compiler<std::regex_traits<char>>::_M_expression_term<false, false>(std::__detail::_Compiler<std::regex_traits<char>>::_BracketState&, std::__detail::_BracketMatcher<std::regex_traits<char>, false, false>&)::'lambda'(char)::operator()(char) const
 bool std::__detail::_Compiler<std::regex_traits<char>>::_M_expression_term<false, true>(std::__detail::_Compiler<std::regex_traits<char>>::_BracketState&, std::__detail::_BracketMatcher<std::regex_traits<char>, false, true>&)
+bool std::__detail::_Compiler<std::regex_traits<char>>::_M_expression_term<false, true>(std::__detail::_Compiler<std::regex_traits<char>>::_BracketState&, std::__detail::_BracketMatcher<std::regex_traits<char>, false, true>&)::'lambda'(char)::operator()(char) const
 bool std::__detail::_Compiler<std::regex_traits<char>>::_M_expression_term<true, false>(std::__detail::_Compiler<std::regex_traits<char>>::_BracketState&, std::__detail::_BracketMatcher<std::regex_traits<char>, true, false>&)
+bool std::__detail::_Compiler<std::regex_traits<char>>::_M_expression_term<true, false>(std::__detail::_Compiler<std::regex_traits<char>>::_BracketState&, std::__detail::_BracketMatcher<std::regex_traits<char>, true, false>&)::'lambda'(char)::operator()(char) const
 bool std::__detail::_Compiler<std::regex_traits<char>>::_M_expression_term<true, true>(std::__detail::_Compiler<std::regex_traits<char>>::_BracketState&, std::__detail::_BracketMatcher<std::regex_traits<char>, true, true>&)
+bool std::__detail::_Compiler<std::regex_traits<char>>::_M_expression_term<true, true>(std::__detail::_Compiler<std::regex_traits<char>>::_BracketState&, std::__detail::_BracketMatcher<std::regex_traits<char>, true, true>&)::'lambda'(char)::operator()(char) const
 bool std::__exchange<bool, bool>(bool&, bool&&)
 bool std::has_facet<std::__cxx11::collate<char>>(std::locale const&)
 bool std::has_facet<std::__cxx11::collate<wchar_t>>(std::locale const&)
@@ -2422,6 +2429,7 @@ g_BitBuf_ExtraMasks
 g_flConfigMaxCoord
 g_flTValues0To1Inclusive<float vector[4]>
 g_flTValues0To1Inclusive<float>
+g_nConfigMaxCoord
 g_nSequentialBytes<int vector[4]>
 g_nSequentialBytes<int>
 g_nSequentialIndices<float vector[4]>
@@ -2744,7 +2752,6 @@ phys_res
 please implement MergeFrom for your type.
 plus-sign
 poll
-posix_memalign
 posxyz
 prev
 print
@@ -3800,23 +3807,20 @@ std::__detail::_Compiler<std::regex_traits<char>>::_M_cur_int_value(int)
 std::__detail::_Compiler<std::regex_traits<char>>::_M_disjunction()
 std::__detail::_Compiler<std::regex_traits<char>>::_M_pop()
 std::__detail::_Compiler<std::regex_traits<char>>::_M_quantifier()
-std::__detail::_Compiler<std::regex_traits<char>>::_M_quantifier()::'lambda'()::operator()() const
 std::__detail::_Compiler<std::regex_traits<char>>::_M_try_char()
-std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_M_dfs(std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_Match_mode, long)
-std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_M_handle_alternative(std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_Match_mode, long)
-std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_M_handle_backref(std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_Match_mode, long)
-std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_M_handle_repeat(std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_Match_mode, long)
-std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_M_handle_word_boundary(std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_Match_mode, long)
-std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_M_is_line_terminator(char) const
-std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_M_is_word(char) const::__s
-std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_M_lookahead(long)
-std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_M_rep_once_more(std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_Match_mode, long)
-std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, true>::_M_dfs(std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, true>::_Match_mode, long)
-std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, true>::_M_handle_backref(std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, true>::_Match_mode, long)
-std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, true>::_M_is_line_terminator(char) const
-std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, true>::_M_is_word(char) const::__s
-std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, true>::_M_lookahead(long)
-std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, true>::_M_rep_once_more(std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, true>::_Match_mode, long)
+std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, false>::_M_dfs(std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, false>::_Match_mode, long)
+std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, false>::_M_handle_alternative(std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, false>::_Match_mode, long)
+std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, false>::_M_handle_backref(std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, false>::_Match_mode, long)
+std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, false>::_M_is_line_terminator(char) const
+std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, false>::_M_is_word(char) const::__s
+std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, false>::_M_lookahead(long)
+std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, false>::_M_rep_once_more(std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, false>::_Match_mode, long)
+std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, true>::_M_dfs(std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, true>::_Match_mode, long)
+std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, true>::_M_handle_backref(std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, true>::_Match_mode, long)
+std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, true>::_M_is_line_terminator(char) const
+std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, true>::_M_is_word(char) const::__s
+std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, true>::_M_lookahead(long)
+std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, true>::_M_rep_once_more(std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, true>::_Match_mode, long)
 std::__detail::_NFA<std::regex_traits<char>>::_M_insert_dummy()
 std::__detail::_NFA<std::regex_traits<char>>::_M_insert_matcher(std::function<bool (char)>)
 std::__detail::_NFA<std::regex_traits<char>>::_M_insert_repeat(long, long, bool)
@@ -6253,9 +6257,7 @@ std::vector<std::Catalog_info*, std::allocator<std::Catalog_info*>>::push_back(s
 std::vector<std::Catalog_info*, std::allocator<std::Catalog_info*>>::size() const
 std::vector<std::Catalog_info*, std::allocator<std::Catalog_info*>>::vector()
 std::vector<std::Catalog_info*, std::allocator<std::Catalog_info*>>::~vector()
-std::vector<std::regex_traits<char>::_RegexMask, std::allocator<std::regex_traits<char>::_RegexMask>>::vector(std::vector<std::regex_traits<char>::_RegexMask, std::allocator<std::regex_traits<char>::_RegexMask>> const&)
 std::vector<std::string, std::allocator<std::string>>::vector(std::vector<std::string, std::allocator<std::string>> const&)
-std::vector<std::sub_match<char const*>, std::allocator<std::sub_match<char const*>>>::vector(std::vector<std::sub_match<char const*>, std::allocator<std::sub_match<char const*>>> const&)
 std::wcerr
 std::wcin
 std::wclog
@@ -7154,7 +7156,6 @@ void std::swap<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>(std:
 void std::vector<std::regex_traits<char>::_RegexMask, std::allocator<std::regex_traits<char>::_RegexMask>>::_M_realloc_append<std::regex_traits<char>::_RegexMask const&>(std::regex_traits<char>::_RegexMask const&)
 vsnprintf
 vtable for 
-vtable for CCharBufferFormatOutputStream
 vtable for __cxxabiv1::__class_type_info
 vtable for __cxxabiv1::__forced_unwind
 vtable for __cxxabiv1::__foreign_exception

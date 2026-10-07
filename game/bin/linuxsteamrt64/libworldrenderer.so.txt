@@ -3,22 +3,6 @@
   what():  
  !"#$%%&'()*+,-../0123456789:;<=>?@ABCDEFGHIJKLLMNOPQRSTUVWXY[]_`bdefhjlnprtvz|~
  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
- (Start: 
- : Extraneous input - expected %s ...\n
- : Extraneous input - expected <EOF>\n
- : Extraneous input...
- : Missing %s \n
- : Missing <EOF>\n
- : Missing token (%d)...\n
- : cannot match to any predicted input...\n
- : error %d : %s
- : expected %s ...\n
- : expected <EOF>\n
- : missing elements...\n
- : syntax error...\n
- : syntax not recognized...\n
- : unexpected input...\n  expected one of : 
- LinePos:
  [clone 
  _Complex
  _Imaginary
@@ -56,9 +40,6 @@ $ORIGIN
 %llu
 %s  '%s' --> '%s' : %s (%s) [delay=%.2f;times=%d;type=%d]\n
 %s %s %s %s
-%s - Blackboard reference %s: %u (%s) type mismatches
-%s - Could not find blackboard instance for %s
-%s - Could not find blackboard reference %s: %u (%s)
 %s - unknown entity lump '%s'\n
 %s - unknown or invalid world '%s'\n
 %s - unknown world layer '%s'\n
@@ -87,16 +68,12 @@ $ORIGIN
 %sI/O Connections:\n
 (!((uintptr_t)(src_height) & ((2)-1)))
 (!((uintptr_t)(src_width) & ((2)-1)))
-(Expecting %s)
-(Expecting EOF)
 (None)
 (anonymous namespace)
-(channel = 
 (dst_width % 2 == 0) && (dst_width >= 0)
 (dst_width % 3 == 0) && (dst_width > 0)
 (dy & 0x1ffff) == 0
 (dy & 0x3ffff) == 0
-(end of input).\n\t This indicates a poorly specified lexer RULE\n\t or unterminated input element such as: "STRING["]\n
 (fWeightSumLeft + fWeightSumRight) > 0.0f
 (fWeightSumTop + fWeightSumBottom) > 0.0f
 (hide)
@@ -108,10 +85,6 @@ $ORIGIN
 *N12_GLOBAL__N_121future_error_categoryE
 *N12_GLOBAL__N_121system_error_categoryE
 *N12_GLOBAL__N_122generic_error_categoryE
-*N30PulseBindingSchemaEnumTraits_tI25PulseCursorWakePriority_tEUlvE1_E
-*N30PulseBindingSchemaEnumTraits_tI25PulseCursorWakePriority_tEUlvE2_E
-*N30PulseBindingSchemaEnumTraits_tI27PulseCursorCancelPriority_tEUlvE0_E
-*N30PulseBindingSchemaEnumTraits_tI27PulseCursorCancelPriority_tEUlvE_E
 *NSt13__facet_shims12_GLOBAL__N_112collate_shimIcEE
 *NSt13__facet_shims12_GLOBAL__N_112collate_shimIwEE
 *NSt13__facet_shims12_GLOBAL__N_113messages_shimIcEE
@@ -133,7 +106,6 @@ $ORIGIN
 *ZN13CSOAContainer10FilterFromERKS_iiiiiPKfbEUlvE_
 *ZN13CSOAContainer17SrgbGammaToLinearEiEUlvE_
 *ZN13CSOAContainer17SrgbLinearToGammaEiEUlvE_
-*ZN13CSOAContainer21GenerateDistanceFieldEiiiP8Rect3D_tEUlvE_
 *ZN13CSOAContainer24IIRGaussianApproximationEjfEUliiE0_
 *ZN13CSOAContainer24IIRGaussianApproximationEjfEUliiE1_
 *ZN13CSOAContainer24IIRGaussianApproximationEjfEUliiE_
@@ -151,26 +123,18 @@ $ORIGIN
 *ZN3Etc13EncodeMipmapsEPfjjNS_5Image6FormatENS_11ErrorMetricEfjjjjPNS_8RawImageEPibEUlPhE_
 *\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f
 ++%s is at refcount %d\n
-, at offset %d
-, near %s
 -+xX0123456789abcdef0123456789ABCDEF
 -+xX0123456789abcdefABCDEF
 --%s is at refcount %d\n
 --forward-all-args--
 --old-connection-literal--
 -0123456789
--Stop: 
--end of input-(
--memory-
--unknown source-
--unknown source-(
 ../../public/tier0/tslist.h
 ../public/tier0/threadtoolstypes.h
 ../public/tier0/utldict.h
 ../public/tier0/utlmap.h
 .vpk
 .vwnod
-/data/src/mathlib/extended/generic_expr.g
 /dev/random
 /dev/urandom
 /home/saml/dev/steam/thirdpartycode/nonredist/libyuv/libyuv/source/planar_functions.cc
@@ -203,6 +167,7 @@ $ORIGIN
 11CRefCountedI20CRefCountServiceBaseI6CRefMTEE
 12CSceneObject
 12CThreadEvent
+13CNullTypeInfo
 13CScriptScopeTI22CDefScriptAccessorBaseLb1EE
 13CWorldManager
 13ConCommandRef
@@ -211,6 +176,7 @@ $ORIGIN
 14CBaseAppSystemI17IWorldRendererMgrE
 14CEmptySequence
 14IErrorListener
+14IPulseTypeInfo
 15CEntityIOOutput
 15CEntityIdentity
 15CEntityInstance
@@ -223,7 +189,6 @@ $ORIGIN
 15CTier3AppSystemI17IWorldRendererMgrLx0EE
 15IWorldReference
 16CEntityComponent
-16CGenericExprPart
 16CPulseExecCursor
 16CScriptAccessorTI22CDefScriptAccessorBaseLb1EE
 16CScriptComponent
@@ -233,15 +198,13 @@ $ORIGIN
 17CWorldRendererMgr
 17IPulseHost_Cursor
 17IWorldRendererMgr
-18CGenericExpr_Unary
 18CWorldVPKReference
 18IPulseHost_Unknown
+18IPulseTypeEnumInfo
 18IWorldVPKReference
-19CGenericExpr_Binary
 19CPulseCell_BaseFlow
 19CSchemaRegistration
 19CVariantSaveDataOps
-1:1: Tokens : ( T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | TOK_COLON | OPEN_BRACE | CLOSE_BRACE | OPEN_PAREN | CLOSE_PAREN | OPEN_BRACKET | CLOSE_BRACKET | SEMICOLON | OP_EQUAL | COMMA | DOUBLE_AND | NEGATIVE_TOK | DOUBLE_OR | LITERAL_TRUE | LITERAL_FALSE | POS_INTLITERAL | POS_FLOATLITERAL | SCOPE_QUALIFIER | ID | DOUBLE_QUOTED_STRING | SINGLE_QUOTED_STRING | SINGLE_LINE_COMMENT | ML_COMMENT | WS | UNRECOGNIZED );
 20CGrassTileObjectDesc
 20CPostConnectCallback
 20CRefCountServiceBaseI6CRefMTE
@@ -249,7 +212,6 @@ $ORIGIN
 20EntityKeyValueData_t
 20IResourceTypeManager
 20PermEntityLumpData_t
-21CGenericExpr_Property
 21CGrassTileSceneObject
 21IGrassTileSceneObject
 21IPulseInstanceLoadAPI
@@ -259,21 +221,17 @@ $ORIGIN
 22CSchemaInstallCallback
 22IToolsResourceListener
 23CEntityComponentHelperTI16CScriptComponent32CEntityComponentHelperReferencedIS0_EE
-23CGenericExpr_IntLiteral
 23CKV3ResourceBlockHelper
 23CKV3TransferContextBase
 23CKV3TransferLoadContext
 23CKV3TransferSaveContext
-24CGenericExpr_BoolLiteral
 24CPulseCell_Inflow_Method
+24CPulseRegisteredTypeInfo
+24CPulseSchemaEnumTypeInfo
 25CConCommandMemberAccessorI17CWorldRendererMgrE
-25CGenericExpr_FloatLiteral
-25CGenericExpr_FunctionCall
 25IAsyncProcessedDataResult
 25IPulseHost_BaseObservable
 25IPulseHost_YieldingCursor
-25IPulseTypeQueriesForScope
-26CGenericExpr_StringLiteral
 26CPulseCell_BaseRequirement
 26CPulseInstanceLoadAPI_NoOp
 26CPulseInstanceSaveAPI_NoOp
@@ -282,16 +240,13 @@ $ORIGIN
 27CSchemaRegistration_entity2
 27CVoxelVisibilityTypeManager
 28CBaseVModuleMetadataProvider
-28CPulseModuleRegistrationHookI25IPulseTypeQueriesForScopeE
-30CGenericExpr_VariableReference
-31CGenericExpr_TernaryConditional
 31CPulseCursorBaseObservableScope
+32CEntityAPIModuleMetadataProvider
 32CEntityComponentHelperReferencedI16CScriptComponentE
 32CPulseCell_Inflow_BaseEntrypoint
 32CPulseInterfaceHelpers_Load_NoOp
 32CPulseInterfaceHelpers_Save_NoOp
 33CBaseIntrospectedToKV3TypeManager
-33CPulseScopeEnumeratingTypeService
 33CSchemaRegistration_worldrenderer
 34CKV3Transfer_ResourceLoadInterface
 34IKV3TransferInterface_EHandle_Load
@@ -304,6 +259,7 @@ $ORIGIN
 37CTypesafeIntrospectedToKV3TypeManagerILy495874631030E20PermEntityLumpData_tE
 37IKV3TransferInterface_Worldspace_Load
 37IKV3TransferInterface_Worldspace_Save
+38CEntityClassInfoModuleMetadataProvider
 39CKV3TransferInterface_EHandle_Load_NoOp
 39CKV3TransferInterface_EHandle_Save_NoOp
 39CKV3Transfer_EmptyResourceLoadInterface
@@ -312,7 +268,6 @@ $ORIGIN
 41CModuleMetadataProvider_ResourceManifests
 42CKV3TransferInterface_Worldspace_Load_NoOp
 42CKV3TransferInterface_Worldspace_Save_NoOp
-488:1: POS_FLOATLITERAL : ( ( DIGIT )+ '.' ( DIGIT )* ( EXPONENT )? | '.' ( DIGIT )+ ( EXPONENT )? | ( DIGIT )+ EXPONENT );
 5;FJ$,XEK4<
 5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5Jx
 6CWorld
@@ -322,23 +277,15 @@ $ORIGIN
 8"3hrf
 969p
 9ISequence
-: lexer error %d :\n\t%s at offset %d, 
 ;J;J;J;J;J;J;J;J;J;J;J;J;J;J;J;Jx
 <<NULL ENTITY LUMP>>
-<DOWN>
-<EOF>
-<EOR>
-<Unknown>
 <array: %u elements>
 <binary blob: %u bytes>
 <empty member name>
 <empty>
-<invalid>
-<missing 
 <no classname>
 <no failure reason set>
 <no targetname>
-<no text for the token>
 <non-RTTI type>
 <none>
 <pointer>
@@ -373,8 +320,6 @@ ABGRToYRow_Any_SSSE3
 ABGRToYRow_C
 ABGRToYRow_SSSE3
 AKST
-ANTLR3_EXCEPTION number %d (%08X).\n
-ANTLR3_EXCEPTION: %s\n
 APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %d!\n
 AR30ToAB30
 AR30ToAB30Row_C
@@ -585,7 +530,6 @@ AYUVToUVRow_C
 AYUVToVURow_C
 AYUVToYRow_C
 Activate
-Actually dude, we didn't seem to be expecting anything here, or at least\n
 Add an output
 AddOutput
 AddPage
@@ -622,7 +566,6 @@ AssetSystemTest001
 Attempted to ConvertToCopiedData for unsupported type (%d)\n
 Attribute_t
 August
-BACKSLASH_CHAR
 BC6H
 BGR565
 BGR888
@@ -641,44 +584,17 @@ BGRAToYRow_SSSE3
 BGRX8888
 BGRX8888_LINEAR
 Bad KV3 data for resource '%s': %s\n
-Bad array index %d (array has %d elements)
 Bad code word
 Bad type %d in saved CVariant\n
 BakedLODBuilderMgr001
+BankID%d
 Base Flow  Cancel After
 Base Flow  Cancel Elegantly
 Base Flow  Cancel Immediately
 Base Flow  Wake Elegantly
 Base Flow  Wake Immediately
 Base Pulse Domain
-Base recognizer function 'alreadyParsedRule' called by unknown parser type - provide override for this function\n
-Base recognizer function 'consumeUntil' called by unknown parser type - provide override for this function\n
-Base recognizer function 'consumeUntilSet' called by unknown parser type - provide override for this function\n
-Base recognizer function 'match' called by unknown parser type - provide override for this function\n
-Base recognizer function 'matchAny' called by unknown parser type - provide override for this function\n
-Base recognizer function 'mismatch' called by unknown parser type - provide override for this function\n
-Base recognizer function 'synPred' called by unknown parser type - provide override for this function\n
-Base recognizer function antlr3RecognitionExceptionNew called by unknown parser type - provide override for this function\n
-Base recognizer function consumeUntilSet called by unknown parser type - provide override for this function\n
-Base recognizer function displayRecognitionError called by unknown parser type - provide override for this function\n
-Base recognizer function recover called by unknown parser type - provide override for this function\n
-Base recognizer function recoverFromMismatchedSet called by unknown parser type - provide override for this function\n
-Base recognizer function recoverFromMismatchedToken called by unknown parser type - provide override for this function\n
 BaseDomain
-BinAdd
-BinDiv
-BinEq
-BinGt
-BinGtE
-BinInvalid
-BinLogAnd
-BinLogOr
-BinLt
-BinLtE
-BinMod
-BinMul
-BinNe
-BinSub
 BinaryProperties_GetValue
 BlendPlane
 BlendPlaneRow_AVX2
@@ -686,8 +602,6 @@ BlendPlaneRow_Any_AVX2
 BlendPlaneRow_Any_SSSE3
 BlendPlaneRow_C
 BlendPlaneRow_SSSE3
-Breakpoint Log [%u]
-Breakpoint Log [%u] - %s
 Broken promise
 ByteToFloat
 ByteToFloatRow_C
@@ -696,7 +610,6 @@ CBufferString::AppendConcat(int, char const* const*, int const*, bool)
 CBufferString::AppendFormat(char const*, ...)
 CBufferString::AppendFormatV(char const*, __va_list_tag*)
 CBufferString::ComposeFileName(char const*, char const*, char)
-CBufferString::EndsWith(char const*) const
 CBufferString::ExtendPath(char const*, char, bool)
 CBufferString::ExtractFileBase(char const*, bool)
 CBufferString::ExtractFilePath(char const*, bool)
@@ -722,8 +635,7 @@ CBufferString::ToLowerFast(int)
 CBufferString::TrimTail(char const*)
 CBufferString::TruncateAt(int, bool)
 CCallQueue::ParallelCallQueued(char const*, IThreadPool*)
-CCharBufferFormatOutputStream::PutC(char)
-CCharBufferFormatOutputStream::Terminate()
+CEntityComponent_API
 CEntityHandle
 CEntityIdentity *
 CEntityIdentity::SetEntityName called, but there is no entity name string table pointer!\n
@@ -742,10 +654,8 @@ CGridStringPrinter::SetColumnJustification(int, bool)
 CGridStringPrinter::SetString(int, int, char const*)
 CGridStringPrinter::Spew(int, char const*) const
 CHandle
+CHandle\<\s*(.*?)\s*\>
 CKeyValues_Data::Internal_GetString(char const*, char*, unsigned long)
-CLOSE_BRACE
-CLOSE_BRACKET
-CLOSE_PAREN
 CMemAllocSystemInitialize
 CMemoryStack::CMemoryStack()
 CMemoryStack::Init(char const*, unsigned int, unsigned int, unsigned int, unsigned int)
@@ -755,50 +665,26 @@ CMemoryStack::~CMemoryStack()
 CNativeOutputs
 CNetworkSerializerClassInfo::Get( %s ) failed!\n
 CNetworkUtlVectorBase
-COMMA
 COM_TimestampedLog
+CPulseArgumentPack
 CPulseCell_BaseYieldingInflow::BaseFlow_CancelAfter
 CPulseCell_BaseYieldingInflow::BaseFlow_CancelElegantly
 CPulseCell_BaseYieldingInflow::BaseFlow_CancelImmediately
 CPulseCell_BaseYieldingInflow::BaseFlow_WakeElegantly
 CPulseCell_BaseYieldingInflow::BaseFlow_WakeImmediately
-CPulseCell_FireCursors::Cancel
 CPulseCell_Inflow_Method '%s' --> Chunk%d: %s
-CPulseCell_Inflow_Wait::Abort
-CPulseCell_Inflow_Wait::ImmediateWake
 CPulseCell_Inflow_Wait::Wait
-CPulseCell_Inflow_Yield::Abort
 CPulseCell_Inflow_Yield::Pause
-CPulseCell_Inflow_Yield::Resume
-CPulseCell_IntervalTimer::StopTimer
 CPulseCell_Outflow_CycleOrdered::Run
 CPulseCell_Outflow_CycleRandom::Run
 CPulseCell_Outflow_CycleShuffled::Run
-CPulseCell_Outflow_ListenForAnimgraphTag::Cancel
-CPulseCell_Outflow_ListenForEntityOutput::Cancel
-CPulseCell_Outflow_NPCAccompanyEntity::Cancel
-CPulseCell_Outflow_NPCFollowTarget::Cancel
-CPulseCell_Outflow_NPCLeadPlayer::Cancel
-CPulseCell_Outflow_NPCScriptedIdle::Cancel
-CPulseCell_Outflow_NPCScriptedIdle::CancelElegantly
-CPulseCell_Outflow_NPCScriptedMoveTo::Cancel
-CPulseCell_Outflow_NPCUseScriptedAbility::Cancel
-CPulseCell_Outflow_PlaySequence::Cancel
-CPulseCell_Outflow_PlaySequence::CancelAtInterrupt
-CPulseCell_Outflow_PlayVCD::Cancel
-CPulseCell_Outflow_PlayVCD::CancelAtInterrupt
-CPulseCell_Outflow_PlayVOLine::Cancel
-CPulseCell_Outflow_ScriptedSequence::Cancel
-CPulseCell_PlaySequence::Cancel
+CPulseCell_ReturnValues::HandleReturnValues
 CPulseCell_Step_CallExternalMethod::Run
-CPulseCell_Step_CallExternalMethod::StopWaiting
 CPulseCell_Step_DebugLog::Run
 CPulseCell_Step_PublicOutput::Run
-CPulseCell_Timeline::Stop
 CPulseCell_Value_RandomFloat::Eval
 CPulseCell_Value_RandomInt::Eval
-CPulseCell_WaitForObservable::Cancel
-CPulseValueFullType
+CPulseInputParamMap
 CRC32_ProcessBuffer
 CRC64_ProcessBuffer
 CSOAContainer::SetAttributeType - ERROR, trying to change type of previously-defined attribute %d!\n
@@ -899,7 +785,6 @@ CUtlString::operator+(char const*) const
 CUtlString::operator+=(char const*)
 CUtlString::operator=(CBufferString const&)
 CUtlString::operator==(CUtlString const&) const
-CUtlStringAndTokenWithStorage::KV3TransferLoad(CKV3TransferLoadContext*)
 CUtlStringToken
 CUtlStringTokenNoRegistration
 CUtlSymbolLarge
@@ -931,7 +816,6 @@ Cannot allocate abstract class
 Cannot convert KV3 type '%s' (%u) to a string token
 Cannot destruct abstract class
 Cannot reference domain '%s' from '%s'\n
-Cannot reinterpret instance (actual: %s) from (original) %s to (desired) %s
 Cannot run script: NULL script name\n
 Cast of %s loses value information (returning %s)\n
 CharacterSetBuild
@@ -976,12 +860,11 @@ CopyRow_C
 CopyRow_ERMS
 CopyRow_SSE2
 Could not decode alpha data.
-Could not execute '%s' because this graph domain does not support the required IPulseHost
 Couldn't ReadTexturePixels when creating grass.\n
 CpuId
 CreateEntity
 CreateInterface
-Creating %i scene objects for node %i\n
+Creating %i scene objects for world node\n
 CumulativeSumToAverageRow_C
 CumulativeSumToAverageRow_SSE2
 Cursor[ ptr:%p | id:%d | graph:%p ]: CPulseExecCursor()\n
@@ -1005,19 +888,11 @@ DF32_
 DF32x
 DF64_
 DF64x
-DIGIT
-DOUBLE_AND
-DOUBLE_OR
-DOUBLE_QUOTED_STRING
-DOUBLE_QUOTE_CHAR
 DXT1
 DXT1_ONEBITALPHA
 DXT3
 DXT5
 DXT5_NM
-Data breakpoint [%s]
-Data breakpoint [%s] - %s
-Data breakpoint hit
 Data_Branch1xy
 Data_Branch1zBranch2x
 Data_Branch2yz
@@ -1031,8 +906,6 @@ DemoUpconverterVersion001
 Destroy
 DevMsg
 DevMsg(char const*, ...)
-Did not execute '%s' because the 'Target' object was missing
-Disallowed variable name: %s
 DisconnectOutput
 DisconnectOutputFromScript
 DisconnectOutputFromScriptSelf
@@ -1041,7 +914,6 @@ DispatchActivate
 DispatchPrecache
 DispatchSpawn
 DispatchUpdateOnRemove
-Divide by zero!
 DivideRow_16_AVX2
 DivideRow_16_Any_AVX2
 DivideRow_16_C
@@ -1050,13 +922,8 @@ E<G&Iw
 ERROR: CUtlSymbolTableLarge element limit of %u exceeded\n
 ERROR:NoEnum:%s:%d
 ERROR:NoEnumerator:%s:%d
-ERROR:NoFlags:%s:%d
-ESCAPE_CHAR
-ESCAPE_CODE
 ETC1
-EXPONENT
 EXPORTSYSTEM_INTERFACE_VERSION_001
-Early exit
 EarlyInit_Tier0
 EconItemToolModel_001
 Enable multithreading to use std::thread
@@ -1070,11 +937,18 @@ Etc::Image::EncodingStatus Etc::Image::Encode(Etc::Image::Format, Etc::ErrorMetr
 Etc::IndividualTrys::IndividualTrys(Etc::ColorFloatRGBA, Etc::ColorFloatRGBA, const unsigned int*, const unsigned int*, unsigned int)
 Eval
 ExtractModuleMetadata
-Extraneous token
+FTYPEDESC_ADDED_KEYFIELD
+FTYPEDESC_ADDITIONAL_FIELDS
+FTYPEDESC_ENUM
+FTYPEDESC_EXPLICIT_BASE
+FTYPEDESC_GEN_ARRAY_KEYNAMES_0
+FTYPEDESC_GEN_ARRAY_KEYNAMES_1
+FTYPEDESC_KEY
+FTYPEDESC_NONE
+FTYPEDESC_PROCEDURAL_KEYFIELD
+FTYPEDESC_PTR
+FTYPEDESC_REMOVED_KEYFIELD
 Failed to activate script entity %s of type %s: script entity instance is null\n
-Failed to allocate a lexer for '%s'. (Out of memory?)
-Failed to allocate a parser for '%s'. (Out of memory?)
-Failed to allocate a token stream for '%s'. (Out of memory?)
 Failed to allocate an instance of a class of type '%s'
 Failed to call CBaseIntrospectedToKV3TypeManager::Init
 Failed to load geometry for level %s\n
@@ -1097,7 +971,6 @@ FixedDiv_C
 FixedDiv_X86
 FixupResourceName: Illegal full path passed in ("%s")!\n
 FixupResourceName: Illegal path, missing extension passed in ("%s")!\n
-Float( %f )
 FloatBitMap_t::CopyFloatBitmap: Received NULL pointer!\n
 FloatBitMap_t::LoadFromBuffer: Received improper buffer size, skipping!\n
 FloatBitMap_t::LoadFromBuffer: Unsupported color format, skipping!\n
@@ -1109,14 +982,12 @@ FormatTo(IFormatOutputStream*, CFormatStringElement, bool)
 FormatTo(IFormatOutputStream*, CFormatStringElement, double)
 FormatTo(IFormatOutputStream*, CFormatStringElement, float)
 FormatTo(IFormatOutputStream*, CFormatStringElement, int)
-FormatTo(IFormatOutputStream*, CFormatStringElement, std::basic_string_view<char, std::char_traits<char>>)
 FormatTo(IFormatOutputStream*, CFormatStringElement, unsigned int)
 FormatTo(IFormatOutputStream*, CFormatStringElement, void const*)
 Found existing value when inserting into dict - replacing existing value with new value. If this is intended behavior, use InsertOrReplace. If leaving existing values alone is intended, use InsertIfNotFound.
 Frame not displayable.
 Frame setup failed
 Friday
-Functions not supported in this evaluator (%s)
 Future already retrieved
 GAME
 GCC: (SteamRT 14.2.0-19~steamrt3.1+bsrt3.1) 14.2.0
@@ -1169,7 +1040,6 @@ GetThreadLocalStackAllocator
 GetValue
 GetXCR0
 Gf95)1&!\ry9I
-GrassCopyTexture.vtex
 GrassDensity.vtex
 GrassDepth.vtex
 GrassObject
@@ -1213,9 +1083,9 @@ HalfMergeUVRow_AVX2
 HalfMergeUVRow_C
 HalfMergeUVRow_SSSE3
 HammerMapLoader001
+Handle Return Values
 HelpSystem_001
 Hitbox indexing is incorrect for set %s, hitbox %s. Hitboxes will not be setup properly.\n
-I could not work out what I was expecting, like so many of us these days!\n
 I010AlphaToARGBMatrix
 I010Copy
 I010ToAB30
@@ -1417,7 +1287,6 @@ I444ToI420
 I444ToNV12
 I444ToNV21
 IA88
-ID_CHAR
 IFormatOutputStream::Format2DTable(CTypeErasedFormattingWrapper, CFormatStringElement, void const**, int, int)
 IFormatOutputStream::FormatArray(CTypeErasedFormattingWrapper, CFormatStringElement, void const**, int, bool)
 IFormatOutputStream::FormatEnumHelper(CFormatStringElement, int, std::initializer_list<std::pair<int, char const*>>)
@@ -1455,7 +1324,6 @@ InsertMultipleBefore
 InstallSchemaBindings
 Insufficient memory to compile regular expression
 Insufficient memory to determine regex match
-Internal cursor flow error: halting due to leaf cell bug!
 InterpolatePlane
 InterpolateRow_16_C
 InterpolateRow_AVX2
@@ -1472,8 +1340,6 @@ Invalid character range in regular expression
 Invalid collating element in regular expression
 Invalid escape in regular expression
 Invalid range in '{}' in regular expression
-Invalid use of KV3 specific type %s with basic type %s, must be basic type %s
-Invoke '%s' failed with code %d
 InvokeMiniDumpHandler
 IsValidIndex( i )
 J400ToARGB
@@ -1493,7 +1359,6 @@ JArray
 January
 July
 June
-KV3 instances cannot be set to an unspecified specific type
 KV3 load transfer failed for resource '%s': %s
 KeyValues3
 KeyValues3: pre-allocated array memory is too small for %u elements (%u bytes available, %u bytes needed)\n
@@ -1531,17 +1396,12 @@ LC_PAPER
 LC_TELEPHONE
 LC_TIME
 LINEAR_D24S8
-LINE_CONTINUATION
-LITERAL_FALSE
-LITERAL_TRUE
 LOG_CONSOLE
 LOG_GENERAL
 LegacyUnserialize
-Lexer encountered %d error(s)
 Lightmap version number is out of date! Reverting to dynamic lighting
 LightmapUV
 LightmapUVW
-Line: 
 LoadFromKV3
 LoadKV3(CKV3Arena*, CUtlString*, CUtlBuffer*, KV3ID_t const&, char const*, unsigned int)
 LoadKV3(KeyValues3*, CUtlString*, CUtlBuffer*, KV3ID_t const&, char const*, unsigned int)
@@ -1550,7 +1410,6 @@ LoadKV3FromKV1Text_Translated(KeyValues3*, CUtlString*, char const*, KV1TextEsca
 LoadKV3Text_NoHeader(KeyValues3*, CUtlString*, char const*, KV3ID_t const&, char const*, unsigned int)
 LocalServerClientAccess001
 LockForRead
-LoggingSystem_GetChannelColor
 LoggingSystem_GetChannelVerbosity
 LoggingSystem_IsChannelEnabled
 LoggingSystem_Log
@@ -1558,12 +1417,12 @@ LoggingSystem_Log(int, LoggingSeverity_t, Color, char const*, ...)
 LoggingSystem_Log(int, LoggingSeverity_t, LoggingMetaData_t const*, Color, char const*, ...)
 LoggingSystem_Log(int, LoggingSeverity_t, LoggingMetaData_t const*, char const*, ...)
 LoggingSystem_Log(int, LoggingSeverity_t, LoggingRareOptions_t const&, char const*, ...)
-LoggingSystem_LogDirect(int, LoggingSeverity_t, Color, LoggingMetaData_t const*, char const*)
 LoggingSystem_RegisterLoggingChannel
 LooksLikeKV3TextData(void const*, int, KV3ID_t*, char*, int)
 Loongson-2K
 Loongson-3
 MATCHFRAMEWORK_001
+MAlternateSemanticName
 MCustomFGDMetadata
 MEnumFlagsWithOverlappingBits
 MEnumeratorIsNotAFlag
@@ -1572,7 +1431,6 @@ MGetKV3ClassDefaults
 MIsBoxedFloatType
 MIsBoxedIntegerType
 MKV3TransferSaveOpsForField
-ML_COMMENT
 MNetworkChangeAccessorFieldPathIndex
 MNotSaved
 MODEL_PROCESSING_SERVICES_INTERFACE_001
@@ -1582,7 +1440,6 @@ MPropertySuppressEnumerator
 MPulseCellInflow_IsDefault
 MPulseCursorTerminates
 MPulseFGDSkipField
-MPulseLegacyName
 MResourceTypeForInfoType
 MakeStringToken
 March
@@ -1657,11 +1514,7 @@ MirrorUVRow_SSSE3
 Mismatched '(' and ')' in regular expression
 Mismatched '[' and ']' in regular expression
 Mismatched '{' and '}' in regular expression
-Mismatched Token Exception
-Mismatched set
 Missing required transfer interface: %s
-Missing token
-Missing token %s
 MnZ/rs
 Model conversion: %d conversions in %.3fsec (%.3fms each)\n
 ModelDocUtils001
@@ -1701,8 +1554,6 @@ N3Etc35Block4x4Encoding_RGB8A1_TransparentE
 N9__gnu_cxx20recursive_init_errorE
 N9__gnu_cxx24__concurrence_lock_errorE
 N9__gnu_cxx26__concurrence_unlock_errorE
-NEGATIVE_TOK
-NEWLINE
 NSt13__future_base12_Result_baseE
 NSt13__future_base12_Task_setterISt10unique_ptrINS_7_ResultIjEENS_12_Result_base8_DeleterEENSt6thread8_InvokerISt5tupleIJMN3Etc5ImageEFjjjjEPSB_jijEEEEjEE
 NSt13__future_base12_Task_setterISt10unique_ptrINS_7_ResultIvEENS_12_Result_base8_DeleterEENSt6thread8_InvokerISt5tupleIJMN3Etc5ImageEFvjjEPSB_ijEEEEvEE
@@ -1828,18 +1679,11 @@ No associated state
 No closing */ before end of file
 No conversion from %s to bool now\n
 No conversion from %s to string at the moment!\n
-No data
-No expression!
 No free conversion of %s variant to HSCRIPT right now\n
-No input data for '%s'. (Empty buffer.)
 Not a key frame.
 Not safe to 'new' this class due to alignment requirements
 November
 NumCols() <= V_ARRAYSIZE( s_DummyRow )
-OPEN_BRACE
-OPEN_BRACKET
-OPEN_PAREN
-OP_EQUAL
 October
 Only DXT1/DXT5 online texture compression supported.\n
 Output aborted.
@@ -1894,14 +1738,14 @@ PKDs
 PKDu
 PLANAR
 POSIX
-POS_FLOATLITERAL
-POS_INTLITERAL
 PURH
 PVAL_ANY
 PVAL_INVALID
+PVAL_SCHEMA_ENUM
+PVAL_TYPESAFE_INT
+PVAL_TYPESAFE_INT64
 PanoramaTextServices001
 ParallelForSharedCode
-Parser encountered %d error(s)
 Pause
 Pause the cursor at this point.
 PerVertexLighting
@@ -1922,11 +1766,11 @@ Plat_IsInDebugSession
 Plat_NonFatalErrorFunc
 Plat_RelativeTicks
 Pointers cannot be used as numeric values
+PooledLayout
 Precache
 Precaches a specific resource
 Premature end-of-file encountered.
 Premature end-of-partition0 encountered.
-Preventing new cursor (%s)
 Promise already satisfied
 PropWorldOrigin
 PropertyEditorSystem_001
@@ -1950,6 +1794,7 @@ R8G8B8A8_ETC2_EAC
 R8G8B8_ETC2
 R8G8_UINT
 R8_UINT
+R8_UNORM
 R9G9B9E5_FLOAT
 RAWToARGB
 RAWToARGBRow_Any_SSSE3
@@ -2056,8 +1901,6 @@ RandomFloat
 RandomInt
 RandomSeed
 Reads a spawn key
-Recognition Exception
-Recognition exception
 RedirectOutput
 RegisterConCommand: Unknown error registering con command "%s"!\n
 RegisterConVar: Unknown error registering convar "%s"!\n
@@ -2077,26 +1920,22 @@ Retrieve the private per-instance script-side data associated with an entity
 Retrieve the public script-side data associated with an entity
 Retrieve, creating if necessary, the private per-instance script-side data associated with an entity
 Retrieve, creating if necessary, the public script-side data associated with an entity
+Return
 Root
 RotatePlane
 RotatePlane180
 RotatePlane270
 RotatePlane90
-SCOPE_QUALIFIER
-SEMICOLON
 SIGNED_R11
 SIGNED_RG11
-SINGLE_LINE_COMMENT
-SINGLE_QUOTED_STRING
-SINGLE_QUOTE_CHAR
 SRGB8
 SRGB8A1
 SRGBA8
 SSE and SSE2 are required.
-STRING_CHAR
 Saturday
 SaveKV3Text_NoHeader(KeyValues3 const*, CUtlString*, CBufferString*, unsigned int)
 SaveKV3Text_NoHeader(KeyValues3 const*, CUtlString*, CUtlBuffer*, unsigned int)
+SaveKV3Text_NoHeader(KeyValues3 const*, CUtlString*, CUtlString*, unsigned int)
 SaveKV3Text_ToString(KV3ID_t const&, KeyValues3 const*, CUtlString*, CBufferString*, unsigned int)
 SaveKV3Text_ToString(KV3ID_t const&, KeyValues3 const*, CUtlString*, CUtlString*, unsigned int)
 Scale
@@ -2315,6 +2154,8 @@ SetRow_Any_X86
 SetRow_C
 SetRow_ERMS
 SetRow_X86
+ShapeOffset
+SmartPropsSystem_001
 SobelRow_Any_SSE2
 SobelRow_C
 SobelRow_SSE2
@@ -2494,7 +2335,6 @@ St9money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
 St9time_base
 St9type_info
 Stack depth limit hit (%d)
-String( %s )
 Sunday
 SwapUVPlane
 SwapUVRow_AVX2
@@ -2505,9 +2345,7 @@ SwapUVRow_SSSE3
 T0d/
 TLS init function for 
 TLS wrapper function for 
-TOK_COLON
 TanFrameQuat
-TernaryConditional
 This convar is being accessed prior to ConVar_Register being called
 ThreadAtomicNotifyOne(unsigned int const*)
 ThreadGetCurrentId
@@ -2548,7 +2386,6 @@ U422ToARGB
 U444ToABGR
 U444ToARGB
 UNKNOWN
-UNRECOGNIZED
 UTF-8
 UUUU
 UV88
@@ -2583,28 +2420,16 @@ UYVYToYRow_Any_SSE2
 UYVYToYRow_C
 UYVYToYRow_SSE2
 U\8h(
-UnInvalid
-UnNegate
-UnNot
-Unexpected character
-Unexpected character '%c' (0x%02X)
-Unexpected end of file
-Unexpected node
 Unexpected null character in regular expression
-Unexpected token
-Unexpected token '%s' %s
-Unknown KV3 specific type %u
+Unhandled type %s in VariantCompatibility_SetEntityVariantFromPulseVariant; defaulting to string
 Unknown error
 Unknown lightmap texture: %s\n
-Unknown property %s
-Unknown variable %s
 Unlock
 UnmountWorldVPK() --%s is at refcount %d\n
 Unsupported ETC image format %d.\n
 Unsupported Grass File Version. Expected %d. Found %d\n
 Unsupported KV3 basic type '%s' (%d)!
 Unsupported number of values found in grass tile. Expected %d. Found %d\n
-Unwanted token '%s' %s
 UpdateOnRemove
 Usage: %s <world_name> <layer_name> <visible>\n
 Usage: %s <world_name> <lump_name>\n
@@ -2622,6 +2447,7 @@ VP8GetCPUInfo
 VP8GetInfo
 VP8LCheckSignature
 VP8LGetInfo
+VProfScopeHelper<0, false>::EnterScopeInternalBudgetFlags(char const*, VProfBudgetGroupCallSite&, CUtlSourceLocation const&)
 VRenderDeviceSetupV001
 VTT for 
 VTT for std::basic_iostream<wchar_t, std::char_traits<wchar_t>>
@@ -2818,17 +2644,15 @@ ZN37CTypesafeIntrospectedToKV3TypeManagerILy431366240118E11WorldNode_tE15Allocat
 ZN37CTypesafeIntrospectedToKV3TypeManagerILy431366240118E11WorldNode_tE24DeallocateDestroyCleanupEPvP25IResourceDeallocatorUtilsE17CDeallocatorUtils
 ZN37CTypesafeIntrospectedToKV3TypeManagerILy495874631030E20PermEntityLumpData_tE15AllocateAndLoadER23CKV3TransferLoadContextPK21ResourceBindingBase_tP29IRD_RegisterResourceDataUtilsE15CAllocatorUtils
 ZN37CTypesafeIntrospectedToKV3TypeManagerILy495874631030E20PermEntityLumpData_tE24DeallocateDestroyCleanupEPvP25IResourceDeallocatorUtilsE17CDeallocatorUtils
-[Index: 
 [abi:
 [friend]
 \f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*
-\n    near %s\n    
 \nLoaded List:\n
 \nPending List:\n
-\t The lexer was matching from line %d, offset %d, which\n\t 
 \tWorld: %s
-\t\t\tNodes Loaded: %d / %d\n
+\t\t\tWorld Node Loaded: %s\n
 \v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%
+^$\.*+?()[]{}|
 _Float
 _GLOBAL_
 _ITM_RU1
@@ -2852,6 +2676,8 @@ _V_strnicmp_fast
 _ZNKSt13__facet_shims12__any_stringcvNSt7__cxx1112basic_stringIT_St11char_traitsIS3_ESaIS3_EEEB5cxx11IcEEv
 _ZNKSt13__facet_shims12__any_stringcvNSt7__cxx1112basic_stringIT_St11char_traitsIS3_ESaIS3_EEEB5cxx11IwEEv
 _ZSt10__exchangeIPNSt8ios_base14_Callback_listEDnET_RS4_OT0_
+__PROCEDURAL
+__UNKNOWN__
 __assert_fail
 __ctype_b_loc
 __ctype_get_mb_cur_max
@@ -3048,6 +2874,7 @@ alnum
 alpha
 ampersand
 an attr
+angles
 apostrophe
 array
 asterisk
@@ -3060,6 +2887,8 @@ backslash
 backspace
 bad partition length
 bad_function_call
+bank_unique_id
+base
 basic_ios::clear
 basic_iostream
 basic_istream
@@ -3116,9 +2945,13 @@ bool __gnu_cxx::operator==<wchar_t const*, wchar_t*, std::__cxx11::basic_string<
 bool __gnu_cxx::operator==<wchar_t*, std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>>(__gnu_cxx::__normal_iterator<wchar_t*, std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>> const&, __gnu_cxx::__normal_iterator<wchar_t*, std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>> const&)
 bool __gnu_cxx::operator==<wchar_t*, std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>>(__gnu_cxx::__normal_iterator<wchar_t*, std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>> const&, __gnu_cxx::__normal_iterator<wchar_t*, std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>> const&)
 bool std::__detail::_Compiler<std::regex_traits<char>>::_M_expression_term<false, false>(std::__detail::_Compiler<std::regex_traits<char>>::_BracketState&, std::__detail::_BracketMatcher<std::regex_traits<char>, false, false>&)
+bool std::__detail::_Compiler<std::regex_traits<char>>::_M_expression_term<false, false>(std::__detail::_Compiler<std::regex_traits<char>>::_BracketState&, std::__detail::_BracketMatcher<std::regex_traits<char>, false, false>&)::'lambda'(char)::operator()(char) const
 bool std::__detail::_Compiler<std::regex_traits<char>>::_M_expression_term<false, true>(std::__detail::_Compiler<std::regex_traits<char>>::_BracketState&, std::__detail::_BracketMatcher<std::regex_traits<char>, false, true>&)
+bool std::__detail::_Compiler<std::regex_traits<char>>::_M_expression_term<false, true>(std::__detail::_Compiler<std::regex_traits<char>>::_BracketState&, std::__detail::_BracketMatcher<std::regex_traits<char>, false, true>&)::'lambda'(char)::operator()(char) const
 bool std::__detail::_Compiler<std::regex_traits<char>>::_M_expression_term<true, false>(std::__detail::_Compiler<std::regex_traits<char>>::_BracketState&, std::__detail::_BracketMatcher<std::regex_traits<char>, true, false>&)
+bool std::__detail::_Compiler<std::regex_traits<char>>::_M_expression_term<true, false>(std::__detail::_Compiler<std::regex_traits<char>>::_BracketState&, std::__detail::_BracketMatcher<std::regex_traits<char>, true, false>&)::'lambda'(char)::operator()(char) const
 bool std::__detail::_Compiler<std::regex_traits<char>>::_M_expression_term<true, true>(std::__detail::_Compiler<std::regex_traits<char>>::_BracketState&, std::__detail::_BracketMatcher<std::regex_traits<char>, true, true>&)
+bool std::__detail::_Compiler<std::regex_traits<char>>::_M_expression_term<true, true>(std::__detail::_Compiler<std::regex_traits<char>>::_BracketState&, std::__detail::_BracketMatcher<std::regex_traits<char>, true, true>&)::'lambda'(char)::operator()(char) const
 bool std::has_facet<std::__cxx11::collate<char>>(std::locale const&)
 bool std::has_facet<std::__cxx11::collate<wchar_t>>(std::locale const&)
 bool std::has_facet<std::__cxx11::messages<char>>(std::locale const&)
@@ -3167,7 +3000,6 @@ bool std::operator==<char, std::char_traits<char>, std::allocator<char>>(std::__
 bool std::operator==<char, std::char_traits<char>, std::allocator<char>>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)
 bool std::operator==<char, std::char_traits<char>>(std::istreambuf_iterator<char, std::char_traits<char>> const&, std::istreambuf_iterator<char, std::char_traits<char>> const&)
 bool std::operator==<wchar_t, std::char_traits<wchar_t>>(std::istreambuf_iterator<wchar_t, std::char_traits<wchar_t>> const&, std::istreambuf_iterator<wchar_t, std::char_traits<wchar_t>> const&)
-bool8
 boolean
 bpp >= 1 && bpp <= 4
 btowc
@@ -3204,7 +3036,6 @@ char* std::string::_S_construct_aux<char*>(char*, char*, std::allocator<char> co
 char16_t
 char32_t
 char32_t const& std::min<char32_t>(char32_t const&, char32_t const&)
-char8
 char8_t
 character
 circumflex
@@ -3214,7 +3045,6 @@ cntrl
 co_await 
 codegen, 
 colon
-color32
 comma
 commercial-at
 compressedtangentframe
@@ -3223,6 +3053,7 @@ const_cast
 construction vtable for 
 control_storage
 covariant return thunk to 
+cpp_name
 cpu model
 cpu_info_
 cstring
@@ -3260,22 +3091,24 @@ dx == 65536 * 2
 dx == 65536 * 4
 dy != __null
 dynamic_cast
+edited_as_type
 effortblocks = %d\n
 eight
 ekv_%08x
 encodingTry.m_fError < 3.40282346638528859811704183484516925e+38F
 entindex
 entity2
+entity_api
+entity_api_designname_to_base
 entity_lump_spew %s %s
-entity_name
 entitykeyvalues.cpp
 enum(signed), 
 enum, 
+enum_or_datamap
 equals-sign
 exclamation-mark
 exit
 expf
-expr
 f5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5Jx
 fMinAlpha <= fMaxAlpha
 fMinGrn <= fMaxGrn
@@ -3289,6 +3122,9 @@ fast
 fclose
 feof
 fgets
+field_flags
+field_type
+fields
 filesystem_stdio
 final %s\n
 five
@@ -3303,8 +3139,8 @@ float Etc::Block4x4Encoding::CalcPixelError(Etc::ColorFloatRGBA, float, Etc::Col
 float Etc::Block4x4Encoding::GetError()
 float64
 floatbitmap.cpp
-floatbitmap.cpp(1191): Unsupported color format "%s", skipping!\n
-floatbitmap.cpp(518): Conversion not supported yet!\n
+floatbitmap.cpp(1213): Unsupported color format "%s", skipping!\n
+floatbitmap.cpp(520): Conversion not supported yet!\n
 fopen
 fopen64
 form-feed
@@ -3443,7 +3279,6 @@ int& std::forward<int&>(std::remove_reference<int&>::type&)
 int&& std::forward<int>(std::remove_reference<int>::type&)
 int16
 int64
-int8
 integer
 interrupt_priority
 invalid
@@ -3452,7 +3287,6 @@ ios_base::_M_grow_words allocation failed
 ios_base::_M_grow_words is not valid
 iostream
 iostream error
-is also the end of the line, so you must check your lexer rules\n
 java Class for 
 java resource 
 js_array
@@ -3488,7 +3322,6 @@ left-curly-bracket
 left-parenthesis
 left-square-bracket
 less-than-sign
-lexer->mTokens(): Error: No lexer rules were added to the lexer yet!\n
 libc.so.6
 libm.so.6
 libpthread.so.0
@@ -3500,7 +3333,6 @@ locale::_S_normalize_category category not found
 locale::facet::_S_create_c_locale name not valid
 locale::facet::_S_lc_ctype_c_locale duplocale error
 locale::facet::_S_lc_ctype_c_locale newlocale error
-localize
 long
 long const& std::min<long>(long const&, long const&)
 long double
@@ -3510,7 +3342,6 @@ long std::__copy_streambufs<wchar_t, std::char_traits<wchar_t>>(std::basic_strea
 long std::__copy_streambufs_eof<char, std::char_traits<char>>(std::basic_streambuf<char, std::char_traits<char>>*, std::basic_streambuf<char, std::char_traits<char>>*, bool&)
 long std::__copy_streambufs_eof<wchar_t, std::char_traits<wchar_t>>(std::basic_streambuf<wchar_t, std::char_traits<wchar_t>>*, std::basic_streambuf<wchar_t, std::char_traits<wchar_t>>*, bool&)
 longjmp
-looks like this:\n\t\t%.*s\n
 loongson-ext
 loongson-mmi
 lower
@@ -3518,9 +3349,11 @@ lowprecisionuv
 lowprecisionuv1
 m_Format
 m_InstanceOrientations32
+m_ReturnType
 m_VisClusterMemberBits
 m_bChildCursorsShouldInherit
 m_bRemoveWhenOutOfScope
+m_bShowInUI
 m_boolDiff
 m_boolDiff == true
 m_boolTransparent
@@ -3532,6 +3365,7 @@ m_mode == MODE_T
 m_nCursorID
 m_nGraphID
 m_nStackDepthWhenAdded
+m_nUniqueID
 m_nYieldToken
 m_paucEncodingBits == nullptr
 m_uiAddedBlocks < m_uiImageBlocks
@@ -3544,7 +3378,6 @@ maps/%s/world.vwrld
 maps/%s/world_visibility.vvis
 maps\
 materials/grass/grasstile.vmat
-matrix3x4
 matrix3x4_t
 mbrtowc
 mbsnrtowcs
@@ -3563,8 +3396,6 @@ nMax
 nMin
 nTries < 10000000
 nanosleep
-near '%c' :\n
-near char(%#02X) :\n
 net_array
 new 
 new[]
@@ -3618,7 +3449,6 @@ operator""
 opqMU
 optionallycompressedtangentframe
 pMessage
-panorama
 param
 parent_cursor_id
 pass %u\n
@@ -3627,10 +3457,8 @@ percent-sign
 period
 phys_res
 plus-sign
-pointer
 pointer, 
 port_name
-posix_memalign
 posxyz
 print
 printf
@@ -3676,17 +3504,14 @@ registers
 reinterpret_cast
 requested_cancel
 resource_manifests
-resource_name
 resourcehandle
 resources
 resourcesystem
 return_values
-return_values_enabled
 retval
 right-curly-bracket
 right-parenthesis
 right-square-bracket
-rotation_vector
 roundf
 s5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5Jx
 sRGB
@@ -3705,7 +3530,6 @@ sincosf
 sizeof 
 sizeof...
 slash
-soundevent
 source_file
 source_line
 space
@@ -4689,23 +4513,20 @@ std::__detail::_Compiler<std::regex_traits<char>>::_M_cur_int_value(int)
 std::__detail::_Compiler<std::regex_traits<char>>::_M_disjunction()
 std::__detail::_Compiler<std::regex_traits<char>>::_M_pop()
 std::__detail::_Compiler<std::regex_traits<char>>::_M_quantifier()
-std::__detail::_Compiler<std::regex_traits<char>>::_M_quantifier()::'lambda'()::operator()() const
 std::__detail::_Compiler<std::regex_traits<char>>::_M_try_char()
-std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_M_dfs(std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_Match_mode, long)
-std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_M_handle_alternative(std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_Match_mode, long)
-std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_M_handle_backref(std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_Match_mode, long)
-std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_M_handle_repeat(std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_Match_mode, long)
-std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_M_handle_word_boundary(std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_Match_mode, long)
-std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_M_is_line_terminator(char) const
-std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_M_is_word(char) const::__s
-std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_M_lookahead(long)
-std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_M_rep_once_more(std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_Match_mode, long)
-std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, true>::_M_dfs(std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, true>::_Match_mode, long)
-std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, true>::_M_handle_backref(std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, true>::_Match_mode, long)
-std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, true>::_M_is_line_terminator(char) const
-std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, true>::_M_is_word(char) const::__s
-std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, true>::_M_lookahead(long)
-std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, true>::_M_rep_once_more(std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, true>::_Match_mode, long)
+std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, false>::_M_dfs(std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, false>::_Match_mode, long)
+std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, false>::_M_handle_alternative(std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, false>::_Match_mode, long)
+std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, false>::_M_handle_backref(std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, false>::_Match_mode, long)
+std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, false>::_M_is_line_terminator(char) const
+std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, false>::_M_is_word(char) const::__s
+std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, false>::_M_lookahead(long)
+std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, false>::_M_rep_once_more(std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, false>::_Match_mode, long)
+std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, true>::_M_dfs(std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, true>::_Match_mode, long)
+std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, true>::_M_handle_backref(std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, true>::_Match_mode, long)
+std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, true>::_M_is_line_terminator(char) const
+std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, true>::_M_is_word(char) const::__s
+std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, true>::_M_lookahead(long)
+std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, true>::_M_rep_once_more(std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, true>::_Match_mode, long)
 std::__detail::_NFA<std::regex_traits<char>>::_M_insert_dummy()
 std::__detail::_NFA<std::regex_traits<char>>::_M_insert_matcher(std::function<bool (char)>)
 std::__detail::_NFA<std::regex_traits<char>>::_M_insert_repeat(long, long, bool)
@@ -7045,10 +6866,8 @@ std::vector<std::Catalog_info*, std::allocator<std::Catalog_info*>>::push_back(s
 std::vector<std::Catalog_info*, std::allocator<std::Catalog_info*>>::size() const
 std::vector<std::Catalog_info*, std::allocator<std::Catalog_info*>>::vector()
 std::vector<std::Catalog_info*, std::allocator<std::Catalog_info*>>::~vector()
-std::vector<std::regex_traits<char>::_RegexMask, std::allocator<std::regex_traits<char>::_RegexMask>>::vector(std::vector<std::regex_traits<char>::_RegexMask, std::allocator<std::regex_traits<char>::_RegexMask>> const&)
 std::vector<std::string, std::allocator<std::string>>::push_back(std::string const&)
 std::vector<std::string, std::allocator<std::string>>::vector(std::vector<std::string, std::allocator<std::string>> const&)
-std::vector<std::sub_match<char const*>, std::allocator<std::sub_match<char const*>>>::vector(std::vector<std::sub_match<char const*>, std::allocator<std::sub_match<char const*>>> const&)
 std::weak_ptr<std::__future_base::_State_baseV2>::lock() const
 std::weak_ptr<std::__future_base::_State_baseV2>::~weak_ptr()
 stderr
@@ -7061,7 +6880,6 @@ strerror_r
 string literal
 string::string
 string_t
-string_token
 strlen
 strncmp
 strncpy
@@ -7070,7 +6888,6 @@ stronghandle,
 strstr
 strtold_l
 strtoul
-subclass
 syscall
 system
 system_state
@@ -7083,6 +6900,7 @@ target_type
 targetname
 template
 template parameter object for 
+tempvar:%d
 terminate called after throwing an instance of '
 terminate called recursively\n
 terminate called without an active exception\n
@@ -7134,7 +6952,6 @@ transaction clone for std::runtime_error::~runtime_error()
 transaction clone for std::underflow_error::underflow_error(char const*)
 transaction clone for std::underflow_error::underflow_error(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)
 transaction clone for std::underflow_error::~underflow_error()
-transform
 typeinfo fn for 
 typeinfo for 
 typeinfo for CThreadSyncObject
@@ -7718,7 +7535,6 @@ typename
 typesafe_float, 
 typesafe_int, 
 t|AO
-uchar32
 uiTransparentPixels < PIXELS
 uint
 uint32_t libyuv::SumPixels(int, const uint16_t*)
@@ -7737,7 +7553,6 @@ unsigned long const& std::max<unsigned long>(unsigned long const&, unsigned long
 unsigned long const& std::min<unsigned long>(unsigned long const&, unsigned long const&)
 unsigned long long
 unsigned short
-unspecified
 upper
 utl_vector, 
 utlstringtoken
@@ -7996,7 +7811,6 @@ void std::vector<std::regex_traits<char>::_RegexMask, std::allocator<std::regex_
 vpk:%s:
 vsnprintf
 vtable for 
-vtable for CCharBufferFormatOutputStream
 vtable for __cxxabiv1::__class_type_info
 vtable for __cxxabiv1::__forced_unwind
 vtable for __cxxabiv1::__foreign_exception

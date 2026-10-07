@@ -39,6 +39,7 @@ $ORIGIN
 %d %d %d %d
 %d bones found and initialized\n
 %d sec to find %d material files\n
+%d shapes, %d spheres, %d capsules, %d hulls, %d meshes}
 %d verts, %d polys}
 %d verts, %d tris}
 %d+%d layers excluded
@@ -50,8 +51,6 @@ $ORIGIN
 %s %s included in target detail layer '%s' of %s
 %s (Color)
 %s (Material)
-%s 0x%llX - 0x%llX, except %s\n
-%s 0x%llX\n
 %s F=%d V=%d hE=%d
 %s NameIndex:AcquirePreindexedName( %x ) without name string\n
 %s allocation count overflow
@@ -63,6 +62,7 @@ $ORIGIN
 %s does not include FCOLLISION_FUNC_ENABLE_TOUCH_EVENT. Disabling all touch events.
 %s has FCOLLISION_FUNC_ENABLE_TOUCH_PERSISTS. Adding persistent touch events.
 %s(): Bone referenced by collision mesh not found in render skeleton. Skipping collision mesh.\n
+%s: %d bodies: %d shapes: %d spheres, %d capsules, %d boxes, %d other hulls (%.1fv %.1fe %.1fue %.1ff), %d meshes (%.1fv %.1ft)\n
 %s: __pos (which is %zu) > __size (which is %zu)
 %s: __pos (which is %zu) > this->size() (which is %zu)
 %s: allocation of %u too large, max %u\n
@@ -81,14 +81,17 @@ $ORIGIN
 (anonymous namespace)
 *N12_GLOBAL__N_121system_error_categoryE
 *N12_GLOBAL__N_122generic_error_categoryE
+*N24CParallelProcessLauncher18CParallelLambdaJobIZ11ParallelForILb1EZ16RnCompoundCreateSt4spanIK10RnSphere_tLm18446744073709551615EES2_IK11RnCapsule_tLm18446744073709551615EES2_IKPK8RnHull_tLm18446744073709551615EES2_IKPK8RnMesh_tLm18446744073709551615EES2_IKhLm18446744073709551615EEP12RnCompound_tEUliE_EviiPKcOT0_ii13JobPriority_tQ14is_invocable_vISQ_JiEEEUliE_EE
 *N24CParallelProcessLauncher18CParallelLambdaJobIZ11ParallelForILb1EZN13CRnBodyHelper17UpdateSceneObjectEP7CRnBodyfyEUliE_EviiPKcOT0_ii13JobPriority_tQ14is_invocable_vIS8_JiEEEUliE_EE
 *N24CParallelProcessLauncher18CParallelLambdaJobIZ11ParallelForILb1EZN19CVPhysics2Interface13ConvertBodiesER10CUtlVectorI16PhysicsBodyDef_ti25CUtlVectorMemory_GrowableIS4_iLm0EEEPK21VPhysXAggregateData_tEUliE_EviiPKcOT0_ii13JobPriority_tQ14is_invocable_vISF_JiEEEUliE_EE
 *N24CParallelProcessLauncher18CParallelLambdaJobIZ11ParallelForILb1EZN8CRnWorld18BeginRopeAsyncJobsEbEUliE_EviiPKcOT0_ii13JobPriority_tQ14is_invocable_vIS6_JiEEEUliE_EE
+*N24CParallelProcessLauncher18CParallelLambdaJobIZ11ParallelForILb1EZNK15CompoundBuilder14BuildHierarchyESt4spanINS2_9PrimitiveELm18446744073709551615EEEUliE_EviiPKcOT0_ii13JobPriority_tQ14is_invocable_vIS9_JiEEEUliE_EE
 *N24CParallelProcessLauncher18CParallelLambdaJobIZN11CBroadphase23FinalizeHierarchyUpdateER27BroadphaseHierarchyUpdate_tR32BroadphaseOverlappingPairQuery_tEUliE_EE
 *N24CParallelProcessLauncher18CParallelLambdaJobIZN8CRnWorld14SolveTOIBodiesE13RnTOIParams_tR19CUtlAtomicAddVectorIP7CRnBodyLb0E14CUtlLeanVectorIS5_i18CMemAllocAllocatorEEEUliE_EE
 *N24CParallelProcessLauncher18CParallelLambdaJobIZN8CRnWorld5SolveEfbR32BroadphaseOverlappingPairQuery_tEUliE_EE
 *N24CParallelProcessLauncher18CParallelLambdaJobIZN8CRnWorld7CollideEfEUliE_EE
-*N24CParallelProcessLauncher18CParallelLambdaJobIZNK11CBroadphase21QueryOverlappingPairsIZN8CRnWorld40BuildNewContactsFromOverlappingPairQueryER32BroadphaseOverlappingPairQuery_tEUlP8CRnShapeS7_E_EEvS5_RKT_EUliE_EE
+*N24CParallelProcessLauncher18CParallelLambdaJobIZNK11CBroadphase21QueryOverlappingPairsIZN8CRnWorld40BuildNewContactsFromOverlappingPairQueryER32BroadphaseOverlappingPairQuery_tEUlRK19RnDynamicTreeNode_tS8_E_EEvS5_RKT_EUliE_EE
+*Z28CreatePhysicsBodySceneObjectP11ISceneWorld11CWeakHandleI29InfoForResourceTypeIMaterial2EiPKj13CStridedArrayI16RnRenderVertex_tEbEUliiE_
 *Z30RestorePhysicsMotionControllerRK19physrestoreparams_tPP24IPhysicsMotionControllerE17CDummyMotionEvent
 *ZN11IThreadPool17QueueJobWithFlagsIZN26CMultiworldSoftbodyStepperC4EPP11CRnSoftbodyifiEUlvE_EE9CSmartPtrI12CThreadedJob17CRefCountAccessorEPKc13JobPriority_tjOT_E10CLambdaJob
 *ZN14CRnWorldHelper18ReRunRecordedTraceERK15RecordedTrace_tP27CUtlLeanVectorFixedGrowableI21RecordedTraceResult_tLt1Ei18CMemAllocAllocatorEEUlP13IPhysicsShapeE_
@@ -99,6 +102,7 @@ $ORIGIN
 *ZN15CRnParticleRope12BeginSimJobsEfbP16CJobContinuationEUlvE1_
 *ZN15CRnParticleRope12BeginSimJobsEfbP16CJobContinuationEUlvE2_
 *ZN15CRnParticleRope12BeginSimJobsEfbP16CJobContinuationEUlvE3_
+*ZN15CRnParticleRope12BeginSimJobsEfbP16CJobContinuationEUlvE4_
 *ZN15CRnParticleRope12BeginSimJobsEfbP16CJobContinuationEUlvE_
 *ZN15CRnParticleRope14BeginAsyncJobsEbP16CJobContinuationEUlvE_
 *ZN15CRnParticleRope18CreateTautLineJobsEbR16CJobContinuationS1_EUlvE0_
@@ -106,6 +110,7 @@ $ORIGIN
 *ZN15CRnParticleRope18CreateTautLineJobsEbR16CJobContinuationS1_EUlvE_
 *ZN15CRnParticleRope31CreateMotionControlCallbacksJobEbR16CJobContinuationS1_EUlvE_
 *ZN16CJobContinuation10ReleaseRefEvEUlvE_
+*ZN19CFnPhysicsWorldImpl7ProfileER26PhysicsWorldTraceProfile_tEUlRK15RecordedTrace_tE_
 *ZN19CVPhysics2Interface4InitEvEUlvE_
 *ZN20CPhysDataTypeManager16AllocateResourceEPK21ResourceBindingBase_t12ResourceId_tPK20ResourceFileHeader_tP29IRD_RegisterResourceDataUtilsE15CAllocatorUtils
 *ZN30CPhysicsAbsoluteRagdollControl19UpdateJointAbsoluteEiifbPKiPK10CTransformRK17RnCollisionAttr_tRbR27CUtlLeanVectorFixedGrowableISt8functionIFvvEELt100Ei18CMemAllocAllocatorER12CAtomicMutexEUlvE0_
@@ -138,12 +143,12 @@ $ORIGIN
 -----------------\nObject: %s\n
 -aggs
 -cloth
+-collision
 -mem
 -save
 -sdk
 -snapshots
 -touch
-../common/stackhelpers/stackhelpers_vsymbolmodule_translation.cpp
 ../public/tier0/tslist.h
 ../public/tier0/utldict.h
 ../public/tier0/utlsortvector.h
@@ -184,7 +189,6 @@ $ORIGIN
 12CRnMeshShape
 12CRnNullJoint
 12CRnWeldJoint
-12CThreadEvent
 12CThreadedJob
 12CVPhys2World
 12IMotionEvent
@@ -317,7 +321,6 @@ $ORIGIN
 22IFnPhysicsCapsuleShape
 22IFnPhysicsConicalJoint
 22IFnPhysicsGenericJoint
-22IModuleMappingListener
 22IPhysAggregateInstance
 22IPhysicsCharacterProxy
 22IPhysicsRagdollControl
@@ -349,7 +352,6 @@ $ORIGIN
 23CKV3TransferContextBase
 23CKV3TransferLoadContext
 23CKV3TransferSaveContext
-23CStackTranslationHelper
 23CVPhysPtrSaveRestoreOps
 23IFnPhysicsCompoundShape
 23IFnPhysicsRevoluteJoint
@@ -369,6 +371,7 @@ $ORIGIN
 25CFnPhysicsSphereShapeImpl
 25CFnPhysicsSplineJointImpl
 25CFnPhysicsSpringJointImpl
+25CSoftbodyEffectBlobAnchor
 25CSoftbodyEffectPressurize
 25IAsyncProcessedDataResult
 25IPhysSerialStreamSnapshot
@@ -399,7 +402,6 @@ $ORIGIN
 30CSchemaRegistration_physicslib
 30CSoftbodyEffectSkinnedCollider
 30IPhysSurfacePropertyController
-30IStackTranslationHelperFactory
 31CModelConfigElement_RandomColor
 32CModelConfigElement_SetBodygroup
 32CResourceStreamUnalignedGrowable
@@ -407,20 +409,16 @@ $ORIGIN
 32CVPhysics2SurfacePropertyManager
 33CBaseIntrospectedToKV3TypeManager
 33CModelConfigElement_AttachedModel
-33CStackTranslationHelper_Universal
 34CKV3Transfer_ResourceLoadInterface
 34CModelConfigElement_SetRenderColor
 34IKV3TransferInterface_ResourceLoad
 36CKV3Transfer_UtlSymbolLargeInterfaceI24CUtlSymbolTableLargeBaseILb0ELm2048E16CThreadNullMutex18CMemAllocAllocatorEE
 36CModelConfigElement_SetMaterialGroup
 36IKV3TransferInterface_UtlSymbolLarge
-37CStackTranslationHelper_VSymbolModule
 37CTypesafeIntrospectedToKV3TypeManagerILy495958126710E21VPhysXAggregateData_tE
 38CDefaultKV3TransferResourceTypeManagerILy440006964086EE
-38CStackTranslationHelper_VirtualMachine
 39CIntersectionDictionaryResourceListener
 41CModuleMetadataProvider_ResourceManifests
-44CStackTranslationHelperModuleMappingListener
 48CModelConfigElement_SetBodygroupOnAttachedModels
 4fff>fff>fff>fff>
 52CModelConfigElement_SetMaterialGroupOnAttachedModels
@@ -458,10 +456,8 @@ $ORIGIN
 <font color="yellow">[!]</font> 
 <li> - because <font color="cyan">Query</font> interacts with %u <font color="blue">shape</font>'s layer%s: 
 <li> - because shape interacts with %u <font color="cyan">Query</font>'s layer%s: 
-<no debug file path>
 <no failure reason set>
 <non-RTTI type>
-<none>
 <p><b>No</b> reason to hit found</p>
 <p><font color="blue">Body</font> is %s</p>
 <p><font color="blue">Shape</font>-as, <font color="cyan">Query</font>-with: 
@@ -556,9 +552,11 @@ BoneConstraintRbf :: Invalid input %d or output %d bone count :: %s\n
 BoneConstraintRbf :: input bone count %d != input pose count %d :: %s\n
 BoneConstraintRbf :: output bone count %d != output pose count %d :: %s\n
 BoneOverlay
+Both sides must allow collisions outside hierarchy. Intersection disabled.
 Broadphase @%p has %d, %d pairs, %d move buffer entries\n
 Buffer overflow
 Build Mass Unit Test centroid/floating-point-induced Max error: %f, %f, %f\n
+BuildHierarchySplit
 CAtomicMutex::AcquireLock(unsigned long long)
 CAttachmentNameSymbolWithStorage
 CBodyGroupChoiceSymbolWithStorage
@@ -567,7 +565,6 @@ CBufferString::AppendFormat(char const*, ...)
 CBufferString::AppendFormatV(char const*, __va_list_tag*)
 CBufferString::ComposeFileName(char const*, char const*, char)
 CBufferString::ExtendPath(char const*, char, bool)
-CBufferString::ExtractFileBase(char const*, bool)
 CBufferString::ExtractFilePath(char const*, bool)
 CBufferString::FixSlashes(char)
 CBufferString::FixupPathName(char)
@@ -581,7 +578,6 @@ CBufferString::Purge(int)
 CBufferString::RemoveAt(int, int)
 CBufferString::RemoveDotSlashes(char)
 CBufferString::RemoveFirstDir(CBufferString*)
-CBufferString::RemoveToFileBase(bool)
 CBufferString::Replace(char const*, char const*, bool)
 CBufferString::Replace(char, char)
 CBufferString::SetExtension(char const*, bool)
@@ -594,12 +590,11 @@ CBufferString::TrimTail(char const*)
 CBufferString::TruncateAt(int, bool)
 CCallQueue::ParallelCallQueued(char const*, IThreadPool*)
 CColorGradient
-CCountedStringPool_CI::CCountedStringPool_CI()
-CCountedStringPool_CI::~CCountedStringPool_CI()
 CDualHullAgglomerator: Degenerate topology, %d faces removed\n
-CDwarfModule::GetValveSymbolPaths(CBufferString*)
 CEntityIndex
+CFnPhys
 CFormatStringElement::CFormatStringElement(char const*)
+CGamePhysicsQueryInterface::
 CGlobalSymbol
 CL 6900691
 CMemAllocSystemInitialize
@@ -614,10 +609,13 @@ CONICAL_JOINT
 CONTENTS_SOLID
 CONTENTS_SOLID_NO_BLOCK_LOS
 CParentAttachmentName
+CPhys
+CPhysicsGameSystem::
 CRC32_ProcessBuffer
 CRC64_ProcessBuffer
 CResourceStreamFixed: trying to write past the end of allocated memory (new commit %u, allocated %u)\n
 CRnSoftbody::SetLinkParent: Cannot find parent bone
+CRnWorld
 CSOAContainer::SetAttributeType - ERROR, trying to change type of previously-defined attribute %d!\n
 CSplitString::Split(char const*, int, char const**, int, bool)
 CStableSymbolTable::Insert(int, char const*)
@@ -632,15 +630,10 @@ CThreadMultiWaitEvent::CThreadMultiWaitEvent(bool)
 CThreadMultiWaitEvent::Reset()
 CThreadMultiWaitEvent::Set()
 CThreadMultiWaitEvent::~CThreadMultiWaitEvent()
-CThreadRWLock_FastRead::CThreadRWLock_FastRead()
-CThreadRWLock_FastRead::HaveWriteLock_BlockReadsNow(bool)
-CThreadRWLock_FastRead::UnlockWrite(char const*, int)
 CThreadSemaphore::CThreadSemaphore(int, int, char const*, bool)
 CThreadSemaphore::Release(int, int*)
 CThreadSemaphore::~CThreadSemaphore()
 CThreadSyncObject::Wait(unsigned int)
-CThreadSyncObject::WaitImpl(unsigned int)
-CThreadSyncObject::~CThreadSyncObject()
 CThreadedJob::Abort(bool)
 CTransform
 CUniformRandomStreamImpl<CThreadNullMutex>::CUniformRandomStreamImpl(int)
@@ -663,8 +656,6 @@ CUtlBuffer::PutString(char const*)
 CUtlBuffer::Scanf(char const*, ...)
 CUtlBuffer::SeekGet(CUtlBuffer::SeekType_t, int)
 CUtlBuffer::SeekPut(CUtlBuffer::SeekType_t, int)
-CUtlFilenameSymbolTable::FindOrAddFileName(char const*)
-CUtlFilenameSymbolTable::String(unsigned int const&, CBufferString*)
 CUtlLeanVector
 CUtlLeanVectorFixedGrowable
 CUtlLinkedList overflow! (exhausted index range)\n
@@ -702,12 +693,8 @@ CUtlSymbolTable::~CUtlSymbolTable()
 CUtlSymbolTableLarge element limit of %u exceeded\n
 CUtlVector
 CUtlVectorSIMDPaddedVector
-CVDwarfSymbolModule::CVDwarfSymbolModule()
-CVDwarfSymbolModule::Init(char const*, unsigned int, VWMD_CPU_ARCHITECTURE, unsigned long long, unsigned long long, StackTools_ModuleIDFormat_t, void const*, int)
-CVDwarfSymbolModule::OpenAndParseSymbols(char const*, unsigned int, char const*)
 CVPhys2World - Dumped World '%s'.
-CVSymbolModule::ResolveInlineCallInfo(VSymbolInlineInfo_t*, unsigned long long, unsigned int, CBufferString*, unsigned long long*, CBufferString*, unsigned int*, unsigned long long*)
-CVSymbolModule::ResolveSymbolInfo(unsigned long long, unsigned int, CBufferString*, VSymbolKind_t*, unsigned long long*, CBufferString*, unsigned int*, unsigned long long*)
+CVPhys2World::
 CVariableBitStringBase::FreeInts()
 CVariableBitStringBase::Resize(int)
 CVertexKDTree::BuildMidpoint(float const*, int, int)
@@ -722,7 +709,6 @@ Can <b>Not</b> Hit: ignoring entity id 0x%X
 Can Hit
 Can't restore aggregate state, different part count!!!\n
 Can't restore ragdoll control, different body count!!!\n
-CanTranslatePointer
 Cannot allocate abstract class
 Cannot convert KV3 type '%s' (%u) to a string token
 Cannot save file %s, stopping snapshot dumping\n
@@ -745,6 +731,7 @@ Collision filtering: Cannot allocate name '%s' already used %d names\n
 Collision group pair flags=%d. Pair Interacts.
 Collision group pair flags=0. Will not collide.
 Compared Bodies
+Compound-Compound
 ConditionallySolid
 Conical
 Contact Information
@@ -752,6 +739,7 @@ Contacts: %d (%d)
 ControlBodies
 ControlJoints
 ConvertBodies
+Copy Hulls
 Could not create phys debug IB for %lldd elements\n
 Could not create phys debug VB for %lld elements\n
 Could not lock phys debug IB for %lld elements\n
@@ -759,6 +747,7 @@ Could not lock phys debug VB for %lld elements\n
 Couldn't load KV3 for resource: %s
 Create Flags
 CreateInterface
+CreatePhysicsBodySceneObject Job
 Currently allocated agg data: {
 DF128_
 DF16_
@@ -768,7 +757,6 @@ DF32x
 DF64_
 DF64x
 DOT_TO_MORPH
-DWARF_SYMBOL_PATH
 Damping %.2f linear, %.2f angular\n
 Data_Branch1xy
 Data_Branch1zBranch2x
@@ -842,14 +830,12 @@ Gear
 GetCPUInformation
 GetDefaultMiniDumpTypeFlags
 GetGameInfoBool(char const*, bool)
-GetInlineCallData
-GetMappedModuleName
 GetResourceManifestCount
 GetResourceManifests
 GetThreadLocalStackAllocator
-GetTranslationData
 Goals -%d %s
 HELPER_BONE
+HalfAngle
 HammerMapLoader001
 Has common interaction flags
 Has interaction due to %s Collision Group Always
@@ -919,7 +905,6 @@ Keyframed vs Static
 Kin 
 LOG_CONSOLE
 LOG_GENERAL
-LOG_SYMBOLS
 LightmapUV
 LightmapUVW
 Linkage
@@ -937,17 +922,14 @@ Local Damp
 LocalServerClientAccess001
 LocalSpace
 Locked
-LoggingSystem_ChangeChannelIndent
-LoggingSystem_EnsureChannelVerbosity
-LoggingSystem_GetChannelVerbosity
 LoggingSystem_IsChannelEnabled
 LoggingSystem_Log
 LoggingSystem_Log(int, LoggingSeverity_t, Color, char const*, ...)
 LoggingSystem_RegisterLoggingChannel
-LoggingSystem_SetChannelIndent
 MATCHFRAMEWORK_001
 MAlternateSemanticName
 MAtomicTransfersAsPlainString
+MCustomFGDMetadata
 MD5Final
 MD5Init
 MD5Update
@@ -1036,6 +1018,7 @@ No interactions allowed between keyframed vs keyframed or keyframed vs static - 
 No matching excluded interaction flags
 No matching interaction layers
 No shared pair flags on the following collision groups:
+Node %d
 Nodes
 Non-dynamics
 Non-dynamics interactions are generally disabled, unless the collision groups intersect with Trigger and without Resolve flags
@@ -1048,6 +1031,7 @@ Notify Persist
 Null
 ORIENT
 Operation
+Outside-Hierarchy Collisions: <font color = "cyan">%s</font>, <font color = "green">%s</font>
 OverlayProjectionDirection
 PARENT
 PDF128_
@@ -1098,7 +1082,6 @@ Plat_FatalError
 Plat_FloatTime
 Plat_GetEnv
 Plat_GetExeModule
-Plat_GetModuleAddressInformation
 Plat_GetModuleFilename
 Plat_GetModuleProcAddress
 Plat_GetPlatformError
@@ -1152,8 +1135,6 @@ RenderDevice003
 RenderHardwareConfig002
 Reported
 Resolve
-ResolveInlineCallInfo
-ResolveSymbolInfo
 Resource Reallocate: Leaking Cloth Data @%p\n
 ResourceCompilerSystem001
 ResourceHandleUtils001
@@ -1164,7 +1145,6 @@ Revolute
 Revolute Weld Fused
 RnAssertFatalWrapper
 RnCompoundClone
-RnCompoundCreate
 RnCompoundDestroy
 RnHullClone
 RnHullCreate
@@ -1202,7 +1182,6 @@ SaveKV3ToFile(KV3ID_t const&, KV3ID_t const&, KeyValues3 const*, CUtlString*, ch
 Saving snapshots starting from Frame %u into '%s'\n
 SchemaTestExternal_One_001
 SchemaTestExternal_Two_001
-ScrubTool: Mapping Modules for Debug Symbols
 See CL 6900691. Disable trigger/touch events on keyframed vs static.  This wastes CPU in some cases and isn't used in any current cases\n
 Self Collisions
 Self-Collision: <font color = "cyan">%s</font>, <font color = "green">%s</font>
@@ -1211,6 +1190,7 @@ Shape ignored this query by owner ID. shape owner ID: %08x, query owners:%08x, %
 Shape is not part of query target detail layer '%s'
 Shape1
 Shape2
+ShapeOffset
 Shared pair flags exist for the following collision groups:
 Should <b>Not</b> Collide
 Should Collide
@@ -1219,6 +1199,7 @@ Simplify algorithm '%s' could not simplify hull\n
 SimplifyMesh (%.3f) (v=%d,t=%d) to (v=%d,t=%d)\n
 Skipping %d items of total size %u bytes\n
 Slider: %.1f
+SmartPropsSystem_001
 Softbody #%d %s.%d %s (%.4g,%.4g)
 SoftbodyProcessor
 Solid Contact
@@ -1254,9 +1235,6 @@ St9exception
 St9type_info
 Sta 
 Stack depth limit hit (%d)
-StackTools_EnumerateKnownLoadedModules
-StackTools_InstallModuleMappingListener
-StackTools_RemoveModuleMappingListener
 State: %s, Motion %s, (game %04x, index %d)\n
 Static bodies can never move during simulation
 StaticLevel
@@ -1286,8 +1264,6 @@ ThreadMultiWait
 ThreadMultiWaitObjectSetDestroy
 ToolFramework2_002
 ToolSceneNodeFactory_001
-ToolsStallMonitorInternal_BeginScope
-ToolsStallMonitorInternal_EndScope
 Touch Event
 Touch Persists
 Touch list not implemented\n
@@ -1298,13 +1274,14 @@ Tried to load a polymorphic pointer with no '%s' key
 Tried to load resource reference '%s' from a value without a resource reference specific type.
 Trigger <font color="cyan">Query</font>, common interaction flags
 Twist: %.1f, Swing: %.1f, Twist Lambda: %.1f, Swing Lambda: %.1f
+Two compounds may not have collision\n
 Two meshes may not have collision\n
 Two non-dynamics do NOT have a Trigger flag
 Two non-dynamics have a Trigger flag\n
+UTIL_Find
 Undefined
 Unexpected Keyword %s\n
 Unexpected end of buffer @%p, payload %d bytes, %d extra bytes at the end\n
-UnloadModulesInTargetRange
 Unsupported KV3 basic type '%s' (%d)!
 Unsupported version %d for resource '%s' (Expected %d)\n
 UpdateJointsParallel
@@ -1325,12 +1302,6 @@ VP4003
 VPhysics2Startup
 VPhysics2SurfacePropLoader
 VRenderDeviceSetupV001
-VSYMMOD::%s( 0x%llX )\n
-VSYMMOD::Creating symbol module and loading symbols for '%s'\n
-VSYMMOD::Generated DWARF_SYMBOL_PATH = '%s'\n
-VSYMMOD::LoadSymbolsIfNeeded( 0x%llX ) - %s\n
-VSymbolModule init failed\n
-VSymbolModule init succeeded (symbols may or may not have been found)\n
 VTT for 
 VWebm001
 V_DoubleToString_Unsafe
@@ -1594,6 +1565,7 @@ adult male human
 alignof 
 allocator
 always
+angles
 angular_damping_ratio
 angular_frequency
 angularburst
@@ -1653,8 +1625,8 @@ boolean
 bowling ball
 break_list
 breakable_glass
-broadphase.cpp:737
-broadphase.inl:235
+broadphase.cpp:802
+broadphase.inl:226
 burst
 burstRandomize
 byte
@@ -1697,10 +1669,12 @@ coarse
 collisionGroup
 collisionGroup 
 collision_group_override
+compoundId = %i
+compound{
 compressedtangentframe
 const_cast
 construction vtable for 
-contact d=%.2f>
+contact d=%.2f
 contact d=Inf
 contact_indices
 contact_manifolds
@@ -1740,8 +1714,6 @@ expf
 fademaxdist
 fademindist
 fadetime
-fail, GetMappedModuleName\n
-fail\n
 false
 fast
 ff9966;">Can <b>Not</b> Collide: same body</div><span>Both shapes belong to the same body %d <i>%s</i>. Do not collide.</span>
@@ -1756,10 +1728,6 @@ flc_lines
 float
 float64
 fltx4
-found '%s'\n
-found module '%s' already loaded at 0x%llx\n
-found module '%s', not already loaded at 0x%llx, updating\n
-found pointer in module '%s'\n
 fputc
 fputs
 free
@@ -1776,7 +1744,6 @@ g_nSequentialIndices<int>
 g_pMemAlloc
 g_pThreadPool
 generic
-get module name\n
 getentropy
 glibcxx.eh_pool
 global constructors keyed to 
@@ -1839,9 +1806,6 @@ limit
 linear X:%s Y:%s Z:%s angular X:%s Y:%s Z:%s
 linear_damping_ratio
 linear_frequency
-local
-local, checking capture modules\n
-local\n
 local_basis1
 local_basis2
 local_center_of_mass
@@ -1855,6 +1819,8 @@ long long
 lowprecisionuv
 lowprecisionuv1
 m_CollisionAttrib.m_nCollisionGroup
+m_CollisionAttrib.m_nEndpointIgnoreEntityIds[ 0 ]
+m_CollisionAttrib.m_nEndpointIgnoreEntityIds[ 1 ]
 m_CollisionAttrib.m_nEntityIdsToIgnore[ 0 ]
 m_CollisionAttrib.m_nEntityIdsToIgnore[ 1 ]
 m_CollisionAttrib.m_nHierarchyIds[ 0 ]
@@ -1878,6 +1844,7 @@ m_bHasBakedLightingFromVertexStream
 m_bIsAngularConstraintEnabled
 m_bIsCollisionEnabled
 m_bIsLinearConstraintEnabled
+m_bIsLocalFrameScaled
 m_bIsNotMatchedToMaterial
 m_bIsRigid
 m_bIsTautLineEnabled
@@ -2022,8 +1989,6 @@ nodraw
 noexcept
 non-transaction clone for 
 non-virtual thunk to 
-nonlocal
-nonlocal\n
 not 
 npc_actor
 npc_scripted
@@ -2058,9 +2023,7 @@ optionallycompressedtangentframe
 orientation
 other
 other 
-pModule->%s( 0x%llX )\n
 pObject
-pPl[
 pSkeletonPose
 particle_rope
 parts[%d]={
@@ -2088,7 +2051,6 @@ plain
 player
 player_movement
 playerclip
-pointer not found in module list\n
 posxyz
 preMerge face 0
 preMerge face 1
@@ -2129,6 +2091,7 @@ rncommon.cpp
 s off\ng cMesh\nusemtl initialShadingGroup\n
 scale=%g;
 scale={%g,%g,%g};
+scale={%g};
 scripts/collision_detail_layers.vdata
 secure_getenv
 server
@@ -2748,7 +2711,6 @@ strlen
 strncmp
 strstr
 strtoul
-success\n
 surface
 surface 
 surfaceproperties/surfaceproperties.vsurf
@@ -2824,7 +2786,6 @@ twist_limit
 type %u, version %u, total size %u. %d data headers:\n
 typeinfo fn for 
 typeinfo for 
-typeinfo for CThreadSyncObject
 typeinfo for IFormatOutputStream
 typeinfo for _Float128
 typeinfo for _Float128 const*
@@ -3107,7 +3068,6 @@ typeinfo name for wchar_t*
 typename
 uint
 unable to register all schema data: %s\n
-unload %s 0x%llX - 0x%llX\n
 unsigned
 unsigned __int128
 unsigned char
@@ -3188,9 +3148,9 @@ window
 wireframe
 wireframe 
 with
-world.cpp:1625
-world.cpp:1781
-world.cpp:2152
+world.cpp:1713
+world.cpp:1878
+world.cpp:2252
 worldGeometry
 {default arg#
 {lambda

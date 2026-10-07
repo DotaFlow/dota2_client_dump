@@ -2,12 +2,27 @@
 !"#$%&'()*+,-./
 !"%&
 !???????????
+!CPulseType( PVAL_EHANDLE ).CanConvertTo( baseType )
+!CPulseType( PVAL_INT ).CanConvertTo( valueType )
+!PulseFindTypeInfo( baseType ).IsNull()
+!PulseFindTypeInfo( valueType ).IsNull()
 !\b\rA
+!asBool.GetValueBool()
+!baseType.AreInstancesEqual( &first, &second )
+!baseType.CanConvertTo( PVAL_INT )
+!baseType.CanConvertTo( derivedAType )
+!baseType.CanReinterpretInstanceAs( variantA.GetInstanceStorage(), derivedAType )
+!baseType.CanReinterpretInstanceAs( variantDerived.GetInstanceStorage(), derivedBType )
+!defaultA.EqualTo( variantA )
+!defaultA.IsInstanceValid()
 !ff.
-!g_pPulseSystem->GetWeakHandleTable()->AnyHandlesAllocated()
+!g_FakeEntityHandleTable.AnyHandlesAllocated()
+!loadedNull.IsInstanceValid()
 !u0LV
-!w H
-!wJH
+!valueType.AreInstancesEqual( &first, &second )
+!valueType.CanReinterpretInstanceAs( variantA.GetInstanceStorage(), CPulseType( PVAL_LEAF, PULSE_FAKE_ENTITY_SUBTYPE ) )
+!variantA.EqualTo( variantB )
+!variantA.IsInstanceValid()
 ""\r\n
 "&ъԚ\v
 ".B^
@@ -25,53 +40,59 @@
 #t\bL
 #wY\n\vs˜
 $!\b0\b
+$$fA
 $A;\\$
 $BJ Bb
 $H9]
-$Hc=
-$IcD
+$Hc=`&
 $ORIGIN
 $[A\\]
-$\aHc
 $ff.
-$tRH
+$tMH
 $t\bH
 $tcL
 $tjH
 $wj@
-%*^\r
-%,$\r
-%/7\r
-%/s\e
+%"*\r
+%"L\f
+%"W\r
+%#"\r
+%#$\r
+%%$\r
+%'H\f
+%)@\r
+%*_\f
+%/$\r
 %0*d
-%1`\f
-%1t\r
-%7{\f
-%9A\r
-%9u\f
+%2)\r
+%93\f
+%9{\r
 %:`!
-%:`\f
-%;a\f
-%=I\r
-%Av\r
-%B\b\r
-%I1\r
-%I3\r
-%IB\r
-%IN\r
-%I{\r
-%O_\r
-%QK\r
-%R_\r
-%Yz\r
-%Zi\r
-%\e(\f
-%\t/\r
-%\tJ\f
-%\t\t\r
-%_7\r
-%a#\r
-%bt\r
+%@$\r
+%A=\r
+%A?\f
+%B|\r
+%C#\r
+%G`\f
+%I%\f
+%I@\r
+%J>\n
+%J[\r
+%L$\r
+%NX\r
+%O"\r
+%QB\r
+%QI\r
+%Yr\r
+%Z$\r
+%\a0\f
+%\fO\r
+%\nG\f
+%\t2\r
+%\tG\r
+%`#\r
+%a)\r
+%b\r\r
 %d %d %d
 %d %d %d %d
 %d CallInfos:\n
@@ -80,15 +101,18 @@ $wj@
 %d InvokeBindings:\n
 %d OutputConnections:\n
 %d PublicOutputs:\n
+%d TempVarBanks:\n
 %d Vars:\n
 %d instruction(s)\n
 %d register(s) %d byte(s)\n
 %ff.
-%g\t\r
+%j0\r
+%k`\f
+%l#\r
 %lld
 %llu
-%qH\r
-%qr\r
+%q|\r
+%r9\r
 %s %s
 %s %s %s
 %s %s %s %s
@@ -102,6 +126,7 @@ $wj@
 %s allocation count overflow( %llu + %llu > %llu )\n
 %s allocation count overflow( add %llu + current %llu > max %llu )\n
 %s called on a pool arena (no root available)\n
+%s$\r
 %s%02d:%02d
 %s%s
 %s->R%d
@@ -123,9 +148,9 @@ $wj@
 %s:autowake
 %s:interrupt
 %s:wait
-%sI\r
 %u %u %u
-%yf\f
+%y[\r
+%y\v\r
 &;#/
 &L,E
 &S0g
@@ -145,35 +170,49 @@ $wj@
 '<='
 '=='
 '>='
+'ff.
 't\bL
 'u&H
 'u2H
 'w7I
+( ( const PulseStorage_t< PVAL_EHANDLE > * )asEHandle.GetInstanceStorage() )->GetBitRepresentation() == hEntA.GetRaw()
 (! @L
 (%d)
 (%d,%d)
 (%s:%d)
+(-"4
+(-0@
+(-1A
+(-\\@
+(-l?
+(-r>
+(-r?
 (...
+(A;E
 (D9}
 (Expecting %s)
 (Expecting EOF)
+(H9E
 (HcG
 (HcGh
 (L9}
 (LcO
-(Lcg
 (None)
 (Start:
 ([A\\A]A^A_]
 ([A\\A]A^A_]Ð
+([A\\A]A^A_]Ð@
 ([A\\A]A^A_]ÐH
 ([A\\A]A^A_]ÐI
+([A\\A]A^A_]ÐL
+([A\\A]A^A_]ø
 ([A\\A]A^A_]ø\n
+([A\\A]A^A_]鬥
+([A\\A]A^]
 ([A\\A]]
 ([A\\A]]ø
 ([]A\\A]A^A_
 ([]A\\A]A^A_ÐAWH
-(\rOw
 (anonymous namespace)
 (channel =
 (debug)
@@ -185,50 +224,81 @@ $wj@
 (u?H
 (uMH
 ) ='
-)%'d
-)%/D
-)%6]
-)%TT
-)%bK
-)%c5
-)%rK
-)%sZ
-)%ݘ\f
-)-'I
-)-)F
-)-,_
-)-<@
-)->\r
-)-JR
-)-NV
-)-S@
-)-\vO
-)-^\\
-)-eV
-)-v\b
-)-zM
-)-|S
-)5$U
-)5*A
-)5BL
-)5B`
-)5\fJ
-)5\r^
-)5_W
-)5`C
-)5}N
+)%)i
+)%8Z
+)%@r
+)%Fs
+)%I[
+)%Jj
+)%NN
+)%X^
+)%^7
+)%b\r
+)- a
+)-%c
+)-*c
+)-/c
+)-4c
+)-5I
+)-9c
+)-:M
+)->c
+)-Cc
+)-Hc
+)-Mc
+)-Rc
+)-Wc
+)-\\c
+)-\aa
+)-\bO
+)-\be
+)-\eP
+)-\ea
+)-\fa
+)-ac
+)-fc
+)-ff
+)-kc
+)-ko
+)-mK
+)-no
+)-nq
+)-pc
+)-qo
+)-rO
+)-x^
+)5'H
+)52"
+)56f
+)5BI
+)5Fq
+)5XJ
+)5Zp
+)5\r[
+)5sK
+)5ve
+)5wo
 ):\n
-)=/\\\a
-)=4?
-)=A[
-)=FU
-)=\\\\\a
-)=\bH
-)=\fE
-)=_R
-)=fI
-)=rL
-)=}I
+)=">\a
+)=*>\a
+)=+f
+)=,K
+)=.o
+)=2>\a
+)=3p
+)=:>\a
+)=<#
+)=<H
+)=B>\a
+)=U>\a
+)=\n
+)=]M
+)=je
+)=m\v
+)=sZ
+)=tJ
+)=xo
+)=}n
 )A9D$
 )D$0
 )D$@
@@ -236,216 +306,135 @@ $wj@
 )D$`
 )D$p
 )D;r
-)\r \\
-)\r!C
-)\r!H
-)\r!R
-)\r!W
-)\r"A
-)\r#D
-)\r#M
-)\r$D
-)\r%?
-)\r%G
-)\r&B
-)\r&O
-)\r'E
-)\r'J
-)\r(>
-)\r(@
-)\r*C
-)\r*H
-)\r*R
-)\r*W
-)\r,M
-)\r-U
-)\r.?
-)\r.G
-)\r/
-)\r/B
-)\r/O
-)\r0E
-)\r0J
-)\r1>
-)\r1@
-)\r2F
-)\r3A
-)\r3C
-)\r3H
-)\r3R
-)\r4K
-)\r4Z
-)\r5M
-)\r5S
-)\r6U
-)\r8B
-)\r8D
-)\r9E
-)\r9J
-)\r:>
-)\r:@
-)\r;F
-)\r;P
-)\r<A
-)\r<C
-)\r<H
-)\r=K
-)\r>S
-)\r>X
-)\r??
-)\r?I
-)\r?N
-)\rAD
-)\rBE
-)\rC>
-)\rC@
-)\rDF
-)\rDP
-)\rEA
-)\rEC
-)\rEH
-)\rFK
-)\rGS
-)\rGX
-)\rH?
-)\rHI
-)\rHN
-)\rJD
-)\rJ[
-)\rKL
-)\rKV
-)\rL>
-)\rL@
-)\rMF
-)\rMP
-)\rNA
-)\rNC
-)\rOK
-)\rPS
-)\rQ?
-)\rQI
-)\rQN
-)\rRB
-)\rRQ
-)\rSD
-)\rSJ
-)\rTL
-)\rTV
-)\rU>
-)\rUO
-)\rVF
-)\rWA
-)\rYG
-)\rZ?
-)\rZI
-)\rZN
-)\r[B
-)\r[Q
-)\r\\D
-)\r\\J
-)\r\aA
-)\r\bD
-)\r\bK
-)\r\fC
-)\r\fL
-)\r\fQ
-)\r\fV
-)\r\n?
-)\r\nG
-)\r\nI
-)\r\rC
-)\r\tN
-)\r\tS
-)\r\vB
-)\r\vV
-)\r]@
-)\r]E
-)\r]L
-)\r]T
-)\r^>
-)\r^O
-)\r_F
-)\r`A
-)\rbG
-)\rc?
-)\rcI
-)\rdB
-)\rdQ
-)\reD
-)\reJ
-)\reY
-)\rf@
-)\rfE
-)\rfL
-)\rfT
-)\rgO
-)\rg\\
-)\rhR
-)\rhW
-)\riA
-)\riC
-)\riM
-)\rkG
-)\rl?
-)\rmB
-)\rnJ
-)\ro@
-)\roE
-)\rpH
-)\rpO
-)\rqA
-)\rqR
-)\rqW
-)\rrC
-)\rrM
-)\rsF
-)\rtG
-)\rtU
-)\ru?
-)\rvB
-)\rw>
-)\rwJ
-)\rx@
-)\rxE
-)\ryH
-)\rzA
-)\rzR
-)\r{C
-)\r{K
-)\r{M
-)\r{P
-)\r{t
-)\r|F
+)\f$A
+)\r M
+)\r \a
+)\r \f
+)\r i
+)\r"J
+)\r"\b
+)\r#\n
+)\r$\r
+)\r(I
+)\r)\a
+)\r)\f
+)\r+\b
+)\r,\n
+)\r-\r
+)\r/Z
+)\r/\v
+)\r0H
+)\r1I
+)\r2\a
+)\r2i
+)\r2j
+)\r4\b
+)\r5K
+)\r5\n
+)\r6\r
+)\r8\v
+)\r9H
+)\r:I
+)\r;i
+)\r=J
+)\r=\b
+)\r>K
+)\r?\r
+)\rAZ
+)\rA\v
+)\rBH
+)\rCM
+)\rC\f
+)\rDi
+)\rFJ
+)\rF\b
+)\rI\t
+)\rJL
+)\rJ\v
+)\rKI
+)\rL\f
+)\rM\a
+)\rO\b
+)\rR\t
+)\rSH
+)\rS\v
+)\rSj
+)\rTI
+)\rU\e
+)\rU\f
+)\rV\a
+)\rVi
+)\rYK
+)\rZZ
+)\r[\t
+)\r\\H
+)\r\bN
+)\r\b\b
+)\r\eK
+)\r\fH
+)\r\f\t
+)\r\f\v
+)\r\rI
+)\r\r\e
+)\r]I
+)\r^\f
+)\r_\a
+)\r_i
+)\r`\n
+)\raJ
+)\rbK
+)\rc\b
+)\rd\t
+)\reH
+)\reI
+)\rfM
+)\rg\f
+)\rh\a
+)\rhi
+)\ri\n
+)\rjJ
+)\rkZ
+)\rk\r
+)\rl\b
+)\rm\t
+)\rnG
+)\rnI
+)\rnL
+)\rp\f
+)\rq\a
+)\rr\n
+)\rt\r
+)\ru\b
+)\rv\v
+)\rwG
+)\rwI
+)\rwj
+)\ry"
+)\rz\a
+)\rzi
+)\r{\n
+)\r|K
 )\r|Z
-)\r}G
-)\r}P
-)\r}U
+)\r}\r
+)\r~H
+)\r~\b
+)\rŘ\f
 )ff.
 )wZH
 )w^H
 )xFd
+*( const PulseTestInlineValue_t * )defaultA.GetInstanceStorage() == PulseTestInlineValue_t()
+*( const PulseTestInlineValue_t * )loadedNull.GetInstanceStorage() == PulseTestInlineValue_t()
+*( const PulseTestInlineValue_t * )variantA.GetInstanceStorage() == valueA
 ** Entrypoint For Method '%s'
 *** COMPILE ERROR ***
 *C\bf
 *E\bH
 *E\bI
+*F\bH
 *MOVE=>
 *N12_GLOBAL__N_121system_error_categoryE
 *N12_GLOBAL__N_122generic_error_categoryE
-*N30PulseBindingSchemaEnumTraits_tI20PulseTestEnumColor_tEUlvE3_E
-*N30PulseBindingSchemaEnumTraits_tI20PulseTestEnumColor_tEUlvE4_E
-*N30PulseBindingSchemaEnumTraits_tI20PulseTestEnumFlags_tEUlvE7_E
-*N30PulseBindingSchemaEnumTraits_tI20PulseTestEnumFlags_tEUlvE8_E
-*N30PulseBindingSchemaEnumTraits_tI20PulseTestEnumShape_tEUlvE5_E
-*N30PulseBindingSchemaEnumTraits_tI20PulseTestEnumShape_tEUlvE6_E
-*N30PulseBindingSchemaEnumTraits_tI23PulseTestEnumFlagsAlt_tEUlvE10_E
-*N30PulseBindingSchemaEnumTraits_tI23PulseTestEnumFlagsAlt_tEUlvE9_E
-*N30PulseBindingSchemaEnumTraits_tI25PulseCursorWakePriority_tEUlvE1_E
-*N30PulseBindingSchemaEnumTraits_tI25PulseCursorWakePriority_tEUlvE2_E
-*N30PulseBindingSchemaEnumTraits_tI27PulseCursorCancelPriority_tEUlvE0_E
-*N30PulseBindingSchemaEnumTraits_tI27PulseCursorCancelPriority_tEUlvE_E
-*N30PulseBindingSchemaEnumTraits_tI27PulseDurationStringFormat_tEUlvE0_E
-*N30PulseBindingSchemaEnumTraits_tI27PulseDurationStringFormat_tEUlvE_E
 *TV*
 *u2H
 *u\fH
@@ -455,9 +444,10 @@ $wj@
 +FT2
 +ff.
 +tVf
-+t\bA
 +tfH
 +u2H
++ᝳ貋\v
++ᝳ輢\v
 , at <EOF>
 , at offset %d
 , near %s
@@ -466,52 +456,56 @@ $wj@
 ,7IcM
 ,<^ծ
 ,@Ic
+,D$<H
 ,D$\b
+,G\bH
 ,G\b]H
-,G\bÐUH
-,G\b또E
+,G\bÐUE1
 ,IH)
 ,Nwj
 ,T$\b
 ,[Mc
-,\bI)
-,l$4
-,¸YL
+,\fM9
+,l$<
+,¸Yiҕ
 - %s
 - Graph Def '
--!^\r
--!f\r
--!s\r
--*_\r
--,h\r
---X\r
--1}\r
--9;\r
--9`\f
-->f\r
-->s\r
--A\b\r
--IZ\r
--Q"\r
--Qv\r
+-!+\r
+-!L\f
+-!W\r
+-&w\r
+-)W\r
+-)_\f
+-.{\f
+-/\f\r
+-1-\r
+-1?\r
+-2>\r
+-:$\r
+-:\r\r
+-B@\r
+-N-\r
+-N?\r
+-NW\r
 -Stop:
--T$\t
--TX\t
--Y)\r
--_I\r
--bs\r
+-\f6\r
+-\tG\f
+-\tw\r
+-`B\r
+-c;\v
+-d?\t
+-d`\f
+-eI\r
 -end of input-(
 -ff.
+-g%\r
 -in-
 -mP¦
 -memory-
--qM\r
 -tLH
 -ttf
 -unknown source-
 -unknown source-(
--zN\r
--zY\r
 . Dead
 . Req FAIL
 . Req PASS
@@ -520,8 +514,9 @@ $wj@
 . Zġ
 ...)
 ../../_build_/pulse_system/_vpc_pulse_system/default/linuxsteamrt64/_schema_/release/../../../../../../../src/pulse_system/pulse_test_domain.cpp
-../public/tier0/check_cast.h
 ../public/tier0/utlmap.h
+.D$\b
+.D$\f
 .G\bz
 .Ic݅
 .\az'u%
@@ -588,9 +583,7 @@ $wj@
 0SfH
 0[A\\A]A^]
 0[A\\A]A^]Ð
-0[A\\A]A^]ø
 0[A\\]
-0[A\\]ÐI
 0t'H
 0t'I
 0t*Ic
@@ -614,6 +607,7 @@ $wj@
 0tgH
 0thUH
 0tiH
+0tjH
 0u\rH
 0u\tH
 1:1: Tokens : ( T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | TOK_COLON | OPEN_BRACE | CLOSE_BRACE | OPEN_PAREN | CLOSE_PAREN | OPEN_BRACKET | CLOSE_BRACKET | SEMICOLON | OP_EQUAL | COMMA | DOUBLE_AND | NEGATIVE_TOK | DOUBLE_OR | LITERAL_TRUE | LITERAL_FALSE | POS_INTLITERAL | POS_FLOATLITERAL | SCOPE_QUALIFIER | ID | DOUBLE_QUOTED_STRING | SINGLE_QUOTED_STRING | SINGLE_LINE_COMMENT | ML_COMMENT | WS | UNRECOGNIZED );
@@ -625,72 +619,75 @@ $wj@
 1҃C0
 1҃CP
 1҃Cp
+1ҋ\rf4
 1ҾjN
 21ɉ4
+290u\nH
 2t\vH
 33333333H
 3E19
+3[A\\A]A^]
 3\f\a\b
-3ff.
 3u+H
 3uEH
 3u|H
 4#H9
+4$;3uFH
 4$E1
 4$E19
 4$H;t$\bu
+4$Hc
 4$L)
-4$u/
-4&I9
 4'L9
 4(*M
 4(D;c\br\bA
+48H9
 4CL9
+4IH)
 4[Ic
 4\aH9
 4\bI9
 4\fHc҉M
+4\tI9
 4\vM9
 4dMc
 4ff.
-4vE;L
-5 D\r
-5 X\r
-5 q\r
+4vE;T
+5 \r\r
+5!J\n
+5%=\t
 5&YA1H
 5&YA1I
-5)#\r
-5*:\a
-5*t\r
-5+9\a
-5+>\r
-50g\r
-55"\t
-55V\t
-59o\b
-5C9\r
-5LN\b
-5Ln\b
-5O#\b
-5O^\b
-5PJ\r
-5Yt\r
-5[w\a
-5\fV\b
-5\tk\f
-5^`\f
-5iB\r
+5))\r
+508\r
+50=\a
+5:`\f
+5@Z\r
+5CX\f
+5P5\r
+5S)\r
+5U$\r
+5Y)\b
+5\n}\r
+5`%\r
+5`2\r
+5n?\f
+5r>\n
 5t H
 5uFH
-5yh\b
-5|;\r
+5y=\a
+5yA\a
+5{t\f
+5|P\a
+5~#\r
+5~b\f
 5ฉvC
 6%u*I
 6E19
 6ff.
 6f}ܧ
 76 18
-7<!w
+7;3uNH
 7ff.
 7uDA
 8(ݑ,E!|
@@ -698,34 +695,29 @@ $wj@
 8/t\n
 8176 2044
 8:1: POS_FLOATLITERAL : ( ( DIGIT )+ '.' ( DIGIT )* ( EXPONENT )? | '.' ( DIGIT )+ ( EXPONENT )? | ( DIGIT )+ EXPONENT );
-8;BHu\rI
+8;JHu\rH
 8@%rax 8@%rdx
 8@-24(%rbp) 8@-32(%rbp)
 8@-48(%rbp) 8@%rax
 8A9\\$
-8A9]
-8A;\a|
 8AW1
 8A]A^]H
 8A^]H
-8H9]
-8H9ƉU
-8L9m
 8[A\\A]A^A_H
 8[A\\A]A^A_]
 8[A\\A]A^A_]ËG<
+8[A\\A]A^A_]Ð
 8[A\\A]A^A_]Ð9
-8[A\\A]A^A_]ÐA
 8[A\\A]A^A_]ÐH
 8[A\\A]A^A_]ÐI
-8[A\\A]A^A_]ø
-8[A\\A]A^]
+8[A\\A]A^A_]ÐL
 8[A\\A]]
 8[A\\A]]ø
 8[]A\\A]A^A_
 8\btQH
+8\nu鋃
 8ff.
-9=F{
+99:u\nH
 9BLA
 9D9b
 9G\ft\v[1
@@ -735,6 +727,7 @@ $wj@
 9W\bu\t
 9X\b~
 9\ar}I
+9\vt\e
 9ff.
 9q$u
 9wh~\vH
@@ -756,50 +749,53 @@ $wj@
 : syntax not recognized...\n
 : unexpected input...\n  expected one of :
 :$tn
-:98u\nH
-:\fuyHcR
-:\tu\eHcR
+:\nu\eHcR
+:\ruyHcR
 :uSH
 :¥F@,
 ;0HcӍZ
 ;3tL
 ;7tT
 ;7tW
-;AX},
 ;C\bt
 ;D;{
 ;G\bs
-;H\bs"
+;G\bt
 ;H\bu\nH
+;J\bs#
+;N\bs
 ;OXs
 ;OXsxH
 ;W@s
 ;[A\\]H
 ;\btyD
 ;\btzD
-;ff.
+;\nt\n1
 ;k\br
+;q\bs
 ;r\bt\vH
 ;s\buIH
 ;wPH
 ;w\bs\f
 ;}>L
-<$ w
 <$A\\]
 <$E1
 <$E9e
+<$Hǃ
 <$L)
 <$t!H
 <$uFH
 <$uYH
 <$űU
 <$~HHc
+<$裭\n
 <&\bv"
-<&t,1
+<&t'1
 <(wYd
 <*t-H
 <*t\a
 <,I)IM
+<- R%d
 <-- Arg '%s'
 <-- Retval '%s'
 <.t$H
@@ -827,6 +823,7 @@ $wj@
 <Eu\eH
 <Fu\eH
 <Gu\eH
+<Htπ#
 <HuPH
 <Iu(H
 <Iu/H
@@ -846,7 +843,6 @@ $wj@
 <Pu;ff.
 <Pu\e
 <QuOH
-<RIc
 <Su\eH
 <SudH
 <Tt\n
@@ -855,37 +851,36 @@ $wj@
 <UP>
 <Unknown>
 <Uu\eH
+<Ww[<Ht31
 <Xu;H
 <Xu\a
 <Zt#H
 <Zu\eH
 <Zu\f
-<\bM9
+<[Ic
 <\bt#H
-<\bt-1
-<\btFH
-<\btxI
+<\btjI
+<\bu$E
 <\bu(1
 <\bu(H
 <\bu/L
 <\buV
-<\buVH
 <\bu\t
 <\bu\vH
+<\bu_
 <\buËF\bD
 <\bwbH
 <\ru\n
-<\tt-1
-<\tt:1
 <\tt;<\b
+<\ttIw
 <\tt\n1
+<\tt\vH
+<\tts<\btOH
 <\tu"
 <\tu1
-<\tu3E
 <\tu\aH
 <\tu\aI
 <\tu\bI
-<\tv|
 <_t/
 <_t\n
 <_t\vH
@@ -910,7 +905,6 @@ $wj@
 <empty member name>
 <ft\n
 <fuNH
-<ht$<Hu
 <invalid>
 <iu+H
 <iu4H
@@ -918,6 +912,7 @@ $wj@
 <map_key>
 <map_value>
 <missing
+<missing>
 <muQH
 <no failure reason set>
 <no text for the token>
@@ -941,286 +936,127 @@ $wj@
 <unknown KV3 basic type '%s' (%d)>
 <unknown>
 <z~-H
-= ;\r
-= Q\r
-= T\n
-= w\r
-=!-\f
-=!7\f
-="p\f
-=#:\a
-=#e\v
-=$S\n
-=$b\r
-=$q\r
-=$s\n
-=%]\n
-=&6\t
-=&:\a
-=&t\r
-='T\n
-=(6\r
+= h\f
+= u\f
+=#\r\f
+=$\e\n
+=%%\f
 =(9\r
-=(R\r
-=(U\r
-=(V\r
-=(X\r
-=([\r
-=(^\r
-=(a\r
-=(d\r
-=(g\r
-=(j\r
-=(m\r
-=(r\r
-=(x\r
-=({\r
-=)G\f
-=)N\r
-=)P\r
-=)S\b
-=)e\r
-=)s\r
-=*;\r
-=*>\r
-=*F\r
-=*Q\r
-=+S\n
-=+w\r
-=-7\r
-=-J\r
-=-v\r
-=-w\r
-=0-\r
-=0;\r
-=0Z\r
-=1I\r
-=1a\r
-=1b\b
-=2#\r
-=2R\n
-=4*\b
-=62\r
-=6;\r
-=6b\r
-=6q\r
-=8'\r
-=85\r
-=88\r
-=8;\r
-=8>\r
-=8A\r
-=8D\r
-=8G\r
-=8N\r
-=8T\r
-=8W\r
-=8Z\r
-=8]\r
-=8`\r
-=8c\r
-=8f\r
-=8z\r
-=8}\f
-=8}\r
-=9 \b
-=9G\f
-=9R\r
-=9S\b
-=9k\r
-=:7\r
+=(J\f
+=(\e\r
+=(}\r
+=*#\r
+=*$\r
+=*D\t
+=+%\f
+=+\e\n
+=+\f\f
+=/"\r
+=/$\r
+=0\v\r
+=1$\r
+=2g\f
+=3`\t
+=3g\r
+=6"\r
+=6$\r
+=7I\r
+=8\v\b
+=9t\n
+=:v\f
+=<9\f
+=<\n\f
 == PulseGraphDef ==\n
-==F\r
-==Y\r
-=>%\r
-=>&\r
-=?7\r
-=@3\r
-=@I\r
-=@R\r
+==#\r
+=> TempVarBank: Bank%d\n
+=>m\f
+=@"\r
+=A#\n
+=A$\r
 =Authu\a
-=BF\b
-=F!\r
+=B)\r
+=B;\r
+=Ch\f
+=Cu\f
+=DF\e
+=DM\f
 =Genut\n
-=H7\r
-=HK\r
-=HS\r
-=HV\r
-=HY\r
-=H\\\r
-=H\e\r
-=H_\r
-=Hb\r
-=Hy\r
-=H|\r
-=I1\r
-=IG\f
-=It\r
-=JF\r
-=JRJ
-=LR\n
-=MI\r
-=MQ\r
-=MX\r
-=Mw\r
-=Od\a
-=PN\r
-=PU\r
-=P}\r
-=R2\r
-=Sb\v
-=V3\r
-=V7\r
-=W\a\f
-=X6\r
+=Hb\f
+=I\e\r
+=Jb\b
+=Kt\f
+=Ls\v
+=M"\r
+=Nn\f
+=O#\r
+=PS\f
+=Q"\r
+=Q$\r
+=Qg\f
+=S$\r
+=U$\r
+=U8\f
+=V#\r
+=X9\n
 =X9\r
-=XJ\r
-=XP\r
-=XU\r
-=XV\r
-=XX\r
-=X[\r
-=X^\r
-=Xa\r
-=Xd\r
-=Xe\r
-=Xo\r
-=Xr\r
-=Xs\r
-=Xx\r
-=X{\r
-=Y1\r
-=YB\r
-=YG\f
-=YT\e
-=ZX\r
-=\a$\r
-=\as\n
-=\b'\r
-=\b8\r
-=\b;\r
-=\b>\r
-=\bA\r
-=\bD\r
-=\bG\r
-=\bN\r
-=\bQ\r
-=\bV\r
-=\bW\r
-=\bZ\r
-=\b]\r
-=\b`\r
-=\bc\r
-=\bf\r
-=\bq\r
-=\bw\r
-=\bz\r
-=\b}\r
-=\eQ\a
-=\nK\r
-=\nl\r
-=\re\r
-=\ru\r
-=\rw\r
-=\t\\\t
-=\t]\t
-=\tu\a
-=]-\r
-=];\r
-=]K\r
-=]Z\r
-=]}\r
-=`9\r
-=`S\r
-=`\f\r
-=dl\r
-=fN\r
+=X:\f
+=XG\r
+=X\e\r
+=X}\r
+=Y.\a
+=YN\n
+=YN\r
+=\b2\f
+=\nS\f
+=\n`\f
+=\vs\v
+=] \r
+=]\v\r
+=^i\f
+=`8\f
+=`>\v
+=`w\r
+=a#\r
+=bJ\r
+=bX\e
+=dz\r
+=e$\r
+=e>\n
+=f$\r
 =ff.
-=g?\f
-=gC\f
-=h5\r
-=h8\r
-=h;\r
-=h>\r
-=hA\r
-=hD\r
-=hG\r
-=hN\r
-=hT\r
-=hW\r
-=hZ\r
-=h\a\f
-=h]\r
-=h`\r
-=hc\r
-=hf\r
-=hz\r
-=h}\r
-=i1\r
-=iG\f
-=iu\r
-=j9\r
-=jK\r
-=j\f\r
-=k6\f
-=mI\r
-=mR\r
-=m\v\r
-=me\r
-=mj\r
-=nP\n
-=pW\r
-=qg\a
-=sd\a
-=t}\r
-=u2\r
-=v9\r
-=v\f\r
-=vl\r
-=wd\r
-=wq\r
-=x7\r
-=x?\f
-=xC\f
-=xP\r
-=xV\r
-=xY\r
-=x\\\r
-=x_\r
-=xb\r
-=xe\r
-=xh\r
-=xk\r
-=xs\r
-=xt\r
-=xy\r
-=x|\r
-=y-\r
-=y1\r
-=y5\t
-=y6\f
-=yB\r
-=yF\b
-=yP\r
-=yv\f
-=zJ\f
-=z\v\r
-=ze\r
-=zj\r
-={F\r
-=}U\r
-=}W\r
-=~p\f
+=h\e\b
+=i\v\n
+=j \r
+=l\f\f
+=n$\r
+=pD\t
+=p\e\r
+=pg\f
+=q#\r
+=q$\r
+=qf\f
+=r1\r
+=s#\r
+=sS\f
+=u#\r
+=vz\r
+=x)\t
+=x\e\r
+=y$\r
+={t\f
+=}"\r
+=}$\r
+=}9\r
 >\bLi?f
->fff>fff>fff>fff>
+>ff.
 >l8~
 >t\bH
 >uaH
-? w2U
+?!7&
 ?)t&H
+?16ILoggingListener
 ?6\aE
 ?<(u
-????
 ??????????????????????????
 ??????????????????????????@>-
 ??????????????????????????MKI+JH
@@ -1229,22 +1065,21 @@ $wj@
 ?AǄ$
 ?AǄ$(
 ?AǄ$0
-?AǄ$8
-?AǄ$P
-?AǄ$p
+?AǄ$@
+?AǄ$h
 ?E19
 ?H;E
-?[E1
+?]E1
 ?ff.
+?t+I
 ?tLA
 ?t\rH
 ?thH
-?toH
+?tiH
 ?t{H
 ?u6E1
 ?u:E1
 ?u@E19
-?vNH
 ?vOH
 ?v\b%
 ?v\f%
@@ -1254,11 +1089,11 @@ $wj@
 ?w#H
 ?w/M
 ?w\fH
-?wnH
+?whH
 ?~!H
 ?~)H
 ?~0H
-?~1H
+?~5H
 ?~8H
 ?~9H
 ?~:H
@@ -1273,6 +1108,7 @@ $wj@
 @  0
 @ H9
 @ L9
+@(AVH
 @(H9
 @0A]A^]
 @0H9
@@ -1280,10 +1116,12 @@ $wj@
 @0[A\\A]A^]
 @0t\aH
 @89E
+@8A^]
 @8H9
 @8Hc
 @8\v@'&
-@@@@
+@8ƉM
+@:2u
 @@H9
 @@L9
 @AUI
@@ -1312,16 +1150,19 @@ $wj@
 @\bH9E
 @\bHc
 @\bHc@0
+@\bHǅ(
+@\bHǅH
+@\bHǅX
+@\bHǅh
+@\bHǅx
 @\bI9
-@\bIc
 @\bL9
 @\bUH
 @\b[A\\A]A^]
 @\fE1
 @\f\a\b
-@`;P
-@`D;x
-@`H9
+@`;H
+@hH9
 @pH9
 @p[A\\]
 @tPH
@@ -1331,10 +1172,11 @@ $wj@
 @t\rH
 @t\vA
 @t\vC
-@uKM
+@uHM
 @uOE
 @uOH
 @uOL
+@uVA
 @uX1
 @u\eE
 @udA
@@ -1352,16 +1194,17 @@ A#q<H
 A#y<H
 A+L$8
 A1KE
-A8D$
-A8L$
+A8\aA
 A9D$
-A9E0
+A9E0~
 A9L$
 A9T$
 A9T$(
 A9T$`
+A9UX
 A9\\$(~4I
 A9\\$\b~%H
+A9\aA
 A9]P
 A9t$x
 A9ǉM
@@ -1369,10 +1212,11 @@ A9̉S
 A;D$
 A;D$(
 A;D$@
+A;D$PI
 A;D$\bs
 A;EX
 A;Gx
-A;N\bs
+A;M\bs
 A;T$
 A;\\$\br
 A;](
@@ -1412,8 +1256,6 @@ ATSt
 ATUH
 ATUSH
 ATfH
-ATfI
-ATfL
 AU19
 AUAT
 AUATA
@@ -1426,11 +1268,10 @@ AUATM
 AUATS
 AUATSH
 AUATSHc
-AUATSL
 AUATUS
 AUATUSH
 AUE1
-AUfH
+AULc
 AVATSH
 AVAUA
 AVAUATA
@@ -1438,7 +1279,6 @@ AVAUATE1
 AVAUATI
 AVAUATL
 AVAUATLc
-AVAUATM
 AVAUATS
 AVAUATSD
 AVAUATSH
@@ -1453,9 +1293,6 @@ AVAUH
 AVAUI
 AVAUL
 AVAUM
-AVAUfH
-AVE1
-AVLc
 AValueChanged
 AVfA
 AVfH
@@ -1465,20 +1302,17 @@ AWAVAUA
 AWAVAUATA
 AWAVAUATI
 AWAVAUATL
-AWAVAUATLc
+AWAVAUATM
 AWAVAUATS
 AWAVAUATS1
 AWAVAUATSH
-AWAVAUATSHc
 AWAVAUATSL
 AWAVAUATUSH
-AWAVAUD
 AWAVAUE1
 AWAVAUI
 AWAVAUL
 AWAVAULc
 AWAVAUM
-AWAVD
 AWAVE
 AWAVE1
 AWAVH
@@ -1503,34 +1337,39 @@ AZA[L
 AZeroed
 A[A]
 A[A]H
+A[A^
 A[A^1
 A[A^H
 A[A_
 A[X1
 A[XH
-A\\A]
 A\\A]A^A_
 A\\A]A^A_]
 A\\A]A^A_]A
 A\\A]A^A_]H
 A\\A]A^A_]ÐHc
-A\\A]A^A_]鄮
-A\\A]A^A_]鍐
-A\\A]A^A_]钽
+A\\A]A^A_]钃
+A\\A]A^A_]馔
+A\\A]A^H
 A\\A]A^Hi
 A\\A]A^]
 A\\A]A^]ÐL
 A\\A]A^]ø
+A\\A]A^]郕
+A\\A]A^]鉦
+A\\A]A^]騭\n
 A\\A]H
+A\\A]I
 A\\A]]
 A\\A]]Ð
 A\\A]]ÐH
-A\\A]]飬
+A\\A]]郦
+A\\A]]鎒
 A\\H!
 A\\]H
 A\\]Ð
-A\\]颉
-A\\]魷
+A\\]鈗\n
+A\\]魊
 A\a@H
 A\b;F
 A\bH9
@@ -1543,10 +1382,6 @@ A]A^]
 A]]H
 A^A_
 A^A_]
-Abs Float
-Abs Int
-Absolute value (float)
-Absolute value (int)
 Activate
 Actually dude, we didn't seem to be expecting anything here, or at least\n
 Add R%d <- R%d + R%d
@@ -1568,16 +1403,7 @@ Any Other Cursors Have Tag
 Any cursors above this count will wait, up to the limit.
 Any extra waiting cursors will be terminated. -1 for infinite cursors.
 Apply the same tag we're waiting on to the resulting cursor upon wait completion. Can be used to wait on our result cursor with the same tag.
-Arc Cos
-Arc Cosine of input value. Input must be -1.0, 1.0 range. Output in radians, from 0 to π
-Arc Sin
-Arc Sine of input value. Input must be -1.0, 1.0 range. Output in radians, from -π/2 to π/2
-Arc Tan
-Arc Tangent of input value. Input can be any real number. Output in radians, from -π/2 to π/2
-ArcCos input out of range (-1, 1)
-ArcSin input out of range (-1, 1)
 Array
-AssertCastImpl
 AssetBrowserSystem_001
 AssetPreviewSystem_001
 AssetRenameSystem_001
@@ -1586,16 +1412,13 @@ AssetSystemTest001
 Async Call Method (Child Cursor) C%d:I%d
 Async Outflow (Child Cursor) C%d:I%d
 Asynchronous - This node executes independently using a new Cursor. Formerly 'Fire and Forget'. Equivalent to scheduling using an additional 'Fire Child Cursors' node.
-AƄ$б
 AǄ$(
-AǄ$p
 B A9
 B!D?
 B$t=H
 B0H9
+B9D'
 B9D.
-B9D/
-B9D7
 BACKSLASH_CHAR
 BBBBBBBB!!
 BI\aH
@@ -1608,11 +1431,12 @@ B\bHct8
 B\bNcT
 B\btO
 B\f\a\b
-B`D;x
 Bad FLC data for resource '%s': %s\n
 Bad KV3 data for resource '%s': %s\n
 Bad array index %d (array has %d elements)
 BakedLODBuilderMgr001
+Bank%d: %d temp vars (%d bytes)\n
+BankID%d
 Base Flow  Cancel After
 Base Flow  Cancel Elegantly
 Base Flow  Cancel Immediately
@@ -1632,12 +1456,11 @@ Base recognizer function displayRecognitionError called by unknown parser type -
 Base recognizer function recover called by unknown parser type - provide override for this function\n
 Base recognizer function recoverFromMismatchedSet called by unknown parser type - provide override for this function\n
 Base recognizer function recoverFromMismatchedToken called by unknown parser type - provide override for this function\n
-Base-10 logarithm
-Base-2 logarithm
 BaseDomain
 Basic Function
 Begin testing a condition composed of Observable values. Continues checking until canceled.
 Begin testing a condition composed of Observable variable references. Continues checking until true.
+Begin testing a value composed of Observable values. Continues checking until canceled.
 BenchmarkService001
 BhE1
 BinAdd
@@ -1659,6 +1482,7 @@ Black
 Blue
 Bool( %s )
 Boolean
+Break node reached a Method-call boundary without finding an enclosing loop.
 Breakpoint Log [%u]
 Breakpoint Log [%u] - %s
 C A9D$
@@ -1666,11 +1490,11 @@ C A9D$ u8E1
 C D9
 C%d:I%-2d {F=%-10d,V=%-10d,S=%-20.20s}
 C(A9
-C(Hǀ0
 C0I9
 C1 E
 C4Hc
 C8HǄ$
+CALL_TO_PULSE
 CBaseAppSystemI12IPulseSystemE
 CBasePulseGraphInstance
 CBasePulseGraphInstance::CBasePulseGraphInstance( %p )\n
@@ -1722,6 +1546,7 @@ CLOSE_BRACKET
 CLOSE_PAREN
 CMemAllocSystemInitialize
 CModuleMetadataProvider_ResourceManifests
+CNullTypeInfo
 COMMA
 COM_TimestampedLog
 CONVERT_VALUE
@@ -1756,7 +1581,6 @@ CPulseCell_ExampleCriteria::Criteria_t
 CPulseCell_ExampleSelector
 CPulseCell_ExampleSelector::ProcessSelector
 CPulseCell_FireCursors
-CPulseCell_FireCursors::Cancel
 CPulseCell_FireCursors::Start
 CPulseCell_FireCursors::StopWaiting
 CPulseCell_Inflow_BaseEntrypoint
@@ -1771,21 +1595,16 @@ CPulseCell_Inflow_Method '%s' --> Chunk%d: %s
 CPulseCell_Inflow_ObservableVariableListener
 CPulseCell_Inflow_ObservableVariableListener '%s'.'%s (%u)' --> Chunk%d: %s
 CPulseCell_Inflow_Wait
-CPulseCell_Inflow_Wait::Abort
-CPulseCell_Inflow_Wait::ImmediateWake
 CPulseCell_Inflow_Wait::Wait
 CPulseCell_Inflow_Wait_DebugInfo_t
 CPulseCell_Inflow_Yield
-CPulseCell_Inflow_Yield::Abort
 CPulseCell_Inflow_Yield::Pause
-CPulseCell_Inflow_Yield::Resume
 CPulseCell_InlineNodeSkipSelector
 CPulseCell_InlineNodeSkipSelector::ProcessSelector
 CPulseCell_IntervalTimer
 CPulseCell_IntervalTimer::CursorState_t
 CPulseCell_IntervalTimer::OnInterval
 CPulseCell_IntervalTimer::Start
-CPulseCell_IntervalTimer::StopTimer
 CPulseCell_IntervalTimer_DebugInfo_t
 CPulseCell_IsRequirementValid
 CPulseCell_IsRequirementValid::CheckRequirement
@@ -1795,6 +1614,9 @@ CPulseCell_LimitCount::CheckRequirement
 CPulseCell_LimitCount::CommitStep
 CPulseCell_LimitCount::Criteria_t
 CPulseCell_LimitCount::InstanceState_t
+CPulseCell_ObservableSwitchState
+CPulseCell_ObservableSwitchState::Activate
+CPulseCell_ObservableSwitchState_DebugInfo_t
 CPulseCell_Outflow_CycleOrdered
 CPulseCell_Outflow_CycleOrdered::InstanceState_t
 CPulseCell_Outflow_CycleOrdered::Run
@@ -1803,32 +1625,20 @@ CPulseCell_Outflow_CycleRandom::Run
 CPulseCell_Outflow_CycleShuffled
 CPulseCell_Outflow_CycleShuffled::InstanceState_t
 CPulseCell_Outflow_CycleShuffled::Run
-CPulseCell_Outflow_ListenForAnimgraphTag::Cancel
-CPulseCell_Outflow_ListenForEntityOutput::Cancel
-CPulseCell_Outflow_NPCAccompanyEntity::Cancel
-CPulseCell_Outflow_NPCFollowTarget::Cancel
-CPulseCell_Outflow_NPCLeadPlayer::Cancel
-CPulseCell_Outflow_NPCScriptedIdle::Cancel
-CPulseCell_Outflow_NPCScriptedIdle::CancelElegantly
-CPulseCell_Outflow_NPCScriptedMoveTo::Cancel
-CPulseCell_Outflow_NPCUseScriptedAbility::Cancel
-CPulseCell_Outflow_PlaySequence::Cancel
-CPulseCell_Outflow_PlaySequence::CancelAtInterrupt
-CPulseCell_Outflow_PlayVCD::Cancel
-CPulseCell_Outflow_PlayVCD::CancelAtInterrupt
-CPulseCell_Outflow_PlayVOLine::Cancel
-CPulseCell_Outflow_ScriptedSequence::Cancel
 CPulseCell_Outflow_TestExplicitYesNo
 CPulseCell_Outflow_TestExplicitYesNo::Run
 CPulseCell_Outflow_TestRandomYesNo
 CPulseCell_Outflow_TestRandomYesNo::Run
 CPulseCell_PickBestOutflowSelector
 CPulseCell_PickBestOutflowSelector::ProcessSelector
-CPulseCell_PlaySequence::Cancel
+CPulseCell_RaceCursors
+CPulseCell_RaceCursors::Start
+CPulseCell_RaceCursors::StopWaiting
+CPulseCell_ReturnValues
+CPulseCell_ReturnValues::HandleReturnValues
 CPulseCell_Step_CallExternalMethod
 CPulseCell_Step_CallExternalMethod '%s'
 CPulseCell_Step_CallExternalMethod::Run
-CPulseCell_Step_CallExternalMethod::StopWaiting
 CPulseCell_Step_DebugLog
 CPulseCell_Step_DebugLog::Run
 CPulseCell_Step_PublicOutput
@@ -1865,17 +1675,16 @@ CPulseCell_Test_MultiOutflow_WithParams::InflowB
 CPulseCell_Test_MultiOutflow_WithParams::OnOut1
 CPulseCell_Test_MultiOutflow_WithParams::OnOut2
 CPulseCell_Test_MultiOutflow_WithParams_Yielding
+CPulseCell_Test_MultiOutflow_WithParams_Yielding::CallResume1
+CPulseCell_Test_MultiOutflow_WithParams_Yielding::CallResume2
 CPulseCell_Test_MultiOutflow_WithParams_Yielding::CursorState_t
 CPulseCell_Test_MultiOutflow_WithParams_Yielding::OnAsyncChild1
 CPulseCell_Test_MultiOutflow_WithParams_Yielding::OnAsyncChild2
 CPulseCell_Test_MultiOutflow_WithParams_Yielding::OnOut1
-CPulseCell_Test_MultiOutflow_WithParams_Yielding::OnYieldResume1
-CPulseCell_Test_MultiOutflow_WithParams_Yielding::OnYieldResume2
 CPulseCell_Test_MultiOutflow_WithParams_Yielding::Start
 CPulseCell_Test_NoInflow
 CPulseCell_Timeline
 CPulseCell_Timeline::Start
-CPulseCell_Timeline::Stop
 CPulseCell_Timeline::TimelineEvent_t
 CPulseCell_Timeline_DebugInfo_t
 CPulseCell_Unknown
@@ -1897,7 +1706,6 @@ CPulseCell_WaitForCursorsWithTag
 CPulseCell_WaitForCursorsWithTag::Wait
 CPulseCell_WaitForCursorsWithTagBase
 CPulseCell_WaitForObservable
-CPulseCell_WaitForObservable::Cancel
 CPulseCell_WaitForObservable::Start
 CPulseCursorBaseObservableScope
 CPulseCursorFuncs
@@ -1909,8 +1717,8 @@ CPulseCursorFuncs::RemoveTagFromCursor
 CPulseCursorFuncs::TagCursor
 CPulseCursorFuncs::WakeCursorsWithTag
 CPulseCursorTestObservableScope
-CPulseDomainScopeLoader
 CPulseExecCursor
+CPulseFakeEntityTypeInfo
 CPulseGraphDef
 CPulseGraphExecutionHistory
 CPulseGraphInstance_TestDomain
@@ -1927,87 +1735,24 @@ CPulseGraphInstance_TestDomain_UseReadOnlyBlackboardView
 CPulseGraphInstance_TurtleGraphics
 CPulseGraphInstance_TurtleGraphics::Go
 CPulseGraphLoadContext
+CPulseInlineValueTypeInfoI22PulseTestInlineValue_tE
 CPulseInstanceLoadAPI_NoOp
 CPulseInstanceSaveAPI_NoOp
 CPulseInterfaceHelpers_Load_NoOp
 CPulseInterfaceHelpers_Save_NoOp
-CPulseMathlib
-CPulseMathlib::AbsFloat
-CPulseMathlib::AbsInt
-CPulseMathlib::ArcCos
-CPulseMathlib::ArcSin
-CPulseMathlib::ArcTan
-CPulseMathlib::CeilingFloat
-CPulseMathlib::ClampFloat
-CPulseMathlib::ClampInt
-CPulseMathlib::Cos
-CPulseMathlib::CrossProductVector
-CPulseMathlib::Deg2Rad
-CPulseMathlib::DotProductVector
-CPulseMathlib::Exp
-CPulseMathlib::Exp2
-CPulseMathlib::FloatToGameTime
-CPulseMathlib::FloorFloat
-CPulseMathlib::Frac
-CPulseMathlib::GameTimeToFloat
-CPulseMathlib::IntegerDivide
-CPulseMathlib::IsValidVector
-CPulseMathlib::IsValidWorldVector
-CPulseMathlib::LengthVector
-CPulseMathlib::LengthVector2D
-CPulseMathlib::LerpFloat
-CPulseMathlib::LerpVector
-CPulseMathlib::LerpWorldVector
-CPulseMathlib::Log
-CPulseMathlib::Log10
-CPulseMathlib::Log2
-CPulseMathlib::MakeAngle
-CPulseMathlib::MakeAngleFromForwardVector
-CPulseMathlib::MakeColor
-CPulseMathlib::MakeTransform
-CPulseMathlib::MakeVector
-CPulseMathlib::MakeVector2D
-CPulseMathlib::MakeVector4D
-CPulseMathlib::MakeVectorFromAngle
-CPulseMathlib::MakeWorldTransform
-CPulseMathlib::MakeWorldVector
-CPulseMathlib::MaxFloat
-CPulseMathlib::MaxInt
-CPulseMathlib::MinFloat
-CPulseMathlib::MinInt
-CPulseMathlib::NormalizeVector
-CPulseMathlib::Pi
-CPulseMathlib::Pow
-CPulseMathlib::RSqrt
-CPulseMathlib::Rad2Deg
-CPulseMathlib::RandomWorldPosition
-CPulseMathlib::RemapClampedFloat
-CPulseMathlib::RoundFloat
-CPulseMathlib::Saturate
-CPulseMathlib::SignFloat
-CPulseMathlib::SignInt
-CPulseMathlib::Sin
-CPulseMathlib::SplitAngle
-CPulseMathlib::SplitColor
-CPulseMathlib::SplitTransform
-CPulseMathlib::SplitVector
-CPulseMathlib::SplitVector2D
-CPulseMathlib::SplitVector4D
-CPulseMathlib::SplitWorldTransform
-CPulseMathlib::SplitWorldVector
-CPulseMathlib::SqrFloat
-CPulseMathlib::SqrInt
-CPulseMathlib::Sqrt
-CPulseMathlib::StringsAreEqualCaseSensitive
-CPulseMathlib::Tan
-CPulseMathlib::VectorToWorldVector
-CPulseMathlib::WorldVectorToVector
-CPulseModuleRegistrationHookI23CPulseDomainScopeLoaderE
-CPulseModuleRegistrationHookI25IPulseTypeQueriesForScopeE
+CPulseModuleHost
+CPulseModuleRegistrationHookI16CPulseModuleHostE
 CPulseObservableExpression
+CPulseObservableSwitchCases
+CPulseRegisteredTypeInfo
 CPulseRuntimeMethodArg
-CPulseScopeEnumeratingTypeService
+CPulseSchemaEnumTypeInfo
 CPulseStringlib
+CPulseStringlib::Format1
+CPulseStringlib::Format2
+CPulseStringlib::Format3
+CPulseStringlib::Format4
+CPulseStringlib::Format5
 CPulseStringlib::FormatDurationStringFromSeconds
 CPulseStringlib::StringLength
 CPulseStringlib::StringsAreEqualCaseSensitive
@@ -2057,18 +1802,20 @@ CPulseTestFuncs_LibraryA::TestOptionalParameters_AfterDefaultsAdded
 CPulseTestFuncs_LibraryA::TestOptionalParameters_AfterReorderSparseDefaults
 CPulseTestFuncs_LibraryA::TestOptionalParameters_BeforeDefaultsAdded
 CPulseTestFuncs_LibraryA::TestOptionalParameters_BeforeReorderSparseDefaults
-CPulseTestHandleService
+CPulseTestInlineValueTypeInfo
 CPulseTurtleGraphicsCursor
 CPulseTurtleGraphicsCursor::Move
 CPulseTurtleGraphicsCursor::PenDown
 CPulseTurtleGraphicsCursor::PenUp
 CPulseTurtleGraphicsCursor::SetColor
 CPulseTurtleGraphicsCursor::Turn
+CPulseType
 CPulseTypeManager
 CPulseTypeManager::Allocate( %s )\n
 CPulseTypeManager::Deallocate( %s, %p )\n
 CPulseTypeManager::DeallocateResource( %s, %s, dealloc=%p live=%p )\n
-CPulseValueFullType
+CPulseVariant
+CPulseWeakHandleTypeInfo
 CPulse_BlackboardReference
 CPulse_CallInfo
 CPulse_Chunk
@@ -2081,6 +1828,8 @@ CPulse_OutputConnection
 CPulse_PublicOutput
 CPulse_RegisterInfo
 CPulse_ResumePoint
+CPulse_TempVarBankDefinition
+CPulse_TempVarInfo
 CPulse_Variable
 CRC32_ProcessBuffer
 CREATE_CHILD_CURSOR_OUTFLOW
@@ -2101,8 +1850,10 @@ CTier1AppSystemI12IPulseSystemLx0EE
 CTier2AppSystemI12IPulseSystemLx0EE
 CTier3AppSystemI12IPulseSystemLx0EE
 CURSOR_ADD_TAG
+CURSOR_CREATE_CHILD
 CURSOR_REMOVE_TAG
 CURSOR_RETIRED
+CURVE_TANGENT_FLAT
 CURVE_TANGENT_FREE
 CURVE_TANGENT_LINEAR
 CURVE_TANGENT_MIRROR
@@ -2123,6 +1874,16 @@ C\bD;x
 C\bE1
 C\bHc
 C\bHc3Ic
+C\bHǅ0
+C\bHǅ8
+C\bHǅ@
+C\bHǅH
+C\bHǅP
+C\bHǅX
+C\bHǅ`
+C\bHǅh
+C\bHǅp
+C\bHǅx
 C\bI9D$\b
 C\bIc
 C\bIcD
@@ -2132,29 +1893,27 @@ C\bMc
 C\bXZH
 C\b[A\\A]A^]
 C\b[A\\]
-C\b_AXH
 C\btF
 C\btmH
 C\fMc
 C\f\a\b
 Call C%d:I%d (%s)
 CallInfo%d: %s\n
+CallResume1
+CallResume2
 Called to invoke the graph
 Called when timer reaches the duration OR is stopped. NOTE: This will run a little while AFTER the last interval fires unless they line up perfectly.
 CancelOnSucceeded
 Canceled
 Cannot allocate abstract class
 Cannot reference domain '%s' from '%s'\n
-Cannot reinterpret instance (actual: %s) from (original) %s to (desired) %s
-Cast of %s loses value information (returning %s) in %s on %s:%u\n
 Cast of %s loses value information (returning %s)\n
 Causes each execution cursor to pause at this node for a fixed period of time. Each cursor will wake up and resume execution when the time expires, unless aborted or early-woken.
 Causes each execution cursor to wait for the completion of all prior cursors that have visited this node. Use this to safely support multiple triggers to areas of the graph that take time to complete.
 Causes this execution cursor to wait for the completion of other cursors with the given tag. Can optionally kill the tag while waiting.
-Ceiling - round float up to nearest integer)
-Ceiling Float
 Cell%d - NULL\n
 Cell%d EditorID:%d [%s]: %s\n
+Ch<0
 ChA9
 CharacterSetBuild
 Check Requirement
@@ -2166,10 +1925,6 @@ Choose First
 Choose the best outflow with all rules passing, as determined by number of passing rules (specificity).
 Choose the first outflow with all rules passing, from left to right
 Circle
-Clamp Float
-Clamp Int
-Clamp value to range (float)
-Clamp value to range (int)
 Class data is a '%s', not a table\n
 Class does not allow allocation from its schema binding
 ClientLocalServerAccess001
@@ -2185,20 +1940,10 @@ Compare Values
 Compare strings with case sensitivity, in contrast to normal string equality which is case-insensitive.
 CompletedNormally
 Component Func
-Computes 2 raised to a power
-Computes e ( 2.71...) raised to a power
 Condition to evaluate when any of its dependent values change.
 Convert %s R%d <- %s R%d
-Convert degrees (0-180) to radians (0-pi)
-Convert from a Game Time a raw floating-point time that will NOT fixed up - use with caution!
-Convert from a local-space to a world-space vector
-Convert from a raw floating-point time to a Game Time that will be saved/loaded appropriately
-Convert from a world-space to local-space vector
-Convert radians (0-pi) to degrees (0-180)
 Copy R%d <- R%d
-Cosine of angle. Input in radians, output in radians
 Could not execute '%s' because this graph domain does not support the required IPulseHost
-Could not find enumeration '%s'
 Couldn't load KV3 for resource: %s
 Count the number of codepoints in the string (unicode-aware). If you want rendered glyphs, you probably want to consider using Panorama.
 CpHǃ
@@ -2206,8 +1951,6 @@ CpIcw@H
 CreateFakeEntity
 CreateFakeEntity( "%s", "%s" ) -> idx %d (handle %d)\n
 CreateInterface
-Cross Product Vector
-Cross Product of Vector a x Vector b
 Cursor Has Tag
 Cursor Queue
 Cursor [%s] @ %.2f. Cell: %u => %s: %s
@@ -2219,21 +1962,20 @@ Cursor[ ptr:%p | id:%d | graph:%p ]: Resumed from cell ptr:%p id:%d\n
 Cursor[ ptr:%p | id:%d | graph:%p ]: Yielded at cell ptr:%p id:%d\n
 Cursor[ ptr:%p | id:%d | graph:%p ]: ~CPulseExecCursor()\n
 Curve
+CxA9
 CxfH
 D$ 9
 D$ A
 D$ D
 D$ D9
-D$ E
 D$ H
 D$ I
+D$ J
 D$ L
 D$ M
 D$ N
 D$$A
-D$$E
 D$$H
-D$'@A
 D$(A
 D$(A9
 D$(F
@@ -2245,6 +1987,9 @@ D$(L
 D$(N
 D$(O
 D$(t\bƄ$
+D$,H
+D$,I
+D$.O
 D$01
 D$0A
 D$0B
@@ -2254,9 +1999,8 @@ D$0Jc
 D$0L
 D$0[A\\A]A^]
 D$0f
-D$41Ҿ
 D$4A
-D$5r
+D$6r
 D$7@A
 D$8H
 D$8I
@@ -2264,16 +2008,12 @@ D$8L
 D$8O
 D$8f
 D$8u
-D$8袇
-D$<E
+D$<1Ҿ
 D$@1
-D$@1ۅ
-D$@9
 D$@A
-D$@D9
-D$@E1
 D$@H
 D$@L
+D$@蘈
 D$DA
 D$DH
 D$DI
@@ -2284,7 +2024,12 @@ D$HB
 D$HH
 D$HI
 D$HJ
+D$HM
 D$Ht\bH
+D$H胾
+D$H詽
+D$H謇
+D$H踼
 D$IA
 D$IH
 D$LA
@@ -2295,16 +2040,20 @@ D$PA
 D$PD9
 D$PH
 D$PH9
+D$PHǅx
 D$PMc
 D$Pf
+D$P荂
+D$TH
 D$XA
 D$XH
 D$XHc
 D$XI
+D$XJ
 D$XL
 D$XM
-D$XN
 D$Xf
+D$X蘏
 D$\\A
 D$\\H
 D$\a@H
@@ -2318,13 +2067,13 @@ D$\bA_XH
 D$\bB
 D$\bC
 D$\bD
-D$\bD;h
 D$\bE
 D$\bE1
 D$\bH
 D$\bHc
 D$\bI
 D$\bIc
+D$\bJ
 D$\bL
 D$\bLc
 D$\bLcEȁ
@@ -2340,11 +2089,12 @@ D$\br
 D$\bs0
 D$\bu
 D$\bx
-D$\b谜
+D$\f9F\f
 D$\fA
 D$\fH
 D$\fI
 D$\fL
+D$\fM
 D$`9
 D$`A
 D$`H
@@ -2355,8 +2105,10 @@ D$hA
 D$hH
 D$hH9
 D$hL
+D$pH
 D$pH9
 D$pI
+D$pL
 D$ptAA
 D$xA
 D$xA9
@@ -2365,26 +2117,28 @@ D$|H
 D$|t^H
 D(0I
 D)Ήp\bD
-D2\bH
+D1Ήs0L
 D9 u
 D9(t
 D9A$u
 D9Q$u
 D9`\b~
 D9c(
+D9cp
 D9k ~6H
 D9pH
 D9Ʌ4
 D; H
+D; t
 D;&}
-D;8t
-D;8tً@
+D;0t
 D;?|
 D;c\b
 D;c\brċ
 D;c\bs
 D;c\bt&H
 D;f\bu,HcShH
+D;{ D
 DATASH
 DETACH_REGISTER
 DIGIT
@@ -2395,7 +2149,6 @@ DOUBLE_QUOTED_STRING
 DOUBLE_QUOTE_CHAR
 D\a\bH
 D\f\a\b
-D\f\bM
 D\t\bL
 D\tډЉ
 Data breakpoint [%s]
@@ -2404,7 +2157,6 @@ Data breakpoint hit
 Default echo string.
 DefaultComponentString
 DefaultTime
-Deg2 Rad
 DemoUpconverterVersion001
 Derived
 Derived Func A
@@ -2425,18 +2177,14 @@ Div R%d <- R%d / R%d
 Divide by zero!
 Do not stop the current yielding node, but do not continue to the next node afterwards.
 Domain: %s\n
-Dot Product Vector
-Dot Product of Vector a • Vector b
 Double-save to Member '%s'
 Du1H
 DuLH
-D։P\f
 E 9C(u
 E D9
 E HcE
-E ǅ|
 E#l$<Mc
-E(ƀ<
+E(ZY
 E.h~
 E1:\b
 E1:\f
@@ -2448,14 +2196,15 @@ E1ɺ\r
 E1Һ\b
 E3M}
 E7@I
+E9,$
 E9wP
 E9}P
 E;'|
 E;/|
 E;>|
-E;l$
 E;l$ s
-E;l$\bs
+E;l$\b
+E;l$\bsQI
 E;t$
 E=Qt
 EHXZH
@@ -2468,7 +2217,6 @@ ELEMENT_ACCESS_VEC3
 ELEMENT_ACCESS_VEC3WS
 ELEMENT_ACCESS_VEC4
 ENTITY_NAME
-ENs#
 EPH9
 EPulseGraphExecutionHistoryFlag
 EQ_ARRAY
@@ -2476,14 +2224,13 @@ EQ_BOOL
 EQ_COLOR_RGB
 EQ_EHANDLE
 EQ_ENTITY_NAME
+EQ_ENUM
 EQ_FLOAT
 EQ_GAMETIME
 EQ_INT
-EQ_OPAQUE_HANDLE
+EQ_LEAF
 EQ_PANEL_HANDLE
-EQ_SCHEMA_ENUM
 EQ_STRING
-EQ_TEST_HANDLE
 EQ_VEC2
 EQ_VEC3
 EQ_VEC3WS
@@ -2491,9 +2238,9 @@ EQ_VEC4
 ERROR: CUtlSymbolTableLarge element limit of %u exceeded\n
 ERROR:NoEnum:%s:%d
 ERROR:NoEnumerator:%s:%d
-ERROR:NoFlags:%s:%d
 ESCAPE_CHAR
 ESCAPE_CODE
+EXA9
 EXPONENT
 EXPORTSYSTEM_INTERFACE_VERSION_001
 E\\tHH
@@ -2501,24 +2248,22 @@ E\a@I
 E\bA9G\b
 E\bAYAZ
 E\bAYAZH
+E\bA[[
 E\bA^A_
-E\bA^X
 E\bD9
 E\bE)O\b
+E\bHc
 E\bIcM
-E\bLcE
-E\bXZ
 E\bXZH
-E\bXZI
 E\bXZL
 E\bY^
 E\bY^H
 E\b_AX
 E\b_AXH
 E\be4H
-E\bx*D9p
+E\bx\eD;p\b}
 E\f\a\b
-E\rG`
+E\r\a#
 E\v@hA9
 E\vE\t
 E\vM̸
@@ -2527,6 +2272,7 @@ EarlyInit_Tier0
 EconItemToolModel_001
 EhH9
 EhLc
+EhY^H
 Element Access R%d <- R%d[R%d]
 Enable multithreading to use std::thread
 EngineServiceMgr001
@@ -2537,23 +2283,23 @@ EntFire,%s,%s,%s
 Entity Handle
 Entity Name
 EntityName
-Enum flags '%s' invalid value '%s'
-Enumeration '%s' does not have a value '%s'
+Enum
 Eq R%d <- R%d == R%d
 Eval
 Evaluate the curve at the specified input position
 Evaluate the gradient at a position between 0 and 1
 Evaluate the requirements of each connected node
 Example Criteria
-Exp2
 External system providing an int for the test graph to consume
 External system requesting a vector from the test graph
 External system requesting an int from the test graph
 External system requesting an int from the test graph (variant)
 ExtractModuleMetadata
 Extraneous token
+EĉC\bH
 EȉPHH
 EȉPPH
+Eȋ@@A
 Eȋ@H
 Eȋ@L
 Eȋ@P
@@ -2570,37 +2316,41 @@ E؋@(
 E؋@H
 E؋@T
 E؋PHH
+F A9
 F D9
 F H)
 F H9
 F,A\f
 F.3g
 F0[A\\A]A^]Ð)
+F8H9G8t
 FE1NL
 FIRST
 FLCIǅ
-FPfI
+FPHǅ
+FXHǅ
 F\a@H
 F\a@I
 F\a@u
 F\b1Ҿ
 F\b9G\b
-F\b;H
+F\bA9D$\b
 F\bA^XH
+F\bD9h\b
 F\bH9G\b
 F\bHc
 F\bIc
 F\bM9
 F\bMk
-F\bXZ
 F\bXZH
 F\bZYu
 F\b^_
-F\btJ
 F\f8G\f
 F\f9G\f
 F\f9G\ft\b1
 F\f\a\b
+F`;H
+F`Hǅ
 Failed to allocate a lexer for '%s'. (Out of memory?)
 Failed to allocate a parser for '%s'. (Out of memory?)
 Failed to allocate a token stream for '%s'. (Out of memory?)
@@ -2625,10 +2375,12 @@ FakeEntity_t::s_InstanceCount > 0
 FakeEntity_tAPI
 FakeEntity_tAPI::BasicFunction
 FakeEntity_tAPI::GetFloatValue
+FakeEntity_tAPI::GetInlineValue
 FakeEntity_tAPI::GetIntValue
 FakeEntity_tAPI::GetName
 FakeEntity_tAPI::MultipleReturnTest
 FakeEntity_tAPI::SetAndGetIntValue
+FakeEntity_tAPI::SetFromInlineValue
 FakeEntity_tAPI::SetIntValue
 Find Fake Entity
 Find a spawned entity by name.
@@ -2645,17 +2397,22 @@ Fired whenever the global A value changes.
 First
 FixupResourceName: Illegal full path passed in ("%s")!\n
 FixupResourceName: Illegal path, missing extension passed in ("%s")!\n
+Flat
 FlattenedSerializersVersion001
 Float
-Float To Game Time
 Float( %f )
-Floor - round float down to nearest integer
-Floor Float
 FontManager_001
 Format Duration String From Seconds
+Format encountered } without matching { at column %d
+Format expected number or } at column %d
+Format expected } after number at column %d
+Format invalid index %d at column %d
+Format1
+Format2
+Format3
+Format4
+Format5
 FpW2
-Frac
-Fractional component (ie. returns 0.34 for 12.34)
 Free
 Func( %s )
 Function signature which has been replaced after compilation.
@@ -2663,25 +2420,28 @@ Function signature which will be replaced after compilation.
 Functions not supported in this evaluator (%s)
 FvDu
 G 1҃
+G Hc
 G Ic
 G(A^]
 G(Hc
 G(M9
+G.fA
 G01\v>
 G0Hc
 G0M9
 G7@H
 G7@L
-G@A9
-G@t\tH
 GCC: (SteamRT 14.2.0-19~steamrt3.1+bsrt3.1) 14.2.0
 GET_ARRAY_ELEMENT
 GET_BLACKBOARD_REFERENCE
 GET_CONST
 GET_CONST_INLINE_STORAGE
 GET_DOMAIN_VALUE
+GET_TEMPVAR
 GET_VAR
 GET_VAR_DETACH
+GHA9
+GHt\tH
 GLIBCXX_TUNABLES
 GLIBC_2.14
 GLIBC_2.17
@@ -2689,24 +2449,25 @@ GLIBC_2.2.5
 GLIBC_2.25
 GLIBC_2.3
 GLIBC_2.3.2
+GPHǅ
 GREEN
 GXHc
+GXHǅ
 G\a@A
 G\a@H
 G\a@L
-G\b9F\b
+G\b;P
 G\bA9
 G\bD9
 G\bH9
+G\bHc
 G\bIc
-G\bIc79
 G\bfA
 G\bx);p
 G\f\a\b
-G`;P
+G`Hǅ
 Game Blackboards:
 Game Time
-Game Time To Float
 GameResourceServiceClientV001
 GameResourceServiceServerV001
 GameTime_t
@@ -2723,6 +2484,7 @@ Get Enum Flags Value
 Get Enum Shape Value
 Get Fake Entity Name
 Get Float Value
+Get Inline Value
 Get Instance Value X
 Get Int Value
 Get Name
@@ -2739,6 +2501,7 @@ Get the global int value.
 Get the global shape enum value.
 Get the global string value.
 Get the name the entity was created with.
+Get the test value and name as an inline value
 Get the test value as a float
 Get the test value as an int
 GetArrayElement R%d <- R%d[ R%d ]
@@ -2750,6 +2513,7 @@ GetDomainValue R%d <- DV%d (%s)
 GetInlineConst R%d <- C%d (%s)
 GetResourceManifestCount
 GetResourceManifests
+GetTempVar R%d <-
 GetThreadLocalStackAllocator
 GetVar R%d <- V%d (%s)
 GetVar R%d <=MOVE*V%d (%s)
@@ -2761,53 +2525,65 @@ GpHcWhH
 Gradient
 Green
 GЉS$A
+GЉS$Hc[ A9
 GЉSlHcE
+GЉS|HcE
 GЉWlHcE
 H H9
 H#D$
+H$HcX
 H(H)
+H)ʍr
 H+H\b
 H+S\b
 H.f}<
 H0H)
 H8H)
+H95\t=\n
 H9Z\bu
 H9\atVUH
 H9p\bu
 H@H)
-HAUATI
 HHH)
+HLc&D;f
 HPH)
 HPulseCell
 HPulseCellBase
 HXH)
 HYieldedCursor
 H[A\\A]A^A_]
-H[A\\A]A^A_]Ð
-H[A\\A]A^A_]ÐL
+H[A\\A]A^A_]ø
 H[A\\A]]
 H[A\\A]]ø
 H[]A\\A]A^A_
+H\b1\vQ(I
 H\bD9
 H\bHc
 H\b[A\\]
 H\f\a\b
 HammerMapLoader001
+Handle Return Values
 HandleInt
 HandleIntDerived
 HardCancel
+Hc0H
 Hc3H
 Hc3L
+Hc7A9
 Hc7E1҃
 Hc7E1ۃ
-Hc;L
+Hc7t_Hc
 Hc;L9
-Hc=ma
+Hc==$
+Hc@$;A
+HcAh
+HcC$
+HcC(A9
 HcC(M
 HcC0
 HcC0E
-HcC4
 HcC@
+HcC@;CPH
 HcCP
 HcC\\
 HcC\b9
@@ -2817,24 +2593,26 @@ HcChE
 HcE\vM
 HcFH
 HcGPH
+HcG\bH
 HcGh
 HcGhL
 HcK H
-HcKPIc
 HcL2\bI
 HcL7\bH
 HcN\bI
 HcO(
-HcP\b
 HcP\bH
+HcPp
+HcPpD
+HcPpE
 HcS I
-HcS(I
 HcS\b
 HcU܅
 HcV H
+HcW\b
 HcW\bH
+HcX D
 Hc[\fH
-Hc\a9
 Hc\bH
 Hc^\fH
 Hcs\bH
@@ -2847,7 +2625,8 @@ HostStateMgr001
 Ht"H
 I could not work out what I was expecting, like so many of us these days!\n
 I+\\$(
-I9ߋ=\\b
+I9\aA
+I9ߋ=,%
 IAppSystem
 IAsyncProcessedDataResult
 ID_CHAR
@@ -2878,31 +2657,28 @@ IPulseInstanceSaveAPI
 IPulseReloadListener
 IPulseSystem
 IPulseSystem_001
-IPulseTypeQueriesForScope
+IPulseTypeEnumInfo
+IPulseTypeInfo
 IResourceTypeManager
 I\f\a\b
 I\tEPI
 Ia\\T
-Ic0L
+Ic6H9
 Ic6M
 Ic7A
-Ic7H
-Ic7I
-Ic7L9
-Ic?I
 IcD$
 IcD$(
 IcD$4
-IcD$@A;D$PI
+IcD$@A
 IcE(
-IcE@A;EP
 IcEHA9
 IcE\bIc
+IcF(L
 IcF@A
 IcFhL
 IcG I
 IcGP
-IcG\\
+IcG\\;F s
 IcGh
 IcGhA9
 IcJ\b
@@ -2918,19 +2694,22 @@ IcT$PA
 IcT$PE
 IcT$PH
 IcT$\bI
+IcT$p
+IcT$pH
 IcU H
 IcU I
+IcUHA
+IcUHE
+IcUHH
+IcU\b
 IcV H
-IcW E
-IcW I
 IcX\fH
 Ic\\$
+Ic\\$0H
 Ic\\$HH
-Ic\\$PH
 Ic\\$\\H
 Ic\\$\bA9\\$
-Ic\aA9
-Ic\b9
+Ic\aA;G
 Ic\f$I
 Ic\vD9
 Ic] H
@@ -2943,7 +2722,7 @@ Ic_@D
 Ic_PA;_`A
 Ict$hH
 Icv\b
-Icً\r_
+Icً\r
 If (R%d) Jump to Instr I%d
 If (R%d) Leap to Chunk C%d
 If specified, each wait interval will vary randomly between WaitInterval this value
@@ -2962,8 +2741,6 @@ InsertMultipleBefore
 InstallSchemaBindings
 Int( %d )
 Integer
-Integer Divide
-Integer division - unlike the divide (/) node, this will truncate any remainder (floor) and return an integer.
 Internal cursor flow error: halting due to leaf cell bug!
 InterruptElegantly
 InterruptImmediately
@@ -2977,15 +2754,11 @@ Invoke binding %d (%s) not found, converting to NOP\n
 Invoke%d: Cell%d %s\n
 Invoke%d: LibraryFunc %s\n
 InvokeMiniDumpHandler
-Is Valid Vector
-Is Valid World Vector
 IsValidIndex( i )
 IuTH
 IuYH
 Iu^H
-IǄ$(
-IǄ$0
-IǄ$4
+J0f9H\bu
 J0u\bI
 JArray
 JUMP
@@ -2996,8 +2769,12 @@ JdKF
 Ju\eH
 Jump to Instr I%d
 JumpOrLeap( C%d:I%d )
-K8Ic
+K A9
+K(Ic
+K0t%H
 K8Lc
+K@ A9
+K@HcE
 KV3 instances cannot be set to an unspecified specific type
 K\bHc3
 K\bHcU
@@ -3014,7 +2791,7 @@ KeyValues3: pre-allocated array memory is too small for %u elements (%u bytes av
 KeyValues3: pre-allocated table memory is too small for %u members (%u bytes available, %u bytes needed)\n
 KeyValuesSystem
 Kff.
-KhE1퉅,
+KhE1퉅
 Kill After.
 Kill All Other Cursors
 Kill Cursors With Tag
@@ -3031,16 +2808,19 @@ L$(I
 L$(K
 L$,A
 L$,L
+L$,t'H
 L$,t(H
+L$,t8H
 L$,t9H
 L$0H
 L$8L
-L$8f
 L$@Hc
 L$@I
+L$@f
 L$HH
 L$HL
 L$LH
+L$LI
 L$PA
 L$PH
 L$Pu5A
@@ -3057,24 +2837,28 @@ L$\bI
 L$\bJ
 L$\bK
 L$\bL
-L$\fH
 L$`A
 L$`E
 L$`H
+L$`I
 L$`M
+L$`f
 L$dA
 L$dI
 L$dtoH
 L$hA
 L$p)
 L$pA
+L$pL
 L$xA
+L$xHc
 L$|I
 L90r
 L92u
 L92u\b
 L9:r
 L9\nr
+L;c0t
 L@@k- p
 LAST_SERIALIZED_CODE
 LIBRARY_INVOKE
@@ -3082,10 +2866,13 @@ LINE_CONTINUATION
 LITERAL_FALSE
 LITERAL_TRUE
 LI\aH
+LLUN
 LOG_CONSOLE
 LOG_DEVELOPER
 LOG_DEVELOPER_CONSOLE
 LOG_GENERAL
+LOOP_BREAK
+LS\bA
 LTE_FLOAT
 LTE_GAMETIME
 LTE_INT
@@ -3094,6 +2881,7 @@ LT_GAMETIME
 LT_INT
 L\f\a\b
 L\r\bH
+Lc#E9
 Lc'D;g
 Lc+L
 Lc.L
@@ -3101,21 +2889,15 @@ Lc6E
 Lc7E)
 LcF H
 Lcc(D;c8t,D
+LccpD;
 Lcg\bH
-Lck\bE1
 Lck\bL
+Leaf Type
 Leap to Chunk C%d
-Length (magnitude) of Vector
-Length (magnitude) of Vector2D
-Length Vector
-Length Vector2 D
-Lerp Float
-Lerp Vector
-Lerp World Vector
 Less R%d <- R%d < R%d
 LessEq R%d <- R%d <= R%d
 Lexer encountered %d error(s)
-Li%H
+Li%L
 Library Destroy Fake Entity
 Library Find Fake Entity By Name
 Library Spawn Fake Entity
@@ -3126,9 +2908,6 @@ Linear
 List all the active pulse graph instances
 LocalServerClientAccess001
 Localize_001
-Log10
-Log2
-LoggingListener
 LoggingSystem_CurrentStateIndex
 LoggingSystem_GetChannel
 LoggingSystem_IsChannelEnabled
@@ -3145,7 +2924,9 @@ LoggingSystem_UnregisterLoggingListener
 Lower pen.
 LuEH
 LuOH
+M@H9Љ
 MATCHFRAMEWORK_001
+MAlternateSemanticName
 MAtomicTransfersAsPlainString
 MCustomFGDMetadata
 MEnumFlagsWithOverlappingBits
@@ -3159,6 +2940,7 @@ MM_SS_LEADING_ZERO
 MODEL_PROCESSING_SERVICES_INTERFACE_001
 MOD_FLOAT
 MOD_INT
+MPHc
 MPropertyAttributeSuggestionName
 MPropertyDescription
 MPropertyFlattenIntoParentRow
@@ -3173,6 +2955,7 @@ MPulseEditorHeaderIcon
 MPulseEditorHeaderText
 MPulseExpressionAlias
 MPulseFGDSkipField
+MPulseFunctionAddsCursorTag
 MPulseFunctionHiddenInTool
 MPulseLegacyName
 MPulsePolymorphicDependentReturn
@@ -3185,44 +2968,27 @@ MUL_INT
 M\bIcD$
 M\bM9
 M\f\a\b
-Make Angle
-Make Angle From Forward Vector
-Make Color
-Make Transform
-Make Vector
-Make Vector From Angle
-Make Vector2 D
-Make Vector4 D
-Make World Transform
-Make World Vector
-Make a Color from component parts
-Make a Transform from component parts.
-Make a Vector from an Angle
-Make a Vector from component parts.
-Make a Vector2D from component parts.
-Make a World Vector from component parts.
-Make an Angle from a Forward Vector
-Make an Angle from component parts
 MapListService_001
 Material Group
 MaterialUtils_001
-Max Float
-Max Int
-Maximum of two values (float)
-Maximum of two values (int)
 Mc$$
 Mc$$A
 Mc'H
 Mc,$1
 Mc,$A
+Mc,$H
 Mc,$I
 Mc4$H
-Mc7E1
 Mc7H
 McD$
 Mcd$
-Mce0H
-Mcf\bMk
+Mcd$XH
+Mce\bE;e
+Mcex
+McexA
+McexH
+McexL
+Mcg8H
 Mcl$
 Mcl$ E;l$0D
 Mcm\fH
@@ -3238,7 +3004,10 @@ Mct$@I
 Mct$DH
 Mct$HH
 Mct$LH
+Mct$PH
+Mct$TH
 Mct$XH
+Mcu(H
 McuHH
 Mcx\fH
 Mcz\fH
@@ -3254,10 +3023,6 @@ MemAlloc_StrDupWrapperFunc
 MeshSystem001
 MeshUtils001
 Mff.
-Min Float
-Min Int
-Minimum of two values (float)
-Minimum of two values (int)
 Mirror
 Mismatched Token Exception
 Mismatched set
@@ -3268,6 +3033,7 @@ Missing token %s
 Mod R%d <- R%d %% R%d
 ModelDocUtils001
 Monitor Observable
+Monitor Observable Switch
 Move
 Move forward in the facing direction
 MpIcEhI
@@ -3276,7 +3042,9 @@ Mul R%d <- R%d * R%d
 Multiple Return Test
 Multiple pointer returns
 MȉUċE
+Mȋ;H
 MԉUЋE
+N$t6H
 N(Lc
 N10__cxxabiv115__forced_unwindE
 N10__cxxabiv117__class_type_infoE
@@ -3299,14 +3067,13 @@ NE_BOOL
 NE_COLOR_RGB
 NE_EHANDLE
 NE_ENTITY_NAME
+NE_ENUM
 NE_FLOAT
 NE_GAMETIME
 NE_INT
-NE_OPAQUE_HANDLE
+NE_LEAF
 NE_PANEL_HANDLE
-NE_SCHEMA_ENUM
 NE_STRING
-NE_TEST_HANDLE
 NE_VEC2
 NE_VEC3
 NE_VEC3WS
@@ -3321,7 +3088,6 @@ N\bHc
 N\bHc3H
 N\fHc
 N\f\a\b
-Natural logarithm (base e)
 NavGameTest001
 Need to specify a pulse file to open.\n
 Neg R%d <- -R%d
@@ -3341,8 +3107,6 @@ No expression!
 No input data for '%s'. (Empty buffer.)
 NodeID %d port '%s' called from C%d:I%d
 None
-Normalize Vector
-Normalize Vector a
 Not R%d <- !R%d
 Not safe to 'new' this class due to alignment requirements
 NotReloading
@@ -3356,12 +3120,12 @@ OPEN_BRACKET
 OPEN_PAREN
 OP_EQUAL
 OXHc
+O\b;Q
 O\bE)
 O\bH\t
 O\bHc
 O\bHcփ
 O\f\a\b
-O`HcG\\
 Observable
 Odt,H
 OeeF
@@ -3370,15 +3134,11 @@ OnAsyncChild2
 OnInterval
 OnOut1
 OnOut2
-OnYieldResume1
-OnYieldResume2
 Only wrote %d (of %d) values when saving map!
-Opaque Handle
 Open a specific graph instance by id
 Opens the specified pulse used in this map in the editor.\n\tArguments: <pulse_file>
 Optional. Type 'Any'. An associated value, e.g. the Entity Handle which is responsible for this Cursor. The Tag is defined by the unique combination of Name and Value.
 Or R%d <- R%d || R%d
-Origin
 OutflowWithRequirements_t
 Output Connection %d: '%s' -> '%s' : %s( %s )\n
 Output%d: '%s' (%s)\n
@@ -3386,11 +3146,10 @@ O|tQL
 P D;
 P E1
 P H9
-P Hc
+P HcC\\
 P Hǃ
 P Hǃ8
 P Ic
-P Ic7D
 P IcD$
 P IcT$PE
 P Ic]
@@ -3398,22 +3157,25 @@ P Ic_
 P IǄ$
 P L9
 P [I
+P [L
 P ǃ0
 P ǅH
-P ǅ`
+P ǅP
 P ǅx
 P(H9
 P(L9
 P([A\\]
 P0D9
 P8[H
+P=uQ
 P@[A\\]
 PA LP
 PANEL_ID
+PAUATI
 PGDInstruction_t
-PHA9
 PHD9
-PHLc
+PHH9
+PHLcK\\D
 POISONED
 POS_FLOATLITERAL
 POS_INTLITERAL
@@ -3431,12 +3193,13 @@ PVAL_COUNT
 PVAL_CURSOR_FLOW
 PVAL_EHANDLE
 PVAL_ENTITY_NAME
+PVAL_ENUM
 PVAL_FLOAT
 PVAL_GAMETIME
 PVAL_INT
 PVAL_INVALID
+PVAL_LEAF
 PVAL_MODEL_MATERIAL_GROUP
-PVAL_OPAQUE_HANDLE
 PVAL_PANORAMA_PANEL_HANDLE
 PVAL_PARTICLE_EHANDLE
 PVAL_QANGLE
@@ -3446,7 +3209,6 @@ PVAL_SCHEMA_ENUM
 PVAL_SNDEVT_GUID
 PVAL_SNDEVT_NAME
 PVAL_STRING
-PVAL_TEST_HANDLE
 PVAL_TRANSFORM
 PVAL_TRANSFORM_WORLDSPACE
 PVAL_TYPESAFE_INT
@@ -3467,6 +3229,7 @@ P\b;S
 P\bA;
 P\bRH
 P\f\a\b
+P`AWA
 P`[L
 PanelID
 Panorama Panel Handle
@@ -3490,7 +3253,6 @@ Pen Up
 PhA9
 PhE1
 PhysicsBuilderMgr001
-Pitch
 Pj\bA
 Plat_CheckSDL
 Plat_CreateWindow
@@ -3526,7 +3288,7 @@ Plat_NotifyOSAppIsNotHung
 Plat_Printf
 Plat_RelativeTicks
 Plat_SetActiveWindow
-Plat_SetGameDirectories
+Plat_SetGameDirectory
 Plat_ShutdownCOM
 Plat_TickDiffMilliSecF
 Plat_UnloadModule
@@ -3534,7 +3296,7 @@ Plat_UnloadSDL
 Pointers cannot be used as numeric values
 PostProcessingSystem_001
 PpM9
-Preventing new cursor (%s)
+Preventing cursor execution (%s)
 Print String With Editor Suggestions
 Print String With Leaf Suggestions
 Print string with suggestions from editor code.
@@ -3558,6 +3320,8 @@ Pulse system: minimal vpulse definition loading enabled - graphs may be incomple
 Pulse: %s
 PulseApiFeature_t
 PulseBestOutflowRules_t
+PulseBindingTypeForCType< PulseTestInlineValue_t >() == valueType
+PulseBindingTypeForCType< const PulseTestInlineValue_t & >() == valueType
 PulseCursorCancelPriority_t
 PulseCursorID_t
 PulseCursorWakePriority_t
@@ -3567,6 +3331,7 @@ PulseDebugLog: Calling external method on non-existent entity or game blackboard
 PulseDocNodeID_t
 PulseDomainValueType_t
 PulseDurationStringFormat_t
+PulseFindTypeInfo( valueType ).GetBaseType() == CPulseType()
 PulseGraphExecutionHistoryCursorDesc_t
 PulseGraphExecutionHistoryEntry_t
 PulseGraphExecutionHistoryNodeDesc_t
@@ -3587,6 +3352,8 @@ PulseRuntimeInvokeIndex_t
 PulseRuntimeOutputIndex_t
 PulseRuntimeRegisterIndex_t
 PulseRuntimeStateOffset_t
+PulseRuntimeTempVarBankIndex_t
+PulseRuntimeTempVarIndex_t
 PulseRuntimeVarIndex_t
 PulseSelectorOutflowList_t
 PulseSymbol_t
@@ -3603,13 +3370,11 @@ PulseValueType_t
 PulseVariableKeysSource_t
 Q\bA]A^A_
 Q\bH9
-Q\bHk
 Q\btC
 Q\f\a\b
 Qx鸡*j
-R IcW E
+R Hc[ H
 R L9
-R Sqrt
 R%d%s%s
 R%d: %15s %25s %s\n
 RD9d
@@ -3618,20 +3383,18 @@ REINTERPRET_INSTANCE
 REQUIREMENT_FAIL
 REQUIREMENT_PASS
 RESOURCE_TYPE_PULSE_GRAPH_DEF
+RETURN
 RETURN_VALUE
 RETURN_VOID
 RH;|
 R\bI9
 R\f\a\b
-Rad2 Deg
 Raise pen.
 Random Float
 Random Integer
-Random World Position
 RandomFloat
 RandomInt
 Randomly taken half of the time
-Reciprocoal square root (1/sqrt)
 Recognition Exception
 Recognition exception
 Record that the function was called
@@ -3642,8 +3405,6 @@ Regular
 Reinterpret Instance %s R%d <- %s R%d
 Release
 Reloading
-Remap Clamped Float
-Remap and clamp input value from input range to output range (float)
 Remove Tag From Cursor
 Remove the given tag from this cursor. If other cursors are waiting on us, they will resume.
 RenderDevice003
@@ -3659,31 +3420,19 @@ ResourceCompilerSystem001
 ResourceHandleUtils001
 ResourceManifestRegistry001
 ResourceSystem013
+Return
 Return the input string, use the code default if none was supplied.
-Returns -1 or 0 or 1 based on the sign of the argument
-Returns -1.0 or 0.0 or 1.0 based on the sign of the argument
-Returns a random position centered on vCenter with random min and max radius
-Returns interpolated value between A and B based on frac 0.0 - 1.0 (float)
-Returns interpolated value between A and B based on frac 0.0 - 1.0 (vector)
-Returns interpolated value between A and B based on frac 0.0 - 1.0 (world vector)
-Returns the constant pi (3.14...)
-Returns true if the Vector is valid
-Returns true if the World Vector is valid
-Roll
 Root
-Round - round float up or down to integer
-Round Float
-S H9
+S Ic
 S$Hc
 S+\aH
 S0Hc
 S0I9
 S0[A\\]
-S8Ic
 S8Lc
 S:\fr
+S;O\b
 S@H9
-S@Mc
 SCALE
 SCALE_INV
 SCALE_INV_VEC2
@@ -3696,6 +3445,8 @@ SCOPE_QUALIFIER
 SECOND
 SEMICOLON
 SET_BLACKBOARD_REFERENCE
+SET_TEMPVAR
+SET_TEMPVAR_OBSERVABLE
 SET_VAR
 SET_VAR_ARRAY_ELEMENT_1D
 SET_VAR_OBSERVABLE
@@ -3718,27 +3469,25 @@ SUB_VEC3
 SUB_VEC3WS_VEC3
 SUB_VEC3WS_VEC3WS
 SUB_VEC4
-SXH9
 SYNC_WAIT_FOR_COMPLETION
-S\bD;z
 S\bE)
 S\bE9
 S\bHc
 S\bHcD
+S\bIc
 S\bJc
 S\bJct2\b
 S\bJct2\bH
+S\b[H
 S\f\a\b
+S`B!D
+S`Ic
 S`Lc
-Saturate
-Saturate (clamps float between 0 and 1)
 Save a named value of any type on the cursor.
-Scale
 Scale INV R%d <- R%d / R%d
 Scale R%d <- R%d * R%d
 SceneSystem_002
 SceneUtils_001
-Schema Enum
 SchemaSystem_001
 SchemaTestExternal_One_001
 SchemaTestExternal_Two_001
@@ -3756,6 +3505,7 @@ Set Enum Flags
 Set Enum Shape
 Set Float Value
 Set Float Value Optional
+Set From Inline Value
 Set Instance Value X
 Set Int Value
 Set String Value
@@ -3773,24 +3523,24 @@ Set the global int value.
 Set the global string value (with default).
 Set the global string value.
 Set the test value as an int
+Set the test value from an inline value
 SetAssertionPrompt
 SetBlackboardReference BR%d (%s) <- R%d
+SetTempVar
 SetVar V%d (%s) <- R%d
 SetVarArrayElement1D V%d (%s) [ R%d ] <- R%d R%d
-Sign Float
-Sign Int
+Signature hook to fill out arguments for CallResume1
+Signature hook to fill out arguments for CallResume2
 Signature hook to fill out arguments for OnAsyncChild1
 Signature hook to fill out arguments for OnAsyncChild2
 Signature hook to fill out arguments for OnInterval
 Signature hook to fill out arguments for OnOut1
 Signature hook to fill out arguments for OnOut2
-Signature hook to fill out arguments for OnYieldResume1
-Signature hook to fill out arguments for OnYieldResume2
 SignatureOutflow_Continue
 SignatureOutflow_Resume
 Sine
-Sine of angle. Input in radians, output in radians
 Skip this node after the limit. Check Type does not apply, the limit will always be checked.
+SmartPropsSystem_001
 SoftCancel
 SoundEvent
 SoundEvent Instance Handle
@@ -3817,26 +3567,8 @@ Sp[L
 Spawn Fake Entity
 Spawn a fake entity from a static library function.
 Spline
-Split Angle
-Split Color
-Split Transform
-Split Vector
-Split Vector2 D
-Split Vector4 D
-Split World Transform
-Split World Vector
-Split a Color into component parts.
-Split a Transform into component parts.
-Split a Vector into component parts.
-Split a Vector2D into component parts.
-Split a World Vector into component parts.
-Split an Angle into component parts.
 SplitNameAndKV3Args
-Sqr Float
-Sqr Int
-Sqrt
 Square
-Square root
 St10bad_typeid
 St11_Mutex_baseILN9__gnu_cxx12_Lock_policyE2EE
 St11logic_error
@@ -3861,6 +3593,8 @@ St9type_info
 Stack depth limit hit (%d)
 Start
 Start a timer with the specified duration, fire the OnInterval output
+Static_TestFakeEntityVariants
+Static_TestInlineValueVariants
 StatsService_001
 SteamAudio001
 Stop Waiting
@@ -3873,65 +3607,81 @@ Strings Are Equal Case Sensitive
 Su1H
 SuTH
 Sub R%d <- R%d - R%d
+Sxvvǃ
 Synchronous - Wait for this node to fully complete before proceeding.
 T$ )
+T$ E
 T$ H
 T$ HcE
 T$ I
 T$ L
+T$ N
 T$ f
 T$$A
 T$$L
 T$(H
 T$(I
+T$(J
 T$(L
+T$(f
 T$09]
 T$0D
 T$0H
 T$0L
 T$0M
-T$8E
+T$0fA
 T$8H
 T$8I
-T$8~
 T$@A
+T$@E1
 T$@H
+T$@I
 T$@I9
 T$@L
+T$H1
 T$HA9U
 T$HH
 T$HI
-T$HL
-T$HN
-T$PE1
+T$Hf
+T$PH
 T$PI
+T$PfA
 T$XH
+T$\b9
 T$\bA
 T$\bD
+T$\bE
 T$\bE1
 T$\bH
 T$\bI
 T$\bL
+T$\bN
 T$\b[A\\]
+T$\bf
 T$\bu
 T$`H
+T$`L
 T$`[
 T$dH
 T$pA
 T$pH
 T$pL
 T$|H
-T( H
+T%d (%s)
+T%d: '%s' (%s) EditorID:%d%s\n
+T( M
+T((M
+T(\bA
 THIRD
 TLS init function for
 TLS wrapper function for
 TOK_COLON
 TRIANGLE
-TW\bH9
+TW\bI9
 T\f\a\b
 Tag Cursor
 TagsRemoved
-Tangent of angle. Input in radians, output in radians
+Takes a format string that and 1-5 arguments to insert into that string.<br>Format string can look like, for example, <tt>"Hello {} my name is {}"</tt> to reference arguments 0 and 1 implcictly.<br>Or <tt>"Hello {0} my name is {1}"</tt> to reference arguments 0 and 1 explicitly.<br>Use <tt>{{</tt> and <tt>}}</tt> for literal brace characters.<br>
 Terminate()
 TernaryConditional
 Test Array Array Access
@@ -3946,7 +3696,6 @@ Test Function Renamed   With Args  New
 Test Function Renamed  New
 Test Function Renamed  Old
 Test Function Renamed  With Args  Old
-Test Handle
 Test Observable False
 Test Observable True
 Test Optional Parameters  After Defaults Added
@@ -3959,6 +3708,7 @@ Test node that randomly picks between two outflows.
 Test step with return value
 TestClock_AutoRun
 TestClock_ExplicitStepped
+TestColor
 TestComponent_t
 TestComponent_tAPI
 TestComponent_tAPI::ComponentFunc
@@ -3968,11 +3718,14 @@ TestDomainEntity
 TestDomainReadOnlyBlackboardConsumer
 TestDomain_Derived
 TestDomain_UseReadOnlyBlackboardView
+TestFlags
+TestFlagsAlt
 TestFunctionRenamed_New
 TestFunctionRenamed_Old
 TestFunctionRenamed_WithArgs_New
 TestFunctionRenamed_WithArgs_Old
 TestScriptMgr001
+TestShape
 Test_ValidateCursorValues
 TextLayout_001
 Third
@@ -3996,22 +3749,15 @@ Turn
 Turn a time in seconds into a display string. NOT localized.
 Turtle Graphics Domain
 TurtleGraphics
-Typesafe Int
-Typesafe Int64
 U,(#
-U1Ҿ\e
 U>A|
-U@E1
-U@Hc
 UE19
 UE1\t
-UE1ɉ
 UE1ۉ
 UNKNOWN
 UNRECOGNIZED
 UUUUUUUUH
 U\bM9
-U\fHcE
 U\f\a\b
 UnInvalid
 UnNegate
@@ -4062,7 +3808,6 @@ VMDL
 VMaterialSystem2_001
 VMediaFoundation001
 VP4003
-VPIcNHH
 VPhysics2_Interface_001
 VProcessUtils002
 VProfService_001
@@ -4075,6 +3820,7 @@ VTT for
 VUUUH
 VWebm001
 V\bHc
+V\bHk
 V\bIc
 V\btmH
 V\f\a\b
@@ -4098,6 +3844,7 @@ V_StringToBool
 V_StringToColor
 V_StringToFloat32
 V_StringToFloat64
+V_StringToFloatArray
 V_StringToInt16
 V_StringToInt32
 V_StringToInt64
@@ -4119,17 +3866,14 @@ V_UInt8ToString_Unsafe
 V_UnqualifiedFileName
 V_acosd
 V_acosf
-V_asind
 V_asinf
 V_atan2f
-V_atand
 V_atanf
 V_atof
 V_atofloat32
 V_atoi
 V_cosd
 V_cosf
-V_exp2f
 V_expf
 V_fclose
 V_fflush
@@ -4144,8 +3888,6 @@ V_fread
 V_ftell
 V_fwrite
 V_isnand
-V_log10f
-V_log2f
 V_logf
 V_powd
 V_powf
@@ -4157,14 +3899,13 @@ V_sinf
 V_snprintf
 V_sscanf
 V_stricmp_fast
-V_tand
 V_tanf
 V_vsnprintf
 Value 0-1 how far along duration (always 0 if duration is -1)
+Value to evaluate when any of its dependent values change. The result is compared against each case.
 Var( %s )
 Variant
 Vector
-Vector To World Vector
 Vector2D
 Vector4D
 VisBuilder_001
@@ -4172,9 +3913,9 @@ Void
 Vrad3_001
 Vt(H
 W H;
-W$IcW D9
 W0A9
 W0D9
+W>u"
 W@E1
 WARNING: Pulse failed to restore yielded cursor - error with cell state (%d:%s)\n
 WARNING: Pulse failed to restore yielded cursor - no yielding cell or landing pad (%d:%s)\n
@@ -4187,6 +3928,7 @@ W\bL)
 W\f\a\b
 W`9\ntpH
 W`Hc
+W`HcG\\
 Wait
 Wait For Completion
 Wait For Cursors With Tag
@@ -4202,17 +3944,17 @@ When we start waiting, how should we handle existing cursors?
 While False
 While True
 While active, manage child cursors based on the results of a boolean condition. When the observable result changes, the prior cursor will be canceled and the appropriate outflow will fire a new child cursor. Will monitor continuously until externally canceled.
+While active, manage child cursors based on which case an observable value matches. When the observable result moves to a different case, the prior cursor will be canceled and the matching outflow will fire a new child cursor. Will monitor continuously until externally canceled.
 White
 World Transform
 World Vector
-World Vector To Vector
 WorldRendererMgr001
 Worldsize_Init
 Wp|x
 X D9
-X to the Y power
 XA\\A]A^A_]
 XDp?
+XHcK(Ic
 XZ럐I
 XZ롐I
 XZ뤐H
@@ -4223,19 +3965,23 @@ X[A\\A]A^A_]ËE
 X[A\\A]A^A_]ÐH
 X[A\\A]A^A_]ÐI
 X[A\\A]]
+X\bLc I
 X\f\a\b
+Y-i\t
 Y\f\a\b
 Y^I9
-Y^uU
+Y^uR
 Yield, Resume=%s
 Z*ܒZ
 ZD$\b%
 ZD$\f%
-ZE\bH
 ZYH9
-Z\bf.
+Z[A\\H
+Z[A\\]H
 Z\f\a\b
 ZtdH
+ZttH
+ZtzH
 ZvVH
 [ Chunk%d ]
 [ written at chunk start last-read I%d ]
@@ -4248,8 +3994,6 @@ ZvVH
 [A\\A
 [A\\A]A^A_]
 [A\\A]A^A_]H
-[A\\A]A^A_]Ã
-[A\\A]A^A_]Ë
 [A\\A]A^A_]Ð
 [A\\A]A^A_]Ð1
 [A\\A]A^A_]Ð1Ʌ
@@ -4259,11 +4003,14 @@ ZvVH
 [A\\A]A^A_]ÐHc
 [A\\A]A^A_]ÐI
 [A\\A]A^A_]ÐL
-[A\\A]A^A_]ÐM
 [A\\A]A^A_]û
-[A\\A]A^A_]骿
-[A\\A]A^A_]鲣
+[A\\A]A^A_]链
+[A\\A]A^A_]顇
+[A\\A]A^A_]飒
+[A\\A]A^A_]鬒
+[A\\A]A^A_]鹓
 [A\\A]A^]
+[A\\A]A^]A
 [A\\A]A^]É
 [A\\A]A^]Ð
 [A\\A]A^]Ð1
@@ -4273,26 +4020,38 @@ ZvVH
 [A\\A]A^]ÐL
 [A\\A]A^]ÐM
 [A\\A]A^]ú
+[A\\A]A^]郘
+[A\\A]A^]髸
+[A\\A]A^]鲠
 [A\\A]H
 [A\\A]]
 [A\\A]]H
-[A\\A]]Ë
+[A\\A]]Å
 [A\\A]]Ë~\b
-[A\\A]]ÐL
+[A\\A]]Ð
 [A\\A]]ø
+[A\\A]]鈩\v
 [A\\A^]
+[A\\A^]ÐL
 [A\\H
 [A\\L
 [A\\]
 [A\\]H
 [A\\]Hk
 [A\\]Ã
+[A\\]É
+[A\\]Ð
 [A\\]ÐA
 [A\\]ÐD
 [A\\]ÐH
+[A\\]ÐL
 [A\\]ø
 [A\\]ÿ
-[A\\]鞒\r
+[A\\]顎
+[A\\]鮇
+[BREAK]
+[CPulseCell_ReturnValues]
+[E19
 [IMMEDIATE_HALT]
 [INVALID]
 [Index:
@@ -4308,10 +4067,10 @@ ZvVH
 []A\\A]A^
 []A\\A]A^A_
 []A\\A]A^ÐD
-[]A\\A]隢
 [abi:
 [clone
 [friend]
+[loop body, break -> C%d:I%d]
 [t(H
 [test]
 [unknown]
@@ -4322,24 +4081,27 @@ ZvVH
 \\$ D
 \\$ M
 \\$ Mcl$
-\\$ N
 \\$ f
-\\$$H
+\\$&H
 \\$(H
 \\$(I
-\\$(J
-\\$(L
 \\$0D
 \\$0H
 \\$0I
 \\$0IcD$(H
+\\$0L
 \\$0M
+\\$0f
 \\$@%
+\\$@f
+\\$@fA
 \\$HD
 \\$HMcl$@Mk
 \\$HMk
 \\$PH
-\\$PL
+\\$PI
+\\$Pf
+\\$XIcD$PL
 \\$\b1
 \\$\bA
 \\$\bA\\A_1
@@ -4348,17 +4110,18 @@ ZvVH
 \\$\bI
 \\$\bL
 \\$\bM
-\\$\bN
 \\$\bXZ
 \\$\bXZH
 \\$\bY^
 \\$\b_AX1
 \\$\bf
-\\$\b貧
-\\( M
-\\((M
-\\(\bE
+\\$\buA1
+\\$\b袖
+\\$\ff
+\\&=L
 \\C\bf
+\\D$\b
+\\D$\f
 \\\a\b1
 \\\f\a\b
 \\u5H
@@ -4386,12 +4149,14 @@ ZvVH
 \a~.D
 \a~7D
 \a~dL
-\bA8\f$
+\bAPI
 \bAUI
 \bA\v
 \bA\v@
 \bA\vV\n
 \bA\v`
+\bA^]
+\bD9\tu\nL
 \bE1\t
 \bE\vG\n
 \bE\vJ\n
@@ -4406,6 +4171,7 @@ ZvVH
 \bHcC H
 \bHcG
 \bHcO
+\bHc\a
 \bHc_\b
 \bI\vL
 \bJ\vL
@@ -4419,19 +4185,23 @@ ZvVH
 \bLcgH
 \bMcm\f1ɾ
 \bMcn
-\bMcn0E1
 \bMcu$E1
+\bMcu0E1
 \bMcv
 \bMc},E1
 \bMc~
 \b[A\\A]A^A_]
 \b[A\\A]A^A_]Ð
 \b[A\\A]A^A_]ÐI
+\b[A\\A]A^H
 \b[A\\A]]
+\b[A\\A]]H
+\b[A\\A]]Ã
 \b[A\\A]]Ð
 \b[A\\A]]ÐH
 \b[A\\A]]ÐI
 \b[A\\A]]ú
+\b[A\\A]]骰
 \b[]A\\A]
 \b\b\b\b\t\b\b\t\b\b\b
 \b\b\b\bf
@@ -4441,14 +4211,14 @@ ZvVH
 \bc*s;
 \bo$C
 \bt#H
-\bt*9\v
+\bt)9\v
 \bt2H
 \bt5H
 \bt<H
 \btlUH
 \btsE
-\bu:<
-\buv1
+\bu\f<
+\bus1
 \bu͋p\b1
 \b~)H
 \b~5H
@@ -4461,10 +4231,9 @@ ZvVH
 \e\e\f\a\b
 \e\f\a\b
 \eff.
-\etFH
+\et?H
 \euYH
 \euvHc
-\f$8\b
 \f,Hc
 \f0H9
 \f3H9
@@ -4488,8 +4257,6 @@ ZvVH
 \f\f\f\ff
 \f\r\f\rf
 \f\vH9
-\ft\n%
-\fw)H
 \n    near %s\n
 \n"""
 \n9y$u
@@ -4499,7 +4266,6 @@ ZvVH
 \n<\et\rA
 \n<\etrH
 \n<\eu
-\nD9\bu\nL
 \n\f\a\b
 \n\f\a\bA\v
 \n\f\a\bE\v
@@ -4507,36 +4273,27 @@ ZvVH
 \n\n\n\nf
 \n\v\n\vf
 \nv8H
-\r Y\r
-\r!Y\r
-\r)P\a
-\r)z\n
-\r*P\a
-\r/3\r
+\r"@\r
+\r0(\r
 \r1кt
-\r79\a
-\r:j\r
+\r6(\r
 \r<d~
-\r?N\r
-\rDo\r
-\rP\\\r
-\rQ\\\r
-\rV\r\r
-\rVb\r
-\rVo\r
-\rZ\e\r
+\r<z\f
+\rB9\r
+\rDg\r
+\rE$\r
+\rJ1\r
+\rJr\r
+\rYl\n
+\r\fK\f
 \r\n"""
 \r\r\r\rf
-\r]b\r
-\r]o\r
-\rbp\r
-\rt\nA
-\rt\r\r
+\re#\r
+\rj2\f
 \rt`H
 \ru.H
 \ru5H
 \ruAH
-\r~I\r
 \rˤx&
 \t The lexer was matching from line %d, offset %d, which\n\t
 \t%.*s\n
@@ -4548,6 +4305,7 @@ ZvVH
 \t\r\n
 \t\t\t\tf
 \ta\n\f\a\bA\v
+\ttrUH
 \tu+H
 \tuzH
 \tu~L
@@ -4555,29 +4313,26 @@ ZvVH
 \twpH
 \t~,H
 \tЉEи
-\vA;\f$u
 \v\v\v\vf
 \v_ R
-\vt\n%
 ]A\\A]A^A_
-]A\\A]A^A_鸠
 ]A\\L
-]XIcEPL
-]\bAYAZ
-]\bA[[
+]HcK
+]\bA\\A]
 ]\bIc
 ]\bXZ
 ]\bXZH
+]\bY^H
 ]\f\a\b
+]p[A\\A]A^]
 ]u\fH
+]xIcEpH
 ^HcK8Ic
 ^\bA[[1
 ^\bIc
 ^\bXZ
 ^\bXZH
 ^\f\a\b
-^_븐H
-^_뺐H
 ^hIcF`L
 ^u;H
 ^uhD
@@ -4620,6 +4375,7 @@ _Z19FioReadFileToBufferPKcP10CUtlBufferi
 _Z20LoadKV3Text_NoHeaderP10KeyValues3P10CUtlStringPKcRK7KV3ID_tS4_j
 _Z20LooksLikeKV3TextDataPKviP7KV3ID_tPci
 _Z20SaveKV3Text_NoHeaderPK10KeyValues3P10CUtlStringP13CBufferStringj
+_Z20SaveKV3Text_NoHeaderPK10KeyValues3P10CUtlStringS3_j
 _Z20_txnal_cow_string_D1Pv
 _Z20g_nSequentialIndicesIDv4_fE
 _Z20g_nSequentialIndicesIDv4_iE
@@ -4627,7 +4383,6 @@ _Z20g_nSequentialIndicesIfE
 _Z20g_nSequentialIndicesIiE
 _Z21ThreadAtomicNotifyOnePKj
 _Z22Assert_ConditionFailedRK34_AssertCompileTimeConstantStruct_t
-_Z22Assert_ConditionFailedRK34_AssertCompileTimeConstantStruct_tPKcz
 _Z23FormatArgumentsToBufferP19IFormatOutputStreamPKcPK28CTypeErasedFormattingWrapperi
 _Z23_txnal_cow_string_c_strPKv
 _Z23_txnal_sso_string_c_strPKv
@@ -5880,10 +5635,10 @@ _ZnwmSt11align_val_t
 _ZnwmSt11align_val_tRKSt9nothrow_t
 _\bE1
 _\bHcC0
-_\bL9
 _\f\a\b
 __CursorQueue__
 __FireCursorsParent__
+__RaceCursorsParent__
 __State_Child_Condition__
 __TimelineParent__
 __ctype_b_loc
@@ -5931,7 +5686,7 @@ _class
 _t<H
 _u&H
 _u\rH
-`A\\A]A^H
+`@fA
 `IcE\b1
 `IcM\bHc
 `L9}
@@ -5942,24 +5697,24 @@ _u\rH
 `xUf
 a\f\a\b
 abort
-acos
 active_frame
 alignof
 allocator
 alpha
-angle
 angles
 arg1
 arg2
 arg3
 arg4
 array
-asin
-atan
+asBool.GetValueBool()
+asInt.GetValueInt() == valueA.m_nValue
+assignedB.EqualTo( variantB, false )
 auto
 auto:
 b$øH
 b$øL
+bA\\]H
 bFail
 bIcO
 bInAutoWakeList
@@ -5968,6 +5723,14 @@ bValue
 bWasAnObservableComputation
 b\f\a\b
 bad_function_call
+bank_unique_id
+baseType.AreInstancesEqual( &first, &second )
+baseType.CanConvertTo( PVAL_BOOL )
+baseType.CanConvertTo( PVAL_EHANDLE )
+baseType.CanConvertTo( PVAL_STRING )
+baseType.CanReinterpretInstanceAs( variantDerived.GetInstanceStorage(), derivedAType )
+baseType.DeduceDerivedType( variantDerived.GetInstanceStorage() ) == derivedAType
+baseType.GetInstanceStorage().m_nSize == sizeof( PulseWeakHandle_t )
 basic_iostream
 basic_istream
 basic_ostream
@@ -5998,25 +5761,26 @@ bool8
 boolean
 byte
 b~h~
+c(Lc#E9
+c0[L
+c\bA^X
 c\bD;c
 c\bL9
 c\bX1
 c\bXZ
 c\bXZH
 c\bY1
-c\bY^
 c\bu*1\t
 c\f\a\b
 catch
-ceil
 cell_info
-chHǃ
+ch[A\\]
 char
 char16_t
 char32_t
 char8
 char8_t
-clamp
+childID
 class
 client.dll
 close
@@ -6027,6 +5791,13 @@ const
 const_cast
 construction vtable for
 control_storage
+copiedA.EqualTo( variantA, false )
+copiedA.GetType() == valueType
+copiedA.GetType() == variantA.GetType()
+copiedDerived.EqualTo( variantDerived, false )
+copiedDerived.GetType() == derivedAType
+copiedDerived.IsInstanceValid()
+copy == valueA
 covariant return thunk to
 cpt%H
 current_value
@@ -6036,15 +5807,15 @@ cursors[ 0 ]->DomainCursorAssertCast< CPulseGraphInstance_TestDomain_Derived >()
 cursors[ 1 ]->DomainCursorAssertCast< CPulseGraphInstance_TestDomain_Derived >()->m_nCursorValueA == values[ 1 ]
 d$ H
 d$ M
+d$ fA
+d$0E1
 d$8H
 d$8L
 d$HH
 d$HM
-d$\bH
+d$\bL
 d$hA
-d,\bL
 d\f\a\b
-d\n\bH
 decimal128
 decimal32
 decimal64
@@ -6052,18 +5823,31 @@ decltype (
 decltype(auto)
 decltype(nullptr)
 default
-deg2rad
+defaultA.EqualTo( defaultB )
+defaultA.GetType() == baseType
+defaultA.GetType() == valueType
+defaultA.IsInstanceValid()
 delete
 delete[]
+derivedAType.CanConvertTo( baseType )
+derivedBType.CanConvertTo( derivedAType )
+derivedBType.DoesInstanceRequireConstructDestruct()
+deserializedVariant.EqualTo( variantA )
+deserializedVariant.EqualTo( variantDerived )
+deserializedVariant.GetType() == valueType
+deserializedVariant.GetType() == variantDerived.GetType()
 dl_iterate_phdr
 double
+downcast.EqualTo( variantDerived, false )
+downcast.GetType() == derivedAType
 dr^$
 dt(H
 dtRH
 dynamic_cast
 e4Na\\
+ePHc
 e\bE1
-e\bMcE
+e\bL9
 e\bXZ
 e\f\a\b
 e^طj
@@ -6072,60 +5856,47 @@ entity_name
 es0e
 esze
 execution_history
-exp2
 expr
 f#t&
+f$t(H
 f&|f\v
 f4`!gp
 f8A9
+fD9s\b
 fE;w
 fHcKXIc
 f\a\ah
 f\bE1
 f\bIc
 f\bL9
+f\bXZ
 f\f\a\b
 fakeEnt.m_nHandle.WeakHandle() == PULSE_WEAK_HANDLE_INVALID
 fake_derived_a
 fake_derived_b
+fake_entity
 false
 fclose
 fflush
 fileno
+first == hEntB.Storage() && second == hEntA.Storage()
+first == valueB && second == valueA
 flDegrees
 flDistance
 flDuration
 flDurationSec
 flElapsed
 flExecTime
-flExponent
-flFloat
-flFrac
-flInputA
-flInputB
 flLastReferenced
 flMax
-flMaxRadius
 flMin
-flMinRadius
-flOutputA
-flOutputB
 flPercentage
-flPitch
-flRadians
-flRoll
-flScale
 flSeconds
-flTime
-flVal
 flValue
-flValueA
-flValueB
 flWaitInterval
 flWaitIntervalHigh
 flWaitValue
 flWakeTime
-flYaw
 flags
 flc_columns
 flc_count
@@ -6135,11 +5906,9 @@ flc_lines
 float
 float32
 float64
-floor
 for forH
 fputc
 fputs
-frac
 free
 fwrite
 g HcU
@@ -6162,22 +5931,25 @@ global destructors keyed to
 gpHcGhM
 group
 guard variable for
+h Ic݅
 h(IcM
+h<0w
 h=2\f(3
+hCopy == hEntA
+hDefault == PULSE_TEST_EHANDLE_INVALID
 hEntity
 hInstance
 hLco
 hTarget
 h[A\\A]A^A_]
 h[A\\A]A^A_]Ã
-h[A\\A]A^A_]Ð
 h[A\\A]A^A_]Ð@
-h[A\\A]A^A_]ÐA
-h[A\\A]A^A_]ÐH
+h\bD3
 h\bfI
 h\bucA
 h\f\a\b
 half
+handleStr.IsEqual_CaseSensitive( CFmtStr( "%u", hEntA.GetRaw() ) )
 hardware
 hidden alias for
 highlight_instance_id
@@ -6185,7 +5957,6 @@ highlight_node_id
 https://H
 i\f\a\b
 i^$,
-idiv
 in {
 initializer for module
 instance
@@ -6202,6 +5973,7 @@ j\bfH
 j\f\a\b
 java Class for
 java resource
+k(fA
 k8t\nI
 kHcC
 kIcM Ic
@@ -6215,13 +5987,15 @@ k\bXZ
 k\bY^
 k\b_AX
 k\f\a\b
+knownTypes.HasElement( valueType )
+k~bC
 l bug reH
+l$ %
 l$ A
-l$ H
 l$ I
-l$(H
-l$0)ȅ
+l$ 耬
 l$0ǅ
+l$8)ȅ
 l$8E
 l$8H
 l$8L
@@ -6230,7 +6004,6 @@ l$HE1
 l$HM
 l$XH
 l$\bA
-l$\bA\\A]H
 l$\bD
 l$\bH
 l$\bI
@@ -6238,14 +6011,12 @@ l$\bI9
 l$\bL
 l$\bM
 l$hD
+l$pL
 l(ήe*
 l2\bH
 l\f\a\b
 ld-linux-x86-64.so.2
 lease suH
-length2d
-length3d
-lerp
 lexer->mTokens(): Error: No lexer rules were added to the lexer yet!\n
 libc.so.6
 libpthread.so.0
@@ -6254,9 +6025,8 @@ libpulse_system.so.dbg
 libstdcxx
 libtier0.so
 listeners
+loadedB.EqualTo( variantB, false )
 localize
-log10
-log2
 long
 long double
 long long
@@ -6274,6 +6044,9 @@ m_BlackboardResource
 m_BlackboardResourceName
 m_CallInfos
 m_CallMethodID
+m_CaseOutflows
+m_CaseValues
+m_Cases
 m_Cells
 m_Chunks
 m_ClockScopeID
@@ -6284,8 +6057,10 @@ m_Condition
 m_Connection
 m_Constants
 m_Curve
+m_DefaultCaseOutflow
 m_DefaultValue
 m_DependentObservableBlackboardReferences
+m_DependentObservableTempVars
 m_DependentObservableVars
 m_Description
 m_DestinationFlowNodeID
@@ -6347,6 +6122,7 @@ m_RequiredRuntimeType
 m_RequirementNodeIDs
 m_ResumePoint
 m_ReturnType
+m_ReturnValues
 m_SequencePoint
 m_SequencePointName
 m_Shuffle
@@ -6355,10 +6131,13 @@ m_SourceOutflowName
 m_SourceOutput
 m_StartTime
 m_Stops
+m_SwitchValue
 m_TagName
 m_TagValue
 m_TargetEntity
 m_TargetInput
+m_TempVarBanks
+m_TempVars
 m_TimelineEvents
 m_TracePrefix
 m_Tracepoints
@@ -6380,6 +6159,7 @@ m_bAnd
 m_bChildCursorsShouldInherit
 m_bCompleteOnNextWake
 m_bConditionValue
+m_bDeferBreak
 m_bExpectingCursorTerminatedDueToMaxInstructions
 m_bExpectingToDestroyWithYieldedCursors
 m_bExplicitTimeStepping
@@ -6396,6 +6176,7 @@ m_bPenUp
 m_bQuietTracepoints
 m_bRemoveWhenOutOfScope
 m_bSelfReference
+m_bShowInUI
 m_bTagSelfWhenComplete
 m_bTestYesOrNoPath
 m_bWaitForChildOutflows
@@ -6426,10 +6207,13 @@ m_hSelfCellInstanceUntyped
 m_hSelfCursor
 m_mapCellDesc
 m_mapCursorDesc
+m_nActiveCase
 m_nAsyncCallMode
 m_nBlackboardIndex
 m_nBlackboardReference
 m_nBlackboardReferenceIdx
+m_nBreakDestChunk
+m_nBreakDestInstruction
 m_nCallInfoIndex
 m_nCellID
 m_nCellIndex
@@ -6478,7 +6262,11 @@ m_nSrcChunk
 m_nSrcInstruction
 m_nStackDepthWhenAdded
 m_nSubject
+m_nTempVarBank
+m_nTempVarIdx
 m_nType
+m_nUniqueID
+m_nValue
 m_nValueNodeID
 m_nVar
 m_nVarDocNodeID
@@ -6502,13 +6290,16 @@ memmove
 memset
 mold 2.36.0 (compatible with GNU ld)
 mt19937
+m۶m۶mH
+m۶m۶mL
 n(Ic]
 n8Ic]
+n@1Ҿ
+n@fA
 nAsyncRet1
 nC@f
 nColor
 nCursorID
-nDenominator
 nEditorID
 nFlags
 nFormat
@@ -6519,7 +6310,6 @@ nLastValidEntryIdx
 nMEu.w(
 nMax
 nMin
-nNumerator
 nParam
 nRemainderDigits
 nRemainderNoiseDigits
@@ -6551,20 +6341,44 @@ not enouH
 nsion (PH
 nu,H
 null
-nȀ="}
+o%0=
+o-/<
+o-C6
+o-H8
+o-[,
+o-\e8
+o-\f;
+o-^*
+o-`>
+o-i!
+o-k4
+o-p6
+o5!<
+o5bC
 o6_Hv
+o=A?
+o=EH
+o=|B
+oAHH
 oB\bA
+oCPH
 oC\bH
 oD$\bH
+oD$`H
 oE\bL
-oG\bA
+oE`L
+oF\bD
+oF\bH
+oF`H
 oIcL$
+oL$PL
+oNPH
+oNPL
 oXH9
 o\bATI
 o\bATSH
 o\b^_H
 o\f\a\b
-o\r,F
 obj_count
 obj_size
 observable_false
@@ -6576,12 +6390,12 @@ open
 open_asset %s
 open_current_map_pulse_in_tool
 operator
-operator int<int>
 operator""
 org/bugsH
-origin
 ou2H
 out {
+oxATSH
+p8E1
 p< tgv]<0uIL
 p< tgv]<0ulH
 p< thv^<0uOI
@@ -6592,6 +6406,8 @@ pAsyncRet2
 pClass
 pEnt
 pF3y
+pHHc@@I
+pHǅx
 pMessage
 pName
 pParam
@@ -6605,9 +6421,12 @@ pTraceStringA
 pTraceStringB
 pValue
 pYieldArg2
+p[A\\A]A^]
 p[A\\]
+p\bXZ
 p\b[A\\]
 p\bfH
+p\bt11
 p\fAQE1
 p\f\a\b
 panorama
@@ -6618,6 +6437,8 @@ pointer
 polymorphic_arg
 port at H
 port_name
+position
+ppE1
 previous_value
 pthread_cond_broadcast
 pthread_cond_wait
@@ -6630,6 +6451,7 @@ pthread_once
 pthread_sigmask
 public_output::%s
 public_output::%s::%s
+pulse_cursor_infinite_loop_detection_threshold
 pulse_debug_print
 pulse_editor
 pulse_list_graphs
@@ -6645,6 +6467,7 @@ pulse_system.dll
 pulse_test_example_suggestion
 p~]H
 q0Vu
+q\bA9
 q\f\a\b
 qangle
 quaternion
@@ -6655,14 +6478,12 @@ r0[A\\]
 r3A9
 r\f\a\b
 r`c̺
-rad2deg
 random_device could not be read
 random_device: getentropy failed
 random_device: rdrand failed
 random_device: rdseed failed
 random_device::random_device(const std::string&): device not available
 random_device::random_device(const std::string&): unsupported token
-random_position
 rdrand
 rdrnd
 rdseed
@@ -6671,7 +6492,6 @@ realloc
 reference temporary #
 registers
 reinterpret_cast
-remap
 requested_cancel
 requires
 resource
@@ -6683,62 +6503,61 @@ resourcesystem
 restrict
 rethrow
 return_values
-return_values_enabled
 retval
 rg/bugs/H
 rg3o
 rlHc
 roA;
 rotation_vector
-round
-rsqrt
 r|H9
 rՐFH
 s [A\\H
 s u$
 s2E1
+s3UH
 s8HcC09
+s?E1
+s@[A\\H
 sEff.
 sH[A\\]
 sII)
 sJH)
+sNf.
 sRHcC0H
-sWff.
+sSUH
 s\bE9
 s\bH9
 s\bHcE
 s\bHc\vIc
 s\bIc
 s\bJcL
-s\bY^I9
 s\bfH
 s\bt\bL
 s\f\a\b
 s`HcCX9
 s`IcF0I
-saturate
+scale
+scff.
 scheduled_hooks
 schemasystem
 secure_getenv
 self
 self_handle
+seqPoint
 server.dll
 shape
 shfD
 short
 show_vpulse_file
 sigfillset
-sign
 signed char
 sizeof
 sizeof...
-skE1
 soundevent
 source_file
 source_line
 spHc
 sprintf
-sqrt
 stack
 stapsdt
 state
@@ -6765,6 +6584,7 @@ stdin
 stdout
 strBindingName
 strCellDesc
+strFormat
 strValue
 strchr
 strcmp
@@ -6788,9 +6608,9 @@ swHc
 syscall
 system
 system_state
-t!Hc
 t!Mc
 t"D9p
+t"E1
 t#U1
 t$ )Ё
 t$ 1
@@ -6798,30 +6618,32 @@ t$ A
 t$ H
 t$ H9
 t$ I
+t$ I9
 t$ L
+t$ M
 t$"H
-t$$I
+t$$H
 t$(A
 t$(B
 t$(E)
 t$(H
+t$(\r
 t$0H
 t$0L
 t$8B
 t$8E1
 t$8H
-t$@A
-t$@A\\H
+t$@H
 t$@L
 t$DHc
 t$HE1
 t$HH
-t$HIcD$@I
 t$HM
 t$I1
 t$LH
 t$LI
 t$PH
+t$PL
 t$PM
 t$Pf
 t$UH
@@ -6830,47 +6652,52 @@ t$XH9
 t$\b)Ё
 t$\bA
 t$\bA\\A^H
+t$\bD
 t$\bH
 t$\bH9
 t$\bI
+t$\bI9
 t$\bIc
 t$\bL
 t$\bY^H
 t$\b[A\\A]A^]
 t$\b^_H
-t$\btw1
 t$\bu
 t$\fH
 t$\fM
 t$\nH
 t$`H
+t$`M
 t$hD
 t$hE
 t$hH
 t$pH
+t$pHǅ
+t$xH
+t$xM
 t%D9
 t%UH
-t&UH
+t&Hc
 t'A9<
-t( L
 t(ƅ~
+t)UH
 t)f.
 t*M9
-t*\b1
 t+Hc
 t+Ic
 t+UH
 t,Hc
-t-D;$
 t0\bL
 t1L9
 t1UH
+t2ff.
 t3E1
 t3Hc
 t3UH
-t3[A\\]
 t4Hcڃ
 t4ff.
+t7Hc
+t7f.
 t7ff.
 t91۸\b
 t9Hc
@@ -6887,40 +6714,39 @@ t>UH
 t?UH
 t@</
 t@E1
-t@UH
 tAE1
+tAUH
 tBE1
 tBHcE
 tCAǇ
 tD94\au
 tDE1
 tDHc
+tDHcE
+tDff.
 tFE1
-tFHcE
 tFUH
 tGE1
 tGHc
-tGUH
 tH</
 tIcN
 tJI9
+tKUH
 tLIcI
 tNHc
-tNUH
-tRHc
+tOUH
+tQI;D$0t*H
 tSH9
-tSHcU
-tSUH
 tSff.
 tTE9
 tTE9a
 tTUH
-tUf.
-tVIc
 tW1Ҿ
 tYHc
 tYHcC
+tYUH
 t\a1ɀ
+t\a90
 t\aH9p\bu
 t\aHc
 t\aL9*r
@@ -6929,13 +6755,13 @@ t\bAƇ
 t\b[A\\]
 t\b[L
 t\bfA
+t\eHc
+t\ef.
 t\f[A\\A]A^]
 t\f\a\b
 t\f\a\b$
 t\n[A\\]
-t\rD; u
 t\rUH
-t\t90
 t]Hc
 t]f.
 t^[L
@@ -6950,37 +6776,41 @@ tagName
 tagValue
 tags
 tb97
-tc1Ʌ
 tcE1
-tcL9
 tdff.
 te1Ʌ
-teHcȉ
+temp_var_banks
 template
 template parameter object for
+tempvar:%d
 terminate called after throwing an instance of '
 terminate called recursively\n
 terminate called without an active exception\n
 testRef
+test_inline_value
 test_pulse
 tfUH
 tfff.
 tg91
 tgE1
+tgHcȉ
 tgIcGPA9
 tgUH
+th1Ʌ
 thUH
 this
 throw
 ti1Ʌ
+tiIcNH
 tier0
+tjIcD$
 tkUH
-tlE1
 tlHc@$;A
 tmHc
 tmIc
 tmv*g
 tnHc
+tnUH
 toHc
 toUH
 tools/images/pulse_editor/cursor_kill.png
@@ -6994,10 +6824,9 @@ tools/images/pulse_editor/node_timer.png
 tools/images/pulse_editor/observable_variable_listener.png
 tools/images/pulse_editor/requirements.png
 tpE1
-tpUH
 tqE1
 tr1Ʌ
-trUH
+trU1
 transaction clone for
 transaction_safe
 transform
@@ -7007,51 +6836,51 @@ ts1Ʌ
 tsE1
 tsHc
 tsHcC
-tuE1
+ttfA
 tuHcE
 tuMi
-tv1Ʌ
 tvIc
-twUH
 txUH
 tyIcD$ A;D$0
 typeinfo fn for
 typeinfo for
 typeinfo name for
 typename
+tz1Ʌ
+t{D9h
 t{Hc
 t{U1
 t{UH
+t}Ic
 t͋s\bE
 u!f.
+u%UH
 u%[A\\]
 u%ff.
-u(豲\a
+u+UH
 u-Lc
 u/UH
-u2f.
 u4ff.
 u5ff.
 u7ff.
-u8E1
 u9L9
 u:Ic
 u:UH
+u<fE
+uE1\b
 uGUH
 uPH9
 uQf.
-uT1Ҿ\e
 uUIcĉK0H
-uVUH
-uZUH
+u\\IcUH
+u\\IcUHH
+u\\tFH
 u\a[A\\]
 u\bAYAZH
 u\bA[A]H
-u\bA]A^H
 u\bA^A_H
 u\bH9
 u\bIc
-u\bIc}
 u\bL)
 u\bXZH
 u\bXZI
@@ -7059,9 +6888,9 @@ u\bY^H
 u\b^_H
 u\b_AXH
 u\bfH
+u\eE1
 u\f[A\\]
 u\f\a\b
-u\n[A\\]
 u\vÐH
 uaI9
 uchar32
@@ -7072,7 +6901,6 @@ uint32
 uint64
 uint8
 ulHcU
-um1\b
 unFlags
 unable to register all schema data: %s\n
 unknown
@@ -7084,26 +6912,49 @@ unsigned long
 unsigned long long
 unsigned short
 unspecified
+upcast.GetType() == baseType
 uuaH
-u͋C\\1
+uwI9
+u}H9
 uρ{\\
+uϋC<
 uЉЈE
 uڋ3H
-vCenter
-vForward
 vOff.
 vV<0uJI
+vWLc{
 v\bA9
 v\bAUL
 v\bIc
 v\bfA
 v\f\a\b
-v^<7
 value
+value0
+value1
+value2
+value3
+value4
+valueType.AreInstancesEqual( &first, &second )
+valueType.CanConvertTo( PVAL_INT )
+valueType.CanReinterpretInstanceAs( variantA.GetInstanceStorage(), valueType )
+valueType.DeduceDerivedType( variantA.GetInstanceStorage() ) == valueType
+valueType.DoesInstanceRequireConstructDestruct()
+valueType.GetInstanceStorage().m_nSize == sizeof( PulseTestInlineValue_t )
+value_a
+value_b
+values
+variantA.EqualTo( variantA2 )
+variantA.GetType() == CPulseType( PVAL_LEAF, PULSE_FAKE_ENTITY_SUBTYPE )
+variantA.GetType() == valueType
+variantA.IsInstanceValid()
+variantDerived.EqualTo( upcast, false )
+variantDerived.GetType() == CPulseType( PVAL_LEAF, FakeEntityDerivedA_t::DesignerName() )
+variantDerived.GetType().CanReinterpretInstanceAs( variantDerived.GetInstanceStorage(), baseType )
+variantDerived.IsInstanceValid()
+variant_test_a
+variant_test_b
+variant_test_derived
 vecAncestorCursorIDs
-vecValue
-vecValueA
-vecValueB
 vector
 vector2
 vector2d
@@ -7111,62 +6962,65 @@ vector3
 vector4
 vector4d
 vectorws
+vf<7
 virtual thunk to
 void
 volatile
+vpHǅ
 vpN\t
 vpulse
 vpulse_c2
 vtable for
 vuTH
-w(AUI
-w(IcG 9
-w1<g
+w*uh
+w-Ic
+w0<h
 w54.Y0f
-w6<\b
-w6<gv+H
-w8#5
-w8[E19
-w>Ic
+w:<\b
 w@Ic
-wC<g
-wP<X
+wT<Wv@H
+wV<H
 wXI9
-wZuh
 w\bAUATI
 w\bHc
 w\f\a\b
 w\ffA
 w\rBƄ
 w\tD9
-w]<g
+w`E1
+w`IcG\\L
 wcB4
 wchar_t
 what():
-wjLc I
-wpE1
+wpHǅ
 wpI9
-wq<\b
+x3Lc
 x4Hcʉ
-x5Hcʉ
+x4x2L
+x5Lc
+x6Mc
 x7Hcʉ
+x7Lc
 x8Hcʉ
+x9Hcʉ
 x>Hcډ
+x?Hc
 x@fA
 xAHc
 xCHc
-xCLc
 xEHc
 xEHcډ
 xFHc
 xFHcډ
+xFUH
 xGHc
-xGHcʉ
 xHHcډ
-xHǅh
+xHLc
 xN9wP~IH
 xOt\vAǇ8
 xPHcʉ
+xQHcʉ
+xQUH
 xSHcʉ
 xTHcʉ
 xU;Ph}PH
@@ -7175,16 +7029,10 @@ xVHcʉ
 xWHcʉ
 xXHcʉ
 x[A\\A]A^A_]
-x[A\\A]A^A_]Ð
-x[A\\A]A^A_]Ð@
-x[A\\A]A^A_]ÐH
 x[A\\A]A^A_]ÐL
-x\\Hcډ
 x\b1ɉ
 x\b1ɍ_
-x\bHc
-x\bIc0H
-x\bIc0M
+x\bLc
 x\b\tw
 x\b\twIA
 x\b\twkA
@@ -7192,12 +7040,11 @@ x\byρπlH!
 x\f\a\b
 x\v;G(}
 x`Hcډ
-xkHcʉ
+xdHcʉ
 xl`J
-xpHc
+xsLc
 y@ h
 yA9T$(
-y\bAVI
 y\f\a\b
 y\ns\tf
 y\v?W
@@ -7207,27 +7054,28 @@ z A9
 z A;w\bu
 z'u%
 z*u(
-z+u)
-z,u*H
-z2u0
-z8u6H
+z,u*
+z5u3H
 z:u8f
 z@u>
+zBu@
+zJuH
 zP6\e
 zPLR
-zUtSwQH
+zWtUwSL
+z\bHk
 z\b\tw
 z\b\twEA
 z\b\twIA
 z\b\twJA
 z\b\twKA
+z\bt\e
 z\f\a\b
 z\n}\by
 zrup
 zvRH
 zzux
 zƥF`Cd
-{ A9
 { D9
 { className = 'IsControlFlowNode' }
 { className = 'IsStateNode' item_factory = 'BooleanSwitchState' }
@@ -7235,14 +7083,15 @@ zƥF`Cd
 { className='IsControlFlowNode AllOutflowsInSpecialSection IsSelectorNode' create_special_outflows_section=true }
 { item_factory = 'IntervalTimer' }
 { standard_yielding_flow = true }
+{(A9
 {(Hc
 {0x%x}
 {8t\tI
 {GP]
 {HHc
-{PA9
+{H[A\\A]A^A_]
 {X1:\b
-{X1Ҿ
+{X[A\\A]A^A_]
 {\b/H
 {\b/t
 {\b1ҹ
@@ -7250,60 +7099,59 @@ zƥF`Cd
 {\bIc
 {\bLc
 {\bMc
-{\b[A\\]
 {\b\tw
 {\b\tw<
 {\bfH
+{\b誌\r
 {\f\a\b
+{`Ic
 {default arg#
 {f{\b
 {lambda
 {parm#
 {unnamed type#
-{x1Ҿ
-|$ 1
 |$ 9\a
 |$ A
 |$ D
 |$ H
 |$ I
 |$ L
-|$ M
 |$ u
-|$ 膬
 |$(1
 |$(E1
 |$(H
 |$(I
 |$(L
 |$(M
-|$(蠈
+|$(老
 |$01
 |$019
 |$0A
+|$0D
 |$0H
+|$0H9
 |$0IǄ$
 |$0L
-|$0警
+|$0N
 |$8H
 |$8I
 |$8L
 |$8t\tI
-|$8蚬
+|$8躮
 |$@B9
 |$@D
 |$@H
 |$@L
-|$@輚
 |$DHǅ
 |$HH
 |$PH
+|$PI
+|$PL
 |$PfA
-|$P跦
 |$X)
 |$XA
 |$XA\\]
-|$X貐
+|$X貑
 |$\b1
 |$\b1ɉ
 |$\b;
@@ -7315,42 +7163,59 @@ zƥF`Cd
 |$\bH
 |$\bI
 |$\bL
+|$\bY^H9
 |$\b\tw'A
 |$\b\tw.A
-|$\b薀\n
+|$\b_AXI9
+|$\bf
 |$\fL
-|$`A\\A]]靹
+|$`A\\A]]
+|$`H
+|$`蘽
 |$hH
 |$pD
+|$pH
+|$x1ɉ
 |* H
-|1\bB
-|=\bH
+|*\bE1
+|2\b1
+|8\bH
+|: H
 |\a\bH
 |\f\a\b
+|^A;D$
 |^A;G`
+|`A;D$(
 |h9S
+|pA;D$
 |qA;
-|rA;
 |ra..A
 |raeez
+|sA;D$(
 |xA;
 |yA;
 |zA;
 |zA;T$
+|z~dL
 ||A;E
 } A9
-}(Ic
+}(Ic_
+}-ff.
 }/Ic
 }0ff.
 }1ff.
 }GMc
 }PfH
 }Xs3
-}\bA_X
+}\\IcUH
+}\\IcUHA
+}\\t-H
 }\bE1
+}\bHc
 }\bI9
 }\bL)
 }\bLc+L
+}\bXZ
 }\b\tI
 }\b\twUA
 }\br&L
@@ -7362,6 +7227,7 @@ zƥF`Cd
 }gɆH
 }gɆL
 }lL`^09
+}vMc
 }ȅ\vM
 }؉uԁ}ԃ
 }؉uԋU
@@ -7369,58 +7235,40 @@ zƥF`Cd
 ~!ff.
 ~#ff.
 ~$Hc
-~%9l
-~%Fl
-~%Qv
-~%um
-~%~u
 ~&ff.
 ~'ff.
 ~(f.
-~+ff.
-~-Jv
-~-\bv
-~-ff.
-~-im
-~-lu
 ~.E1
+~.Lc
+~0Hc
 ~1E1
 ~1Hc
-~57j
-~58l
-~5?v
-~5Fm
-~5Nm
-~5ru
-~<Hc
-~=4v
-~=Bm
-~=Fm
-~=dl
+~4Lc
 ~>E1
 ~>Hc
-~E f
-~E(f
-~E0f
-~E8f
-~E\bf
+~C f
+~C(f
+~C0f
+~C8f
+~C\bf
 ~GHc
 ~HHc
 ~IHcǃ
-~KHcǃ
 ~MHcǃ
 ~MIc
-~NE1
 ~OE1
 ~OHc
 ~PE1
+~PHcǃ
 ~PfH
 ~QHcǃ
-~UHcǃ
+~RHcǃ
+~THc
+~VE1
 ~VHcǃ
-~WE1
 ~XHc
 ~YHc
+~YHcǃ
 ~[f.
 ~\\UHc
 ~\b;W
@@ -7434,16 +7282,16 @@ zƥF`Cd
 ~\ef.
 ~\eff.
 ~\f\a\b
-~\r1m
-~\rFm
-~\rQl
+~\rzp
 ~\teI
+~]Ic
 ~kHcE
 ~sHcE
 ~ut1
 ~vHcG\bL
 ~vUH
 ~wUH
+~yf.
 ~zIc
 ĉP\bA
 ċCHA
@@ -7452,15 +7300,30 @@ zƥF`Cd
 Ɂ\nҬ\e
 ɉ\bx&H
 ɉ\b~PH
-̀=)h\v
-̀=95
-̀=9m
-̀=9s
-̀=Ie\v
-̀=Yk
-̀=yb\v
-̃? w"
+̀="{
+̀=)\\
+̀=)t\v
+̀=9;\f
+̀=9C\t
+̀=9\\
+̀=I\r\f
+̀=Ic
+̀=Y$
+̀=Yg\r
+̀=\t&
+̀=\t\t
+̀=\t\t\v
+̀=i,
+̀=ih\f
+̀=iu\f
+̀=y#
+̀=y-
+̀=y\\
+̀=y]
+̀=y{
+̃-M\f
 ̃~\b\t
+̉=.1
 ̋F\b9G\bt\b1
 ̋F\b9G\bu\b
 ̋G\b9
@@ -7482,7 +7345,9 @@ zƥF`Cd
 މẺu
 މE؉u
 ߉CXA
+߉K@H
 ߋP\b1
 ߋP\f1
+ੀ8\f\a
 ⎡n:=pqz2
 돍N(Lc

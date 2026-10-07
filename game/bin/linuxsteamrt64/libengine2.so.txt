@@ -78,6 +78,8 @@
    Total samples: %u\n
    Total time: %3f\n
    Voice:%.1fkb
+  %-12s %8.3f ms  (+/- %6.3f)  %8.1f fps\n
+  %-32s: %6.3f ms (+/- %6.3f) ms%s\n
   %d classes, %d bytes\n
   %s = %s was changed between from/to ticks but is missed by CalcDelta (i.e., encoded values are same)\n
   * (No VConComm)\n
@@ -146,7 +148,6 @@
  %4u Hltv Frames   = %12s bytes\n
  %4u stashed frames = %12s bytes
  %i refs\n
- (Start: 
  (default = .tga + .wav file)\n
  (fallback, started with 
  (from CL)
@@ -163,23 +164,8 @@
  2r6
  3CQ`p
  7Me}
- : Extraneous input - expected %s ...\n
- : Extraneous input - expected <EOF>\n
- : Extraneous input...
- : Missing %s \n
- : Missing <EOF>\n
- : Missing token (%d)...\n
- : cannot match to any predicted input...\n
- : error %d : %s
- : expected %s ...\n
- : expected <EOF>\n
- : missing elements...\n
- : syntax error...\n
- : syntax not recognized...\n
- : unexpected input...\n  expected one of : 
  = { <proto text format> }". To set fields within it, use syntax like "
  BackUp() can only be called after Next().
- Build\n
  CBaseClient::ProcessCreateStringTable(%s)-done
  CPU %s Threads %d\n
  CServerSideClientBase::ProcessClassInfo
@@ -189,7 +175,6 @@
  CServerSideClientBase::SendSignonData
  Can't back up over more bytes than were returned by the last call to Next().
  Driver %s (vendorid %x, deviceid %x DXSupport Level %d)\n
- LinePos:
  Not all fragments ready [+%d][tick+%d]. %d, %d.\n
  OVERFLOW range [%5d->%5d = %5d cmds]
  Outdent() without matching Indent().
@@ -490,7 +475,6 @@ $lZT
 %*s ------ ------   ------ ------ ------   ------ ------   ------ ------ ------\n
 %*s%7.2f%7.2f%9d%7.2f%7.2f%9.2f%7.2f%9d%7.2f%7.2f\n
 %-32s: %6.3f ms (+/- %6.3f) ms (%6.3f ave fps)\n
-%-32s: %6.3f ms (+/- %6.3f) ms%s\n
 %-32s: %6.3f ms (+/- %6.3f) ms\n
 %.1f%% %s missed due to network (%d dropped, %d late)   Good:%d   BadOther:%d    Fixed: %d dropped, %d late\n
 %.2f GB
@@ -570,7 +554,6 @@ $lZT
 %d snapshot creation ticks referred\n
 %d spawn groups
 %d,%f,%f,%f,%f,%f\n
-%d. Msg_HltvReplay %s->%s\n
 %d. Msg_Tick %d cl:delayed sv:real-time\n
 %d. Msg_Tick %d cl:real-time sv:replay\n
 %d. Skipping %d ticks, jumping from fragment %d to %d. Ticks per fragment: (%f * %f )\n
@@ -629,9 +612,6 @@ $lZT
 %s '%s': file size larger than 1 MB!\n
 %s '%s': invalid file type.\n
 %s '%s': invalid path.\n
-%s - Blackboard reference %s: %u (%s) type mismatches
-%s - Could not find blackboard instance for %s
-%s - Could not find blackboard reference %s: %u (%s)
 %s - processing %llu(%p)\n
 %s - requesting %llu (%p)\n
 %s -- pass %d
@@ -795,7 +775,6 @@ $lZT
 %s_%04d%s%s
 %s_%u_slot%d
 %s_current.meta
-%s_tempcontent
 %u MB
 %u/%u started, %u full, %u cancels / %u stops, %u fails%s
 %u[%d items changed]
@@ -819,21 +798,17 @@ $lZT
 (8GXgw
 (?R or (?[+-]digits must be followed by )
 (Direct Routing)
-(Expecting %s)
-(Expecting EOF)
 (None)
 (QfT
 (Relay)
 (Untested Direct Routing)
 (anonymous namespace)
 (cannot determine missing fields for lite message)
-(channel = 
 (dst_width % 2 == 0) && (dst_width >= 0)
 (dst_width % 3 == 0) && (dst_width > 0)
 (dump took %.1fms)\n
 (dy & 0x1ffff) == 0
 (dy & 0x3ffff) == 0
-(end of input).\n\t This indicates a poorly specified lexer RULE\n\t or unterminated input element such as: "STRING["]\n
 (fWeightSumLeft + fWeightSumRight) > 0.0f
 (fWeightSumTop + fWeightSumBottom) > 0.0f
 (merge 
@@ -879,10 +854,6 @@ $lZT
 *N24CParallelProcessLauncher18CParallelLambdaJobIZ15ParallelForEachIR10CUtlVectorIN22CNetworkGameServerBase24PackEntityBaselineWork_tEi25CUtlVectorMemory_GrowableIS4_iLm0EEEZN18CNetworkGameServer19PackEntities_NormalERS2_IPK20Entity2Networkable_tiS5_ISC_iLm0EEEiPP17CServerSideClientR7CBitVecILi16384EESL_P14CFrameSnapshotEUlRKS4_E_EvOT_PKcOT0_ii13JobPriority_tQ14is_invocable_vISV_JDTdecl5beginfL0p_EEEEEUliE_EE
 *N24CParallelProcessLauncher18CParallelLambdaJobIZ15ParallelForEachIR10CUtlVectorIii25CUtlVectorMemory_GrowableIiiLm0EEEZN22CNetworkGameClientBase18CopyEntityBaselineEiiEUliE_EvOT_PKcOT0_ii13JobPriority_tQ14is_invocable_vISD_JDTdecl5beginfL0p_EEEEEUliE_EE
 *N24CParallelProcessLauncher18CParallelLambdaJobIZN16CHLTVServerAsync27ExpandDeltaFrameToFullFrameEP17SHLTVDeltaFrame_tEUliE_EE
-*N30PulseBindingSchemaEnumTraits_tI25PulseCursorWakePriority_tEUlvE1_E
-*N30PulseBindingSchemaEnumTraits_tI25PulseCursorWakePriority_tEUlvE2_E
-*N30PulseBindingSchemaEnumTraits_tI27PulseCursorCancelPriority_tEUlvE0_E
-*N30PulseBindingSchemaEnumTraits_tI27PulseCursorCancelPriority_tEUlvE_E
 *N6google8protobuf12_GLOBAL__N_123AggregateErrorCollectorE
 *N6google8protobuf12_GLOBAL__N_123GeneratedMessageFactoryE
 *N6google8protobuf12_GLOBAL__N_123StringBaseTextGeneratorE
@@ -909,6 +880,7 @@ $lZT
 *ZN11IThreadPool17QueueJobWithFlagsIZN14CRenderService33LaunchAsyncBeginRenderingViewsJobERK22EventClientPreOutput_tbEUlvE0_EE9CSmartPtrI12CThreadedJob17CRefCountAccessorEPKc13JobPriority_tjOT_E10CLambdaJob
 *ZN11IThreadPool17QueueJobWithFlagsIZN14CRenderService33LaunchAsyncBeginRenderingViewsJobERK22EventClientPreOutput_tbEUlvE_EE9CSmartPtrI12CThreadedJob17CRefCountAccessorEPKc13JobPriority_tjOT_E10CLambdaJob
 *ZN11IThreadPool17QueueJobWithFlagsIZN18CNetworkGameClient34ProcessReadPacketEntitiesWorkItemsE13RPEStatType_tR15CEntityReadInfoEUlvE_EE9CSmartPtrI12CThreadedJob17CRefCountAccessorEPKc13JobPriority_tjOT_E10CLambdaJob
+*ZN11IThreadPool17QueueJobWithFlagsIZN21CFrameSnapshotManager19DeleteFrameSnapshotEP14CFrameSnapshotbEUlvE_EE9CSmartPtrI12CThreadedJob17CRefCountAccessorEPKc13JobPriority_tjOT_E10CLambdaJob
 *ZN11IThreadPool17QueueJobWithFlagsIZN21CNetworkServerService23OnServerPostAdvanceTickERK28EventServerPostAdvanceTick_tEUlvE_EE9CSmartPtrI12CThreadedJob17CRefCountAccessorEPKc13JobPriority_tjOT_E10CLambdaJob
 *ZN11IThreadPool17QueueJobWithFlagsIZN22CNetworkGameServerBase19ServerBeginSimulateERK26EventServerBeginSimulate_tEUlvE_EE9CSmartPtrI12CThreadedJob17CRefCountAccessorEPKc13JobPriority_tjOT_E10CLambdaJob
 *ZN13CInputService15SaveConvarStateEvEUlPKvE_
@@ -916,7 +888,6 @@ $lZT
 *ZN13CSOAContainer10FilterFromERKS_iiiiiPKfbEUlvE_
 *ZN13CSOAContainer17SrgbGammaToLinearEiEUlvE_
 *ZN13CSOAContainer17SrgbLinearToGammaEiEUlvE_
-*ZN13CSOAContainer21GenerateDistanceFieldEiiiP8Rect3D_tEUlvE_
 *ZN13CSOAContainer24IIRGaussianApproximationEjfEUliiE0_
 *ZN13CSOAContainer24IIRGaussianApproximationEjfEUliiE1_
 *ZN13CSOAContainer24IIRGaussianApproximationEjfEUliiE_
@@ -959,10 +930,8 @@ $lZT
 +shift
 +w?FFv?
 , Position\n
-, at offset %d
 , but was 
 , localization %s
-, near %s
 , not just within "
 , positional keys are enabled
 , setpos %0.2f %0.2f %0.2f; setang %0.2f %0.2f %0.2f\n
@@ -998,7 +967,6 @@ $lZT
 -?Vb,?H$+?Z
 -JCN
 -NE2
--Stop: 
 -all
 -auto -title "auto_bug %04d-%02d-%02d %02d:%02d:%02d"
 -component
@@ -1008,17 +976,13 @@ $lZT
 -consolelog
 -diff
 -empty
--end of input-(
 -inf
 -instance
--memory-
 -pdiff
 -perfectworld
 -product
 -report
 -snap
--unknown source-
--unknown source-(
 -vulkan
 .  Please update your library.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
 . Difference of 
@@ -1096,7 +1060,6 @@ $lZT
 /R?jjU?
 /content/
 /cwG
-/data/src/mathlib/extended/generic_expr.g
 /dev/null
 /dev/random
 /dev/urandom
@@ -1133,6 +1096,7 @@ $lZT
 00A+
 0123456789
 0123456789abcdef
+01:06:56
 0B_u
 0C&C
 0x%x,
@@ -1203,6 +1167,7 @@ $lZT
 13CCallbackImplILi128EE
 13CCallbackImplILi12EE
 13CCallbackImplILi16EE
+13CCallbackImplILi18EE
 13CCallbackImplILi1EE
 13CCallbackImplILi20EE
 13CCallbackImplILi4EE
@@ -1304,6 +1269,8 @@ $lZT
 13CNetMessagePBILi75E29CCLCMsg_HltvFixupOperatorTickL13SignonGroup_t17EL19NetChannelBufType_t1ELb0EE
 13CNetMessagePBILi76E20CSVCMsg_UserCommandsL13SignonGroup_t17EL19NetChannelBufType_t1ELb0EE
 13CNetMessagePBILi77E24CSVCMsg_NextMsgPredictedL13SignonGroup_t17EL19NetChannelBufType_t1ELb0EE
+13CNetMessagePBILi78E21CSVCMsg_EncryptedDataL13SignonGroup_t0EL19NetChannelBufType_t1ELb0EE
+13CNetMessagePBILi79E20CSVCMsg_UserCommandsL13SignonGroup_t17EL19NetChannelBufType_t1ELb0EE
 13CNetMessagePBILi7E19CNETMsg_SignonStateL13SignonGroup_t10EL19NetChannelBufType_t1ELb0EE
 13CNetMessagePBILi8E23CNETMsg_SpawnGroup_LoadL13SignonGroup_t15EL19NetChannelBufType_t1ELb0EE
 13CNetMessagePBILi9E33CNETMsg_SpawnGroup_ManifestUpdateL13SignonGroup_t15EL19NetChannelBufType_t1ELb0EE
@@ -1312,6 +1279,7 @@ $lZT
 13CNetMessagePBILin1E26NetMessageConnectionClosedL13SignonGroup_t11EL19NetChannelBufType_t1ELb0EE
 13CNetMessagePBILin1E27NetMessageConnectionCrashedL13SignonGroup_t11EL19NetChannelBufType_t1ELb0EE
 13CNetMessagePBILin1E32NetMessageSplitscreenUserChangedL13SignonGroup_t11EL19NetChannelBufType_t1ELb0EE
+13CNullTypeInfo
 13CSVCMsg_Print
 13CScriptScopeTI22CDefScriptAccessorBaseLb1EE
 13CSoundService
@@ -1405,6 +1373,7 @@ $lZT
 14IGameUIService
 14IKeyValueCache
 14IMovieRecorder
+14IPulseTypeInfo
 14IRenderHandler
 14IRenderService
 14ISource2Engine
@@ -1581,7 +1550,6 @@ $lZT
 16CEntityWriteInfo
 16CFrameMemDumpJob
 16CGameEventSystem
-16CGenericExprPart
 16CHLTVClientState
 16CHLTVServerAsync
 16CLoopModeConsole
@@ -1609,7 +1577,6 @@ $lZT
 16ILoggingListener
 16ILoopModeFactory
 16IMatchEventsSink
-16IProtobufBinding
 17CBaseCmdKeyValuesI20CCLCMsg_CmdKeyValuesE
 17CBaseCmdKeyValuesI20CSVCMsg_CmdKeyValuesE
 17CBaseCmdKeyValuesI32CSVCMsg_GameSessionConfigurationE
@@ -1643,7 +1610,6 @@ $lZT
 17IEngineServiceMgr
 17IGameEventWatcher
 17IPulseHost_Cursor
-18:05:16
 18CBannedUsersFilter
 18CBaseEngineServiceI12IToolServiceE
 18CBaseEngineServiceI13IInputServiceE
@@ -1666,7 +1632,6 @@ $lZT
 18CCLCMsg_HltvReplay
 18CDemoAnimationData
 18CGameUIRenderLayer
-18CGenericExpr_Unary
 18CLoopModeLevelLoad
 18CNetworkGameClient
 18CNetworkGameServer
@@ -1686,12 +1651,12 @@ $lZT
 18INetworkP2PService
 18INetworkStringDict
 18IPulseHost_Unknown
+18IPulseTypeEnumInfo
 18IRenderDeviceSetup
 19C2S_CONNECT_Message
 19CCLCMsg_BaselineAck
 19CClientFrameManager
 19CDebugVisualizerMgr
-19CGenericExpr_Binary
 19CNETMsg_SetConVar_t
 19CNETMsg_SignonState
 19CNETMsg_StringCmd_t
@@ -1716,7 +1681,6 @@ $lZT
 19IScreenshotCallback
 19ISplitScreenService
 19NetMessagePacketEnd
-1:1: Tokens : ( T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | TOK_COLON | OPEN_BRACE | CLOSE_BRACE | OPEN_PAREN | CLOSE_PAREN | OPEN_BRACKET | CLOSE_BRACKET | SEMICOLON | OP_EQUAL | COMMA | DOUBLE_AND | NEGATIVE_TOK | DOUBLE_OR | LITERAL_TRUE | LITERAL_FALSE | POS_INTLITERAL | POS_FLOATLITERAL | SCOPE_QUALIFIER | ID | DOUBLE_QUOTED_STRING | SINGLE_QUOTED_STRING | SINGLE_LINE_COMMENT | ML_COMMENT | WS | UNRECOGNIZED );
 1>O\kw
 1?Uo
 1A26b
@@ -1770,13 +1734,13 @@ $lZT
 21CEngineWatchdogThread
 21CFrameSnapshotManager
 21CGameInfo_CCSGameInfo
-21CGenericExpr_Property
 21CLoopTypeClientServer
 21CNETMsg_SignonState_t
 21CNetworkClientService
 21CNetworkServerService
 21CPanoramaInputHandler
 21CRealMemoryDemoBuffer
+21CSVCMsg_EncryptedData
 21CSVCMsg_GameEventList
 21CSVCMsg_ServerSteamID
 21CSVCMsg_SplitScreen_t
@@ -1825,6 +1789,7 @@ $lZT
 22IServerConsoleRedirect
 22ISocketCreatorListener
 22IToolsResourceListener
+22ProtoCoordSizeParams_t
 23CBaseGameUIInputHandler
 23CCLCMsg_LoadingProgress
 23CClientOnlyServerConfig
@@ -1832,12 +1797,12 @@ $lZT
 23CEntityComponentHelperTI16CScriptComponent32CEntityComponentHelperReferencedIS0_EE
 23CEntityResourceManifest
 23CGameInfo_CDotaGameInfo
-23CGenericExpr_IntLiteral
 23CKV3TransferContextBase
 23CKV3TransferLoadContext
 23CKV3TransferSaveContext
 23CNETMsg_SpawnGroup_Load
 23CNETMsg_SplitScreenUser
+23CSVCMsg_EncryptedData_t
 23CSVCMsg_GameEvent_key_t
 23CSVCMsg_ServerSteamID_t
 23CSequentialPrerequisite
@@ -1848,12 +1813,13 @@ $lZT
 24CDeltaEntityHeaderReader
 24CDeltaEntityHeaderWriter
 24CDemoCustomDataCallbacks
-24CGenericExpr_BoolLiteral
 24CHiddenFieldValuePrinter
 24CNetworkClientSpawnGroup
 24CNetworkServerSpawnGroup
 24CPanoramaProceduralLayer
 24CPulseCell_Inflow_Method
+24CPulseRegisteredTypeInfo
+24CPulseSchemaEnumTypeInfo
 24CSVCMsg_FullFrameSplit_t
 24CSVCMsg_NextMsgPredicted
 24CSVCMsg_PacketEntities_t
@@ -1885,8 +1851,6 @@ $lZT
 25CConnectRelayPrerequisite
 25CDemoStringTables_items_t
 25CDemoStringTables_table_t
-25CGenericExpr_FloatLiteral
-25CGenericExpr_FunctionCall
 25CNETMsg_SpawnGroup_Load_t
 25CNETMsg_SpawnGroup_Unload
 25CSVCMsg_Broadcast_Command
@@ -1897,12 +1861,11 @@ $lZT
 25IAssertionFailureListener
 25IPulseHost_BaseObservable
 25IPulseHost_YieldingCursor
-25IPulseTypeQueriesForScope
 26CCLCMsg_RespondCvarValue_t
 26CCLCMsg_SplitPlayerConnect
 26CDownloadAddonPrerequisite
-26CGenericExpr_StringLiteral
 26CLoadAutoCompletionFunctor
+26CMsgSource2FramePerfSample
 26CMsgSource2VProfLiteReport
 26CParallelProcessorAbstractI18CParallelProcessorI11CrashItem_t21CFuncJobItemProcessorIS1_ELi1EEE
 26CParallelProcessorAbstractI18CParallelProcessorI16FatalErrorItem_t21CFuncJobItemProcessorIS1_ELi1EEE
@@ -1953,7 +1916,6 @@ $lZT
 28CLoadSpawnGroupsPrerequisite
 28CLoopTypeClientServerService
 28CNetworkStringTableContainer
-28CPulseModuleRegistrationHookI25IPulseTypeQueriesForScopeE
 28CSVCMsg_ClearAllStringTables
 28CSVCMsg_SendTable_sendprop_t
 28CThreadedJobWithDependencies
@@ -1961,6 +1923,7 @@ $lZT
 28IFlattenedSerializerSpewFunc
 28INetworkStringTableContainer
 28IRenderDevicePresentCallback
+28QuantizedFloatEncoderAlias_t
 29CBidirMsg_RebroadcastSource_t
 29CCLCMsg_HltvFixupOperatorTick
 29CCLCMsg_SplitPlayerDisconnect
@@ -1972,7 +1935,6 @@ $lZT
 29CMiniDumpCommentConvarsWriter
 29CMsgServerNetworkStats_Player
 29CMsgSource2NetworkFlowQuality
-29CMsgSource2PerfIntervalSample
 29CResourceManifestPrerequisite
 29CSVCMsg_FlattenedSerializer_t
 29CSimpleWindowsLoggingListener
@@ -1991,8 +1953,8 @@ $lZT
 30CConnectGameClientPrerequisite
 30CEngine2MinidumpCommentBuilder
 30CGameClientConnectPrerequisite
-30CGenericExpr_VariableReference
 30CHostSubscribeForProfileEvents
+30CMsgSource2FramePerfSample_Tag
 30CMsgSource2VProfLiteReportItem
 30CSVCMsgList_GameEvents_event_t
 30CSVCMsg_ClearAllStringTables_t
@@ -2003,7 +1965,6 @@ $lZT
 31CConsoleProcessorForTestScripts
 31CFinalizeConnectionPrerequisite
 31CGameUIRenderCallbackGroupLayer
-31CGenericExpr_TernaryConditional
 31CParallelProcessorAbstract_Base
 31CPulseCursorBaseObservableScope
 31CSVCMsg_HltvFixupOperatorStatus
@@ -2014,6 +1975,7 @@ $lZT
 31NetPacketCustomAlloc_std_string
 31ProtoFlattenedSerializerField_t
 32CBidirMsg_RebroadcastGameEvent_t
+32CEntityAPIModuleMetadataProvider
 32CEntityComponentHelperReferencedI16CScriptComponentE
 32CEntityMETAAutoCompletionFunctor
 32CFlattenedSerializerSpewFunc_Log
@@ -2028,10 +1990,8 @@ $lZT
 32IFlattenedSerializerSpewListener
 32NetMessageSplitscreenUserChanged
 33CGameResourceManifestPrerequisite
-33CMsgSource2PerfIntervalSample_Tag
 33CNETMsg_SpawnGroup_ManifestUpdate
 33CNetworkServerCreatePrerequisites
-33CPulseScopeEnumeratingTypeService
 33IRenderAsyncShaderCompileListener
 346$Z\
 34CChangelevelGameClientPrerequisite
@@ -2063,6 +2023,7 @@ $lZT
 37IKV3TransferInterface_Worldspace_Save
 37IVConsole2FlattenedSerializerListener
 38CEngineSoundServicesDebugVisualizerRel
+38CEntityClassInfoModuleMetadataProvider
 38CServerGameSessionManifestPrerequisite
 38CWaitForInitialSpawnGroupsPrerequisite
 39CBaseClientSpawnGroupCreatePrerequisite
@@ -2095,7 +2056,6 @@ $lZT
 45CSource2Metrics_FetchMapData_Response_MapData
 45CSource2Metrics_MatchPerfSummary_Notification
 476\r
-488:1: POS_FLOATLITERAL : ( ( DIGIT )+ '.' ( DIGIT )* ( EXPONENT )? | '.' ( DIGIT )+ ( EXPONENT )? | ( DIGIT )+ EXPONENT );
 48CMsgSource2PlayStatsPackedRecordList_SteamIDList
 48CNetworkClientSpawnGroup_WaitForChildSpawnGroups
 48CNetworkServerSpawnGroup_WaitForChildSpawnGroups
@@ -2106,6 +2066,7 @@ $lZT
 49CNetworkServerSpawnGroup_LoadEntitiesPrerequisite
 49CNetworkServerSpawnGroup_LoadSaveGamePrerequisite
 49CSVCMsg_PacketEntities_non_transmitted_entities_t
+49ProtoFlattenedSerializerField_t_proto_enum_info_t
 4CPVS
 4DXgu~
 4E#6
@@ -2171,6 +2132,7 @@ $lZT
 9CCallbackI13CSteam3Client22SocketStatusCallback_tLb0EE
 9CCallbackI13CSteam3Client27GameServerChangeRequested_tLb0EE
 9CCallbackI15CSteam3ServerS118GSPolicyResponse_tLb1EE
+9CCallbackI15CSteam3ServerS121GSClientGroupStatus_tLb1EE
 9CCallbackI15CSteam3ServerS123SteamServersConnected_tLb1EE
 9CCallbackI15CSteam3ServerS126SteamServersDisconnected_tLb1EE
 9CCallbackI15CSteam3ServerS127SteamServerConnectFailure_tLb1EE
@@ -2189,7 +2151,6 @@ $lZT
 :    processpacketentities: server executed through command %d\n
 : Tried to copy from a message with a different type. to: 
 : failed to parse contents
-: lexer error %d :\n\t%s at offset %d, 
 ::ExecGameTypeCfg
 ::google::protobuf::FieldDescriptorProto_Label_IsValid(value)
 ::google::protobuf::FieldDescriptorProto_Type_IsValid(value)
@@ -2198,22 +2159,15 @@ $lZT
 ;J;J;J;J;J;J;J;J;J;J;J;J;J;J;J;Jx
 ;nGVKUTS[BXIWH\KbHi:k6s4r7p8
 <<unknown>>
-<DOWN>
-<EOF>
-<EOR>
 <L7g
-<Unknown>
 <\n<\ng\t\n\tZ\t?\t
 <array: %u elements>
 <binary blob: %u bytes>
 <empty member name>
 <empty>
-<invalid>
-<missing 
 <missing>
 <no failure reason set>
 <no inputsystem>
-<no text for the token>
 <none>
 <null>
 <pointer>
@@ -2227,6 +2181,7 @@ $lZT
 <unknown>
 =-N57
 === %sEntity List Summary (%s) ===\n
+=== FRAME ===  %s\n
 === Total: %s/%s %s entities%s ===\n
 =rF`JXKXWJYB[Cd;l2x(z%a+N2SNTQXKVJWGZI]J]Jm(r$u"u"
 >0|t?z7
@@ -2295,8 +2250,6 @@ AI8
 AKST
 ALIGN_TYPE is wrong, please fix
 ALREADY_EXISTS
-ANTLR3_EXCEPTION number %d (%08X).\n
-ANTLR3_EXCEPTION: %s\n
 ANY)
 ANYCRLF)
 APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %d!\n
@@ -2518,7 +2471,6 @@ ActivateMainWindow
 ActivateSteamGameServer(finished)
 ActivateSteamGameServer(start)
 Active loop %s:\n
-Actually dude, we didn't seem to be expecting anything here, or at least\n
 Add an output
 AddAllocatedMessage
 AddBool
@@ -2611,6 +2563,7 @@ AssetSystemTest001
 AssignRangeMultipler with bitcount=32!\n
 AssignRangeMultiplier
 Async
+Async save still in progress, ignoring this load request. \nTry again after you see the console message "Directory copy (save/*.hl?)"\n
 Async tick packet send callback is %.1fms late!\n
 AsyncAddViewsToSceneSystem
 AsyncBeginRenderingViews
@@ -2629,12 +2582,12 @@ AutoBugComponent
 AutoBugProduct
 Av8I5
 Avestan
+AwaitAsyncJobs
 A{v8
 B2Bk
 B5@S
 B86!
 B?wMD?
-BACKSLASH_CHAR
 BC6H
 BGR565
 BGR888
@@ -2660,8 +2613,6 @@ BackUp() can not exceed the size of the last Next() call.
 BackUp() can only be called after a successful Next().
 BackgroundMaterial
 Backing store not supported
-Bad Password
-Bad array index %d (array has %d elements)
 Bad auth data from %s\n
 Bad code word
 Bad connectionless packet ( CL '%c') from %s.\n
@@ -2676,6 +2627,7 @@ BakedLODBuilderMgr001
 Balinese
 Bamum
 Bandwidth . . . . . . . : Total:%.1fkb
+BankID%d
 Banning %s for rcon hacking attempts\n
 Base Flow  Cancel After
 Base Flow  Cancel Elegantly
@@ -2683,19 +2635,6 @@ Base Flow  Cancel Immediately
 Base Flow  Wake Elegantly
 Base Flow  Wake Immediately
 Base Pulse Domain
-Base recognizer function 'alreadyParsedRule' called by unknown parser type - provide override for this function\n
-Base recognizer function 'consumeUntil' called by unknown parser type - provide override for this function\n
-Base recognizer function 'consumeUntilSet' called by unknown parser type - provide override for this function\n
-Base recognizer function 'match' called by unknown parser type - provide override for this function\n
-Base recognizer function 'matchAny' called by unknown parser type - provide override for this function\n
-Base recognizer function 'mismatch' called by unknown parser type - provide override for this function\n
-Base recognizer function 'synPred' called by unknown parser type - provide override for this function\n
-Base recognizer function antlr3RecognitionExceptionNew called by unknown parser type - provide override for this function\n
-Base recognizer function consumeUntilSet called by unknown parser type - provide override for this function\n
-Base recognizer function displayRecognitionError called by unknown parser type - provide override for this function\n
-Base recognizer function recover called by unknown parser type - provide override for this function\n
-Base recognizer function recoverFromMismatchedSet called by unknown parser type - provide override for this function\n
-Base recognizer function recoverFromMismatchedToken called by unknown parser type - provide override for this function\n
 BaseDomain
 BaseLine
 Base_CmdKeyValues
@@ -2706,20 +2645,6 @@ BeginDebuggerInspect
 BeginServerTick
 Being asked to use steam authentication, but we are running in anonymous testing mode\n
 Bengali
-BinAdd
-BinDiv
-BinEq
-BinGt
-BinGtE
-BinInvalid
-BinLogAnd
-BinLogOr
-BinLt
-BinLtE
-BinMod
-BinMul
-BinNe
-BinSub
 BinaryProperties_GetValue
 BindToggle <key> <cvar>: invalid syntax specified\n
 BlendPlane
@@ -2750,8 +2675,6 @@ Brazilian
 Breakpad Signal
 BreakpadAppId
 BreakpadAppId_Tools
-Breakpoint Log [%u]
-Breakpoint Log [%u] - %s
 Broadcast Player: failed to create demo net channel\n
 Broadcast backlog of http requests in flight is too high (%d > %d), dropping %d/full and %d/delta.\n
 Broadcast on GOTV[%d] is already active\n
@@ -2805,7 +2728,7 @@ ByteToFloat
 ByteToFloatRow_C
 C+N4"
 C-Yn
-C2S_CONNECTION_Message_t::GetProtobufBinding()->WriteToBuffer failed\n
+C2S_CONNECTION_Message_t::WriteSizeAndBodyToBuffer failed\n
 C>YPH>z
 CANCELLED
 CAppSystemDict::Connect( %-32s ) %8.3f msec
@@ -2825,7 +2748,6 @@ CBufferString::AppendFormat(char const*, ...)
 CBufferString::AppendFormatV(char const*, __va_list_tag*)
 CBufferString::ComposeFileName(char const*, char const*, char)
 CBufferString::DefaultExtension(char const*)
-CBufferString::EndsWith(char const*) const
 CBufferString::EnsureCapacity(int, char**, bool, bool)
 CBufferString::ExtendPath(char const*, char, bool)
 CBufferString::ExtractFileBase(char const*, bool)
@@ -2839,7 +2761,6 @@ CBufferString::MakeAbsolutePath(char const*, char const*)
 CBufferString::MakeRelativePath(char const*, char const*, bool)
 CBufferString::MoveFrom(CBufferString&)
 CBufferString::Purge(int)
-CBufferString::Relinquish(CBufferString::EAllocationOption_t)
 CBufferString::RemoveAt(int, int)
 CBufferString::RemoveDotSlashes(char)
 CBufferString::RemoveFirstDir(CBufferString*)
@@ -2957,6 +2878,7 @@ CEngineServer::PrecacheGeneric: '%s' overflow, too many decals
 CEngineServiceMgr::Activating loop ( %s, %u )\n
 CEngineServiceMgr::_MainLoop
 CEngineSoundServicesDebugVisualizerRel
+CEntityComponent_API
 CEntityHandle
 CEntityIdentity *
 CEntityIdentity::SetEntityName called, but there is no entity name string table pointer!\n
@@ -3320,19 +3242,14 @@ CHLTVClientState::ProcessClassInfo: expecting to re-create serializers from serv
 CHLTVClientState::SendPacket
 CHLTVDemoRecorder::CullSpawnGroups culling message %s, spawngroup %s was never created\n
 CHLTVDemoRecorder::CullSpawnGroups culling message at %d unable to unserialize.  %s\n
-CHLTVDemoRecorder::CullSpawnGroups culling message at unknown handle\n
 CHLTVDemoRecorder::ParseMessage: Failed to serialize message\n
-CHLTVDemoRecorder::WriteFrame
-CHLTVDemoRecorder::WriteFrame: Failed to serialize CNETMsg_Tick_t\n
-CHLTVDemoRecorder::WriteFrame: Failed to serialize CSVCMsg_PacketEntities_t\n
-CHLTVDemoRecorder::WriteFrame: Failed to serialize CSVCMsg_VoiceData_t\n
 CHLTVDemoRecorder::WriteFrameImmediate
 CHLTVDemoRecorder::WriteFrameImmediate: Failed to serialize CNETMsg_Tick_t\n
 CHLTVDemoRecorder::WriteFrameImmediate: Failed to serialize CSVCMsg_PacketEntities_t\n
 CHLTVDemoRecorder::WriteFrameImmediate: Failed to serialize CSVCMsg_VoiceData_t\n
+CHLTVDemoRecorder::WriteFullFrame
 CHLTVDemoRecorder::WriteFullFrame: Failed to serialize CNETMsg_Tick_t\n
 CHLTVDemoRecorder::WriteFullFrame: Failed to serialize CSVCMsg_PacketEntities_t\n
-CHLTVDemoRecorder::WriteFullFrame: Failed to serialize CSVCMsg_UserCommands_t\n
 CHLTVDemoRecorder::WriteNetMessage %s with %u bytes at %i (%d)\n
 CHLTVDemoRecorder::WriteNetMessage: Failed to serialize message\n
 CHLTVDemoRecorder::WriteSpawnGroupUpdateMessages AddSpawnMessageToDemoSpawnGroups tick=%d (from %d) sending message %s (spawn group %s)\n
@@ -3348,15 +3265,14 @@ CHLTVServer::SendClientMessages client %s SendSnapshot() returned false on tick 
 CHLTVServer::SendClientMessages client %s is inactive.\n
 CHLTVServer::SendClientMessages skipping client %s updating to %d from %d: CanPacket()? %s\n
 CHLTVServer::SendClientMessages skipping on relay -- not connected to remote server\n
-CHLTVServer::ServerPostSimulate
 CHLTVServer::Shutdown
 CHLTVServer::Shutdown:  Calling Plat_ExitProcess as tv_relay_hard_shutdown is set and this is a relay server.\n
 CHLTVServer::Shutdown\n
 CHLTVServer::StartRelay: WriteSendTables %s.\n
 CHLTVServer::UpdateHibernationState:  Terminating after relaying game.\n
-CHLTVServer::UpdateTick
 CHLTVServerAsync::ExecuteDelayedCall StartAutoRecordingCall_t with start tick == 0\n
 CHandle
+CHandle\<\s*(.*?)\s*\>
 CHostStateMgr::QueueNewRequest( %s, %u )\n
 CInputService
 CInputService:  cursor position ( %g, %g )\n
@@ -3422,17 +3338,23 @@ CL:  TransmitNetChannel
 CL:  WARNING:  Connection Problem, not requesting uncompressed update due to sv_snapshot_unlimited == true\n
 CL:  WARNING:  Connection Problem, requesting uncompressed update\n
 CL:  [%s: %s | %s | %s]:  Load%s\n
+CL:  adopting server world extent %.1f (gameinfo.gi currently using %.1f)\n
+CL:  client offered an unusable legacy world extent %f\n
 CL:  connection to '%s' already started\n
 CL:  deleting entity %d %s due to reconcile issue!\n
+CL:  ignoring quantized float encoder alias '%s' with no bit count\n
 CL:  m_pStringTableContainer is NULL in CBaseClientState::ProcessUpdateStringTable\n
 CL:  received delta (%d), calling ForceFullUpdate to proceed with demo recording\n
+CL:  rejecting unusable coord size params from server (bits %d/%d, mp %d/%d, normal %d, angle %d)\n
+CL:  rejecting unusable server world extent %f\n
+CL:  serializers carry no coord size params and the client offered no legacy encoding; decoding with this build's COORDSIZE, which may not match what was recorded\n
+CL:  serializers carry no coord size params; applying legacy encoding (bits %d/%d, mp %d/%d, normal %d, angle %d)\n
+CL:  server info carries no encoding config and the client offered no legacy defaults; decoding with this build's values (which may not match what was recorded).\n
+CL:  server info carries no encoding config; applying %d legacy encoder alias(es) and world extent %.1f for pre-config playback.\n
 CL:  skipping back: %d -> %d. Calling RemoveAllFrames()\n
 CL: CNetworkGameClient::ProcessTick server tick %d went backward from previous of %d, resetting previous\n
 CL: CNetworkGameClientBase::LinkClasses renamed %s to %s for replay compatability\n
 CL: SendMovePacket sending %3d commands (%d...%d) at tick %5d %8.3f [%4d bytes] %s\n
-CLOSE_BRACE
-CLOSE_BRACKET
-CLOSE_PAREN
 CLZSS::Compress(unsigned char*, int, unsigned int*, bool)
 CLZSS::GetActualSize(unsigned char*)
 CLZSS::SafeUncompress(unsigned char*, unsigned char*, unsigned int)
@@ -3493,6 +3415,7 @@ CNetworkGameClient::ClientSidePredict
 CNetworkGameClient::FinishSignonState_New() setting state to %s:%d\n
 CNetworkGameClient::ProcessClassInfo: create on client %s\n
 CNetworkGameClient::ProcessClassInfo: creating client serializers from local server serializers (crc %u, server api %s)\n
+CNetworkGameClient::ProcessClassInfo: failed to parse cached CSVCMsg_FlattenedSerializer_t: %s\n
 CNetworkGameClient::ProcessClassInfo: parsing serializers from cache due to matching crc %u\n
 CNetworkGameClient::ProcessTick( -1 ), ignoring during demo playback\n
 CNetworkGameClient::SendMoveInternal: Send delayed due to !CanPacket, tick=%d\n
@@ -3511,8 +3434,8 @@ CNetworkGameServerBase::ConnectClient( name='%s', remote='%s' )\n
 CNetworkGameServerBase::ReplyConnection
 CNetworkGameServerBase::SetServerState (%s -> %s)\n
 CNetworkP2PService
-CNetworkP2PService::InternalBroadcastP2PNetMessage: SerializeAbstract for message %s failed!\n
-CNetworkP2PService::InternalBroadcastP2PNetMessage: SerializeAbstract for message %s overflowed!\n
+CNetworkP2PService::InternalBroadcastP2PNetMessage: Serialize for message %s failed!\n
+CNetworkP2PService::InternalBroadcastP2PNetMessage: Serialize for message %s overflowed!\n
 CNetworkP2PService::UpdatePeerConnectionStatus
 CNetworkSerializerClassInfo::Get( %s ) failed!\n
 CNetworkServerCreatePrerequisites
@@ -3540,7 +3463,6 @@ CNetworkStringTableItem::SetUserData(%s) tried to write userdata of %d bytes, ma
 CNetworkStringTableItem::SetUserData(%s) userdata of %d bytes is very large, threshold is %d bytes\n
 CNetworkUtlVectorBase
 CO-%u
-COMMA
 COMMIT
 COMPLETE
 COM_TimestampedLog
@@ -3565,48 +3487,25 @@ CPanoramaEngineHandler::Init
 CPanoramaInputHandler
 CPlayDemoClientPrerequisite
 CPostDataUpdateCallList::AddPostDataUpdateCall: overflowed m_PostDataUpdateCalls
+CPulseArgumentPack
 CPulseCell_BaseYieldingInflow::BaseFlow_CancelAfter
 CPulseCell_BaseYieldingInflow::BaseFlow_CancelElegantly
 CPulseCell_BaseYieldingInflow::BaseFlow_CancelImmediately
 CPulseCell_BaseYieldingInflow::BaseFlow_WakeElegantly
 CPulseCell_BaseYieldingInflow::BaseFlow_WakeImmediately
-CPulseCell_FireCursors::Cancel
 CPulseCell_Inflow_Method '%s' --> Chunk%d: %s
-CPulseCell_Inflow_Wait::Abort
-CPulseCell_Inflow_Wait::ImmediateWake
 CPulseCell_Inflow_Wait::Wait
-CPulseCell_Inflow_Yield::Abort
 CPulseCell_Inflow_Yield::Pause
-CPulseCell_Inflow_Yield::Resume
-CPulseCell_IntervalTimer::StopTimer
 CPulseCell_Outflow_CycleOrdered::Run
 CPulseCell_Outflow_CycleRandom::Run
 CPulseCell_Outflow_CycleShuffled::Run
-CPulseCell_Outflow_ListenForAnimgraphTag::Cancel
-CPulseCell_Outflow_ListenForEntityOutput::Cancel
-CPulseCell_Outflow_NPCAccompanyEntity::Cancel
-CPulseCell_Outflow_NPCFollowTarget::Cancel
-CPulseCell_Outflow_NPCLeadPlayer::Cancel
-CPulseCell_Outflow_NPCScriptedIdle::Cancel
-CPulseCell_Outflow_NPCScriptedIdle::CancelElegantly
-CPulseCell_Outflow_NPCScriptedMoveTo::Cancel
-CPulseCell_Outflow_NPCUseScriptedAbility::Cancel
-CPulseCell_Outflow_PlaySequence::Cancel
-CPulseCell_Outflow_PlaySequence::CancelAtInterrupt
-CPulseCell_Outflow_PlayVCD::Cancel
-CPulseCell_Outflow_PlayVCD::CancelAtInterrupt
-CPulseCell_Outflow_PlayVOLine::Cancel
-CPulseCell_Outflow_ScriptedSequence::Cancel
-CPulseCell_PlaySequence::Cancel
+CPulseCell_ReturnValues::HandleReturnValues
 CPulseCell_Step_CallExternalMethod::Run
-CPulseCell_Step_CallExternalMethod::StopWaiting
 CPulseCell_Step_DebugLog::Run
 CPulseCell_Step_PublicOutput::Run
-CPulseCell_Timeline::Stop
 CPulseCell_Value_RandomFloat::Eval
 CPulseCell_Value_RandomInt::Eval
-CPulseCell_WaitForObservable::Cancel
-CPulseValueFullType
+CPulseInputParamMap
 CQ disabled, re-syncing usercmd and simulation clock remainders\n
 CQ enabled, using client-controlled JIT async send mode\n
 CQ enabled, using client-controlled synchronous send mode\n
@@ -3693,10 +3592,10 @@ CThreadSemaphore::~CThreadSemaphore()
 CThreadSyncObject::Wait(unsigned int)
 CThreadSyncObject::WaitImpl(unsigned int)
 CThreadSyncObject::~CThreadSyncObject()
+CThreadedDependentJob::Wait()
 CThreadedFileLogger
 CThreadedJob::WaitOrImmediatelyExecute()
 CThreadedJobWithDependencies::DoExecuteInternal()
-CThreadedJobWithDependencies::Wait()
 CTier2AppSystemDict::LoadStartupManifestGroup
 CToolService
 CToolService::ThrottleRenderingToYieldCPU
@@ -3730,7 +3629,7 @@ CUtlBuffer::SetBigEndian(bool)
 CUtlBuffer::SetBufferType(bool, bool)
 CUtlBuffer::SetExternalBuffer(void*, int, int, CUtlBuffer::BufferFlags_t)
 CUtlBuffer::SetOverflowFuncs(bool (CUtlBuffer::*)(int), bool (CUtlBuffer::*)(int))
-CUtlBuffer::Swap(CUtlBuffer&, bool)
+CUtlBuffer::Swap(CUtlBuffer&)
 CUtlBuffer::WriteToFile(char const*, bool)
 CUtlLeanVector
 CUtlLinkedList overflow! (exhausted index range)\n
@@ -3748,6 +3647,10 @@ CUtlScratchMemoryPool::FreeToAllocPoint(UtlScratchMemoryPoolMark_t)
 CUtlScratchMemoryPool::GetCurrentAllocPoint() const
 CUtlScratchMemoryPool::Init(unsigned int, unsigned int, void*, bool)
 CUtlScratchMemoryPool::~CUtlScratchMemoryPool()
+CUtlStreamBuffer::FileWrite
+CUtlStreamBuffer::Flush
+CUtlStreamBuffer::GrowAllocatedSize
+CUtlStreamBuffer::StreamPutOverflow
 CUtlString
 CUtlString::Acquire(CBufferString*, bool)
 CUtlString::Append(char const*)
@@ -3787,7 +3690,6 @@ CUtlString::operator+=(char)
 CUtlString::operator=(CBufferString const&)
 CUtlString::operator==(CUtlString const&) const
 CUtlString::operator[](int) const
-CUtlStringAndTokenWithStorage::KV3TransferLoad(CKV3TransferLoadContext*)
 CUtlStringList::SplitString(char const*, char const* const*, int)
 CUtlStringTokenNoRegistration
 CUtlSymbolLarge
@@ -3820,8 +3722,10 @@ CVProfile::GetCounterNameAndValue(int, unsigned long&) const
 CVProfile::GetCounterValue(int) const
 CVProfile::GetNumBudgetGroups()
 CVProfile::GetNumCounters() const
+CVProfile::MergeBackgroundTrees()
 CVProfile::OutputReport(VProfReportSettings_t const&, char const*, int)
 CVProfile::ResetCounters(CounterGroup_t)
+CVProfile::SetProfileAllThreads(bool)
 CVariableBitStringBase::FreeInts()
 CVariableBitStringBase::Resize(int)
 CVariantBase
@@ -3857,7 +3761,6 @@ Can't change replicated ConVar %s from console of client, only server operator c
 Can't changelevel, server not in a map\n
 Can't condump! Too many existing condump output files in the gamedir!\n
 Can't create class tables.\n
-Can't find '%s'
 Can't find the asset '%s' from the -asset parameter on the command line
 Can't get here.
 Can't get here: failed to get default value as string
@@ -3865,6 +3768,7 @@ Can't happen
 Can't kick "%s", name not found\n
 Can't print proto content: proto type 
 Can't reach
+Can't read '%s'
 Can't record demo, no local client!\n
 Can't record during demo playback.\n
 Can't record on dedicated server.\n
@@ -3884,7 +3788,6 @@ Cannot quantize more than %d color components
 Cannot quantize to fewer than %d colors
 Cannot quantize to more than %d colors
 Cannot reference domain '%s' from '%s'\n
-Cannot reinterpret instance (actual: %s) from (original) %s to (desired) %s
 Cannot run executable from '_build_' intermediate dir: %s
 Cannot run script: NULL script name\n
 Cannot set convar '%s', missing required FCVAR flag\n
@@ -3951,11 +3854,11 @@ Client %s(%d) tried to execute command "%s" before being fully connected.\n
 Client %s(%d) tried to execute command "%s" but it is not marked FCVAR_CLIENT_CAN_EXECUTE.\n
 Client GameSessionManifest
 Client GameSessionManifest received from server
-Client Input/Output
 Client Rendering
 Client Simulation
 Client is running in anonymous mode.  Many steam features will not work\n
 Client missing networkable entity class %s\n
+Client thinks server has executed up to command %d, but latest generated command is %d.  Assuming server substituted commands.\n
 Client with SteamID %s tried to send ClientInfo with SteamID %s\n
 Client:  %s\n
 Client::CmdKeyValues
@@ -3983,6 +3886,8 @@ Closed demo frame stats file '%s'\n
 Closed temporary file %s
 Cluster %d added\n
 Cluster list cleared\n
+CmdEncryptedDataMessageCodec failed to parse embedded message: %s\n
+CmdEncryptedDataMessageCodec key size is %d, but %d is expected!\n
 Command Line: 
 Commencing SourceTV connection retry to %s\n
 Comment : %s\n
@@ -3998,7 +3903,9 @@ ConColorMsg(Color const&, char const*, ...)
 ConDMsg
 ConMsg(char const*, ...)
 ConVars
+Con_JPEG_Screenshot_f
 Con_PNG_Screenshot_f
+Con_Screenshot_f
 Config %s contains invalid commands\n
 Conflicting regex grammar options
 ConnectOutput
@@ -4069,7 +3976,6 @@ Corrupt JPEG data: premature end of data segment
 Could not create an instance of 
 Could not decode alpha data.
 Could not establish connection to Steam servers.\n
-Could not execute '%s' because this graph domain does not support the required IPulseHost
 Could not find type "
 Could not get ILegacyGameUI interface from client %s\n
 Couldn't open %s\n
@@ -4137,12 +4043,7 @@ DF32_
 DF32x
 DF64_
 DF64x
-DIGIT
 DO NOT PARSE: fields may be stripped and missing.\n
-DOUBLE_AND
-DOUBLE_OR
-DOUBLE_QUOTED_STRING
-DOUBLE_QUOTE_CHAR
 DOWNSTREAM (server->client)
 DXT1
 DXT1_ONEBITALPHA
@@ -4150,15 +4051,17 @@ DXT3
 DXT5
 DXT5_NM
 Danish
-Data breakpoint [%s]
-Data breakpoint [%s] - %s
-Data breakpoint hit
 DeactivateSteamGameServer(finished)
 DeactivateSteamGameServer(start)
 DebugBreak
 DebugDraw
 DebugDrawObjects
+DebugImGui
+DebugImGuiLayer
+DebugImGuiView
 DebugInfo
+DebugOverlay2D
+DebugOverlay2DLayer
 DebugPrintKV3(KeyValues3 const*)
 DebugUI
 DebugVisualizerMgr
@@ -4169,7 +4072,7 @@ DeclareCurrentThreadIsMainThread
 DeclareCurrentThreadIsSecondaryMainThread
 DecodeClassBaseline
 DecodeClassBaseline: NULL instance baseline table
-DecodeDemoNetMessage Failed to parse message\n
+DecodeDemoNetMessage Failed to parse message %s: %s\n
 Dedicated Server
 Default value for an enum field must be an identifier.
 DefaultGameUI
@@ -4183,6 +4086,7 @@ Define Huffman Table 0x%02x
 Define Quantization Table %d  precision %d
 Define Restart Interval %u
 DelayedConCommands
+Delete Frame Snapshot
 Delete this entity
 Delta Entities Overhead
 Delta Frames
@@ -4222,11 +4126,9 @@ Detected log rotation.  Closing and reopening log\n
 DevMsg
 DevMsg(char const*, ...)
 Devanagari
-Did not execute '%s' because the 'Target' object was missing
 Didn't expect more than one scan
 DirectUpdate
 Disabling user config reading/writing due to -playtest\n
-Disallowed variable name: %s
 DiscardMouseFocusClick
 Discarding pending request '%s, %u'\n
 Discarding queued request '%s, %u'\n
@@ -4248,7 +4150,6 @@ DispatchSpawn
 DispatchUpdateOnRemove
 Dispatching EventAppShutdown_t {\n
 DisplayMessage
-Divide by zero!
 DivideRow_16_AVX2
 DivideRow_16_Any_AVX2
 DivideRow_16_C
@@ -4282,24 +4183,20 @@ ERROR: No PVS at this Camera position!
 ERROR: couldn't open.\n
 ERROR:NoEnum:%s:%d
 ERROR:NoEnumerator:%s:%d
-ERROR:NoFlags:%s:%d
 ERROR_BADREQUEST: Code error - bad request
 ERROR_FILEOPEN: File not found
 ERROR_NOMEMORY: Out of memory
 ERROR_READING: File exists but read failed
-ESCAPE_CHAR
-ESCAPE_CODE
 ETC1
 ETc'
 EXECUTABLE_PATH
-EXPONENT
 EXPORTSYSTEM_INTERFACE_VERSION_001
 E]sv
-Early exit
 EarlyInit_Tier0
 EconItemToolModel_001
 Egyptian_Hieroglyphs
 Empty JPEG image (DNL not supported)
+Empty gameinfo file '%s'
 Empty input file
 Enable multithreading to use std::thread
 Encountered a circular dependency with library %s!\n
@@ -4427,23 +4324,29 @@ Extensions of MessageSets must be optional messages.
 Extensions to non-lite types can only be declared in non-lite files.  Note that you cannot extend a non-lite type to contain a lite type, but the reverse is allowed.
 Extra arguments given after name\n
 ExtractModuleMetadata
-Extraneous token
 FAIL
 FAILED_PRECONDITION
 FALSE
 FATAL
 FCVAR_CHEAT cvars reverted to defaults (sv_cheats disabled).\n
 FPS: Avg=%.1f, P1=%.1f\n
-FSKey=
+FTYPEDESC_ADDED_KEYFIELD
+FTYPEDESC_ADDITIONAL_FIELDS
+FTYPEDESC_ENUM
+FTYPEDESC_EXPLICIT_BASE
+FTYPEDESC_GEN_ARRAY_KEYNAMES_0
+FTYPEDESC_GEN_ARRAY_KEYNAMES_1
+FTYPEDESC_KEY
+FTYPEDESC_NONE
+FTYPEDESC_PROCEDURAL_KEYFIELD
+FTYPEDESC_PTR
+FTYPEDESC_REMOVED_KEYFIELD
 FWj|
 FYLh.o
 FZ?w
 Failed
 Failed To Load '%s'! VConsole Communication Disabled!\n
 Failed to activate script entity %s of type %s: script entity instance is null\n
-Failed to allocate a lexer for '%s'. (Out of memory?)
-Failed to allocate a parser for '%s'. (Out of memory?)
-Failed to allocate a token stream for '%s'. (Out of memory?)
 Failed to connect to %s. (%d) %s
 Failed to create temporary file %s
 Failed to determine base game directory from %s
@@ -4559,10 +4462,10 @@ FixedDiv_C
 FixedDiv_X86
 FixupResourceName: Illegal full path passed in ("%s")!\n
 FixupResourceName: Illegal path, missing extension passed in ("%s")!\n
-Float( %f )
 FloatBitMap_t::LoadFromBuffer: Received improper buffer size, skipping!\n
 FloatBitMap_t::LoadFromBuffer: Unsupported color format, skipping!\n
 FloatBitMap_t::WriteToBuffer: Received improper buffer size %s (expecting %s), skipping!\n
+Flush
 FlushEntityPacket: %s
 Focus based priority boost disabled\n
 For packet-level statistics, see net_connections_stats.\n
@@ -4572,6 +4475,7 @@ Forced by cvar\n
 Forcing engine to render for the next %d frames\n
 FormatArgumentsToBuffer(IFormatOutputStream*, char const*, CTypeErasedFormattingWrapper const*, int)
 FormatTo(IFormatOutputStream*, CFormatStringElement, bool)
+FormatTo(IFormatOutputStream*, CFormatStringElement, char const*)
 FormatTo(IFormatOutputStream*, CFormatStringElement, double)
 FormatTo(IFormatOutputStream*, CFormatStringElement, float)
 FormatTo(IFormatOutputStream*, CFormatStringElement, int)
@@ -4604,7 +4508,6 @@ Friday
 Full Frame
 FullFrameSplit tick=%d, chunk=%d of %d\n
 FullPacketGoto
-Functions not supported in this evaluator (%s)
 Future already retrieved
 FvPKcE
 G%llx,
@@ -4644,13 +4547,10 @@ GOTV[%d] memory consumption: (%.1fms)\n%s
 GOTV[%d] must be explicitly enabled (with -addhltv1) on this server. tv_enable%d 0 to hide this message\n
 GOTV[%d] not active.\n
 GOTV[%u]\n
-GPU Frame Time
 GPUTimeAvgMS,GPUTimeRangeMS,GPUTimeMinMS,GPUTimeMaxMS,rendersystemdll,width,height,msaa\n
 Game
-Game Engine
 Game Server is not running\n
 Game Time %s, Mod "%s", Map "%s"\n
-Game cannot launch without explicit commandline flag: %s
 Game does not support save/restore.\n
 Game info file does not specify a steam app id!\n
 Game supporting (%d) split screen players\n
@@ -4725,6 +4625,8 @@ GetOrCreatePublicScriptScope
 GetPlayerNetworkIDString
 GetPrivateScriptScope
 GetPublicScriptScope
+GetQuantizedFloatEncoderAlias
+GetQuantizedFloatEncoderAliasCount
 GetRawRepeatedField
 GetRepeatedBool
 GetRepeatedDouble
@@ -4808,6 +4710,7 @@ HalfMergeUVRow_AVX2
 HalfMergeUVRow_C
 HalfMergeUVRow_SSSE3
 HammerMapLoader001
+Handle Return Values
 Hangul
 Hanunoo
 HasElement
@@ -4821,7 +4724,6 @@ Hen\fM
 Hex and octal numbers must be integers.
 Hibernating
 Hiragana
-Hltv Replay
 Hltv Replay Failure: cannot find stash %d\n
 Hltv Replay failure: HLTV frame is not ready\n
 Hltv Replay failure: Hltv replay is not enabled\n
@@ -4839,7 +4741,6 @@ HudUpdate
 Huffman code size table overflow
 Huffman table 0x%02x was not defined
 Hungarian
-I could not work out what I was expecting, like so many of us these days!\n
 I010AlphaToARGBMatrix
 I010Copy
 I010ToAB30
@@ -5044,7 +4945,6 @@ I<OXb<^
 IA88
 ID filter list has %i entries\n
 ID: %i, "%s" %s, Time %s, %s, In %.1f, Out %.1f.\n
-ID_CHAR
 IEngineClient::RecordDemoCustomData(): Not recording a demo.\n
 IFormatOutputStream::Format2DTable(CTypeErasedFormattingWrapper, CFormatStringElement, void const**, int, int)
 IFormatOutputStream::FormatArray(CTypeErasedFormattingWrapper, CFormatStringElement, void const**, int, bool)
@@ -5118,6 +5018,7 @@ InitializeDummyRow
 InitializeEntityDLLFields
 Initiating forceful connect: awaiting %d @ %d\n
 Input
+Input Handling
 Input State
 Input file read error
 Input size too large: 
@@ -5135,7 +5036,6 @@ Insufficient memory (case %d)
 Insufficient memory to compile regular expression
 Insufficient memory to determine regex match
 Integer out of range (
-Internal cursor flow error: halting due to leaf cell bug!
 InternalProcessPacketEntities
 InternalReadPacket
 InterpolatePlane
@@ -5155,7 +5055,7 @@ Invalid JPEG file structure: SOS before SOF
 Invalid JPEG file structure: missing SOS marker
 Invalid JPEG file structure: two SOF markers
 Invalid JPEG file structure: two SOI markers
-Invalid S2C_CONNECTION packet
+Invalid S2C_CONNECTION packet: %s
 Invalid SOS parameters for sequential JPEG
 Invalid Steam key size
 Invalid back reference in regular expression
@@ -5189,7 +5089,6 @@ Invalid search path specified for '%s'. Search path '%s' does not contain '%s'\n
 Invalid splitscreen slot %d specified for convar in '%s'.\n
 Invalid strings::Substitute() format string: "
 Invalid symbol name: 
-Invalid use of KV3 specific type %s with basic type %s, must be basic type %s
 Invalid value for boolean field "
 Invalid weak dependency index.
 Invalid wire type for CPPTYPE_INT32: 
@@ -5197,8 +5096,6 @@ Invalid wire type for CPPTYPE_INT64:
 Invalid wire type for CPPTYPE_MESSAGE: 
 Invalid wire type for CPPTYPE_UINT32: 
 Invalid wire type for CPPTYPE_UINT64: 
-InvalidSteamLogon
-Invoke '%s' failed with code %d
 InvokeMiniDumpHandler
 Is fixup operator client running at low FPS? Only %d/%d fixup ticks available for %s\n
 IsValidIndex( i )
@@ -5238,13 +5135,11 @@ JiYMm
 Joystick
 July
 Jumping to random tick %d (%.2f min)\n
-Jun 25 2026
 June
 JustInTime Resource Spawn Group
 JustInTimeManifest
 JwMW
 KNQ\r
-KV3 instances cannot be set to an unspecified specific type
 KW<S
 Kaithi
 Kannada
@@ -5272,6 +5167,7 @@ KeyValues::GetFirstTrueSubKey()
 KeyValues::GetFirstValue()
 KeyValues::GetFloat(char const*, float) const
 KeyValues::GetInt(char const*, int) const
+KeyValues::GetKeyValuesSystem() const
 KeyValues::GetName() const
 KeyValues::GetNextKey()
 KeyValues::GetNextTrueSubKey()
@@ -5286,6 +5182,7 @@ KeyValues::LoadFromBuffer(char const*, CUtlBuffer&, IFileSystem*, char const*, b
 KeyValues::LoadFromBuffer(char const*, char const*, IFileSystem*, char const*, bool (*)(char const*, void*), IKeyValuesErrorSpew*, void*, char const*)
 KeyValues::LoadFromFile(IFileSystem*, char const*, char const*, bool (*)(char const*, void*), void*, char const*)
 KeyValues::MakeCopy() const
+KeyValues::MakeCopy(IKeyValuesSystem*) const
 KeyValues::MergeFrom(KeyValues const*, KeyValues::MergeKeyValuesOp_t)
 KeyValues::ReadAsBinary(CUtlBuffer&)
 KeyValues::RecursiveSaveToFile(CUtlBuffer&, int, bool, bool) const
@@ -5313,12 +5210,12 @@ Kicked to free up slot
 Known Peer State "%s"
 Known by handlers: 
 Korean
+Kr,c
 KuoW
 L %02i/%02i/%04i - %02i:%02i:%02i: %s
 L?%OX
 LANG
 LATE
-LAYEREDGAMEROOT
 LC_ADDRESS
 LC_ALL
 LC_COLLATE
@@ -5336,9 +5233,6 @@ LGI0L
 LIMIT_MATCH=
 LIMIT_RECURSION=
 LINEAR_D24S8
-LINE_CONTINUATION
-LITERAL_FALSE
-LITERAL_TRUE
 LIVE
 LOG_ASSERT
 LOG_CONSOLE
@@ -5357,15 +5251,12 @@ Late registration of demo custom data callback.\n
 Latest:%6.2f   Excess:%6.2f   Actual:%6.2f..%6.2f (@%d,%d)   Est:%6.2f..%6.2f (@%d,%d)   cmd:%d   Samples:%d   Target:%.2f
 Latin
 Launch path: %s\n
-LayeredGameRoot
 LayeredOnMod
 LeavePVS
 LegacyUserSettingsPathID
 Lepcha
 LevelLoad
-Lexer encountered %d error(s)
 Limbu
-Line: 
 Linear_B
 LinkClasses: class %d/%d not initialized.\n
 LinkClasses: unable to match one or more serializers\n
@@ -5379,6 +5270,7 @@ LoadAppSystems:  appSystems Load(finish)
 LoadAppSystems:  finished
 LoadAppSystems:  pre game/client services %f msec
 LoadAppSystems: %d modAppSystems took %f msec
+LoadDataTablesFromBuffer: failed to parse CSVCMsg_FlattenedSerializer_t: %s\n
 LoadDemoClassInfos: can't allocate %d C_ServerClassInfos.\n
 LoadDemoClassInfos: invalid class index (%d).\n
 LoadKV3(KeyValues3*, CUtlString*, CUtlBuffer*, KV3ID_t const&, char const*, unsigned int)
@@ -5460,6 +5352,7 @@ MA>i
 MARK
 MATCHFRAMEWORK_001
 MAX_ALLOC_CHUNK is wrong, please fix
+MAlternateSemanticName
 MCustomFGDMetadata
 META for '%s'\n
 MEl~R
@@ -5472,7 +5365,6 @@ MIsBoxedFloatType
 MIsBoxedIntegerType
 MKV3TransferSaveOpsForField
 MLFU
-ML_COMMENT
 MNetworkChangeAccessorFieldPathIndex
 MNotSaved
 MODEL_PROCESSING_SERVICES_INTERFACE_001
@@ -5483,7 +5375,6 @@ MPropertySuppressEnumerator
 MPulseCellInflow_IsDefault
 MPulseCursorTerminates
 MPulseFGDSkipField
-MPulseLegacyName
 MSAADefaultNonVR
 Main 3D Window
 Main Game Server is direct demo recording %s\n
@@ -5641,16 +5532,12 @@ Mismatched '(' and ')' in regular expression
 Mismatched '[' and ']' in regular expression
 Mismatched '{' and '}' in regular expression
 Mismatched CTier2AppSystemDict::SetAllowAddonChanges!!!\n
-Mismatched Token Exception
-Mismatched set
 Mismatched { } braces in command line arguments\n
 Missing Huffman code table entry
 Missing button or key name\n
 Missing field: FileDescriptorProto.name.
 Missing name.
 Missing required transfer interface: %s
-Missing token
-Missing token %s
 Missing/invalid pause tick number.\n
 MmB_
 MnZ/rs
@@ -5664,11 +5551,11 @@ MountAddonSearchPaths: Failed to find CONTENTADDONS search path.\n
 Mounting addon '%s'\n
 Mouse
 Mouse Control
-Move
 Moves the camera position + orientation to the named entity
 Moves the camera position + orientation to the specified position
 Movie recording failed! Missing expected pixels!\n
 Msg processing time . . : P50:%.2fms
+Msg_HltvReplay[tick %d] %s->%s\n
 Multiple NextMsgPredicted?\n
 Multiple extension registrations for type "
 MultiplyRow_16_AVX2
@@ -5690,70 +5577,6 @@ N10__cxxabiv120__si_class_type_infoE
 N10__cxxabiv121__vmi_class_type_infoE
 N10__cxxabiv123__fundamental_type_infoE
 N10__cxxabiv129__pointer_to_member_type_infoE
-N13CNetMessagePBILi1073741824E21NetMessagePacketStartL13SignonGroup_t11EL19NetChannelBufType_t1ELb0EE16CProtobufBindingE
-N13CNetMessagePBILi1073741825E19NetMessagePacketEndL13SignonGroup_t11EL19NetChannelBufType_t1ELb0EE16CProtobufBindingE
-N13CNetMessagePBILi11E34CNETMsg_SpawnGroup_SetCreationTickL13SignonGroup_t15EL19NetChannelBufType_t1ELb0EE16CProtobufBindingE
-N13CNetMessagePBILi12E25CNETMsg_SpawnGroup_UnloadL13SignonGroup_t15EL19NetChannelBufType_t1ELb0EE16CProtobufBindingE
-N13CNetMessagePBILi13E32CNETMsg_SpawnGroup_LoadCompletedL13SignonGroup_t15EL19NetChannelBufType_t1ELb0EE16CProtobufBindingE
-N13CNetMessagePBILi15E20CNETMsg_DebugOverlayL13SignonGroup_t16EL19NetChannelBufType_t1ELb0EE16CProtobufBindingE
-N13CNetMessagePBILi16E30CBidirMsg_RebroadcastGameEventL13SignonGroup_t5EL19NetChannelBufType_t1ELb1EE16CProtobufBindingE
-N13CNetMessagePBILi17E27CBidirMsg_RebroadcastSourceL13SignonGroup_t5EL19NetChannelBufType_t1ELb1EE16CProtobufBindingE
-N13CNetMessagePBILi19E25CBidirMsg_PredictionEventL13SignonGroup_t0EL19NetChannelBufType_t0ELb0EE16CProtobufBindingE
-N13CNetMessagePBILi20E18CCLCMsg_ClientInfoL13SignonGroup_t10EL19NetChannelBufType_t1ELb0EE16CProtobufBindingE
-N13CNetMessagePBILi21E12CCLCMsg_MoveL13SignonGroup_t8EL19NetChannelBufType_t0ELb0EE16CProtobufBindingE
-N13CNetMessagePBILi22E17CCLCMsg_VoiceDataL13SignonGroup_t6EL19NetChannelBufType_t0ELb0EE16CProtobufBindingE
-N13CNetMessagePBILi23E19CCLCMsg_BaselineAckL13SignonGroup_t16EL19NetChannelBufType_t1ELb0EE16CProtobufBindingE
-N13CNetMessagePBILi25E24CCLCMsg_RespondCvarValueL13SignonGroup_t0EL19NetChannelBufType_t1ELb0EE16CProtobufBindingE
-N13CNetMessagePBILi27E23CCLCMsg_LoadingProgressL13SignonGroup_t10EL19NetChannelBufType_t1ELb0EE16CProtobufBindingE
-N13CNetMessagePBILi28E26CCLCMsg_SplitPlayerConnectL13SignonGroup_t10EL19NetChannelBufType_t1ELb0EE16CProtobufBindingE
-N13CNetMessagePBILi30E29CCLCMsg_SplitPlayerDisconnectL13SignonGroup_t10EL19NetChannelBufType_t1ELb0EE16CProtobufBindingE
-N13CNetMessagePBILi31E20CCLCMsg_ServerStatusL13SignonGroup_t0EL19NetChannelBufType_t1ELb0EE16CProtobufBindingE
-N13CNetMessagePBILi33E20CCLCMsg_RequestPauseL13SignonGroup_t0EL19NetChannelBufType_t1ELb0EE16CProtobufBindingE
-N13CNetMessagePBILi34E17CBaseCmdKeyValuesI20CCLCMsg_CmdKeyValuesEL13SignonGroup_t9EL19NetChannelBufType_t1ELb0EE16CProtobufBindingE
-N13CNetMessagePBILi35E25CCLCMsg_RconServerDetailsL13SignonGroup_t0EL19NetChannelBufType_t1ELb0EE16CProtobufBindingE
-N13CNetMessagePBILi36E18CCLCMsg_HltvReplayL13SignonGroup_t17EL19NetChannelBufType_t1ELb0EE16CProtobufBindingE
-N13CNetMessagePBILi37E18CCLCMsg_DiagnosticL13SignonGroup_t0EL19NetChannelBufType_t1ELb0EE16CProtobufBindingE
-N13CNetMessagePBILi40E18CSVCMsg_ServerInfoL13SignonGroup_t10EL19NetChannelBufType_t1ELb0EE16CProtobufBindingE
-N13CNetMessagePBILi41E34CSVCMsg_FlattenedSerializerWrapperL13SignonGroup_t10EL19NetChannelBufType_t1ELb0EE16CProtobufBindingE
-N13CNetMessagePBILi42E17CSVCMsg_ClassInfoL13SignonGroup_t10EL19NetChannelBufType_t1ELb0EE16CProtobufBindingE
-N13CNetMessagePBILi43E16CSVCMsg_SetPauseL13SignonGroup_t0EL19NetChannelBufType_t1ELb0EE16CProtobufBindingE
-N13CNetMessagePBILi44E25CSVCMsg_CreateStringTableL13SignonGroup_t10EL19NetChannelBufType_t1ELb0EE16CProtobufBindingE
-N13CNetMessagePBILi45E25CSVCMsg_UpdateStringTableL13SignonGroup_t7EL19NetChannelBufType_t1ELb0EE16CProtobufBindingE
-N13CNetMessagePBILi46E17CSVCMsg_VoiceInitL13SignonGroup_t10EL19NetChannelBufType_t1ELb0EE16CProtobufBindingE
-N13CNetMessagePBILi47E17CSVCMsg_VoiceDataL13SignonGroup_t6EL19NetChannelBufType_t0ELb0EE16CProtobufBindingE
-N13CNetMessagePBILi48E13CSVCMsg_PrintL13SignonGroup_t0EL19NetChannelBufType_t1ELb0EE16CProtobufBindingE
-N13CNetMessagePBILi49E14CSVCMsg_SoundsL13SignonGroup_t4EL19NetChannelBufType_t1ELb0EE16CProtobufBindingE
-N13CNetMessagePBILi4E12CNETMsg_TickL13SignonGroup_t16EL19NetChannelBufType_t0ELb0EE16CProtobufBindingE
-N13CNetMessagePBILi50E15CSVCMsg_SetViewL13SignonGroup_t0EL19NetChannelBufType_t1ELb0EE16CProtobufBindingE
-N13CNetMessagePBILi51E28CSVCMsg_ClearAllStringTablesL13SignonGroup_t10EL19NetChannelBufType_t1ELb0EE16CProtobufBindingE
-N13CNetMessagePBILi52E17CBaseCmdKeyValuesI20CSVCMsg_CmdKeyValuesEL13SignonGroup_t9EL19NetChannelBufType_t1ELb0EE16CProtobufBindingE
-N13CNetMessagePBILi54E19CSVCMsg_SplitScreenL13SignonGroup_t10EL19NetChannelBufType_t1ELb0EE16CProtobufBindingE
-N13CNetMessagePBILi55E22CSVCMsg_PacketEntitiesL13SignonGroup_tn1EL19NetChannelBufType_t1ELb0EE16CProtobufBindingE
-N13CNetMessagePBILi56E16CSVCMsg_PrefetchL13SignonGroup_t4EL19NetChannelBufType_t1ELb0EE16CProtobufBindingE
-N13CNetMessagePBILi57E12CSVCMsg_MenuL13SignonGroup_t0EL19NetChannelBufType_t1ELb0EE16CProtobufBindingE
-N13CNetMessagePBILi58E20CSVCMsg_GetCvarValueL13SignonGroup_t0EL19NetChannelBufType_t1ELb0EE16CProtobufBindingE
-N13CNetMessagePBILi59E17CSVCMsg_StopSoundL13SignonGroup_t4EL19NetChannelBufType_t1ELb0EE16CProtobufBindingE
-N13CNetMessagePBILi5E17CNETMsg_StringCmdL13SignonGroup_t9EL19NetChannelBufType_t1ELb0EE16CProtobufBindingE
-N13CNetMessagePBILi60E16CSVCMsg_PeerListL13SignonGroup_t0EL19NetChannelBufType_t1ELb0EE16CProtobufBindingE
-N13CNetMessagePBILi61E22CSVCMsg_PacketReliableL13SignonGroup_t0EL19NetChannelBufType_t1ELb0EE16CProtobufBindingE
-N13CNetMessagePBILi62E18CSVCMsg_HLTVStatusL13SignonGroup_t0EL19NetChannelBufType_t1ELb1EE16CProtobufBindingE
-N13CNetMessagePBILi63E21CSVCMsg_ServerSteamIDL13SignonGroup_t0EL19NetChannelBufType_t1ELb1EE16CProtobufBindingE
-N13CNetMessagePBILi6E17CNETMsg_SetConVarL13SignonGroup_t9EL19NetChannelBufType_t1ELb0EE16CProtobufBindingE
-N13CNetMessagePBILi70E22CSVCMsg_FullFrameSplitL13SignonGroup_t0EL19NetChannelBufType_t1ELb0EE16CProtobufBindingE
-N13CNetMessagePBILi71E25CSVCMsg_RconServerDetailsL13SignonGroup_t0EL19NetChannelBufType_t1ELb0EE16CProtobufBindingE
-N13CNetMessagePBILi72E19CSVCMsg_UserMessageL13SignonGroup_t13EL19NetChannelBufType_t1ELb0EE16CProtobufBindingE
-N13CNetMessagePBILi74E18CSVCMsg_HltvReplayL13SignonGroup_t17EL19NetChannelBufType_t1ELb0EE16CProtobufBindingE
-N13CNetMessagePBILi75E29CCLCMsg_HltvFixupOperatorTickL13SignonGroup_t17EL19NetChannelBufType_t1ELb0EE16CProtobufBindingE
-N13CNetMessagePBILi76E20CSVCMsg_UserCommandsL13SignonGroup_t17EL19NetChannelBufType_t1ELb0EE16CProtobufBindingE
-N13CNetMessagePBILi77E24CSVCMsg_NextMsgPredictedL13SignonGroup_t17EL19NetChannelBufType_t1ELb0EE16CProtobufBindingE
-N13CNetMessagePBILi7E19CNETMsg_SignonStateL13SignonGroup_t10EL19NetChannelBufType_t1ELb0EE16CProtobufBindingE
-N13CNetMessagePBILi8E23CNETMsg_SpawnGroup_LoadL13SignonGroup_t15EL19NetChannelBufType_t1ELb0EE16CProtobufBindingE
-N13CNetMessagePBILi9E33CNETMsg_SpawnGroup_ManifestUpdateL13SignonGroup_t15EL19NetChannelBufType_t1ELb0EE16CProtobufBindingE
-N13CNetMessagePBILin1E19C2S_CONNECT_MessageL13SignonGroup_t0EL19NetChannelBufType_t1ELb0EE16CProtobufBindingE
-N13CNetMessagePBILin1E22C2S_CONNECTION_MessageL13SignonGroup_t0EL19NetChannelBufType_t1ELb0EE16CProtobufBindingE
-N13CNetMessagePBILin1E26NetMessageConnectionClosedL13SignonGroup_t11EL19NetChannelBufType_t1ELb0EE16CProtobufBindingE
-N13CNetMessagePBILin1E27NetMessageConnectionCrashedL13SignonGroup_t11EL19NetChannelBufType_t1ELb0EE16CProtobufBindingE
-N13CNetMessagePBILin1E32NetMessageSplitscreenUserChangedL13SignonGroup_t11EL19NetChannelBufType_t1ELb0EE16CProtobufBindingE
 N14CHLTVBroadcast13CHttpCallbackE
 N15CDemoStreamHttp12CSyncRequestE
 N15CDemoStreamHttp13CStartRequestE
@@ -5908,13 +5731,12 @@ N9__gnu_cxx18stdio_sync_filebufIwSt11char_traitsIwEEE
 N9__gnu_cxx20recursive_init_errorE
 N9__gnu_cxx24__concurrence_lock_errorE
 N9__gnu_cxx26__concurrence_unlock_errorE
-NEGATIVE_TOK
 NETWORK_DISCONNECT_%d
 NETWORK_DISCONNECT_REJECT to %s: rejected by game rules with code %d\n
+NETWORK_DISCONNECT_REJECT_BANNED to %s: %s is banned\n
 NETWORK_DISCONNECT_REJECT_SERVERFULL to %s: Cannot get free client\n
 NETWORK_DISCONNECT_REJECT_SERVERFULL to %s: GetNumClients()[%d] - GetNumFakeClients()[%d] + numSlotsRequested[%d] > m_numGameSlots[%d]\n
 NET_Tick
-NEWLINE
 NJ2"v
 NL*\nO
 NO SUNLIGHT/CSMs HERE, SHADOW ATLAS FREE - OPTIMAL SHADOWED DLIGHT PLACEMENT HERE.
@@ -6066,7 +5888,6 @@ No closing */ before end of file
 No console available\n
 No conversion from %s to bool now\n
 No conversion from %s to string at the moment!\n
-No data
 No default value
 No demos in list, use startdemos <demoname> <demoname2> to specify\n
 No demos listed with startdemos\n
@@ -6074,10 +5895,10 @@ No display adapters found. Falling back to software rasterizer. (nAdapterCount=%
 No engine network summary data available -- running in loopback mode\n
 No engine network summary data available..\n
 No existing hint file %s\n
-No expression!
 No field named "uninterpreted_option" in the Options proto.
 No free conversion of %s variant to HSCRIPT right now\n
-No input data for '%s'. (Empty buffer.)
+No game directory specified
+No game directory specified!\n
 No know mod!
 No mod specified! This is necessary to run!
 No movie started.\n
@@ -6119,16 +5940,13 @@ Numbers starting with leading zero must be in octal.
 O*9y]
 O-p?A6
 OFFICIAL_ADDONS
-OPEN_BRACE
-OPEN_BRACKET
-OPEN_PAREN
-OP_EQUAL
 OUT_OF_RANGE
 OVERFLOW FAILURE
 OV{O
 OZw3(?
 Obtained EMS handle %u
 Obtained XMS handle %u
+Oct  6 2026
 October
 Ogham
 Ol_Chiki
@@ -6217,6 +6035,7 @@ Output file write error --- out of disk space?
 Overflow sending send tables
 Overflowed failed to serialize CNETMsg_Tick_t\n
 Override Fog color: %f %f %f\n
+OverrideQuantizedFloatEncoderAlias
 P010ToAR30Matrix
 P010ToARGBMatrix
 P010ToP410
@@ -6281,8 +6100,6 @@ PNG\r\n
 POSIX
 POSIX collating elements are not supported
 POSIX named classes are supported only within a class
-POS_FLOATLITERAL
-POS_INTLITERAL
 PQ${ZM
 PREP
 PRUNE
@@ -6291,6 +6108,9 @@ PS_SATISFIED %s in sequence for %s [%.3f msec]\n
 PURH
 PVAL_ANY
 PVAL_INVALID
+PVAL_SCHEMA_ENUM
+PVAL_TYPESAFE_INT
+PVAL_TYPESAFE_INT64
 PVS cluster %d\n
 PVS origin %s\n
 PackEntities_Normal EnsureInstanceBaseline
@@ -6323,7 +6143,6 @@ ParseDeltaHeader Failure: Previously parsed entity id: %d class: %s entity: %s\n
 ParseDeltaHeader Failure: Previously parsed entity id: %d\n
 ParseDeltaHeader Failure: last update flags = %d\n
 Parsed message %s with invalid size %u
-Parser encountered %d error(s)
 ParsingCompleted %d bits used, resizing packet buffer from %d to %d bytes\n
 ParsingStarted %d bits reserved\n
 PatchVersion
@@ -6400,7 +6219,6 @@ Plat_GetWindowBounds
 Plat_GetWindowClientBounds
 Plat_GetWindowClientSize
 Plat_GetWindowContentsScale
-Plat_GetWindowSafeAreaInsets
 Plat_GlobalMemoryStatus
 Plat_HasEnteredFatalState
 Plat_IgnoreContentAsserts
@@ -6441,7 +6259,7 @@ Plat_SetCurrentFrame
 Plat_SetDesktopNotifyIconPath
 Plat_SetEnv
 Plat_SetFullscreenMinimizeOnFocusLoss
-Plat_SetGameDirectories
+Plat_SetGameDirectory
 Plat_SetVirtualReserveWarnLimit
 Plat_SetWatchdogHandlerFunction
 Plat_SetWindowIcon
@@ -6496,10 +6314,11 @@ Premature end-of-partition0 encountered.
 Prepare Client Updates
 PrepareForAssetLoad(%s)
 PrepareSendClientMessages
+PrepareSendClientUpdatesAsync
+PrepareSendClientUpdatesMainThread
 Prerequisite %s not found in sequence for %s\n
 Present_RenderDevice
 PreserveEnt
-Preventing new cursor (%s)
 Prints out the current camera position + orientation to the console
 Priority boost already disabled.\n
 Priority boost already enabled.\n
@@ -6573,6 +6392,7 @@ R8G8B8A8_ETC2_EAC
 R8G8B8_ETC2
 R8G8_UINT
 R8_UINT
+R8_UNORM
 R9G9B9E5_FLOAT
 R;876.
 RAWToARGB
@@ -6716,8 +6536,6 @@ Received signon %i when at %i\n
 Received wrong spawn count %i when at %i\n
 Receiving %.1fK non-incremental update from server\n
 Receiving C2S_CONNECT [protocol %u %u auth %d] from %s\n
-Recognition Exception
-Recognition exception
 Reconnecting; disconnecting prior connection
 Recorded %s [%d -> %d:  %d bits\n
 Recording %s\n
@@ -6792,6 +6610,7 @@ Reset video config to defaults!\n
 Reset video config to desktop mode %dx%d!\n
 ResetBreakpadAppId
 ResetGameConVarsToDefaults\n
+ResetQuantizedFloatEncoderAliasOverrides
 ResizableWindow
 Resource Manifest: "%s" %s [pass %d]\n
 ResourceCompilerSystem001
@@ -6806,6 +6625,7 @@ Retrieve, creating if necessary, the public script-side data associated with an 
 Retrying connection to %s, server requires lobby reservation but is unreserved.\n
 Retrying request for fragment %d\n
 Retrying sync\n
+Return
 ReturnJobManualEventToPool
 RevisionVersion
 Romanian
@@ -6836,7 +6656,6 @@ S3: Duplicate client connection: UserID: %x SteamID %s\n
 SAVE/%s.hl1
 SAVE/%s.hl2
 SAVE/%s.hl3
-SCOPE_QUALIFIER
 SDL [%s]: %s\n
 SDL_Init( 0x%X ) failed: %s\n
 SDL_VIDEO_ALLOW_SCREENSAVER
@@ -6844,7 +6663,6 @@ SDL_VIDEO_DRIVER
 SDL_WINDOWS_DETECT_DEVICE_HOTPLUG
 SDL_WINDOWS_GAMEINPUT
 SDL_WINDOW_FRAME_USABLE_WHILE_CURSOR_HIDDEN
-SEMICOLON
 SENT
 SHADER_SOURCE
 SHADER_SOURCE_MOD
@@ -6855,9 +6673,6 @@ SIGNED_RG11
 SIGNONSTATE_FULL: Auto-Recording demo\n
 SIGTERM received while server hibernating.\n
 SIGTERM received while server was **not** hibernating!  Shutting down even though a game may be in progress!\n
-SINGLE_LINE_COMMENT
-SINGLE_QUOTED_STRING
-SINGLE_QUOTE_CHAR
 SKIP
 SKIPPING: ReadReplayMessage returning deltaFrame tick=%d\n
 SKIPPING: ReadReplayMessage returning fullFrame tick=%d\n
@@ -6894,13 +6709,12 @@ STEAMPARENTALSETTINGS_INTERFACE_VERSION001
 STEAMREMOTEPLAY_INTERFACE_VERSION003
 STEAMREMOTESTORAGE_INTERFACE_VERSION016
 STEAMSCREENSHOTS_INTERFACE_VERSION003
-STEAMUGC_INTERFACE_VERSION019
+STEAMUGC_INTERFACE_VERSION021
 STEAMUSERSTATS_INTERFACE_VERSION013
 STEAMVIDEO_INTERFACE_V002
 STEAM_
 STEAM_ID_LAN
 STEAM_ID_PENDING
-STRING_CHAR
 SUNLIGHT/SHADOW ATLAS IN FULL USE HERE.
 SV:  % 3d %40.40s not resolved\n
 SV:  %15.15s:  %40.40s marked by %s\n
@@ -6943,7 +6757,7 @@ SV:  Setting game load failed flag.\n
 SV:  Spawn Server: %s: [%s]\n
 SV:  Spawn Server: %s\n
 SV:  SpawnServer WriteClassInfosAndSerializesToBuffer %s.\n
-SV:  Unable to parse C2S_CONNECT_Message_t payload from '%s'\n
+SV:  Unable to parse C2S_CONNECT_Message_t payload from '%s': %s\n
 SV:  VAC secure mode disabled.\n
 SV:  VAC secure mode is activated.\n
 SV:  WriteBaselines:  %20.20s wrote %6d bytes [%36.36s], headroom %6d bytes\n
@@ -6965,6 +6779,7 @@ SV: Player %s kicked for too many failed console commands.\n
 SV: ProcessMove %s on tick %d, packet had too many Move messages (expected only 1, this is %d), disconnecting user\n
 SV: Queuing k_EAuthSessionResponseAuthTicketCanceled for %s.\n
 SV: SendSnapshot_Job with real client and NULL NetChan, cancelling\n
+SVCMsg_EncryptedData_EncryptMessage
 SV_CreateNetworkStringTables
 SV_InstallHLTVStringTableMirrors! Missing client table "%s".\n 
 SV_SendServerinfo->msg
@@ -6977,6 +6792,7 @@ Saurashtra
 SaveKV3(KV3ID_t const&, KV3ID_t const&, KeyValues3 const*, CUtlString*, CUtlBuffer*, unsigned int)
 SaveKV3AsJSON(KeyValues3 const*, CUtlString*, CUtlBuffer*)
 SaveKV3Text_NoHeader(KeyValues3 const*, CUtlString*, CBufferString*, unsigned int)
+SaveKV3Text_NoHeader(KeyValues3 const*, CUtlString*, CUtlString*, unsigned int)
 SaveKV3Text_ToString(KV3ID_t const&, KeyValues3 const*, CUtlString*, CBufferString*, unsigned int)
 SaveKV3Text_ToString(KV3ID_t const&, KeyValues3 const*, CUtlString*, CUtlString*, unsigned int)
 Saved '%s' to SteamRemoteStorage, %d bytes OK\n
@@ -7238,16 +7054,13 @@ Sending connect to %s\n
 Sending network quality stats to server, summary over %d seconds\n
 Sending voice from: %s - playerslot: %d [ xuid %llx ]\n
 Sending vprof lite summary to server.  %d frames, %d detailed line items\n
-Sep 29 2026
 September
 Server (%s) is not a SourceTV proxy.\n
 Server Broadcast
 Server Changelevel
 Server CheckTransmit
-Server Demo
 Server GameSessionManifest
 Server PackEntities
-Server Send Networking
 Server Shutting Down
 Server Simulation
 Server SteamID in handshake is %llu, but SteamID from SteamNetworkingSockets is %llu.\n
@@ -7370,10 +7183,11 @@ Skipped to LIVE\n
 Skipped to tick=%d clientTick=%d startServerTick=%d\n
 Skipping to %d, current=%d\n
 Skipping unknown demo command %d\n
-Slamming client tick to server tick.  abs( server tick %d - client tick %d = %d ) > ( cl_clockdrift_max_ticks %d + sim ticks %d = %d )\n
+Slamming client tick to server tick.  abs( server tick %d - client tick %d = %d ) > ( cl_clockdrift_max_ticks %.1f + sim ticks %d + jitter margin %.1f = %d )\n
 Sleep
 SleepAfterMainLoop
 Sleeping
+SmartPropsSystem_001
 Smoothing not supported with nonstandard sampling ratios
 SobelRow_Any_SSE2
 SobelRow_C
@@ -7442,7 +7256,6 @@ Spawn
 Spawn Group %d creation sequence %d create tick %d\n
 Spawn Group %d manifest update (create tick %d)\n
 Spawn Group %d unload at tick %d ignored\n
-Spawn Groups
 Spawn group %s precache manifest overflow: this spawn group will not precache correctly on networked clients.\n
 Specified too high an adapter number on the command line (%d/%d)!\n
 Spewing changes between
@@ -7706,13 +7519,11 @@ SteamUtils010
 Stop Broadcast @frag %d\n
 Stopping.\n
 StrReplaceChar
-String Command
-String Table
+StreamPutOverflow
 String field
 String literals cannot cross line boundaries.
 String tables user data bits restricted to %i bits, requested %i is too large\n
 String tables user data size restricted to %i bytes, requested %i is too large\n
-String( %s )
 StringPrintfVector currently only supports up to 
 StringTable %s
 Successfully disabled priority boost.\n
@@ -7762,7 +7573,6 @@ TGAWriter: Failed to serialize screenshot pixels (%d x %d, %s).\n
 THEN
 TLS init function for 
 TLS wrapper function for 
-TOK_COLON
 TRUE
 TV client has no downstream TV sink\n
 TV: No game server to record demo.\n
@@ -7780,7 +7590,6 @@ Tamil
 Tearing off console log, will continue using suffix '%s'\n
 Telling clients to connect (%d maxclients)\n
 Telugu
-TernaryConditional
 Test minidump comment
 TestScriptMgr_CheckPoint(client_connected)
 TexGroup_Global_
@@ -7812,6 +7621,7 @@ ThreadGetMainThreadId
 ThreadGetProcessPriority
 ThreadInMainThread
 ThreadInPrimaryOrSecondaryMainThread
+ThreadInSecondaryMainThread
 ThreadNanoSleep
 ThreadSetPerfSetAffinity
 ThreadSetPriority
@@ -7885,6 +7695,15 @@ Tried to register a non-generated type with the generated type registry.
 Tried to register an input value %s with the same name as a concommand/convar!\n
 Tried to register the same input value %s twice!\n
 Tried to write clouded file, but we don't have Steam interfaces?  Probably bug with order of initialization, or trying to run without steam\n
+TrueViewLookAhead: aggressive fixup deactivated, desired margin reached\n
+TrueViewLookAhead: aggressive slowdown deactivated, desired margin reached\n
+TrueViewLookAhead: aggressive slowdown stopped; max number of adjustments reached\n
+TrueViewLookAhead: changed %d -> %d.  Activating tick gobble to get in sync\n
+TrueViewLookAhead: changed %d cmds, %.1f ticks  ->  %d cmds %.1f ticks.  Activating aggressive local sim slowdown until we get back sync\n
+TrueViewLookAhead: gobble canceled, desired margin reached\n
+TrueViewLookAhead: gobbling. Current tick is %d, we have received a message for tick %d.  Processing all messages up to %d now\n
+TrueViewLookAhead: no excess ticks from server to gobble\n
+TrueViewLookAheadChange
 Truncated header.
 Tuesday
 Turkish
@@ -7917,7 +7736,6 @@ UNKNOWN
 UNKNOWN FAILURE
 UNKNOWN VALUE
 UNKNOWN_ENUM_VALUE_%s_%d
-UNRECOGNIZED
 UPSTREAM (client->server)
 URLName
 USRLOCAL
@@ -7963,9 +7781,6 @@ UYVYToYRow_SSE2
 U\8h(
 Ugaritic
 Ukrainian
-UnInvalid
-UnNegate
-UnNot
 Unable to %s, couldn't load class metadata from networking system\n
 Unable to Start Game
 Unable to capture %s virtual memory information\n
@@ -7992,23 +7807,17 @@ Unaccounted
 Under memory limit. Limit is %llu but current usage is %llu.\n
 Unepxected spawn group %d, %d was expected.\n
 Unexpected authentication protocol %i!
-Unexpected character
-Unexpected character '%c' (0x%02X)
-Unexpected end of file
 Unexpected end of string.
 Unexpected failure while serializing option submessage 
 Unexpected marker 0x%02x
-Unexpected node
 Unexpected null character in regular expression
-Unexpected token
-Unexpected token '%s' %s
 Unhandled event %s (%d) %llu %d\n
+Unhandled type %s in VariantCompatibility_SetEntityVariantFromPulseVariant; defaulting to string
 Unimplemented type: 
 Uninterpreted option is missing name or value.
 Unknown APP0 marker (not JFIF), length %u
 Unknown APP14 marker (not Adobe), length %u
 Unknown Adobe color transform code %d
-Unknown KV3 specific type %u
 Unknown command '%s'!\n
 Unknown convar '%s'!\n
 Unknown enumeration value of "
@@ -8018,8 +7827,7 @@ Unknown message in DemoSpawnGroups %d.\n
 Unknown message in SpawnGroups %d.\n
 Unknown net message %d!\n
 Unknown option '%s'\n
-Unknown property %s
-Unknown variable %s
+Unknown spawn group message in GetSpawnGroupHandleFromMessage!\n
 Unknown variety of crash. You have now failed to crash. I hope you're happy.\n
 Unknown vtune option.\n
 Unlock
@@ -8040,7 +7848,6 @@ Unsupported KV3 basic type '%s' (%d)!
 Unsupported color conversion request
 Unsupported marker type 0x%02x
 Unsupported: type mismatch
-Unwanted token '%s' %s
 Update
 UpdateManifest
 UpdateNetworkQualityMessages
@@ -8082,7 +7889,7 @@ Usage: playcast <url> [url2...] [-options]\n
 Usage: sv_setsteamaccount <login_token>\n
 Usage: toggle varName [... optional list of valid values to cycle]\n
 Use "force_assert any_argument_here" to test the assertion evaluating to true\n
-User Messages
+User %s is %s member of clan %s\n
 User command %d recv on server %s, tick %d, margin %.1fms. (%s)  frame time=%.1fms, LastCommandRecv=%d, LastCommandExecuted=%d\n
 UserDataFixedSize exceeds size %d needs room for %d bits\n
 UserSettingsFileEx
@@ -8173,7 +7980,6 @@ V_Int64ToString_Unsafe
 V_IsAbsolutePath
 V_LogMultiline
 V_ParseJSONBuffer
-V_ParseToken
 V_PathContainsPath
 V_PrettifyMem
 V_PrettifyNum
@@ -8300,7 +8106,6 @@ Virtual array controller messed up
 VisBuilder_001
 VisSystemDebug
 Visibility %s.\n
-Voice
 Vrad3_001
 Vu?N\t?8Ws?vGr?
 Vv.q
@@ -8372,7 +8177,10 @@ WireframeParticles
 WireframeReflective
 Wm\1<B&
 WorldGroupId_t
+Worldsize_ClearSessionMaxCoord
+Worldsize_GetGameInfoMaxCoordFloat
 Worldsize_Init
+Worldsize_SetSessionMaxCoord
 Write
 Write failed on temporary file --- out of disk space?
 Write to EMS failed
@@ -8384,6 +8192,20 @@ WriteEnterPVS: missing instance baseline for '%s'.
 WriteEnterPVS: missing pFromData for '%s'.
 WriteFrame
 WriteFrameImmediate
+WriteFrameImmediate_CopyToProto
+WriteFrameImmediate_DemoFileWrite
+WriteFrameImmediate_Entities
+WriteFrameImmediate_SaveGame
+WriteFrameImmediate_SerializeEntities
+WriteFrameImmediate_SpawnGroups
+WriteFrameImmediate_StringTables
+WriteFullFrame
+WriteFullFrame_CopyToProto
+WriteFullFrame_DemoFileWrite
+WriteFullFrame_Entities
+WriteFullFrame_KeyframeMessages
+WriteFullFrame_SerializeEntities
+WriteFullFrame_StringTables
 WriteNetMessage
 WriteNonTransmitted
 WriteOOPVSDeltaEntities
@@ -8466,7 +8288,6 @@ Zq",9\fB
 [A:%u:%u:%u]
 [BUG - how?]
 [INCOMPLETE!]
-[Index: 
 [M:%u:%u:%u]
 [NoChan]
 [Player %d] : "%s" = "%s"\n
@@ -8519,7 +8340,6 @@ Zq",9\fB
 \k is not followed by a braced, angle-bracketed, or quoted name
 \n    Actual    : 
 \n    Field type: 
-\n    near %s\n    
 \n  Field       : 
 \n  Message type: 
 \n  Problem     : 
@@ -8527,6 +8347,7 @@ Zq",9\fB
 \n  Problem     : Field is not the right type for this message:\n    Expected  : 
 \n!!!\n\nClientCommandKeyValues:  Some entity tried to stuff '%s' to console buffer of entity %i when maxclients was set to %i, ignoring\n\n
 \n(%d dupes)
+\n--- EVENT PROFILE ---------------------------------------------------\n
 \n----------Benchmark run on %s------\n
 \n6fM
 \nBegin mem_test\n
@@ -8563,7 +8384,6 @@ Zq",9\fB
 \rB9\v3
 \r\r\f\f\f\f\v\v\v\n\n\n\t\t\t\t\t\t
 \rmj>zjZ
-\t The lexer was matching from line %d, offset %d, which\n\t 
 \t"%s" has %d known peers:\n
 \t"%s" has no known peers.\n
 \t$$$$$$$\n\v\f\r
@@ -8590,6 +8410,7 @@ Zq",9\fB
 \vxYT
 \x%02x
 ] is an invalid data character in JavaScript compatibility mode
+^$\.*+?()[]{}|
 ^^^ Duplicate connection allowed\n
 ^hmpsv
 ^oEZ_
@@ -8631,6 +8452,7 @@ _ZSt10__exchangeIPKcDnET_RS3_OT0_
 _ZSt10__exchangeIPNSt8ios_base14_Callback_listEDnET_RS4_OT0_
 _ZSt10__exchangeIPcDnET_RS2_OT0_
 _ZSt10__exchangeIPwDnET_RS2_OT0_
+__PROCEDURAL
 __UNKNOWN__
 ___clientsideitemsplaceholder0___
 ___clientsideitemsplaceholder1___
@@ -8885,7 +8707,6 @@ _root_keyname
 _setjmp
 _spawngroup_logging/log_%s_group_%s.txt
 _temp_mapcycle.txt
-_tempcontent
 _txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
 _txnal_cow_string_D1(void*)
 _txnal_cow_string_D1_commit(void*)
@@ -8922,7 +8743,8 @@ addon
 addondownload
 addoninfo.txt
 addonroot
-addonroot_language
+addonroot_audiolanguage
+addonroot_uilanguage
 addons_to_download
 address
 alert
@@ -8986,9 +8808,11 @@ banid 0 %s\r\n
 banid:  couldn't find userid %d %s\n
 banid:  user filter list is full\n
 banid: disabled on server (sv_banid_enabled = false)\n
+bank_unique_id
 banlist
 banned_ip.cfg
 banned_user.cfg
+base
 basefilename
 baseline counter change %d:%s [%d changes] to %d:%s [%d changes]\n
 basespawngroup.h
@@ -9082,9 +8906,13 @@ bool __gnu_cxx::operator==<wchar_t*, std::__cxx11::basic_string<wchar_t, std::ch
 bool __gnu_cxx::operator==<wchar_t*, std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>>(__gnu_cxx::__normal_iterator<wchar_t*, std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>> const&, __gnu_cxx::__normal_iterator<wchar_t*, std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>> const&)
 bool google::protobuf::internal::RepeatedFieldRefIterator<T>::operator!=(const google::protobuf::internal::RepeatedFieldRefIterator<T>&) const [with T = google::protobuf::Message]
 bool std::__detail::_Compiler<std::regex_traits<char>>::_M_expression_term<false, false>(std::__detail::_Compiler<std::regex_traits<char>>::_BracketState&, std::__detail::_BracketMatcher<std::regex_traits<char>, false, false>&)
+bool std::__detail::_Compiler<std::regex_traits<char>>::_M_expression_term<false, false>(std::__detail::_Compiler<std::regex_traits<char>>::_BracketState&, std::__detail::_BracketMatcher<std::regex_traits<char>, false, false>&)::'lambda'(char)::operator()(char) const
 bool std::__detail::_Compiler<std::regex_traits<char>>::_M_expression_term<false, true>(std::__detail::_Compiler<std::regex_traits<char>>::_BracketState&, std::__detail::_BracketMatcher<std::regex_traits<char>, false, true>&)
+bool std::__detail::_Compiler<std::regex_traits<char>>::_M_expression_term<false, true>(std::__detail::_Compiler<std::regex_traits<char>>::_BracketState&, std::__detail::_BracketMatcher<std::regex_traits<char>, false, true>&)::'lambda'(char)::operator()(char) const
 bool std::__detail::_Compiler<std::regex_traits<char>>::_M_expression_term<true, false>(std::__detail::_Compiler<std::regex_traits<char>>::_BracketState&, std::__detail::_BracketMatcher<std::regex_traits<char>, true, false>&)
+bool std::__detail::_Compiler<std::regex_traits<char>>::_M_expression_term<true, false>(std::__detail::_Compiler<std::regex_traits<char>>::_BracketState&, std::__detail::_BracketMatcher<std::regex_traits<char>, true, false>&)::'lambda'(char)::operator()(char) const
 bool std::__detail::_Compiler<std::regex_traits<char>>::_M_expression_term<true, true>(std::__detail::_Compiler<std::regex_traits<char>>::_BracketState&, std::__detail::_BracketMatcher<std::regex_traits<char>, true, true>&)
+bool std::__detail::_Compiler<std::regex_traits<char>>::_M_expression_term<true, true>(std::__detail::_Compiler<std::regex_traits<char>>::_BracketState&, std::__detail::_BracketMatcher<std::regex_traits<char>, true, true>&)::'lambda'(char)::operator()(char) const
 bool std::__exchange<bool, bool>(bool&, bool&&)
 bool std::has_facet<std::__cxx11::collate<char>>(std::locale const&)
 bool std::has_facet<std::__cxx11::collate<wchar_t>>(std::locale const&)
@@ -9136,7 +8964,6 @@ bool std::operator==<char, std::char_traits<char>, std::allocator<char>>(std::__
 bool std::operator==<char, std::char_traits<char>>(std::istreambuf_iterator<char, std::char_traits<char>> const&, std::istreambuf_iterator<char, std::char_traits<char>> const&)
 bool std::operator==<wchar_t, std::char_traits<wchar_t>>(std::istreambuf_iterator<wchar_t, std::char_traits<wchar_t>> const&, std::istreambuf_iterator<wchar_t, std::char_traits<wchar_t>> const&)
 bool&& std::forward<bool>(std::remove_reference<bool>::type&)
-bool8
 boolean
 boot
 both
@@ -9232,7 +9059,6 @@ char* std::string::_S_construct_aux<char*>(char*, char*, std::allocator<char> co
 char16_t
 char32_t
 char32_t const& std::min<char32_t>(char32_t const&, char32_t const&)
-char8
 char8_t
 character
 character value in \u.... sequence is too large
@@ -9257,6 +9083,7 @@ cl_ticktiming. . . . . TOTAL:%s (may not be sum of below due to rounding and ave
 cl_ticktiming: bad argument '%s'\n
 cl_ticktiming:%7.1f  =%7.1f out (%4.1f +%6.1f +%4.1f)  +%5.1f sim  +%7.1f in (%5.1f +%5.1f +%5.1f +%4.1f +%4.1f)\n
 clamp
+clanonly
 class
 class %s - %s instance%s (%.2f%%)\n
 clearalpha
@@ -9287,7 +9114,6 @@ code
 code %d bits %d->%d\n
 codegen, 
 colon
-color32
 comb_filter
 comb_filter_const_sse
 comma
@@ -9336,6 +9162,7 @@ core
 core.stop_all_soundevents
 corrupted stream
 covariant return thunk to 
+cpp_name
 cpu model
 cpu_fast
 cpu_info_
@@ -9482,6 +9309,7 @@ ec_laplace_decode
 ec_laplace_encode
 ec_tell_frac
 edem
+edited_as_type
 efficiency
 effortblocks = %d\n
 eh?o
@@ -9503,10 +9331,12 @@ engineservicemgr.cpp
 entindex
 entindex %d snaps: 
 entity2
-entity_name
+entity_api
+entity_api_designname_to_base
 enum
 enum(signed), 
 enum, 
+enum_or_datamap
 equals-sign
 erroffset passed as NULL
 es-419
@@ -9519,13 +9349,13 @@ excl ms   excl %%   incl ms   group\n
 exclamation-mark
 exec autoexec.cfg\n
 exec_async_wait
+execifexists playtest.cfg\n
 execing %s\n
 exists
 exit
 exp_rotation
 expecting to re-create serializers from server serializers
 expf
-expr
 extend .$0 {\n
 f == nullptr || dynamic_cast<To>(f) != nullptr
 f#kI3\t
@@ -9558,8 +9388,11 @@ ferror
 fflush
 fgets
 fi_FI
+field_flags
+field_type
 fieldcount
 fieldpathpacker.cpp
+fields
 file 
 file error
 file://{resources}/
@@ -9585,8 +9418,8 @@ float Etc::Block4x4Encoding::CalcPixelError(Etc::ColorFloatRGBA, float, Etc::Col
 float Etc::Block4x4Encoding::GetError()
 float64
 floatbitmap.cpp
-floatbitmap.cpp(1191): Unsupported color format "%s", skipping!\n
-floatbitmap.cpp(518): Conversion not supported yet!\n
+floatbitmap.cpp(1213): Unsupported color format "%s", skipping!\n
+floatbitmap.cpp(520): Conversion not supported yet!\n
 floor
 floorf
 fopen
@@ -9660,9 +9493,10 @@ game.DeferredDepth
 game.GBufferNormalSpecExp
 game.cfg
 game.depthprepass
-game_language
+game_audiolanguage
 game_lowviolence
 game_nontools
+game_uilanguage
 gamedescription
 gameinfo
 gameinfo.gi
@@ -9877,7 +9711,7 @@ hltvclientstate.cpp
 hltvdemo.cpp
 hltvserver.cpp
 hltvserver_async.cpp
-hltvserver_async.cpp:1127
+hltvserver_async.cpp:1123
 host
 host_sleep: %d msecs remaining\n
 host_timescale %.2f\n
@@ -9981,7 +9815,6 @@ int& std::forward<int&>(std::remove_reference<int&>::type&)
 int&& std::forward<int>(std::remove_reference<int>::type&)
 int16
 int64
-int8
 integer
 internal
 internal error
@@ -10022,7 +9855,6 @@ ios_base::_M_grow_words is not valid
 iostream
 iostream error
 ipaddress
-is also the end of the line, so you must check your lexer rules\n
 is_digital_silence
 is_large()
 is_nullptr
@@ -10118,7 +9950,6 @@ less-than-sign
 level_load
 levelload
 levelname
-lexer->mTokens(): Error: No lexer rules were added to the lexer yet!\n
 libc.so.6
 libengine2.so
 libm.so.6
@@ -10161,7 +9992,6 @@ long std::__copy_streambufs_eof<wchar_t, std::char_traits<wchar_t>>(std::basic_s
 long std::__exchange<long, int>(long&, int&&)
 longjmp
 lookbehind assertion is not fixed length
-looks like this:\n\t\t%.*s\n
 loongson-ext
 loongson-mmi
 loopback
@@ -10182,9 +10012,11 @@ l|)9lC
 m?@Zl?~\vk?k
 m\vm\vm\vm\vm\vm\vm\vm\vm\vm\vm\v
 m_FullSendTables
+m_ReturnType
 m_Signon
 m_bChildCursorsShouldInherit
 m_bRemoveWhenOutOfScope
+m_bShowInUI
 m_boolDiff
 m_boolDiff == true
 m_boolTransparent
@@ -10197,6 +10029,7 @@ m_mode == MODE_T
 m_nCursorID
 m_nGraphID
 m_nStackDepthWhenAdded
+m_nUniqueID
 m_nYieldToken
 m_pFrameSnapshotManager->Reset()
 m_pGameUIFuncs->Start
@@ -10239,7 +10072,6 @@ materials/loading_background.vmat
 materials/startup_background.vmat
 materials/startup_background_cn.vmat
 materialsystem2
-matrix3x4
 max_threads
 maxplayers
 maxtick
@@ -10295,8 +10127,6 @@ n`xBF|7T
 name is too long in (*MARK), (*PRUNE), (*SKIP), or (*THEN)
 nanosleep
 ndZTNGA:3-' 
-near '%c' :\n
-near char(%#02X) :\n
 need dictionary
 net_array
 netadr_t::Clear()
@@ -10375,6 +10205,7 @@ non-virtual thunk to std::basic_stringstream<char, std::char_traits<char>, std::
 non-virtual thunk to std::basic_stringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>::~basic_stringstream()
 normalise_bands
 norwegian
+not a
 not currently logging\n
 not enough codes
 not hibernating
@@ -10574,7 +10405,6 @@ please implement MergeFrom for your type.
 plus-sign
 pm"U
 png 
-pointer
 pointer, 
 polish
 poll
@@ -10640,7 +10470,7 @@ quant_fine_energy
 quaternion
 question-mark
 queuing %s for async execution\n
-quick
+quicksave
 quit\n
 quotation-mark
 qxs?L
@@ -10724,7 +10554,6 @@ reports
 request not implemented
 requested uncompressed update (%d)
 requested_cancel
-require_commandline
 required
 resampling_factor
 rescale
@@ -10737,7 +10566,6 @@ resource/%s_%%language%%.txt
 resource/game-icon.bmp
 resource/keybindings_%language%.txt
 resource_manifests
-resource_name
 resourcehandle
 resources
 restart: only valid when running a map, and only on the server\n
@@ -10747,7 +10575,6 @@ results.txt
 resume
 retail
 return_values
-return_values_enabled
 retval
 reuse
 right-curly-bracket
@@ -10776,7 +10603,6 @@ rnnoise_model_orig
 rnnoise_process_frame
 ro_RO
 romanian
-rotation_vector
 round
 roundf
 rpt/%04d_%02d_%02d
@@ -11082,7 +10908,6 @@ snprintf
 socket
 sound,
 sound_state.txt
-soundevent
 sounds
 sounds/VOIP_Loopback.vsnd
 soundsystem
@@ -11121,6 +10946,7 @@ stackstats_dump
 stackstats_dump usage:\n\tstackstats_dump %s ["filename"]\n
 stackstats_dump usage:\n\tstackstats_dump struct ["filename"]. There's a single instance registered, auto-picking: %s\n
 startdemos:  %i demo(s) in loop\n
+startpaused
 starved_ticks
 static_cast
 stats_print_gpu requires stats_collect_gpu to be true.\n
@@ -12134,6 +11960,19 @@ std::__detail::_Compiler<std::regex_traits<char>>::_M_pop()
 std::__detail::_Compiler<std::regex_traits<char>>::_M_quantifier()
 std::__detail::_Compiler<std::regex_traits<char>>::_M_quantifier()::'lambda'()::operator()() const
 std::__detail::_Compiler<std::regex_traits<char>>::_M_try_char()
+std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, false>::_M_dfs(std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, false>::_Match_mode, long)
+std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, false>::_M_handle_alternative(std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, false>::_Match_mode, long)
+std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, false>::_M_handle_backref(std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, false>::_Match_mode, long)
+std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, false>::_M_is_line_terminator(char) const
+std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, false>::_M_is_word(char) const::__s
+std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, false>::_M_lookahead(long)
+std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, false>::_M_rep_once_more(std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, false>::_Match_mode, long)
+std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, true>::_M_dfs(std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, true>::_Match_mode, long)
+std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, true>::_M_handle_backref(std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, true>::_Match_mode, long)
+std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, true>::_M_is_line_terminator(char) const
+std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, true>::_M_is_word(char) const::__s
+std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, true>::_M_lookahead(long)
+std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, true>::_M_rep_once_more(std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, true>::_Match_mode, long)
 std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_M_dfs(std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_Match_mode, long)
 std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_M_handle_alternative(std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_Match_mode, long)
 std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_M_handle_backref(std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_Match_mode, long)
@@ -14707,7 +14546,6 @@ string length exceeds max size
 string literal
 string::string
 string_t
-string_token
 strings::Substitute format string invalid: asked for "$
 strlen
 strncmp
@@ -14724,7 +14562,6 @@ strtold_l
 strtoll
 strtoul
 strtoull
-subclass
 subpattern name expected
 subpattern name is too long (maximum 32 characters)
 subtype mismatch
@@ -14735,7 +14572,6 @@ summary
 support for \P, \p, and \X has not been compiled
 sv_SE
 sv_cheats 1\n%s\n
-sv_ents_write.cpp
 sv_packedentities.cpp
 sv_shutdown console command received.\n
 sv_steamauth.cpp
@@ -14767,6 +14603,7 @@ temp/%s.wav
 temp/bugreport.wav
 template
 template parameter object for 
+tempvar:%d
 terminate called after throwing an instance of '
 terminate called recursively\n
 terminate called without an active exception\n
@@ -14860,7 +14697,6 @@ transaction clone for std::runtime_error::~runtime_error()
 transaction clone for std::underflow_error::underflow_error(char const*)
 transaction clone for std::underflow_error::underflow_error(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)
 transaction clone for std::underflow_error::~underflow_error()
-transform
 tried to sprint to a non-client\n
 turkish
 tv_chatgroup
@@ -15493,7 +15329,6 @@ tzset
 t|AO
 uV<c
 ub?L
-uchar32
 udp/ip   : %s:%i
 udp_port
 uiTransparentPixels < PIXELS
@@ -15560,7 +15395,6 @@ unsigned long long
 unsigned long std::__exchange<unsigned long, int>(unsigned long&, int&&)
 unsigned long&& std::forward<unsigned long>(std::remove_reference<unsigned long>::type&)
 unsigned short
-unspecified
 upper
 uptime
 url_name
@@ -15580,12 +15414,14 @@ usergroup
 userid "%d" not found\n
 userinfo
 utl_vector, 
+utlstreambuffer.cpp
 utlstringtoken
 vE-2
 vIK \f3
 vQO+t
 vWewe
 value_override
+values
 valve
 valve_demo_1
 valve_demo_2

@@ -3,11 +3,9 @@
 !"#$%&'()*+,-./
 !H1Ѕ
 !H1։
-!I1ǋ
 !\bQ<
 !\b\rA
 !ff.
-!w H
 ".B^
 "@F(
 "QT#
@@ -21,12 +19,12 @@
 #t\tH
 #xMj
 $!\b0\b
-$.A9
+$$fA
 $2\eD
 $@t2H
 $A;D$
 $BJ Bb
-$Hc=P
+$Hc=
 $IH)
 $IcD$H
 $IcD$\f
@@ -36,14 +34,19 @@ $\tu6A
 $t\nI
 $w(I
 $~:Ic
-%[y\b
-%\ey\b
+%+b\n
+%/D\v
+%1=!
+%>E!
+%K?!
+%\r?!
 %d %d %d
 %d %d %d %d
 %f %f %f
 %ff.
 %lld
 %llu
+%oD\v
 %s %s
 %s %s %s
 %s %s %s %s
@@ -54,6 +57,7 @@ $~:Ic
 %s allocation count overflow( %llu > %llu )\n
 %s allocation count overflow( add %llu + current %llu > max %llu )\n
 %s called on a pool arena (no root available)\n
+%s meshlet indices\n
 %s%s_%i
 %s: %s\n
 %s: __pos (which is %zu) > __size (which is %zu)
@@ -90,14 +94,12 @@ $~:Ic
 (! @L
 (%d)
 (%d,%d)
-(-Q+
 (...
 (@ D
 (B H
 (D$@A
 (D9u
 (H L
-(HcOx
 (L$P
 (L9e
 (L9m
@@ -105,60 +107,61 @@ $~:Ic
 (L9}
 (LcO
 (Lco E
-(Ncd(
 (OPL
-(X`H
 ([A\\A]A^A_]
-([A\\A]A^A_]À=Ii\a
+([A\\A]A^A_]À=Y
+([A\\A]A^A_]Å
+([A\\A]A^A_]ÐE
 ([A\\A]A^A_]ÐH
 ([A\\A]A^A_]ÐL
 ([A\\A]A^A_]ÐM
 ([A\\A]]
-([A\\A]]ÐA
+([A\\A]]ÐH
 ([]A\\A]A^A_
 ([]A\\A]A^A_ÐAWH
 (\aH9
 (\f$H
 (\f\bH
-(\r'}\a
-(\r09
-(\r6x
-(\rPQ
-(\r`{
-(\rs:
-(\rwv
+(\r\b!
 (anonymous namespace)
 (ff.
 (u*H
 (u?H
 (uMH
 (ËMċU
+(ϋ\aA
 (ݑ,6
-)%4)
-)%5-
-)%6\a
-)%=\n
-)%I$
-)%\f\b
-)%`-
-)%f.
-)%j%
-)%n\t
-)-(\n
-)-4,
-)-;\v
-)-Z\b
-)-\e!
-)-\n\t
-)-\t!
+)%Bv
+)%FA
+)%`m
+)%a|
+)%ps
+)-#k
+)-Jx
+)-L~
+)-\fk
+)-ax
+)-ju
+)-vo
 )42I
-)5V!
-)5f,
-)5z+
+)5"@
+)5"B
+)50n
+)5??
+)5My
+)5kp
 ):\n
-)=K!
-)=S+
-)=}\b
+)=/}
+)=Bw
+)=Mt
+)=NH
+)=PH
+)=S@
+)=\a@
+)=jH
+)=kk
+)=nn
+)=x?
 )@ H
 )@`H
 )@`u
@@ -172,44 +175,220 @@ $~:Ic
 )D$p
 )E\tE
 )F H
+)F L
 )F`H
 )G@f
+)GPH
 )G`H
 )GpǇ
 )O fH
 )O`H
-)Q0I
 )V?L
 )X I
-)Y J
-)Y0J
-)\r(\t
-)\r.$
-)\r3%
-)\r7$
-)\r<%
-)\r?\a
-)\r@$
-)\r@\b
-)\rR$
-)\rR%
-)\r[$
-)\r\n$
-)\rc!
-)\rc\b
-)\rd$
-)\rj\a
-)\rr
-)\rs%
-)\rv$
-)\r{
+)\r ~
+)\r!j
+)\r!t
+)\r!y
+)\r"m
+)\r"|
+)\r#?
+)\r#o
+)\r#u
+)\r$w
+)\r%?
+)\r%@
+)\r%i
+)\r%z
+)\r&q
+)\r'l
+)\r)r
+)\r*j
+)\r*t
+)\r*y
+)\r+A
+)\r+H
+)\r+m
+)\r+|
+)\r,o
+)\r,u
+)\r-k
+)\r-p
+)\r-w
+)\r.?
+)\r.i
+)\r.z
+)\r/q
+)\r0l
+)\r2r
+)\r3j
+)\r3t
+)\r4m
+)\r4|
+)\r5?
+)\r5H
+)\r5o
+)\r5u
+)\r6k
+)\r6p
+)\r6w
+)\r7z
+)\r8}
+)\r9l
+)\r9n
+)\r9x
+)\r:>
+)\r;r
+)\r<?
+)\r<j
+)\r=m
+)\r>u
+)\r?k
+)\r?p
+)\r@?
+)\r@@
+)\r@s
+)\r@z
+)\rAl
+)\rA}
+)\rBn
+)\rBx
+)\rC>
+)\rCq
+)\rDH
+)\rDr
+)\rEj
+)\rFm
+)\rGi
+)\rGu
+)\rHk
+)\rHp
+)\rI?
+)\rI@
+)\rIs
+)\rJl
+)\rJ}
+)\rKn
+)\rKv
+)\rKx
+)\rK{
+)\rL>
+)\rLq
+)\rMr
+)\rM{
+)\rOA
+)\rOm
+)\rPi
+)\rPu
+)\rQk
+)\rQp
+)\rR?
+)\rRs
+)\rSl
+)\rTn
+)\rTv
+)\rTx
+)\rUq
+)\rU~
+)\rVt
+)\rVy
+)\rV{
+)\rWo
+)\rYi
+)\rZk
+)\rZp
+)\r[s
+)\r\\l
+)\r\bm
+)\r\bo
+)\r\ew
+)\r\fl
+)\r\fn
+)\r\fs
+)\r\n?
+)\r\ni
+)\r\nk
+)\r\rv
+)\r\tp
+)\r\tu
+)\r\vq
+)\r\v{
+)\r]H
+)\r]n
+)\r]v
+)\r^j
+)\r^q
+)\r^~
+)\r_t
+)\r_y
+)\r`o
+)\ra$
+)\rah
+)\rbi
+)\rbr
+)\rbw
+)\rb|
+)\rci
+)\rck
+)\rds
+)\rd|
+)\re>
+)\rei
+)\rel
+)\rfn
+)\rfv
+)\rgj
+)\rgq
+)\rg~
+)\rht
+)\rhy
+)\rim
+)\rio
+)\rjh
+)\rkr
+)\rkw
+)\rm|
+)\rn>
+)\rni
+)\rnl
+)\rpj
+)\rpq
+)\rqt
+)\rqy
+)\rrm
+)\rro
+)\rsh
+)\rsu
+)\rt?
+)\rt@
+)\rtk
+)\rtp
+)\rtr
+)\rtw
+)\ruz
+)\rvH
+)\rw>
+)\rwl
+)\ryj
+)\rys
+)\rzj
+)\rzt
+)\r{>
+)\r{m
+)\r{o
+)\r|h
+)\r|j
+)\r|u
+)\r}?
+)\r}k
+)\r}p
+)\r}r
+)\r}w
+)\r~z
 )] H
-)^`A
 )ff.
 )u/D
 )ȉE̋E
 )ˍ\f[
-)Љ\aL
 )؉E̋E
 *D$8H
 *N12_GLOBAL__N_121system_error_categoryE
@@ -227,8 +406,8 @@ $~:Ic
 +ff.
 +u2H
 +w+H
-,"E1
 ,$A9
+,$E)
 ,$E1
 ,$Hǅp
 ,$I9
@@ -237,14 +416,13 @@ $~:Ic
 ,<N{`
 ,G\bH
 ,G\b]H
-,G\bÐUH
-,G\b또E
-,G\b뙐E
+,G\bÐUE1
 ,IH)
+,\nM9
 ,ff.
 ,¸Yiҕ
+-,\t\r
 -Kv9M
--OP\v
 -d!\vY
 -ff.
 -in-
@@ -309,13 +487,16 @@ $~:Ic
 .rodata.str1.8
 .shstrtab
 .tbss
+.tdata
 .text
 .tm_clone_table
 .u3M
 .vmdl
+.~xMc
 /ATHc
 /\a~j
 /\e>A|
+/\r9\n
 /dev/random
 /dev/urandom
 /src/
@@ -353,15 +534,17 @@ $~:Ic
 0tfH
 0tgH
 0tiH
+0tjH
 0u\rH
 0u\tH
 1IcYxH
-1\v=y|\f
+1ff.
 1yIk
 1żqI
 1Ɖ7L
-1ȋO\\i
-1ЉG\\
+1ȋOdi
+1Ήwd
+1ЉGd
 1ҋwL1
 1ҾjN
 1ېA9
@@ -370,10 +553,12 @@ $~:Ic
 2t\vH
 3E19
 3HcM
+3MR\\
 3\f\a\b
 3u+H
 3uEH
 3u|H
+4"E1
 4#A9
 4$A9
 4$E)
@@ -382,11 +567,12 @@ $~:Ic
 4$H;t$\bu
 4$HcE
 4$L)
-4(IcV0A
+4$L9
 4)Hc
 4,Hc
 42fH
-49L9
+48L9
+4?L9
 4@HcE
 4@Mc
 4IH)
@@ -398,43 +584,41 @@ $~:Ic
 4\bI9
 4\fHc
 4\fHc҉M
-4\nM9
 4`!g
+4afB
+4afD
+4afF
 4dHc
-4ff.
-4ifB
-4ifD
-4ifF
 4vMc
 4vfD
-5#\\
 5&YA1
 5&YA1A
 5&YA1H
 5&YA1I
-5&i\v
-5)4\v
-5)u\t
+5'h\f
+5,S!
 5,¸Yi
+5=c\v
 5B#\f
 5LgJ
 5LgJH
-5`4\v
+5\eP!
+5f[!
 5ff.
-5o4\v
 5t H
 5u:M
 5uFH
 5ueM
+5xS!
+5y3\f
 5ۮ\r_
 6CModel
 6ff.
-6t'I
 6u;M
 6v\v,
 7*ψH
 7*ψL
-7<!w
+7*ψ貂
 7t\bL
 8@%rax 8@%rdx
 8@-24(%rbp) 8@-32(%rbp)
@@ -448,6 +632,7 @@ $~:Ic
 8LcgpE
 8RkR
 8SAU
+8[A\\A]A^A_H
 8[A\\A]A^A_]
 8[A\\A]A^A_]H
 8[A\\A]A^A_]ËG
@@ -461,7 +646,6 @@ $~:Ic
 8ff.
 8vIM
 8vIML
-9AXD
 9G\fH
 9H\b~\bH
 9ISequence
@@ -475,7 +659,7 @@ $~:Ic
 :¥F\\
 ;7tT
 ;7tW
-;=:`\a
+;AWH
 ;H\bu\nH
 ;HcC
 ;W@s
@@ -494,16 +678,18 @@ $~:Ic
 ;}uA
 ;}uq
 ;}uy
-<"H9
+< Ic
 <$E1
 <$Hǃ
-<$Hǃ0
+<$Hǃ(
+<$Hǃ@
 <$I9
-<$Ic
 <$uFH
 <$uYH
 <$űU
-<$ǃ\b
+<$ǃ0
+<$ǃH
+<&Ic
 <&\bv"
 <*t-H
 <*t\a
@@ -512,15 +698,16 @@ $~:Ic
 <.t$H
 <.u\a
 <.ucH
+</Ic
 </t`<*
 </~\vH
-<0L9
+<0IcW0A
 <0_u
 <0uiI
+<6M9
 <:t\vH
 <=u\a
 <@E1
-<@Ic
 <Au\eH
 <BH9
 <Bu5H
@@ -534,7 +721,9 @@ $~:Ic
 <Eu\eH
 <Fu\eH
 <Gu\eH
+<Htπ#
 <HuPH
+<IE1
 <Iu(H
 <Iu/H
 <Iu5H
@@ -565,28 +754,28 @@ $~:Ic
 <Zu\eH
 <Zu\f
 <[Hc
+<\bH9
 <\bIcЉ
 <\bff.
 <\bt#H
-<\bt-1
-<\bt8L
-<\btFH
 <\bu(1
 <\bu(H
 <\bu/L
 <\buV
-<\buVH
 <\bu\t
 <\bu\vH
+<\bu_
 <\bwbH
 <\tE1
-<\tt-1
+<\tL9
+<\ttIw
 <\tt[L
 <\tt\n1
+<\tt\vH
+<\tts<\btOH
 <\tu1
 <\tu\bI
 <\turH
-<\tv|
 <_t\n
 <_t\vH
 <_u!H
@@ -612,12 +801,10 @@ $~:Ic
 <empty member name>
 <ft\n
 <fuNH
-<ht$<Hu
 <iu+H
 <iu4H
 <lu\eH
 <muQH
-<nfA
 <no failure reason set>
 <non-RTTI type>
 <nu\a
@@ -637,87 +824,53 @@ $~:Ic
 <undefined>
 <unknown KV3 basic type '%s' (%d)>
 <unknown>
+<yA9
 <z~-H
 <{tT
 <{ty
-=!c\f
-=#Q\a
-=#i\a
-=&~\f
-=)=\b
-=)?\n
-=)W\f
-=)a\t
-=2D\f
-=33\n
-=3:\n
-=3@\n
-=3y\a
+= \t\t
+=(4\f
+=)D\t
+=)M\a
+=)\v\n
+=0U\a
+=1?\b
+=21\f
+=3?\r
 =4.Y0
-=47\f
-=81\f
-=9A\n
-=9I\n
-=9\a\n
-=9]\f
-=9f\t
-=AV\f
+=9M\a
+=9\n\n
+=9c\r
+=9i\r
+=>/\f
+=A&\r
 =Authu\a
-=B.\f
-=CB\n
-=CN\a
+=C\t\t
 =Genut\n
-=I7\b
-=IA\n
-=I\f\r
-=Id\f
-=Iy\r
-=Jh\a
-=KE\n
+=IM\a
+=IS\t
+=Ie\r
+=J7\a
+=M7\r
+=Ma\n
 =MД\\~
-=NU\a
-=SM\a
-=Sr\r
-=Sy\f
-=Y9\t
-=YA\b
-=YA\n
-=YB\n
-=YJ\n
-=Y[\f
-=Y_\t
-=Yb\v
-=[<\n
-=[x\b
-=\tA\f
-=\tE\n
-=\tP\v
-=\tR\f
-=\tY\v
-=\t\n\n
-=\t\t\r
-=\tb\f
-=_@\n
-=cZ\a
-=cx\a
-=d~\f
-=h|\a
-=i8\b
-=i9\t
-=iA\n
-=iH\n
-=iK\n
-=ib\v
-=rY\t
-=s\b\r
-=wO\v
-=y@\b
-=yG\n
-=yJ\b
-=yb\v
-={A\n
-={E\n
+=P?\b
+=PV\a
+=Q&\r
+=Q6\b
+=S^\r
+=WE\t
+=Y1\b
+=\tM\a
+=\t\v\n
+=cX\r
+=c`\r
+=jH\b
+=yL\a
+=~1\f
+>E19,
 >Hc؉
+>IcV
 >Lcm
 >l8~
 >nL\rH
@@ -727,6 +880,7 @@ $~:Ic
 ?444
 ????
 ?AǄ$
+?AǄ$(
 ?AǄ$0
 ?AǄ$8
 ?AǄ$H
@@ -736,66 +890,59 @@ $~:Ic
 ?AǄ$h
 ?AǄ$x
 ?H;E
-?Hiۨ
+?Hǅ,
+?HǇ\\
 ?LcʉU
 ?Tn̊
-?_AX
 ?ff.
 ?name
 ?t\aH
 ?t\rH
 ?thH
-?toH
+?tiH
 ?t{H
 ?u#1
-?v3Hc
-?vUH
+?v9Hc
+?vVH
 ?v\b%
 ?v\f%
 ?v\n%
 ?v\t%
 ?v\v%
 ?vgH
-?vnH
 ?vuH
 ?w!H
-?w$M
-?w)M
 ?w/H
 ?w2M
-?w@H
+?w<M
 ?wPH
 ?w\tH
 ?~7H
 ?~:H
+?~;H
 ?~@H
 @  0
 @ A9
 @ H9
-@ I9
-@(A9
+@ ~qH
 @(H9
 @(L9
-@0A9
 @0Hc
-@0fD
 @89E
 @8A9
-@8I9
-@8\v@'&
+@8\v@('
+@8ƉM
 @<E1
-@<~\aD
-@@A9
-@@dx
 @AUI
+@D~\aD
 @E;,$|
 @E;7|
+@H\vE
 @HcD
 @L9e
 @XA9
 @[A\\A]A^]
 @[A\\]
-@\\taH
 @\b D
 @\bH+E
 @\bH9
@@ -810,7 +957,6 @@ $~:Ic
 @\ffI
 @ff.
 @hH9
-@pA9
 @pH9
 @t\aƃ
 @t\bAƀ
@@ -825,25 +971,31 @@ $~:Ic
 @u\eE
 @ujL
 @xI9
-A A9_
 A DP
 A#\bA
 A#q<H
 A#y<H
+A(A9
+A(Hi
 A)Չq
 A)։q
+A*A9
 A+D$H
 A+D$`
 A+D$x
-A+EH
 A+E\b
 A+Fx
+A+G(
 A+L$8
 A+N\b
 A+O\b
-A0L9
+A+T$0
+A+T$H
+A+U0
+A+VH
 A4tQH
 A8G}
+A8Hi
 A8_UNORM
 A9D$
 A9D$\b
@@ -851,7 +1003,7 @@ A9D$\f
 A9E\b
 A9F\b
 A9T$
-A9T$(
+A9T$p
 A9U(
 A9UH
 A9\\$
@@ -859,6 +1011,7 @@ A9\t|1
 A9]p
 A9^<~>IcV81
 A9^H
+A9t$(
 A9t$0
 A9t$@
 A9t$X
@@ -868,8 +1021,8 @@ A9ĉM
 A9ĉU
 A9ĉ]
 A9̉C
-A9ΉS,
-A9ԉƉC|
+A9ΉS4
+A9ԉƉ
 A9߉E
 A;D$
 A;D$0
@@ -886,10 +1039,10 @@ A;V(
 A;\\$
 A;\a|
 A;t$
+A;t$(
 A;w\bu
 AABB_t
-ADE9
-AHcE
+AHHi
 ALtQH
 APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %d!\n
 ASEQ
@@ -916,11 +1069,13 @@ AUATL
 AUATLc
 AUATM
 AUATS
+AUATS1
 AUATSH
 AUATSL
 AUATUS
 AUATUSH
 AUE1
+AUH)
 AULc
 AUfI
 AVATS
@@ -929,6 +1084,7 @@ AVAUAT%
 AVAUATA
 AVAUATI
 AVAUATLc
+AVAUATM
 AVAUATS
 AVAUATSD
 AVAUATSH
@@ -945,10 +1101,10 @@ AVAUL
 AVAULc
 AVAUM
 AVE1
-AVH)
 AWAVA
 AWAVAUA
 AWAVAUATA
+AWAVAUATE1
 AWAVAUATI
 AWAVAUATL
 AWAVAUATLc
@@ -965,7 +1121,6 @@ AWAVE1
 AWAVH
 AWAVI
 AWAVL
-AWAVLc
 AWAVM
 AWE1
 AWLc
@@ -973,52 +1128,48 @@ AWfH
 AXAY
 AXAY1
 AXAYH
+AXAY믐L
 AYAZ
 AYAZ1
-AYAZL
-AYAZ믐L
+AYAZH
+AYAZI9
+AYAZ벐H
+AYAZ벐L
 AYAZ뵐H
 AYtbH
 AZA[
 AZA[1
-AZA[I9
 A[A\\
-A[A]
-A[E1
+A[A^
 A[X1
 A\\A]A^A_
 A\\A]A^A_]
 A\\A]A^A_]H
 A\\A]A^A_]ÐHc
-A\\A]A^A_]酿
-A\\A]A^A_]钾
-A\\A]A^A_]鵏
-A\\A]A^A_]鼧
+A\\A]A^A_]須
 A\\A]A^Hi
 A\\A]A^]
 A\\A]A^]Ã
-A\\A]A^]陦
-A\\A]A^]顜
+A\\A]A^]駜
 A\\A]A^]齞
+A\\A]A^]龬
 A\\A]]
 A\\A]]Ð
 A\\A]]ÐH
-A\\A]]鋳
-A\\A]]鞴
 A\\Hc
 A\\]H
 A\\]Ð1
-A\bG^
 A\bH9
-A\bHcWH
 A\e09
 A\f;A\b
 A\f\a\b
 A\t\aI
+A\v_\bI
 A]A^A_]
+A]A^A_]H
 A]A^]
-A]]郰
 A^A_
+A^A_1
 A^A_]
 AddMultipleToTail
 AddPage
@@ -1026,8 +1177,8 @@ AdtQH
 Aff.
 AiD$
 AiD$0
-AiD$H
-AiD$H`
+AiD$@x
+AiD$Hp
 AkD$
 AlignedByteArray not properly aligned\n
 Alloc
@@ -1061,14 +1212,17 @@ AƄ$P
 AƄ$X
 AƇ@$
 AƇh6
+AǄ$(
 AǄ$0
+AǄ$8
 AǄ$@
 AǄ$\b
+AǄ$p
 B+L9
 B,fH
 B5G5R5A1_UNORM
 B5G6R5_UNORM
-B8D2
+B8D:
 B8G8R8A8_UNORM
 B8G8R8X8_UNORM
 B@ހ*T,(#
@@ -1088,6 +1242,7 @@ BC4_UNORM
 BC5_SNORM
 BC5_TYPELESS
 BC5_UNORM
+BHcE
 BI\aH
 BLEND_PREALIGNED
 BWĮn
@@ -1098,6 +1253,7 @@ B\bHct8
 B\bNcT
 B\btO
 B\f\a\b
+B\t\f
 B\t\f\aD
 Bad KV3 data for resource '%s': %s\n
 Bad KV3 data in control block for '%s': %s\n
@@ -1128,15 +1284,15 @@ BoneConstraintRbf :: output bone count %d != output pose count %d :: %s\n
 Box - Ground
 BxHc
 C D9
-C(A9
-C*A9
+C I9
+C IcGXH
+C t\tH
 C*I\r
 C0E1
-C0I9
+C0H9
 C1 E
 C8E1
 C8HǄ$
-C@Hcs8A9
 CAimConstraint
 CAnimAttachment
 CAnimCycle
@@ -1179,10 +1335,7 @@ CFootStride
 CFootTrajectories
 CFootTrajectory
 CGlobalSymbol
-CHA9
-CHE1
 CHH9
-CHHc
 CHitBox
 CHitBoxSet
 CHitBoxSetList
@@ -1192,6 +1345,7 @@ CKV3TransferContextBase
 CKV3TransferLoadContext
 CKV3TransferSaveContext
 CKV3Transfer_ResourceLoadInterface
+CLHc
 CMaterialDrawDescriptor
 CMaterialDrawDescriptor::RigidMeshPart_t
 CMemAllocSystemInitialize
@@ -1237,8 +1391,6 @@ CNPCPhysicsHull
 CONTENT
 COrientConstraint
 CP9C
-CPHc
-CPIk
 CP[A\\A]A^]
 CParentAttachmentName
 CParentConstraint
@@ -1295,7 +1447,6 @@ CUtlSymbolTableLarge element limit of %u exceeded\n
 CUtlVector
 CVPhysXSurfacePropertiesList
 CXfB
-C\\HcGXH
 C\a@H
 C\a@u
 C\bD9`\b
@@ -1315,6 +1466,8 @@ C\bMi
 C\bXZH
 C\bfB
 C\f\a\b
+C\vC0H
+C`E1
 C`H9
 Cables
 Cannot allocate abstract class
@@ -1325,6 +1478,7 @@ Capsule - Ground
 Cast of %s loses value information (returning %s)\n
 Center 1
 Center 2
+Ch<0
 CharacterSetBuild
 ClMcl$pA
 Class data is a '%s', not a table\n
@@ -1342,15 +1496,17 @@ CpA9
 CpHǃ
 CreateInterface
 CreateMeshInstance
-CxH!
+CtIcG`H
 CxH9
 Cxt.H
 Cylinder - Centered (SLOW PERF)
 Cylinder - Ground (SLOW PERF)
 C|D9
+C|\bHc
 C|fA
+CȋA(L
 D \bH
-D#`I
+D#hI
 D$ )
 D$ 1
 D$ 8E
@@ -1361,12 +1517,11 @@ D$ E
 D$ H
 D$ H)
 D$ I
+D$ I9
 D$ L
 D$ M
 D$ N
 D$ t(f
-D$#\b
-D$#\n
 D$$1
 D$$9E
 D$$=
@@ -1377,6 +1532,9 @@ D$&H
 D$(1
 D$(9
 D$(9E
+D$(A
+D$(A9
+D$(A\\]
 D$(E
 D$(H
 D$(H9
@@ -1385,15 +1543,20 @@ D$(K
 D$(L
 D$(M
 D$(XZH
+D$(f
 D$(t\bƄ$
+D$,A
 D$,H
 D$,L
 D$01
 D$0A
 D$0A9
+D$0D
 D$0E
 D$0E1
 D$0H
+D$0H9
+D$0HcC0
 D$0I
 D$0L
 D$0M
@@ -1405,8 +1568,10 @@ D$4A
 D$4E
 D$4H
 D$4L
+D$4M
 D$4tRH
 D$8)
+D$81
 D$8A
 D$8A9
 D$8E
@@ -1423,28 +1588,33 @@ D$@9
 D$@A
 D$@E
 D$@H
-D$@HcK8A9
 D$@I
 D$@L
+D$@LcK8E9
+D$D=
+D$DA
+D$DE
 D$DH
 D$DI
 D$GM
 D$HA
 D$HE
-D$HE1
 D$HH
 D$HI
 D$HIcF<
+D$HIcFH
 D$HL
 D$HfI
 D$IA
 D$IE1
+D$I艜
 D$LH
 D$LtIHc
 D$P)
 D$PA
 D$PD9
 D$PH
+D$PI
 D$PI9
 D$PL
 D$Pf
@@ -1453,13 +1623,17 @@ D$RA
 D$SI
 D$TA
 D$TH
+D$X9
 D$XA9
 D$XE
 D$XH
+D$XI
 D$XL
 D$Xf
 D$Xt\fH
 D$YH
+D$\\=
+D$\\E
 D$\\H
 D$\\I
 D$\a@I
@@ -1476,7 +1650,6 @@ D$\bAYAZH
 D$\bB
 D$\bD
 D$\bE
-D$\bE1
 D$\bH
 D$\bH9
 D$\bI
@@ -1488,26 +1661,35 @@ D$\bY^H
 D$\b^_H
 D$\b_AXH
 D$\bf
+D$\bfA
 D$\bfH
 D$\bu
-D$\bu\b
 D$\bx
+D$\e\b
+D$\e\n
 D$\f1
 D$\fA
 D$\fH
+D$\fI
+D$\vC
 D$\vH
 D$`1
 D$`A
 D$`H
 D$`H)
 D$`H9
+D$`I
 D$`L
 D$`t\bH
+D$dA
 D$dE
 D$dH
 D$du
+D$h)
+D$hA
 D$hH
 D$hH9
+D$hI
 D$hL
 D$ht\bH
 D$l1
@@ -1519,28 +1701,31 @@ D$p9
 D$pA
 D$pA9
 D$pH
+D$pH9
 D$pI
 D$pL
 D$pu
 D$t1
 D$tA
 D$tH
+D$tI
 D$tf
 D$ttJH
 D$ttRH
+D$xA
 D$xH
 D$xH)
 D$xI
+D$xIǄ$
 D$xL
-D$|%
 D$|A\\A]A^]H
 D$|E
 D$|H
 D$|I
+D$ȋC
+D$؋C
 D)Ήp\bD
-D0PH
-D0`H
-D1 H
+D1$H
 D16_UNORM
 D2(A9
 D24_UNORM_S8_UINT
@@ -1550,23 +1735,23 @@ D32_FLOAT
 D32_FLOAT_S8X24_UINT
 D6\bN
 D7\bN
+D8$D
 D8(A
 D8\bH
 D9(t
 D9)H
 D9XP
 D9\bI
-D9\fI
 D9`\b~
 D9p\b
 D9p\bt\tD
 D9s\bt
+D9s`
 D9wh
-D9{H
-D9{H~F1
+D; f
 D; }
 D;&}
-D;>~/L
+D;.~.Mc
 D;SH}cH
 D;c@|
 D;c@}KH
@@ -1577,18 +1762,13 @@ D;k||
 D;k|}*
 D;s I
 D;sH
-D>\fM
 DATAHǅX
 DATAL
 DOT_TO_MORPH
 DSTF
-D\a\bH
-D\bPD
 D\b\bH
 D\b\bL
-D\b`D
 D\f\a\b
-D\n\fK
 D\t0H
 D\t:H
 D\t\bL
@@ -1598,6 +1778,7 @@ Data_Branch1zBranch2x
 Data_Branch2yz
 De\bI
 DemoUpconverterVersion001
+Dff.
 DistanceFieldList_t
 Double-save to Member '%s'
 Du1H
@@ -1610,6 +1791,7 @@ E E1
 E noH
 E#IS
 E#l$<Mc
+E$tKIc
 E$tPHk
 E$tSHc
 E(XH
@@ -1618,7 +1800,7 @@ E(Y^H
 E*2E
 E+迨H
 E,t[Hk
-E0H9
+E0IcD$0
 E19(
 E1:\b
 E1:\f
@@ -1627,31 +1809,28 @@ E1:\t
 E1\tE
 E1ɀ{
 E1ɋM
+E1ҋP`Hc
 E1䃽0
 E4DɑH
 E6Ti
-E97^_
-E9Zx
-E9fHA
-E9fH~F1
-E9fx
+E8E1
+E9/^_
+E9f`A
+E9f`~F1
 E9l$
 E9n\b
 E9r\b
 E9|$@u
 E9|$`
-E9}x~
 E9~X
-E9ω\f
 E;/|
 E;4$
 E;>|
 E;l$ s
 E;o D
 E< S
-E@Icu89
+E@L9
 EDIcU@
-EHD9
 EHXZH
 EHY^H
 EHfA
@@ -1669,14 +1848,16 @@ E\bAZA[H
 E\bA[A]H
 E\bA]A^H
 E\bA^A_H
-E\bA_XH
 E\bE)O\b
 E\bHc
+E\bHi
+E\bMi
 E\bXZ1
 E\bXZH
 E\bXZL
 E\bXZu
 E\bY^H
+E\bZYH
 E\b^_H
 E\b_AX1
 E\b_AXH
@@ -1685,12 +1866,13 @@ E\f\a\b
 E\t&I
 E\t0I
 E\t>I
+E\tC0t\tH
 E\v<$I
 E\vC<
 E\vCH
 E\vE\t
 E\vM̸
-E`H9
+E`L9
 EarlyInit_Tier0
 EconItemToolModel_001
 EhXZH
@@ -1700,10 +1882,8 @@ EnsureElementCapacity
 EnsureMemberCapacity
 EnsureUnusedCapacity
 EqL9
-ExH9
 Expected an array with two elements when loading a std::pair.
 ExtractModuleMetadata
-E|IcUx%
 EȉPHH
 EȉPPH
 Eȋ@H
@@ -1711,6 +1891,7 @@ Eȋ@L
 Eȋ@P
 EȋUԉ
 ẼCP
+E̋M\vU
 EЀf,
 EЋC\b
 EЋEȉ
@@ -1744,11 +1925,9 @@ F8IcV<
 F@A9
 FDf.
 FE1N
-FHA9
 FHH9
-FHHǆ
 FHIcE<
-FHIc}XD
+FHIcGH
 FHfA
 FLAG0_SHIFT_BREAKABLE_FORCE
 FLAG0_SHIFT_BREAKABLE_TORQUE
@@ -1827,17 +2006,16 @@ FLEX_OP_SQRT
 FLEX_OP_SUB
 FORCE_UINT
 FPH9
-FPIk
 F\a@H
 F\a@I
 F\a@u
 F\bHc
-F\bHiۨ
 F\bHk
 F\bI9
 F\bIc
-F\bMi
+F\bMc
 F\bMk
+F\bXZ
 F\bXZt
 F\b^_H
 F\b^_u
@@ -1853,6 +2031,7 @@ Failed to load distance field KV3 data.\n
 Failed to save unsupported class
 Fast
 Fff.
+FhIk
 FixupResourceName: Illegal full path passed in ("%s")!\n
 FixupResourceName: Illegal path, missing extension passed in ("%s")!\n
 FlattenedSerializersVersion001
@@ -1860,17 +2039,16 @@ FlexOpCode_t
 FoliageAnimation
 FontManager_001
 Force a reload of a vmdl resource
+Forward Start Only
 Found existing value when inserting into dict - replacing existing value with new value. If this is intended behavior, use InsertOrReplace. If leaving existing values alone is intended, use InsertIfNotFound.
 Found translucent and opaque grooms in the same groom group. This is not allowed.\n
-FpH9
+FxIǆ
 FyOG
-G A9
+F|E1
 G D9
 G E1
 G H9
 G HcP
-G Ii
-G Mk
 G$Ƈ`
 G(Hc
 G(L9
@@ -1883,9 +2061,12 @@ G9H=
 G<A9
 G<IcW8
 G@Hc
+G@Icw8A9
 GAME
 GCC: (SteamRT 14.2.0-19~steamrt3.1+bsrt3.1) 14.2.0
 GHA9
+GHH9
+GHHǇ
 GLIBCXX_TUNABLES
 GLIBC_2.14
 GLIBC_2.17
@@ -1895,24 +2076,17 @@ GLIBC_2.27
 GLIBC_2.3
 GLIBC_2.3.2
 GPHc
-GPHǅ
-GPIk
 GPËG8
-G\\IcFXH
+GXIc^PE
+GXIcwP9
 G\a@A
 G\a@H
 G\b1ۅ
-G\bA_XH
-G\bA_Xu
 G\bH9
-G\bHiҰ
+G\bHc\f
 G\bIc
-G\bJc
 G\bXZ
-G\bXZu
-G\b_AXu
 G\bfA
-G\bfB
 G\bfE
 G\bx);p
 G\bǀP
@@ -1920,6 +2094,7 @@ G\bǀT
 G\f\a\b
 G\fxz
 G`A9
+G`D9
 GameResourceServiceClientV001
 GameResourceServiceServerV001
 GameStartup
@@ -1930,34 +2105,25 @@ GetResourceManifestCount
 GetResourceManifests
 GetThreadLocalStackAllocator
 Gff.
-Ght8LcnpD
 GpH9
 GrowCount
 GxE1
-GxH!
 GxHc
 GЉS$A
-GЉSLIc
-GЉЉS
 GЉЉS<
 GЉ։S
-GЋCH
-G։S|K
-H ~I1
-H ~l1
 H#D$
 H$t(H
 H(H)
 H0H)
 H0Hk
-H0Ic@(9
-H0fD
+H2LcX
 H8H)
 H8Hk
 H8Lc
 H90u
 H9\atVUH
-H;Cpt
+H9ÉU
 H<t(H
 H=vmat
 H=vmdl
@@ -1977,17 +2143,19 @@ H[A\\A]]
 H[]A\\A]A^A_
 H\\E1
 H\bD9
+H\bH9
 H\bI9
 H\bf.
 H\bƅ
+H\fIc\f
 H\f\a\b
 HammerMapLoader001
 Hc7E1҃
 Hc7E1ۃ
+Hc7H
 Hc;L9
-Hc=-
+Hc=ݓ
 Hc@0
-Hc@<
 Hc@P
 Hc@\b
 Hc@\bI
@@ -2003,51 +2171,40 @@ HcC0H
 HcC8
 HcC<
 HcC@
+HcC@A9
+HcC@E1
 HcCH
+HcCHD
 HcCLH
 HcCLf
 HcCP
 HcCPA
-HcCX
 HcC\b
 HcC\bI
 HcC\f
-HcCd
 HcCp
-HcCxH9
-HcCxHcS|
 HcC|
 HcẼ
 HcFLH
 HcFLL
 HcFP
-HcFXH
 HcF\b
-HcFx
 HcG0t?H
 HcG8
 HcGHL
-HcGPH
-HcGXH
-HcGXHcOTH
+HcG\\M
 HcG\bH
 HcG`A9
 HcG`L
-HcK(
-HcK8
-HcK8L
+HcK\bH
 HcK\bL
-HcKxH
 HcL7\bH
 HcO(
 HcOH
 HcOHH
 HcP(
-HcPH
-HcP\b
+HcP<
 HcP\bH
-HcP`
-HcPx
 HcS(
 HcS0E1
 HcS0HcC4H
@@ -2057,47 +2214,49 @@ HcS@
 HcS@E1
 HcS@L
 HcSH
-HcSHH
 HcS\bE1
 HcS\bH
 HcS\bL
-HcSxH
 HcU܅
 HcV\bH
+HcW\b
 HcW\bH
 HcX(H
 HcYh9
 HcYhL
+Hc\aD
 Hc\bH
-Hc\bL
 Hc\v;K
 Hc\vH
-Hcp(
-Hcp(H
-Hcp(Ic
-Hcp(L
 Hcp0
+Hcp0H
+Hcp0Ic
+Hcp0L
 Hcpp
-Hcq89
-HcsxH
-HcsxIc
-HcsxL
-Hc{XD
+Hcq t
+Hcq0t
+Hcq@9
+Hcq@t
+Hcs(Hc
+Hc{0
 Hcɉ0H
-Hcˋ=
 HcЋE
+HcщM
 Hcщɉ]
 Hc҉M
 Hc҉\bH
 Hcҍ<
 Height
 HelpSystem_001
+Hff.
+Hi]8
 HostStateMgr001
 Ht"H
-Htt5H
+H|Hǅ
+I)ŋ;
 I)ŐHcCP
-I9\tw\\
-I9ߋ=
+I9\twd
+I9ߋ=̔
 IAppSystem
 IAsyncProcessedDataResult
 IBaseSequence
@@ -2133,6 +2292,7 @@ Ic4$H
 Ic6M
 Ic<$H9
 Ic@LH
+IcC I
 IcC4
 IcD$
 IcD$0A9
@@ -2140,6 +2300,7 @@ IcD$4
 IcD$81
 IcD$8H
 IcD$<
+IcD$@1
 IcD$HA9
 IcD$HI
 IcD$\b9
@@ -2149,6 +2310,7 @@ IcD$`
 IcD$`A9
 IcD$h
 IcE8
+IcE@E1
 IcEHA9
 IcEP1
 IcE\b1
@@ -2161,8 +2323,6 @@ IcF A;F0
 IcF0
 IcF0D
 IcFPA9
-IcFPH
-IcFXH
 IcF\b9
 IcFhA9
 IcG0
@@ -2170,39 +2330,48 @@ IcG8
 IcG@I
 IcGHA9
 IcGLH
-IcGX
 IcG\b
+IcGd
+IcGxD
 IcL$\b
 IcL$\b1҅
 IcM\bI
+IcN(A
 IcN<
 IcN\bH
+IcO(
+IcO8
+IcOH
 IcT$
+IcT$0
+IcT$0H
+IcT$0fE
 IcT$8I
 IcT$<I
+IcT$@L
 IcT$\b
 IcT$\bH
 IcT$\bI
+IcT$`H
 IcT$xH
-IcU0
-IcU0H
-IcU0fE
+IcU8f
 IcU<I
-IcUPH
 IcU\bH
-IcUxH
 IcV<I
-IcVP
 IcV\b
 IcV\bH
 IcW8H
+IcWX
 IcW\bL
+IcW|D
 Ic\\$
 Ic\\$$H
 Ic\\$0A
+Ic\\$4
 Ic\\$HH
 Ic\\$PH
-Ic\\$pA;
+Ic\\$xA;
+Ic\aH
 Ic\f$B
 Ic\vD9
 Ic]0H
@@ -2216,14 +2385,13 @@ Ict$0H
 Ict$HH
 Ict$\bH
 Ict$`H
-IcuxA
-IcuxI
-IcuxL9
 Icv\b
 IcwH
 IcwHA
 IcwHH
-Icԋ|
+Icw\bH
+Ic|$
+Ic̋\\
 IcՉC\bH
 Ic։C\bH
 IltAH
@@ -2257,6 +2425,7 @@ IǄ$\b
 IǄ$`
 IǄ$h
 IǄ$p
+IǄ$x
 IǇH$
 IǇp6
 J+D*\bH
@@ -2270,20 +2439,19 @@ JOINT_FLAGS_NONE
 JOINT_FLAGS_USE_BLOCK_SOLVER
 J\bfH
 J\f\a\b
-JcD(\bI
 JcL2\bH
 Jc\f1I
 Ju\eH
-K(A9
-KLE1
-KLHcU
+Jȋp\bf
+K A9
+K0A9
 KV3 load transfer failed for mesh '%s': %s\n
 KXM9
-K\bHc
 K\bHcU
 K\bI9
 K\bIc
 K\bL9
+K\bLc
 K\efB-
 K\f\a\b
 KeyValueCache001
@@ -2308,15 +2476,16 @@ L$(1
 L$(A
 L$(E
 L$(H
+L$(I
 L$(K
 L$,L
-L$,tWH
-L$0E
+L$,tZH
+L$,tbH
+L$0A
 L$0H
 L$4H
 L$4tUHc
 L$8A
-L$8E
 L$8E1
 L$8H
 L$8L
@@ -2329,20 +2498,23 @@ L$DH
 L$DL
 L$DtVH
 L$Dt^H
+L$HA
+L$HE
 L$HH
 L$P=
 L$PA
-L$PE
 L$PH
 L$P\t
 L$Pu5A
 L$X1
 L$XH
+L$XL
 L$\\H
 L$\\I
 L$\\L
 L$\\tVH
 L$\\tZH
+L$\\t^H
 L$\\tbH
 L$\b)
 L$\b1
@@ -2352,6 +2524,7 @@ L$\bE
 L$\bH
 L$\bHc
 L$\bI
+L$\bIi
 L$\bL
 L$\bf
 L$\fA
@@ -2360,53 +2533,63 @@ L$\fM
 L$\ft;H
 L$`H
 L$`M
+L$`f
 L$df
 L$h)
 L$hA
+L$hE
 L$hH
 L$lH
 L$pA
 L$pH
 L$pL
+L$tA
+L$tt[H
 L$xE
 L$xH
 L$|H
 L)҉M
-L0\fI
 L90r
 L92u
 L9:r
 L9\nr
+L9\r.k
 L; 9
 L; t
 L;Y\bt
+L;\fK
 L;`\b
+L>\fH
 LD;m
 LD;}
 LE;l$\b|
 LH9ƉJHu
-LHc<
 LI\aH
 LOG_CONSOLE
 LOG_GENERAL
-LU\bf
+LS\bA
+LS\bI
+LS\bfA
+L\b\fH
 L\f\a\b
 L\r\bH
 L\t\bH
-L\t\fH
-Lc J
-Lc(H
 Lc(L
+Lc(Mi
 Lc+D;k
 Lc.L
 Lc/D)
+Lc3L
 Lc6D
 Lc6E
 Lc7D)
 Lc8A
 Lc8H
 Lc:H
-LcS8
+Lc;L
+Lc?D
+LcK8
+LcK8L
 Lc`0L
 Lc`\bL
 Lcc8
@@ -2416,16 +2599,18 @@ Lcc`D9cpuՋst
 Lcg0E
 LcgHH
 Lcg\bH
-LckH
-Lcox
+Lcn0E
+Lcp j
 LcsHH
-Lcv(t
-LcvTH
+Lcv0t
 Lcw E
 Lc{0
+Lc{XA
 LcډU
+Lcቍ`
 Lc苅D
 Lean
+Lff.
 LightmapUV
 LightmapUVW
 LoadModelSyncNoExtrefs - AllocateResource failed\n
@@ -2438,23 +2623,28 @@ Localize_001
 LoggingSystem_IsChannelEnabled
 LoggingSystem_Log
 LoggingSystem_RegisterLoggingChannel
+Logs information about memory consumption by TraceDataForDraw_t/ToolsTraceData
+Lt\aD
 LuEH
 LuOH
+M Ic
 M Zġ؟2h
-M$t&H
 M9IT
-M9Iw\\
-M@I9
+M9Iwd
+M@Hc҃
 MATCHFRAMEWORK_001
 MATERIAL_ATTRIBUTE:
 MAlternateSemanticName
 MAtomicTransfersAsPlainString
 MBUF
 MBUFH
+MCustomFGDMetadata
 MDAT
 MDATH
 MESH_BUFFER_USAGE_ADJACENCY
+MESH_BUFFER_USAGE_ALIAS_TABLE
 MESH_BUFFER_USAGE_IB
+MESH_BUFFER_USAGE_MESHLETS
 MESH_BUFFER_USAGE_MESHLET_TRIS
 MESH_BUFFER_USAGE_NONE
 MESH_BUFFER_USAGE_RT_PROXY
@@ -2509,26 +2699,26 @@ M\tT\b
 M\tu\vp
 M\tw@H
 M\vQ(M
-M\vs8L9
 MapListService_001
 MaterialGroup_t
 MaterialUtils_001
-Mc'M
+Mc$$H
+Mc/L
 Mc4$H
 Mc4$M
 Mc<$H
 McD$
 McT$
 Mce H
-Mce8E1
-Mce8M
-McfHE
+Mce01
+Mce0I
+McePE1
+McePM
 Mcl$
 Mcl$8A
 Mcl$8E
 Mcl$H1
 Mcl$HI
-Mcl$x
 McnxE
 Mco(E;o8D
 Mct$
@@ -2537,26 +2727,24 @@ Mct$ H
 Mct$8H
 Mct$@H
 Mct$DH
-Mct$LH
-Mct$PH
-Mct$TH
-Mct$XH
 Mct$\fH
 Mct$`H
 Mct$hH
 Mct$lH
 Mct$xH
 Mct$|H
+Mcu 1
 Mcu I
 Mcu(H
+Mcu@E1
+Mcu@M
 Mcu\bE;u
 Mcu`H
 McupH
 Mc|$
 Mc|$(A
-Mc|$HH
+Mc|$PH
 Mc|$\bH
-Mc}4E
 Mc~`E;~pD
 Medium
 MemAlloc_AllocFunc
@@ -2569,7 +2757,6 @@ MeshSystem/UseIndexBufferPool
 MeshSystem/UseVertexBufferPool
 MeshSystem001
 MeshUtils001
-Mff.
 Missing buffers for mesh (%s: %d)\n
 Missing data block for mesh (%s: %d)\n
 Missing required transfer interface: %s
@@ -2605,6 +2792,7 @@ MzN;
 MċC$
 Mċp$
 MȉHHH
+MȉS\bA\t
 MȉUċE
 Mȉuȋp\b
 MԉUЋE
@@ -2626,7 +2814,6 @@ N9__gnu_cxx20recursive_init_errorE
 N9__gnu_cxx24__concurrence_lock_errorE
 N9__gnu_cxx26__concurrence_unlock_errorE
 N@A9
-NLE1
 NPCPhysicsHullType_t
 NSt3_V214error_categoryE
 NULL RenderMesh with valid handle\n
@@ -2636,6 +2823,7 @@ N\bIc
 N\f\a\b
 Name
 NavGameTest001
+NdE1
 NetworkClientService_001
 NetworkMessagesVersion001
 NetworkP2PService_001
@@ -2647,19 +2835,18 @@ No DATA block for resource\n
 None
 Not safe to 'new' this class due to alignment requirements
 Ntt+Hc
+O(E1
 O(t(H
-O8Mi
 OHHc
 OPD9
-OPHc
 ORIENT
-OXfA
 O\\tEH
 O\bE)
 O\bHc
 O\bHcփ
 O\f\a\b
-Ohiѕ
+O`fA
+Opiѕ
 Org(%.3f,%.3f,%.3f) Ang(%.3f,%.3f,%.3f)
 OverlayProjectionDirection
 P D9
@@ -2667,14 +2854,12 @@ P D;
 P E1
 P H9
 P Hc
-P HcC
 P HcC@
 P HcCX
 P HcCp
 P HcS
 P HcS8
 P Hǃ
-P HǃP
 P Hǃx
 P I9
 P Ic
@@ -2686,15 +2871,17 @@ P IcE
 P IcE8
 P IcW8D
 P IcwHH
-P Ii
-P IǆP
+P IǄ$
+P Iǅ
 P L9
 P M9
-P t?1
-P ~M1
+P ~BL
+P ~DL
+P ~`H
+P ǃ(
 P ǃ0
-P ǃ8
 P ǃ<
+P ǃ`
 P ǅP
 P ǅ`
 P 넉ʁ
@@ -2702,8 +2889,8 @@ P(AV
 P(AVA
 P(AW
 P(AWA
+P*D9
 P8AVA
-P8AWA
 P8H=vmdl
 P8H=vmdlu
 P8H=vmdluϋC
@@ -2715,15 +2902,14 @@ P@I9
 P@M9
 P@[A\\]
 PARENT
+PATSH
 PHI9
 PHYSt9L
-PHtHI
 PL9e
 PL9u
 POINT
 POSE_SPACE_BONE
 POSE_SPACE_MORPH
-PPI9
 PXL9
 P[A\\A]A^A_]
 P[A\\A]A^]
@@ -2731,12 +2917,14 @@ P\b1ɐH
 P\bD9
 P\bH9
 P\bHcF
-P\bHǆ
 P\bI9
 P\bfA
+P\bfD
 P\bfF
 P\f\a\b
+P\ffD
 P\ffH
+P\nfD
 P`AV
 P`AVA
 P`AWA
@@ -2757,7 +2945,6 @@ PermModelData_t
 PermModelExtPart_t
 PermModelInfo_t
 PermModelInfo_t::FlagEnum
-PhI9
 PhysFeModelDesc_t
 PhysShapeMarkup_t
 PhysSoftbodyDesc_t
@@ -2795,12 +2982,16 @@ QAngle
 Q[,L
 Q\bA]A^A_
 Q\btC
-Q\btX
 Q\f\a\b
 Quaternion
 QuaternionStorage
+R Hǃ
 R Icw
+R IǄ$
+R Iǆ
+R IǇ
 R L9
+R ǃ(
 R10G10B10A2_TYPELESS
 R10G10B10A2_UINT
 R10G10B10A2_UNORM
@@ -2911,13 +3102,13 @@ RENDER_SLOT_PER_VERTEX
 RESOURCE_TYPE_MODEL
 RESOURCE_TYPE_MORPHSET_INTERNAL
 RESOURCE_TYPE_RENDERMESH_INTERNAL
-RH9\\
-RI9\\
 RIcL
 RL9d
 RL9l
+RL9t
 RL;L
 RM9l
+RM9t
 ROTATION
 R[A\\A]]H
 R\bH9
@@ -2951,6 +3142,7 @@ ResourceHandleUtils001
 ResourceManifestRegistry001
 ResourceSystem013
 RnCapsuleDesc_t
+RnCompoundDesc_t
 RnHullDesc_t
 RnMeshDesc_t
 RnSoftbodyCapsule_t
@@ -2967,17 +3159,17 @@ S8E1
 S<Mc
 S@H9
 SHD9
+SHcG
 SHcډ
 SHcں\n
 SLc/H
 SLc7H
-SLco
-SPHc
-SPHk
 SPLc
 SSE and SSE2 are required.
 S\b19
 S\bD9
+S\bE1
+S\bHc
 S\bHiɰ
 S\bI9
 S\bJct2\b
@@ -2985,6 +3177,8 @@ S\bJct2\bH
 S\bLc
 S\bfD9
 S\f\a\b
+Saved by moving skindata: %s (was %s, now %s of real data)\n
+Saved by removing VertexPaintBlendParams: %s (was %s, now %s of real data)\n
 SceneSystem/ComputeShaderSkinning
 SceneSystem_002
 SceneUtils_001
@@ -2997,6 +3191,9 @@ SegmentLength
 SequenceGroupResourceData_t
 SerializedEntitiesVersion001
 ServerToolsInfo_001
+ShHc
+ShHk
+ShapeOffset
 SharedMovementGait_t
 SheetSequenceIntegerId_t
 Should we straighten face island if the displacement is this much? (inches)
@@ -3012,6 +3209,7 @@ SkeletonAnimCapture_t::Frame_t
 SkeletonBoneBounds_t
 SkeletonDemoDb_t
 Slow
+SmartPropsSystem_001
 SoundOpSystem001
 SoundOpSystemEdit001
 SoundService_001
@@ -3029,6 +3227,7 @@ Source2Host001
 Source2ModTools001
 Source2Server001
 Source2V8System001
+SrfA
 St10bad_typeid
 St11_Mutex_baseILN9__gnu_cxx12_Lock_policyE2EE
 St11logic_error
@@ -3061,7 +3260,6 @@ Su1H
 SuTH
 SurfacePropertiesList
 SxA9
-SxL9
 Sxt&
 T \bI
 T$ )
@@ -3072,6 +3270,7 @@ T$ I
 T$ J
 T$ L
 T$ f
+T$ tZ
 T$$A
 T$$H
 T$$L
@@ -3079,16 +3278,22 @@ T$(A
 T$(H
 T$(I
 T$(L
+T$(f
+T$(tL
 T$0A
 T$0E
 T$0H
+T$0H9
 T$0I
 T$0L
+T$0fA
+T$0t>
 T$81
 T$8A
 T$8A\\A]A^]
 T$8H
 T$8L
+T$8t0
 T$@A
 T$@H
 T$@t
@@ -3099,14 +3304,19 @@ T$Df
 T$HA
 T$HE
 T$HH
+T$HI
 T$HM
+T$Hf
 T$LH
 T$PA
 T$PH
 T$PI
 T$PIcD$HI
+T$PL
+T$PfA
 T$XA
 T$XH
+T$XI
 T$\\H
 T$\bA
 T$\bD
@@ -3116,28 +3326,30 @@ T$\bHc
 T$\bI
 T$\bJ
 T$\bL
-T$\bLc
 T$\bM
 T$\b[A\\]
+T$\bf
 T$\bu
 T$\fH
 T$\fHc
 T$`A
 T$`H
+T$`L
 T$`M
 T$hA
 T$hL
+T$pI
 T$tH
-T$tI
 T$xA
+T$xE
 T$xH
 T$xM
 T(\bI
 T0\fH
-T2 Hcȃ
+T1\bA9
+T1\fA9
 T8\bH
 T: D
-T=tb
 TĀ|
 TBUF
 TBUFE
@@ -3147,7 +3359,9 @@ TLS init function for
 TLS wrapper function for
 TWIST
 TW\bH9
+TW\bI9
 T\a\bH
+T\b\fM
 T\f\a\b
 T\f\bIc
 TanFrameQuat
@@ -3163,6 +3377,7 @@ ToolSceneNodeFactory_001
 ToolService_001
 ToolsStallMonitorInternal_BeginScope
 ToolsStallMonitorInternal_EndScope
+TraceData memory (loaded)\n    %s vertex data (%s used, %s wasted on unused TraceVertex_t fields), %s extra attributes\n    %s index, %s remap (%s of it ~identity)\n
 Tried to load a polymorphic pointer with no '%s' key
 Tried to load resource reference '%s' from a value without a resource reference specific type.
 Trying to override a material with an invalid draw call index\n
@@ -3174,8 +3389,7 @@ TypeManager
 UE19
 UE1\t
 UE1ۉ
-UHMcVH
-ULcɉ
+ULcʉ
 UNKNOWN
 UPSCALER_AMD_FSR2
 UPSCALER_AMD_FSR3
@@ -3184,17 +3398,18 @@ UPSCALER_INTEL_XESS
 UPSCALER_NONE
 UPSCALER_NVIDIA_DLSS
 USAGE: print_model_bind_pose <vmdl_name> [bone_name]\n
+UUUU
 U\bLc
 U\bM9
 U\fA9
 U\f\a\b
-U\vs(L9
 Uf\a\ahd
 Unable to load tools vb block (%s: %d)\n
 Unable to read resource file %s!\n
 Unknown
 Unsupported KV3 basic type '%s' (%d)!
 Untested code path - Morph layers without morphset/flex rules. Will try to map model flex controllers directly to cloth morph layers
+Unused TraceVertex_t field memory:\n
 UpscalerType_t
 Ut#H
 Ut3H
@@ -3203,6 +3418,7 @@ UtlVectorMemory_Alloc
 UtlVectorMemory_CalcNewAllocationCount
 UtlVectorMemory_FailedAllocation
 UuLH
+UôHǅ
 UȉMȋH\b
 UȉȈE
 UԉP,H
@@ -3210,6 +3426,7 @@ U؉ȈE
 U؋M܅
 U㗤\n\ahD
 V H9
+V0H9
 V2g%
 V5t\b
 VApplication001
@@ -3224,7 +3441,6 @@ VERTEX_ALBEDO_NONE
 VEj*
 VEngineCvar007
 VFileSystem017
-VLIc
 VMaterialSystem2_001
 VMediaFoundation001
 VModelError
@@ -3257,8 +3473,6 @@ V\bE1
 V\bHc
 V\bHc\vH
 V\bIc
-V\bt1I
-V\bt5I
 V\f\a\b
 V\rH}
 V_DoubleToString_Unsafe
@@ -3329,6 +3543,7 @@ V_stricmp_fast
 V_strlower_fast
 V_tanf
 V_vsnprintf
+VdIc
 Vector
 Vector4D
 VectorAligned
@@ -3345,46 +3560,42 @@ VsInputSignatureElement_t
 VsInputSignature_t
 Vt(H
 W H;
-W fB
 W!g*W
+W0fB
+W4H9
 W<IcW8A9
+W= S
+W=`S
 WARNING: Failed to convert introspected block for file: %s\n
 WARNING: Invalid resource version (%d): %s\n
 WARNING: Resource name "%s" has the incorrect extension "%s" for the specified resource type (expected "%s")!\n
 WARNING: Trying to create a CRenderContextPtr without a valid context.\n
 WARNING: Unrecognized bone "%s"\n
-WL1Ɂ
 WNA9
 WPA9
-WPHc
-WPHk
-WPIcOHH
 WPff.
 WVA9
+WXH9
 W\\H1
 W\bB!D
-W\bHc4
 W\bL9
+W\bfA
 W\bt#f
 W\f\a\b
-W\r|\a
-W\r~\b
+W\nfA
+W\rUR
+W\tfA
 W`H)
 Warning
 Whether to support legacy (pre-modeldoc) models
 Width
 WorldRendererMgr001
-WpH\t
 Wp|z
 X D9
-X ~GE1
-X ~JE1
-X ~KE1
-X%e\r
-X0fD
+X%IL
 X24_TYPELESS_G8_UINT
 X32_TYPELESS_G8X24_UINT
-XD\f\bf
+XD5\bf
 XHHc@@E1
 XHcG0
 XHc\a
@@ -3397,23 +3608,17 @@ X[A\\A]A^A_]Ðf
 X[A\\A]]
 X[A\\A]]ÐH
 X[A\\L
-X\bMc
-X\bMk
-X\bfA
+X\bIc
 X\bfE
 X\bt{ff.
 X\f\a\b
-X\ffA
-X\ffE
-X\nfA
-X\nfE
 YD$ H
 YD$\b
 YE\bH
 YS A
 Y[$A
+Y\\$
 Y\f\a\b
-Yn~$
 Ys(A
 Yw\vHc
 Y}h"
@@ -3430,11 +3635,11 @@ ZtdH
 [A1ɉ
 [A\\A
 [A\\A]
+[A\\A]A^
 [A\\A]A^A_]
 [A\\A]A^A_]H
 [A\\A]A^A_]É
 [A\\A]A^A_]Ë
-[A\\A]A^A_]Ës
 [A\\A]A^A_]Ð
 [A\\A]A^A_]Ð1Ʌ
 [A\\A]A^A_]ÐA
@@ -3443,19 +3648,21 @@ ZtdH
 [A\\A]A^A_]ÐH
 [A\\A]A^A_]ÐI
 [A\\A]A^A_]ÐL
+[A\\A]A^A_]ÐM
 [A\\A]A^A_]ø
 [A\\A]A^A_]ÿ
 [A\\A]A^A_]ÿ8
-[A\\A]A^A_]ÿP
-[A\\A]A^A_]鍆
-[A\\A]A^A_]鍕
-[A\\A]A^A_]鑜
-[A\\A]A^A_]閵
-[A\\A]A^A_]饠
-[A\\A]A^A_]黑
+[A\\A]A^A_]逭
+[A\\A]A^A_]鄽
+[A\\A]A^A_]鐫
+[A\\A]A^A_]頻
+[A\\A]A^A_]饉
+[A\\A]A^A_]鮽
+[A\\A]A^A_]鰦
+[A\\A]A^A_]麗
+[A\\A]A^A_]麨
 [A\\A]A^]
 [A\\A]A^]ËG
-[A\\A]A^]Ð
 [A\\A]A^]Ð1
 [A\\A]A^]ÐD
 [A\\A]A^]ÐH
@@ -3464,21 +3671,24 @@ ZtdH
 [A\\A]A^]ÿ
 [A\\A]A^]ÿ(
 [A\\A]A^]ÿ0
-[A\\A]A^]镉
 [A\\A]H
 [A\\A]]
 [A\\A]]H
 [A\\A]]Å
 [A\\A]]ÐH
+[A\\A]]ÐI
 [A\\A]]ÿ
 [A\\A]]ÿX
+[A\\A]]镠
 [A\\A^]
 [A\\L
 [A\\]
+[A\\]H
 [A\\]Hk
 [A\\]ÐD
 [A\\]ÐH
 [A\\]ÿ`
+[E19
 [Eiɕ
 [IcL$@Ic
 [XH#F8t
@@ -3488,9 +3698,11 @@ ZtdH
 []A\\A]A^
 []A\\A]A^A_
 []A\\A]A^ÐD
+[]A\\A]隽
 [abi:
 [clone
 [friend]
+[hHc
 [iX\b
 [iX\f
 [idx=%d] "%s"
@@ -3498,9 +3710,10 @@ ZtdH
 \\$ A
 \\$ D
 \\$ H
+\\$ IcD$
+\\$ L
 \\$ M
-\\$ Mct$
-\\$ Mi
+\\$ f
 \\$$H
 \\$(E
 \\$(H
@@ -3509,32 +3722,36 @@ ZtdH
 \\$0D
 \\$0E
 \\$0H
+\\$0f
 \\$8I
-\\$8L
 \\$@%
+\\$@E
 \\$@IcD$8L
 \\$@K
 \\$@L
+\\$@f
+\\$@fA
 \\$HD
 \\$HE
 \\$HH
+\\$HIcT$@L
 \\$PE
 \\$PH
 \\$PL
 \\$PMct$HMi
 \\$PMi
+\\$Pf
 \\$XH
 \\$YH
-\\$\b1
 \\$\bA
 \\$\bE1
 \\$\bH
 \\$\bHcSP
 \\$\bI
+\\$\bIc
 \\$\bL
 \\$\bM
 \\$\bXZH
-\\$\fI
 \\$\nH
 \\$\vH
 \\$`D)
@@ -3544,13 +3761,16 @@ ZtdH
 \\$xH
 \\$xIcD$pL
 \\$xIcD$t
-\\-}d
-\\59d
+\\5A'
+\\8\fI
+\\=&$
+\\=4+
 \\D$\b
 \\L$\b
 \\\a\b1
 \\\f\a\b
 \\k*d
+\aD\tƉ2
 \aH\tƄ
 \aH\tǄ
 \aHcG
@@ -3594,8 +3814,11 @@ ZtdH
 \bHcB
 \bHcG0
 \bHcGtHcWpH
+\bHcGx
 \bHcO
+\bHc\a
 \bI\vL
+\bIc\f
 \bJ\vL
 \bK\vG
 \bL9e
@@ -3615,6 +3838,7 @@ ZtdH
 \b[A\\A]A^A_]ÐI
 \b[A\\A]\t
 \b[A\\A]]
+\b[A\\A]]Ã
 \b[A\\A]]Ð
 \b[]A\\A]
 \b\b\b\bf
@@ -3625,8 +3849,7 @@ ZtdH
 \b\t\t\n\t\n\n\v
 \bc Lq
 \bff.
-\bt(H
-\bt+H
+\bt-Hǀ`
 \bt5H
 \bt<H
 \btEI
@@ -3634,14 +3857,14 @@ ZtdH
 \bt\rf
 \btsE
 \buj㭀
-\buv1
+\bus1
 \bu͋p\b1
 \bv\rI
 \b~wH
 \e\e\f\a\b
 \e\f\a\b
 \eff.
-\etFH
+\et?H
 \euYH
 \euaH
 \euiH
@@ -3649,7 +3872,11 @@ ZtdH
 \euyH
 \f L9
 \f$E1
+\f$M9
+\f$[A\\]
+\f'H)
 \f,Hc
+\f4I9
 \f4fH
 \f>Ic
 \f>L9
@@ -3657,26 +3884,24 @@ ZtdH
 \f@Ic
 \fD\t4
 \fHc҉M
-\fIE1
 \fIH)
 \fIM;L
 \fIM;l
 \fIfA
 \fIfE
 \fL@:
-\fSH9
+\fTH9
+\f[A\\A]A^]
 \f[Hc
-\f\aE1
 \f\a\b
 \f\a\b$
 \f\f\f\ff
 \f\r\f\rf
-\fnfA
-\fnfB
-\fnfD
-\fofA
+\f`fA
+\fffA
+\fffB
+\fffD
 \fqeL
-\ft\n%
 \fvMc
 \n<\et
 \n<\et"H
@@ -3689,25 +3914,24 @@ ZtdH
 \n\v\n\vf
 \nu5㭀
 \n}\by
-\r 4\f
-\r$=\f
-\r(9\f
-\r*@\f
-\r9%\n
+\r't\b
+\r)f\t
+\r+_\t
+\r.}\b
 \r9(\n
-\rPA\f
-\rPB\f
 \r\r\r\rf
-\r^"\b
-\r^,\b
-\r`%\n
-\rgX\t
+\r`(\n
+\rgN\b
+\rt\a\n
+\rvm\b
+\r{r\f
 \t!O3
 \t!O3L
 \tCLx
 \tCp~
 \tCtx
 \tV#{
+\t\f8D
 \t\f\a\b
 \t\r\n
 \t\t\t\tf
@@ -3716,23 +3940,21 @@ ZtdH
 \tu+H
 \turH
 \t~,H
-\tʉP\f
 \tЈChI
 \tЈCoH
+\tЉA\f
 \v1\vq
 \vC\fxm
-\vI,tOH
-\vIDtSH
 \v\v\v\vf
-\vt\n%
 \vwϋD
-\vx,Hcp(t
+\vx4Hcp0t
 \v̋WH
+](Mi
 ]+$c
-]<Hc
-]<Ic
+]8Mi
 ]@IcE8L
 ]A\\A]A^A_
+]A\\A]A^A_鸻
 ]A\\L
 ]HcM
 ]IcE01
@@ -3741,7 +3963,6 @@ ZtdH
 ]\bMcu
 ]\bXZH
 ]\f\a\b
-]\tEĉU
 ]`gD
 ]odMcGP
 ]u\fH
@@ -3751,13 +3972,13 @@ ZtdH
 ^\bD9+
 ^\bIc0A
 ^\bIc7A
+^\bIc7C
 ^\bIi
 ^\bLc
 ^\f\a\b
 ^_I9
 ^_봐H
 ^dtEH
-^hD\t#A
 ^htyI
 ^t?H
 ^u;H
@@ -3766,13 +3987,11 @@ ZtdH
 _(E1
 _)^طj%Qd
 _AX1
-_AXH
-_AXI9
+_B{\t
 _Complex
 _Cy\r
 _Float
 _GLOBAL_
-_HD9
 _ITM_RU1
 _ITM_RU8
 _ITM_addUserCommitAction
@@ -3783,8 +4002,8 @@ _ITM_registerTMCloneTable
 _Imaginary
 _MakeGlobalSymbol
 _MakeGlobalSymbolCaseSensitive
-_PHc
 _PIcGHL
+_THc
 _V_SetExtension
 _V_StringAfterPrefix
 _V_StripLastDir
@@ -4964,8 +5183,12 @@ _ZnwmSt11align_val_t
 _ZnwmSt11align_val_tRKSt9nothrow_t
 _\bE1
 _\bHi
+_\bLc
 _\bLi
 _\bMc
+_\bMc.Mi
+_\bMi
+_\bMk
 _\f\a\b
 __cxa_allocate_dependent_exception
 __cxa_allocate_exception
@@ -5005,12 +5228,12 @@ _class
 _u&H
 _u\rH
 ` A9
-`AUI
 `IcE\b1
 `IcM\bHc
 `[A\\A]A^]
 `[A\\]
-`\bIc
+`\bHi
+`\bLc
 `\bMk
 `\f[A\\]
 `\f\a\b
@@ -5023,6 +5246,7 @@ acosf
 ahE1
 alignof
 allocator
+angles
 angularburst
 anim_data_block
 anim_graph_resource
@@ -5039,7 +5263,6 @@ auto:
 b+Gn
 bHEȋM
 bOwnVBAndIB == m_bOwnVBAndIB && m_pFixedMeshDataOverride
-bShaderBlended
 b\f\a\b
 bad_function_call
 basic_iostream
@@ -5083,8 +5306,8 @@ burst
 burstRandomize
 byte
 c(E\t4$H
-cHE9
-cPMk
+c0M9
+c\bAZA[u
 c\bHc\eHi
 c\bLc+L
 c\bXZH
@@ -5094,6 +5317,8 @@ cables_list
 calloc
 cannot create std::vector larger than max_size()
 catch
+chHk
+chMk
 chancetospawn
 char
 char16_t
@@ -5109,8 +5334,8 @@ const
 const_cast
 construction vtable for
 covariant return thunk to
-ct\aE
 curvature
+d$ fA
 d$!E1
 d$8H
 d$8L
@@ -5149,10 +5374,12 @@ eCount
 eDeploy
 eDrop
 eFast
+eForwardStartOnly
 eGenericCapsule
 eGroundBox
 eGroundCapsule
 eGroundCylinder
+eHMi
 eHolster
 eIdleTurn
 eInstantStop
@@ -5162,7 +5389,6 @@ eMedium
 eMoveWithGait
 eObsoleteBackCompat1
 eObsoleteBackCompat2
-ePIk
 ePlantedTurn
 eShuffle
 eSlow
@@ -5176,7 +5402,6 @@ eWait
 eWaitFacing
 e\bIcE
 e\bXZu
-e\bfE
 e\f\a\b
 elasticity
 embedded_animation
@@ -5187,7 +5412,7 @@ error.vmesh
 expf
 eye_data
 eye_data_list
-eؾX\e
+eؾ}wB
 eܺ3NZ
 f4MaxDist
 f4MinDist
@@ -5195,11 +5420,11 @@ f4RelaxationFactor
 f4Slack
 f4Weight0
 f4Weights
-f;0r
 f;\br
 f;\nt}fD
 fA9@
 fA;T$
+fA;V
 fA\tM
 fA\v^
 fD9/
@@ -5211,6 +5436,7 @@ fD;C
 fE9ĈO
 fE; tqI
 f\bE1
+f\bHc3C
 f\bHi۸
 f\bL9
 f\f\a\b
@@ -5262,9 +5488,7 @@ free
 friction
 fwrite
 fЏ);0
-g E1
 g E9
-gPHc
 g\bXZu
 g\f\a\b
 g_flConfigMaxCoord
@@ -5277,6 +5501,7 @@ generic
 getentropy
 gfffH
 gh spaceH
+ghIk
 glibcxx.eh_pool
 global constructors keyed to
 global destructors keyed to
@@ -5284,14 +5509,15 @@ group
 group_data_block
 guard variable for
 h M9
+h<0w
 h=2\f(3
 hHc\a
-hL9u
 h[A\\A]A^A_]
 h[A\\A]A^A_]Ã
 h[A\\A]A^A_]ËF
 h[A\\A]A^A_]Ð
 h[A\\A]A^A_]ÐA
+h[A\\A]A^A_]Ðf
 h[A\\L
 h\bMco\bH
 h\bucA
@@ -5309,6 +5535,9 @@ hullivr_edge_merge_tan
 hullivr_faceisland_merge_disp
 hullivr_faceisland_merge_tan
 hullivr_version
+i(E1
+i0E1
+i@E1
 i\f\a\b
 impactHardThreshold
 impacthard
@@ -5323,11 +5552,11 @@ ioctl
 j\f\a\b
 java Class for
 java resource
-k HiE
-k Hǅ@
+k HcC
+k0Lc
+k0Mcl$0
 kE_P
 kIcL$@Ic
-kPHc
 k\bA9
 k\bD;k
 k\bHǅh
@@ -5337,31 +5566,34 @@ k\bMc<$E
 k\bXZu
 k\fA9
 k\f\a\b
+khHc
 khHǅh
 kpMcl$p
 ksmC
 l bug reH
 l$ A
 l$ D
+l$ I
 l$(A
-l$(E
 l$(H
+l$*D
 l$/I
 l$/M
 l$0H
 l$8E
 l$8L
 l$8M
-l$@A
 l$@H
-l$@L
+l$@I
 l$HA
 l$HE1
 l$HH
 l$HM
 l$PA
+l$PD
 l$PE
 l$PH
+l$TD
 l$XE
 l$XI
 l$\\D
@@ -5379,10 +5611,8 @@ l$`D
 l$`H
 l$`I
 l$hA
-l$hE
 l$pI
 l$tD
-l$x%
 l$xA
 l$xH
 l0\bD
@@ -5442,6 +5672,8 @@ m_CollisionPlanes
 m_Color
 m_Command
 m_CompositeBones
+m_Compound
+m_CompoundMaterialIndices
 m_ConeAxis
 m_ConeCutoff
 m_ConfigName
@@ -5493,6 +5725,7 @@ m_HingeLimits
 m_HitBoxSets
 m_HitBoxes
 m_Hull
+m_Hulls
 m_ImportedCollision
 m_InitPos
 m_InitPose
@@ -5517,6 +5750,7 @@ m_MaterialGroupName
 m_MaterialGroupOnOtherModels
 m_Materials
 m_Mesh
+m_Meshes
 m_ModelBindPose
 m_ModelName
 m_MorphLayers
@@ -5537,6 +5771,8 @@ m_ParticleBoneName
 m_Particles
 m_Plane
 m_Planes
+m_PrismVolumes
+m_Prisms
 m_Quads
 m_ReverseOffsets
 m_RigidColliderPriorities
@@ -5547,6 +5783,8 @@ m_SelfCollisionLayers
 m_SimStateBones
 m_SimdAnimStrayRadii
 m_SimdNodeBases
+m_SimdPrismVolumes
+m_SimdPrisms
 m_SimdQuads
 m_SimdRods
 m_SimdRodsAnim
@@ -5557,6 +5795,7 @@ m_SourceElems
 m_SourceFilename
 m_Sphere
 m_SphereRigids
+m_Spheres
 m_SpringIntegrator
 m_Springs
 m_Stamp
@@ -5566,6 +5805,7 @@ m_Tag
 m_TaperedCapsuleRigids
 m_TaperedCapsuleStretches
 m_Transform
+m_Tree
 m_TreeChildren
 m_TreeCollisionMasks
 m_TreeParents
@@ -5597,6 +5837,9 @@ m_bBakedTwoSided
 m_bBoneMergeFlex
 m_bCanBatchWithDynamicShaderConstants
 m_bClamp
+m_bCollideOutsideHierarchy
+m_bCollideWithHierarchy
+m_bCompoundsPacked
 m_bCompressedZSTD
 m_bComputeDynamicMeshTensionAfterAnimation
 m_bCreateBufferSRV
@@ -5671,6 +5914,7 @@ m_cRenderColor
 m_capsules
 m_children
 m_collisionAttributes
+m_compounds
 m_constraints
 m_constraints2
 m_controls
@@ -5705,6 +5949,7 @@ m_elasticity
 m_elems
 m_embeddedKeyvalues
 m_fEmissiveFactor
+m_fTriangleAreaSize
 m_feet
 m_flAddWorldCollisionRadius
 m_flAlongDamping
@@ -5771,6 +6016,7 @@ m_flMaxQuantizedDistance
 m_flMaxTorque
 m_flMaxYaw
 m_flMin
+m_flMinCentroidRadius
 m_flMinPitch
 m_flMinYaw
 m_flMotionSmoothCDT
@@ -5887,6 +6133,7 @@ m_morphDatas
 m_morphNames
 m_morphRectDatas
 m_morphSet
+m_nAliasTableIB
 m_nAppliedIndexOffset
 m_nAttachBoneIdx
 m_nAttachMeshDrawCallIdx
@@ -5922,6 +6169,7 @@ m_nDepthVertexBufferIndex
 m_nDynamicNodeFlags
 m_nElementCount
 m_nElementSizeInBytes
+m_nEmissivePrimitiveCount
 m_nEndIdx
 m_nEntIndex
 m_nEntParent
@@ -5942,12 +6190,14 @@ m_nGuideHairIndices_nSurfaceTriIndex
 m_nHairCount
 m_nHeight
 m_nHitBoxIndex
+m_nHullBaseIndex
 m_nIncludeDetailLayerCount
 m_nIndexCount
 m_nInfluences
 m_nJiggleParent
 m_nMax
 m_nMaxSegmentsPerHairStrand
+m_nMeshBaseIndex
 m_nMeshIndex
 m_nMeshletPackedIVBIndex
 m_nMeshoptMeshletEncodeVersion
@@ -5985,6 +6235,7 @@ m_nRotLockStaticNodes
 m_nRotateMotion
 m_nSDFRigidIndex
 m_nSemanticIndex
+m_nShapeCount
 m_nShapeInBody
 m_nShapeType
 m_nSimdQuadCount1
@@ -5999,8 +6250,10 @@ m_nSphereRigidIndex
 m_nSrcDrawIndex
 m_nStartIndex
 m_nStartIndexOffset
+m_nStartIterationIndex
 m_nStaticNodeFlags
 m_nStaticNodes
+m_nSubtreeEndOrCompoundId
 m_nSurfacePropertyIndex
 m_nTaperedCapsuleRigidIndex
 m_nTargetAxis
@@ -6197,10 +6450,11 @@ mesh_calculate_curvature_smooth_invert
 mesh_calculate_curvature_smooth_pass_count
 mesh_calculate_curvature_smooth_weight
 mesh_index
+mesh_trace_data_memory_report
 meshinstance_imp.cpp
 meshsystem
 meshsystem.cpp
-meshsystem.cpp(118): GetErrorModel() called before error model exists!\n
+meshsystem.cpp(119): GetErrorModel() called before error model exists!\n
 meshutils.cpp
 model
 model_default_preview_sequence_name
@@ -6219,7 +6473,6 @@ mt19937
 multiplayer_break
 mø&G\a
 n Lc}
-n@IcV8H
 nBegin
 nBeginDynamic
 nBoneCtrl
@@ -6256,7 +6509,10 @@ nType
 nVertexBase
 nVertexCount
 nVertexMapIndex
+n\bHc3C
 n\bIc
+n\bMc
+n\bt\tH
 n\f\a\b
 new[]
 nextafterf
@@ -6272,36 +6528,47 @@ nu,H
 null
 nxMc
 nϿ\a\a\a\af
-nӻ????fE
-o Hc
-o Hi
-o%]P
-o5K5
-o<\af
-o=-x
-o=nv
-o@\bI
+o HcI
+o%5s
+o%Aq
+o%Op
+o-mv
+o-||
+o5)m
+o5[r
+o5fq
+o5tq
+o5}l
+o=#r
+o=%n
+o=(o
+o=,o
+o=0u
+o=bo
+o=vq
+o@IcW8H
 oB\bA
 oB\bH
+oHATSH
 oL$<
 oL$XE1
 oPHcU
 oPLcu
-oP\bI
 oT$<
 o\bXZu
 o\f\a\b
+o\r]]
 obj_count
 obj_size
 occlusionFactor
 offset
+oh\af
 open
 operator
 operator""
 optionallycompressedtangentframe
 org/bugsH
 ou2H
-oxSL
 p0I9
 p8E1
 p8IcF\b
@@ -6312,13 +6579,10 @@ p< tpvV<0uJI
 p< u
 pL9}
 pLD9
-pPH9
 p[A\\]
-p\bMi
-p\b_AXu
+p\bA[A^u
 p\f\a\b
 particles_list
-phI9
 phys_data_block
 phys_res
 physics
@@ -6326,7 +6590,6 @@ placementattachment
 placementbone
 port at H
 position
-posix_memalign
 posxyz
 print_model_bind_pose
 projectedDecal
@@ -6337,23 +6600,24 @@ pthread_mutex_unlock
 pthread_once
 pushoff
 q(I9
-q8t^Hc
+q,D9
+q0HcA(9
 q@I9
+q@t^Hc
 qAdjust
 qHI9
 qXI9
-q\bI9
 q\f\a\b
 q`I9
 qangle
-qx4I
+qx1I
 r&L\t
+rHAUL
 rHHǂ
 rHu\vA
 rIcM
 rNH9
 rXHc\f
-r\aHi
 r\f\a\b
 ragdoll
 random_device could not be read
@@ -6370,7 +6634,6 @@ realloc
 reference temporary #
 reinterpret_cast
 reload_model
-renderbackfaces
 requires
 resonant
 resource_manifests
@@ -6384,31 +6647,33 @@ rolling
 root
 rpHc
 ryf;
-r܋C|
-r܋S|D
-r܋s|D
+s D9
 s ǅX
 s(A9
+s(E1
 s([A\\]H
 s(t\bL
-s,Ic
 s0[A\\H
-s1ff.
+s1M9
+s4Ic
 s4ff.
+s6L9
+s8HcC09
+s9L9
 s@Hc
-s@HcK8A9
+s@LcK8E9
+sEff.
 sFaT1
 sHH9
-sHLc
+sHHcK@L
+sHHcS@H
+sHHi
 sIfE
+sKff.
 sName
-sPHc
-sPIc
-sPLc{HL
 sP[L
 sP\t4
 sY[L
-sYff.
 sZHi۸
 s\bD;s
 s\bH9
@@ -6416,19 +6681,25 @@ s\bHcU
 s\bHc\vA9
 s\bHc\vIc
 s\bIc
+s\bLc
 s\bMc
-s\bfA
 s\bfE9
+s\bt\bL
 s\eff.
 s\f\a\b
+s\rHc
 s\vHc
 s`Lcs H
+saff.
+scale
 scrapeRoughThreshold
 scraperough
 scrapesmooth
 secure_getenv
 seqgroup_data_block
-shff.
+sgff.
+shHc
+shHcS`L
 short
 signed char
 sincosf
@@ -6483,30 +6754,30 @@ su*H
 su,H
 su`H
 surfacePropertyName
-svMc
 swE1
 swHc
 sxE1
 syscall
 system
 t Ic\aD9
-t!Hc
-t"H9
+t \bI
+t!ff.
 t"Ic
-t#`H
+t#hH
 t$ 1
 t$ A
 t$ A\\H
 t$ D
 t$ E
 t$ H
-t$ H9
+t$ I
 t$ L
 t$ M
 t$ t
-t$$E1
+t$ 蚻
+t$ 譛
 t$$H
-t$%E1
+t$$輯
 t$%H
 t$&H
 t$'H
@@ -6519,21 +6790,23 @@ t$(H9
 t$(I
 t$(M
 t$(t\bL
+t$,E1
 t$,H
+t$-E1
 t$01
 t$0A
 t$0E
 t$0H
 t$0M
 t$4H
+t$81
 t$8H
 t$8H9
 t$8I
+t$8K
 t$8L
 t$8L)
 t$8M
-t$8胳
-t$8軓
 t$<H
 t$=H
 t$@E
@@ -6552,24 +6825,19 @@ t$HE
 t$HH
 t$HH)
 t$HM
+t$P1
 t$PA
-t$PE
+t$PD
 t$PH
 t$PH9
 t$PI
 t$PM
 t$Pf
-t$P聯
-t$P认
-t$QH
-t$RH
-t$SH
 t$UH
 t$XA
 t$XE
 t$XH
 t$XM
-t$\\H
 t$\b1
 t$\bA
 t$\bAYAZH
@@ -6588,13 +6856,13 @@ t$\b[A\\A]A^]
 t$\b_AX
 t$\b_AXH
 t$\bt
+t$\bt\bL
 t$\fH
 t$\fLc{\bE
 t$\fM
 t$\nH
 t$\rH
 t$\tH
-t$`1
 t$`D
 t$`E
 t$`H
@@ -6605,16 +6873,20 @@ t$hH
 t$hH)
 t$hH9
 t$hM
-t$h脲
-t$lA
+t$h贼
+t$h躶
+t$p1
+t$pE1
 t$pH
 t$pM
+t$p跊
+t$r1
+t$x1
 t$xH
+t$xI
 t$xK
 t$xM
 t$xf
-t$|H
-t$|I
 t%f.
 t&H9
 t'A9<
@@ -6622,30 +6894,31 @@ t'H9\bu
 t'H9\f
 t'Hc
 t(UH
-t(\bI
 t(\bJ
 t)[L
-t,ff.
-t-Hǀ`
 t-ff.
 t.H9
 t.Hc
-t/Hc
 t1Hc
+t1Hk
 t1UH
+t2IcGH
 t3E1
 t3Hc
-t3Hk
+t4HcC0
 t4Hcڃ
+t4IcD$0
+t4IcFH
 t4ff.
 t5ff.
 t6UH
 t7Hc
-t7McVHD
 t7\bO
-t8Lc
 t8\bH
 t8ff.
+t9Hc
+t9Mcl$0D
+t9Mcl$pD
 t:ff.
 t;E1
 t;UH
@@ -6657,15 +6930,16 @@ t>Hc
 t?Hc
 t?ff.
 t@</
-tA;U
+tAE1
 tAff.
+tBMcl$0D
 tCUH
 tD94\au
 tDD;,
-tDE1
 tDHc
 tDHk
 tD[A\\A]A^]
+tEHk
 tE[L
 tF;rh}AHc
 tFE1
@@ -6674,11 +6948,8 @@ tFUH
 tGE1
 tH</
 tHE1
-tIcEX1
 tJHc
 tKf.
-tMHk
-tMIc
 tNUH
 tNfA
 tPIcU
@@ -6688,9 +6959,7 @@ tSff.
 tTE9
 tTE9a
 tTHc
-tULckHD
 tV)׃
-tVH9O\bt4H
 tVHc
 tVU1
 tYHcC
@@ -6705,32 +6974,35 @@ t\b;\b
 t\bAƇ
 t\bH)
 t\b\bH
-t\eE9
+t\eH9
+t\eHc
 t\f\a\b
 t\f\a\b$
 t\n[A\\]
 t\nǃP
 t\rf
 t\t;H
+t\t\fI
 t\vH)
 t\vHǀ
 t\vHǅ
+t]1Ʌ
 t]Hc
 t]f.
 t]ff.
-t^;=:`\a
 t^[A\\A]A^]
 t_1Ʌ
 t_Hc
 t_ff.
+t`Hc
 t`ff.
-ta;=:`\a
 table
 taff.
 tangent
 tangentu_signv
 tb97
 tc1ҩ
+tcH9O\bt:H
 tcLi
 tdff.
 te1Ʌ
@@ -6740,92 +7012,96 @@ terminate called after throwing an instance of '
 terminate called recursively\n
 terminate called without an active exception\n
 texcoord
+texcoord0
+texcoord1
+tf;=z
 tfff.
 tg91
 tgHiҰ
 tgUH
+th1Ʌ
 thickness
 this
 throw
 ti1Ʌ
+ti;=z
 tiHc
 tjƱH
 tjƱL
-tk;=:`\a
 tkHcS\b
 tkUH
 tl 1
 tl(E1
 tl1Ʌ
-tl;=:`\a
 tlE1
 tl\bE1
-tm;=:`\a
 tmFrame2
 tmIc
-tn1Ʌ
-tn;=:`\a
 tnE1
 tnff.
-to;=:`\a
 toHc
 tools_vb_block
 tp1Ʌ
-tp;=:`\a
-tq;=:`\a
 tqE1
-tr;=:`\a
 transaction clone for
 transaction_safe
 true
 ts1Ʌ
-ts9=:`\a
+ts;=z
 tsE1
 tsHcC
 tsLi
+tt;=z
 ttD;0u
+tu;=z
 tuHc
 tuIc
 tuff.
+tv;=z
 tvIc
+tw;=z
+twHc
 twIc]@
+tx;=z
+ty;=z
 typeinfo fn for
 typeinfo for
 typeinfo name for
 typename
 tz1Ʌ
+tz;=z
 t{1Ʌ
+t{;=z
 t{Hc
 t{UD
 t|1Ʌ
+t|9=z
 t|fD
-t}Ic
 t}IcFxA9
-t~Ic
 t~fH
 tʋS`
 tыK8
+tՋ:I
 t܋CH
 u H9
 u Hc
-u IcM
-u*D\v{
+u IcE
+u%HcCp
+u*D\v{\bH
 u.Hǅ
 u/UH
 u2ff.
 u6E1
 u7ff.
-u8HcCX
 u9L9
 u@Hc
-u@I9
-u@Ic}8H
 uAUH
 uGUH
 uG[A\\A]A^]
 uPH9
 uQf.
 u[I9
+u\aE;|$
 u\aƃj
 u\bAXAYH
 u\bAYAZH
@@ -6834,22 +7110,19 @@ u\bA[A\\H
 u\bA[A]H
 u\bA]A^H
 u\bA^A_H
-u\bA_XH
 u\bH9
 u\bXZH
-u\bXZu
 u\bY^
 u\bY^H
 u\b^_H
-u\b_AX
 u\b_AXH
+u\bt\bH
 u\f\a\b
 u\rHǅ
 u\v[A\\]
-u\v}ċE
 u`H)
 uaI9
-ucLi
+ucHiڸ
 ueE1
 ugf.
 uint
@@ -6868,6 +7141,7 @@ urH9
 uuHǅ0
 uuaH
 uxH)
+uxHcS(H
 uǁ{4
 uǁ{L
 uǁ{d
@@ -6878,7 +7152,6 @@ uڋ3H
 v H)
 v H9
 v HcE
-v HcU
 v%L9
 v&H9
 v8H9
@@ -6898,11 +7171,11 @@ vSphere
 vV<0uJI
 vXH9
 vXH\tM
+v\bH9
 v\bHc
 v\bHǅ
 v\bIc
 v\f\a\b
-v^<7
 vagrp
 value
 vanim
@@ -6915,6 +7188,7 @@ vector::_M_default_append
 vectorws
 vehicleparams
 very_fast
+vf<7
 vhI9
 virtual thunk to
 vmat
@@ -6945,17 +7219,24 @@ vtable for
 vtexL
 vuTH
 w IcG
+w Mco
+w(A9
 w(AUA
-w1<g
-w6<\b
+w(L9
+w0<h
 w8#{g
+w8L9
+w:<\b
 w@Hc
-wC<g
+w@Mco8Mi
 wDIcO@
 wHIcG@9
-wP<X
 wPI9
 wPIcGH9
+wT<Wv@H
+wV<H
+wXI9
+wXIc
 wXIcWPH
 w\bAYAZu
 w\bA[A^u
@@ -6967,21 +7248,21 @@ w\bY^u
 w\b_AXu
 w\f\a\b
 w\rBƄ
-w]<g
-w`i֕
 wcB4
 wchar_t
 what():
 wheeldrag
 wheelfrictionscale
-wq<\b
+whi֕
 x I9
+x,E1
+x<Hcډ
 x=HcI
 x=Hcډ
 x>Hc؉
+x>Hcډ
 x>Lc
 x?Hcډ
-x@Hcډ
 x@Lc
 xAHcډ
 xALc
@@ -6995,6 +7276,8 @@ xDLc
 xEHc
 xELc
 xFHc
+xFHcډ
+xFLc
 xGHc
 xGLc
 xHHǀ
@@ -7002,8 +7285,6 @@ xHLc
 xJHc
 xLHc
 xLLc
-xMHc
-xOHcʉ
 xPHcʉ
 xSHcʉ
 xUHcʉ
@@ -7022,8 +7303,8 @@ xZHcډ
 x[A\\A]A^A_]
 x[A\\A]A^A_]Á
 x[A\\A]A^A_]Ð@
-x[A\\A]A^A_]ÐA
 x[A\\A]A^A_]ÐH
+x[A\\A]A^A_]ÐHcE
 x[Hcʉ
 x[Hcډ
 x[Lc
@@ -7032,12 +7313,9 @@ x\\HcI
 x\\Hcʉ
 x\\Hcډ
 x\b1ɍ_
-x\bA_XH
-x\bE1
-x\bHi
-x\bLi
-x\bXZu
-x\b_AXu
+x\bAYAZu
+x\bAZA[u
+x\bA_Xu
 x\by\f
 x\f\a\b
 x]Hc
@@ -7065,7 +7343,6 @@ xkLc
 xoLc
 xpIc@hM
 xpLc
-xqLc
 xrHcʉ
 xsHc
 xtLc
@@ -7074,11 +7351,11 @@ x鸡N/
 y,A\f
 y@ h
 y\bE1ɉ}
+y\bMc
 y\f\a\b
 ylP¦
 z A9
 z A;w\bu
-z$蠸\v
 z'u%
 z)u'H
 z*u(
@@ -7089,37 +7366,37 @@ zKuI
 zPLR
 z\f\a\b
 z`u^D
-zuus
 z~u|
 { Hcu
 { Hi
 { I9
-{ Mi
+{ Lck
+{ node_name_key = 'm_sName' }
 {(1Ʌ
+{(E1
 {(Hc
 {0x%x}
 {8Hi
 {8I9
+{@Lck8Mi
 {HHi
+{Hǅh
 {P6\e
 {PH9
-{PHc
-{PIc
 {\b/H
 {\b/t
 {\b1ҹ
 {\bAYAZu
-{\bHi
+{\bHcЉ
 {\bHk
 {\bI9
 {\bIc
 {\bIi
 {\bIk
-{\bM9
-{\b~~Ic
 {\f\a\b
 {default arg#
-{ff.
+{hHc
+{hLc
 {lambda
 {parm#
 {tK<}u
@@ -7132,8 +7409,8 @@ z~u|
 |$ H
 |$ L
 |$ M
-|$ 裭
-|$ 覣
+|$ 覆
+|$ 謟
 |$$B
 |$(1
 |$(A
@@ -7144,8 +7421,7 @@ z~u|
 |$(L
 |$(M
 |$(M9
-|$(裢
-|$(赭
+|$(茸
 |$,L
 |$01
 |$019
@@ -7165,21 +7441,23 @@ z~u|
 |$@9
 |$@A
 |$@D
+|$@E
 |$@H
 |$@L
 |$@M9
 |$HD
 |$HE
 |$HH
-|$HHǅ
 |$HI
 |$PD
 |$PH
+|$PHǅ
 |$PLc
 |$PfI
 |$TH
 |$XH
 |$XM)
+|$X輶
 |$\b1
 |$\b1ɉ
 |$\b;
@@ -7191,18 +7469,18 @@ z~u|
 |$\bD9
 |$\bH
 |$\bHi
+|$\bHiИ
 |$\bHk
 |$\bHǅ
 |$\bI
+|$\bIc
 |$\bIi
-|$\bIi֨
 |$\bIk
 |$\bJ
 |$\bL
 |$\bXZu
 |$\bY^
 |$\bf
-|$\b褑
 |$`D
 |$`E
 |$dI
@@ -7214,26 +7492,27 @@ z~u|
 |$pM)
 |$tH
 |$xH
+|& 蜒\a
 |.\bI
-|2 @8|
+|1\bA9
+|1\nA9
 |6\bH
+|: @8|
 |UA9
-|\\A;Fp
 |\b\bAGRP
 |\b\bANIM
 |\f\a\b
-|bHcCX1
+|^A;Fp
 |bIc
 |h9S
-|qA;
 |r;Ah
-|rA;
-|s;AP
 |sA;
 |tA;
-|wA;
+|u;AP
+|uA;
 |wA;Fx
-|xA;
+|yA;
+|yA;V
 |zA;
 |zA;GX
 |~A;EX
@@ -7247,24 +7526,25 @@ z~u|
 }(ff.
 }*E1
 }*Ic
-}+A9
 }.ff.
 }/Ic
 }0A9
 }4ff.
+}5A9
 }8I9
-};ff.
 }=U{
 }EIc
-}Jff.
+}HIcM@L
+}IIc
 }PI9
 }\bA;
 }\bAYAZ
 }\bA[A]
 }\bA\\A]A^]
+}\bHi
 }\bI9
+}\bIi
 }\bXZ
-}\bfE
 }\f\a\b
 }\f\a\b$
 }\tzt
@@ -7276,38 +7556,43 @@ z~u|
 }؉uԁ}ԃ
 }؉uԋU
 ~#ff.
+~$Hi
 ~%ff.
 ~'ff.
 ~(t\nI
 ~*ff.
 ~-H.f}
+~-qS
 ~1Hc
 ~1Lc
-~4)f
-~4.fD
-~4if
-~4ifB
+~4!f
+~4&fD
+~4af
+~4afB
 ~5Lc
-~8Mi
 ~8ff.
-~:Hi
-~<)f
-~</J
-~<iJ
+~< J
+~<!f
+~<aJ
 ~=Lc
 ~>Hc
 ~@\bL
-~ALc
-~BHcу
-~B|fI
+~@|fI
+~BHcƃ
+~C f
+~C(f
+~C0f
+~C8f
 ~CHc
 ~CLc
-~E f
-~E(f
-~E0f
-~E8f
+~C\bf
+~D$ f
+~D$(f
+~D$0f
+~D$8f
+~D$\b
+~D$\bf
 ~EHcǃ
-~E\bf
 ~Eff.
 ~GHc
 ~GLk
@@ -7316,10 +7601,10 @@ z~u|
 ~HHcƃ
 ~HLc
 ~IHcǃ
-~JHcƃ
+~JHcу
 ~KIc
+~KLc
 ~LE1
-~LMi
 ~MHcǃ
 ~MIc
 ~NLc
@@ -7347,85 +7632,75 @@ z~u|
 ~\bA[A^
 ~\bE1
 ~\bIcG\b
-~\bL9
 ~\bMc
+~\bMc>H
+~\bMi
+~\bXZ
 ~\bY^
-~\b_AX
 ~\b_AXu
 ~\bt$H
-~\f)J
-~\f)f
-~\f)fA
-~\f.J
-~\f.f
-~\f.fA
+~\f!J
+~\f!f
+~\f!fA
+~\f&J
+~\f&f
+~\f&fA
 ~\f\a\b
-~\fiJ
-~\fif
-~\fnf
+~\faJ
+~\faf
+~\fff
 ~\teI
 ~`Ic
 ~apI
 ~dHc
-~fPM
+~hHk
 ~htDH
 ~iLc
 ~jLc
 ~jff.
 ~kHcE
 ~kLc
-~npH
+~opI
 ~qE1
 ~rE1
 ~sHcE
 ~vHcG\bL
-~w E
-~xHi
 ~zIc
 ~{HcE
 ~}E1
-À=9l\b
+À=\t?
 Ð;0H
 Āt\rf
 ĉC0y!
 ĉP\bA
-ƋGx1Ήw\\
+ƀL9u
 ǋC0H
-ǋC|%
-ǋC|HcM
-ǋC|L
 ȉE\bE)O\b
 ȥnz\b
 ɉ\b~PH
 ʥFZg
-̀=)I
-̀=)N\a
-̀=9M\a
-̀=9P
-̀=9r
-̀=IQ\a
-̀=IV
-̀=IW
-̀=I\t
-̀=It
-̀=Iw
-̀=Y$
-̀=\t(
-̀=\t3
-̀=\tV
-̀=\tW
-̀=\ti\a
-̀=\tt
-̀=iN\a
-̀=iZ
-̀=io
-̀=iq
-̀=yM\a
-̀=yr\r
-̀=yv
-̀=yz
-̀=y{
-̀=٬\f
+̀=)(
+̀=)_
+̀=9#
+̀=9*
+̀=9S
+̀=I!
+̀=I&
+̀=IO
+̀=Iu
+̀=Y\\
+̀=Yt
+̀=\t
+̀=\t!
+̀=\t$
+̀=\tO
+̀=i\t\t
+̀=i_
+̀=ig
+̀=y"
+̀=Ɋ\a
+̀=ɍ\a
+̀=٫\a
 ЉE܋E
 ЋP$L
 ҉D$,D
@@ -7433,7 +7708,7 @@ z~u|
 ҋG\fI
 Չ2t\tH
 պvmdlATL
-։SL9E
+։SL9
 ڍtR\f
 ھvmdlH
 ۉEЋF
@@ -7443,6 +7718,5 @@ z~u|
 މE؉u
 ߋP\b1
 ߋP\f1
-袋.IcwHM
 돍N(Lc
 말[A\\A]A^]

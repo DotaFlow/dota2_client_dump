@@ -1,3 +1,8 @@
+    %s meshlet indices\n
+    %s: %s\n
+  Saved by moving skindata: %s (was %s, now %s of real data)\n
+  Saved by removing VertexPaintBlendParams: %s (was %s, now %s of real data)\n
+  Unused TraceVertex_t field memory:\n
   what():  
  [clone 
  _Complex
@@ -498,6 +503,7 @@ MATCHFRAMEWORK_001
 MATERIAL_ATTRIBUTE:
 MAlternateSemanticName
 MAtomicTransfersAsPlainString
+MCustomFGDMetadata
 MFgdHelper
 MGetKV3ClassDefaults
 MIsBoxedIntegerType
@@ -678,6 +684,8 @@ SchemaTestExternal_One_001
 SchemaTestExternal_Two_001
 SegmentLength
 SequenceGroupResourceData_t
+ShapeOffset
+SmartPropsSystem_001
 Source2ModTools001
 St10bad_typeid
 St11_Mutex_baseILN9__gnu_cxx12_Lock_policyE2EE
@@ -716,12 +724,14 @@ ToolFramework2_002
 ToolSceneNodeFactory_001
 ToolsStallMonitorInternal_BeginScope
 ToolsStallMonitorInternal_EndScope
+TraceData memory (loaded)\n    %s vertex data (%s used, %s wasted on unused TraceVertex_t fields), %s extra attributes\n    %s index, %s remap (%s of it ~identity)\n
 Tried to load a polymorphic pointer with no '%s' key
 Tried to load resource reference '%s' from a value without a resource reference specific type.
 Trying to override a material with an invalid draw call index\n
 Trying to override the same draw call with two different materials!\nOnly the last override will be set!\n
 UNKNOWN
 USAGE: print_model_bind_pose <vmdl_name> [bone_name]\n
+UUUU
 Unable to load tools vb block (%s: %d)\n
 Unable to read resource file %s!\n
 Unsupported KV3 basic type '%s' (%d)!
@@ -958,6 +968,7 @@ abort
 acosf
 alignof 
 allocator
+angles
 angularburst
 anim_data_block
 anim_graph_resource
@@ -966,7 +977,6 @@ array
 auto
 auto:
 bOwnVBAndIB == m_bOwnVBAndIB && m_pFixedMeshDataOverride
-bShaderBlended
 bad_function_call
 basic_iostream
 basic_istream
@@ -1179,7 +1189,7 @@ mesh_index
 meshinstance_imp.cpp
 meshsystem
 meshsystem.cpp
-meshsystem.cpp(118): GetErrorModel() called before error model exists!\n
+meshsystem.cpp(119): GetErrorModel() called before error model exists!\n
 meshutils.cpp
 models/
 models/%s
@@ -1230,7 +1240,6 @@ phys_data_block
 phys_res
 placementattachment
 placementbone
-posix_memalign
 posxyz
 projectedDecal
 pthread_cond_broadcast
@@ -1252,7 +1261,6 @@ read
 realloc
 reference temporary #
 reinterpret_cast
-renderbackfaces
 resource_manifests
 resources
 resourcesystem
@@ -1863,6 +1871,8 @@ terminate called after throwing an instance of '
 terminate called recursively\n
 terminate called without an active exception\n
 texcoord
+texcoord0
+texcoord1
 this
 this 
 thread-local initialization routine for g_pThreadLocalStackAllocator

@@ -15,6 +15,7 @@
  throw
  transaction_safe
  volatile
+!anchor_is_external
 #include
 $ORIGIN
 %I:%M:%S %p
@@ -29,11 +30,11 @@ $ORIGIN
 %s allocation count overflow( add %llu + current %llu > max %llu )\n
 %s called on a pool arena (no root available)\n
 %s referencing %d missing resources:\n
-%s | %s:  discarded rule because of invalid criterion %i:  %s\n
+%s | %s: discarded rule because of invalid criterion %i:  %s\n
 %s%20s : %40s %5.3f\n
 %s(token %i) : %s
 %s(token %i, line %i, col %i) : %s\n
-%s/%s:  discarded rule because of invalid criterion %i:  %s\n
+%s/%s: discarded rule because of invalid criterion %i: %s\n
 %s: __pos (which is %zu) > __size (which is %zu)
 %s: __pos (which is %zu) > this->size() (which is %zu)
 %s: allocation of %u too large, max %u\n
@@ -43,6 +44,7 @@ $ORIGIN
 %s: member count overflow (%u)\n
 %s: no space for allocation of %u\n
 '%20s' vs. '%20s' = 
+(None)
 (anonymous namespace)
 (unknown)
 *N12_GLOBAL__N_117io_error_categoryE
@@ -69,6 +71,9 @@ $ORIGIN
 *ZN12CChoreoActor30GetAttributeTable_CChoreoActorEP10CUtlVectorIP13IBaseToolAttri25CUtlVectorMemory_GrowableIS2_iLm0EEEE15CAttr_no_member_0
 *ZN12CChoreoActor30GetAttributeTable_CChoreoActorEP10CUtlVectorIP13IBaseToolAttri25CUtlVectorMemory_GrowableIS2_iLm0EEEE15CAttr_no_member_1
 *ZN12CChoreoActor30GetAttributeTable_CChoreoActorEP10CUtlVectorIP13IBaseToolAttri25CUtlVectorMemory_GrowableIS2_iLm0EEEE15CAttr_no_member_2
+*ZN12CChoreoActor30GetAttributeTable_CChoreoActorEP10CUtlVectorIP13IBaseToolAttri25CUtlVectorMemory_GrowableIS2_iLm0EEEE15CAttr_no_member_3
+*ZN12CChoreoActor30GetAttributeTable_CChoreoActorEP10CUtlVectorIP13IBaseToolAttri25CUtlVectorMemory_GrowableIS2_iLm0EEEE15CAttr_no_member_4
+*ZN12CChoreoActor30GetAttributeTable_CChoreoActorEP10CUtlVectorIP13IBaseToolAttri25CUtlVectorMemory_GrowableIS2_iLm0EEEE15CAttr_no_member_5
 *ZN12CChoreoScene30GetAttributeTable_CChoreoSceneEP10CUtlVectorIP13IBaseToolAttri25CUtlVectorMemory_GrowableIS2_iLm0EEEE15CAttr_no_member
 *ZN15CResponseSystem7CompareEPKcP8CriteriabEUlS1_RbE_
 *ZN17CChoreoEvent_FACE35GetAttributeTable_CChoreoEvent_FACEEP10CUtlVectorIP13IBaseToolAttri25CUtlVectorMemory_GrowableIS2_iLm0EEEE15CAttr_no_member
@@ -80,6 +85,7 @@ $ORIGIN
 *ZN18CChoreoEvent_SPEAK36GetAttributeTable_CChoreoEvent_SPEAKEP10CUtlVectorIP13IBaseToolAttri25CUtlVectorMemory_GrowableIS2_iLm0EEEE15CAttr_no_member_1
 *ZN18CChoreoEvent_SPEAK36GetAttributeTable_CChoreoEvent_SPEAKEP10CUtlVectorIP13IBaseToolAttri25CUtlVectorMemory_GrowableIS2_iLm0EEEE15CAttr_no_member_2
 *ZN18CChoreoEvent_SPEAK36GetAttributeTable_CChoreoEvent_SPEAKEP10CUtlVectorIP13IBaseToolAttri25CUtlVectorMemory_GrowableIS2_iLm0EEEE15CAttr_no_member_3
+*ZN18CChoreoEvent_SPEAK36GetAttributeTable_CChoreoEvent_SPEAKEP10CUtlVectorIP13IBaseToolAttri25CUtlVectorMemory_GrowableIS2_iLm0EEEE15CAttr_no_member_4
 *ZN19CChoreoEvent_LOOKAT37GetAttributeTable_CChoreoEvent_LOOKATEP10CUtlVectorIP13IBaseToolAttri25CUtlVectorMemory_GrowableIS2_iLm0EEEE15CAttr_no_member
 *ZN19CChoreoEvent_LOOKAT37GetAttributeTable_CChoreoEvent_LOOKATEP10CUtlVectorIP13IBaseToolAttri25CUtlVectorMemory_GrowableIS2_iLm0EEEE15CAttr_no_member_0
 *ZN19CChoreoEvent_LOOKAT37GetAttributeTable_CChoreoEvent_LOOKATEP10CUtlVectorIP13IBaseToolAttri25CUtlVectorMemory_GrowableIS2_iLm0EEEE15CAttr_no_member_1
@@ -94,6 +100,11 @@ $ORIGIN
 *ZN20CChoreoEvent_LOCATOR38GetAttributeTable_CChoreoEvent_LOCATOREP10CUtlVectorIP13IBaseToolAttri25CUtlVectorMemory_GrowableIS2_iLm0EEEE15CAttr_no_member_0
 *ZN20CChoreoEvent_LOCATOR38GetAttributeTable_CChoreoEvent_LOCATOREP10CUtlVectorIP13IBaseToolAttri25CUtlVectorMemory_GrowableIS2_iLm0EEEE15CAttr_no_member_1
 *ZN20CChoreoEvent_LOCATOR38GetAttributeTable_CChoreoEvent_LOCATOREP10CUtlVectorIP13IBaseToolAttri25CUtlVectorMemory_GrowableIS2_iLm0EEEE15CAttr_no_member_2
+*ZN20CChoreoEvent_LOCATOR38GetAttributeTable_CChoreoEvent_LOCATOREP10CUtlVectorIP13IBaseToolAttri25CUtlVectorMemory_GrowableIS2_iLm0EEEE15CAttr_no_member_3
+*ZN20CChoreoEvent_LOCATOR38GetAttributeTable_CChoreoEvent_LOCATOREP10CUtlVectorIP13IBaseToolAttri25CUtlVectorMemory_GrowableIS2_iLm0EEEE15CAttr_no_member_4
+*ZN20CChoreoEvent_LOCATOR38GetAttributeTable_CChoreoEvent_LOCATOREP10CUtlVectorIP13IBaseToolAttri25CUtlVectorMemory_GrowableIS2_iLm0EEEE15CAttr_no_member_5
+*ZN20CChoreoEvent_LOCATOR38GetAttributeTable_CChoreoEvent_LOCATOREP10CUtlVectorIP13IBaseToolAttri25CUtlVectorMemory_GrowableIS2_iLm0EEEE15CAttr_no_member_6
+*ZN20CChoreoEvent_LOCATOR38GetAttributeTable_CChoreoEvent_LOCATOREP10CUtlVectorIP13IBaseToolAttri25CUtlVectorMemory_GrowableIS2_iLm0EEEE15CAttr_no_member_7
 *ZN20CChoreoEvent_SECTION38GetAttributeTable_CChoreoEvent_SECTIONEP10CUtlVectorIP13IBaseToolAttri25CUtlVectorMemory_GrowableIS2_iLm0EEEE15CAttr_no_member
 *ZN21CChoreoEvent_BaseMood39GetAttributeTable_CChoreoEvent_BaseMoodEP10CUtlVectorIP13IBaseToolAttri25CUtlVectorMemory_GrowableIS2_iLm0EEEE15CAttr_no_member
 *ZN21CChoreoEvent_SEQUENCE39GetAttributeTable_CChoreoEvent_SEQUENCEEP10CUtlVectorIP13IBaseToolAttri25CUtlVectorMemory_GrowableIS2_iLm0EEEE15CAttr_no_member
@@ -119,8 +130,11 @@ $ORIGIN
 *ZN23CChoreoEvent_EXPRESSION41GetAttributeTable_CChoreoEvent_EXPRESSIONEP10CUtlVectorIP13IBaseToolAttri25CUtlVectorMemory_GrowableIS2_iLm0EEEE15CAttr_no_member
 *ZN23CChoreoEvent_EXPRESSION41GetAttributeTable_CChoreoEvent_EXPRESSIONEP10CUtlVectorIP13IBaseToolAttri25CUtlVectorMemory_GrowableIS2_iLm0EEEE15CAttr_no_member_0
 *ZN24CChoreoEvent_FIRETRIGGER42GetAttributeTable_CChoreoEvent_FIRETRIGGEREP10CUtlVectorIP13IBaseToolAttri25CUtlVectorMemory_GrowableIS2_iLm0EEEE15CAttr_no_member
+*ZN24CChoreoEvent_FIRETRIGGER42GetAttributeTable_CChoreoEvent_FIRETRIGGEREP10CUtlVectorIP13IBaseToolAttri25CUtlVectorMemory_GrowableIS2_iLm0EEEE15CAttr_no_member_0
 *ZN25CChoreoEvent_REQUIREMENTS43GetAttributeTable_CChoreoEvent_REQUIREMENTSEP10CUtlVectorIP13IBaseToolAttri25CUtlVectorMemory_GrowableIS2_iLm0EEEE15CAttr_no_member
 *ZN25CChoreoEvent_REQUIREMENTS43GetAttributeTable_CChoreoEvent_REQUIREMENTSEP10CUtlVectorIP13IBaseToolAttri25CUtlVectorMemory_GrowableIS2_iLm0EEEE15CAttr_no_member_0
+*ZN26CChoreoEvent_PLAY_RESPONSE44GetAttributeTable_CChoreoEvent_PLAY_RESPONSEEP10CUtlVectorIP13IBaseToolAttri25CUtlVectorMemory_GrowableIS2_iLm0EEEE15CAttr_no_member
+*ZN26CChoreoEvent_PLAY_RESPONSE44GetAttributeTable_CChoreoEvent_PLAY_RESPONSEEP10CUtlVectorIP13IBaseToolAttri25CUtlVectorMemory_GrowableIS2_iLm0EEEE15CAttr_no_member_0
 *ZN27CChoreoEvent_BaseLocalEvent45GetAttributeTable_CChoreoEvent_BaseLocalEventEP10CUtlVectorIP13IBaseToolAttri25CUtlVectorMemory_GrowableIS2_iLm0EEEE15CAttr_no_member
 *ZN27CChoreoEvent_BaseLocalEvent45GetAttributeTable_CChoreoEvent_BaseLocalEventEP10CUtlVectorIP13IBaseToolAttri25CUtlVectorMemory_GrowableIS2_iLm0EEEE15CAttr_no_member_0
 *ZN27CChoreoEvent_BaseLocalEvent45GetAttributeTable_CChoreoEvent_BaseLocalEventEP10CUtlVectorIP13IBaseToolAttri25CUtlVectorMemory_GrowableIS2_iLm0EEEE15CAttr_no_member_1
@@ -141,6 +155,7 @@ $ORIGIN
 *ZN39CChoreoEvent_EXTERNAL_ANIMGRAPH_CONTROL57GetAttributeTable_CChoreoEvent_EXTERNAL_ANIMGRAPH_CONTROLEP10CUtlVectorIP13IBaseToolAttri25CUtlVectorMemory_GrowableIS2_iLm0EEEE15CAttr_no_member_0
 *ZN39CChoreoEvent_EXTERNAL_ANIMGRAPH_CONTROL57GetAttributeTable_CChoreoEvent_EXTERNAL_ANIMGRAPH_CONTROLEP10CUtlVectorIP13IBaseToolAttri25CUtlVectorMemory_GrowableIS2_iLm0EEEE15CAttr_no_member_1
 +Retiming
+, not matched\n
 , score %4.2f\n
 -+xX0123456789abcdef0123456789ABCDEF
 -+xX0123456789abcdefABCDEF
@@ -201,13 +216,18 @@ $ORIGIN
 17CConcreteToolAttrI10CUtlString23CChoreoEvent_CommonBasevE
 17CConcreteToolAttrI10CUtlString23CChoreoEvent_EXPRESSIONvE
 17CConcreteToolAttrI10CUtlString24CChoreoEvent_FIRETRIGGERvE
+17CConcreteToolAttrI10CUtlString26CChoreoEvent_PLAY_RESPONSEvE
 17CConcreteToolAttrI10CUtlString30CChoreoEvent_PULSE_REQUIREMENTvE
 17CConcreteToolAttrI10CUtlString31CChoreoEvent_EXTERNAL_ANIMGRAPHvE
 17CConcreteToolAttrI10CUtlString33CChoreoEvent_ANIMGRAPH_CONTROLLERvE
 17CConcreteToolAttrI10CUtlString39CChoreoEvent_EXTERNAL_ANIMGRAPH_CONTROLvE
 17CConcreteToolAttrI18ChoreoStrafeMode_t17CChoreoEvent_FACEvE
 17CConcreteToolAttrI18HandshakeTagType_t31CChoreoEvent_EXTERNAL_ANIMGRAPHvE
+17CConcreteToolAttrI20SharedMovementGait_t20CChoreoEvent_LOCATORvE
+17CConcreteToolAttrI33ChoreoLocatorArrivalOptionFlags_t20CChoreoEvent_LOCATORvE
+17CConcreteToolAttrI5Vec3DIfE12CChoreoActorvE
 17CConcreteToolAttrI5Vec3DIfE20CChoreoEvent_LOCATORvE
+17CConcreteToolAttrI6QAngle12CChoreoActorvE
 17CConcreteToolAttrI6QAngle20CChoreoEvent_LOCATORvE
 17CConcreteToolAttrIb12CChoreoActorvE
 17CConcreteToolAttrIb18CChoreoEvent_SPEAKvE
@@ -216,6 +236,7 @@ $ORIGIN
 17CConcreteToolAttrIb20CChoreoEvent_LOCATORvE
 17CConcreteToolAttrIb21CChoreoEvent_SEQUENCEvE
 17CConcreteToolAttrIb22CChoreoEvent_ANIM_CLIPvE
+17CConcreteToolAttrIb24CChoreoEvent_FIRETRIGGERvE
 17CConcreteToolAttrIb25CChoreoEvent_REQUIREMENTSvE
 17CConcreteToolAttrIb27CChoreoEvent_BaseLocalEventvE
 17CConcreteToolAttrIb31CChoreoEvent_EXTERNAL_ANIMGRAPHvE
@@ -248,6 +269,8 @@ $ORIGIN
 20IToolAttr_TypedValueI10CUtlStringE
 20IToolAttr_TypedValueI18ChoreoStrafeMode_tE
 20IToolAttr_TypedValueI18HandshakeTagType_tE
+20IToolAttr_TypedValueI20SharedMovementGait_tE
+20IToolAttr_TypedValueI33ChoreoLocatorArrivalOptionFlags_tE
 20IToolAttr_TypedValueI5Vec3DIfEE
 20IToolAttr_TypedValueI6QAngleE
 20IToolAttr_TypedValueIbE
@@ -269,13 +292,18 @@ $ORIGIN
 21CBaseConcreteToolAttrI10CUtlString23CChoreoEvent_CommonBaseE
 21CBaseConcreteToolAttrI10CUtlString23CChoreoEvent_EXPRESSIONE
 21CBaseConcreteToolAttrI10CUtlString24CChoreoEvent_FIRETRIGGERE
+21CBaseConcreteToolAttrI10CUtlString26CChoreoEvent_PLAY_RESPONSEE
 21CBaseConcreteToolAttrI10CUtlString30CChoreoEvent_PULSE_REQUIREMENTE
 21CBaseConcreteToolAttrI10CUtlString31CChoreoEvent_EXTERNAL_ANIMGRAPHE
 21CBaseConcreteToolAttrI10CUtlString33CChoreoEvent_ANIMGRAPH_CONTROLLERE
 21CBaseConcreteToolAttrI10CUtlString39CChoreoEvent_EXTERNAL_ANIMGRAPH_CONTROLE
 21CBaseConcreteToolAttrI18ChoreoStrafeMode_t17CChoreoEvent_FACEE
 21CBaseConcreteToolAttrI18HandshakeTagType_t31CChoreoEvent_EXTERNAL_ANIMGRAPHE
+21CBaseConcreteToolAttrI20SharedMovementGait_t20CChoreoEvent_LOCATORE
+21CBaseConcreteToolAttrI33ChoreoLocatorArrivalOptionFlags_t20CChoreoEvent_LOCATORE
+21CBaseConcreteToolAttrI5Vec3DIfE12CChoreoActorE
 21CBaseConcreteToolAttrI5Vec3DIfE20CChoreoEvent_LOCATORE
+21CBaseConcreteToolAttrI6QAngle12CChoreoActorE
 21CBaseConcreteToolAttrI6QAngle20CChoreoEvent_LOCATORE
 21CBaseConcreteToolAttrIb12CChoreoActorE
 21CBaseConcreteToolAttrIb18CChoreoEvent_SPEAKE
@@ -284,6 +312,7 @@ $ORIGIN
 21CBaseConcreteToolAttrIb20CChoreoEvent_LOCATORE
 21CBaseConcreteToolAttrIb21CChoreoEvent_SEQUENCEE
 21CBaseConcreteToolAttrIb22CChoreoEvent_ANIM_CLIPE
+21CBaseConcreteToolAttrIb24CChoreoEvent_FIRETRIGGERE
 21CBaseConcreteToolAttrIb25CChoreoEvent_REQUIREMENTSE
 21CBaseConcreteToolAttrIb27CChoreoEvent_BaseLocalEventE
 21CBaseConcreteToolAttrIb31CChoreoEvent_EXTERNAL_ANIMGRAPHE
@@ -317,13 +346,18 @@ $ORIGIN
 21CToolAttrGetSetAccessI10CUtlString23CChoreoEvent_CommonBaseE
 21CToolAttrGetSetAccessI10CUtlString23CChoreoEvent_EXPRESSIONE
 21CToolAttrGetSetAccessI10CUtlString24CChoreoEvent_FIRETRIGGERE
+21CToolAttrGetSetAccessI10CUtlString26CChoreoEvent_PLAY_RESPONSEE
 21CToolAttrGetSetAccessI10CUtlString30CChoreoEvent_PULSE_REQUIREMENTE
 21CToolAttrGetSetAccessI10CUtlString31CChoreoEvent_EXTERNAL_ANIMGRAPHE
 21CToolAttrGetSetAccessI10CUtlString33CChoreoEvent_ANIMGRAPH_CONTROLLERE
 21CToolAttrGetSetAccessI10CUtlString39CChoreoEvent_EXTERNAL_ANIMGRAPH_CONTROLE
 21CToolAttrGetSetAccessI18ChoreoStrafeMode_t17CChoreoEvent_FACEE
 21CToolAttrGetSetAccessI18HandshakeTagType_t31CChoreoEvent_EXTERNAL_ANIMGRAPHE
+21CToolAttrGetSetAccessI20SharedMovementGait_t20CChoreoEvent_LOCATORE
+21CToolAttrGetSetAccessI33ChoreoLocatorArrivalOptionFlags_t20CChoreoEvent_LOCATORE
+21CToolAttrGetSetAccessI5Vec3DIfE12CChoreoActorE
 21CToolAttrGetSetAccessI5Vec3DIfE20CChoreoEvent_LOCATORE
+21CToolAttrGetSetAccessI6QAngle12CChoreoActorE
 21CToolAttrGetSetAccessI6QAngle20CChoreoEvent_LOCATORE
 21CToolAttrGetSetAccessIb12CChoreoActorE
 21CToolAttrGetSetAccessIb18CChoreoEvent_SPEAKE
@@ -332,6 +366,7 @@ $ORIGIN
 21CToolAttrGetSetAccessIb20CChoreoEvent_LOCATORE
 21CToolAttrGetSetAccessIb21CChoreoEvent_SEQUENCEE
 21CToolAttrGetSetAccessIb22CChoreoEvent_ANIM_CLIPE
+21CToolAttrGetSetAccessIb24CChoreoEvent_FIRETRIGGERE
 21CToolAttrGetSetAccessIb25CChoreoEvent_REQUIREMENTSE
 21CToolAttrGetSetAccessIb27CChoreoEvent_BaseLocalEventE
 21CToolAttrGetSetAccessIb31CChoreoEvent_EXTERNAL_ANIMGRAPHE
@@ -372,13 +407,18 @@ $ORIGIN
 23CConcreteToolAttrGetSetI10CUtlString23CChoreoEvent_CommonBaseE
 23CConcreteToolAttrGetSetI10CUtlString23CChoreoEvent_EXPRESSIONE
 23CConcreteToolAttrGetSetI10CUtlString24CChoreoEvent_FIRETRIGGERE
+23CConcreteToolAttrGetSetI10CUtlString26CChoreoEvent_PLAY_RESPONSEE
 23CConcreteToolAttrGetSetI10CUtlString30CChoreoEvent_PULSE_REQUIREMENTE
 23CConcreteToolAttrGetSetI10CUtlString31CChoreoEvent_EXTERNAL_ANIMGRAPHE
 23CConcreteToolAttrGetSetI10CUtlString33CChoreoEvent_ANIMGRAPH_CONTROLLERE
 23CConcreteToolAttrGetSetI10CUtlString39CChoreoEvent_EXTERNAL_ANIMGRAPH_CONTROLE
 23CConcreteToolAttrGetSetI18ChoreoStrafeMode_t17CChoreoEvent_FACEE
 23CConcreteToolAttrGetSetI18HandshakeTagType_t31CChoreoEvent_EXTERNAL_ANIMGRAPHE
+23CConcreteToolAttrGetSetI20SharedMovementGait_t20CChoreoEvent_LOCATORE
+23CConcreteToolAttrGetSetI33ChoreoLocatorArrivalOptionFlags_t20CChoreoEvent_LOCATORE
+23CConcreteToolAttrGetSetI5Vec3DIfE12CChoreoActorE
 23CConcreteToolAttrGetSetI5Vec3DIfE20CChoreoEvent_LOCATORE
+23CConcreteToolAttrGetSetI6QAngle12CChoreoActorE
 23CConcreteToolAttrGetSetI6QAngle20CChoreoEvent_LOCATORE
 23CConcreteToolAttrGetSetIb12CChoreoActorE
 23CConcreteToolAttrGetSetIb18CChoreoEvent_SPEAKE
@@ -387,6 +427,7 @@ $ORIGIN
 23CConcreteToolAttrGetSetIb20CChoreoEvent_LOCATORE
 23CConcreteToolAttrGetSetIb21CChoreoEvent_SEQUENCEE
 23CConcreteToolAttrGetSetIb22CChoreoEvent_ANIM_CLIPE
+23CConcreteToolAttrGetSetIb24CChoreoEvent_FIRETRIGGERE
 23CConcreteToolAttrGetSetIb25CChoreoEvent_REQUIREMENTSE
 23CConcreteToolAttrGetSetIb27CChoreoEvent_BaseLocalEventE
 23CConcreteToolAttrGetSetIb31CChoreoEvent_EXTERNAL_ANIMGRAPHE
@@ -430,13 +471,18 @@ $ORIGIN
 26CBaseConcreteToolAttrValueI10CUtlString23CChoreoEvent_CommonBaseE
 26CBaseConcreteToolAttrValueI10CUtlString23CChoreoEvent_EXPRESSIONE
 26CBaseConcreteToolAttrValueI10CUtlString24CChoreoEvent_FIRETRIGGERE
+26CBaseConcreteToolAttrValueI10CUtlString26CChoreoEvent_PLAY_RESPONSEE
 26CBaseConcreteToolAttrValueI10CUtlString30CChoreoEvent_PULSE_REQUIREMENTE
 26CBaseConcreteToolAttrValueI10CUtlString31CChoreoEvent_EXTERNAL_ANIMGRAPHE
 26CBaseConcreteToolAttrValueI10CUtlString33CChoreoEvent_ANIMGRAPH_CONTROLLERE
 26CBaseConcreteToolAttrValueI10CUtlString39CChoreoEvent_EXTERNAL_ANIMGRAPH_CONTROLE
 26CBaseConcreteToolAttrValueI18ChoreoStrafeMode_t17CChoreoEvent_FACEE
 26CBaseConcreteToolAttrValueI18HandshakeTagType_t31CChoreoEvent_EXTERNAL_ANIMGRAPHE
+26CBaseConcreteToolAttrValueI20SharedMovementGait_t20CChoreoEvent_LOCATORE
+26CBaseConcreteToolAttrValueI33ChoreoLocatorArrivalOptionFlags_t20CChoreoEvent_LOCATORE
+26CBaseConcreteToolAttrValueI5Vec3DIfE12CChoreoActorE
 26CBaseConcreteToolAttrValueI5Vec3DIfE20CChoreoEvent_LOCATORE
+26CBaseConcreteToolAttrValueI6QAngle12CChoreoActorE
 26CBaseConcreteToolAttrValueI6QAngle20CChoreoEvent_LOCATORE
 26CBaseConcreteToolAttrValueIb12CChoreoActorE
 26CBaseConcreteToolAttrValueIb18CChoreoEvent_SPEAKE
@@ -445,6 +491,7 @@ $ORIGIN
 26CBaseConcreteToolAttrValueIb20CChoreoEvent_LOCATORE
 26CBaseConcreteToolAttrValueIb21CChoreoEvent_SEQUENCEE
 26CBaseConcreteToolAttrValueIb22CChoreoEvent_ANIM_CLIPE
+26CBaseConcreteToolAttrValueIb24CChoreoEvent_FIRETRIGGERE
 26CBaseConcreteToolAttrValueIb25CChoreoEvent_REQUIREMENTSE
 26CBaseConcreteToolAttrValueIb27CChoreoEvent_BaseLocalEventE
 26CBaseConcreteToolAttrValueIb31CChoreoEvent_EXTERNAL_ANIMGRAPHE
@@ -461,12 +508,15 @@ $ORIGIN
 26CBaseConcreteToolAttrValueIi27CChoreoEvent_BaseLocalEventE
 26CChoreoEvent_DISABLE_BLINK
 26CChoreoEvent_FLEXANIMATION
+26CChoreoEvent_PLAY_RESPONSE
 26CResponseDoc_ResponseGroup
 26CToolEditContextQuery_Base
 27CChoreoEvent_BaseLocalEvent
 27IToolAttrConcreteDataAccessI10CUtlStringE
 27IToolAttrConcreteDataAccessI18ChoreoStrafeMode_tE
 27IToolAttrConcreteDataAccessI18HandshakeTagType_tE
+27IToolAttrConcreteDataAccessI20SharedMovementGait_tE
+27IToolAttrConcreteDataAccessI33ChoreoLocatorArrivalOptionFlags_tE
 27IToolAttrConcreteDataAccessI5Vec3DIfEE
 27IToolAttrConcreteDataAccessI6QAngleE
 27IToolAttrConcreteDataAccessIbE
@@ -502,6 +552,7 @@ $ORIGIN
 30CDefaultToolAttrTableForStructI25CChoreoEvent_REQUIREMENTSE
 30CDefaultToolAttrTableForStructI26CChoreoEvent_DISABLE_BLINKE
 30CDefaultToolAttrTableForStructI26CChoreoEvent_FLEXANIMATIONE
+30CDefaultToolAttrTableForStructI26CChoreoEvent_PLAY_RESPONSEE
 30CDefaultToolAttrTableForStructI27CChoreoEvent_BaseLocalEventE
 30CDefaultToolAttrTableForStructI29CChoreoEvent_PERMIT_RESPONSESE
 30CDefaultToolAttrTableForStructI30CChoreoEvent_PULSE_REQUIREMENTE
@@ -513,7 +564,6 @@ $ORIGIN
 31CChoreoEvent_EXTERNAL_ANIMGRAPH
 33CChoreoEvent_ANIMGRAPH_CONTROLLER
 34CSchemaRegistration_scenefilecache
-34IKV3TransferInterface_ResourceLoad
 35CChoreoEvent_BaseLocalEventWithRamp
 36CChoreoEvent_IGNORE_EXTERNAL_LOOKATS
 39CChoreoEvent_EXTERNAL_ANIMGRAPH_CONTROL
@@ -528,6 +578,7 @@ $ORIGIN
 <array: %u elements>
 <binary blob: %u bytes>
 <empty member name>
+<externally specified>
 <map_key>
 <map_value>
 <no failure reason set>
@@ -536,6 +587,7 @@ $ORIGIN
 <undefined>
 <unknown KV3 basic type '%s' (%d)>
 <unknown>
+?34IKV3TransferInterface_ResourceLoad
 ???CRR_Response bogus index
 AE_CHOREO_LOOP
 AGCriteria_%s
@@ -554,7 +606,6 @@ AddMultipleToTail
 AddPage
 AlignedByteArray not properly aligned\n
 Alloc
-Anchor
 Anchor Actor
 Anchor Is External
 Anim Clip
@@ -571,6 +622,8 @@ Animgraph Is Public
 Animgraph Public Name
 Animgraph Slot ID
 April
+Arrival Options
+Arrival Options are external
 Assert_ConditionFailed(_AssertCompileTimeConstantStruct_t const&, char const*, ...)
 Assert_ConditionFailed_Fatal(_AssertCompileTimeConstantStruct_t const&)
 Assert_ConditionFailed_Fatal(_AssertCompileTimeConstantStruct_t const&, char const*, ...)
@@ -636,6 +689,7 @@ CChoreoEvent_INTERRUPT
 CChoreoEvent_LOCATOR
 CChoreoEvent_LOOKAT
 CChoreoEvent_LOOP
+CChoreoEvent_PLAY_RESPONSE
 CChoreoEvent_PULSE_REQUIREMENT
 CChoreoEvent_REQUIREMENTS
 CChoreoEvent_SECTION
@@ -657,7 +711,7 @@ CResponseFileParser::LoadFromBuffer:  Unknown entry type '%s', expecting 'respon
 CResponseRulesLegacyTextImporter: ignoring commented-out #include "%s"\n
 CResponseRulesLegacyTextImporter::LoadFromBuffer:  Unknown entry type '%s', expecting 'response', 'criterion', 'enumeration' or 'rules' in file %s(offset:%i)\n
 CResponseSystem:  %s (%i rules, %i criteria, and %i responses)\n
-CResponseSystem:  failed to load %s\n
+CResponseSystem: failed to load %s\n
 CResponseSystem::LoadFromFile took %f msec
 CSplitString::Split(char const*, int, char const**, int, bool)
 CTSListBase::CTSListBase()
@@ -668,6 +722,7 @@ CThreadMultiWaitEvent::CThreadMultiWaitEvent(bool)
 CThreadMultiWaitEvent::Reset()
 CThreadMultiWaitEvent::Set()
 CThreadMultiWaitEvent::~CThreadMultiWaitEvent()
+CURVE_TANGENT_FLAT
 CURVE_TANGENT_FREE
 CURVE_TANGENT_LINEAR
 CURVE_TANGENT_MIRROR
@@ -736,7 +791,6 @@ CVertexKDTree::BuildMidpoint(float const*, int, int)
 CVertexKDTree::BuildMidpointFromVertexSubSet(float const*, int, int const*, int)
 CVertexKDTree::FindVertsInBox(CUtlVectorFixedGrowable<float const*, 64ul, int>&, Vec3D<float> const&, Vec3D<float> const&, int) const
 CVertexKDTree::Nearest(Vec3D<float> const&, CUtlVectorFixedGrowable<float const*, 64ul, int>&) const
-Call Pulse
 Cast of %s loses value information (returning %s)\n
 Catmull-Rom
 Catmull-Rom (Norm X)
@@ -753,10 +807,13 @@ Clip
 CloseCaptionNoAttenuate
 Complexity of regex match exceeded implementation limits
 Concept
+Concept Name
 Conflicting regex grammar options
 Copy Unbound Params From Actor
 Couldn't load KV3 for resource: %s
 CreateInterface
+Criteria
+Criteria Key/Value(s)
 Data_Branch1xy
 Data_Branch1zBranch2x
 Data_Branch2yz
@@ -773,7 +830,6 @@ Double-save to Member '%s'
 Duplicate include: %s\n
 Duration
 Dynamic Actor
-ENTITYIO
 ERROR: CUtlSymbolTableLarge element limit of %u exceeded\n
 EXPORTSYSTEM_INTERFACE_VERSION_001
 EarlyInit_Tier0
@@ -809,7 +865,6 @@ External Animgraph
 External Animgraph Control
 External Graph: %s
 ExtractModuleMetadata
-FIRE token in response needs exactly three parameters.
 Face %s
 Face Actor
 FaceposerSectionPause
@@ -830,11 +885,12 @@ Failed to allocate an instance of a class of type '%s'
 Failed to apply FLC data to resource '%s': %s\n
 Failed to save unsupported class
 February
-Fire Entity I/O
+FindCriterionIndex
 Fixed Length
 FixedLength
 FixupResourceName: Illegal full path passed in ("%s")!\n
 FixupResourceName: Illegal path, missing extension passed in ("%s")!\n
+Flat
 FoliageAnimation
 FormatArgumentsToBuffer(IFormatOutputStream*, char const*, CTypeErasedFormattingWrapper const*, int)
 FormatTo(IFormatOutputStream*, CFormatStringElement, bool)
@@ -857,6 +913,7 @@ GLIBC_2.25
 GLIBC_2.27
 GLIBC_2.3
 GLIBC_2.3.2
+Gait Override
 Gesture
 GestureName
 GetCPUInformation
@@ -874,6 +931,9 @@ HandshakeTagType_t::eMovement
 HandshakeTagType_t::eTask
 Hard Stop Speak Event
 HardStopSpeakEvent
+Has Duration
+Has Preview Transform
+HasDuration
 HelpSystem_001
 Hold
 Hold Event
@@ -887,8 +947,12 @@ IFormatOutputStream::PutRepeatedChar(char, int)
 IKV3TransferInterface_ResourceLoad
 IKV3TransferInterface_ResourceSave
 If left empty, will default to the owner entity of this scene, meaning that the relative position will actually be the world position
+If set, replaces manually-authored Relative Position/Orientation with world_OFFSET bone from the first frame of the specified clip. The offset is re-extracted from the clip as needed - it will track changes to the clip. (When active, shows the extracted values for relative position & orientation.)
+If true, the entity will be immediately moved to the destination
+If true, the move-to params for this event will be exposed as ports to pulse
 If true, then this anchor will be exposed externally to the entity that owns this VCD
 Ignore External Lookats
+Ignore the lipsync data compiled into the vsnd, both embedded morph animation and phonemes.  Doesn't affect flex animation channels in the scene. NOTE: Requires mod specific support in game, see CChoreoComponent::IsLipsyncSuppressedForSound()
 Inert VModuleMetadata
 Insert
 InsertMultipleBefore
@@ -960,12 +1024,14 @@ Look at Actor
 LookAtActorName
 LookSpeed
 LookType
-Loop
 Loop Count
 Loop Playback Rate
 LoopCount
 LoopPlaybackRate
 MATCHFRAMEWORK_001
+MAlternateSemanticName
+MEnumFlagsWithOverlappingBits
+MEnumeratorIsNotAFlag
 MGetKV3ClassDefaults
 MNotSaved
 MODEL_PROCESSING_SERVICES_INTERFACE_001
@@ -994,6 +1060,8 @@ Mood Body: %s
 Mood: %s
 MoodName
 Moods File
+Move To %s
+Move-to options for this locator (don't stop at goal, ignore arrival facing, smooth arrival path)
 Movement
 Multiple definitions for criteria '%s' [%u]\n
 Multiple definitions for criteria '%s'\n
@@ -1057,7 +1125,9 @@ NSt8__detail15_BracketMatcherISt12regex_traitsIcELb1ELb1EEE
 NSt8ios_base7failureB5cxx11E
 NSt8ios_base7failureE
 NULL
+Newline in string literal
 No DATA block for resource\n
+No closing */ before end of file
 No such enumeration '%s'\n
 No such response '%s' for rule '%s'\n
 Non-embedded Response Rules found! (presumably from a legacy .txt import?) Pairing up with Response Groups...\n
@@ -1069,7 +1139,6 @@ OutroPlaybackRate
 OverlayProjectionDirection
 POSIX
 PRINT
-PULSE
 PanoramaTextServices001
 ParallelForSharedCode
 Parameter [%s=%s] 
@@ -1095,10 +1164,11 @@ Play Sequence Overtop Script
 PlaySequenceOverScript
 Playback Rate
 Pointers cannot be used as numeric values
+Preview Angles
+Preview Origin
 Print (for prototyping)
 PropWorldOrigin
 PropertyEditorSystem_001
-Public Graph: %s
 Public: %s
 Pulse Requirement
 Pulse Requirement Name
@@ -1106,10 +1176,8 @@ PulseRequirementName
 RESOURCE_TYPE_CHOREO_SCENE
 RESOURCE_TYPE_RESPONSE_RULES_LIST
 RESPONSE
-RESPONSE_ENTITYIO
 RESPONSE_NONE
 RESPONSE_PRINT
-RESPONSE_PULSE
 RESPONSE_RESPONSE
 RESPONSE_SCENE
 RESPONSE_SPEAK
@@ -1127,7 +1195,6 @@ Release
 ReloadModels
 RenderDevice003
 RenderHardwareConfig002
-Req:Locator
 Requirements m_linkedEventIDs[%d] m_bWaitUntilEnd[%s] 
 Reset On End
 ResourceCompilerSystem001
@@ -1165,8 +1232,12 @@ September
 SequenceName
 SetAnimClipByName
 SetExternalAnimgraphResource
+SetWorldOffsetReferenceClipByName
+ShapeOffset
+Should Teleport
 Simple Cubic
 SimplePlaybackRate
+SmartPropsSystem_001
 SoundDelayOrSkip
 Source2ModTools001
 Speak (sound event)
@@ -1300,6 +1371,8 @@ State=%s
 Strafe Mode
 StrafeMode
 Sunday
+Suppress Lipsync
+SuppressLipsync
 Sync Cycle To Time
 Sync Exit tag to next gesture Entry tag
 SyncToFollowingGesture
@@ -1317,6 +1390,7 @@ TanFrameQuat
 TargetCastForModify
 Task
 Task/Action handshake.
+Teleport to %s
 ThenSimple rule Generated: rule '%s' with criteria '%s' pointing to response '%s'.\n
 ThenSimple rule generated in response '%s'.\n
 This convar is being accessed prior to ConVar_Register being called
@@ -1353,6 +1427,7 @@ VDataChoice()
 VMediaFoundation001
 VNotify Abandoned (Not enabled)\n
 VP4003
+VProfScopeHelper<3, false>::EnterScopeInternal(char const*, CUtlSourceLocation const&)
 VRenderDeviceSetupV001
 VTT for 
 VTT for std::basic_iostream<wchar_t, std::char_traits<wchar_t>>
@@ -1427,6 +1502,7 @@ V_frexpf
 V_isEntirelyWhitespace
 V_isnand
 V_logf
+V_modff
 V_powd
 V_powf
 V_qsort
@@ -1458,9 +1534,12 @@ WaitUntilEnd
 Wants Handshake
 Warning
 Wednesday
+World Offset Reference Clip
 World contexts: '%s', 
+WorldOffsetReferenceClip
 [abi:
 [friend]
+[unknown]
 \nFailed to save %s\n
 \nFailed to upconvert %s\n
 ^$\.*+?()[]{}|
@@ -1688,6 +1767,8 @@ apostrophe
 applycontext
 applycontexttoworld
 array
+arrival_options
+arrival_options_are_external
 asterisk
 auto
 auto:
@@ -1873,6 +1954,7 @@ construction vtable for
 copy_unbound_params_from_actor
 covariant return thunk to 
 criteria
+criteriaset.cpp
 criterion
 curvature
 curve_
@@ -1931,10 +2013,8 @@ face
 faceposer
 faceposermodel
 failed
-failed (+exclude rule)
 false
 fast
-fire
 firetrigger
 five
 fixedlength
@@ -1965,6 +2045,7 @@ g_nSequentialIndices<int vector[4]>
 g_nSequentialIndices<int>
 g_pMemAlloc
 g_pThreadPool
+gait_override
 generic
 gesture
 getentropy
@@ -2025,6 +2106,8 @@ half
 handshake_enum
 hardstopspeakevent
 hardware
+has_duration
+has_preview_transform
 hidden alias for 
 hold
 holdevent
@@ -2146,9 +2229,9 @@ m_flSlopeIncoming
 m_flSlopeOutgoing
 m_freeVariableValues
 m_hRoot
+m_hWorldOffsetReferenceClip
 m_handle
 m_iNode
-m_input
 m_matchExpr
 m_matchKey
 m_nIncomingTangent
@@ -2158,7 +2241,6 @@ m_notes
 m_odds
 m_pConceptFollowup
 m_pEmbeddedRule
-m_pEntityIOFollowup
 m_pResponseFollowup
 m_predelay.range
 m_predelay.start
@@ -2257,11 +2339,15 @@ permitresponses
 phys_res
 playback_time
 playoverscript
+playresponse
 plus-sign
 position_relative
-posix_memalign
+post_requirement_duration
 posxyz
 predelay
+preview_angles
+preview_origin
+previous_duration
 print
 pthread_cond_broadcast
 pthread_cond_wait
@@ -2281,6 +2367,7 @@ rdrand
 rdrnd
 rdseed
 read
+readonly_expr
 realloc
 reference temporary #
 regex error
@@ -2310,11 +2397,9 @@ right-curly-bracket
 right-parenthesis
 right-square-bracket
 right_edge
-rr_dumpresponses
 rule
 samples
 samples_use_time
-scalesettings
 scene_ramp
 scene_ramp_curve
 scenefilecache
@@ -2334,6 +2419,7 @@ setlocale
 seven
 shifted_time
 short
+should_teleport
 show_vcd_file
 signed char
 simple_cubic
@@ -5521,6 +5607,7 @@ strrchr
 strstr
 strtold_l
 strtoul
+suppresslipsync
 synctofollowinggesture
 syscall
 system
@@ -5545,7 +5632,6 @@ throw
 throw 
 tilde
 time
-tool
 transaction clone for 
 transaction clone for operator delete(void*)
 transaction clone for operator new[](unsigned long)
@@ -6310,6 +6396,7 @@ wmemcmp
 wmemcpy
 wmemmove
 wmemset
+world_OFFSET
 xdigit
 zero
 zero_value

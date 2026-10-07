@@ -193,6 +193,7 @@ $ORIGIN
 %d / %s "%s" thinking for %.02f ms!!!\n
 %d [%s,%s] %s
 %d bits
+%d bytes is too big.
 %d of %d empty (%.3f %%)\n
 %d structs not using DECLARE_NETWORKVAR_STRUCT_NOT_IN_NETWORK_UTLVECTOR_EMBEDDED, consider porting fields to use CNetworkVars!\n
 %d total.\n
@@ -273,6 +274,7 @@ $ORIGIN
 %s: shrinking removes delegate [0x%p]\n
 %s: timing out, last received %f [%.2f seconds ago]\n
 %s: unable to find serializer named %s\n
+%s::%s encoder mismatch, local '%s' vs. remote '%s', using local\n
 %s::%s has more than one MNetworkChangeCallback that requires passing network value into handler, this is unsupported\n
 %s::%s was in the original serializer at offset %u but that offset isn't in the ignore list!!!\n
 %s::%s:%u (%s ) already encountered at %s::%s:%u (%s)
@@ -465,7 +467,6 @@ $ORIGIN
 16CSerializerStack
 16ICommandCallback
 16INetworkMessages
-16IProtobufBinding
 17CCLCMsg_VoiceData
 17CMsgServerUserCmd
 17CNETMsg_SetConVar
@@ -496,7 +497,6 @@ $ORIGIN
 20CCLCMsg_RequestPause
 20CCLCMsg_ServerStatus
 20CNETMsg_DebugOverlay
-20CNetworkSerializerPB
 20CPostConnectCallback
 20CRefCountServiceBaseI6CRefMTE
 20CSVCMsg_CmdKeyValues
@@ -506,6 +506,7 @@ $ORIGIN
 21CDeltaFieldPathTracer
 21CFlattenedSerializers
 21CNetworkEncodingStats
+21CSVCMsg_EncryptedData
 21CSVCMsg_GameEventList
 21CSVCMsg_ServerSteamID
 21IDeltaFieldPathTracer
@@ -524,6 +525,7 @@ $ORIGIN
 22CSVCMsg_PacketEntities
 22CSVCMsg_PacketReliable
 22CSchemaInstallCallback
+22ProtoCoordSizeParams_t
 23CCLCMsg_LoadingProgress
 23CKV3TransferContextBase
 23CKV3TransferLoadContext
@@ -531,7 +533,6 @@ $ORIGIN
 23CNETMsg_SpawnGroup_Load
 23CNETMsg_SplitScreenUser
 23CSVCMsg_GameEvent_key_t
-23INetworkMessageInternal
 23NetMessagePacketStart_t
 24CCLCMsg_RespondCvarValue
 24CHiddenFieldValuePrinter
@@ -550,6 +551,7 @@ $ORIGIN
 25CSVCMsg_UpdateStringTable
 25IFieldShadowSpewCollector
 26CCLCMsg_SplitPlayerConnect
+26CMsgSource2FramePerfSample
 26CMsgSource2VProfLiteReport
 26CSVCMsg_Sounds_sounddata_t
 26ICommandCompletionCallback
@@ -570,13 +572,14 @@ $ORIGIN
 28CSVCMsg_SendTable_sendprop_t
 28IFlattenedSerializerSpewFunc
 28NetMessageConnectionClosed_t
+28QuantizedFloatEncoderAlias_t
 29CCLCMsg_HltvFixupOperatorTick
 29CCLCMsg_SplitPlayerDisconnect
 29CMsgServerNetworkStats_Player
 29CMsgSource2NetworkFlowQuality
-29CMsgSource2PerfIntervalSample
 29NetMessageConnectionCrashed_t
 30CBidirMsg_RebroadcastGameEvent
+30CMsgSource2FramePerfSample_Tag
 30CMsgSource2VProfLiteReportItem
 30CNetworkFieldChangedEventQueue
 30CSVCMsgList_GameEvents_event_t
@@ -591,7 +594,6 @@ $ORIGIN
 32IFlattenedSerializerSpewListener
 32INetworkFieldSerializerAllocator
 32NetMessageSplitscreenUserChanged
-33CMsgSource2PerfIntervalSample_Tag
 33CNETMsg_SpawnGroup_ManifestUpdate
 33CSchemaRegistration_networksystem
 34CNETMsg_SpawnGroup_SetCreationTick
@@ -612,6 +614,7 @@ $ORIGIN
 48CSVCMsg_PacketEntities_outofpvs_entity_updates_t
 48CSerializedEntityPolymorphicFieldsMetadataHelper
 49CSVCMsg_PacketEntities_non_transmitted_entities_t
+49ProtoFlattenedSerializerField_t_proto_enum_info_t
 51ProtoFlattenedSerializerField_t_polymorphic_field_t
 52CSource2Metrics_MatchPerfSummary_Notification_Client
 8CMsgRGBA
@@ -685,6 +688,7 @@ Average Backing Raw Paths         :  %8.3f\n
 Average Data Bytes                :  %8.3f bytes\n
 Average Memory Usage Per Entity   :  %8.3f bytes\n
 Average Number of Field Paths     :  %8.3f\n
+BUG! Failed to read from buffer after checking size?
 BackUp() can not exceed the size of the last Next() call.
 BackUp() can only be called after a successful Next().
 BakedLODBuilderMgr001
@@ -713,7 +717,6 @@ CBufferString::Format(char const*, ...)
 CBufferString::Insert(int, char const*, int, bool)
 CBufferString::MoveFrom(CBufferString&)
 CBufferString::Purge(int)
-CBufferString::Relinquish(CBufferString::EAllocationOption_t)
 CBufferString::RemoveAt(int, int)
 CBufferString::Replace(char const*, char const*, bool)
 CBufferString::SetLength(int, bool, int*)
@@ -724,8 +727,6 @@ CBufferString::Trim(char const*)
 CBufferString::TrimTail(char const*)
 CBufferString::TruncateAt(int, bool)
 CBuildNetworkSerializerHierarchyOrder::ComputeDepth
-CCharBufferFormatOutputStream::PutC(char)
-CCharBufferFormatOutputStream::Terminate()
 CCommand::Tokenize: Encountered command which overflows the tokenizer buffer.. Skipping!\n
 CDeltaCalculator::ErrorMsg %s %d\n
 CDeltaCalculator::ErrorMsg: %s\n
@@ -1063,17 +1064,14 @@ CMergedEntityOffsetBuilder::Expecting at least one bit in offset
 CNetChan::BUF_RELIABLE
 CNetChan::BUF_UNRELIABLE
 CNetChan::BUF_VOICE
-CNetChan::SendNetMessage: SerializeAbstract for message %s failed!\n
+CNetChan::SendNetMessage: Failed to serialize %s\n
 CNetChan::SendNetMessage: Trying to send message %s, which is an invalid category for this channel!\n
 CNetChan::SendNetMessage: Unable to send message %s, buffer is full!\n
 CNetChan::Setup for %s\n
 CNetChan::UpdateMessageStats, bit counter about to roll over with addition of %d bits, resetting to zero\n
 CNetworkFieldChangedEventQueue::QueueChange:  ran out of scratch data space!!!\n
-CNetworkMessages::AllocateAndCopyConstructNetMessageAbstract unable to allocate unknown message type!\n
-CNetworkMessages::DeallocateUnserializedMessage unable to deallocate unknown message type!\n
 CNetworkMessages::FindOrCreateGroupId: Too many network groups!\n
 CNetworkMessages::FindOrCreateNetMessage: It is illegal to register new net messages after serialization!\n
-CNetworkMessages::FindOrCreateNetMessage: Message %s is expected to have already been registered!\n
 CNetworkMessages::InitNetworkChangeTag - missing m_NetworkChangeTagCallback, should have been installed by CEntitySystem::Init call to g_pNetworkMessages->RegisterNetworkChangeTagCallback!
 CNetworkMessages::Serialize attempted to serialize a non-serializeable message [%s]!\n
 CNetworkSerializer: Unable to find network encoder named %s!\n
@@ -1233,6 +1231,7 @@ Checking for missing CNetworkVar* declarations\n
 Class data is a '%s', not a table\n
 Class,Field,Field Path,Decode Count,Total Bits,Avg Bits,Total Index Bits,Avg Index Bits,Priority,=SUM(E:E),Full Name,Notes\n
 ClearField
+Client Messages
 ClientLocalServerAccess001
 CloseSocket
 CloseSteamNetConnection handle #%u (userdata %d)%s\n
@@ -1305,6 +1304,7 @@ EnsureCapacity
 EnsureElementCapacity
 EnsureMemberCapacity
 EnsureUnusedCapacity
+Entities
 Enum name 
 Enum type "
 Enum value "$0" is reserved multiple times.
@@ -1316,7 +1316,7 @@ EnumValueOptions
 Enums must contain at least one value.
 Error
 Error installing message handlers into a net channel: missing handlers in channel %s!\n
-Error parsing message type %d (%s)
+Error parsing message type %d (%s): %s
 Error parsing text-format 
 Error processing network message %s! Channel is closing!\n
 Error reporting not implemented.
@@ -1344,7 +1344,6 @@ Expected identifier, got:
 Expected integer or identifier, got: 
 Expected integer, got: 
 Expected string, got: 
-Expecting NetMessageInfo_t::m_pProtobufBinding to be non-NULL
 Explicit default values are not allowed in proto3.
 Extension "
 Extension conflicts with extension already in database: extend 
@@ -1375,6 +1374,7 @@ Failed to create poll group for socket '%s'?\n
 Failed to install message handler for message %s in channel %s!\n
 Failed to open P2P network socket '%s'\n
 Failed to open UDP network socket '%s'\n
+Failed to parse %s.  %s\n
 Failed to save unsupported class
 Failed to set SteamNetworkingSockets option '%s'\n
 Failed to start listening for SDR on port %d.  Waiting and will retry\n
@@ -1434,17 +1434,15 @@ Files that do not use optimize_for = LITE_RUNTIME cannot import files which do u
 Files with optimize_for = LITE_RUNTIME cannot define services unless you set both options cc_generic_services and java_generic_services to false.
 Find
 FindOrCreateGroupId
-FindOrCreateNetMessage
 FindPolymorphicFieldInfoByCodegenBinding
 First argument to Swap() (of type "
 First argument to SwapFields() (of type "
 FormatArgumentsToBuffer(IFormatOutputStream*, char const*, CTypeErasedFormattingWrapper const*, int)
-FormatTo(IFormatOutputStream*, CFormatStringElement, bool)
 FormatTo(IFormatOutputStream*, CFormatStringElement, float)
 FormatTo(IFormatOutputStream*, CFormatStringElement, int)
-FormatTo(IFormatOutputStream*, CFormatStringElement, std::basic_string_view<char, std::char_traits<char>>)
 Found existing value when inserting into dict - replacing existing value with new value. If this is intended behavior, use InsertOrReplace. If leaving existing values alone is intended, use InsertIfNotFound.
 Found invalid proto option data for: 
+Frame too large (%d bytes uncompressed), limit is %s=%d
 Friday
 GAME
 GCC: (SteamRT 14.2.0-19~steamrt3.1+bsrt3.1) 14.2.0
@@ -1459,6 +1457,7 @@ GLIBC_2.3
 GLIBC_2.3.2
 GLIBC_2.3.4
 GLIBC_2.4
+Game Engine
 GatherAllFieldOffsets_R:  local offset of %s::%s %u is too large (%u max)\n
 GatherSendProxyResults
 GetBitRange
@@ -1508,6 +1507,7 @@ HammerMapLoader001
 HasField
 HelpSystem_001
 Hex and octal numbers must be integers.
+Hltv Replay
 INFO
 INTERNAL
 INVALID_ARGUMENT
@@ -1616,16 +1616,16 @@ LC_TIME
 LOG_CONSOLE
 LOG_GENERAL
 Latency. . . . . . . . : %7dms%7dms%7dms   net_fakelag\n
+Lead byte(s) encode invalid size %d.  (%d bytes remaining)
 Leaked channel %s remote %s\n
 LoadKV3(KeyValues3*, CUtlString*, CUtlBuffer*, KV3ID_t const&, char const*, unsigned int)
+Local Player
 LocalServerClientAccess001
-LoggingSystem_GetChannelColor
 LoggingSystem_GetChannelVerbosity
 LoggingSystem_IsChannelEnabled
 LoggingSystem_Log
 LoggingSystem_Log(int, LoggingSeverity_t, LoggingMetaData_t const*, char const*, ...)
 LoggingSystem_Log(int, LoggingSeverity_t, LoggingRareOptions_t const&, char const*, ...)
-LoggingSystem_LogDirect(int, LoggingSeverity_t, Color, LoggingMetaData_t const*, char const*)
 LoggingSystem_RegisterLoggingChannel
 Logic problem? szsrc = 
 Loss . . . . . . . . . : %8.2f%%%8.2f%%%9s   net_fakeloss\n
@@ -1685,6 +1685,8 @@ Message does not support reflection (type
 Message is too deep, the parser exceeded the configured recursion limit of 
 Message missing required fields: 
 Message of type "
+Message of type (%s) %d size %d exceeded maximum message size %d; allowing as per %s=%d\n
+Message of type (%s) %d size %d exceeded maximum message size %d; rejecting.\n
 Message type "
 MessageLite at 0x
 MessageOptions
@@ -1700,6 +1702,7 @@ Missing field: FileDescriptorProto.name.
 Missing name.
 ModelDocUtils001
 Monday
+Move
 Multiple extension registrations for type "
 Multiple steam net connections from %s\n
 MutableMessage
@@ -1714,14 +1717,6 @@ N10__cxxabiv120__si_class_type_infoE
 N10__cxxabiv121__vmi_class_type_infoE
 N10__cxxabiv123__fundamental_type_infoE
 N10__cxxabiv129__pointer_to_member_type_infoE
-N13CNetMessagePBILi0E11CNETMsg_NOPL13SignonGroup_t11EL19NetChannelBufType_t1ELb0EE16CProtobufBindingE
-N13CNetMessagePBILi1073741824E21NetMessagePacketStartL13SignonGroup_t11EL19NetChannelBufType_t1ELb0EE16CProtobufBindingE
-N13CNetMessagePBILi1073741825E19NetMessagePacketEndL13SignonGroup_t11EL19NetChannelBufType_t1ELb0EE16CProtobufBindingE
-N13CNetMessagePBILi35E25CCLCMsg_RconServerDetailsL13SignonGroup_t0EL19NetChannelBufType_t1ELb0EE16CProtobufBindingE
-N13CNetMessagePBILi3E23CNETMsg_SplitScreenUserL13SignonGroup_t11EL19NetChannelBufType_t1ELb0EE16CProtobufBindingE
-N13CNetMessagePBILin1E26NetMessageConnectionClosedL13SignonGroup_t11EL19NetChannelBufType_t1ELb0EE16CProtobufBindingE
-N13CNetMessagePBILin1E27NetMessageConnectionCrashedL13SignonGroup_t11EL19NetChannelBufType_t1ELb0EE16CProtobufBindingE
-N13CNetMessagePBILin1E32NetMessageSplitscreenUserChangedL13SignonGroup_t11EL19NetChannelBufType_t1ELb0EE16CProtobufBindingE
 N24CFieldPathHuffmanEncoder12InternalNodeE
 N24CFieldPathHuffmanEncoder5INodeE
 N24CFieldPathHuffmanEncoder8LeafNodeE
@@ -1918,7 +1913,7 @@ Need space between identifier and decimal point.
 Need space between number and identifier.
 Net graph %s\n
 Net status for host %s:\n
-NetChan %s ProcessMessages has exhausted its CPU time warning budget.  %dms to process %d messages this call.  (Current message type: '%s')\n
+NetChan %s ProcessMessages excessive CPU usage.  %dms to process %d messages this call.  (Current message type: '%s', drop budget remaining: %.1fms)\n
 NetChanTransmitReliable
 NetChanTransmitUnreliable
 NetChannel '%s':\n
@@ -1930,7 +1925,6 @@ Network System Initialized\n
 Network field tried to use a priority that has not been registered!\n
 Network socket '%s' opened on port %d\n
 NetworkConfigLimits
-NetworkMessages::FindOrCreateNetMessage: Message %s is of size %d in leaf code, but protobuf object is size %lld, the added fields should be placed into object derived from protobuf and then CNetMessagePB references that\n
 NetworkReplayCompatField_t %s::%s on field '%s' is using possibly bogus this pointer from class %s!\n
 NetworkSystem
 NetworkSystem/CreateListenSocketP2P
@@ -1975,6 +1969,7 @@ Option field "
 Option must have a name.
 Option must not use reserved name "uninterpreted_option".
 Order,'From','To',Bits\n
+Other Players
 PACKET_STATUS_DROPPED
 PACKET_STATUS_INVALID
 PACKET_STATUS_NORMAL
@@ -2005,7 +2000,6 @@ PLACEHOLDER_VALUE
 POSIX
 Package name is too long
 PanoramaTextServices001
-ParseMessages
 Path_AddToTail failed for read only CFieldPath
 Path_AddToTail failed, depth already == DEFAULT_MAX_PATH_DEPTH(%d)
 Path_PopLast failed for read only CFieldPath
@@ -2049,6 +2043,7 @@ ProcessOverride encountered unknown directive NetworkOverrideType_t(%d)\n
 Processing
 PropertyEditorSystem_001
 Proto file starts with 0xEF but not UTF-8 BOM. Only UTF-8 is accepted for proto file.
+Protobuf parse failed
 Protobuf: %s(%d): %s\n
 Protocol Buffer map usage error:\n
 Protocol Buffer reflection usage error:\n  Method      : google::protobuf::Reflection::
@@ -2104,6 +2099,7 @@ Release
 ReleaseLast
 ReleaseLast() called on a RepeatedPtrField that is on an arena, 
 ReleaseMessage
+Reliable payload expands to %d bytes, limit is %d
 Remove
 RemoveArrayElementsOutsideOfArrayMetadataBounds:  %s [ent %d] removing change '%s' for field %s (value '%s') on array that has metadata with only %d array elements!\n
 RemoveFakeFields(%s) restoring clone %s:%d with original at %s:%d\n
@@ -2164,12 +2160,15 @@ SetUInt32
 SetUInt64
 Setting FS %s field %s to %s\n
 Should not reach here.
+Signon
+SmartPropsSystem_001
 Socket '%s' bound to '%s' [%s]:\n
 Socket '%s' listening for %s on port %d:\n
 Socket '%s' listening for SDR on port %d virtual port %d\n
 Some options could not be correctly parsed using the proto descriptors compiled into this binary.\nUnparsed options: 
 Source of CopyFrom cannot be a descendant of the target.
 Source2ModTools001
+Spawn Groups
 St10bad_typeid
 St10ctype_base
 St10money_base
@@ -2343,6 +2342,8 @@ SteamNetworkingUtils_LibV4
 SteamUser023
 SteamUtils010
 Stopping capture, %s samples written\n
+String Command
+String Table
 String field
 String literals cannot cross line boundaries.
 StringPrintfVector currently only supports up to 
@@ -2379,6 +2380,7 @@ To google::protobuf::internal::down_cast(From*) [with To = const google::protobu
 To google::protobuf::internal::down_cast(From*) [with To = google::protobuf::Message*; From = google::protobuf::MessageLite]
 To google::protobuf::internal::down_cast(From*) [with To = google::protobuf::internal::DynamicMapField*; From = google::protobuf::internal::MapFieldBase]
 Too many incoming messages on channel (%s) %d remain queued, limit per-frame is %d.\n
+Too many messages in one frame (%d), limit is %s=%d
 Too many proxies for serializer %s.
 Too many queued messages (%d)
 Too many queued messages on channel (%s) %d queued, limit is %d.\n
@@ -2416,6 +2418,7 @@ Unreasonable reliable nUncompressedSize (%d).
 Unreasonable unreliable nUncompressedSize (%d).
 Unrecognized syntax: 
 Unreliable header too small
+Unreliable payload expands to %d bytes, limit is %d
 UnsafeArenaAddAllocatedMessage
 UnsafeArenaReleaseLast
 Unsupported
@@ -2424,6 +2427,7 @@ Unsupported: type mismatch
 Usage: net_captureculldata <file path>\n
 Usage: net_option <setting> [<value>]\n
 Usage:\nnet_fakejitter [send|recv] AVG [PCT] [MAX]\nnet_fakejitter [send|recv] PROFILE\n\nsend|recv  If present, applies the changes to the specified direction only.\nAVG        Mean delay, for packets that are jittered, in ms.  The random\n           delay is chosen using the exponential distribution.\nPCT        Percentage of packets (0...100) that will receive a random delay.\nMAX        Clamp random jitter delay to MAX ms.\nPROFILE    One of: off, low, med, high, huge\n\nUse net_fakestatus to display current simulated network conditions.\n
+User Messages
 Using Valve ICE implementation\n
 UtlRBTree_FailedInsertDuplicate
 UtlVectorMemory_Alloc
@@ -2544,6 +2548,7 @@ Value out of range for int64 option "
 Value out of range for uint32 option "
 VectorWS
 VisBuilder_001
+Voice
 Vrad3_001
 WARNING
 Warning
@@ -3076,7 +3081,6 @@ context(0x%p)
 coord_integral
 covariant return thunk to 
 create_poll_group
-cxRwu
 data_ == other.data_
 data_bits
 databytes
@@ -3147,6 +3151,7 @@ filesystem_stdio
 five
 fixed array
 fixed32
+fixed8
 flattenedserializer.cpp
 flattenedserializers.cpp
 float
@@ -3451,7 +3456,6 @@ marked by nobase
 marked by user group
 matrix3x4_t
 matrix3x4a_t
-max_size
 mbrtowc
 mbsnrtowcs
 mbsrtowcs
@@ -3492,7 +3496,6 @@ netadr_t::ToString(bool) const
 netadr_t::ToString(char*, unsigned int, bool) const
 netadr_t::operator<(netadr_t const&) const
 netchan.cpp
-netmessage
 netmessages.proto
 network_connection.proto
 networkbasetypes.proto
@@ -3663,14 +3666,11 @@ sfixed32
 sfixed64
 short
 showing permutations for %s\n
-shutdown
 signed char
 single permutation
 sint32
 sint64
-size
 size too big: 
-size_exceeded_max
 sizeof 
 sizeof...
 skip
@@ -3756,11 +3756,9 @@ std::_Rb_tree_rotate_left(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*&)
 std::_Rb_tree_rotate_right(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*&)
 std::_Setfill<char> std::setfill<char>(char)
 std::_Setfill<wchar_t> std::setfill<wchar_t>(wchar_t)
-std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_destroy()
 std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release()
 std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release_last_use()
 std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release_last_use_cold()
-std::_Sp_counted_ptr<std::nullptr_t, (__gnu_cxx::_Lock_policy)2>::_M_dispose()
 std::_Sp_counted_ptr_inplace<std::__detail::_NFA<std::regex_traits<char>>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_destroy()
 std::_Sp_counted_ptr_inplace<std::__detail::_NFA<std::regex_traits<char>>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_dispose()
 std::_Sp_counted_ptr_inplace<std::__detail::_NFA<std::regex_traits<char>>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_get_deleter(std::type_info const&)
@@ -4667,6 +4665,19 @@ std::__detail::_Compiler<std::regex_traits<char>>::_M_pop()
 std::__detail::_Compiler<std::regex_traits<char>>::_M_quantifier()
 std::__detail::_Compiler<std::regex_traits<char>>::_M_quantifier()::'lambda'()::operator()() const
 std::__detail::_Compiler<std::regex_traits<char>>::_M_try_char()
+std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, false>::_M_dfs(std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, false>::_Match_mode, long)
+std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, false>::_M_handle_alternative(std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, false>::_Match_mode, long)
+std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, false>::_M_handle_backref(std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, false>::_Match_mode, long)
+std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, false>::_M_is_line_terminator(char) const
+std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, false>::_M_is_word(char) const::__s
+std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, false>::_M_lookahead(long)
+std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, false>::_M_rep_once_more(std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, false>::_Match_mode, long)
+std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, true>::_M_dfs(std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, true>::_Match_mode, long)
+std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, true>::_M_handle_backref(std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, true>::_Match_mode, long)
+std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, true>::_M_is_line_terminator(char) const
+std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, true>::_M_is_word(char) const::__s
+std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, true>::_M_lookahead(long)
+std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, true>::_M_rep_once_more(std::__detail::_Executor<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<std::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string>>>, std::regex_traits<char>, true>::_Match_mode, long)
 std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_M_dfs(std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_Match_mode, long)
 std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_M_handle_alternative(std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_Match_mode, long)
 std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_M_handle_backref(std::__detail::_Executor<char const*, std::allocator<std::sub_match<char const*>>, std::regex_traits<char>, false>::_Match_mode, long)
@@ -8045,7 +8056,6 @@ void std::swap<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>(std:
 void std::vector<std::regex_traits<char>::_RegexMask, std::allocator<std::regex_traits<char>::_RegexMask>>::_M_realloc_append<std::regex_traits<char>::_RegexMask const&>(std::regex_traits<char>::_RegexMask const&)
 vsnprintf
 vtable for 
-vtable for CCharBufferFormatOutputStream
 vtable for __cxxabiv1::__class_type_info
 vtable for __cxxabiv1::__forced_unwind
 vtable for __cxxabiv1::__foreign_exception

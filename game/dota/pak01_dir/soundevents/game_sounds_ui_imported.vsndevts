@@ -2257,7 +2257,7 @@
 	{
 		type = "dota_limit_speakers_ui"
 		pitch = 1.0
-		volume = 0.16
+		volume = 0.5
 		vsnd_files = "sounds/ui/inventory/treasure_reveal.vsnd"
 		vsnd_duration = 2.274921
 	}
@@ -3326,6 +3326,99 @@
 		mixgroup = "Stingers"
 		vsnd_files = "sounds\\ui\\spin_music_end.vsnd"
 		vsnd_duration = 5.991292
+	}
+	ui.treasure_new.spin = 
+	{
+		type = "dota_limit_speakers_ui"
+		pitch = 1.0
+		volume = 0.25
+		vsnd_files = "sounds/ui/treasure_spin.vsnd"
+		vsnd_duration = 2.575397
+	}
+	ui.treasure_new.reveal01 = 
+	{
+		type = "dota_src1_2d"
+		volume = 0.8
+		vsnd_files = "sounds/ui/treasure_reveal_1.vsnd"
+		vsnd_duration = 5.023129
+	}
+	ui.treasure_new.reveal02 = 
+	{
+		type = "dota_src1_2d"
+		volume = 1.0
+		mixgroup = "Stingers"
+		vsnd_files = "sounds/ui/treasure_reveal_2.vsnd"
+		vsnd_duration = 5.602698
+	}
+	ui.treasure_new.reveal03 = 
+	{
+		type = "dota_src1_2d"
+		volume = 0.8
+		mixgroup = "Stingers"
+		vsnd_files = "sounds/ui/treasure_reveal_3.vsnd"
+		vsnd_duration = 15.889524
+	}
+	ui.treasure_new.spin_music = 
+	{
+		type = "dota_src1_2d"
+		volume = 0.8
+		volume_fade_out = 0.8
+		mixgroup = "Stingers"
+		vsnd_files = "sounds/ui/spin_music.vsnd"
+		vsnd_duration = 11.228299
+	}
+	ui.treasure_new.spin_music.end = 
+	{
+		type = "dota_src1_2d"
+		volume = 0.25
+		mixgroup = "Stingers"
+		vsnd_files = "sounds/ui/spin_music_end.vsnd"
+		vsnd_duration = 5.991292
+	}
+	ui.treasure_new.carousel_focus = 
+	{
+		type = "dota_limit_speakers_ui"
+		volume = 0.3
+		vsnd_files = 
+		[
+			"sounds/ui/ui_herocard_hover_01.vsnd",
+			"sounds/ui/ui_herocard_hover_02.vsnd",
+			"sounds/ui/ui_herocard_hover_03.vsnd",
+			"sounds/ui/ui_herocard_hover_04.vsnd",
+			"sounds/ui/ui_herocard_hover_05.vsnd",
+			"sounds/ui/ui_herocard_hover_06.vsnd",
+		]
+		vsnd_duration = 0.468821
+	}
+	ui.treasure_new.home_focus = 
+	{
+		type = "dota_src1_2d"
+		volume = 1.0
+		pitch = 1.0
+		soundlevel = 75.0
+		event_type = 2.0
+		vsnd_files = "sounds/ui/ui_herocard_hover_05.vsnd"
+		vsnd_duration = 0.393605
+	}
+	ui.treasure_new.details_slide_in = 
+	{
+		type = "dota_src1_2d"
+		volume = 1.0
+		pitch = 1.0
+		soundlevel = 75.0
+		event_type = 2.0
+		vsnd_files = "sounds/ui/shop_slide_up.vsnd"
+		vsnd_duration = 0.97068
+	}
+	ui.treasure_new.details_slide_out = 
+	{
+		type = "dota_src1_2d"
+		volume = 1.0
+		pitch = 1.0
+		soundlevel = 75.0
+		event_type = 2.0
+		vsnd_files = "sounds/ui/shop_slide_down.vsnd"
+		vsnd_duration = 0.97068
 	}
 	ui.report_positive = 
 	{

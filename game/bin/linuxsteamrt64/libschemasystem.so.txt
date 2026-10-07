@@ -146,7 +146,6 @@ CBufferString
 CBufferString::AppendConcat(int, char const* const*, int const*, bool)
 CBufferString::AppendFormat(char const*, ...)
 CBufferString::AppendFormatV(char const*, __va_list_tag*)
-CBufferString::EndsWith(char const*) const
 CBufferString::FixSlashes(char)
 CBufferString::Format(char const*, ...)
 CBufferString::Insert(int, char const*, int, bool)
@@ -207,14 +206,11 @@ CUtlScratchMemoryPool::AllocAligned(int, int)
 CUtlString
 CUtlString::Acquire(CBufferString*, bool)
 CUtlString::Format(char const*, ...)
-CUtlString::FormatV(char const*, __va_list_tag*)
 CUtlString::FreeMemoryBlock()
-CUtlString::GetForModify()
 CUtlString::IsEqual_CaseSensitive(char const*) const
 CUtlString::IsEqual_FastCaseInsensitive(char const*) const
 CUtlString::Purge()
 CUtlString::Set(char const*)
-CUtlString::TrimRight(char const*)
 CUtlString::operator+(char const*) const
 CUtlString::operator+=(char const*)
 CUtlStringToken
@@ -273,7 +269,6 @@ EnsureCapacity
 EnsureElementCapacity
 EnsureMemberCapacity
 EnsureUnusedCapacity
-Enum
 Enum '%s' (binary '%s' project '%s')\n
 Enum Name
 Enum name collision: '%s' and '%s' (%d)\n
@@ -313,7 +308,6 @@ GCC: (SteamRT 14.2.0-19~steamrt3.1+bsrt3.1) 14.2.0
 GLIBCXX_TUNABLES
 GLIBC_2.14
 GLIBC_2.17
-GLIBC_2.18
 GLIBC_2.2.5
 GLIBC_2.25
 GLIBC_2.3
@@ -364,7 +358,6 @@ MIsBoxedIntegerType
 MODEL_PROCESSING_SERVICES_INTERFACE_001
 MPropertyCustomFGDType
 MResourceTypeForInfoType
-MSkipDataDescTweaks
 MemAlloc_StrDupFunc
 Member Count
 MeshUtils001
@@ -377,9 +370,6 @@ N10__cxxabiv117__class_type_infoE
 N10__cxxabiv119__foreign_exceptionE
 N10__cxxabiv120__si_class_type_infoE
 N10__cxxabiv121__vmi_class_type_infoE
-N24CFieldPathHuffmanEncoder12InternalNodeE
-N24CFieldPathHuffmanEncoder5INodeE
-N24CFieldPathHuffmanEncoder8LeafNodeE
 N9__gnu_cxx20recursive_init_errorE
 N9__gnu_cxx24__concurrence_lock_errorE
 N9__gnu_cxx26__concurrence_unlock_errorE
@@ -430,6 +420,7 @@ Schema registration error - subclass '%s' registered before base class '%s'\n
 SchemaTestExternal_One_001
 SchemaTestExternal_Two_001
 Size: %d bytes (%d unaccounted, of which %d is likely alignment)\n
+SmartPropsSystem_001
 SoundGuid_t
 Source2ModTools001
 St10bad_typeid
@@ -531,11 +522,9 @@ V_qsort_s
 V_sincosf
 V_sind
 V_sinf
-V_snprintf
 V_stricmp_fast
 V_stristr_fast(char const*, char const*)
 V_strnlen(char const*, int)
-V_strtok
 V_tanf
 V_uuid_t
 V_vsnprintf
@@ -563,10 +552,8 @@ _ITM_memcpyRtWn
 _ITM_registerTMCloneTable
 _MakeGlobalSymbolCaseSensitive
 _V_SetExtension
-_V_strncat
 _V_strncmp
 _V_strncpy
-_V_strnicmp_fast
 __cxa_allocate_dependent_exception
 __cxa_allocate_exception
 __cxa_atexit
@@ -588,8 +575,6 @@ __cxa_guard_release
 __cxa_init_primary_exception
 __cxa_pure_virtual
 __cxa_rethrow
-__cxa_thread_atexit
-__cxa_thread_atexit_impl
 __cxa_throw
 __cxxabiv1::__base_class_type_info::__is_public_p() const
 __cxxabiv1::__base_class_type_info::__is_virtual_p() const
@@ -764,8 +749,6 @@ fputs
 free
 fwrite
 gYGw
-g_BitBuf_BitWriteMasks
-g_BitBuf_ExtraMasks
 g_flTValues0To1Inclusive<float vector[4]>
 g_flTValues0To1Inclusive<float>
 g_nSequentialBytes<int vector[4]>

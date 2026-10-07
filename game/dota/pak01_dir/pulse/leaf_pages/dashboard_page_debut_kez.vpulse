@@ -14,8 +14,8 @@
 			m_MethodName = "AlternateStyle"
 			m_Description = ""
 			m_bIsPublic = true
-			m_ReturnType = "PVAL_VOID"
 			m_Args = [  ]
+			m_ReturnValues = [  ]
 		},
 		{
 			_class = "CPulseCell_Inflow_Method"
@@ -29,8 +29,8 @@
 			m_MethodName = "StartDebut"
 			m_Description = ""
 			m_bIsPublic = true
-			m_ReturnType = "PVAL_VOID"
 			m_Args = [  ]
+			m_ReturnValues = [  ]
 		},
 		{
 			m_nEditorNodeID = 785129421
@@ -54,8 +54,8 @@
 			m_MethodName = "OriginalStyle"
 			m_Description = ""
 			m_bIsPublic = true
-			m_ReturnType = "PVAL_VOID"
 			m_Args = [  ]
+			m_ReturnValues = [  ]
 		},
 		{
 			_class = "CPulseCell_Inflow_Method"
@@ -69,8 +69,8 @@
 			m_MethodName = "EndDebut"
 			m_Description = ""
 			m_bIsPublic = true
-			m_ReturnType = "PVAL_VOID"
 			m_Args = [  ]
+			m_ReturnValues = [  ]
 		},
 		{
 			m_nEditorNodeID = 472771684
@@ -202,7 +202,7 @@
 		{
 			m_Name = "Stinger_SoundId"
 			m_Description = ""
-			m_Type = "PVAL_TYPESAFE_INT:UISoundEventGuid"
+			m_Type = "PVAL_LEAF:UISoundEventGuid"
 			m_DefaultValue = 0
 			m_nKeysSource = "PRIVATE"
 			m_bIsPublicBlackboardVariable = false
@@ -213,7 +213,7 @@
 		{
 			m_Name = "SFX_SoundId"
 			m_Description = ""
-			m_Type = "PVAL_TYPESAFE_INT:UISoundEventGuid"
+			m_Type = "PVAL_LEAF:UISoundEventGuid"
 			m_DefaultValue = 0
 			m_nKeysSource = "PRIVATE"
 			m_bIsPublicBlackboardVariable = false
@@ -222,6 +222,7 @@
 			m_Metadata = null
 		},
 	]
+	m_TempVarBanks = [  ]
 	m_Constants = 
 	[
 		{
@@ -241,7 +242,7 @@
 			m_Value = 0.01
 		},
 		{
-			m_Type = "PVAL_SCHEMA_ENUM:PulseCursorCancelPriority_t"
+			m_Type = "PVAL_ENUM:PulseCursorCancelPriority_t"
 			m_Value = "HardCancel"
 		},
 		{
@@ -750,7 +751,7 @@
 				}
 				m_Outparams = null
 			}
-			m_FuncName = "CBaseAnimatingActivityAPI::PlaySequence"
+			m_FuncName = "CBaseAnimatingActivity_API::PlaySequence"
 			m_nCellIndex = -1
 			m_nSrcChunk = -1
 			m_nSrcInstruction = -1
@@ -791,7 +792,7 @@
 				}
 				m_Outparams = null
 			}
-			m_FuncName = "CBaseAnimatingActivityAPI::PlaySequence"
+			m_FuncName = "CBaseAnimatingActivity_API::PlaySequence"
 			m_nCellIndex = -1
 			m_nSrcChunk = -1
 			m_nSrcInstruction = -1
@@ -836,7 +837,7 @@
 				}
 				m_Outparams = null
 			}
-			m_FuncName = "CBaseAnimatingActivityAPI::PlaySequence"
+			m_FuncName = "CBaseAnimatingActivity_API::PlaySequence"
 			m_nCellIndex = -1
 			m_nSrcChunk = -1
 			m_nSrcInstruction = -1
@@ -925,6 +926,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "RETURN_VOID"
@@ -939,6 +941,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 			]
 			m_Registers = [  ]
@@ -955,6 +958,7 @@
 					m_SequencePointName = "m_OptionalRequirementsCheckPointForInlineSkip"
 				},
 			]
+			m_nTempVarBank = -1
 		},
 		{
 			m_Instructions = 
@@ -972,6 +976,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "GET_DOMAIN_VALUE"
@@ -986,6 +991,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = 0
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "LIBRARY_INVOKE"
@@ -1000,6 +1006,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "GET_DOMAIN_VALUE"
@@ -1014,6 +1021,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = 1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "GET_CONST"
@@ -1028,6 +1036,7 @@
 					m_nConstIdx = 0
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "LIBRARY_INVOKE"
@@ -1042,6 +1051,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "GET_DOMAIN_VALUE"
@@ -1056,6 +1066,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = 1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "GET_CONST"
@@ -1070,6 +1081,7 @@
 					m_nConstIdx = 1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "LIBRARY_INVOKE"
@@ -1084,6 +1096,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "GET_DOMAIN_VALUE"
@@ -1098,6 +1111,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = 0
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "GET_CONST"
@@ -1112,6 +1126,7 @@
 					m_nConstIdx = 2
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "LIBRARY_INVOKE"
@@ -1126,6 +1141,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "GET_DOMAIN_VALUE"
@@ -1140,6 +1156,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = 2
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "GET_CONST"
@@ -1154,6 +1171,7 @@
 					m_nConstIdx = 1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "LIBRARY_INVOKE"
@@ -1168,6 +1186,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "GET_CONST"
@@ -1182,6 +1201,7 @@
 					m_nConstIdx = 3
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "CELL_INVOKE"
@@ -1196,6 +1216,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "IMMEDIATE_HALT"
@@ -1210,6 +1231,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "NOP"
@@ -1224,6 +1246,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "GET_CONST"
@@ -1238,6 +1261,7 @@
 					m_nConstIdx = 5
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "LIBRARY_INVOKE"
@@ -1252,6 +1276,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "GET_DOMAIN_VALUE"
@@ -1266,6 +1291,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = 2
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "GET_CONST"
@@ -1280,6 +1306,7 @@
 					m_nConstIdx = 6
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "CELL_INVOKE"
@@ -1294,6 +1321,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "IMMEDIATE_HALT"
@@ -1308,6 +1336,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "NOP"
@@ -1322,6 +1351,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "GET_DOMAIN_VALUE"
@@ -1336,6 +1366,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = 3
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "GET_CONST"
@@ -1350,6 +1381,7 @@
 					m_nConstIdx = 1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "LIBRARY_INVOKE"
@@ -1364,6 +1396,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "GET_DOMAIN_VALUE"
@@ -1378,6 +1411,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = 2
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "GET_CONST"
@@ -1392,6 +1426,7 @@
 					m_nConstIdx = 1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "LIBRARY_INVOKE"
@@ -1406,6 +1441,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "GET_DOMAIN_VALUE"
@@ -1420,6 +1456,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = 6
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "LIBRARY_INVOKE"
@@ -1434,6 +1471,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "GET_DOMAIN_VALUE"
@@ -1448,6 +1486,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = 6
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "GET_DOMAIN_VALUE"
@@ -1462,6 +1501,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = 7
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "GET_CONST"
@@ -1476,6 +1516,7 @@
 					m_nConstIdx = 7
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "LIBRARY_INVOKE"
@@ -1490,6 +1531,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "CELL_INVOKE"
@@ -1504,6 +1546,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "IMMEDIATE_HALT"
@@ -1518,6 +1561,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "NOP"
@@ -1532,6 +1576,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "RETURN_VOID"
@@ -1546,6 +1591,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "NOP"
@@ -1560,6 +1606,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "GET_DOMAIN_VALUE"
@@ -1574,6 +1621,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = 8
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "CELL_INVOKE"
@@ -1588,6 +1636,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "IMMEDIATE_HALT"
@@ -1602,6 +1651,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "NOP"
@@ -1616,6 +1666,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "GET_DOMAIN_VALUE"
@@ -1630,6 +1681,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = 9
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "CELL_INVOKE"
@@ -1644,6 +1696,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "IMMEDIATE_HALT"
@@ -1658,6 +1711,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "NOP"
@@ -1672,6 +1726,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "GET_CONST"
@@ -1686,6 +1741,7 @@
 					m_nConstIdx = 8
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "LIBRARY_INVOKE"
@@ -1700,6 +1756,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "SET_VAR"
@@ -1714,6 +1771,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "GET_CONST"
@@ -1728,6 +1786,7 @@
 					m_nConstIdx = 9
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "LIBRARY_INVOKE"
@@ -1742,6 +1801,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "SET_VAR"
@@ -1756,6 +1816,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "RETURN_VOID"
@@ -1770,6 +1831,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "NOP"
@@ -1784,6 +1846,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "GET_CONST"
@@ -1798,6 +1861,7 @@
 					m_nConstIdx = 10
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "CELL_INVOKE"
@@ -1812,6 +1876,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "IMMEDIATE_HALT"
@@ -1826,6 +1891,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "NOP"
@@ -1840,6 +1906,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "GET_DOMAIN_VALUE"
@@ -1854,6 +1921,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = 8
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "GET_CONST"
@@ -1868,6 +1936,7 @@
 					m_nConstIdx = 11
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "LIBRARY_INVOKE"
@@ -1882,6 +1951,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "GET_DOMAIN_VALUE"
@@ -1896,6 +1966,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = 6
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "GET_DOMAIN_VALUE"
@@ -1910,6 +1981,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = 10
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "LIBRARY_INVOKE"
@@ -1924,6 +1996,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "CELL_INVOKE"
@@ -1938,6 +2011,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "IMMEDIATE_HALT"
@@ -1952,6 +2026,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "NOP"
@@ -1966,6 +2041,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "GET_DOMAIN_VALUE"
@@ -1980,6 +2056,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = 9
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "GET_CONST"
@@ -1994,6 +2071,7 @@
 					m_nConstIdx = 12
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "LIBRARY_INVOKE"
@@ -2008,6 +2086,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "RETURN_VOID"
@@ -2022,6 +2101,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "NOP"
@@ -2036,6 +2116,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "GET_DOMAIN_VALUE"
@@ -2050,6 +2131,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = 4
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "GET_CONST"
@@ -2064,6 +2146,7 @@
 					m_nConstIdx = 1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "LIBRARY_INVOKE"
@@ -2078,6 +2161,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "GET_DOMAIN_VALUE"
@@ -2092,6 +2176,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = 5
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "GET_CONST"
@@ -2106,6 +2191,7 @@
 					m_nConstIdx = 1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "LIBRARY_INVOKE"
@@ -2120,6 +2206,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "RETURN_VOID"
@@ -2134,6 +2221,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "NOP"
@@ -2148,6 +2236,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "GET_DOMAIN_VALUE"
@@ -2162,6 +2251,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = 11
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "GET_CONST"
@@ -2176,6 +2266,7 @@
 					m_nConstIdx = 11
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "LIBRARY_INVOKE"
@@ -2190,6 +2281,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "GET_DOMAIN_VALUE"
@@ -2204,6 +2296,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = 6
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "GET_DOMAIN_VALUE"
@@ -2218,6 +2311,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = 12
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "GET_CONST"
@@ -2232,6 +2326,7 @@
 					m_nConstIdx = 13
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "LIBRARY_INVOKE"
@@ -2246,6 +2341,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "GET_DOMAIN_VALUE"
@@ -2260,6 +2356,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = 6
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "GET_DOMAIN_VALUE"
@@ -2274,6 +2371,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = 13
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "LIBRARY_INVOKE"
@@ -2288,6 +2386,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "GET_CONST"
@@ -2302,6 +2401,7 @@
 					m_nConstIdx = 7
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "CELL_INVOKE"
@@ -2316,6 +2416,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "IMMEDIATE_HALT"
@@ -2330,6 +2431,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "NOP"
@@ -2344,6 +2446,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "RETURN_VOID"
@@ -2358,6 +2461,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "NOP"
@@ -2372,6 +2476,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "RETURN_VOID"
@@ -2386,6 +2491,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "NOP"
@@ -2400,6 +2506,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "GET_DOMAIN_VALUE"
@@ -2414,6 +2521,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = 6
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "GET_CONST"
@@ -2428,6 +2536,7 @@
 					m_nConstIdx = 14
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "GET_CONST"
@@ -2442,6 +2551,7 @@
 					m_nConstIdx = 15
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "GET_CONST"
@@ -2456,6 +2566,7 @@
 					m_nConstIdx = 16
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "GET_CONST"
@@ -2470,6 +2581,7 @@
 					m_nConstIdx = 17
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "LIBRARY_INVOKE"
@@ -2484,6 +2596,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "RETURN_VOID"
@@ -2498,6 +2611,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 			]
 			m_Registers = 
@@ -2672,7 +2786,7 @@
 				},
 				{
 					m_nReg = 24
-					m_Type = "PVAL_TYPESAFE_INT:UISoundEventGuid"
+					m_Type = "PVAL_LEAF:UISoundEventGuid"
 					m_OriginName = "47026135:retval"
 					m_nWrittenByInstruction = 52
 					m_nLastReadByInstruction = -1
@@ -2686,7 +2800,7 @@
 				},
 				{
 					m_nReg = 26
-					m_Type = "PVAL_TYPESAFE_INT:UISoundEventGuid"
+					m_Type = "PVAL_LEAF:UISoundEventGuid"
 					m_OriginName = "362267468:retval"
 					m_nWrittenByInstruction = 55
 					m_nLastReadByInstruction = -1
@@ -3413,6 +3527,7 @@
 					m_SequencePointName = "OutDefault"
 				},
 			]
+			m_nTempVarBank = -1
 		},
 		{
 			m_Instructions = 
@@ -3430,6 +3545,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "RETURN_VOID"
@@ -3444,6 +3560,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 			]
 			m_Registers = [  ]
@@ -3460,6 +3577,7 @@
 					m_SequencePointName = "m_OptionalRequirementsCheckPointForInlineSkip"
 				},
 			]
+			m_nTempVarBank = -1
 		},
 		{
 			m_Instructions = 
@@ -3477,6 +3595,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "GET_CONST"
@@ -3491,6 +3610,7 @@
 					m_nConstIdx = 4
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "LIBRARY_INVOKE"
@@ -3505,6 +3625,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "GET_DOMAIN_VALUE"
@@ -3519,6 +3640,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = 3
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "GET_CONST"
@@ -3533,6 +3655,7 @@
 					m_nConstIdx = 1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "LIBRARY_INVOKE"
@@ -3547,6 +3670,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "GET_DOMAIN_VALUE"
@@ -3561,6 +3685,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = 2
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "GET_CONST"
@@ -3575,6 +3700,7 @@
 					m_nConstIdx = 1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "LIBRARY_INVOKE"
@@ -3589,6 +3715,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "GET_DOMAIN_VALUE"
@@ -3603,6 +3730,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = 4
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "GET_CONST"
@@ -3617,6 +3745,7 @@
 					m_nConstIdx = 1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "LIBRARY_INVOKE"
@@ -3631,6 +3760,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "GET_DOMAIN_VALUE"
@@ -3645,6 +3775,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = 5
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "GET_CONST"
@@ -3659,6 +3790,7 @@
 					m_nConstIdx = 1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "LIBRARY_INVOKE"
@@ -3673,6 +3805,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "GET_VAR"
@@ -3687,6 +3820,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "LIBRARY_INVOKE"
@@ -3701,6 +3835,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "GET_VAR"
@@ -3715,6 +3850,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "LIBRARY_INVOKE"
@@ -3729,6 +3865,7 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 				{
 					m_nCode = "RETURN_VOID"
@@ -3743,13 +3880,14 @@
 					m_nConstIdx = -1
 					m_nDomainValueIdx = -1
 					m_nBlackboardReferenceIdx = -1
+					m_nTempVarIdx = -1
 				},
 			]
 			m_Registers = 
 			[
 				{
 					m_nReg = 0
-					m_Type = "PVAL_SCHEMA_ENUM:PulseCursorCancelPriority_t"
+					m_Type = "PVAL_ENUM:PulseCursorCancelPriority_t"
 					m_OriginName = "547714893:nKillPriority"
 					m_nWrittenByInstruction = 1
 					m_nLastReadByInstruction = -1
@@ -3812,14 +3950,14 @@
 				},
 				{
 					m_nReg = 9
-					m_Type = "PVAL_TYPESAFE_INT:UISoundEventGuid"
+					m_Type = "PVAL_LEAF:UISoundEventGuid"
 					m_OriginName = "931573165:value"
 					m_nWrittenByInstruction = 15
 					m_nLastReadByInstruction = -1
 				},
 				{
 					m_nReg = 10
-					m_Type = "PVAL_TYPESAFE_INT:UISoundEventGuid"
+					m_Type = "PVAL_LEAF:UISoundEventGuid"
 					m_OriginName = "851413847:value"
 					m_nWrittenByInstruction = 17
 					m_nLastReadByInstruction = -1
@@ -3928,6 +4066,7 @@
 					m_SequencePointName = "OutDefault"
 				},
 			]
+			m_nTempVarBank = -1
 		},
 	]
 }

@@ -14,6 +14,7 @@
 !AxU
 !H1É
 !H1Éډ]
+!H1ƅ
 !H1Љ
 !H;P
 !H\tЋ
@@ -29,11 +30,16 @@
 !o}O
 !rR\n4:
 !u0h
-!w H
 !}#@
 !ʋH\bD)C
 !̧3`
+"%.*s" is #defined in terms of itself
+"%.*s" is not a valid integer
+"%.*s" is too long to be a #define name
 "%/28;=#$019:>?
+"%s" is #defined as "%s", which is not an integer or the name of another #define
+"%s" is #defined as multiple values ("%s" in %s and as "%s" in %s), it cannot be used in a rule
+"%s" is not an integer and is not #defined in this shader or anything it includes
 ".B^g
 "C!䂸
 "\v0A-
@@ -72,24 +78,25 @@
 #CfU7
 #D)\t
 #F\\J얁
-#O@tF
 #RenderSystem_UnableToStartGame
 #Vulkan_DisableInstructions
 #Vulkan_InitializationFailure
 #Vulkan_RequiredExtensionMissing
 #X|u˪H\vf
 #[A\\]
-#\atwH
-#\au,
+#\at|H
 #bML"
+#define
+#else
+#endif
 #fA9
 #ff.
 #h/f
+#if defined(__cplusplus)
 #include
 #line
 #rw_output_autoreactive
 #tHM
-#t\e1
 #|?b
 $ H0
 $ Hc
@@ -102,13 +109,13 @@ $0A)
 $0E)
 $1I)
 $2M)
-$2SH
 $3Mi
 $6L)
 $6M9
 $8H)
 $98s
 $9L9
+$;wGH
 $<\ru\nA
 $<^y
 $>Hi
@@ -123,12 +130,13 @@ $GHc
 $H9]
 $H\tȋ
 $H\tЋ
-$Hc=
+$Hc= 4+
 $I#T$\bH
 $IH)
 $Ic}`9
 $K|d%
 $LA9
+$LD9
 $M#l$\bH
 $ORIGIN
 $OTHEfE
@@ -156,10 +164,10 @@ $fE9
 $ff.
 $gfI
 $qE}
-$s=A
-$sDA
+$sHA
 $t\aH
 $t\aI
+$t^A
 $u I
 $u#I
 $uRH
@@ -169,347 +177,1059 @@ $vfA
 $x*I
 $~*I
 $~,I
-%!C3
+% ,9
 %!ҠR
-%$ A
-%$!A
-%$"A
-%$#A
-%$$A
-%$%A
-%$&A
-%$'A
-%$(A
-%$)A
-%$*A
-%$++
-%$+A
-%$,A
-%$-A
-%$.A
-%$/A
-%$\aA
-%$\bA
-%$\eA
-%$\fA
-%$\nA
-%$\rA
-%$\tA
-%$\vA
+%"1B
+%"7B
+%"?B
+%#XA
+%$ B
+%$!B
+%$"B
+%$#B
+%$$B
+%$%B
+%$&B
+%$'B
+%$(B
+%$)B
+%$*B
+%$+B
+%$,B
+%$-B
+%$.B
+%$/B
+%$0B
+%$1B
+%$2B
+%$3B
+%$4B
+%$5B
+%$6B
+%$7B
+%$8B
+%$9B
+%$:B
+%$;B
+%$<B
+%$=B
+%$>B
+%$?B
+%$@B
+%$AB
+%$BB
+%$CB
+%$DB
+%$EB
+%$FB
+%$GB
+%$HB
+%$IB
+%$JB
+%$KB
+%$LB
+%$MB
+%$NB
+%$OB
+%$PB
+%$QB
+%$RB
+%$SB
+%$TB
+%$UB
+%$VB
+%$WB
+%$XB
+%$YB
+%$ZB
+%$[B
+%$\\B
+%$\eB
+%$]B
+%$^B
+%$_B
+%$`B
+%$aB
+%$bB
+%$cB
+%$dB
+%$eB
+%$fB
+%$gB
+%$hB
+%$iB
+%$jB
+%$kB
+%$lB
+%$mB
+%$nB
+%$oB
+%$pB
+%$qB
+%$rB
+%$sB
+%$tB
+%$uB
 %%%%%%)
 %%%%%%.
-%)W>
-%*v1
-%, A
-%,!A
-%,"A
-%,#A
-%,$A
-%,%A
-%,&A
-%,'A
-%,(A
-%,)A
-%,*A
-%,+A
-%,,A
+%%%s%c
+%%%sd
+%%~9
+%*1B
+%*AB
+%, B
+%,!B
+%,"B
+%,#B
+%,$B
+%,%B
+%,&B
+%,'B
+%,(B
+%,)B
+%,*B
+%,+B
+%,,B
 %,-????????????????
-%,-A
-%,.A
-%,/A
+%,-B
+%,.B
+%,/B
+%,0B
+%,1B
+%,2B
 %,34-&.56????????????????
 %,3:;4-&
-%,\aA
-%,\bA
-%,\eA
-%,\fA
-%,\nA
-%,\rA
-%,\tA
-%,\vA
+%,3B
+%,4B
+%,5B
+%,6B
+%,7B
+%,8B
+%,9B
+%,:B
+%,;B
+%,<B
+%,=B
+%,>B
+%,?B
+%,@B
+%,AB
+%,BB
+%,CB
+%,DB
+%,EB
+%,FB
+%,GB
+%,HB
+%,IB
+%,JB
+%,KB
+%,LB
+%,MB
+%,NB
+%,OB
+%,PB
+%,QB
+%,RB
+%,SB
+%,TB
+%,UB
+%,VB
+%,WB
+%,XB
+%,YB
+%,ZB
+%,[B
+%,\\B
+%,\eB
+%,]B
+%,^B
+%,_B
+%,`B
+%,aB
+%,bB
+%,cB
+%,dB
+%,eB
+%,fB
+%,gB
+%,hB
+%,iB
+%,jB
+%,kB
+%,lB
+%,mB
+%,nB
+%,oB
+%,pB
+%,qB
+%,rB
+%,sB
+%,tB
+%,uB
 %-100s %-6s %-6s\n
-%.%?
+%-160s | %8.2fms\n
+%-160s | %8s\n
 %.*Lf
 %.3f
 %0*x
 %016lx
-%1P1
+%1I/
+%24B
 %3d %3d %3d %3d %3d %3d %3d %3d
 %3d: e=%.3f rms=%.6f %u\n
-%4 A
-%4!A
-%4"A
-%4#A
-%4$A
-%4%A
-%4&A
-%4'A
-%4(A
-%4)A
-%4*A
-%4+A
-%4,A
-%4-A
-%4.A
-%4/A
-%4\aA
-%4\bA
-%4\eA
-%4\fA
-%4\nA
-%4\rA
-%4\tA
-%4\vA
+%4 B
+%4!B
+%4"B
+%4#B
+%4$B
+%4%B
+%4&B
+%4'B
+%4(B
+%4)B
+%4*B
+%4+B
+%4,B
+%4-B
+%4.B
+%4/B
+%40B
+%41B
+%42B
+%43B
+%44B
+%45B
+%46B
+%47B
+%48B
+%49B
+%4:B
+%4;B
+%4<B
+%4=B
+%4>B
+%4?B
+%4@B
+%4AB
+%4BB
+%4CB
+%4DB
+%4EB
+%4FB
+%4GB
+%4HB
+%4IB
+%4JB
+%4KB
+%4LB
+%4MB
+%4NB
+%4OB
+%4PB
+%4QB
+%4RB
+%4SB
+%4TB
+%4UB
+%4VB
+%4WB
+%4XB
+%4YB
+%4ZB
+%4[B
+%4\\B
+%4\eB
+%4]B
+%4^B
+%4_B
+%4`B
+%4aB
+%4bB
+%4cB
+%4dB
+%4eB
+%4fB
+%4gB
+%4hB
+%4iB
+%4jB
+%4kB
+%4lB
+%4mB
+%4nB
+%4oB
+%4pB
+%4qB
+%4rB
+%4sB
+%4tB
 %4u %4u %4u %4u %4u %4u %4u %4u
+%4uB
 %4xY
-%7$*
-%7)4
-%7T-
-%8\t#
-%9&/
-%9Q+
-%< A
-%<!A
-%<"A
-%<#A
-%<$A
-%<%A
-%<&A
-%<'A
-%<(A
-%<)A
-%<*A
-%<+A
-%<,A
-%<-A
-%<.A
-%</A
-%<\aA
-%<\bA
-%<\eA
-%<\fA
-%<\nA
-%<\rA
-%<\tA
-%<\vA
+%5=$
+%9"?
+%:4B
+%:7B
+%< B
+%<!B
+%<"B
+%<#B
+%<$B
+%<%B
+%<&B
+%<'B
+%<(B
+%<)B
+%<*B
+%<+B
+%<,B
+%<-B
+%<.B
+%</B
+%<0B
+%<1B
+%<2B
+%<3B
+%<4B
+%<5B
+%<6B
+%<7B
+%<8B
+%<9B
+%<:B
+%<;B
+%<<B
+%<=B
+%<>B
+%<?B
+%<@B
+%<AB
+%<BB
+%<CB
+%<DB
+%<EB
+%<FB
+%<GB
+%<HB
+%<IB
+%<JB
+%<KB
+%<LB
+%<MB
+%<NB
+%<OB
+%<PB
+%<QB
+%<RB
+%<SB
+%<TB
+%<UB
+%<VB
+%<WB
+%<XB
+%<YB
+%<ZB
+%<[B
+%<\\B
+%<\eB
+%<]B
+%<^B
+%<_B
+%<`B
+%<aB
+%<bB
+%<cB
+%<dB
+%<eB
+%<fB
+%<gB
+%<hB
+%<iB
+%<jB
+%<kB
+%<lB
+%<mB
+%<nB
+%<oB
+%<pB
+%<qB
+%<rB
+%<sB
+%<tB
+%<uB
 %=(knΚ
 %A Is
-%A,.
-%B$+
-%C{;
-%D A
-%D!A
-%D"A
-%D#A
-%D$A
-%D%A
-%D&A
-%D'A
-%D(A
-%D)A
-%D*A
-%D+A
-%D,A
-%D-A
-%D.A
-%D/A
-%D\aA
-%D\bA
-%D\eA
-%D\fA
-%D\nA
-%D\rA
-%D\tA
-%D\vA
-%EM1
-%H,.
+%A_3
+%D B
+%D!B
+%D"B
+%D#B
+%D$B
+%D%B
+%D&B
+%D'B
+%D(B
+%D)B
+%D*B
+%D+B
+%D,B
+%D-B
+%D.B
+%D/B
+%D0B
+%D1B
+%D2B
+%D3B
+%D4B
+%D5B
+%D6B
+%D7B
+%D8B
+%D9B
+%D:B
+%D;B
+%D<B
+%D=B
+%D>B
+%D?B
+%D@B
+%DAB
+%DBB
+%DCB
+%DDB
+%DEB
+%DFB
+%DGB
+%DHB
+%DIB
+%DJB
+%DKB
+%DLB
+%DMB
+%DNB
+%DOB
+%DPB
+%DQB
+%DRB
+%DSB
+%DTB
+%DUB
+%DVB
+%DWB
+%DXB
+%DYB
+%DZB
+%D[B
+%D\\B
+%D\eB
+%D]B
+%D^B
+%D_B
+%D`B
+%DaB
+%DbB
+%DcB
+%DdB
+%DeB
+%DfB
+%DgB
+%DhB
+%DiB
+%DjB
+%DkB
+%DlB
+%DmB
+%DnB
+%DoB
+%DpB
+%DqB
+%DrB
+%DsB
+%DtB
+%DuB
+%E @
+%E$@
+%Gf@
 %H:%M
 %H:%M:%S
 %HҼoަ
 %I:%M:%S %p
-%IX4
-%L A
-%L!A
-%L"A
-%L#A
-%L$A
-%L%A
-%L&A
-%L'A
-%L(A
-%L)A
-%L*A
-%L+A
-%L,A
-%L-A
-%L.A
-%L/A
-%L\aA
-%L\bA
-%L\eA
-%L\fA
-%L\nA
-%L\rA
-%L\tA
-%L\vA
+%IA6
+%IF>
+%J3B
+%J7B
+%J?B
+%L B
+%L!B
+%L"B
+%L#@
+%L#B
+%L$B
+%L%B
+%L&B
+%L'B
+%L(B
+%L)B
+%L*B
+%L+B
+%L,B
+%L-B
+%L.B
+%L/B
+%L0B
+%L1B
+%L2B
+%L3B
+%L4B
+%L5B
+%L6B
+%L7B
+%L8B
+%L9B
+%L:B
+%L;B
+%L<B
+%L=B
+%L>B
+%L?B
+%L@B
+%LAB
+%LBB
+%LCB
+%LDB
+%LEB
+%LFB
+%LGB
+%LHB
+%LIB
+%LJB
+%LKB
+%LLB
+%LMB
+%LNB
+%LOB
+%LPB
+%LQB
+%LRB
+%LSB
+%LTB
+%LUB
+%LVB
+%LWB
+%LXB
+%LYB
+%LZB
+%L[B
+%L\\B
+%L\eB
+%L]B
+%L^B
+%L_B
+%L`B
+%LaB
+%LbB
+%LcB
+%LdB
+%LeB
+%LfB
+%LgB
+%LhB
+%LiB
+%LjB
+%LkB
+%LlB
+%LmB
+%LnB
+%LoB
+%LpB
+%LqB
+%LrB
 %LrUg
-%N~5
-%P\b#
-%Qj3
+%LsB
+%LtB
+%LuB
+%NU7
+%R1B
+%R3B
 %S*VN
-%T A
-%T!A
-%T"A
-%T#A
-%T$A
-%T%A
-%T&A
-%T'A
-%T(A
-%T)A
-%T*A
-%T+A
-%T,A
-%T-A
-%T.A
-%T/A
-%T\aA
-%T\bA
-%T\eA
-%T\fA
-%T\nA
-%T\rA
-%T\tA
-%T\vA
-%US+
-%X\t#
-%\\ A
-%\\!A
-%\\"A
-%\\#A
-%\\$A
-%\\%A
-%\\&A
-%\\'A
-%\\(A
-%\\)A
-%\\*A
-%\\+A
-%\\,A
-%\\-A
-%\\.A
-%\\/A
-%\\\aA
-%\\\bA
-%\\\eA
-%\\\fA
-%\\\nA
-%\\\rA
-%\\\tA
-%\\\vA
-%\ed+
-%\f A
-%\f!A
-%\f"A
-%\f#A
-%\f$A
-%\f%A
-%\f&A
-%\f'A
-%\f(A
-%\f)A
-%\f*A
-%\f+A
-%\f,A
-%\f-A
-%\f.A
-%\f/A
-%\f\aA
-%\f\bA
-%\f\eA
-%\f\fA
-%\f\nA
-%\f\rA
-%\f\tA
-%\f\vA
-%\rfA
-%\t'/
-%\t(1
-%\t54
-%\t\e3
+%T B
+%T!B
+%T"B
+%T#B
+%T$B
+%T%B
+%T&B
+%T'B
+%T(B
+%T)B
+%T*B
+%T+B
+%T,B
+%T-B
+%T.B
+%T/B
+%T0B
+%T1B
+%T2B
+%T3B
+%T4B
+%T5B
+%T6B
+%T7B
+%T8B
+%T9B
+%T:B
+%T;B
+%T<B
+%T=B
+%T>B
+%T?B
+%T@B
+%TAB
+%TBB
+%TCB
+%TDB
+%TEB
+%TFB
+%TGB
+%THB
+%TIB
+%TJB
+%TKB
+%TLB
+%TMB
+%TNB
+%TOB
+%TPB
+%TQB
+%TRB
+%TSB
+%TTB
+%TUB
+%TVB
+%TWB
+%TXB
+%TYB
+%TZB
+%T[B
+%T\\B
+%T\eB
+%T]B
+%T^B
+%T_B
+%T`B
+%TaB
+%TbB
+%TcB
+%TdB
+%TeB
+%TfB
+%TgB
+%ThB
+%TiB
+%TjB
+%TkB
+%TlB
+%TmB
+%TnB
+%ToB
+%TpB
+%TqB
+%TrB
+%TsB
+%TtB
+%TuB
+%Y23
+%YI#
+%Z3B
+%Z8B
+%\\ B
+%\\!B
+%\\"B
+%\\#B
+%\\$B
+%\\%B
+%\\&B
+%\\'B
+%\\(B
+%\\)B
+%\\*B
+%\\+B
+%\\,B
+%\\-B
+%\\.B
+%\\/B
+%\\0B
+%\\1B
+%\\2B
+%\\3B
+%\\4B
+%\\5B
+%\\6B
+%\\7B
+%\\8B
+%\\9B
+%\\:B
+%\\;B
+%\\<B
+%\\=B
+%\\>B
+%\\?B
+%\\@B
+%\\AB
+%\\BB
+%\\CB
+%\\DB
+%\\EB
+%\\FB
+%\\GB
+%\\HA
+%\\HB
+%\\IB
+%\\JB
+%\\KB
+%\\LB
+%\\MB
+%\\NB
+%\\OB
+%\\PB
+%\\QB
+%\\RB
+%\\SB
+%\\TB
+%\\UB
+%\\VB
+%\\WB
+%\\XB
+%\\YB
+%\\ZB
+%\\[B
+%\\\\B
+%\\\eB
+%\\]B
+%\\^B
+%\\_B
+%\\`B
+%\\aB
+%\\bB
+%\\cB
+%\\dB
+%\\eB
+%\\fB
+%\\gB
+%\\hB
+%\\iB
+%\\jB
+%\\kB
+%\\lB
+%\\mB
+%\\nB
+%\\oB
+%\\pB
+%\\qB
+%\\rB
+%\\sB
+%\\tB
+%\\uB
+%\bR/
+%\e"$
+%\f B
+%\f!B
+%\f"B
+%\f#B
+%\f$B
+%\f%B
+%\f&B
+%\f'B
+%\f(B
+%\f)B
+%\f*B
+%\f+B
+%\f,B
+%\f-B
+%\f.B
+%\f/B
+%\f0B
+%\f1B
+%\f2B
+%\f3B
+%\f4B
+%\f5B
+%\f6B
+%\f7B
+%\f8B
+%\f9B
+%\f:B
+%\f;B
+%\f<B
+%\f=B
+%\f>B
+%\f?B
+%\f@B
+%\fAB
+%\fBB
+%\fCB
+%\fDB
+%\fEB
+%\fFB
+%\fGB
+%\fHB
+%\fIB
+%\fJB
+%\fKB
+%\fLB
+%\fMB
+%\fNB
+%\fOB
+%\fPB
+%\fQB
+%\fRB
+%\fSB
+%\fTB
+%\fUB
+%\fVB
+%\fWB
+%\fXB
+%\fYB
+%\fZB
+%\f[B
+%\f\\B
+%\f\eB
+%\f]B
+%\f^B
+%\f_B
+%\f`B
+%\faB
+%\fbB
+%\fcB
+%\fdB
+%\feB
+%\ffB
+%\fgB
+%\fhB
+%\fiB
+%\fjB
+%\fkB
+%\flB
+%\fmB
+%\fnB
+%\foB
+%\fpB
+%\fqB
+%\frB
+%\fsB
+%\ftB
+%\fuB
+%\n1B
+%\n9B
+%\t23
+%\tY*
 %\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%
-%]\\+
 %a %b %e %T %Y
-%c'>
+%b1B
+%b3B
+%b7B
+%b?B
 %d %d %d
 %d %d %d %d
-%d A
-%d!A
-%d"A
-%d#A
-%d$A
-%d%A
-%d&A
-%d'A
-%d(A
-%d)A
-%d*A
-%d+A
-%d,A
-%d-A
+%d B
+%d!B
+%d"B
+%d#B
+%d$B
+%d%B
+%d&B
+%d'B
+%d(B
+%d)B
+%d*B
+%d+B
+%d,B
+%d-B
 %d.%d.%d.%d
-%d..%d
-%d.A
-%d/A
-%d\aA
-%d\bA
-%d\eA
-%d\fA
-%d\nA
-%d\rA
-%d\tA
-%d\vA
+%d.B
+%d/B
+%d0B
+%d1B
+%d2B
+%d3B
+%d4B
+%d5B
+%d6B
+%d7B
+%d8B
+%d9B
+%d:B
+%d;B
+%d<B
+%d=B
+%d>B
+%d?B
+%d@B
+%dAB
+%dBB
+%dCB
+%dDB
+%dEB
+%dFB
+%dGB
+%dHB
+%dIB
+%dJB
+%dKB
+%dLB
+%dMB
+%dNB
+%dOB
+%dPB
+%dQB
+%dRB
+%dSB
+%dTB
+%dUB
+%dVB
+%dWB
+%dXB
+%dYB
+%dZB
+%d[B
+%d\\B
+%d\eB
+%d]B
+%d^B
+%d_B
+%d`B
+%daB
 %daT
+%dbB
+%dcB
+%ddB
+%deB
+%dfB
+%dgB
+%dhB
+%diB
+%djB
+%dkB
+%dlB
+%dmB
+%dnB
+%doB
+%dpB
+%dqB
+%drB
+%dsB
+%dtB
+%duB
 %f%fH
 %f%ff
 %f%ffD
 %ff.
-%hb<
-%iW>
-%id7
-%ieA
-%jF7
-%l A
-%l!A
-%l"A
-%l#A
-%l$A
-%l%A
-%l&A
-%l'A
-%l(A
-%l)A
-%l*A
-%l+A
-%l,A
-%l-A
-%l.A
-%l/A
-%l\aA
-%l\bA
-%l\eA
-%l\fA
-%l\nA
-%l\rA
-%l\tA
-%l\vA
+%g#@
+%h"5
+%h\\;
+%iC6
+%i\v=
+%j3B
+%l B
+%l!B
+%l"B
+%l#B
+%l$B
+%l%B
+%l&B
+%l'B
+%l(B
+%l)B
+%l*B
+%l+B
+%l,B
+%l-B
+%l.B
+%l/B
+%l0B
+%l1B
+%l2B
+%l3B
+%l4B
+%l5B
+%l6B
+%l7B
+%l8B
+%l9B
+%l:B
+%l;B
+%l<B
+%l=B
+%l>B
+%l?B
+%l@B
+%lAB
+%lBB
+%lCB
+%lDB
+%lEB
+%lFB
+%lGB
+%lHB
+%lIB
+%lJB
+%lKB
+%lLB
+%lMB
+%lNB
+%lOB
+%lPB
+%lQB
+%lRB
+%lSB
+%lTB
+%lUB
+%lVB
+%lWB
+%lXB
+%lYB
+%lZB
+%l[B
+%l\\B
+%l\eB
+%l]B
+%l^B
+%l_B
+%l`B
+%laB
+%lbB
+%lcB
 %ld%c
+%ldB
+%leB
+%lfB
+%lgB
+%lhB
+%liB
+%ljB
+%lkB
+%llB
 %lld
 %llu
+%lmB
+%lnB
+%loB
+%lpB
+%lqB
+%lrB
+%lsB
 %ls_%02d
 %ls_%02d.%ls
+%ltB
+%luB
 %m/%d/%y
 %oҠRh
+%p=#
+%qm@
+%r1B
+%r3B
 %s %s
 %s %s %s
 %s %s %s %s
@@ -532,6 +1252,7 @@ $~,I
 %s does not support all required features, disabling.\n
 %s does not support computeDerivativeGroupQuads, disabling.\n
 %s does not support fragmentShaderBarycentric, disabling.\n
+%s does not support shaderAbort, disabling.\n
 %s required because VulkanRequireBarycentrics is set in gameinfo.gi, but it is not supported.  Vulkan device creation failed.\n
 %s required because VulkanRequireComputeShaderDerivatives is set in gameinfo.gi, but it is not supported.  Vulkan device creation failed.\n
 %s%d
@@ -540,7 +1261,6 @@ $~,I
 %s.spv
 %s/%s
 %s: Can't concatenate input layouts with more than %d fields total!\n
-%s: Input vector has incorrect length\n
 %s: Unable to compute hash for shader module\n
 %s: Warning: No compile targets specified! Shader will not be compiled!\n
 %s: __pos (which is %zu) > __size (which is %zu)
@@ -554,7 +1274,7 @@ $~,I
 %s: vkAllocateMemory failed fallback system memory allocation.  Fatal error: out of video and system memory.\n
 %s: vkAllocateMemory failed to allocate GPU memory.  Fatal error: out of GPU video memory and no fallback heap available.\n
 %s:%s,
-%s:8
+%s[%d]
 %s[%s:%d] %s\n
 %s_ColorTargetImageView
 %s_ColorTargetImageViewSrgb
@@ -569,63 +1289,190 @@ $~,I
 %s_PerMipLevelImageView
 %s_PerMipLevelUAVCompressedBlockView
 %s_s_PerMipLevelImageViewSrgb
-%t A
-%t!A
-%t"A
-%t#A
-%t$A
-%t%A
-%t&A
-%t'A
-%t(A
-%t)A
-%t*A
-%t+A
-%t,A
-%t-A
-%t.A
-%t/A
+%t B
+%t!B
+%t"B
+%t#B
+%t$B
+%t%B
+%t&B
+%t'B
+%t(B
+%t)B
+%t*B
+%t+B
+%t,B
+%t-B
+%t.B
+%t/B
+%t0B
+%t1B
+%t2B
+%t3B
+%t4B
+%t5B
+%t6B
+%t7B
+%t8B
+%t9B
+%t:B
+%t;B
+%t<B
+%t=B
+%t>B
+%t?B
+%t@B
+%tAB
+%tBB
+%tCB
+%tDB
+%tEB
+%tFB
+%tGB
+%tHB
+%tIB
+%tJB
 %tJrF"
-%t\aA
-%t\bA
-%t\eA
-%t\fA
-%t\nA
-%t\rA
-%t\tA
-%t\vA
+%tKB
+%tLB
+%tMB
+%tNB
+%tOB
+%tPB
+%tQB
+%tRB
+%tSB
+%tTB
+%tUB
+%tVB
+%tWB
+%tXB
+%tYB
+%tZB
+%t[B
+%t\\B
+%t\eB
+%t]B
+%t^B
+%t_B
+%t`B
+%taB
+%tbB
+%tcB
+%tdB
+%teB
+%tfB
+%tgB
+%thB
+%tiB
+%tjB
+%tkB
+%tlB
+%tmB
+%tnB
+%toB
+%tpB
+%tqB
+%trB
+%tsB
+%ttB
+%tuB
 %u iterated blocks\n
 %u unfinished blocks\n
-%w3?
-%yP+
-%{$9
-%| A
-%|!A
-%|"A
-%|#A
-%|$A
-%|%A
-%|&A
-%|'A
-%|(A
-%|)A
-%|*A
-%|+A
-%|,A
-%|-A
-%|.A
-%|/A
-%|\aA
-%|\bA
-%|\eA
-%|\fA
-%|\n#
-%|\nA
-%|\rA
-%|\tA
-%|\vA
-%}e.
-%~j2
+%vb@
+%yP5
+%yf@
+%z/A
+%z3B
+%| B
+%|!B
+%|"B
+%|#B
+%|$B
+%|%B
+%|&B
+%|'B
+%|(B
+%|)B
+%|*B
+%|+B
+%|,B
+%|-B
+%|.B
+%|/B
+%|0B
+%|1B
+%|2B
+%|3B
+%|4B
+%|5B
+%|6B
+%|7B
+%|8B
+%|9B
+%|:B
+%|;B
+%|<B
+%|=B
+%|>B
+%|?B
+%|@B
+%|AB
+%|BB
+%|CB
+%|DB
+%|EB
+%|FB
+%|GB
+%|HB
+%|IB
+%|JB
+%|KB
+%|LB
+%|MB
+%|NB
+%|OB
+%|PB
+%|QB
+%|RB
+%|SB
+%|TB
+%|UB
+%|VB
+%|WB
+%|XB
+%|YB
+%|ZB
+%|[B
+%|\\B
+%|\eB
+%|]B
+%|^B
+%|_B
+%|`B
+%|aB
+%|bB
+%|cB
+%|dB
+%|eB
+%|fB
+%|gB
+%|hB
+%|iB
+%|jB
+%|kB
+%|lB
+%|mB
+%|nB
+%|oB
+%|pB
+%|qB
+%|rB
+%|sB
+%|tB
+%|uB
+%}"2
+%~U@
 &-pR
 &/ź;
 &A%j
@@ -663,7 +1510,6 @@ $~,I
 '<='
 '=='
 '>='
-'H9S
 '_AXA
 'ff.
 'u&H
@@ -675,35 +1521,23 @@ $~,I
 ( ( uint32 ) pLayoutBindingFlagsBlob->GetBinaryBlobSize() ) == ( pipelineLayoutHash.m_numLayoutBindingsPerSet[ nDescriptorSet ] * sizeof( VkDescriptorBindingFlags ) )
 ( ( uint32 ) pLayoutBindingsBlob->GetBinaryBlobSize() ) == ( pipelineLayoutHash.m_numLayoutBindingsPerSet[ nDescriptorSet ] * sizeof( VkDescriptorSetLayoutBinding ) )
 ( nResult == VK_OPERATION_DEFERRED_KHR ) || ( nResult == VK_OPERATION_NOT_DEFERRED_KHR )
+( pVB == nullptr ) || m_ResourceMgr.IsHandleValid( hBuffer )
 ( result == VK_SUCCESS )
 (!((uintptr_t)(src_height) & ((2)-1)))
 (!((uintptr_t)(src_width) & ((2)-1)))
 ($$B
-(%B|
-(%]c
 (%s): ADD %s = %s\n
 (%s): Setting %s to %s\n
 ();,\n\r
 (*3q20
 (,5\n
-(-*H
-(-1m
-(-9k
-(-Di
-(-Ll
-(-am
-(-bi
-(-le
-(-xp
-(-|i
+(-%\e
 (...
-(57C
-(5qG
+(5<\e
+(5?u
+(5j\a
 (9F\bD
 (:W"
-(=-o
-(=4`
-(=h_
 (@DX
 (D$@f
 (D$P
@@ -722,13 +1556,12 @@ $~,I
 (U\f}
 ([A\\A]A^A_]
 ([A\\A]A^A_]À
-([A\\A]A^A_]É
 ([A\\A]A^A_]ËwpH
 ([A\\A]A^A_]Ð
 ([A\\A]A^A_]ÐH
 ([A\\A]A^A_]Ðf
 ([A\\A]A^A_]þ
-([A\\A]A^A_]鱸
+([A\\A]A^A_]鼛
 ([A\\A]A^]
 ([A\\A]]
 ([]A\\A]A^A_
@@ -736,9 +1569,7 @@ $~,I
 ([]A\\A]A^A_ÐH
 (\b\b@
 (\b\b\b
-(\r-u
-(\r8J
-(\rHv
+(\rm"
 (\t$
 (anonymous namespace)
 (b\\R
@@ -753,7 +1584,6 @@ $~,I
 (ff.
 (kdz
 (rfi
-(t^A
 (t^\aG\v
 (to1
 (u*H
@@ -764,66 +1594,97 @@ $~,I
 (ÓØ𠃹Ñ𠃸Ú
 (𠃸*𠃹5𠃸5
 ) ='
-)%0~
-)%35
-)%4D
-)%Em
-)%Lp
-)%Q,
-)%R;
-)%\en
-)%h2
-)%o#
-)%vo
-)%}r
+)%"=#
+)%0r
+)%3)
+)%48
+)%Ea
+)%Jv
+)%Ld
+)%R/
+)%\eb
+)%h&
+)%vc
+)%}f
 ))))))-
 ))))))2
 )*,y
 )+\t\v
-)- F
-)-*l
-)-47
-)-==
-)-Jq
-)-K7
-)-[4
-)-\b'
-)-\b@
-)-\r*
-)-`.
-)-bn
-)-hr
-)-w.
-)-y+
-)-{s
-)-|D
+)- :
+)-)s
+)-)x
+)-*`
+)-,=#
+)-4+
+)-8v
+)-8}
+)-:x
+)-=1
+)-?x
+)-Dx
+)-D}
+)-Iv
+)-Ix
+)-I}
+)-Je
+)-K+
+)-Nx
+)-O}
+)-Sx
+)-Xx
+)-[(
+)-[}
+)-\a|
+)-\b4
+)-\b\e
+)-\t|
+)-\v|
+)-]x
+)-`"
+)-bb
+)-bx
+)-c|
+)-gx
+)-hf
+)-h|
+)-lx
+)-qx
+)-vx
+)-w"
+)-{g
+)-{x
+)-|8
 )4$H
-)5 A
-)5!-
-)5!r
-)55s
-)5>8
-)5?$
-)5\\/
-)5\\}
-)5]C
-)5m~
-)5t:
-)5z&
+)5 5
+)5!!
+)5!f
+)5(<#
+)5(v
+)5*v
+)55g
+)5:=#
+)5>,
+)5\\#
+)5\\q
+)5\as
+)5]7
+)5mr
+)5t.
 ):\n
 )<$f
-)= <
-)=,6
-)=>3
-)=Dr
-)=U}
-)=X-
-)=[l
-)=\\*
-)=\fp
-)=\nE
-)=jC
-)=}~
+)= 0
+)=*v
+)=,*
+)=>'
+)=Df
+)=Uq
+)=X!
+)=[`
+)=\fd
+)=\n9
+)=f<#
+)=j7
+)=}r
 )@ H
 )@0H
 )A9D$
@@ -852,6 +1713,7 @@ $~,I
 )D$pH
 )D$pf
 )E\n}
+)E\tU
 )E̠\\2
 )HcP\b9
 )IʉU
@@ -869,244 +1731,174 @@ $~,I
 )\\ZEo^m/
 )\aw(H
 )\e/\v
-)\r #
-)\r %
-)\r!&
-)\r!+
-)\r!~
-)\r"o
-)\r#'
-)\r#1
-)\r#}
-)\r$$
-)\r$)
-)\r$n
-)\r%,
-)\r&4
-)\r&k
-)\r'*
-)\r'/
-)\r'l
-)\r'q
-)\r(9
-)\r(}
-)\r)%
-)\r)<
-)\r)A
-)\r*&
-)\r*-
-)\r*7
-)\r+m
-)\r+o
-)\r,'
-)\r,1
-)\r-$
-)\r-)
-)\r-n
-)\r.,
-)\r/4
-)\r/k
-)\r0*
-)\r0/
-)\r0F
-)\r0l
-)\r0o
-)\r0q
-)\r1#
-)\r12
-)\r2%
-)\r2+
-)\r2<
-)\r3-
-)\r37
-)\r3~
-)\r40
-)\r4m
-)\r5'
-)\r51
-)\r5?
-)\r6$
-)\r7'
-)\r7,
+)\r!r
+)\r"c
+)\r#%
+)\r#\e
+)\r#q
+)\r$b
+)\r%
+)\r&(
+)\r&_
+)\r'#
+)\r'`
+)\r'e
+)\r(-
+)\r(q
+)\r)0
+)\r)5
+)\r*!
+)\r*+
+)\r+a
+)\r+c
+)\r,%
+)\r,\e
+)\r-b
+)\r.
+)\r/(
+)\r/_
+)\r0#
+)\r0,"
+)\r0`
+)\r0c
+)\r0e
+)\r0v
+)\r1&
+)\r20
+)\r3!
+)\r3+
+)\r3r
+)\r4$
+)\r4a
+)\r5%
+)\r53
+)\r5\e
+)\r6<#
+)\r7
+)\r7\e
 )\r8(
-)\r84
-)\r9*
-)\r9/
-)\r9o
-)\r:#
-)\r:2
-)\r:F
-)\r;%
-)\r;+
-)\r<&
-)\r<-
-)\r<5
-)\r<7
-)\r=0
-)\r@'
-)\r@p
-)\rA(
-)\rAl
-)\rA}
-)\rB*
-)\rB/
-)\rC#
-)\rC2
-)\rD%
-)\rD+
-)\rD:
-)\rE&
-)\rE-
-)\rE5
-)\rE:
-)\rEF
-)\rF0
-)\rF=
-)\rG3
-)\rG8
-)\rH$
-)\rH.
-)\rHk
-)\rJ(
-)\rJl
-)\rK*
-)\rL#
-)\rL2
-)\rM%
-)\rM+
-)\rN&
-)\rN-
-)\rN5
-)\rNm
-)\rO)
-)\rO0
-)\rO=
-)\rOn
-)\rP3
-)\rP8
-)\rQ$
-)\rQ.
-)\rQk
-)\rR'
-)\rS(
-)\rS1
-)\rS6
-)\rS@
-)\rSl
+)\r9#
+)\r9c
+)\r:&
+)\r:,"
+)\r<!
+)\r<)
+)\r<+
+)\r=$
+)\r@\e
+)\r@d
+)\rA`
+)\rAq
+)\rB#
+)\rC&
+)\rD.
+)\rE!
+)\rE)
+)\rE,"
+)\rE.
+)\rF$
+)\rF1
+)\rG'
+)\rG,
+)\rH"
+)\rH_
+)\rJ`
+)\rL&
+)\rN!
+)\rN)
+)\rNa
+)\rO$
+)\rO1
+)\rOb
+)\rP'
+)\rP,
+)\rQ"
+)\rQ_
+)\rR\e
+)\rS%
+)\rS*
+)\rS4
+)\rS`
+)\rSe
 )\rSq
-)\rS}
-)\rU#
-)\rUp
-)\rV+
-)\rW&
-)\rWm
-)\rX)
-)\rX0
-)\rXn
-)\rXs
-)\rY3
-)\rY8
-)\rZ$
-)\rZ,
-)\rZ.
-)\rZk
-)\r['
-)\r[;
-)\r\\(
-)\r\\1
-)\r\\6
-)\r\\;
-)\r\\o
-)\r\a5
-)\r\a~
-)\r\b=
-)\r\bm
-)\r\bo
-)\r\e$
-)\r\e)
-)\r\e3
-)\r\f6
-)\r\f@
-)\r\fk
-)\r\r(
-)\r\rq
-)\r\t$
-)\r\t)
-)\r\t3
-)\r\t8
-)\r\v.
-)\r](
-)\r]F
-)\r^#
-)\r_+
-)\r`&
-)\ra)
-)\rb3
-)\rc$
-)\rc,
-)\rc.
-)\rd'
-)\rd4
-)\rdl
+)\rU=#
+)\rUd
+)\rWa
+)\rX$
+)\rXb
+)\rXg
+)\rY'
+)\rY,
+)\rZ
+)\rZ"
+)\rZ_
+)\r[/
+)\r[\e
+)\r\\%
+)\r\\*
+)\r\\/
+)\r\\c
+)\r\a)
+)\r\ar
+)\r\b1
+)\r\ba
+)\r\bc
+)\r\e'
+)\r\f*
+)\r\f4
+)\r\f_
+)\r\re
+)\r\t'
+)\r\t,
+)\r\tv
+)\r\v"
+)\r],"
+)\rb'
+)\rc
+)\rc"
+)\rd(
+)\rd\e
+)\rd`
+)\re#
+)\re%
 )\re*
-)\re/
-)\re1
-)\re6
-)\re}
-)\rf%
-)\rf9
-)\rg#
-)\rgA
-)\rh+
-)\rhq
-)\ri&
-)\rj)
-)\rj2
-)\rl$
-)\rl,
-)\rl.
-)\rlk
-)\rm'
-)\rm4
-)\rm>
-)\rml
-)\rn*
-)\rn/
-)\rn1
-)\ro%
-)\ro9
-)\rpA
-)\rq(
-)\rq-
-)\rq7
-)\rq<
-)\rr&
-)\rrn
-)\rs)
-)\rs2
-)\rt)
-)\ru$
-)\ru,
-)\ruk
-)\rv'
-)\rv4
-)\rvl
-)\rv}
-)\rw*
-)\rw/
-)\rx#
-)\rx%
-)\rym
-)\rz(
-)\rz-
-)\rz7
-)\rz<
-)\r{n
-)\r|2
-)\r}:
-)\r~$
-)\r~,
-)\r~k
+)\req
+)\rf-
+)\rg5
+)\rhe
+)\rj&
+)\rl
+)\rl"
+)\rl_
+)\rm(
+)\rm2
+)\rm\e
+)\rm`
+)\rn#
+)\rn%
+)\ro-
+)\rp5
+)\rq!
+)\rq+
+)\rq0
+)\rrb
+)\rs&
+)\ru
+)\ru_
+)\rv(
+)\rv\e
+)\rv`
+)\rvq
+)\rw#
+)\rya
+)\rz!
+)\rz+
+)\rz0
+)\r{b
+)\r|&
+)\r}.
+)\r~
+)\r~_
 )]\n]
 )]\vu\v
 )]Њ}
@@ -1158,11 +1950,11 @@ $~,I
 *** VB "%s": Tried to lock too much memory (%s > %s)!\n
 *** VB "%s": Tried to lock too much memory for subregion (%s > %s)!\n
 *** VB "%s": Tried to lock twice without an unlock!\n
-*** vfx_common.cpp(1097): Error opening file "%s"!\n\n
-*** vfx_common.cpp(1105): Error opening file "%s"!\n\n
-*** vfx_common.cpp(1255): Source cache incomplete, file "%s" missing!\n\n
-*** vfx_common.cpp(1267): Error masking unused parts for "%s"!\n\n
-*** vfx_common.cpp(7031): Programmer Error! The order of VfxVariableSourceType_t does not match s_shaderVariableSource!\n
+*** vfx_common.cpp(1209): Error opening file "%s"!\n\n
+*** vfx_common.cpp(1217): Error opening file "%s"!\n\n
+*** vfx_common.cpp(1369): Source cache incomplete, file "%s" missing!\n\n
+*** vfx_common.cpp(1381): Error masking unused parts for "%s"!\n\n
+*** vfx_common.cpp(7535): Programmer Error! The order of VfxVariableSourceType_t does not match s_shaderVariableSource!\n
 *.spv
 *0[b
 *2jZ@
@@ -1211,7 +2003,6 @@ $~,I
 *ZN13CSOAContainer10FilterFromERKS_iiiiiPKfbEUlvE_
 *ZN13CSOAContainer17SrgbGammaToLinearEiEUlvE_
 *ZN13CSOAContainer17SrgbLinearToGammaEiEUlvE_
-*ZN13CSOAContainer21GenerateDistanceFieldEiiiP8Rect3D_tEUlvE_
 *ZN13CSOAContainer24IIRGaussianApproximationEjfEUliiE0_
 *ZN13CSOAContainer24IIRGaussianApproximationEjfEUliiE1_
 *ZN13CSOAContainer24IIRGaussianApproximationEjfEUliiE_
@@ -1226,6 +2017,7 @@ $~,I
 *ZN13CSOAContainer9FilterInZEi9IntAABB_tiPKfbEUlvE_
 *ZN18CRenderContextBase16GetBarrierHelperEvE19CBarrierHelperEmpty
 *ZN19CRenderThreadVulkan27Thread_ExecuteCommandStreamEiEUlvE_
+*ZN19CTextureManagerBase23ReadCompiledTextureMipsE11CWeakHandleI31InfoForResourceTypeCTextureBaseEiii11ImageFormatSt10shared_ptrI26IReadTexturePixelsCallbackEEUlP25IAsyncResourceDataRequestSt10unique_ptrI25IAsyncProcessedDataResultSt14default_deleteISA_EEE_
 *ZN19CTextureManagerBase31MN_AddAsyncTextureBitsHookupJobEP12CTextureBaseRKNS_24AsyncTextureHookupData_tEEUlvE_
 *ZN22CPipelineManagerVulkan19LinkPipelineLibraryEPK15CPipelineVulkanP21PerThreadDataVulkan_tP22PipelineObjectVulkan_tEUlvE_
 *ZN23CTextureStreamingHelper23IssueTextureLoadRequestEP12CTextureBaseRK22TextureSpecification_tEUlP25IAsyncResourceDataRequestSt10unique_ptrI25IAsyncProcessedDataResultSt14default_deleteIS8_EEE_
@@ -1236,6 +2028,7 @@ $~,I
 *ff.
 *r_shading_change
 *rw_shading_change
+*t*E
 *t3A
 *u2H
 *u\fH
@@ -1279,25 +2072,26 @@ $~,I
 ,!Mc
 ,"E9
 ,"L)
+,$A9
 ,$E1
 ,$E9} s
 ,$H9
 ,$I9
 ,$t\nI
-,$ǅl
 ,(E)
 ,*/vu
 ,*D9m
 ,*E9
 ,*Vh
-,0A9
 ,1H)
 ,1M9
 ,1\\\v
 ,2A9
+,2ATSH
 ,2E9
 ,6D9m
 ,7IcM
+,8A9
 ,8L9
 ,8Mc
 ,9Mc
@@ -1306,13 +2100,13 @@ $~,I
 ,@ATI
 ,@Ȅxr
 ,ED9
+,G\bH
 ,GfA
 ,IH)
 ,KbwLùRsD
 ,S-H
 ,VHc
 ,WATSH
-,[Ic
 ,\aE9
 ,\aM9
 ,\bB\a
@@ -1323,6 +2117,7 @@ $~,I
 ,\fMc
 ,\nATSI
 ,\nI)
+,\ns\v1
 ,\tD$
 ,\tE9
 ,\tMc
@@ -1341,99 +2136,94 @@ $~,I
 ,ȈJ\n
 ,Ȉ\nH
 ,ȋT$\fH
--!G;
--%:?
--)V;
--)\t7
--+'7
+-!+<
+-!\v/
+-!f@
+-%c@
 -+xX0123456789abcdef0123456789ABCDEF
 -+xX0123456789abcdefABCDEF
 ----
 --------------------------------------------\n
---<?
---]4
+-._9
 -0123456789
--1z.
--3y2
--5b(
--9c(
--:H;
--=O?
+-1w0
+-9/>
+-:[5
+-:[7
 -=\r\r
+-=b@
 -=m\b
--?\t4
+-A\n.
 -B.\bn
--F(2
+-Cb5
+-Cg7
 -H,@
 -H\tȋ
 -H\tЋ
--I@\r
--Il0
--J<?
+-I+<
+-Ip@
 -Kj7
--LE3
--M>3
+-Lf)
+-Lp)
+-Ml.
 -NVSDK_NGX_VULKAN_Init_with_ProjectID
--N|4
--O>?
--PW(
--Qa(
--Qx-
+-Qh@
 -Stop:
--SwA
--Up4
--Vj2
--XI;
--Y~.
--\f'*
--\n <
+-X9-
+-Z^<
+-Zb@
+-Zr@
+-[1=
+-[i4
+-\\*?
+-\\-?
+-\\\tB
+-\nB9
 -\n\v\\G=
--\nc(
--\t<?
--\tH;
--]X(
--]l2
--^T%
--_j4
--aZ(
+-\v?0
+-\vj4
+-aC\r
+-aY@
+-db)
+-disable_async_shaders: pipelines compile synchronously on the thread that needs them. If the cache is empty, loading can go silent for a very long time (1+ hours) while they compile.\n
 -dx11
 -empty
 -end of input-(
--f<?
--fM+
 -ff.
 -hG<
--hb(
+-iR?
+-if-
 -in-
--jSA
--l/>
+-ir,
 -memory-
--o[<
--qA?
+-mp@
+-qE/
 -r_current_luma
 -rw_current_luma
+-s%3
 -sSO\\
 -shaderdebugging
 -shadowTargetSize forcing nPoolSizeInMb size to %d from %d, bLarge %d, avail %lld\n
--st=
+-s|9
+-t,?
 -ttf
--u:6
--uM2
 -unknown source-
 -unknown source-(
--vh4
 -vulkan
+-vulkan_disable_dontinline
 -vulkan_disable_validation_core_checks
 -vulkan_disable_validation_object_lifetimes
 -vulkan_disable_validation_shaders
 -vulkan_disable_validation_unique_handles
 -vulkan_enable_gpu_validation
 -vulkan_enable_sync_validation
--vulkan_enable_sync_validation_consevative
+-vulkan_enable_sync_validation_conservative
 -vulkan_enable_thread_safety_validation
 -vulkan_gpuav_shader_names
--z?>
--{^.
+-w,A
+-yZ5
+-{'-
+-{]A
 . w.
 . z.
 . }.
@@ -1443,6 +2233,7 @@ $~,I
 ../../public/tier0/tslist.h
 ../public/tier0/threadtoolstypes.h
 ../public/tier0/tslist.h
+../public/tier0/utldict.h
 ../public/tier0/utlqueue.h
 .9PE]ڈ
 .:au
@@ -1502,6 +2293,7 @@ $~,I
 .shstrtab
 .spv
 .t/H
+.tSL
 .t\tH
 .tbss
 .tdata
@@ -1512,9 +2304,9 @@ $~,I
 .vcs
 .vfx_
 .vpk:
-/%7`
-/-\fZ
-/5`U
+/%+!
+/= [
+/=HZ
 /D$8
 /D$h
 /H3E
@@ -1527,9 +2319,9 @@ $~,I
 /T$<
 /T$X
 /T$XwR
-/\r#F
-/\rPM
-/\rUE
+/\r.Z
+/\rbZ
+/\ro\a
 /data/src/vfx/compiletargetexpr.g
 /dev/random
 /dev/urandom
@@ -1596,9 +2388,7 @@ $~,I
 0ATL
 0H92
 0H97
-0H9]
-0HǅP
-0L9u
+0Hǅ`
 0S\tJ,
 0XZH
 0[A\\A]A^A_]
@@ -1612,6 +2402,7 @@ $~,I
 0njΊ
 0r_luma_instability
 0rw_luma_instability
+0t%H
 0t'H
 0t'I
 0t*Ic
@@ -1624,13 +2415,15 @@ $~,I
 0tOI
 0t\fH
 0t\tH
-0tgH
+0tjH
 0t~H
 0uWǃ
 0u\rH
 0u\tH
+0x%llx
 0x%x
 0~q1
+1. Delete game/<mod>/shadercache/vulkan/*\n
 1.2.11
 1@*4\bA
 1A\\]
@@ -1642,15 +2435,16 @@ $~,I
 1Hiҡ%
 1L9\v
 1\a\aH
+1\a\a藍
 1\a\f\a\b
 1\r\a$;<Y
 1\v;H
+1\v=Ǯ)
 1\vN4
 1\vO4
 1\v\n9
 1\vw4
 1ff.
-1~7Ic
 1~9Ic
 1~DIc
 1~JH
@@ -1661,7 +2455,9 @@ $~,I
 1~`Ic
 1Ų!,
 1ɉK`H
+1ɍTR
 1ʋKh
+1Ҁ{(
 1҃x\b
 1ҋK H
 1ҋ\b9
@@ -1674,7 +2470,10 @@ $~,I
 1ҾjN
 1𠀑2𠀑8
 1𠀑=𠀑D
+2"E1
+2"ƅ\b
 2%k_ܝ
+2. Delete /path/to/steam/steamapps/shadercache/<appID>/nvidiav1/GLCache (for NVIDIA)\n
 21ɉ4
 222222
 29t\a
@@ -1687,10 +2486,8 @@ $~,I
 2][,#
 2a\\|
 2qne
-2t$A
 2tLA
 2t\vH
-2wFH
 3(-Qz
 3)]H
 3333333
@@ -1729,9 +2526,9 @@ $~,I
 4$E1
 4$H9
 4$H;t$\bu
-4$L9
 4$N䇜
 4$fE
+4$ǅl
 4(D;c\br\bA
 4(H9u
 4)I9
@@ -1745,11 +2542,14 @@ $~,I
 40Hc
 40fD
 40zmT
+41A9
 41D)
+41D9
 41H)
 41Hc
 41I)
 42A9
+42H9
 42~%
 44M9
 469u
@@ -1759,7 +2559,6 @@ $~,I
 47A)
 47D!
 47Hc
-48ff.
 49H)
 4:E1
 4:H)
@@ -1774,6 +2573,7 @@ $~,I
 4WE1
 4[A\\A]A^A_]
 4[E)
+4\aE1
 4\aH)
 4\aH9
 4\aM9
@@ -1815,76 +2615,95 @@ $~,I
 4vfA
 4vfD
 4w-H
+4wt>Hk
 4~fD
 5 .j
-5!R+
-5$:(
+5!<\r
+5"e)
+5"o)
+5#"5
+5%!5
 5&YA1A
 5&YA1I
-5'q.
-5(:4
-5+n2
-5,\f,
+5'B9
+5'E?
+5'F?
+5)9-
+5)~)
+5*z0
+5+j\n
 5,¸Y1
 5,¸YD1
 5,¸Yi
-5-~2
-5.i#
-51y9
+5->/
+5-p@
+5.\e*
+5/;.
+50j7
+51L:
+51V7
+51W%
+5524
 555555B
-57u/
-58+5
-59)=
+58,A
+58f)
 5;FJ$,XEK4<
-5?\\2
+5>HA
+5?7&
 5Aހ*
-5DR.
-5D\v<
-5E?-
+5Eb$
 5Eiɕ
-5H )
+5F:#
+5FT8
+5G6?
+5I"@
 5I1ω
-5IL;
-5I|2
+5I~)
 5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5Jx
-5LJ>
-5O^4
-5Q])
-5SJ2
-5X")
-5Z7.
-5\\|?
+5Ku,
+5Mt@
+5Q04
+5T5\n
+5X>.
+5XD?
+5Y(#
 5\a%𠀔c
-5\b")
-5\eK>
-5\eL>
-5\n\t7
-5\t9\r
-5`_/
+5\a35
+5\bn)
+5\e,3
+5\nQ-
+5]f@
+5_\b3
+5_m)
+5a4=
+5aR<
 5ff.
-5g",
-5h!)
 5h\r:
-5ib6
-5ix+
-5jH>
-5kI>
+5i;@
+5jD6
+5k\eB
+5m*3
 5mӽP d
-5o57
-5oL)
-5oS7
-5p[/
-5p~+
-5qL;
-5qM?
+5n*5
+5o14
+5o5\n
+5on)
+5p,5
+5r/-
+5s,+
+5s7&
 5t H
-5tA\n
 5tqA9
 5u:M
 5uFH
-5u^<
-5vI/
-5xy9
+5u},
+5v4+
+5vB?
+5wC?
+5wb$
+5x./
+5xL:
+5|R4
 5ߴٝ:
 5𠃸<𠃹(𠃸(𠃹$𠃸$
 64: D
@@ -1895,6 +2714,7 @@ $~,I
 6HcO\bL
 6Mct$
 6\\}
+6\aC7
 6fE9
 6ff.
 6f}X#
@@ -1906,7 +2726,6 @@ $~,I
 7%/pZ
 7&F|If
 79\n\e
-7<!w
 7>Fw
 7E1҃
 7E1ۃ
@@ -1928,6 +2747,7 @@ $~,I
 8:/t!H
 8:/t>H
 8;-6zN;
+8?9H9Q9l9Z9c9
 8@%rax 8@%rdx
 8@-24(%rbp) 8@-32(%rbp)
 8@-48(%rbp) 8@%rax
@@ -1935,10 +2755,9 @@ $~,I
 8AUA
 8AUI
 8AVA
-8A\\]
 8A^]H
+8BPS
 8BPSu\bf
-8BPSu\vf
 8C\rt
 8C\ru
 8C\ruዕ|
@@ -1948,18 +2767,21 @@ $~,I
 8H!ى
 8H!߉
 8H9:
+8HcG@H
 8HcN(H
 8L\tσ
+8Lcg\b
 8M9\\
 8[A\\A]A^A_]
 8[A\\A]A^A_]H
+8[A\\A]A^A_]É
 8[A\\A]A^A_]Ë;
 8[A\\A]A^A_]Ð
 8[A\\A]A^A_]ÐE
-8[A\\A]A^A_]ÐI
 8[A\\A]A^A_]ù
 8[A\\A]A^]
 8[A\\A]]
+8[A\\A]]顖
 8[]A\\A]
 8[]A\\A]A^A_
 8\btQH
@@ -1970,11 +2792,11 @@ $~,I
 8bfƵ
 8ff.
 8l\a1
-8t<H
+8t9[A\\A]A^]
 8tJH
-8tMH
-8tUH
-8tYH
+8tOH
+8tVH
+8tWH
 8tZH
 8t\nH
 8t\tH
@@ -1995,6 +2817,7 @@ $~,I
 9CdZr>
 9D$$
 9D$(
+9D;2
 9F\bM
 9G s!
 9G s#
@@ -2030,9 +2853,11 @@ $~,I
 9]ԉ]
 9^\bt`
 9a&g
+9curv
 9l$\b
 9p@}
 9p\bH
+9para
 9pyj
 9q$u
 9s8~8H
@@ -2076,7 +2901,6 @@ $~,I
 :ff.
 :tSH
 :uSH
-:vtexf
 :~@U
 :~Ir
 ;0u틈
@@ -2129,6 +2953,7 @@ $~,I
 ;G\bs
 ;H0tZ[
 ;H\bu\nH
+;Hǅ8
 ;HǅD
 ;Hǅp
 ;J0H
@@ -2140,6 +2965,7 @@ $~,I
 ;Q4t
 ;RIFF
 ;S\bH
+;S\b}\bI
 ;V8m%
 ;X\bu
 ;X\b}&
@@ -2159,13 +2985,16 @@ $~,I
 ;t&L
 ;t*H
 ;t,H
+;t.L
 ;t8H
 ;t:H
 ;t<H
-;tMH
 ;tRH
+;tUH
+;tZH
 ;t\rH
 ;tcH
+;tqH
 ;t~-ޜ*
 ;u\t@
 ;u`L
@@ -2181,12 +3010,14 @@ $~,I
 < f.
 < tL<"
 < t\bC
+< u%H
 <!I9
+<"Hc
 <#IiصC
 <#Mi
+<$"tO
 <$A\\A]A^]
 <$A\\H
-<$D9
 <$E1
 <$E19
 <$E9e
@@ -2202,6 +3033,7 @@ $~,I
 <$uFH
 <$uYH
 <$űU
+<$讽\b
 <&\bv"
 <(wY
 <*fI
@@ -2233,6 +3065,7 @@ $~,I
 <1t!L
 <2H)
 <2H9
+<2t5-\e
 <3H)
 <3I9
 <3L9
@@ -2246,7 +3079,7 @@ $~,I
 <;Hc
 <<Hc
 <<I)
-<<t3A
+<<t#A
 <=u\a
 <>t\n<\rw
 <?D!
@@ -2268,6 +3101,7 @@ $~,I
 <Eu\eH
 <Fu\eH
 <Gu\eH
+<Htπ#
 <HuPH
 <Iu(H
 <Iu/H
@@ -2311,13 +3145,14 @@ $~,I
 <\bu(H
 <\bu/L
 <\buV
-<\buVH
 <\bu\t
 <\bu\vH
+<\bu_
 <\eL)
 <\eLc
 <\nAi
 <\nD)
+<\nL;7u
 <\nLi
 <\nt"
 <\nt$
@@ -2330,8 +3165,7 @@ $~,I
 <\rt0<>
 <\ru\b
 <\ru\tA
-<\tL;7u
-<\tt\n1
+<\ttIw
 <\tt\rH
 <\vDi
 <\vw4
@@ -2391,182 +3225,195 @@ $~,I
 <{tl
 <~fD
 <ƋC(H
-= H+
-=!O?
-=!_=
-=!d*
-="C0
-="\r@
-="q>
-=#^(
-=#r=
+= X+
+= \v8
+=!@B
+=!v=
+=!z7
+=" *
+=""A
+="AA
+="S?
+="h+
+=#l)
+=$9@
 =$w)
-=%&=
-=%:@
-=&Z)
-='<8
-='^)
-=(:,
-=(T8
-=(^<
-=)"\n
-=)>?
-=)?4
-=)`A
-=)f6
-=)pA
-=)u4
-=*Y\b
+=%X\a
+=&R3
+='K/
+='b$
+='c0
+=(\bC
+=(x0
+=)F5
+=)H5
+=)f.
+=)h5
+=+'*
+=,O=
 =,|(
-=-L@
-=-b*
-=-q)
-=/\f?
-=/i#
-=0 )
-=0\b:
-=1/:
-=1\b@
-=3J(
-=434
-=5'=
-=6!)
-=7M2
-=7a/
-=7p.
-=8J,
-=8W+
-=8X+
-=9^6
-=9^=
-=9`A
-=9h@
-=9p2
-=9|A
-=;\\)
-=;_2
-=<s)
-==S)
-=?^+
+=-&=
+=-d@
+=.|;
+=/&@
+=//+
+=/u)
+=0\v=
+=1<A
+=1[5
+=2T?
+=2t6
+=3(*
+=3V.
+=3\n=
+=58B
+=5P)
+=5v)
+=6(A
+=6Z3
+=8e)
+=9+3
+=9f5
+=9y5
+=:\b7
+=:e>
+=;#.
+=;&*
+=;d)
+=;z?
+=>D?
+=>M*
+=>P<
+=?1.
+=??B
+=@:#
 =@[V
-=AX@
-=A\r?
-=A]=
+=@\a0
+=A'@
+=AS-
 =Authu\a
-=BK+
-=B\r@
-=CA:
-=Cf/
-=Dj)
+=B/*
+=BAA
+=Bl?
+=B~5
+=DR-
 =DşCè
-=F>?
-=FY)
-=G\r\n
+=G;.
+=G\t6
 =Genut\n
-=H5,
-=H;7
-=H=@
-=Hu)
-=ID@
-=IF6
-=IM3
-=Iz4
-=MM,
-=MeSaA
-=NhA
-=PD)
-=PQ)
-=Q65
-=R\a@
-=S*:
-=ST+
-=Sf9
-=T28
+=I?6
+=I\tC
+=I{=
+=LB@
+=LL(
+=OA@
+=O\b0
+=Ow5
+=Ow?
+=P48
+=Pm>
+=QV6
+=Qy+
+=R;A
+=RsA
+=S38
+=S9:
+=Sl>
+=Tw+
+=U<A
 =UUUUw&
-=U\b@
-=W"/
-=WG+
-=XP)
-=XT+
-=YV@
-=Yf/
-=Yn)
-=Z2A
-=Z\v5
-=[H+
-=[}/
-=\\~/
+=VQ<
+=Vd.
+=X,*
+=X2=
+=Y*+
+=Y4.
+=Y>5
+=YV5
+=Yb$
+=YvB
+=Z+6
+=Zc>
+=[\v3
+=\\B\n
 =\a)𠀔k
-=\bg*
-=\r\a@
+=\f9B
+=\fm2
+=\n48
+=\nm>
+=\r;A
+=\rZ.
 =\t ();,\n\r<>
-=\t3A
-=\tn)
-=\ts4
-=\ts?
-=\ty5
-=],@
-=]D\f
-=^b@
-=^s)
-=_)4
-=_W/
-=_c(
-=a~+
-=b4A
-=b<A
-=c .
-=cY;
-=cZ-
-=d\r\n
-=e;5
-=e\r)
+=\t75
+=\t=5
+=\tv5
+=\t~5
+=\v4.
+=\vI?
+=\vN\r
+=\vx+
+=]W?
+=`[.
+=`\b9
+=`^=
+=`|.
+=aw5
+=bf@
+=c>(
+=c{)
+=d+9
+=e\n3
+=f^*
 =ff.
-=fy;
-=g-$
+=g**
 =gVY
-=g]*
-=hl;
-=i<A
-=in+
-=iv.
+=gv=
+=i!7
+=i95
+=i=6
+=iB5
+=iP0
+=i\f4
+=i]5
+=ir@
+=jR-
 =j]Į]-
-=jo@
-=lP,
-=l\\<
-=lp)
-=m"=
-=m<A
-=mF+
-=mo)
-=o'=
-=oe/
-=pW=
-=r )
-=rk@
-=s%*
-=sG<
-=si=
-=tZ-
-=t^4
+=jh.
+=ju=
+=kr@
+=lR3
+=m3.
+=nu@
+=oQ3
+=pc)
+=q7.
+=q?B
+=qJA
+=q\v8
+=qq@
+=r0+
+=sX=
+=t9+
+=tM*
+=t\a0
 =u,A
-=uA+
-=uQ>
+=uA@
+=uG\f
+=v(*
+=vd)
 =wA,
-=y4.
-=yX5
-=yv4
-=y|4
-=zJ\r
-=z[?
-=z\\)
-=zp?
-=z}/
-=|"2
-=|N\n
-=}<0
-=}<:
-=~z;
+=yI5
+=y[>
+=yb5
+=yi5
+=yk5
+=yp5
+={M9
+=|(A
+=|c0
+=}[3
+=~ <
+=~>-
 >,@U
 >= 10
 >At#
@@ -2595,7 +3442,6 @@ $~,I
 >uaH
 >uppe
 >xdig
->|>|>
 >ġ~o
 >ص\a|
 ?(3w
@@ -2606,10 +3452,13 @@ $~,I
 ????H
 ????f
 ??пЀЀЀ
-?ATP1
+?AWP1
 ?AƄ$i
 ?Aǃ0
 ?AǄ$
+?AǄ$(
+?AǄ$(\t
+?AǄ$0\b
 ?AǄ$P
 ?AǄ$h
 ?AǄ$h\a
@@ -2618,8 +3467,8 @@ $~,I
 ?AǇ8
 ?AǇP
 ?EiɅJ
-?H!ʹ?
 ?H;E
+?Hǃ0H
 ?Hǅd
 ?L9g
 ?L9o
@@ -2635,10 +3484,10 @@ $~,I
 ?t\fI
 ?t\rH
 ?thH
-?toH
+?tiH
 ?t{H
 ?u"1
-?u%1
+?u,1
 ?uxA
 ?v!A
 ?v"A
@@ -2649,8 +3498,8 @@ $~,I
 ?v*A
 ?v8L
 ?v:H
-?v?E
 ?vEH
+?vW%
 ?v\b%
 ?v\f%
 ?v\n%
@@ -2665,7 +3514,6 @@ $~,I
 ?w$H
 ?w%H
 ?w&M
-?w'H
 ?w)H
 ?w*H
 ?w-H
@@ -2677,15 +3525,16 @@ $~,I
 ?w\bL
 ?w\r[A\\A]A^]
 ?w\tH
+?wrM
 ?}BHk
 ?~EM
 ?~\\M
 ?¿¿􀂿
+?ÿÿÿÿÿÿÿ
+?ǃ \f
+?ǃ(\a
 ?ǃ(f
-?ǃHS
-?ǃ\b\f
-?ǃh\a
-?ǃpS
+?ǃx@
 @ : 0x
 @ : [
 @ A\\]
@@ -2693,6 +3542,7 @@ $~,I
 @ H9
 @ el:
 @ fA
+@ fH
 @ ns:
 @ rs:
 @!.H
@@ -2720,6 +3570,7 @@ $~,I
 @8\v@*)
 @8w1
 @8y\v
+@8ƉM
 @9G\b
 @>6\ax鸡Ŀ
 @>H)
@@ -2736,6 +3587,7 @@ $~,I
 @BXV
 @D9e
 @E1(
+@E9|
 @E;,$|
 @E;7|
 @H.H
@@ -2747,6 +3599,7 @@ $~,I
 @Hǅp
 @I#E
 @I,H
+@Ic\\
 @IǄ$@
 @LcM
 @LcU A
@@ -2766,7 +3619,6 @@ $~,I
 @\a@H
 @\a@L
 @\a@u
-@\a@uoH
 @\aH9B\a
 @\b$\t
 @\b1҃
@@ -2787,13 +3639,12 @@ $~,I
 @\bf9B\b
 @\bf9F\b
 @\bf9G\b
+@\bfA
 @\bfA9A\b
 @\bfH
-@\btLI
 @\btpH
 @\f\a\b
 @\nfA
-@\t8E
 @\tD9
 @`9E
 @`H!
@@ -2807,12 +3658,11 @@ $~,I
 @m@,
 @pH9
 @pL9
-@tIc
 @tLH
 @tOI
 @tXH
-@t\afA
 @t\aƃ
+@t\bA
 @t\bAƀ
 @t\eH
 @t\nA
@@ -2832,11 +3682,12 @@ $~,I
 @uOE
 @uOH
 @uOL
+@uZA
 @u\bE
 @u\eA
 @u\eE
 @ujL
-@xAƀ
+@xE1
 @xH9
 @{iV5\v
 @˟;tDH
@@ -2845,15 +3696,15 @@ A H)
 A!;I2
 A"zaܛ 2Dr+
 A#E\f
-A#G\ft
+A#E\ft
 A#q<H
 A#y<H
 A$tUH
 A'\r:
-A(w*H
 A)K\\A
 A)\vE
 A)κ\n
+A)ӋU
 A*1A
 A+@H
 A+@`
@@ -2866,14 +3717,14 @@ A+D$,A
 A+E`
 A+F$A
 A+F`
-A+G$
 A+G$A
 A+RH
 A+R\bA
 A+R`
 A+UH
-A+W$A
+A+W$
 A+\\$$)
+A+w$
 A.H=
 A.cf
 A0M)CA
@@ -2896,8 +3747,8 @@ A9D$@|
 A9D$L
 A9FP
 A9FT
+A9FX
 A9Fl
-A9GX
 A9L$
 A9S@
 A9WPH
@@ -2910,7 +3761,6 @@ A9\au!H
 A9\au\eI
 A9^8
 A9_\b
-A9w\b
 A9{\bu
 A9{\fuًz A9{
 A9~PH
@@ -2921,6 +3771,8 @@ A9Ј$
 A9҈\f\a
 A:D$\rt
 A:E\rt
+A:\\$
+A:_*
 A;A$
 A;A(
 A;A0
@@ -2929,9 +3781,10 @@ A;A8
 A;A\b
 A;A\f
 A;C\bA
-A;D$
 A;D$(
+A;D$(A
 A;D$Tr
+A;D$\b
 A;D$\bs
 A;L$
 A;L$0
@@ -2949,7 +3802,7 @@ A;_`
 A;t$
 A;wPr
 A;w\bu
-A;|$
+A<9w
 A<Hc
 A>H9
 A@H9
@@ -2983,6 +3836,7 @@ AHD;p
 AHH9
 AKST
 ALIGN_TYPE is wrong, please fix
+ALIǁ
 ALPH
 ALPHu\bI
 ANTLR3_EXCEPTION number %d (%08X).\n
@@ -2992,7 +3846,6 @@ APPE
 APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %d!\n
 APWE
 APWPS
-AQRASh
 AQSD
 AQd0
 AR30ToAB30
@@ -3199,6 +4052,8 @@ ARWj
 ASCII
 ASCII//TRANSLIT
 ASEs implemented
+ASP1
+ASPH
 ATARSH
 ATAWA
 ATAWj
@@ -3208,16 +4063,17 @@ ATI2N
 ATLc
 ATLk
 ATMc
+ATPj
 ATS1
 ATSA
 ATSD
+ATSE
 ATSH
 ATSHc
 ATSIc؉
 ATSL
 ATSt
-ATSte
-ATS~jA
+ATStm
 ATUA
 ATUH
 ATUI
@@ -3226,6 +4082,7 @@ ATUSH
 ATfH
 ATfI
 AU19
+AUAT
 AUATA
 AUATE
 AUATE1
@@ -3244,16 +4101,18 @@ AUATSL
 AUATUH
 AUATUS
 AUATUSH
+AUAVH
 AUE1
 AULc
 AUMc
-AUSH
 AUVAPh
 AUWL
 AUfE
 AUfH
 AVAP
+AVASARV
 AVATI
+AVATL
 AVATj
 AVAUA
 AVAUATA
@@ -3288,17 +4147,19 @@ AVAUL
 AVAULc
 AVAUM
 AVAUfH
+AVAW
 AVAvȈ/
+AVDk
 AVE1
 AVLc
 AVMc
 AVP1
+AVSD
 AVWL
 AVfD
 AVfH
 AWATAVj
 AWAUATSH
-AWAUL
 AWAULc
 AWAV
 AWAVA
@@ -3341,11 +4202,12 @@ AWAVLi
 AWAVM
 AWAVMc
 AWE1
+AWH)
 AWH1
 AWHc
 AWIc
 AWLc
-AWPj
+AWRASh
 AWRVh
 AWfA
 AWfD
@@ -3361,6 +4223,7 @@ AYUVToNV21
 AYUVToUVRow_C
 AYUVToVURow_C
 AYUVToYRow_C
+AYt8A
 AZA[
 AZL\t
 A[A\\
@@ -3369,11 +4232,7 @@ A\\A]
 A\\A]A^A_
 A\\A]A^A_]
 A\\A]A^A_]H
-A\\A]A^A_]鈷
-A\\A]A^A_]銆
-A\\A]A^A_]鎴
-A\\A]A^A_]霢
-A\\A]A^H)
+A\\A]A^A_]醀
 A\\A]A^L
 A\\A]A^]
 A\\A]A^]A
@@ -3381,23 +4240,27 @@ A\\A]A^]ÐD
 A\\A]A^]ÐL
 A\\A]A^]Ð[
 A\\A]A^]ø
-A\\A]A^]釆
-A\\A]A^]鎟
-A\\A]A^]顠
+A\\A]A^]鐣
+A\\A]A^]鯒
+A\\A]A^]鵎
 A\\A]H
 A\\A]]
 A\\A]]Ð
 A\\A]]ÐH
-A\\A]]馒\b
+A\\A]]鎻
+A\\A]]隈
 A\\A^
 A\\A^A_]
 A\\A^]
+A\\H)
 A\\H=
 A\\L\t
 A\\]
 A\\]H
 A\\]ø
-A\\]韽
+A\\]閖
+A\\]鴱
+A\\]鹃
 A\b;F
 A\bA:
 A\bH!
@@ -3408,6 +4271,7 @@ A\bfA
 A\bt6H
 A\bċG8L
 A\bǅd
+A\fMcۺ
 A\f\a\b
 A\ft_H
 A\nA:A
@@ -3417,21 +4281,20 @@ A\tA9
 A\tA:A
 A\tD$\b9]
 A\tD9
-A\tŀ}
 A\tŉЃ
 A\tɉу
 A\tʉC
 A\tˉC
 A\tΉу
+A\tπ}
 A\tЍQ
 A\tՅɋP\bunLc
 A\tِfD
-A]A^
 A]A^A_]
 A]A^A_]H
+A]A^A_]闈
 A]A^]
 A]A^]H
-A]]H
 A^A_
 A^A_]
 A^XE
@@ -3450,7 +4313,6 @@ Access: H
 AcquireVfxShaderFile: Failed to unserialize CVfxShaderFileVulkan.  Is your shadercache out-of-date?  Try deleting it.\n
 Actually dude, we didn't seem to be expecting anything here, or at least\n
 Adapter: %d\nDriver Name:  %s\nDriver Version: %s\nVendorId / DeviceId:  0x%x / 0x%x\nSubSystem / Rev:  0x%x / 0x%x\n\n
-AddDescriptorsToGlobalPerFrameDescriptorSet(): Trying to register descriptor with binding %d more than once!\n
 AddPage
 Additional fossilize database path: %s\n
 Adobe APP14 marker: version %d, flags 0x%04x 0x%04x, transform %d
@@ -3514,10 +4376,11 @@ At marker 0x%02x, recovery action %d
 Attempted to pop off of an empty CUtlQueue. Please check before using this method.
 Attempted to update an image layout for an image that was not transitioned in this command buffer.\n
 Attempted to update invalid descriptor set.\n
+Attempting Set[Index|Vertex]Data on %s - this is not allowed, use SetPooled[Index|Vertex]Data instead.\n
 Attempting to create a Vulkan compute pipeline without a compute shader bound, aborting pipeline creation.\n
 Attempting to create a Vulkan pipeline with too many descriptors, aborting pipeline creation.\n
 Attempting to create a Vulkan pipeline without a vertex/mesh shader bound, aborting pipeline creation.\n
-Attempting to create a descriptor set with VK_EXT_descriptor_indexing, but it's not enabled.\n
+Attempting to create descriptor set '%s' with VK_EXT_descriptor_indexing, but it's not enabled.\n
 Attempting to load Steam Shader Pre-Cache database from basePath: %s read-only: %s\n
 Attempting to purge m_fencedResourceList.Count() = %d, m_pendingFencedResourceQueue.Count() = %d, nCurrentCmdBuffersAvailable = %d, nAllocatedCommandBuffers = %d\n
 Attempting to release an invalid semaphore handle.\n
@@ -3534,60 +4397,63 @@ A}oX`
 A}oY`
 Aƃ*)
 Aƃp\b
+AƄ$<H
 AƄ$J
-AƄ$X
-AƄ$\f[
 AƄ$`
+AƄ$d
 AƄ$p
 AƄ$q
 AƄ\v()
-AƅH\a
+Aƅ`\a
 Aƅ}$
 AƆp\b
 AƇ 3
 Aǀ<\b
 AǄ$ \v
-AǄ$$\t
 AǄ$(
 AǄ$(\v
 AǄ$0
-AǄ$8T
 AǄ$<
-AǄ$<T
 AǄ$@
-AǄ$D\a
 AǄ$H
+AǄ$H\t
 AǄ$L
 AǄ$P\b
-AǄ$\b\t
+AǄ$X
+AǄ$\\\a
+AǄ$\b>
+AǄ$\bA
+AǄ$\fA
 AǄ$`\b
+AǄ$d\t
 AǄ$h
-AǄ$pP
-AǄ$tP
+AǄ$hA
+AǄ$lA
 AǄ$x
-AǄ$xV
 AǄ$x\r
 AǄ$|
+Aǅ \f
 Aǅ \v
 Aǅ$\v
 Aǅ(\v
 Aǅ,\v
 Aǅ4\v
+Aǅ@E
 AǅP\n
-Aǅ\b\f
 Aǅh\r
 Aǅl\r
 Aǅx$
 Aǅx\r
-Aǆ\bY
+Aǆ8F
 Aǆ`B
 AǆtB
 Aǆx\r
 AǇ \n
-AǇ$\t
+AǇ@E
 AǇ@\n
 AǇP\n
 AǇX\n
+AǇd\t
 AǇx$
 AǇx\n
 A˟;I
@@ -3601,17 +4467,16 @@ B fD
 B$HcV\b
 B( D
 B(H)
+B(H9
 B(fH
 B(ng:
 B(ze:
 B(ݑ,MVb
 B,XL(6
 B0H9
-B0I+B8H
 B0I;B A
 B1fA
 B2Hc
-B8f.
 B<H9
 B<t$H
 B@L)
@@ -3637,12 +4502,13 @@ BGRAToYRow_SSSE3
 BGRX8888
 BGRX8888_LINEAR
 BHHcAH
+BHI9
 BIB\bH
 BIB\bI
 BIB\bM
 BIC\bA
+BIF\b
 BIF\bH
-BIG\b
 BIG\bA
 BINORMAL
 BI\aH
@@ -3668,7 +4534,7 @@ B\bHc48I
 B\bHct8
 B\bI)
 B\bI9
-B\bI9G\b
+B\bI9E\b
 B\bL9
 B\bMk
 B\bNcT
@@ -3678,14 +4544,18 @@ B\bfD
 B\bfD9
 B\bfE
 B\bu\n
+B\b}wHc
 B\e\ay
 B\f)ƃ
 B\fA9
-B\fPA
 B\f\a\b
+B\ffA
+B\f}WHc
+B\f~WHc
 B\nfD
 B\tA2F
-B\vfD
+B\tC\bE
+B\tG\bE
 B`HcA`
 B`fA
 Backing store not supported
@@ -3744,7 +4614,7 @@ Bogus virtual array access
 Border color not supported by VK (%x), defaulting to white.\n
 Borderless Window
 Broken promise
-BtwH
+Bt~H
 Budget
 BudgetBytes
 Buffer '%s' is %s and total usage is %s, do you really want to allocate this much GPU buffer memory?  Performance issues/device lost could be imminent.\n
@@ -3760,10 +4630,12 @@ B|L9
 B}T}Ô%
 BÃ𠃹É𠃸É
 BË𠃹Ñ𠃸Ñ
-BωH\bH
+BƉB\b
+BƉB\f
+BǉC\bA
 BгY>
 Bрx$
-Bрxt
+BщP\bH
 B։Q\bI
 C A8F u
 C AT
@@ -3772,6 +4644,7 @@ C E1҅
 C H9C
 C Hc
 C Hǅ
+C L)
 C L9
 C Lc
 C PA
@@ -3779,6 +4652,7 @@ C [H
 C fH
 C fI
 C tJ
+C 讽\e
 C$+CX9C,
 C$+CX9C,@
 C$PA
@@ -3797,13 +4671,14 @@ C0Hi҈
 C0Hǅ
 C0I)
 C0PH
-C0fA
+C0[A\\]
 C0fH
 C1\bH
 C2: D
 C89C@}\a
 C8A9
 C8E1
+C8H9
 C8HǄ$
 C8L)
 C8fA
@@ -3826,17 +4701,18 @@ CBaseAccelerationStructureVulkan
 CBaseAppSystemI12IRenderUtilsE
 CBaseAppSystemI16IRenderDeviceMgrE
 CBaseVModuleMetadataProvider
+CBufferBackedObjectDeferredDeletionIP15VkMicromapEXT_TXadL_Z20vkDestroyMicromapEXTEEE
+CBufferBackedObjectDeferredDeletionIP28VkAccelerationStructureKHR_TXadL_Z33vkDestroyAccelerationStructureKHREEE
 CBufferBarrierTracker
 CBufferMovedListenerDeferredDeletion
 CBufferedDescriptorSetVulkan
 CCIR601 sampling not implemented yet
-CColorFormatBase
-CColorFormatVulkan
 CCommandBufferChunk CUtlMemoryPool
 CCompileTargetExprOpCodeHandler
 CCompileTargetExprStackMachineBuilder
 CConCommandMemberAccessorI17CRenderDeviceBaseE
 CConCommandMemberAccessorI18CShaderTableVulkanE
+CConCommandMemberAccessorI19CRenderDeviceVulkanE
 CConCommandMemberAccessorI19CTextureManagerBaseE
 CConCommandMemberAccessorI20CMemoryManagerVulkanE
 CConCommandMemberAccessorI21CFramebufferMgrVulkanE
@@ -3845,11 +4721,10 @@ CConstantBufferVulkan
 CDescriptorCountTracker
 CDescriptorSetReferenced
 CDescriptorSetVulkan
-CDescriptorSetVulkan::Rebake - could not allocate descriptor in new pool.\n
+CDescriptorSetVulkan::Rebake - could not allocate descriptor set '%s' in new pool.\n
 CDeviceFence
 CDeviceFenceBase
 CDmeSheetSequence
-CD藀\v
 CFallbackTextureVulkan
 CFossilizeStateCreator
 CFramebufferMgrVulkan
@@ -3887,6 +4762,7 @@ CPipelineVulkan
 CPooledIndexBuffer
 CPooledVertexBuffer
 CPostConnectCallback
+CPsdBufferFile
 CRC mismatch!\n
 CRC32_ProcessBuffer
 CRayTraceOMMVulkan
@@ -3930,13 +4806,17 @@ CRenderDeviceMgrBase
 CRenderDeviceMgrVulkan
 CRenderDeviceVulkan
 CRenderDeviceVulkan::AllocateBufferInPool - invalid memory pool handle.\n
+CRenderDeviceVulkan::AllocateBufferInPool - unable to get Vulkan buffer.\n
 CRenderDeviceVulkan::AllocateStaticDescriptorSet: Failed to allocate descriptor set.\n
 CRenderDeviceVulkan::AllocateTextureInPool - invalid memory pool handle.\n
 CRenderDeviceVulkan::AllocateUpdateAfterBindDescriptorSet: Failed to allocate descriptor set.\n
-CRenderDeviceVulkan::CreateDescriptorSet: Failed to create descriptor set.\n
+CRenderDeviceVulkan::CreateDescriptorSet: Failed to create descriptor set '%s'.\n
 CRenderDeviceVulkan::CreateIndirectCommandsPreprocessBuffer- invalid layout handle.\n
 CRenderDeviceVulkan::DestroyDeviceMemoryPool - invalid memory pool handle.\n
 CRenderDeviceVulkan::DestroyIndirectCommandsLayout - invalid layout handle.\n
+CRenderDeviceVulkan::DeviceMemoryPoolPerFrameUpdate
+CRenderDeviceVulkan::FreeBufferFromPool
+CRenderDeviceVulkan::FreeTextureFromPool
 CRenderDeviceVulkan::FreeTextureFromPool - invalid memory pool handle.\n
 CRenderDeviceVulkan::GetDeviceSpecificTexture() failed to get texture data.\n
 CRenderDeviceVulkan::InitDevice: failed to get queue properties\n
@@ -3966,6 +4846,7 @@ CSwapChainVulkan
 CSwapChainVulkan::SwapBuffers vkAcquireNextImageKHR
 CSwapChainVulkan::SwapBuffers(): the main thread is more than %d frames ahead which means no swap queue images are available.  Waiting for outstanding frames...\n
 CTD9
+CTE1
 CTLASVulkan
 CTSQueue corruption
 CTSQueue: Misaligned queue\n
@@ -3984,9 +4865,13 @@ CTier1AppSystemI12IRenderUtilsLx0EE
 CTier1AppSystemI16IRenderDeviceMgrLx0EE
 CTier2AppSystemI12IRenderUtilsLx0EE
 CTier2AppSystemI16IRenderDeviceMgrLx0EE
+CTu2
 CUtlLinkedList overflow! (exhausted index range)\n
 CUtlStackMachineBuilder
 CUtlStreamBuffer does not support TEXT_BUFFER's use CUtlBuffer\n
+CUtlStreamBuffer::FileWrite
+CUtlStreamBuffer::GrowAllocatedSize
+CUtlStreamBuffer::StreamPutOverflow
 CUtlSymbolTableLarge element limit of %u exceeded\n
 CUtlVector
 CVertexBufferBase
@@ -4009,7 +4894,6 @@ CVulkanIndirectExecutionSet
 CVulkanObjectIP11VkSampler_TXadL_Z16vkDestroySamplerEEE
 CVulkanObjectIP13VkImageView_TXadL_Z18vkDestroyImageViewEEE
 CVulkanObjectIP14VkBufferView_TXadL_Z19vkDestroyBufferViewEEE
-CVulkanObjectIP15VkMicromapEXT_TXadL_Z20vkDestroyMicromapEXTEEE
 CVulkanObjectIP28VkAccelerationStructureKHR_TXadL_Z33vkDestroyAccelerationStructureKHREEE
 CVulkanPooledFenceObject
 CVulkanSamplerObject
@@ -4055,17 +4939,16 @@ C\bD?
 C\bE)
 C\bE1
 C\bE19
-C\bE9|$\\
+C\bE9|$d
 C\bE?
 C\bF?
 C\bG?
-C\bH)
 C\bH?
 C\bHc
 C\bHc3Ic
 C\bHi
 C\bHk
-C\bHǅ
+C\bHǅ\b
 C\bHǅ\f
 C\bI?
 C\bIc
@@ -4079,6 +4962,7 @@ C\bL)s
 C\bL9
 C\bL;c(L
 C\bL?
+C\bLc
 C\bM?
 C\bN?
 C\bO?
@@ -4093,16 +4977,14 @@ C\bfB
 C\bfD9`
 C\bfD;`\b
 C\bfH
-C\bt=H
 C\btF
+C\bt\\I
 C\btmH
 C\bu,
 C\bu7H
 C\bu\aE
-C\b諳\a
 C\f1҃
 C\fE1ɹ
-C\fIk
 C\fMc
 C\fPA
 C\fPAPD
@@ -4118,8 +5000,6 @@ C`PA
 C`t\v
 C`uZ@
 CaPA
-CalcDynamicComboIdFromValues
-CalcStaticComboIdFromValues
 Call to vkCreateSwapchainWSI returned a error %s.\n
 Call to vkGetPhysicalDeviceSurfaceSupportKHR returned an error.\n
 Can't clear TEXTURE_WAITING_FOR_IO flag because of streaming request mismatch: %d in handle, %d in request\n
@@ -4141,6 +5021,8 @@ CdPA
 CePA
 Cff.
 Ch H
+Ch<0
+ChHc
 CharacterSetBuild
 Checked pending presents %s times; waited %s times; abandoned %s times\n
 Checking for VK_NV_device_diagnostic_checkpoints indicating queue failure...\n
@@ -4232,20 +5114,21 @@ CpuId
 Cpǃ,
 CreateConstantBufferInternal
 CreateDefaultShaders
+CreateDocument failed
 CreateIndirectExecutionSet
 CreateInterface
 CreateNewThreadPool
 CreateSimpleThread
 CreateSwapChain
 CreateVulkanImageInternal failed - unable to create MSAA resolve image.\n
+Creating render device for graphics adapter %d '%s' [VendorId 0x%X / DeviceId 0x%X]: %u.%u.%u.%u\n
 CreationNodeMask
-CtbD
-CtfA
 Cu='@
 CumulativeSumToAverageRow_C
 CumulativeSumToAverageRow_SSE2
 CustomData
 CustomPools
+CwFH
 CxE1
 CxHǃ
 CxfH
@@ -4256,6 +5139,7 @@ C܋mQN
 D \bfH
 D \nfA
 D b    I
+D#G@tHA
 D$ 1
 D$ 9D$0
 D$ A
@@ -4298,7 +5182,6 @@ D$(H
 D$(Hc
 D$(HcЋD$,Hc
 D$(I
-D$(IcF
 D$(IcP`E
 D$(K
 D$(L
@@ -4324,7 +5207,6 @@ D$09D$H
 D$09D$L
 D$0;D$H
 D$0A
-D$0B
 D$0H
 D$0I
 D$0L
@@ -4370,6 +5252,7 @@ D$=P
 D$@9
 D$@A
 D$@H
+D$@H9
 D$@Hc
 D$@Hi
 D$@I
@@ -4382,7 +5265,7 @@ D$@\n
 D$@\v
 D$@f
 D$@fH
-D$@wZI
+D$@|
 D$@ǃ
 D$@ǅ
 D$AH
@@ -4390,7 +5273,6 @@ D$BH
 D$CH
 D$DA
 D$DH
-D$DI
 D$DL
 D$D[A\\]Ë
 D$EH
@@ -4399,7 +5281,6 @@ D$GH
 D$GM
 D$H1
 D$H1҃
-D$H9
 D$HA
 D$HA)\\$P
 D$HH
@@ -4407,18 +5288,24 @@ D$HH9
 D$HHcЋD$LHc
 D$HI
 D$HL
+D$HL9
 D$HM
 D$Hf
 D$HfH
+D$Hw^I
 D$IH
 D$JH
 D$L9
+D$L<
+D$LA
 D$LH
 D$Lf
 D$O@D
 D$P1
 D$P1ɺ
+D$P9
 D$PA
+D$PB
 D$PH
 D$PI
 D$PL
@@ -4427,27 +5314,25 @@ D$P[A\\]
 D$P\f
 D$P\n
 D$P\v
-D$Pf
 D$PfA
-D$Pt
-D$Pt\bL
+D$Pt\fH
 D$TD
 D$TE
 D$TH
-D$X1
+D$TI
 D$X1\vD$
 D$X9
 D$XA
 D$XH
 D$XH9
 D$XI
-D$XJ
 D$XL
 D$XM
 D$Xf
 D$\\A
 D$\\A9
 D$\\H
+D$\\I
 D$\a<:t
 D$\a@
 D$\a@I
@@ -4489,11 +5374,9 @@ D$\bfA9
 D$\bfH
 D$\br
 D$\bs0
-D$\btVH
 D$\btyB
 D$\bu
 D$\bx
-D$\b蝑
 D$\f0
 D$\f1
 D$\f1Ƀ
@@ -4506,9 +5389,11 @@ D$\fH
 D$\fI
 D$\fL
 D$\fM
+D$\fMc
 D$\fPA
 D$\f\b
 D$\fdH
+D$\ff
 D$\ffH
 D$\fǅ
 D$\f臼
@@ -4525,24 +5410,25 @@ D$\vPA
 D$^D\t
 D$`9
 D$`A
-D$`D9
 D$`H
 D$`H9
 D$`I
+D$`J
 D$`L
 D$`M
 D$`f
-D$d1
+D$`t
 D$dE1
 D$dH
+D$dI
 D$f@A
 D$fE1
 D$hA
 D$hB
 D$hBƄ0
+D$hD9
 D$hH
 D$hI
-D$hL
 D$hM
 D$hf
 D$ht
@@ -4551,6 +5437,7 @@ D$lA
 D$lD
 D$lE
 D$lH
+D$lI
 D$pA
 D$pA;_`r
 D$pE
@@ -4558,23 +5445,22 @@ D$pH
 D$pH9
 D$pI
 D$pL
-D$pf
 D$ptAA
 D$tH
-D$tfA
+D$tI
 D$x1
 D$xA
 D$xA9
-D$xE1
 D$xH
 D$xI
-D$xI9
 D$xL
 D$xdH3
+D$|H
+D$|I
 D$̋C4
 D$ЋC8D9
 D%\bH
-D'9葏
+D'7诏
 D'\bH
 D( D
 D(\bD
@@ -4595,7 +5481,6 @@ D*\f8E
 D*\f\b9
 D*\f\bE
 D+c$E
-D+k$E
 D,3P|2
 D,\bfI
 D.\bH
@@ -4611,6 +5496,7 @@ D24S8
 D24X8
 D24X8_SHADOW
 D32FS8
+D6\nf
 D7(H
 D74Hcq4
 D7\fHcq\f
@@ -4618,7 +5504,6 @@ D8"tMH
 D8$A
 D80~6I
 D8\bJ
-D8s*
 D8sxH
 D8zf
 D9 u
@@ -4633,6 +5518,7 @@ D98I
 D98u
 D99H
 D99u
+D9?u
 D9@\b
 D9@\bu
 D9A$u
@@ -4644,9 +5530,9 @@ D9Q$u
 D9S\b
 D9S\f
 D9X8
+D9[\b
 D9\bH
 D9\nf
-D9\v=(
 D9`\b~
 D9c\fu
 D9cp
@@ -4664,7 +5550,7 @@ D9|$,
 D9|$4
 D9ÉGPA
 D9ƉM
-D:\bH
+D9Ƌ= DB
 D;"t]H
 D;$$
 D;+tkL
@@ -4674,6 +5560,7 @@ D;7H
 D;L$
 D;S\b
 D;T$
+D;[\b
 D;\nL
 D;\tu
 D;c D
@@ -4684,10 +5571,12 @@ D;c\b
 D;c\brċ
 D;c\bs
 D;c`sNL
+D;kX
 D;p0
 D;p4
 D;s@
 D;sP
+D;s\b
 D;xPr
 D;x\bu
 D;{8
@@ -4706,7 +5595,6 @@ DEVICE POOL: %.2fmb\n
 DEVICE_COHERENT_AMD
 DEVICE_LOCAL
 DEVICE_UNCACHED_AMD
-DE\tE
 DG\nM
 DISABLE_VK_LAYER_VALVE_steam_fossilize_1
 DISCRETEI
@@ -4744,6 +5632,7 @@ DP\ff9E
 DP\ff\tE
 DS\nfF
 DT5T>;
+DWJHi0
 DX11
 DXLevel:  %d\nTexture memory:  %s\nVid:  %s, render at %i x %i, display at %i x %i\n
 DXT1
@@ -4766,6 +5655,7 @@ D\f\b~EH
 D\nHD
 D\n\bD
 D\n\bH
+D\r\bA
 D\r\bI
 D\t I
 D\t$I
@@ -4797,6 +5687,7 @@ DecodeEXH
 Decompressed %i texture mips in %.2f ms (%.1fmb/s)\n
 DedicatedAllocations
 DefaultCB
+DefaultEmptyDescriptorSet
 DefaultPools
 DefaultVB
 Define Arithmetic Table 0x%02x: 0x%02x
@@ -4858,11 +5749,14 @@ During a VMA defrag, number of moves to process for a pass in a single frame upd
 DynamicCombo
 DynamicComboFromFeature
 DynamicComboRule
+DynamicDescriptorSetPool
 DynamicPoolPMB_%s
 Dynamically adjust texture streaming budget based on GPU memory usage.
 Dȋ:1
 DԉG\b1
 E ;E
+E A8El
+E A8F
 E D9
 E H9
 E H;E(
@@ -4871,39 +5765,39 @@ E H;E(t"H
 E H;E(t&H
 E HcU
 E HcЋE
-E Hǅ<
-E PS
+E Hǅ,
 E fI
 E$fA
 E(;E
 E(;E0u0
 E(H9
-E(HcU
+E(Hc
 E(HcЋE
 E(Mk
 E(]H
-E(fA
+E(fA9F(
 E*;E
 E*\vE
+E+W$E
 E+f\b)
 E+f\bD
 E,ǀ<\b
 E0;E
+E0PAUAT
 E0PD
-E19\t
+E0PH
 E1:\b
 E1\rQ
-E1\rTR
 E1\v0I
 E1\v3H
 E1\vMȅ
 E1\vU
+E1\vu
 E1ɃǀA
 E1ɉU
-E1ɉވ
-E1ɋM
 E1ɋU
 E1ɋw
+E1ɹ\t
 E1ɺ\t
 E1҃ǀA
 E1҅9
@@ -4912,6 +5806,7 @@ E1ҋW\fH
 E1ҍ<@
 E1ҍ\fRf
 E1ېI
+E1䈍@
 E1䉕l
 E1䉝h
 E1䉽(
@@ -4928,6 +5823,7 @@ E8fH
 E8o\rL
 E8uxI
 E8|$
+E8~*
 E9&u
 E9&u"I
 E9'tBH
@@ -4942,38 +5838,33 @@ E9G\f
 E9H=
 E9P\fu
 E9Q\f
-E9_\b
 E9`x
 E9`|
-E9g\b
 E9h\bu
 E9h\fu
 E9l$
 E9t$(
 E9t$8
-E9|$\\
+E9|$d
 E9}8
 E9ˉG\f
 E9ӉC0D
-E:g*
 E:n\b
-E:}*
+E:t$*
 E:}\ru
 E;&u
 E;.L
 E;.u
 E;/|
 E;1u
+E;7L
 E;<$u
 E;>|
 E;H\f
-E;_\b
-E;g\b
 E;l$
 E;l$(N
 E;n8t
 E;o0H
-E;o\b
 E;t$
 E;u@
 E;uD
@@ -5010,7 +5901,9 @@ EXRReadFile() - R channel not found!\n
 EXRReadFile() - cannot read image data!\n
 EXTERNAL: %.2fmb\n
 EXfH
+E\a@E
 E\a@I
+E\a@M
 E\bA9G\b
 E\bAƁ
 E\bD!
@@ -5021,13 +5914,15 @@ E\bH)
 E\bHc
 E\bHk
 E\bI)
+E\bL)
 E\bet
+E\bt<I
+E\bt\v
 E\f\a\b
 E\f\a\b,
 E\ffA
-E\tŰẼ
 E\v0~
-E\v8A
+E\v=)
 E\vE0
 E\vE0H
 E\vE\t
@@ -5094,6 +5989,8 @@ EtI9E
 Etc::DifferentialTrys::DifferentialTrys(Etc::ColorFloatRGBA, Etc::ColorFloatRGBA, const unsigned int*, const unsigned int*, unsigned int, int, int)
 Etc::Image::EncodingStatus Etc::Image::Encode(Etc::Image::Format, Etc::ErrorMetric, float, unsigned int, unsigned int)
 Etc::IndividualTrys::IndividualTrys(Etc::ColorFloatRGBA, Etc::ColorFloatRGBA, const unsigned int*, const unsigned int*, unsigned int)
+EtfA
+EtfA9E(
 Evict all resident texture.
 ExIǅ
 Exclusive Fullscreen
@@ -5108,6 +6005,7 @@ EĉE0
 EċE\tE
 EċM8
 Eȁx\\
+Eȃxt
 EȉC(H
 EȉEċE
 EȉP(
@@ -5180,7 +6078,6 @@ E܉U؋
 E܋E8
 Eꌠ9Y>)F$
 E썐l\a
-F 8C
 F 8G t\t
 F E1
 F Hǅ8
@@ -5195,10 +6092,10 @@ F(9G(u
 F(9ǉE
 F(H9
 F(I9
+F(IcE
 F(L9
 F(PA
 F(PH
-F(f9C(
 F*.f
 F,L9
 F,PA
@@ -5211,7 +6108,7 @@ F0L9
 F0M9
 F0PA
 F0[A\\A]A^]Ð)
-F1@umH
+F1@u
 F2fA
 F4E1
 F4L9
@@ -5224,6 +6121,7 @@ F9H=
 F<L9
 F<PA
 F>Ţuq
+F@Aǆ
 F@E1
 F@H)
 F@H9
@@ -5290,10 +6188,8 @@ FXA9
 FXPA
 FXt\n
 F\\A9
-F\a@E
 F\a@H
 F\a@I
-F\a@L
 F\a@M
 F\a@u
 F\aPA
@@ -5304,16 +6200,18 @@ F\bH9
 F\bH=
 F\bI9
 F\bL9
-F\bMc
 F\bPA
 F\bfA
 F\bfD
+F\btgHc
+F\btkH
 F\buP
 F\buQL
 F\buT
 F\b~-
 F\fD9ʋ~
 F\fHc
+F\fI9
 F\fL9
 F\fPA
 F\f\a\b
@@ -5414,6 +6312,7 @@ FossilizePipelineCreation
 FossilizePrepare
 Found %d checkpoints.\n
 Found %d streaming textures in array, but in-flight count is %d\n
+Found existing value when inserting into dict - replacing existing value with new value. If this is intended behavior, use InsertOrReplace. If leaving existing values alone is intended, use InsertIfNotFound.
 Found matching VkApplicationInfo.pApplicationName: '%s' VkApplicationInfo.pEngineName: '%s'\n
 FpHc
 FpǅP
@@ -5436,13 +6335,12 @@ F|Y^
 F|f9
 Fج4y
 F٩K/7sz
-G A8Gl
+G 8C
 G A9
 G H+G
 G H9
 G H=
 G HcU
-G PM
 G!fH
 G$A9
 G(9F
@@ -5453,6 +6351,8 @@ G(H)p\bH
 G(Lc
 G(Mi
 G(f9
+G(f9C(
+G(fA
 G(ff.
 G,9F
 G,H9
@@ -5460,9 +6360,11 @@ G/ԑj[
 G09F
 G0H+G8H
 G0H+G8M
+G0H9
 G0Hc
 G0Hc_hH
 G0fA
+G0t\fH
 G1\bt\n
 G49F
 G4AUH
@@ -5483,7 +6385,6 @@ G@H)
 G@H9
 G@Hc
 G@L)
-G@tO
 G@ǇX
 GAME
 GAMEROOT
@@ -5507,12 +6408,8 @@ GBuffer.Subsurface
 GCC: (SteamRT 14.2.0-19~steamrt3.1+bsrt3.1) 14.2.0
 GCC: (SteamRT 4.8.4-1ubuntu15~12.04+steamrt1.2+srt2) 4.8.4
 GCC: (SteamRT 9.3.0-13+steamrt1.2+srt1) 9.3.0
-GD蚅\v
 GENERAL
-GHE1
 GHH9
-GHI9
-GIcU H
 GLIBCXX_TUNABLES
 GLIBC_2.14
 GLIBC_2.17
@@ -5535,7 +6432,7 @@ GL_GOOGLE_cpp_style_line_directive
 GL_GOOGLE_include_directive
 GL_KHR_shader_subgroup_basic
 GL_KHR_shader_subgroup_quad
-GPHǅ|
+GPE1
 GPU memory available (%d MB of %d MB used). Increasing texture pool size %d MB -> %d MB.\n
 GPU memory available (%d MB of %d MB used). Reducing texture pool size %d MB -> %d MB\n
 GPU memory available (%d MB of %d MB used). Texture pool size has become smaller than the minimum pool size, increasing pool size %d MB -> %d MB\n
@@ -5547,16 +6444,17 @@ GXPH
 G\a@A
 G\a@H
 G\a@I
-G\a@L
 G\a@M
 G\a@u
 G\b;\as
+G\bD!
 G\bD9
 G\bE1
 G\bH!
 G\bH)
 G\bH9
 G\bH;G
+G\bHc
 G\bHk
 G\bI9
 G\bL!
@@ -5581,8 +6479,8 @@ G\bǀ\f
 G\bǀh
 G\bǀl
 G\bǅp
-G\b覬\n
 G\fAƇ`$
+G\fE1ɹ
 G\fLc
 G\f\a\b
 G\f\bH
@@ -5611,6 +6509,8 @@ GetResourceManifestCount
 GetResourceManifests
 GetSemaphoreAndMarkQueued%d
 GetThreadLocalStackAllocator
+GetVertexBuffer
+GetVertexBufferAllowDeleted
 GetXCR0
 Ge­lH
 Gf95)1&!\ry9I
@@ -5621,26 +6521,26 @@ Got parse error: %d\n
 GpH9
 Graphics Device changed, resetting video config\n
 Green
-Gt\bH
 GtfA
-GtfA9G(
 GxHǇ
 GxIǇ
-GxtyH
 Gz\b>
 GzfA
+G|\bH
 GɋN\b
 GΈHc
+GЉSdIc
 H A\t
 H D9
 H E9
 H H9
 H L9
 H! \t
+H#5(
 H#5J
-H#5P"=
-H#=g
-H#=mvA
+H#5P
+H#='
+H#=-
 H#A\b
 H#A\bH
 H#C\bH
@@ -5650,7 +6550,9 @@ H#F\bH
 H#G\bH
 H#S\bH
 H#X\b
-H#\rs8:
+H#\r@
+H#\rO
+H#\r_A9
 H#p\bH
 H#p\bL
 H#r\b
@@ -5674,10 +6576,8 @@ H(H9
 H(L9
 H(Lc
 H)C0
-H)C\bH
 H)EȀK\v
 H)KE
-H)Ɖ}
 H)ƋE
 H)ƋE܉
 H)Ƌ}
@@ -5744,16 +6644,21 @@ H90u
 H97tKUH
 H99r
 H9:t9Hi
+H9:u
 H9@ t
 H9@ u
 H9@\b
+H9C H
 H9C(
+H9C8
+H9C8D
+H9C8L
 H9CP
-H9C`
+H9Ch
 H9D$
 H9EH
-H9G(
-H9G`H
+H9EHt
+H9GhH
 H9H(@
 H9I H
 H9K8u
@@ -5769,7 +6674,7 @@ H9P@~\bH
 H9P\b
 H9P`~\bH
 H9R H
-H9S0H
+H9S8I
 H9S8u\n
 H9SH
 H9SX
@@ -5783,34 +6688,37 @@ H9[\b
 H9\atVUH
 H9\br\eH
 H9]H
+H9]Ht
 H9]Pu
 H9p\bu
-H9s0
+H9s8
 H9s@@
 H9v\bI
 H9w\b
+H9w\bU
 H9w\brmM
+H9x\b
 H9z\bu
-H9{0
 H9~XuG
 H9ψB
 H9؋M
 H:Ii
 H;0r
-H;5h
+H;5R%4
+H;5mLB
 H;8L
 H;8u
 H;8űp\b
 H;:u
-H;=0
-H;=A
-H;=B
-H;=D
-H;=W
-H;=\a0
-H;=\r
-H;=u
-H;=}Y
+H;=/
+H;=5
+H;=:
+H;=<
+H;=M
+H;=Y
+H;=\b\e
+H;=^
+H;=h
 H;>u
 H;@\b
 H;A\b
@@ -5820,14 +6728,11 @@ H;C(H
 H;C(L
 H;C(t9D
 H;C(tNH
-H;C0
-H;C0L
-H;C0u
+H;C8u
 H;CH
 H;C\b
 H;C\bH
 H;C\bt9H
-H;C`L
 H;CxH
 H;CxL
 H;E s\a
@@ -5849,15 +6754,16 @@ H;S(
 H;SH
 H;V }$H
 H;W(
-H;X8tBH
+H;X8tKD
+H;Z8ttH
 H;Z\bu
 H;[\b
 H;\\$\bu
 H;\br
-H;\r\e
-H;\rk
-H;\rr
-H;\rӸ
+H;\rC
+H;\rJ
+H;\rc
+H;\rv
 H;p(
 H;p\bu
 H;q\bu
@@ -5889,9 +6795,11 @@ HPH)
 HU/f
 HXH)
 H[A\\A]A^A_]
+H[A\\A]A^A_]Ë{\\1Ʌ
 H[A\\A]A^A_]ÐH
-H[A\\A]A^A_]ÐLcu
-H[A\\A]A^A_]ÿ
+H[A\\A]A^A_]ÐI
+H[A\\A]A^A_]ÐLcm
+H[A\\A]A^A_]鲨
 H[A\\A]A^]
 H[A\\A]]
 H[]A\\A]A^A_
@@ -5917,6 +6825,8 @@ H\fstHcP\b9
 H\nL9
 H\nfA
 H\vH\bH
+H\vr\bH
+H\vz\bH
 H^T+
 H_A^]H)
 HalfFOV
@@ -5937,7 +6847,10 @@ Hc7E1ۃ
 Hc:HcB
 Hc;H
 Hc;L9
-Hc=m
+Hc@H
+HcC H
+HcC I
+HcC(
 HcC0
 HcC0E
 HcC4H
@@ -5953,7 +6866,6 @@ HcE8
 HcE8D
 HcE8H
 HcE8Hc]
-HcẼ
 HcF8
 HcG,D
 HcG8
@@ -5962,6 +6874,7 @@ HcG\fHcO
 HcGhH
 HcH0H
 HcIM
+HcK H
 HcK8Ic
 HcKPIc
 HcKXIc
@@ -5978,7 +6891,6 @@ HcN\bI
 HcO\bHcW
 HcO\fH
 HcP H
-HcP\b
 HcP\f
 HcQ\bMc
 HcRXH9
@@ -5996,6 +6908,7 @@ HcU H
 HcU̸
 HcU܅
 HcV(H
+HcW\b
 HcW\bD
 HcW\bH
 HcZ4H
@@ -6028,7 +6941,6 @@ HcɉE
 HcʋT$,
 HcʋU
 HcЀ<
-HcЉ]
 HcЋD$
 HcЋD$,
 HcЋD$,H
@@ -6038,7 +6950,6 @@ HcЋD$L
 HcЋD$LH
 HcЋE
 HcщM
-HcщƁ
 HcҀ<
 Hc҈$
 Hcҋ4
@@ -6070,98 +6981,108 @@ Ht"H
 Hu?Г
 Huffman code size table overflow
 Huffman table 0x%02x was not defined
-HxH;
 Hxtt
 Hyd1`
 HǀH^
-Hǀ`X
 Hǀ`\n
-Hǃ S
-Hǃ X
+Hǃ F
+Hǃ G
 Hǃ \a
+Hǃ \b
+Hǃ \f
+Hǃ \n
+Hǃ \t
 Hǃ f
-Hǃ(R
-Hǃ(X
+Hǃ#H
+Hǃ(>
+Hǃ(F
 Hǃ(\a
 Hǃ(\b
+Hǃ(\f
+Hǃ(\n
+Hǃ(\t
 Hǃ(f
-Hǃ0S
-Hǃ0T
-Hǃ0Y
+Hǃ0>
+Hǃ0A
+Hǃ0C
+Hǃ0F
 Hǃ0\a
 Hǃ0\b
+Hǃ0\f
+Hǃ0\n
+Hǃ0\t
 Hǃ0f
-Hǃ8A
-Hǃ8P
-Hǃ8T
-Hǃ8X
-Hǃ8Z
+Hǃ8>
+Hǃ8C
 Hǃ8\a
+Hǃ8\b
+Hǃ8\t
 Hǃ8f
-Hǃ@P
-Hǃ@S
-Hǃ@V
-Hǃ@X
-Hǃ@Y
-Hǃ@Z
+Hǃ@F
+Hǃ@G
+Hǃ@H
+Hǃ@I
 Hǃ@\b
 Hǃ@\n
 Hǃ@\t
 Hǃ@\v
-HǃHP
-HǃHR
-HǃHS
-HǃHV
-HǃH[
+HǃHA
+HǃHE
+HǃHF
+HǃHG
+HǃHI
 HǃH\a
 HǃH\b
 HǃH\n
+HǃH\t
 HǃH\v
-HǃPS
-HǃPY
-HǃP[
+HǃP@
+HǃPE
+HǃPI
 HǃP\a
 HǃP\b
 HǃP\n
+HǃP\t
 HǃP\v
 HǃPf
-HǃXQ
-HǃXS
+HǃX?
+HǃXE
 HǃX\b
-Hǃ\bQ
-Hǃ\bV
+HǃX\n
+Hǃ\bA
+Hǃ\bG
+Hǃ\bI
 Hǃ\b\a
 Hǃ\b\b
 Hǃ\b\f
-Hǃ\b\n
 Hǃ\b\t
 Hǃ\b\v
-Hǃ`X
-Hǃ`Y
-Hǃ`Z
-Hǃ`[
+Hǃ`@
+Hǃ`A
+Hǃ`F
 Hǃ`\a
 Hǃ`\b
-HǃhP
-HǃhS
-HǃhV
-HǃhX
-HǃhZ
-Hǃh[
+Hǃh.
+Hǃh=
+HǃhA
+HǃhE
+HǃhG
 Hǃh\a
 Hǃh\b
-Hǃp$
-HǃpP
-HǃpS
-HǃpV
-HǃpY
+Hǃp=
+Hǃp@
+HǃpC
+HǃpE
+HǃpF
+HǃpG
 Hǃp\a
-HǃxQ
-HǃxS
-HǃxX
+Hǃx=
+Hǃx?
+Hǃx@
+HǃxC
+HǃxH
 Hǃx\a
 Hǃx\b
-Hǃx\t
 HǄ$\b
 HǄ\v@a
 HǄ\v@d
@@ -6186,7 +7107,6 @@ I#x\b1
 I#}\b1
 I#}\bH
 I&pA
-I)ā{
 I)ĐH
 I)݉u
 I)ދ]
@@ -6399,33 +7319,32 @@ I444ToNV21
 I98u
 I98u0H
 I9>s
-I9D$
-I9D$`
 I9E A
-I9E`H
+I9E(
+I9E0
 I9F8
-I9G(
-I9G0
-I9L$0
-I9L$8
+I9M0
+I9M8
 I9Q0
-I9T$(
+I9U(
 I9V(
-I9^8tVH
-I9_\b
+I9^8tcH
+I9}hH
 I9ǋM
 I9θB
 I9Љ\f
 I9ָ\b
-I9ߋ=\\
+I9ߋ=
 I:\fr
 I;7r
 I;;u
+I;D$ H
 I;D$ s$L
 I;D$(
 I;D$\bH
 I;D$`
 I;D$`M
+I;E H
 I;E skH
 I;E(
 I;E(D
@@ -6454,7 +7373,6 @@ I;V0
 I;W s&H
 I;\\$0
 I;\as
-I;]8tfH
 I@tA
 IA88
 IAppSystem
@@ -6531,18 +7449,17 @@ IcA`
 IcAxE
 IcD$
 IcD$ 9
-IcD$0M
+IcD$(
 IcD$8A
+IcD$8M
 IcD$\b
 IcE$H
 IcE(H
 IcE0HcӋu
-IcE4
 IcE\b
+IcE\b9
 IcE\bIc
-IcF H
 IcF M
-IcF$H
 IcF0
 IcF8
 IcF8D
@@ -6553,6 +7470,7 @@ IcF\bL
 IcF`
 IcFhM
 IcG0
+IcG4
 IcG8M
 IcG\fE
 IcG\fH
@@ -6578,6 +7496,7 @@ IcO\bIcW
 IcO\bL
 IcO\fH
 IcQH
+IcQHI
 IcQ\fH
 IcQ`
 IcT$
@@ -6586,9 +7505,7 @@ IcT$@D
 IcT$HD
 IcT$HI
 IcT$PH
-IcT$X
 IcT$XD
-IcT$XI
 IcT$\b9
 IcT$\bI
 IcT$`
@@ -6596,15 +7513,18 @@ IcT$`D
 IcT$`H
 IcT$`I
 IcT$pD
-IcT$pI
 IcT$xI
 IcU H
+IcU$H
 IcU4D
 IcU4Mc
+IcUHD
 IcU\bH
 IcU\bL
+IcU\fI
 IcU\fIcE\bH
 IcU\fL
+IcU`D
 IcV A;V0
 IcV0I
 IcV@A
@@ -6613,12 +7533,10 @@ IcVHI
 IcVPA
 IcVPI
 IcVXA
-IcVXD
 IcV\bD
 IcV\bH
 IcV\fA
 IcVpA
-IcVpI
 IcW A
 IcW8L
 IcW\bH
@@ -6635,12 +7553,9 @@ Ic]4LcQ
 Ic]\b
 Ic^<I
 Icq`
-Ict$\f
 Icu(
 Icv\b
 Icv\bH
-Icv`
-Icv`H
 Icw\bH
 Icw\fL
 Ic|$(H9U
@@ -6674,6 +7589,7 @@ InputLayoutVariation_t
 InputService_001
 InputStackSystemVersion001
 InputSystemVersion001
+Insert
 InsertMultipleBefore
 InstallSchemaBindings
 Instrumenting subset of GPU-AV shaders %s\n
@@ -6738,40 +7654,42 @@ IuTH
 IuYH
 Iu^H
 IǄ$ \b
+IǄ$ \t
 IǄ$ f
 IǄ$(
-IǄ$(V
 IǄ$(\b
 IǄ$0
-IǄ$0T
-IǄ$0Y
+IǄ$0A
+IǄ$8
+IǄ$8@
 IǄ$@
+IǄ$HA
 IǄ$P
 IǄ$X
+IǄ$XC
+IǄ$X\t
 IǄ$\b
-IǄ$\bS
 IǄ$`
-IǄ$`X
-IǄ$hP
-IǄ$hS
-IǄ$h[
-IǄ$p
+IǄ$`A
+IǄ$`F
+IǄ$h
 IǄ$p\a
 IǄ$x
 IǄ$x\a
+IǄ\\H
 Iǅ f
 IǅH\v
 IǅX\r
-Iǅ`X
 Iǅ`\r
 Iǅp\r
-Iǅx\t
+Iǆ F
+Iǆ0A
 Iǆ0B
 Iǆ8\v
-Iǆ`X
-IǆhS
 IǇ f
 IǇ(\n
+IǇHA
+IǇX\t
 IǇ`\n
 IǇh\n
 IǇp$
@@ -6783,11 +7701,7 @@ IԉT$<D
 IԉT$DD
 IՉT$8B
 IՉT$@B
-J tR
-J$tE
-J(t8
 J*D9
-J,t+
 J400ToARGB
 J400ToARGBRow_Any_SSE2
 J400ToARGBRow_C
@@ -6817,6 +7731,7 @@ JPEG parameter struct mismatch: library thinks size is %u, caller expects %u
 JPEGMEM
 JSON version mismatches.
 J\aD\tЈB
+J\b<\a
 J\bA9\f$u
 J\bH9
 J\bI9
@@ -6857,10 +7772,12 @@ K fH
 K tJ
 K$tSH
 K$txI
+K*1Љ
 K,E1
 K0B9L $uˋ
 K0fA
 K0fH
+K0tFI
 K8H;K@u
 K8I9
 K8Y^H
@@ -6879,21 +7796,19 @@ K@H;KHrZ
 K@Mc
 K@fH
 KCh<
-KD19
 KG89G@
 KHHc
 KNQ\r
-KPHcҋ
 KPIfW
 KPfH
 KXE1
 K\\A9
 K\aJ𠀔n
-K\b)Ѓ
-K\bE9~\\
+K\bE9~d
 K\bHc
 K\bHc3
 K\bHc҃
+K\bHk
 K\bI\t
 K\bI\t׃
 K\bIc
@@ -6917,6 +7832,7 @@ Kff.
 KpE1
 KpfH
 Kv{!
+KxH;
 KxHǃ
 K|XYd
 L \bL
@@ -6931,10 +7847,12 @@ L#{\bH
 L$ )
 L$ A
 L$ D
+L$ E
 L$ H
 L$ H9
 L$ I
 L$ L
+L$ M
 L$ k
 L$$1
 L$$A
@@ -7013,18 +7931,16 @@ L$`L
 L$`M
 L$`f
 L$bA
+L$dE
 L$hH
 L$hH;L$p
 L$hH;L$x
 L$h|
 L$lH
 L$p9
-L$pD
 L$pE
 L$pI
-L$pǅ0
 L$tA
-L$tL
 L$xI
 L'1J
 L)k(H
@@ -7041,11 +7957,9 @@ L8hI
 L9 u
 L9(u
 L9)u݃
-L9-:
 L90r
 L92u
 L9:r
-L9@\bu
 L9Z\bt
 L9\nr
 L9\t\f
@@ -7055,6 +7969,7 @@ L9b\bu
 L9d$(
 L9h\br\bI
 L9iHt:
+L9k8
 L9k\bu
 L9mȉ
 L9o r,H
@@ -7062,31 +7977,34 @@ L9p\bu
 L9t$
 L9t\b\b
 L9uHL
+L9wh
 L9x(~\bL
 L9x0~\bL
 L9xH~\bL
 L9xP~\bL
 L9xX~\bL
+L9x\bu
 L9xh~\bL
 L9xx~\bL
-L9{0
 L9|$\bu
 L9ǈB
 L9ȈW
 L9؋U
 L; u
 L;#u
+L;%p
 L;&tyH
-L;-_
-L;=\\D
-L;=bE
+L;'u
+L;-w
+L;=4H
+L;=:I
 L;A\bu
 L;H\bu
 L;P\bu
 L;S\bu
 L;\\$\b
-L;\rSA
-L;`8tEI
+L;\r+E
+L;`8tPI
 L;`\b
 L;`\bu
 L;b\bu
@@ -7105,6 +8023,7 @@ L;x8}\bL
 L;xp}\bL
 L;z\bu
 L;{0
+L;{8
 L> H
 LB\bf
 LC_ADDRESS
@@ -7120,9 +8039,9 @@ LC_PAPER
 LC_TELEPHONE
 LC_TIME
 LD;3}\vH
+LD;R
 LD;Z\b|
 LDWLFJĖ
-LG\bu
 LINEAR_D24S8
 LI\aH
 LOCAL
@@ -7134,14 +8053,14 @@ L\a(D
 L\a(I
 L\a*H
 L\b\bI
-L\b\bM
 L\f\a\b
 L\n\bA
 L\r\bH
 L\t H)
-L\tI5\f\b
+L\tI5,(
 L\tR\bf
 L\tʾ\r
+L\vx\bH
 Lc#D;c
 Lc(D9m
 Lc6E
@@ -7162,24 +8081,24 @@ Lc\aH
 Lc\vE
 Lc^\bI
 Lcc4E
-Lcc\bD;c
 Lcc\bI
 Lcc\fI
 LceHL9
 Lcg\bH
 Lcgh
 LckXD;khf
-LckhD;kxD
 Lcn\fH
 Lco<M
 Lcp(N
 Lcp8
 LcpXu
+Lcu̸
 Lcv\fH
 Lcx4H
 Lc{8E
 Lc~ E
 LcƉډ
+LcȉE
 LcȋD
 LcډE
 LegacyUserSettingsPathID
@@ -7240,21 +8159,25 @@ M0@\n
 M0E1
 M0fH
 M8MF
-M9,$t\rM
+M94$t\rM
 M9>u
 M9T$
-M9d$
-M;,;u4H
+M9e\bu
+M9t$h
+M;4;u4H
 M;8t{M
 M;8u
+M;I t>M
 M;I\b
 M;K(
 M;d$ L
 M;d$\b
-M;g8teI
+M;g8tjI
 M;m t\vI
 M;n8
 M;u\bu
+M;|$
+M@Hǅ<
 M@HǅL
 MATCHFRAMEWORK_001
 MAX_ALLOC_CHUNK is wrong, please fix
@@ -7289,6 +8212,7 @@ M\bM9
 M\f\a\b
 M\tq\tA
 M\vK\fH
+M\vM\bI
 M\vU
 MainCs
 MainGs
@@ -7311,7 +8235,6 @@ Mc,$E1
 Mc/I
 Mc4$E1
 Mc4$H
-Mc<$E
 Mc<$E;|$
 Mc<$IcM
 McBxH
@@ -7336,14 +8259,15 @@ Mce0E;e@D
 MceHE;eXD
 Mce`E;epD
 McexE;
+Mcg\bA
 Mcl$
 Mcl$xA
 Mcl$xE
+Mcn\b1
 Mct$
 Mct$ A
 Mct$XE
-Mcu\bE;u
-Mcu\bI
+Mct$hE;t$xD
 Mcy\bH
 Mc}\bA
 McȉM
@@ -7477,6 +8401,7 @@ M̃}@
 M̋E0
 M̋E@
 M̋Ep
+M̋H8H
 M̋HXA
 MЋEЉE
 MЋUԋu
@@ -7514,6 +8439,9 @@ N3Etc29Block4x4Encoding_RGBA8_OpaqueE
 N3Etc30Block4x4Encoding_RGB8A1_OpaqueE
 N3Etc34Block4x4Encoding_RGBA8_TransparentE
 N3Etc35Block4x4Encoding_RGB8A1_TransparentE
+N3psd15MallocAllocatorE
+N3psd4FileE
+N3psd9AllocatorE
 N4A!
 N4AUD
 N8H9
@@ -7734,7 +8662,6 @@ N\f\a\b
 N\nD\t
 N\t{E(3
 N_U9203
-N`A9
 Name
 NavGameTest001
 NetworkClientService_001
@@ -7745,6 +8672,7 @@ NetworkService_001
 NetworkSystemVersion001
 Nff.
 NgmkC
+NhA9
 Nk Gl
 No Pool
 No Vulkan heaps support system memory allocation for this resource.\n
@@ -7757,6 +8685,7 @@ Not a key frame.
 Not all required VK_KHR_shader_float16_int8 / VK_KHR_16bit_storage features are supported and VulkanRequireSM6 is set in gameinfo.gi.  Vulkan device creation failed.\n
 Not implemented yet
 November
+NpfA
 NsPr
 Ns\rI
 NumCols() <= V_ARRAYSIZE( s_DummyRow )
@@ -7783,14 +8712,14 @@ OX[A\\A]A^A_]
 O\\1҅
 O\\L9
 O\aD9
+O\b)Ѓ
 O\bE)
 O\bH9
 O\bHc
-O\bHc҃
+O\bIc
 O\bLc
 O\bRH
-O\bVPQRL
-O\bVRQP
+O\bVM
 O\b\bA
 O\bfA9
 O\b~\rH
@@ -7847,9 +8776,9 @@ P IcD$
 P IǄ$
 P IǄ$\b
 P IǄ$p
-P IǄ$pV
 P Iǅ
 P Iǆ
+P Iǆ0F
 P Iǆ@
 P IǇ
 P IǇ@
@@ -7859,7 +8788,6 @@ P M9
 P f.
 P fA
 P t\tI
-P ƅH
 P ǃ(
 P ǅ(
 P ǅh
@@ -7871,6 +8799,7 @@ P(H9
 P(L9
 P([A\\]
 P([H
+P(fA
 P(t\bH
 P(t\tI
 P*i)\tyI
@@ -7911,23 +8840,23 @@ P4L9
 P8A9
 P8H=vtex
 P8H=vtext
-P8H=vtext+1
 P8Ic
 P8L9
 P8XH
-P8럋CHI
-P8빿#
 P<L9
 P@A8
 P@H+P8H
 P@[A\\]
 PAPH
+PAQAWj
+PAQE1
 PASD
 PASj
 PATD
 PATj
 PAUj\aj
 PAVAUh
+PAWL
 PBD)
 PC SM 5.0 (D3D11)
 PC SM 5.0 (VULKAN)
@@ -7950,13 +8879,14 @@ POSITION
 POSITION0
 POSITIONT
 POSIX
-PPE1
+PPH!
 PPH9
-PPt\tI
 PQRSTUVWXYZ[\\]^_
 PROGRAM
 PROTECTED
-PSAUH
+PSATD
+PSAUD
+PSD is %d bits per channel, only 8 bit PSDs can be read into a Bitmap_t\n
 PSIZE
 PSWI
 PS_RENDER_STATE
@@ -7964,6 +8894,7 @@ PS_RTX
 PURH
 PV(x
 PXD9
+PXHǅ
 PXI9
 P[A\\A]A^A_]
 P[A\\A]A^]
@@ -7994,13 +8925,14 @@ P\b[1
 P\b[L
 P\bfA
 P\bfF
-P\bt#L
-P\bt&L
-P\bƃ(
+P\bƃp
 P\bǃ4
+P\f!хҋP\bD
 P\fARD
 P\fH9
 P\fHc
+P\fHcC
+P\fI9
 P\fL9
 P\f\a\b
 P\ffA
@@ -8017,11 +8949,13 @@ P\vARD
 P_SD
 P`AWA
 P`AWL
+P`t\tI
 PanoramaTextServices001
 PanoramaUIClient001
 PanoramaUIEngine001
 ParallelForSharedCode
 ParseEXRHeaderFromMemory() failed! Error message: %s\n
+ParseImageDataSection failed
 Parser encountered %i errors parsing compile targets expression "%s"\n
 ParticleSystemMgr003
 Pc[A\\A]A^A_]
@@ -8099,10 +9033,12 @@ Present
 Previous allocation with memoryRequirements.memoryTypeBits=0x%x was from heap %d (propertyFlags: %s) with requested propertyFlags (%s), trying in heap %d (propertyFlags: %s) with requested propertyFlags %s.\n
 Print Vertex/Index/GPU buffers.
 Prints out detailed memory fragmentation stats for the Vulkan memory manager
+Prints out information on pipeline compile times.
 Prints out stats for the Vulkan Framebuffer manager
 Prints out stats for the Vulkan Pipeline manager
 Prints out stats for the Vulkan memory manager
 Prints out stats for the Vulkan shader table
+ProcessResourceThreadEvents
 Promise already satisfied
 PropertyEditorSystem_001
 Pu(I
@@ -8123,7 +9059,9 @@ QARWL
 QC,A
 QNHi
 QPI\b
+QXE1
 Q\bA]A^A_
+Q\bH+F8H
 Q\bH9
 Q\bHc
 Q\bI9
@@ -8146,7 +9084,7 @@ Query
 QueuePresent
 QxI9
 Qz5k
-R D9m
+R D9}
 R fA
 R$N(
 R*ِw
@@ -8170,6 +9108,7 @@ R8G8B8A8_ETC2_EAC
 R8G8B8_ETC2
 R8G8_UINT
 R8_UINT
+R8_UNORM
 R9G9B9E5_FLOAT
 R;cv
 R@L;
@@ -8319,7 +9258,6 @@ RJqn
 RL;L
 RM9\\
 RM;\\
-RPH!
 RPHE
 RST%d
 RS_CMP_ALWAYS
@@ -8370,6 +9308,17 @@ RayTracingHitDistance
 Read failed on temporary file
 Read from EMS failed
 Read from XMS failed
+ReadCompiledTextureMips: callback for %s is still using mip %d, but that data is about to be recycled\n
+ReadCompiledTextureMips: cannot convert %s from %s to %s\n
+ReadCompiledTextureMips: could not create a read request for %s\n
+ReadCompiledTextureMips: could not decode passthrough %s\n
+ReadCompiledTextureMips: mip %d of %s did not decompress (%d of %d bytes)\n
+ReadCompiledTextureMips: mip %d of %s is %d bytes on disk but %d uncompressed\n
+ReadCompiledTextureMips: mip %d of %s is below page size but the texture has no mip tail\n
+ReadCompiledTextureMips: mip %d of %s runs past the data we read\n
+ReadCompiledTextureMips: mip %d of %s wants pages out to byte %lld but only %llu were read\n
+ReadCompiledTextureMips: no texture data for %s\n
+ReadCompiledTextureMips: short read for %s, wanted %lld bytes of mips but got %llu\n
 Recognition Exception
 Reduce texture memory pool size by this many MB / s when over budget.
 Reduce texture memory pool size when this percentage of the budget is full.
@@ -8446,6 +9395,8 @@ Requires
 Requires%d
 Reset
 ResidentH
+Resizing IBPool from %s -> %s\n
+Resizing VBPool from %s -> %s\n
 ResolveLayout
 ResourceCompilerSystem001
 ResourceHandleUtils001
@@ -8465,6 +9416,7 @@ RsDepthStencilStateDesc_t
 RsFillMode_t
 RsRasterizerStateDesc_t
 RsStencilStateDesc_t
+Run with -vulkan_track_pipeline_compile_times and clear the shader cache to time pipeline compiles.  To clear the shader cache:\n
 Rx={=
 S Hc
 S Hǅp
@@ -8475,7 +9427,6 @@ S u\aL
 S$+SX9S,
 S(E1
 S(H!
-S(H9
 S(L!
 S(L9
 S([A\\]
@@ -8498,11 +9449,11 @@ S@H;SHrg
 S@Hc
 S@Hi
 S@RAR
-SASARV
 SAUH
 SDE1
 SDL_Vulkan_CreateSurface failed, error: %s.\n
 SDrtM
+SH1\bKD
 SHADER_SOURCE
 SHADER_SOURCE_ROOT
 SHHc
@@ -8518,8 +9469,11 @@ SMQNR
 SP1\a
 SPD)
 SPH9
+SPIR-V reflect failed to enumerate specialization constants: %s\n
 SPIR-V reflect failed with error: %s\n
 SPV_GOOGLE_hlsl_functionality1
+SPV_KHR_abort
+SPV_KHR_constant_data
 SPV_KHR_physical_storage_buffer
 SPV_REFLECT_RESULT_ERROR_ALLOC_FAILED
 SPV_REFLECT_RESULT_ERROR_COUNT_MISMATCH
@@ -8549,7 +9503,6 @@ SRGBA8
 SSE and SSE2 are required.
 STEAM_FOSSILIZE_DUMP_PATH
 STEAM_FOSSILIZE_DUMP_PATH_READ_ONLY
-STt\bH
 STv/N
 SUPPORTS_CS
 SUPPORTS_GS
@@ -8567,7 +9520,6 @@ S\bHk
 S\bHǃH
 S\bHǄ
 S\bHǅ
-S\bI9
 S\bIc
 S\bIc6L
 S\bJc
@@ -8581,7 +9533,10 @@ S\f1ɿ
 S\f\a\b
 S\f\r6
 S\n9U
+S_DEBUG_ASSERTS_ENABLED
 S_EXECUTION_REORDERING
+S_GPU_DEVICE_ID
+S_GPU_VENDOR_ID
 S_MOLTEN_VK
 S_REVERSE_DEPTH_BUFFER
 S_SHADER_QUALITY
@@ -8813,15 +9768,18 @@ SetRow_Any_X86
 SetRow_C
 SetRow_ERMS
 SetRow_X86
+Sets the renderArea of a render pass to its viewport bounds (false will use RT size). More accurate renderArea, but results in more render passes.
 Setting max texture resolution to: %dx%d\n
 Setting validation duplicate_message_limit to %d\n
 Sff.
+ShHc
 ShHǅ
+Shader
 Shader %s doesn't support compile target %s\n
 Shader '%s' has more than the maximum number of samplers per stage (has: %d MAX: %d)\n
 Shader '%s' has more than the maximum number of textures per stage (has: %d MAX: %d)\n
 Shader '%s' has more than the maximum number of uniform blocks per stage (has: %d MAX: %d)\n
-Shader '%s' not compiled during level load, could result in runtime hitch.  Missing RegisterDescriptorSetLayout(%s) for ExternalDescriptorSet?\n
+Shader '%s' not compiled during level load, could result in runtime hitch.  Descriptor set '%s' was never created with RENDER_DESCRIPTOR_SET_CREATE_REGISTER_SHADER_LAYOUT for its ExternalDescriptorSet?\n
 Shader cache size %s exceeds limit %s, deleting cache files to reset.\n
 Shader file version mismatch.  Expected (%d), Got (%d).
 Shader module
@@ -8831,6 +9789,7 @@ ShaderIDColor
 ShadingComplexity
 Sharpness
 SheetSequenceIntegerId_t
+Show RenderDoc overlay
 Size
 Size (in KBs) above which textures should be allocated in dedicated memory (NV-only).
 SizeInBytes
@@ -8838,6 +9797,7 @@ Skipping pipeline layout creation, encountered null descriptor set layout.\n
 Skipping texture streaming: looks like the texture was reloaded while in the streaming list (%s).\n
 Skipping texture streaming: texture resource handles don't match\n
 Slp\v
+SmartPropsSystem_001
 Smoothing not supported with nonstandard sampling ratios
 SobelRow_Any_SSE2
 SobelRow_C
@@ -9050,10 +10010,12 @@ Starting RenderDoc frame capture...\n
 Starting shutdown...\n
 StaticCombo
 StaticComboRule
+StaticDescriptorPool
 Stats
 StatsService_001
 SteamAudio001
 StencilSH
+StreamPutOverflow
 Streaming Validation: %s
 Strict: H
 Su(E
@@ -9068,6 +10030,7 @@ SuperSampling.FeatureInitResult
 SuperSampling.MinDriverVersionMajor
 SuperSampling.MinDriverVersionMinor
 SuperSampling.NeedsUpdatedDriver
+Suppress
 Suspension not allowed here
 Sw7H
 Swap Chain Mode Changing:\n\tm_nVersion: %d -> %d\n\tm_DisplayMode:\n\t\tm_nVersion: %d -> %d\n\t\tm_nWidth: %d -> %d\n\t\tm_nHeight: %d -> %d\n\t\tm_Format: %d -> %d\n\t\tm_nRefreshRateNumerator: %d -> %d\n\t\tm_nRefreshRateDenominator: %d -> %d\n\t\tm_nFlags: 0x%X -> 0x%X\n\tm_nBackBufferCount: %d -> %d\n\tm_nMultisampleType: %d -> %d\n\tm_nModeUsage: %d -> %d\n\tm_bUseStencil: %d -> %d\n\tm_bWaitForVSync: %d -> %d\n\tm_bScaleToOutputResolution: %d -> %d\n\tm_bProgressive: %d -> %d\n\tm_bUsingMultipleWindows: %d -> %d\n\tm_bIsMainWindow: %d -> %d\n
@@ -9097,11 +10060,9 @@ T$ )
 T$ 9
 T$ A
 T$ D
-T$ E
 T$ H
 T$ H)
 T$ I
-T$ Ic
 T$ L
 T$ M
 T$ f
@@ -9113,12 +10074,12 @@ T$(D
 T$(E
 T$(H
 T$(I
+T$(Ic
 T$(L
 T$(M
 T$(f
 T$,H
 T$,Hc
-T$,荌
 T$.E
 T$09]
 T$0A
@@ -9131,7 +10092,6 @@ T$0M
 T$0f
 T$4A
 T$4H
-T$4L
 T$81
 T$8A
 T$8D
@@ -9205,16 +10165,11 @@ T$\fdH
 T$\nA
 T$\rH
 T$`H
-T$`L
 T$`[
 T$dAVD
 T$dH
-T$dIc
 T$h)Å
-T$hD
 T$hH
-T$hHc
-T$hIc
 T$lH
 T$pA
 T$pE
@@ -9225,8 +10180,6 @@ T$pIǄ$
 T$tA
 T$tD
 T$tH
-T$tL
-T$xA
 T$xH
 T$xI
 T$xIǇ
@@ -9262,6 +10215,8 @@ TEXMAN: Adding %llx+%p (binding=%p), %s to abandoned hookup jobs\n
 TEXMAN: Deleting %d textures\n
 TEXMAN: Outstanding stream count %d -> %d (%s)\n
 TEXMAN: Oversubscription state is %s, updating additional resolution bias from %.2f -> %.2f\n
+TEXMAN: streaming data requested for a virtual texture before the VT manager callbacks were installed, not preloading (%s)\n
+TEXMAN: virtual texture created before the VT manager callbacks were installed, falling back to normal streaming (%s)\n
 TEXTURESTREAMING: Extremely low memory: Available mem: %.2f MB, Required: %.2f MB. (Limit: %.2f MB, All Texture Memory: %.2f MB, Streamable Texture Memory %.2fMB)\n
 TEXTURESTREAMING: Filled %d fallback textures in %.3f ms\n
 TEXTURESTREAMING: Resource view ptr or texture resources are still NULL after waiting.\n
@@ -9277,12 +10232,14 @@ TOTAL: %.2fmb\n
 TOUCH
 TRPG
 TYzk
+T\a(I
 T\a*H
 T\bHD
 T\b\bD
 T\f9K
 T\f\a\b
 T\n\bH
+T\r-n
 T\v@A
 TestScriptMgr001
 TextLayout_001
@@ -9320,6 +10277,7 @@ ThreadYield
 Thread_ExecuteCommandStreamCombined
 Thursday
 Time (in seconds) between updating texture memory budget.
+Time(ms)
 Timed out waiting for thread to exit? hung?
 Tm4T^
 TmG\eF
@@ -9399,7 +10357,7 @@ U8^a
 U<fB
 U@H)
 U@H9
-U@H;5
+U@H;5U%4
 U@Hc
 U@Hi
 U@I)
@@ -9410,6 +10368,7 @@ UE1ɉ
 UE1ɹ
 UE1҉
 UE1ۉ
+UHHǅ`
 UHIǅ
 UK鉰x
 ULcΉ
@@ -9476,6 +10435,7 @@ U\tBLH
 U\tEȉK
 U\vE H
 Uff.
+UhIc
 Unable to create VkSurfaceKHR for invalid window handle.\n
 Unable to create the DLSS feature : error code = 0x%08x, info: %s
 Unable to determine texture heap size, assuming %llu MB.\n
@@ -9483,6 +10443,7 @@ Unable to find swapchain named %s
 Unable to initialize DLSS : FeatureInitResult = 0x%08x, info: %s, result %s
 Unable to initialize DLSS : Need to update the driver to %u.%u
 Unable to initialize NGX Vulkan Instance : error code = 0x%08x, info: %s
+Unable to load psd: %s\n
 Unable to memory-map blob file %s for writing.\n
 Unable to open Vulkan pipeline cache KV3 file %s - might not exist yet.\n
 Unable to open blob file %s for writing.\n
@@ -9490,6 +10451,7 @@ Unable to open or memory-map pipeline cache blob file %s.\n
 Unable to parse Vulkan pipeline cache KV3 file %s.  Error: %s\n
 Unable to query size of supported swapchain formats.\n
 Unable to query supported swapchain formats.\n
+Unable to read compiled texture "%s" (Error: %s)\n
 Unable to retrieve NGX Parameter map: error code = 0x%08x, info: %s
 Unable to stream in resource file "%s" (Error: %s)\n
 Unable to write to pipeline cache KV3 file "%s".  Error: %s
@@ -9544,6 +10506,7 @@ Using '%s' for Vulkan debug markers.\n
 Using Steam Shader Pre-Cache whitelist %s\n
 Using VK_EXT_memory_budget set texture memory budget to %llu MB.\n
 Using VK_GOOGLE_display_timing for frame pacing.\n
+Using a deleted buffer '%s', this is likely to crash or hang the GPU
 Ut#H
 Ut3H
 UtlRBTree_FailedInsertDuplicate
@@ -9591,7 +10554,6 @@ V@t4E
 V@|$7
 VALIDATION
 VARH
-VATD
 VApplication001
 VAsyncFileSystem2_001
 VAvi001
@@ -9647,6 +10609,8 @@ VK_EXT_depth_bias_control
 VK_EXT_depth_bias_control does not support all required features, disabling.\n
 VK_EXT_descriptor_indexing
 VK_EXT_descriptor_indexing support required because VulkanRequireDescriptorIndxing is set in gameinfo.gi, but are not supported.  Vulkan device creation failed.\n
+VK_EXT_device_address_binding_report
+VK_EXT_device_address_binding_report requires VK_EXT_debug_utils to deliver reports, disabling extension.\n
 VK_EXT_device_generated_commands
 VK_EXT_device_generated_commands does not support all required features, disabling.\n
 VK_EXT_extended_dynamic_state
@@ -9658,6 +10622,7 @@ VK_EXT_graphics_pipeline_library
 VK_EXT_graphics_pipeline_library and dependent extensions enabled.\n
 VK_EXT_load_store_op_none
 VK_EXT_memory_budget
+VK_EXT_memory_priority
 VK_EXT_mesh_shader
 VK_EXT_multi_draw
 VK_EXT_mutable_descriptor_type
@@ -9681,6 +10646,7 @@ VK_KHR_dI
 VK_KHR_dedicated_allocation
 VK_KHR_deferred_host_operations
 VK_KHR_depth_stencil_resolve
+VK_KHR_device_fault
 VK_KHR_device_group_creation
 VK_KHR_dynamic_rendering
 VK_KHR_fragment_shader_barycentric
@@ -9701,6 +10667,9 @@ VK_KHR_ray_tracing_maintenance1
 VK_KHR_ray_tracing_pipeline
 VK_KHR_ray_tracing_position_fetch
 VK_KHR_separate_depth_stencil_layouts
+VK_KHR_shader_abort
+VK_KHR_shader_abort message: %s\n
+VK_KHR_shader_abort_message: %s\n
 VK_KHR_shader_clock
 VK_KHR_shader_clock does not support shaderDeviceClock, disabling.\n
 VK_KHR_shader_float16_int8
@@ -9732,6 +10701,7 @@ VK_OBJECT_TYPE_CUDA_FUNCTION_NV
 VK_OBJECT_TYPE_CUDA_MODULE_NV
 VK_OBJECT_TYPE_CU_FUNCTION_NVX
 VK_OBJECT_TYPE_CU_MODULE_NVX
+VK_OBJECT_TYPE_DATA_GRAPH_PIPELINE_SESSION_ARM
 VK_OBJECT_TYPE_DEBUG_REPORT_CALLBACK_EXT
 VK_OBJECT_TYPE_DEBUG_UTILS_MESSENGER_EXT
 VK_OBJECT_TYPE_DEFERRED_OPERATION_KHR
@@ -9744,6 +10714,7 @@ VK_OBJECT_TYPE_DEVICE_MEMORY
 VK_OBJECT_TYPE_DISPLAY_KHR
 VK_OBJECT_TYPE_DISPLAY_MODE_KHR
 VK_OBJECT_TYPE_EVENT
+VK_OBJECT_TYPE_EXTERNAL_COMPUTE_QUEUE_NV
 VK_OBJECT_TYPE_FENCE
 VK_OBJECT_TYPE_FRAMEBUFFER
 VK_OBJECT_TYPE_IMAGE
@@ -9768,9 +10739,12 @@ VK_OBJECT_TYPE_SAMPLER
 VK_OBJECT_TYPE_SAMPLER_YCBCR_CONVERSION
 VK_OBJECT_TYPE_SEMAPHORE
 VK_OBJECT_TYPE_SHADER_EXT
+VK_OBJECT_TYPE_SHADER_INSTRUMENTATION_ARM
 VK_OBJECT_TYPE_SHADER_MODULE
 VK_OBJECT_TYPE_SURFACE_KHR
 VK_OBJECT_TYPE_SWAPCHAIN_KHR
+VK_OBJECT_TYPE_TENSOR_ARM
+VK_OBJECT_TYPE_TENSOR_VIEW_ARM
 VK_OBJECT_TYPE_UNKNOWN
 VK_OBJECT_TYPE_VALIDATION_CACHE_EXT
 VK_OBJECT_TYPE_VIDEO_SESSION_KHR
@@ -9784,6 +10758,9 @@ VK_THREAD_DONE_KHR
 VK_THREAD_IDLE_KHR
 VK_TIMEOUT
 VLLcv`L
+VMA LEAK: %s\n
+VMA LEAK: UNFREED ALLOCATION; Offset: %lu; Size: %lu; UserData: %p; Name: %s; Type: %s; Usage: %lu\n
+VMA LEAK: UNFREED VIRTUAL ALLOCATION; Offset: %lu; Size: %lu; UserData: %p\n
 VMA breaking defragmentation pass due to allocation.
 VMA defrag completed after %d passes.\n
 VMA defrag pass %d\n
@@ -9945,7 +10922,7 @@ V_strtoi64
 V_strtoui64
 V_tanf
 V_vsnprintf
-V`tB
+V`tE
 Vc0a
 Vendor ID mismatch in pipeline cache blob (Got: %x Expected: %x).\n
 VendorID
@@ -9959,6 +10936,7 @@ Virtual array controller messed up
 VisBuilder_001
 VisibilityNodeMask
 VkH.f}4^
+VkPhysicalDeviceAddressBindingReportFeaturesEXT.reportAddressBinding not supported, disabling extension.\n
 VkPhysicalDeviceOpacityMicromapFeaturesEXT.micromap not supported, disabling opacity micromaps.\n
 VkPhysicalDeviceSwapchainMaintenance1FeaturesEXT.swapchainMaintenance1 not supported, disabling extension.\n
 VkPhysicalDeviceVulkan11Features.variablePointers not supported, ConstBufferPointer<> will not work.\n
@@ -9989,8 +10967,6 @@ Vulkan Pipeline Manager Stats:\n
 Vulkan Total Mem: %s; Fragmentation: %s; PMB mem: %s; command buffers: %s\n
 Vulkan device does not support precise occlusion queries, this may result in incorrect rendering that relies on accurate occlusion queries (such as tonemapping).\n
 Vulkan driver doesn't support MultiDrawIndexedInstancedIndirectCount\n.
-Vulkan driver version Major = %d, Minor = %d, Patch = %d\n
-Vulkan driver version: %d.%d.%d.%d\n
 Vulkan encountered unrecoverable error VK_ERROR_DEVICE_LOST.
 Vulkan extension enabled: %s\n
 Vulkan failed to create descriptor pool.\n
@@ -10024,7 +11000,6 @@ W0D9
 W4E1
 W4vC
 W;`Ȍ;t
-W=?U
 W?H)
 W@E1
 WAITING_FOR_HOOKUP_JOB
@@ -10035,19 +11010,21 @@ WARNING: Resource name "%s" has the incorrect extension "%s" for the specified r
 WARNING: Trying to create a CRenderContextPtr without a valid context.\n
 WDRE
 WEBP
-WH1ۅ
 WHL)
 WITHIN_BUDGET
 WLHcɃ
 WNHi
+WP1ۅ
 WPH+
 WStrToUTF8Str
 WZRC
 W\aHc
 W\a\f\a\b
+W\bAQH
 W\bB!D
-W\bE9f\\
+W\bE9fd
 W\bH9
+W\bHk
 W\bI9
 W\bIc
 W\bL9
@@ -10110,24 +11087,22 @@ Write to XMS failed
 Wrong JPEG library version: library is %d, caller expects %d
 Wrote %s\n
 Wrote RenderDoc capture to %s\n
+WucM9
 WxH)
 WԉP\fA
 X D9
-X%<n
-X%\\h
-X%\vj
-X%fN
-X%mR
+X%/(
+X%6+
+X%G\t
+X%k\f
 X(E1
 X(Hc
 X(M9
-X-Cn
-X-ch
+X-N\t
 X19&
 X5AHx
-X5an
-X==M
-X=hn
+X5z\t
+X=r%
 X@E1
 XC}\b"[
 XD$,
@@ -10149,6 +11124,7 @@ XT$4
 XT$8
 XT$x
 XZE9
+XZHǅ
 XZt\bL
 XZtrI
 X[<N
@@ -10164,12 +11140,9 @@ X\bH9
 X\bHc
 X\bIk
 X\f\a\b
+X\r**
 X\r3
-X\rV^
-X\rYR
-X\r\nR
-X\r\rn
-X\rpM
+X\rM&
 X`D)
 X`Ic
 Xd$0
@@ -10191,15 +11164,7 @@ XueP
 X|$$
 X|$0
 X|$4
-Y%XH
-Y%fb
 Y'H<
-Y-%3
-Y-B-
-Y5\r.
-Y=/,
-Y=A0
-Y=jG
 Y@XH
 YD$D
 YD$t
@@ -10243,23 +11208,23 @@ Y\bH)
 Y\bfA
 Y\f9X
 Y\f\a\b
-Y\r7Q
-Y\r7c
-Y\ri$
+Y\r$
+Y\r,\a
+Y\rc$
+Y\rq'
 Y^A9
-Y^t/H
-Y^tAA
 Yt Hǃ
 Yt"H
 Yt*H
 Yt1H
 Yt3H
+YtXD
 YtZH
-Yu(I
 Yu,M
 YuGM
 Y}hs
 YÉT$\f
+Yŉy\b
 Yىt$TD
 Z fD
 Z"0*
@@ -10291,7 +11256,6 @@ Zb@"
 Zff.
 Zjz\v
 Zt.A
-ZufM9
 ZvXH
 ZxfD
 ZyΡ#
@@ -10314,11 +11278,13 @@ Z~$|7\e
 [A\\A]A^A
 [A\\A]A^A_H
 [A\\A]A^A_]
+[A\\A]A^A_]A
 [A\\A]A^A_]Ã
 [A\\A]A^A_]Å
 [A\\A]A^A_]É
 [A\\A]A^A_]Ë
 [A\\A]A^A_]Ë;H
+[A\\A]A^A_]Ë=
 [A\\A]A^A_]Ëz
 [A\\A]A^A_]ÍA
 [A\\A]A^A_]ÍH
@@ -10331,6 +11297,7 @@ Z~$|7\e
 [A\\A]A^A_]ÐD
 [A\\A]A^A_]ÐE
 [A\\A]A^A_]ÐE1
+[A\\A]A^A_]ÐE9
 [A\\A]A^A_]ÐH
 [A\\A]A^A_]ÐHc
 [A\\A]A^A_]ÐHi
@@ -10339,16 +11306,18 @@ Z~$|7\e
 [A\\A]A^A_]ÐIǇ
 [A\\A]A^A_]ÐL
 [A\\A]A^A_]ÐL9
+[A\\A]A^A_]ÐM
 [A\\A]A^A_]ø
 [A\\A]A^A_]ú
 [A\\A]A^A_]û
 [A\\A]A^A_]þ
 [A\\A]A^A_]ÿ
-[A\\A]A^A_]醎
-[A\\A]A^A_]阥
-[A\\A]A^A_]餁
-[A\\A]A^A_]鲱
-[A\\A]A^A_]鴅
+[A\\A]A^A_]釮
+[A\\A]A^A_]鉾
+[A\\A]A^A_]鐎
+[A\\A]A^A_]麑
+[A\\A]A^A_]黗
+[A\\A]A^A_]黲
 [A\\A]A^H
 [A\\A]A^H)
 [A\\A]A^]
@@ -10363,22 +11332,24 @@ Z~$|7\e
 [A\\A]A^]ÐM
 [A\\A]A^]ø
 [A\\A]A^]ú
+[A\\A]A^]鰳\n
+[A\\A]A^]黫\n
 [A\\A]A_]
 [A\\A]H
+[A\\A]H)
 [A\\A]L
-[A\\A]L)
 [A\\A]]
 [A\\A]]Hi
 [A\\A]]É
 [A\\A]]Ë1H
+[A\\A]]ËS
 [A\\A]]Ë~\b
+[A\\A]]Ð
 [A\\A]]ÐH
 [A\\A]]ÐL
 [A\\A]]ø
 [A\\A]]ú
-[A\\A]]醭
-[A\\A]]釈
-[A\\A]]髀
+[A\\A]]鶭
 [A\\A^A_]
 [A\\A^]
 [A\\H
@@ -10391,6 +11362,7 @@ Z~$|7\e
 [A\\]Hk
 [A\\]I
 [A\\]Á
+[A\\]É
 [A\\]É˹~
 [A\\]ËS8
 [A\\]Ð
@@ -10398,7 +11370,8 @@ Z~$|7\e
 [A\\]ÐH
 [A\\]ÐL
 [A\\]ÿ\a
-[A]]
+[A\\]递
+[A\\]飨
 [AiN
 [Aiԕ
 [D1C
@@ -10408,6 +11381,7 @@ Z~$|7\e
 [DiKt
 [DiK|
 [DiN
+[E19
 [Eiɹ
 [Eiە
 [H1ȉщ
@@ -10433,7 +11407,6 @@ Z~$|7\e
 [abi:
 [bќ\n
 [clone
-[ff.
 [friend]
 [h1R
 [hHi
@@ -10457,7 +11430,6 @@ Z~$|7\e
 \\$ A
 \\$ D
 \\$ H
-\\$ Ic
 \\$ L
 \\$ M
 \\$ XZD9u8w\aA
@@ -10472,10 +11444,11 @@ Z~$|7\e
 \\$0B
 \\$0D
 \\$0H
-\\$0J
+\\$0L
 \\$8A
 \\$8H
 \\$8I
+\\$8J
 \\$8M
 \\$8f
 \\$<A
@@ -10486,8 +11459,6 @@ Z~$|7\e
 \\$PE
 \\$PH
 \\$PL9
-\\$XH
-\\$XI
 \\$XdH3
 \\$\bA
 \\$\bD
@@ -10514,18 +11485,19 @@ Z~$|7\e
 \\$hL
 \\$pD
 \\$pf
-\\$tu\vH
 \\$xH
 \\%hK
 \\,+y
 \\0\bH
 \\2KС
+\\5 Z
 \\8 L
 \\8$L
 \\8(L
 \\8,L
 \\80L
 \\84L
+\\8\bI
 \\8\bL
 \\8\fL
 \\9`H
@@ -10564,6 +11536,7 @@ Z~$|7\e
 \\𠂀𠀅Ȅ
 \a!7
 \a+ٯc
+\a0,U
 \a0I*L
 \a52F*
 \a6\v*78
@@ -10572,16 +11545,14 @@ Z~$|7\e
 \a:9\r
 \a</u
 \a<=tY<\r
+\a<\nth<\rtdE
 \a<\ru\tA
+\a<\rw
 \a<\rwDI
 \aA6\r
 \aARL
 \aATA
-\aATD
-\aATH
 \aATS
-\aAUD
-\aAUH
 \aAUI
 \aAVAUATSH
 \aAVD
@@ -10619,8 +11590,8 @@ Z~$|7\e
 \a\a\a\a\a\a\a\a
 \a\a\a\a\a\a\a\aH
 \a\a\a\a\a\a\a\aI
+\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a
 \a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a
-\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a`@N
 \a\a\a\a\b\b\b\b\b\b\b\b\t\t\t\t\t\t\t\t\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r
 \a\a\a\af
 \a\a\b\b\t\t\n\n\v\v\f\f\r\r
@@ -10648,10 +11619,8 @@ Z~$|7\e
 \a\t\v\r
 \a\t\v\t\v\r
 \a^Rt(
-\af%p
 \ar_transparency_and_composition_mask
 \at!D
-\at3H
 \atIA
 \atLH
 \atWI
@@ -10665,20 +11634,19 @@ Z~$|7\e
 \au!A
 \au!H
 \au%H
-\au'A
 \au(H
 \au-H
 \au-f
 \au/f
+\au5fA
 \au7A
-\au8fA
 \au9fA
 \au<fA
+\au=A
 \auMfA
 \auUfA
 \auWH
 \au\vH
-\au`H
 \audD;
 \aulf
 \av)I9
@@ -10687,6 +11655,7 @@ Z~$|7\e
 \av\fH
 \av\rH
 \av\tE
+\avbH
 \avdJ
 \aw H
 \aw#H
@@ -10701,7 +11670,6 @@ Z~$|7\e
 \a~\bAƇ 3
 \a~sL
 \b  @
-\b"ƅ\b
 \b$(0A
 \b$Tj
 \b*\f0
@@ -10749,7 +11717,6 @@ Z~$|7\e
 \bD\t\t
 \bD\tȉB
 \bE1ɉ
-\bE1ۉ
 \bE\v,
 \bE\vA
 \bE\vG\n
@@ -10763,7 +11730,7 @@ Z~$|7\e
 \bEҋE
 \bEڀ}
 \bEހ}
-\bFNu&
+\bFNu.
 \bF\nL
 \bF\rm
 \bF\vA
@@ -10773,12 +11740,13 @@ Z~$|7\e
 \bG\vD\n
 \bG\v^\n
 \bH#X\bH
+\bH9EP
 \bH9M
 \bH9\n
 \bH9]
 \bH;5
+\bH;5/
 \bH;5\\
-\bH;5o
 \bH\t\nH
 \bH\tȉ
 \bH\tȉу
@@ -10797,6 +11765,7 @@ Z~$|7\e
 \bHcS\fI
 \bHcW\bH
 \bHc\a
+\bHc҉
 \bHc҉\\
 \bHiE
 \bHi]
@@ -10821,6 +11790,8 @@ Z~$|7\e
 \bL;i@uۍB
 \bL\vA
 \bLc&D;f
+\bLc.H
+\bLc/E)
 \bLc7E)
 \bLc?E)
 \bLcQ
@@ -10841,10 +11812,8 @@ Z~$|7\e
 \b[A\\A]A^A_]ÐE1
 \b[A\\A]A^A_]ÐH
 \b[A\\A]A^A_]ÐI
-\b[A\\A]A^A_]ú
-\b[A\\A]A^A_]鷉
-\b[A\\A]A^A_]鸲
 \b[A\\A]]
+\b[A\\A]]H
 \b[A\\A]]H)
 \b[A\\A]]Ã
 \b[A\\A]]ËP\fA
@@ -10900,32 +11869,39 @@ Z~$|7\e
 \bn\v[\n
 \br_reconstructed_previous_nearest_depth
 \brw_reconstructed_previous_nearest_depth
+\bt!H
 \bt$H
-\bt-=
+\bt'L
+\bt(A
+\bt+L
 \bt/H
 \bt<H
 \bt>I
+\btCH
 \btDH
 \btTA
-\btXA
+\bt\n1
 \bt\nA
 \bt\nǇ
 \bt\tH
 \bt\vH
+\btcH
 \btdA
 \btv;A(
 \bu%H
+\bu-A
 \buFD
 \bu\rI
 \bu\tH
 \buiH
 \bumA
-\buv1
+\bus1
 \buv[A\\]Ð
 \bvVH
 \bvgI
 \bymg3
 \bzGɠ2
+\b}\tD9
 \b~#A
 \b~,L
 \b~4L
@@ -10966,7 +11942,6 @@ Z~$|7\e
 \eÊǛǜ
 \eͨf2
 \f \b0
-\f"H9
 \f"M)
 \f$E1
 \f$H9
@@ -10977,8 +11952,12 @@ Z~$|7\e
 \f$fA
 \f$tI
 \f$t\aI
+\f&A9
+\f(L9
+\f)Hc
 \f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*
 \f+A9
+\f+H9
 \f+\ns
 \f,M)
 \f-.s
@@ -11004,6 +11983,7 @@ Z~$|7\e
 \f7H)
 \f7L9
 \f7tTD9
+\f7~'
 \f9Hc
 \f9L;a
 \f9Miɍ\e
@@ -11015,6 +11995,7 @@ Z~$|7\e
 \f:Mi
 \f<I)
 \f=À0
+\f>A9
 \f>A9H\f:~\nH
 \f>A9\b\f:
 \f>A9\b\f:~\bH
@@ -11024,14 +12005,12 @@ Z~$|7\e
 \f?IcىUЉ
 \f?Mc
 \f?Miɲ
-\f?~'
 \f@Hc
 \f@Ic
 \fAfF
 \fAff.
 \fHH9
 \fH\tȋ
-\fHcE
 \fHcP\f
 \fHfB
 \fIH)
@@ -11041,20 +12020,21 @@ Z~$|7\e
 \fI\tԋ
 \fIfA
 \fIfE
-\fIǆL
+\fIǇL
 \fJE)
 \fKM9
 \fNfA
-\fNt<Hk
 \fOH9
 \fP H
 \fP@I
 \fP@L
+\fPHcC I
 \fPizz2:>
 \fRD)
 \fRfA
 \fTo\v
 \fWH9
+\f[1ɾ
 \f[D9
 \f\aH)
 \f\aHc
@@ -11100,7 +12080,6 @@ Z~$|7\e
 \fv@H
 \fwfA
 \fwwwwwwwwwwwwwww
-\fw|H
 \fx~U
 \fzHc
 \fâáá
@@ -11115,6 +12094,7 @@ Z~$|7\e
 \n    limH
 \n    near %s\n
 \n*** %s "%s" in %s does not follow the 0..N format!\n\n
+\n*** %s "%s" in %s has a bad range: %s!\n\n
 \n*** %s "%s" in %s has max(%d) > 254!\n\n
 \n*** %s "%s" in %s has min(%d) < 0!\n\n
 \n*** %s "%s" in %s has min(%d) > max(%d)!\n\n
@@ -11135,7 +12115,7 @@ Z~$|7\e
 \n*** Error masking unused parts! Unknown text found. This is usually caused by a '{' or '}' not tabbed properly or an invalid declaration at the global scope. (line %d):\n%s\n\n
 \n*** Error parsing ==N for rule in %s! First arg to RequiresN cannot be ==0!\n\n
 \n*** Error parsing ==N for rule in %s! Not allowed on ChildOf. Use RequiresN instead.\n\n
-\n*** Error parsing ==N for rule in %s!\n\n
+\n*** Error parsing ==N for rule in %s: %s!\n\n
 \n*** Error parsing =N for mode %s in %s!\n\n
 \n*** Error parsing AllowN rule in %s! N must be >= 0!\n\n
 \n*** Error parsing AllowN rule in %s!\n\n
@@ -11155,6 +12135,9 @@ Z~$|7\e
 \n*** Error! Could not find static combo with name "%s" in %s!\n\n
 \n*** Error! Could not find static or dynamic combo with name "%s" in %s!\n\n
 \n*** Error! Rule error string must be quoted in %s!\n\n
+\n*** Error! Suppress rule in %s can only suppress combos of its own type! Put the condition first and suppress same-tier combos, or use RequiresN.\n\n
+\n*** Error! Suppress rule in %s must only suppress combos that are 0..x!\n\n
+\n*** Error! Suppress rule in %s needs a condition followed by at least one combo to suppress!\n\n
 \n*** Error! Too many args found in rule in %s!\n\n
 \n*** Error! Too many or too few arguments to a rule in %s!\n\n
 \n*** Feature "%s" in %s does not follow the 0..N format!\n\n
@@ -11173,15 +12156,24 @@ Z~$|7\e
 \n*** Unable to parse Version in HEADER section of %s!\n\n
 \n*** Unknown rule "%s" in %s!\n\n
 \n*** Unknown text found in FEATURES section in %s: "%s"\n\n
-\n*** vfx_common.cpp(1369): Error opening file "%s"!\n\n
-\n*** vfx_common.cpp(1446): Error opening file "%s"!\n\n
-\n*** vfx_common.cpp(5825): Error opening file "%s"!\n\n
-\n*** vfx_common.cpp(5975): Error opening include file in features list"%s"!\n\n
-\n*** vfx_common.cpp(6016): Error opening file "%s"!\n\n
-\n*** vfx_common.cpp(6330): Error opening file "%s"!\n\n
-\n*** vfx_common.cpp(6376): Error opening file "%s"!\n\n
-\n*** vfx_common.cpp(6415): Error opening file "%s"!\n\n
-\n*** vfx_common.cpp(6519): Error opening file "%s"!\n\n
+\n*** vfx_common.cpp(1484): Error opening file "%s"!\n\n
+\n*** vfx_common.cpp(1561): Error opening file "%s"!\n\n
+\n*** vfx_common.cpp(6339): Error opening file "%s"!\n\n
+\n*** vfx_common.cpp(6489): Error opening include file in features list"%s"!\n\n
+\n*** vfx_common.cpp(6531): Error opening file "%s"!\n\n
+\n*** vfx_common.cpp(6845): Error opening file "%s"!\n\n
+\n*** vfx_common.cpp(6891): Error opening file "%s"!\n\n
+\n*** vfx_common.cpp(6930): Error opening file "%s"!\n\n
+\n*** vfx_common.cpp(7042): Error opening file "%s"!\n\n
+\n***ASSERT FAILED*** Image data section has too many channels (%d).
+\n***ASSERT FAILED*** Pointer is null.
+\n***ERROR*** [DecompressRle] Malformed RLE data encountered
+\n***ERROR*** [ImageData] Unhandled bits per channel: %u.
+\n***ERROR*** [ImageData] Unhandled compression type %u.
+\n***ERROR*** [PSD] Document does not contain an image data section.
+\n***ERROR*** [PsdExtract] File seems to be corrupt, reserved bytes are not zero.
+\n***ERROR*** [PsdExtract] File seems to be corrupt, signature does not match "8BPS".
+\n***ERROR*** [PsdExtract] File seems to be corrupt, version does not match 1 or 2.
 \n,^y
 \n4_l
 \n9y$u
@@ -11215,7 +12207,7 @@ Z~$|7\e
 \nf-@(f
 \nff.
 \nr_dilated_depth
-\nrenderdocapi.cpp(93): ERROR! Can't load %s dll, automatic RenderDoc shader debug info not available.\n
+\nrenderdocapi.cpp(95): ERROR! Can't load %s dll, automatic RenderDoc shader debug info not available.\n
 \nrw_dilated_depth
 \nt8H
 \ntX;A0
@@ -11228,75 +12220,96 @@ Z~$|7\e
 \n~.H
 \nϡ!7J
 \r  \b
-\r"}+
-\r$\t(
+\r"K.
+\r"p@
+\r#"@
+\r#b$
+\r%)@
 \r%P
-\r)@\n
+\r' @
+\r*[(
 \r+گ\n\eL6
-\r-.$
-\r/0\f
+\r,>@
+\r/X@
+\r04\n
+\r3?\r
+\r5H-
+\r6P.
+\r6S.
+\r8K%
+\r9\b\n
+\r9]7
+\r9y2
+\r:K.
 \r;Sn
-\r=r?
-\r?@?
-\r?O7
-\r@\t(
-\rB-$
-\rB.?
-\rFi#
-\rH);
+\r=DB
+\r?8&
+\rDI.
+\rF3+
+\rG3\f
+\rGG-
 \rH)ЋU
 \rHi҃
-\rI:(
-\rI|+
 \rK~\n
 \rLiг,
-\rN'?
-\rOE
-\rP@\n
-\rQ=4
-\rS\a?
-\r[&?
+\rMZ@
+\rMi@
+\rNH-
+\rQ0+
+\rRf@
+\rSy@
+\rX?<
 \r[A\\A]A^]
-\r\\\t(
-\r\b\t(
-\r\e<\r
-\r\f%2
-\r\f%?
+\r[O%
+\r\a*.
+\r\f8&
 \r\fNA
+\r\f[(
 \r\f\v\n\t\b\a
+\r\nK.
 \r\r\f\f
 \r\r\r\r
 \r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r
 \r\r\r\rf
 \r\r\r\rǅ
 \r\r\r\rǇ,
-\r\t8.
+\r\t4\n
+\r\t~6
 \r\v\t\a
-\r_>?
-\ra);
 \rb#-
+\rbG@
 \rc\n}J
-\re=:
-\riE
-\rmB?
+\rd:#
+\rgG-
+\rhF>
+\rig0
+\rjU<
+\rl,>
+\rmR.
+\rm\\@
 \rmj>zjZ
-\rr<:
-\rrP?
+\rn@@
+\roP.
+\rr8&
 \rr_new_locks
 \rrw_new_locks
+\rsI.
 \rt+;A<
 \rtjH
+\rvy@
 \rw+H
 \rw-I
+\rwL%
 \rw\nI
 \rwxH
-\rz'?
-\rzJ\r
-\rz\t(
-\r{\t8
+\rxb8
+\ryq8
+\ry~6
+\r{?@
 \rŠ8L
 \t ();,
 \t ();,\n\r
+\t ,\n\r
 \t The lexer was matching from line %d, offset %d, which\n\t
 \t%.*s\n
 \t0\b\f
@@ -11322,7 +12335,7 @@ Z~$|7\e
 \tEݕF
 \tFramebuffer Count ( %d ): \n
 \tH\tK
-\tIǆh
+\tIǇh
 \tLayout Count( %d ) \n
 \tP, \b
 \tPMB Type ( %s ): Count ( %d ) ( %llu MB ) \n
@@ -11333,7 +12346,6 @@ Z~$|7\e
 \tTotal Command Buffers (%d)\n
 \tV#{
 \tW@H
-\tZH@
 \t[ \b\b
 \t\b\v\n\r\f
 \t\f\a\b
@@ -11414,6 +12426,7 @@ Z~$|7\e
 \vt>H
 \vtI;A4
 \vthH
+\vv!A
 \vvx1
 \vw%H
 \vwMH
@@ -11430,6 +12443,7 @@ Z~$|7\e
 ]HI9
 ]\bAǇ4
 ]\bD9#
+]\bH9
 ]\bMk
 ]\f\a\b
 ]\n     I
@@ -11455,7 +12469,7 @@ Z~$|7\e
 ]ԋEԃ
 ]܋EP
 ]܋E܃
-^%F^
+^*A:]*
 ^*ܪ` kr>b*
 ^,9Ӊ]
 ^6o}
@@ -11474,8 +12488,7 @@ Z~$|7\e
 ^\f9X
 ^\f\a\b
 ^\ftL
-^\r4!
-^\rS\\
+^\rHT
 ^^^^^^^^^^^^^^^
 ^^^^^^^^^^^^^^^^
 ^i)H|Y
@@ -11483,6 +12496,7 @@ Z~$|7\e
 ^u;H
 ^w7H
 ^ʌ7;^
+_$Hc
 _(E1
 _(H9
 _@f.
@@ -11704,7 +12718,7 @@ _ZN10CUtlBuffer18AddNullTerminationEv
 _ZN10CUtlBuffer21CheckArbitraryPeekGetEiRi
 _ZN10CUtlBuffer3GetEPvi
 _ZN10CUtlBuffer3PutEPKvi
-_ZN10CUtlBuffer4SwapERS_b
+_ZN10CUtlBuffer4SwapERS_
 _ZN10CUtlBuffer6PrintfEPKcz
 _ZN10CUtlBuffer7GetUpToEPvi
 _ZN10CUtlBuffer7PeekGetEii
@@ -11727,6 +12741,7 @@ _ZN10CUtlString6AppendEPKc
 _ZN10CUtlString6AppendEPKci
 _ZN10CUtlString6FormatEPKcz
 _ZN10CUtlString7AcquireEP13CBufferStringb
+_ZN10CUtlString7FormatVEPKcP13__va_list_tag
 _ZN10CUtlString9SetDirectEPKci
 _ZN10CUtlString9SetLengthEi
 _ZN10CUtlStringC1ERK13CBufferString
@@ -11821,6 +12836,7 @@ _ZN15CKeyValues_Data18Internal_GetStringEPKcPcm
 _ZN15CKeyValues_Data19Internal_GetWStringEPKwPwm
 _ZN15CUtlBinaryBlock3SetEPKvi
 _ZN15CUtlBinaryBlock9SetLengthEi
+_ZN15CUtlStringToken4MakeEPKc
 _ZN15CUtlSymbolTable9AddStringEPKcPb
 _ZN15CUtlSymbolTableC1Eiib
 _ZN15CUtlSymbolTableD1Ev
@@ -17122,6 +18138,7 @@ _\bH9
 _\bHcC0
 _\bL9
 _\bMc
+_\bMk
 _\bdH
 _\fE1
 _\f\a\b
@@ -17255,20 +18272,22 @@ _~6\f
 `Pe#\n
 `Pf.
 `Xf.
-`XfA
 `[A\\A]A^A_]
 `[A\\A]A^A_]Ë
 `[A\\A]A^]
 `[A\\A]]
 `[A\\]
 `\b)I
+`\bLi
 `\bf.
+`\fD9
 `\fE1
 `\f[A\\]
 `\f\a\b
 ``f.
 `abcdefghijklmno
 `hf.
+`hfA
 `pf.
 `xf.
 `zs[
@@ -17350,7 +18369,6 @@ attachment
 attachmentCount
 attachments
 attributes
-auto
 auto:
 a˨\af
 b M9
@@ -17408,6 +18426,7 @@ bindingFlags
 bindings
 bindtextdomain
 binormal
+bitmap output needs an 8 bit document
 blank
 blendConstants
 blendEnable
@@ -17432,8 +18451,6 @@ byte
 byteaddressbuffer
 b~bA
 c I9
-c$Ic
-c*E:f*
 c0Hi
 c8fA
 c@M9
@@ -17489,6 +18506,7 @@ cfg/%svideo_%02d.txt
 cfg/moddefaults.txt
 cfg/video_version.txt
 cfg/videodefaults.txt
+chIc
 chL;cp
 chOutputH
 chSize: H
@@ -17510,6 +18528,7 @@ clock_gettime
 close
 closedir
 closestHitShader
+cmyk document with non 8 bit channels
 cntrl
 co_await
 code
@@ -17531,6 +18550,8 @@ compareEnable
 compareMask
 compareOp
 components
+composite channel data missing
+composite has too few channels for its color mode
 compressH
 compression
 compute
@@ -17585,6 +18606,7 @@ d$XH
 d$\bE
 d$\bE1
 d$\bH
+d$\bI
 d$\bL
 d$\bM
 d$\ffE
@@ -17831,10 +18853,13 @@ exelOffsI
 exelPrecI
 exit
 exp2
+expected an integer or the name of a #define
+expected an integer, got "%.*s" ( #define names can be used in combo declarations and rules, but not in FEATURES )
 exposure resource provided, however auto exposure flag is present
 extraPrimitiveOverestimationSize
 e~ܵ\aP
 eȾvtexL
+f Mc
 f(SH
 f-=v
 f0ǅ\f
@@ -17864,7 +18889,6 @@ fC]d
 fD+4pfD
 fD9/
 fD9X
-fD9c(
 fD9o
 fD;#
 fD;C
@@ -17877,12 +18901,13 @@ fDeviceToViewDepth
 fDownscaleFactor
 fE9J
 fE9e
+fE9f(
 fE9ĈO
 fE9ʈE
 fE;D
-fE;e(
 fE;f\b
-fE;o(
+fE;g(
+fE;l$(
 fE;|
 fFrameIndex
 fHM9
@@ -17936,6 +18961,7 @@ fallback3d.vtex
 fallbackcube.vtex
 fallbackcubearray.vtex
 false
+false && "Unfreed dedicated allocations found!"
 fclose
 fcntl
 fdopen
@@ -17961,8 +18987,8 @@ float Etc::Block4x4Encoding::GetError()
 float32
 float64
 floatbitmap.cpp
-floatbitmap.cpp(1191): Unsupported color format "%s", skipping!\n
-floatbitmap.cpp(518): Conversion not supported yet!\n
+floatbitmap.cpp(1213): Unsupported color format "%s", skipping!\n
+floatbitmap.cpp(520): Conversion not supported yet!\n
 fn\aJ
 fopen
 fopen64
@@ -18003,7 +19029,6 @@ f̈F*H
 f̾t@o
 fՏN7
 g SH
-g(SH
 g0SH
 g8:\n
 g@L;gH
@@ -18019,6 +19044,7 @@ g\f\a\b
 g_Mathlib_GammaToLinearByteTable
 g_PushConstants
 g_TSPointerListNodes
+g_globalLateBoundBindlessSet
 g_nInputAddress
 g_nOutputAddress
 g_nSizeAddress
@@ -18059,6 +19085,7 @@ global destructors keyed to
 gnedMipSH
 gnment: H
 gpSH
+gpuav_debug_disable_dontinline
 gpuav_enable
 gpuav_reserve_binding_slot
 gpuav_select_instrumented_shaders
@@ -18077,6 +19104,7 @@ gx|yy
 h Lc
 h1`(H!Bq
 h8$I
+h<0w
 hBiasClaH
 hBounds:H
 hCT\v
@@ -18085,7 +19113,6 @@ hGT.
 hG\eiWC
 hHM9
 hIST
-hIcF
 hL9e
 hL9u
 hO\f\e
@@ -18163,6 +19190,7 @@ iRenderSize
 iTXt
 iUpscaleSize
 iViewporH
+i\bD9
 i\bI9
 i\f\a\b
 i]Wb
@@ -18194,6 +19222,9 @@ incorrect data check
 incorrect header check
 incorrect length check
 indeH
+indexed document with more than 2 channels
+indexed document with no usable palette
+indexed document with non 8 bit indices
 indirect_preprocess
 ineIu
 inheH
@@ -18293,6 +19324,7 @@ kRgbH709Constants
 kRgbI601Constants
 kRgbJPEGConstants
 kShape: H
+kTRC
 kWords: H
 kYuv2020Constants
 kYuvF709Constants
@@ -18307,11 +19339,9 @@ kYvuI601Constants
 kYvuJPEGConstants
 kYvuV2020Constants
 k\bE1
-k\bH)
 k\bH9
 k\f\a\b
 kh9F
-khIc
 khM9
 kkkkkkkkkkkkkkk㭫㭊㭊㭊㭊㭊㭊㭊㭊㭊㭊㭊㭊㭊㭊㭊硊磻磻磻磻磻磻磻磻磻磻磻磻磻磻磻毻欀欀欀欀欀欀欀欀欀欀欀欀欀欀欀⨀⨌⨌⨌⨌⨌⨌⨌⨌⨌⨌⨌⨌⨌⨌⨌\f
 klfA
@@ -18340,6 +19370,7 @@ l$'H
 l$'L
 l$(H
 l$(L
+l$(M
 l$(f
 l$(wmH
 l$)H
@@ -18364,8 +19395,10 @@ l$8L
 l$9H
 l$:H
 l$=L
+l$@D
 l$@E
 l$@E1
+l$@M
 l$HE1
 l$HM
 l$HM9
@@ -18375,7 +19408,6 @@ l$Pf
 l$XD
 l$XE
 l$XH
-l$ZJ
 l$\aA
 l$\aH
 l$\bA
@@ -18385,6 +19417,8 @@ l$\bI
 l$\bL
 l$\bMk
 l$\bf
+l$\b艺
+l$\b芻
 l$\eL
 l$\f1
 l$\fA
@@ -18394,6 +19428,7 @@ l$\fI
 l$\fLc
 l$\ffE
 l$\rA
+l$^J
 l$`A
 l$`D
 l$`E
@@ -18406,7 +19441,6 @@ l$pD
 l$pE
 l$pH
 l$pL
-l$pt
 l$xB
 l$xD
 l$xH
@@ -18510,6 +19544,8 @@ mBufferAH
 mNП5+
 m\f\a\b
 m\t]̉E
+m_MapCount == 0 && "Allocation was not unmapped before destruction."
+m_MapCount == 0 && "VkDeviceMemory block is being destroyed while it is still mapped."
 m_Value
 m_bAlphaToCoverageEnable
 m_bDepthClipEnable
@@ -18540,6 +19576,8 @@ m_frontStencilDepthFailOp
 m_frontStencilFailOp
 m_frontStencilFunc
 m_frontStencilPassOp
+m_hMemory != VK_NULL_HANDLE
+m_hMemory == VK_NULL_HANDLE
 m_mode == MODE_ETC1
 m_mode == MODE_H
 m_mode == MODE_PLANAR
@@ -18555,6 +19593,7 @@ m_nSlotType
 m_nStencilReadMask
 m_nStencilWriteMask
 m_pD3DSemanticName
+m_pMetadata->IsEmpty() && "Some allocations were not freed before destruction of this memory block!"
 m_pName
 m_pSemantic
 m_pSemanticName
@@ -18572,7 +19611,6 @@ m_uiAddedBlocks < m_uiImageBlocks
 m_uiAddedBlocks == m_uiImageBlocks
 m_uiEncodingIterations == 0
 m_vkRayTracePipeline != VK_NULL_HANDLE
-ma++
 magFilter
 mageArraJ
 mageDimeI
@@ -18679,9 +19717,6 @@ n$,f
 n$\bf
 n)\tҜ
 n,\tfD
-n-|ڢ
-n5\f_
-n5xڢ
 n@M9
 nB(knN
 nCount: H
@@ -18697,10 +19732,11 @@ nI`f
 nIcE`1
 nJ`f
 nK\bf
+nL$PH
+nL$\bf
 nM H
 nM f
 nM(1Ґ
-nM@L
 nMEux
 nMPE8
 nMPH)
@@ -18716,12 +19752,12 @@ nResult = vmaBindImageMemory( m_pVmaAllocator, pMove->dstTmpAllocation, ( VkImag
 nResult = vmaCreateAllocator( &allocatorCreateInfo, &m_pVmaAllocator )
 nResult = vmaCreatePool( m_pVmaAllocator, &poolCreateInfo, &allocInfo.pool )
 nResult = vmaCreatePool( m_pVmaAllocator, &poolCreateInfo, &pNewPool )
-nS@H
 nSemaphoreIndex < static_cast< int32 >( m_nSwapQueueImageCount )
 nSemaphoreIndex >= 0
 nSolid: H
 nTries < 10000000
 nU8f
+nUPf
 nUXf
 nV f
 n\afD
@@ -18740,7 +19776,7 @@ n\f\vH
 n\f͠[G
 n\nfA
 n\nfD
-n\rqh
+n\r!x
 n\tC<H
 n\tW=L^
 n\t{\fD
@@ -18776,6 +19812,7 @@ niformBuI
 niformBuJ
 nine
 nm f
+no composite (not saved with Maximize Compatibility)
 no memory during frame initialization.
 no message
 noInvocationFragmentShadingRates
@@ -18823,7 +19860,6 @@ nº\b4\b4fE
 nû\a\a\a\aI
 nû\b4\b4f
 nƾ\b4\b4f
-nȋC0L
 nȋ\f7f
 nȸ{N{Nf
 n˻\b4\b4fE
@@ -18843,19 +19879,15 @@ o$2L
 o$7H
 o$\af
 o$\bf
-o%"Ȣ
-o%&l
-o%5Ң
-o%:Ģ
-o%Zq
-o%ZǢ
-o%\fŢ
-o%a>
-o%hp
-o%j|
-o%ym
-o%{[
-o%}j
+o$\nf
+o%$5
+o%9R
+o%VK
+o%\nM
+o%_I
+o%hS
+o%j0
+o%x/
 o(ATSH
 o(fA9
 o,$f
@@ -18864,67 +19896,44 @@ o,&fD
 o,1H
 o,>H
 o,\af
-o-&l
-o-*\\
-o-+U
-o-8Q
-o-9J
-o-=Ӣ
-o-@_
-o-FF
-o-Ll
-o-LƢ
-o-\ez
-o-\nǢ
-o-bq
-o-bĢ
-o-de
-o-dŢ
-o-h]
-o-pp
-o-sd
-o-|b
+o-6+
+o-9\r
+o-\aM
+o-^K
+o-eN
+o-gL
+o-r0
 o4$A
 o4$f
 o4)L
+o40L
 o40f
 o41L
 o41f
 o4pf
 o4qH
-o5&?
-o5(ߢ
-o5DѢ
-o5N{
-o5Tb
-o5\f|
-o5af
-o5ck
-o5~Ӣ
+o5EQ
+o5s*
+o5xP
 o7ρπZ
 o<1H
 o<1f
 o<3f
+o<8I
 o<9f
 o<>H
 o<\aI
-o<\bH
-o=$Ƣ
-o=C@
-o=E@
-o=L<
-o=Tg
-o=e<
-o=qm
+o=d&
 o?fD
 o?fE
-o@(D
+o@ f
+o@(f
 o@\bf
 oAhf
 oAttachmH
+oB(H
 oB\bA
 oC(H
-oC0u\rH
 oC@A
 oCXf
 oC\bff.
@@ -18934,6 +19943,7 @@ oD$\b
 oE\bf
 oF H
 oF M
+oF(H
 oF0f
 oFFs
 oF\bA
@@ -18979,7 +19989,6 @@ oQ fD
 oQ0H
 oQ@fE
 oQ\bH
-oR\bI9
 oS<I
 oT$\\
 oV f
@@ -18995,6 +20004,7 @@ oW I
 oW f
 oW@fE
 oW\\O
+oX,ƅ
 oX`fE
 oY H
 oY f
@@ -19007,8 +20017,6 @@ oY`fE
 oYxfD
 oZ,D
 oZ`H
-o\\$,H
-o\\$<E
 o\\$P
 o\\$h
 o\\$l
@@ -19019,6 +20027,7 @@ o\\9 H
 o\\q
 o\afE
 o\bATE1
+o\bE1䉍
 o\bF9f
 o\bH)
 o\bL;o
@@ -19036,10 +20045,10 @@ o\f\af
 o\f\ff
 o\f\nfD
 o\f`fA
-o\r7Z
-o\rF(
-o\rH5
-o\r\e6
+o\r \t
+o\r*d
+o\rf~
+o\rj~
 o^Hf
 o^`fD
 o^ӭә2"]@H
@@ -19055,8 +20064,6 @@ oc\bL
 ocationCJ
 ocationsH
 occlH
-od$,H
-od$<
 od$PfH
 od$l
 od$|
@@ -19074,7 +20081,7 @@ oj0H
 okOP
 ol$ A
 ol$,
-ol$,H
+ol$,E
 ol$`
 ol$hf
 ol$|
@@ -19113,7 +20120,6 @@ ot$,
 ot$0
 ot$0A
 ot$0f
-ot$<
 ot$<f
 ot$@A
 ot$PA
@@ -19133,10 +20139,8 @@ output resource is null
 outputpatch
 ouр~
 ov f
-ov,H
 o{<L
 o{\bL
-o|$,
 o|$0
 o|$<
 o|$L
@@ -19145,10 +20149,8 @@ o|1\bf
 o|9 f
 o|90f
 oʈx\tH
-p H9
 p"D)
 p&Hc
-p(H9
 p(fA
 p*fD
 p-Tg
@@ -19166,12 +20168,13 @@ p<,Dfo
 p==,
 p@"x
 p@9p8~
+pAUI
 pHYs
 pH_r
+pIcF
 pIntermediateSwapChainImage == pSwapChainVulkan->m_pIntermediateSwapChainImage
 pNext
 pPIc
-pPfH
 pSYL
 p[A\\A]A^]
 p[A\\]
@@ -19269,17 +20272,18 @@ pɪfD
 pҪfD
 p۪fD
 q$Mc
+q(A_]
 q,Hc
 q4M~
 qLҎ!
 qQNq9
+qXfH
 q\bA9
 q\bI9
-q\bIc
 q\b\f\a\b
 q\bf9
 q\bfE
-q\bt\b]
+q\bt\n]
 q\f\a\b
 q\f\a\b$
 qangle
@@ -19311,7 +20315,6 @@ r0Hc
 r0[A\\]
 r1H)
 r3A9
-r6H9
 r8H9
 r8H;xHM
 r>kTA
@@ -19322,7 +20325,9 @@ rCopyOffH
 rCopyRowH
 rInputAtH
 rLH9
+rPE1
 rQH9
+rSUL
 rSampledH
 rSamplerH
 rSetInpuH
@@ -19330,13 +20335,14 @@ rSetSampH
 rSetStorH
 rSetUnifH
 rStorageH
+rTRC
 rUniformH
 r\a9q\a
 r\bA;7uڅ
 r\bAUA
 r\bHc
 r\bHk
-r\bHǅP
+r\bHǅ`
 r\bIc
 r\bL9
 r\bMc
@@ -19394,6 +20400,7 @@ r_renderdoc_auto_shader_pdbs
 r_renderdoc_capture_frame
 r_renderdoc_capture_window_vulkan
 r_renderdoc_open_captures
+r_renderdoc_show_overlay
 r_renderdoc_validation_error_capture_limit
 r_shading_change
 r_show_gpu_memory_visualizer
@@ -19428,7 +20435,9 @@ r_vma_defrag_max_allocation_count_per_pass
 r_vma_defrag_max_allocation_size_per_pass
 r_vma_defrag_moves_per_frame
 r_vma_defrag_threshold_mb
+r_vulkan_accurate_renderarea
 r_vulkan_force_sync1
+r_vulkan_print_pipeline_compile_times
 r_vulkan_sw_cmd_lists
 r_vulkan_validation_filter_in
 r_vulkan_validation_filter_out
@@ -19472,6 +20481,7 @@ rdrand
 rdrnd
 rdseed
 read
+read past end of file (truncated/corrupt)
 readback_staging_mem
 readdir64
 readlink
@@ -19494,7 +20504,7 @@ renderdevicebase.cpp
 renderdevicemgrbase.cpp
 renderdoc
 renderdoc_captures
-renderdocapi.cpp:874
+renderdocapi.cpp:886
 rendersystem (%s) tracked resources:\n
 rendersystemvulkan
 requiredSubgroupSize
@@ -19528,6 +20538,7 @@ robustImageAccess
 robustImageAccess2
 roundf
 rpolatioH
+rqL9
 rrHc
 rrayDynaH
 rsDynamiH
@@ -19584,6 +20595,7 @@ s(L)
 s(Pj
 s)H;
 s*1ȉ
+s*E:w*u
 s*M9
 s*fA
 s+1I
@@ -19616,6 +20628,7 @@ sFa<Ɍ
 sFfE\t'H
 sH+O(f
 sHH9
+sHcC
 sL<}
 sPA)
 sPI)
@@ -19626,7 +20639,9 @@ sRHcC0H
 sRange: H
 sSff.
 sSpaceSiH
+sTH9
 sTff.
+sTt\bH
 sType
 sXff.
 s\\;p0
@@ -19636,7 +20651,6 @@ s\afA
 s\bE9
 s\bHc
 s\bHc\vIc
-s\bHc҃
 s\bHi
 s\bHk
 s\bJcL
@@ -19651,8 +20665,11 @@ s\brl
 s\efA
 s\f\a\b
 s\ffA
+s\nI;
 s\tD9
 s\tH9
+s\tH;
+s\tL9
 s\vIc
 s_LinearClamp
 s`Hǅ
@@ -19670,7 +20687,6 @@ scissorCount
 scissors
 screenWindowCenter
 screenWindowWidth
-sdIc
 sdM9
 sdUH
 seAddresJ
@@ -19710,6 +20726,7 @@ setting.shaderquality
 seven
 sff.
 shHc
+shHcC`9
 shIc
 shadH
 shader thread state machine violation
@@ -19877,17 +20894,19 @@ t!A9
 t!A;1u
 t!D9
 t!H94
-t!Hc
 t!Hi
 t!I9
 t!Ic
 t";\as
 t"Hc
 t"Ic
+t"[A\\A]A^]
 t"fA
 t#Hk
 t#Ic
 t#IǄ$
+t#Pt
+t#Pup
 t#U1
 t#f.
 t#ff.
@@ -19897,6 +20916,7 @@ t$ H
 t$ I
 t$ L
 t$ f
+t$ fA
 t$$H
 t$$L9m
 t$$f
@@ -19914,6 +20934,7 @@ t$0H9
 t$0H9u
 t$0I
 t$0I9
+t$0Ic
 t$0WL
 t$2A
 t$4I
@@ -19938,7 +20959,6 @@ t$@E1
 t$@H
 t$@H)
 t$@Hc
-t$@I
 t$@Ic
 t$@L
 t$@M
@@ -19946,11 +20966,13 @@ t$@f
 t$A9
 t$CH
 t$D9
+t$E1
 t$H1
 t$H9
 t$HD
 t$HH
 t$HI
+t$HIc
 t$HL
 t$HM
 t$I9
@@ -19971,6 +20993,7 @@ t$XI
 t$\aH
 t$\b1
 t$\bA
+t$\bA9
 t$\bA;
 t$\bA\\]
 t$\bE
@@ -19988,6 +21011,7 @@ t$\bL
 t$\bL!
 t$\bL9
 t$\bM
+t$\bM9
 t$\b[A\\A]A^]
 t$\bf
 t$\bfA
@@ -20006,10 +21030,8 @@ t$`w?f
 t$bH
 t$bf
 t$h1ۅ
-t$hA
 t$hH
 t$hIc
-t$hIcD$`9
 t$lL
 t$pD
 t$pH
@@ -20029,8 +21051,8 @@ t%pI
 t%ǅ(
 t&E1
 t&H9
-t&Hc
 t&UH
+t&ff.
 t&wL
 t'E1
 t'Hc
@@ -20042,15 +21064,15 @@ t(\bI
 t(\bJ
 t(f.
 t(ff.
+t)1ɿ
 t)A;\f$s#Hc
 t)E1
 t)f.
-t)ff.
 t*1\b
 t*E1
-t*Hc
 t*UH
 t*\bJ
+t*ff.
 t+D9
 t+Hc
 t+UH
@@ -20060,8 +21082,6 @@ t,E1
 t,H;4
 t,Hc
 t,Hk
-t,Hǃ
-t,Ik
 t,ff.
 t-</u
 t-E1
@@ -20073,7 +21093,8 @@ t.HcS$H
 t.f.
 t.ff.
 t/9X
-t/HcG0
+t/E1
+t/HcG8
 t/UH
 t/ff.
 t/Ǉ$\v
@@ -20088,15 +21109,16 @@ t1E1
 t1H9
 t1Hc
 t1UH
+t1ff.
 t2Hc
 t2HcU
 t2Lc
 t2Lc#D;c
+t2f=
 t2ff.
 t3Hc
 t3[A\\]
 t3ff.
-t41ɿ
 t4D9
 t4E1
 t4Hc
@@ -20126,22 +21148,25 @@ t8\bL
 t8\bf
 t91۸\b
 t9E1
+t9Hk
 t9L9
 t9\b;B
 t9f.
 t:Hc
 t:\bL
 t:ff.
-t;1Ҿ
+t:ƃ6H
 t;H9
+t;Hk
 t;UH
 t;ff.
 t<Ic
+t<Ik
 t<w%H
 t=E1
-t=H!
 t=Hc
 t=Hk
+t>H!
 t>Hc
 t>Hǅp
 t>\bH
@@ -20161,7 +21186,6 @@ tAËG\b
 tBE1
 tBI;
 tBMcw
-tBf.
 tBlend: H
 tBy*N
 tBy\n
@@ -20174,6 +21198,7 @@ tDE9
 tDHc
 tDHcA`
 tDIc
+tD[A\\A]A^]
 tEH91u
 tEHc
 tEHk
@@ -20181,6 +21206,7 @@ tEIc
 tEUH
 tEXt
 tEXtH
+tE[A\\]
 tEfA
 tEff.
 tFH9r\bt
@@ -20190,6 +21216,7 @@ tFormat:H
 tGE1
 tGHi
 tGHk
+tG[A\\A]A^]
 tG\nfA
 tH</
 tHHH
@@ -20199,7 +21226,9 @@ tHcCx1
 tIHc
 tIME
 tJHcE
+tJUH
 tJ\bv
+tK;H
 tKE1
 tKUH
 tK\bv
@@ -20208,6 +21237,7 @@ tLE1
 tLfA
 tME1
 tMHc
+tMHk
 tNH;
 tNff.
 tNǂ$
@@ -20228,43 +21258,47 @@ tSff.
 tSizeGraJ
 tTE9
 tTHǀ
-tTHǅD
 tTL;`\bu
 tTUH
 tUL;x\bu
 tU[A\\A]A^]
 tUxkL
 tVHc
-tVL9
 tVUI
 tV[A\\A]A^A_]
 tVff.
 tW;\bu
-tWD9
 tWL9$
 tWLc
 tWUH
+tWff.
 tXE1
 tYA#
 tYHcC
+tYHǅ4
+tYHǅD
 tZL;@\bu
 t[D8
 t[Hc
 t[Iǆ
+t[L9
 t[L;`\bu
-t[Lcc\bI
 t[UH
 t\a1ɀ
+t\a9p
+t\a;0u
 t\a@"
+t\aA"
 t\aD9
 t\aG
 t\aH9@ u
 t\aL9*r
 t\a\bf
+t\aƃ8\n
+t\aƃ?H
 t\b;\b
 t\b<:
 t\bAƇ
-t\bC
 t\bE1
 t\bG
 t\bH)
@@ -20273,11 +21307,13 @@ t\bH;P I
 t\bH;\as
 t\bH;p I
 t\bHc
+t\b]邻
 t\bfA
 t\bËO$
 t\e1
 t\e1ɺ
 t\eAǇ
+t\eE1
 t\eH)
 t\eHc
 t\efD
@@ -20289,6 +21325,7 @@ t\fH;
 t\fIǄ$
 t\fMc
 t\f[A\\A]A^]
+t\f[L
 t\f\a\b
 t\f\b9
 t\f~܋
@@ -20298,11 +21335,12 @@ t\nH;@ t
 t\nH;P
 t\nH;x
 t\n[A\\]
+t\n\bL
 t\n\bLc
 t\nǃ
 t\nǃ(
-t\nǃ@[
 t\nǃ\b
+t\nǃpH
 t\nǇ
 t\nǇ(\v
 t\rBƄ5
@@ -20313,20 +21351,16 @@ t\rL;
 t\rUH
 t\r[A\\A]A^]
 t\r[A\\A]]
-t\r[H
 t\t1Ҁ
 t\t;H
 t\t@82
 t\tA9
 t\tA;
-t\tC
 t\tH;7
 t\tH;8
 t\tL9
 t\t[A\\A]]
-t\t\bL
 t\tfA
-t\vA9
 t\vAǅ
 t\vAǅ\b
 t\vAǇ
@@ -20336,17 +21370,17 @@ t\vH-p
 t\vHǀ
 t\vHǃ
 t\vHǅ(
+t\vIc
 t\v[A\\]
 t]Hc
+t]Lk
 t]f.
-t^D9
 t^E1
 t^UH
 t_D9
 t_Hǆ
 t_f.
 t`1Ʌ
-t`L9H\bu
 t`Lc
 t`ff.
 ta1Ʌ
@@ -20364,11 +21398,11 @@ tb@8
 tbE1
 tbuffer
 tcE1
+tcHc
 tcLi
 tcUH
 tciѽ
 td1Ʌ
-tdE1
 tdHk
 tdI!
 tdUH
@@ -20400,28 +21434,30 @@ texture2dms
 texture2dmsarray
 texture3d
 texturebase.cpp
-texturebase.cpp(2342):Error loading texture: %s\n
-texturebase.cpp(3100):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
-texturebase.cpp(3103):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
-texturebase.cpp(3136):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
-texturebase.cpp(3139):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
-texturebase.cpp(3161):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
-texturebase.cpp(3164):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
-texturebase.cpp(3184):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
-texturebase.cpp(3187):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
-texturebase.cpp(3207):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
-texturebase.cpp(3210):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
-texturebase.cpp(3232):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
-texturebase.cpp(3235):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
-texturebase.cpp(3247):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
-texturebase.cpp(3250):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
-texturebase.cpp(3262):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
-texturebase.cpp(3265):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
+texturebase.cpp(2873):Error loading texture: %s\n
+texturebase.cpp(3707):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
+texturebase.cpp(3710):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
+texturebase.cpp(3729):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
+texturebase.cpp(3732):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
+texturebase.cpp(3765):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
+texturebase.cpp(3768):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
+texturebase.cpp(3790):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
+texturebase.cpp(3793):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
+texturebase.cpp(3813):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
+texturebase.cpp(3816):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
+texturebase.cpp(3836):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
+texturebase.cpp(3839):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
+texturebase.cpp(3861):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
+texturebase.cpp(3864):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
+texturebase.cpp(3876):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
+texturebase.cpp(3879):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
+texturebase.cpp(3891):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
+texturebase.cpp(3894):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
 texturebuffer
 texturecube
 texturecubearray
 tf1Ʌ
-tfE1
+tfM;d$ u
 tfUH
 tfff.
 tg91
@@ -20429,7 +21465,9 @@ tgE1
 tgHc
 tgHi
 tgHiҘ
+tgHk
 tgHǅ
+tgLk
 tgf.
 thL;P\bu
 th[A\\A]A^A_]
@@ -20491,6 +21529,7 @@ tsHcC
 tsLi
 ts\bdn
 tsfA
+ttA9
 ttAƇ
 ttE1
 tu1Ʌ
@@ -20503,11 +21542,11 @@ tvIc
 tvLc_
 tvM)
 twA9
-twH;
 twL9 u
 twL;#u
 twUH
 twfE
+txLk
 tx\b\f
 ty: H
 tyH!
@@ -20524,6 +21563,7 @@ typename
 tz1Ʌ
 tzUH
 t{1Ʌ
+t{Hc
 t{Hk
 t{UA
 t{UH
@@ -20538,12 +21578,9 @@ tǋ;H
 t͋;D
 t͋s\bE
 tЃ{\b
-tы;H
-tӋ;H
 tԋ;H
 tՋ;H
 t؋;H
-tً;H
 tۋ;H
 tދ;H
 tߋ;H
@@ -20558,23 +21595,24 @@ u![A\\]
 u!f.
 u"[L
 u$IcE\bA
+u$ff.
 u%E1
 u&9E
-u(1I
 u(E1
-u(SR
 u(f.
 u)HcCxH
 u*1ȉ
 u+1I
+u+1҅
 u+M;8uvH
 u-E9
 u.ff.
 u/D9
 u/UH
-u0HcP H
+u0AVAUATL
 u0I9
 u0QD
+u0RH
 u1fA
 u1ff.
 u2ff.
@@ -20586,6 +21624,7 @@ u5fA
 u5ff.
 u61Ҿ
 u8O0
+u8RH
 u8\f\b
 u9L9
 u9[t
@@ -20599,17 +21638,17 @@ u>L;
 u?ff.
 uB[A\\A]A^]ÐD
 uB_?Ffn|
-uBf.
-uCI;
 uDA9
+uDI9
+uDfH
 uEL9
 uFL;
 uGUH
 uG[A\\A]A^]
-uHE1
 uHHǃ
-uIfH
+uJE1
 uKHǅp
+uNH;
 uNL;
 uN[A\\A]A^]
 uN[A\\A]]
@@ -20620,17 +21659,18 @@ uQf.
 uR>ƝL
 uSHcN
 uSUH
-uTH;
+uTI;
 uU&#
 uUL9
 uV[H
 uW\tַV
 uXH)
-uXIǆt
+uXI;
+uXIǇt
+uYI;
 uYff.
 u[[A\\A]A^]
 u\\Nۨ5r
-u\aD9
 u\aH9
 u\b;3
 u\bH!
@@ -20639,6 +21679,7 @@ u\bHc
 u\bHǅX
 u\bIc
 u\bL!
+u\bL9
 u\bMc
 u\eH9
 u\eI9
@@ -20651,6 +21692,7 @@ u\f\a\b
 u\f\a\b$
 u\nǅp
 u\nǅt
+u\nǅx
 u\rH9
 u\rL9
 u\r[A\\]
@@ -20669,15 +21711,11 @@ u\vfA
 u\vfC
 u\vÐH
 u]Hǅp
-u]I;
 u_L;
-u`E1
-u`H;
 u`Ic
 ualSrcAtH
 uc19
 uc[A\\]
-ueI;
 ueries: H
 uff.
 ugf.
@@ -20703,6 +21741,7 @@ unknown
 unknown NVSDK_NGX_Result value
 unknown compression method
 unknown header flags set
+unknown reason
 unnormalizedCoordinates
 unsigned
 unsigned __int128
@@ -20712,6 +21751,12 @@ unsigned int Etc::Image::IterateThroughWorstBlocks(unsigned int, unsigned int, u
 unsigned long
 unsigned long long
 unsigned short
+unsupported bits per channel
+unsupported color mode: bitmap
+unsupported color mode: duotone
+unsupported color mode: lab
+unsupported color mode: multichannel
+unsupported color mode: unknown
 unts: 0xH
 uo[A\\A]A^]
 upper
@@ -20731,6 +21776,7 @@ utComponH
 utFormatH
 uteOffseH
 utime
+utlstreambuffer.cpp
 utputAttH
 utputComH
 utputResH
@@ -20738,23 +21784,23 @@ uuaH
 ux܉~O
 uz[A\\]
 u~Hǃ
+u~[A\\A]A^]
 uËP 9
+uĀ{L
 uěH,
 uŁ{4
-uǁ{d
+uǁ{T
+uǋP$
 uȁ{<
 uȋ@D
-uȋP$
 uȋ{0
 ű{8
-ű}\tE
 uσ9\fu
 uσ;\fu
 uЀzX
 uЉỦM
 uЉỦMȁ}
 uЉЈE
-uЋ=I")
 uыK(I
 uҋG 9F\buʋG$9F\fu
 uҋH\f9H
@@ -20768,14 +21814,13 @@ uۃ;\au
 uߋH4
 uߋH\f
 uߋK\bA9J\bu
-u耻hM
+u䋃LE
 v Zġ6
 v%H9
 v%L9
 v&H9
 v&L9
 v(D9k
-v(t\bH
 v)H9
 v)L9
 v.F_
@@ -20786,6 +21831,7 @@ vC\tМ
 vEMi
 vH7B
 vIK \f3
+vK뙐H
 vPHc
 vPIc
 vQO+t
@@ -20805,7 +21851,6 @@ v\f\a\b
 v\nfD
 v\rH-
 v\v[A\\A]A^A_]
-v^<7
 validate_core
 validate_sync
 validation.cache
@@ -20830,8 +21875,10 @@ vertexBindingDivisors
 vertexInputState
 vertical-line
 vertical-tab
+vf<7
 vfIc
 vfprintf
+vfx_common.cpp
 vfx_compile_helpers.cpp(16): Cannot use absolute paths for shader includes. Found %s\n
 vfx_compile_helpers.cpp(77): Cannot read file "%s"\n
 vfx_compile_helpers.cpp(85): Cannot find include file %s\n
@@ -20843,6 +21890,8 @@ vfx_dx11
 vfx_shader_file.cpp
 vfx_vulkan
 vfxc
+vhE1
+vhH;
 vhIc
 video.cfg
 video_version
@@ -20895,50 +21944,69 @@ vkBindAccelerationStructureMemoryNV
 vkBindBufferMemory
 vkBindBufferMemory2
 vkBindBufferMemory2KHR
+vkBindDataGraphPipelineSessionMemoryARM
 vkBindImageMemory
 vkBindImageMemory2
 vkBindImageMemory2KHR
 vkBindOpticalFlowSessionImageNV
+vkBindTensorMemoryARM
 vkBindVideoSessionMemoryKHR
 vkBuildAccelerationStructuresKHR
 vkBuildMicromapsEXT
+vkClearShaderInstrumentationMetricsARM
+vkCmdBeginConditionalRendering2EXT
 vkCmdBeginConditionalRenderingEXT
+vkCmdBeginCustomResolveEXT
 vkCmdBeginDebugUtilsLabelEXT
+vkCmdBeginPerTileExecutionQCOM
 vkCmdBeginQuery
 vkCmdBeginQueryIndexedEXT
 vkCmdBeginRenderPass
 vkCmdBeginRenderPass2
 vkCmdBeginRenderPass2KHR
 vkCmdBeginRenderingKHR
+vkCmdBeginShaderInstrumentationARM
+vkCmdBeginTransformFeedback2EXT
 vkCmdBeginTransformFeedbackEXT
 vkCmdBeginVideoCodingKHR
 vkCmdBindDescriptorBufferEmbeddedSamplers2EXT
 vkCmdBindDescriptorBufferEmbeddedSamplersEXT
 vkCmdBindDescriptorBuffersEXT
 vkCmdBindDescriptorSets
+vkCmdBindDescriptorSets2
 vkCmdBindDescriptorSets2KHR
 vkCmdBindIndexBuffer
+vkCmdBindIndexBuffer2
 vkCmdBindIndexBuffer2KHR
+vkCmdBindIndexBuffer3KHR
 vkCmdBindInvocationMaskHUAWEI
 vkCmdBindPipeline
 vkCmdBindPipelineShaderGroupNV
+vkCmdBindResourceHeapEXT
+vkCmdBindSamplerHeapEXT
 vkCmdBindShadersEXT
 vkCmdBindShadingRateImageNV
+vkCmdBindTileMemoryQCOM
+vkCmdBindTransformFeedbackBuffers2EXT
 vkCmdBindTransformFeedbackBuffersEXT
 vkCmdBindVertexBuffers
 vkCmdBindVertexBuffers2
 vkCmdBindVertexBuffers2EXT
+vkCmdBindVertexBuffers3KHR
 vkCmdBlitImage
 vkCmdBlitImage2
 vkCmdBlitImage2KHR
 vkCmdBuildAccelerationStructureNV
 vkCmdBuildAccelerationStructuresIndirectKHR
 vkCmdBuildAccelerationStructuresKHR
+vkCmdBuildClusterAccelerationStructureIndirectNV
 vkCmdBuildMicromapsEXT
+vkCmdBuildPartitionedAccelerationStructuresNV
 vkCmdClearAttachments
 vkCmdClearColorImage
 vkCmdClearDepthStencilImage
 vkCmdControlVideoCodingKHR
+vkCmdConvertCooperativeVectorMatrixNV
 vkCmdCopyAccelerationStructureKHR
 vkCmdCopyAccelerationStructureNV
 vkCmdCopyAccelerationStructureToMemoryKHR
@@ -20954,42 +22022,61 @@ vkCmdCopyImage2KHR
 vkCmdCopyImageToBuffer
 vkCmdCopyImageToBuffer2
 vkCmdCopyImageToBuffer2KHR
+vkCmdCopyImageToMemoryKHR
+vkCmdCopyMemoryIndirectKHR
 vkCmdCopyMemoryIndirectNV
+vkCmdCopyMemoryKHR
 vkCmdCopyMemoryToAccelerationStructureKHR
+vkCmdCopyMemoryToImageIndirectKHR
 vkCmdCopyMemoryToImageIndirectNV
+vkCmdCopyMemoryToImageKHR
 vkCmdCopyMemoryToMicromapEXT
 vkCmdCopyMicromapEXT
 vkCmdCopyMicromapToMemoryEXT
 vkCmdCopyQueryPoolResults
+vkCmdCopyQueryPoolResultsToMemoryKHR
+vkCmdCopyTensorARM
 vkCmdCuLaunchKernelNVX
 vkCmdCudaLaunchKernelNV
 vkCmdDebugMarkerBeginEXT
 vkCmdDebugMarkerEndEXT
 vkCmdDebugMarkerInsertEXT
 vkCmdDecodeVideoKHR
+vkCmdDecompressMemoryEXT
+vkCmdDecompressMemoryIndirectCountEXT
 vkCmdDecompressMemoryIndirectCountNV
 vkCmdDecompressMemoryNV
 vkCmdDispatch
 vkCmdDispatchBase
 vkCmdDispatchBaseKHR
+vkCmdDispatchDataGraphARM
 vkCmdDispatchGraphAMDX
 vkCmdDispatchGraphIndirectAMDX
 vkCmdDispatchGraphIndirectCountAMDX
 vkCmdDispatchIndirect
+vkCmdDispatchIndirect2KHR
+vkCmdDispatchTileQCOM
 vkCmdDraw
 vkCmdDrawClusterHUAWEI
 vkCmdDrawClusterIndirectHUAWEI
 vkCmdDrawIndexed
 vkCmdDrawIndexedIndirect
+vkCmdDrawIndexedIndirect2KHR
 vkCmdDrawIndexedIndirectCount
+vkCmdDrawIndexedIndirectCount2KHR
 vkCmdDrawIndexedIndirectCountAMD
 vkCmdDrawIndexedIndirectCountKHR
 vkCmdDrawIndirect
+vkCmdDrawIndirect2KHR
+vkCmdDrawIndirectByteCount2EXT
 vkCmdDrawIndirectByteCountEXT
 vkCmdDrawIndirectCount
+vkCmdDrawIndirectCount2KHR
 vkCmdDrawIndirectCountAMD
 vkCmdDrawIndirectCountKHR
 vkCmdDrawMeshTasksEXT
+vkCmdDrawMeshTasksIndirect2EXT
+vkCmdDrawMeshTasksIndirectCount2EXT
 vkCmdDrawMeshTasksIndirectCountEXT
 vkCmdDrawMeshTasksIndirectCountNV
 vkCmdDrawMeshTasksIndirectEXT
@@ -21000,19 +22087,25 @@ vkCmdDrawMultiIndexedEXT
 vkCmdEncodeVideoKHR
 vkCmdEndConditionalRenderingEXT
 vkCmdEndDebugUtilsLabelEXT
+vkCmdEndPerTileExecutionQCOM
 vkCmdEndQuery
 vkCmdEndQueryIndexedEXT
 vkCmdEndRenderPass
 vkCmdEndRenderPass2
 vkCmdEndRenderPass2KHR
 vkCmdEndRendering
+vkCmdEndRendering2EXT
+vkCmdEndRendering2KHR
 vkCmdEndRenderingKHR
+vkCmdEndShaderInstrumentationARM
+vkCmdEndTransformFeedback2EXT
 vkCmdEndTransformFeedbackEXT
 vkCmdEndVideoCodingKHR
 vkCmdExecuteCommands
 vkCmdExecuteGeneratedCommandsEXT
 vkCmdExecuteGeneratedCommandsNV
 vkCmdFillBuffer
+vkCmdFillMemoryKHR
 vkCmdInitializeGraphScratchMemoryAMDX
 vkCmdInsertDebugUtilsLabelEXT
 vkCmdNextSubpass
@@ -21025,9 +22118,15 @@ vkCmdPipelineBarrier2KHR
 vkCmdPreprocessGeneratedCommandsEXT
 vkCmdPreprocessGeneratedCommandsNV
 vkCmdPushConstants
+vkCmdPushConstants2
 vkCmdPushConstants2KHR
+vkCmdPushDataEXT
+vkCmdPushDescriptorSet
+vkCmdPushDescriptorSet2
 vkCmdPushDescriptorSet2KHR
 vkCmdPushDescriptorSetKHR
+vkCmdPushDescriptorSetWithTemplate
+vkCmdPushDescriptorSetWithTemplate2
 vkCmdPushDescriptorSetWithTemplate2KHR
 vkCmdPushDescriptorSetWithTemplateKHR
 vkCmdResetEvent
@@ -21048,6 +22147,7 @@ vkCmdSetColorBlendEnableEXT
 vkCmdSetColorBlendEquationEXT
 vkCmdSetColorWriteEnableEXT
 vkCmdSetColorWriteMaskEXT
+vkCmdSetComputeOccupancyPriorityNV
 vkCmdSetConservativeRasterizationModeEXT
 vkCmdSetCoverageModulationModeNV
 vkCmdSetCoverageModulationTableEnableNV
@@ -21081,6 +22181,7 @@ vkCmdSetDeviceMaskKHR
 vkCmdSetDiscardRectangleEXT
 vkCmdSetDiscardRectangleEnableEXT
 vkCmdSetDiscardRectangleModeEXT
+vkCmdSetDispatchParametersARM
 vkCmdSetEvent
 vkCmdSetEvent2
 vkCmdSetEvent2KHR
@@ -21092,6 +22193,7 @@ vkCmdSetFragmentShadingRateKHR
 vkCmdSetFrontFace
 vkCmdSetFrontFaceEXT
 vkCmdSetLineRasterizationModeEXT
+vkCmdSetLineStipple
 vkCmdSetLineStippleEXT
 vkCmdSetLineStippleEnableEXT
 vkCmdSetLineStippleKHR
@@ -21105,6 +22207,7 @@ vkCmdSetPerformanceStreamMarkerINTEL
 vkCmdSetPolygonModeEXT
 vkCmdSetPrimitiveRestartEnable
 vkCmdSetPrimitiveRestartEnableEXT
+vkCmdSetPrimitiveRestartIndexEXT
 vkCmdSetPrimitiveTopology
 vkCmdSetPrimitiveTopologyEXT
 vkCmdSetProvokingVertexModeEXT
@@ -21113,7 +22216,9 @@ vkCmdSetRasterizationStreamEXT
 vkCmdSetRasterizerDiscardEnable
 vkCmdSetRasterizerDiscardEnableEXT
 vkCmdSetRayTracingPipelineStackSizeKHR
+vkCmdSetRenderingAttachmentLocations
 vkCmdSetRenderingAttachmentLocationsKHR
+vkCmdSetRenderingInputAttachmentIndices
 vkCmdSetRenderingInputAttachmentIndicesKHR
 vkCmdSetRepresentativeFragmentTestEnableNV
 vkCmdSetSampleLocationsEXT
@@ -21145,6 +22250,7 @@ vkCmdTraceRaysIndirectKHR
 vkCmdTraceRaysKHR
 vkCmdTraceRaysNV
 vkCmdUpdateBuffer
+vkCmdUpdateMemoryKHR
 vkCmdUpdatePipelineIndirectBufferNV
 vkCmdWaitEvents
 vkCmdWaitEvents2
@@ -21153,20 +22259,26 @@ vkCmdWriteAccelerationStructuresPropertiesKHR
 vkCmdWriteAccelerationStructuresPropertiesNV
 vkCmdWriteBufferMarker2AMD
 vkCmdWriteBufferMarkerAMD
+vkCmdWriteMarkerToMemoryAMD
 vkCmdWriteMicromapsPropertiesEXT
 vkCmdWriteTimestamp
 vkCmdWriteTimestamp2
 vkCmdWriteTimestamp2KHR
 vkCompileDeferredNV
+vkConvertCooperativeVectorMatrixNV
 vkCopyAccelerationStructureKHR
 vkCopyAccelerationStructureToMemoryKHR
+vkCopyImageToImage
 vkCopyImageToImageEXT
+vkCopyImageToMemory
 vkCopyImageToMemoryEXT
 vkCopyMemoryToAccelerationStructureKHR
+vkCopyMemoryToImage
 vkCopyMemoryToImageEXT
 vkCopyMemoryToMicromapEXT
 vkCopyMicromapEXT
 vkCopyMicromapToMemoryEXT
+vkCreateAccelerationStructure2KHR
 vkCreateAccelerationStructureKHR
 vkCreateAccelerationStructureKHR( Device(), &asci, nullptr, &m_pAccelerationStructure )
 vkCreateAccelerationStructureKHR( Device(), &asci, nullptr, &pCompactedAcclerationStructure )
@@ -21185,6 +22297,8 @@ vkCreateCuFunctionNVX
 vkCreateCuModuleNVX
 vkCreateCudaFunctionNV
 vkCreateCudaModuleNV
+vkCreateDataGraphPipelineSessionARM
+vkCreateDataGraphPipelinesARM
 vkCreateDebugReportCallbackEXT
 vkCreateDebugUtilsMessengerEXT
 vkCreateDebugUtilsMessengerEXT( m_InstanceVulkan, &debugUtilsMessengerCreateInfo, nullptr, &m_pDebugUtilsMessengerVulkan )
@@ -21204,6 +22318,7 @@ vkCreateDisplayModeKHR
 vkCreateDisplayPlaneSurfaceKHR
 vkCreateEvent
 vkCreateExecutionGraphPipelinesAMDX
+vkCreateExternalComputeQueueNV
 vkCreateFence
 vkCreateFence( VulkanDevice(), &fenceCreateInfo, NULL, &pFence )
 vkCreateFramebuffer
@@ -21278,12 +22393,15 @@ vkCreateSemaphore( VulkanDevice(), &semaphoreCreateInfo, NULL, &pSemaphore )
 vkCreateSemaphore( m_pDeviceVulkan, &acquireNextImageSemaphoreCreateInfo, NULL, &m_ppAcquireNextImageSemaphores[ nSem ] )
 vkCreateSemaphore( m_pDeviceVulkan, &semaphoreCreateInfo, nullptr, &pVulkanSemaphore->m_pSemaphore )
 vkCreateSemaphore() return error '%s'\n
+vkCreateShaderInstrumentationARM
 vkCreateShaderModule
 vkCreateShaderModule( VulkanDevice(), pShaderModuleCreateInfo, nullptr, &pShaderModule )
 vkCreateShadersEXT
 vkCreateSharedSwapchainsKHR
 vkCreateSwapchainKHR
 vkCreateSwapchainKHR( pDeviceVulkan, &swapChainCreateInfo, nullptr, &m_pSwapChainKHR )
+vkCreateTensorARM
+vkCreateTensorViewARM
 vkCreateValidationCacheEXT
 vkCreateValidationCacheEXT returned error %s.\n
 vkCreateVideoSessionKHR
@@ -21302,6 +22420,7 @@ vkDestroyCuFunctionNVX
 vkDestroyCuModuleNVX
 vkDestroyCudaFunctionNV
 vkDestroyCudaModuleNV
+vkDestroyDataGraphPipelineSessionARM
 vkDestroyDebugReportCallbackEXT
 vkDestroyDebugUtilsMessengerEXT
 vkDestroyDeferredOperationKHR
@@ -21311,6 +22430,7 @@ vkDestroyDescriptorUpdateTemplate
 vkDestroyDescriptorUpdateTemplateKHR
 vkDestroyDevice
 vkDestroyEvent
+vkDestroyExternalComputeQueueNV
 vkDestroyFence
 vkDestroyFramebuffer
 vkDestroyImage
@@ -21334,9 +22454,12 @@ vkDestroySamplerYcbcrConversion
 vkDestroySamplerYcbcrConversionKHR
 vkDestroySemaphore
 vkDestroyShaderEXT
+vkDestroyShaderInstrumentationARM
 vkDestroyShaderModule
 vkDestroySurfaceKHR
 vkDestroySwapchainKHR
+vkDestroyTensorARM
+vkDestroyTensorViewARM
 vkDestroyValidationCacheEXT
 vkDestroyVideoSessionKHR
 vkDestroyVideoSessionParametersKHR
@@ -21361,7 +22484,9 @@ vkEnumerateInstanceVersion
 vkEnumeratePhysicalDeviceGroups
 vkEnumeratePhysicalDeviceGroupsKHR
 vkEnumeratePhysicalDeviceGroupsKHR: no physical device groups supported.  Using single GPU.\n
+vkEnumeratePhysicalDeviceQueueFamilyPerformanceCountersByRegionARM
 vkEnumeratePhysicalDeviceQueueFamilyPerformanceQueryCountersKHR
+vkEnumeratePhysicalDeviceShaderInstrumentationMetricsARM
 vkEnumeratePhysicalDevices
 vkEnumeratePhysicalDevices failed, unable to enumerate GPUs with Vulkan.\n
 vkEnumeratePhysicalDevices failed, unable to init and enumerate GPUs with Vulkan.\n
@@ -21385,7 +22510,12 @@ vkGetBufferOpaqueCaptureAddressKHR
 vkGetBufferOpaqueCaptureDescriptorDataEXT
 vkGetCalibratedTimestampsEXT
 vkGetCalibratedTimestampsKHR
+vkGetClusterAccelerationStructureBuildSizesNV
 vkGetCudaModuleCacheNV
+vkGetDataGraphPipelineAvailablePropertiesARM
+vkGetDataGraphPipelinePropertiesARM
+vkGetDataGraphPipelineSessionBindPointRequirementsARM
+vkGetDataGraphPipelineSessionMemoryRequirementsARM
 vkGetDeferredOperationMaxConcurrencyKHR
 vkGetDeferredOperationResultKHR
 vkGetDeferredOperationResultKHR( m_pDevice, hDeferredOp )
@@ -21399,7 +22529,10 @@ vkGetDescriptorSetLayoutSupportKHR
 vkGetDeviceAccelerationStructureCompatibilityKHR
 vkGetDeviceBufferMemoryRequirements
 vkGetDeviceBufferMemoryRequirementsKHR
+vkGetDeviceCombinedImageSamplerIndexNVX
+vkGetDeviceFaultDebugInfoKHR
 vkGetDeviceFaultInfoEXT
+vkGetDeviceFaultReportsKHR
 vkGetDeviceGroupPeerMemoryFeatures
 vkGetDeviceGroupPeerMemoryFeaturesKHR
 vkGetDeviceGroupPresentCapabilitiesKHR
@@ -21408,6 +22541,7 @@ vkGetDeviceImageMemoryRequirements
 vkGetDeviceImageMemoryRequirementsKHR
 vkGetDeviceImageSparseMemoryRequirements
 vkGetDeviceImageSparseMemoryRequirementsKHR
+vkGetDeviceImageSubresourceLayout
 vkGetDeviceImageSubresourceLayoutKHR
 vkGetDeviceMemoryCommitment
 vkGetDeviceMemoryOpaqueCaptureAddress
@@ -21417,6 +22551,7 @@ vkGetDeviceProcAddr
 vkGetDeviceQueue
 vkGetDeviceQueue2
 vkGetDeviceSubpassShadingMaxWorkgroupSizeHUAWEI
+vkGetDeviceTensorMemoryRequirementsARM
 vkGetDisplayModeProperties2KHR
 vkGetDisplayModePropertiesKHR
 vkGetDisplayPlaneCapabilities2KHR
@@ -21428,6 +22563,7 @@ vkGetEncodedVideoSessionParametersKHR
 vkGetEventStatus
 vkGetExecutionGraphPipelineNodeIndexAMDX
 vkGetExecutionGraphPipelineScratchSizeAMDX
+vkGetExternalComputeQueueDataNV
 vkGetFenceFdKHR
 vkGetFenceStatus
 vkGetFramebufferTilePropertiesQCOM
@@ -21437,14 +22573,17 @@ vkGetImageDrmFormatModifierPropertiesEXT
 vkGetImageMemoryRequirements
 vkGetImageMemoryRequirements2
 vkGetImageMemoryRequirements2KHR
+vkGetImageOpaqueCaptureDataEXT
 vkGetImageOpaqueCaptureDescriptorDataEXT
 vkGetImageSparseMemoryRequirements
 vkGetImageSparseMemoryRequirements2
 vkGetImageSparseMemoryRequirements2KHR
 vkGetImageSubresourceLayout
+vkGetImageSubresourceLayout2
 vkGetImageSubresourceLayout2EXT
 vkGetImageSubresourceLayout2KHR
 vkGetImageViewAddressNVX
+vkGetImageViewHandle64NVX
 vkGetImageViewHandleNVX
 vkGetImageViewOpaqueCaptureDescriptorDataEXT
 vkGetInstanceProcAddr
@@ -21454,12 +22593,17 @@ vkGetMemoryFdPropertiesKHR
 vkGetMemoryHostPointerPropertiesEXT
 vkGetMemoryRemoteAddressNV
 vkGetMicromapBuildSizesEXT
+vkGetPartitionedAccelerationStructuresBuildSizesNV
+vkGetPastPresentationTimingEXT
 vkGetPastPresentationTimingGOOGLE
 vkGetPerformanceParameterINTEL
 vkGetPhysicalDeviceCalibrateableTimeDomainsEXT
 vkGetPhysicalDeviceCalibrateableTimeDomainsKHR
+vkGetPhysicalDeviceCooperativeMatrixFlexibleDimensionsPropertiesNV
 vkGetPhysicalDeviceCooperativeMatrixPropertiesKHR
 vkGetPhysicalDeviceCooperativeMatrixPropertiesNV
+vkGetPhysicalDeviceCooperativeVectorPropertiesNV
+vkGetPhysicalDeviceDescriptorSizeEXT
 vkGetPhysicalDeviceDisplayPlaneProperties2KHR
 vkGetPhysicalDeviceDisplayPlanePropertiesKHR
 vkGetPhysicalDeviceDisplayProperties2KHR
@@ -21471,6 +22615,7 @@ vkGetPhysicalDeviceExternalFencePropertiesKHR
 vkGetPhysicalDeviceExternalImageFormatPropertiesNV
 vkGetPhysicalDeviceExternalSemaphoreProperties
 vkGetPhysicalDeviceExternalSemaphorePropertiesKHR
+vkGetPhysicalDeviceExternalTensorPropertiesARM
 vkGetPhysicalDeviceFeatures
 vkGetPhysicalDeviceFeatures2
 vkGetPhysicalDeviceFeatures2KHR
@@ -21491,6 +22636,10 @@ vkGetPhysicalDevicePresentRectanglesKHR
 vkGetPhysicalDeviceProperties
 vkGetPhysicalDeviceProperties2
 vkGetPhysicalDeviceProperties2KHR
+vkGetPhysicalDeviceQueueFamilyDataGraphEngineOperationPropertiesARM
+vkGetPhysicalDeviceQueueFamilyDataGraphOpticalFlowImageFormatsARM
+vkGetPhysicalDeviceQueueFamilyDataGraphProcessingEnginePropertiesARM
+vkGetPhysicalDeviceQueueFamilyDataGraphPropertiesARM
 vkGetPhysicalDeviceQueueFamilyPerformanceQueryPassesKHR
 vkGetPhysicalDeviceQueueFamilyProperties
 vkGetPhysicalDeviceQueueFamilyProperties2
@@ -21541,6 +22690,7 @@ vkGetRayTracingShaderGroupHandlesNV
 vkGetRayTracingShaderGroupStackSizeKHR
 vkGetRefreshCycleDurationGOOGLE
 vkGetRenderAreaGranularity
+vkGetRenderingAreaGranularity
 vkGetRenderingAreaGranularityKHR
 vkGetSamplerOpaqueCaptureDescriptorDataEXT
 vkGetSemaphoreCounterValue
@@ -21548,6 +22698,7 @@ vkGetSemaphoreCounterValueKHR
 vkGetSemaphoreFdKHR
 vkGetShaderBinaryDataEXT
 vkGetShaderInfoAMD
+vkGetShaderInstrumentationValuesARM
 vkGetShaderModuleCreateInfoIdentifierEXT
 vkGetShaderModuleIdentifierEXT
 vkGetSwapchainCounterEXT
@@ -21555,6 +22706,12 @@ vkGetSwapchainImagesKHR
 vkGetSwapchainImagesKHR( m_pDeviceVulkan, m_pSwapChainKHR, &m_nSwapQueueImageCount, NULL )
 vkGetSwapchainImagesKHR( m_pDeviceVulkan, m_pSwapChainKHR, &m_nSwapQueueImageCount, pSwapChainImages )
 vkGetSwapchainStatusKHR
+vkGetSwapchainTimeDomainPropertiesEXT
+vkGetSwapchainTimingPropertiesEXT
+vkGetTensorMemoryRequirementsARM
+vkGetTensorOpaqueCaptureDataARM
+vkGetTensorOpaqueCaptureDescriptorDataARM
+vkGetTensorViewOpaqueCaptureDescriptorDataARM
 vkGetValidationCacheDataEXT
 vkGetVideoSessionMemoryRequirementsKHR
 vkImportFenceFdKHR
@@ -21564,6 +22721,7 @@ vkInvalidateMappedMemoryRanges
 vkLatencySleepNV
 vkMapMemory
 vkMapMemory( m_pDeviceVulkan, pNewMemoryPool->m_pGPUMemory, 0, pNewMemoryPool->m_nPoolSize, 0, ( void ** ) &pNewMemoryPool->m_pMappedBuffer )
+vkMapMemory2
 vkMapMemory2KHR
 vkMergePipelineCaches
 vkMergeValidationCachesEXT
@@ -21573,6 +22731,7 @@ vkQueueEndDebugUtilsLabelEXT
 vkQueueInsertDebugUtilsLabelEXT
 vkQueueNotifyOutOfBandNV
 vkQueuePresentKHR
+vkQueueSetPerfHintQCOM
 vkQueueSetPerformanceConfigurationINTEL
 vkQueueSubmit
 vkQueueSubmit( VulkanQueue(), 1, &submitInfo, VK_NULL_HANDLE )
@@ -21584,6 +22743,7 @@ vkQueueSubmit2KHR
 vkQueueWaitIdle
 vkQueueWaitIdle( VulkanQueue() )
 vkQueueWaitIdle( m_pQueueVulkan )
+vkRegisterCustomBorderColorEXT
 vkRegisterDeviceEventEXT
 vkRegisterDisplayEventEXT
 vkReleaseCapturedPipelineDataKHR
@@ -21591,6 +22751,7 @@ vkReleaseDisplayEXT
 vkReleasePerformanceConfigurationINTEL
 vkReleaseProfilingLockKHR
 vkReleaseSwapchainImagesEXT
+vkReleaseSwapchainImagesKHR
 vkResetCommandBuffer
 vkResetCommandBuffer( (*ppCommandBuffer)->m_pCmdBuffer, 0 )
 vkResetCommandBuffer( pCmdBuffer, 0 )
@@ -21613,15 +22774,19 @@ vkSetLatencySleepModeNV() return error '%s'\n
 vkSetLocalDimmingAMD
 vkSetPrivateData
 vkSetPrivateDataEXT
+vkSetSwapchainPresentTimingQueueSizeEXT
 vkSignalSemaphore
 vkSignalSemaphoreKHR
 vkSubmitDebugUtilsMessageEXT
+vkTransitionImageLayout
 vkTransitionImageLayoutEXT
 vkTrimCommandPool
 vkTrimCommandPoolKHR
 vkUninitializePerformanceApiINTEL
 vkUnmapMemory
+vkUnmapMemory2
 vkUnmapMemory2KHR
+vkUnregisterCustomBorderColorEXT
 vkUpdateDescriptorSetWithTemplate
 vkUpdateDescriptorSetWithTemplateKHR
 vkUpdateDescriptorSets
@@ -21629,11 +22794,14 @@ vkUpdateIndirectExecutionSetPipelineEXT
 vkUpdateIndirectExecutionSetShaderEXT
 vkUpdateVideoSessionParametersKHR
 vkWaitForFences
+vkWaitForPresent2KHR
 vkWaitForPresentKHR
 vkWaitSemaphores
 vkWaitSemaphoresKHR
 vkWriteAccelerationStructuresPropertiesKHR
 vkWriteMicromapsPropertiesEXT
+vkWriteResourceDescriptorsEXT
+vkWriteSamplerDescriptorsEXT
 vlMc
 vmaAllocateMemory
 vmaAllocateMemory failed fallback system memory allocation.  Fatal error: out of video and system memory.\n
@@ -21650,6 +22818,7 @@ vmaCreateBufferWithAlignment
 vmaCreateBufferWithAlignment( size = %s ) failed fallback system memory allocation.  Fatal error: out of video and system memory.\n
 vmaCreatePool failed with error: %d\n
 vmaMapMemory( GetVmaAllocator(), asyncReadback.m_pVmaAllocation, &pLockedData )
+vma_empty
 vma_memdump%d.json
 void
 void Etc::Block4x4::InitFromEtcEncodingBits(Etc::Image::Format, unsigned int, unsigned int, unsigned char*, Etc::Image*, Etc::ErrorMetric)
@@ -21746,33 +22915,34 @@ vtexu
 vuTH
 vulkan/asynccompilehelpervulkan.cpp
 vulkan/memorymgrvulkan.cpp
-vulkan/memorymgrvulkan.cpp(1476): vmaCreatePool failed with error: %d\n
-vulkan/memorymgrvulkan.cpp(1547): vmaCreatePool failed with error: %d\n
-vulkan/memorymgrvulkan.cpp:723
+vulkan/memorymgrvulkan.cpp(1617): vmaCreatePool failed with error: %d\n
+vulkan/memorymgrvulkan.cpp(1691): vmaCreatePool failed with error: %d\n
+vulkan/memorymgrvulkan.cpp:803
 vulkan/pipelinecachemgrvulkan.cpp
 vulkan/pipelinemgrvulkan.cpp
 vulkan/raytracevulkan.cpp
 vulkan/rendercontextvulkan.cpp
-vulkan/rendercontextvulkan.cpp(448):
-vulkan/rendercontextvulkan.cpp(6420):  - invalid offset, aborting texture update to avoid hanging the GPU [texture: %s].\n
+vulkan/rendercontextvulkan.cpp(449):
+vulkan/rendercontextvulkan.cpp(6475):  - invalid offset, aborting texture update to avoid hanging the GPU [texture: %s].\n
 vulkan/renderdevicevulkan.cpp
-vulkan/renderdevicevulkan.cpp(10028): Unable to get Vulkan buffer.\n
-vulkan/renderdevicevulkan.cpp(10034): no allocation for buffer %s.\n
-vulkan/renderdevicevulkan.cpp(10105): Unable to get Vulkan image for %s.\n
-vulkan/renderdevicevulkan.cpp(10111): no allocation for image %s.\n
-vulkan/renderdevicevulkan.cpp(10130): Unable to get Vulkan buffer.\n
-vulkan/renderdevicevulkan.cpp(10136): no allocation for buffer %s.\n
-vulkan/renderdevicevulkan.cpp(9612): Allocation already set for %s, it is not valid to assign a new allocation.\n
-vulkan/renderdevicevulkan.cpp(9689): failed to allocate GPU memory in custom pool for %s.\n
-vulkan/renderdevicevulkan.cpp(9756): vmaBindImageMemory failed for image %s with error %d.\n
-vulkan/renderdevicevulkan.cpp(9788): Unable to get Vulkan image for %s.\n
-vulkan/renderdevicevulkan.cpp(9794): no allocation for image %s.\n
-vulkan/renderdevicevulkan.cpp(9934): failed to allocate GPU memory in custom pool for %s.\n
-vulkan/renderdevicevulkan.cpp(9989): vmaBindImageMemory failed for buffer %s with error %d.\n
+vulkan/renderdevicevulkan.cpp(10054): failed to allocate GPU memory in custom pool for %s.\n
+vulkan/renderdevicevulkan.cpp(10121): vmaBindImageMemory failed for image %s with error %d.\n
+vulkan/renderdevicevulkan.cpp(10153): Unable to get Vulkan image for %s.\n
+vulkan/renderdevicevulkan.cpp(10159): no allocation for image %s.\n
+vulkan/renderdevicevulkan.cpp(10306): failed to allocate GPU memory in custom pool for %s.\n
+vulkan/renderdevicevulkan.cpp(10361): vmaBindImageMemory failed for buffer %s with error %d.\n
+vulkan/renderdevicevulkan.cpp(10399): Unable to get Vulkan buffer.\n
+vulkan/renderdevicevulkan.cpp(10405): no allocation for buffer %s.\n
+vulkan/renderdevicevulkan.cpp(10480): Unable to get Vulkan image for %s.\n
+vulkan/renderdevicevulkan.cpp(10486): no allocation for image %s.\n
+vulkan/renderdevicevulkan.cpp(10504): Unable to get Vulkan buffer.\n
+vulkan/renderdevicevulkan.cpp(10510): no allocation for buffer %s.\n
+vulkan/renderdevicevulkan.cpp(9975): Allocation already set for %s, it is not valid to assign a new allocation.\n
+vulkan/renderdevicevulkan.h
 vulkan/renderthreadvulkan.cpp
 vulkan/shadertablevulkan.cpp
 vulkan/texturevulkan.cpp
-vulkan/texturevulkan.cpp(1400):
+vulkan/texturevulkan.cpp(1405):
 vulkan/vulkanfunctions.h
 vulkan_batch_size
 vulkan_batch_submits
@@ -21791,7 +22961,7 @@ vulkan_unpause_workers_after_each_texture_deallocation
 vulkan_vma_defrag
 vulkan_vma_gpu_mem_dump
 vw3G
-vxM9
+vxPA
 vxff.
 vzfA
 vπ>Juʀ~
@@ -21800,29 +22970,27 @@ w H9
 w fH
 w(1I
 w(9r(A
+w(L9
 w)H;v\bt#H
 w*1ȉ
-w*Oc
 w+1I
 w+OQvr
 w/H)
-w0APRL
 w0AUI
 w0H9
 w0HcP
-w1<g
 w3Xc
 w4IcA
 w5XzԷ
 w8A9w@D
-wC<g
+w>Ic
 wK\nٖ)
 wLE1
 wPu"H
+wT<Wv@H
 wWFH
 wXR\r
 w\b@8r\bt
-w\bAUI
 w\bH!
 w\bH9
 w\bHc
@@ -21854,7 +23022,7 @@ wcsnrtombs
 wcsrtombs
 wcsrtombs failed
 wctob
-wdHǅ
+wdHc
 we\\3
 whAUATSH
 what():
@@ -21871,14 +23039,12 @@ wn>JjѮ
 workGroupOffset
 wpH)
 wpp >= 1 && wpp <= 2
-wq<\b
 wqA9
 wrinkle
 write
 writeMask
 writing renderdoc capture to %s\n
 wuߖR:
-wvE:w*
 wwwwwwwwwwwwwwww
 wxAUATI
 wxfA
@@ -21889,6 +23055,7 @@ x 9y
 x D9
 x M9
 x!ǅ`
+x$acsp
 x(L9
 x(M9
 x-A;
@@ -21897,7 +23064,6 @@ x0L9
 x0Ysqx
 x6ff.
 x8L9
-x;Hcډ
 x;Lc
 x<7Hy<@
 x<Hcډ
@@ -21905,6 +23071,7 @@ x>Hc؉
 x>Lc
 x?Hcى
 x?Lc
+x@Hcډ
 x@Lc
 xAƅ@f
 xBHcI
@@ -21913,15 +23080,21 @@ xCLc
 xChromaOffset
 xDE9{Du
 xDHcډ
-xDLc
 xEHc
 xELc
+xFHc
 xFIc
+xFLc
 xFT2
 xHHcI
+xHcں
 xJHcʉ
 xKHc
-xQHc
+xMcҺ
+xNHcʉ
+xOHcʉ
+xPHc
+xTHc
 xUint32:H
 xValue: H
 xWHcʉ
@@ -21942,11 +23115,11 @@ x\bA^]H
 x\bH9
 x\bH9z\b
 x\bHc
-x\bHcE
 x\bI9
+x\bIc
 x\bIcT$\b
 x\bL9
-x\f!хҋP\bD
+x\bƅ\b
 x\fB9<*u܋p
 x\fHc
 x\f\a\b
@@ -21956,7 +23129,6 @@ x\f\bu
 x\nA8
 x\r\bH
 x\tA9
-x]Hcʉ
 x]Lc
 x]`غ7W
 x^Hcʉ
@@ -21965,14 +23137,13 @@ x_Hcʉ
 xaHcډ
 xabf.
 xbHcډ
-xdHc
 xdLc
 xdigit
-xeHc
 xe⎡n
-xff.
+xgLc
 xg^Jp5|
 xgl~
+xiHc
 xiLc
 xkLc
 xmLc
@@ -21987,7 +23158,7 @@ xsLc
 xvIc
 xvLcp(J
 xxxxxxxxxxxxxxxx
-xًP\b
+x؋P\b
 x怨u2q
 y != __null
 y(H9
@@ -22036,12 +23207,12 @@ z.u,D
 z0PSD
 z6u4D
 z8I9z0u\r
-z9u7f
+z:u8f
 z@H9zHuwA
 z@I9z8
 zCuAf
 zHH9zPugA
-zIuG
+zJuH
 zMtu
 zPH9zXuWA
 zPLR
@@ -22049,16 +23220,18 @@ zRuP
 zTXt
 zXH9z`uGA
 zXfA
-zYuW
 zYԞZ
+zZuX
 z\a9y\a
 z\aH9y\a
 z\aHc
 z\b9y\b
+z\bAǆ
 z\bH9y\b
 z\bH9~\b
 z\bI9;t\f
 z\bf9y\b
+z\f u\aƅ?
 z\f\a\b
 z\ru\vƅh
 z\tu\aƃh
@@ -22069,8 +23242,9 @@ z`u^
 zau_
 ze: H
 zero
+zero sized document
 zhH9zpu'A
-ziug
+zjuh
 zo\f8
 zoum
 zpun
@@ -22085,11 +23259,10 @@ z𠃹ӗ𠃸ӗ
 { H)։
 { L)
 {(1Ҿ
+{(H9
 {(L9
-{(t<I
-{*E:~*u
 {0Hc
-{0[A\\]
+{0[A\\]鍓
 {4Hc
 {8E1
 {@AVj
@@ -22102,6 +23275,7 @@ z𠃹ӗ𠃸ӗ
 {HL;{PH
 {H[A\\A]A^A_]
 {Np_MT
+{PA9
 {PE1
 {XPA
 {\b/H
@@ -22111,7 +23285,6 @@ z𠃹ӗ𠃸ӗ
 {\bE1
 {\bH)
 {\bH9
-{\bHc
 {\bHǅX
 {\bIi
 {\bJcL
@@ -22124,7 +23297,7 @@ z𠃹ӗ𠃸ӗ
 {\b[1
 {\brH
 {\brw
-{\bǅD
+{\bǅ4
 {\f\a\b
 {\r\aH
 {`[A\\]
@@ -22147,6 +23320,7 @@ z𠃹ӗ𠃸ӗ
 {𠃹́𠃸́
 {𠃹͋𠃸͋
 |  H
+| `1
 |!\bH
 |!\fH
 |#Mc
@@ -22160,6 +23334,7 @@ z𠃹ӗ𠃸ӗ
 |$ L
 |$ N
 |$ f
+|$ 襛
 |$$A9
 |$$L)
 |$(1
@@ -22171,6 +23346,7 @@ z𠃹ӗ𠃸ӗ
 |$(I
 |$(L
 |$(M
+|$(跛
 |$,1
 |$,H
 |$,N
@@ -22210,18 +23386,20 @@ z𠃹ӗ𠃸ӗ
 |$HI
 |$HL
 |$LfE
+|$PA
 |$PD
 |$PH
 |$PH9
 |$PI
 |$PM
 |$PfI
-|$X1
 |$XD
 |$XE
 |$XH
-|$Xǅ
+|$XI
 |$\\
+|$\\1Ʌ
+|$\\I
 |$\a@
 |$\aH
 |$\b1
@@ -22239,14 +23417,18 @@ z𠃹ӗ𠃸ӗ
 |$\bL
 |$\bL!
 |$\bM
-|$\bN
 |$\bf
 |$\bfH
+|$\b舖
+|$\b苎
+|$\b蛰
 |$\b螴
+|$\f1ɐ
 |$\fA
 |$\fD
 |$\fH
 |$\f\t
+|$\ff
 |$\r\aL
 |$\r\bL
 |$\r\tL
@@ -22254,13 +23436,12 @@ z𠃹ӗ𠃸ӗ
 |$`D
 |$`H
 |$`L
-|$h9
-|$hA
 |$hD
 |$hH
 |$hI
 |$nD\t
 |$p1
+|$p9
 |$pH
 |$pH9
 |$pI
@@ -22271,9 +23452,6 @@ z𠃹ӗ𠃸ӗ
 |$xD9
 |$xH
 |$ċC0
-|(\b藹
-|,Pt
-|,Pui
 |/\bA)
 |00f
 |0\bf
@@ -22287,6 +23465,7 @@ z𠃹ӗ𠃸ӗ
 |7\bD
 |7\bH
 |8D)
+|8\bI
 |9\bH
 |9\bHc
 |:8Mc
@@ -22308,32 +23487,32 @@ z𠃹ӗ𠃸ӗ
 |{1Ʌ
 |ǋ2E1
 |ӌeL
-} \tH
-} \tw
+} \bH
+} \bw
 } f.
 }#Hc҃
-}#ff.
 }%ff.
 }&A9
 }(Hǅ8
+}(ff.
 })Hc
+},ff.
 }-ff.
-}.ff.
 }/A9
 }/ff.
 }0H9
 }0ff.
 }1Q\bH
-}1ff.
 }2f%
 }2ff.
 }4ff.
 }6ff.
+}7Hc
 }8H)
 }8ǅ@
 }=ff.
 }>ff.
-}D\bL
+}@Hc
 }Fff.
 }HE1
 }HH9
@@ -22341,10 +23520,12 @@ z𠃹ӗ𠃸ӗ
 }Mhw
 }O|\\6]N
 }Rff.
+}Vff.
 }\\ff.
 }\bAƇ 3
 }\bHc
 }\bI9
+}\bIcU
 }\bSH
 }\br&L
 }\f\a\b
@@ -22369,9 +23550,10 @@ z𠃹ӗ𠃸ӗ
 }o_`
 }pA9
 }p\bf
+}vE:}*
 }y8f
 }|Lc
-}~fA
+}|fA
 }Ȅ\bE
 }ȉuĉU\tM
 }ȋG8
@@ -22387,9 +23569,7 @@ z𠃹ӗ𠃸ӗ
 ~ Lc
 ~ ff.
 ~!Hc
-~!ff.
 ~"HcɃ
-~"ff.
 ~#Ai
 ~#ff.
 ~$$fD
@@ -22401,14 +23581,20 @@ z𠃹ӗ𠃸ӗ
 ~$RfD
 ~$\af
 ~$i\a
-~%AR
-~%\b~
-~%\nI
-~%_Q
-~%ff.
+~%%V
+~%'%1
+~%9#
+~%=1
+~%VP
+~%W"
+~%Yk
+~%\e@
 ~%i\a
-~%xP
-~%{o
+~%mN
+~%p!
+~%pz
+~%s|
+~%x\e
 ~&Hc
 ~&Mc
 ~&ff.
@@ -22416,11 +23602,13 @@ z𠃹ӗ𠃸ӗ
 ~'McɃ
 ~'ff.
 ~(HcҀ<
+~(t\bL
 ~)HcɃ
 ~)Hc҃
 ~*Hc
 ~*Hc҃
 ~*fA
+~*ff.
 ~+McɃ
 ~+ff.
 ~,1H
@@ -22429,18 +23617,21 @@ z𠃹ӗ𠃸ӗ
 ~,QfD
 ~,UH
 ~,\nJ
-~-8r
-~-B)
+~- P
+~-2?
+~-8v
+~-?U
+~-Ax
 ~-Hc
 ~-Ic
-~-Ko
-~-US
-~-]v
-~-bn
-~-eJ
+~-M$
+~-MG
+~-\e@
+~-\rp
+~-]\e
+~-dZ
 ~-ff.
-~-q\t
-~-{S
+~-s$
 ~.E1
 ~.ff.
 ~/Hc
@@ -22451,17 +23642,19 @@ z𠃹ӗ𠃸ӗ
 ~0Lce
 ~1E1
 ~1Hc
+~1ff.
 ~2:V
 ~2fA
 ~2ff.
+~3Ic
 ~4E1
 ~4LcȋD
 ~4WHc
-~5.&
-~5IV
+~59h
+~5A'
 ~5Lc
-~5\a&
 ~6Hc
+~7Hc
 ~8Ic
 ~8Mc
 ~8WL
@@ -22472,11 +23665,11 @@ z𠃹ӗ𠃸ӗ
 ~<GM
 ~<HcҀ<
 ~<\af
-~=?J
+~<\bf
+~=7\e
 ~=Hc
-~=\aJ
-~=\bK
-~=fN
+~=qO
+~=}\e
 ~>Hc
 ~@ f
 ~@8H
@@ -22513,6 +23706,7 @@ z𠃹ӗ𠃸ӗ
 ~D0\bfD;#shf
 ~D8xA
 ~EHcǃ
+~E\rP
 ~Exf
 ~F(I
 ~FHc
@@ -22547,13 +23741,16 @@ z𠃹ӗ𠃸ӗ
 ~LHc
 ~LHcǃ
 ~LMc
+~L\bL
 ~M0L
 ~M1Ʌ
 ~MHcǃ
 ~MpH)
 ~N0A
+~N@A
 ~N@f
 ~NHc
+~NIc
 ~N\bf
 ~O f
 ~O0H
@@ -22578,7 +23775,6 @@ z𠃹ӗ𠃸ӗ
 ~SHc
 ~THcǃ
 ~TMc
-~TUHc
 ~UHf
 ~V f
 ~V fH
@@ -22616,7 +23812,6 @@ z𠃹ӗ𠃸ӗ
 ~\\UHc
 ~\afE
 ~\bHǅ
-~\bIc
 ~\bL!
 ~\bM;>
 ~\bMc
@@ -22634,6 +23829,7 @@ z𠃹ӗ𠃸ӗ
 ~\fCf
 ~\fFf
 ~\fGf
+~\fI9
 ~\fNB
 ~\fQf
 ~\fWf
@@ -22645,24 +23841,40 @@ z𠃹ӗ𠃸ӗ
 ~\f\bf
 ~\nN،%xI
 ~\nfE
-~\r)@
-~\r2P
-~\r8\t$
-~\r=@
-~\rC`
-~\rFU
-~\rQ@
-~\rV[
+~\r$Z
+~\r&_2
+~\r(c
+~\r*!
+~\r*{
+~\r-T
+~\r-\a
+~\r.&
+~\r1C
+~\r3{
+~\r;1
+~\r@Z
+~\rEC
+~\rGx
+~\rKt
+~\rO&
+~\rTY
+~\rUT
+~\rVY2
+~\rWq
+~\rYC
+~\rZ
+~\r\\
 ~\r\aL
 ~\r\bL
-~\rdO
-~\re@
-~\rgU
-~\rhb4
-~\rq=9
-~\rr[
-~\ry@
-~\r~|
+~\r\tC
+~\r\tE
+~\rmC
+~\rsb-
+~\rvM
+~\rx
+~\r{[
+~\rЃ0
+~\rۚ4
 ~\tHǅP
 ~\teI
 ~\vfD
@@ -22716,8 +23928,6 @@ z𠃹ӗ𠃸ӗ
 ~pA9
 ~pHc
 ~pHcC
-~qHc
-~qLc
 ~q\bL
 ~q\bf
 ~rE1
@@ -22728,13 +23938,14 @@ z𠃹ӗ𠃸ӗ
 ~sLcȋD
 ~s[ⴌ3
 ~s\bf
-~tD9
 ~tHc
 ~tLc
 ~tMc
 ~uHc
 ~uMc
 ~vH)
+~vHc
+~vLc
 ~v\bJ
 ~wIcV8H
 ~w\bf
@@ -22746,7 +23957,6 @@ z𠃹ӗ𠃸ӗ
 ~xWI
 ~x\bH
 ~y8fD
-~yHc
 ~y\bf
 ~zIc
 ~{HcE
@@ -22757,8 +23967,8 @@ z𠃹ӗ𠃸ӗ
 ~~Mc
 ~~~~H
 §g&a
-À;"tG
 ÉA\bI
+ËG\bH
 ËW\bH
 Ð;0H
 ÐHcw
@@ -22768,24 +23978,21 @@ z𠃹ӗ𠃸ӗ
 Āt}H
 ĉP\bA
 ċCHA
-ŉA\bI
 ŊO\b}d
-ŋF\b9
 ō\fSC
 Ųe]]
-ƀt\bD
 ƀt\nǇ
-ƉChH
 ƉW\bfA
 ƋD$8I
 ƍ4vH
 ƍ\fqA
 ƸON/
 ǂAW@
-ǉC\\H
+ǉCdH
 ǉJ\bA
 ǋC\bA
 ǋS4A
+ǋS\bH
 Ǜ-ms
 ȃ} !H
 ȈD$/
@@ -22797,7 +24004,7 @@ z𠃹ӗ𠃸ӗ
 ɉN ;\n
 ɉ\b~PH
 ɋO4H
-ɍ4\nu\\
+ɨ@t\f
 ɴ`%T
 ʈEĉЈE
 ʈE܉ЈE
@@ -22805,24 +24012,25 @@ z𠃹ӗ𠃸ӗ
 ʚ;Hǃ
 ʚ;I)
 ʰ\\3;
+ˉG\bI
 ˖@=\n
 ˬ_wjb
 ˽J\\H
-̀=&.
-̀=)H)
-̀=*Y+
-̀=9D4
-̀=9E+
-̀=9\v
-̀=9a
-̀=I^(
-̀=Ir=
-̀=YJ(
-̀=if/
-̀=y*:
-̀=yT+
-̀=y\v
-̀=ɏ,
+̀=)8+
+̀=9\r
+̀=9b
+̀=>"
+̀=Y\n=
+̀=\t/
+̀=\t0A
+̀=\t1+
+̀=\tx'
+̀=y38
+̀=y\f
+̀=yl>
+̀=ɩ=
+̀=ɽ>
+̀=ٳ(
 ̃?\vt\v
 ̋FPD
 ̋G$H
@@ -22867,7 +24075,6 @@ z𠃹ӗ𠃸ӗ
 кtBH
 кt\rH
 л%f%ff
-њ;t.L
 ҉D$,D
 ҉PXH
 ҉P`H
@@ -22875,7 +24082,7 @@ z𠃹ӗ𠃸ӗ
 ҉SpA
 ҉w8H
 ҋ;~N
-ҋCLu6
+ҋCLu
 ҋO`t>D
 ҥfAj
 ұt9G
@@ -22884,12 +24091,11 @@ z𠃹ӗ𠃸ӗ
 ӋP\bH
 ӣX*4
 ӵ\aAC
-ӺvtexH
 ԋR\bA
 ԣJugm
 Ԥ7z\n5
-ՋQTH
 ֺ.wN\f9
+ֺvtexH
 ר\atXA
 ؆/v0P
 ؈p\nH
@@ -22918,14 +24124,13 @@ z𠃹ӗ𠃸ӗ
 މẺu
 މE؉u
 މp<H
+ދO\fPj
 ޖЭ"e
 ߀deZ
 ߈B\tA\t
 ߉CXA
-߉J\bL
 ߉UȉE
 ߉t$$H
-ߋSHH
 ߍ\f@L
 Ẫfo:
 䣠B1g6
@@ -22933,5 +24138,5 @@ z𠃹ӗ𠃸ӗ
 渱{I\r
 諽 s$-
 돍N(Lc
-벐[A\\]É
+뵐[A\\]É
 i$X\b

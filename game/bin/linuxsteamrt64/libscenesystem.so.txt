@@ -1,24 +1,72 @@
+                 %s rendertarget binds, %s push-constant sets\n
+                 tiles  %2i%% of atlas   (%s all-lit, %s all-shadow, %s penumbra)\n
+     light objects      env %-3s   lpv  %-3s\n
+    %-12s %12s %12s %12s\n
     %s, 0x%08x+%s
-    empty indirect draws compacted: %i
-   %d initial materials (%d initial depth-only) (%i fast-path depth-only)\n
-   %d material Vfx evals, %d material Vfx rule checks, %i cb updates (%ikb)\n
-   %d material computes, %d full material sets, %d skipped sets, %d partial-skipped sets, %d texture-only sets\n
+    aggregate  %s of %s fragments merged\n
+    clutter    %s instances in %s visible tiles\n
+    instmesh   %s instances (%s LOD) -> %s meshes drawn; shadow %s -> %s\n
+    particles  %s material binds\n
+    reculled but still visible: %s base, %s animated, %s aggregate, %s instmesh\n
+   %8s  %-8s
+   Mip   Resident   Overhead   Overhead %%   256 pages\n
    SST: %.1f MB, uncompressed: %d MB (compression: %.1f%%)\n
    SST: EMPTY (no static geo rendered into any tiles, must be flagged as baked only)\n
-  %s agg [%s fragments (%s merged), %s meshlets drawn (%s tested, %s recull, %s recull visible)]\n
-  %s base ( %s meshlets drawn, %s tested ), %s animated ( %s meshlets drawn, %s tested )\n
-  %s clutter sceneobjects [%s tiles, %s instances]\n
-  %s instmesh [%s draw calls, %s instances, %s drawn (shadow: %s instances, %s drawn), %s recull visible ]\n
+  ! %d leaked drawlists\n
+  %-11s %10s %11s %12s %12s %9s\n
+  %-14s %10s   %s\n
+  %-14s %10s   (%s depth-only, %s fast-path depth-only)\n
+  %-14s %10s   (%s kb)\n
+  %-14s %10s   (%s rule checks)\n
+  %-14s %10s   (%s skipped, %s partial, %s texture-only)\n
+  %-14s %10s builds     (%s tris)\n
+  %-14s %10s builds     (%s tris, %u compactions, %s scratch)\n
+  %-14s %10s instances  (%s geometries, %s size-culled)\n
+  %-14s %10s instances  (%s geometries, %s tris)\n
+  %-14s %10s objects    (%s draws, %s verts)\n
+  %-14s %10s\n
+  %-14s %12s %12s %12s\n
+  %4s   %8d   %8d   %9.1f%%   %9d\n
+  %s empty indirect draws compacted\n
+  %s objects starting to fade\n
+  %s pre-cull   ->   %s tested   ->   %s passing  (%.1f%%)\n
   Actual   : 
+  Atlas occupancy: %.1f%% now, %.1f%% with 256x256 pages ( capacity %d pages ).\n
+  Atlas: %d 256x256 pages, taking the space of %d pages today ( %.2fx ).\n
   Cache: %.1f MB
   Comment started here.
   Expected : 
+  Meshlets: %.1fK
+  Meshlets: %.1fM
+  Meshlets: %d
+  Nothing resident.\n
+  Tile reads: %d instead of %d ( %.2fx the count, %.2fx the bytes ).\n
   Verts: %.1fK
   Verts: %.1fM
   Verts: %d
   [%i] %s %s %s IndexCount: %d\n
-  cpu culling: [vis %d] [vol %d] [dist %d] [size %d]\n
-  gpu culling: [vis %d] [frust %d] [occ %d] [vol %d] [bface %d] [size %d] [density %d]
+  allocated      %s transforms, %s instances, %s meshlets\n
+  boxes      %s cull boxes, %s objects tested (%lluus) -> %s culled\n
+  draw calls   %12s   + %s meshlet dispatches\n
+  dropped: zero %u, unknown texture %u, missing mip %u, bad coords %u, no page %u
+  fog volumes    %10d   (%d culled: %d frustum, %d dist, %d pvs)\n
+  jobs           %s culling (%.3f ms), %s rendering (%.3f ms), %s used to render\n
+  meshlet bounds %u updates, %s meshlets\n
+  processed %u: requested %u, already requested %u, page accessed %u
+  records name %u textures, %u are off page (0,0). Mip 1..9: %u %u %u %u %u %u %u %u %u
+  scene objs   %12s   drawn\n
+  scratch        %s used (high watermark %s)\n
+  shadow tiles   lights %2i%% of slots   (%s conservative -> %s final)\n
+  shadowed lights      omni %-3s   spot %-3s   barn %-3s   [%s fog only]\n
+  shadowmaps     %10d   (%d dynamic, %d mixed, %d fog-only, %d skipped)\n
+  submission     %s primary contexts, %s display lists, %s resolves\n
+  timing         begin->finish %.3f ms, finish->complete %.3f ms\n
+  triangles    %12s\n
+  unshadowed lights    omni %-3s   spot %-3s   barn %-3s   [%s fog only]\n
+  vertex cache   %u updates in %u dispatches, %s vertices\n
+  vertices     %12s\n
+  views          %s still allocated\n
+  views        %12s   (%s with world traversal)\n
   w/ default threshold: %d,
   w/ default threshold: (%.1f, %.1f)
   w/ large threshold: %d,
@@ -30,7 +78,6 @@
  !"#$%%&'()*+,-../0123456789:;<=>?@ABCDEFGHIJKLLMNOPQRSTUVWXY[]_`bdefhjlnprtvz|~
  !"#$%&'()*+,-./0123
  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
- %i fog-only.
  %s | Flags %lld \n
  (EXTERN)
  (Frozen)
@@ -46,6 +93,7 @@
  *CentralNode*
  *Inactive*
  *Unused*
+ + tail
  ; contains 
  = { <proto text format> }". To set fields within it, use syntax like "
  BackUp() can only be called after Next().
@@ -127,6 +175,7 @@
  Width=%d
  Window=0x%08X
  Window=0x%08X%n
+ [RE-RENDER: different object flags requested]
  [clone 
  [cur %i, targ %i %s, %.1fs]
  [default = $0
@@ -417,10 +466,8 @@
 #%02X%02X%02X%02X\nR:%d, G:%d, B:%d, A:%d\n(%.3f, %.3f, %.3f, %.3f)
 #%02X%02X%02X\nR: %d, G: %d, B: %d\n(%.3f, %.3f, %.3f)
 #%d: %s 0x%p @ (%g,%g,%g)
-#%s/IssueViewTimestampQuery
 #%s/SemaphoreWait(%s)
 #%s/SemaphoreWaitOnBuiltInCommandList
-#%s/SetupView
 #8465
 #CLOSE
 #COLLAPSE
@@ -475,6 +522,8 @@ $\nY8O
 %.2fms
 %.3f ms
 %.3f | %i%% %i/%i
+%.3s %s %.*s %s %.3s\n
+%.3s %s %.*s\n
 %0.2f
 %0.3f
 %02X%02X%02X
@@ -491,18 +540,18 @@ $\nY8O
 %04d: scrollable region
 %08X
 %08dx.geo
+%3.1f%% (%d)
+%4d / %4d (%3.1f%%)
 %A Is
 %I:%M:%S %p
 %\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v
 %a %b %e %T %Y
 %c [%02d] where %03d, insert %03d, delete %03d, char_storage %03d "%.*s"
 %d %d %d %d
-%d (%d depth-only
 %d assets
 %d columns
 %d current allocations
 %d past errors skipped.
-%d primary\n
 %d some text
 %d vertices, %d indices (%d triangles)
 %d visible windows, %d current allocations
@@ -513,19 +562,19 @@ $\nY8O
 %d:%02d:%02d%s
 %d:%02d:%02d.%03d%s
 %daT
+%dx%d
 %dx%dTriStrippedVB
 %e grams
 %g dB
 %g ms
 %i The quick brown fox jumps over the lazy dog
 %i The quick brown fox jumps over the lazy dog\n
-%i dynamic, %i cached, %i failed, %i lru
-%i dynamic, %i cached, %i failed, %i lru'd in %ix%i atlas
+%i dynamic, %i cached, %i failed, %i lru'd in %ix%i atlas | %i requests, %i reused, %i re-renders drawn (%i held)
 %i filtered textures
 %i loaded models, %i allocations.  using %.1f%% of atlas
 %i object%s, %i draw call%s, %s tris
+%i requests, %i reused without re-render%s
 %i resources used
-%i shadowmaps [%i dynamic, %i mixed, %i fog-only]\n
 %i textures
 %i tiles used, %i tiles rendered, %i tiles recycled, %i failed in %ix%i atlas
 %ix%i
@@ -551,13 +600,13 @@ $\nY8O
 %s allocation count overflow( %llu + %llu > %llu )\n
 %s allocation count overflow( %llu > %llu )\n
 %s allocation count overflow( add %llu + current %llu > max %llu )\n
+%s at ( %.0f %.0f %.0f ) has RT dynamic materials enabled, but %s. It keeps the baked RT proxy colors.\n
 %s called on a pool arena (no root available)\n
 %s has no mip levels of size %dx%d\n
 %s is not a 2D texture!\n
 %s is wrong format %s - expected %s!\n
 %s###Menu_%02d
 %s##path
-%s%d.vtex
 %s, 0x%08x+%s -- Overlaps:
 %s.ini
 %s.log
@@ -565,6 +614,8 @@ $\nY8O
 %s/%s's viewport (%d,%d - %d,%d) extends outside of the framebuffer (%d,%d)
 %s/DockSpace_%08X
 %s: %d entries, %d bytes
+%s: %i dynamic, %i cached, %i failed, %i lru, %i requests, %i reused, %i re-renders (%i held)
+%s: %u tiles, average %4.1fms, median %sms, max %4.1fms
 %s: '%s' %d vtx, %d indices, %d cmds
 %s: 0x%08X (scored %d)
 %s: 0x%08X%s
@@ -586,8 +637,6 @@ $\nY8O
 %s\n%.0f/%.0f
 %s\nIndex: %d
 %s\nLOD Level: %d Draw Calls: %d Triangles: %d
-%s_%d.vtex
-%s_%d_%d.vtex
 %u ms
 &A3\rk
 ' Kj3
@@ -600,6 +649,7 @@ $\nY8O
 (%6.1f,%6.1f) (%6.1f,%6.1f) Size (%6.1f,%6.1f) %s
 (%6.1f,%6.1f) (%6.1f,%6.1f) Size (%6.1f,%6.1f) Col %d %s
 (%d,%d,%d,%d)
+(%s depth-only
 (2) Or right-click this text
 (3) Or click this button
 (<-- right-click here)
@@ -647,6 +697,7 @@ $\nY8O
 (void*)0x%p
 )", which is not defined. The innermost scope is searched first in name resolution. Consider using a leading '.'(i.e., "(.
 ).  Contact the program author for an update.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
+* = only on some fragments
 ** %d instances of same table! Some data below will refer to last instance.
 **DebugBreak**
 *COPIED*
@@ -687,6 +738,7 @@ $\nY8O
 *ZN11IThreadPool17QueueJobWithFlagsIZN12CSceneSystem26Thread_RenderLayerDrawListESt10shared_ptrI13CViewDrawListEP11CSceneLayerP16CRenderBatchList18EBatchStartFlags_tRK16DrawListVector_tEUlvE0_EE9CSmartPtrI12CThreadedJob17CRefCountAccessorEPKc13JobPriority_tjOT_E10CLambdaJob
 *ZN12CSceneSystem11RenderAViewEP10CSceneViewfEUlvE0_
 *ZN12CSceneSystem11RenderAViewEP10CSceneViewfEUlvE_
+*ZN12CSceneSystem16KickoffBatchListESt10shared_ptrI13CViewDrawListEP11CSceneLayerR16DrawListVector_tRN16ISceneObjectDesc24GeneratePrimitivesArgs_tEbEUlvE_
 *ZN12CSceneSystem17Thread_RenderViewEP10CSceneViewEUlvE0_
 *ZN12CSceneSystem17Thread_RenderViewEP10CSceneViewEUlvE1_
 *ZN12CSceneSystem17Thread_RenderViewEP10CSceneViewEUlvE_
@@ -700,14 +752,17 @@ $\nY8O
 *ZN12CSceneSystem28Thread_RenderGpuCullingLayerESt10shared_ptrI13CViewDrawListEP11CSceneLayerEUlvE_
 *ZN12CSceneSystem30GenerateVertexCacheUpdateTasksER10CUtlVectorI9CSmartPtrI13CThreadFutureIP12CDisplayListE17CRefCountAccessorEi25CUtlVectorMemory_GrowableIS7_iLm0EEEbbEUlvE0_
 *ZN12CSceneSystem30GenerateVertexCacheUpdateTasksER10CUtlVectorI9CSmartPtrI13CThreadFutureIP12CDisplayListE17CRefCountAccessorEi25CUtlVectorMemory_GrowableIS7_iLm0EEEbbEUlvE1_
+*ZN12CSceneSystem30GenerateVertexCacheUpdateTasksER10CUtlVectorI9CSmartPtrI13CThreadFutureIP12CDisplayListE17CRefCountAccessorEi25CUtlVectorMemory_GrowableIS7_iLm0EEEbbEUlvE2_
 *ZN12CSceneSystem30GenerateVertexCacheUpdateTasksER10CUtlVectorI9CSmartPtrI13CThreadFutureIP12CDisplayListE17CRefCountAccessorEi25CUtlVectorMemory_GrowableIS7_iLm0EEEbbEUlvE_
+*ZN12CSceneSystem32ReleaseProceduralLayerDependentsEP11CSceneLayerEUlvE_
 *ZN15CLightBinnerGPU18GatherHammerLightsEvEUlP17CSceneLightObjectE_
 *ZN15CLightBinnerGPU25AddEnvironmentMapsForViewEP10CSceneViewEUlP18CEnvMapSceneObjectE_
 *ZN15CLightBinnerGPU25DebugLightProbeVolumeGridEP10CSceneViewEUlP28CSceneLightProbeVolumeObjectE0_
 *ZN15CLightBinnerGPU25DebugLightProbeVolumeGridEP10CSceneViewEUlP28CSceneLightProbeVolumeObjectE_
 *ZN15CLightBinnerGPU26GatherIndirectBounceLightsEvEUlP17CSceneLightObjectE_
 *ZN15CLightBinnerGPU26GatherIndirectBounceLightsEvEUlP21CSceneBarnLightObjectE_
-*ZN15CLightBinnerGPU27AddLightProbeVolumesForViewEP10CSceneViewiEUlP28CSceneLightProbeVolumeObjectE_
+*ZN15CLightBinnerGPU27AddLightProbeVolumesForViewEP10CSceneViewEUlP28CSceneLightProbeVolumeObjectE_
+*ZN15CVtTileStreamer21SubmitPendingRequestsEvEUlP25IAsyncResourceDataRequestSt10unique_ptrI25IAsyncProcessedDataResultSt14default_deleteIS3_EEE_
 *ZN16CRenderBatchList21DrawCurrentPrimitivesEvEUlvE0_
 *ZN16CRenderBatchList21DrawCurrentPrimitivesEvEUlvE_
 *ZN16CRenderBatchList28CanBatchWithPrevousPrimitiveEP20CMeshDrawPrimitive_tEUlvE0_
@@ -720,19 +775,23 @@ $\nY8O
 *ZN20CBaseSceneObjectDesc17DrawArrayMeshletsEP14IRenderContextP20CMeshDrawPrimitive_tiPK10ISceneViewP11ISceneLayerR26SceneSystemPerFrameStats_tEUlvE_
 *ZN20CBaseSceneObjectDesc25OnBeginSubmitDisplayListsEP14IRenderContextE19ReadStatsCallback_t
 *ZN25CAggregateSceneObjectDesc9DrawArrayEP14IRenderContextP20CMeshDrawPrimitive_tiPK10ISceneViewP11ISceneLayerR26SceneSystemPerFrameStats_tEUlvE_
+*ZN26CAnimatableSceneObjectDesc13DrawPrimitiveEP14IRenderContextP20CMeshDrawPrimitive_tPK10IMaterial2P13IMaterialModeR12DrawValues_tbR26SceneSystemPerFrameStats_tP11ISceneLayerEUlvE_
+*ZN26CAnimatableSceneObjectDesc21DrawPrimitiveMeshletsEP14IRenderContextPK10ISceneViewP20CMeshDrawPrimitive_tPK10IMaterial2P13IMaterialModebR26SceneSystemPerFrameStats_tP11ISceneLayerEUlvE_
+*ZN26CAnimatableSceneObjectDesc23GpuCullPrimitivesInViewE13EGpuCullPhaseP14IRenderContextPK10ISceneViewPK11ISceneLayerP20CMeshDrawPrimitive_tjP26SceneSystemPerFrameStats_tEUlvE_
 *ZN29CInstancedMeshSceneObjectDesc17DrawArrayMeshletsEP14IRenderContextP20CMeshDrawPrimitive_tiPK10ISceneViewP11ISceneLayerR26SceneSystemPerFrameStats_tEUlvE_
 *ZN29CInstancedMeshSceneObjectDesc25OnBeginSubmitDisplayListsEP14IRenderContextE19ReadStatsCallback_t
 *ZN29CInstancedMeshSceneObjectDesc9DrawArrayEP14IRenderContextP20CMeshDrawPrimitive_tiPK10ISceneViewP11ISceneLayerR26SceneSystemPerFrameStats_tEUlvE_
-*ZZN12CSceneSystem22Thread_RenderViewLayerESt10shared_ptrI13CViewDrawListEP11CSceneLayerENKUlbE_clEbEUlvE_
 *ZZN15CLightBinnerGPU25DebugLightProbeVolumeGridEP10CSceneViewENKUlP28CSceneLightProbeVolumeObjectE0_clES3_EUlvE0_
 *ZZN15CLightBinnerGPU25DebugLightProbeVolumeGridEP10CSceneViewENKUlP28CSceneLightProbeVolumeObjectE0_clES3_EUlvE_
 *ZZN15CLightBinnerGPU25DebugLightProbeVolumeGridEP10CSceneViewENKUlP28CSceneLightProbeVolumeObjectE_clES3_EUlvE_
 *\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f
 +Alts
-, %d depth-only alpha-tested
+, %s alpha-tested
+, aliased to the error texture
 , but was 
 , name%Y
 , not just within "
+, still streaming
 ,Ncmap
 - First Input that contains the glyph is used.\n- Use ImFontConfig::GlyphExcludeRanges[] to specify ranges to ignore glyph in given Input.\n- Prefer using a small number of ranges as the list is scanned every time a new glyph is loaded,\n  - e.g. GlyphExcludeRanges[] = { ICON_MIN_FA, ICON_MAX_FA, 0 };\n- This tool doesn't cache results and is slow, don't keep it open!
 - Load additional fonts with io.Fonts->AddFontXXX() functions.\n- Read FAQ and docs/FONTS.md for more details.
@@ -758,6 +817,7 @@ $\nY8O
 ...<truncated>...
 ../../_build_/scenesystem/_vpc_scenesystem/default/linuxsteamrt64/_schema_/release/../../../../../../../src/scenesystem/lightbinner_gpu.cpp
 ../../src/thirdparty/tinybvh/inc_tiny_bvh.h
+../public/scenesystem/sceneobject.h
 ../public/tier0/tslist.h
 ../public/tier0/utldict.h
 ./google/protobuf/arena.h
@@ -823,6 +883,7 @@ $\nY8O
 0xDDDDDDDD
 1. I am selectable
 1.92.5
+1024
 10CEntityMsg
 10CMsgQAngle
 10CMsgVector
@@ -929,6 +990,7 @@ $\nY8O
 19ISceneLightListener
 2-wide
 2. I am selectable
+2048
 20CBarnLightObjectDesc
 20CBaseSceneObjectDesc
 20CDebugTextObjectDesc
@@ -944,6 +1006,8 @@ $\nY8O
 20ISceneObjectDescBaseI25CSceneLPVSampleGridObjectE
 20ISceneObjectDescBaseI26CProjectedDecalSceneObjectE
 20ISceneObjectDescBaseI28CSceneLightProbeVolumeObjectE
+20ISceneObjectDescBaseI29CSceneFarfieldSDFVolumeObjectE
+20ISceneObjectDescBaseI31CSceneFarfieldProbeVolumeObjectE
 20ISceneObjectDescBaseI33CAmbientOcclusionProxySceneObjectE
 20ISceneObjectDescBaseI33CDistanceFieldInstanceSceneObjectE
 20ISceneObjectDescBaseIN23CCharacterDecalRenderer26CCharacterDecalSceneObjectEE
@@ -964,6 +1028,7 @@ $\nY8O
 22CSVCMsgList_GameEvents
 22CSceneAnimatableObject
 22CSchemaInstallCallback
+22CVirtualTextureManager
 22CVolumetricFogRenderer
 22IVDataResourceListener
 23CBarnLightObjectDescGPU
@@ -991,6 +1056,7 @@ $\nY8O
 24IProceduralLayerRenderer
 25CAggregateSceneObjectDesc
 25CConCommandMemberAccessorI12CSceneSystemE
+25CConCommandMemberAccessorI22CVirtualTextureManagerE
 25CEnvMapLightObjectDescGPU
 25CInstancedMeshSceneObject
 25CNETMsg_SpawnGroup_Unload
@@ -1009,26 +1075,32 @@ $\nY8O
 27CMeshBuilderSceneObjectDesc
 28CAggregateRTProxySceneObject
 28CBaseVModuleMetadataProvider
+28CFarfieldSDFVolumeObjectDesc
 28CSceneLightProbeVolumeObject
 28CShardedSceneBufferAllocator
 28CTextureBarrierLayerRenderer
 28CTextureDisplayLayerRenderer
 28ISceneEnvironmentMapListener
+28QuantizedFloatEncoderAlias_t
 29CBaseNonPooledSceneObjectDescI18C6FaceSkyboxObjectE
 29CBaseRenderingPipelineFactory
 29CInstancedMeshSceneObjectDesc
+29CSceneFarfieldSDFVolumeObject
 2d arr
 3 (tab skip)
 3-wide
 3. I am selectable
 30CDirectionalLightObjectDescGPU
+30CFarfieldProbeVolumeObjectDesc
 30CLightProbeVolumeObjectDescGPU
 30CProjectedDecalSceneObjectDesc
 30CSVCMsgList_GameEvents_event_t
 30ISceneLightProbeVolumeListener
 31CBlitTextureToRenderTargetLayer
+31CFarfieldSDFVolumeObjectDescGPU
 31CParallelProcessorAbstract_Base
 31CResolveProceduralLayerRenderer
+31CSceneFarfieldProbeVolumeObject
 31CSchemaRegistration_scenesystem
 32CAggregateRTProxySceneObjectDesc
 32CNETMsg_SpawnGroup_LoadCompleted
@@ -1037,19 +1109,24 @@ $\nY8O
 333?
 33CAmbientOcclusionProxySceneObject
 33CDistanceFieldInstanceSceneObject
+33CFarfieldProbeVolumeObjectDescGPU
 33CNETMsg_SpawnGroup_ManifestUpdate
 34CNETMsg_SpawnGroup_SetCreationTick
 34CSimplePostProcessingLayerRenderer
 35CInputLayoutRegistration_sm_hLayout
 35CSceneLPVSampleGridObjectDescriptor
+36IRenderDeviceVirtualTextureCallbacks
 37CAmbientOcclusionProxySceneObjectDesc
 37CDistanceFieldInstanceSceneObjectDesc
 38IMaxSwapChainDimensionsChangedListener
+3<IA><CMI<
 3Z5\nNa
 3ways
+3|87@
 4 (tab skip)
 4-wide
 4. I am double clickable
+4096
 40ISceneAnimatableProceduralBoneTransforms
 41CModuleMetadataProvider_ResourceManifests
 43CSSTTileGenerationReadTexturePixelsCallback
@@ -1303,6 +1380,7 @@ ABGRToYRow_SSSE3
 ABORTED
 ABOUT THIS DEMO:
 ACTION
+AGGREGATE_INSTANCE_STREAM_
 AI\vE
 AKST
 ALL_GRAPHICS
@@ -1311,7 +1389,6 @@ ALPHA_TEST_ZPREPASS
 ALREADY_EXISTS
 ALT 
 AN?NbX?\f
-AO Proxies: %d (%d drawcalls)\n
 AO*AG
 AOProxies
 APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %d!\n
@@ -1529,6 +1606,7 @@ Ab5
 Abibliophobia
 About Dear ImGui
 Absquatulate
+AcquireImGuiLock
 Action
 Active DrawLists in Viewport #%d, ID: 0x%08X
 Active: %d/%d, WriteAccessed: %d, BeginOrderWithinContext: %d
@@ -1564,6 +1642,7 @@ Advanced & Close Button
 Advanced, with Selectable nodes
 After reordering, contents of channel 0 appears below channel 1.
 Ag3l
+Age: %d frames
 AgeList
 Aggregate Debugger
 AggregateDesc
@@ -1629,6 +1708,7 @@ Another bullet point
 Anti-aliased fill
 Anti-aliased lines
 Anti-aliased lines use texture
+Any request for a duplicate dispatch/mesh shader primitive in an outputbuffer must previously set the dispatch buffer
 AnyHit0
 AnyHit1
 AnyHit2
@@ -1689,6 +1769,7 @@ Auto-scroll
 Auto/Current
 Avail %.2f
 Available
+Average block Stream Time: %4.2fms
 Avocado
 Axes
 Axis Constraints
@@ -1755,10 +1836,10 @@ BGRAToYRow_SSSE3
 BGRX8888
 BGRX8888_LINEAR
 BK!qg\tW
+BLAS
 BLAS %d
-BLAS Compaction
 BLAS build requires %i bytes, we only have %i\n
-BLAS builds: %u (%s triangles); Dynamic builds: %u (%s triangles); %u compactions; %s scratch mem\n
+BLAS dynamic
 BU\vS
 BVH::Build( void (*customGetAABB)( .. ), instCount ), instCount == 0.
 Bachman
@@ -1806,7 +1887,6 @@ Beatrice
 Beet
 Beetroot
 Begin has already been called without an intervening render
-Begin to finish rendering views : %f\n
 BeginDragDropSourceItem() needs to be called within an itemized context!
 BeginGroup() basically locks the horizontal position for new line. EndGroup() bundles the whole group so that you can use "item" functions such as IsItemHovered()/IsItemActive() or SameLine() etc. on the whole group.
 BeginLegendPopup() needs to be called within an itemized context!
@@ -1967,6 +2047,10 @@ CDistanceFieldInstanceSceneObjectDesc
 CEnvMapLightObjectDesc
 CEnvMapLightObjectDescGpu
 CFF 
+CFarfieldProbeVolumeObjectDesc
+CFarfieldProbeVolumeObjectDescGpu
+CFarfieldSDFVolumeObjectDesc
+CFarfieldSDFVolumeObjectDescGpu
 CFormatStringElement::CFormatStringElement(char const*)
 CG,T
 CHECK failed: !AllocPolicy(): 
@@ -2247,6 +2331,7 @@ CHECK failed: uninterpreted_options_field != nullptr:
 CHECK failed: unknown_fields->SerializeToString(outstr): 
 CHECK failed: value != nullptr: 
 CHECK failed: z.first != NULL: 
+CHairRenderManager: missing call to UpdateHairContext() - skipping hair for model '%s' in view '%s' (flags 0x%x, FOV %f), layer '%s'.\n
 CInstancedMeshSceneObjectDesc
 CJK text will only appear if the font was loaded with the appropriate CJK character ranges. Call io.Fonts->AddFontFromFileTTF() manually to load extra character ranges. Read docs/FONTS.md for details.
 CK0U
@@ -2303,6 +2388,7 @@ CRC32_ProcessBuffer
 CRC64_ProcessBuffer
 CSM%d
 CSM%i "%s" (%s)
+CSM%i Skybox "%s"
 CSSTCopyDepthQuadRenderer
 CSceneObjectDesc
 CSceneSystem::FrameUpdate
@@ -2326,6 +2412,7 @@ CStrAutoEncode::Clear()
 CStrAutoEncode::Copy(CStrAutoEncode const&)
 CStrAutoEncode::InitEmpty()
 CStrAutoEncode::SetCopy(char const*, int)
+CStrongHandle
 CTRL 
 CTRL+LMB to select more than one frame to compare them.
 CTSListBase::CTSListBase()
@@ -2351,11 +2438,13 @@ CThreadSyncObject::Wait(unsigned int)
 CThreadSyncObject::WaitImpl(unsigned int)
 CThreadSyncObject::~CThreadSyncObject()
 CThreadedJob::WaitOrImmediatelyExecute()
+CULLING
 CURRENTLY APPENDING
 CUniformRandomStreamImpl<CThreadNullMutex>::CUniformRandomStreamImpl()
 CUniformRandomStreamImpl<CThreadNullMutex>::CUniformRandomStreamImpl(int)
 CUniformRandomStreamImpl<CThreadNullMutex>::RandomFloat(float, float)
 CUniformRandomStreamImpl<CThreadNullMutex>::RandomInt(int, int)
+CUtlBinaryBlock
 CUtlBinaryBlock::Set(void const*, int)
 CUtlBinaryBlock::SetLength(int)
 CUtlBinaryBlock::operator=(CUtlBinaryBlock&&)
@@ -2414,6 +2503,7 @@ CUtlString::operator+=(CUtlString const&)
 CUtlString::operator+=(char const*)
 CUtlString::operator=(CBufferString const&)
 CUtlString::operator==(CUtlString const&) const
+CUtlStringToken
 CUtlSymbolTable::AddString(char const*, bool*)
 CUtlSymbolTable::CUtlSymbolTable(int, int, bool)
 CUtlSymbolTable::Find(char const*) const
@@ -2430,7 +2520,7 @@ CVertexKDTree::Nearest(Vec3D<float> const&, CUtlVectorFixedGrowable<float const*
 CW4"
 Cabbage
 Cached Fog
-Cached Light %p: failed to allocate %ix%i shadow from atlas (%i failed this frame, freed %i lru rects)\n
+Cached Light %p (%s): failed to allocate %ix%i shadow from atlas (%i failed this frame, freed %i lru rects)\n
 Cached: %s, LRU %i, Age %i
 Calabash
 Call set methods to initialize MapKey.
@@ -2540,6 +2630,7 @@ Clamp even if min==max==0.0f. Otherwise DragXXX functions don't clamp.
 Clamp integers to 0..50
 Clamp value to min/max bounds when input manually with Ctrl+Click. By default Ctrl+Click allows going out of bounds.
 ClampFloatToZero_SSE2
+Class %s set to %d.\n
 Class data is a '%s', not a table\n
 ClassId=0x%08X\n
 ClassId=0x%X
@@ -2555,6 +2646,7 @@ Clear nodes
 Clear settings
 Clear unused
 ClearField
+Clears all virtual texture tile streaming stats
 Click
 Click %s Button to break in debugger! (remap w/ Ctrl+Shift)
 Click and drag column headers to reorder columns.\n\nRight-click on a header to open a context menu.
@@ -2746,7 +2838,6 @@ Could not find type "
 Couldn't ReadTexturePixels for SST shadow map.\n
 Couldn't load textures/dev/scrambled_halton.vdata
 Couldn't parse default value "
-Courier New
 Course Grade
 CpuId
 Cq\fAI
@@ -2754,7 +2845,6 @@ Create a docking node and tab-bar on single floating windows.
 CreateBLASForDrawCall
 CreateBLASForRigidPart
 CreateInterface
-CreateSimpleThread
 Creating VB/IB/BLAS for %d meshes... 
 Creating ray trace scene world with %d instances... 
 Cross
@@ -2790,7 +2880,6 @@ Cube
 CubeMapDebugColors
 Cucumber
 CullParams_t
-Culling: %s objects pre-cull (%s tested), %s passing culling\n
 Cumulative
 CumulativeSumToAverageRow_C
 CumulativeSumToAverageRow_SSE2
@@ -2912,7 +3001,6 @@ DeleteSceneObject
 DemoUpconverterVersion001
 Demonstrate mixing table context menu (over header), item context button (over button) and custom per-column context menu (over column body).
 Demonstrate using BeginDisabled()/EndDisabled() across other sections.
-Density
 Depth
 DepthCopy
 Descriptor Changed
@@ -3032,7 +3120,6 @@ DragRect() needs to be called between BeginPlot() and EndPlot()!
 Dragging
 Dragging %d objects
 Drags
-Draw Calls
 Draw Channels
 Draw Proxy: qh:%p org:<%d,%d,%d> (frame:%d)\n
 Draw frame with background (e.g. for CollapsingHeader)
@@ -3051,6 +3138,7 @@ DrawLists (%d)
 DrawShadowMapsForLight
 Drawing aggregates without valid meshlets, please recompile the map!
 Drawing instanced meshes without meshlets, please recompile the map!
+Draws/Dispatches
 Dummy
 Dynamic Decals
 Dynamic list with Delete key support.
@@ -3063,6 +3151,7 @@ ERROR
 ERROR! Cannot load GpuLightBinnerManifest
 ERROR! Cannot load HairRendererManifest resource manifest!\n
 ERROR! Cannot load SubsurfaceProfilesManifest
+ERROR! Cannot load VirtualTextureMgrManifest resource manifest!\n
 ERROR: CUtlSymbolTableLarge element limit of %u exceeded\n
 ERROR: Docking is not enabled! See Demo > Configuration.
 EXPORTSYSTEM_INTERFACE_VERSION_001
@@ -3132,6 +3221,7 @@ EnvMap
 EnvironmentMaps have different textures, lightbinner requires everything to be atlased into an array.  Rebuild your map + cubemaps.\n
 Equal Axes
 Equal constraint applies to axis pairs (e.g ImAxis_X1/Y1, ImAxis_X2/Y2)
+Equivalent Mip-Streamed Texture Size: %7.1f MB
 Error Bars
 Error Handling
 Error loading barn light: %s\n
@@ -3157,6 +3247,7 @@ Escape to deactivate a widget, close popup,\nexit a child window or the menu lay
 Escape to revert.
 Euro
 Even more contents
+Evicts all virtual texture pages
 Exact
 Example: Assets Browser
 Example: Auto-resizing window
@@ -3189,8 +3280,8 @@ Examples/Simple layout
 Exceeded compacted draws buffer size [buffer %i, used %i], @peted should implement resizing\n
 Exceeded maximum number visible environment maps: %i, %i maximum\n
 Exceeded maximum number visible lpvs: %i, %i maximum\n
+Exceeding maximum number of fog volumes: %i, max %i\n
 Exceeding number of envmaps: MAX %i, found %i\n
-Exceeding number of lpvs: MAX %i, found %i\n
 Exceeds Maximum Package Depth
 Exclude Outliers
 Exec %i Pass%s
@@ -3237,6 +3328,7 @@ FG%D
 FORCE_UINT
 FORWARD_LAYER_ONLY 
 FRAGMENT_SHADER
+FRAME
 Factor
 Failed to allocate scratch rendertarget for %s from pool. The following pool entries were matches:\n
 Failed to allocate space for morph!\n
@@ -3245,12 +3337,15 @@ Failed to save unsupported class
 Fallback
 Fallback character: '%s' (U+%04X)
 Fancy
+FarfieldProbeVolume
+FarfieldSDFVolume
 FastHexToBuffer() wants non-negative integers, not 
 Faster lines using texture data. Require backend to render with bilinear filtering (not point/nearest filtering).
 Feature is currently in Beta. Please read comments in imgui.h
 Features
 Features:
 February
+Feedback: %u shader writes -> %u unique records (%u readbacks so far)
 Feel free to add support for more if you need it.
 Field "
 Field "$0" uses reserved number $1.
@@ -3304,7 +3399,6 @@ Filter colors
 Filter usage:\n  ""         display all lines\n  "xxx"      display lines containing "xxx"\n  "xxx,yyy"  display lines containing "xxx" or "yyy"\n  "-xxx"     hide lines containing "xxx"
 Filtered Text Input
 Final Exam
-Finish to complete : %f\n
 FinishRenderingViews has been called without a call to begin!!!
 Fire
 First argument to Swap() (of type "
@@ -3347,8 +3441,6 @@ Focus on 3
 Focus on X
 Focus on Y
 Focus on Z
-Fog tile: %i since used, %i since rendered
-Fog: %d volumes visible, %d culled [%d frustum, %d dist, %d PVS]\n
 FogTile
 Folder
 FoliageAnimation
@@ -3433,6 +3525,7 @@ GCC: (SteamRT 4.8.4-1ubuntu15~12.04+steamrt1.2+srt2) 4.8.4
 GCC: (SteamRT 5.4.0-7.really.6+steamrt1.2+srt2) 5.4.1 20160803
 GCC: (SteamRT 9.3.0-13+steamrt1.2+srt1) 9.3.0
 GENERAL
+GEOMETRY
 GGGG
 GLIBCXX_TUNABLES
 GLIBC_2.14
@@ -3451,14 +3544,11 @@ GOOGL
 GO\fQ
 GPOS
 GPU Animated Vertex Cache allocation too large! Requested: %d, max allowed: %d\nUse smaller draw calls or increase cache buffer block size\n
+GPU Culled Prims
 GPU Instance Mem  : %s allocated, %s written, %s used
-GPU Instance Mem  : %s written, %s used, %s allocated\n
 GPU Memory Size
-GPU Meshlet Mem   : %s written, %s used, %s allocated\n
-GPU Particle Mem   : %s written, %s used, %s allocated\n
 GPU Time: %.2f ms
 GPU Transform Mem : %s allocated, %s written, %s used
-GPU Transform Mem : %s written, %s used, %s allocated\n
 GPUProfiler
 GPUSort
 GW\fI
@@ -3949,6 +4039,7 @@ IFormatOutputStream::OutputIndentation()
 IFormatOutputStream::PutRepeatedChar(char, int)
 IIII
 IIIIIII
+IKV3TransferInterface_ResourceSave
 IMAGE_FORMAT_IMC2
 IMAGE_FORMAT_NV12
 IM_ASSERT() calls assert() by default. Compiling with NDEBUG will usually strip out assert() to nothing, which is NOT recommended because we use asserts to notify of programmer mistakes!
@@ -4459,6 +4550,7 @@ LC_PAPER
 LC_TELEPHONE
 LC_TIME
 LEVERAGE\nBUZZWORD
+LIGHTING & SHADOWS
 LINEAR_D24S8
 LLLLLLL
 LOD Debugging
@@ -4498,7 +4590,6 @@ Layout/Scrolling/Vertical
 Layout/Text Baseline Alignment
 Layout/Text Clipping
 Layout/Widgets Width
-Leaked drawlists : %d!!!!!\n
 Left-click drag on axis labels to pan an individual axis.
 Left-click drag within the plot area to pan X and Y axes.
 Left-click while box selecting to cancel the selection.
@@ -4522,7 +4613,6 @@ LegendText
 Liars
 Light
 Light %p: failed to allocate %ix%i shadow %s from atlas (%i failed this frame, freed %i lru rects)\n
-Light %p: failed to re-allocate %ix%i shadow from atlas\n
 Light Bounds Debugger
 Light Cookies
 LightBinner
@@ -4531,7 +4621,6 @@ LightProbeVolumeDebugColors
 LightProbeVolumeDebugColors_%s
 LightmapUV
 LightmapUVW
-Lights in view (unshadowed+shadowed): %d+%d omni, %d+%d spot, %d+%d barn %d env %d lpv.
 Like this one
 Limits
 Limits Constraints
@@ -4547,7 +4636,6 @@ Line 2
 Line Plot
 Line Plots
 LineWeight
-Lines
 Lines Count
 Lines##2
 Link 1
@@ -4616,6 +4704,7 @@ Ls?q
 M:0.000
 M:000
 MATCHFRAMEWORK_001
+MATERIALS
 MATERIAL_SUPPORTS_SHADOWS 
 MESSAGE FROM DEAR IMGUI
 MEnumFlagsWithOverlappingBits
@@ -4690,8 +4779,8 @@ MaskCpuFlags
 Master disable flag (also hide from context menu)
 Material %s - cannot find raytrace shader!\n
 Material change on single-material desc
-Material changes: 
 Max Height (in Lines)
+Max LRU Age: %4d
 Max Time
 Max: %.1f %%
 Max: %d units
@@ -4702,6 +4791,7 @@ MaybeAllocateAligned cannot fail here.
 MbP?
 Mc'_A$Cm
 McCain
+Median LRU Age: %4d
 MemAlloc_AllocFunc
 MemAlloc_CallocFunc
 MemAlloc_FreeFunc
@@ -4778,6 +4868,7 @@ Meshbuilder2
 Meshbuilder2IndexData
 Meshbuilder2VertexData
 Meshlet
+MeshletBoundsRefit
 Message class "
 Message does not support reflection (type 
 Message is too deep, the parser exceeded the configured recursion limit of 
@@ -4807,7 +4898,12 @@ MinorGridSize
 MinorTickLen
 MinorTickSize
 Minus
+Mip 0-1
+Mip 2+
+Mip tail
+Mip: %d
 MipsCpuCaps
+MipsUsed
 MirrorPlane
 MirrorRow_AVX2
 MirrorRow_Any_AVX2
@@ -4856,6 +4952,7 @@ Missing PopStyleVar()
 Missing TreePop()
 Missing field: FileDescriptorProto.name.
 Missing name.
+Missing required transfer interface: %s
 Mixed items
 MnZ/rs
 ModAlt
@@ -5004,6 +5101,7 @@ N19CRenderGraphBuilder9LayerPassE
 N20CPathTraceSceneWorld9CPipelineE
 N20IPathTraceSceneWorld9IPipelineE
 N22CMeshInstanceGroomData17IVirtualDestuctorE
+N22CVirtualTextureManager18CAuxBufferReadbackE
 N23CCharacterDecalRenderer26CCharacterDecalSceneObjectE
 N23CCharacterDecalRenderer27CCharacterDecalRendererDescE
 N6google8protobuf10TextFormat17BaseTextGeneratorE
@@ -5277,6 +5375,7 @@ NeedsLightProbe
 Nested tables
 NewFrame(): ClearActiveID() because it isn't marked alive anymore!\n
 Newline in string literal
+Next
 NextColormapColor() needs to be called between BeginPlot() and EndPlot()!
 Nice try, but the number of rows and columns must be greater than 0!
 Nincompoop
@@ -5343,21 +5442,8 @@ Note: some memory buffers have been compacted/freed.
 November
 Num Dummy Items (Demo Scrolling)
 NumLock
-Number of contexts created: 
-Number of cull boxes: %d\n
-Number of display lists submitted: 
-Number of jobs used to render: 
 Number of lines
-Number of objects culled by cull boxes: %d\n
-Number of objects starting to fade: 
-Number of objects tested against cull boxes: %d (%lluus)\n
-Number of pushconstant sets: 
-Number of rendertarget binds: 
-Number of resolves: %d\n
 Number of targets (%d) exceeds maximum (%d).  List of targets:\n
-Number of unique materials in the frame: 
-Number of views allocated : %d\n
-Number of views rendered: %d (%d with world traversals)\n
 Numbers starting with leading zero must be in octal.
 OBJs
 OCCLUSION_RECULLED 
@@ -5517,8 +5603,13 @@ Package name is too long
 Packed rects: %d, area: about %d px ~%dx%d px
 Padding
 Padding:
+Page Residency
+Page Streaming Events In Flight: %d
 PageDown
 PageUp
+Pages
+Pages Accessed Last Frame: %6d
+Pages Used In Last 60 Frames: %d (%3.1f%%), %4.1f MB
 Paired
 Palette
 Palin
@@ -5530,7 +5621,6 @@ Parent View%s:
 ParentNode
 ParentWindow
 ParentWindowForFocusRoute
-Particles: %d systems rendered in %d draw calls, %d meshlets and %d material binds\n
 Pass
 Passing ImGuiHoveredFlags_ForTooltip to IsItemHovered() is the preferred way to standardize tooltip activation details across your application. You may however decide to use custom flags for a specific tooltip instance.
 Password Input
@@ -5542,12 +5632,12 @@ Pause
 Pause Streaming Activity Graph
 Pear
 Pen Pressure: %.1f
-Per-frame scratch memory used: %s (high watermark %s)\n
 PerVertexLighting
 PerViewLightProbeVolumeConstantBuffer_t
 PerViewLightingConstantBufferGpu_t
 Period
 Perry
+Physical Pages: %5d/%d (%4.1fMB/%4.1fMB) %3.1f%% used
 PhysicsBuilderMgr001
 PiYG
 Picker Mode
@@ -5799,9 +5889,11 @@ RAWToYJRow_C
 RAWToYJRow_SSSE3
 RAWToYRowMatrix_C
 RAWToYRow_C
+RAY TRACING
 RAY_TRACING_SHADER
 REACTION
 REFLECTS 
+RENDER DEVICE
 RESOURCE_EXHAUSTED
 RG11_EAC
 RG1616
@@ -5891,6 +5983,7 @@ Read FAQ for more details:
 Read comments in ShowExampleAppDockSpace()
 Read the FAQ at 
 ReadbackBuffer
+Real Update VT Atlas
 Realtime Plots
 Rebuild
 Rebuild all
@@ -5920,7 +6013,6 @@ Release
 ReleaseLast
 ReleaseLast() called on a RepeatedPtrField that is on an arena, 
 ReleaseMessage
-ReleaseThreadHandle
 Releases
 Reloaded %s into textureset\n
 Remaining
@@ -5954,6 +6046,7 @@ RenderingPipelineForwardManifest
 Reorderable Tabs
 Reorderable, hideable, with headers
 Repeated fields can't have default values.
+Reports what the current virtual texture residency would cost with 256x256 pages instead of 128x128
 Requested Blend Weight Limit of %d is too large, setting to system max of %d
 Requested size is too large to fit into size_t.
 Requested split stream input layout from non-split material!
@@ -5986,12 +6079,14 @@ ResizeNWSE
 ResizeX 
 ResizeY 
 ResizedColumn: %d, ReorderColumn: %d, HeldHeaderColumn: %d
+Resizing Vertex Cache Buffer from %s -> %s\n
 Resizing lock-free scratch allocation pool to %s.\n
 Resolve vel volume
 ResolveMSAARenderTargetIfNecessary
 Resource %s was created but never accessed\n
 ResourceCompiler/BakedLighting/DisableCullingForShadows
 ResourceCompiler/BakedLighting/LPVAtlas
+ResourceCompiler/WorldRendererBuilder/BakePrecomputedShadows
 ResourceCompiler/WorldRendererBuilder/UseStaticEnvMapForObjectsWithLightingOrigin
 ResourceCompilerSystem001
 ResourceHandleUtils001
@@ -6043,6 +6138,7 @@ Rw8N
 Ryan
 S:%0.3f
 S:%3d
+SCENESYSTEM INTERNALS
 SHADER_READ_ONLY_OPTIMAL
 SHADER_WRITE_BIT
 SHIFT 
@@ -6287,7 +6383,6 @@ SceneGfxResources_RayTracing
 SceneLPVDebugGridObjectDesc
 SceneLPVDebugGridObjectVB
 SceneObjects
-SceneObjects drawn: %s in %s draw calls and %s meshlet dispatches\n
 SceneSystem/AssertViewportWithinFramebuffer
 SceneSystem/CMTAtlasHeight
 SceneSystem/CMTAtlasWidth
@@ -6332,6 +6427,7 @@ SceneSystem/SupportsHybridInstancedFade
 SceneSystem/Tonemapping
 SceneSystem/TransformTextureRowCount
 SceneSystem/TransformTextureRowCountToolsMode
+SceneSystem/VirtualTextures
 SceneSystem/VolumetricFog
 SceneSystem/WellKnownLightCookies
 SceneSystem/WindController
@@ -6339,7 +6435,6 @@ SceneSystemInit
 SceneTLAS
 SceneView
 SceneViewDebugOverlays World
-SceneViewDebugOverlaysScreenTextFont
 SceneWorldDump
 Scenesystem render target token too large! Increase MAX_RT_NAME_SIZE in scenesystem/scenesystem.h!\n
 SchemaTestExternal_One_001
@@ -6501,14 +6596,13 @@ Shaded Plots
 Shaded Plots##
 Shading Atlas
 Shadow
+Shadow Atlas
 Shadow Atlas Debugger
 Shadow strength %.2f (%.2f fog), penumbra %.2f, filter radius %i\n
 ShadowAtlas
 ShadowTile Atlas Debugger
-ShadowTiles: %02i%% lights used, %s conservative, %s final\n
-ShadowTiles: %02i%% tiles used, %s all lit, %s all shadow, %s penumbra\n
-Shape %i\nSpeed Multiplier %.2f
 Shape %i\nStrength %.2f\nExponent %.2f
+ShapeOffset
 Share Items
 SharedFlags
 Shift 
@@ -6599,6 +6693,7 @@ SkyBox
 SkyBrightnessExposureBias
 Skybox
 Slash
+Slice %d
 Slider
 SliderFloat
 SliderFloat (0 -> 1)
@@ -6610,6 +6705,7 @@ Sliders (reverse)
 Small buttons
 SmallButton
 SmallButton()
+SmartPropsSystem_001
 SmoothNormals
 Snickersnee
 SobelRow_Any_SSE2
@@ -6625,6 +6721,7 @@ SobelXYRow_C
 SobelXYRow_SSE2
 SobelYRow_C
 SobelYRow_SSE2
+Solid Color Textures Resident: %5d (%3.1f%% of pages in use)
 Some %s text %d,%d\nOver two lines..
 Some Selectable
 Some calls to Begin()/BeginChild() will return false.\n\nWill cycle through window depths then repeat. Windows should be flickering while running.
@@ -6869,6 +6966,7 @@ Streamed
 Streamed In: %0.2f MB
 Streamed Out: %0.2f MB:
 Streaming Activity
+Streams
 Stretch
 Stretch + ScrollX
 Stretch Spacing
@@ -6923,10 +7021,11 @@ T>gaW?:]f?AHV>'
 TEST
 TEST##1
 TEST##2
-TLAS: %s instances, %s geometries, %s instances size culled\n
+TLAS
 TLS init function for 
 TLS wrapper function for 
 TOOLSCENE_OVERLAY_LAYER 
+TOOLS_DYNAMIC_IN_GAME 
 TOOLS_UNLIT_LAYER 
 TRANSFER_DST_OPTIMAL
 TRANSFER_READ_BIT
@@ -7029,6 +7128,7 @@ TextSelectedBg
 Texture #%03d (%dx%d pixels)
 Texture Area: about %d px ~%dx%d px
 Texture Memory
+Texture Name Filter
 Texture Visualizer
 Thanks for clicking me!
 The "Examples" menu above leads to more demo contents.
@@ -7093,7 +7193,6 @@ ThreadAtomicNotifyOne(unsigned int const*)
 ThreadGetCurrentId
 ThreadInMainThread
 ThreadInPrimaryOrSecondaryMainThread
-ThreadJoin
 ThreadMultiWait
 ThreadMultiWaitObjectSetDestroy
 ThreadNanoSleep
@@ -7110,11 +7209,14 @@ Thursday
 Tick Labels
 Tick Marks
 Ticks
+Tile Stream Latency, tiles per ms bucket (discarded before hookup: %u)
+TileStreamLatency
 Tilefish
 Time Scale
 Time Series
 TimeSlicedShadow
 Timer took %.4f
+Timesliced shadow rendering is enabled for view %s, but no shadow atlas id is set: this will corrupt shadows\n
 Tint
 TinyBVH Fatal Error: %s at %s:%d
 TinyBVHFatalError
@@ -7166,6 +7268,8 @@ Tooltips
 Top-left
 Top-right
 Total : %d (%ukb)\n
+Total Completed Stream Events: %d
+Total Virtual Texture Pages: %7d, %3.2f%% resident
 TouchExtraPadding
 TouchScreen
 TraceRays
@@ -7200,7 +7304,6 @@ TreeNode
 TreeNode (w/ double-click)
 TreeNode() is technically supported but... using this correctly is more complicated (you need some sort of linear/random access to your tree, which is suited to advanced trees setups already implementing filters and clipper. We will work toward simplifying and demoing this.\n\nFor now the tree demo is actually a little bit meaningless because it is an empty tree with only root nodes.
 Trees
-Triangles rendered: %s\n
 Tried to merge messages of different types 
 Tried to register a non-generated type with the generated type registry.
 Tris
@@ -7235,6 +7338,7 @@ U444ToABGR
 U444ToARGB
 UG\vHs\vI@
 UID: 0x%08X
+UNALLOCATED
 UNAUTHENTICATED
 UNAVAILABLE
 UNDEFINED
@@ -7247,6 +7351,7 @@ UNUSED
 UQ\vL
 USER GUIDE:
 USER:\nHold Shift or use mouse to select text.\nCtrl+Left/Right to word jump.\nCtrl+A or Double-Click to select all.\nCtrl+X,Ctrl+C,Ctrl+V for clipboard.\nCtrl+Z to undo, Ctrl+Y/Ctrl+Shift+Z to redo.\nEscape to revert.\n\nPROGRAMMER:\nYou can use the ImGuiInputTextFlags_CallbackResize facility if you need to wire InputText() to a dynamic string type. See misc/cpp/imgui_stdlib.h for an example (this is not demonstrated in imgui_demo.cpp).
+USES_CS_SKINNING
 USES_PAYLOAD
 USES_SHADOW_FAST_PATH
 UTF-8
@@ -7289,7 +7394,6 @@ Unable to AddTextureToSet( %s ): %s\n
 Unable to AddTextureToSet( %s ): Loading Texture failed\n
 Unable to reload texture %s into textureset: %s\n
 Unable to reload texture %s into textureset: couldn't load from disk\n
-Unbatchable material draws: 
 Uncertain Data
 Underlying float value: %f
 Undo
@@ -7318,6 +7422,8 @@ Unsupported
 Unsupported KV3 basic type '%s' (%d)!
 Unsupported: type mismatch
 UpArrow
+Update VT Page Table
+Update VT Texture Info Array
 UpdateAOProxySceneObject
 UpdateBuffers
 UpdateDirtyObjects
@@ -7375,8 +7481,26 @@ VP8GetCPUInfo
 VP8GetInfo
 VP8LCheckSignature
 VP8LGetInfo
+VPages
 VProfScopeHelper<0, false>::EnterScopeInternalBudgetFlags(char const*, VProfBudgetGroupCallSite&, CUtlSourceLocation const&)
+VProfScopeHelper<3, false>::EnterScopeInternal(char const*, CUtlSourceLocation const&)
 VRenderDeviceSetupV001
+VT Mips
+VT residency as 256x256 pages, over %d textures:\n
+VT tile read failed for "%s": %s\n
+VT: Unsupported texture format %s\n
+VT: Unsupported texture size %s\n
+VT: Unsupported texture size or flags. %s\n
+VT: alloc failed for tex %d, %dx%d fmt %d, aliasing the error texture (%s)\n
+VT: created tex %d, %dx%d, %d mips%s, %d pages (%s)\n
+VT: destroyed tex %d, %d of %d pages were resident%s%s (%s)\n
+VT: no physical pages left for tex %d, sampling the error tile (%s)\n
+VT: tex %d low mips loaded, releasing the load (%s)\n
+VT: tex %d preload to %d, mips 2-%d, %d pages outstanding (%s)\n
+VT: tex %d preload to %d, nothing above the pinned mips, %d pages outstanding (%s)\n
+VTPageAtlas%s
+VTPageAtlasATI2N%s
+VTPageAtlasDXT5%s
 VTT for 
 VTT for std::basic_fstream<char, std::char_traits<char>>
 VTT for std::basic_fstream<wchar_t, std::char_traits<wchar_t>>
@@ -7506,7 +7630,6 @@ Ve\fK
 Vector2f
 Vert:
 VertCount
-Vertex Cache: %u updates in %u dispatches updating %u vertices\n
 VertexCache
 VertexColorPos_t
 VertexColorUVPos_t
@@ -7543,8 +7666,19 @@ ViewportPos=%d,%d\n
 ViewportPos=%i,%i
 Viewports
 Viewports (%d)
+Views: %d, shadow %d (fog-only %d)  |  CPU: %02.01fms, shadow %02.01fms (fog-only %01.01fms)
 Viridis
+Virtual Texture Debugger
+Virtual Textures: %d
+Virtual texture page atlas: %u -> %u slices, evicting all tiles\n
+Virtual texture page atlas: could not create %u slices, staying at %u\n
+VirtualTextureAuxBuffer
+VirtualTextureCompactUsageBuffer
+VirtualTextureInfo
 VirtualTextureMgrManifest
+VirtualTexturePageTable
+VirtualTexturePatchList
+VirtualTextureUsageBuffer
 VisBuilder_001
 Visible: %d
 Visible=%d%n
@@ -7953,6 +8087,7 @@ Zoom and pan the X-axis. Disable Stems to see a difference in fit.
 \n    Field type: 
 \n  Field       : 
 \n  Message type: 
+\n  Overhead: %d extra 128x128 pages dragged in, %.1f%% of the %d resident now.\n
 \n  Problem     : 
 \n  Problem     : Enum value did not match field type:\n    Expected  : 
 \n  Problem     : Field is not the right type for this message:\n    Expected  : 
@@ -8316,18 +8451,25 @@ accessor_ == other.accessor_
 acosf
 active resources
 active sceneobject: %i clusters
+aggregate
 aggregate cullrequests
+aggregate meshlet indirect dispatch
+aggregate meshlet indirect dispatch recull
+aggregate meshlet overflow handling
 aggregate.fragmentCount
+aggregate.material_flags
 aggregate.material_name
 aggregate.meshletCount
 aggregate.model_name
+aggregate.object_flags
 aggregatedesc.cpp
-aggregatedesc.cpp:1980
+aggregatedesc.cpp:2081
 aggregatertproxydesc.cpp
 aggregates
 alert
 aliasing
 alignof 
+allocated
 allocator
 allowed in proto3.
 alnum
@@ -8338,8 +8480,25 @@ ampersand
 analog_%d
 analog_0
 analog_1
+animatable meshlet overflow handling
+animatable object cull request
+animatable scene object
+animatable visibility indices
+animatable.gpucull.%d
+animatable.gpucull.%d.blend_weight_count
+animatable.gpucull.%d.curve_basis_count
+animatable.gpucull.%d.dispatch_index
+animatable.gpucull.%d.model_name
+animatable.gpucull.%d.num_meshlets
+animatable.material_name
+animatable.meshletCount
+animatable.model_name
+animatable.object_flags
+animatable.objecttype_flags
+animatable.vertexCache
 another one of those tree node...
 another popup
+ao proxies
 ao_proxy_box_list
 ao_proxy_capsule_list
 apostrophe
@@ -8354,6 +8513,7 @@ avg %f
 b%d (%.02f secs)
 bDisableDynamicRefractionMap
 bReflectDynamicObjectsOnly
+backface
 backslash
 backspace
 bad partition length
@@ -8363,6 +8523,7 @@ baked_shadow_light_id
 barn
 barnlightconstants
 bars
+base
 base scene object
 base scene object cull request
 baseobject.material_name
@@ -8406,6 +8567,7 @@ batchlist.descriptor
 batchlist.flags_str
 batchlist.flags_uint
 batchlist.last_batch_break
+batchlist.view_gpu_cull_id
 bbb1.c
 bbb2.cpp
 bbbb
@@ -8532,6 +8694,7 @@ canvas
 carriage-return
 cascade %d%s
 casing swap
+cb updates
 cbrt
 ccc1.c
 ccc2.cpp
@@ -8539,6 +8702,8 @@ cccc
 cell bg type
 cfg/imgui_%s
 cfg_infos
+cfog
+changes
 char
 char const (&std::forward<char const (&) [10]>(std::remove_reference<char const (&) [10]>::type&)) [10]
 char const (&std::forward<char const (&) [9]>(std::remove_reference<char const (&) [9]>::type&)) [9]
@@ -8573,6 +8738,7 @@ click on a button to set focus
 clock_gettime
 close
 close() failed: 
+clutter
 cmap
 cntrl
 co_await 
@@ -8600,6 +8766,7 @@ compacted draw count
 compacted drawindirectargs
 compaction requests
 compressedtangentframe
+computes
 concave
 const google::protobuf::UnknownFieldSet& google::protobuf::UnknownField::group() const
 const google::protobuf::internal::ExtensionSet::Extension* google::protobuf::internal::ExtensionSet::FindOrNullInLargeMap(int) const
@@ -8666,6 +8833,7 @@ digital_0
 digital_1
 dimensions
 display very important message here!
+dist
 distancefieldscene.cpp
 dlBNvz!/u{1?cmR^
 dl_iterate_phdr
@@ -8702,6 +8870,7 @@ drawcounts
 drawindirectargs
 drawindirectargs_recull
 drawmaterialquad2
+draws
 drop here##0
 drop here##1
 dst_height > 0
@@ -8711,13 +8880,16 @@ dual_lobe_roughness_0
 dual_lobe_roughness_1
 dual_lobe_roughness_mix
 dummybuffer
+dummybuffer_r32uint
 dx != __null
 dx == 65536 * 2
 dx == 65536 * 4
 dy != __null
+dyn materials
 dynamic_cast
 eeee
 eight
+emissive
 emissive_lighting_boost
 empty
 enter text here
@@ -8807,7 +8979,7 @@ float1
 float64
 floorf
 fog volumes
-fog_cached_shadow_atlas
+fog_cached
 fopen
 fopen64
 for_sort_specs_only
@@ -8829,6 +9001,7 @@ fseek
 fseeko64
 ftell
 ftello64
+full sets
 fullscreenquad
 func
 future
@@ -8837,9 +9010,12 @@ g?Q1
 g_BitBuf_BitWriteMasks
 g_BitBuf_ExtraMasks
 g_Mathlib_GammaToLinearByteTable
+g_binLightsSet
 g_flConfigMaxCoord
 g_flTValues0To1Inclusive<float vector[4]>
 g_flTValues0To1Inclusive<float>
+g_groomResourcesDescSet
+g_lightBinnerGpuSet
 g_nSequentialBytes<int vector[4]>
 g_nSequentialBytes<int>
 g_nSequentialIndices<float vector[4]>
@@ -8848,6 +9024,8 @@ g_nSequentialIndices<int vector[4]>
 g_nSequentialIndices<int>
 g_pMemAlloc
 g_pThreadPool
+g_rtxCameraDescSet
+g_sceneDescriptorSet
 generic
 geosphere
 get_nprocs
@@ -8965,6 +9143,7 @@ google/protobuf/wire_format.cc
 google/protobuf/wire_format_lite.cc
 google::protobuf::internal::ExtensionSet::KeyValue* google::protobuf::internal::ExtensionSet::flat_begin()
 google::protobuf::internal::ExtensionSet::KeyValue* google::protobuf::internal::ExtensionSet::flat_end()
+gpu mem
 graph
 grave-accent
 greater-than-sign
@@ -9071,6 +9250,7 @@ iconv_close
 iconv_open
 id_unused
 ignore
+ih> Gl>\f.p>
 illum
 illumfrustum
 illumination_volume
@@ -9094,6 +9274,7 @@ incl. Discarded rects: %d, area: about %d px ~%dx%d px
 index
 indexbuffer
 infinity
+initial
 initializer for module 
 inner_width
 inner_width (when ScrollX active)
@@ -9119,6 +9300,7 @@ input u32
 input u32 hex
 input u64
 input u8
+instance
 instance buffer
 instance cull stats
 instance cull stats shadow
@@ -9128,6 +9310,7 @@ instanced mesh data
 instanced meshlet indirect dispatch
 instanced meshlet indirect dispatch debug
 instanced meshlet indirect dispatch recull
+instanced meshlet overflow handling
 instancedmesh.material_name
 instancedmesh.max_instances
 instancedmesh.model_name
@@ -9138,6 +9321,7 @@ instancedmeshdesc.cpp
 instanceidbuffer
 instanceidbuffer2
 instances
+instmesh
 int const& std::min<int>(int const&, int const&)
 int google::protobuf::CalculateBase64EscapedLen(int, bool)
 int std::__exchange<int, int>(int&, int&&)
@@ -9240,6 +9424,7 @@ is_large()
 item view
 items_count
 items_type (first column)
+its RT dynamic material draws cannot be computed (texcoord 0 format, or shadow-only draws)
 jasonm_433ce42d
 java Class for 
 java resource 
@@ -9331,10 +9516,13 @@ lowprecisionuv1
 lseek
 mL\tfm\t 
 m_Endpoints
+m_Format
+m_InstanceOrientations32
 m_Luminaire
 m_Positions
 m_ScaledTangents
 m_Tangents
+m_VisClusterMemberBits
 m_bLightInsideFrustum
 m_flEndcapAreaPercentage
 m_flLightColorToRadiance
@@ -9342,6 +9530,7 @@ m_mFromClipSpace
 m_mToClipSpace
 m_nCookie
 m_nLuminaireType
+m_pDuplicateDispatchPrimitives != nullptr
 m_vAngleFade
 m_vColor
 m_vDistanceFade
@@ -9388,6 +9577,7 @@ materials/dev/hair_sim_cs.vmat
 materials/dev/imgui.vmat
 materials/dev/lpv_debug_grid.vmat
 materials/dev/luminaire.vmat
+materials/dev/meshlet_refit_cs.vmat
 materials/dev/morphcomposite.vmat
 materials/dev/occlusionproxy.vmat
 materials/dev/occlusionproxy_countdraw.vmat
@@ -9420,6 +9610,7 @@ materials/subsurface_profiles.vdata
 materials/tools/copy_texture_with_gamma.vmat
 materials/tools/copy_to_backbuffer.vmat
 materialsystem2
+matrix3x4_t
 matrix3x4a_t
 mattestquad
 maxdate
@@ -9436,8 +9627,11 @@ memmove
 memset
 mergedindices
 mesh
+meshlet
 meshlet buffer
 meshlet input layouts
+meshlet refit requests
+meshlets
 meshsystem
 message
 min_row_height = %.2f
@@ -9448,8 +9642,6 @@ mktime
 model %s, alloc [%i,%i %ix%i]
 mold 2.36.0 (compatible with GNU ld)
 morphcomposite
-msindirectdispatchargs
-msindirectdispatchargsrecull
 mt19937
 my image
 my popup
@@ -9488,6 +9680,7 @@ non-virtual thunk to std::basic_iostream<char, std::char_traits<char>>::~basic_i
 non-virtual thunk to std::basic_iostream<wchar_t, std::char_traits<wchar_t>>::~basic_iostream()
 non-virtual thunk to std::basic_stringstream<char, std::char_traits<char>, std::allocator<char>>::~basic_stringstream()
 non-virtual thunk to std::basic_stringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>::~basic_stringstream()
+none of its materials support them
 not 
 null
 null VP8Io passed to VP8GetHeaders()
@@ -9499,6 +9692,8 @@ oY.o<
 obj %d
 obj_count
 obj_size
+objects
+occl
 occlusionproxyvb
 offset_angles
 offset_origin
@@ -9543,7 +9738,9 @@ package $0;\n\n
 parallel
 parse
 parsing
+particle
 particle data buffer
+particles
 passes
 password (clear)
 password (w/ hint)
@@ -9570,7 +9767,6 @@ post
 posxyz
 powf
 prepi
-prev layer not found
 print
 printf
 proto
@@ -9623,6 +9819,7 @@ rdseed
 read
 read FAQ "About ID Stack System"
 realloc
+recull
 reculldispatchargs
 recullrequests
 recursion_budget_ < recursion_limit_
@@ -9636,7 +9833,6 @@ rendertarget_
 rendertarget_dscratch_%d_%d_%d.vtex
 rendertarget_r11g11b10f_%d_%d
 rendertarget_scratch_16161616F_mip_%d_%d
-rendertarget_ssao_depth_%d_%d
 rendertargets
 repeated
 required
@@ -9683,8 +9879,8 @@ scenesysDodecahedron
 scenesysPyramid
 scenesystem
 scenesystem.cpp
-scenesystem.cpp(5559): Expecting 1 renderable pass for material "%s" but found %d!\n
-scenesystem.cpp:3298
+scenesystem.cpp(5432): Expecting 1 renderable pass for material "%s" but found %d!\n
+scenesystem.cpp:3094
 scenesystemdebug
 scenesystemperframedata
 scenetextureset_%d
@@ -9699,6 +9895,7 @@ scroll
 scrolling
 seaborn style
 secure_getenv
+seen this frame
 semicolon
 serialize
 serializing
@@ -9713,7 +9910,7 @@ sfixed32
 sfixed64
 shaded pass
 shadow
-shadow_atlas
+shadow_atlas_%dx%d.vtex
 shadowtile_hairvolumeinfo
 short
 show_headers
@@ -9733,6 +9930,7 @@ size too big:
 sizeof 
 sizeof(size_t): %d, sizeof(ImDrawIdx): %d, sizeof(ImDrawVert): %d
 sizeof...
+skinnedmeshletcache
 skinnedvertexcache
 skinning
 sky_bounce
@@ -9794,7 +9992,7 @@ sparse_shadow_tree_depth
 sparse_shadow_tree_depth_%d_%d_%d.vtex
 sparse_shadow_tree_output_depth_%d.vtex
 sparseshadowtree.cpp
-sparseshadowtree.cpp(758): 
+sparseshadowtree.cpp(766): 
 split
 split1
 split2
@@ -13445,6 +13643,7 @@ terminate called after throwing an instance of '
 terminate called recursively\n
 terminate called without an active exception\n
 tesidx
+tested
 tests1
 texcoord
 text
@@ -13481,6 +13680,7 @@ tom-low
 tom-mid
 tomb_1bb480ad
 too few verts
+tools.toolsmaterial
 toupper
 transaction clone for 
 transaction clone for operator delete(void*)
@@ -14150,6 +14350,7 @@ uint32_t libyuv::SumPixels_16(int, const uint32_t*)
 uint64_t google::protobuf::UnknownField::fixed64() const
 uint64_t google::protobuf::UnknownField::varint() const
 unable to register all schema data: %s\n
+unbatchable
 underscore
 undo_point: %d, redo_point: %d, undo_char_point: %d, redo_char_point: %d
 undopoints
@@ -14160,6 +14361,7 @@ uniform_sky_color
 unimplemented type: 
 uninitialized __any_string
 uninterpreted_option
+unique mats
 unknown
 unsigned
 unsigned __int128
@@ -14178,10 +14380,11 @@ unsigned long&& std::forward<unsigned long>(std::remove_reference<unsigned long>
 unsigned short
 upper
 uppercase
+used
 utils/characterdecalrenderer.cpp
 utils/hairrenderer.cpp
 utils/scalable_ambient_obscurance.cpp
-utils/sceneutils.h(68): Material %s cannot render in mode %s but is being asked to\n
+utils/sceneutils.h(67): Material %s cannot render in mode %s but is being asked to\n
 utils/virtualtexturemanager.cpp
 utils/volumetricfog.cpp
 utils/windcontroller.cpp
@@ -14206,6 +14409,7 @@ vertical split
 vertical-line
 vertical-tab
 very_fast
+vfx evals
 viewport
 views
 virtual thunk to 
@@ -14420,6 +14624,9 @@ void_context
 volumetric fog
 volumetric_fog.vtex
 vsnprintf
+vt_analyze_256_pages
+vt_evict_all
+vt_stream_latency_reset
 vtable for 
 vtable for CCharBufferFormatOutputStream
 vtable for __cxxabiv1::__class_type_info
@@ -14633,6 +14840,7 @@ wellknown_checker_2x2.vtex
 wellknown_depth_d32_black.vtex
 wellknown_depth_d32_white.vtex
 wellknown_grey_1x1
+wellknown_grey_1x1x1
 wellknown_one_16bit_1x1
 wellknown_one_array_16bit_1x1x1
 wellknown_opaque_black_2x2x2
@@ -14643,6 +14851,7 @@ wellknown_white_1x1
 wellknown_white_1x1x1
 wellknown_white_array_1x1x1
 wellknown_zero_1x1_uint.vtex
+wellknown_zero_1x1x1_uint.vtex
 wind
 wind volumes
 wind_noise_0.vtex
@@ -14661,6 +14870,7 @@ word-wrapping
 wpp >= 1 && wpp <= 2
 write
 writev
+written
 wrong submessage type
 wyS]
 x != __null
@@ -14681,6 +14891,7 @@ zW>w
 zero
 {default arg#
 {lambda
+{m8U
 {parm#
 {unnamed type#
 };\nImPlotColormap %s = ImPlot::AddColormap("%s", %s_Data, %d);

@@ -1,20 +1,25 @@
 !"#$%&'()*+,-./
 !1ЉE
-!H1ǋ
-!H1ǋE
-!H1Ѕ
+!H1Ƌ
 !YA1
 !YA1A
 !\bQ<
 !\b\rA
 !ff.
-!w H
+!w-H
+"%.*s" is #defined in terms of itself
+"%.*s" is not a valid integer
+"%.*s" is too long to be a #define name
+"%s" is #defined as "%s", which is not an integer or the name of another #define
+"%s" is #defined as multiple values ("%s" in %s and as "%s" in %s), it cannot be used in a rule
+"%s" is not an integer and is not #defined in this shader or anything it includes
 ".B^
 "@F(
 "PXM
 "ff.
 "t\bfH
 "ⴌ3d
+#3=.
 #C\fH
 #C\fHc
 #C\fL
@@ -29,10 +34,13 @@
 #S\ffA
 #W\b\t
 #W\f\t
-#[A\\A]A^]Ð
 #[A\\]
+#define
+#else
+#endif
 #fA9
 #ff.
+#if defined(__cplusplus)
 #include
 #lH!
 #line
@@ -44,6 +52,7 @@
 #x\fH
 #x\fI
 $!\b0\b
+$$fA
 $$t6I
 $7fA
 $<\ru\nA
@@ -54,22 +63,18 @@ $Hc=
 $I9܉
 $IH)
 $ORIGIN
-$\tE1
 $\tu2A
 $\vD9
 $\vL9
 $d1҉
-$dMcD
 $ff.
 $t2H
 $t\bL
 $w)I
 $},L
-%)/\f
-%,*\f
 %10s
+%13s
 %15.15s
-%1G\f
 %2d = "%s"\n
 %2d: FontHandle:0x%8.8llx, %s, %s, font:%s, tall:%f.0%s\n
 %2dx
@@ -79,15 +84,13 @@ $},L
 %6s %-50s %5s %5s %5s %5s %5s %5s %10s\n
 %6s %-50s %5s %5s %5s %5s %5s %5s %5s %10s\n
 %7sK
-%95\r
 %=(knΚ
-%Q}\f
-%R3\a
-%Rz\a
-%b^\f
+%B\t\f
+%I{\r
+%YA\f
+%\t2\r
 %d %d %d
 %d %d %d %d
-%d..%d
 %d..%d\n
 %f %f
 %f %f %f
@@ -95,6 +98,7 @@ $},L
 %ff.
 %lld
 %llu
+%r2\r
 %s %s
 %s %s %s
 %s %s %s %s
@@ -116,7 +120,6 @@ $},L
 %s%s-%s
 %s(): Deprecated and unimplemented. Fix client code to use new postprocessing resources.\n
 %s: %s\n
-%s: Input vector has incorrect length\n
 %s: Warning: No compile targets specified! Shader will not be compiled!\n
 %s: __pos (which is %zu) > __size (which is %zu)
 %s: __pos (which is %zu) > this->size() (which is %zu)
@@ -132,9 +135,7 @@ $},L
 %s__font_page_%d
 %s_intermediate_%d.vtex
 %vsB,
-%}6\r
 %}{g
-%~7\r
 &Hc\nH
 &S0g
 &YA1
@@ -163,9 +164,16 @@ $},L
 (%d)
 (%d,%d)
 ();,\n\r
+(-!=
+(-"9
+(-0<
+(-8?
+(-I<
+(-]>
+(-q=
+(-|:
 (...
 (Fallback Shader)
-(HcD
 (Hc_x
 (LcO
 (NumShaderHandles
@@ -176,13 +184,13 @@ $},L
 ([A\\A]A^A_]ËCx
 ([A\\A]A^A_]Ð
 ([A\\A]A^A_]ÐE
+([A\\A]A^A_]ÐE1
 ([A\\A]A^A_]ÐH
+([A\\A]A^A_]饎
 ([A\\A]]
 ([]A\\A]A^A_
 ([]A\\A]A^A_ÐAWH
-(\r?2
-(\rI6
-(\r\a7
+(\r\tF
 (a/ #
 (anonymous namespace)
 (channel =
@@ -192,80 +200,75 @@ $},L
 (u*H
 (u?H
 (uMH
+(unnamed)
 (ݑ,6
 (𠀁𠀂𐀀𠀂
 ) ='
-)%)\\
-)%8M
-)%@e
-)%D\t
-)%Ff
-)%IN
-)%J]
-)%NA
-)%XQ
-)- T
-)-%V
-)-*V
-)-/V
-)-4V
-)-5<
-)-9V
-)-:@
-)->V
-)->\v
-)-CV
-)-HV
-)-MV
-)-RV
-)-U\v
-)-WV
-)-\\V
-)-\aT
-)-\bB
-)-\bX
-)-\eC
-)-\eT
-)-\fT
-)-aV
-)-fV
-)-fY
-)-kV
-)-kb
-)-l\b
-)-m>
-)-nb
-)-nd
-)-pV
-)-qb
-)-rB
-)-xQ
-)5';
-)56Y
-)5B<
-)5Fd
-)5O\f
-)5X=
-)5Zc
-)5\rN
-)5s>
-)5vX
-)5wb
+)%(D
+)%0\\
+)%6]
+)%9E
+)%:T
+)%>8
+)%HH
+)%\r9
+)-$M
+)-%3
+)-)M
+)-*7
+)-.M
+)-3M
+)-8M
+)-=M
+)->\b
+)-BM
+)-GM
+)-LM
+)-QM
+)-VM
+)-VP
+)-[M
+)-[Y
+)-\f\v
+)-\v:
+)-\vK
+)-]5
+)-^Y
+)-^[
+)-`M
+)-aY
+)-b9
+)-hH
+)-tD
+)-uZ
+)-x3
+)5"\f
+)5&P
+)523
+)56[
+)5H4
+)5JZ
+)5c5
+)5fO
+)5gY
+)5y6
 ):\n
-)=+Y
-)=,>
-)=3c
-)=6\n
-)=<;
-)=O\a
-)=]@
-)=jX
-)=sM
-)=t=
+)=!\a
+)=#Z
+)=,2
+)=M7
+)=ZO
+)=\eP
+)=\rE
+)=cD
+)=d4
+)=tE
+)=|\n
+)=~9
 )@ H
 )@ f
+)@0I
 )A9D$
-)B H
 )C H
 )C0I
 )C@I
@@ -274,81 +277,73 @@ $},L
 )D$P
 )D$`
 )D$p
-)\r @
-)\r \\
-)\r"=
-)\r#\a
-)\r%\b
-)\r&\n
-)\r(<
-)\r.\b
-)\r.\r
-)\r/M
-)\r0;
-)\r1<
-)\r2\\
-)\r2]
-)\r5>
-)\r7\b
-)\r7\r
-)\r9;
-)\r:<
-)\r;\\
-)\r;\v
-)\r==
-)\r>>
-)\r@\b
-)\rAM
-)\rB;
-)\rC@
-)\rD\\
-)\rD\v
-)\rF=
-)\rJ?
-)\rK<
-)\rM\t
-)\rS;
-)\rS]
-)\rT<
-)\rV\\
-)\rV\t
-)\rX\a
-)\rX\f
-)\rY>
-)\rZM
-)\r\\;
-)\r\bA
-)\r\e>
-)\r\f;
-)\r\r<
-)\r]<
-)\r_\\
-)\ra=
-)\ra\a
-)\ra\f
-)\rb>
-)\rd\n
-)\re;
-)\re<
-)\rf@
-)\rh\\
-)\rj=
-)\rj\a
-)\rkM
-)\rm\n
-)\rn:
-)\rn<
-)\rn?
-)\ru\b
-)\rw:
-)\rw<
-)\rw\r
-)\rw]
-)\rz\\
-)\r|>
-)\r|M
-)\r~;
-)\r~\b
+)\r 2
+)\r!3
+)\r"S
+)\r"T
+)\r%5
+)\r)2
+)\r*3
+)\r*\a
+)\r+S
+)\r-4
+)\r.5
+)\r1D
+)\r22
+)\r37
+)\r4S
+)\r64
+)\r:6
+)\r;3
+)\rC2
+)\rCT
+)\rD3
+)\rFS
+)\rG\b
+)\rI5
+)\rJD
+)\rL2
+)\rM3
+)\rOS
+)\rQ4
+)\rR5
+)\rU2
+)\rU3
+)\rV7
+)\rXS
+)\rZ4
+)\r[D
+)\r\aS
+)\r\fT
+)\r\t4
+)\r\v5
+)\r^1
+)\r^3
+)\r^6
+)\r`Y
+)\rd\e\r
+)\rg1
+)\rg3
+)\rgT
+)\ri\f
+)\rjS
+)\rl5
+)\rlD
+)\rm\e\r
+)\rn2
+)\rp1
+)\rp3
+)\rr\a
+)\rsS
+)\rt4
+)\ru5
+)\rv\e\r
+)\rw2
+)\ry1
+)\rz7
+)\r|S
+)\r}4
+)\r~D
 )ff.
 )t\nA
 )wZH
@@ -363,31 +358,31 @@ $},L
 *** Error! Multiple dynamic combos are putting the same texure (%s) in different descriptor set slots. This won't work correctly.\n
 *** Problem remapping texture reference!\n
 *** UNKNOWN ***
-*** vfx_common.cpp(1097): Error opening file "%s"!\n\n
-*** vfx_common.cpp(1105): Error opening file "%s"!\n\n
-*** vfx_common.cpp(1255): Source cache incomplete, file "%s" missing!\n\n
-*** vfx_common.cpp(1267): Error masking unused parts for "%s"!\n\n
-*** vfx_common.cpp(183): Don't call VfxInit() more than once!
-*** vfx_common.cpp(191): g_pFullFileSystem must be set up before calling VfxInit!\n
-*** vfx_common.cpp(7031): Programmer Error! The order of VfxVariableSourceType_t does not match s_shaderVariableSource!\n
+*** vfx_common.cpp(1209): Error opening file "%s"!\n\n
+*** vfx_common.cpp(1217): Error opening file "%s"!\n\n
+*** vfx_common.cpp(1369): Source cache incomplete, file "%s" missing!\n\n
+*** vfx_common.cpp(1381): Error masking unused parts for "%s"!\n\n
+*** vfx_common.cpp(188): Don't call VfxInit() more than once!
+*** vfx_common.cpp(196): g_pFullFileSystem must be set up before calling VfxInit!\n
+*** vfx_common.cpp(7535): Programmer Error! The order of VfxVariableSourceType_t does not match s_shaderVariableSource!\n
 *@\bM
 *N12_GLOBAL__N_121system_error_categoryE
 *N12_GLOBAL__N_122generic_error_categoryE
-*N24CParallelProcessLauncher18CParallelLambdaJobIZ11ParallelForILb1EZ31CompileAllShadersForStaticComboyR19CVfxStaticComboDataR4CVfx12VfxProgram_tP4IVfxEUliE_EviiPKcOT0_ii13JobPriority_tQ14is_invocable_vISC_JiEEEUliE_EE
-*N24CParallelProcessLauncher18CParallelLambdaJobIZ48CompileComboAndGetVariables_DynamicShaderCompileR10CUtlVectorI26DynamicShaderCompileTask_ti25CUtlVectorMemory_GrowableIS2_iLm0EEEPFvibiEEUliE_EE
+*N24CParallelProcessLauncher18CParallelLambdaJobIZ23VfxDynamicShaderCompileR10CUtlVectorI29VfxDynamicShaderCompileTask_ti25CUtlVectorMemory_GrowableIS2_iLm0EEEP4IVfxP29IRuntimeShaderCreateCallbacksPFvibiEEUliE_EE
 *ZN10CMaterial222IssueAsyncLoadRequestsER14CUtlLeanVectorI32MaterialStaticComboLoadRequest_ti18CMemAllocAllocatorE11CWeakHandleI29InfoForResourceTypeIMaterial2E16ShaderLoadMode_tEUlP25IAsyncResourceDataRequestE_
 *ZN10CMaterial222IssueAsyncLoadRequestsER14CUtlLeanVectorI32MaterialStaticComboLoadRequest_ti18CMemAllocAllocatorE11CWeakHandleI29InfoForResourceTypeIMaterial2E16ShaderLoadMode_tEUlP25IAsyncResourceDataRequestSt10unique_ptrI25IAsyncProcessedDataResultSt14default_deleteISC_EEE_
 *ZNK13CMaterialMode49SetRenderStateForRenderablePassWithCommandBuffersEPK17CRenderAttributesS2_P14IRenderContextP21RenderInputLayout_t__RK24MaterialRenderablePass_tPK24RsStencilStateOverride_tPK26RsDepthBiasStateOverride_tijEUlvE0_
 *ZNK13CMaterialMode49SetRenderStateForRenderablePassWithCommandBuffersEPK17CRenderAttributesS2_P14IRenderContextP21RenderInputLayout_t__RK24MaterialRenderablePass_tPK24RsStencilStateOverride_tPK26RsDepthBiasStateOverride_tijEUlvE_
+*\v=LR
 *\vS8L
 *] A
 *](A
 *ff.
 *u2H
 *u\fH
-*|?H
 ++CCUNGH
 ++CCUNGH9E
++\r\v@
 +\tЋS
 +ff.
 +tVf
@@ -406,61 +401,61 @@ $},L
 ,<N{`
 ,@\b9
 ,G\b]H
-,G\b또E
 ,IH)
 ,ff.
 ,¸Yiҕ
 ,ЈP\nA
--) \b
--*z\a
---$\r
+-!r\f
 -----
 ----------
 --------------------------------------------------
 --------H
 ----H
--1.\b
--10\f
--2|\v
--8{\f
--:^\f
--@!\b
--Iz\v
+-:(\f
+-:2\b
+-:2\r
+-=j\r
+-=w\a
+-B0\r
+-B3\b
+-E*\b
+-I!\a
 -Kv9M
--L&\r
+-Q&\f
+-Qj\a
+-S2\r
 -Stop:
--Vg\r
 -XX: Shader program -vs -ps -gs -cs -psrs -rtx -ms\n
--Y)\b
--\r!\b
--\rf\f
--aE\f
--b<\v
+-\\l\r
+-\t}\v
 -end of input-(
--i.\b
 -in-
--jB\f
+-j#\f
+-jg\a
+-m2\b
 -memory-
 -psrs
+-q3\b
 -rtx
--s!\b
 -show_none
 -show_used_combos
 -show_used_combos: Verbosely spew a line for each program and the list of combos enabled\n
 -ttf
 -unknown source-
 -unknown source-(
--{/\b
--}"\b
+-x'\b
+-{H\b
+-}X\f
+-~\t\a
 .%s\n
 ...)
+../public/tier0/utldict.h
 .@Pz
 .@\bz
 .D\n\f
 .G8z
 .G\bz
 .H\fz
-.[A\\A]A^]
 .\az'u%
 .\az7u5
 ._8z'u%
@@ -499,6 +494,7 @@ $},L
 .rodata.str1.1
 .rodata.str1.8
 .shstrtab
+.tSL
 .t\bH
 .tbss
 .text
@@ -518,9 +514,9 @@ $},L
 /YA1H
 /\a~j
 /\e>A|
-/\r8p
-/\rPo
-/\rtp
+/\r(U
+/\rPV
+/\r`U
 /data/src/vfx/compiletargetexpr.g
 /dev/random
 /dev/urandom
@@ -531,7 +527,7 @@ $},L
 /w$H
 /w-D
 /w-M
-/w9H
+/wOH
 0 0 0
 0 0 0 0
 0 0 0 255
@@ -560,46 +556,42 @@ $},L
 0t\fH
 0tgH
 0tiH
+0tjH
 0u\rH
 0u\tH
-1\v=/
-1\v=2
-1\v=7
-1\v=:
-1\v=H
-1\v=\a
-1\v=\e
-1\v=b
-1\v=u
-1\v=w
-1\v={
-1\v=}
-1\v=}d
-1\v=~
-1\v=ɬ
-1\v=ڹ\b
+1?n{3?"X5?
+1\v=!
+1\v=-"
+1\v=/\e\n
+1\v=G
+1\v=G&
+1\v=K$\r
+1\v=S\e\n
+1\v=[F
+1\v=g%
+1\v=u"
+1\v=w&
 1\vK<
 1\vN<
 1\vO<
 1ff.
-1t\nE
 1yIk
 1żqI
 1ɺI2\r
 1ҐI;4
 1ҾjN
 29t\a
+2>e(6>"
 2D;~\b
 2D;~\bu
-2H90u͋r
 2t\vH
 333?+
 33s?+
+3<IA><CMI<ǶT<
 3E19
 3HcS
 3I9u
 3\f\a\b
-3\rǅ
 3t\bL
 3u+H
 3uEH
@@ -609,46 +601,43 @@ $},L
 4$E;t$
 4$H9
 4$H;t$\bu
-4'H9
+4$L9
 4(D;c\br\bA
-4/I9
 43L9
-44H9
 48Hc
-48ff.
 4;H9
 4Na\\
 4XH2\r
-4\bA9
+4\aHc
 4\bI9
+4\fI9
 4\vH9
 4`!g
 4hJ2\r
-4ot,
+4ot4
 4vAUI
 4vL;\\
 5&YA1
 5&YA1A
 5&YA1I
-5*#\b
-5+g\f
 5,¸Y
-57`\b
-58V\a
-5YA1
-5ZS\a
-5\n1\f
+5Ct\r
+5XD\a
+5\t0\r
+5b:\b
 5ces
+5l~\r
 5t H
 5u:M
 5uFH
 5ult
-5|<\r
+5zA\a
 5ۮ\r_
 6G<]
 6G<]L
+6ff.
 6u;M
-7<!w
+77?(
 7E1҃
 7Hc҃
 7ff.
@@ -660,10 +649,10 @@ $},L
 8A^]H
 8C @
 8C A
+8Hc\tH
 8RkR
 8[A\\A]A^A_]
 8[A\\A]A^A_]H
-8[A\\A]A^A_]黌
 8[A\\A]A^]
 8[A\\A]]
 8[]A\\A]A^A_
@@ -672,6 +661,8 @@ $},L
 93~4I
 9C,~
 9CFontBase
+9Cx~+
+9D;2
 9H\b~1
 9K(u
 9OD|c
@@ -706,10 +697,11 @@ $},L
 : unexpected input...\n  expected one of :
 :(ήeE
 :=pq
+:^>\v;
 :a\vbg
 :uSH
 :¥F\\
-;0}6
+;0}8
 ;B@sx1
 ;F(u\fL
 ;G\bs
@@ -719,13 +711,16 @@ $},L
 ;V4u#H
 ;X\b}&
 ;[A\\]H
+;\btyD
 ;\btzD
+;\v\a3;a
 ;ff.
 ;k\br
 ;w\bs\f
 ;}>L
 < tL<"
-<#I9
+< u%H
+<$"tO
 <$E1
 <$E9e
 <$H9;
@@ -734,28 +729,31 @@ $},L
 <$uYH
 <$űU
 <&\bv"
+<*E9
 <*t-H
 <*t\a
 <*t_H
+<,I9
 <.t$H
 <.u\a
 <.ucH
 </uغ
 </~\vH
-<0M9
+<0H)
 <0_u
 <0uiI
+<2L9
 <7fA
 <8AƇ
 <8fA
+<:M9
 <:t\vH
-<<t3A
+<<t#A
 <<unknown_mod>>\\
 <=u\a
 <>t\n<\rw
 <??>
 <@1҉
-<@A;t
 <Au\eH
 <Bu5H
 <DOWN>
@@ -771,7 +769,7 @@ $},L
 <Eu\eH
 <Fu\eH
 <Gu\eH
-<HcE
+<Htπ#
 <HuPH
 <IH)
 <Iu(H
@@ -791,6 +789,7 @@ $},L
 <Pu;ff.
 <Pu\e
 <QuOH
+<Ra\f<
 <Su\eH
 <SudH
 <Tt\n
@@ -804,16 +803,14 @@ $},L
 <Zt#H
 <Zu\eH
 <Zu\f
-<\aA9
 <\bL)
-<\bM9
 <\bt#H
 <\bu(H
 <\bu/L
 <\buV
-<\buVH
 <\bu\t
 <\bu\vH
+<\bu_
 <\nI9
 <\nL9
 <\nt"
@@ -827,13 +824,12 @@ $},L
 <\rt0<>
 <\ru\b
 <\ru\tA
-<\tt-1
+<\ttIw
 <\tt\n1
 <\tu"
 <\tu1
 <\tu\aH
 <\turH
-<\tv|
 <_t\n
 <_t\vH
 <_u!H
@@ -863,6 +859,7 @@ $},L
 <invalid>
 <iu+H
 <iu4H
+<k>)<
 <lu\eH
 <missing
 <muQH
@@ -886,76 +883,60 @@ $},L
 <unknown KV3 basic type '%s' (%d)>
 <unknown>
 <vAUI
+<vMc
 <z~-H
 <{tl
-="B\t
-=#w\v
-=%(\a
-=%;\v
-=%}\t
-=)%\f
-=)E\r
-=)\b\f
-=*;\t
-=0j\t
-=1*\r
-=3G\t
+<}ӭ<
+=!l\r
+=!z\t
+="$\r
+=$d\t
+=$v\r
+=):\b
+=3?\r
 =4.Y0
-=9%\f
-=9E\v
-=9_\r
-=9f\f
+=99\f
+=;e\t
 ==%d
-=>;\t
 =Authu\a
-=C2\f
-=C5\f
-=DF\t
-=DK\b
-=Fk\t
-=F}\t
+=Cs\f
 =Genut\n
-=Gz\b
-=I%\f
-=If\f
-=L&\n
-=L/\t
-=LB\t
+=Gv\r
+=I9\f
+=I:\b
+=IF\f
+=K8\r
 =Lce
 =MД\\~
-=NV\b
-=Ny\b
-=N~\t
-=PH\b
-=WN\b
-=Y%\f
-=YI\f
-=YJ\v
-=Yf\f
-=Yj\t
-=[G\t
-=\rL\b
-=\r[\t
+=N\n\t
+=Pz\t
+=Q\v\t
+=Sd\t
+=X|\t
+=Y9\f
+=Zv\f
+=\r)\f
 =\t ();,\n\r<>
-=\t#\b
-=\t/\b
-=\tL\v
-=\ti\t
-=^%\n
-=^}\t
-=fL\b
-=iI\f
-=if\f
-=n/\t
-=pf\f
-=pz\b
-=q\a\b
-=sF\t
-=xN\b
-=yI\f
-=yL\r
-=yf\f
-=~G\t
+=^e\t
+=_\f\t
+=d~\n
+=e}\v
+=f\n\t
+=ff.
+=i@\f
+=iC\f
+=ma\b
+=mv\r
+=pͬ=('
+=t\b\v
+=u.\f
+=u\b\n
+=yz\t
+={d\t
+=~!\r
+=ߘ\a=
+>"à>
+>=ˎ>
 >VFON
 >l8~
 >t\bL
@@ -965,25 +946,28 @@ $},L
 ???@A¾Ā
 ?AǄ$
 ?AǄ$P
+?Aǅ\b
 ?E19
 ?H;E
 ?H\tЉ
 ?Hǀ<
 ?Hǆ<
 ?LcʉU
-?RZ\a
+?Mc҈M
+?Py!?
 ?Su_A
 ?Tn̊
 ?[A\\A]A^]
 ?\tIO
 ?\t։w
 ?ff.
+?rg\a
 ?t"A
 ?t\aL
 ?t\eA
 ?t\rH
 ?thH
-?toH
+?tiH
 ?t{H
 ?u6E1
 ?u91
@@ -1000,16 +984,16 @@ $},L
 ?v\t%
 ?v\v%
 ?w!H
-?w$H
 ?w&H
 ?w&M
 ?w'H
+?w(H
 ?w*H
 ?w7H
-?w9H
 ?}BHk
 ?~:H
 ?~@H
+?ф\b?W\e\n?
 ?𠀑ᒵ𠀑2𠀑
 @  0
 @ H9
@@ -1019,11 +1003,13 @@ $},L
 @%\nH
 @&\tH
 @(H9
+@(I9
 @(\aD
 @(ǅ0
 @(ǅP
 @)\aA
 @/\tD
+@0A9
 @0A9A0
 @0D;F0t\t
 @0\tD
@@ -1031,29 +1017,25 @@ $},L
 @89E
 @8H9
 @8\v@'&
+@8ƉM
+@?1B?
 @@E9.
 @A9<
 @A;<
-@A;\\
 @A;^
 @AUI
 @E;,$|
 @E;7|
 @HHi0
-@HcU
-@Hcu
-@IcA8H
 @O@H
 @Tf.
 @XA\\A]A^]
 @XH9
 @[A\\A]]
 @[A\\]
-@\\Lc
 @\a@H
 @\a@L
 @\a@u
-@\a@uoH
 @\b D
 @\bH+E
 @\bH9
@@ -1061,16 +1043,18 @@ $},L
 @\bHc@0
 @\bHk
 @\bI9
+@\bRH
 @\bfH
+@\bt,A
 @\fD9F
 @\f\a\b
 @\f\tL
-@\n\tL
-@\t8E
+@\v\tL
 @`H9
 @hH9
 @t\aƃ
 @t\bAƀ
+@t\f[A\\A]A^]
 @t\nA
 @t\rH
 @t\vA
@@ -1084,33 +1068,35 @@ $},L
 @u\eE
 @u\eE1
 @ujL
-A 8A
+@xA9
 A DP
 A#D$DH
 A#T$DH
-A#\\$\fH
 A#^DH
+A#^\fH
 A#pDH
 A#q<H
 A#w<H
 A#xDH
 A#y<H
-A#|$\fH
+A#~\fH
 A$tDHc
 A%mB,
 A(A9
 A)\v=
-A)\v=@
 A)Չq
 A)։q
 A)߅ɸ
+A+D$(
 A+D$,A
 A+F8
 A+L$@
 A+N@
 A+N\b
 A+O\b
+A+\aY
 A,Mca
+A4tWH
 A8D$
 A8Eh
 A8}h
@@ -1119,22 +1105,20 @@ A9D$
 A9D$H
 A9EX
 A9EXt
-A9G8
-A9G8~.A
+A9FH
 A9L$
-A9U0
-A9V8
-A9WH
 A9W\b
 A9\\$H
 A9]0~^I
+A9^x
 A9t$
 A9}X
+A:D$
 A;@HsS1
-A;D$
 A;D$(
 A;D$H
 A;D$HsX1
+A;D$\b
 A;D$\bs
 A;FH
 A;FX
@@ -1143,19 +1127,19 @@ A;T$H
 A;\\$\br
 A;]\br
 A;^(
-A;^H}RA
 A;t$0
 A;w\bu
+A<9w
 A<tDHc
 A@A9
 AA;<
 ABGR8888
-ALIcqH%
+AD9@
+AD9X
 ANTLR3_EXCEPTION number %d (%08X).\n
 ANTLR3_EXCEPTION: %s\n
 APE1
 APPSYSTEM: In ConnectInterfaces(), s_nRegistrationCount is %d!\n
-ARAT
 ARGB8888
 ATE1
 ATI1N
@@ -1197,6 +1181,7 @@ AVAUA
 AVAUATA
 AVAUATE1
 AVAUATI
+AVAUATL
 AVAUATS
 AVAUATSA
 AVAUATSD
@@ -1205,6 +1190,7 @@ AVAUATSHc
 AVAUATSHcO
 AVAUATSHc_
 AVAUATStL
+AVAUATStX
 AVAUATUH
 AVAUATUS
 AVAUATUSH
@@ -1217,11 +1203,14 @@ AVAUM
 AVE1
 AVLc
 AVMc
+AVSD
+AVfH
 AWAVA
 AWAVAUA
 AWAVAUATA
 AWAVAUATE
 AWAVAUATI
+AWAVAUATL
 AWAVAUATLc
 AWAVAUATS
 AWAVAUATSH
@@ -1255,33 +1244,28 @@ AZA[1
 A[A_
 A\\A]A^A_
 A\\A]A^A_]
+A\\A]A^A_]H
 A\\A]A^A_]ÐHc
-A\\A]A^A_]鲲
+A\\A]A^A_]颪
 A\\A]A^Hi
 A\\A]A^]
 A\\A]A^]ÐL
+A\\A]A^]醊
 A\\A]H
 A\\A]]
 A\\A]]H
 A\\A]]Ð
 A\\A]]ÐH
-A\\A]]鹪
-A\\]邕
 A\b;F
 A\bHc҃
 A\bIc
-A\bfA
 A\b􀪦\a
 A\e09
-A\e8A
 A\f\a\b
 A\tŋC
 A\t􀀪\t
-A]A^
 A]A^A_]
 A]A^]
-A]A^]H
-A]A^]離
 A]]H
 A^XH
 AbtlHk
@@ -1320,14 +1304,12 @@ Attribute-based texture %s not bound for material "%s"!\n
 AƄ$)
 AƄ$J
 AƄ$L
-AƄ$\b
 AǄ$H
 AǄ$L
 AǄ$\f
 B C!\a
 B H9
 B0H9
-B2D*
 B@H9
 B@ހ*T,(#
 BC6H
@@ -1383,15 +1365,15 @@ BloomBlendMode_t
 Bќ=+
 C H1
 C [A\\]
+C(H9
 C(Ic
 C(PD
 C*I\r
-C,IcD
+C,Ic
 C1 E
 C2f%
 C8D:\b
 C8HǄ$
-C<HcK8D
 C@fA9
 CBaseAppSystemI11ITextLayoutE
 CBaseAppSystemI12IFontManagerE
@@ -1433,8 +1415,6 @@ CO@H
 COLOR
 COMMENT
 COMMON
-CPBǄ
-CPD"
 CPIiԈ
 CPlatformFont
 CPostConnectCallback
@@ -1447,7 +1427,7 @@ CQueuedSetMaterialOrTextureRenderable
 CQueuedTextRenderable
 CRC32_ProcessBuffer
 CRf%
-CRfD9
+CRfA9
 CSchemaInstallCallback
 CSchemaRegistration
 CSchemaRegistration_materialsystem2
@@ -1484,6 +1464,9 @@ CUtlLinkedList overflow! (exhausted index range)\n
 CUtlNTree overflow!\n
 CUtlStackMachineBuilder
 CUtlStreamBuffer does not support TEXT_BUFFER's use CUtlBuffer\n
+CUtlStreamBuffer::FileWrite
+CUtlStreamBuffer::GrowAllocatedSize
+CUtlStreamBuffer::StreamPutOverflow
 CUtlString
 CUtlSymbolTableLarge element limit of %u exceeded\n
 CUtlVector
@@ -1500,6 +1483,7 @@ C\bD9`\b
 C\bE1
 C\bHc
 C\bHc39
+C\bHǅ\b
 C\bL9
 C\bMc
 C\bZYH
@@ -1511,15 +1495,14 @@ C\btF
 C\btmH
 C\fI9E\fu؋C
 C\f\a\b
-C`HcSXMc
 C`uZ@
-CalcStaticComboIdFromValues
 Cannot allocate abstract class
 Cast of %s loses value information (returning %s)\n
 Cbf%
 CbfE
 Cc}H
 Cc}L
+Ch<0
 ChD9
 CharacterSetBuild
 ChfH
@@ -1542,7 +1525,6 @@ Command Format: mat_set_shader_quality <value> (valid values are 0 or 1)\n
 CommandLine
 Compile Target Expression
 Compile Targets
-CompileShadersForFeatureCombo
 CompileTargets
 Compiled
 Compiled %i shaders (%i cached) in %.1fs\n
@@ -1556,13 +1538,13 @@ Courier
 Courier New
 CpHǃ
 CreateInterface
+Ct?)
 Custom font '%s' is already registered, ignoring new registration '%s' range %d - %d\n
 Custom font file '%s' ignored because no font name was given\n
-Cx@t
 CxfH
 D \bH
 D"\bH
-D#=d\b
+D#-9N
 D#@\fH
 D#C\fH
 D#K\fH
@@ -1571,7 +1553,6 @@ D#S\ffD9
 D#g\fI
 D#{\fH
 D$ 1
-D$ 8C
 D$ A
 D$ D
 D$ E
@@ -1579,22 +1560,26 @@ D$ H
 D$ H)
 D$ Hǃ
 D$ I
+D$ L
 D$ M
 D$ N
+D$ f
 D$ u'I
+D$!)
 D$$A
 D$$H
 D$(A9G(u
 D$(E
 D$(E1
 D$(H
+D$(H9
 D$(I
 D$(K
 D$(L
 D$(t\bƄ$
 D$,H
-D$,L
 D$01
+D$09
 D$0A
 D$0H
 D$0I
@@ -1605,22 +1590,22 @@ D$41
 D$49
 D$4A
 D$4H
+D$8A9
 D$8H
 D$8O
 D$8f
+D$8vz
 D$<%
 D$@H
 D$@I
 D$@L
-D$@L9
-D$@vz
+D$@v
 D$GM
 D$HH
 D$HL
 D$L%
 D$L1
 D$LA
-D$LH
 D$LIc
 D$O@I
 D$P1
@@ -1635,10 +1620,10 @@ D$Pu
 D$TH
 D$XD9
 D$XH
-D$XL
 D$XM
 D$Xf
 D$\\H
+D$\a@H
 D$\a@I
 D$\a@M
 D$\b1
@@ -1649,6 +1634,7 @@ D$\bA9
 D$\bB
 D$\bC
 D$\bD
+D$\bD;(
 D$\bE
 D$\bE9o
 D$\bE9o(~:Mcf
@@ -1681,20 +1667,23 @@ D$`H
 D$`H9
 D$`I
 D$`L
+D$dH
 D$h1
 D$hD
 D$hH
+D$lH
 D$pE
 D$pH
 D$ptAA
+D$tH
 D$xH
 D$xL
+D$|H
 D(\bH
 D)I˃
 D)ÉU
 D)Ήp\bD
 D+c$E
-D+k$E
 D0\bI
 D0\bJ
 D16_SHADOW
@@ -1728,7 +1717,6 @@ D:\bsG
 D;J\b|
 D;J\b}
 D;J\b}'
-D;SH
 D;`\b|
 D;`\b}
 D;a\b
@@ -1739,8 +1727,13 @@ D;g8D
 D;x\b
 DATAL
 DDDDUUUUDDDDUUUU
+DHHF
+DHhE9
 DPHHi0
-DPHfA
+DP\bA
+DPhA
+DPhA9
+DWJHi0
 DXBC
 DXT1
 DXT1_ONEBITALPHA
@@ -1750,6 +1743,7 @@ DXT5_NM
 D\a\bH
 D\a\bHc
 D\ã)
+D\bHE
 D\b\bE
 D\f\a\b
 D\n H
@@ -1757,6 +1751,7 @@ D\n,1
 D\nHD
 D\n\bD
 D\tʉU
+D\v=v>
 D_FADE_COLOR
 DeHL
 Debug font name
@@ -1777,6 +1772,7 @@ Double-save to Member '%s'
 Du1H
 DuHH
 DuLH
+DxHD
 Dynamic )\n
 Dynamic combos:\n
 Dynamic shader compile disabled when launched from Steam.\n
@@ -1784,17 +1780,16 @@ Dynamic shader compile failed "%s" (%s%s)!\n
 DynamicCombo
 DynamicComboFromFeature
 DynamicComboRule
-DynamicComboRule(
 DynamicGlobalsBDA
+DƋ=N
+E 8C
 E H)
 E#fDL
 E#l$DL
-E(E1
 E(PH
 E(t%H
+E+W$E
 E,,A
-E-?g
-E0A9
 E0E1
 E1,r
 E1:\b
@@ -1805,10 +1800,13 @@ E1ɉƁ
 E1䋽X
 E1큽d
 E1퉅L
-E4tHH
-E5xd
+E4Aǅ
+E5J;
+E5RD
+E5x:
 E8I9
 E94$
+E9Fx
 E9fX
 E9n8~
 E9oX
@@ -1817,6 +1815,7 @@ E9Ź\b
 E:0l
 E;.I
 E;/|
+E;7L
 E;7|
 E;<$
 E;>|
@@ -1825,22 +1824,23 @@ E;f(D
 E;l$
 E;np
 E;t$
+E;|$
 E<7\r
 E<Hc2%
 E<Zg
+E@L9
 EAoL
 EE?+
 EFPH
 ELIcMH%
-EO@u
 ERROR!
 ERROR! Renderable pass data is being used across frame boundaries! Renderable pass has frame count %u. Current frame count is %u.\n
 ERROR: CUtlSymbolTableLarge element limit of %u exceeded\n
 ESC_SEQ
 EXPORTSYSTEM_INTERFACE_VERSION_001
+E\a@E
 E\a@I
 E\a@M
-E\a@u
 E\bA9G\b
 E\bAYAZH
 E\bAZA[H
@@ -1849,25 +1849,28 @@ E\bA]A^H
 E\bA^A_H
 E\bD9
 E\bE)O\b
+E\bH9
 E\bHk
 E\bIc
 E\bXZH
-E\bXZu
 E\bY^H
 E\b_AXH
 E\bt\bH
 E\fIcU\b
 E\f\a\b
 E\ft\bH
+E\rXN
+E\r[N
+E\r\nL
+E\r\vL
 E\vF(
 E\vM̸
 E\vPhIcE
 E`H9C`u
-E`IcuXHc
 Early exit
 EarlyInit_Tier0
 EconItemToolModel_001
-Eff.
+Enables DebugDraw_AssertMsg() in Vulkan shaders (S_DEBUG_ASSERTS_ENABLED).
 Engine2/RenderingPipeline
 EngineServiceMgr001
 EnsureCapacity
@@ -1889,10 +1892,7 @@ ExternalDescSet
 ExtractModuleMetadata
 Extraneous token
 E~(M
-EȄ\vu
-EȈC\b
 EȉA\bH
-EȉC\b
 EȉPHH
 EȉPPH
 Eȋ@H
@@ -1910,22 +1910,21 @@ E؋@H
 E؋@T
 E؋PHH
 F A8Eh
-F H9
+F L9
+F(E1
 F(Hc
 F0[A\\A]A^]Ð)
-F3|(
 F4t(HiИ
 F@A9
-F@H9
 F@H9A\b
+F@L9
 FATAL ERROR: attempting to render with error material.  The following material(s) failed to load: \n
 FE1N
 FEATURES
 FHI9
-FIXME!
-FLIcVH
 FO@H
 FO@I
+FO@u
 FT_Done_Face
 FT_Done_FreeType
 FT_Get_Char_Index
@@ -1939,18 +1938,17 @@ FT_Set_Pixel_Sizes
 FXA9
 FXD9
 F\a$?+
-F\a@E
 F\a@H
 F\a@I
 F\a@L
 F\a@M
 F\a@t
 F\a@u
-F\bH9
 F\bHc\n
 F\bHc\nH
 F\bHǅ
 F\bIc6L
+F\fIcv
 F\f\a\b
 F\nf%
 Failed to Allocate a Dynamic Index Buffer of size %u\n
@@ -1986,6 +1984,7 @@ FeatureRule
 Features
 File
 File has not been opened!\n
+FileSystem
 FixupResourceName: Illegal full path passed in ("%s")!\n
 FixupResourceName: Illegal path, missing extension passed in ("%s")!\n
 FlattenedSerializersVersion001
@@ -1997,10 +1996,12 @@ Found %d materials
 Found %d textures ( %d references ) %s MB (mem) %s MB (disk) | Mem = %s MB (streamable) %s MB (RTs) %s MB (non-mip'd non-RTs)\n\n
 Found %d unique vfx files, %s unique shader handles\n\n
 Found 0 materials
+Found existing value when inserting into dict - replacing existing value with new value. If this is intended behavior, use InsertOrReplace. If leaving existing values alone is intended, use InsertIfNotFound.
 FpA9
 FrameUpdate
 Fv<H
 FyOG
+F|HcM
 F؋A4D
 G +F
 G D9
@@ -2027,17 +2028,16 @@ GLIBC_2.3.2
 GLSL.std.450
 GO@I
 GO@u
-GPD"
 GPIc
 G\a@A
 G\a@H
 G\a@I
-G\a@L
 G\a@M
 G\a@u
 G\bA9
 G\bAZA[
 G\bD9
+G\bD;(
 G\bE1
 G\bH9
 G\bHc
@@ -2065,13 +2065,9 @@ GetThreadLocalStackAllocator
 Gff.
 GhfA
 Glyph Miss: FontHandle_t:0x%8.8llx (%s), %s\n
-GpA9
 GraphicsMisc
 GrowCount
-Gx@u
-GxIc
 GЉSLƃ
-GЉ։S<A9
 H#D$
 H(H)
 H)ЍH
@@ -2081,14 +2077,17 @@ H09K0
 H0H)
 H1KC
 H1ȋK
+H1Љ]
 H8H)
 H8H9x8
+H9:u
 H9Kp
 H9Z\bu
 H9\atVUH
 H9\bu
 H9p\bu
 H9z\bt
+H9z\bu
 H9ƉY
 H;C(
 H;C\bH
@@ -2101,12 +2100,12 @@ H;P\f
 H;P`
 H;Pl
 H;Px
-H<Ic
 H=@\f
 H=vmat
 H=vmatt
 H=vmatu
 H=vtex
+H=vtexI
 H@H)
 HEADER
 HEX_DIGIT
@@ -2120,6 +2119,7 @@ HPE1\vy
 HPH)
 HXH)
 H[A\\A]A^A_]
+H[A\\A]A^A_]Ð
 H[A\\A]A^A_]ÐH
 H[A\\A]A^A_]ú
 H[A\\A]]
@@ -2137,11 +2137,12 @@ HbtK1
 Hc3L
 Hc7E1҃
 Hc7E1ۃ
+Hc7H
 Hc;L9
-Hc@ H
 Hc@0;
 HcA@A9
 HcApA9
+HcB\bH
 HcC L
 HcC(
 HcC0
@@ -2149,25 +2150,30 @@ HcC0E
 HcC8
 HcC8I
 HcCH
+HcCHE1
+HcCHH
+HcCHL
 HcCx
 HcF0
 HcGx
 HcH\b
-HcK8L
 HcKS
 HcL7\bH
 HcO(
+HcO\bL
 HcP\b
 HcP\bH
 HcS$H
 HcS@I
 HcS\b
 HcU܅
+HcW\b
 HcW\bH
-HcXXt
+HcX\bH
+HcX\fH
 Hc\a9ẺW
+Hc\aD
 Hc\aH
-Hc\bH
 Hc\fȉ
 Hc\nH
 Hc\nf
@@ -2175,7 +2181,9 @@ Hc\tH
 Hc\tf
 Hcs@H
 Hcs\bH
+Hcw\fH
 HcƉu
+Hcȋ\f
 HcɈ4
 Hcʀ<
 HcʉU
@@ -2184,11 +2192,12 @@ Hc҈$
 Hc҈\f7H
 Hcҍ4
 HelpSystem_001
+HiM(
 HorizJustification_e
 HostStateMgr001
-HpH9
 Ht"H
 HxHǀ
+Hȋ=k
 I could not work out what I was expecting, like so many of us these days!\n
 I+\\$(
 I9<$
@@ -2246,41 +2255,37 @@ ITextLayout
 I\bHc
 I\bHc\nH
 I\f\a\b
+Ic0H
 Ic6M
-Ic@8A
-Ic@8L
-Ic@HA
-Ic@HHi
+Ic@\bH
+IcAx
 IcD$
 IcD$H
 IcD$H9
 IcE@
 IcEH1
-IcEHE1
 IcEHI
-IcEHM
+IcE\b9
 IcE\bIc
-IcF81
 IcF@I
+IcF\b9
+IcFx1
 IcG0
-IcG89
-IcG8A
-IcG\b
-IcH\bH
 IcM\bI
 IcN@
 IcN\bH
+IcN\bHk
+IcNxL
 IcT$
 IcT$PH
 IcT$\bI
 IcT$h1
-IcU H
-IcUHE1
-IcUHI
-IcUHM
-IcU\bH
 IcV A;V0
-IcV8I
+IcVHE1
+IcVHI
+IcVHM
+IcVxH
+IcVxI
 IcW A
 IcW0H
 IcWHE1
@@ -2288,6 +2293,7 @@ IcWHI
 IcWHM
 Ic\\$8H
 Ic\\$X
+Ic\aA;G
 Ic\f$
 Ic\vD9
 Ic](A;]8
@@ -2295,23 +2301,27 @@ Ic]0H
 Ic]@H
 Ic]\bH
 Ic^(A;^8ts
-Ic^\bH
-Ic_`H
+Icp\fH
 Ics\bD
 Icu\bIcE\fIcM
 Icv\b
+Icv\bH
+Icx\bHc
+Icx\fH
 Incorrect vpk path delimiter for shader %s\n
 Inert VModuleMetadata
 InfoForResourceTypeCTextureBase
 InputService_001
 InputStackSystemVersion001
 InputSystemVersion001
+Insert
 InsertMultipleBefore
 InstallSchemaBindings
 InvTextureDim
 InvViewportSize
 InvokeMiniDumpHandler
 IsCharCached
+Its expression depends on a static combo, which the preprocessor bakes separately into each combo's build. Using %u.\n
 IuTH
 IuYH
 Iu^H
@@ -2328,6 +2338,7 @@ IǄ$x
 Iǅ\tǸ
 IДH\t
 IДI1
+J(HcD
 JArray
 JXE1
 J\bHc
@@ -2335,18 +2346,16 @@ J\fA9
 J\f\a\b
 JcL2\bH
 Ju\eH
-JxHǂ
+K H9
 K(1ҩ
+K(QL
 K(fA9
 K(t\nfE9
+K8Hc
 K<~\\f
 KK\bA
-KPHc
 KTfA
-KXD)
-KX[A\\]
 K\\E1
-K\b)Ѓ
 K\bH9
 K\bI9
 K\bIc
@@ -2360,7 +2369,6 @@ K\v\bA
 K\v\bH
 K\v\bL
 K`f;
-Kct'\b
 KeyValueCache001
 KeyValues3: pre-allocated array memory is too small for %u elements (%u bytes available, %u bytes needed)\n
 KeyValues3: pre-allocated table memory is too small for %u members (%u bytes available, %u bytes needed)\n
@@ -2368,9 +2376,8 @@ KeyValuesSystem
 Kff.
 Kq\bH
 KxHǃ
-KxtN
+KxtF
 L \bH
-L$ 9
 L$ A
 L$ D
 L$ H
@@ -2380,16 +2387,14 @@ L$ L
 L$$H
 L$(1
 L$(H
-L$(IcT
+L$(L
 L$,H
 L$,L
 L$0H
 L$4H
 L$8H
 L$8L
-L$8\aI
 L$@D
-L$@H
 L$@~XL
 L$HD
 L$HI
@@ -2409,9 +2414,11 @@ L$\bE
 L$\bH
 L$\bI
 L$\bL
+L$\bu
 L$\fH
 L$`H
 L$`M
+L$`f
 L$hA
 L7\t>,
 L90r
@@ -2424,41 +2431,47 @@ L>\nף<
 LAYOUTPOSITIONTYPE_FRACTIONAL
 LAYOUTPOSITIONTYPE_NONE
 LAYOUTPOSITIONTYPE_VIEWPORT_RELATIVE
-LHHfA
+LD;R
 LINEAR_D24S8
 LI\aH
 LOG_CONSOLE
 LOG_GENERAL
-LPHI
-LPHN
-LPHfA
-LPhH
-LPhL
+LPHF
+LPhA9
+LS\bA
+LS\bI
 L\a\bfD
 L\b\bH
 L\f\a\b
 L\n\bH
 L\r\bH
 L\v\bfD
-L]HH
 LayoutPositionType_e
 Lc D;c
-Lc(E
 Lc(E;l$
-Lc+Hǅ
 Lc/E
+Lc0E
+Lc3Hǅ
 Lc8E9
 Lc;H
+LcO\bHc
+LcO\fO
 Lc`\b
 Lcc(D9
 Lcc\bI
 LcgP1
 Lcg\b
 Lcg\bH
+Lch H
+Lch$H
+Lch(H
+Lch,H
+Lch0H
+Lch4H
+Lch8H
+Lch<H
 Lck@E1
 LckpL
-LcpHt
-Lcq8t
 Lcs8D;sHD
 LcډU
 Lexer encountered %i errors parsing compile targets expression "%s"\n
@@ -2466,6 +2479,7 @@ Liberation Sans
 LightSim_DiffuseAlbedoTexture
 Line:
 LinePos:
+Liu(
 LoadKV3ObjectInPlace error: %s\n
 LocalServerClientAccess001
 Localize_001
@@ -2474,10 +2488,11 @@ LoggingSystem_Log
 LoggingSystem_RegisterLoggingChannel
 LuEH
 LuOH
-L{HH
 M Zġ؟2h
 M-7?,
-M;t$\bH
+M;l$
+M;u\b
+M;u\bM
 MATCHFRAMEWORK_001
 MD5 match on %s, loading from vcs\n
 MD5 mismatch on %s, will load from vfx instead.\n
@@ -2497,6 +2512,8 @@ M\bM9
 M\f\a\b
 MainPs
 MainVs
+MakeOrthonormalForward
+MakeOrthonormalRight
 MapListService_001
 Marlett
 MatUtilsRenderMesh
@@ -2537,17 +2554,19 @@ MatrixIdentity
 MatrixMultiply
 MatrixScale
 MatrixTranslate
+Mb&A
 Mc'A
+Mc+E9
 Mc,$L
+Mc.H
 Mc4$H
-Mc<$A
-Mc<$E
-Mc<$E9|$
 Mc<$E;|$
 Mc<$H
 Mc>E;~
 McD$
+McO0I
 McZ\fH
+Mc]XM
 Mcl$H1
 Mcl$HI
 Mcn`D
@@ -2557,7 +2576,6 @@ Mct$
 Mcu\fI
 McwHLc
 Mc|$0H
-Mc}h
 Mc~8E9
 Mc̋E
 MemAlloc_AllocFunc
@@ -2586,12 +2604,13 @@ Must run with -shaderstats to use mat_shading_complexity!\n
 MzN;
 MȉP\f
 MȉUċE
-Mȋ6f
 MȋAL
 M̉\bH
 MԉUЋE
 N Hc
 N(Lc
+N,>E
+N0Hc7LcW\bLcO\fH
 N10CMaterial224AsyncStaticComboResult_tE
 N10__cxxabiv115__forced_unwindE
 N10__cxxabiv117__class_type_infoE
@@ -2606,6 +2625,7 @@ N37CTypesafeIntrospectedToKV3TypeManagerILy500152889462E24PostProcessingResource
 N9__gnu_cxx20recursive_init_errorE
 N9__gnu_cxx24__concurrence_lock_errorE
 N9__gnu_cxx26__concurrence_unlock_errorE
+N?͙P?
 NORMAL
 NOTE: Each static combo creates multiple shader programs based on the dynamic combos available.\n\n
 NOTE: Use mat_print_materials instead, and then click on the hyperlink for a given material. That will call this concommand with the correctly formatted argument.\n
@@ -2617,6 +2637,8 @@ N\\tSIc
 N\bAiƕ
 N\bH9H\b
 N\bHc\nH
+N\fIk
+N\fMcF
 N\f\a\b
 N\t;E
 NavGameTest001
@@ -2639,32 +2661,28 @@ Ns\rI
 NtMcn`
 NtMcn`D
 NttRIc
+O(IcT
 O(fA
 O(fA9
 O(t(H
 O8I9
-O<IcG8L
 OCTAL_ESC
 OE0E
 OHI9
-OPHc
 OSGN
-OT1Ʌ
-OTMcgP
+O\b)Ѓ
 O\bE)
+O\bH9
 O\bHc
 O\bRH
-O\bVPQRL
-O\bVRQP
+O\bVM
 O\f\a\b
 O\v\bA
 O\v\bL
 OȀ~8
-OȍD\v
 P D9
 P D9c0
 P D;
-P E1
 P E;e@|
 P E;eH|
 P Hc
@@ -2680,20 +2698,19 @@ P HǃP
 P HǃX
 P Hǃ\b
 P Hǃh
-P I9
 P Ic
+P Ic~
 P IǄ$
-P Iǅ
 P Iǆ
 P L9
 P M9
-P McN
 P Y^
 P fA
 P ǃ0
 P ǅ(
 P ǅP
 P ǅX
+P ǅ`
 P ǅp
 P ǅx
 P(Ic
@@ -2704,15 +2721,13 @@ P8H=vmatt
 P8H=vmatu
 P8H=vmatu!
 P8H=vmatuЋC
-P8H=vtext
+P8H=vtex
 P8Hc
 P8Ic
-P8fA
-P<A9
 P@HcE
 P@Ic
 P@[A\\]
-PAVAWL
+PAWL
 PC SM 5.0 (D3D11)
 PC SM 5.0 (VULKAN)
 PC SM 6.0 (VULKAN)
@@ -2720,7 +2735,7 @@ PC_SM_5_0
 PC_SM_5_0_VULKAN
 PC_SM_6_0_VULKAN
 PH1ɋ~H1ׁ
-PLA9
+PHǅ0
 PLAT_
 POSITION
 PPPP
@@ -2739,6 +2754,7 @@ P\b19\a
 P\b1ɐH
 P\b8U
 P\b;S
+P\bA9
 P\bD9c\\~,
 P\bE9
 P\bHk
@@ -2750,6 +2766,7 @@ P\bfD;\nH
 P\bfF
 P\fH9
 P\f\a\b
+P\r?i
 P`AWA
 PanoramaTextServices001
 PanoramaUIClient001
@@ -2762,7 +2779,6 @@ PerViewConstantBuffer_t
 Pff.
 PhA9
 PhHc
-Pht.
 PhysicsBuilderMgr001
 Pixel Shader
 Pixel Shader Render State
@@ -2811,9 +2827,10 @@ Print loaded textures in ascending size order. Takes an optional substring as an
 Print materials sorted by cost heuristic
 Print materials that have never been used
 Print materials used last frame
+Print procedural textures ( render targets, UAVs, atlases and other textures created by code ) in ascending in memory size order. Takes an optional substring as an argument.
 Print supported rendering modes.
+Print textures that are neither procedural nor virtual, i.e. the ones the mip streaming system manages, in alphabetical order. Takes an optional substring as an argument.
 Program MD5 is out of date with features! %s\n
-Programmer Error! Static combo not loaded!\n
 PropertyEditorSystem_001
 Pu(I
 Pu4H
@@ -2822,12 +2839,10 @@ PxE1
 PxfA
 Q@[H
 Q@f%
-QPMi
 Q\bA]A^A_
 Q\bIc
 Q\f\a\b
 R Iǅ
-R Iǅ(
 R L9
 R11G11B10_FLOAT
 R11_EAC
@@ -2842,8 +2857,10 @@ R8G8B8A8_ETC2_EAC
 R8G8B8_ETC2
 R8G8_UINT
 R8_UINT
+R8_UNORM
 R9G9B9E5_FLOAT
 RD11<
+RD9l
 RDEFH
 RE9\\
 RE;T
@@ -2867,7 +2884,6 @@ RGBA8888_UINT
 RGBX8888
 RH;L
 R\bE1
-R\bH9
 R\bI9
 R\fD9
 R\f\a\b
@@ -2916,7 +2932,6 @@ S4A)
 S4Hc
 S8H9
 S8I9
-S<A9
 S@H9
 SA94
 SHADER_SOURCE
@@ -2928,7 +2943,6 @@ SHLc
 SHcں\n
 SHcލC
 SL9P\brJH
-SLc7H
 SPV_KHR_storage_buffer_storage_class
 SSE and SSE2 are required.
 STAT
@@ -2940,13 +2954,18 @@ SV_Target
 SXH9
 S\\E1
 S\bE1
+S\bHc
 S\bHiɈ
+S\bHk
 S\bHǅ
 S\bIc
 S\bJct2\b
 S\bJct2\bH
 S\f\a\b
+S_DEBUG_ASSERTS_ENABLED
 S_EXECUTION_REORDERING
+S_GPU_DEVICE_ID
+S_GPU_VENDOR_ID
 S_MOLTEN_VK
 S_REVERSE_DEPTH_BUFFER
 S_SHADER_QUALITY
@@ -2955,7 +2974,6 @@ S_SUPPORTS_CLIP_DISTANCE
 S_SUPPORTS_DX_11_1
 S_TOOLS_ENABLED
 S_VR
-S`Mc
 SceneSystem_002
 SceneUtils_001
 SchemaSystem_001
@@ -2969,6 +2987,7 @@ SetColorCorrectionResetable
 SetRenderStateForMode
 SetSubTextureRGBA: Invalid texture id %i\n
 SetTextureRGBA: Invalid texture id %i\n
+Sff.
 Shader
 Shader %s attribute "%s" has inconsistent value or type across multiple shaders of a feature combo! [
 Shader %s doesn't support compile target %s\n
@@ -2980,6 +2999,7 @@ Shader uses push constants but they weren't supplied through attributes (%s)!\n
 ShaderIDColor
 ShaderIDColors
 ShadingComplexity
+SmartPropsSystem_001
 SoundOpSystem001
 SoundOpSystemEdit001
 SoundService_001
@@ -3001,7 +3021,6 @@ SpHcD
 Sp[1
 Sp[D
 Sp[L
-Spawning %d compile jobs\n
 Spew information about font manager fonts
 SrgbGammaToLinear
 SrgbLinearToGamma
@@ -3031,12 +3050,13 @@ Stack depth limit hit (%d)
 Static combos:\n
 StaticCombo
 StaticComboRule
-StaticComboRule(
 StatsService_001
 SteamAudio001
+StreamPutOverflow
 Su1H
 SuTH
 SupportsMappingDimensions
+Suppress
 SxA9
 T \bH
 T$ )
@@ -3046,15 +3066,20 @@ T$ H
 T$ I
 T$ L
 T$ f
-T$ t\nI
+T$ tZ
 T$$A
+T$(A
 T$(I
 T$(L
+T$(f
+T$(tL
 T$09]
 T$0D
 T$0H
 T$0I
 T$0L
+T$0fA
+T$0t>
 T$4E
 T$4I
 T$4~
@@ -3062,6 +3087,7 @@ T$8E
 T$8H
 T$8I
 T$8L
+T$8t0
 T$@A
 T$@H
 T$@I9
@@ -3069,58 +3095,73 @@ T$@L
 T$DH
 T$HE
 T$HH
+T$Hf
 T$PH
 T$PH9
 T$PHc
 T$PHc\\
 T$PI
 T$PIc
+T$PfA
 T$TA
 T$XH
+T$XI
 T$Xu;A
 T$\a9
 T$\aA
+T$\b1
+T$\b9
 T$\bA
+T$\bC
 T$\bD
+T$\bE
 T$\bE1
 T$\bH
 T$\bH9
 T$\bI
 T$\bL
 T$\b[A\\]
+T$\bf
 T$\bt
 T$\bu
 T$\b뺐L
 T$\f9
 T$\fE1
 T$\fH
-T$\f}3
 T$\rD
 T$\vHc
 T$`H
+T$`I
 T$`[
-T$hI
 T$pH
 T$xH
 T0\bI
 T0bf
 T1\bA
+T8 I
+T8(I
+T80A
+T88A
 T8\bH
+T8\bI
 T9bA
+T@>b
 TANGENT
 TĀ|
 TCHfD9Q
 TEXCOORD
+THHF
 TIcL$
 TLS init function for
 TLS wrapper function for
+TPHD
 TP\bL
 TW\bH9
+TW\bI9
 T\bHD
 T\b\bD
 T\f\a\b
-T\r^B
-T\rs\b
+T\rN8
 Tag: %s \n
 TestScriptMgr001
 TextLayout_001
@@ -3155,10 +3196,11 @@ U 1ɋu
 U AR
 U ARD
 U RL
+U t\tI
 U(ZD
 U(tPH
 U19\b
-U@Mi
+U>\aSY>
 UE19
 UE1\t
 UE1ɉ
@@ -3198,7 +3240,6 @@ UtlVectorMemory_CalcNewAllocationCount
 UtlVectorMemory_FailedAllocation
 UuLH
 Uv scale variable %s referenced by texture %s doesn't evaluate to a constant value at material load time (%s).\n
-UȈP8A
 UȉȈE
 Uȋ@\b
 UԉP,H
@@ -3206,14 +3247,15 @@ U؉P\bH
 U؉ȈE
 U؋M܅
 U㗤\n\ahD
+V %d virtual texture(s), counted at 0K: their pixels are in the VTPageAtlas, which is listed on its own\n
 V 8P
+V*??%,?
 V0Hc
 V2g%
 V5t\b
 V88P8
 V89P8
 V8Lc+L
-V@IcW
 VApplication001
 VAsyncFileSystem2_001
 VAvi001
@@ -3235,6 +3277,7 @@ VFX_PROGRAM_MAX
 VFX_RULE_ALLOW_NUM
 VFX_RULE_CHILD_OF
 VFX_RULE_REQUIRES
+VFX_RULE_SUPPRESS
 VFX_RULE_TYPE_DYNAMIC
 VFX_RULE_TYPE_FEATURE
 VFX_RULE_TYPE_MAX
@@ -3243,6 +3286,7 @@ VFX_RULE_TYPE_UNKNOWN
 VFX_RULE_UNKNOWN
 VFileSystem017
 VHHc
+VHIcW
 VIEW_FADE_CONSTANT_COLOR
 VIEW_FADE_MOD2X
 VIEW_FADE_MODULATE
@@ -3251,8 +3295,6 @@ VMatError
 VMaterialSystem2_001
 VMediaFoundation001
 VP4003
-VPHc
-VPHi
 VPhysics2_Interface_001
 VProcessUtils002
 VProfService_001
@@ -3269,14 +3311,14 @@ VUUU
 VUUUD
 VUUUH
 VWebm001
+VXHc
 VXs$A
 V\bE1
 V\bH9P\b
 V\bHc\nH
-V\bIc
 V\bIc>L
-V\bIcǿ(
 V\f\a\b
+V\f}*
 V\rH}
 V_DoubleToString_Unsafe
 V_FixDoubleSlashes
@@ -3363,6 +3405,7 @@ V_snprintf
 V_sscanf
 V_stricmp_fast
 V_strspn
+V_strtoi64
 V_strtoui64
 V_tanf
 V_towupper32
@@ -3400,12 +3443,12 @@ W0Hc
 W0]7
 W0f%
 W@E1
-W@Hǅ
 WARNING: Failed to convert introspected block for file: %s\n
 WARNING: Invalid resource version (%d): %s\n
 WARNING: Resource name "%s" has the incorrect extension "%s" for the specified resource type (expected "%s")!\n
 WARNING: Trying to create a CRenderContextPtr without a valid context.\n
-WPHc
+WT1҅
+WTMcgP
 W\bB!D
 W\bE1
 W\bHc
@@ -3416,34 +3459,33 @@ Warning
 Wff.
 WorldRendererMgr001
 Wp|z
+Wxt\aI
 X D9
-X,A9
-XDA9
+X E1
 XHc1A
 XHcE(H
 XHc\tA
 XHc\tH
-XXE1
 XZA\\A]A^A_]
-XZHi
+XZMi
 XZ말H
 X[A\\A]A^A_]
 X[A\\A]A^A_]ÐH
-X[A\\A]A^A_]鵵
 X[A\\A]]
 X[A\\A]]Ð
 X\bHc
 X\f\a\b
+X\rhM
 XpVH
-Y>t$7?
-YD$,
-YD$,A
-YD$,L
-YE,E
+YD$0
+YD$0A
+YD$0L
+YE0E
 YEȋU
-YL$,
+YL$0
 Y\f\a\b
-Y\r[C
+Y\rK9
+Y\rox
 Y^t\tH
 Y}h"
 Z(J:
@@ -3451,51 +3493,54 @@ ZN37CTypesafeIntrospectedToKV3TypeManagerILy1952542070E22MaterialResourceData_tE
 ZN37CTypesafeIntrospectedToKV3TypeManagerILy1952542070E22MaterialResourceData_tE24DeallocateDestroyCleanupEPvP25IResourceDeallocatorUtilsE17CDeallocatorUtils
 ZN37CTypesafeIntrospectedToKV3TypeManagerILy500152889462E24PostProcessingResource_tE15AllocateAndLoadER23CKV3TransferLoadContextPK21ResourceBindingBase_tP29IRD_RegisterResourceDataUtilsE15CAllocatorUtils
 ZN37CTypesafeIntrospectedToKV3TypeManagerILy500152889462E24PostProcessingResource_tE24DeallocateDestroyCleanupEPvP25IResourceDeallocatorUtilsE17CDeallocatorUtils
+ZYt-L
 Z\fA9X
 Z\f\a\b
 ZtpH
 ZvXH
-Z뾋=N
 [ mat_print_material_info ] Error! Cannot find material '%s'!\n
 [%u]
 [...]=
 [5,¸Yi
-[8L9ȝ\b
 [A\\A
 [A\\A]
 [A\\A]A^A_]
 [A\\A]A^A_]A
+[A\\A]A^A_]H
 [A\\A]A^A_]Ã
 [A\\A]A^A_]Å
 [A\\A]A^A_]Ë
+[A\\A]A^A_]Ë=L
 [A\\A]A^A_]Ð
 [A\\A]A^A_]Ð1
 [A\\A]A^A_]Ð1Ʌ
-[A\\A]A^A_]ÐD
+[A\\A]A^A_]Ð;p
 [A\\A]A^A_]ÐE;
 [A\\A]A^A_]ÐH
 [A\\A]A^A_]ÐI
 [A\\A]A^A_]ÐL
-[A\\A]A^A_]ÐMc.H
+[A\\A]A^A_]ÐMcn
 [A\\A]A^A_]Ðf
 [A\\A]A^A_]ø
 [A\\A]A^A_]ÿ
-[A\\A]A^A_]鯅
-[A\\A]A^A_]麔
+[A\\A]A^A_]雇
+[A\\A]A^A_]鰓\n
 [A\\A]A^]
 [A\\A]A^]Ã@\b
 [A\\A]A^]É
 [A\\A]A^]Ð
 [A\\A]A^]Ð1
+[A\\A]A^]ÐD:\b
 [A\\A]A^]ÐH
 [A\\A]A^]ÐL
 [A\\A]A^]ÐM
-[A\\A]A^]鵙
+[A\\A]A^]预
 [A\\A]D
 [A\\A]H
 [A\\A]]
 [A\\A]]H
 [A\\A]]É
+[A\\A]]Ë=ژ
 [A\\A]]Ë~\b
 [A\\A]]ÐH
 [A\\A]]ÐI
@@ -3503,19 +3548,19 @@ Z뾋=N
 [A\\A]]ú
 [A\\A]]ÿX
 [A\\H
-[A\\J
 [A\\L
 [A\\]
 [A\\]H
 [A\\]Hk
-[A\\]Ë
 [A\\]Ð
 [A\\]ÐD
 [A\\]ÐH
 [A\\]ÿp
-[A\\]髏
+[A\\]鋧
+[A\\]隐\b
 [Dynamic shader compile] Reloading %d material(s)\n
 [Dynamic shader compile] Warning: %d material(s) are not reloaded because they have outstanding file I/O requests\n
+[E19
 [Error Resource]
 [Fallback Resource]
 [H\t
@@ -3537,17 +3582,22 @@ Z뾋=N
 [t(H
 \\$ D
 \\$ E
-\\$ E1
 \\$ M
+\\$ f
 \\$$HcU
 \\$(I
 \\$0D
 \\$0H
+\\$0f
 \\$@E
-\\$@H
+\\$@f
+\\$@fA
+\\$HH9
+\\$HL
 \\$PH
 \\$PH9
 \\$PI
+\\$Pf
 \\$\bA
 \\$\bE
 \\$\bE1
@@ -3559,8 +3609,8 @@ Z뾋=N
 \\$\bXZH
 \\7\b!
 \\B\bH
-\\H\bM
-\\HhL
+\\PHI
+\\P\bA
 \\P\bL
 \\\a\b1
 \\\b\b!
@@ -3571,14 +3621,15 @@ Z뾋=N
 \\r\\n
 \\src\\shaders\\
 \\tr@
-\\Ƀ}0
 \a</u
 \a<=tY<\r
+\a<\nth<\rtdE
 \a<\ru\tA
+\a<\rw
 \a<\rwDI
-\aARM
 \aAVD
 \aA]A^]H
+\aE;g
 \aH9x\bt[H
 \aH\tƄ
 \aH\tǄ
@@ -3586,7 +3637,7 @@ Z뾋=N
 \aI\tD
 \aI\tƄ
 \a[A\\A^]
-\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a
+\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a\a[
 \a\a\a\af
 \at 1
 \atWI
@@ -3597,9 +3648,10 @@ Z뾋=N
 \atrA
 \au!A
 \au'A
+\au=A
 \au\tE
 \au\vH
-\aw@@
+\awD@
 \awqH
 \axhL
 \a{?,
@@ -3625,17 +3677,17 @@ Z뾋=N
 \bE1:
 \bE1:\r
 \bE1\t
+\bE1ɹ
 \bE\vG\n
 \bE\vJ\n
 \bE\vX
 \bF\vA
 \bG#+
-\bH;5<`\b
+\bH;5$
 \bH\t\nH
 \bH\v
 \bH\v8
 \bH\vu
-\bHcE
 \bHcO
 \bHc\a
 \bHc_
@@ -3645,7 +3697,6 @@ Z뾋=N
 \bIcP
 \bIcЋE
 \bIcыE
-\bIǄ$
 \bJ\vL
 \bK\vG
 \bL9e
@@ -3662,6 +3713,7 @@ Z뾋=N
 \b[A\\A]]
 \b[A\\A]]Ã
 \b[A\\A]]Ð
+\b[A\\A]]ÐA
 \b[A\\A]]ÐH
 \b[A\\A]]ÐI
 \b[]A\\A]
@@ -3671,25 +3723,27 @@ Z뾋=N
 \b\t\n\v
 \bc Lq
 \bfD;\nH
+\bt$A
 \bt%A
 \bt&A
 \bt2H
 \bt<H
 \bt\bH
 \bt\bL
+\bt\eD
 \bt\t[A\\A]A^]
-\btaIcT
+\btpIcT
+\btsA
 \btv;A(
-\btvH
 \bu2I
-\buDH
 \buFD
-\buv1
+\bus1
 \bv:H
 \bvVH
 \b~6I
 \b~7H
 \b~wH
+\b~}H
 \b􀀊\b􀀊\b
 \b􀀊\t䀁
 \b􀀪\n䀁
@@ -3702,18 +3756,15 @@ Z뾋=N
 \euYH
 \euvHc
 \euyH
-\f!uӄ
-\f$txA
+\f$tyA
 \f2I9
 \f3H9
-\f>A9
+\f4H9
 \f@Hc
 \f@Ic
 \fAVD
-\fILc
 \fKA9<
 \fOH9
-\f\aA9
 \f\aD;a\b
 \f\a\b
 \f\a\b$
@@ -3724,23 +3775,21 @@ Z뾋=N
 \f\r\f\rf
 \f\vH9
 \ft:;A8
-\ft\n%
 \fu0E
 \fu^H
-\fv%H
-\fv*H
+\fv$H
 \fv@H
 \fvMc
 \fv\aH
-\fw(f
-\fw]H
-\fwoI
-\fwqf
+\fv\rI
+\fw&H
+\fwVI
+\fwWH
+\fw^H
+\fwdB
+\fwmI
 \fwrfD
 \fwzf
-\fw|H
-\fw~H
-\fw~f
 \f~9fA
 \f􀀚\v䀁
 \f􀁆\v􇀆\r􆀀
@@ -3753,6 +3802,7 @@ Z뾋=N
 \n%6s %-50s %5s %5s %5s %5s %5s %5s %5s %10s\n
 \n%s File\n
 \n*** %s "%s" in %s does not follow the 0..N format!\n\n
+\n*** %s "%s" in %s has a bad range: %s!\n\n
 \n*** %s "%s" in %s has max(%d) > 254!\n\n
 \n*** %s "%s" in %s has min(%d) < 0!\n\n
 \n*** %s "%s" in %s has min(%d) > max(%d)!\n\n
@@ -3773,7 +3823,7 @@ Z뾋=N
 \n*** Error masking unused parts! Unknown text found. This is usually caused by a '{' or '}' not tabbed properly or an invalid declaration at the global scope. (line %d):\n%s\n\n
 \n*** Error parsing ==N for rule in %s! First arg to RequiresN cannot be ==0!\n\n
 \n*** Error parsing ==N for rule in %s! Not allowed on ChildOf. Use RequiresN instead.\n\n
-\n*** Error parsing ==N for rule in %s!\n\n
+\n*** Error parsing ==N for rule in %s: %s!\n\n
 \n*** Error parsing =N for mode %s in %s!\n\n
 \n*** Error parsing AllowN rule in %s! N must be >= 0!\n\n
 \n*** Error parsing AllowN rule in %s!\n\n
@@ -3793,6 +3843,9 @@ Z뾋=N
 \n*** Error! Could not find static combo with name "%s" in %s!\n\n
 \n*** Error! Could not find static or dynamic combo with name "%s" in %s!\n\n
 \n*** Error! Rule error string must be quoted in %s!\n\n
+\n*** Error! Suppress rule in %s can only suppress combos of its own type! Put the condition first and suppress same-tier combos, or use RequiresN.\n\n
+\n*** Error! Suppress rule in %s must only suppress combos that are 0..x!\n\n
+\n*** Error! Suppress rule in %s needs a condition followed by at least one combo to suppress!\n\n
 \n*** Error! Too many args found in rule in %s!\n\n
 \n*** Error! Too many or too few arguments to a rule in %s!\n\n
 \n*** Feature "%s" in %s does not follow the 0..N format!\n\n
@@ -3811,16 +3864,16 @@ Z뾋=N
 \n*** Unable to parse Version in HEADER section of %s!\n\n
 \n*** Unknown rule "%s" in %s!\n\n
 \n*** Unknown text found in FEATURES section in %s: "%s"\n\n
-\n*** material2.cpp(1536): Error! Trying to load material "%s" without any params!\n
-\n*** vfx_common.cpp(1369): Error opening file "%s"!\n\n
-\n*** vfx_common.cpp(1446): Error opening file "%s"!\n\n
-\n*** vfx_common.cpp(5825): Error opening file "%s"!\n\n
-\n*** vfx_common.cpp(5975): Error opening include file in features list"%s"!\n\n
-\n*** vfx_common.cpp(6016): Error opening file "%s"!\n\n
-\n*** vfx_common.cpp(6330): Error opening file "%s"!\n\n
-\n*** vfx_common.cpp(6376): Error opening file "%s"!\n\n
-\n*** vfx_common.cpp(6415): Error opening file "%s"!\n\n
-\n*** vfx_common.cpp(6519): Error opening file "%s"!\n\n
+\n*** material2.cpp(1600): Error! Trying to load material "%s" without any params!\n
+\n*** vfx_common.cpp(1484): Error opening file "%s"!\n\n
+\n*** vfx_common.cpp(1561): Error opening file "%s"!\n\n
+\n*** vfx_common.cpp(6339): Error opening file "%s"!\n\n
+\n*** vfx_common.cpp(6489): Error opening include file in features list"%s"!\n\n
+\n*** vfx_common.cpp(6531): Error opening file "%s"!\n\n
+\n*** vfx_common.cpp(6845): Error opening file "%s"!\n\n
+\n*** vfx_common.cpp(6891): Error opening file "%s"!\n\n
+\n*** vfx_common.cpp(6930): Error opening file "%s"!\n\n
+\n*** vfx_common.cpp(7042): Error opening file "%s"!\n\n
 \n//-----------------------------------\n
 \n9y$u
 \n<\et
@@ -3828,6 +3881,7 @@ Z뾋=N
 \nA;\t
 \nH?+
 \nMS,\nVS_MS_RTX
+\nMne
 \nPS_RENDER_STATE
 \nRTX
 \nSkipped %d%% of all combos\n
@@ -3842,21 +3896,22 @@ Z뾋=N
 \n\t%02i%% (%i/%i)
 \n\t\tDynamic:
 \n\v\n\vf
+\n]>|
 \nmaterial2.cpp(119): ERROR! Can't load vfx_dx dll, dynamic shader compile unavailable!\n
-\nmaterial2.cpp(1531): Error! Material "%s" is already loaded!\n
-\nmaterial2.cpp(1562): Cannot find shader entry in material "%s"! Using error.vfx!\n
-\nmaterial2.cpp(1602): Error creating shader %s and cannot load error.vfx instead!\n
-\nmaterial2.cpp(1641): Error creating fallback shader %s for %s for material %s! A fallback shader cannot fallback to a different shader!\n
-\nmaterial2.cpp(1653): Error creating fallback shader %s for %s for material %s!\n
-\nmaterial2.cpp(1657): Error creating fallback shader %s for %s and cannot load error.vfx instead!\n
-\nmaterial2.cpp(1684): Error creating shader %s for material %s!\n
-\nmaterial2.cpp(1689): Error creating shader %s and cannot load error.vfx instead!\n
-\nmaterial2.cpp(1699): Error creating static combos for shader %s and error.vfx instead!\n
-\nmaterial2.cpp(2721): Dynamic shader compile failed for %s in material "%s"!\n
-\nmaterial2.cpp(3450): All bad! The error material failed in dynamic shader compile!\n
-\nmaterial2.cpp(4329): Find a graphics programmer! Trying to bind a "%s" shader that doesn't exist! for %s\n
+\nmaterial2.cpp(1595): Error! Material "%s" is already loaded!\n
+\nmaterial2.cpp(1626): Cannot find shader entry in material "%s"! Using error.vfx!\n
+\nmaterial2.cpp(1666): Error creating shader %s and cannot load error.vfx instead!\n
+\nmaterial2.cpp(1705): Error creating fallback shader %s for %s for material %s! A fallback shader cannot fallback to a different shader!\n
+\nmaterial2.cpp(1717): Error creating fallback shader %s for %s for material %s!\n
+\nmaterial2.cpp(1721): Error creating fallback shader %s for %s and cannot load error.vfx instead!\n
+\nmaterial2.cpp(1748): Error creating shader %s for material %s!\n
+\nmaterial2.cpp(1753): Error creating shader %s and cannot load error.vfx instead!\n
+\nmaterial2.cpp(1763): Error creating static combos for shader %s and error.vfx instead!\n
+\nmaterial2.cpp(3397): All bad! The error material failed in dynamic shader compile!\n
+\nmaterial2.cpp(4310): Find a graphics programmer! Trying to bind a "%s" shader that doesn't exist! for %s\n
 \ntVH
 \ntX;A0
+\nvfx_common.cpp(8992): Dynamic shader compile failed for %s in "%s"!\n
 \nw<H
 \n}\by
 \nף;,
@@ -3866,6 +3921,8 @@ Z뾋=N
 \n􀀚\v䀁
 \n􀀺\n􀀪\n
 \n􀁆\t䀂
+\r)\r\b
+\rSh\r
 \r\r\r\r\r\r\r
 \r\r\r\r\r\ȓ
 \r\r\r\rf
@@ -3877,15 +3934,14 @@ Z뾋=N
 \rwXH
 \rw\nI
 \rwxH
-\ryV\f
 \r􀁆\f􇀆\a􆀀\t􀀺\b
 \t ();,
 \t ();,\n\r
+\t ,\n\r
 \t The lexer was matching from line %d, offset %d, which\n\t
 \t%.*s\n
 \t%s\n
 \t;Hdt\fH
-\tA$H
 \tE\vC
 \tHc\n
 \tHc\nH
@@ -3893,13 +3949,13 @@ Z뾋=N
 \tPlA
 \tS$H
 \tV#{
-\tVlA
 \t\f\a\b
 \t\r\n
 \t\tStatic:
 \t\t\n\n\t\t\t
 \t\t\t\tf
 \ta\n\f\a\bA\v
+\trlA
 \ttg;A,
 \tu+H
 \tvtH
@@ -3915,6 +3971,7 @@ Z뾋=N
 \t􀀪\t􀀺\n
 \t􀀺\b􀀚\n􀀪\n
 \t􀀺\v􀀪\t􀀚\t
+\v=pf
 \v[A\\]
 \v\v\r\r\r
 \v\v\v\v
@@ -3922,7 +3979,6 @@ Z뾋=N
 \v\v\v\vf
 \vt!f
 \vtI;A4
-\vwfH
 \vw͋D
 \vw͋L
 \vwϋD
@@ -3932,11 +3988,14 @@ Z뾋=N
 \vwӋD
 \v􀀚\v䀁
 \v􀀺\v䀁
+] E1
 ]+$c
 ]A\\A]A^A_
 ]A\\L
 ]HcK
 ]\bHc
+]\bL9
+]\bLc
 ]\bMk
 ]\bXZH
 ]\f\a\b
@@ -3950,20 +4009,19 @@ Z뾋=N
 ^Xu:A
 ^\bIc
 ^\bXZH
-^\bff.
 ^\f\a\b
+^\rEM
 ^^^ Attribute-based texture warning is now disabled after outputting 50 warnings.\n
 ^^^ Constant buffer warning is now disabled after outputting 50 warnings.\n
 ^_뷐H
-^_뿐H
 ^u;H
+_$Hc
 _(;_8
 _(A^
 _(E1
 _(E;_8D
 _)^طj%Qd
 _0Lc
-_0rf
 _AXH
 _Complex
 _Float
@@ -3976,7 +4034,6 @@ _ITM_memcpyRnWt
 _ITM_memcpyRtWn
 _ITM_registerTMCloneTable
 _Imaginary
-_LE1
 _MakeGlobalSymbolCaseSensitive
 _PLc
 _V_SetExtension
@@ -4106,7 +4163,7 @@ _ZN10CUtlBuffer18AddNullTerminationEv
 _ZN10CUtlBuffer21CheckArbitraryPeekGetEiRi
 _ZN10CUtlBuffer3GetEPvi
 _ZN10CUtlBuffer3PutEPKvi
-_ZN10CUtlBuffer4SwapERS_b
+_ZN10CUtlBuffer4SwapERS_
 _ZN10CUtlBuffer6PrintfEPKcz
 _ZN10CUtlBuffer7GetUpToEPvi
 _ZN10CUtlBuffer7PeekGetEii
@@ -4129,6 +4186,7 @@ _ZN10CUtlString6AppendEPKc
 _ZN10CUtlString6AppendEPKci
 _ZN10CUtlString6FormatEPKcz
 _ZN10CUtlString7AcquireEP13CBufferStringb
+_ZN10CUtlString7FormatVEPKcP13__va_list_tag
 _ZN10CUtlString9SetDirectEPKci
 _ZN10CUtlString9SetLengthEi
 _ZN10CUtlStringC1ERK13CBufferString
@@ -4788,6 +4846,7 @@ _ZNSt15underflow_errorD0Ev
 _ZNSt15underflow_errorD1Ev
 _ZNSt15underflow_errorD2Ev
 _ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE10_M_destroyEv
+_ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE10_M_releaseEv
 _ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE24_M_release_last_use_coldEv
 _ZNSt16invalid_argumentC1EPKc
 _ZNSt16invalid_argumentC1ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
@@ -5174,6 +5233,7 @@ _ZnwmSt11align_val_tRKSt9nothrow_t
 _\bE1
 _\bHcC0
 _\bIcE
+_\bMk
 _\f\a\b
 __Attribute__
 __Expression__
@@ -5240,7 +5300,7 @@ _vViewportToGBufferRatio
 `IcM\bHc
 `[A\\A]A^]
 `[A\\]
-`\\~\bA
+`\bLi
 `\bfD
 `\b~Ff
 `\f[A\\]
@@ -5294,17 +5354,13 @@ buffer
 byte
 byteaddressbuffer
 c H9
-c$Ic
 c$xe
 c(t\tI
-c8f.
 cB}PfD
 cHD;cXH
-cHE1
 cHHcS@M
 c\bI9
 c\bLc
-c\bXZu
 c\bY^H
 c\f\a\b
 c`tDfD
@@ -5333,6 +5389,7 @@ cs_6_0
 cwaI
 d$ H
 d$ M
+d$ fA
 d$81
 d$8H
 d$8L
@@ -5342,7 +5399,9 @@ d$\bI
 d$hA
 d1\bI
 dHHA
+dN>+
 d\a\b!
+d\b\bH
 d\f\a\b
 debug_font_name
 debug_font_size
@@ -5380,6 +5439,8 @@ error.vfx
 error.vmat
 error.vmat_c
 exp2
+expected an integer or the name of a #define
+expected an integer, got "%.*s" ( #define names can be used in combo declarations and rules, but not in FEATURES )
 externaldescriptorset
 e؉CHH
 f9Y`uDf9Ybt;H
@@ -5398,12 +5459,12 @@ f;P(
 f;S@
 f;S@s
 f;Y`u.f9Ybt%[1
-f;Y`u\nf9Yb
-f;Y`ubf9YbtYH
 f;Z`tYHk
 f;Z`uEf9Zbt<H
 f;\ntzfD
 f;^`t*
+f;^`u\nf9^b
+f;^`uaf9^btXH
 f;p`
 f;p`t
 f;pbt
@@ -5424,9 +5485,9 @@ fA;\a
 fD91
 fD9M
 fD9U
+fD9X
 fD9]
 fD9e
-fD9k0fD
 fD9m
 fD9q
 fD9}
@@ -5436,13 +5497,15 @@ fD;c@
 fD;c@f
 fD;c`fD
 fD;e
+fD;k0fD
 fD;u\t
 fE)o
 fE9c
 fE;#
-fPMi
+fE;|$
 f\bE1
 f\bH9
+f\bIc
 f\bL9
 f\f\a\b
 f`1S
@@ -5478,7 +5541,7 @@ fЏ);0
 g E9
 g SH
 g(D;g8D
-gPSfI
+g4SH
 g\f\a\b
 g_bFogTypeEnabled
 g_bOtherFxEnabled
@@ -5609,16 +5672,14 @@ gs_6_0
 guard variable for
 h8L9
 h:CA
+h<0w
 h=2\f(3
 hHc1A
-hHcG
-hHcӾ
-hPHc
-hPIc@HH
 h[A\\A]A^A_]
 h[A\\A]A^A_]Ã
 h[A\\A]A^A_]Ð
 h[A\\A]A^A_]ÐL
+h[A\\A]A^A_]ÿ
 h[A\\A]]
 h[A\\]H
 h\bE!
@@ -5634,8 +5695,8 @@ https://H
 iEJA+
 iNĳH
 iNĳǅ
-iPMcN
 i\f\a\b
+ih> Gl>\f.p>
 initializer for module
 int16
 int2
@@ -5653,18 +5714,20 @@ j\f\a\b
 java Class for
 java resource
 jw'H
-k0~VfA
+k0~ffA
 kHD;kXD
 k\bAYAZ
 k\b_AX
 k\f\a\b
-k`I9
 kxE1
 l bug reH
 l$ A
 l$ I
 l$!A9
+l$(D
+l$(H
 l$(t
+l$0D
 l$8E
 l$8L
 l$HE1
@@ -5679,9 +5742,14 @@ l$\bXZu
 l$\bY^
 l$\tA9
 l$hE;
+l$h覉
 l)\bH
 l2\bH
+lHHF
+lH\bA
 lL`^
+lPHD
+lPHM
 l\f\a\b
 l\f\bO
 l\n\bK
@@ -5939,6 +6007,8 @@ mat_print_materials %s -show_none
 mat_print_materials_last_frame
 mat_print_materials_unused
 mat_print_modes
+mat_print_non_virtual_textures
+mat_print_procedural_textures
 mat_print_shader_info
 mat_print_shader_info %s -show_used_combos
 mat_print_shader_info %s -show_used_combos -%s
@@ -5953,6 +6023,7 @@ mat_reinitmaterials
 mat_reloadshaders
 mat_reset_material_costs
 mat_set_shader_quality
+mat_shader_asserts
 mat_shader_cache
 mat_shading_complexity
 mat_shading_complexity_color
@@ -5962,40 +6033,42 @@ mat_skip_static_const_eval
 mat_warn_bad_modes
 material
 material2.cpp
-material2.cpp(1598): Error creating shader %s for material %s!\n
-material2.cpp(2408): DxSupportLevel %d not supported!\n
-material2.cpp(3035): Failed call to FindOrLoadStaticComboData()!\n
+material2.cpp(1662): Error creating shader %s for material %s!\n
+material2.cpp(2475): DxSupportLevel %d not supported!\n
+material2.cpp(2974): Failed call to FindOrCreateStaticComboDataInCache()!\n
 material2.cpp(643): Material "%s" is requesting a bad mode "%s"!\n
-material2.cpp(767): Error! Material "%s" doesn't have any valid layers to get the CVsInputSignatureVector from!\n
-material2.cpp(799): Error! Material "%s" doesn't have a CVsInputSignatureVector!\n
-material2.cpp(817): Error! Material "%s" has invalid signature index %d!\n
-material2.cpp:2660
-material_shader_params.cpp(1025): Invalid data type for render state variable %s in material "%s"!\n
-material_shader_params.cpp(1078): Invalid data type for render state variable %s in material "%s"!\n
-material_shader_params.cpp(1085): Error evaluating expression for render state variable %s in material "%s"!\n
-material_shader_params.cpp(1091): Invalid variable source type for render state variable %s in material "%s"!\n
-material_shader_params.cpp(1150): Unsupported render state type in material "%s"!\n
-material_shader_params.cpp(1168): Sampler index %d out of bounds for "%s" in material "%s"!\n
-material_shader_params.cpp(1241): Unsupported sampler state type for "%s" in material "%s"!\n
-material_shader_params.cpp(1323): Could not bind constant buffer "%s" because the constant buffer handle was invalid in material "%s"!\n
-material_shader_params.cpp(1341): Error setting constant for REGISTER_FLOAT4 for "%s" in material "%s"! Talk to a programmer!\n
-material_shader_params.cpp(1439): Trying to set VFX_VARIABLE_TYPE_MATRIX_* but this isn't supported yet! In material "%s"\n
-material_shader_params.cpp(1444): Bad VFX_VARIABlE type for VFX_VARIABLE_SOURCE_SET_BY_ARTIST %s in material "%s"!\n
-material_shader_params.cpp(1739): Invalid data type for render state variable %s in material "%s"!\n
-material_shader_params.cpp(1780): Invalid data type for render state variable %s in material "%s"!\n
-material_shader_params.cpp(1866): Invalid data type for render state variable %s in material "%s"!\n
-material_shader_params.cpp(1874): Invalid variable source type for render state variable %s in material "%s"!\n
-material_shader_params.cpp(1939): Unsupported render state type in material "%s"!\n
-material_shader_params.cpp(2087): Unsupported render state in material "%s"!\n
-material_shader_params.cpp(2160): Unsupported sampler state type for "%s" in material "%s"!\n
-material_shader_params.cpp(2182): Unsupported sampler state type for "%s" in material "%s"!\n
-material_shader_params.cpp(388): Trying to set VFX_VARIABLE_TYPE_MATRIX_* but this isn't supported yet! In material "%s"\n
-material_shader_params.cpp(393): Bad VFX_VARIABlE type for VFX_VARIABLE_SOURCE_SET_BY_ARTIST %s in material "%s"!\n
-material_shader_params.cpp(448): Trying to set VFX_VARIABLE_TYPE_MATRIX_* but this isn't supported yet! In material "%s"\n
-material_shader_params.cpp(453): Bad VFX_VARIABlE type for VFX_VARIABLE_SOURCE_SET_BY_ARTIST %s in material "%s"!\n
-material_shader_params.cpp(530): Trying to set VFX_VARIABLE_TYPE_MATRIX_* but this isn't supported yet! In material "%s"\n
-material_shader_params.cpp(535): Bad VFX_VARIABlE type for VFX_VARIABLE_SOURCE_SET_BY_ARTIST %s in material "%s"!\n
-material_shader_params.cpp(980): Unknown variable type for %s in material "%s"!\n
+material2.cpp(780): Error! Material "%s" doesn't have any valid layers to get the CVsInputSignatureVector from!\n
+material2.cpp(812): Error! Material "%s" doesn't have a CVsInputSignatureVector!\n
+material2.cpp(830): Error! Material "%s" has invalid signature index %d!\n
+material_shader_params.cpp(1036): Invalid data type for render state variable %s in material "%s"!\n
+material_shader_params.cpp(1089): Invalid data type for render state variable %s in material "%s"!\n
+material_shader_params.cpp(1096): Error evaluating expression for render state variable %s in material "%s"!\n
+material_shader_params.cpp(1102): Invalid variable source type for render state variable %s in material "%s"!\n
+material_shader_params.cpp(1161): Unsupported render state type in material "%s"!\n
+material_shader_params.cpp(1179): Sampler index %d out of bounds for "%s" in material "%s"!\n
+material_shader_params.cpp(1252): Unsupported sampler state type for "%s" in material "%s"!\n
+material_shader_params.cpp(1292): Specialization constant "%s" in material "%s" is driven by a DynamicParams expression, which cannot be baked into the shader.\n
+material_shader_params.cpp(1301): Could not evaluate specialization constant "%s" in material "%s"! Talk to a programmer!\n
+material_shader_params.cpp(1320): Specialization constant "%s" (id %u) in material "%s" resolved to both %u and %u.\n
+material_shader_params.cpp(1412): Could not bind constant buffer "%s" because the constant buffer handle was invalid in material "%s"!\n
+material_shader_params.cpp(1430): Error setting constant for REGISTER_FLOAT4 for "%s" in material "%s"! Talk to a programmer!\n
+material_shader_params.cpp(1528): Trying to set VFX_VARIABLE_TYPE_MATRIX_* but this isn't supported yet! In material "%s"\n
+material_shader_params.cpp(1533): Bad VFX_VARIABlE type for VFX_VARIABLE_SOURCE_SET_BY_ARTIST %s in material "%s"!\n
+material_shader_params.cpp(1828): Invalid data type for render state variable %s in material "%s"!\n
+material_shader_params.cpp(1869): Invalid data type for render state variable %s in material "%s"!\n
+material_shader_params.cpp(1955): Invalid data type for render state variable %s in material "%s"!\n
+material_shader_params.cpp(1963): Invalid variable source type for render state variable %s in material "%s"!\n
+material_shader_params.cpp(2028): Unsupported render state type in material "%s"!\n
+material_shader_params.cpp(2176): Unsupported render state in material "%s"!\n
+material_shader_params.cpp(2249): Unsupported sampler state type for "%s" in material "%s"!\n
+material_shader_params.cpp(2271): Unsupported sampler state type for "%s" in material "%s"!\n
+material_shader_params.cpp(399): Trying to set VFX_VARIABLE_TYPE_MATRIX_* but this isn't supported yet! In material "%s"\n
+material_shader_params.cpp(404): Bad VFX_VARIABlE type for VFX_VARIABLE_SOURCE_SET_BY_ARTIST %s in material "%s"!\n
+material_shader_params.cpp(459): Trying to set VFX_VARIABLE_TYPE_MATRIX_* but this isn't supported yet! In material "%s"\n
+material_shader_params.cpp(464): Bad VFX_VARIABlE type for VFX_VARIABLE_SOURCE_SET_BY_ARTIST %s in material "%s"!\n
+material_shader_params.cpp(541): Trying to set VFX_VARIABLE_TYPE_MATRIX_* but this isn't supported yet! In material "%s"\n
+material_shader_params.cpp(546): Bad VFX_VARIABlE type for VFX_VARIABLE_SOURCE_SET_BY_ARTIST %s in material "%s"!\n
+material_shader_params.cpp(991): Unknown variable type for %s in material "%s"!\n
 material_type_manager.cpp
 material_type_manager.cpp(52): GetErrorMaterial() called before error material exists!\n
 materials
@@ -6019,12 +6092,12 @@ materialsystem.skip_mode_RTX
 materialsystem.skip_mode_VS
 materialsystem2
 materialsystem2.cpp
-materialsystem2.cpp(1067): ERROR!!! Shaders not freed before shader reload! (See spew above)\n\n
+materialsystem2.cpp(1073): ERROR!!! Shaders not freed before shader reload! (See spew above)\n\n
 materialsystem2.cpp(153): ERROR! Empty shader mode string found! Use "Default" instead!\n
 materialsystem2.cpp(169): ERROR! Shader mode "%s" has unsupported type "%s" specified gameinfo.gi!\n
-materialsystem2.cpp(3221): pVfx == NULL!\n
-materialsystem2.cpp(3270): pVfx == NULL!\n
-materialsystem2.cpp(3504): Error reading index!\n
+materialsystem2.cpp(3302): pVfx == NULL!\n
+materialsystem2.cpp(3351): pVfx == NULL!\n
+materialsystem2.cpp(3585): Error reading index!\n
 materialsystem2.cpp(486): ERROR!!! Materials not released by other systems on shutdown! (See spew above)\n
 materialsystem2.cpp(491): ERROR!!! Shaders not freed on shutdown, likely due to unreleased materials! (See spew above)\n
 materialsystem2.cpp(505): GetErrorMaterial() called when m_pMaterialTypeManager == NULL!\n
@@ -6049,7 +6122,6 @@ nM(f
 nM0f
 n\bA]A^H
 n\bA_XH
-n\bLc
 n\f\a\b
 n^@H
 name
@@ -6072,19 +6144,25 @@ null
 nv@f
 nvironmentmapped
 o ATSH
-o%ls
-o%sv
-o%{t
-o4ATL
-o56v
-o5Dv
-o5Mq
-o5\ew
-o5du
-o5}s
-o="t
-o=Fv
-o=Yv
+o% 9
+o%h\r
+o%v>
+o-+'
+o-46
+o-?<
+o-@1
+o-C5
+o-I<
+o-T)
+o-\b"
+o-c?
+o-h/
+o-k3
+o5-\r
+o5a7
+o=,=
+o=L\r
+o=U6
 o@(H
 oA(A
 oA8A
@@ -6096,6 +6174,7 @@ oD$ Hǃ
 oD$(I
 oG\bA
 oIcNxHc
+oO(D
 oO\bI
 oOpf
 oR A
@@ -6106,10 +6185,14 @@ oRpf
 oWpf
 oZ`A
 o\bATE1
+o\bE1䉍
 o\bLc
 o\bSH
+o\f$fA
 o\f\a\b
-o\ft5Hi
+o\ft/Hi
+o\r@8
+o\rR>
 obj_count
 obj_size
 open
@@ -6117,6 +6200,7 @@ operator
 operator""
 org/bugsH
 ou2H
+o~\bA
 p< tgv]<0uIL
 p< tgv]<0ulH
 p< thv^<0uOI
@@ -6124,6 +6208,8 @@ p< tpvV<0uJI
 p< u
 pXE!
 p[A\\]
+p\bAWA
+p\bE1
 p\bHi
 p\b[A\\]
 p\f\a\b
@@ -6146,7 +6232,6 @@ pthread_once
 pxHǀ
 p}?+
 q0I9
-q=\nףp=\nH
 qHI9
 q\bf9
 q\f\a\b
@@ -6155,7 +6240,6 @@ q`f9
 q`t31
 qangle
 qxI9
-r H9p u
 r$fD
 r&L\t
 r(E1
@@ -6163,6 +6247,7 @@ r*H9
 r+A9
 r0[A\\]
 r3A9
+r;H9
 r@E1
 rFf9
 r\f\a\b
@@ -6190,7 +6275,6 @@ resourcesystem
 restrict
 rethrow
 rg/bugs/H
-rhte;
 rlHc
 rotate2d
 rotation2d
@@ -6211,22 +6295,22 @@ s(t\nI
 s+ff.
 s-E1
 s.E1
+s8Ic
 s@Ic
 sFaT1
 sL<}
-sLf.
 sPA)
 sPHcSH
 sRHcC0H
+s\\Hc
 s\bHc
 s\bHc\vIc
 s\bIc
 s\bL9
-s\bM;t$\b
+s\bLcC
+s\bM;u\b
 s\bfB
 s\f\a\b
-s]Hc
-s`HcCX9
 s`I9
 s`IcF0I
 sampler1D
@@ -6306,6 +6390,8 @@ syscall
 system
 t \bH
 t!Hc
+t!Hi
+t!f.
 t"Ic
 t#Hk
 t#U1
@@ -6314,30 +6400,31 @@ t$ A
 t$ H
 t$ L
 t$ M
-t$ [A\\A]A^A_]
 t$(A
 t$(E)
 t$(H
 t$(H9
 t$(I
 t$(IcD$ Ic
-t$(L
 t$(M
 t$0A
 t$0H
 t$0I
-t$0L
 t$0M
+t$4L
 t$7?+
 t$8H
-t$8I
+t$8Ic
 t$8IcT$0H
 t$8M
 t$8fA
 t$8fE
+t$8脘
 t$@H
+t$@I
 t$@M
 t$H9
+t$HH
 t$HI
 t$HM
 t$LA
@@ -6348,17 +6435,16 @@ t$PIcD$H9
 t$Pf
 t$Pu
 t$UH
-t$XH
 t$XIcD$PHc
 t$XM
 t$\aA9
 t$\aH
 t$\b1
 t$\bA
+t$\bA9
 t$\bAXAYH
 t$\bA[A\\H
 t$\bA^A_H
-t$\bD
 t$\bH
 t$\bI
 t$\bIc
@@ -6377,7 +6463,6 @@ t$`M
 t$p1
 t$p9
 t$pH
-t$pI
 t$pM
 t$pfA
 t%D9
@@ -6386,7 +6471,9 @@ t%ff.
 t'A9<
 t'D;$
 t'[A\\]
+t(Hc
 t(\bH
+t)UH
 t)f;w\bs#1
 t*\b!
 t+Hc
@@ -6394,14 +6481,17 @@ t+f;w\bs%Hc
 t,Hc
 t-</u
 t-Hc
-t.Hc
 t.HcS$H
+t.HcXDH
+t.LcTP\bH
 t.fA9
+t/E9
 t/f;_\bs)Hc
 t/f;w\bs)Hc
+t/ff.
 t0Hc
 t0\bH
-t1@J
+t1E1
 t1Hc
 t1UH
 t1f;w\bs+Hc
@@ -6419,7 +6509,7 @@ t91۸\b
 t9\b;B
 t:\bH
 t:ff.
-t;Hc\\P\b
+t;Ic\aHk
 t;UH
 t;ff.
 t<E1
@@ -6433,35 +6523,39 @@ t>f;w\bs81
 t?Hc
 t?UH
 t@</
+t@E1
 t@HcӀ
 tAE1
-tBHc
+tAËG\b
 tBI9
-tBf.
 tBf;w\bs<Hc
 tCE1
 tCHIc
-tCHc
+tCHk
 tD94\au
 tDE1
 tFHc
+tFHk
+tFIc
 tFUH
 tGE1
-tGHc
+tGE9
 tH</
 tHHH
-tIIc
+tH\bA
+tIHi
+tIHiа
 tJHc
-tMKct'\b
+tMIc
+tNE1
 tOHc
 tOHcC
-tOHk
-tPhL
-tRHi
-tRHiа
+tOIc
+tP\bA
+tPhA9
+tQ[A\\A]A^]
 tRHk
-tSE1
-tS[A\\A]A^]
+tSHc
 tSff.
 tTE9
 tTE9a
@@ -6469,13 +6563,11 @@ tTIc
 tTUH
 tUE1
 tUUH
-tVIc
+tVHc
 tWUH
 tXE1
-tXIc
+tYHc
 tYHcC
-tYLc
-t\\ L
 t\\1҉
 t\\Ic
 t\\UH
@@ -6485,10 +6577,14 @@ t\aL9*r
 t\a\bt&H
 t\a\bt2H
 t\b;\b
+t\bA9
 t\bAƇ
 t\b\bM
 t\b\bO
+t\eHc
 t\eHiҰ
+t\ef;4
+t\ef;\f
 t\eff.
 t\fIǄ$
 t\f\a\b
@@ -6498,19 +6594,27 @@ t\n\bH
 t\rHǀ
 t\t9C4
 t\t;H
+t\tE9
 t\t\bf9
+t\vD9
+t\vE9
 t\vHǃ
 t\vHǃ0
 t\vHǃ@
 t\vHǃP
 t\vHǃ`
 t\vHǃp
+t\vIc
+t] L
 t]1Ʌ
 t]Hc
+t]Lk
 t]f.
+t^E1
 t_Hc
 t_Hǆ
 t`Hc
+t`Lch@H
 t`ff.
 table
 tangent
@@ -6537,17 +6641,20 @@ tfff.
 tg91
 tgE1
 tgHi҈
+tgHk
+tgLk
 tgf;
-tg}5I
 thIcF A9
 this
 throw
 ti1Ʌ
 time
-tj1Ʌ
 tkUH
 tlE1
 tmIc
+tmfA
+tn1Ʌ
+tnfA
 toHc
 tools
 tp1Ʌ
@@ -6561,36 +6668,42 @@ ts1Ʌ
 tsE1
 tsHcC
 tsLi
+tuHc
 tuIc
 tuMi
+tvHc
 tvIc
+twHc
 twIc
 tx1Ʌ
+txLk
 txMc
 tyfD
 typeinfo fn for
 typeinfo for
 typeinfo name for
 typename
+t{Hc
 t{UH
-t{fA
 t}Ic
-tË=DW
+t}fA
+tË=$
 tȾvtexH
+tʀy%
 t͋s\bE
-tϋ=:~\t
+tϋ=\n
 u A8t$
 u!f.
-u(H9
+u$ff.
 u(fA
 u*UH
 u+1҅
 u/UH
 u0ATSD
+u0ff.
 u1fA
 u3[A\\A]A^]
 u9L9
-u<Hc
 uBIcU8
 uGUH
 uHcC
@@ -6605,8 +6718,8 @@ u\bA\\H
 u\bA]A^H
 u\bA_XH
 u\bAƆ
+u\bE1
 u\bH9
-u\bIcU
 u\bXZA
 u\bXZH
 u\bY^H
@@ -6617,12 +6730,12 @@ u\bfA
 u\eA
 u\eE1
 u\f\a\b
-u\rH9
+u\rL9
 u\r[A\\]
+u\tE9
+u\vv\b9w\bu
 u\vÐH
-u`Ic
 ubfA
-ug[A\\A]A^]
 ugf.
 uint
 uint16
@@ -6639,18 +6752,23 @@ unsigned long long
 unsigned short
 using substring "%s"
 utils/materialsystem2utils.cpp
+utlstreambuffer.cpp
 uuH9
 uuaH
+uyHc
 u~A9
 uŁ{4
-uǁ{d
 uȁ{\\
+uȋxP
+uȋxT
+uȋxX
 ủUȁ
 uЉЈE
 uًp8E1Ʌ
 uڋ3H
 uڋH,L
 v @8p
+v M\t
 v$G2
 v(E1
 v(I9
@@ -6663,27 +6781,26 @@ vEMi
 vLHc
 vL\v}J
 vPH9
-vPHc
 vPIcFH9
 vV<0uJI
 vVHcC
+v\aHih
 v\bA9
-v\bD;>
 v\bHǅ
 v\bfA
 v\f\a\b
-v^<7
 v`A9v
 vector2
 vector3
 vector4
 vectorws
+vf<7
 vfx_common.cpp
-vfx_common.cpp(4364): Error! Ref count !=0 for static combo data cache entry!\n
-vfx_common.cpp(7750): Error opening file %s\n
-vfx_common.cpp(7783): VCS3 %s Load Failure: %s\n
-vfx_common.cpp(7796): VCS3 %s Load Failure: %s\n
-vfx_common.cpp(7825): VCS %s Unserialize hit EOF\n
+vfx_common.cpp(8254): Error opening file %s\n
+vfx_common.cpp(8287): VCS3 %s Load Failure: %s\n
+vfx_common.cpp(8300): VCS3 %s Load Failure: %s\n
+vfx_common.cpp(8329): VCS %s Unserialize hit EOF\n
+vfx_common.cpp:8911
 vfx_compile_helpers.cpp(16): Cannot use absolute paths for shader includes. Found %s\n
 vfx_compile_helpers.cpp(77): Cannot read file "%s"\n
 vfx_compile_helpers.cpp(85): Cannot find include file %s\n
@@ -6712,7 +6829,6 @@ vs_6_0
 vtable for
 vtexH
 vtexL
-vtexSH
 vtexf
 vuTH
 w Ic
@@ -6720,17 +6836,15 @@ w&Lc
 w(AY
 w(A[
 w(fA
-w1<g
-w4Mcw0K
-w6<\b
-w7Hc
 w8#=\n
 w8IcW0H
+w:<\b
+w?Hc
 w@Hc
-wC<g
 wGfE9
-wPHi
 wPfD9M
+wT<Wv@H
+wXIc
 w\bAUATI
 w\bHc
 w\bIc
@@ -6740,28 +6854,24 @@ w\fD9
 w\f\a\b
 w\rBƄ
 w\tE9
-w]<g
 wcB4
 wchar_t
 weight
 what():
-wq<\b
+x A9}
 x!H)
 x,Lc
-x/Hk
 x2Hcʉ
 x2HiҰ
+x4;B0}
 x4Lc
 x6Hcʉ
-x8fE
-x;Hcډ
-x>Hc
 x>Lc
 x?Hcى
 x?Lc
-x@Ic@8H
+x@Hcډ
 xALc
-xBHc
+xBE1
 xBHcI
 xBHcډ
 xBLc
@@ -6772,44 +6882,38 @@ xEHc
 xEHcʉ
 xELc
 xFLc
-xGHc
 xHHcI
 xKHc
 xLHc
 xLHcʉ
 xOt\vAǇ8
-xPHc
-xPIc
 xQHcʉ
 xRLc
 xVHcʉ
 xWHc
 xWLc
+xXLc
 xZHcʉ
-xZLc
 x[A\\A]A^A_]
 x[Hcʉ
 x\\Hcʉ
 x\bA^]H
-x\bHiҐ
+x\bIc@
 x\bbmys
 x\by\f
 x\eHk
 x\f9~
 x\f\a\b
-x]Hcʉ
 x^Hcʉ
 x_Hcʉ
-x`Hc
 x`f9
 xaD9]
 xaHcʉ
-xcLc
+xcHc
 xdHcʉ
 xhHc
 xhLc
 xiLc
-xjLc
 xkHc
 xkLc
 xmLc
@@ -6821,18 +6925,26 @@ xpLc
 xsLc
 xtHcʉ
 xwLc
+xxHǀ
 xzHc
 xzHcމ
 x|Lc
+x}Hc
 x}Lc
 x鸡N/
+y H9x u
 y Hc
+y(t3H
 y,A\f
+y8Hc
 y@ h
+yPIc~
 yZ[A\\A]A^]
+y\bE1ɉ}
 y\btUA
 y\f\a\b
 y\ns\tf
+yhtd;
 ylP¦
 z A9
 z A;w\bu
@@ -6843,6 +6955,8 @@ z*u(
 z,u*
 z01҉
 z0u.
+z8Hc
+z=g\v
 z?u=
 zAu?
 zCuA
@@ -6851,22 +6965,21 @@ zJuH
 zPLR
 zRuP
 z\bA9{
-z\bAYAZH
-z\bHc\bL
+z\bAYAZ
+z\bAǆ
 z\f\a\b
+z\fu\nA
 z\ru\v
 zau_A
 zdub
 zvut
 { A8} ff.
-{ E1\vF
 { Hǃp
-{ L9
 {(t:H
 {0x%x}
-{@HcC8
-{@HcC8D
+{8A9
 {P6\e
+{PHc
 {\b/H
 {\b/t
 {\b1ҹ
@@ -6889,10 +7002,10 @@ zvut
 | (H
 | \bH
 |$ 9\a
+|$ E1\vF
 |$ H
 |$ I
 |$ L
-|$ 膸
 |$(1
 |$(E
 |$(H
@@ -6902,6 +7015,7 @@ zvut
 |$,H
 |$01
 |$019
+|$0D
 |$0H
 |$4_AXE
 |$8H
@@ -6929,11 +7043,12 @@ zvut
 |$\bH9{\b
 |$\bHc
 |$\bI
+|$\bIc
 |$\bL
-|$\bN
 |$\bf
 |$pE
 |$pH
+|$xH
 |%\bO
 |*\bA!
 |*\bH
@@ -6946,7 +7061,9 @@ zvut
 |5\bO
 |8\bH
 |9\bA!
+|=\bI9
 |>\bA!
+|HHD
 |\b\bA
 |\b\bK
 |\f\a\b
@@ -6955,95 +7072,115 @@ zvut
 |^ f
 |^HcK
 |_A;F0
+|fHcK8Ic
 |sHf9z
 |y;A8
 |y;Ah
 ||;A
 } Iǅ
 }#Hc҃
+}%HcP\bH
+}%ff.
 }-ff.
 }3ff.
+}4Mi
+}4f9
 }=U{
+}=m?i
 }LfA9
-}OfA9
 }Off.
-}PfA
+}PfA9
 }Vff.
 }Wff.
 }Yff.
-}\\~\bE
 }\bHc
 }\bI9
 }\bI9|$\b
+}\bIcU
+}\bLc
 }\bXZ
 }\bY^
 }\br&L
 }\f\a\b
 }\f\a\b$
 }\tzt
-}p)ƉU
+}`Mk
+}`fA
+}nfA9
 }p)ΉE
 }pHc
+}tHc
 }ȉH\fI
 }̋K0L
 }؉uԁ}ԃ
 }؉uԋU
+~ %d texture(s) are views of another texture's memory and are counted at 0K so that memory is not counted twice\n
 ~ ff.
 ~#ff.
 ~$Hc
+~%3z
 ~(E1
 ~-H.f}
-~-sh
 ~.E1
+~0Ic0McP\bIcx\fH
 ~1E1
 ~1Hc
-~1Lc
 ~1UH
 ~21Ʌ
 ~2ff.
+~5Hi
 ~5ff.
 ~69M
 ~;f=
 ~>Hc
 ~?UU
+~@0L
+~@@L
+~@Hc
+~@PL
 ~@\bL
+~@`L
 ~@`f
+~@pL
 ~A`f
 ~Bff.
+~C f
+~C(f
+~C0f
+~C8f
 ~CHc
 ~CLc
+~C\bf
 ~C\bfH
+~C|f
+~D$ f
 ~D$(I
+~D$(f
+~D$0f
+~D$8f
+~D$\b
+~D$\bf
 ~D0`H
-~E f
-~E(f
-~E0f
-~E8f
-~E\bf
-~FHc
+~GIi
 ~HHc
 ~HLc
 ~H\bf
-~IHc
 ~IHcǃ
 ~I\bMi
 ~I\bf
-~K|f
 ~L$0I
 ~LHc
 ~LHcǃ
+~MHc
 ~MHcǃ
 ~MIc
 ~NE1
-~NHc
 ~N\bH
 ~N\bf
 ~NfA
-~OHc
+~O(L
 ~OHcǃ
 ~PD)
-~PHc
-~P芎\n
 ~QHcǃ
 ~QLk
 ~Qff.
@@ -7054,70 +7191,67 @@ zvut
 ~WHcǃ
 ~YHc
 ~YHk
-~YIi
 ~YLc
 ~\\Lc
 ~\\UHc
 ~\bA^A_u
 ~\bE1
-~\bIc
 ~\bL9
 ~\bfA
 ~\bfD
 ~\bt$H
 ~\f\a\b
-~\r-1\f
+~\r(p
 ~\teI
 ~^Hcʿ
 ~^Lc
-~`1ۅ
+~`<ߥl<"-y<
 ~dfA
 ~hD)
 ~iLc
 ~kHc
 ~kHcE
+~mIcą
 ~n0D
-~nfA9
-~qLc
 ~sHcE
-~vE1
 ~vHcG\bL
+~vLc
+~xHcM
 ~zIc
 ~zLc
+~{E1
 ~{HcE
-~~Ic
-À;"tG
 ËK\bD
 ÐHcG
 ĉP\bA
 ċCHA
-ŋ=ܼ\b
-Ƌ=ܨ\b
+Ǟ<34
 ȉE\bE)O\b
 ȥnz\b
 ɉ\b~PH
-ʋ\r7+
 ʥFZg
-̀=)m
-̀=IB
-̀=Iw\v
-̀=Y+
-̀=i2\f
-̀=i5\f
-̀=yd
-̋=jH
+̀=)l
+̀=Y?\r
+̀=is\f
 ̋G(@
 ̋G\b9
 ̋O,H
+ϋK|H
 ЉE܋E
 ҉D$,D
+։S|A9
 ۉEЋF
 ۉZ\fH
 ېHcÅ
 ېHcɃ
+܂\\L!
 މẺu
 މE؉u
 ߉CXA
 ߋP\b1
 ߋP\f1
+넋=&=
+닋=A=
 돍N(Lc
+뒋=~\\\t
+똋= \e\n

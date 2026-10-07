@@ -154,8 +154,10 @@
 	Ability.Ravage = 
 	{
 		type = "dota_update_default"
-		volume = 0.699707
+		volume = 0.7
 		pitch = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
 		soundlevel = 81.0
 		mixgroup = "Ultimates"
 		spread_radius = 1200.0
@@ -294,6 +296,20 @@
 			"sounds/weapons/hero/tidehunter/taunt2022.vsnd",
 		]
 		vsnd_duration = 3.754667
+	}
+	Hero_Tidehunter.Taunt_2026 = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch = 1.0
+		soundlevel = 78.0
+		distance_max = 2500.0
+		volume_fade_out = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/tidehunter/taunt2026.vsnd",
+		]
+		vsnd_duration = 4.939456
 	}
 	Hero_Tidehunter.DeadInTheWater.Cast = 
 	{
@@ -445,5 +461,113 @@
 			"sounds/weapons/hero/ringmaster/glitch05.vsnd",
 		]
 		vsnd_duration = 2.704195
+	}
+	Hero_Tidehunter.Arcana.Ravage.HitHeroBelowThreshold = 
+	{
+		type = "dota_src1_2d"
+		volume = 1.0
+		pitch = 1.0
+		mixgroup = "Ultimates"
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/tidehunter/arc_ravage_counter_1.vsnd",
+		]
+		vsnd_duration = 0.133628
+	}
+	Hero_Tidehunter.Arcana.Ravage.HitHeroAboveThreshold = 
+	{
+		type = "dota_src1_2d"
+		volume = 1.0
+		pitch = 1.0
+		delay = 0.25
+		mixgroup = "Ultimates"
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/tidehunter/arc_ravage_counter_2.vsnd",
+		]
+		vsnd_duration = 3.447574
+	}
+	Hero_Tidehunter.Arcana.Ravage.HitHeroFiveOrAbove = 
+	{
+		type = "dota_src1_2d"
+		volume = 1.0
+		pitch = 1.0
+		delay = 0.5
+		mixgroup = "NoDuck"
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/tidehunter/arc_ravage_counter_3.vsnd",
+		]
+		vsnd_duration = 6.895147
+	}
+	Hero_Tidehunter.Arcana.Fish.FishEaten = 
+	{
+		type = "dota_src1_2d"
+		volume = 1.0
+		pitch = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/tidehunter/arc_fish_counter_1.vsnd",
+		]
+		vsnd_duration = 0.703968
+	}
+	Hero_Tidehunter.Arcana.Fish.FishEatenGoalAchieved = 
+	{
+		type = "dota_src1_2d"
+		volume = 1.0
+		pitch = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/tidehunter/arc_fish_counter_2.vsnd",
+		]
+		vsnd_duration = 1.618639
+	}
+	Hero_Tidehunter.Arcana.run_alt = 
+	{
+		type = "dota_src1_3d"
+		volume = 1.0
+		pitch_rand_min = -0.025
+		pitch_rand_max = 0.025
+		pitch = 1.0
+		soundlevel = 75.0
+		distance_max = 1500.0
+		mixgroup = "Physics"
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/tidehunter/alt_run_impact.vsnd",
+		]
+		vsnd_duration = 1.593469
+	}
+	Hero_Tidehunter.Ravage.Arcana = 
+	{
+		type = "dota_update_default"
+		volume = 0.5
+		pitch = 1.0
+		soundlevel = 81.0
+		mixgroup = "Ultimates"
+		spread_radius = 600.0
+		soundevent_layer2 = "Hero_Tidehunter.Ravage.ArcanaLayer"
+		soundevent_layer2_on = 1.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/tidehunter/tidehunter_ravage.vsnd",
+		]
+		vsnd_duration = 4.148118
+	}
+	Hero_Tidehunter.Ravage.ArcanaLayer = 
+	{
+		type = "dota_update_default"
+		volume = 1.0
+		pitch = 1.0
+		pitch_rand_min = -0.05
+		pitch_rand_max = 0.05
+		soundlevel = 81.0
+		mixgroup = "Ultimates"
+		spread_radius = 1200.0
+		vsnd_files = 
+		[
+			"sounds/weapons/hero/tidehunter/ravage_arc_layer.vsnd",
+		]
+		vsnd_duration = 4.148118
 	}
 }
