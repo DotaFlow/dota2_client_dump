@@ -166,6 +166,7 @@
  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
+ !"#$%&'()*+,-./0123@
  %02X
  %4hf
  %d %s is interpolating on %s %s\n
@@ -4417,6 +4418,9 @@
 #DOTA_Treasure_DisassembleConfirm_Popup_Message
 #DOTA_Treasure_DisassembleConfirm_Popup_Title
 #DOTA_Treasure_FilterAvailable
+#DOTA_Treasure_GiftFriend_Tooltip_Limited
+#DOTA_Treasure_GiftingConfirm_Popup_Message
+#DOTA_Treasure_GiftingConfirm_Popup_Title
 #DOTA_Treasure_HelpDupe
 #DOTA_Treasure_HelpGrantAll
 #DOTA_Treasure_HelpHeader
@@ -4556,6 +4560,7 @@
 #DOTA_practice_vs_bots_team_radiant
 #DOTA_tooltip_econ_item_gift_allowed
 #DOTA_tooltip_econ_item_gift_restriction_date
+#DOTA_tooltip_econ_item_gift_restriction_until_date
 #DOTA_tooltip_econ_item_seasonal_accessible
 #DOTA_tooltip_econ_item_trade_cooldown_date
 #DOTA_tooltip_econ_item_trade_market_cooldown_date
@@ -6952,6 +6957,7 @@ $hRh
 *N5GCSDK17GCClientJobLambdaIZN30CDOTA_UI_Popup_BroadcasterFact12RequestStatsEvEUlvE_EE
 *N5GCSDK17GCClientJobLambdaIZN30CDOTA_UI_Popup_Team_Management20OnTeamFileOpenDialogEiEUlvE_EE
 *N5GCSDK17GCClientJobLambdaIZN30CDOTA_UI_SpectatorLobbyBrowser23EventJoinSpectatorLobbyEybEUlvE_EE
+*N5GCSDK17GCClientJobLambdaIZN30CDOTA_UI_TreasureRecycleStatus17EventGiftToFriendE23item_definition_index_tEUlvE_EE
 *N5GCSDK17GCClientJobLambdaIZN30CDOTA_UI_TreasureRecycleStatus18EventRecycleBundleE23item_definition_index_tEUlvE_EE
 *N5GCSDK17GCClientJobLambdaIZN31CDOTA_DB_Page_Collection_Shards24EventPurchaseRandomRelicE16EHeroRelicRarityEUlvE_EE
 *N5GCSDK17GCClientJobLambdaIZN31CDOTA_DB_Page_Comp_TI10_Fantasy16UpdateDirtyPanelEvEUlvE0_EE
@@ -9178,7 +9184,6 @@ $hRh
 0x%X
 0x%X 
 0x%s
-0y3\t
 0}dV
 1 = always block, 2 = block after attack, 3 = block, then jab.
 1 = force setup of refrect / refact pipelines even when using cheap water
@@ -31627,7 +31632,6 @@ $hRh
 ?d86L
 ?dt]X
 ?gwL
-?iNo
 ?jOb
 ?srJO
 ?streamonly=1
@@ -49889,6 +49893,8 @@ CanAddSocket
 CanAffordBuybackAndQuickbuy
 CanBeDominated
 CanBeExecuted
+CanBeGifted
+CanBeRecycled
 CanBeRerolled
 CanBeSoldByLocalPlayer
 CanBeSwapped
@@ -54297,6 +54303,7 @@ DOTAHeroGridEditCategorySettings
 DOTAHeroGridHeroSelected
 DOTAHeroGridHideStickers
 DOTAHeroGridNew
+DOTAHeroGridPersonaPortraitsSettingChanged
 DOTAHeroGridRoleRankTierSelected
 DOTAHeroGridSelectDefaultConfig
 DOTAHeroGridSelectedConfigChanged
@@ -57285,6 +57292,7 @@ DOTATreasureList
 DOTATreasurePreview
 DOTATreasureRecycleBundle
 DOTATreasureRecycleCreditsHovered
+DOTATreasureRecycleGiftFriend
 DOTATreasureRecycleStatus
 DOTATreasureStickerPackDetailsPage
 DOTATreasureToggleCrownfallDiscountActive
@@ -67062,6 +67070,7 @@ HasLeague
 HasLeagueID
 HasLegacyItem
 HasLevel
+HasLimitedGifting
 HasLiveMatch
 HasLoadedScenario
 HasLocalPlayer
@@ -70228,6 +70237,7 @@ ItemSearchResult
 ItemSearchTextEntry
 ItemSelect
 ItemSet
+ItemSetGiftButton
 ItemSetPreview
 ItemSetPreview_1
 ItemSetPreview_2
@@ -81714,6 +81724,8 @@ RewardSetPreview
 RewardSlotBonusLeft
 RewardSlotBonusRight
 RewardSlotMain
+RewardSlotOverflowLeft
+RewardSlotOverflowRight
 RewardSquare
 RewardTerrain
 RewardTier
@@ -84336,6 +84348,7 @@ Show debugging info for Muerta's dead_shot.
 Show debugging info for Muerta's double shot aiming.
 Show debugging info for Puck's curve ball facet.
 Show entity contexts in ent_text display
+Show equipped persona portraits in the hero grid.
 Show every hero as alive
 Show gamestate round transitions.
 Show health bars when the game or camera mode would ordinarily hide them.
@@ -84736,6 +84749,7 @@ ShowTitles
 ShowTooltip
 ShowTourneyButton
 ShowTrackingTooltip
+ShowTroveGiftingViolator
 ShowTutorialState
 ShowUnavailable
 ShowUnitKills
@@ -88304,6 +88318,8 @@ TwoColumns
 TwoImages
 TwoItem
 TwoPlayers
+TwoRewardsOnLeft
+TwoRewardsOnRight
 TwoRows
 Type
 Type appears to be in generated pool but wasn't 
@@ -100269,6 +100285,7 @@ dota_hero_demo_towers_enabled
 dota_hero_grid_monster_hunter_hero_atlas_filter_mode_toggle
 dota_hero_grid_role_threshold_percent
 dota_hero_grid_select_overworld_season
+dota_hero_grid_show_persona_portraits
 dota_hero_indicators_hide_distance
 dota_hero_indicators_max_distance
 dota_hero_indicators_max_radius
@@ -106272,7 +106289,9 @@ gift_tokens_received
 gift_wrap
 giftable
 giftable after date
+giftable until date
 giftable_after_date_time
+giftable_until_date_time
 gifter account id
 gifter_name
 gifting_action_id
@@ -127121,7 +127140,6 @@ nightstalker_night
 nine
 niv <= EVP_MAX_IV_LENGTH
 nkey <= EVP_MAX_KEY_LENGTH
-nlZt
 nl_NL
 nmI\n8
 nmonqnmomnmomomno
@@ -128640,6 +128658,7 @@ panorama/images/heroes/*.vtex_c
 panorama/images/heroes/icons/%s%s_png.vtex
 panorama/images/heroes/icons/%s_png.vtex
 panorama/images/heroes/icons/npc_dota_hero_axe_png.vtex
+panorama/images/heroes/selection/%s_png.vtex_c
 panorama/images/hud/*.vtex_c
 panorama/images/hud/arcana/es/numbers/*.vtex_c
 panorama/images/items/%s_png.vtex_c
@@ -128661,6 +128680,7 @@ panorama/localization/addon_%language%.txt
 panorama/panorama_config.txt
 panorama/scripts
 panorama/styles
+panorama/videos/heroes/%s.webm
 panorama::CPanelPtr
 panorama\images\teamfancontent\season_%d\%d\banner_png.vtex
 panorama\images\teamfancontent\season_%d\%d\baselogo_png.vtex
@@ -142283,6 +142303,7 @@ trophy_state
 trophy_xp
 trophyid
 trophyscore
+trove_of_terror_gifting_violator
 true
 true 
 true\n
@@ -145575,6 +145596,7 @@ xrJ:DCG
 xsK;
 xxBEAM_HOSExxunused
 xxH}
+xzS\t
 xzxv
 y != __null
 y axis
