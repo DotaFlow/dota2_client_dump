@@ -1,0 +1,3899 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vrr_c1:version{c1f07085-5299-4e8a-b7e9-1cbb66bbbe23} -->
+{
+	m_Includes = 
+	[
+		"scripts/talker/response_rules_shared.vrr",
+	]
+	m_ResponseGroups = 
+	[
+		{
+			m_name = "announcer_dlc_axe_CustomIsAnnouncerVoice_AxeIsSelectHero"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_choose_hero"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsAnnouncerVoice_AxeIsSelectHero"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsAnnouncerVoice_Axe",
+					"IsSelectHero",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsAnnouncerVoice_AxeIsPickYour"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_pick_yr"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsAnnouncerVoice_AxeIsPickYour"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsAnnouncerVoice_Axe",
+					"IsPickYour",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsAnnouncerVoice_AxeIsPlayerTeam_RadiantIsPickDire"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_pick_enm"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsAnnouncerVoice_AxeIsPlayerTeam_RadiantIsPickDire"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsAnnouncerVoice_Axe",
+					"IsPlayerTeam_Radiant",
+					"IsPickDire",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsAnnouncerVoice_AxeIsPlayerTeam_DireIsPickRadiant"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_pick_enm"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsAnnouncerVoice_AxeIsPlayerTeam_DireIsPickRadiant"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsAnnouncerVoice_Axe",
+					"IsPlayerTeam_Dire",
+					"IsPickRadiant",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsAnnouncerVoice_AxeIsPickDireIsPlayerTeam_Spectator"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_pick_dire"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsAnnouncerVoice_AxeIsPickDireIsPlayerTeam_Spectator"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsAnnouncerVoice_Axe",
+					"IsPickDire",
+					"IsPlayerTeam_Spectator",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsAnnouncerVoice_AxeIsPickRadiantIsPlayerTeam_Spectator"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_pick_rad"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsAnnouncerVoice_AxeIsPickRadiantIsPlayerTeam_Spectator"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsAnnouncerVoice_Axe",
+					"IsPickRadiant",
+					"IsPlayerTeam_Spectator",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsAnnouncerVoice_AxeIsBanYour"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_ban_yr"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsAnnouncerVoice_AxeIsBanYour"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsAnnouncerVoice_Axe",
+					"IsBanYour",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsAnnouncerVoice_AxeIsBanDireIsPlayerTeam_Radiant"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_ban_enm"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsAnnouncerVoice_AxeIsBanDireIsPlayerTeam_Radiant"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsAnnouncerVoice_Axe",
+					"IsBanDire",
+					"IsPlayerTeam_Radiant",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsAnnouncerVoice_AxeIsBanRadiantIsPlayerTeam_Dire"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_ban_enm"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsAnnouncerVoice_AxeIsBanRadiantIsPlayerTeam_Dire"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsAnnouncerVoice_Axe",
+					"IsBanRadiant",
+					"IsPlayerTeam_Dire",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsAnnouncerVoice_AxeIsBanDireIsPlayerTeam_Spectator"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_ban_dire"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsAnnouncerVoice_AxeIsBanDireIsPlayerTeam_Spectator"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsAnnouncerVoice_Axe",
+					"IsBanDire",
+					"IsPlayerTeam_Spectator",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsAnnouncerVoice_AxeIsBanRadiantIsPlayerTeam_Spectator"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_ban_rad"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsAnnouncerVoice_AxeIsBanRadiantIsPlayerTeam_Spectator"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsAnnouncerVoice_Axe",
+					"IsBanRadiant",
+					"IsPlayerTeam_Spectator",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsAnnouncerVoice_AxeIs10SecToPick"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_count_pick_10"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsAnnouncerVoice_AxeIs10SecToPick"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsAnnouncerVoice_Axe",
+					"Is10SecToPick",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsAnnouncerVoice_AxeIs5SecToPick"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_count_pick_5"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsAnnouncerVoice_AxeIs5SecToPick"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsAnnouncerVoice_Axe",
+					"Is5SecToPick",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsAnnouncerVoice_AxeIsReserveTime"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_time_reserve"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsAnnouncerVoice_AxeIsReserveTime"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsAnnouncerVoice_Axe",
+					"IsReserveTime",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsGameStarting30IsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_count_battle_30"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsGameStarting30IsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsGameStarting30",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsGameStarting10IsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_count_battle_10"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsGameStarting10IsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsGameStarting10",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsPrepStartIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_battle_prepare_01"
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_GENERIC"
+						m_contexts = "foo:0"
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsPrepStartIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsPrepStart",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsGameStartIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_battle_begin_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsGameStartIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsGameStart",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsFortAttackedIsNotSpectatorIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_anc_attack_yr_01"
+					m_params = 
+					{
+						m_respeakdelay.start = 6.0
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_anc_attack_yr_02"
+					m_params = 
+					{
+						m_respeakdelay.start = 6.0
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_anc_attack_yr_03"
+					m_params = 
+					{
+						m_respeakdelay.start = 6.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsFortAttackedIsNotSpectatorIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsFortAttacked",
+					"IsNotSpectator",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsFortAttackedIsGoodAttackedIsSpectatorIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_anc_attack_rad_01"
+					m_params = 
+					{
+						m_respeakdelay.start = 8.0
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_anc_attack_rad_02"
+					m_params = 
+					{
+						m_respeakdelay.start = 8.0
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_anc_attack_rad_03"
+					m_params = 
+					{
+						m_respeakdelay.start = 8.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsFortAttackedIsGoodAttackedIsSpectatorIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsFortAttacked",
+					"IsGoodAttacked",
+					"IsSpectator",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsFortAttackedIsBadAttackedIsSpectatorIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_anc_attack_dire_01"
+					m_params = 
+					{
+						m_respeakdelay.start = 8.0
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_anc_attack_dire_02"
+					m_params = 
+					{
+						m_respeakdelay.start = 8.0
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_anc_attack_dire_03"
+					m_params = 
+					{
+						m_respeakdelay.start = 8.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsFortAttackedIsBadAttackedIsSpectatorIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsFortAttacked",
+					"IsBadAttacked",
+					"IsSpectator",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsTowerAttackedIsGoodAttackedIsSpectatorIsTopLaneIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_attack_rad_top_01"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_attack_rad_top_02"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_attack_rad_top_03"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsTowerAttackedIsGoodAttackedIsSpectatorIsTopLaneIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsTowerAttacked",
+					"IsGoodAttacked",
+					"IsSpectator",
+					"IsTopLane",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsTowerAttackedIsGoodAttackedIsSpectatorIsMidLaneIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_attack_rad_mid_01"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_attack_rad_mid_02"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_attack_rad_mid_03"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsTowerAttackedIsGoodAttackedIsSpectatorIsMidLaneIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsTowerAttacked",
+					"IsGoodAttacked",
+					"IsSpectator",
+					"IsMidLane",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsTowerAttackedIsGoodAttackedIsSpectatorIsBotLaneIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_attack_rad_bot_01"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_attack_rad_bot_02"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_attack_rad_bot_03"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsTowerAttackedIsGoodAttackedIsSpectatorIsBotLaneIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsTowerAttacked",
+					"IsGoodAttacked",
+					"IsSpectator",
+					"IsBotLane",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsTowerAttackedIsBadAttackedIsSpectatorIsTopLaneIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_attack_dire_top_01"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_attack_dire_top_02"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_attack_dire_top_03"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsTowerAttackedIsBadAttackedIsSpectatorIsTopLaneIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsTowerAttacked",
+					"IsBadAttacked",
+					"IsSpectator",
+					"IsTopLane",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsTowerAttackedIsBadAttackedIsSpectatorIsMidLaneIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_attack_dire_mid_01"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_attack_dire_mid_02"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_attack_dire_mid_03"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsTowerAttackedIsBadAttackedIsSpectatorIsMidLaneIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsTowerAttacked",
+					"IsBadAttacked",
+					"IsSpectator",
+					"IsMidLane",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsTowerAttackedIsBadAttackedIsSpectatorIsBotLaneIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_attack_dire_bot_01"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_attack_dire_bot_02"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_attack_dire_bot_03"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsTowerAttackedIsBadAttackedIsSpectatorIsBotLaneIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsTowerAttacked",
+					"IsBadAttacked",
+					"IsSpectator",
+					"IsBotLane",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsTowerAttackedIsNotSpectatorIsTopLaneIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_attack_yr_top_01"
+					m_params = 
+					{
+						m_respeakdelay.start = 7.0
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_attack_yr_top_02"
+					m_params = 
+					{
+						m_respeakdelay.start = 7.0
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_attack_yr_top_03"
+					m_params = 
+					{
+						m_respeakdelay.start = 7.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsTowerAttackedIsNotSpectatorIsTopLaneIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsTowerAttacked",
+					"IsNotSpectator",
+					"IsTopLane",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsTowerAttackedIsNotSpectatorIsMidLaneIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_attack_yr_mid_01"
+					m_params = 
+					{
+						m_respeakdelay.start = 7.0
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_attack_yr_mid_02"
+					m_params = 
+					{
+						m_respeakdelay.start = 7.0
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_attack_yr_mid_03"
+					m_params = 
+					{
+						m_respeakdelay.start = 7.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsTowerAttackedIsNotSpectatorIsMidLaneIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsTowerAttacked",
+					"IsNotSpectator",
+					"IsMidLane",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsTowerAttackedIsNotSpectatorIsBotLaneIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_attack_yr_bot_01"
+					m_params = 
+					{
+						m_respeakdelay.start = 7.0
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_attack_yr_bot_02"
+					m_params = 
+					{
+						m_respeakdelay.start = 7.0
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_attack_yr_bot_03"
+					m_params = 
+					{
+						m_respeakdelay.start = 7.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsTowerAttackedIsNotSpectatorIsBotLaneIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsTowerAttacked",
+					"IsNotSpectator",
+					"IsBotLane",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsTowerKilledIsTopLaneIsNotDenyIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_fall_yr_top_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_fall_yr_top_02"
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_NEGATIVE"
+						m_contexts = "foo:0"
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_fall_yr_top_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsTowerKilledIsTopLaneIsNotDenyIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsTowerKilled",
+					"IsTopLane",
+					"IsNotDeny",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsTowerKilledIsMidLaneIsNotDenyIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_fall_yr_mid_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_fall_yr_mid_02"
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_NEGATIVE"
+						m_contexts = "foo:0"
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_fall_yr_mid_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsTowerKilledIsMidLaneIsNotDenyIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsTowerKilled",
+					"IsMidLane",
+					"IsNotDeny",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsTowerKilledIsBotLaneIsNotDenyIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_fall_yr_bot_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_fall_yr_bot_02"
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_NEGATIVE"
+						m_contexts = "foo:0"
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_fall_yr_bot_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsTowerKilledIsBotLaneIsNotDenyIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsTowerKilled",
+					"IsBotLane",
+					"IsNotDeny",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsGoodTowerKilledIsSpectatorIsTopLaneIsNotDenyIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_fall_rad_top_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_fall_rad_top_02"
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_NEGATIVE"
+						m_contexts = "foo:0"
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_fall_rad_top_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsGoodTowerKilledIsSpectatorIsTopLaneIsNotDenyIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsGoodTowerKilled",
+					"IsSpectator",
+					"IsTopLane",
+					"IsNotDeny",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsGoodTowerKilledIsSpectatorIsMidLaneIsNotDenyIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_fall_rad_mid_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_fall_rad_mid_02"
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_NEGATIVE"
+						m_contexts = "foo:0"
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_fall_rad_mid_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsGoodTowerKilledIsSpectatorIsMidLaneIsNotDenyIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsGoodTowerKilled",
+					"IsSpectator",
+					"IsMidLane",
+					"IsNotDeny",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsGoodTowerKilledIsSpectatorIsBotLaneIsNotDenyIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_fall_rad_bot_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_fall_rad_bot_02"
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_NEGATIVE"
+						m_contexts = "foo:0"
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_fall_rad_bot_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsGoodTowerKilledIsSpectatorIsBotLaneIsNotDenyIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsGoodTowerKilled",
+					"IsSpectator",
+					"IsBotLane",
+					"IsNotDeny",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsBadTowerKilledIsSpectatorIsTopLaneIsNotDenyIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_fall_dire_top_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_fall_dire_top_02"
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_NEGATIVE"
+						m_contexts = "foo:0"
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_fall_dire_top_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsBadTowerKilledIsSpectatorIsTopLaneIsNotDenyIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsBadTowerKilled",
+					"IsSpectator",
+					"IsTopLane",
+					"IsNotDeny",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsBadTowerKilledIsSpectatorIsMidLaneIsNotDenyIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_fall_dire_mid_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_fall_dire_mid_02"
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_NEGATIVE"
+						m_contexts = "foo:0"
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_fall_dire_mid_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsBadTowerKilledIsSpectatorIsMidLaneIsNotDenyIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsBadTowerKilled",
+					"IsSpectator",
+					"IsMidLane",
+					"IsNotDeny",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsBadTowerKilledIsSpectatorIsBotLaneIsNotDenyIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_fall_dire_bot_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_fall_dire_bot_02"
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_NEGATIVE"
+						m_contexts = "foo:0"
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_fall_dire_bot_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_fall_dire_bot_04"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsBadTowerKilledIsSpectatorIsBotLaneIsNotDenyIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsBadTowerKilled",
+					"IsSpectator",
+					"IsBotLane",
+					"IsNotDeny",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsEnemyTowerKilledIsTopLaneIsNotDenyIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_fall_enm_top_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_fall_enm_top_02"
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_POSITIVE"
+						m_contexts = "foo:0"
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_fall_enm_top_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsEnemyTowerKilledIsTopLaneIsNotDenyIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsEnemyTowerKilled",
+					"IsTopLane",
+					"IsNotDeny",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsEnemyTowerKilledIsMidLaneIsNotDenyIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_fall_enm_mid_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_fall_enm_mid_02"
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_POSITIVE"
+						m_contexts = "foo:0"
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_fall_enm_mid_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsEnemyTowerKilledIsMidLaneIsNotDenyIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsEnemyTowerKilled",
+					"IsMidLane",
+					"IsNotDeny",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsEnemyTowerKilledIsBotLaneIsNotDenyIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_fall_enm_bot_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_fall_enm_bot_02"
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_POSITIVE"
+						m_contexts = "foo:0"
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_fall_enm_bot_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsEnemyTowerKilledIsBotLaneIsNotDenyIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsEnemyTowerKilled",
+					"IsBotLane",
+					"IsNotDeny",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsBarracksAttackedIsNotSpectatorIsTopLaneIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_rax_attack_yr_top_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_rax_attack_yr_top_02"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_NEGATIVE_ONGOING"
+						m_contexts = "foo:0"
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_rax_attack_yr_top_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsBarracksAttackedIsNotSpectatorIsTopLaneIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsBarracksAttacked",
+					"IsNotSpectator",
+					"IsTopLane",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsBarracksAttackedIsNotSpectatorIsMidLaneIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_rax_attack_yr_mid_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_rax_attack_yr_mid_02"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_NEGATIVE_ONGOING"
+						m_contexts = "foo:0"
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_rax_attack_yr_mid_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsBarracksAttackedIsNotSpectatorIsMidLaneIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsBarracksAttacked",
+					"IsNotSpectator",
+					"IsMidLane",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsBarracksAttackedIsNotSpectatorIsBotLaneIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_rax_attack_yr_bot_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_rax_attack_yr_bot_02"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_NEGATIVE_ONGOING"
+						m_contexts = "foo:0"
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_rax_attack_yr_bot_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsBarracksAttackedIsNotSpectatorIsBotLaneIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsBarracksAttacked",
+					"IsNotSpectator",
+					"IsBotLane",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsBarracksAttackedIsGoodAttackedIsSpectatorIsTopLaneIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_rax_attack_rad_top_01"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_rax_attack_rad_top_02"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_NEGATIVE_ONGOING"
+						m_contexts = "foo:0"
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_rax_attack_rad_top_03"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsBarracksAttackedIsGoodAttackedIsSpectatorIsTopLaneIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsBarracksAttacked",
+					"IsGoodAttacked",
+					"IsSpectator",
+					"IsTopLane",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsBarracksAttackedIsGoodAttackedIsSpectatorIsMidLaneIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_rax_attack_rad_mid_01"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_rax_attack_rad_mid_02"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_NEGATIVE_ONGOING"
+						m_contexts = "foo:0"
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_rax_attack_rad_mid_03"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsBarracksAttackedIsGoodAttackedIsSpectatorIsMidLaneIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsBarracksAttacked",
+					"IsGoodAttacked",
+					"IsSpectator",
+					"IsMidLane",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsBarracksAttackedIsGoodAttackedIsSpectatorIsBotLaneIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_rax_attack_rad_bot_01"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_rax_attack_rad_bot_02"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_NEGATIVE_ONGOING"
+						m_contexts = "foo:0"
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_rax_attack_rad_bot_03"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_rax_attack_rad_bot_04"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsBarracksAttackedIsGoodAttackedIsSpectatorIsBotLaneIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsBarracksAttacked",
+					"IsGoodAttacked",
+					"IsSpectator",
+					"IsBotLane",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsBarracksAttackedIsBadAttackedIsSpectatorIsTopLaneIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_rax_attack_dire_top_01"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_rax_attack_dire_top_02"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_NEGATIVE_ONGOING"
+						m_contexts = "foo:0"
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_rax_attack_dire_top_03"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsBarracksAttackedIsBadAttackedIsSpectatorIsTopLaneIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsBarracksAttacked",
+					"IsBadAttacked",
+					"IsSpectator",
+					"IsTopLane",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsBarracksAttackedIsBadAttackedIsSpectatorIsMidLaneIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_rax_attack_dire_mid_01"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_rax_attack_dire_mid_02"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_NEGATIVE_ONGOING"
+						m_contexts = "foo:0"
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_rax_attack_dire_mid_03"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsBarracksAttackedIsBadAttackedIsSpectatorIsMidLaneIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsBarracksAttacked",
+					"IsBadAttacked",
+					"IsSpectator",
+					"IsMidLane",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsBarracksAttackedIsBadAttackedIsSpectatorIsBotLaneIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_rax_attack_dire_bot_01"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_rax_attack_dire_bot_02"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_NEGATIVE_ONGOING"
+						m_contexts = "foo:0"
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_rax_attack_dire_bot_03"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsBarracksAttackedIsBadAttackedIsSpectatorIsBotLaneIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsBarracksAttacked",
+					"IsBadAttacked",
+					"IsSpectator",
+					"IsBotLane",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsBarracksKilledIsTopLaneIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_rax_fall_yr_top_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_rax_fall_yr_top_02"
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_NEGATIVE"
+						m_contexts = "foo:0"
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_rax_fall_yr_top_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_rax_fall_yr_top_04"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsBarracksKilledIsTopLaneIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsBarracksKilled",
+					"IsTopLane",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsBarracksKilledIsMidLaneIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_rax_fall_yr_mid_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_rax_fall_yr_mid_02"
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_NEGATIVE"
+						m_contexts = "foo:0"
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_rax_fall_yr_mid_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsBarracksKilledIsMidLaneIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsBarracksKilled",
+					"IsMidLane",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsBarracksKilledIsBotLaneIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_rax_fall_yr_bot_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_rax_fall_yr_bot_02"
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_NEGATIVE"
+						m_contexts = "foo:0"
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_rax_fall_yr_bot_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsBarracksKilledIsBotLaneIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsBarracksKilled",
+					"IsBotLane",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsGoodBarracksKilledIsSpectatorIsTopLaneIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_rax_fall_rad_top_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_rax_fall_rad_top_02"
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_NEGATIVE"
+						m_contexts = "foo:0"
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_rax_fall_rad_top_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsGoodBarracksKilledIsSpectatorIsTopLaneIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsGoodBarracksKilled",
+					"IsSpectator",
+					"IsTopLane",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsGoodBarracksKilledIsSpectatorIsMidLaneIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_rax_fall_rad_mid_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_rax_fall_rad_mid_02"
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_NEGATIVE"
+						m_contexts = "foo:0"
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_rax_fall_rad_mid_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsGoodBarracksKilledIsSpectatorIsMidLaneIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsGoodBarracksKilled",
+					"IsSpectator",
+					"IsMidLane",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsGoodBarracksKilledIsSpectatorIsBotLaneIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_rax_fall_rad_bot_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_rax_fall_rad_bot_02"
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_NEGATIVE"
+						m_contexts = "foo:0"
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_rax_fall_rad_bot_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsGoodBarracksKilledIsSpectatorIsBotLaneIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsGoodBarracksKilled",
+					"IsSpectator",
+					"IsBotLane",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsBadBarracksKilledIsSpectatorIsTopLaneIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_rax_fall_dire_top_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_rax_fall_dire_top_02"
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_NEGATIVE"
+						m_contexts = "foo:0"
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_rax_fall_dire_top_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsBadBarracksKilledIsSpectatorIsTopLaneIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsBadBarracksKilled",
+					"IsSpectator",
+					"IsTopLane",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsBadBarracksKilledIsSpectatorIsMidLaneIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_rax_fall_dire_mid_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_rax_fall_dire_mid_02"
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_NEGATIVE"
+						m_contexts = "foo:0"
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_rax_fall_dire_mid_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsBadBarracksKilledIsSpectatorIsMidLaneIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsBadBarracksKilled",
+					"IsSpectator",
+					"IsMidLane",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsBadBarracksKilledIsSpectatorIsBotLaneIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_rax_fall_dire_bot_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_rax_fall_dire_bot_02"
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_NEGATIVE"
+						m_contexts = "foo:0"
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_rax_fall_dire_bot_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsBadBarracksKilledIsSpectatorIsBotLaneIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsBadBarracksKilled",
+					"IsSpectator",
+					"IsBotLane",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsEnemyBarracksKilledIsTopLaneIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_rax_fall_enm_top_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_rax_fall_enm_top_02"
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_POSITIVE"
+						m_contexts = "foo:0"
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_rax_fall_enm_top_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsEnemyBarracksKilledIsTopLaneIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsEnemyBarracksKilled",
+					"IsTopLane",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsEnemyBarracksKilledIsMidLaneIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_rax_fall_enm_mid_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_rax_fall_enm_mid_02"
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_POSITIVE"
+						m_contexts = "foo:0"
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_rax_fall_enm_mid_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsEnemyBarracksKilledIsMidLaneIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsEnemyBarracksKilled",
+					"IsMidLane",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsEnemyBarracksKilledIsBotLaneIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_rax_fall_enm_bot_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_rax_fall_enm_bot_02"
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_POSITIVE"
+						m_contexts = "foo:0"
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_rax_fall_enm_bot_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsEnemyBarracksKilledIsBotLaneIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsEnemyBarracksKilled",
+					"IsBotLane",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsTowerKilledIsTopLaneIsDenyIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_deny_yr_top_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_deny_yr_top_02"
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_POSITIVE"
+						m_contexts = "foo:0"
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_deny_yr_top_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsTowerKilledIsTopLaneIsDenyIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsTowerKilled",
+					"IsTopLane",
+					"IsDeny",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsTowerKilledIsMidLaneIsDenyIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_deny_yr_mid_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_deny_yr_mid_02"
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_POSITIVE"
+						m_contexts = "foo:0"
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_deny_yr_mid_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsTowerKilledIsMidLaneIsDenyIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsTowerKilled",
+					"IsMidLane",
+					"IsDeny",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsTowerKilledIsBotLaneIsDenyIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_deny_yr_bot_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_deny_yr_bot_02"
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_POSITIVE"
+						m_contexts = "foo:0"
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_deny_yr_bot_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsTowerKilledIsBotLaneIsDenyIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsTowerKilled",
+					"IsBotLane",
+					"IsDeny",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsEnemyTowerKilledIsTopLaneIsDenyIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_deny_enm_top_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_deny_enm_top_02"
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_NEGATIVE"
+						m_contexts = "foo:0"
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_deny_enm_top_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsEnemyTowerKilledIsTopLaneIsDenyIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsEnemyTowerKilled",
+					"IsTopLane",
+					"IsDeny",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsEnemyTowerKilledIsMidLaneIsDenyIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_deny_enm_mid_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_deny_enm_mid_02"
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_NEGATIVE"
+						m_contexts = "foo:0"
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_deny_enm_mid_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsEnemyTowerKilledIsMidLaneIsDenyIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsEnemyTowerKilled",
+					"IsMidLane",
+					"IsDeny",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsEnemyTowerKilledIsBotLaneIsDenyIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_deny_enm_bot_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_deny_enm_bot_02"
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_NEGATIVE"
+						m_contexts = "foo:0"
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_deny_enm_bot_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsEnemyTowerKilledIsBotLaneIsDenyIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsEnemyTowerKilled",
+					"IsBotLane",
+					"IsDeny",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsGoodTowerKilledIsSpectatorIsTopLaneIsDenyIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_deny_rad_top_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_deny_rad_top_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_deny_rad_top_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsGoodTowerKilledIsSpectatorIsTopLaneIsDenyIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsGoodTowerKilled",
+					"IsSpectator",
+					"IsTopLane",
+					"IsDeny",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsGoodTowerKilledIsSpectatorIsMidLaneIsDenyIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_deny_rad_mid_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_deny_rad_mid_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_deny_rad_mid_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsGoodTowerKilledIsSpectatorIsMidLaneIsDenyIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsGoodTowerKilled",
+					"IsSpectator",
+					"IsMidLane",
+					"IsDeny",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsGoodTowerKilledIsSpectatorIsBotLaneIsDenyIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_deny_rad_bot_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_deny_rad_bot_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_deny_rad_bot_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsGoodTowerKilledIsSpectatorIsBotLaneIsDenyIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsGoodTowerKilled",
+					"IsSpectator",
+					"IsBotLane",
+					"IsDeny",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsBadTowerKilledIsSpectatorIsTopLaneIsDenyIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_deny_dire_top_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_deny_dire_top_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_deny_dire_top_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_deny_dire_top_04"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsBadTowerKilledIsSpectatorIsTopLaneIsDenyIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsBadTowerKilled",
+					"IsSpectator",
+					"IsTopLane",
+					"IsDeny",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsBadTowerKilledIsSpectatorIsMidLaneIsDenyIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_deny_dire_mid_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_deny_dire_mid_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_deny_dire_mid_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_deny_dire_mid_04"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsBadTowerKilledIsSpectatorIsMidLaneIsDenyIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsBadTowerKilled",
+					"IsSpectator",
+					"IsMidLane",
+					"IsDeny",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsBadTowerKilledIsSpectatorIsBotLaneIsDenyIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_deny_dire_bot_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_deny_dire_bot_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_twr_deny_dire_bot_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsBadTowerKilledIsSpectatorIsBotLaneIsDenyIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsBadTowerKilled",
+					"IsSpectator",
+					"IsBotLane",
+					"IsDeny",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomGlyphUsedBadIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_fort_dire_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_fort_dire_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_fort_dire_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_fort_dire_04"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomGlyphUsedBadIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"GlyphUsedBad",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomGlyphUsedGoodIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_fort_rad_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_fort_rad_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_fort_rad_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_fort_rad_04"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomGlyphUsedGoodIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"GlyphUsedGood",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomCourierLostBadIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_cour_kill_dire_01"
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_GENERIC"
+						m_contexts = "foo:0"
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_cour_kill_dire_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_cour_kill_dire_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_cour_kill_dire_04"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomCourierLostBadIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"CourierLostBad",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomCourierLostGoodIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_cour_kill_rad_01"
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_GENERIC"
+						m_contexts = "foo:0"
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_cour_kill_rad_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_cour_kill_rad_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomCourierLostGoodIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"CourierLostGood",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsMegaCreepsIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_mega_now_you_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_mega_now_you_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsMegaCreepsIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsMegaCreeps",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsEnemyMegaCreepsIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_mega_now_enm_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_mega_now_enm_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsEnemyMegaCreepsIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsEnemyMegaCreeps",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsBadMegaCreepsIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_mega_now_dire_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsBadMegaCreepsIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsBadMegaCreeps",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsGoodMegaCreepsIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_mega_now_rad_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsGoodMegaCreepsIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsGoodMegaCreeps",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsRoshanKilledBadIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_roshan_fallen_dire_01"
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_GENERIC"
+						m_contexts = "foo:0"
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_roshan_fallen_dire_02"
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_GENERIC"
+						m_contexts = "foo:0"
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_roshan_fallen_dire_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_roshan_fallen_dire_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_roshan_fallen_dire_05"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsRoshanKilledBadIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsRoshanKilledBad",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsRoshanKilledGoodIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_roshan_fallen_rad_01"
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_GENERIC"
+						m_contexts = "foo:0"
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_roshan_fallen_rad_02"
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_GENERIC"
+						m_contexts = "foo:0"
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_roshan_fallen_rad_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_roshan_fallen_rad_04"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsRoshanKilledGoodIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsRoshanKilledGood",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsBadVictoryIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_victory_dire_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_victory_dire_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_victory_dire_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsBadVictoryIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsBadVictory",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsGoodVictoryIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_victory_rad_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_victory_rad_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_victory_rad_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsGoodVictoryIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsGoodVictory",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsAllPickIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_type_all_pick"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsAllPickIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsAllPick",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsAllRandomIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_type_all_random"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsAllRandomIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsAllRandom",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsCaptainsDraftIsDraftBeginIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_type_capt_draft"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsCaptainsDraftIsDraftBeginIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsCaptainsDraft",
+					"IsDraftBegin",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsCaptainsModeIsDraftBeginIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_type_capt_mode"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsCaptainsModeIsDraftBeginIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsCaptainsMode",
+					"IsDraftBegin",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsReverseCaptainsModeIsDraftBeginIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_type_capt_mode"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsReverseCaptainsModeIsDraftBeginIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsReverseCaptainsMode",
+					"IsDraftBegin",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsRandomDraftIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_type_random_draft"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsRandomDraftIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsRandomDraft",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsSingleDraftIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_type_single_draft"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsSingleDraftIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsSingleDraft",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsDeathMatchIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_type_death_match"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsDeathMatchIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsDeathMatch",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsTenSecondsRemainingIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_count_pick_10"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsTenSecondsRemainingIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsTenSecondsRemaining",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsFiveSecondsRemainingIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_count_pick_5"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsFiveSecondsRemainingIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsFiveSecondsRemaining",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsMidOnlyIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_choose_hero"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsMidOnlyIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsMidOnly",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsLeastPlayedIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_choose_hero"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsLeastPlayedIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsLeastPlayed",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsLimitedHeroesIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_choose_hero"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsLimitedHeroesIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsLimitedHeroes",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsCustomModeIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_choose_hero"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsCustomModeIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsCustomMode",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsOneVsOneIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_choose_hero"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsOneVsOneIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsOneVsOne",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsAnnounceIdleDuringGameChance_10%IsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_idle_to_player_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_idle_to_player_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_idle_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsAnnounceIdleDuringGameChance_10%IsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsAnnounceIdle",
+					"DuringGame",
+					"Chance_10%",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_CustomIsAnnounceHeroPickChance_50%IsEnemyAxeIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_idle_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_idle_03"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_CustomIsAnnounceHeroPickChance_50%IsEnemyAxeIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_axe",
+					"IsAnnounceHeroPick",
+					"Chance_50%",
+					"IsEnemyAxe",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_Followup_GenericIsPrepStartChance_5%IsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_battle_pregame_idle_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_Followup_GenericIsPrepStartChance_5%IsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Followup_Generic",
+					"Isannouncer_dlc_axe",
+					"IsPrepStart",
+					"Chance_5%",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_Followup_GenericCourierLostBadIsAnnouncerVoice_AxeChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_cour_follow_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_cour_follow_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_Followup_GenericCourierLostBadIsAnnouncerVoice_AxeChance_25%"
+				m_Requirements = 
+				[
+					"Followup_Generic",
+					"Isannouncer_dlc_axe",
+					"CourierLostBad",
+					"IsAnnouncerVoice_Axe",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_Followup_GenericCourierLostGoodIsAnnouncerVoice_AxeChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_cour_follow_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_cour_follow_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_Followup_GenericCourierLostGoodIsAnnouncerVoice_AxeChance_25%"
+				m_Requirements = 
+				[
+					"Followup_Generic",
+					"Isannouncer_dlc_axe",
+					"CourierLostGood",
+					"IsAnnouncerVoice_Axe",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_Followup_GenericIsRoshanKilledBadIsAnnouncerVoice_AxeChance_5%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_roshan_idle_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_Followup_GenericIsRoshanKilledBadIsAnnouncerVoice_AxeChance_5%"
+				m_Requirements = 
+				[
+					"Followup_Generic",
+					"Isannouncer_dlc_axe",
+					"IsRoshanKilledBad",
+					"IsAnnouncerVoice_Axe",
+					"Chance_5%",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_Followup_GenericIsRoshanKilledGoodIsAnnouncerVoice_AxeChance_5%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_roshan_idle_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_Followup_GenericIsRoshanKilledGoodIsAnnouncerVoice_AxeChance_5%"
+				m_Requirements = 
+				[
+					"Followup_Generic",
+					"Isannouncer_dlc_axe",
+					"IsRoshanKilledGood",
+					"IsAnnouncerVoice_Axe",
+					"Chance_5%",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_Followup_NegativeIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_ally_neg_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_ally_neg_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_ally_neg_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_ally_neg_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_ally_neg_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_ally_neg_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_ally_neg_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_ally_neg_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_Followup_NegativeIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Followup_Negative",
+					"Isannouncer_dlc_axe",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_Followup_PositiveIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_ally_pos_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_ally_pos_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_ally_pos_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_ally_pos_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_ally_pos_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_ally_pos_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_ally_pos_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_ally_pos_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_ally_pos_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_ally_pos_11"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_Followup_PositiveIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Followup_Positive",
+					"Isannouncer_dlc_axe",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_Followup_Negative_OngoingIsAnnouncerVoice_Axe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_event_neg_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_event_neg_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_event_neg_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_event_neg_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_event_neg_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_event_neg_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_event_neg_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_event_neg_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_event_neg_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_Followup_Negative_OngoingIsAnnouncerVoice_Axe"
+				m_Requirements = 
+				[
+					"Followup_Negative_Ongoing",
+					"Isannouncer_dlc_axe",
+					"IsAnnouncerVoice_Axe",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_axe_RespawnChance_3%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_axe_announcer_player_aegis_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_axe_RespawnChance_3%"
+				m_Requirements = 
+				[
+					"Respawn",
+					"Isannouncer_dlc_axe",
+					"Chance_3%",
+				]
+			}
+		},
+	]
+	m_Requirements = 
+	[
+		{
+			m_name = "Isannouncer_dlc_axe"
+			m_matchKey = "classname"
+			m_matchExpr = "npc_dota_hero_announcer_dlc_axe"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsAnnouncerVoice_Axe"
+			m_matchKey = "announcer_voice"
+			m_matchExpr = "npc_dota_hero_announcer_dlc_Axe"
+			m_flWeight = 5.0
+		},
+	]
+}

@@ -1,0 +1,2762 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vrr_c1:version{c1f07085-5299-4e8a-b7e9-1cbb66bbbe23} -->
+{
+	m_Includes = 
+	[
+		"scripts/talker/response_rules_shared.vrr",
+	]
+	m_ResponseGroups = 
+	[
+		{
+			m_name = "templar_assassin_Spawn"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_spawn_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_spawn_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_spawn_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_spawn_04"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_Spawn"
+				m_Requirements = 
+				[
+					"Spawn",
+					"Istemplar_assassin",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_CustomIsGameStart"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_begins_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_CustomIsGameStart"
+				m_Requirements = 
+				[
+					"Custom",
+					"Istemplar_assassin",
+					"IsGameStart",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_CustomIsTemplarAsLoadoutSpawn"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_spawn_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_spawn_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_spawn_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_spawn_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_move_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_move_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_psiblades_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_cast_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_cast_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_cast_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_psiblades_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_psiblades_04"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_CustomIsTemplarAsLoadoutSpawn"
+				m_Requirements = 
+				[
+					"Custom",
+					"Istemplar_assassin",
+					"IsTemplarAsLoadoutSpawn",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_KillIsFirstBlood"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_first_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_KillIsFirstBlood"
+				m_Requirements = 
+				[
+					"Kill",
+					"Istemplar_assassin",
+					"IsFirstBlood",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_Kill"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_psiblades_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_kill_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_kill_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_kill_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_kill_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_kill_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_kill_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_kill_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_kill_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_kill_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_kill_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_kill_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_kill_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_kill_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_kill_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_kill_15"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_rival_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_laugh_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_laugh_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_laugh_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_laugh_05"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_Kill"
+				m_Requirements = 
+				[
+					"Kill",
+					"Istemplar_assassin",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_KillChance_1%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_refraction_04"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_KillChance_1%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Istemplar_assassin",
+					"Chance_1%",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_KillIsEnemyRikiChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_rival_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_KillIsEnemyRikiChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Istemplar_assassin",
+					"IsEnemyRiki",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_KillIsEnemyBounty_HunterChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_rival_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_KillIsEnemyBounty_HunterChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Istemplar_assassin",
+					"IsEnemyBounty_Hunter",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_KillIsEnemyPhantom_AssassinChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_rival_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_KillIsEnemyPhantom_AssassinChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Istemplar_assassin",
+					"IsEnemyPhantom_Assassin",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_KillIsEnemyWarlockChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_rival_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_rival_05"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_KillIsEnemyWarlockChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Istemplar_assassin",
+					"IsEnemyWarlock",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_KillIsEnemyInvokerChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_rival_06"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_KillIsEnemyInvokerChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Istemplar_assassin",
+					"IsEnemyInvoker",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_KillIsEnemyRubickChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_rival_07"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_KillIsEnemyRubickChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Istemplar_assassin",
+					"IsEnemyRubick",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_KillIsEnemyOmniKnightChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_rival_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_rival_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_rival_10"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_KillIsEnemyOmniKnightChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Istemplar_assassin",
+					"IsEnemyOmniKnight",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_KillIsEnemySpectreChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_rival_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_rival_13"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_KillIsEnemySpectreChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Istemplar_assassin",
+					"IsEnemySpectre",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_KillIsEnemyVoid_SpiritChance_30%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_rival_14"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_rival_15"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_rival_16"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_rival_17"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_KillIsEnemyVoid_SpiritChance_30%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Istemplar_assassin",
+					"IsEnemyVoid_Spirit",
+					"Chance_30%",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_KillIsEnemyMonkey_KingChance_30%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_rival_18"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_rival_19"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_KillIsEnemyMonkey_KingChance_30%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Istemplar_assassin",
+					"IsEnemyMonkey_King",
+					"Chance_30%",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_KillIsEnemyPangolinChance_30%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_rival_20"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_rival_21"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_KillIsEnemyPangolinChance_30%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Istemplar_assassin",
+					"IsEnemyPangolin",
+					"Chance_30%",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_KillIsEnemyDark_WillowChance_30%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_rival_22"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_rival_23"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_KillIsEnemyDark_WillowChance_30%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Istemplar_assassin",
+					"IsEnemyDark_Willow",
+					"Chance_30%",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_KillIsEnemyGrimstrokeChance_30%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_rival_24"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_rival_25"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_KillIsEnemyGrimstrokeChance_30%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Istemplar_assassin",
+					"IsEnemyGrimstroke",
+					"Chance_30%",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_KillIsEnemyMarsChance_30%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_rival_26"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_rival_27"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_KillIsEnemyMarsChance_30%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Istemplar_assassin",
+					"IsEnemyMars",
+					"Chance_30%",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_KillIsEnemySnapfireChance_30%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_rival_28"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_rival_29"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_KillIsEnemySnapfireChance_30%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Istemplar_assassin",
+					"IsEnemySnapfire",
+					"Chance_30%",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_Move"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_move_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_move_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_move_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_move_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_move_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_move_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_move_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_move_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_move_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_move_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_move_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_move_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_move_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_move_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_move_15"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_Move"
+				m_Requirements = 
+				[
+					"Move",
+					"Istemplar_assassin",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_Attack"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_attack_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_attack_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_attack_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_attack_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_attack_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_attack_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_attack_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_attack_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_attack_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_attack_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_attack_11"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_Attack"
+				m_Requirements = 
+				[
+					"Attack",
+					"Istemplar_assassin",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_CastOrder"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_cast_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_cast_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_cast_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_CastOrder"
+				m_Requirements = 
+				[
+					"CastOrder",
+					"Istemplar_assassin",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_CastExecuteIsAbilityTemplarAsTrapSetChance_50%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_psionictrap_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_psionictrap_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_psionictrap_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_CastExecuteIsAbilityTemplarAsTrapSetChance_50%"
+				m_Requirements = 
+				[
+					"CastExecute",
+					"Istemplar_assassin",
+					"IsAbilityTemplarAsTrapSet",
+					"Chance_50%",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_CastExecuteIsAbilityTemplarAsTrapSetChance_1%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_psionictrap_04"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_CastExecuteIsAbilityTemplarAsTrapSetChance_1%"
+				m_Requirements = 
+				[
+					"CastExecute",
+					"Istemplar_assassin",
+					"IsAbilityTemplarAsTrapSet",
+					"Chance_1%",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_CastExecuteIsAbilityTemplarAsTrapSpringChance_50%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_psionictrap_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_psionictrap_10"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_CastExecuteIsAbilityTemplarAsTrapSpringChance_50%"
+				m_Requirements = 
+				[
+					"CastExecute",
+					"Istemplar_assassin",
+					"IsAbilityTemplarAsTrapSpring",
+					"Chance_50%",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_LevelUp"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_levelup_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_levelup_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_levelup_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_levelup_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_levelup_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_levelup_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_levelup_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_levelup_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_levelup_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_levelup_10"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_LevelUp"
+				m_Requirements = 
+				[
+					"LevelUp",
+					"Istemplar_assassin",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_AllyNearIsAllyRikiEarlyGame"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_ally_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_AllyNearIsAllyRikiEarlyGame"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Istemplar_assassin",
+					"IsAllyRiki",
+					"EarlyGame",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_AllyNearIsAllyPhantom_AssassinEarlyGame"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_ally_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_AllyNearIsAllyPhantom_AssassinEarlyGame"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Istemplar_assassin",
+					"IsAllyPhantom_Assassin",
+					"EarlyGame",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_AllyNearIsAllyNyx_AssassinEarlyGame"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_ally_03"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_AllyNearIsAllyNyx_AssassinEarlyGame"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Istemplar_assassin",
+					"IsAllyNyx_Assassin",
+					"EarlyGame",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_AllyNearIsAllyWarlockEarlyGame"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_ally_04"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_AllyNearIsAllyWarlockEarlyGame"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Istemplar_assassin",
+					"IsAllyWarlock",
+					"EarlyGame",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_AllyNearIsAllySilencerEarlyGame"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_ally_05"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_AllyNearIsAllySilencerEarlyGame"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Istemplar_assassin",
+					"IsAllySilencer",
+					"EarlyGame",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_AllyNearIsAllyOmniKnightEarlyGame"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_ally_06"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_AllyNearIsAllyOmniKnightEarlyGame"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Istemplar_assassin",
+					"IsAllyOmniKnight",
+					"EarlyGame",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_AllyNearIsAllyVoid_SpiritEarlyGame"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_ally_07"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_ally_08"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_ally_09"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_ally_10"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_AllyNearIsAllyVoid_SpiritEarlyGame"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Istemplar_assassin",
+					"IsAllyVoid_Spirit",
+					"EarlyGame",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_AllyNearIsAllyMonkey_KingEarlyGame"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_ally_11"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_ally_12"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_AllyNearIsAllyMonkey_KingEarlyGame"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Istemplar_assassin",
+					"IsAllyMonkey_King",
+					"EarlyGame",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_AllyNearIsAllyPangolinEarlyGame"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_ally_13"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_ally_13_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_AllyNearIsAllyPangolinEarlyGame"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Istemplar_assassin",
+					"IsAllyPangolin",
+					"EarlyGame",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_AllyNearIsAllyDark_WillowEarlyGame"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_ally_14"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_ally_15"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_AllyNearIsAllyDark_WillowEarlyGame"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Istemplar_assassin",
+					"IsAllyDark_Willow",
+					"EarlyGame",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_AllyNearIsAllyGrimstrokeEarlyGame"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_ally_16"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_ally_17"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_AllyNearIsAllyGrimstrokeEarlyGame"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Istemplar_assassin",
+					"IsAllyGrimstroke",
+					"EarlyGame",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_AllyNearIsAllyMarsEarlyGame"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_ally_18"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_ally_19"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_AllyNearIsAllyMarsEarlyGame"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Istemplar_assassin",
+					"IsAllyMars",
+					"EarlyGame",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_AllyNearIsAllySnapfireEarlyGame"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_ally_20"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_ally_21"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_AllyNearIsAllySnapfireEarlyGame"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Istemplar_assassin",
+					"IsAllySnapfire",
+					"EarlyGame",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_LastHit"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_lasthit_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_lasthit_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_lasthit_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_lasthit_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_lasthit_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_lasthit_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_lasthit_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_lasthit_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_lasthit_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_LastHit"
+				m_Requirements = 
+				[
+					"LastHit",
+					"Istemplar_assassin",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_Death"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_death_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_death_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_death_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_death_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_death_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_death_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_death_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_death_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_death_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_death_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_death_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_death_12"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_Death"
+				m_Requirements = 
+				[
+					"Death",
+					"Istemplar_assassin",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_DeathChance_5%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_death_13"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_DeathChance_5%"
+				m_Requirements = 
+				[
+					"Death",
+					"Istemplar_assassin",
+					"Chance_5%",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_DeathIsReincarnating"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_fastres_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_DeathIsReincarnating"
+				m_Requirements = 
+				[
+					"Death",
+					"Istemplar_assassin",
+					"IsReincarnating",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_Respawn"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_respawn_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_respawn_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_respawn_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_respawn_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_respawn_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_respawn_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_respawn_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_respawn_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_respawn_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_respawn_10"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_Respawn"
+				m_Requirements = 
+				[
+					"Respawn",
+					"Istemplar_assassin",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_Select"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_rare_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_rare_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_rare_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_rare_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_void_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_void_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_void_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_void_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_void_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_Select"
+				m_Requirements = 
+				[
+					"Select",
+					"Istemplar_assassin",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_PurchaseIsExpensiveItem"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_purch_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_purch_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_purch_03"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_PurchaseIsExpensiveItem"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Istemplar_assassin",
+					"IsExpensiveItem",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_PurchaseIsUltimateScepter"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_scepter_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_scepter_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_PurchaseIsUltimateScepter"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Istemplar_assassin",
+					"IsUltimateScepter",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_PurchaseIsBlinkDagger"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_blink_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_blink_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_PurchaseIsBlinkDagger"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Istemplar_assassin",
+					"IsBlinkDagger",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_PurchaseIsDesolator"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_items_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_PurchaseIsDesolator"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Istemplar_assassin",
+					"IsDesolator",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_PurchaseIsBlackKingBar"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_items_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_PurchaseIsBlackKingBar"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Istemplar_assassin",
+					"IsBlackKingBar",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_PurchaseIsButterfly"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_items_03"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_PurchaseIsButterfly"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Istemplar_assassin",
+					"IsButterfly",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_PurchaseIsDaedalus"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_items_04"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_PurchaseIsDaedalus"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Istemplar_assassin",
+					"IsDaedalus",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_PurchaseIsAssaultCuirass"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_items_05"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_PurchaseIsAssaultCuirass"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Istemplar_assassin",
+					"IsAssaultCuirass",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_PurchaseIsHeart"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_items_06"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_PurchaseIsHeart"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Istemplar_assassin",
+					"IsHeart",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_PurchaseIsSphere"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_items_07"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_PurchaseIsSphere"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Istemplar_assassin",
+					"IsSphere",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_PurchaseIsMonkeyKingBar"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_items_08"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_PurchaseIsMonkeyKingBar"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Istemplar_assassin",
+					"IsMonkeyKingBar",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_PurchaseIsSkadi"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_items_09"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_PurchaseIsSkadi"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Istemplar_assassin",
+					"IsSkadi",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_PurchaseIsManta"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_items_10"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_PurchaseIsManta"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Istemplar_assassin",
+					"IsManta",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_Bottling"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_bottle_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_bottle_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_bottle_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_Bottling"
+				m_Requirements = 
+				[
+					"Bottling",
+					"Istemplar_assassin",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_Deny"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_deny_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_deny_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_deny_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_deny_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_deny_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_deny_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_deny_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_deny_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_deny_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_deny_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_deny_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_deny_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_deny_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_deny_15"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_deny_16"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_Deny"
+				m_Requirements = 
+				[
+					"Deny",
+					"Istemplar_assassin",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_ItemDropIsCommonDrop"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_itemcommon_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_ItemDropIsCommonDrop"
+				m_Requirements = 
+				[
+					"ItemDrop",
+					"Istemplar_assassin",
+					"IsCommonDrop",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_ItemDropIsRareDrop"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_itemmoderate_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_ItemDropIsRareDrop"
+				m_Requirements = 
+				[
+					"ItemDrop",
+					"Istemplar_assassin",
+					"IsRareDrop",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_ItemDropIsUltraRareDrop"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_itemrare_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_ItemDropIsUltraRareDrop"
+				m_Requirements = 
+				[
+					"ItemDrop",
+					"Istemplar_assassin",
+					"IsUltraRareDrop",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_Immortality"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_immort_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_immort_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_Immortality"
+				m_Requirements = 
+				[
+					"Immortality",
+					"Istemplar_assassin",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_PowerupIsPowerupHaste"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_haste_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_haste_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_PowerupIsPowerupHaste"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Istemplar_assassin",
+					"IsPowerupHaste",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_PowerupIsPowerupDoubleDamage"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_doubdam_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_doubdam_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_PowerupIsPowerupDoubleDamage"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Istemplar_assassin",
+					"IsPowerupDoubleDamage",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_PowerupIsPowerupRegeneration"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_regen_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_regen_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_PowerupIsPowerupRegeneration"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Istemplar_assassin",
+					"IsPowerupRegeneration",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_PowerupIsPowerupBounty"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_lasthit_07"
+					m_params = 
+					{
+						m_respeakdelay.start = 300.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_PowerupIsPowerupBounty"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Istemplar_assassin",
+					"IsPowerupBounty",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_PowerupIsPowerupIllusion"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_illus_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_illus_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_PowerupIsPowerupIllusion"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Istemplar_assassin",
+					"IsPowerupIllusion",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_PowerupIsPowerupInvisibility"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_invis_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_invis_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_PowerupIsPowerupInvisibility"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Istemplar_assassin",
+					"IsPowerupInvisibility",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_PowerupIsPowerupArcane"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_itemmoderate_02"
+					m_params = 
+					{
+						m_respeakdelay.start = 300.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_PowerupIsPowerupArcane"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Istemplar_assassin",
+					"IsPowerupArcane",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_CooldownLittleNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_notyet_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_notyet_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_notyet_07"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_CooldownLittleNag"
+				m_Requirements = 
+				[
+					"Cooldown",
+					"Istemplar_assassin",
+					"LittleNag",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_CooldownMediumNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_notyet_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_notyet_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_notyet_08"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_CooldownMediumNag"
+				m_Requirements = 
+				[
+					"Cooldown",
+					"Istemplar_assassin",
+					"MediumNag",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_CooldownSuperNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_notyet_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_notyet_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_notyet_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_CooldownSuperNag"
+				m_Requirements = 
+				[
+					"Cooldown",
+					"Istemplar_assassin",
+					"SuperNag",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_NoManaLittleNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_nomana_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_nomana_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_nomana_07"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_NoManaLittleNag"
+				m_Requirements = 
+				[
+					"NoMana",
+					"Istemplar_assassin",
+					"LittleNag",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_NoManaMediumNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_nomana_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_nomana_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_nomana_08"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_NoManaMediumNag"
+				m_Requirements = 
+				[
+					"NoMana",
+					"Istemplar_assassin",
+					"MediumNag",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_NoManaSuperNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_nomana_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_nomana_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_nomana_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_NoManaSuperNag"
+				m_Requirements = 
+				[
+					"NoMana",
+					"Istemplar_assassin",
+					"SuperNag",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_Thanks"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_thanks_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_thanks_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_thanks_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_Thanks"
+				m_Requirements = 
+				[
+					"Thanks",
+					"Istemplar_assassin",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_ThanksChance_5%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_thanks_05"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_ThanksChance_5%"
+				m_Requirements = 
+				[
+					"Thanks",
+					"Istemplar_assassin",
+					"Chance_5%",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_PainChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_underattack_01"
+					m_params = 
+					{
+						m_respeakdelay.start = 120.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_PainChance_25%"
+				m_Requirements = 
+				[
+					"Pain",
+					"Istemplar_assassin",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_Pain"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_pain_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_pain_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_pain_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_pain_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_pain_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_pain_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_pain_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_pain_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_pain_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_Pain"
+				m_Requirements = 
+				[
+					"Pain",
+					"Istemplar_assassin",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_InTheBag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_inthebag_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_InTheBag"
+				m_Requirements = 
+				[
+					"InTheBag",
+					"Istemplar_assassin",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_Defeat"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_lose_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_lose_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_lose_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_Defeat"
+				m_Requirements = 
+				[
+					"Defeat",
+					"Istemplar_assassin",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_Victory"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_win_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_win_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_win_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_Victory"
+				m_Requirements = 
+				[
+					"Victory",
+					"Istemplar_assassin",
+				]
+			}
+		},
+		{
+			m_name = "templar_assassin_EmoteIsEmoteLaugh"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_laugh_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_laugh_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_laugh_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "templar_assassin_temp_laugh_05"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "templar_assassin_EmoteIsEmoteLaugh"
+				m_Requirements = 
+				[
+					"Emote",
+					"Istemplar_assassin",
+					"IsEmoteLaugh",
+				]
+			}
+		},
+	]
+	m_Requirements = 
+	[
+		{
+			m_name = "Istemplar_assassin"
+			m_matchKey = "classname"
+			m_matchExpr = "npc_dota_hero_templar_assassin"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsAbilityTemplarAsTrapSet"
+			m_matchKey = "abilityname"
+			m_matchExpr = "templar_assassin_psionic_trap"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsAbilityTemplarAsTrapSpring"
+			m_matchKey = "abilityname"
+			m_matchExpr = "templar_assassin_trap"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsTemplarAsLoadoutSpawn"
+			m_matchKey = "special_spawn"
+			m_matchExpr = "templar_assassin_loadout_spawn"
+			m_flWeight = 5.0
+		},
+	]
+}

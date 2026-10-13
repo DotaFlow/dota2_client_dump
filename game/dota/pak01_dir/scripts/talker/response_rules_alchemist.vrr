@@ -1,0 +1,2817 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vrr_c1:version{c1f07085-5299-4e8a-b7e9-1cbb66bbbe23} -->
+{
+	m_Includes = 
+	[
+		"scripts/talker/response_rules_shared.vrr",
+	]
+	m_ResponseGroups = 
+	[
+		{
+			m_name = "alchemist_Spawn"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_spawn_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_spawn_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_spawn_03"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/alchemist/alchemist_alch_spawn_04.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/alchemist/alchemist_alch_spawn_05.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_Spawn"
+				m_Requirements = 
+				[
+					"Spawn",
+					"Isalchemist",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_CustomIsGameStart"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_battlebegins_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_battlebegins_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_CustomIsGameStart"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isalchemist",
+					"IsGameStart",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_CustomIsAbilityConcoctionIsTooLate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_ability_concoc_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_ability_concoc_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_ability_concoc_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_ability_concoc_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_ability_concoc_18"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_ability_concoc_19"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_ability_concoc_20"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_CustomIsAbilityConcoctionIsTooLate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isalchemist",
+					"IsAbilityConcoction",
+					"IsTooLate",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_CustomIsAbilityConcoctionThrowIsJustInTime"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_ability_concoc_16"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_ability_concoc_17"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_CustomIsAbilityConcoctionThrowIsJustInTime"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isalchemist",
+					"IsAbilityConcoctionThrow",
+					"IsJustInTime",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_CustomIsAbilityConcoctionItBlewUp"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_ability_concoc_21"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_ability_concoc_22"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_ability_concoc_23"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_ability_concoc_24"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_ability_concoc_25"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_CustomIsAbilityConcoctionItBlewUp"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isalchemist",
+					"IsAbilityConcoction",
+					"ItBlewUp",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_CustomIsAlchemistLoadoutSpawn"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_spawn_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_spawn_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_spawn_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_attack_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_attack_17"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_move_26"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_level_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_respawn_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_attack_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_move_20"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_attack_18"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_cast_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_CustomIsAlchemistLoadoutSpawn"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isalchemist",
+					"IsAlchemistLoadoutSpawn",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_KillIsFirstBlood"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_firstblood_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_KillIsFirstBlood"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isalchemist",
+					"IsFirstBlood",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_KillIsAbilityConcoctionChance_50%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_ability_concoc_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_ability_concoc_15"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_KillIsAbilityConcoctionChance_50%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isalchemist",
+					"IsAbilityConcoction",
+					"Chance_50%",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_Kill"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_kill_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_kill_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_kill_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_kill_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_kill_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_kill_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_kill_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_kill_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_kill_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_kill_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_kill_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_kill_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_kill_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_kill_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_kill_15"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_kill_16"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_kill_17"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_kill_18"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_laugh_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_laugh_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_laugh_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_laugh_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_laugh_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_laugh_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_laugh_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_laugh_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_laugh_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_laugh_10"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_Kill"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isalchemist",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_KillIsEnemyBatriderChance_35%"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/alchemist/alchemist_alch_rival_01.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_KillIsEnemyBatriderChance_35%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isalchemist",
+					"IsEnemyBatrider",
+					"Chance_35%",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_KillIsEnemyPudgeChance_35%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_rival_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_rival_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_KillIsEnemyPudgeChance_35%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isalchemist",
+					"IsEnemyPudge",
+					"Chance_35%",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_KillIsEnemyAncient_ApparitionChance_35%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_rival_04"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_KillIsEnemyAncient_ApparitionChance_35%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isalchemist",
+					"IsEnemyAncient_Apparition",
+					"Chance_35%",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_KillIsEnemyPuckChance_35%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_rival_05"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_KillIsEnemyPuckChance_35%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isalchemist",
+					"IsEnemyPuck",
+					"Chance_35%",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_KillIsEnemyKunkkaChance_35%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_rival_06"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_KillIsEnemyKunkkaChance_35%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isalchemist",
+					"IsEnemyKunkka",
+					"Chance_35%",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_KillIsEnemyMorphlingChance_35%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_rival_07"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_KillIsEnemyMorphlingChance_35%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isalchemist",
+					"IsEnemyMorphling",
+					"Chance_35%",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_KillIsEnemyClinkzChance_35%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_rival_10"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_KillIsEnemyClinkzChance_35%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isalchemist",
+					"IsEnemyClinkz",
+					"Chance_35%",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_KillIsEnemyPugnaChance_35%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_rival_11"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_KillIsEnemyPugnaChance_35%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isalchemist",
+					"IsEnemyPugna",
+					"Chance_35%",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_KillIsEnemySlardarChance_35%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_rival_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_rival_14"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_KillIsEnemySlardarChance_35%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isalchemist",
+					"IsEnemySlardar",
+					"Chance_35%",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_KillIsEnemyRattletrapChance_35%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_rival_15"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_KillIsEnemyRattletrapChance_35%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isalchemist",
+					"IsEnemyRattletrap",
+					"Chance_35%",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_KillIsEnemySniperChance_35%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_rival_16"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_KillIsEnemySniperChance_35%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isalchemist",
+					"IsEnemySniper",
+					"Chance_35%",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_KillIsEnemyEarthshakerChance_35%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_rival_17"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_KillIsEnemyEarthshakerChance_35%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isalchemist",
+					"IsEnemyEarthshaker",
+					"Chance_35%",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_KillIsEnemyAxeChance_35%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_rival_18"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_rival_20"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_KillIsEnemyAxeChance_35%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isalchemist",
+					"IsEnemyAxe",
+					"Chance_35%",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_KillIsEnemySpirit_BreakerChance_35%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_rival_19"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_KillIsEnemySpirit_BreakerChance_35%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isalchemist",
+					"IsEnemySpirit_Breaker",
+					"Chance_35%",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_Move"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_move_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_move_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_move_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_move_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_move_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_move_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_move_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_move_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_move_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_move_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_move_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_move_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_move_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_move_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_move_15"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_move_16"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_move_17"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_move_18"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_move_19"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_move_20"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_move_21"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_move_22"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_move_23"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_move_24"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_move_25"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_move_26"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_move_27"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_move_28"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_move_29"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_move_30"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_move_31"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_move_32"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_move_33"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_move_34"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_move_35"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_move_36"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_move_37"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_move_38"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_move_39"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_move_40"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_move_41"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_Move"
+				m_Requirements = 
+				[
+					"Move",
+					"Isalchemist",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_Attack"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_attack_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_attack_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_attack_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_attack_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_attack_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_attack_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_attack_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_attack_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_attack_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_attack_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_attack_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_attack_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_attack_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_attack_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_attack_15"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_attack_16"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_attack_17"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_attack_18"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_attack_19"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_Attack"
+				m_Requirements = 
+				[
+					"Attack",
+					"Isalchemist",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_CastOrder"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_cast_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_cast_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_cast_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_CastOrder"
+				m_Requirements = 
+				[
+					"CastOrder",
+					"Isalchemist",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_CastExecuteIsAbilityAcidSpray"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_ability_acid_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_ability_acid_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_ability_acid_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_ability_acid_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_ability_acid_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_ability_acid_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_ability_acid_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_ability_acid_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_ability_acid_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_ability_acid_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_ability_acid_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_ability_acid_12"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_CastExecuteIsAbilityAcidSpray"
+				m_Requirements = 
+				[
+					"CastExecute",
+					"Isalchemist",
+					"IsAbilityAcidSpray",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_CastExecuteIsAbilityConcoction"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_ability_concoc_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_ability_concoc_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_ability_concoc_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_ability_concoc_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_ability_concoc_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_ability_concoc_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_ability_concoc_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_ability_concoc_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_ability_concoc_10"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_CastExecuteIsAbilityConcoction"
+				m_Requirements = 
+				[
+					"CastExecute",
+					"Isalchemist",
+					"IsAbilityConcoction",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_CastExecuteIsAbilityChemicalRage"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_ability_rage_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_ability_rage_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_ability_rage_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_ability_rage_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_ability_rage_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_ability_rage_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_ability_rage_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_ability_rage_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_ability_rage_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_ability_rage_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_ability_rage_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_ability_rage_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_ability_rage_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_ability_rage_15"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_ability_rage_16"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_ability_rage_17"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_ability_rage_18"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_ability_rage_19"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_ability_rage_20"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_ability_rage_21"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_ability_rage_22"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_ability_rage_23"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_ability_rage_24"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_ability_rage_25"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_CastExecuteIsAbilityChemicalRage"
+				m_Requirements = 
+				[
+					"CastExecute",
+					"Isalchemist",
+					"IsAbilityChemicalRage",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_LastHit"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_ability_goblin_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_ability_goblin_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_ability_goblin_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_ability_goblin_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_ability_goblin_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_ability_goblin_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_ability_goblin_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_lasthit_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_lasthit_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_lasthit_03"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/alchemist/alchemist_alch_lasthit_04.vcd"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_lasthit_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_lasthit_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_lasthit_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_lasthit_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_lasthit_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_LastHit"
+				m_Requirements = 
+				[
+					"LastHit",
+					"Isalchemist",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_LevelUp"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_level_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_level_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_level_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_level_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_level_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_level_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_level_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_level_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_level_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_level_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_level_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_level_12"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_LevelUp"
+				m_Requirements = 
+				[
+					"LevelUp",
+					"Isalchemist",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_Death"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_death_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_death_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_death_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_death_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_death_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_death_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_death_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_death_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_death_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_death_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_death_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_death_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_death_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_death_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_death_15"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_death_16"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_death_17"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_death_18"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_death_19"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_Death"
+				m_Requirements = 
+				[
+					"Death",
+					"Isalchemist",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_DeathIsReincarnating"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_fastres_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_DeathIsReincarnating"
+				m_Requirements = 
+				[
+					"Death",
+					"Isalchemist",
+					"IsReincarnating",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_Respawn"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_respawn_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_respawn_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_respawn_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_respawn_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_respawn_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_respawn_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_respawn_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_respawn_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_respawn_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_respawn_10"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_Respawn"
+				m_Requirements = 
+				[
+					"Respawn",
+					"Isalchemist",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_Select"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_rare_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_rare_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_rare_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_rare_04"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_Select"
+				m_Requirements = 
+				[
+					"Select",
+					"Isalchemist",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_PurchaseIsExpensiveItem"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/alchemist/alchemist_alch_purch_01.vcd"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_purch_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/alchemist/alchemist_alch_purch_03.vcd"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_PurchaseIsExpensiveItem"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isalchemist",
+					"IsExpensiveItem",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_PurchaseIsBlinkDagger"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/alchemist/alchemist_alch_blink_01.vcd"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_blink_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_PurchaseIsBlinkDagger"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isalchemist",
+					"IsBlinkDagger",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_PurchaseIsUltimateScepter"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_scepter_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_scepter_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_PurchaseIsUltimateScepter"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isalchemist",
+					"IsUltimateScepter",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_PurchaseIsVanguard"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_item_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_PurchaseIsVanguard"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isalchemist",
+					"IsVanguard",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_PurchaseIsSatanic"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_item_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_PurchaseIsSatanic"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isalchemist",
+					"IsSatanic",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_PurchaseIsHoodOfDefiance"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_item_03"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_PurchaseIsHoodOfDefiance"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isalchemist",
+					"IsHoodOfDefiance",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_PurchaseIsHeart"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_item_04"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_PurchaseIsHeart"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isalchemist",
+					"IsHeart",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_PurchaseIsAssaultCuirass"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/alchemist/alchemist_alch_item_05.vcd"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_PurchaseIsAssaultCuirass"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isalchemist",
+					"IsAssaultCuirass",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_PurchaseIsRadiance"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_item_06"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_PurchaseIsRadiance"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isalchemist",
+					"IsRadiance",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_PurchaseIsPhaseBoots"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/alchemist/alchemist_alch_item_07.vcd"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_PurchaseIsPhaseBoots"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isalchemist",
+					"IsPhaseBoots",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_PurchaseIsMaskOfMadness"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_item_08"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_PurchaseIsMaskOfMadness"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isalchemist",
+					"IsMaskOfMadness",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_Bottling"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_bottle_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_bottle_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_bottle_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_Bottling"
+				m_Requirements = 
+				[
+					"Bottling",
+					"Isalchemist",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_Deny"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_deny_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_deny_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_deny_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_deny_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_deny_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_deny_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_deny_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_deny_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_deny_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_deny_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_deny_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_deny_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_deny_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_deny_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_deny_15"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_deny_16"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_deny_17"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_deny_18"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_deny_19"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_deny_20"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_deny_21"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_deny_22"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_Deny"
+				m_Requirements = 
+				[
+					"Deny",
+					"Isalchemist",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_Defeat"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_lose_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_lose_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_lose_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_Defeat"
+				m_Requirements = 
+				[
+					"Defeat",
+					"Isalchemist",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_Victory"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_win_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_win_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_win_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_Victory"
+				m_Requirements = 
+				[
+					"Victory",
+					"Isalchemist",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_Immortality"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_immort_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_Immortality"
+				m_Requirements = 
+				[
+					"Immortality",
+					"Isalchemist",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_ImmortalityChance_5%"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/alchemist/alchemist_alch_immort_02.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_ImmortalityChance_5%"
+				m_Requirements = 
+				[
+					"Immortality",
+					"Isalchemist",
+					"Chance_5%",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_PowerupIsPowerupHaste"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_haste_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_PowerupIsPowerupHaste"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isalchemist",
+					"IsPowerupHaste",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_PowerupIsPowerupHasteChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_haste_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_PowerupIsPowerupHasteChance_25%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isalchemist",
+					"IsPowerupHaste",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_PowerupIsPowerupDoubleDamage"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_doubdam_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_PowerupIsPowerupDoubleDamage"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isalchemist",
+					"IsPowerupDoubleDamage",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_PowerupIsPowerupBounty"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_lasthit_07"
+					m_params = 
+					{
+						m_respeakdelay.start = 300.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_PowerupIsPowerupBounty"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isalchemist",
+					"IsPowerupBounty",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_PowerupIsPowerupArcane"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_happy_04"
+					m_params = 
+					{
+						m_respeakdelay.start = 300.0
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_happy_06"
+					m_params = 
+					{
+						m_respeakdelay.start = 300.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_PowerupIsPowerupArcane"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isalchemist",
+					"IsPowerupArcane",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_PowerupIsPowerupArcaneChance_10%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_invis_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_PowerupIsPowerupArcaneChance_10%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isalchemist",
+					"IsPowerupArcane",
+					"Chance_10%",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_PowerupIsPowerupRegeneration"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_regen_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_PowerupIsPowerupRegeneration"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isalchemist",
+					"IsPowerupRegeneration",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_PowerupIsPowerupRegenerationChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_regen_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_PowerupIsPowerupRegenerationChance_25%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isalchemist",
+					"IsPowerupRegeneration",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_PowerupIsPowerupIllusion"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_illus_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_PowerupIsPowerupIllusion"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isalchemist",
+					"IsPowerupIllusion",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_PowerupIsPowerupIllusionChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_illus_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_PowerupIsPowerupIllusionChance_25%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isalchemist",
+					"IsPowerupIllusion",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_PowerupIsPowerupInvisibility"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_invis_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_PowerupIsPowerupInvisibility"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isalchemist",
+					"IsPowerupInvisibility",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_CooldownLittleNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_notyet_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_notyet_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_notyet_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_CooldownLittleNag"
+				m_Requirements = 
+				[
+					"Cooldown",
+					"Isalchemist",
+					"LittleNag",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_CooldownMediumNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_notyet_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_notyet_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_notyet_06"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_CooldownMediumNag"
+				m_Requirements = 
+				[
+					"Cooldown",
+					"Isalchemist",
+					"MediumNag",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_CooldownSuperNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_notyet_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_notyet_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_notyet_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_CooldownSuperNag"
+				m_Requirements = 
+				[
+					"Cooldown",
+					"Isalchemist",
+					"SuperNag",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_NoManaLittleNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_nomana_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_nomana_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_nomana_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_NoManaLittleNag"
+				m_Requirements = 
+				[
+					"NoMana",
+					"Isalchemist",
+					"LittleNag",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_NoManaMediumNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_nomana_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_nomana_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_nomana_06"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_NoManaMediumNag"
+				m_Requirements = 
+				[
+					"NoMana",
+					"Isalchemist",
+					"MediumNag",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_NoManaSuperNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_nomana_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_nomana_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_nomana_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_NoManaSuperNag"
+				m_Requirements = 
+				[
+					"NoMana",
+					"Isalchemist",
+					"SuperNag",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_Thanks"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_thanks_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_thanks_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_Thanks"
+				m_Requirements = 
+				[
+					"Thanks",
+					"Isalchemist",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_PainChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_underattack_01"
+					m_params = 
+					{
+						m_respeakdelay.start = 120.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_PainChance_25%"
+				m_Requirements = 
+				[
+					"Pain",
+					"Isalchemist",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_Pain"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_pain_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_pain_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_pain_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_pain_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_pain_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_pain_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_pain_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_pain_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_pain_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_pain_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_pain_11"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_Pain"
+				m_Requirements = 
+				[
+					"Pain",
+					"Isalchemist",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_InTheBag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_inthebag_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_InTheBag"
+				m_Requirements = 
+				[
+					"InTheBag",
+					"Isalchemist",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_ItemDropIsCommonDrop"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_happy_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_ItemDropIsCommonDrop"
+				m_Requirements = 
+				[
+					"ItemDrop",
+					"Isalchemist",
+					"IsCommonDrop",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_ItemDropIsUltraRareDrop"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_happy_04"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_ItemDropIsUltraRareDrop"
+				m_Requirements = 
+				[
+					"ItemDrop",
+					"Isalchemist",
+					"IsUltraRareDrop",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_ItemDropIsRareDrop"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_happy_05"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_ItemDropIsRareDrop"
+				m_Requirements = 
+				[
+					"ItemDrop",
+					"Isalchemist",
+					"IsRareDrop",
+				]
+			}
+		},
+		{
+			m_name = "alchemist_EmoteIsEmoteLaugh"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_laugh_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_laugh_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_laugh_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_laugh_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_laugh_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_laugh_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_laugh_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_laugh_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_laugh_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "alchemist_alch_laugh_10"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "alchemist_EmoteIsEmoteLaugh"
+				m_Requirements = 
+				[
+					"Emote",
+					"Isalchemist",
+					"IsEmoteLaugh",
+				]
+			}
+		},
+	]
+	m_Requirements = 
+	[
+		{
+			m_name = "Isalchemist"
+			m_matchKey = "classname"
+			m_matchExpr = "npc_dota_hero_alchemist"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsAbilityConcoction"
+			m_matchKey = "abilityname"
+			m_matchExpr = "alchemist_unstable_concoction"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsJustInTime"
+			m_matchKey = "cookstate"
+			m_matchExpr = "0"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsTooLate"
+			m_matchKey = "cookstate"
+			m_matchExpr = "1"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsAbilityConcoctionThrow"
+			m_matchKey = "abilityname"
+			m_matchExpr = "alchemist_unstable_concoction_throw"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "ItBlewUp"
+			m_matchKey = "cookstate"
+			m_matchExpr = "2"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsAbilityChemicalRage"
+			m_matchKey = "abilityname"
+			m_matchExpr = "alchemist_chemical_rage"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsAbilityAcidSpray"
+			m_matchKey = "abilityname"
+			m_matchExpr = "alchemist_acid_spray"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsAlchScepterUse"
+			m_matchKey = "abilityname"
+			m_matchExpr = "item_ultimate_scepter"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsAlchemistLoadoutSpawn"
+			m_matchKey = "special_spawn"
+			m_matchExpr = "alchemist_loadout_spawn"
+			m_flWeight = 5.0
+		},
+	]
+}

@@ -1,0 +1,2786 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vrr_c1:version{c1f07085-5299-4e8a-b7e9-1cbb66bbbe23} -->
+{
+	m_Includes = 
+	[
+		"scripts/talker/response_rules_shared.vrr",
+	]
+	m_ResponseGroups = 
+	[
+		{
+			m_name = "nyx_assassin_Spawn"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_spawn_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_spawn_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_spawn_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_spawn_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_spawn_05"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_Spawn"
+				m_Requirements = 
+				[
+					"Spawn",
+					"Isnyx_assassin",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_CustomIsGameStart"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_begin_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_CustomIsGameStart"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isnyx_assassin",
+					"IsGameStart",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_CustomIsNyxLoadoutSpawn"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_spawn_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_spawn_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_spawn_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_spawn_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_spawn_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_begin_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_nyx_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_attack_16"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_burn_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_levelup_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_kill_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_levelup_10"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_CustomIsNyxLoadoutSpawn"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isnyx_assassin",
+					"IsNyxLoadoutSpawn",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_KillIsFirstBlood"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_firstblood_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_firstblood_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_firstblood_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_KillIsFirstBlood"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isnyx_assassin",
+					"IsFirstBlood",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_Kill"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_kill_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_kill_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_kill_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_kill_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_kill_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_kill_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_kill_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_kill_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_kill_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_kill_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_kill_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_kill_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_kill_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_kill_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_kill_15"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_kill_16"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_kill_17"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_rival_25"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_laugh_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_laugh_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_laugh_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_laugh_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_laugh_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_laugh_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_laugh_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_nyx_06"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_Kill"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isnyx_assassin",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_KillIsEnemyJakiroChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_rival_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_rival_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_KillIsEnemyJakiroChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isnyx_assassin",
+					"IsEnemyJakiro",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_KillIsEnemyLycanChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_rival_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_KillIsEnemyLycanChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isnyx_assassin",
+					"IsEnemyLycan",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_KillIsEnemyLone_DruidChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_rival_04"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_KillIsEnemyLone_DruidChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isnyx_assassin",
+					"IsEnemyLone_Druid",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_KillIsEnemyWeaverChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_rival_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_rival_06"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_KillIsEnemyWeaverChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isnyx_assassin",
+					"IsEnemyWeaver",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_KillIsEnemyBroodmotherChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_rival_07"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_KillIsEnemyBroodmotherChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isnyx_assassin",
+					"IsEnemyBroodmother",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_KillIsEnemyBounty_HunterChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_rival_08"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_KillIsEnemyBounty_HunterChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isnyx_assassin",
+					"IsEnemyBounty_Hunter",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_KillIsEnemyRattletrapChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_rival_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_rival_10"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_KillIsEnemyRattletrapChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isnyx_assassin",
+					"IsEnemyRattletrap",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_KillIsEnemyAlchemistChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_rival_11"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_KillIsEnemyAlchemistChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isnyx_assassin",
+					"IsEnemyAlchemist",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_KillIsEnemyDragon_KnightChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_rival_12"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_KillIsEnemyDragon_KnightChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isnyx_assassin",
+					"IsEnemyDragon_Knight",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_KillIsEnemyRikiChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_rival_13"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_KillIsEnemyRikiChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isnyx_assassin",
+					"IsEnemyRiki",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_KillIsEnemyWarlockChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_rival_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_rival_21"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_rival_22"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_KillIsEnemyWarlockChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isnyx_assassin",
+					"IsEnemyWarlock",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_KillIsEnemyPudgeChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_rival_15"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_KillIsEnemyPudgeChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isnyx_assassin",
+					"IsEnemyPudge",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_KillIsEnemyUndyingChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_rival_16"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_rival_26"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_KillIsEnemyUndyingChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isnyx_assassin",
+					"IsEnemyUndying",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_KillIsEnemyClinkzChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_rival_17"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_rival_18"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_rival_19"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_KillIsEnemyClinkzChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isnyx_assassin",
+					"IsEnemyClinkz",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_KillIsEnemyTinkerChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_rival_20"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_KillIsEnemyTinkerChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isnyx_assassin",
+					"IsEnemyTinker",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_KillChance_1%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_rival_23"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_KillChance_1%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isnyx_assassin",
+					"Chance_1%",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_KillIsEnemyAbaddonChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_rival_27"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_KillIsEnemyAbaddonChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isnyx_assassin",
+					"IsEnemyAbaddon",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_Move"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_move_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_move_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_move_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_move_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_move_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_move_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_move_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_move_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_move_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_move_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_move_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_move_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_move_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_move_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_move_15"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_move_16"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_nyx_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_nyx_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_nyx_08"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_Move"
+				m_Requirements = 
+				[
+					"Move",
+					"Isnyx_assassin",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_Attack"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_attack_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_attack_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_attack_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_attack_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_attack_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_attack_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_attack_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_attack_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_attack_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_attack_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_attack_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_attack_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_attack_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_attack_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_attack_15"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_attack_16"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_Attack"
+				m_Requirements = 
+				[
+					"Attack",
+					"Isnyx_assassin",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_CastOrder"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_cast_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_cast_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_cast_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_cast_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_cast_05"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_CastOrder"
+				m_Requirements = 
+				[
+					"CastOrder",
+					"Isnyx_assassin",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_CastExecuteIsNyxBurrowChance_50%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_impale_02"
+					m_params = 
+					{
+						m_respeakdelay.start = 30.0
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_impale_04"
+					m_params = 
+					{
+						m_respeakdelay.start = 30.0
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_chitter_01"
+					m_params = 
+					{
+						m_respeakdelay.start = 30.0
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_chitter_03"
+					m_params = 
+					{
+						m_respeakdelay.start = 30.0
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_chitter_04"
+					m_params = 
+					{
+						m_respeakdelay.start = 30.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_CastExecuteIsNyxBurrowChance_50%"
+				m_Requirements = 
+				[
+					"CastExecute",
+					"Isnyx_assassin",
+					"IsNyxBurrow",
+					"Chance_50%",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_CastExecuteIsNyxSpikedCarapaceChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_spikedcarapace_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_spikedcarapace_05"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_CastExecuteIsNyxSpikedCarapaceChance_25%"
+				m_Requirements = 
+				[
+					"CastExecute",
+					"Isnyx_assassin",
+					"IsNyxSpikedCarapace",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_CastExecuteIsNyxVendettaChance_30%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_vendetta_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_vendetta_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_vendetta_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_vendetta_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_CastExecuteIsNyxVendettaChance_30%"
+				m_Requirements = 
+				[
+					"CastExecute",
+					"Isnyx_assassin",
+					"IsNyxVendetta",
+					"Chance_30%",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_Deny"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_spikedcarapace_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_vendetta_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_deny_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_deny_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_deny_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_deny_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_deny_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_deny_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_deny_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_deny_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_deny_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_deny_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_deny_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_deny_15"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_Deny"
+				m_Requirements = 
+				[
+					"Deny",
+					"Isnyx_assassin",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_LevelUp"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_levelup_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_levelup_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_levelup_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_levelup_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_levelup_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_levelup_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_levelup_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_levelup_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_levelup_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_levelup_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_levelup_11"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_LevelUp"
+				m_Requirements = 
+				[
+					"LevelUp",
+					"Isnyx_assassin",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_DeathIsEnemyBroodmotherChance_35%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_rival_24"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_DeathIsEnemyBroodmotherChance_35%"
+				m_Requirements = 
+				[
+					"Death",
+					"Isnyx_assassin",
+					"IsEnemyBroodmother",
+					"Chance_35%",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_Death"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_death_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_death_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_death_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_death_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_death_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_death_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_death_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_death_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_death_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_death_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_death_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_death_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_death_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_death_18"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_Death"
+				m_Requirements = 
+				[
+					"Death",
+					"Isnyx_assassin",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_DeathIsEnemyJakiroChance_50%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_death_14"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_DeathIsEnemyJakiroChance_50%"
+				m_Requirements = 
+				[
+					"Death",
+					"Isnyx_assassin",
+					"IsEnemyJakiro",
+					"Chance_50%",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_DeathIsEnemyAlchemistChance_35%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_death_15"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_DeathIsEnemyAlchemistChance_35%"
+				m_Requirements = 
+				[
+					"Death",
+					"Isnyx_assassin",
+					"IsEnemyAlchemist",
+					"Chance_35%",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_DeathIsEnemyWarlockChance_35%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_death_16"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_DeathIsEnemyWarlockChance_35%"
+				m_Requirements = 
+				[
+					"Death",
+					"Isnyx_assassin",
+					"IsEnemyWarlock",
+					"Chance_35%",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_DeathIsEnemySlardarChance_35%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_death_17"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_DeathIsEnemySlardarChance_35%"
+				m_Requirements = 
+				[
+					"Death",
+					"Isnyx_assassin",
+					"IsEnemySlardar",
+					"Chance_35%",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_DeathIsReincarnating"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_fastres_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_DeathIsReincarnating"
+				m_Requirements = 
+				[
+					"Death",
+					"Isnyx_assassin",
+					"IsReincarnating",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_AllyNearIsAllyBroodmotherEarlyGame"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_ally_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_AllyNearIsAllyBroodmotherEarlyGame"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Isnyx_assassin",
+					"IsAllyBroodmother",
+					"EarlyGame",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_AllyNearIsAllyWeaverEarlyGame"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_ally_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_AllyNearIsAllyWeaverEarlyGame"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Isnyx_assassin",
+					"IsAllyWeaver",
+					"EarlyGame",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_AllyNearIsAllySandkingEarlyGame"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_ally_03"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_AllyNearIsAllySandkingEarlyGame"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Isnyx_assassin",
+					"IsAllySandking",
+					"EarlyGame",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_AllyNearIsAllyEarthshakerEarlyGame"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_ally_04"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_AllyNearIsAllyEarthshakerEarlyGame"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Isnyx_assassin",
+					"IsAllyEarthshaker",
+					"EarlyGame",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_AllyNearIsAllyLionEarlyGame"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_ally_06"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_AllyNearIsAllyLionEarlyGame"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Isnyx_assassin",
+					"IsAllyLion",
+					"EarlyGame",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_LastHit"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_lasthit_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_lasthit_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_lasthit_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_lasthit_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_lasthit_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_lasthit_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_lasthit_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_lasthit_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_lasthit_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_lasthit_10"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_LastHit"
+				m_Requirements = 
+				[
+					"LastHit",
+					"Isnyx_assassin",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_Respawn"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_respawn_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_respawn_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_respawn_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_respawn_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_respawn_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_respawn_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_respawn_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_respawn_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_respawn_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_respawn_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_respawn_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_respawn_13"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_Respawn"
+				m_Requirements = 
+				[
+					"Respawn",
+					"Isnyx_assassin",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_Select"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_rare_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_rare_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_rare_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_rare_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_rare_05"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_Select"
+				m_Requirements = 
+				[
+					"Select",
+					"Isnyx_assassin",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_PowerupIsPowerupBounty"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_lasthit_07"
+					m_params = 
+					{
+						m_respeakdelay.start = 300.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_PowerupIsPowerupBounty"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isnyx_assassin",
+					"IsPowerupBounty",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_PowerupIsPowerupHaste"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_haste_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_PowerupIsPowerupHaste"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isnyx_assassin",
+					"IsPowerupHaste",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_PowerupIsPowerupHasteChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_haste_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_PowerupIsPowerupHasteChance_25%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isnyx_assassin",
+					"IsPowerupHaste",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_PowerupIsPowerupDoubleDamage"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_doubdam_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_PowerupIsPowerupDoubleDamage"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isnyx_assassin",
+					"IsPowerupDoubleDamage",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_PowerupIsPowerupDoubleDamageChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_doubdam_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_PowerupIsPowerupDoubleDamageChance_25%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isnyx_assassin",
+					"IsPowerupDoubleDamage",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_PowerupIsPowerupDoubleDamageChance_5%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_doubdam_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_PowerupIsPowerupDoubleDamageChance_5%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isnyx_assassin",
+					"IsPowerupDoubleDamage",
+					"Chance_5%",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_PowerupIsPowerupRegeneration"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_regen_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_PowerupIsPowerupRegeneration"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isnyx_assassin",
+					"IsPowerupRegeneration",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_PowerupIsPowerupRegenerationChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_regen_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_PowerupIsPowerupRegenerationChance_25%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isnyx_assassin",
+					"IsPowerupRegeneration",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_PowerupIsPowerupIllusion"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_illus_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_PowerupIsPowerupIllusion"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isnyx_assassin",
+					"IsPowerupIllusion",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_PowerupIsPowerupIllusionChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_illus_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_PowerupIsPowerupIllusionChance_25%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isnyx_assassin",
+					"IsPowerupIllusion",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_PowerupIsPowerupInvisibility"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_invis_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_PowerupIsPowerupInvisibility"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isnyx_assassin",
+					"IsPowerupInvisibility",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_PowerupIsPowerupInvisibilityChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_invis_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_PowerupIsPowerupInvisibilityChance_25%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isnyx_assassin",
+					"IsPowerupInvisibility",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_PowerupIsPowerupArcane"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_happy_03"
+					m_params = 
+					{
+						m_respeakdelay.start = 300.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_PowerupIsPowerupArcane"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isnyx_assassin",
+					"IsPowerupArcane",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_PurchaseIsExpensiveItem"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_purch_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_purch_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_purch_03"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_items_11"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_PurchaseIsExpensiveItem"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isnyx_assassin",
+					"IsExpensiveItem",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_PurchaseIsUltimateScepter"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_scepter_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_scepter_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_PurchaseIsUltimateScepter"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isnyx_assassin",
+					"IsUltimateScepter",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_PurchaseIsBlinkDagger"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_blink_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_blink_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_PurchaseIsBlinkDagger"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isnyx_assassin",
+					"IsBlinkDagger",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_PurchaseIsAssaultCuirass"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_items_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_PurchaseIsAssaultCuirass"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isnyx_assassin",
+					"IsAssaultCuirass",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_PurchaseIsRingofAquila"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_items_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_PurchaseIsRingofAquila"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isnyx_assassin",
+					"IsRingofAquila",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_PurchaseIsUrnOfShadows"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_items_03"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_PurchaseIsUrnOfShadows"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isnyx_assassin",
+					"IsUrnOfShadows",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_PurchaseIsEthereal"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_items_04"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_PurchaseIsEthereal"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isnyx_assassin",
+					"IsEthereal",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_PurchaseIsDiffusal"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_items_05"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_PurchaseIsDiffusal"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isnyx_assassin",
+					"IsDiffusal",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_PurchaseIsOrchid"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_items_06"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_PurchaseIsOrchid"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isnyx_assassin",
+					"IsOrchid",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_PurchaseIsNecronomicon"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_items_07"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_items_10"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_PurchaseIsNecronomicon"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isnyx_assassin",
+					"IsNecronomicon",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_PurchaseIsBladeMail"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_items_08"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_items_12"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_PurchaseIsBladeMail"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isnyx_assassin",
+					"IsBladeMail",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_PurchaseIsDagon"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_items_09"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_PurchaseIsDagon"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isnyx_assassin",
+					"IsDagon",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_Bottling"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_bottle_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_bottle_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_bottle_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_Bottling"
+				m_Requirements = 
+				[
+					"Bottling",
+					"Isnyx_assassin",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_MissingIsLaneTop"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_lanemissing_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_MissingIsLaneTop"
+				m_Requirements = 
+				[
+					"Missing",
+					"Isnyx_assassin",
+					"IsLaneTop",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_MissingIsLaneBot"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_lanemissing_04"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_MissingIsLaneBot"
+				m_Requirements = 
+				[
+					"Missing",
+					"Isnyx_assassin",
+					"IsLaneBot",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_MissingIsLaneMid"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_lanemissing_06"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_MissingIsLaneMid"
+				m_Requirements = 
+				[
+					"Missing",
+					"Isnyx_assassin",
+					"IsLaneMid",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_ItemDropIsCommonDrop"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_itemcommon_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_ItemDropIsCommonDrop"
+				m_Requirements = 
+				[
+					"ItemDrop",
+					"Isnyx_assassin",
+					"IsCommonDrop",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_ItemDropIsRareDrop"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_itemmoderate_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_ItemDropIsRareDrop"
+				m_Requirements = 
+				[
+					"ItemDrop",
+					"Isnyx_assassin",
+					"IsRareDrop",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_ItemDropIsUltraRareDrop"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_itemrare_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_ItemDropIsUltraRareDrop"
+				m_Requirements = 
+				[
+					"ItemDrop",
+					"Isnyx_assassin",
+					"IsUltraRareDrop",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_Immortality"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_immort_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_Immortality"
+				m_Requirements = 
+				[
+					"Immortality",
+					"Isnyx_assassin",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_CooldownLittleNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_notyet_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_notyet_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_notyet_07"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_CooldownLittleNag"
+				m_Requirements = 
+				[
+					"Cooldown",
+					"Isnyx_assassin",
+					"LittleNag",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_CooldownMediumNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_notyet_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_notyet_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_notyet_08"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_CooldownMediumNag"
+				m_Requirements = 
+				[
+					"Cooldown",
+					"Isnyx_assassin",
+					"MediumNag",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_CooldownSuperNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_notyet_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_notyet_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_notyet_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_CooldownSuperNag"
+				m_Requirements = 
+				[
+					"Cooldown",
+					"Isnyx_assassin",
+					"SuperNag",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_NoManaLittleNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_nomana_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_nomana_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_nomana_07"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_NoManaLittleNag"
+				m_Requirements = 
+				[
+					"NoMana",
+					"Isnyx_assassin",
+					"LittleNag",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_NoManaMediumNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_nomana_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_nomana_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_nomana_08"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_NoManaMediumNag"
+				m_Requirements = 
+				[
+					"NoMana",
+					"Isnyx_assassin",
+					"MediumNag",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_NoManaSuperNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_nomana_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_nomana_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_nomana_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_NoManaSuperNag"
+				m_Requirements = 
+				[
+					"NoMana",
+					"Isnyx_assassin",
+					"SuperNag",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_Thanks"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_thanks_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_thanks_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_thanks_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_Thanks"
+				m_Requirements = 
+				[
+					"Thanks",
+					"Isnyx_assassin",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_Pain"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_underattack_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_pain_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_pain_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_pain_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_pain_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_pain_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_pain_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_pain_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_pain_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_pain_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_Pain"
+				m_Requirements = 
+				[
+					"Pain",
+					"Isnyx_assassin",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_InTheBag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_inthebag_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_InTheBag"
+				m_Requirements = 
+				[
+					"InTheBag",
+					"Isnyx_assassin",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_Defeat"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_lose_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_lose_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_lose_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_lose_04"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_Defeat"
+				m_Requirements = 
+				[
+					"Defeat",
+					"Isnyx_assassin",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_Victory"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_win_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_win_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_win_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_win_04"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_Victory"
+				m_Requirements = 
+				[
+					"Victory",
+					"Isnyx_assassin",
+				]
+			}
+		},
+		{
+			m_name = "nyx_assassin_EmoteIsEmoteLaugh"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_laugh_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_laugh_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_laugh_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_laugh_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_laugh_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_laugh_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "nyx_assassin_nyx_laugh_07"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "nyx_assassin_EmoteIsEmoteLaugh"
+				m_Requirements = 
+				[
+					"Emote",
+					"Isnyx_assassin",
+					"IsEmoteLaugh",
+				]
+			}
+		},
+	]
+	m_Requirements = 
+	[
+		{
+			m_name = "Isnyx_assassin"
+			m_matchKey = "classname"
+			m_matchExpr = "npc_dota_hero_nyx_assassin"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsNyxSpikedCarapace"
+			m_matchKey = "abilityname"
+			m_matchExpr = "nyx_assassin_spiked_carapace"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsNyxVendetta"
+			m_matchKey = "abilityname"
+			m_matchExpr = "nyx_assassin_vendetta"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsNyxBurrow"
+			m_matchKey = "abilityname"
+			m_matchExpr = "nyx_assassin_burrow"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsNyxUnborrow"
+			m_matchKey = "abilityname"
+			m_matchExpr = "nyx_assassin_unburrow"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsNyxLoadoutSpawn"
+			m_matchKey = "special_spawn"
+			m_matchExpr = "nyx_loadout_spawn"
+			m_flWeight = 5.0
+		},
+	]
+}

@@ -1,0 +1,2387 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vrr_c1:version{c1f07085-5299-4e8a-b7e9-1cbb66bbbe23} -->
+{
+	m_Includes = 
+	[
+		"scripts/talker/response_rules_shared.vrr",
+	]
+	m_ResponseGroups = 
+	[
+		{
+			m_name = "phantom_lancer_Spawn"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_spawn_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_spawn_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_spawn_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_spawn_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_spawn_05"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_Spawn"
+				m_Requirements = 
+				[
+					"Spawn",
+					"Isphantom_lancer",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_CustomIsGameStart"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_battlebegins_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_CustomIsGameStart"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isphantom_lancer",
+					"IsGameStart",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_CustomIsPhantomLancerLoadoutSpawn"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_spawn_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_spawn_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_spawn_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_spawn_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_spawn_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_battlebegins_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_attack_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_attack_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_attack_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_cast_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_levelup_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_levelup_06"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_CustomIsPhantomLancerLoadoutSpawn"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isphantom_lancer",
+					"IsPhantomLancerLoadoutSpawn",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_KillIsFirstBlood"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_firstblood_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_KillIsFirstBlood"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isphantom_lancer",
+					"IsFirstBlood",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_Kill"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_kill_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_kill_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_kill_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_kill_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_kill_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_kill_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_kill_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_kill_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_kill_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_kill_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_laugh_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_laugh_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_laugh_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_laugh_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_laugh_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_laugh_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_laugh_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_laugh_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_laugh_10"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_Kill"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isphantom_lancer",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_KillIsEnemyChaos_KnightChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_rival_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_KillIsEnemyChaos_KnightChance_25%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isphantom_lancer",
+					"IsEnemyChaos_Knight",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_KillIsEnemyBrewmasterChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_rival_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_KillIsEnemyBrewmasterChance_25%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isphantom_lancer",
+					"IsEnemyBrewmaster",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_KillIsEnemyDark_SeerChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_rival_04"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_KillIsEnemyDark_SeerChance_25%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isphantom_lancer",
+					"IsEnemyDark_Seer",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_KillIsEnemyBounty_HunterChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_rival_05"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_KillIsEnemyBounty_HunterChance_25%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isphantom_lancer",
+					"IsEnemyBounty_Hunter",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_KillIsEnemySniperChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_rival_06"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_KillIsEnemySniperChance_25%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isphantom_lancer",
+					"IsEnemySniper",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_KillIsEnemyTidehunterChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_rival_07"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_KillIsEnemyTidehunterChance_25%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isphantom_lancer",
+					"IsEnemyTidehunter",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_KillIsEnemySlardarChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_rival_08"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_KillIsEnemySlardarChance_25%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isphantom_lancer",
+					"IsEnemySlardar",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_KillIsEnemyMorphlingChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_rival_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_KillIsEnemyMorphlingChance_25%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isphantom_lancer",
+					"IsEnemyMorphling",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_KillIsEnemyOgre_MagiChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_rival_10"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_KillIsEnemyOgre_MagiChance_25%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isphantom_lancer",
+					"IsEnemyOgre_Magi",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_KillIsEnemyMedusaChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_rival_11"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_KillIsEnemyMedusaChance_25%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isphantom_lancer",
+					"IsEnemyMedusa",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_Move"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_move_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_move_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_move_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_move_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_move_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_move_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_move_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_move_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_move_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_move_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_move_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_move_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_move_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_move_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_move_15"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_move_16"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_move_17"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_move_18"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_move_clone_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_move_clone_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_move_clone_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_move_clone_19"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_Move"
+				m_Requirements = 
+				[
+					"Move",
+					"Isphantom_lancer",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_Attack"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_attack_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_attack_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_attack_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_attack_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_attack_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_attack_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_attack_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_attack_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_attack_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_attack_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_attack_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_attack_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_attack_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_attack_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_attack_15"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_attack_clone_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_Attack"
+				m_Requirements = 
+				[
+					"Attack",
+					"Isphantom_lancer",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_CastOrder"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_cast_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_cast_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_cast_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_CastOrder"
+				m_Requirements = 
+				[
+					"CastOrder",
+					"Isphantom_lancer",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_CastExecuteIsPhantomLancerLance"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_ability_spiritlance_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_ability_spiritlance_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_ability_spiritlance_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_ability_spiritlance_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_ability_spiritlance_08"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_CastExecuteIsPhantomLancerLance"
+				m_Requirements = 
+				[
+					"CastExecute",
+					"Isphantom_lancer",
+					"IsPhantomLancerLance",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_CastExecuteIsPhantomLancerDoppelgangerChance_5%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_ability_doppelwalk_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_ability_doppelwalk_06"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_CastExecuteIsPhantomLancerDoppelgangerChance_5%"
+				m_Requirements = 
+				[
+					"CastExecute",
+					"Isphantom_lancer",
+					"IsPhantomLancerDoppelganger",
+					"Chance_5%",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_CastExecuteIsPhantomLancerDoppelganger"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_ability_doppelwalk_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_ability_doppelwalk_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_ability_doppelwalk_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_ability_juxtapose_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_CastExecuteIsPhantomLancerDoppelganger"
+				m_Requirements = 
+				[
+					"CastExecute",
+					"Isphantom_lancer",
+					"IsPhantomLancerDoppelganger",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_LevelUp"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_levelup_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_levelup_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_levelup_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_levelup_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_levelup_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_levelup_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_levelup_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_levelup_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_levelup_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_LevelUp"
+				m_Requirements = 
+				[
+					"LevelUp",
+					"Isphantom_lancer",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_AllyNearIsAllyChaos_KnightEarlyGame"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_ally_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_AllyNearIsAllyChaos_KnightEarlyGame"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Isphantom_lancer",
+					"IsAllyChaos_Knight",
+					"EarlyGame",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_AllyNearIsAllyMeepoEarlyGame"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_ally_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_AllyNearIsAllyMeepoEarlyGame"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Isphantom_lancer",
+					"IsAllyMeepo",
+					"EarlyGame",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_AllyNearIsAllyBrewmasterEarlyGame"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_ally_03"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_AllyNearIsAllyBrewmasterEarlyGame"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Isphantom_lancer",
+					"IsAllyBrewmaster",
+					"EarlyGame",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_AllyNearIsAllyNaga_SirenEarlyGame"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_ally_04"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_AllyNearIsAllyNaga_SirenEarlyGame"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Isphantom_lancer",
+					"IsAllyNaga_Siren",
+					"EarlyGame",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_AllyNearIsAllyKeeper_of_the_LightEarlyGame"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_ally_05"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_AllyNearIsAllyKeeper_of_the_LightEarlyGame"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Isphantom_lancer",
+					"IsAllyKeeper_of_the_Light",
+					"EarlyGame",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_AllyNearIsAllyCrystalMaidenEarlyGame"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_ally_06"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_AllyNearIsAllyCrystalMaidenEarlyGame"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Isphantom_lancer",
+					"IsAllyCrystalMaiden",
+					"EarlyGame",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_AllyNearIsAllyMorphlingEarlyGame"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_ally_07"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_AllyNearIsAllyMorphlingEarlyGame"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Isphantom_lancer",
+					"IsAllyMorphling",
+					"EarlyGame",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_LastHit"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_lasthit_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_lasthit_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_lasthit_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_lasthit_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_lasthit_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_lasthit_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_lasthit_07"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_LastHit"
+				m_Requirements = 
+				[
+					"LastHit",
+					"Isphantom_lancer",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_Death"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_death_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_death_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_death_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_death_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_death_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_death_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_death_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_death_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_death_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_death_10"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_Death"
+				m_Requirements = 
+				[
+					"Death",
+					"Isphantom_lancer",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_DeathIsReincarnating"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_fastres_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_DeathIsReincarnating"
+				m_Requirements = 
+				[
+					"Death",
+					"Isphantom_lancer",
+					"IsReincarnating",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_Respawn"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_respawn_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_respawn_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_respawn_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_respawn_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_respawn_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_respawn_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_respawn_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_respawn_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_respawn_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_respawn_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_respawn_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_respawn_12"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_Respawn"
+				m_Requirements = 
+				[
+					"Respawn",
+					"Isphantom_lancer",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_Select"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_rare_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_rare_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_rare_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_Select"
+				m_Requirements = 
+				[
+					"Select",
+					"Isphantom_lancer",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_PurchaseIsExpensiveItem"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_purch_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_purch_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_purch_03"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_PurchaseIsExpensiveItem"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isphantom_lancer",
+					"IsExpensiveItem",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_PurchaseIsBlinkDagger"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_blink_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_blink_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_PurchaseIsBlinkDagger"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isphantom_lancer",
+					"IsBlinkDagger",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_PurchaseIsUltimateScepter"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_scepter_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_scepter_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_PurchaseIsUltimateScepter"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isphantom_lancer",
+					"IsUltimateScepter",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_PurchaseIsManta"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_item_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_PurchaseIsManta"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isphantom_lancer",
+					"IsManta",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_PurchaseIsButterfly"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_item_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_PurchaseIsButterfly"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isphantom_lancer",
+					"IsButterfly",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_PurchaseIsHeart"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_item_03"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_PurchaseIsHeart"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isphantom_lancer",
+					"IsHeart",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_PurchaseIsMonkeyKingBar"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_item_04"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_PurchaseIsMonkeyKingBar"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isphantom_lancer",
+					"IsMonkeyKingBar",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_PurchaseIsVanguard"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_item_05"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_PurchaseIsVanguard"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isphantom_lancer",
+					"IsVanguard",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_PurchaseIsRadiance"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_item_06"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_PurchaseIsRadiance"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isphantom_lancer",
+					"IsRadiance",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_PurchaseIsSkadi"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_item_07"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_PurchaseIsSkadi"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isphantom_lancer",
+					"IsSkadi",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_PurchaseIsDiffusal"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_item_08"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_PurchaseIsDiffusal"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isphantom_lancer",
+					"IsDiffusal",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_PurchaseIsDaedalus"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_item_09"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_PurchaseIsDaedalus"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isphantom_lancer",
+					"IsDaedalus",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_Bottling"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_bottle_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_bottle_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_bottle_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_Bottling"
+				m_Requirements = 
+				[
+					"Bottling",
+					"Isphantom_lancer",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_Deny"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_deny_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_deny_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_deny_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_deny_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_deny_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_deny_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_deny_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_deny_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_deny_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_deny_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_deny_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_deny_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_deny_13"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_Deny"
+				m_Requirements = 
+				[
+					"Deny",
+					"Isphantom_lancer",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_Defeat"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_lose_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_lose_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_lose_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_Defeat"
+				m_Requirements = 
+				[
+					"Defeat",
+					"Isphantom_lancer",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_Victory"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_win_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_win_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_win_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_win_04"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_Victory"
+				m_Requirements = 
+				[
+					"Victory",
+					"Isphantom_lancer",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_MissingIsLaneTop"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_lane_missing_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_MissingIsLaneTop"
+				m_Requirements = 
+				[
+					"Missing",
+					"Isphantom_lancer",
+					"IsLaneTop",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_MissingIsLaneMid"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_lane_missing_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_MissingIsLaneMid"
+				m_Requirements = 
+				[
+					"Missing",
+					"Isphantom_lancer",
+					"IsLaneMid",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_MissingIsLaneBot"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_lane_missing_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_MissingIsLaneBot"
+				m_Requirements = 
+				[
+					"Missing",
+					"Isphantom_lancer",
+					"IsLaneBot",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_Immortality"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_immort_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_Immortality"
+				m_Requirements = 
+				[
+					"Immortality",
+					"Isphantom_lancer",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_PowerupIsPowerupHaste"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_haste_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_PowerupIsPowerupHaste"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isphantom_lancer",
+					"IsPowerupHaste",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_PowerupIsPowerupBounty"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_lasthit_04"
+					m_params = 
+					{
+						m_respeakdelay.start = 300.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_PowerupIsPowerupBounty"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isphantom_lancer",
+					"IsPowerupBounty",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_PowerupIsPowerupDoubleDamage"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_doubdam_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_PowerupIsPowerupDoubleDamage"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isphantom_lancer",
+					"IsPowerupDoubleDamage",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_PowerupIsPowerupRegeneration"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_regen_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_PowerupIsPowerupRegeneration"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isphantom_lancer",
+					"IsPowerupRegeneration",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_PowerupIsPowerupRegenerationChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_regen_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_PowerupIsPowerupRegenerationChance_25%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isphantom_lancer",
+					"IsPowerupRegeneration",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_PowerupIsPowerupIllusion"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_illus_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_PowerupIsPowerupIllusion"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isphantom_lancer",
+					"IsPowerupIllusion",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_PowerupIsPowerupIllusionChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_illus_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_PowerupIsPowerupIllusionChance_25%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isphantom_lancer",
+					"IsPowerupIllusion",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_PowerupIsPowerupInvisibility"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_invis_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_PowerupIsPowerupInvisibility"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isphantom_lancer",
+					"IsPowerupInvisibility",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_PowerupIsPowerupArcane"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_illus_04"
+					m_params = 
+					{
+						m_respeakdelay.start = 300.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_PowerupIsPowerupArcane"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isphantom_lancer",
+					"IsPowerupArcane",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_CooldownLittleNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_notyet_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_notyet_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_notyet_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_CooldownLittleNag"
+				m_Requirements = 
+				[
+					"Cooldown",
+					"Isphantom_lancer",
+					"LittleNag",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_CooldownMediumNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_notyet_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_notyet_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_notyet_06"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_CooldownMediumNag"
+				m_Requirements = 
+				[
+					"Cooldown",
+					"Isphantom_lancer",
+					"MediumNag",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_CooldownSuperNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_notyet_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_notyet_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_notyet_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_CooldownSuperNag"
+				m_Requirements = 
+				[
+					"Cooldown",
+					"Isphantom_lancer",
+					"SuperNag",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_NoManaLittleNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_nomana_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_nomana_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_nomana_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_NoManaLittleNag"
+				m_Requirements = 
+				[
+					"NoMana",
+					"Isphantom_lancer",
+					"LittleNag",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_NoManaMediumNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_nomana_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_nomana_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_nomana_06"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_NoManaMediumNag"
+				m_Requirements = 
+				[
+					"NoMana",
+					"Isphantom_lancer",
+					"MediumNag",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_NoManaSuperNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_nomana_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_nomana_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_nomana_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_NoManaSuperNag"
+				m_Requirements = 
+				[
+					"NoMana",
+					"Isphantom_lancer",
+					"SuperNag",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_Thanks"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_thanks_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_thanks_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_thanks_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_Thanks"
+				m_Requirements = 
+				[
+					"Thanks",
+					"Isphantom_lancer",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_PainChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_underattack_01"
+					m_params = 
+					{
+						m_respeakdelay.start = 120.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_PainChance_25%"
+				m_Requirements = 
+				[
+					"Pain",
+					"Isphantom_lancer",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_Pain"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_pain_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_pain_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_pain_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_pain_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_pain_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_pain_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_pain_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_Pain"
+				m_Requirements = 
+				[
+					"Pain",
+					"Isphantom_lancer",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_InTheBag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_inthebag_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_InTheBag"
+				m_Requirements = 
+				[
+					"InTheBag",
+					"Isphantom_lancer",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_ItemDropIsCommonDrop"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_drop_common"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_ItemDropIsCommonDrop"
+				m_Requirements = 
+				[
+					"ItemDrop",
+					"Isphantom_lancer",
+					"IsCommonDrop",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_ItemDropIsRareDrop"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_drop_medium"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_ItemDropIsRareDrop"
+				m_Requirements = 
+				[
+					"ItemDrop",
+					"Isphantom_lancer",
+					"IsRareDrop",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_ItemDropIsUltraRareDrop"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_drop_rare"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_ItemDropIsUltraRareDrop"
+				m_Requirements = 
+				[
+					"ItemDrop",
+					"Isphantom_lancer",
+					"IsUltraRareDrop",
+				]
+			}
+		},
+		{
+			m_name = "phantom_lancer_EmoteIsEmoteLaugh"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_laugh_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_laugh_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_laugh_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_laugh_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_laugh_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_laugh_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_laugh_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_laugh_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_laugh_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_laugh_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_laugh_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_laugh_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_laugh_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_laugh_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_laugh_15"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "phantom_lancer_plance_laugh_16"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phantom_lancer_EmoteIsEmoteLaugh"
+				m_Requirements = 
+				[
+					"Emote",
+					"Isphantom_lancer",
+					"IsEmoteLaugh",
+				]
+			}
+		},
+	]
+	m_Requirements = 
+	[
+		{
+			m_name = "Isphantom_lancer"
+			m_matchKey = "classname"
+			m_matchExpr = "npc_dota_hero_phantom_lancer"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsPhantomLancerLance"
+			m_matchKey = "abilityname"
+			m_matchExpr = "phantom_lancer_spirit_lance"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsPhantomLancerDoppelganger"
+			m_matchKey = "abilityname"
+			m_matchExpr = "phantom_lancer_doppelwalk"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsPhantomLancerJux"
+			m_matchKey = "abilityname"
+			m_matchExpr = "phantom_lancer_juxtapose"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsPhantomLancerEdge"
+			m_matchKey = "abilityname"
+			m_matchExpr = "phantom_lancer_phantom_edge"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsPhantomLancerLoadoutSpawn"
+			m_matchKey = "special_spawn"
+			m_matchExpr = "phantom_lancer_loadout_spawn"
+			m_flWeight = 5.0
+		},
+	]
+}

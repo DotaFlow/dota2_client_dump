@@ -1,0 +1,2863 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vrr_c1:version{c1f07085-5299-4e8a-b7e9-1cbb66bbbe23} -->
+{
+	m_Includes = 
+	[
+		"scripts/talker/response_rules_shared.vrr",
+	]
+	m_ResponseGroups = 
+	[
+		{
+			m_name = "announcer_diretide_2012_CustomIsDiretideIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_welcome_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_welcome_05"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsDiretideIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsDiretide",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsDiretideModeIsGameStartIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_welcome_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_diretide_rosh_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsDiretideModeIsGameStartIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsDiretideMode",
+					"IsGameStart",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsAnnouncerVoice_Diretide_2012IsPickYour"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_pick_yr"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsAnnouncerVoice_Diretide_2012IsPickYour"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsAnnouncerVoice_Diretide_2012",
+					"IsPickYour",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsAnnouncerVoice_Diretide_2012IsPlayerTeam_RadiantIsPickDire"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_pick_enm"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsAnnouncerVoice_Diretide_2012IsPlayerTeam_RadiantIsPickDire"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsAnnouncerVoice_Diretide_2012",
+					"IsPlayerTeam_Radiant",
+					"IsPickDire",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsAnnouncerVoice_Diretide_2012IsPlayerTeam_DireIsPickRadiant"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_pick_enm"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsAnnouncerVoice_Diretide_2012IsPlayerTeam_DireIsPickRadiant"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsAnnouncerVoice_Diretide_2012",
+					"IsPlayerTeam_Dire",
+					"IsPickRadiant",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsAnnouncerVoice_Diretide_2012IsPickDireIsPlayerTeam_Spectator"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_pick_dire"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsAnnouncerVoice_Diretide_2012IsPickDireIsPlayerTeam_Spectator"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsAnnouncerVoice_Diretide_2012",
+					"IsPickDire",
+					"IsPlayerTeam_Spectator",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsAnnouncerVoice_Diretide_2012IsPickRadiantIsPlayerTeam_Spectator"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_pick_rad"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsAnnouncerVoice_Diretide_2012IsPickRadiantIsPlayerTeam_Spectator"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsAnnouncerVoice_Diretide_2012",
+					"IsPickRadiant",
+					"IsPlayerTeam_Spectator",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsAnnouncerVoice_Diretide_2012IsBanYour"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_ban_yr"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsAnnouncerVoice_Diretide_2012IsBanYour"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsAnnouncerVoice_Diretide_2012",
+					"IsBanYour",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsAnnouncerVoice_Diretide_2012IsBanDireIsPlayerTeam_Radiant"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_ban_enm"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsAnnouncerVoice_Diretide_2012IsBanDireIsPlayerTeam_Radiant"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsAnnouncerVoice_Diretide_2012",
+					"IsBanDire",
+					"IsPlayerTeam_Radiant",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsAnnouncerVoice_Diretide_2012IsBanRadiantIsPlayerTeam_Dire"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_ban_enm"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsAnnouncerVoice_Diretide_2012IsBanRadiantIsPlayerTeam_Dire"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsAnnouncerVoice_Diretide_2012",
+					"IsBanRadiant",
+					"IsPlayerTeam_Dire",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsAnnouncerVoice_Diretide_2012IsBanDireIsPlayerTeam_Spectator"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_ban_dire"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsAnnouncerVoice_Diretide_2012IsBanDireIsPlayerTeam_Spectator"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsAnnouncerVoice_Diretide_2012",
+					"IsBanDire",
+					"IsPlayerTeam_Spectator",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsAnnouncerVoice_Diretide_2012IsBanRadiantIsPlayerTeam_Spectator"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_ban_rad"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsAnnouncerVoice_Diretide_2012IsBanRadiantIsPlayerTeam_Spectator"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsAnnouncerVoice_Diretide_2012",
+					"IsBanRadiant",
+					"IsPlayerTeam_Spectator",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsAnnouncerVoice_Diretide_2012Is10SecToPick"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_count_pick_10"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsAnnouncerVoice_Diretide_2012Is10SecToPick"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsAnnouncerVoice_Diretide_2012",
+					"Is10SecToPick",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsAnnouncerVoice_Diretide_2012Is5SecToPick"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_count_pick_5"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsAnnouncerVoice_Diretide_2012Is5SecToPick"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsAnnouncerVoice_Diretide_2012",
+					"Is5SecToPick",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsAnnouncerVoice_Diretide_2012IsReserveTime"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_time_reserve"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsAnnouncerVoice_Diretide_2012IsReserveTime"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsAnnouncerVoice_Diretide_2012",
+					"IsReserveTime",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsAnnouncerVoice_Diretide_2012IsSelectHero"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_choose_hero"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsAnnouncerVoice_Diretide_2012IsSelectHero"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsAnnouncerVoice_Diretide_2012",
+					"IsSelectHero",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsGameStarting30IsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_count_battle_30"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsGameStarting30IsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsGameStarting30",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsGameStarting10IsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_count_battle_10"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsGameStarting10IsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsGameStarting10",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsPrepStartIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_battle_prepare_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsPrepStartIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsPrepStart",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsGameStartIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_battle_begin_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsGameStartIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsGameStart",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsFortAttackedIsNotSpectatorIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_anc_attack_yr_01"
+					m_params = 
+					{
+						m_respeakdelay.start = 6.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsFortAttackedIsNotSpectatorIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsFortAttacked",
+					"IsNotSpectator",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsFortAttackedIsGoodAttackedIsSpectatorIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_anc_attack_rad_01"
+					m_params = 
+					{
+						m_respeakdelay.start = 8.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsFortAttackedIsGoodAttackedIsSpectatorIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsFortAttacked",
+					"IsGoodAttacked",
+					"IsSpectator",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsFortAttackedIsBadAttackedIsSpectatorIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_anc_attack_dire_01"
+					m_params = 
+					{
+						m_respeakdelay.start = 8.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsFortAttackedIsBadAttackedIsSpectatorIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsFortAttacked",
+					"IsBadAttacked",
+					"IsSpectator",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsTowerAttackedIsGoodAttackedIsSpectatorIsTopLaneIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_twr_attack_rad_top_01"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsTowerAttackedIsGoodAttackedIsSpectatorIsTopLaneIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsTowerAttacked",
+					"IsGoodAttacked",
+					"IsSpectator",
+					"IsTopLane",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsTowerAttackedIsGoodAttackedIsSpectatorIsMidLaneIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_twr_attack_rad_mid_01"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsTowerAttackedIsGoodAttackedIsSpectatorIsMidLaneIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsTowerAttacked",
+					"IsGoodAttacked",
+					"IsSpectator",
+					"IsMidLane",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsTowerAttackedIsGoodAttackedIsSpectatorIsBotLaneIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_twr_attack_rad_bot_01"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsTowerAttackedIsGoodAttackedIsSpectatorIsBotLaneIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsTowerAttacked",
+					"IsGoodAttacked",
+					"IsSpectator",
+					"IsBotLane",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsTowerAttackedIsBadAttackedIsSpectatorIsTopLaneIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_twr_attack_dire_top_01"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsTowerAttackedIsBadAttackedIsSpectatorIsTopLaneIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsTowerAttacked",
+					"IsBadAttacked",
+					"IsSpectator",
+					"IsTopLane",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsTowerAttackedIsBadAttackedIsSpectatorIsMidLaneIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_twr_attack_dire_mid_01"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsTowerAttackedIsBadAttackedIsSpectatorIsMidLaneIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsTowerAttacked",
+					"IsBadAttacked",
+					"IsSpectator",
+					"IsMidLane",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsTowerAttackedIsBadAttackedIsSpectatorIsBotLaneIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_twr_attack_dire_bot_01"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsTowerAttackedIsBadAttackedIsSpectatorIsBotLaneIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsTowerAttacked",
+					"IsBadAttacked",
+					"IsSpectator",
+					"IsBotLane",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsTowerAttackedIsNotSpectatorIsTopLaneIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_twr_attack_yr_top_01"
+					m_params = 
+					{
+						m_respeakdelay.start = 7.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsTowerAttackedIsNotSpectatorIsTopLaneIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsTowerAttacked",
+					"IsNotSpectator",
+					"IsTopLane",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsTowerAttackedIsNotSpectatorIsMidLaneIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_twr_attack_yr_mid_01"
+					m_params = 
+					{
+						m_respeakdelay.start = 7.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsTowerAttackedIsNotSpectatorIsMidLaneIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsTowerAttacked",
+					"IsNotSpectator",
+					"IsMidLane",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsTowerAttackedIsNotSpectatorIsBotLaneIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_twr_attack_yr_bot_01"
+					m_params = 
+					{
+						m_respeakdelay.start = 7.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsTowerAttackedIsNotSpectatorIsBotLaneIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsTowerAttacked",
+					"IsNotSpectator",
+					"IsBotLane",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsTowerKilledIsTopLaneIsNotDenyIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_twr_fall_yr_top_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsTowerKilledIsTopLaneIsNotDenyIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsTowerKilled",
+					"IsTopLane",
+					"IsNotDeny",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsTowerKilledIsMidLaneIsNotDenyIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_twr_fall_yr_mid_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsTowerKilledIsMidLaneIsNotDenyIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsTowerKilled",
+					"IsMidLane",
+					"IsNotDeny",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsTowerKilledIsBotLaneIsNotDenyIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_twr_fall_yr_bot_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsTowerKilledIsBotLaneIsNotDenyIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsTowerKilled",
+					"IsBotLane",
+					"IsNotDeny",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsGoodTowerKilledIsSpectatorIsTopLaneIsNotDenyIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_twr_fall_rad_top_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsGoodTowerKilledIsSpectatorIsTopLaneIsNotDenyIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsGoodTowerKilled",
+					"IsSpectator",
+					"IsTopLane",
+					"IsNotDeny",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsGoodTowerKilledIsSpectatorIsMidLaneIsNotDenyIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_twr_fall_rad_mid_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsGoodTowerKilledIsSpectatorIsMidLaneIsNotDenyIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsGoodTowerKilled",
+					"IsSpectator",
+					"IsMidLane",
+					"IsNotDeny",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsGoodTowerKilledIsSpectatorIsBotLaneIsNotDenyIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_twr_fall_rad_bot_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsGoodTowerKilledIsSpectatorIsBotLaneIsNotDenyIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsGoodTowerKilled",
+					"IsSpectator",
+					"IsBotLane",
+					"IsNotDeny",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsBadTowerKilledIsSpectatorIsTopLaneIsNotDenyIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_twr_fall_dire_top_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsBadTowerKilledIsSpectatorIsTopLaneIsNotDenyIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsBadTowerKilled",
+					"IsSpectator",
+					"IsTopLane",
+					"IsNotDeny",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsBadTowerKilledIsSpectatorIsMidLaneIsNotDenyIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_twr_fall_dire_mid_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsBadTowerKilledIsSpectatorIsMidLaneIsNotDenyIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsBadTowerKilled",
+					"IsSpectator",
+					"IsMidLane",
+					"IsNotDeny",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsBadTowerKilledIsSpectatorIsBotLaneIsNotDenyIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_twr_fall_dire_bot_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsBadTowerKilledIsSpectatorIsBotLaneIsNotDenyIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsBadTowerKilled",
+					"IsSpectator",
+					"IsBotLane",
+					"IsNotDeny",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsEnemyTowerKilledIsTopLaneIsNotDenyIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_twr_fall_enm_top_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsEnemyTowerKilledIsTopLaneIsNotDenyIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsEnemyTowerKilled",
+					"IsTopLane",
+					"IsNotDeny",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsEnemyTowerKilledIsMidLaneIsNotDenyIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_twr_fall_enm_mid_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsEnemyTowerKilledIsMidLaneIsNotDenyIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsEnemyTowerKilled",
+					"IsMidLane",
+					"IsNotDeny",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsEnemyTowerKilledIsBotLaneIsNotDenyIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_twr_fall_enm_bot_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsEnemyTowerKilledIsBotLaneIsNotDenyIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsEnemyTowerKilled",
+					"IsBotLane",
+					"IsNotDeny",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsBarracksAttackedIsNotSpectatorIsTopLaneIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_rax_attack_yr_top_01"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsBarracksAttackedIsNotSpectatorIsTopLaneIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsBarracksAttacked",
+					"IsNotSpectator",
+					"IsTopLane",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsBarracksAttackedIsNotSpectatorIsMidLaneIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_rax_attack_yr_mid_01"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsBarracksAttackedIsNotSpectatorIsMidLaneIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsBarracksAttacked",
+					"IsNotSpectator",
+					"IsMidLane",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsBarracksAttackedIsNotSpectatorIsBotLaneIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_rax_attack_yr_bot_01"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsBarracksAttackedIsNotSpectatorIsBotLaneIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsBarracksAttacked",
+					"IsNotSpectator",
+					"IsBotLane",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsBarracksAttackedIsGoodAttackedIsSpectatorIsTopLaneIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_rax_attack_rad_top_01"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsBarracksAttackedIsGoodAttackedIsSpectatorIsTopLaneIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsBarracksAttacked",
+					"IsGoodAttacked",
+					"IsSpectator",
+					"IsTopLane",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsBarracksAttackedIsGoodAttackedIsSpectatorIsMidLaneIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_rax_attack_rad_mid_01"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsBarracksAttackedIsGoodAttackedIsSpectatorIsMidLaneIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsBarracksAttacked",
+					"IsGoodAttacked",
+					"IsSpectator",
+					"IsMidLane",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsBarracksAttackedIsGoodAttackedIsSpectatorIsBotLaneIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_rax_attack_rad_bot_01"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsBarracksAttackedIsGoodAttackedIsSpectatorIsBotLaneIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsBarracksAttacked",
+					"IsGoodAttacked",
+					"IsSpectator",
+					"IsBotLane",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsBarracksAttackedIsBadAttackedIsSpectatorIsTopLaneIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_rax_attack_dire_top_01"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsBarracksAttackedIsBadAttackedIsSpectatorIsTopLaneIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsBarracksAttacked",
+					"IsBadAttacked",
+					"IsSpectator",
+					"IsTopLane",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsBarracksAttackedIsBadAttackedIsSpectatorIsMidLaneIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_rax_attack_dire_mid_01"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsBarracksAttackedIsBadAttackedIsSpectatorIsMidLaneIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsBarracksAttacked",
+					"IsBadAttacked",
+					"IsSpectator",
+					"IsMidLane",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsBarracksAttackedIsBadAttackedIsSpectatorIsBotLaneIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_rax_attack_dire_bot_01"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsBarracksAttackedIsBadAttackedIsSpectatorIsBotLaneIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsBarracksAttacked",
+					"IsBadAttacked",
+					"IsSpectator",
+					"IsBotLane",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsBarracksKilledIsTopLaneIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_rax_fall_yr_top_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsBarracksKilledIsTopLaneIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsBarracksKilled",
+					"IsTopLane",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsBarracksKilledIsMidLaneIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_rax_fall_yr_mid_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsBarracksKilledIsMidLaneIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsBarracksKilled",
+					"IsMidLane",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsBarracksKilledIsBotLaneIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_rax_fall_yr_bot_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsBarracksKilledIsBotLaneIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsBarracksKilled",
+					"IsBotLane",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsGoodBarracksKilledIsSpectatorIsTopLaneIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_rax_fall_rad_top_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsGoodBarracksKilledIsSpectatorIsTopLaneIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsGoodBarracksKilled",
+					"IsSpectator",
+					"IsTopLane",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsGoodBarracksKilledIsSpectatorIsMidLaneIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_rax_fall_rad_mid_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsGoodBarracksKilledIsSpectatorIsMidLaneIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsGoodBarracksKilled",
+					"IsSpectator",
+					"IsMidLane",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsGoodBarracksKilledIsSpectatorIsBotLaneIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_rax_fall_rad_bot_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsGoodBarracksKilledIsSpectatorIsBotLaneIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsGoodBarracksKilled",
+					"IsSpectator",
+					"IsBotLane",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsBadBarracksKilledIsSpectatorIsTopLaneIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_rax_fall_dire_top_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsBadBarracksKilledIsSpectatorIsTopLaneIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsBadBarracksKilled",
+					"IsSpectator",
+					"IsTopLane",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsBadBarracksKilledIsSpectatorIsMidLaneIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_rax_fall_dire_mid_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsBadBarracksKilledIsSpectatorIsMidLaneIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsBadBarracksKilled",
+					"IsSpectator",
+					"IsMidLane",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsBadBarracksKilledIsSpectatorIsBotLaneIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_rax_fall_dire_bot_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsBadBarracksKilledIsSpectatorIsBotLaneIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsBadBarracksKilled",
+					"IsSpectator",
+					"IsBotLane",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsEnemyBarracksKilledIsTopLaneIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_rax_fall_enm_top_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsEnemyBarracksKilledIsTopLaneIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsEnemyBarracksKilled",
+					"IsTopLane",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsEnemyBarracksKilledIsMidLaneIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_rax_fall_enm_mid_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsEnemyBarracksKilledIsMidLaneIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsEnemyBarracksKilled",
+					"IsMidLane",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsEnemyBarracksKilledIsBotLaneIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_rax_fall_enm_bot_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsEnemyBarracksKilledIsBotLaneIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsEnemyBarracksKilled",
+					"IsBotLane",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsTowerKilledIsTopLaneIsDenyIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_twr_deny_yr_top_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsTowerKilledIsTopLaneIsDenyIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsTowerKilled",
+					"IsTopLane",
+					"IsDeny",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsTowerKilledIsMidLaneIsDenyIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_twr_deny_yr_mid_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsTowerKilledIsMidLaneIsDenyIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsTowerKilled",
+					"IsMidLane",
+					"IsDeny",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsTowerKilledIsBotLaneIsDenyIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_twr_deny_yr_bot_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsTowerKilledIsBotLaneIsDenyIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsTowerKilled",
+					"IsBotLane",
+					"IsDeny",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsEnemyTowerKilledIsTopLaneIsDenyIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_twr_deny_enm_top_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsEnemyTowerKilledIsTopLaneIsDenyIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsEnemyTowerKilled",
+					"IsTopLane",
+					"IsDeny",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsEnemyTowerKilledIsMidLaneIsDenyIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_twr_deny_enm_mid_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsEnemyTowerKilledIsMidLaneIsDenyIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsEnemyTowerKilled",
+					"IsMidLane",
+					"IsDeny",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsEnemyTowerKilledIsBotLaneIsDenyIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_twr_deny_enm_bot_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsEnemyTowerKilledIsBotLaneIsDenyIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsEnemyTowerKilled",
+					"IsBotLane",
+					"IsDeny",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsGoodTowerKilledIsSpectatorIsTopLaneIsDenyIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_twr_deny_rad_top_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsGoodTowerKilledIsSpectatorIsTopLaneIsDenyIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsGoodTowerKilled",
+					"IsSpectator",
+					"IsTopLane",
+					"IsDeny",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsGoodTowerKilledIsSpectatorIsMidLaneIsDenyIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_twr_deny_rad_mid_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsGoodTowerKilledIsSpectatorIsMidLaneIsDenyIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsGoodTowerKilled",
+					"IsSpectator",
+					"IsMidLane",
+					"IsDeny",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsGoodTowerKilledIsSpectatorIsBotLaneIsDenyIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_twr_deny_rad_bot_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsGoodTowerKilledIsSpectatorIsBotLaneIsDenyIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsGoodTowerKilled",
+					"IsSpectator",
+					"IsBotLane",
+					"IsDeny",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsBadTowerKilledIsSpectatorIsTopLaneIsDenyIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_twr_deny_dire_top_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsBadTowerKilledIsSpectatorIsTopLaneIsDenyIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsBadTowerKilled",
+					"IsSpectator",
+					"IsTopLane",
+					"IsDeny",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsBadTowerKilledIsSpectatorIsMidLaneIsDenyIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_twr_deny_dire_mid_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsBadTowerKilledIsSpectatorIsMidLaneIsDenyIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsBadTowerKilled",
+					"IsSpectator",
+					"IsMidLane",
+					"IsDeny",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsBadTowerKilledIsSpectatorIsBotLaneIsDenyIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_twr_deny_dire_bot_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsBadTowerKilledIsSpectatorIsBotLaneIsDenyIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsBadTowerKilled",
+					"IsSpectator",
+					"IsBotLane",
+					"IsDeny",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomGlyphUsedBadIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_fort_dire_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomGlyphUsedBadIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"GlyphUsedBad",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomGlyphUsedGoodIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_fort_rad_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomGlyphUsedGoodIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"GlyphUsedGood",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomCourierLostBadIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_cour_kill_dire_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomCourierLostBadIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"CourierLostBad",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomCourierLostGoodIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_cour_kill_rad_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomCourierLostGoodIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"CourierLostGood",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsMegaCreepsIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_mega_now_you_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsMegaCreepsIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsMegaCreeps",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsEnemyMegaCreepsIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_mega_now_enm_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsEnemyMegaCreepsIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsEnemyMegaCreeps",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsBadMegaCreepsIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_mega_now_dire_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsBadMegaCreepsIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsBadMegaCreeps",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsGoodMegaCreepsIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_mega_now_rad_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsGoodMegaCreepsIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsGoodMegaCreeps",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsRoshanKilledBadIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_roshan_fallen_dire_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsRoshanKilledBadIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsRoshanKilledBad",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsRoshanKilledGoodIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_roshan_fallen_rad_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsRoshanKilledGoodIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsRoshanKilledGood",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsBadVictoryIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_victory_dire_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsBadVictoryIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsBadVictory",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsGoodVictoryIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_victory_rad_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_victory_rad_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsGoodVictoryIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsGoodVictory",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsAllPickIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_type_all_pick"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsAllPickIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsAllPick",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsAllRandomIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_type_all_random"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsAllRandomIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsAllRandom",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsCaptainsDraftIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_type_capt_draft"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsCaptainsDraftIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsCaptainsDraft",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsCaptainsModeIsDraftBeginIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_type_capt_mode"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsCaptainsModeIsDraftBeginIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsCaptainsMode",
+					"IsDraftBegin",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsReverseCaptainsModeIsDraftBeginIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_type_capt_mode"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsReverseCaptainsModeIsDraftBeginIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsReverseCaptainsMode",
+					"IsDraftBegin",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsRandomDraftIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_type_random_draft"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsRandomDraftIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsRandomDraft",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsSingleDraftIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_type_single_draft"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsSingleDraftIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsSingleDraft",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsDeathMatchIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_type_death_match"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsDeathMatchIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsDeathMatch",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsTenSecondsRemainingIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_count_pick_10"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsTenSecondsRemainingIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsTenSecondsRemaining",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsFiveSecondsRemainingIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_count_pick_5"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsFiveSecondsRemainingIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsFiveSecondsRemaining",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsMidOnlyIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_choose_hero"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsMidOnlyIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsMidOnly",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsLeastPlayedIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_choose_hero"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsLeastPlayedIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsLeastPlayed",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsLimitedHeroesIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_choose_hero"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsLimitedHeroesIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsLimitedHeroes",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsCustomModeIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_choose_hero"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsCustomModeIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsCustomMode",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsOneVsOneIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_choose_hero"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsOneVsOneIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsOneVsOne",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsDiretideRosh10secondsIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_count_pick_10"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsDiretideRosh10secondsIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsDiretideRosh10seconds",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsDiretideModeIsRoshanSpawnIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_diretide_rosh_02"
+					m_flFollowupDelay = 3.0
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_GENERIC"
+						m_contexts = "foo:0"
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsDiretideModeIsRoshanSpawnIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsDiretideMode",
+					"IsRoshanSpawn",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsDiretideModeIsRoshanHuntingIsRoshanTargetDireIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_diretide_rosh_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsDiretideModeIsRoshanHuntingIsRoshanTargetDireIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsDiretideMode",
+					"IsRoshanHunting",
+					"IsRoshanTargetDire",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsDiretideModeIsRoshanHuntingIsRoshanTargetRadiantIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_diretide_rosh_04"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsDiretideModeIsRoshanHuntingIsRoshanTargetRadiantIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsDiretideMode",
+					"IsRoshanHunting",
+					"IsRoshanTargetRadiant",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsDiretideModeIsGoodVictoryIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_diretide_rosh_08"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsDiretideModeIsGoodVictoryIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsDiretideMode",
+					"IsGoodVictory",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsDiretideModeIsSugarRushIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_diretide_rosh_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_diretide_rosh_09_alt_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_diretide_rosh_09_alt_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsDiretideModeIsSugarRushIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsDiretideMode",
+					"IsSugarRush",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsDiretideModeIsRoshanLevelingUpIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_diretide_rosh_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_diretide_rosh_13"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsDiretideModeIsRoshanLevelingUpIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsDiretideMode",
+					"IsRoshanLevelingUp",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsDiretideModeIsRoshanKilledIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_diretide_rosh_16"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsDiretideModeIsRoshanKilledIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsDiretideMode",
+					"IsRoshanKilled",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsDiretideModeIsCandyChaosEndsIsBadVictoryIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_diretide_rosh_18"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsDiretideModeIsCandyChaosEndsIsBadVictoryIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsDiretideMode",
+					"IsCandyChaosEnds",
+					"IsBadVictory",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_CustomIsDiretideModeIsCandyChaosEndsIsGoodVictoryIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_diretide_rosh_19"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_CustomIsDiretideModeIsCandyChaosEndsIsGoodVictoryIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_diretide_2012",
+					"IsDiretideMode",
+					"IsCandyChaosEnds",
+					"IsGoodVictory",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_Followup_GenericIsDiretideModeIsRoshanSpawnIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_diretide_rosh_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_diretide_rosh_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_diretide_rosh_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_diretide_rosh_20"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_Followup_GenericIsDiretideModeIsRoshanSpawnIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Followup_Generic",
+					"Isannouncer_diretide_2012",
+					"IsDiretideMode",
+					"IsRoshanSpawn",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+		{
+			m_name = "announcer_diretide_2012_Followup_GenericIsDiretideModeIsRoshanKilledIsAnnouncerVoice_Diretide_2012"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_diretide_2012_announcer_diretide_rosh_21"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_diretide_2012_Followup_GenericIsDiretideModeIsRoshanKilledIsAnnouncerVoice_Diretide_2012"
+				m_Requirements = 
+				[
+					"Followup_Generic",
+					"Isannouncer_diretide_2012",
+					"IsDiretideMode",
+					"IsRoshanKilled",
+					"IsAnnouncerVoice_Diretide_2012",
+				]
+			}
+		},
+	]
+	m_Requirements = 
+	[
+		{
+			m_name = "Isannouncer_diretide_2012"
+			m_matchKey = "classname"
+			m_matchExpr = "npc_dota_hero_announcer_diretide_2012"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsDiretide"
+			m_matchKey = "announce_gamemode"
+			m_matchExpr = "7"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsAnnouncerVoice_Diretide_2012"
+			m_matchKey = "announcer_voice"
+			m_matchExpr = "npc_dota_hero_announcer_diretide_2012"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsSugarRush"
+			m_matchKey = "announce_event"
+			m_matchExpr = "sugar_rush"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsRoshanKilled"
+			m_matchKey = "announce_event"
+			m_matchExpr = "diretide_roshan_killed"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsRoshanSpawn"
+			m_matchKey = "announce_event"
+			m_matchExpr = "diretide_roshan_spawned"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsRoshanHunting"
+			m_matchKey = "announce_event"
+			m_matchExpr = "roshan_choose_target"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsCandyChaosEnds"
+			m_matchKey = "announce_event"
+			m_matchExpr = "candy_chaos_ends"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsDiretideMode"
+			m_matchKey = "gamemode"
+			m_matchExpr = "7"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsRoshanTargetDire"
+			m_matchKey = "roshan_target_team"
+			m_matchExpr = "dire"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsRoshanTargetRadiant"
+			m_matchKey = "roshan_target_team"
+			m_matchExpr = "radiant"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsRoshanLevelingUp"
+			m_matchKey = "announce_event"
+			m_matchExpr = "roshan_leveling_up"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsDiretideRosh10seconds"
+			m_matchKey = "announce_event"
+			m_matchExpr = "hw_rosh_ten_seconds_remain"
+			m_flWeight = 5.0
+		},
+	]
+}

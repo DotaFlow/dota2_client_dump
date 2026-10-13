@@ -1,0 +1,2693 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vrr_c1:version{c1f07085-5299-4e8a-b7e9-1cbb66bbbe23} -->
+{
+	m_Includes = 
+	[
+		"scripts/talker/response_rules_shared.vrr",
+	]
+	m_ResponseGroups = 
+	[
+		{
+			m_name = "bounty_hunter_Spawn"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_spawn_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_spawn_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_spawn_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_spawn_04"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_Spawn"
+				m_Requirements = 
+				[
+					"Spawn",
+					"Isbounty_hunter",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_CustomIsGameStart"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_battlebegins_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_ability_track_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_CustomIsGameStart"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isbounty_hunter",
+					"IsGameStart",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_CustomIsBountyHunterLoadoutSpawn"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_spawn_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_spawn_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_spawn_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_spawn_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_battlebegins_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_move_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_attack_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_level_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_respawn_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_win_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_blink_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_ability_track_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_CustomIsBountyHunterLoadoutSpawn"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isbounty_hunter",
+					"IsBountyHunterLoadoutSpawn",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_KillIsFirstBlood"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_firstblood_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_KillIsFirstBlood"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isbounty_hunter",
+					"IsFirstBlood",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_Kill"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_ability_jinada_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_ability_jinada_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_ability_track_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_kill_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_kill_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_kill_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_kill_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_kill_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_kill_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_kill_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_kill_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_kill_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_kill_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_kill_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_kill_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_kill_15"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_kill_16"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_kill_17"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_kill_19"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_kill_20"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_laugh_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_laugh_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_laugh_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_laugh_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_laugh_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_laugh_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_laugh_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_laugh_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_laugh_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_laugh_10"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_Kill"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isbounty_hunter",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_KillChance_2%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_kill_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_kill_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_kill_18"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_KillChance_2%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isbounty_hunter",
+					"Chance_2%",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_KillIsEnemyHuskarChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_rival_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_KillIsEnemyHuskarChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isbounty_hunter",
+					"IsEnemyHuskar",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_KillIsEnemyQueenofPainChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_rival_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_KillIsEnemyQueenofPainChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isbounty_hunter",
+					"IsEnemyQueenofPain",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_KillIsEnemySniperChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_rival_04"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_KillIsEnemySniperChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isbounty_hunter",
+					"IsEnemySniper",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_KillIsEnemyZuusChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_rival_05"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_KillIsEnemyZuusChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isbounty_hunter",
+					"IsEnemyZuus",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_KillIsEnemySkeleton_KingChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_rival_07"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_KillIsEnemySkeleton_KingChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isbounty_hunter",
+					"IsEnemySkeleton_King",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_KillIsEnemyVengefulSpiritChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_rival_08"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_KillIsEnemyVengefulSpiritChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isbounty_hunter",
+					"IsEnemyVengefulSpirit",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_KillIsEnemyDrowRangerChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_rival_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_KillIsEnemyDrowRangerChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isbounty_hunter",
+					"IsEnemyDrowRanger",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_KillIsEnemySpectreChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_rival_10"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_KillIsEnemySpectreChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isbounty_hunter",
+					"IsEnemySpectre",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_KillIsEnemyAlchemistChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_rival_11"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_KillIsEnemyAlchemistChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isbounty_hunter",
+					"IsEnemyAlchemist",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_KillIsEnemyPhantom_AssassinChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_rival_12"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_KillIsEnemyPhantom_AssassinChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isbounty_hunter",
+					"IsEnemyPhantom_Assassin",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_KillIsEnemyNyx_AssassinChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_rival_13"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_KillIsEnemyNyx_AssassinChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isbounty_hunter",
+					"IsEnemyNyx_Assassin",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_KillIsEnemyMeepoChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_rival_14"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_KillIsEnemyMeepoChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isbounty_hunter",
+					"IsEnemyMeepo",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_KillIsEnemyPhantom_LancerChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_rival_15"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_KillIsEnemyPhantom_LancerChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isbounty_hunter",
+					"IsEnemyPhantom_Lancer",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_KillIsEnemyRikiChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_rival_16"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_rival_17"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_rival_18"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_rival_23"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_KillIsEnemyRikiChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isbounty_hunter",
+					"IsEnemyRiki",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_KillIsEnemyMiranaChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_rival_19"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_KillIsEnemyMiranaChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isbounty_hunter",
+					"IsEnemyMirana",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_KillIsEnemyTidehunterChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_rival_20"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_KillIsEnemyTidehunterChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isbounty_hunter",
+					"IsEnemyTidehunter",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_KillIsEnemyBroodmotherChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_rival_22"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_KillIsEnemyBroodmotherChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isbounty_hunter",
+					"IsEnemyBroodmother",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_Move"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_move_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_move_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_move_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_move_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_move_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_move_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_move_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_move_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_move_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_move_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_move_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_move_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_move_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_move_15"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_move_16"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_move_17"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_Move"
+				m_Requirements = 
+				[
+					"Move",
+					"Isbounty_hunter",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_MoveChance_2%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_move_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_move_18"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_move_19"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_MoveChance_2%"
+				m_Requirements = 
+				[
+					"Move",
+					"Isbounty_hunter",
+					"Chance_2%",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_Attack"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_attack_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_attack_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_attack_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_attack_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_attack_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_attack_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_attack_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_attack_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_attack_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_attack_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_attack_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_attack_13"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_Attack"
+				m_Requirements = 
+				[
+					"Attack",
+					"Isbounty_hunter",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_AttackChance_2%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_attack_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_attack_14"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_AttackChance_2%"
+				m_Requirements = 
+				[
+					"Attack",
+					"Isbounty_hunter",
+					"Chance_2%",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_CastOrder"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_cast_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_cast_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_cast_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_CastOrder"
+				m_Requirements = 
+				[
+					"CastOrder",
+					"Isbounty_hunter",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_CastExecuteIsAbilityShurikenTossChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_ability_shur_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_ability_shur_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_CastExecuteIsAbilityShurikenTossChance_25%"
+				m_Requirements = 
+				[
+					"CastExecute",
+					"Isbounty_hunter",
+					"IsAbilityShurikenToss",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_CastExecuteIsAbilityWindWalkChance_75%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_ability_windwalk_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_ability_windwalk_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_ability_windwalk_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_ability_windwalk_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_ability_windwalk_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_ability_windwalk_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_ability_windwalk_08"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_CastExecuteIsAbilityWindWalkChance_75%"
+				m_Requirements = 
+				[
+					"CastExecute",
+					"Isbounty_hunter",
+					"IsAbilityWindWalk",
+					"Chance_75%",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_CastExecuteIsAbilityTrackChance_10%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_ability_track_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_ability_track_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_CastExecuteIsAbilityTrackChance_10%"
+				m_Requirements = 
+				[
+					"CastExecute",
+					"Isbounty_hunter",
+					"IsAbilityTrack",
+					"Chance_10%",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_AllyNearIsAllyMiranaEarlyGame"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_ally_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_AllyNearIsAllyMiranaEarlyGame"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Isbounty_hunter",
+					"IsAllyMirana",
+					"EarlyGame",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_AllyNearIsAllyDrowRangerEarlyGame"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_ally_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_AllyNearIsAllyDrowRangerEarlyGame"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Isbounty_hunter",
+					"IsAllyDrowRanger",
+					"EarlyGame",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_AllyNearIsAllyTidehunterEarlyGame"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_ally_03"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_AllyNearIsAllyTidehunterEarlyGame"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Isbounty_hunter",
+					"IsAllyTidehunter",
+					"EarlyGame",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_AllyNearIsAllyRikiEarlyGame"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_ally_04"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_ally_05"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_AllyNearIsAllyRikiEarlyGame"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Isbounty_hunter",
+					"IsAllyRiki",
+					"EarlyGame",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_AllyNearIsAllySniperEarlyGame"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_ally_06"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_AllyNearIsAllySniperEarlyGame"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Isbounty_hunter",
+					"IsAllySniper",
+					"EarlyGame",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_AllyNearIsAllyTemplar_Assassin"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_ally_07"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_AllyNearIsAllyTemplar_Assassin"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Isbounty_hunter",
+					"IsAllyTemplar_Assassin",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_AllyNearIsAllyNyx_AssassinEarlyGame"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_ally_08"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_AllyNearIsAllyNyx_AssassinEarlyGame"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Isbounty_hunter",
+					"IsAllyNyx_Assassin",
+					"EarlyGame",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_LevelUp"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_level_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_level_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_level_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_level_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_level_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_level_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_level_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_level_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_level_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_level_11"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_LevelUp"
+				m_Requirements = 
+				[
+					"LevelUp",
+					"Isbounty_hunter",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_LevelUpChance_2%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_level_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_LevelUpChance_2%"
+				m_Requirements = 
+				[
+					"LevelUp",
+					"Isbounty_hunter",
+					"Chance_2%",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_Death"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_death_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_death_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_death_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_death_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_death_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_death_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_death_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_death_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_death_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_death_10"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_Death"
+				m_Requirements = 
+				[
+					"Death",
+					"Isbounty_hunter",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_DeathChance_2%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_death_11"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_DeathChance_2%"
+				m_Requirements = 
+				[
+					"Death",
+					"Isbounty_hunter",
+					"Chance_2%",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_DeathIsReincarnating"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_fastres_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_fastres_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_fastres_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_fastres_04"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_DeathIsReincarnating"
+				m_Requirements = 
+				[
+					"Death",
+					"Isbounty_hunter",
+					"IsReincarnating",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_Respawn"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_respawn_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_respawn_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_respawn_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_respawn_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_respawn_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_respawn_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_respawn_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_respawn_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_respawn_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_respawn_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_respawn_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_respawn_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_respawn_13"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_Respawn"
+				m_Requirements = 
+				[
+					"Respawn",
+					"Isbounty_hunter",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_LastHit"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_lasthit_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_lasthit_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_lasthit_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_lasthit_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_lasthit_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_lasthit_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_lasthit_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_lasthit_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_lasthit_10"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_LastHit"
+				m_Requirements = 
+				[
+					"LastHit",
+					"Isbounty_hunter",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_LastHitChance_2%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_lasthit_04"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_LastHitChance_2%"
+				m_Requirements = 
+				[
+					"LastHit",
+					"Isbounty_hunter",
+					"Chance_2%",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_Deny"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_deny_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_deny_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_deny_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_deny_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_deny_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_deny_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_deny_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_deny_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_deny_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_deny_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_deny_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_deny_13"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_Deny"
+				m_Requirements = 
+				[
+					"Deny",
+					"Isbounty_hunter",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_DenyChance_2%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_deny_07"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_DenyChance_2%"
+				m_Requirements = 
+				[
+					"Deny",
+					"Isbounty_hunter",
+					"Chance_2%",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_Select"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_move_06"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_Select"
+				m_Requirements = 
+				[
+					"Select",
+					"Isbounty_hunter",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_PurchaseIsExpensiveItem"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_purch_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_purch_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_purch_03"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_PurchaseIsExpensiveItem"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isbounty_hunter",
+					"IsExpensiveItem",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_PurchaseIsBlinkDagger"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_blink_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_blink_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_blink_03"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_PurchaseIsBlinkDagger"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isbounty_hunter",
+					"IsBlinkDagger",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_PurchaseIsUltimateScepter"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_scepter_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_scepter_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_PurchaseIsUltimateScepter"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isbounty_hunter",
+					"IsUltimateScepter",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_PurchaseIsBlackKingBar"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_item_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_PurchaseIsBlackKingBar"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isbounty_hunter",
+					"IsBlackKingBar",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_PurchaseIsSangeAndYasha"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_item_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_PurchaseIsSangeAndYasha"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isbounty_hunter",
+					"IsSangeAndYasha",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_PurchaseIsButterfly"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_item_03"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_PurchaseIsButterfly"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isbounty_hunter",
+					"IsButterfly",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_PurchaseIsMonkeyKingBar"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_item_04"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_PurchaseIsMonkeyKingBar"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isbounty_hunter",
+					"IsMonkeyKingBar",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_PurchaseIsDesolator"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_item_05"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_PurchaseIsDesolator"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isbounty_hunter",
+					"IsDesolator",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_PurchaseIsVladmirs"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_item_06"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_PurchaseIsVladmirs"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isbounty_hunter",
+					"IsVladmirs",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_PurchaseIsDemonEdge"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_item_07"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_PurchaseIsDemonEdge"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isbounty_hunter",
+					"IsDemonEdge",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_PurchaseIsDivineRapier"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_item_08"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_PurchaseIsDivineRapier"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isbounty_hunter",
+					"IsDivineRapier",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_Bottling"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_bottle_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_bottle_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_bottle_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_Bottling"
+				m_Requirements = 
+				[
+					"Bottling",
+					"Isbounty_hunter",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_Immortality"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_immort_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_Immortality"
+				m_Requirements = 
+				[
+					"Immortality",
+					"Isbounty_hunter",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_PowerupIsPowerupHaste"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_haste_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_PowerupIsPowerupHaste"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isbounty_hunter",
+					"IsPowerupHaste",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_PowerupIsPowerupBounty"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_level_08"
+					m_params = 
+					{
+						m_respeakdelay.start = 300.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_PowerupIsPowerupBounty"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isbounty_hunter",
+					"IsPowerupBounty",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_PowerupIsPowerupArcane"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_lasthit_10"
+					m_params = 
+					{
+						m_respeakdelay.start = 300.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_PowerupIsPowerupArcane"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isbounty_hunter",
+					"IsPowerupArcane",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_PowerupIsPowerupDoubleDamage"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_doubdam_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_PowerupIsPowerupDoubleDamage"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isbounty_hunter",
+					"IsPowerupDoubleDamage",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_PowerupIsPowerupDoubleDamageChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_doubdam_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_PowerupIsPowerupDoubleDamageChance_25%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isbounty_hunter",
+					"IsPowerupDoubleDamage",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_PowerupIsPowerupRegeneration"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_regen_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_PowerupIsPowerupRegeneration"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isbounty_hunter",
+					"IsPowerupRegeneration",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_PowerupIsPowerupRegenerationChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_regen_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_PowerupIsPowerupRegenerationChance_25%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isbounty_hunter",
+					"IsPowerupRegeneration",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_PowerupIsPowerupIllusion"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_illus_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_PowerupIsPowerupIllusion"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isbounty_hunter",
+					"IsPowerupIllusion",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_PowerupIsPowerupIllusionChance_5%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_illus_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_PowerupIsPowerupIllusionChance_5%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isbounty_hunter",
+					"IsPowerupIllusion",
+					"Chance_5%",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_PowerupIsPowerupInvisibility"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_invis_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_PowerupIsPowerupInvisibility"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isbounty_hunter",
+					"IsPowerupInvisibility",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_PowerupIsPowerupInvisibilityChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_invis_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_PowerupIsPowerupInvisibilityChance_25%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isbounty_hunter",
+					"IsPowerupInvisibility",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_Thanks"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_thanks_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_thanks_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_Thanks"
+				m_Requirements = 
+				[
+					"Thanks",
+					"Isbounty_hunter",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_PainChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_underattack_01"
+					m_params = 
+					{
+						m_respeakdelay.start = 120.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_PainChance_25%"
+				m_Requirements = 
+				[
+					"Pain",
+					"Isbounty_hunter",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_Pain"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_pain_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_pain_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_pain_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_pain_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_pain_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_pain_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_pain_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_pain_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_pain_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_pain_10"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_Pain"
+				m_Requirements = 
+				[
+					"Pain",
+					"Isbounty_hunter",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_InTheBag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_inthebag_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_InTheBag"
+				m_Requirements = 
+				[
+					"InTheBag",
+					"Isbounty_hunter",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_CooldownLittleNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_notyet_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_notyet_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_notyet_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_CooldownLittleNag"
+				m_Requirements = 
+				[
+					"Cooldown",
+					"Isbounty_hunter",
+					"LittleNag",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_CooldownMediumNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_notyet_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_notyet_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_notyet_06"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_CooldownMediumNag"
+				m_Requirements = 
+				[
+					"Cooldown",
+					"Isbounty_hunter",
+					"MediumNag",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_CooldownSuperNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_notyet_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_notyet_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_notyet_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_CooldownSuperNag"
+				m_Requirements = 
+				[
+					"Cooldown",
+					"Isbounty_hunter",
+					"SuperNag",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_NoManaLittleNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_nomana_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_nomana_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_nomana_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_NoManaLittleNag"
+				m_Requirements = 
+				[
+					"NoMana",
+					"Isbounty_hunter",
+					"LittleNag",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_NoManaMediumNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_nomana_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_nomana_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_nomana_06"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_NoManaMediumNag"
+				m_Requirements = 
+				[
+					"NoMana",
+					"Isbounty_hunter",
+					"MediumNag",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_NoManaSuperNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_nomana_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_nomana_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_nomana_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_NoManaSuperNag"
+				m_Requirements = 
+				[
+					"NoMana",
+					"Isbounty_hunter",
+					"SuperNag",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_Defeat"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_lose_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_lose_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_lose_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_Defeat"
+				m_Requirements = 
+				[
+					"Defeat",
+					"Isbounty_hunter",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_Victory"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_win_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_win_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_win_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_win_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_win_05"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_Victory"
+				m_Requirements = 
+				[
+					"Victory",
+					"Isbounty_hunter",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_ItemDropIsCommonDrop"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_happy_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_happy_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_ItemDropIsCommonDrop"
+				m_Requirements = 
+				[
+					"ItemDrop",
+					"Isbounty_hunter",
+					"IsCommonDrop",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_ItemDropIsRareDrop"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_happy_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_ItemDropIsRareDrop"
+				m_Requirements = 
+				[
+					"ItemDrop",
+					"Isbounty_hunter",
+					"IsRareDrop",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_ItemDropIsUltraRareDrop"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_happy_04"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_ItemDropIsUltraRareDrop"
+				m_Requirements = 
+				[
+					"ItemDrop",
+					"Isbounty_hunter",
+					"IsUltraRareDrop",
+				]
+			}
+		},
+		{
+			m_name = "bounty_hunter_EmoteIsEmoteLaugh"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_laugh_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_laugh_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_laugh_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_laugh_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_laugh_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_laugh_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_laugh_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_laugh_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_laugh_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "bounty_hunter_bount_laugh_10"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "bounty_hunter_EmoteIsEmoteLaugh"
+				m_Requirements = 
+				[
+					"Emote",
+					"Isbounty_hunter",
+					"IsEmoteLaugh",
+				]
+			}
+		},
+	]
+	m_Requirements = 
+	[
+		{
+			m_name = "Isbounty_hunter"
+			m_matchKey = "classname"
+			m_matchExpr = "npc_dota_hero_bounty_hunter"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsAbilityShurikenToss"
+			m_matchKey = "abilityname"
+			m_matchExpr = "bounty_hunter_shuriken_toss"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsAbilityJinada"
+			m_matchKey = "abilityname"
+			m_matchExpr = "bounty_hunter_jinada"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsAbilityWindWalk"
+			m_matchKey = "abilityname"
+			m_matchExpr = "bounty_hunter_wind_walk"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsAbilityTrack"
+			m_matchKey = "abilityname"
+			m_matchExpr = "bounty_hunter_track"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsBountyHunterLoadoutSpawn"
+			m_matchKey = "special_spawn"
+			m_matchExpr = "bounty_hunter_loadout_spawn"
+			m_flWeight = 5.0
+		},
+	]
+}

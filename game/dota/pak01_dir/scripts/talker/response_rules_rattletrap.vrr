@@ -1,0 +1,2376 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vrr_c1:version{c1f07085-5299-4e8a-b7e9-1cbb66bbbe23} -->
+{
+	m_Includes = 
+	[
+		"scripts/talker/response_rules_shared.vrr",
+	]
+	m_ResponseGroups = 
+	[
+		{
+			m_name = "rattletrap_Spawn"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_spawn_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_spawn_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_spawn_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_spawn_05"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "rattletrap_Spawn"
+				m_Requirements = 
+				[
+					"Spawn",
+					"Israttletrap",
+				]
+			}
+		},
+		{
+			m_name = "rattletrap_Move"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_move_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_move_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_move_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_move_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_move_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_move_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_move_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_move_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_move_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_move_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_move_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_move_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_move_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_move_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_move_15"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_move_16"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_move_17"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_move_18"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_move_19"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_move_20"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_move_21"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_move_23"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_move_24"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_move_25"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_move_26"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_move_27"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "rattletrap_Move"
+				m_Requirements = 
+				[
+					"Move",
+					"Israttletrap",
+				]
+			}
+		},
+		{
+			m_name = "rattletrap_MoveIsEnemySniperChance_10%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_cuz_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_cuz_15"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_cuz_16"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "rattletrap_MoveIsEnemySniperChance_10%"
+				m_Requirements = 
+				[
+					"Move",
+					"Israttletrap",
+					"IsEnemySniper",
+					"Chance_10%",
+				]
+			}
+		},
+		{
+			m_name = "rattletrap_MoveIsEnemyTinkerChance_10%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_cuz_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_cuz_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_cuz_17"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "rattletrap_MoveIsEnemyTinkerChance_10%"
+				m_Requirements = 
+				[
+					"Move",
+					"Israttletrap",
+					"IsEnemyTinker",
+					"Chance_10%",
+				]
+			}
+		},
+		{
+			m_name = "rattletrap_CustomIsGameStart"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_move_22"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "rattletrap_CustomIsGameStart"
+				m_Requirements = 
+				[
+					"Custom",
+					"Israttletrap",
+					"IsGameStart",
+				]
+			}
+		},
+		{
+			m_name = "rattletrap_CustomIsRattletrapHookshotHit"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_ability_batt_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_ability_batt_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_ability_batt_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_ability_hook_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_ability_hook_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_ability_hook_06"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "rattletrap_CustomIsRattletrapHookshotHit"
+				m_Requirements = 
+				[
+					"Custom",
+					"Israttletrap",
+					"IsRattletrapHookshotHit",
+				]
+			}
+		},
+		{
+			m_name = "rattletrap_CustomIsRattletrapHookshotReachedTargetChance_15%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_ability_hook_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_ability_hook_05"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "rattletrap_CustomIsRattletrapHookshotReachedTargetChance_15%"
+				m_Requirements = 
+				[
+					"Custom",
+					"Israttletrap",
+					"IsRattletrapHookshotReachedTarget",
+					"Chance_15%",
+				]
+			}
+		},
+		{
+			m_name = "rattletrap_CustomIsRattletrapHookshotReachedTargetIsEnemyPudgeChance_15%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_ability_hook_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_ability_hook_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_ability_hook_12"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "rattletrap_CustomIsRattletrapHookshotReachedTargetIsEnemyPudgeChance_15%"
+				m_Requirements = 
+				[
+					"Custom",
+					"Israttletrap",
+					"IsRattletrapHookshotReachedTarget",
+					"IsEnemyPudge",
+					"Chance_15%",
+				]
+			}
+		},
+		{
+			m_name = "rattletrap_CustomIsRattletrapHookshotReachedTargetIsEnemyTinkerChance_15%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_ability_hook_13"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "rattletrap_CustomIsRattletrapHookshotReachedTargetIsEnemyTinkerChance_15%"
+				m_Requirements = 
+				[
+					"Custom",
+					"Israttletrap",
+					"IsRattletrapHookshotReachedTarget",
+					"IsEnemyTinker",
+					"Chance_15%",
+				]
+			}
+		},
+		{
+			m_name = "rattletrap_CustomIsRattletrapLoadoutSpawn"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_spawn_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_spawn_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_spawn_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_spawn_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_spawn_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_move_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_move_15"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_move_18"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_move_25"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_attack_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_attack_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_cast_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "rattletrap_CustomIsRattletrapLoadoutSpawn"
+				m_Requirements = 
+				[
+					"Custom",
+					"Israttletrap",
+					"IsRattletrapLoadoutSpawn",
+				]
+			}
+		},
+		{
+			m_name = "rattletrap_Attack"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_attack_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_attack_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_attack_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_attack_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_attack_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_attack_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_attack_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_attack_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_attack_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_attack_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_attack_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_attack_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_attack_13"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "rattletrap_Attack"
+				m_Requirements = 
+				[
+					"Attack",
+					"Israttletrap",
+				]
+			}
+		},
+		{
+			m_name = "rattletrap_AttackIsEnemyTinkerChance_15%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_cuz_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_cuz_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_cuz_05"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "rattletrap_AttackIsEnemyTinkerChance_15%"
+				m_Requirements = 
+				[
+					"Attack",
+					"Israttletrap",
+					"IsEnemyTinker",
+					"Chance_15%",
+				]
+			}
+		},
+		{
+			m_name = "rattletrap_AttackIsEnemySniperChance_15%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_cuz_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_cuz_04"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "rattletrap_AttackIsEnemySniperChance_15%"
+				m_Requirements = 
+				[
+					"Attack",
+					"Israttletrap",
+					"IsEnemySniper",
+					"Chance_15%",
+				]
+			}
+		},
+		{
+			m_name = "rattletrap_KillIsEnemySniperChance_35%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_cuz_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_cuz_25"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "rattletrap_KillIsEnemySniperChance_35%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Israttletrap",
+					"IsEnemySniper",
+					"Chance_35%",
+				]
+			}
+		},
+		{
+			m_name = "rattletrap_KillIsEnemyTinkerChance_35%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_cuz_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_cuz_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_cuz_24"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "rattletrap_KillIsEnemyTinkerChance_35%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Israttletrap",
+					"IsEnemyTinker",
+					"Chance_35%",
+				]
+			}
+		},
+		{
+			m_name = "rattletrap_KillIsEnemyCentaurChance_35%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_cuz_18"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "rattletrap_KillIsEnemyCentaurChance_35%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Israttletrap",
+					"IsEnemyCentaur",
+					"Chance_35%",
+				]
+			}
+		},
+		{
+			m_name = "rattletrap_KillIsRattletrapRocketFlareIsLongFlareKill"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_ability_flare_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_ability_flare_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_ability_flare_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_ability_flare_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_ability_flare_12"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "rattletrap_KillIsRattletrapRocketFlareIsLongFlareKill"
+				m_Requirements = 
+				[
+					"Kill",
+					"Israttletrap",
+					"IsRattletrapRocketFlare",
+					"IsLongFlareKill",
+				]
+			}
+		},
+		{
+			m_name = "rattletrap_Kill"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_kill_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_kill_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_kill_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_kill_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_kill_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_kill_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_kill_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_kill_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_kill_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_kill_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_kill_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_kill_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_kill_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_kill_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_kill_15"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_kill_16"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_deny_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_deny_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_win_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_laugh_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_laugh_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "rattletrap_Kill"
+				m_Requirements = 
+				[
+					"Kill",
+					"Israttletrap",
+				]
+			}
+		},
+		{
+			m_name = "rattletrap_KillIsFirstBlood"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_firstblood_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "rattletrap_KillIsFirstBlood"
+				m_Requirements = 
+				[
+					"Kill",
+					"Israttletrap",
+					"IsFirstBlood",
+				]
+			}
+		},
+		{
+			m_name = "rattletrap_DeathIsEnemyTinkerChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_cuz_21"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_cuz_23"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "rattletrap_DeathIsEnemyTinkerChance_25%"
+				m_Requirements = 
+				[
+					"Death",
+					"Israttletrap",
+					"IsEnemyTinker",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "rattletrap_DeathIsEnemySniperChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_cuz_22"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "rattletrap_DeathIsEnemySniperChance_20%"
+				m_Requirements = 
+				[
+					"Death",
+					"Israttletrap",
+					"IsEnemySniper",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "rattletrap_Death"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_death_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_death_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_death_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_death_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_death_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_death_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_death_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_death_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_death_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_death_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_death_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_death_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_death_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_death_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_death_15"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_death_16"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "rattletrap_Death"
+				m_Requirements = 
+				[
+					"Death",
+					"Israttletrap",
+				]
+			}
+		},
+		{
+			m_name = "rattletrap_DeathIsReincarnating"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_laugh_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "rattletrap_DeathIsReincarnating"
+				m_Requirements = 
+				[
+					"Death",
+					"Israttletrap",
+					"IsReincarnating",
+				]
+			}
+		},
+		{
+			m_name = "rattletrap_CastOrder"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_cast_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_cast_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_cast_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "rattletrap_CastOrder"
+				m_Requirements = 
+				[
+					"CastOrder",
+					"Israttletrap",
+				]
+			}
+		},
+		{
+			m_name = "rattletrap_CastExecuteIsRattletrapBatteryAssault"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_ability_batt_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_ability_batt_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_ability_batt_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_ability_batt_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_ability_batt_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_ability_batt_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_ability_batt_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_ability_batt_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_ability_batt_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_ability_batt_15"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_ability_batt_16"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_ability_batt_17"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_ability_batt_18"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "rattletrap_CastExecuteIsRattletrapBatteryAssault"
+				m_Requirements = 
+				[
+					"CastExecute",
+					"Israttletrap",
+					"IsRattletrapBatteryAssault",
+				]
+			}
+		},
+		{
+			m_name = "rattletrap_CastExecuteIsRattletrapPowerCogsChance_50%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_ability_cogs_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_ability_cogs_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_ability_cogs_07"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "rattletrap_CastExecuteIsRattletrapPowerCogsChance_50%"
+				m_Requirements = 
+				[
+					"CastExecute",
+					"Israttletrap",
+					"IsRattletrapPowerCogs",
+					"Chance_50%",
+				]
+			}
+		},
+		{
+			m_name = "rattletrap_CastExecuteIsRattletrapRocketFlare"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_ability_flare_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_ability_flare_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_ability_flare_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_ability_flare_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_ability_flare_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_ability_flare_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_ability_flare_07"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "rattletrap_CastExecuteIsRattletrapRocketFlare"
+				m_Requirements = 
+				[
+					"CastExecute",
+					"Israttletrap",
+					"IsRattletrapRocketFlare",
+				]
+			}
+		},
+		{
+			m_name = "rattletrap_AllyNearIsAllyPudgeEarlyGame"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_ability_hook_10"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "rattletrap_AllyNearIsAllyPudgeEarlyGame"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Israttletrap",
+					"IsAllyPudge",
+					"EarlyGame",
+				]
+			}
+		},
+		{
+			m_name = "rattletrap_LevelUp"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_level_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_level_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_level_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_level_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_level_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_level_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_level_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_level_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_level_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_level_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_level_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_level_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_level_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_level_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_level_15"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_level_16"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_level_17"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_level_18"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_level_19"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_level_20"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_level_21"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_level_22"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "rattletrap_LevelUp"
+				m_Requirements = 
+				[
+					"LevelUp",
+					"Israttletrap",
+				]
+			}
+		},
+		{
+			m_name = "rattletrap_LastHit"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_lasthit_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_lasthit_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_lasthit_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_lasthit_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_lasthit_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_lasthit_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_lasthit_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_lasthit_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_lasthit_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_lasthit_10"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "rattletrap_LastHit"
+				m_Requirements = 
+				[
+					"LastHit",
+					"Israttletrap",
+				]
+			}
+		},
+		{
+			m_name = "rattletrap_Respawn"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_respawn_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_respawn_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_respawn_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_respawn_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_respawn_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_respawn_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_respawn_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_respawn_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_respawn_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_respawn_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_respawn_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_respawn_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_respawn_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_respawn_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_respawn_15"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_respawn_16"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_respawn_17"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_respawn_18"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "rattletrap_Respawn"
+				m_Requirements = 
+				[
+					"Respawn",
+					"Israttletrap",
+				]
+			}
+		},
+		{
+			m_name = "rattletrap_Select"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_rare_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_rare_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "rattletrap_Select"
+				m_Requirements = 
+				[
+					"Select",
+					"Israttletrap",
+				]
+			}
+		},
+		{
+			m_name = "rattletrap_PurchaseIsExpensiveItem"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_purch_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_purch_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_purch_03"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_purch_04"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_purch_05"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "rattletrap_PurchaseIsExpensiveItem"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Israttletrap",
+					"IsExpensiveItem",
+				]
+			}
+		},
+		{
+			m_name = "rattletrap_PurchaseIsBlinkDagger"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_blink_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_blink_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "rattletrap_PurchaseIsBlinkDagger"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Israttletrap",
+					"IsBlinkDagger",
+				]
+			}
+		},
+		{
+			m_name = "rattletrap_PurchaseIsUltimateScepter"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_scepter_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_scepter_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_scepter_03"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_scepter_04"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "rattletrap_PurchaseIsUltimateScepter"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Israttletrap",
+					"IsUltimateScepter",
+				]
+			}
+		},
+		{
+			m_name = "rattletrap_Bottling"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_bottle_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_bottle_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_bottle_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_bottle_04"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "rattletrap_Bottling"
+				m_Requirements = 
+				[
+					"Bottling",
+					"Israttletrap",
+				]
+			}
+		},
+		{
+			m_name = "rattletrap_Deny"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_deny_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_deny_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_deny_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_deny_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_deny_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_deny_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_deny_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_deny_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_deny_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_deny_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_deny_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_deny_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_deny_15"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "rattletrap_Deny"
+				m_Requirements = 
+				[
+					"Deny",
+					"Israttletrap",
+				]
+			}
+		},
+		{
+			m_name = "rattletrap_Defeat"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_lose_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_lose_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_lose_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "rattletrap_Defeat"
+				m_Requirements = 
+				[
+					"Defeat",
+					"Israttletrap",
+				]
+			}
+		},
+		{
+			m_name = "rattletrap_Victory"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_win_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_win_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_win_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_win_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_win_05"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "rattletrap_Victory"
+				m_Requirements = 
+				[
+					"Victory",
+					"Israttletrap",
+				]
+			}
+		},
+		{
+			m_name = "rattletrap_Immortality"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_immort_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "rattletrap_Immortality"
+				m_Requirements = 
+				[
+					"Immortality",
+					"Israttletrap",
+				]
+			}
+		},
+		{
+			m_name = "rattletrap_ImmortalityChance_5%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_immort_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "rattletrap_ImmortalityChance_5%"
+				m_Requirements = 
+				[
+					"Immortality",
+					"Israttletrap",
+					"Chance_5%",
+				]
+			}
+		},
+		{
+			m_name = "rattletrap_PowerupIsPowerupHaste"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_haste_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "rattletrap_PowerupIsPowerupHaste"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Israttletrap",
+					"IsPowerupHaste",
+				]
+			}
+		},
+		{
+			m_name = "rattletrap_PowerupIsPowerupHasteChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_haste_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "rattletrap_PowerupIsPowerupHasteChance_25%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Israttletrap",
+					"IsPowerupHaste",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "rattletrap_PowerupIsPowerupDoubleDamage"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_doubdam_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "rattletrap_PowerupIsPowerupDoubleDamage"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Israttletrap",
+					"IsPowerupDoubleDamage",
+				]
+			}
+		},
+		{
+			m_name = "rattletrap_PowerupIsPowerupDoubleDamageChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_doubdam_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "rattletrap_PowerupIsPowerupDoubleDamageChance_25%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Israttletrap",
+					"IsPowerupDoubleDamage",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "rattletrap_PowerupIsPowerupRegeneration"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_regen_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "rattletrap_PowerupIsPowerupRegeneration"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Israttletrap",
+					"IsPowerupRegeneration",
+				]
+			}
+		},
+		{
+			m_name = "rattletrap_PowerupIsPowerupRegenerationChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_regen_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "rattletrap_PowerupIsPowerupRegenerationChance_25%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Israttletrap",
+					"IsPowerupRegeneration",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "rattletrap_PowerupIsPowerupBounty"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_lasthit_09"
+					m_params = 
+					{
+						m_respeakdelay.start = 300.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "rattletrap_PowerupIsPowerupBounty"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Israttletrap",
+					"IsPowerupBounty",
+				]
+			}
+		},
+		{
+			m_name = "rattletrap_PowerupIsPowerupArcane"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_happy_02"
+					m_params = 
+					{
+						m_respeakdelay.start = 300.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "rattletrap_PowerupIsPowerupArcane"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Israttletrap",
+					"IsPowerupArcane",
+				]
+			}
+		},
+		{
+			m_name = "rattletrap_PowerupIsPowerupIllusion"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_illus_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "rattletrap_PowerupIsPowerupIllusion"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Israttletrap",
+					"IsPowerupIllusion",
+				]
+			}
+		},
+		{
+			m_name = "rattletrap_PowerupIsPowerupIllusionChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_illus_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "rattletrap_PowerupIsPowerupIllusionChance_25%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Israttletrap",
+					"IsPowerupIllusion",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "rattletrap_PowerupIsPowerupInvisibility"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_invis_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "rattletrap_PowerupIsPowerupInvisibility"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Israttletrap",
+					"IsPowerupInvisibility",
+				]
+			}
+		},
+		{
+			m_name = "rattletrap_CooldownLittleNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_notyet_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_notyet_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_notyet_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "rattletrap_CooldownLittleNag"
+				m_Requirements = 
+				[
+					"Cooldown",
+					"Israttletrap",
+					"LittleNag",
+				]
+			}
+		},
+		{
+			m_name = "rattletrap_CooldownMediumNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_notyet_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_notyet_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_notyet_06"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "rattletrap_CooldownMediumNag"
+				m_Requirements = 
+				[
+					"Cooldown",
+					"Israttletrap",
+					"MediumNag",
+				]
+			}
+		},
+		{
+			m_name = "rattletrap_CooldownSuperNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_notyet_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_notyet_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_notyet_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "rattletrap_CooldownSuperNag"
+				m_Requirements = 
+				[
+					"Cooldown",
+					"Israttletrap",
+					"SuperNag",
+				]
+			}
+		},
+		{
+			m_name = "rattletrap_NoManaLittleNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_nomana_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_nomana_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_nomana_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "rattletrap_NoManaLittleNag"
+				m_Requirements = 
+				[
+					"NoMana",
+					"Israttletrap",
+					"LittleNag",
+				]
+			}
+		},
+		{
+			m_name = "rattletrap_NoManaMediumNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_nomana_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_nomana_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_nomana_06"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "rattletrap_NoManaMediumNag"
+				m_Requirements = 
+				[
+					"NoMana",
+					"Israttletrap",
+					"MediumNag",
+				]
+			}
+		},
+		{
+			m_name = "rattletrap_NoManaSuperNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_nomana_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_nomana_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_nomana_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "rattletrap_NoManaSuperNag"
+				m_Requirements = 
+				[
+					"NoMana",
+					"Israttletrap",
+					"SuperNag",
+				]
+			}
+		},
+		{
+			m_name = "rattletrap_Thanks"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_thanks_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_thanks_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "rattletrap_Thanks"
+				m_Requirements = 
+				[
+					"Thanks",
+					"Israttletrap",
+				]
+			}
+		},
+		{
+			m_name = "rattletrap_PainChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_underattack_01"
+					m_params = 
+					{
+						m_respeakdelay.start = 120.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "rattletrap_PainChance_25%"
+				m_Requirements = 
+				[
+					"Pain",
+					"Israttletrap",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "rattletrap_Pain"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_pain_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_pain_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_pain_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_pain_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_pain_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_pain_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_pain_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_pain_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_pain_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_pain_10"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "rattletrap_Pain"
+				m_Requirements = 
+				[
+					"Pain",
+					"Israttletrap",
+				]
+			}
+		},
+		{
+			m_name = "rattletrap_InTheBag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_inthebag_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "rattletrap_InTheBag"
+				m_Requirements = 
+				[
+					"InTheBag",
+					"Israttletrap",
+				]
+			}
+		},
+		{
+			m_name = "rattletrap_ItemDropIsCommonDrop"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_happy_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "rattletrap_ItemDropIsCommonDrop"
+				m_Requirements = 
+				[
+					"ItemDrop",
+					"Israttletrap",
+					"IsCommonDrop",
+				]
+			}
+		},
+		{
+			m_name = "rattletrap_ItemDropIsRareDrop"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_happy_04"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "rattletrap_ItemDropIsRareDrop"
+				m_Requirements = 
+				[
+					"ItemDrop",
+					"Israttletrap",
+					"IsRareDrop",
+				]
+			}
+		},
+		{
+			m_name = "rattletrap_ItemDropIsUltraRareDrop"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_happy_05"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "rattletrap_ItemDropIsUltraRareDrop"
+				m_Requirements = 
+				[
+					"ItemDrop",
+					"Israttletrap",
+					"IsUltraRareDrop",
+				]
+			}
+		},
+		{
+			m_name = "rattletrap_EmoteIsEmoteLaugh"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_laugh_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_laugh_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_laugh_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "rattletrap_ratt_laugh_04"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "rattletrap_EmoteIsEmoteLaugh"
+				m_Requirements = 
+				[
+					"Emote",
+					"Israttletrap",
+					"IsEmoteLaugh",
+				]
+			}
+		},
+	]
+	m_Requirements = 
+	[
+		{
+			m_name = "Israttletrap"
+			m_matchKey = "classname"
+			m_matchExpr = "npc_dota_hero_rattletrap"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsRattletrapBatteryAssault"
+			m_matchKey = "abilityname"
+			m_matchExpr = "rattletrap_battery_assault"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsRattletrapPowerCogs"
+			m_matchKey = "abilityname"
+			m_matchExpr = "rattletrap_power_cogs"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsRattletrapRocketFlare"
+			m_matchKey = "abilityname"
+			m_matchExpr = "rattletrap_rocket_flare"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsLongFlareKill"
+			m_matchKey = "flaretraveldist"
+			m_matchExpr = ">=6000"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsRattletrapHookshotHit"
+			m_matchKey = "hookshot_hit"
+			m_matchExpr = "1"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsRattletrapHookshotReachedTarget"
+			m_matchKey = "hookshot_target_reached"
+			m_matchExpr = "1"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsRattletrapLoadoutSpawn"
+			m_matchKey = "special_spawn"
+			m_matchExpr = "rattletrap_loadout_spawn"
+			m_flWeight = 5.0
+		},
+	]
+}

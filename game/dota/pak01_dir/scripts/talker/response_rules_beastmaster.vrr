@@ -1,0 +1,2064 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vrr_c1:version{c1f07085-5299-4e8a-b7e9-1cbb66bbbe23} -->
+{
+	m_Includes = 
+	[
+		"scripts/talker/response_rules_shared.vrr",
+	]
+	m_ResponseGroups = 
+	[
+		{
+			m_name = "beastmaster_Spawn"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_spawn_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_spawn_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_spawn_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_spawn_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_spawn_06"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "beastmaster_Spawn"
+				m_Requirements = 
+				[
+					"Spawn",
+					"Isbeastmaster",
+				]
+			}
+		},
+		{
+			m_name = "beastmaster_CustomIsGameStart"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_spawn_05"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "beastmaster_CustomIsGameStart"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isbeastmaster",
+					"IsGameStart",
+				]
+			}
+		},
+		{
+			m_name = "beastmaster_CustomIsBeastmasterLoadoutSpawn"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_spawn_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_spawn_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_spawn_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_spawn_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_spawn_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_spawn_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_ability_axes_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_level_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_kill_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_kill_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_win_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_respawn_11"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "beastmaster_CustomIsBeastmasterLoadoutSpawn"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isbeastmaster",
+					"IsBeastmasterLoadoutSpawn",
+				]
+			}
+		},
+		{
+			m_name = "beastmaster_Move"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_move_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_move_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_move_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_move_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_move_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_move_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_move_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_move_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_move_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_move_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_move_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_move_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_move_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_move_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_move_15"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_move_16"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "beastmaster_Move"
+				m_Requirements = 
+				[
+					"Move",
+					"Isbeastmaster",
+				]
+			}
+		},
+		{
+			m_name = "beastmaster_MoveIsBeastmasterHawkIsBeastmasterChance_30%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_ability_summonsbird_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_ability_summonsbird_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_ability_summonsbird_04"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "beastmaster_MoveIsBeastmasterHawkIsBeastmasterChance_30%"
+				m_Requirements = 
+				[
+					"Move",
+					"Isbeastmaster",
+					"IsBeastmasterHawk",
+					"IsBeastmaster",
+					"Chance_30%",
+				]
+			}
+		},
+		{
+			m_name = "beastmaster_MoveIsBeastmasterHawkIsBeastmaster"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_ability_hawk_move_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "beastmaster_MoveIsBeastmasterHawkIsBeastmaster"
+				m_Requirements = 
+				[
+					"Move",
+					"Isbeastmaster",
+					"IsBeastmasterHawk",
+					"IsBeastmaster",
+				]
+			}
+		},
+		{
+			m_name = "beastmaster_MoveIsBeastmasterBoarIsBeastmasterChance_35%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_ability_summonsboar_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_ability_summonsboar_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "beastmaster_MoveIsBeastmasterBoarIsBeastmasterChance_35%"
+				m_Requirements = 
+				[
+					"Move",
+					"Isbeastmaster",
+					"IsBeastmasterBoar",
+					"IsBeastmaster",
+					"Chance_35%",
+				]
+			}
+		},
+		{
+			m_name = "beastmaster_MoveIsBeastmasterBoarIsBeastmaster"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_ability_boar_move_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_ability_boar_move_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "beastmaster_MoveIsBeastmasterBoarIsBeastmaster"
+				m_Requirements = 
+				[
+					"Move",
+					"Isbeastmaster",
+					"IsBeastmasterBoar",
+					"IsBeastmaster",
+				]
+			}
+		},
+		{
+			m_name = "beastmaster_Attack"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_attack_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_attack_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_attack_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_attack_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_attack_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_attack_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_attack_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_attack_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_attack_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_attack_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_attack_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_attack_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_attack_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_attack_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_attack_15"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_cast_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_cast_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_cast_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_ability_animalsound_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_ability_animalsound_04"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "beastmaster_Attack"
+				m_Requirements = 
+				[
+					"Attack",
+					"Isbeastmaster",
+				]
+			}
+		},
+		{
+			m_name = "beastmaster_AttackIsBeastmasterBoarChance_25%IsBeastmaster"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_ability_summonsboar_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_ability_summonsboar_06"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "beastmaster_AttackIsBeastmasterBoarChance_25%IsBeastmaster"
+				m_Requirements = 
+				[
+					"Attack",
+					"Isbeastmaster",
+					"IsBeastmasterBoar",
+					"Chance_25%",
+					"IsBeastmaster",
+				]
+			}
+		},
+		{
+			m_name = "beastmaster_AttackIsBeastmasterBoarIsBeastmaster"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_ability_boar_attack_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "beastmaster_AttackIsBeastmasterBoarIsBeastmaster"
+				m_Requirements = 
+				[
+					"Attack",
+					"Isbeastmaster",
+					"IsBeastmasterBoar",
+					"IsBeastmaster",
+				]
+			}
+		},
+		{
+			m_name = "beastmaster_CastOrder"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_cast_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_cast_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_cast_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_cast_07"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "beastmaster_CastOrder"
+				m_Requirements = 
+				[
+					"CastOrder",
+					"Isbeastmaster",
+				]
+			}
+		},
+		{
+			m_name = "beastmaster_Select"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_ability_axes_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_rare_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_rare_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_rare_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "beastmaster_Select"
+				m_Requirements = 
+				[
+					"Select",
+					"Isbeastmaster",
+				]
+			}
+		},
+		{
+			m_name = "beastmaster_CastExecuteIsBeastCallWildBoarChance_30%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_ability_callwild_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_ability_summonsboar_04"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "beastmaster_CastExecuteIsBeastCallWildBoarChance_30%"
+				m_Requirements = 
+				[
+					"CastExecute",
+					"Isbeastmaster",
+					"IsBeastCallWildBoar",
+					"Chance_30%",
+				]
+			}
+		},
+		{
+			m_name = "beastmaster_CastExecuteIsBeastCallWildHawkChance_30%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_ability_summonsbird_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_ability_summonsbird_05"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "beastmaster_CastExecuteIsBeastCallWildHawkChance_30%"
+				m_Requirements = 
+				[
+					"CastExecute",
+					"Isbeastmaster",
+					"IsBeastCallWildHawk",
+					"Chance_30%",
+				]
+			}
+		},
+		{
+			m_name = "beastmaster_LearnIsBeastLevelCallWildIsBeastBothHawkIsBeastBothBoar"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_ability_callwild_05"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "beastmaster_LearnIsBeastLevelCallWildIsBeastBothHawkIsBeastBothBoar"
+				m_Requirements = 
+				[
+					"Learn",
+					"Isbeastmaster",
+					"IsBeastLevelCallWild",
+					"IsBeastBothHawk",
+					"IsBeastBothBoar",
+				]
+			}
+		},
+		{
+			m_name = "beastmaster_LevelUp"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_level_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_level_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_level_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_level_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_level_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_level_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_level_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_level_08"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "beastmaster_LevelUp"
+				m_Requirements = 
+				[
+					"LevelUp",
+					"Isbeastmaster",
+				]
+			}
+		},
+		{
+			m_name = "beastmaster_Kill"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_kill_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_kill_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_kill_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_kill_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_kill_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_kill_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_kill_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_kill_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_kill_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_kill_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_kill_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_kill_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_kill_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_kill_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_laugh_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_laugh_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_laugh_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_laugh_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_laugh_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_laugh_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_laugh_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "beastmaster_Kill"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isbeastmaster",
+				]
+			}
+		},
+		{
+			m_name = "beastmaster_KillIsEnemyRattleTrapChance_35%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_killspecial_rattl_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_killspecial_rattl_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "beastmaster_KillIsEnemyRattleTrapChance_35%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isbeastmaster",
+					"IsEnemyRattleTrap",
+					"Chance_35%",
+				]
+			}
+		},
+		{
+			m_name = "beastmaster_KillIsEnemyZuusChance_35%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_killspecial_zuus_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_killspecial_zuus_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "beastmaster_KillIsEnemyZuusChance_35%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isbeastmaster",
+					"IsEnemyZuus",
+					"Chance_35%",
+				]
+			}
+		},
+		{
+			m_name = "beastmaster_KillIsFirstBlood"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_firstblood_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "beastmaster_KillIsFirstBlood"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isbeastmaster",
+					"IsFirstBlood",
+				]
+			}
+		},
+		{
+			m_name = "beastmaster_LastHit"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_lasthit_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_lasthit_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_lasthit_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_lasthit_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_lasthit_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_lasthit_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_lasthit_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_lasthit_08"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "beastmaster_LastHit"
+				m_Requirements = 
+				[
+					"LastHit",
+					"Isbeastmaster",
+				]
+			}
+		},
+		{
+			m_name = "beastmaster_Death"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_death_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_death_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_death_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_death_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_death_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_death_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_death_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_death_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_death_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_death_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_death_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_death_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_death_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_death_14"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "beastmaster_Death"
+				m_Requirements = 
+				[
+					"Death",
+					"Isbeastmaster",
+				]
+			}
+		},
+		{
+			m_name = "beastmaster_DeathIsReincarnating"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_laugh_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_laugh_08"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "beastmaster_DeathIsReincarnating"
+				m_Requirements = 
+				[
+					"Death",
+					"Isbeastmaster",
+					"IsReincarnating",
+				]
+			}
+		},
+		{
+			m_name = "beastmaster_Respawn"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_respawn_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_respawn_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_respawn_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_respawn_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_respawn_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_respawn_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_respawn_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_respawn_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_respawn_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_respawn_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_respawn_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_respawn_12"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "beastmaster_Respawn"
+				m_Requirements = 
+				[
+					"Respawn",
+					"Isbeastmaster",
+				]
+			}
+		},
+		{
+			m_name = "beastmaster_PurchaseIsExpensiveItem"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_purch_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_purch_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_purch_03"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_purch_04"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "beastmaster_PurchaseIsExpensiveItem"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isbeastmaster",
+					"IsExpensiveItem",
+				]
+			}
+		},
+		{
+			m_name = "beastmaster_PurchaseIsBlinkDagger"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_blink_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_blink_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "beastmaster_PurchaseIsBlinkDagger"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isbeastmaster",
+					"IsBlinkDagger",
+				]
+			}
+		},
+		{
+			m_name = "beastmaster_PurchaseIsUltimateScepter"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_scepter_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_scepter_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "beastmaster_PurchaseIsUltimateScepter"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isbeastmaster",
+					"IsUltimateScepter",
+				]
+			}
+		},
+		{
+			m_name = "beastmaster_PurchaseIsNecronomicon"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_buysnecro_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_buysnecro_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_buysnecro_03"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_buysnecro_04"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_buysnecro_05"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_buysnecro_06"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_buysnecro_07"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "beastmaster_PurchaseIsNecronomicon"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isbeastmaster",
+					"IsNecronomicon",
+				]
+			}
+		},
+		{
+			m_name = "beastmaster_Bottling"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_bottle_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_bottle_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_bottle_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_bottle_04"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "beastmaster_Bottling"
+				m_Requirements = 
+				[
+					"Bottling",
+					"Isbeastmaster",
+				]
+			}
+		},
+		{
+			m_name = "beastmaster_Deny"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_deny_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_deny_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_deny_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_deny_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_deny_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_deny_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_deny_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_deny_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_deny_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "beastmaster_Deny"
+				m_Requirements = 
+				[
+					"Deny",
+					"Isbeastmaster",
+				]
+			}
+		},
+		{
+			m_name = "beastmaster_Defeat"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_lose_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_lose_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_lose_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "beastmaster_Defeat"
+				m_Requirements = 
+				[
+					"Defeat",
+					"Isbeastmaster",
+				]
+			}
+		},
+		{
+			m_name = "beastmaster_Victory"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_win_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_win_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_win_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "beastmaster_Victory"
+				m_Requirements = 
+				[
+					"Victory",
+					"Isbeastmaster",
+				]
+			}
+		},
+		{
+			m_name = "beastmaster_Immortality"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_immort_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "beastmaster_Immortality"
+				m_Requirements = 
+				[
+					"Immortality",
+					"Isbeastmaster",
+				]
+			}
+		},
+		{
+			m_name = "beastmaster_PowerupIsPowerupHaste"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_haste_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "beastmaster_PowerupIsPowerupHaste"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isbeastmaster",
+					"IsPowerupHaste",
+				]
+			}
+		},
+		{
+			m_name = "beastmaster_PowerupIsPowerupBounty"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_ability_animalsound_05"
+					m_params = 
+					{
+						m_respeakdelay.start = 300.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "beastmaster_PowerupIsPowerupBounty"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isbeastmaster",
+					"IsPowerupBounty",
+				]
+			}
+		},
+		{
+			m_name = "beastmaster_PowerupIsPowerupArcane"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_happy_05"
+					m_params = 
+					{
+						m_respeakdelay.start = 300.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "beastmaster_PowerupIsPowerupArcane"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isbeastmaster",
+					"IsPowerupArcane",
+				]
+			}
+		},
+		{
+			m_name = "beastmaster_PowerupIsPowerupArcaneChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_ability_animalsound_01"
+					m_params = 
+					{
+						m_respeakdelay.start = 300.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "beastmaster_PowerupIsPowerupArcaneChance_25%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isbeastmaster",
+					"IsPowerupArcane",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "beastmaster_PowerupIsPowerupDoubleDamage"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_doubdam_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "beastmaster_PowerupIsPowerupDoubleDamage"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isbeastmaster",
+					"IsPowerupDoubleDamage",
+				]
+			}
+		},
+		{
+			m_name = "beastmaster_PowerupIsPowerupDoubleDamageChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_doubdam_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "beastmaster_PowerupIsPowerupDoubleDamageChance_25%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isbeastmaster",
+					"IsPowerupDoubleDamage",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "beastmaster_PowerupIsPowerupRegeneration"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_regen_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "beastmaster_PowerupIsPowerupRegeneration"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isbeastmaster",
+					"IsPowerupRegeneration",
+				]
+			}
+		},
+		{
+			m_name = "beastmaster_PowerupIsPowerupRegenerationChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_regen_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "beastmaster_PowerupIsPowerupRegenerationChance_25%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isbeastmaster",
+					"IsPowerupRegeneration",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "beastmaster_PowerupIsPowerupIllusion"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_illus_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "beastmaster_PowerupIsPowerupIllusion"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isbeastmaster",
+					"IsPowerupIllusion",
+				]
+			}
+		},
+		{
+			m_name = "beastmaster_PowerupIsPowerupIllusionChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_illus_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "beastmaster_PowerupIsPowerupIllusionChance_25%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isbeastmaster",
+					"IsPowerupIllusion",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "beastmaster_PowerupIsPowerupInvisibility"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_invis_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "beastmaster_PowerupIsPowerupInvisibility"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isbeastmaster",
+					"IsPowerupInvisibility",
+				]
+			}
+		},
+		{
+			m_name = "beastmaster_CooldownLittleNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_notyet_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_notyet_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_notyet_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "beastmaster_CooldownLittleNag"
+				m_Requirements = 
+				[
+					"Cooldown",
+					"Isbeastmaster",
+					"LittleNag",
+				]
+			}
+		},
+		{
+			m_name = "beastmaster_CooldownMediumNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_notyet_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_notyet_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_notyet_06"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "beastmaster_CooldownMediumNag"
+				m_Requirements = 
+				[
+					"Cooldown",
+					"Isbeastmaster",
+					"MediumNag",
+				]
+			}
+		},
+		{
+			m_name = "beastmaster_CooldownSuperNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_notyet_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_notyet_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_notyet_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "beastmaster_CooldownSuperNag"
+				m_Requirements = 
+				[
+					"Cooldown",
+					"Isbeastmaster",
+					"SuperNag",
+				]
+			}
+		},
+		{
+			m_name = "beastmaster_NoManaLittleNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_nomana_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_nomana_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_nomana_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "beastmaster_NoManaLittleNag"
+				m_Requirements = 
+				[
+					"NoMana",
+					"Isbeastmaster",
+					"LittleNag",
+				]
+			}
+		},
+		{
+			m_name = "beastmaster_NoManaMediumNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_nomana_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_nomana_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_nomana_06"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "beastmaster_NoManaMediumNag"
+				m_Requirements = 
+				[
+					"NoMana",
+					"Isbeastmaster",
+					"MediumNag",
+				]
+			}
+		},
+		{
+			m_name = "beastmaster_NoManaSuperNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_nomana_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_nomana_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_nomana_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "beastmaster_NoManaSuperNag"
+				m_Requirements = 
+				[
+					"NoMana",
+					"Isbeastmaster",
+					"SuperNag",
+				]
+			}
+		},
+		{
+			m_name = "beastmaster_Thanks"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_thanks_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_thanks_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "beastmaster_Thanks"
+				m_Requirements = 
+				[
+					"Thanks",
+					"Isbeastmaster",
+				]
+			}
+		},
+		{
+			m_name = "beastmaster_PainChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_underattack_01"
+					m_params = 
+					{
+						m_respeakdelay.start = 120.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "beastmaster_PainChance_25%"
+				m_Requirements = 
+				[
+					"Pain",
+					"Isbeastmaster",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "beastmaster_Pain"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_pain_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_pain_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_pain_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_pain_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_pain_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_pain_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_pain_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_pain_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_pain_10"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "beastmaster_Pain"
+				m_Requirements = 
+				[
+					"Pain",
+					"Isbeastmaster",
+				]
+			}
+		},
+		{
+			m_name = "beastmaster_InTheBag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_inthebag_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "beastmaster_InTheBag"
+				m_Requirements = 
+				[
+					"InTheBag",
+					"Isbeastmaster",
+				]
+			}
+		},
+		{
+			m_name = "beastmaster_ItemDropIsCommonDrop"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_happy_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "beastmaster_ItemDropIsCommonDrop"
+				m_Requirements = 
+				[
+					"ItemDrop",
+					"Isbeastmaster",
+					"IsCommonDrop",
+				]
+			}
+		},
+		{
+			m_name = "beastmaster_ItemDropIsRareDrop"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_happy_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "beastmaster_ItemDropIsRareDrop"
+				m_Requirements = 
+				[
+					"ItemDrop",
+					"Isbeastmaster",
+					"IsRareDrop",
+				]
+			}
+		},
+		{
+			m_name = "beastmaster_ItemDropIsUltraRareDrop"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_happy_04"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "beastmaster_ItemDropIsUltraRareDrop"
+				m_Requirements = 
+				[
+					"ItemDrop",
+					"Isbeastmaster",
+					"IsUltraRareDrop",
+				]
+			}
+		},
+		{
+			m_name = "beastmaster_EmoteIsEmoteLaugh"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_laugh_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_laugh_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_laugh_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_laugh_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_laugh_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_laugh_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_laugh_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_laugh_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "beastmaster_beas_laugh_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "beastmaster_EmoteIsEmoteLaugh"
+				m_Requirements = 
+				[
+					"Emote",
+					"Isbeastmaster",
+					"IsEmoteLaugh",
+				]
+			}
+		},
+	]
+	m_Requirements = 
+	[
+		{
+			m_name = "Isbeastmaster"
+			m_matchKey = "classname"
+			m_matchExpr = "npc_dota_hero_beastmaster"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsBeastmasterHawk"
+			m_matchKey = "beastname"
+			m_matchExpr = "beast_hawk"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsBeastmasterBoar"
+			m_matchKey = "beastname"
+			m_matchExpr = "beast_boar"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsBeastCallWildHawk"
+			m_matchKey = "abilityname"
+			m_matchExpr = "beastmaster_call_of_the_wild"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsBeastCallWildBoar"
+			m_matchKey = "abilityname"
+			m_matchExpr = "beastmaster_call_of_the_wild_boar"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsBeastHawk1"
+			m_matchKey = "creaturename"
+			m_matchExpr = "npc_dota_scout_hawk"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsBeastHawk2"
+			m_matchKey = "creaturename"
+			m_matchExpr = "npc_dota_greater_hawk"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsBeastBoar1"
+			m_matchKey = "creaturename"
+			m_matchExpr = "npc_dota_beastmaster_boar"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsBeastBoar2"
+			m_matchKey = "creaturename"
+			m_matchExpr = "npc_dota_beastmaster_greater_boar"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsBeastLevelCallWild"
+			m_matchKey = "abilityname"
+			m_matchExpr = "beastmaster_call_of_the_wild"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsBeastBothHawk"
+			m_matchKey = "skill2_level"
+			m_matchExpr = "2"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsBeastBothBoar"
+			m_matchKey = "skill3_level"
+			m_matchExpr = "2"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsBeastmasterLoadoutSpawn"
+			m_matchKey = "special_spawn"
+			m_matchExpr = "beastmaster_loadout_spawn"
+			m_flWeight = 5.0
+		},
+	]
+}

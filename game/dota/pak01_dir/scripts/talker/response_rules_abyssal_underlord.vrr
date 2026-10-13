@@ -1,0 +1,3376 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vrr_c1:version{c1f07085-5299-4e8a-b7e9-1cbb66bbbe23} -->
+{
+	m_Includes = 
+	[
+		"scripts/talker/response_rules_shared.vrr",
+	]
+	m_ResponseGroups = 
+	[
+		{
+			m_name = "abyssal_underlord_Spawn"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_spawn_02"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/abyssal_underlord/abyssal_underlord_abys_spawn_03.vcd"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_spawn_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_spawn_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_spawn_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_spawn_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_spawn_08"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_Spawn"
+				m_Requirements = 
+				[
+					"Spawn",
+					"Isabyssal_underlord",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_CustomIsGameStart"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_battlebegins_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_battlebegins_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_attack_08"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_CustomIsGameStart"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isabyssal_underlord",
+					"IsGameStart",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_CustomIsAbysSpecialSpawn"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/abyssal_underlord/abyssal_underlord_abys_spawn_03.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_CustomIsAbysSpecialSpawn"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isabyssal_underlord",
+					"IsAbysSpecialSpawn",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_CustomIsAbysLoadoutSpawn"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_spawn_02"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/abyssal_underlord/abyssal_underlord_abys_spawn_03.vcd"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_spawn_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_spawn_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_spawn_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_spawn_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_spawn_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_darkrift_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_levelup_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_levelup_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_levelup_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_levelup_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_CustomIsAbysLoadoutSpawn"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isabyssal_underlord",
+					"IsAbysLoadoutSpawn",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_KillIsFirstBlood"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_firstblood_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_firstblood_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_KillIsFirstBlood"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isabyssal_underlord",
+					"IsFirstBlood",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_KillIsAbyssalFirestormChance_50%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_firestrorm_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_firestrorm_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_kill_18"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_kill_19"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_kill_20"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_KillIsAbyssalFirestormChance_50%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isabyssal_underlord",
+					"IsAbyssalFirestorm",
+					"Chance_50%",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_Kill"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_atrophyaura_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_atrophyaura_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_atrophyaura_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_kill_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_kill_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_kill_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_kill_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_kill_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_kill_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_kill_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_kill_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_kill_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_kill_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_kill_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_kill_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_kill_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_kill_15"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_kill_16"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_kill_17"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_kill_25"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_kill_26"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_deny_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_laugh_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_laugh_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_laugh_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_laugh_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_laugh_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_laugh_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_laugh_08"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_Kill"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isabyssal_underlord",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_KillIsAbyssalPitofMaliceChance_50%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_kill_22"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_kill_23"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_kill_24"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_KillIsAbyssalPitofMaliceChance_50%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isabyssal_underlord",
+					"IsAbyssalPitofMalice",
+					"Chance_50%",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_KillIsEnemySandKingChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_rival_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_rival_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_KillIsEnemySandKingChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isabyssal_underlord",
+					"IsEnemySandKing",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_KillIsEnemySkeleton_KingChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_rival_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_rival_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_KillIsEnemySkeleton_KingChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isabyssal_underlord",
+					"IsEnemySkeleton_King",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_KillIsEnemyTroll_WarlordChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_rival_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_rival_11"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_KillIsEnemyTroll_WarlordChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isabyssal_underlord",
+					"IsEnemyTroll_Warlord",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_KillIsEnemyOmniknightChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_rival_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_KillIsEnemyOmniknightChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isabyssal_underlord",
+					"IsEnemyOmniknight",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_KillIsEnemySilencerChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_rival_04"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_KillIsEnemySilencerChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isabyssal_underlord",
+					"IsEnemySilencer",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_KillIsEnemyLunaChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_rival_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_rival_06"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_KillIsEnemyLunaChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isabyssal_underlord",
+					"IsEnemyLuna",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_KillIsEnemyMiranaChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_rival_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_rival_06"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_KillIsEnemyMiranaChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isabyssal_underlord",
+					"IsEnemyMirana",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_KillIsEnemyTreantChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_rival_08"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_KillIsEnemyTreantChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isabyssal_underlord",
+					"IsEnemyTreant",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_KillIsEnemyShadow_DemonChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_rival_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_KillIsEnemyShadow_DemonChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isabyssal_underlord",
+					"IsEnemyShadow_Demon",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_KillIsEnemyDoom_BringerChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_rival_10"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_KillIsEnemyDoom_BringerChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isabyssal_underlord",
+					"IsEnemyDoom_Bringer",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_KillIsEnemyTerrorbladeChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_rival_10"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_KillIsEnemyTerrorbladeChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isabyssal_underlord",
+					"IsEnemyTerrorblade",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_KillIsEnemyMedusaChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_rival_13"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_KillIsEnemyMedusaChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isabyssal_underlord",
+					"IsEnemyMedusa",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_KillIsEnemyNaga_SirenChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_rival_13"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_KillIsEnemyNaga_SirenChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isabyssal_underlord",
+					"IsEnemyNaga_Siren",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_KillIsEnemySkywrath_MageChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_rival_14"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_KillIsEnemySkywrath_MageChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isabyssal_underlord",
+					"IsEnemySkywrath_Mage",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_KillIsEnemyElder_TitanChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_rival_15"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_KillIsEnemyElder_TitanChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isabyssal_underlord",
+					"IsEnemyElder_Titan",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_KillIsEnemyAbaddonChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_rival_16"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_KillIsEnemyAbaddonChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isabyssal_underlord",
+					"IsEnemyAbaddon",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_KillIsEnemyEmber_SpiritChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_rival_17"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_KillIsEnemyEmber_SpiritChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isabyssal_underlord",
+					"IsEnemyEmber_Spirit",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_KillIsEnemyTechiesChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_rival_18"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_KillIsEnemyTechiesChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isabyssal_underlord",
+					"IsEnemyTechies",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_KillIsEnemyWinter_WyvernChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_rival_19"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_KillIsEnemyWinter_WyvernChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isabyssal_underlord",
+					"IsEnemyWinter_Wyvern",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_KillIsEnemyBaneChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_rival_20"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_KillIsEnemyBaneChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isabyssal_underlord",
+					"IsEnemyBane",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_KillIsEnemyLegion_CommanderChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_rival_21"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_rival_22"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_rival_23"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_rival_24"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_KillIsEnemyLegion_CommanderChance_25%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isabyssal_underlord",
+					"IsEnemyLegion_Commander",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_KillIsEnemyQueenofPainChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_rival_25"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_rival_26"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_rival_27"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_rival_28"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_KillIsEnemyQueenofPainChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isabyssal_underlord",
+					"IsEnemyQueenofPain",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_Move"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_move_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_move_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_move_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_move_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_move_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_move_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_move_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_move_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_move_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_move_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_move_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_move_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_move_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_move_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_move_15"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_move_16"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_move_20"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_move_22"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_Move"
+				m_Requirements = 
+				[
+					"Move",
+					"Isabyssal_underlord",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_Attack"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_attack_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_attack_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_attack_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_attack_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_attack_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_attack_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_attack_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_attack_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_attack_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_attack_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_attack_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_attack_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_attack_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_attack_15"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_attack_16"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_attack_17"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_Attack"
+				m_Requirements = 
+				[
+					"Attack",
+					"Isabyssal_underlord",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_CastOrder"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_cast_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_cast_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_cast_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_CastOrder"
+				m_Requirements = 
+				[
+					"CastOrder",
+					"Isabyssal_underlord",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_CastExecuteIsAbyssalFirestormChance_50%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_firestrorm_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_firestrorm_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_firestrorm_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_kill_21"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_CastExecuteIsAbyssalFirestormChance_50%"
+				m_Requirements = 
+				[
+					"CastExecute",
+					"Isabyssal_underlord",
+					"IsAbyssalFirestorm",
+					"Chance_50%",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_CastExecuteIsAbyssalPitofMaliceChance_50%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_pitofmalice_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_pitofmalice_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_pitofmalice_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_pitofmalice_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_pitofmalice_06"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_CastExecuteIsAbyssalPitofMaliceChance_50%"
+				m_Requirements = 
+				[
+					"CastExecute",
+					"Isabyssal_underlord",
+					"IsAbyssalPitofMalice",
+					"Chance_50%",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_CastExecuteIsAbyssalDarkRiftChance_50%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_darkrift_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_darkrift_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_darkrift_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_darkrift_05"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_CastExecuteIsAbyssalDarkRiftChance_50%"
+				m_Requirements = 
+				[
+					"CastExecute",
+					"Isabyssal_underlord",
+					"IsAbyssalDarkRift",
+					"Chance_50%",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_CastExecuteIsAbyssalDarkRiftChance_5%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_darkrift_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_CastExecuteIsAbyssalDarkRiftChance_5%"
+				m_Requirements = 
+				[
+					"CastExecute",
+					"Isabyssal_underlord",
+					"IsAbyssalDarkRift",
+					"Chance_5%",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_LevelUp"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_levelup_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_levelup_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_levelup_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_levelup_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_levelup_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_levelup_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_levelup_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_levelup_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_levelup_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_levelup_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_levelup_12"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_LevelUp"
+				m_Requirements = 
+				[
+					"LevelUp",
+					"Isabyssal_underlord",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_AllyNearIsAllyUndyingEarlyGame"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_ally_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_AllyNearIsAllyUndyingEarlyGame"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Isabyssal_underlord",
+					"IsAllyUndying",
+					"EarlyGame",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_AllyNearIsAllyLeshracEarlyGame"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_ally_03"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_AllyNearIsAllyLeshracEarlyGame"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Isabyssal_underlord",
+					"IsAllyLeshrac",
+					"EarlyGame",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_AllyNearIsAllyTuskEarlyGameChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_ally_04"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_AllyNearIsAllyTuskEarlyGameChance_25%"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Isabyssal_underlord",
+					"IsAllyTusk",
+					"EarlyGame",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_AllyNearIsAllyDrowRangerEarlyGameChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_ally_04"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_AllyNearIsAllyDrowRangerEarlyGameChance_25%"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Isabyssal_underlord",
+					"IsAllyDrowRanger",
+					"EarlyGame",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_AllyNearIsAllyCrystalMaidenEarlyGameChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_ally_04"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_AllyNearIsAllyCrystalMaidenEarlyGameChance_25%"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Isabyssal_underlord",
+					"IsAllyCrystalMaiden",
+					"EarlyGame",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_AllyNearIsAllyJakiroEarlyGameChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_ally_04"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_AllyNearIsAllyJakiroEarlyGameChance_25%"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Isabyssal_underlord",
+					"IsAllyJakiro",
+					"EarlyGame",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_AllyNearIsAllyLichEarlyGameChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_ally_04"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_AllyNearIsAllyLichEarlyGameChance_25%"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Isabyssal_underlord",
+					"IsAllyLich",
+					"EarlyGame",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_AllyNearIsAllyAncient_ApparitionEarlyGameChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_ally_04"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_AllyNearIsAllyAncient_ApparitionEarlyGameChance_25%"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Isabyssal_underlord",
+					"IsAllyAncient_Apparition",
+					"EarlyGame",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_AllyNearIsAllyWinter_WyvernEarlyGameChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_ally_04"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_AllyNearIsAllyWinter_WyvernEarlyGameChance_25%"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Isabyssal_underlord",
+					"IsAllyWinter_Wyvern",
+					"EarlyGame",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_AllyNearIsAllyOmniknightEarlyGame"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_ally_05"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_AllyNearIsAllyOmniknightEarlyGame"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Isabyssal_underlord",
+					"IsAllyOmniknight",
+					"EarlyGame",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_AllyNearIsAllyTerrorbladeEarlyGame"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_ally_06"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_AllyNearIsAllyTerrorbladeEarlyGame"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Isabyssal_underlord",
+					"IsAllyTerrorblade",
+					"EarlyGame",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_AllyNearIsAllyLegion_CommanderEarlyGame"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_ally_07"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_ally_08"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_AllyNearIsAllyLegion_CommanderEarlyGame"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Isabyssal_underlord",
+					"IsAllyLegion_Commander",
+					"EarlyGame",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_AllyNearIsAllyDazzleEarlyGame"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_ally_09"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_AllyNearIsAllyDazzleEarlyGame"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Isabyssal_underlord",
+					"IsAllyDazzle",
+					"EarlyGame",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_LastHit"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_lasthit_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_lasthit_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_lasthit_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_lasthit_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_lasthit_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_lasthit_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_lasthit_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_lasthit_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_lasthit_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_lasthit_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_lasthit_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_lasthit_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_lasthit_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_lasthit_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_lasthit_15"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_lasthit_16"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_LastHit"
+				m_Requirements = 
+				[
+					"LastHit",
+					"Isabyssal_underlord",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_Death"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_death_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_death_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_death_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_death_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_death_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_death_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_death_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_death_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_death_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_death_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_death_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_death_13"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_Death"
+				m_Requirements = 
+				[
+					"Death",
+					"Isabyssal_underlord",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_DeathIsReincarnating"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_fastres_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_DeathIsReincarnating"
+				m_Requirements = 
+				[
+					"Death",
+					"Isabyssal_underlord",
+					"IsReincarnating",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_Respawn"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_respawn_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_respawn_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_respawn_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_respawn_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_respawn_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_respawn_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_respawn_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_respawn_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_respawn_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_respawn_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_respawn_11"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_Respawn"
+				m_Requirements = 
+				[
+					"Respawn",
+					"Isabyssal_underlord",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_PurchaseIsExpensiveItem"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_purch_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_purch_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_purch_03"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_PurchaseIsExpensiveItem"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isabyssal_underlord",
+					"IsExpensiveItem",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_PurchaseIsUltimateScepter"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_scepter_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_scepter_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_PurchaseIsUltimateScepter"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isabyssal_underlord",
+					"IsUltimateScepter",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_PurchaseIsBlinkDagger"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_blink_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_blink_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_PurchaseIsBlinkDagger"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isabyssal_underlord",
+					"IsBlinkDagger",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_PurchaseIsAbyssalBlade"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_items_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_items_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_items_03"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_PurchaseIsAbyssalBlade"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isabyssal_underlord",
+					"IsAbyssalBlade",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_PurchaseIsAssaultCuirass"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_items_04"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_PurchaseIsAssaultCuirass"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isabyssal_underlord",
+					"IsAssaultCuirass",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_PurchaseIsHeart"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_items_05"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_PurchaseIsHeart"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isabyssal_underlord",
+					"IsHeart",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_PurchaseIsShiva"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_items_06"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_PurchaseIsShiva"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isabyssal_underlord",
+					"IsShiva",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_PurchaseIsNecronomicon"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_items_07"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_PurchaseIsNecronomicon"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isabyssal_underlord",
+					"IsNecronomicon",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_PurchaseIsSheepStick"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_items_08"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_PurchaseIsSheepStick"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isabyssal_underlord",
+					"IsSheepStick",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_PurchaseIsMekansm"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_items_09"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_PurchaseIsMekansm"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isabyssal_underlord",
+					"IsMekansm",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_PurchaseIsRadiance"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_items_10"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_PurchaseIsRadiance"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isabyssal_underlord",
+					"IsRadiance",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_PurchaseIsVanguard"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_items_11"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_PurchaseIsVanguard"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isabyssal_underlord",
+					"IsVanguard",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_PurchaseIsBattleFury"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_items_12"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_PurchaseIsBattleFury"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isabyssal_underlord",
+					"IsBattleFury",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_PurchaseIsBlackKingBar"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_items_13"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_PurchaseIsBlackKingBar"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isabyssal_underlord",
+					"IsBlackKingBar",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_PurchaseIsSphere"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_items_14"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_PurchaseIsSphere"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isabyssal_underlord",
+					"IsSphere",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_PurchaseIsPipe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_items_15"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_PurchaseIsPipe"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isabyssal_underlord",
+					"IsPipe",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_PurchaseIsHoodOfDefiance"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_items_16"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_PurchaseIsHoodOfDefiance"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isabyssal_underlord",
+					"IsHoodOfDefiance",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_PurchaseIsVladmirs"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_items_17"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_PurchaseIsVladmirs"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isabyssal_underlord",
+					"IsVladmirs",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_PurchaseIsDrums"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_items_18"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_PurchaseIsDrums"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isabyssal_underlord",
+					"IsDrums",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_PurchaseIsBladeMail"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_items_19"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_PurchaseIsBladeMail"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isabyssal_underlord",
+					"IsBladeMail",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_PurchaseIsHeavens"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_items_20"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_items_21"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_PurchaseIsHeavens"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isabyssal_underlord",
+					"IsHeavens",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_Bottling"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_bottle_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_bottle_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_bottle_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_Bottling"
+				m_Requirements = 
+				[
+					"Bottling",
+					"Isabyssal_underlord",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_Deny"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_deny_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_deny_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_deny_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_deny_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_deny_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_deny_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_deny_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_deny_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_deny_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_deny_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_deny_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_deny_13"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_Deny"
+				m_Requirements = 
+				[
+					"Deny",
+					"Isabyssal_underlord",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_MissingIsLaneTop"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_lanemissing_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_MissingIsLaneTop"
+				m_Requirements = 
+				[
+					"Missing",
+					"Isabyssal_underlord",
+					"IsLaneTop",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_MissingIsLaneMid"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_lanemissing_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_MissingIsLaneMid"
+				m_Requirements = 
+				[
+					"Missing",
+					"Isabyssal_underlord",
+					"IsLaneMid",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_MissingIsLaneBot"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_lanemissing_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_MissingIsLaneBot"
+				m_Requirements = 
+				[
+					"Missing",
+					"Isabyssal_underlord",
+					"IsLaneBot",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_ItemDropIsCommonDrop"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_itemcommon_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_ItemDropIsCommonDrop"
+				m_Requirements = 
+				[
+					"ItemDrop",
+					"Isabyssal_underlord",
+					"IsCommonDrop",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_ItemDropIsRareDrop"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_itemmoderate_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_ItemDropIsRareDrop"
+				m_Requirements = 
+				[
+					"ItemDrop",
+					"Isabyssal_underlord",
+					"IsRareDrop",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_ItemDropIsUltraRareDrop"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_itemrare_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_ItemDropIsUltraRareDrop"
+				m_Requirements = 
+				[
+					"ItemDrop",
+					"Isabyssal_underlord",
+					"IsUltraRareDrop",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_Immortality"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_immort_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_Immortality"
+				m_Requirements = 
+				[
+					"Immortality",
+					"Isabyssal_underlord",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_ImmortalityChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_immort_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_ImmortalityChance_25%"
+				m_Requirements = 
+				[
+					"Immortality",
+					"Isabyssal_underlord",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_PowerupIsPowerupHaste"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_haste_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_PowerupIsPowerupHaste"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isabyssal_underlord",
+					"IsPowerupHaste",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_PowerupIsPowerupHasteChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_haste_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_PowerupIsPowerupHasteChance_25%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isabyssal_underlord",
+					"IsPowerupHaste",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_PowerupIsPowerupBounty"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_deny_10"
+					m_params = 
+					{
+						m_respeakdelay.start = 300.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_PowerupIsPowerupBounty"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isabyssal_underlord",
+					"IsPowerupBounty",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_PowerupIsPowerupDoubleDamage"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_doubdam_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_PowerupIsPowerupDoubleDamage"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isabyssal_underlord",
+					"IsPowerupDoubleDamage",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_PowerupIsPowerupDoubleDamageChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_doubdam_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_PowerupIsPowerupDoubleDamageChance_25%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isabyssal_underlord",
+					"IsPowerupDoubleDamage",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_PowerupIsPowerupRegeneration"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_regen_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_PowerupIsPowerupRegeneration"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isabyssal_underlord",
+					"IsPowerupRegeneration",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_PowerupIsPowerupRegenerationChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_regen_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_PowerupIsPowerupRegenerationChance_25%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isabyssal_underlord",
+					"IsPowerupRegeneration",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_PowerupIsPowerupIllusion"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_illus_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_PowerupIsPowerupIllusion"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isabyssal_underlord",
+					"IsPowerupIllusion",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_PowerupIsPowerupIllusionChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_illus_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_PowerupIsPowerupIllusionChance_25%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isabyssal_underlord",
+					"IsPowerupIllusion",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_PowerupIsPowerupInvisibility"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_invis_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_PowerupIsPowerupInvisibility"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isabyssal_underlord",
+					"IsPowerupInvisibility",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_PowerupIsPowerupInvisibilityChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_invis_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_PowerupIsPowerupInvisibilityChance_25%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isabyssal_underlord",
+					"IsPowerupInvisibility",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_PowerupIsPowerupArcane"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_purch_01"
+					m_params = 
+					{
+						m_respeakdelay.start = 300.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_PowerupIsPowerupArcane"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isabyssal_underlord",
+					"IsPowerupArcane",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_CooldownLittleNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_notyet_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_notyet_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_notyet_07"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_CooldownLittleNag"
+				m_Requirements = 
+				[
+					"Cooldown",
+					"Isabyssal_underlord",
+					"LittleNag",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_CooldownSuperNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_notyet_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_notyet_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_notyet_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_CooldownSuperNag"
+				m_Requirements = 
+				[
+					"Cooldown",
+					"Isabyssal_underlord",
+					"SuperNag",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_CooldownMediumNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_notyet_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_notyet_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_notyet_08"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_CooldownMediumNag"
+				m_Requirements = 
+				[
+					"Cooldown",
+					"Isabyssal_underlord",
+					"MediumNag",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_NoManaLittleNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_nomana_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_nomana_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_nomana_07"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_NoManaLittleNag"
+				m_Requirements = 
+				[
+					"NoMana",
+					"Isabyssal_underlord",
+					"LittleNag",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_NoManaMediumNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_nomana_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_nomana_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_nomana_08"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_NoManaMediumNag"
+				m_Requirements = 
+				[
+					"NoMana",
+					"Isabyssal_underlord",
+					"MediumNag",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_NoManaSuperNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_nomana_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_nomana_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_nomana_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_NoManaSuperNag"
+				m_Requirements = 
+				[
+					"NoMana",
+					"Isabyssal_underlord",
+					"SuperNag",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_Thanks"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_thanks_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_thanks_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_Thanks"
+				m_Requirements = 
+				[
+					"Thanks",
+					"Isabyssal_underlord",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_ThanksChance_2%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_thanks_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_ThanksChance_2%"
+				m_Requirements = 
+				[
+					"Thanks",
+					"Isabyssal_underlord",
+					"Chance_2%",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_Select"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_rare_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_rare_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_rare_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_rare_04"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_Select"
+				m_Requirements = 
+				[
+					"Select",
+					"Isabyssal_underlord",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_PainChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_underattack_01"
+					m_params = 
+					{
+						m_respeakdelay.start = 150.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_PainChance_25%"
+				m_Requirements = 
+				[
+					"Pain",
+					"Isabyssal_underlord",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_Pain"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_pain_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_pain_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_pain_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_pain_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_pain_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_pain_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_pain_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_pain_08"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_Pain"
+				m_Requirements = 
+				[
+					"Pain",
+					"Isabyssal_underlord",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_InTheBag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_inthebag_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_InTheBag"
+				m_Requirements = 
+				[
+					"InTheBag",
+					"Isabyssal_underlord",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_Defeat"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_lose_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_lose_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_lose_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_lose_04"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_Defeat"
+				m_Requirements = 
+				[
+					"Defeat",
+					"Isabyssal_underlord",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_Victory"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_win_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_win_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_win_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_win_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_win_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_win_06"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_Victory"
+				m_Requirements = 
+				[
+					"Victory",
+					"Isabyssal_underlord",
+				]
+			}
+		},
+		{
+			m_name = "abyssal_underlord_EmoteIsEmoteLaugh"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_laugh_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_laugh_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_laugh_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_laugh_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_laugh_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_laugh_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "abyssal_underlord_abys_laugh_08"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "abyssal_underlord_EmoteIsEmoteLaugh"
+				m_Requirements = 
+				[
+					"Emote",
+					"Isabyssal_underlord",
+					"IsEmoteLaugh",
+				]
+			}
+		},
+	]
+	m_Requirements = 
+	[
+		{
+			m_name = "Isabyssal_underlord"
+			m_matchKey = "classname"
+			m_matchExpr = "npc_dota_hero_abyssal_underlord"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsAbyssalFirestorm"
+			m_matchKey = "abilityname"
+			m_matchExpr = "abyssal_underlord_firestorm"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsAbyssalPitofMalice"
+			m_matchKey = "abilityname"
+			m_matchExpr = "abyssal_underlord_pit_of_malice"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsAbyssalDarkRift"
+			m_matchKey = "abilityname"
+			m_matchExpr = "abyssal_underlord_dark_rift"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsAbysSpecialSpawn"
+			m_matchKey = "special_spawn"
+			m_matchExpr = "abyss_intro"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsAbysLoadoutSpawn"
+			m_matchKey = "special_spawn"
+			m_matchExpr = "abyss_loadout_spawn"
+			m_flWeight = 5.0
+		},
+	]
+}

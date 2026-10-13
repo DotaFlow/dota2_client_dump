@@ -1,0 +1,3652 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vrr_c1:version{c1f07085-5299-4e8a-b7e9-1cbb66bbbe23} -->
+{
+	m_Includes = 
+	[
+		"scripts/talker/response_rules_shared.vrr",
+	]
+	m_ResponseGroups = 
+	[
+		{
+			m_name = "tusk_Spawn"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_spawn_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_spawn_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_spawn_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_spawn_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_spawn_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_spawn_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_spawn_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_spawn_08"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_Spawn"
+				m_Requirements = 
+				[
+					"Spawn",
+					"Istusk",
+				]
+			}
+		},
+		{
+			m_name = "tusk_CustomIsGameStart"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_battlebegins_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_CustomIsGameStart"
+				m_Requirements = 
+				[
+					"Custom",
+					"Istusk",
+					"IsGameStart",
+				]
+			}
+		},
+		{
+			m_name = "tusk_CustomIsTuskLoadoutSpawn"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_spawn_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_spawn_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_spawn_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_spawn_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_spawn_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_spawn_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_spawn_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_spawn_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_battlebegins_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_move_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_move_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_attack_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_CustomIsTuskLoadoutSpawn"
+				m_Requirements = 
+				[
+					"Custom",
+					"Istusk",
+					"IsTuskLoadoutSpawn",
+				]
+			}
+		},
+		{
+			m_name = "tusk_KillIsFirstBlood"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_firstblood_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_firstblood_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_firstblood_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_KillIsFirstBlood"
+				m_Requirements = 
+				[
+					"Kill",
+					"Istusk",
+					"IsFirstBlood",
+				]
+			}
+		},
+		{
+			m_name = "tusk_KillIsTuskIceShardsChance_15%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_iceshards_04"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_KillIsTuskIceShardsChance_15%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Istusk",
+					"IsTuskIceShards",
+					"Chance_15%",
+				]
+			}
+		},
+		{
+			m_name = "tusk_KillIsTuskSnowballChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_snowball_11"
+					m_params = 
+					{
+						m_weapondelay.start = 2.0
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_snowball_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_snowball_15"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_snowball_16"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_KillIsTuskSnowballChance_25%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Istusk",
+					"IsTuskSnowball",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "tusk_Kill"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_kill_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_kill_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_kill_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_kill_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_kill_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_kill_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_kill_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_kill_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_kill_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_kill_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_kill_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_kill_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_kill_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_kill_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_kill_15"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_kill_16"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_kill_20"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_kill_21"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_kill_22"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_kill_23"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_kill_26"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_deny_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_laugh_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_laugh_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_laugh_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_laugh_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_laugh_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_laugh_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_laugh_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_laugh_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_laugh_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_laugh_10"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_Kill"
+				m_Requirements = 
+				[
+					"Kill",
+					"Istusk",
+				]
+			}
+		},
+		{
+			m_name = "tusk_KillIsTuskSnowball"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_kill_17"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_kill_18"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_kill_19"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_KillIsTuskSnowball"
+				m_Requirements = 
+				[
+					"Kill",
+					"Istusk",
+					"IsTuskSnowball",
+				]
+			}
+		},
+		{
+			m_name = "tusk_KillIsEnemyTidehunterChance_15%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_rival_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_KillIsEnemyTidehunterChance_15%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Istusk",
+					"IsEnemyTidehunter",
+					"Chance_15%",
+				]
+			}
+		},
+		{
+			m_name = "tusk_KillIsEnemyNaga_SirenChance_15%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_rival_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_KillIsEnemyNaga_SirenChance_15%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Istusk",
+					"IsEnemyNaga_Siren",
+					"Chance_15%",
+				]
+			}
+		},
+		{
+			m_name = "tusk_KillIsEnemySlardarChance_15%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_rival_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_KillIsEnemySlardarChance_15%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Istusk",
+					"IsEnemySlardar",
+					"Chance_15%",
+				]
+			}
+		},
+		{
+			m_name = "tusk_KillIsEnemySlarkChance_15%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_rival_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_KillIsEnemySlarkChance_15%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Istusk",
+					"IsEnemySlark",
+					"Chance_15%",
+				]
+			}
+		},
+		{
+			m_name = "tusk_KillIsEnemyDoom_BringerChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_rival_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_KillIsEnemyDoom_BringerChance_25%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Istusk",
+					"IsEnemyDoom_Bringer",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "tusk_KillIsEnemyLichChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_rival_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_KillIsEnemyLichChance_25%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Istusk",
+					"IsEnemyLich",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "tusk_KillIsEnemyBrewmasterChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_rival_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_rival_05"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_KillIsEnemyBrewmasterChance_25%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Istusk",
+					"IsEnemyBrewmaster",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "tusk_KillIsEnemyWinter_WyvernChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_rival_06"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_KillIsEnemyWinter_WyvernChance_25%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Istusk",
+					"IsEnemyWinter_Wyvern",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "tusk_KillIsEnemyAncient_ApparitionChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_rival_07"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_KillIsEnemyAncient_ApparitionChance_25%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Istusk",
+					"IsEnemyAncient_Apparition",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "tusk_KillIsEnemyMeepoChance_15%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_rival_08"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_KillIsEnemyMeepoChance_15%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Istusk",
+					"IsEnemyMeepo",
+					"Chance_15%",
+				]
+			}
+		},
+		{
+			m_name = "tusk_KillIsEnemyPhantom_LancerChance_15%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_rival_08"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_KillIsEnemyPhantom_LancerChance_15%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Istusk",
+					"IsEnemyPhantom_Lancer",
+					"Chance_15%",
+				]
+			}
+		},
+		{
+			m_name = "tusk_KillIsEnemyPudgeChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_rival_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_KillIsEnemyPudgeChance_25%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Istusk",
+					"IsEnemyPudge",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "tusk_KillIsEnemyBaneChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_rival_10"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_KillIsEnemyBaneChance_25%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Istusk",
+					"IsEnemyBane",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "tusk_KillIsEnemyCentaurChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_rival_11"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_KillIsEnemyCentaurChance_25%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Istusk",
+					"IsEnemyCentaur",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "tusk_KillIsEnemyTroll_WarlordChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_rival_12"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_KillIsEnemyTroll_WarlordChance_25%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Istusk",
+					"IsEnemyTroll_Warlord",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "tusk_KillIsEnemyCrystalMaiden"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_rival_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_rival_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_rival_15"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_rival_16"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_rival_17"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_rival_18"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_rival_19"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_rival_20"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_KillIsEnemyCrystalMaiden"
+				m_Requirements = 
+				[
+					"Kill",
+					"Istusk",
+					"IsEnemyCrystalMaiden",
+				]
+			}
+		},
+		{
+			m_name = "tusk_KillIsEnemyBristlebackChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_rival_21"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_KillIsEnemyBristlebackChance_25%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Istusk",
+					"IsEnemyBristleback",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "tusk_Move"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_move_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_move_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_move_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_move_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_move_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_move_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_move_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_move_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_move_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_move_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_move_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_move_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_move_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_move_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_move_15"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_move_16"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_move_17"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_move_18"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_move_19"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_move_20"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_move_21"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_move_22"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_move_23"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_move_24"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_move_25"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_Move"
+				m_Requirements = 
+				[
+					"Move",
+					"Istusk",
+				]
+			}
+		},
+		{
+			m_name = "tusk_MoveChance_1%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_move_26"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_MoveChance_1%"
+				m_Requirements = 
+				[
+					"Move",
+					"Istusk",
+					"Chance_1%",
+				]
+			}
+		},
+		{
+			m_name = "tusk_Attack"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_attack_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_attack_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_attack_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_attack_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_attack_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_attack_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_attack_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_attack_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_attack_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_attack_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_attack_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_attack_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_attack_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_attack_14"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_Attack"
+				m_Requirements = 
+				[
+					"Attack",
+					"Istusk",
+				]
+			}
+		},
+		{
+			m_name = "tusk_CastOrder"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_cast_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_cast_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_cast_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_CastOrder"
+				m_Requirements = 
+				[
+					"CastOrder",
+					"Istusk",
+				]
+			}
+		},
+		{
+			m_name = "tusk_CastExecuteIsTuskIceShardsChance_75%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_iceshards_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_iceshards_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_iceshards_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_iceshards_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_iceshards_06"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_CastExecuteIsTuskIceShardsChance_75%"
+				m_Requirements = 
+				[
+					"CastExecute",
+					"Istusk",
+					"IsTuskIceShards",
+					"Chance_75%",
+				]
+			}
+		},
+		{
+			m_name = "tusk_CastExecuteIsTuskSnowballChance_75%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_snowball_01"
+					m_params = 
+					{
+						m_weapondelay.start = 2.0
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_snowball_02"
+					m_params = 
+					{
+						m_weapondelay.start = 2.0
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_snowball_04"
+					m_params = 
+					{
+						m_weapondelay.start = 2.0
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_snowball_05"
+					m_params = 
+					{
+						m_weapondelay.start = 2.0
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_snowball_09"
+					m_params = 
+					{
+						m_weapondelay.start = 2.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_CastExecuteIsTuskSnowballChance_75%"
+				m_Requirements = 
+				[
+					"CastExecute",
+					"Istusk",
+					"IsTuskSnowball",
+					"Chance_75%",
+				]
+			}
+		},
+		{
+			m_name = "tusk_CastExecuteIsTuskSnowballLaunchChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_snowball_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_snowball_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_snowball_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_snowball_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_snowball_10"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_CastExecuteIsTuskSnowballLaunchChance_25%"
+				m_Requirements = 
+				[
+					"CastExecute",
+					"Istusk",
+					"IsTuskSnowballLaunch",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "tusk_CastExecuteIsTuskTagTeam"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_frozensigil_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_frozensigil_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_frozensigil_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_frozensigil_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_frozensigil_05"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_CastExecuteIsTuskTagTeam"
+				m_Requirements = 
+				[
+					"CastExecute",
+					"Istusk",
+					"IsTuskTagTeam",
+				]
+			}
+		},
+		{
+			m_name = "tusk_CastExecuteIsTuskWalrusPunch"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_15"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_16"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_17"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_18"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_19"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_20"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_21"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_22"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_23"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_24"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_25"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_26"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_27"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_28"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_29"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_30"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_31"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_32"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_33"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_34"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_35"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_36"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_37"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_38"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_39"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_40"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_41"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_42"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_43"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_44"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_45"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_46"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_47"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_48"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_49"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_50"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_51"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_52"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_53"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_54"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_55"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_56"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_57"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_58"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_59"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_60"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_61"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_62"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_64"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_65"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_66"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_67"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_68"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_69"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_70"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_71"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_72"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_73"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_74"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_75"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_76"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_77"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_78"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_79"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_80"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_83"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_CastExecuteIsTuskWalrusPunch"
+				m_Requirements = 
+				[
+					"CastExecute",
+					"Istusk",
+					"IsTuskWalrusPunch",
+				]
+			}
+		},
+		{
+			m_name = "tusk_LevelUp"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_levelup_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_levelup_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_levelup_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_levelup_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_levelup_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_levelup_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_levelup_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_levelup_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_levelup_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_levelup_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_levelup_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_levelup_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_levelup_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_levelup_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_levelup_15"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_levelup_16"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_LevelUp"
+				m_Requirements = 
+				[
+					"LevelUp",
+					"Istusk",
+				]
+			}
+		},
+		{
+			m_name = "tusk_AllyNearIsAllyCrystalMaidenEarlyGame"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_ally_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_AllyNearIsAllyCrystalMaidenEarlyGame"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Istusk",
+					"IsAllyCrystalMaiden",
+					"EarlyGame",
+				]
+			}
+		},
+		{
+			m_name = "tusk_AllyNearIsAllyBrewmasterEarlyGame"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_ally_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_AllyNearIsAllyBrewmasterEarlyGame"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Istusk",
+					"IsAllyBrewmaster",
+					"EarlyGame",
+				]
+			}
+		},
+		{
+			m_name = "tusk_AllyNearIsAllyOgre_MagiEarlyGame"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_ally_03"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_AllyNearIsAllyOgre_MagiEarlyGame"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Istusk",
+					"IsAllyOgre_Magi",
+					"EarlyGame",
+				]
+			}
+		},
+		{
+			m_name = "tusk_AllyNearIsAllyLichEarlyGame"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_ally_04"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_AllyNearIsAllyLichEarlyGame"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Istusk",
+					"IsAllyLich",
+					"EarlyGame",
+				]
+			}
+		},
+		{
+			m_name = "tusk_AllyNearIsAllyAncient_ApparitionEarlyGame"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_ally_05"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_AllyNearIsAllyAncient_ApparitionEarlyGame"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Istusk",
+					"IsAllyAncient_Apparition",
+					"EarlyGame",
+				]
+			}
+		},
+		{
+			m_name = "tusk_AllyNearIsAllyWinter_WyvernEarlyGame"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_ally_06"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_AllyNearIsAllyWinter_WyvernEarlyGame"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Istusk",
+					"IsAllyWinter_Wyvern",
+					"EarlyGame",
+				]
+			}
+		},
+		{
+			m_name = "tusk_AllyNearIsAllyStormSpiritEarlyGame"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_ally_07"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_AllyNearIsAllyStormSpiritEarlyGame"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Istusk",
+					"IsAllyStormSpirit",
+					"EarlyGame",
+				]
+			}
+		},
+		{
+			m_name = "tusk_AllyNearIsAllyMagnataurEarlyGame"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_ally_08"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_AllyNearIsAllyMagnataurEarlyGame"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Istusk",
+					"IsAllyMagnataur",
+					"EarlyGame",
+				]
+			}
+		},
+		{
+			m_name = "tusk_AllyNearIsAllySlardarEarlyGame"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_ally_09"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_AllyNearIsAllySlardarEarlyGame"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Istusk",
+					"IsAllySlardar",
+					"EarlyGame",
+				]
+			}
+		},
+		{
+			m_name = "tusk_AllyNearIsAllyCentaurEarlyGame"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_ally_10"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_AllyNearIsAllyCentaurEarlyGame"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Istusk",
+					"IsAllyCentaur",
+					"EarlyGame",
+				]
+			}
+		},
+		{
+			m_name = "tusk_AllyNearIsAllyBristlebackEarlyGame"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_ally_11"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_AllyNearIsAllyBristlebackEarlyGame"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Istusk",
+					"IsAllyBristleback",
+					"EarlyGame",
+				]
+			}
+		},
+		{
+			m_name = "tusk_AllyNearIsAllyLegion_CommanderEarlyGame"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_ally_11"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_AllyNearIsAllyLegion_CommanderEarlyGame"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Istusk",
+					"IsAllyLegion_Commander",
+					"EarlyGame",
+				]
+			}
+		},
+		{
+			m_name = "tusk_Death"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_death_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_death_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_death_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_death_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_death_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_death_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_death_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_death_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_death_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_death_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_death_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_death_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_death_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_death_19"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_Death"
+				m_Requirements = 
+				[
+					"Death",
+					"Istusk",
+				]
+			}
+		},
+		{
+			m_name = "tusk_DeathIsEnemyCrystalMaiden"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_death_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_death_15"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_death_16"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_death_17"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_death_18"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_DeathIsEnemyCrystalMaiden"
+				m_Requirements = 
+				[
+					"Death",
+					"Istusk",
+					"IsEnemyCrystalMaiden",
+				]
+			}
+		},
+		{
+			m_name = "tusk_DeathIsReincarnating"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_fastres_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_DeathIsReincarnating"
+				m_Requirements = 
+				[
+					"Death",
+					"Istusk",
+					"IsReincarnating",
+				]
+			}
+		},
+		{
+			m_name = "tusk_Respawn"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_respawn_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_respawn_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_respawn_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_respawn_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_respawn_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_respawn_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_respawn_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_respawn_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_respawn_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_respawn_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_respawn_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_respawn_12"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_Respawn"
+				m_Requirements = 
+				[
+					"Respawn",
+					"Istusk",
+				]
+			}
+		},
+		{
+			m_name = "tusk_LastHit"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_lasthit_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_lasthit_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_lasthit_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_lasthit_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_lasthit_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_lasthit_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_lasthit_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_lasthit_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_lasthit_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_lasthit_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_lasthit_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_lasthit_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_lasthit_13"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_LastHit"
+				m_Requirements = 
+				[
+					"LastHit",
+					"Istusk",
+				]
+			}
+		},
+		{
+			m_name = "tusk_Deny"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_deny_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_deny_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_deny_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_deny_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_deny_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_deny_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_deny_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_deny_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_deny_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_deny_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_deny_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_deny_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_deny_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_deny_15"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_deny_16"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_deny_17"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_deny_18"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_deny_19"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_deny_20"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_deny_21"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_Deny"
+				m_Requirements = 
+				[
+					"Deny",
+					"Istusk",
+				]
+			}
+		},
+		{
+			m_name = "tusk_Select"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_rare_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_rare_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_rare_04"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_Select"
+				m_Requirements = 
+				[
+					"Select",
+					"Istusk",
+				]
+			}
+		},
+		{
+			m_name = "tusk_PurchaseIsExpensiveItem"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_purch_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_purch_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_purch_03"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_purch_05"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_PurchaseIsExpensiveItem"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Istusk",
+					"IsExpensiveItem",
+				]
+			}
+		},
+		{
+			m_name = "tusk_PurchaseIsUltimateScepter"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_scepter_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_scepter_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_PurchaseIsUltimateScepter"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Istusk",
+					"IsUltimateScepter",
+				]
+			}
+		},
+		{
+			m_name = "tusk_PurchaseIsBlinkDagger"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_blink_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_blink_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_PurchaseIsBlinkDagger"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Istusk",
+					"IsBlinkDagger",
+				]
+			}
+		},
+		{
+			m_name = "tusk_PurchaseIsShiva"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_items_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_PurchaseIsShiva"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Istusk",
+					"IsShiva",
+				]
+			}
+		},
+		{
+			m_name = "tusk_PurchaseIsAssaultCuirass"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_items_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_PurchaseIsAssaultCuirass"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Istusk",
+					"IsAssaultCuirass",
+				]
+			}
+		},
+		{
+			m_name = "tusk_PurchaseIsMonkeyKingBar"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_items_03"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_PurchaseIsMonkeyKingBar"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Istusk",
+					"IsMonkeyKingBar",
+				]
+			}
+		},
+		{
+			m_name = "tusk_PurchaseIsBattleFury"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_items_04"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_PurchaseIsBattleFury"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Istusk",
+					"IsBattleFury",
+				]
+			}
+		},
+		{
+			m_name = "tusk_PurchaseIsHeart"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_items_05"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_PurchaseIsHeart"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Istusk",
+					"IsHeart",
+				]
+			}
+		},
+		{
+			m_name = "tusk_PurchaseIsUrnOfShadows"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_items_06"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_PurchaseIsUrnOfShadows"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Istusk",
+					"IsUrnOfShadows",
+				]
+			}
+		},
+		{
+			m_name = "tusk_PurchaseIsDrums"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_items_07"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_PurchaseIsDrums"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Istusk",
+					"IsDrums",
+				]
+			}
+		},
+		{
+			m_name = "tusk_PurchaseIsSangeAndYasha"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_items_08"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_PurchaseIsSangeAndYasha"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Istusk",
+					"IsSangeAndYasha",
+				]
+			}
+		},
+		{
+			m_name = "tusk_PurchaseIsBlackKingBar"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_items_09"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_PurchaseIsBlackKingBar"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Istusk",
+					"IsBlackKingBar",
+				]
+			}
+		},
+		{
+			m_name = "tusk_PurchaseIsBladeMail"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_items_10"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_PurchaseIsBladeMail"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Istusk",
+					"IsBladeMail",
+				]
+			}
+		},
+		{
+			m_name = "tusk_Bottling"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_bottle_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_bottle_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_bottle_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_Bottling"
+				m_Requirements = 
+				[
+					"Bottling",
+					"Istusk",
+				]
+			}
+		},
+		{
+			m_name = "tusk_Immortality"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_immort_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_Immortality"
+				m_Requirements = 
+				[
+					"Immortality",
+					"Istusk",
+				]
+			}
+		},
+		{
+			m_name = "tusk_ImmortalityChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_immort_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_ImmortalityChance_25%"
+				m_Requirements = 
+				[
+					"Immortality",
+					"Istusk",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "tusk_PowerupIsPowerupBounty"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_move_17"
+					m_params = 
+					{
+						m_respeakdelay.start = 300.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_PowerupIsPowerupBounty"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Istusk",
+					"IsPowerupBounty",
+				]
+			}
+		},
+		{
+			m_name = "tusk_PowerupIsPowerupHaste"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_haste_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_PowerupIsPowerupHaste"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Istusk",
+					"IsPowerupHaste",
+				]
+			}
+		},
+		{
+			m_name = "tusk_PowerupIsPowerupHasteChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_haste_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_PowerupIsPowerupHasteChance_25%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Istusk",
+					"IsPowerupHaste",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "tusk_PowerupIsPowerupDoubleDamage"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_doubdam_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_PowerupIsPowerupDoubleDamage"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Istusk",
+					"IsPowerupDoubleDamage",
+				]
+			}
+		},
+		{
+			m_name = "tusk_PowerupIsPowerupDoubleDamageChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_doubdam_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_PowerupIsPowerupDoubleDamageChance_25%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Istusk",
+					"IsPowerupDoubleDamage",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "tusk_PowerupIsPowerupRegeneration"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_regen_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_PowerupIsPowerupRegeneration"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Istusk",
+					"IsPowerupRegeneration",
+				]
+			}
+		},
+		{
+			m_name = "tusk_PowerupIsPowerupRegenerationChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_regen_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_PowerupIsPowerupRegenerationChance_25%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Istusk",
+					"IsPowerupRegeneration",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "tusk_PowerupIsPowerupRegenerationChance_5%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_regen_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_PowerupIsPowerupRegenerationChance_5%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Istusk",
+					"IsPowerupRegeneration",
+					"Chance_5%",
+				]
+			}
+		},
+		{
+			m_name = "tusk_PowerupIsPowerupIllusion"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_illus_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_PowerupIsPowerupIllusion"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Istusk",
+					"IsPowerupIllusion",
+				]
+			}
+		},
+		{
+			m_name = "tusk_PowerupIsPowerupIllusionChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_illus_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_PowerupIsPowerupIllusionChance_25%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Istusk",
+					"IsPowerupIllusion",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "tusk_PowerupIsPowerupInvisibility"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_invis_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_PowerupIsPowerupInvisibility"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Istusk",
+					"IsPowerupInvisibility",
+				]
+			}
+		},
+		{
+			m_name = "tusk_PowerupIsPowerupInvisibilityChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_invis_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_PowerupIsPowerupInvisibilityChance_25%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Istusk",
+					"IsPowerupInvisibility",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "tusk_PowerupIsPowerupArcane"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_superpunch_attack_82"
+					m_params = 
+					{
+						m_respeakdelay.start = 300.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_PowerupIsPowerupArcane"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Istusk",
+					"IsPowerupArcane",
+				]
+			}
+		},
+		{
+			m_name = "tusk_Thanks"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_thanks_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_thanks_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_thanks_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_Thanks"
+				m_Requirements = 
+				[
+					"Thanks",
+					"Istusk",
+				]
+			}
+		},
+		{
+			m_name = "tusk_PainChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_underattack_01"
+					m_params = 
+					{
+						m_respeakdelay.start = 120.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_PainChance_25%"
+				m_Requirements = 
+				[
+					"Pain",
+					"Istusk",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "tusk_Pain"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_pain_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_pain_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_pain_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_pain_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_pain_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_pain_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_pain_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_pain_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_pain_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_pain_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_pain_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_pain_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_pain_13"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_Pain"
+				m_Requirements = 
+				[
+					"Pain",
+					"Istusk",
+				]
+			}
+		},
+		{
+			m_name = "tusk_InTheBagChance_15%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_inthebag_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_InTheBagChance_15%"
+				m_Requirements = 
+				[
+					"InTheBag",
+					"Istusk",
+					"Chance_15%",
+				]
+			}
+		},
+		{
+			m_name = "tusk_InTheBag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_inthebag_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_InTheBag"
+				m_Requirements = 
+				[
+					"InTheBag",
+					"Istusk",
+				]
+			}
+		},
+		{
+			m_name = "tusk_MissingIsLaneTop"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_lane_missing_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_MissingIsLaneTop"
+				m_Requirements = 
+				[
+					"Missing",
+					"Istusk",
+					"IsLaneTop",
+				]
+			}
+		},
+		{
+			m_name = "tusk_MissingIsLaneMid"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_lane_missing_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_MissingIsLaneMid"
+				m_Requirements = 
+				[
+					"Missing",
+					"Istusk",
+					"IsLaneMid",
+				]
+			}
+		},
+		{
+			m_name = "tusk_MissingIsLaneBot"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_lane_missing_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_MissingIsLaneBot"
+				m_Requirements = 
+				[
+					"Missing",
+					"Istusk",
+					"IsLaneBot",
+				]
+			}
+		},
+		{
+			m_name = "tusk_ItemDropIsCommonDrop"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_drop_common_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_ItemDropIsCommonDrop"
+				m_Requirements = 
+				[
+					"ItemDrop",
+					"Istusk",
+					"IsCommonDrop",
+				]
+			}
+		},
+		{
+			m_name = "tusk_ItemDropIsRareDrop"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_drop_medium_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_ItemDropIsRareDrop"
+				m_Requirements = 
+				[
+					"ItemDrop",
+					"Istusk",
+					"IsRareDrop",
+				]
+			}
+		},
+		{
+			m_name = "tusk_ItemDropIsUltraRareDrop"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_drop_rare_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_ItemDropIsUltraRareDrop"
+				m_Requirements = 
+				[
+					"ItemDrop",
+					"Istusk",
+					"IsUltraRareDrop",
+				]
+			}
+		},
+		{
+			m_name = "tusk_CooldownLittleNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_notyet_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_notyet_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_notyet_07"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_CooldownLittleNag"
+				m_Requirements = 
+				[
+					"Cooldown",
+					"Istusk",
+					"LittleNag",
+				]
+			}
+		},
+		{
+			m_name = "tusk_CooldownMediumNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_notyet_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_notyet_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_notyet_08"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_CooldownMediumNag"
+				m_Requirements = 
+				[
+					"Cooldown",
+					"Istusk",
+					"MediumNag",
+				]
+			}
+		},
+		{
+			m_name = "tusk_CooldownSuperNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_notyet_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_notyet_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_notyet_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_CooldownSuperNag"
+				m_Requirements = 
+				[
+					"Cooldown",
+					"Istusk",
+					"SuperNag",
+				]
+			}
+		},
+		{
+			m_name = "tusk_NoManaLittleNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_nomana_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_nomana_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_nomana_07"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_NoManaLittleNag"
+				m_Requirements = 
+				[
+					"NoMana",
+					"Istusk",
+					"LittleNag",
+				]
+			}
+		},
+		{
+			m_name = "tusk_NoManaMediumNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_nomana_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_nomana_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_nomana_08"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_NoManaMediumNag"
+				m_Requirements = 
+				[
+					"NoMana",
+					"Istusk",
+					"MediumNag",
+				]
+			}
+		},
+		{
+			m_name = "tusk_NoManaSuperNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_nomana_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_nomana_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_nomana_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_NoManaSuperNag"
+				m_Requirements = 
+				[
+					"NoMana",
+					"Istusk",
+					"SuperNag",
+				]
+			}
+		},
+		{
+			m_name = "tusk_Defeat"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_lose_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_lose_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_lose_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_lose_04"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_Defeat"
+				m_Requirements = 
+				[
+					"Defeat",
+					"Istusk",
+				]
+			}
+		},
+		{
+			m_name = "tusk_Victory"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_win_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_win_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_win_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_win_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_win_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_win_06"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_Victory"
+				m_Requirements = 
+				[
+					"Victory",
+					"Istusk",
+				]
+			}
+		},
+		{
+			m_name = "tusk_EmoteIsEmoteLaugh"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_laugh_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_laugh_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_laugh_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_laugh_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_laugh_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_laugh_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_laugh_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_laugh_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_laugh_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_laugh_10"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_EmoteIsEmoteLaugh"
+				m_Requirements = 
+				[
+					"Emote",
+					"Istusk",
+					"IsEmoteLaugh",
+				]
+			}
+		},
+		{
+			m_name = "tusk_TauntIsTuskFightMeTI8Taunt"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_attack_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_attack_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_attack_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_attack_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "tusk_tusk_spawn_05"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "tusk_TauntIsTuskFightMeTI8Taunt"
+				m_Requirements = 
+				[
+					"Taunt",
+					"Istusk",
+					"IsTuskFightMeTI8Taunt",
+				]
+			}
+		},
+	]
+	m_Requirements = 
+	[
+		{
+			m_name = "Istusk"
+			m_matchKey = "classname"
+			m_matchExpr = "npc_dota_hero_tusk"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsTuskIceShards"
+			m_matchKey = "abilityname"
+			m_matchExpr = "tusk_ice_shards"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsTuskSnowball"
+			m_matchKey = "abilityname"
+			m_matchExpr = "tusk_snowball"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsTuskSnowballLaunch"
+			m_matchKey = "abilityname"
+			m_matchExpr = "tusk_launch_snowball"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsTuskTagTeam"
+			m_matchKey = "abilityname"
+			m_matchExpr = "tusk_tag_team"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsTuskWalrusPunch"
+			m_matchKey = "abilityname"
+			m_matchExpr = "tusk_walrus_punch"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsTuskWalrusPunchLevel"
+			m_matchKey = "skill6_level"
+			m_matchExpr = ">0"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsTuskPunch"
+			m_matchKey = "punch_hero"
+			m_matchExpr = "yes"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsTuskPunchFail"
+			m_matchKey = "punch_fail"
+			m_matchExpr = "yes"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsTuskLoadoutSpawn"
+			m_matchKey = "special_spawn"
+			m_matchExpr = "tusk_loadout_spawn"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsTuskFightMeTI8Taunt"
+			m_matchKey = "taunt_type"
+			m_matchExpr = "fight_me"
+			m_flWeight = 5.0
+		},
+	]
+}

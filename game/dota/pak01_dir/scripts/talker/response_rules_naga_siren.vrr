@@ -1,0 +1,2858 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vrr_c1:version{c1f07085-5299-4e8a-b7e9-1cbb66bbbe23} -->
+{
+	m_Includes = 
+	[
+		"scripts/talker/response_rules_shared.vrr",
+	]
+	m_ResponseGroups = 
+	[
+		{
+			m_name = "naga_siren_Spawn"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_spawn_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_spawn_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_spawn_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_spawn_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_spawn_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_spawn_06"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_Spawn"
+				m_Requirements = 
+				[
+					"Spawn",
+					"Isnaga_siren",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_CustomIsGameStart"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_begin_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_CustomIsGameStart"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isnaga_siren",
+					"IsGameStart",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_CustomIsNagaSirenLoadoutSpawn"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_spawn_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_spawn_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_spawn_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_spawn_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_spawn_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_spawn_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_begin_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_songofthesiren_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_levelup_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_respawn_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_CustomIsNagaSirenLoadoutSpawn"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isnaga_siren",
+					"IsNagaSirenLoadoutSpawn",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_KillIsFirstBlood"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_firstblood_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_firstblood_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_KillIsFirstBlood"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isnaga_siren",
+					"IsFirstBlood",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_Kill"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_songofthesiren_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_kill_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_kill_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_kill_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_kill_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_kill_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_kill_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_kill_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_kill_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_kill_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_kill_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_kill_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_kill_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_laugh_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_laugh_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_laugh_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_laugh_04"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_Kill"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isnaga_siren",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_KillIsNagaSirenRipTideChance_10%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_songofthesiren_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_songofthesiren_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_songofthesiren_10"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_KillIsNagaSirenRipTideChance_10%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isnaga_siren",
+					"IsNagaSirenRipTide",
+					"Chance_10%",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_KillIsEnemyClinkzChance_35%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_rival_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_KillIsEnemyClinkzChance_35%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isnaga_siren",
+					"IsEnemyClinkz",
+					"Chance_35%",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_KillIsEnemyMorphlingChance_15%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_rival_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_rival_04"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_KillIsEnemyMorphlingChance_15%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isnaga_siren",
+					"IsEnemyMorphling",
+					"Chance_15%",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_KillIsEnemyMorphlingChance_35%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_rival_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_KillIsEnemyMorphlingChance_35%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isnaga_siren",
+					"IsEnemyMorphling",
+					"Chance_35%",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_KillIsEnemyChenChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_rival_05"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_KillIsEnemyChenChance_25%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isnaga_siren",
+					"IsEnemyChen",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_KillIsEnemyOmniknightChance_15%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_rival_06"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_KillIsEnemyOmniknightChance_15%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isnaga_siren",
+					"IsEnemyOmniknight",
+					"Chance_15%",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_KillIsEnemyOmniknightChance_35%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_rival_07"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_KillIsEnemyOmniknightChance_35%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isnaga_siren",
+					"IsEnemyOmniknight",
+					"Chance_35%",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_KillIsEnemyVenomancerChance_35%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_rival_08"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_KillIsEnemyVenomancerChance_35%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isnaga_siren",
+					"IsEnemyVenomancer",
+					"Chance_35%",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_KillIsEnemyVenomancerChance_15%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_rival_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_KillIsEnemyVenomancerChance_15%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isnaga_siren",
+					"IsEnemyVenomancer",
+					"Chance_15%",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_KillIsEnemySlardarChance_35%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_rival_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_rival_11"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_KillIsEnemySlardarChance_35%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isnaga_siren",
+					"IsEnemySlardar",
+					"Chance_35%",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_KillIsEnemySlardarChance_15%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_rival_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_rival_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_rival_15"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_KillIsEnemySlardarChance_15%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isnaga_siren",
+					"IsEnemySlardar",
+					"Chance_15%",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_KillIsEnemySlardarChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_rival_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_rival_16"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_KillIsEnemySlardarChance_25%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isnaga_siren",
+					"IsEnemySlardar",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_KillIsEnemyTidehunterChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_rival_17"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_KillIsEnemyTidehunterChance_25%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isnaga_siren",
+					"IsEnemyTidehunter",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_KillIsEnemyTidehunterChance_15%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_rival_18"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_KillIsEnemyTidehunterChance_15%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isnaga_siren",
+					"IsEnemyTidehunter",
+					"Chance_15%",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_KillIsEnemyTidehunterChance_35%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_rival_19"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_KillIsEnemyTidehunterChance_35%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isnaga_siren",
+					"IsEnemyTidehunter",
+					"Chance_35%",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_KillIsEnemyBrewmasterChance_35%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_rival_20"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_rival_22"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_KillIsEnemyBrewmasterChance_35%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isnaga_siren",
+					"IsEnemyBrewmaster",
+					"Chance_35%",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_KillIsEnemyBrewmasterChance_15%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_rival_21"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_KillIsEnemyBrewmasterChance_15%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isnaga_siren",
+					"IsEnemyBrewmaster",
+					"Chance_15%",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_KillIsEnemyBrewmasterChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_rival_23"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_KillIsEnemyBrewmasterChance_25%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isnaga_siren",
+					"IsEnemyBrewmaster",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_KillIsEnemyQueenofPainChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_rival_24"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_KillIsEnemyQueenofPainChance_25%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isnaga_siren",
+					"IsEnemyQueenofPain",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_KillIsEnemyQueenofPainChance_35%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_rival_25"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_rival_26"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_KillIsEnemyQueenofPainChance_35%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isnaga_siren",
+					"IsEnemyQueenofPain",
+					"Chance_35%",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_KillIsEnemyEarthshakerChance_15%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_rival_27"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_KillIsEnemyEarthshakerChance_15%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isnaga_siren",
+					"IsEnemyEarthshaker",
+					"Chance_15%",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_KillIsEnemyEarthshakerChance_35%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_rival_28"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_KillIsEnemyEarthshakerChance_35%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isnaga_siren",
+					"IsEnemyEarthshaker",
+					"Chance_35%",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_KillIsEnemyKunkkaChance_15%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_rival_29"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_KillIsEnemyKunkkaChance_15%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isnaga_siren",
+					"IsEnemyKunkka",
+					"Chance_15%",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_KillIsEnemyKunkkaChance_35%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_rival_30"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_KillIsEnemyKunkkaChance_35%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isnaga_siren",
+					"IsEnemyKunkka",
+					"Chance_35%",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_Move"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_move_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_move_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_move_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_move_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_move_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_move_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_move_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_move_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_move_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_move_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_move_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_move_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_move_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_move_15"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_move_16"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_Move"
+				m_Requirements = 
+				[
+					"Move",
+					"Isnaga_siren",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_MoveChance_5%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_move_11"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_MoveChance_5%"
+				m_Requirements = 
+				[
+					"Move",
+					"Isnaga_siren",
+					"Chance_5%",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_Attack"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_attack_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_attack_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_attack_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_attack_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_attack_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_attack_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_attack_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_attack_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_attack_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_attack_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_attack_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_attack_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_attack_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_attack_15"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_Attack"
+				m_Requirements = 
+				[
+					"Attack",
+					"Isnaga_siren",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_CastOrder"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_cast_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_cast_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_cast_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_cast_04"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_CastOrder"
+				m_Requirements = 
+				[
+					"CastOrder",
+					"Isnaga_siren",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_CastExecuteIsNagaSirenEnsnareChance_50%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_ensnare_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_ensnare_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_ensnare_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_ensnare_06"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_CastExecuteIsNagaSirenEnsnareChance_50%"
+				m_Requirements = 
+				[
+					"CastExecute",
+					"Isnaga_siren",
+					"IsNagaSirenEnsnare",
+					"Chance_50%",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_CastExecuteIsNagaSirenMirrorImageChance_30%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_mirrorimage_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_mirrorimage_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_mirrorimage_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_CastExecuteIsNagaSirenMirrorImageChance_30%"
+				m_Requirements = 
+				[
+					"CastExecute",
+					"Isnaga_siren",
+					"IsNagaSirenMirrorImage",
+					"Chance_30%",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_CastExecuteIsNagaSirenRipTideChance_50%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_anger_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_anger_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_anger_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_anger_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_CastExecuteIsNagaSirenRipTideChance_50%"
+				m_Requirements = 
+				[
+					"CastExecute",
+					"Isnaga_siren",
+					"IsNagaSirenRipTide",
+					"Chance_50%",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_LevelUp"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_levelup_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_levelup_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_levelup_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_levelup_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_levelup_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_levelup_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_levelup_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_levelup_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_levelup_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_LevelUp"
+				m_Requirements = 
+				[
+					"LevelUp",
+					"Isnaga_siren",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_AllyNearIsAllySlardarEarlyGame"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_ally_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_AllyNearIsAllySlardarEarlyGame"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Isnaga_siren",
+					"IsAllySlardar",
+					"EarlyGame",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_AllyNearIsAllyShadowShamanEarlyGame"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_ally_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_ally_03"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_AllyNearIsAllyShadowShamanEarlyGame"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Isnaga_siren",
+					"IsAllyShadowShaman",
+					"EarlyGame",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_AllyNearIsAllyPugnaEarlyGame"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_ally_05"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_AllyNearIsAllyPugnaEarlyGame"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Isnaga_siren",
+					"IsAllyPugna",
+					"EarlyGame",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_AllyNearIsAllyJuggernautEarlyGame"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_ally_06"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_AllyNearIsAllyJuggernautEarlyGame"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Isnaga_siren",
+					"IsAllyJuggernaut",
+					"EarlyGame",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_AllyNearIsAllyBaneEarlyGame"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_ally_07"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_AllyNearIsAllyBaneEarlyGame"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Isnaga_siren",
+					"IsAllyBane",
+					"EarlyGame",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_AllyNearIsAllySlarkEarlyGame"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_ally_08"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_AllyNearIsAllySlarkEarlyGame"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Isnaga_siren",
+					"IsAllySlark",
+					"EarlyGame",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_AllyNearIsAllyTidehunterEarlyGame"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_ally_09"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_AllyNearIsAllyTidehunterEarlyGame"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Isnaga_siren",
+					"IsAllyTidehunter",
+					"EarlyGame",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_AllyNearIsAllyMorphlingEarlyGame"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_ally_10"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_AllyNearIsAllyMorphlingEarlyGame"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Isnaga_siren",
+					"IsAllyMorphling",
+					"EarlyGame",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_LastHit"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_lasthit_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_lasthit_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_lasthit_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_lasthit_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_lasthit_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_lasthit_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_lasthit_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_lasthit_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_lasthit_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_LastHit"
+				m_Requirements = 
+				[
+					"LastHit",
+					"Isnaga_siren",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_Death"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_death_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_death_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_death_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_death_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_death_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_death_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_death_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_death_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_death_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_death_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_death_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_death_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_death_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_death_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_death_15"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_death_16"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_death_17"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_Death"
+				m_Requirements = 
+				[
+					"Death",
+					"Isnaga_siren",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_DeathIsReincarnating"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_fastres_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_DeathIsReincarnating"
+				m_Requirements = 
+				[
+					"Death",
+					"Isnaga_siren",
+					"IsReincarnating",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_Respawn"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_respawn_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_respawn_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_respawn_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_respawn_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_respawn_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_respawn_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_respawn_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_respawn_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_respawn_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_respawn_12"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_Respawn"
+				m_Requirements = 
+				[
+					"Respawn",
+					"Isnaga_siren",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_RespawnChance_5%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_respawn_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_respawn_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_respawn_13"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_RespawnChance_5%"
+				m_Requirements = 
+				[
+					"Respawn",
+					"Isnaga_siren",
+					"Chance_5%",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_Select"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_rare_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_rare_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_rare_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_rare_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_rare_05"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_Select"
+				m_Requirements = 
+				[
+					"Select",
+					"Isnaga_siren",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_PurchaseIsExpensiveItem"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_purch_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_purch_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_purch_03"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_PurchaseIsExpensiveItem"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isnaga_siren",
+					"IsExpensiveItem",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_PurchaseIsUltimateScepter"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_scepter_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_scepter_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_scepter_03"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_PurchaseIsUltimateScepter"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isnaga_siren",
+					"IsUltimateScepter",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_PurchaseIsBlinkDagger"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_blink_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_blink_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_PurchaseIsBlinkDagger"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isnaga_siren",
+					"IsBlinkDagger",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_PurchaseIsButterfly"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_items_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_PurchaseIsButterfly"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isnaga_siren",
+					"IsButterfly",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_PurchaseIsManta"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_items_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_PurchaseIsManta"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isnaga_siren",
+					"IsManta",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_PurchaseIsDiffusal"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_items_03"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_PurchaseIsDiffusal"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isnaga_siren",
+					"IsDiffusal",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_PurchaseIsHeart"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_items_04"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_PurchaseIsHeart"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isnaga_siren",
+					"IsHeart",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_PurchaseIsSphere"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_items_05"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_PurchaseIsSphere"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isnaga_siren",
+					"IsSphere",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_PurchaseIsMonkeyKingBar"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_items_06"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_PurchaseIsMonkeyKingBar"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isnaga_siren",
+					"IsMonkeyKingBar",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_PurchaseIsYasha"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_items_07"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_PurchaseIsYasha"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isnaga_siren",
+					"IsYasha",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_PurchaseIsDesolator"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_items_08"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_PurchaseIsDesolator"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isnaga_siren",
+					"IsDesolator",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_PurchaseIsDaedalus"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_items_09"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_PurchaseIsDaedalus"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isnaga_siren",
+					"IsDaedalus",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_Bottling"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_bottle_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_bottle_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_bottle_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_Bottling"
+				m_Requirements = 
+				[
+					"Bottling",
+					"Isnaga_siren",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_Deny"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_deny_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_deny_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_deny_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_deny_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_deny_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_deny_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_deny_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_deny_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_deny_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_deny_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_deny_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_deny_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_deny_14"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_Deny"
+				m_Requirements = 
+				[
+					"Deny",
+					"Isnaga_siren",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_DenyChance_5%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_deny_08"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_DenyChance_5%"
+				m_Requirements = 
+				[
+					"Deny",
+					"Isnaga_siren",
+					"Chance_5%",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_MissingIsLaneTop"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_lanemissing_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_MissingIsLaneTop"
+				m_Requirements = 
+				[
+					"Missing",
+					"Isnaga_siren",
+					"IsLaneTop",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_MissingIsLaneMid"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_lanemissing_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_MissingIsLaneMid"
+				m_Requirements = 
+				[
+					"Missing",
+					"Isnaga_siren",
+					"IsLaneMid",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_MissingIsLaneBot"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_lanemissing_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_MissingIsLaneBot"
+				m_Requirements = 
+				[
+					"Missing",
+					"Isnaga_siren",
+					"IsLaneBot",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_Immortality"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_immort_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_Immortality"
+				m_Requirements = 
+				[
+					"Immortality",
+					"Isnaga_siren",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_ImmortalityChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_immort_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_ImmortalityChance_25%"
+				m_Requirements = 
+				[
+					"Immortality",
+					"Isnaga_siren",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_PowerupIsPowerupHaste"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_haste_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_PowerupIsPowerupHaste"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isnaga_siren",
+					"IsPowerupHaste",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_PowerupIsPowerupHasteChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_haste_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_PowerupIsPowerupHasteChance_25%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isnaga_siren",
+					"IsPowerupHaste",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_PowerupIsPowerupDoubleDamage"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_doubdam_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_doubdam_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_PowerupIsPowerupDoubleDamage"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isnaga_siren",
+					"IsPowerupDoubleDamage",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_PowerupIsPowerupRegeneration"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_regen_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_PowerupIsPowerupRegeneration"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isnaga_siren",
+					"IsPowerupRegeneration",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_PowerupIsPowerupRegenerationChance_10%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_regen_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_PowerupIsPowerupRegenerationChance_10%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isnaga_siren",
+					"IsPowerupRegeneration",
+					"Chance_10%",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_PowerupIsPowerupBounty"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_levelup_03"
+					m_params = 
+					{
+						m_respeakdelay.start = 300.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_PowerupIsPowerupBounty"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isnaga_siren",
+					"IsPowerupBounty",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_PowerupIsPowerupIllusion"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_illus_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_PowerupIsPowerupIllusion"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isnaga_siren",
+					"IsPowerupIllusion",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_PowerupIsPowerupIllusionChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_illus_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_PowerupIsPowerupIllusionChance_25%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isnaga_siren",
+					"IsPowerupIllusion",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_PowerupIsPowerupInvisibility"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_invis_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_PowerupIsPowerupInvisibility"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isnaga_siren",
+					"IsPowerupInvisibility",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_PowerupIsPowerupInvisibilityChance_35%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_invis_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_PowerupIsPowerupInvisibilityChance_35%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isnaga_siren",
+					"IsPowerupInvisibility",
+					"Chance_35%",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_PowerupIsPowerupArcane"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_itemcommon_01"
+					m_params = 
+					{
+						m_respeakdelay.start = 300.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_PowerupIsPowerupArcane"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isnaga_siren",
+					"IsPowerupArcane",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_CooldownLittleNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_notyet_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_notyet_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_notyet_07"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_CooldownLittleNag"
+				m_Requirements = 
+				[
+					"Cooldown",
+					"Isnaga_siren",
+					"LittleNag",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_CooldownMediumNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_notyet_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_notyet_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_notyet_08"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_CooldownMediumNag"
+				m_Requirements = 
+				[
+					"Cooldown",
+					"Isnaga_siren",
+					"MediumNag",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_CooldownSuperNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_notyet_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_notyet_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_notyet_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_CooldownSuperNag"
+				m_Requirements = 
+				[
+					"Cooldown",
+					"Isnaga_siren",
+					"SuperNag",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_NoManaLittleNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_nomana_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_nomana_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_nomana_07"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_NoManaLittleNag"
+				m_Requirements = 
+				[
+					"NoMana",
+					"Isnaga_siren",
+					"LittleNag",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_NoManaMediumNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_nomana_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_nomana_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_nomana_08"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_NoManaMediumNag"
+				m_Requirements = 
+				[
+					"NoMana",
+					"Isnaga_siren",
+					"MediumNag",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_NoManaSuperNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_nomana_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_nomana_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_nomana_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_NoManaSuperNag"
+				m_Requirements = 
+				[
+					"NoMana",
+					"Isnaga_siren",
+					"SuperNag",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_Thanks"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_thanks_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_thanks_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_Thanks"
+				m_Requirements = 
+				[
+					"Thanks",
+					"Isnaga_siren",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_PainChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_underattack_01"
+					m_params = 
+					{
+						m_respeakdelay.start = 120.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_PainChance_25%"
+				m_Requirements = 
+				[
+					"Pain",
+					"Isnaga_siren",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_Pain"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_pain_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_pain_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_pain_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_pain_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_pain_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_pain_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_pain_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_pain_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_pain_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_pain_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_pain_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_pain_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_pain_13"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_Pain"
+				m_Requirements = 
+				[
+					"Pain",
+					"Isnaga_siren",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_InTheBag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_inthebag_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_InTheBag"
+				m_Requirements = 
+				[
+					"InTheBag",
+					"Isnaga_siren",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_Defeat"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_lose_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_lose_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_Defeat"
+				m_Requirements = 
+				[
+					"Defeat",
+					"Isnaga_siren",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_Victory"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_win_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_win_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_win_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_Victory"
+				m_Requirements = 
+				[
+					"Victory",
+					"Isnaga_siren",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_ItemDropIsCommonDrop"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_itemcommon_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_ItemDropIsCommonDrop"
+				m_Requirements = 
+				[
+					"ItemDrop",
+					"Isnaga_siren",
+					"IsCommonDrop",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_ItemDropIsRareDrop"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_itemmoderate_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_ItemDropIsRareDrop"
+				m_Requirements = 
+				[
+					"ItemDrop",
+					"Isnaga_siren",
+					"IsRareDrop",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_ItemDropIsUltraRareDrop"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_itemrare_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_itemrare_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_ItemDropIsUltraRareDrop"
+				m_Requirements = 
+				[
+					"ItemDrop",
+					"Isnaga_siren",
+					"IsUltraRareDrop",
+				]
+			}
+		},
+		{
+			m_name = "naga_siren_EmoteIsEmoteLaugh"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_laugh_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_laugh_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_laugh_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "naga_siren_naga_laugh_04"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "naga_siren_EmoteIsEmoteLaugh"
+				m_Requirements = 
+				[
+					"Emote",
+					"Isnaga_siren",
+					"IsEmoteLaugh",
+				]
+			}
+		},
+	]
+	m_Requirements = 
+	[
+		{
+			m_name = "Isnaga_siren"
+			m_matchKey = "classname"
+			m_matchExpr = "npc_dota_hero_naga_siren"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsNagaSirenMirrorImage"
+			m_matchKey = "abilityname"
+			m_matchExpr = "naga_siren_mirror_image"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsNagaSirenEnsnare"
+			m_matchKey = "abilityname"
+			m_matchExpr = "naga_siren_ensnare"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsNagaSirenRipTide"
+			m_matchKey = "abilityname"
+			m_matchExpr = "naga_siren_rip_tide"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsNagaSirenSongCancel"
+			m_matchKey = "abilityname"
+			m_matchExpr = "naga_siren_song_of_the_siren_cancel"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsNagaSirenLoadoutSpawn"
+			m_matchKey = "special_spawn"
+			m_matchExpr = "naga_siren_loadout_spawn"
+			m_flWeight = 5.0
+		},
+	]
+}

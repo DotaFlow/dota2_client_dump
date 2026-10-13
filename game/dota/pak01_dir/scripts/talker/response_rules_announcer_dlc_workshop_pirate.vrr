@@ -1,0 +1,3587 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vrr_c1:version{c1f07085-5299-4e8a-b7e9-1cbb66bbbe23} -->
+{
+	m_Includes = 
+	[
+		"scripts/talker/response_rules_shared.vrr",
+	]
+	m_ResponseGroups = 
+	[
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsAnnouncerVoice_PirateIsPickYour"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_your_pick1"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_your_pick2"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_your_pick3"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsAnnouncerVoice_PirateIsPickYour"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsAnnouncerVoice_Pirate",
+					"IsPickYour",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsAnnouncerVoice_PirateIsPlayerTeam_RadiantIsPickDire"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_enemy_pick1"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_enemy_pick2"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_enemy_pick3"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsAnnouncerVoice_PirateIsPlayerTeam_RadiantIsPickDire"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsAnnouncerVoice_Pirate",
+					"IsPlayerTeam_Radiant",
+					"IsPickDire",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsAnnouncerVoice_PirateIsPlayerTeam_DireIsPickRadiant"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_enemy_pick1"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_enemy_pick2"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_enemy_pick3"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsAnnouncerVoice_PirateIsPlayerTeam_DireIsPickRadiant"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsAnnouncerVoice_Pirate",
+					"IsPlayerTeam_Dire",
+					"IsPickRadiant",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsAnnouncerVoice_PirateIsPickDireIsPlayerTeam_Spectator"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_dire_pick1"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_dire_pick2"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsAnnouncerVoice_PirateIsPickDireIsPlayerTeam_Spectator"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsAnnouncerVoice_Pirate",
+					"IsPickDire",
+					"IsPlayerTeam_Spectator",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsAnnouncerVoice_PirateIsPickRadiantIsPlayerTeam_Spectator"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_radiant_pick"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsAnnouncerVoice_PirateIsPickRadiantIsPlayerTeam_Spectator"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsAnnouncerVoice_Pirate",
+					"IsPickRadiant",
+					"IsPlayerTeam_Spectator",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsAnnouncerVoice_PirateIsBanYour"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_your_ban1"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_your_ban2"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsAnnouncerVoice_PirateIsBanYour"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsAnnouncerVoice_Pirate",
+					"IsBanYour",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsAnnouncerVoice_PirateIsBanDireIsPlayerTeam_Radiant"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_enemy_ban"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsAnnouncerVoice_PirateIsBanDireIsPlayerTeam_Radiant"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsAnnouncerVoice_Pirate",
+					"IsBanDire",
+					"IsPlayerTeam_Radiant",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsAnnouncerVoice_PirateIsBanRadiantIsPlayerTeam_Dire"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_enemy_ban"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsAnnouncerVoice_PirateIsBanRadiantIsPlayerTeam_Dire"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsAnnouncerVoice_Pirate",
+					"IsBanRadiant",
+					"IsPlayerTeam_Dire",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsAnnouncerVoice_PirateIsBanDireIsPlayerTeam_Spectator"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_dire_ban1"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_dire_ban2"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsAnnouncerVoice_PirateIsBanDireIsPlayerTeam_Spectator"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsAnnouncerVoice_Pirate",
+					"IsBanDire",
+					"IsPlayerTeam_Spectator",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsAnnouncerVoice_PirateIsBanRadiantIsPlayerTeam_Spectator"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_radiant_ban"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsAnnouncerVoice_PirateIsBanRadiantIsPlayerTeam_Spectator"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsAnnouncerVoice_Pirate",
+					"IsBanRadiant",
+					"IsPlayerTeam_Spectator",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsAnnouncerVoice_PirateIs10SecToPick"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_tensecsremain1"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_tensecsremain2"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsAnnouncerVoice_PirateIs10SecToPick"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsAnnouncerVoice_Pirate",
+					"Is10SecToPick",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsAnnouncerVoice_PirateIs5SecToPick"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_fivesecsremain"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsAnnouncerVoice_PirateIs5SecToPick"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsAnnouncerVoice_Pirate",
+					"Is5SecToPick",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsAnnouncerVoice_PirateIsReserveTime"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_reservetime"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsAnnouncerVoice_PirateIsReserveTime"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsAnnouncerVoice_Pirate",
+					"IsReserveTime",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsAnnouncerVoice_PirateIsSelectHero"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_pick_take"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_choose1"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_choose2"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_select1"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_select2"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsAnnouncerVoice_PirateIsSelectHero"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsAnnouncerVoice_Pirate",
+					"IsSelectHero",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsGameStarting30IsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_thirtysecsbattle1"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_thirtysecsbattle2"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_thirtysecsbattle3"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_thirtysecsbattle4"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsGameStarting30IsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsGameStarting30",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsGameStarting10IsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_tensecsbattle"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsGameStarting10IsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsGameStarting10",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsPrepStartIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_prepareforbattle"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsPrepStartIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsPrepStart",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsGameStartIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_battlebegins1"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_battlebegins2"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsGameStartIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsGameStart",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsFortAttackedIsNotSpectatorIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_your_ancientattack1"
+					m_params = 
+					{
+						m_respeakdelay.start = 6.0
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_your_ancientattack2"
+					m_params = 
+					{
+						m_respeakdelay.start = 6.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsFortAttackedIsNotSpectatorIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsFortAttacked",
+					"IsNotSpectator",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsFortAttackedIsGoodAttackedIsSpectatorIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_radiant_ancientattack1"
+					m_params = 
+					{
+						m_respeakdelay.start = 8.0
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_radiant_ancientattack2"
+					m_params = 
+					{
+						m_respeakdelay.start = 8.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsFortAttackedIsGoodAttackedIsSpectatorIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsFortAttacked",
+					"IsGoodAttacked",
+					"IsSpectator",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsFortAttackedIsBadAttackedIsSpectatorIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_dire_ancientattack1"
+					m_params = 
+					{
+						m_respeakdelay.start = 8.0
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_dire_ancientattack2"
+					m_params = 
+					{
+						m_respeakdelay.start = 8.0
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_dire_ancientattack3"
+					m_params = 
+					{
+						m_respeakdelay.start = 8.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsFortAttackedIsBadAttackedIsSpectatorIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsFortAttacked",
+					"IsBadAttacked",
+					"IsSpectator",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsTowerAttackedIsGoodAttackedIsSpectatorIsTopLaneIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_radiant_toptowerattack1"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_radiant_toptowerattack2"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsTowerAttackedIsGoodAttackedIsSpectatorIsTopLaneIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsTowerAttacked",
+					"IsGoodAttacked",
+					"IsSpectator",
+					"IsTopLane",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsTowerAttackedIsGoodAttackedIsSpectatorIsMidLaneIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_radiant_midtowerattack"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsTowerAttackedIsGoodAttackedIsSpectatorIsMidLaneIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsTowerAttacked",
+					"IsGoodAttacked",
+					"IsSpectator",
+					"IsMidLane",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsTowerAttackedIsGoodAttackedIsSpectatorIsBotLaneIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_radiant_bottowerattack1"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_radiant_bottowerattack2"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsTowerAttackedIsGoodAttackedIsSpectatorIsBotLaneIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsTowerAttacked",
+					"IsGoodAttacked",
+					"IsSpectator",
+					"IsBotLane",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsTowerAttackedIsBadAttackedIsSpectatorIsTopLaneIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_dire_toptowerattack"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsTowerAttackedIsBadAttackedIsSpectatorIsTopLaneIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsTowerAttacked",
+					"IsBadAttacked",
+					"IsSpectator",
+					"IsTopLane",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsTowerAttackedIsBadAttackedIsSpectatorIsMidLaneIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_dire_midtowerattack"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsTowerAttackedIsBadAttackedIsSpectatorIsMidLaneIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsTowerAttacked",
+					"IsBadAttacked",
+					"IsSpectator",
+					"IsMidLane",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsTowerAttackedIsBadAttackedIsSpectatorIsBotLaneIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_dire_bottowerattack"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsTowerAttackedIsBadAttackedIsSpectatorIsBotLaneIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsTowerAttacked",
+					"IsBadAttacked",
+					"IsSpectator",
+					"IsBotLane",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsTowerAttackedIsNotSpectatorIsTopLaneIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_your_toptowerattack1"
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_NEGATIVE"
+						m_contexts = "foo:0"
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_your_toptowerattack2"
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_NEGATIVE"
+						m_contexts = "foo:0"
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_your_toptowerattack3"
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_NEGATIVE"
+						m_contexts = "foo:0"
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsTowerAttackedIsNotSpectatorIsTopLaneIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsTowerAttacked",
+					"IsNotSpectator",
+					"IsTopLane",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsTowerAttackedIsNotSpectatorIsMidLaneIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_your_midtowerattack1"
+					m_params = 
+					{
+						m_respeakdelay.start = 7.0
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_your_midtowerattack2"
+					m_params = 
+					{
+						m_respeakdelay.start = 7.0
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_your_midtowerattack3"
+					m_params = 
+					{
+						m_respeakdelay.start = 7.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsTowerAttackedIsNotSpectatorIsMidLaneIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsTowerAttacked",
+					"IsNotSpectator",
+					"IsMidLane",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsTowerAttackedIsNotSpectatorIsBotLaneIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_your_bottowerattack1"
+					m_params = 
+					{
+						m_respeakdelay.start = 7.0
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_your_bottowerattack2"
+					m_params = 
+					{
+						m_respeakdelay.start = 7.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsTowerAttackedIsNotSpectatorIsBotLaneIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsTowerAttacked",
+					"IsNotSpectator",
+					"IsBotLane",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsTowerKilledIsTopLaneIsNotDenyIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_your_toptowerfallen1"
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_NEGATIVE"
+						m_contexts = "foo:0"
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_your_toptowerfallen2"
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_NEGATIVE"
+						m_contexts = "foo:0"
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_your_toptowerfallen3"
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_NEGATIVE"
+						m_contexts = "foo:0"
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsTowerKilledIsTopLaneIsNotDenyIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsTowerKilled",
+					"IsTopLane",
+					"IsNotDeny",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsTowerKilledIsMidLaneIsNotDenyIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_your_midtowerfallen1"
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_NEGATIVE"
+						m_contexts = "foo:0"
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_your_midtowerfallen2"
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_NEGATIVE"
+						m_contexts = "foo:0"
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_your_midtowerfallen3"
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_NEGATIVE"
+						m_contexts = "foo:0"
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsTowerKilledIsMidLaneIsNotDenyIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsTowerKilled",
+					"IsMidLane",
+					"IsNotDeny",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsTowerKilledIsBotLaneIsNotDenyIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_your_bottowerfallen1"
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_NEGATIVE"
+						m_contexts = "foo:0"
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_your_bottowerfallen2"
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_NEGATIVE"
+						m_contexts = "foo:0"
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_your_bottowerfallen3"
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_NEGATIVE"
+						m_contexts = "foo:0"
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_your_bottowerfallen4"
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_NEGATIVE"
+						m_contexts = "foo:0"
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_your_bottowerfallen5"
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_NEGATIVE"
+						m_contexts = "foo:0"
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsTowerKilledIsBotLaneIsNotDenyIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsTowerKilled",
+					"IsBotLane",
+					"IsNotDeny",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsGoodTowerKilledIsSpectatorIsTopLaneIsNotDenyIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_radiant_toptowerfallen"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsGoodTowerKilledIsSpectatorIsTopLaneIsNotDenyIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsGoodTowerKilled",
+					"IsSpectator",
+					"IsTopLane",
+					"IsNotDeny",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsGoodTowerKilledIsSpectatorIsMidLaneIsNotDenyIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_radiant_midtowerfallen"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsGoodTowerKilledIsSpectatorIsMidLaneIsNotDenyIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsGoodTowerKilled",
+					"IsSpectator",
+					"IsMidLane",
+					"IsNotDeny",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsGoodTowerKilledIsSpectatorIsBotLaneIsNotDenyIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_radiant_bottowerfallen1"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_radiant_bottowerfallen2"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsGoodTowerKilledIsSpectatorIsBotLaneIsNotDenyIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsGoodTowerKilled",
+					"IsSpectator",
+					"IsBotLane",
+					"IsNotDeny",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsBadTowerKilledIsSpectatorIsTopLaneIsNotDenyIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_dire_toptowerfallen"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsBadTowerKilledIsSpectatorIsTopLaneIsNotDenyIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsBadTowerKilled",
+					"IsSpectator",
+					"IsTopLane",
+					"IsNotDeny",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsBadTowerKilledIsSpectatorIsMidLaneIsNotDenyIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_dire_midtowerfallen"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsBadTowerKilledIsSpectatorIsMidLaneIsNotDenyIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsBadTowerKilled",
+					"IsSpectator",
+					"IsMidLane",
+					"IsNotDeny",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsBadTowerKilledIsSpectatorIsBotLaneIsNotDenyIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_dire_bottowerfallen"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsBadTowerKilledIsSpectatorIsBotLaneIsNotDenyIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsBadTowerKilled",
+					"IsSpectator",
+					"IsBotLane",
+					"IsNotDeny",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsEnemyTowerKilledIsTopLaneIsNotDenyIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_enemy_toptowerfallen1"
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_POSITIVE"
+						m_contexts = "foo:0"
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_enemy_toptowerfallen2"
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_POSITIVE"
+						m_contexts = "foo:0"
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsEnemyTowerKilledIsTopLaneIsNotDenyIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsEnemyTowerKilled",
+					"IsTopLane",
+					"IsNotDeny",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsEnemyTowerKilledIsMidLaneIsNotDenyIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_enemy_midtowerfallen"
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_POSITIVE"
+						m_contexts = "foo:0"
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsEnemyTowerKilledIsMidLaneIsNotDenyIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsEnemyTowerKilled",
+					"IsMidLane",
+					"IsNotDeny",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsEnemyTowerKilledIsBotLaneIsNotDenyIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_enemy_bottowerfallen"
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_POSITIVE"
+						m_contexts = "foo:0"
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsEnemyTowerKilledIsBotLaneIsNotDenyIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsEnemyTowerKilled",
+					"IsBotLane",
+					"IsNotDeny",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsBarracksAttackedIsNotSpectatorIsTopLaneIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_your_topbarracksattack1"
+					m_params = 
+					{
+						m_respeakdelay.start = 7.0
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_your_topbarracksattack2"
+					m_params = 
+					{
+						m_respeakdelay.start = 7.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsBarracksAttackedIsNotSpectatorIsTopLaneIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsBarracksAttacked",
+					"IsNotSpectator",
+					"IsTopLane",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsBarracksAttackedIsNotSpectatorIsMidLaneIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_your_midbarracksattack"
+					m_params = 
+					{
+						m_respeakdelay.start = 7.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsBarracksAttackedIsNotSpectatorIsMidLaneIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsBarracksAttacked",
+					"IsNotSpectator",
+					"IsMidLane",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsBarracksAttackedIsNotSpectatorIsBotLaneIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_your_botbarracksattack"
+					m_params = 
+					{
+						m_respeakdelay.start = 7.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsBarracksAttackedIsNotSpectatorIsBotLaneIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsBarracksAttacked",
+					"IsNotSpectator",
+					"IsBotLane",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsBarracksAttackedIsGoodAttackedIsSpectatorIsTopLaneIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_radiant_topbarracksattack"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsBarracksAttackedIsGoodAttackedIsSpectatorIsTopLaneIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsBarracksAttacked",
+					"IsGoodAttacked",
+					"IsSpectator",
+					"IsTopLane",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsBarracksAttackedIsGoodAttackedIsSpectatorIsMidLaneIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_radiant_midbarracksattack"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsBarracksAttackedIsGoodAttackedIsSpectatorIsMidLaneIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsBarracksAttacked",
+					"IsGoodAttacked",
+					"IsSpectator",
+					"IsMidLane",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsBarracksAttackedIsGoodAttackedIsSpectatorIsBotLaneIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_radiant_botbarracksattack1"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_radiant_botbarracksattack2"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsBarracksAttackedIsGoodAttackedIsSpectatorIsBotLaneIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsBarracksAttacked",
+					"IsGoodAttacked",
+					"IsSpectator",
+					"IsBotLane",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsBarracksAttackedIsBadAttackedIsSpectatorIsTopLaneIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_dire_topbarracksattack"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsBarracksAttackedIsBadAttackedIsSpectatorIsTopLaneIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsBarracksAttacked",
+					"IsBadAttacked",
+					"IsSpectator",
+					"IsTopLane",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsBarracksAttackedIsBadAttackedIsSpectatorIsMidLaneIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_dire_midbarracksattack"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsBarracksAttackedIsBadAttackedIsSpectatorIsMidLaneIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsBarracksAttacked",
+					"IsBadAttacked",
+					"IsSpectator",
+					"IsMidLane",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsBarracksAttackedIsBadAttackedIsSpectatorIsBotLaneIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_dire_botbarracksattck"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsBarracksAttackedIsBadAttackedIsSpectatorIsBotLaneIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsBarracksAttacked",
+					"IsBadAttacked",
+					"IsSpectator",
+					"IsBotLane",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsBarracksKilledIsTopLaneIsNotSpectatorIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_your_topbarracksfallen1"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_your_topbarracksfallen2"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsBarracksKilledIsTopLaneIsNotSpectatorIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsBarracksKilled",
+					"IsTopLane",
+					"IsNotSpectator",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsBarracksKilledIsMidLaneIsNotSpectatorIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_your_midbarracksfallen1"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_your_midbarracksfallen2"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_your_midbarracksfallen3"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsBarracksKilledIsMidLaneIsNotSpectatorIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsBarracksKilled",
+					"IsMidLane",
+					"IsNotSpectator",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsBarracksKilledIsBotLaneIsNotSpectatorIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_your_botbarracksfallen1"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_your_botbarracksfallen2"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_your_botbarracksfallen3"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsBarracksKilledIsBotLaneIsNotSpectatorIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsBarracksKilled",
+					"IsBotLane",
+					"IsNotSpectator",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsGoodBarracksKilledIsSpectatorIsTopLaneIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_radiant_topbarracksfallen"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsGoodBarracksKilledIsSpectatorIsTopLaneIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsGoodBarracksKilled",
+					"IsSpectator",
+					"IsTopLane",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsGoodBarracksKilledIsSpectatorIsMidLaneIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_radiant_midbarracksfallen"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsGoodBarracksKilledIsSpectatorIsMidLaneIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsGoodBarracksKilled",
+					"IsSpectator",
+					"IsMidLane",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsGoodBarracksKilledIsSpectatorIsBotLaneIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_radiant_botbarracksfallen"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsGoodBarracksKilledIsSpectatorIsBotLaneIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsGoodBarracksKilled",
+					"IsSpectator",
+					"IsBotLane",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsBadBarracksKilledIsSpectatorIsTopLaneIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_dire_topbarracksfallen2"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsBadBarracksKilledIsSpectatorIsTopLaneIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsBadBarracksKilled",
+					"IsSpectator",
+					"IsTopLane",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsBadBarracksKilledIsSpectatorIsMidLaneIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_dire_midbarracksfallen"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsBadBarracksKilledIsSpectatorIsMidLaneIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsBadBarracksKilled",
+					"IsSpectator",
+					"IsMidLane",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsBadBarracksKilledIsSpectatorIsBotLaneIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_dire_botbarracksfallen"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsBadBarracksKilledIsSpectatorIsBotLaneIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsBadBarracksKilled",
+					"IsSpectator",
+					"IsBotLane",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsEnemyBarracksKilledIsTopLaneIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_enemy_topbarracksfallen"
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_POSITIVE"
+						m_contexts = "foo:0"
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsEnemyBarracksKilledIsTopLaneIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsEnemyBarracksKilled",
+					"IsTopLane",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsEnemyBarracksKilledIsMidLaneIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_enemy_midbarracksfallen1"
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_POSITIVE"
+						m_contexts = "foo:0"
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_enemy_midbarracksfallen2"
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_POSITIVE"
+						m_contexts = "foo:0"
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsEnemyBarracksKilledIsMidLaneIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsEnemyBarracksKilled",
+					"IsMidLane",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsEnemyBarracksKilledIsBotLaneIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_enemy_botbarracksfallen1"
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_POSITIVE"
+						m_contexts = "foo:0"
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_enemy_botbarracksfallen2"
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_POSITIVE"
+						m_contexts = "foo:0"
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsEnemyBarracksKilledIsBotLaneIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsEnemyBarracksKilled",
+					"IsBotLane",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsTowerKilledIsTopLaneIsDenyIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_your_toptowerdenied1"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_your_toptowerdenied2"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsTowerKilledIsTopLaneIsDenyIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsTowerKilled",
+					"IsTopLane",
+					"IsDeny",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsTowerKilledIsMidLaneIsDenyIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_your_midtowerdenied1"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_your_midtowerdenied2"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsTowerKilledIsMidLaneIsDenyIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsTowerKilled",
+					"IsMidLane",
+					"IsDeny",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsTowerKilledIsBotLaneIsDenyIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_your_bottowerdenied"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsTowerKilledIsBotLaneIsDenyIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsTowerKilled",
+					"IsBotLane",
+					"IsDeny",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsEnemyTowerKilledIsTopLaneIsDenyIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_enemy_toptowerdenied1"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_enemy_toptowerdenied2"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsEnemyTowerKilledIsTopLaneIsDenyIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsEnemyTowerKilled",
+					"IsTopLane",
+					"IsDeny",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsEnemyTowerKilledIsMidLaneIsDenyIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_enemy_midtowerdenied"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsEnemyTowerKilledIsMidLaneIsDenyIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsEnemyTowerKilled",
+					"IsMidLane",
+					"IsDeny",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsEnemyTowerKilledIsGoodAttackedIsBotLaneIsDenyIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_radiant_bottowerdenied"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsEnemyTowerKilledIsGoodAttackedIsBotLaneIsDenyIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsEnemyTowerKilled",
+					"IsGoodAttacked",
+					"IsBotLane",
+					"IsDeny",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsEnemyTowerKilledIsBadAttackedIsBotLaneIsDenyIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_dire_bottowerdenied"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsEnemyTowerKilledIsBadAttackedIsBotLaneIsDenyIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsEnemyTowerKilled",
+					"IsBadAttacked",
+					"IsBotLane",
+					"IsDeny",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsGoodTowerKilledIsSpectatorIsTopLaneIsDenyIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_radiant_toptowerdenied"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsGoodTowerKilledIsSpectatorIsTopLaneIsDenyIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsGoodTowerKilled",
+					"IsSpectator",
+					"IsTopLane",
+					"IsDeny",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsGoodTowerKilledIsSpectatorIsMidLaneIsDenyIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_radiant_midtowerdenied"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsGoodTowerKilledIsSpectatorIsMidLaneIsDenyIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsGoodTowerKilled",
+					"IsSpectator",
+					"IsMidLane",
+					"IsDeny",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsGoodTowerKilledIsSpectatorIsBotLaneIsDenyIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_radiant_bottowerdenied"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsGoodTowerKilledIsSpectatorIsBotLaneIsDenyIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsGoodTowerKilled",
+					"IsSpectator",
+					"IsBotLane",
+					"IsDeny",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsBadTowerKilledIsSpectatorIsTopLaneIsDenyIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_dire_toptowerdenied"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsBadTowerKilledIsSpectatorIsTopLaneIsDenyIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsBadTowerKilled",
+					"IsSpectator",
+					"IsTopLane",
+					"IsDeny",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsBadTowerKilledIsSpectatorIsMidLaneIsDenyIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_dire_midtowerdenied"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsBadTowerKilledIsSpectatorIsMidLaneIsDenyIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsBadTowerKilled",
+					"IsSpectator",
+					"IsMidLane",
+					"IsDeny",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsBadTowerKilledIsSpectatorIsBotLaneIsDenyIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_dire_bottowerdenied"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsBadTowerKilledIsSpectatorIsBotLaneIsDenyIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsBadTowerKilled",
+					"IsSpectator",
+					"IsBotLane",
+					"IsDeny",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomGlyphUsedBadIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_dire_fortified1"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_dire_fortified2"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomGlyphUsedBadIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"GlyphUsedBad",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomGlyphUsedGoodIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_radiant_fortified1"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_radiant_fortified2"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomGlyphUsedGoodIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"GlyphUsedGood",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomCourierLostBadIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_dire_courier1"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_dire_courier2"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomCourierLostBadIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"CourierLostBad",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomCourierLostGoodIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_radiant_courier1"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_radiant_courier2"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomCourierLostGoodIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"CourierLostGood",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsMegaCreepsIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_we_megacreeps1"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_we_megacreeps2"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsMegaCreepsIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsMegaCreeps",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsEnemyMegaCreepsIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_enemy_megacreeps"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsEnemyMegaCreepsIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsEnemyMegaCreeps",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsBadMegaCreepsIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_dire_megacreeps"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsBadMegaCreepsIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsBadMegaCreeps",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsGoodMegaCreepsIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_radiant_megacreeps"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsGoodMegaCreepsIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsGoodMegaCreeps",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsRoshanKilledBadIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_roshan_dire1"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_roshan_dire2"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_roshan_dire3"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_roshan_direkracken"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_roshan_direwhatshisface"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsRoshanKilledBadIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsRoshanKilledBad",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsRoshanKilledGoodIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_roshan_radiant1"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_roshan_radiant2"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_roshan_radiant3"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_roshan_radientkracken"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_roshan_radientwhatshisface"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsRoshanKilledGoodIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsRoshanKilledGood",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsBadVictoryIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_dire_victory1"
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_POSITIVE"
+						m_contexts = "foo:0"
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_dire_victory2"
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_POSITIVE"
+						m_contexts = "foo:0"
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_dire_victory3"
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_POSITIVE"
+						m_contexts = "foo:0"
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsBadVictoryIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsBadVictory",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsGoodVictoryIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_radiant_victory1"
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_POSITIVE"
+						m_contexts = "foo:0"
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_radiant_victory2"
+					m_flFollowupDelay = 0.01
+					m_pConceptFollowup = 
+					{
+						m_target = "self"
+						m_concept = "TLK_DOTA_FOLLOWUP_POSITIVE"
+						m_contexts = "foo:0"
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsGoodVictoryIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsGoodVictory",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsAllPickIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_allpick1"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_allpick2"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_pick_poison"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsAllPickIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsAllPick",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsAllRandomIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_allrandom1"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_allrandom2"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsAllRandomIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsAllRandom",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsAllRandomChance_20%IsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_allrandom3"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsAllRandomChance_20%IsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsAllRandom",
+					"Chance_20%",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsCaptainsDraftIsDraftBeginIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_capdraft"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsCaptainsDraftIsDraftBeginIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsCaptainsDraft",
+					"IsDraftBegin",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsCaptainsModeIsDraftBeginIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_capmode"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsCaptainsModeIsDraftBeginIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsCaptainsMode",
+					"IsDraftBegin",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsReverseCaptainsModeIsDraftBeginIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_capmode"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsReverseCaptainsModeIsDraftBeginIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsReverseCaptainsMode",
+					"IsDraftBegin",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsRandomDraftIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_randomdraft"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsRandomDraftIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsRandomDraft",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsSingleDraftIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_singledraft1"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_singledraft2"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsSingleDraftIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsSingleDraft",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsDeathMatchIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_deathmatch"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsDeathMatchIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsDeathMatch",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsTenSecondsRemainingIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_tensecsremain1"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_tensecsremain2"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsTenSecondsRemainingIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsTenSecondsRemaining",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsFiveSecondsRemainingIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_fivesecsremain"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsFiveSecondsRemainingIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsFiveSecondsRemaining",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsMidOnlyIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_pick_take"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_choose1"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_choose2"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsMidOnlyIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsMidOnly",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsLeastPlayedIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_pick_take"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_choose1"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_choose2"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsLeastPlayedIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsLeastPlayed",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsLimitedHeroesIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_pick_take"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_choose1"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_choose2"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsLimitedHeroesIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsLimitedHeroes",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsCustomModeIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_pick_take"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_choose1"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_choose2"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsCustomModeIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsCustomMode",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsOneVsOneIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_pick_take"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_choose1"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_choose2"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsOneVsOneIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsOneVsOne",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsAnnounceIdleChance_15%DuringGameIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_spec_othersfight"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_spec_river"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_spec_scared"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_spec_seemyboat"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_spec_whereparrot"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_spec_whereparrot2"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_spec_whereparrot3"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsAnnounceIdleChance_15%DuringGameIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsAnnounceIdle",
+					"Chance_15%",
+					"DuringGame",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_CustomIsAnnounceHeroPickChance_50%IsEnemyKunkkaIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_pick_kunkka1"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_pick_kunkka4"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_CustomIsAnnounceHeroPickChance_50%IsEnemyKunkkaIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsAnnounceHeroPick",
+					"Chance_50%",
+					"IsEnemyKunkka",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_Followup_PositiveIsPlayerTeam_DireIsBadVictoryIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_winning_allbase"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_winning_home"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_winning_jollyrodger"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_winning_nextround"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_winning_rum"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_winning_wenches"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_winning_yaarr"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_Followup_PositiveIsPlayerTeam_DireIsBadVictoryIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Followup_Positive",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsPlayerTeam_Dire",
+					"IsBadVictory",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_Followup_PositiveIsPlayerTeam_RadiantIsGoodVictoryIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_winning_allbase"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_winning_home"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_winning_jollyrodger"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_winning_nextround"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_winning_rum"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_winning_wenches"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_winning_yaarr"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_Followup_PositiveIsPlayerTeam_RadiantIsGoodVictoryIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Followup_Positive",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsPlayerTeam_Radiant",
+					"IsGoodVictory",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_Followup_PositiveIsPlayerTeam_DireIsGoodVictoryIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_losing_blubberin"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_losing_daveyjones"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_losing_farewell"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_losing_mysight"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_losing_plank"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_losing_shineboots"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_losing_shore"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_Followup_PositiveIsPlayerTeam_DireIsGoodVictoryIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Followup_Positive",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsPlayerTeam_Dire",
+					"IsGoodVictory",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_Followup_PositiveIsPlayerTeam_RadiantIsBadVictoryIsAnnouncerVoice_Pirate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_losing_blubberin"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_losing_daveyjones"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_losing_farewell"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_losing_mysight"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_losing_plank"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_losing_shineboots"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_losing_shore"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_Followup_PositiveIsPlayerTeam_RadiantIsBadVictoryIsAnnouncerVoice_Pirate"
+				m_Requirements = 
+				[
+					"Followup_Positive",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsPlayerTeam_Radiant",
+					"IsBadVictory",
+					"IsAnnouncerVoice_Pirate",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_Followup_PositiveIsAnnouncerVoice_PirateIsEnemyTowerKilledIsNotDenyChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_compliment_deckswabbinover"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_compliment_finework"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_compliment_firstrate"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_compliment_harhar"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_compliment_jackofall"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_compliment_jollygood"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_compliment_worksneverdone"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_Followup_PositiveIsAnnouncerVoice_PirateIsEnemyTowerKilledIsNotDenyChance_20%"
+				m_Requirements = 
+				[
+					"Followup_Positive",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsAnnouncerVoice_Pirate",
+					"IsEnemyTowerKilled",
+					"IsNotDeny",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_Followup_PositiveIsAnnouncerVoice_PirateIsEnemyBarracksKilledChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_compliment_deckswabbinover"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_compliment_finework"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_compliment_firstrate"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_compliment_harhar"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_compliment_jackofall"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_compliment_jollygood"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_compliment_worksneverdone"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_Followup_PositiveIsAnnouncerVoice_PirateIsEnemyBarracksKilledChance_20%"
+				m_Requirements = 
+				[
+					"Followup_Positive",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsAnnouncerVoice_Pirate",
+					"IsEnemyBarracksKilled",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_workshop_pirate_RespawnIsAnnouncerVoice_PirateChance_10%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_respawn_ahoy"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_respawn_allaboard"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_respawn_backinthere"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_respawn_battlestations"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_respawn_bootyback"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_respawn_goodasnew"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_respawn_handsondeck"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_workshop_pirate_announcer_capn_respawn_prepare"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_workshop_pirate_RespawnIsAnnouncerVoice_PirateChance_10%"
+				m_Requirements = 
+				[
+					"Respawn",
+					"Isannouncer_dlc_workshop_pirate",
+					"IsAnnouncerVoice_Pirate",
+					"Chance_10%",
+				]
+			}
+		},
+	]
+	m_Requirements = 
+	[
+		{
+			m_name = "Isannouncer_dlc_workshop_pirate"
+			m_matchKey = "classname"
+			m_matchExpr = "npc_dota_hero_announcer_dlc_workshop_pirate"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsAnnouncerVoice_Pirate"
+			m_matchKey = "announcer_voice"
+			m_matchExpr = "npc_dota_hero_announcer_dlc_workshop_pirate"
+			m_flWeight = 5.0
+		},
+	]
+}

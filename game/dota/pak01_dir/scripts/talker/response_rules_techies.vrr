@@ -1,0 +1,4567 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vrr_c1:version{c1f07085-5299-4e8a-b7e9-1cbb66bbbe23} -->
+{
+	m_Includes = 
+	[
+		"scripts/talker/response_rules_shared.vrr",
+	]
+	m_ResponseGroups = 
+	[
+		{
+			m_name = "techies_Spawn"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_spawn_01.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_spawn_02.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_spawn_03.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_spawn_04.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_spawn_05.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_spawn_06.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_Spawn"
+				m_Requirements = 
+				[
+					"Spawn",
+					"Istechies",
+				]
+			}
+		},
+		{
+			m_name = "techies_CustomIsGameStart"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_begin_01.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_CustomIsGameStart"
+				m_Requirements = 
+				[
+					"Custom",
+					"Istechies",
+					"IsGameStart",
+				]
+			}
+		},
+		{
+			m_name = "techies_CustomIsTechiesArcanaTaunt"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_move_26.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_move_28.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_move_45.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_move_46.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_move_48.vcd"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_move_50"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_move_54"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_attack_13.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_attack_24.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_attack_25.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_CustomIsTechiesArcanaTaunt"
+				m_Requirements = 
+				[
+					"Custom",
+					"Istechies",
+					"IsTechiesArcanaTaunt",
+				]
+			}
+		},
+		{
+			m_name = "techies_CustomIsTechiesLoadoutSpawn"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_spawn_01.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_spawn_02.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_spawn_03.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_spawn_04.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_spawn_05.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_spawn_06.vcd"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_attack_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_cast_01"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_cast_02.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_cast_03.vcd"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_setmine_11"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_settrap_01.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_CustomIsTechiesLoadoutSpawn"
+				m_Requirements = 
+				[
+					"Custom",
+					"Istechies",
+					"IsTechiesLoadoutSpawn",
+				]
+			}
+		},
+		{
+			m_name = "techies_KillIsFirstBlood"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_firstblood_01.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_firstblood_02.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_KillIsFirstBlood"
+				m_Requirements = 
+				[
+					"Kill",
+					"Istechies",
+					"IsFirstBlood",
+				]
+			}
+		},
+		{
+			m_name = "techies_KillIsFirstBloodChance_10%"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_firstblood_03.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_KillIsFirstBloodChance_10%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Istechies",
+					"IsFirstBlood",
+					"Chance_10%",
+				]
+			}
+		},
+		{
+			m_name = "techies_KillIsTechiesSetMineChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_mineblowsup_01.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_mineblowsup_02.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_mineblowsup_03.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_mineblowsup_04.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_mineblowsup_05.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_mineblowsup_06.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_mineblowsup_08.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_mineblowsup_09.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_minekill_01.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_minekill_02.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_minekill_03.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_KillIsTechiesSetMineChance_25%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Istechies",
+					"IsTechiesSetMine",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "techies_KillIsTechiesZapChance_75%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_trapgoesoff_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_trapgoesoff_03"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_trapgoesoff_07.vcd"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_trapgoesoff_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_trapgoesoff_10"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_KillIsTechiesZapChance_75%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Istechies",
+					"IsTechiesZap",
+					"Chance_75%",
+				]
+			}
+		},
+		{
+			m_name = "techies_KillIsTechiesSetMineChance_15%"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_focuseddetonate_01.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_focuseddetonate_04.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_focuseddetonate_05.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_focuseddetonate_07.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_focuseddetonate_08.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_focuseddetonate_11.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_focuseddetonate_13.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_focuseddetonate_15.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_focuseddetonate_16.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_focuseddetonate_17.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_focuseddetonate_19.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_focuseddetonate_21.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_focuseddetonate_22.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_detonatekill_01.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_detonatekill_02.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_detonatekill_03.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_KillIsTechiesSetMineChance_15%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Istechies",
+					"IsTechiesSetMine",
+					"Chance_15%",
+				]
+			}
+		},
+		{
+			m_name = "techies_KillIsTechiesSetMineChance_5%"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_focuseddetonate_06.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_focuseddetonate_18.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_KillIsTechiesSetMineChance_5%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Istechies",
+					"IsTechiesSetMine",
+					"Chance_5%",
+				]
+			}
+		},
+		{
+			m_name = "techies_Kill"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_levelup_04.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_levelup_14.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_kill_02.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_kill_03.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_kill_04.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_kill_05.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_kill_06.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_kill_07.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_kill_08.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_kill_09.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_kill_11.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_kill_12.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_kill_13.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_kill_17.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_kill_18.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_kill_19.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_kill_20.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_kill_21.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_kill_22.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_kill_23.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_Kill"
+				m_Requirements = 
+				[
+					"Kill",
+					"Istechies",
+				]
+			}
+		},
+		{
+			m_name = "techies_KillChance_5%"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_kill_01.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_kill_14.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_kill_16.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_KillChance_5%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Istechies",
+					"Chance_5%",
+				]
+			}
+		},
+		{
+			m_name = "techies_KillIsEnemyAlchemistChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_rival_02.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_KillIsEnemyAlchemistChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Istechies",
+					"IsEnemyAlchemist",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "techies_KillIsEnemyGyrocopterChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_rival_03.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_KillIsEnemyGyrocopterChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Istechies",
+					"IsEnemyGyrocopter",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "techies_KillIsEnemyTinkerChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_rival_04.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_KillIsEnemyTinkerChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Istechies",
+					"IsEnemyTinker",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "techies_KillIsEnemyOgre_MagiChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_rival_06.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_rival_07.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_rival_08.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_KillIsEnemyOgre_MagiChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Istechies",
+					"IsEnemyOgre_Magi",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "techies_KillIsEnemyAbyssal_UnderlordChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_rival_10.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_KillIsEnemyAbyssal_UnderlordChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Istechies",
+					"IsEnemyAbyssal_Underlord",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "techies_KillIsEnemyDoom_BringerChance_3%"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_rival_11.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_KillIsEnemyDoom_BringerChance_3%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Istechies",
+					"IsEnemyDoom_Bringer",
+					"Chance_3%",
+				]
+			}
+		},
+		{
+			m_name = "techies_KillIsEnemyWispChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_rival_13.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_KillIsEnemyWispChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Istechies",
+					"IsEnemyWisp",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "techies_MoveIsTechSpeakTrioLow"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_move_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_move_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_move_03"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_move_04.vcd"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_move_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_move_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_move_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_move_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_move_11"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_move_12.vcd"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_move_21"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_move_22"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_move_23.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_move_24.vcd"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_move_40"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_move_45.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_move_46.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_move_47.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_move_48.vcd"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_move_49"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_MoveIsTechSpeakTrioLow"
+				m_Requirements = 
+				[
+					"Move",
+					"Istechies",
+					"IsTechSpeakTrioLow",
+				]
+			}
+		},
+		{
+			m_name = "techies_MoveIsTechSpeakTrioHigh"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_move_09.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_move_14.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_move_26.vcd"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_move_27"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_move_28.vcd"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_move_36"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_move_37"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_move_38"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_move_39"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_move_42.vcd"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_move_50"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_move_51.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_move_52.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_move_53.vcd"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_move_54"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_move_60"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_MoveIsTechSpeakTrioHigh"
+				m_Requirements = 
+				[
+					"Move",
+					"Istechies",
+					"IsTechSpeakTrioHigh",
+				]
+			}
+		},
+		{
+			m_name = "techies_MoveIsTechSpeakTrioBarrel"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_move_16"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_move_17"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_move_18"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_move_19"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_move_20"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_move_30.vcd"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_move_32.vcd"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_move_33"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_move_34"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_move_43"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_move_44"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_move_56"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_MoveIsTechSpeakTrioBarrel"
+				m_Requirements = 
+				[
+					"Move",
+					"Istechies",
+					"IsTechSpeakTrioBarrel",
+				]
+			}
+		},
+		{
+			m_name = "techies_AttackIsTechSpeakDuoLow"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_attack_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_attack_07"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_attack_13.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_attack_14.vcd"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_attack_15"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_attack_19"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_attack_21"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_attack_22.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_attack_23.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_AttackIsTechSpeakDuoLow"
+				m_Requirements = 
+				[
+					"Attack",
+					"Istechies",
+					"IsTechSpeakDuoLow",
+				]
+			}
+		},
+		{
+			m_name = "techies_AttackIsTechSpeakDuoHigh"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_attack_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_attack_03"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_attack_05.vcd"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_attack_06"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_attack_09.vcd"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_attack_12"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_attack_16.vcd"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_attack_20"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_attack_24.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_attack_25.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_AttackIsTechSpeakDuoHigh"
+				m_Requirements = 
+				[
+					"Attack",
+					"Istechies",
+					"IsTechSpeakDuoHigh",
+				]
+			}
+		},
+		{
+			m_name = "techies_CastExecuteIsTechiesSetMineIsTechSpeakDuoHigh"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_cast_02.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_cast_03.vcd"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_setmine_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_setmine_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_setmine_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_setmine_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_setmine_21"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_setmine_22"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_setmine_23.vcd"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_setmine_24"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_setmine_25"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_setmine_26"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_setmine_28"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_setmine_29"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_setmine_35"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_setmine_36"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_setmine_37"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_setmine_39"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_setmine_41"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_setmine_42"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_setmine_43"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_setmine_44"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_setmine_52"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_settrap_07"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_remotemines_02.vcd"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_remotemines_21"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_remotemines_22"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_remotemines_23"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_remotemines_28"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_remotemines_29"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_CastExecuteIsTechiesSetMineIsTechSpeakDuoHigh"
+				m_Requirements = 
+				[
+					"CastExecute",
+					"Istechies",
+					"IsTechiesSetMine",
+					"IsTechSpeakDuoHigh",
+				]
+			}
+		},
+		{
+			m_name = "techies_CastExecuteIsTechiesSetMineIsTechSpeakDuoLow"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_setmine_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_setmine_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_setmine_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_setmine_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_setmine_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_setmine_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_setmine_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_setmine_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_setmine_16"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_setmine_17"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_setmine_18"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_setmine_19"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_setmine_20"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_setmine_30"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_setmine_32"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_setmine_33"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_setmine_34"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_setmine_38"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_setmine_45"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_setmine_46"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_setmine_47"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_setmine_48"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_setmine_50"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_setmine_51"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_setmine_54.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_settrap_01.vcd"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_settrap_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_remotemines_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_remotemines_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_remotemines_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_remotemines_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_remotemines_17"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_remotemines_18"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_remotemines_19"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_remotemines_30"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_CastExecuteIsTechiesSetMineIsTechSpeakDuoLow"
+				m_Requirements = 
+				[
+					"CastExecute",
+					"Istechies",
+					"IsTechiesSetMine",
+					"IsTechSpeakDuoLow",
+				]
+			}
+		},
+		{
+			m_name = "techies_CastExecuteIsTechiesZapChance_75%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_settrap_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_settrap_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_settrap_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_settrap_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_settrap_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_settrap_11"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_CastExecuteIsTechiesZapChance_75%"
+				m_Requirements = 
+				[
+					"CastExecute",
+					"Istechies",
+					"IsTechiesZap",
+					"Chance_75%",
+				]
+			}
+		},
+		{
+			m_name = "techies_CastExecuteIsTechiesSetMineIsTechSpeakDuoLowRMine01"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_remotemines_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_CastExecuteIsTechiesSetMineIsTechSpeakDuoLowRMine01"
+				m_Requirements = 
+				[
+					"CastExecute",
+					"Istechies",
+					"IsTechiesSetMine",
+					"IsTechSpeakDuoLowRMine01",
+				]
+			}
+		},
+		{
+			m_name = "techies_CastExecuteIsTechiesStickyBombIsTechSpeakDuoLow"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_remotemines_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_remotemines_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_remotemines_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_remotemines_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_remotemines_15"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_remotemines_20"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_remotemines_25"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_remotemines_26"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_remotemines_27"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_CastExecuteIsTechiesStickyBombIsTechSpeakDuoLow"
+				m_Requirements = 
+				[
+					"CastExecute",
+					"Istechies",
+					"IsTechiesStickyBomb",
+					"IsTechSpeakDuoLow",
+				]
+			}
+		},
+		{
+			m_name = "techies_CastExecuteIsTechiesStickyBombIsTechSpeakDuoHigh"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_remotemines_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_remotemines_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_remotemines_16"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_CastExecuteIsTechiesStickyBombIsTechSpeakDuoHigh"
+				m_Requirements = 
+				[
+					"CastExecute",
+					"Istechies",
+					"IsTechiesStickyBomb",
+					"IsTechSpeakDuoHigh",
+				]
+			}
+		},
+		{
+			m_name = "techies_CastExecuteIsTechiesZapChance_5%"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_focuseddetonate_02.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_CastExecuteIsTechiesZapChance_5%"
+				m_Requirements = 
+				[
+					"CastExecute",
+					"Istechies",
+					"IsTechiesZap",
+					"Chance_5%",
+				]
+			}
+		},
+		{
+			m_name = "techies_CastExecuteIsTechiesZapChance_1%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_15"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_16"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_17"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_18"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_19"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_20"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_21"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_22"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_23"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_25"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_26"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_27"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_28"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_29"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_30"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_31"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_32"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_33"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_34"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_35"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_36"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_37"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_38"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_39"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_40"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_41"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_42"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_43"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_CastExecuteIsTechiesZapChance_1%"
+				m_Requirements = 
+				[
+					"CastExecute",
+					"Istechies",
+					"IsTechiesZap",
+					"Chance_1%",
+				]
+			}
+		},
+		{
+			m_name = "techies_DeathIsTechiesSuicideSuccess"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_suicidesquad_02.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_suicidesquad_03.vcd"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_suicidesquad_06"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_suicidesquad_11.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_suicidesquad_12.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_DeathIsTechiesSuicideSuccess"
+				m_Requirements = 
+				[
+					"Death",
+					"Istechies",
+					"IsTechiesSuicideSuccess",
+				]
+			}
+		},
+		{
+			m_name = "techies_DeathIsTechiesSuicideFizzle"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_suicidesquad_04.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_suicidesquad_09.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_suicidesquad_13.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_DeathIsTechiesSuicideFizzle"
+				m_Requirements = 
+				[
+					"Death",
+					"Istechies",
+					"IsTechiesSuicideFizzle",
+				]
+			}
+		},
+		{
+			m_name = "techies_DeathIsTechiesSuicideFizzleChance_15%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_suicidesquad_08"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_failure_01.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_DeathIsTechiesSuicideFizzleChance_15%"
+				m_Requirements = 
+				[
+					"Death",
+					"Istechies",
+					"IsTechiesSuicideFizzle",
+					"Chance_15%",
+				]
+			}
+		},
+		{
+			m_name = "techies_DeathIsTechiesSuicideSuccessChance_15%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_focuseddetonate_14"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_DeathIsTechiesSuicideSuccessChance_15%"
+				m_Requirements = 
+				[
+					"Death",
+					"Istechies",
+					"IsTechiesSuicideSuccess",
+					"Chance_15%",
+				]
+			}
+		},
+		{
+			m_name = "techies_Death"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_death_01.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_death_02.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_death_04.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_death_05.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_death_08.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_death_09.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_death_10.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_death_11.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_death_12.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_death_13.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_death_15.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_death_16.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_death_17.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_death_18.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_Death"
+				m_Requirements = 
+				[
+					"Death",
+					"Istechies",
+				]
+			}
+		},
+		{
+			m_name = "techies_DeathIsReincarnating"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_fastres_01.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_DeathIsReincarnating"
+				m_Requirements = 
+				[
+					"Death",
+					"Istechies",
+					"IsReincarnating",
+				]
+			}
+		},
+		{
+			m_name = "techies_DeathIsTechiesSuicideSuccessIsReincarnating"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_fastressuicide_01.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_DeathIsTechiesSuicideSuccessIsReincarnating"
+				m_Requirements = 
+				[
+					"Death",
+					"Istechies",
+					"IsTechiesSuicideSuccess",
+					"IsReincarnating",
+				]
+			}
+		},
+		{
+			m_name = "techies_DeathIsTechiesSuicideFizzleIsReincarnating"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_fastressuicide_01.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_DeathIsTechiesSuicideFizzleIsReincarnating"
+				m_Requirements = 
+				[
+					"Death",
+					"Istechies",
+					"IsTechiesSuicideFizzle",
+					"IsReincarnating",
+				]
+			}
+		},
+		{
+			m_name = "techies_LevelUp"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_levelup_01.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_levelup_02.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_levelup_03.vcd"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_levelup_05"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_levelup_06.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_levelup_08.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_levelup_09.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_levelup_10.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_levelup_12.vcd"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_levelup_13"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_levelup_15.vcd"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_levelup_17"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_levelup_18"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_levelup_19.vcd"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_levelup_20"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_levelup_21"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_LevelUp"
+				m_Requirements = 
+				[
+					"LevelUp",
+					"Istechies",
+				]
+			}
+		},
+		{
+			m_name = "techies_LevelUpChance_5%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_levelup_22"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_levelup_24"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_LevelUpChance_5%"
+				m_Requirements = 
+				[
+					"LevelUp",
+					"Istechies",
+					"Chance_5%",
+				]
+			}
+		},
+		{
+			m_name = "techies_AllyNearEarlyGameIsAllyAlchemist"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_ally_02.vcd"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_AllyNearEarlyGameIsAllyAlchemist"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Istechies",
+					"EarlyGame",
+					"IsAllyAlchemist",
+				]
+			}
+		},
+		{
+			m_name = "techies_AllyNearEarlyGameIsAllyOgre_Magi"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_ally_03.vcd"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_AllyNearEarlyGameIsAllyOgre_Magi"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Istechies",
+					"EarlyGame",
+					"IsAllyOgre_Magi",
+				]
+			}
+		},
+		{
+			m_name = "techies_AllyNearEarlyGameIsAllyJakiro"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_ally_04.vcd"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_AllyNearEarlyGameIsAllyJakiro"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Istechies",
+					"EarlyGame",
+					"IsAllyJakiro",
+				]
+			}
+		},
+		{
+			m_name = "techies_AllyNearEarlyGameIsAllyPudge"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_ally_06.vcd"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_AllyNearEarlyGameIsAllyPudge"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Istechies",
+					"EarlyGame",
+					"IsAllyPudge",
+				]
+			}
+		},
+		{
+			m_name = "techies_AllyNearEarlyGameIsAllyTiny"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_ally_07.vcd"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_AllyNearEarlyGameIsAllyTiny"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Istechies",
+					"EarlyGame",
+					"IsAllyTiny",
+				]
+			}
+		},
+		{
+			m_name = "techies_AllyNearEarlyGameIsAllyDark_Seer"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_ally_08.vcd"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_AllyNearEarlyGameIsAllyDark_Seer"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Istechies",
+					"EarlyGame",
+					"IsAllyDark_Seer",
+				]
+			}
+		},
+		{
+			m_name = "techies_AllyNearEarlyGameIsAllyTinkerChance_3%"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_ally_09.vcd"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_AllyNearEarlyGameIsAllyTinkerChance_3%"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Istechies",
+					"EarlyGame",
+					"IsAllyTinker",
+					"Chance_3%",
+				]
+			}
+		},
+		{
+			m_name = "techies_LastHit"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_lasthit_01.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_lasthit_02.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_lasthit_04.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_lasthit_05.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_lasthit_06.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_lasthit_07.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_lasthit_08.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_lasthit_09.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_lasthit_11.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_lasthit_12.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_lasthit_13.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_lasthit_16.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_lasthit_17.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_lasthit_18.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_lasthit_19.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_lasthit_20.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_lasthit_21.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_LastHit"
+				m_Requirements = 
+				[
+					"LastHit",
+					"Istechies",
+				]
+			}
+		},
+		{
+			m_name = "techies_LastHitChance_5%"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_lasthit_10.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_LastHitChance_5%"
+				m_Requirements = 
+				[
+					"LastHit",
+					"Istechies",
+					"Chance_5%",
+				]
+			}
+		},
+		{
+			m_name = "techies_RespawnIsTechiesRespawnDeath"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_respawn_01.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_respawn_03.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_respawn_05.vcd"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_respawn_06"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_respawn_07.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_respawn_09.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_respawn_10.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_respawn_11.vcd"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_respawn_12"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_RespawnIsTechiesRespawnDeath"
+				m_Requirements = 
+				[
+					"Respawn",
+					"Istechies",
+					"IsTechiesRespawnDeath",
+				]
+			}
+		},
+		{
+			m_name = "techies_RespawnIsTechiesRespawnSuicideChance_75%"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_respawn_ssa_01.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_respawn_ssa_02.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_respawn_ssa_03.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_respawn_ssa_04.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_respawn_01.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_RespawnIsTechiesRespawnSuicideChance_75%"
+				m_Requirements = 
+				[
+					"Respawn",
+					"Istechies",
+					"IsTechiesRespawnSuicide",
+					"Chance_75%",
+				]
+			}
+		},
+		{
+			m_name = "techies_PurchaseIsExpensiveItem"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_purch_01.vcd"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_purch_02.vcd"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_purch_03.vcd"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_PurchaseIsExpensiveItem"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Istechies",
+					"IsExpensiveItem",
+				]
+			}
+		},
+		{
+			m_name = "techies_PurchaseIsUltimateScepter"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_scepter_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_scepter_02.vcd"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_scepter_03"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_PurchaseIsUltimateScepter"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Istechies",
+					"IsUltimateScepter",
+				]
+			}
+		},
+		{
+			m_name = "techies_PurchaseIsBlinkDagger"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_blink_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_blink_02.vcd"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_blink_03.vcd"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_blink_04"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_PurchaseIsBlinkDagger"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Istechies",
+					"IsBlinkDagger",
+				]
+			}
+		},
+		{
+			m_name = "techies_PurchaseIsNecronomiconChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_items_01.vcd"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_PurchaseIsNecronomiconChance_20%"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Istechies",
+					"IsNecronomicon",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "techies_PurchaseIsInvisSwordChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_items_02.vcd"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_PurchaseIsInvisSwordChance_20%"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Istechies",
+					"IsInvisSword",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "techies_PurchaseIsMantaChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_items_03.vcd"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_PurchaseIsMantaChance_20%"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Istechies",
+					"IsManta",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "techies_PurchaseIsBootsOfTravelChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_items_04.vcd"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_items_05.vcd"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_PurchaseIsBootsOfTravelChance_20%"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Istechies",
+					"IsBootsOfTravel",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "techies_PurchaseIsEulScepter"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_items_06"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_PurchaseIsEulScepter"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Istechies",
+					"IsEulScepter",
+				]
+			}
+		},
+		{
+			m_name = "techies_PurchaseIsSheepStick"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_items_07"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_PurchaseIsSheepStick"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Istechies",
+					"IsSheepStick",
+				]
+			}
+		},
+		{
+			m_name = "techies_PurchaseIsForceStaff"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_items_08"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_PurchaseIsForceStaff"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Istechies",
+					"IsForceStaff",
+				]
+			}
+		},
+		{
+			m_name = "techies_PurchaseIsBloodStone"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_items_09"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_PurchaseIsBloodStone"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Istechies",
+					"IsBloodStone",
+				]
+			}
+		},
+		{
+			m_name = "techies_PurchaseIsOrchid"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_items_10"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_PurchaseIsOrchid"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Istechies",
+					"IsOrchid",
+				]
+			}
+		},
+		{
+			m_name = "techies_PurchaseIsSphere"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_items_11"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_PurchaseIsSphere"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Istechies",
+					"IsSphere",
+				]
+			}
+		},
+		{
+			m_name = "techies_PurchaseIsShiva"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_items_12"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_PurchaseIsShiva"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Istechies",
+					"IsShiva",
+				]
+			}
+		},
+		{
+			m_name = "techies_PurchaseIsClaymoreChance_15%"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_items_15.vcd"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_PurchaseIsClaymoreChance_15%"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Istechies",
+					"IsClaymore",
+					"Chance_15%",
+				]
+			}
+		},
+		{
+			m_name = "techies_PurchaseIsNecronomicon"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_items_16"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_PurchaseIsNecronomicon"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Istechies",
+					"IsNecronomicon",
+				]
+			}
+		},
+		{
+			m_name = "techies_PurchaseIsInvisSword"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_items_17"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_PurchaseIsInvisSword"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Istechies",
+					"IsInvisSword",
+				]
+			}
+		},
+		{
+			m_name = "techies_PurchaseIsManta"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_items_18"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_PurchaseIsManta"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Istechies",
+					"IsManta",
+				]
+			}
+		},
+		{
+			m_name = "techies_Bottling"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_bottle_01.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_bottle_02.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_Bottling"
+				m_Requirements = 
+				[
+					"Bottling",
+					"Istechies",
+				]
+			}
+		},
+		{
+			m_name = "techies_Deny"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_deny_01.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_deny_02.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_deny_03.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_deny_04.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_deny_05.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_deny_07.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_deny_08.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_deny_09.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_deny_10.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_deny_11.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_deny_12.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_deny_13.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_deny_14.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_deny_15.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_deny_17.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_deny_18.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_deny_19.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_deny_20.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_deny_21.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_deny_22.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_Deny"
+				m_Requirements = 
+				[
+					"Deny",
+					"Istechies",
+				]
+			}
+		},
+		{
+			m_name = "techies_MissingIsLaneTop"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_lanemissing_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_lanemissing_04"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_MissingIsLaneTop"
+				m_Requirements = 
+				[
+					"Missing",
+					"Istechies",
+					"IsLaneTop",
+				]
+			}
+		},
+		{
+			m_name = "techies_MissingIsLaneMid"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_lanemissing_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_lanemissing_05"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_MissingIsLaneMid"
+				m_Requirements = 
+				[
+					"Missing",
+					"Istechies",
+					"IsLaneMid",
+				]
+			}
+		},
+		{
+			m_name = "techies_MissingIsLaneBot"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_lanemissing_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_lanemissing_06"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_MissingIsLaneBot"
+				m_Requirements = 
+				[
+					"Missing",
+					"Istechies",
+					"IsLaneBot",
+				]
+			}
+		},
+		{
+			m_name = "techies_ItemDropIsCommonDrop"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_itemcommon_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_ItemDropIsCommonDrop"
+				m_Requirements = 
+				[
+					"ItemDrop",
+					"Istechies",
+					"IsCommonDrop",
+				]
+			}
+		},
+		{
+			m_name = "techies_ItemDropIsRareDropChance_10%"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_itemmoderate_01.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_ItemDropIsRareDropChance_10%"
+				m_Requirements = 
+				[
+					"ItemDrop",
+					"Istechies",
+					"IsRareDrop",
+					"Chance_10%",
+				]
+			}
+		},
+		{
+			m_name = "techies_ItemDropIsRareDrop"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_itemmoderate_02.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_ItemDropIsRareDrop"
+				m_Requirements = 
+				[
+					"ItemDrop",
+					"Istechies",
+					"IsRareDrop",
+				]
+			}
+		},
+		{
+			m_name = "techies_ItemDropIsUltraRareDrop"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_itemrare_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_ItemDropIsUltraRareDrop"
+				m_Requirements = 
+				[
+					"ItemDrop",
+					"Istechies",
+					"IsUltraRareDrop",
+				]
+			}
+		},
+		{
+			m_name = "techies_Immortality"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_immort_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_Immortality"
+				m_Requirements = 
+				[
+					"Immortality",
+					"Istechies",
+				]
+			}
+		},
+		{
+			m_name = "techies_ImmortalityChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_immort_03.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_ImmortalityChance_25%"
+				m_Requirements = 
+				[
+					"Immortality",
+					"Istechies",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "techies_PowerupIsPowerupArcane"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_itemmoderate_02.vcd"
+					m_params = 
+					{
+						m_respeakdelay.start = 300.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_PowerupIsPowerupArcane"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Istechies",
+					"IsPowerupArcane",
+				]
+			}
+		},
+		{
+			m_name = "techies_PowerupIsPowerupBounty"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_lasthit_01.vcd"
+					m_params = 
+					{
+						m_respeakdelay.start = 300.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_PowerupIsPowerupBounty"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Istechies",
+					"IsPowerupBounty",
+				]
+			}
+		},
+		{
+			m_name = "techies_PowerupIsPowerupHasteChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_haste_01.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_haste_02.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_PowerupIsPowerupHasteChance_25%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Istechies",
+					"IsPowerupHaste",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "techies_PowerupIsPowerupHaste"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_haste_03.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_haste_04.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_PowerupIsPowerupHaste"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Istechies",
+					"IsPowerupHaste",
+				]
+			}
+		},
+		{
+			m_name = "techies_PowerupIsPowerupDoubleDamage"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_doubdam_02.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_doubdam_03.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_PowerupIsPowerupDoubleDamage"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Istechies",
+					"IsPowerupDoubleDamage",
+				]
+			}
+		},
+		{
+			m_name = "techies_PowerupIsPowerupDoubleDamageChance_5%"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_doubdam_04.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_PowerupIsPowerupDoubleDamageChance_5%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Istechies",
+					"IsPowerupDoubleDamage",
+					"Chance_5%",
+				]
+			}
+		},
+		{
+			m_name = "techies_PowerupIsPowerupRegeneration"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_regen_01.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_regen_03.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_PowerupIsPowerupRegeneration"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Istechies",
+					"IsPowerupRegeneration",
+				]
+			}
+		},
+		{
+			m_name = "techies_PowerupIsPowerupRegenerationChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_regen_02.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_PowerupIsPowerupRegenerationChance_25%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Istechies",
+					"IsPowerupRegeneration",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "techies_PowerupIsPowerupIllusion"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_illus_01.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_illus_04.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_PowerupIsPowerupIllusion"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Istechies",
+					"IsPowerupIllusion",
+				]
+			}
+		},
+		{
+			m_name = "techies_PowerupIsPowerupIllusionChance_5%"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_illus_02.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_illus_03.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_PowerupIsPowerupIllusionChance_5%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Istechies",
+					"IsPowerupIllusion",
+					"Chance_5%",
+				]
+			}
+		},
+		{
+			m_name = "techies_PowerupIsPowerupInvisibility"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_invis_01.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_invis_04.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_PowerupIsPowerupInvisibility"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Istechies",
+					"IsPowerupInvisibility",
+				]
+			}
+		},
+		{
+			m_name = "techies_PowerupIsPowerupInvisibilityChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_invis_02.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_PowerupIsPowerupInvisibilityChance_25%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Istechies",
+					"IsPowerupInvisibility",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "techies_CooldownLittleNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_notyet_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_notyet_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_notyet_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_notyet_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_notyet_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_notyet_16"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_CooldownLittleNag"
+				m_Requirements = 
+				[
+					"Cooldown",
+					"Istechies",
+					"LittleNag",
+				]
+			}
+		},
+		{
+			m_name = "techies_CooldownMediumNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_notyet_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_notyet_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_notyet_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_notyet_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_notyet_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_notyet_17"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_CooldownMediumNag"
+				m_Requirements = 
+				[
+					"Cooldown",
+					"Istechies",
+					"MediumNag",
+				]
+			}
+		},
+		{
+			m_name = "techies_CooldownSuperNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_notyet_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_notyet_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_notyet_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_notyet_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_notyet_15"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_notyet_18"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_CooldownSuperNag"
+				m_Requirements = 
+				[
+					"Cooldown",
+					"Istechies",
+					"SuperNag",
+				]
+			}
+		},
+		{
+			m_name = "techies_NoManaLittleNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_nomana_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_nomana_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_nomana_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_nomana_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_nomana_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_nomana_16"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_NoManaLittleNag"
+				m_Requirements = 
+				[
+					"NoMana",
+					"Istechies",
+					"LittleNag",
+				]
+			}
+		},
+		{
+			m_name = "techies_NoManaMediumNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_nomana_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_nomana_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_nomana_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_nomana_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_nomana_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_nomana_17"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_NoManaMediumNag"
+				m_Requirements = 
+				[
+					"NoMana",
+					"Istechies",
+					"MediumNag",
+				]
+			}
+		},
+		{
+			m_name = "techies_NoManaSuperNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_nomana_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_nomana_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_nomana_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_nomana_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_nomana_15"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_nomana_18"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_NoManaSuperNag"
+				m_Requirements = 
+				[
+					"NoMana",
+					"Istechies",
+					"SuperNag",
+				]
+			}
+		},
+		{
+			m_name = "techies_Thanks"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_thanks_01.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_thanks_02.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_thanks_04.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_thanks_05.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_thanks_08.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_thanks_09.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_Thanks"
+				m_Requirements = 
+				[
+					"Thanks",
+					"Istechies",
+				]
+			}
+		},
+		{
+			m_name = "techies_ThanksChance_5%"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_thanks_03.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_thanks_07.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_thanks_10.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_ThanksChance_5%"
+				m_Requirements = 
+				[
+					"Thanks",
+					"Istechies",
+					"Chance_5%",
+				]
+			}
+		},
+		{
+			m_name = "techies_PainChance_15%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_underattack_01"
+					m_params = 
+					{
+						m_respeakdelay.start = 120.0
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_underattack_02"
+					m_params = 
+					{
+						m_respeakdelay.start = 120.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_PainChance_15%"
+				m_Requirements = 
+				[
+					"Pain",
+					"Istechies",
+					"Chance_15%",
+				]
+			}
+		},
+		{
+			m_name = "techies_PainIsTechSpeakTrioLow"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_11"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_PainIsTechSpeakTrioLow"
+				m_Requirements = 
+				[
+					"Pain",
+					"Istechies",
+					"IsTechSpeakTrioLow",
+				]
+			}
+		},
+		{
+			m_name = "techies_PainIsTechSpeakTrioHigh"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_15"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_16"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_17"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_18"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_19"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_20"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_21"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_22"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_23"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_PainIsTechSpeakTrioHigh"
+				m_Requirements = 
+				[
+					"Pain",
+					"Istechies",
+					"IsTechSpeakTrioHigh",
+				]
+			}
+		},
+		{
+			m_name = "techies_PainIsTechSpeakTrioBarrel"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_25"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_26"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_27"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_28"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_29"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_30"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_31"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_32"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_33"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_34"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_35"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_36"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_37"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_38"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_39"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_40"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_41"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_42"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_pain_43"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_PainIsTechSpeakTrioBarrel"
+				m_Requirements = 
+				[
+					"Pain",
+					"Istechies",
+					"IsTechSpeakTrioBarrel",
+				]
+			}
+		},
+		{
+			m_name = "techies_InTheBag"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_inthebag_01.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_inthebag_02.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_InTheBag"
+				m_Requirements = 
+				[
+					"InTheBag",
+					"Istechies",
+				]
+			}
+		},
+		{
+			m_name = "techies_Defeat"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_lose_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_lose_02"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_lose_05.vcd"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_lose_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_lose_10"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_Defeat"
+				m_Requirements = 
+				[
+					"Defeat",
+					"Istechies",
+				]
+			}
+		},
+		{
+			m_name = "techies_DefeatChance_2%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_lose_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_DefeatChance_2%"
+				m_Requirements = 
+				[
+					"Defeat",
+					"Istechies",
+					"Chance_2%",
+				]
+			}
+		},
+		{
+			m_name = "techies_DefeatChance_5%"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_lose_06.vcd"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_lose_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_anger_27"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_DefeatChance_5%"
+				m_Requirements = 
+				[
+					"Defeat",
+					"Istechies",
+					"Chance_5%",
+				]
+			}
+		},
+		{
+			m_name = "techies_Victory"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_win_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_win_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_win_03"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_win_04.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_win_05.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_Victory"
+				m_Requirements = 
+				[
+					"Victory",
+					"Istechies",
+				]
+			}
+		},
+		{
+			m_name = "techies_VictoryChance_5%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_win_06"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_VictoryChance_5%"
+				m_Requirements = 
+				[
+					"Victory",
+					"Istechies",
+					"Chance_5%",
+				]
+			}
+		},
+		{
+			m_name = "techies_Select"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_rare_01.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_rare_02.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_rare_04.vcd"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_rare_05"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_Select"
+				m_Requirements = 
+				[
+					"Select",
+					"Istechies",
+				]
+			}
+		},
+		{
+			m_name = "techies_EmoteIsEmoteLaughIsTechSpeakTrioLow"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_move_23.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_move_24.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_move_45.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_move_46.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_move_47.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_move_48.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_attack_13.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_attack_14.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_attack_22.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_attack_23.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_kill_22.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_EmoteIsEmoteLaughIsTechSpeakTrioLow"
+				m_Requirements = 
+				[
+					"Emote",
+					"Istechies",
+					"IsEmoteLaugh",
+					"IsTechSpeakTrioLow",
+				]
+			}
+		},
+		{
+			m_name = "techies_EmoteIsEmoteLaughIsTechSpeakTrioHigh"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_move_26.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_move_28.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_move_51.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_move_52.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_move_53.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_attack_16.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_attack_24.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_attack_25.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_kill_17.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_kill_19.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_kill_21.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_kill_23.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_EmoteIsEmoteLaughIsTechSpeakTrioHigh"
+				m_Requirements = 
+				[
+					"Emote",
+					"Istechies",
+					"IsEmoteLaugh",
+					"IsTechSpeakTrioHigh",
+				]
+			}
+		},
+		{
+			m_name = "techies_EmoteIsEmoteLaughIsTechSpeakTrioBarrel"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/techies/techies_tech_move_30.vcd"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_move_33"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_EmoteIsEmoteLaughIsTechSpeakTrioBarrel"
+				m_Requirements = 
+				[
+					"Emote",
+					"Istechies",
+					"IsEmoteLaugh",
+					"IsTechSpeakTrioBarrel",
+				]
+			}
+		},
+		{
+			m_name = "techies_TauntIsTechiesTauntSwingAround"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "techies_tech_move_39"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "techies_TauntIsTechiesTauntSwingAround"
+				m_Requirements = 
+				[
+					"Taunt",
+					"Istechies",
+					"IsTechiesTauntSwingAround",
+				]
+			}
+		},
+	]
+	m_Requirements = 
+	[
+		{
+			m_name = "Istechies"
+			m_matchKey = "classname"
+			m_matchExpr = "npc_dota_hero_techies"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsTechiesSetMine"
+			m_matchKey = "abilityname"
+			m_matchExpr = "techies_land_mines"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsTechiesStickyBomb"
+			m_matchKey = "abilityname"
+			m_matchExpr = "techies_sticky_bomb"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsTechiesZap"
+			m_matchKey = "abilityname"
+			m_matchExpr = "techies_reactive_tazer"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsTechiesStasisTrap"
+			m_matchKey = "abilityname"
+			m_matchExpr = "techies_stasis_trap"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsTechiesRemoteMineSet"
+			m_matchKey = "abilityname"
+			m_matchExpr = "techies_remote_mines"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsTechiesRemoteMineDet"
+			m_matchKey = "abilityname"
+			m_matchExpr = "techies_focused_detonate"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsTechiesArcanaTaunt"
+			m_matchKey = "istechiesminitaunt"
+			m_matchExpr = "yes"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsTechiesSuicideSuccess"
+			m_matchKey = "suicide_kills"
+			m_matchExpr = ">=1"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsTechiesSuicideFizzle"
+			m_matchKey = "suicide_kills"
+			m_matchExpr = "0"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsTechiesRespawnSuicide"
+			m_matchKey = "respawnFromSuicide"
+			m_matchExpr = ">=1"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsTechiesRespawnDeath"
+			m_matchKey = "respawnFromSuicide"
+			m_matchExpr = "0"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsTechiesTauntSwingAround"
+			m_matchKey = "taunt_type"
+			m_matchExpr = "swing_around"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsTechiesLoadoutSpawn"
+			m_matchKey = "special_spawn"
+			m_matchExpr = "techies_loadout_spawn"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsTechSpeakTrioHigh"
+			m_matchKey = "randomnum"
+			m_matchExpr = ">=46"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsTechSpeakTrioLow"
+			m_matchKey = "randomnum"
+			m_matchExpr = ">=6,<=45"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsTechSpeakTrioBarrel"
+			m_matchKey = "randomnum"
+			m_matchExpr = "<=5"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsTechSpeakDuoHigh"
+			m_matchKey = "randomnum"
+			m_matchExpr = ">=46"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsTechSpeakDuoLow"
+			m_matchKey = "randomnum"
+			m_matchExpr = "<=45"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsTechSpeakDuoLowRMine01"
+			m_matchKey = "randomnum"
+			m_matchExpr = "<=1"
+			m_flWeight = 5.0
+		},
+	]
+}

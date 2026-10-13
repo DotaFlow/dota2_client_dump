@@ -1,0 +1,2079 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vrr_c1:version{c1f07085-5299-4e8a-b7e9-1cbb66bbbe23} -->
+{
+	m_Includes = 
+	[
+		"scripts/talker/response_rules_shared.vrr",
+	]
+	m_ResponseGroups = 
+	[
+		{
+			m_name = "jakiro_Spawn"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_spawn_01"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/jakiro/jakiro_jak_spawn_02.vcd"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_spawn_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_spawn_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_spawn_05"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "jakiro_Spawn"
+				m_Requirements = 
+				[
+					"Spawn",
+					"Isjakiro",
+				]
+			}
+		},
+		{
+			m_name = "jakiro_CustomIsGameStart"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_battlebegins_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_battlebegins_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "jakiro_CustomIsGameStart"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isjakiro",
+					"IsGameStart",
+				]
+			}
+		},
+		{
+			m_name = "jakiro_CustomIsJakiroLoadoutSpawn"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_spawn_01"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/jakiro/jakiro_jak_spawn_02.vcd"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_spawn_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_spawn_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_spawn_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_battlebegins_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_move_18"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_respawn_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_move_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_move_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_move_16"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/jakiro/jakiro_jak_attack_08.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "jakiro_CustomIsJakiroLoadoutSpawn"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isjakiro",
+					"IsJakiroLoadoutSpawn",
+				]
+			}
+		},
+		{
+			m_name = "jakiro_KillIsFirstBlood"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_firstblood_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "jakiro_KillIsFirstBlood"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isjakiro",
+					"IsFirstBlood",
+				]
+			}
+		},
+		{
+			m_name = "jakiro_Kill"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_ability_dual_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_ability_liquid_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_kill_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_kill_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_kill_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_kill_04"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/jakiro/jakiro_jak_kill_05.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/jakiro/jakiro_jak_kill_06.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/jakiro/jakiro_jak_kill_07.vcd"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_kill_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_kill_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_kill_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_kill_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_kill_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_kill_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_kill_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_kill_15"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_kill_16"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_kill_17"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_kill_18"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_kill_19"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_kill_20"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_kill_21"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_kill_22"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_kill_23"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_kill_24"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_kill_25"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_kill_26"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_kill_27"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_kill_28"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_deny_15"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_laugh_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_laugh_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_laugh_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_laugh_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_laugh_05"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "jakiro_Kill"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isjakiro",
+				]
+			}
+		},
+		{
+			m_name = "jakiro_KillIsEnemyDragon_KnightChance_50%"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/jakiro/jakiro_jak_rival_01.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/jakiro/jakiro_jak_rival_02.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/jakiro/jakiro_jak_rival_03.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "jakiro_KillIsEnemyDragon_KnightChance_50%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isjakiro",
+					"IsEnemyDragon_Knight",
+					"Chance_50%",
+				]
+			}
+		},
+		{
+			m_name = "jakiro_KillIsEnemyLinaChance_50%"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/jakiro/jakiro_jak_rival_04.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/jakiro/jakiro_jak_rival_05.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "jakiro_KillIsEnemyLinaChance_50%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isjakiro",
+					"IsEnemyLina",
+					"Chance_50%",
+				]
+			}
+		},
+		{
+			m_name = "jakiro_KillIsEnemyCrystalMaidenChance_50%"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/jakiro/jakiro_jak_rival_06.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/jakiro/jakiro_jak_rival_07.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/jakiro/jakiro_jak_rival_08.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "jakiro_KillIsEnemyCrystalMaidenChance_50%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isjakiro",
+					"IsEnemyCrystalMaiden",
+					"Chance_50%",
+				]
+			}
+		},
+		{
+			m_name = "jakiro_KillIsEnemyBatriderChance_50%"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/jakiro/jakiro_jak_rival_09.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "jakiro_KillIsEnemyBatriderChance_50%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isjakiro",
+					"IsEnemyBatrider",
+					"Chance_50%",
+				]
+			}
+		},
+		{
+			m_name = "jakiro_KillIsEnemyZuusChance_50%"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/jakiro/jakiro_jak_rival_10.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "jakiro_KillIsEnemyZuusChance_50%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isjakiro",
+					"IsEnemyZuus",
+					"Chance_50%",
+				]
+			}
+		},
+		{
+			m_name = "jakiro_KillIsEnemyAncient_ApparitionChance_50%"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/jakiro/jakiro_jak_rival_11.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "jakiro_KillIsEnemyAncient_ApparitionChance_50%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isjakiro",
+					"IsEnemyAncient_Apparition",
+					"Chance_50%",
+				]
+			}
+		},
+		{
+			m_name = "jakiro_KillIsEnemyPuckChance_50%"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/jakiro/jakiro_jak_rival_12.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "jakiro_KillIsEnemyPuckChance_50%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isjakiro",
+					"IsEnemyPuck",
+					"Chance_50%",
+				]
+			}
+		},
+		{
+			m_name = "jakiro_KillIsEnemyWinter_WyvernChance_50%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_rival_15"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "jakiro_KillIsEnemyWinter_WyvernChance_50%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isjakiro",
+					"IsEnemyWinter_Wyvern",
+					"Chance_50%",
+				]
+			}
+		},
+		{
+			m_name = "jakiro_Move"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_move_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_move_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_move_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_move_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_move_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_move_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_move_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_move_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_move_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_move_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_move_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_move_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_move_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_move_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_move_15"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_move_16"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_move_17"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_move_18"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_move_19"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/jakiro/jakiro_jak_move_20.vcd"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_move_21"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_ability_dual_01"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/jakiro/jakiro_jak_ability_dual_03.vcd"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_ability_dual_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_ability_dual_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_ability_liquid_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_ability_liquid_04"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "jakiro_Move"
+				m_Requirements = 
+				[
+					"Move",
+					"Isjakiro",
+				]
+			}
+		},
+		{
+			m_name = "jakiro_Attack"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_attack_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_attack_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_attack_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_attack_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_attack_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_attack_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_attack_07"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/jakiro/jakiro_jak_attack_08.vcd"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_attack_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_attack_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_attack_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_attack_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_ability_macro_04"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "jakiro_Attack"
+				m_Requirements = 
+				[
+					"Attack",
+					"Isjakiro",
+				]
+			}
+		},
+		{
+			m_name = "jakiro_CastOrder"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_cast_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_cast_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "jakiro_CastOrder"
+				m_Requirements = 
+				[
+					"CastOrder",
+					"Isjakiro",
+				]
+			}
+		},
+		{
+			m_name = "jakiro_Select"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/jakiro/jakiro_jak_ability_dual_02.vcd"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_ability_icepath_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_ability_macro_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_ability_failure_07"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "jakiro_Select"
+				m_Requirements = 
+				[
+					"Select",
+					"Isjakiro",
+				]
+			}
+		},
+		{
+			m_name = "jakiro_LevelUp"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_level_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_level_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_level_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_level_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_level_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_level_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_level_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_level_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_level_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_level_10"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "jakiro_LevelUp"
+				m_Requirements = 
+				[
+					"LevelUp",
+					"Isjakiro",
+				]
+			}
+		},
+		{
+			m_name = "jakiro_DeathIsEnemyDragon_KnightChance_35%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_rival_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_rival_14"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "jakiro_DeathIsEnemyDragon_KnightChance_35%"
+				m_Requirements = 
+				[
+					"Death",
+					"Isjakiro",
+					"IsEnemyDragon_Knight",
+					"Chance_35%",
+				]
+			}
+		},
+		{
+			m_name = "jakiro_Death"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_death_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_death_02"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/jakiro/jakiro_jak_death_03.vcd"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_death_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_death_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_death_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_death_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_death_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_death_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_death_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_death_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_death_12"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "jakiro_Death"
+				m_Requirements = 
+				[
+					"Death",
+					"Isjakiro",
+				]
+			}
+		},
+		{
+			m_name = "jakiro_DeathIsReincarnating"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_fastres_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "jakiro_DeathIsReincarnating"
+				m_Requirements = 
+				[
+					"Death",
+					"Isjakiro",
+					"IsReincarnating",
+				]
+			}
+		},
+		{
+			m_name = "jakiro_LastHit"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_lasthit_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_lasthit_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_lasthit_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_lasthit_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_lasthit_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_lasthit_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_lasthit_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_lasthit_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_lasthit_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "jakiro_LastHit"
+				m_Requirements = 
+				[
+					"LastHit",
+					"Isjakiro",
+				]
+			}
+		},
+		{
+			m_name = "jakiro_Respawn"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_respawn_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_respawn_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_respawn_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_respawn_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_respawn_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_respawn_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_respawn_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_respawn_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_respawn_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_respawn_10"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "jakiro_Respawn"
+				m_Requirements = 
+				[
+					"Respawn",
+					"Isjakiro",
+				]
+			}
+		},
+		{
+			m_name = "jakiro_PurchaseIsExpensiveItem"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_rare_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_rare_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_rare_03"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "jakiro_PurchaseIsExpensiveItem"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isjakiro",
+					"IsExpensiveItem",
+				]
+			}
+		},
+		{
+			m_name = "jakiro_PurchaseIsBlinkDagger"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_blink_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_blink_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "jakiro_PurchaseIsBlinkDagger"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isjakiro",
+					"IsBlinkDagger",
+				]
+			}
+		},
+		{
+			m_name = "jakiro_PurchaseIsUltimateScepter"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_scepter_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/jakiro/jakiro_jak_scepter_02.vcd"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "jakiro_PurchaseIsUltimateScepter"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isjakiro",
+					"IsUltimateScepter",
+				]
+			}
+		},
+		{
+			m_name = "jakiro_PurchaseIsMekansm"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_item_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "jakiro_PurchaseIsMekansm"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isjakiro",
+					"IsMekansm",
+				]
+			}
+		},
+		{
+			m_name = "jakiro_PurchaseIsSheepstick"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_item_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "jakiro_PurchaseIsSheepstick"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isjakiro",
+					"IsSheepstick",
+				]
+			}
+		},
+		{
+			m_name = "jakiro_PurchaseIsEulScepter"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_item_03"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/jakiro/jakiro_jak_item_04.vcd"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "jakiro_PurchaseIsEulScepter"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isjakiro",
+					"IsEulScepter",
+				]
+			}
+		},
+		{
+			m_name = "jakiro_PurchaseIsTangoChance_10%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_item_05"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "jakiro_PurchaseIsTangoChance_10%"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isjakiro",
+					"IsTango",
+					"Chance_10%",
+				]
+			}
+		},
+		{
+			m_name = "jakiro_Bottling"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_bottle_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_bottle_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_bottle_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_bottle_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_bottle_05"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "jakiro_Bottling"
+				m_Requirements = 
+				[
+					"Bottling",
+					"Isjakiro",
+				]
+			}
+		},
+		{
+			m_name = "jakiro_Deny"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_deny_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_deny_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_deny_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_deny_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_deny_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_deny_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_deny_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_deny_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_deny_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_deny_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_deny_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_deny_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_deny_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_deny_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_deny_16"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_deny_17"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "jakiro_Deny"
+				m_Requirements = 
+				[
+					"Deny",
+					"Isjakiro",
+				]
+			}
+		},
+		{
+			m_name = "jakiro_Defeat"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_lose_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_lose_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_lose_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_lose_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_lose_05"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "jakiro_Defeat"
+				m_Requirements = 
+				[
+					"Defeat",
+					"Isjakiro",
+				]
+			}
+		},
+		{
+			m_name = "jakiro_Victory"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_win_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_win_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_win_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "jakiro_Victory"
+				m_Requirements = 
+				[
+					"Victory",
+					"Isjakiro",
+				]
+			}
+		},
+		{
+			m_name = "jakiro_Immortality"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_immort_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "jakiro_Immortality"
+				m_Requirements = 
+				[
+					"Immortality",
+					"Isjakiro",
+				]
+			}
+		},
+		{
+			m_name = "jakiro_PowerupIsPowerupHaste"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_haste_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "jakiro_PowerupIsPowerupHaste"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isjakiro",
+					"IsPowerupHaste",
+				]
+			}
+		},
+		{
+			m_name = "jakiro_PowerupIsPowerupHasteChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_haste_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "jakiro_PowerupIsPowerupHasteChance_25%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isjakiro",
+					"IsPowerupHaste",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "jakiro_PowerupIsPowerupDoubleDamage"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_doubdam_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "jakiro_PowerupIsPowerupDoubleDamage"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isjakiro",
+					"IsPowerupDoubleDamage",
+				]
+			}
+		},
+		{
+			m_name = "jakiro_PowerupIsPowerupBounty"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_lasthit_05"
+					m_params = 
+					{
+						m_respeakdelay.start = 300.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "jakiro_PowerupIsPowerupBounty"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isjakiro",
+					"IsPowerupBounty",
+				]
+			}
+		},
+		{
+			m_name = "jakiro_PowerupIsPowerupRegeneration"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_regen_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "jakiro_PowerupIsPowerupRegeneration"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isjakiro",
+					"IsPowerupRegeneration",
+				]
+			}
+		},
+		{
+			m_name = "jakiro_PowerupIsPowerupIllusion"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_illus_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "jakiro_PowerupIsPowerupIllusion"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isjakiro",
+					"IsPowerupIllusion",
+				]
+			}
+		},
+		{
+			m_name = "jakiro_PowerupIsPowerupIllusionChance_5%"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/jakiro/jakiro_jak_illus_02.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "jakiro_PowerupIsPowerupIllusionChance_5%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isjakiro",
+					"IsPowerupIllusion",
+					"Chance_5%",
+				]
+			}
+		},
+		{
+			m_name = "jakiro_PowerupIsPowerupInvisibility"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_invis_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "jakiro_PowerupIsPowerupInvisibility"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isjakiro",
+					"IsPowerupInvisibility",
+				]
+			}
+		},
+		{
+			m_name = "jakiro_PowerupIsPowerupInvisibilityChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_invis_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_invis_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_invis_06"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "jakiro_PowerupIsPowerupInvisibilityChance_25%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isjakiro",
+					"IsPowerupInvisibility",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "jakiro_PowerupIsPowerupInvisibilityChance_5%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_invis_04"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "jakiro_PowerupIsPowerupInvisibilityChance_5%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isjakiro",
+					"IsPowerupInvisibility",
+					"Chance_5%",
+				]
+			}
+		},
+		{
+			m_name = "jakiro_PowerupIsPowerupArcane"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_happy_01"
+					m_params = 
+					{
+						m_respeakdelay.start = 300.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "jakiro_PowerupIsPowerupArcane"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isjakiro",
+					"IsPowerupArcane",
+				]
+			}
+		},
+		{
+			m_name = "jakiro_CooldownLittleNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_notyet_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_notyet_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_notyet_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "jakiro_CooldownLittleNag"
+				m_Requirements = 
+				[
+					"Cooldown",
+					"Isjakiro",
+					"LittleNag",
+				]
+			}
+		},
+		{
+			m_name = "jakiro_CooldownMediumNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_notyet_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_notyet_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_notyet_06"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "jakiro_CooldownMediumNag"
+				m_Requirements = 
+				[
+					"Cooldown",
+					"Isjakiro",
+					"MediumNag",
+				]
+			}
+		},
+		{
+			m_name = "jakiro_CooldownSuperNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_notyet_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_notyet_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_notyet_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "jakiro_CooldownSuperNag"
+				m_Requirements = 
+				[
+					"Cooldown",
+					"Isjakiro",
+					"SuperNag",
+				]
+			}
+		},
+		{
+			m_name = "jakiro_NoManaLittleNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_nomana_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_nomana_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_nomana_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "jakiro_NoManaLittleNag"
+				m_Requirements = 
+				[
+					"NoMana",
+					"Isjakiro",
+					"LittleNag",
+				]
+			}
+		},
+		{
+			m_name = "jakiro_NoManaMediumNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_nomana_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_nomana_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_nomana_06"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "jakiro_NoManaMediumNag"
+				m_Requirements = 
+				[
+					"NoMana",
+					"Isjakiro",
+					"MediumNag",
+				]
+			}
+		},
+		{
+			m_name = "jakiro_NoManaSuperNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_nomana_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_nomana_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_nomana_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "jakiro_NoManaSuperNag"
+				m_Requirements = 
+				[
+					"NoMana",
+					"Isjakiro",
+					"SuperNag",
+				]
+			}
+		},
+		{
+			m_name = "jakiro_Thanks"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_thanks_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_thanks_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "jakiro_Thanks"
+				m_Requirements = 
+				[
+					"Thanks",
+					"Isjakiro",
+				]
+			}
+		},
+		{
+			m_name = "jakiro_PainChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_underattack_01"
+					m_params = 
+					{
+						m_respeakdelay.start = 120.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "jakiro_PainChance_25%"
+				m_Requirements = 
+				[
+					"Pain",
+					"Isjakiro",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "jakiro_Pain"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_pain_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_pain_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_pain_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_pain_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_pain_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_pain_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_pain_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_pain_08"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "jakiro_Pain"
+				m_Requirements = 
+				[
+					"Pain",
+					"Isjakiro",
+				]
+			}
+		},
+		{
+			m_name = "jakiro_InTheBag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_inthebag_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "jakiro_InTheBag"
+				m_Requirements = 
+				[
+					"InTheBag",
+					"Isjakiro",
+				]
+			}
+		},
+		{
+			m_name = "jakiro_ItemDropIsCommonDrop"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_happy_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_happy_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "jakiro_ItemDropIsCommonDrop"
+				m_Requirements = 
+				[
+					"ItemDrop",
+					"Isjakiro",
+					"IsCommonDrop",
+				]
+			}
+		},
+		{
+			m_name = "jakiro_ItemDropIsRareDrop"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_happy_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "jakiro_ItemDropIsRareDrop"
+				m_Requirements = 
+				[
+					"ItemDrop",
+					"Isjakiro",
+					"IsRareDrop",
+				]
+			}
+		},
+		{
+			m_name = "jakiro_ItemDropIsUltraRareDrop"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_happy_04"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "jakiro_ItemDropIsUltraRareDrop"
+				m_Requirements = 
+				[
+					"ItemDrop",
+					"Isjakiro",
+					"IsUltraRareDrop",
+				]
+			}
+		},
+		{
+			m_name = "jakiro_EmoteIsEmoteLaugh"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_laugh_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_laugh_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_laugh_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_laugh_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "jakiro_jak_laugh_05"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "jakiro_EmoteIsEmoteLaugh"
+				m_Requirements = 
+				[
+					"Emote",
+					"Isjakiro",
+					"IsEmoteLaugh",
+				]
+			}
+		},
+		{
+			m_name = "jakiro_TauntIsJakiroTauntCorkScrew"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/jakiro/jakiro_jak_attack_08.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "jakiro_TauntIsJakiroTauntCorkScrew"
+				m_Requirements = 
+				[
+					"Taunt",
+					"Isjakiro",
+					"IsJakiroTauntCorkScrew",
+				]
+			}
+		},
+	]
+	m_Requirements = 
+	[
+		{
+			m_name = "Isjakiro"
+			m_matchKey = "classname"
+			m_matchExpr = "npc_dota_hero_jakiro"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsJakiroLoadoutSpawn"
+			m_matchKey = "special_spawn"
+			m_matchExpr = "jakiro_loadout_spawn"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsJakiroTauntCorkScrew"
+			m_matchKey = "taunt_type"
+			m_matchExpr = "cork_screw"
+			m_flWeight = 5.0
+		},
+	]
+}

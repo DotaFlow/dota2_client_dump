@@ -1,0 +1,2529 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vrr_c1:version{c1f07085-5299-4e8a-b7e9-1cbb66bbbe23} -->
+{
+	m_Includes = 
+	[
+		"scripts/talker/response_rules_shared.vrr",
+	]
+	m_ResponseGroups = 
+	[
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsPickYourIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_pick_yr_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_pick_yr_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsPickYourIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsPickYour",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsPlayerTeam_RadiantIsPickDireIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_pick_enm_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_pick_enm_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsPlayerTeam_RadiantIsPickDireIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsPlayerTeam_Radiant",
+					"IsPickDire",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsPlayerTeam_DireIsPickRadiantIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_pick_enm_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_pick_enm_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsPlayerTeam_DireIsPickRadiantIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsPlayerTeam_Dire",
+					"IsPickRadiant",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsPickRadiantIsPlayerTeam_SpectatorIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_pick_rad"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsPickRadiantIsPlayerTeam_SpectatorIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsPickRadiant",
+					"IsPlayerTeam_Spectator",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsPickDireIsPlayerTeam_SpectatorIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_pick_dire"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsPickDireIsPlayerTeam_SpectatorIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsPickDire",
+					"IsPlayerTeam_Spectator",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsBanYourIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_ban_yr_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_ban_yr_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsBanYourIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsBanYour",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsBanDireIsPlayerTeam_RadiantIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_ban_enm_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_ban_enm_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsBanDireIsPlayerTeam_RadiantIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsBanDire",
+					"IsPlayerTeam_Radiant",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsBanRadiantIsPlayerTeam_DireIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_ban_enm_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_ban_enm_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsBanRadiantIsPlayerTeam_DireIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsBanRadiant",
+					"IsPlayerTeam_Dire",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsBanDireIsPlayerTeam_SpectatorIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_ban_dire"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsBanDireIsPlayerTeam_SpectatorIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsBanDire",
+					"IsPlayerTeam_Spectator",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsBanRadiantIsPlayerTeam_SpectatorIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_ban_rad"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsBanRadiantIsPlayerTeam_SpectatorIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsBanRadiant",
+					"IsPlayerTeam_Spectator",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsSelectHeroIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_choose_hero"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsSelectHeroIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsSelectHero",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsReserveTimeIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_time_reserve_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_time_reserve_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsReserveTimeIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsReserveTime",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIs10SecToPickIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_count_pick_10_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_count_pick_10_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIs10SecToPickIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"Is10SecToPick",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIs5SecToPickIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_count_pick_5_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_count_pick_5_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIs5SecToPickIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"Is5SecToPick",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsGameStarting30IsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_battle_prepare_30"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsGameStarting30IsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsGameStarting30",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsGameStarting10IsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_battle_prepare_10"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsGameStarting10IsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsGameStarting10",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsPrepStartIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_battle_prepare_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsPrepStartIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsPrepStart",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsGameStartIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_battle_begin"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsGameStartIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsGameStart",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsFortAttackedIsNotSpectatorIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_anc_attack_yr_01"
+					m_params = 
+					{
+						m_respeakdelay.start = 6.0
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_anc_attack_yr_02"
+					m_params = 
+					{
+						m_respeakdelay.start = 6.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsFortAttackedIsNotSpectatorIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsFortAttacked",
+					"IsNotSpectator",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsFortAttackedIsGoodAttackedIsSpectatorIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_anc_attack_rad"
+					m_params = 
+					{
+						m_respeakdelay.start = 8.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsFortAttackedIsGoodAttackedIsSpectatorIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsFortAttacked",
+					"IsGoodAttacked",
+					"IsSpectator",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsFortAttackedIsBadAttackedIsSpectatorIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_anc_attack_dire"
+					m_params = 
+					{
+						m_respeakdelay.start = 8.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsFortAttackedIsBadAttackedIsSpectatorIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsFortAttacked",
+					"IsBadAttacked",
+					"IsSpectator",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsTowerAttackedIsGoodAttackedIsSpectatorIsTopLaneIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_twr_attack_rad_top"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsTowerAttackedIsGoodAttackedIsSpectatorIsTopLaneIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsTowerAttacked",
+					"IsGoodAttacked",
+					"IsSpectator",
+					"IsTopLane",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsTowerAttackedIsGoodAttackedIsSpectatorIsMidLaneIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_twr_attack_rad_mid"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsTowerAttackedIsGoodAttackedIsSpectatorIsMidLaneIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsTowerAttacked",
+					"IsGoodAttacked",
+					"IsSpectator",
+					"IsMidLane",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsTowerAttackedIsGoodAttackedIsSpectatorIsBotLaneIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_twr_attack_rad_bot"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsTowerAttackedIsGoodAttackedIsSpectatorIsBotLaneIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsTowerAttacked",
+					"IsGoodAttacked",
+					"IsSpectator",
+					"IsBotLane",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsTowerAttackedIsBadAttackedIsSpectatorIsTopLaneIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_twr_attack_dire_top"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsTowerAttackedIsBadAttackedIsSpectatorIsTopLaneIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsTowerAttacked",
+					"IsBadAttacked",
+					"IsSpectator",
+					"IsTopLane",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsTowerAttackedIsBadAttackedIsSpectatorIsMidLaneIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_twr_attack_dire_mid"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsTowerAttackedIsBadAttackedIsSpectatorIsMidLaneIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsTowerAttacked",
+					"IsBadAttacked",
+					"IsSpectator",
+					"IsMidLane",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsTowerAttackedIsBadAttackedIsSpectatorIsBotLaneIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_twr_attack_dire_bot"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsTowerAttackedIsBadAttackedIsSpectatorIsBotLaneIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsTowerAttacked",
+					"IsBadAttacked",
+					"IsSpectator",
+					"IsBotLane",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsTowerAttackedIsNotSpectatorIsTopLaneIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_twr_attack_yr_top_01"
+					m_params = 
+					{
+						m_respeakdelay.start = 7.0
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_twr_attack_yr_top_02"
+					m_params = 
+					{
+						m_respeakdelay.start = 7.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsTowerAttackedIsNotSpectatorIsTopLaneIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsTowerAttacked",
+					"IsNotSpectator",
+					"IsTopLane",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsTowerAttackedIsNotSpectatorIsMidLaneIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_twr_attack_yr_mid_01"
+					m_params = 
+					{
+						m_respeakdelay.start = 7.0
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_twr_attack_yr_mid_02"
+					m_params = 
+					{
+						m_respeakdelay.start = 7.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsTowerAttackedIsNotSpectatorIsMidLaneIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsTowerAttacked",
+					"IsNotSpectator",
+					"IsMidLane",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsTowerAttackedIsNotSpectatorIsBotLaneIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_twr_attack_yr_bot_01"
+					m_params = 
+					{
+						m_respeakdelay.start = 7.0
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_twr_attack_yr_bot_02"
+					m_params = 
+					{
+						m_respeakdelay.start = 7.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsTowerAttackedIsNotSpectatorIsBotLaneIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsTowerAttacked",
+					"IsNotSpectator",
+					"IsBotLane",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsTowerKilledIsTopLaneIsNotDenyIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_twr_fall_yr_top"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsTowerKilledIsTopLaneIsNotDenyIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsTowerKilled",
+					"IsTopLane",
+					"IsNotDeny",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsTowerKilledIsMidLaneIsNotDenyIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_twr_fall_yr_mid"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsTowerKilledIsMidLaneIsNotDenyIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsTowerKilled",
+					"IsMidLane",
+					"IsNotDeny",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsTowerKilledIsBotLaneIsNotDenyIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_twr_fall_yr_bot"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsTowerKilledIsBotLaneIsNotDenyIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsTowerKilled",
+					"IsBotLane",
+					"IsNotDeny",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsGoodTowerKilledIsSpectatorIsTopLaneIsNotDenyIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_twr_fall_rad_top"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsGoodTowerKilledIsSpectatorIsTopLaneIsNotDenyIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsGoodTowerKilled",
+					"IsSpectator",
+					"IsTopLane",
+					"IsNotDeny",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsGoodTowerKilledIsSpectatorIsMidLaneIsNotDenyIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_twr_fall_rad_mid"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsGoodTowerKilledIsSpectatorIsMidLaneIsNotDenyIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsGoodTowerKilled",
+					"IsSpectator",
+					"IsMidLane",
+					"IsNotDeny",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsGoodTowerKilledIsSpectatorIsBotLaneIsNotDenyIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_twr_fall_rad_bot"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsGoodTowerKilledIsSpectatorIsBotLaneIsNotDenyIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsGoodTowerKilled",
+					"IsSpectator",
+					"IsBotLane",
+					"IsNotDeny",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsBadTowerKilledIsSpectatorIsTopLaneIsNotDenyIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_twr_fall_dire_top"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsBadTowerKilledIsSpectatorIsTopLaneIsNotDenyIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsBadTowerKilled",
+					"IsSpectator",
+					"IsTopLane",
+					"IsNotDeny",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsBadTowerKilledIsSpectatorIsMidLaneIsNotDenyIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_twr_fall_dire_mid"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsBadTowerKilledIsSpectatorIsMidLaneIsNotDenyIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsBadTowerKilled",
+					"IsSpectator",
+					"IsMidLane",
+					"IsNotDeny",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsBadTowerKilledIsSpectatorIsBotLaneIsNotDenyIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_twr_fall_dire_bot"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsBadTowerKilledIsSpectatorIsBotLaneIsNotDenyIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsBadTowerKilled",
+					"IsSpectator",
+					"IsBotLane",
+					"IsNotDeny",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsEnemyTowerKilledIsTopLaneIsNotDenyIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_twr_fall_enm_top"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsEnemyTowerKilledIsTopLaneIsNotDenyIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsEnemyTowerKilled",
+					"IsTopLane",
+					"IsNotDeny",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsEnemyTowerKilledIsMidLaneIsNotDenyIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_twr_fall_enm_mid"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsEnemyTowerKilledIsMidLaneIsNotDenyIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsEnemyTowerKilled",
+					"IsMidLane",
+					"IsNotDeny",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsEnemyTowerKilledIsBotLaneIsNotDenyIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_twr_fall_enm_bot"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsEnemyTowerKilledIsBotLaneIsNotDenyIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsEnemyTowerKilled",
+					"IsBotLane",
+					"IsNotDeny",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsBarracksAttackedIsNotSpectatorIsTopLaneIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_rax_attack_yr_top"
+					m_params = 
+					{
+						m_respeakdelay.start = 7.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsBarracksAttackedIsNotSpectatorIsTopLaneIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsBarracksAttacked",
+					"IsNotSpectator",
+					"IsTopLane",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsBarracksAttackedIsNotSpectatorIsMidLaneIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_rax_attack_yr_mid"
+					m_params = 
+					{
+						m_respeakdelay.start = 7.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsBarracksAttackedIsNotSpectatorIsMidLaneIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsBarracksAttacked",
+					"IsNotSpectator",
+					"IsMidLane",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsBarracksAttackedIsNotSpectatorIsBotLaneIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_rax_attack_yr_bot"
+					m_params = 
+					{
+						m_respeakdelay.start = 7.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsBarracksAttackedIsNotSpectatorIsBotLaneIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsBarracksAttacked",
+					"IsNotSpectator",
+					"IsBotLane",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsBarracksAttackedIsGoodAttackedIsSpectatorIsTopLaneIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_rax_attack_rad_top"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsBarracksAttackedIsGoodAttackedIsSpectatorIsTopLaneIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsBarracksAttacked",
+					"IsGoodAttacked",
+					"IsSpectator",
+					"IsTopLane",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsBarracksAttackedIsGoodAttackedIsSpectatorIsMidLaneIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_rax_attack_rad_mid"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsBarracksAttackedIsGoodAttackedIsSpectatorIsMidLaneIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsBarracksAttacked",
+					"IsGoodAttacked",
+					"IsSpectator",
+					"IsMidLane",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsBarracksAttackedIsGoodAttackedIsSpectatorIsBotLaneIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_rax_attack_rad_bot"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsBarracksAttackedIsGoodAttackedIsSpectatorIsBotLaneIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsBarracksAttacked",
+					"IsGoodAttacked",
+					"IsSpectator",
+					"IsBotLane",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsBarracksAttackedIsBadAttackedIsSpectatorIsTopLaneIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_rax_attack_dire_top"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsBarracksAttackedIsBadAttackedIsSpectatorIsTopLaneIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsBarracksAttacked",
+					"IsBadAttacked",
+					"IsSpectator",
+					"IsTopLane",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsBarracksAttackedIsBadAttackedIsSpectatorIsMidLaneIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_rax_attack_dire_mid"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsBarracksAttackedIsBadAttackedIsSpectatorIsMidLaneIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsBarracksAttacked",
+					"IsBadAttacked",
+					"IsSpectator",
+					"IsMidLane",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsBarracksAttackedIsBadAttackedIsSpectatorIsBotLaneIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_rax_attack_dire_bot"
+					m_params = 
+					{
+						m_respeakdelay.start = 10.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsBarracksAttackedIsBadAttackedIsSpectatorIsBotLaneIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsBarracksAttacked",
+					"IsBadAttacked",
+					"IsSpectator",
+					"IsBotLane",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsBarracksKilledIsTopLaneIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_rax_fall_yr_top"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsBarracksKilledIsTopLaneIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsBarracksKilled",
+					"IsTopLane",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsBarracksKilledIsMidLaneIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_rax_fall_yr_mid"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsBarracksKilledIsMidLaneIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsBarracksKilled",
+					"IsMidLane",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsBarracksKilledIsBotLaneIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_rax_fall_yr_bot"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsBarracksKilledIsBotLaneIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsBarracksKilled",
+					"IsBotLane",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsGoodBarracksKilledIsSpectatorIsTopLaneIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_rax_fall_rad_top"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsGoodBarracksKilledIsSpectatorIsTopLaneIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsGoodBarracksKilled",
+					"IsSpectator",
+					"IsTopLane",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsGoodBarracksKilledIsSpectatorIsMidLaneIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_rax_fall_rad_mid"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsGoodBarracksKilledIsSpectatorIsMidLaneIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsGoodBarracksKilled",
+					"IsSpectator",
+					"IsMidLane",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsGoodBarracksKilledIsSpectatorIsBotLaneIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_rax_fall_rad_bot"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsGoodBarracksKilledIsSpectatorIsBotLaneIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsGoodBarracksKilled",
+					"IsSpectator",
+					"IsBotLane",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsBadBarracksKilledIsSpectatorIsTopLaneIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_rax_fall_dire_top"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsBadBarracksKilledIsSpectatorIsTopLaneIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsBadBarracksKilled",
+					"IsSpectator",
+					"IsTopLane",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsBadBarracksKilledIsSpectatorIsMidLaneIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_rax_fall_dire_mid"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsBadBarracksKilledIsSpectatorIsMidLaneIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsBadBarracksKilled",
+					"IsSpectator",
+					"IsMidLane",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsBadBarracksKilledIsSpectatorIsBotLaneIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_rax_fall_dire_bot"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsBadBarracksKilledIsSpectatorIsBotLaneIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsBadBarracksKilled",
+					"IsSpectator",
+					"IsBotLane",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsEnemyBarracksKilledIsTopLaneIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_rax_fall_enm_top"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsEnemyBarracksKilledIsTopLaneIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsEnemyBarracksKilled",
+					"IsTopLane",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsEnemyBarracksKilledIsMidLaneIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_rax_fall_enm_mid"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsEnemyBarracksKilledIsMidLaneIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsEnemyBarracksKilled",
+					"IsMidLane",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsEnemyBarracksKilledIsBotLaneIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_rax_fall_enm_bot"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsEnemyBarracksKilledIsBotLaneIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsEnemyBarracksKilled",
+					"IsBotLane",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsTowerKilledIsTopLaneIsDenyIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_twr_deny_yr_top"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsTowerKilledIsTopLaneIsDenyIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsTowerKilled",
+					"IsTopLane",
+					"IsDeny",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsTowerKilledIsMidLaneIsDenyIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_twr_deny_yr_mid"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsTowerKilledIsMidLaneIsDenyIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsTowerKilled",
+					"IsMidLane",
+					"IsDeny",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsTowerKilledIsBotLaneIsDenyIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_twr_deny_yr_bot"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsTowerKilledIsBotLaneIsDenyIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsTowerKilled",
+					"IsBotLane",
+					"IsDeny",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsEnemyTowerKilledIsTopLaneIsDenyIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_twr_deny_enm_top"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsEnemyTowerKilledIsTopLaneIsDenyIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsEnemyTowerKilled",
+					"IsTopLane",
+					"IsDeny",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsEnemyTowerKilledIsMidLaneIsDenyIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_twr_deny_enm_mid"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsEnemyTowerKilledIsMidLaneIsDenyIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsEnemyTowerKilled",
+					"IsMidLane",
+					"IsDeny",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsEnemyTowerKilledIsBotLaneIsDenyIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_twr_deny_enm_bot"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsEnemyTowerKilledIsBotLaneIsDenyIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsEnemyTowerKilled",
+					"IsBotLane",
+					"IsDeny",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsGoodTowerKilledIsSpectatorIsTopLaneIsDenyIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_twr_deny_rad_top"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsGoodTowerKilledIsSpectatorIsTopLaneIsDenyIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsGoodTowerKilled",
+					"IsSpectator",
+					"IsTopLane",
+					"IsDeny",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsGoodTowerKilledIsSpectatorIsMidLaneIsDenyIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_twr_deny_rad_mid"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsGoodTowerKilledIsSpectatorIsMidLaneIsDenyIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsGoodTowerKilled",
+					"IsSpectator",
+					"IsMidLane",
+					"IsDeny",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsGoodTowerKilledIsSpectatorIsBotLaneIsDenyIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_twr_deny_rad_bot"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsGoodTowerKilledIsSpectatorIsBotLaneIsDenyIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsGoodTowerKilled",
+					"IsSpectator",
+					"IsBotLane",
+					"IsDeny",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsBadTowerKilledIsSpectatorIsTopLaneIsDenyIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_twr_deny_dire_top"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsBadTowerKilledIsSpectatorIsTopLaneIsDenyIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsBadTowerKilled",
+					"IsSpectator",
+					"IsTopLane",
+					"IsDeny",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsBadTowerKilledIsSpectatorIsMidLaneIsDenyIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_twr_deny_dire_mid"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsBadTowerKilledIsSpectatorIsMidLaneIsDenyIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsBadTowerKilled",
+					"IsSpectator",
+					"IsMidLane",
+					"IsDeny",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsBadTowerKilledIsSpectatorIsBotLaneIsDenyIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_twr_deny_dire_bot"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsBadTowerKilledIsSpectatorIsBotLaneIsDenyIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsBadTowerKilled",
+					"IsSpectator",
+					"IsBotLane",
+					"IsDeny",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomGlyphUsedBadIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_fort_dire"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomGlyphUsedBadIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"GlyphUsedBad",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomGlyphUsedGoodIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_fort_rad"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomGlyphUsedGoodIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"GlyphUsedGood",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomCourierLostBadIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_cour_kill_dire"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomCourierLostBadIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"CourierLostBad",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomCourierLostGoodIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_cour_kill_rad"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomCourierLostGoodIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"CourierLostGood",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsMegaCreepsIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_mega_now_you"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsMegaCreepsIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsMegaCreeps",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsEnemyMegaCreepsIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_mega_now_enm"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsEnemyMegaCreepsIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsEnemyMegaCreeps",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsBadMegaCreepsIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_mega_now_dire"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsBadMegaCreepsIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsBadMegaCreeps",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsGoodMegaCreepsIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_mega_now_rad"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsGoodMegaCreepsIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsGoodMegaCreeps",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsRoshanKilledBadIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_roshan_fallen_dire_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_roshan_fallen_dire_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsRoshanKilledBadIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsRoshanKilledBad",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsRoshanKilledGoodIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_roshan_fallen_rad_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_roshan_fallen_rad_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsRoshanKilledGoodIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsRoshanKilledGood",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsBadVictoryIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_victory_dire"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsBadVictoryIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsBadVictory",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsGoodVictoryIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_victory_rad"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsGoodVictoryIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsGoodVictory",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsAllPickIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_type_all_pick"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsAllPickIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsAllPick",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsAllRandomIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_type_all_random"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsAllRandomIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsAllRandom",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsCaptainsDraftIsDraftBeginIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_type_capt_draft"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsCaptainsDraftIsDraftBeginIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsCaptainsDraft",
+					"IsDraftBegin",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsCaptainsModeIsDraftBeginIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_type_capt_mode"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsCaptainsModeIsDraftBeginIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsCaptainsMode",
+					"IsDraftBegin",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsRandomDraftIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_type_random_draft"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsRandomDraftIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsRandomDraft",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsSingleDraftIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_type_single_draft"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsSingleDraftIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsSingleDraft",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsDeathMatchIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_type_death_match"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsDeathMatchIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsDeathMatch",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsReverseCaptainsModeIsDraftBeginIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_type_reverse_cm"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsReverseCaptainsModeIsDraftBeginIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsReverseCaptainsMode",
+					"IsDraftBegin",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsMidOnlyIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_type_all_mid"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsMidOnlyIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsMidOnly",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsLeastPlayedIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_type_least_played"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsLeastPlayedIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsLeastPlayed",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsLimitedHeroesIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_type_limited_heroes"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsLimitedHeroesIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsLimitedHeroes",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsCustomModeIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_choose_hero"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsCustomModeIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsCustomMode",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsOneVsOneIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_choose_hero"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsOneVsOneIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsOneVsOne",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsTenSecondsRemainingIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_count_pick_10_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_count_pick_10_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsTenSecondsRemainingIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsTenSecondsRemaining",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+		{
+			m_name = "announcer_dlc_clockwerk_CustomIsFiveSecondsRemainingIsAnnouncerVoice_Clockwerk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_count_pick_5_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "announcer_dlc_clockwerk_announcer_count_pick_5_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "announcer_dlc_clockwerk_CustomIsFiveSecondsRemainingIsAnnouncerVoice_Clockwerk"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isannouncer_dlc_clockwerk",
+					"IsFiveSecondsRemaining",
+					"IsAnnouncerVoice_Clockwerk",
+				]
+			}
+		},
+	]
+	m_Requirements = 
+	[
+		{
+			m_name = "Isannouncer_dlc_clockwerk"
+			m_matchKey = "classname"
+			m_matchExpr = "npc_dota_hero_announcer_dlc_clockwerk"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsAnnouncerVoice_Clockwerk"
+			m_matchKey = "announcer_voice"
+			m_matchExpr = "npc_dota_hero_announcer_dlc_clockwerk"
+			m_flWeight = 5.0
+		},
+	]
+}

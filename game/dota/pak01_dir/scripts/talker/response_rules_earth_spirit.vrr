@@ -1,0 +1,3744 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vrr_c1:version{c1f07085-5299-4e8a-b7e9-1cbb66bbbe23} -->
+{
+	m_Includes = 
+	[
+		"scripts/talker/response_rules_shared.vrr",
+	]
+	m_ResponseGroups = 
+	[
+		{
+			m_name = "earth_spirit_Spawn"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_spawn_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_spawn_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_spawn_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_spawn_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_spawn_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_spawn_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_spawn_07"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_Spawn"
+				m_Requirements = 
+				[
+					"Spawn",
+					"Isearth_spirit",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_CustomIsGameStart"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_battlebegins_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_battlebegins_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_CustomIsGameStart"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isearth_spirit",
+					"IsGameStart",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_CustomIsEarthSpiStoneRemnant"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_stonecaller_05"
+					m_params = 
+					{
+						m_weapondelay.start = 5.0
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_stonecaller_10"
+					m_params = 
+					{
+						m_weapondelay.start = 5.0
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_stonecaller_11"
+					m_params = 
+					{
+						m_weapondelay.start = 5.0
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_stonecaller_12"
+					m_params = 
+					{
+						m_weapondelay.start = 5.0
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_stonecaller_07"
+					m_params = 
+					{
+						m_weapondelay.start = 5.0
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_stonecaller_14"
+					m_params = 
+					{
+						m_weapondelay.start = 5.0
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_happy_03"
+					m_params = 
+					{
+						m_weapondelay.start = 5.0
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_happy_04"
+					m_params = 
+					{
+						m_weapondelay.start = 5.0
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_happy_05"
+					m_params = 
+					{
+						m_weapondelay.start = 5.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_CustomIsEarthSpiStoneRemnant"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isearth_spirit",
+					"IsEarthSpiStoneRemnant",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_CustomIsEarthSpiLoadoutSpawn"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_spawn_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_spawn_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_spawn_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_spawn_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_spawn_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_spawn_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_spawn_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_battlebegins_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_levelup_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_respawn_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_battlebegins_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_move_11"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_CustomIsEarthSpiLoadoutSpawn"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isearth_spirit",
+					"IsEarthSpiLoadoutSpawn",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_KillIsFirstBloodChance_10%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_firstblood_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_firstblood_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_KillIsFirstBloodChance_10%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isearth_spirit",
+					"IsFirstBlood",
+					"Chance_10%",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_KillIsFirstBlood"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_firstblood_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_KillIsFirstBlood"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isearth_spirit",
+					"IsFirstBlood",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_KillIsEarthSpiBoulderSmashChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_bouldersmash_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_bouldersmash_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_bouldersmash_07"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_KillIsEarthSpiBoulderSmashChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isearth_spirit",
+					"IsEarthSpiBoulderSmash",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_KillIsEarthSpiGeoGrip"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_geomagnetic_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_geomagnetic_08"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_KillIsEarthSpiGeoGrip"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isearth_spirit",
+					"IsEarthSpiGeoGrip",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_KillIsEarthSpiRollingBoulderChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_geomagnetic_05"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_KillIsEarthSpiRollingBoulderChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isearth_spirit",
+					"IsEarthSpiRollingBoulder",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_Kill"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_magnetize_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_magnetize_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_magnetize_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_kill_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_kill_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_kill_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_kill_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_kill_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_kill_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_kill_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_kill_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_kill_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_kill_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_kill_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_kill_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_kill_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_kill_15"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_kill_16"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_kill_17"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_kill_18"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_kill_19"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_kill_20"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_laugh_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_laugh_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_laugh_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_laugh_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_laugh_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_laugh_07"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_Kill"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isearth_spirit",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_KillIsEnemyEmber_SpiritChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_rival_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_rival_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_KillIsEnemyEmber_SpiritChance_25%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isearth_spirit",
+					"IsEnemyEmber_Spirit",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_KillIsEnemyStormSpiritChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_rival_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_KillIsEnemyStormSpiritChance_25%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isearth_spirit",
+					"IsEnemyStormSpirit",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_KillIsEnemyBrewmasterChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_rival_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_rival_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_rival_05"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_KillIsEnemyBrewmasterChance_25%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isearth_spirit",
+					"IsEnemyBrewmaster",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_KillIsEnemyTreantChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_rival_06"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_KillIsEnemyTreantChance_25%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isearth_spirit",
+					"IsEnemyTreant",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_KillIsEnemyTinyChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_rival_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_rival_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_rival_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_rival_10"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_KillIsEnemyTinyChance_25%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isearth_spirit",
+					"IsEnemyTiny",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_KillIsEnemyElder_TitanChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_rival_11"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_KillIsEnemyElder_TitanChance_25%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isearth_spirit",
+					"IsEnemyElder_Titan",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_KillIsEnemyChaos_KnightChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_rival_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_rival_13"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_KillIsEnemyChaos_KnightChance_25%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isearth_spirit",
+					"IsEnemyChaos_Knight",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_KillIsEnemyWispChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_rival_15"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_KillIsEnemyWispChance_25%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isearth_spirit",
+					"IsEnemyWisp",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_KillIsEnemyTerrorbladeChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_rival_16"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_rival_17"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_KillIsEnemyTerrorbladeChance_25%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isearth_spirit",
+					"IsEnemyTerrorblade",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_KillIsEnemyTuskChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_rival_18"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_KillIsEnemyTuskChance_25%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isearth_spirit",
+					"IsEnemyTusk",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_KillIsEnemyKunkkaChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_rival_19"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_rival_20"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_KillIsEnemyKunkkaChance_25%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isearth_spirit",
+					"IsEnemyKunkka",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_KillIsEnemyViperChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_rival_21"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_KillIsEnemyViperChance_25%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isearth_spirit",
+					"IsEnemyViper",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_KillIsEnemySandKingChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_rival_22"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_KillIsEnemySandKingChance_25%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isearth_spirit",
+					"IsEnemySandKing",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_KillIsEnemyEnigmaChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_rival_23"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_KillIsEnemyEnigmaChance_25%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isearth_spirit",
+					"IsEnemyEnigma",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_KillIsEnemyFurionChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_rival_24"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_rival_25"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_rival_26"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_rival_27"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_KillIsEnemyFurionChance_25%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isearth_spirit",
+					"IsEnemyFurion",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_KillIsEnemyGyrocopterChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_rival_28"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_KillIsEnemyGyrocopterChance_25%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isearth_spirit",
+					"IsEnemyGyrocopter",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_KillIsEnemyShadowShamanChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_rival_29"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_rival_30"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_KillIsEnemyShadowShamanChance_25%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isearth_spirit",
+					"IsEnemyShadowShaman",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_KillIsEnemyEnchantressChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_rival_31"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_rival_32"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_KillIsEnemyEnchantressChance_25%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isearth_spirit",
+					"IsEnemyEnchantress",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_KillIsEnemyUndyingChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_rival_34"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_rival_35"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_rival_36"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_KillIsEnemyUndyingChance_25%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isearth_spirit",
+					"IsEnemyUndying",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_KillIsEnemyWeaverChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_rival_37"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_KillIsEnemyWeaverChance_25%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isearth_spirit",
+					"IsEnemyWeaver",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_KillIsEnemyUrsaChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_rival_38"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_KillIsEnemyUrsaChance_25%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isearth_spirit",
+					"IsEnemyUrsa",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_KillIsEnemyShredderChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_rival_39"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_rival_40"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_rival_41"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_KillIsEnemyShredderChance_25%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isearth_spirit",
+					"IsEnemyShredder",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_KillIsEnemyKeeper_of_the_LightChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_rival_42"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_KillIsEnemyKeeper_of_the_LightChance_25%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isearth_spirit",
+					"IsEnemyKeeper_of_the_Light",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_KillIsEnemyBroodmotherChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_rival_43"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_KillIsEnemyBroodmotherChance_25%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isearth_spirit",
+					"IsEnemyBroodmother",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_KillIsEnemyVoid_SpiritChance_30%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_rival_void_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_rival_void_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_KillIsEnemyVoid_SpiritChance_30%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isearth_spirit",
+					"IsEnemyVoid_Spirit",
+					"Chance_30%",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_Move"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_move_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_move_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_move_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_move_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_move_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_move_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_move_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_move_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_move_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_move_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_move_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_move_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_move_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_move_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_move_15"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_move_16"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_move_17"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_move_18"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_move_19"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_move_20"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_move_21"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_move_22"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_move_23"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_move_24"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_move_25"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_Move"
+				m_Requirements = 
+				[
+					"Move",
+					"Isearth_spirit",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_Attack"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_attack_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_attack_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_attack_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_attack_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_attack_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_attack_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_attack_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_attack_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_attack_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_attack_12"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_Attack"
+				m_Requirements = 
+				[
+					"Attack",
+					"Isearth_spirit",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_Deny"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_attack_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_deny_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_deny_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_deny_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_deny_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_deny_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_deny_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_deny_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_deny_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_deny_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_deny_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_deny_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_deny_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_deny_15"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_deny_16"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_deny_17"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_deny_18"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_deny_19"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_deny_20"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_deny_21"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_deny_22"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_deny_23"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_deny_24"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_deny_25"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_deny_26"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_Deny"
+				m_Requirements = 
+				[
+					"Deny",
+					"Isearth_spirit",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_CastOrder"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_cast_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_cast_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_CastOrder"
+				m_Requirements = 
+				[
+					"CastOrder",
+					"Isearth_spirit",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_CastExecuteIsEarthSpiGeoGripChance_75%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_geomagnetic_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_geomagnetic_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_geomagnetic_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_geomagnetic_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_geomagnetic_10"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_CastExecuteIsEarthSpiGeoGripChance_75%"
+				m_Requirements = 
+				[
+					"CastExecute",
+					"Isearth_spirit",
+					"IsEarthSpiGeoGrip",
+					"Chance_75%",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_CastExecuteIsEarthSpiGeoGripIsEaSpRockChance_75%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_geomagnetic_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_geomagnetic_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_geomagnetic_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_geomagnetic_10"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_CastExecuteIsEarthSpiGeoGripIsEaSpRockChance_75%"
+				m_Requirements = 
+				[
+					"CastExecute",
+					"Isearth_spirit",
+					"IsEarthSpiGeoGrip",
+					"IsEaSpRock",
+					"Chance_75%",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_CastExecuteIsEarthSpiritEnchRemnantChance_75%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_stonecaller_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_stonecaller_14"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_CastExecuteIsEarthSpiritEnchRemnantChance_75%"
+				m_Requirements = 
+				[
+					"CastExecute",
+					"Isearth_spirit",
+					"IsEarthSpiritEnchRemnant",
+					"Chance_75%",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_LevelUp"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_levelup_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_levelup_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_levelup_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_levelup_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_levelup_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_levelup_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_levelup_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_levelup_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_levelup_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_levelup_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_levelup_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_levelup_12"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_LevelUp"
+				m_Requirements = 
+				[
+					"LevelUp",
+					"Isearth_spirit",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_AllyNearEarlyGameIsAllyStormSpirit"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_ally_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_AllyNearEarlyGameIsAllyStormSpirit"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Isearth_spirit",
+					"EarlyGame",
+					"IsAllyStormSpirit",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_AllyNearEarlyGameIsAllyEmber_Spirit"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_ally_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_AllyNearEarlyGameIsAllyEmber_Spirit"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Isearth_spirit",
+					"EarlyGame",
+					"IsAllyEmber_Spirit",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_AllyNearEarlyGameIsAllyBrewmaster"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_ally_03"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_AllyNearEarlyGameIsAllyBrewmaster"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Isearth_spirit",
+					"EarlyGame",
+					"IsAllyBrewmaster",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_AllyNearEarlyGameIsAllyTreant"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_ally_04"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_AllyNearEarlyGameIsAllyTreant"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Isearth_spirit",
+					"EarlyGame",
+					"IsAllyTreant",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_AllyNearEarlyGameIsAllySpirit_Breaker"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_ally_06"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_AllyNearEarlyGameIsAllySpirit_Breaker"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Isearth_spirit",
+					"EarlyGame",
+					"IsAllySpirit_Breaker",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_AllyNearEarlyGameIsAllySpirit_BreakerChance_1%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_ally_07"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_AllyNearEarlyGameIsAllySpirit_BreakerChance_1%"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Isearth_spirit",
+					"EarlyGame",
+					"IsAllySpirit_Breaker",
+					"Chance_1%",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_AllyNearEarlyGameIsAllyTinyChance_30%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_ally_08"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_ally_09"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_ally_10"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_AllyNearEarlyGameIsAllyTinyChance_30%"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Isearth_spirit",
+					"EarlyGame",
+					"IsAllyTiny",
+					"Chance_30%",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_AllyNearEarlyGameIsAllyElder_Titan"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_ally_11"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_AllyNearEarlyGameIsAllyElder_Titan"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Isearth_spirit",
+					"EarlyGame",
+					"IsAllyElder_Titan",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_AllyNearEarlyGameIsAllyWisp"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_ally_12"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_AllyNearEarlyGameIsAllyWisp"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Isearth_spirit",
+					"EarlyGame",
+					"IsAllyWisp",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_AllyNearEarlyGameIsAllyTusk"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_ally_13"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_AllyNearEarlyGameIsAllyTusk"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Isearth_spirit",
+					"EarlyGame",
+					"IsAllyTusk",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_AllyNearEarlyGameIsAllyFurionChance_30%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_ally_14"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_ally_15"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_AllyNearEarlyGameIsAllyFurionChance_30%"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Isearth_spirit",
+					"EarlyGame",
+					"IsAllyFurion",
+					"Chance_30%",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_AllyNearEarlyGameIsAllySniper"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_ally_16"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_AllyNearEarlyGameIsAllySniper"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Isearth_spirit",
+					"EarlyGame",
+					"IsAllySniper",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_AllyNearEarlyGameIsAllyRattletrap"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_ally_17"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_AllyNearEarlyGameIsAllyRattletrap"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Isearth_spirit",
+					"EarlyGame",
+					"IsAllyRattletrap",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_AllyNearEarlyGameIsAllyTinker"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_ally_18"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_AllyNearEarlyGameIsAllyTinker"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Isearth_spirit",
+					"EarlyGame",
+					"IsAllyTinker",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_AllyNearEarlyGameIsAllyUrsa"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_ally_19"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_AllyNearEarlyGameIsAllyUrsa"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Isearth_spirit",
+					"EarlyGame",
+					"IsAllyUrsa",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_AllyNearEarlyGameIsAllyEnchantressChance_30%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_ally_20"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_ally_21"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_AllyNearEarlyGameIsAllyEnchantressChance_30%"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Isearth_spirit",
+					"EarlyGame",
+					"IsAllyEnchantress",
+					"Chance_30%",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_AllyNearEarlyGameIsAllyLone_Druid"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_ally_22"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_AllyNearEarlyGameIsAllyLone_Druid"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Isearth_spirit",
+					"EarlyGame",
+					"IsAllyLone_Druid",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_AllyNearEarlyGameIsAllyShredderChance_30%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_ally_23"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_ally_24"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_AllyNearEarlyGameIsAllyShredderChance_30%"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Isearth_spirit",
+					"EarlyGame",
+					"IsAllyShredder",
+					"Chance_30%",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_AllyNearEarlyGameIsAllyEnigma"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_ally_25"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_AllyNearEarlyGameIsAllyEnigma"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Isearth_spirit",
+					"EarlyGame",
+					"IsAllyEnigma",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_AllyNearEarlyGameIsAllyVoid_SpiritChance_30%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_ally_26"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_ally_27"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_AllyNearEarlyGameIsAllyVoid_SpiritChance_30%"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Isearth_spirit",
+					"EarlyGame",
+					"IsAllyVoid_Spirit",
+					"Chance_30%",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_LastHit"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_lasthit_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_lasthit_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_lasthit_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_lasthit_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_lasthit_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_lasthit_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_lasthit_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_lasthit_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_lasthit_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_lasthit_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_lasthit_11"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_LastHit"
+				m_Requirements = 
+				[
+					"LastHit",
+					"Isearth_spirit",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_Death"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_death_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_death_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_death_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_death_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_death_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_death_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_death_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_death_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_death_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_death_11"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_Death"
+				m_Requirements = 
+				[
+					"Death",
+					"Isearth_spirit",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_DeathIsReincarnating"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_fastres_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_fastres_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_DeathIsReincarnating"
+				m_Requirements = 
+				[
+					"Death",
+					"Isearth_spirit",
+					"IsReincarnating",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_Respawn"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_respawn_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_respawn_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_respawn_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_respawn_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_respawn_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_respawn_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_respawn_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_respawn_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_respawn_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_respawn_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_respawn_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_respawn_12"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_Respawn"
+				m_Requirements = 
+				[
+					"Respawn",
+					"Isearth_spirit",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_PurchaseIsExpensiveItem"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_purch_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_purch_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_purch_03"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_PurchaseIsExpensiveItem"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isearth_spirit",
+					"IsExpensiveItem",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_PurchaseIsUltimateScepter"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_scepter_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_scepter_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_PurchaseIsUltimateScepter"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isearth_spirit",
+					"IsUltimateScepter",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_PurchaseIsBlinkDagger"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_blink_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_blink_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_PurchaseIsBlinkDagger"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isearth_spirit",
+					"IsBlinkDagger",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_PurchaseIsHeart"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_items_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_PurchaseIsHeart"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isearth_spirit",
+					"IsHeart",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_PurchaseIsShiva"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_items_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_PurchaseIsShiva"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isearth_spirit",
+					"IsShiva",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_PurchaseIsBloodStone"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_items_03"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_PurchaseIsBloodStone"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isearth_spirit",
+					"IsBloodStone",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_PurchaseIsAssaultCuirass"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_items_04"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_PurchaseIsAssaultCuirass"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isearth_spirit",
+					"IsAssaultCuirass",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_PurchaseIsBlackKingBar"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_items_05"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_PurchaseIsBlackKingBar"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isearth_spirit",
+					"IsBlackKingBar",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_PurchaseIsBattleFury"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_items_06"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_items_16"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_PurchaseIsBattleFury"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isearth_spirit",
+					"IsBattleFury",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_PurchaseIsBladeMail"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_items_07"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_PurchaseIsBladeMail"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isearth_spirit",
+					"IsBladeMail",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_PurchaseIsSangeAndYasha"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_items_08"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_PurchaseIsSangeAndYasha"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isearth_spirit",
+					"IsSangeAndYasha",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_PurchaseIsInvisSword"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_items_09"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_PurchaseIsInvisSword"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isearth_spirit",
+					"IsInvisSword",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_PurchaseIsUrnOfShadows"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_items_10"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_PurchaseIsUrnOfShadows"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isearth_spirit",
+					"IsUrnOfShadows",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_PurchaseIsPipe"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_items_11"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_PurchaseIsPipe"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isearth_spirit",
+					"IsPipe",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_PurchaseIsVanguard"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_items_12"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_items_17"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_PurchaseIsVanguard"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isearth_spirit",
+					"IsVanguard",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_PurchaseIsMekansm"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_items_13"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_PurchaseIsMekansm"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isearth_spirit",
+					"IsMekansm",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_PurchaseIsVladmirs"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_items_14"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_PurchaseIsVladmirs"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isearth_spirit",
+					"IsVladmirs",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_PurchaseIsVeilofDiscord"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_items_15"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_items_19"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_PurchaseIsVeilofDiscord"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isearth_spirit",
+					"IsVeilofDiscord",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_Bottling"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_bottle_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_bottle_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_bottle_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_Bottling"
+				m_Requirements = 
+				[
+					"Bottling",
+					"Isearth_spirit",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_MissingIsLaneTop"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_lanemissing_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_lanemissing_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_MissingIsLaneTop"
+				m_Requirements = 
+				[
+					"Missing",
+					"Isearth_spirit",
+					"IsLaneTop",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_MissingIsLaneMid"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_lanemissing_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_MissingIsLaneMid"
+				m_Requirements = 
+				[
+					"Missing",
+					"Isearth_spirit",
+					"IsLaneMid",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_MissingIsLaneBot"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_lanemissing_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_lanemissing_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_lanemissing_06"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_MissingIsLaneBot"
+				m_Requirements = 
+				[
+					"Missing",
+					"Isearth_spirit",
+					"IsLaneBot",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_ItemDropIsCommonDrop"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_itemcommon_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_ItemDropIsCommonDrop"
+				m_Requirements = 
+				[
+					"ItemDrop",
+					"Isearth_spirit",
+					"IsCommonDrop",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_ItemDropIsRareDrop"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_itemmoderate_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_ItemDropIsRareDrop"
+				m_Requirements = 
+				[
+					"ItemDrop",
+					"Isearth_spirit",
+					"IsRareDrop",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_ItemDropIsUltraRareDrop"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_itemrare_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_ItemDropIsUltraRareDrop"
+				m_Requirements = 
+				[
+					"ItemDrop",
+					"Isearth_spirit",
+					"IsUltraRareDrop",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_Immortality"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_immort_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_Immortality"
+				m_Requirements = 
+				[
+					"Immortality",
+					"Isearth_spirit",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_ImmortalityChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_immort_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_ImmortalityChance_25%"
+				m_Requirements = 
+				[
+					"Immortality",
+					"Isearth_spirit",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_PowerupIsPowerupHaste"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_haste_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_PowerupIsPowerupHaste"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isearth_spirit",
+					"IsPowerupHaste",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_PowerupIsPowerupHasteChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_haste_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_PowerupIsPowerupHasteChance_25%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isearth_spirit",
+					"IsPowerupHaste",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_PowerupIsPowerupArcane"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_arcane_01"
+					m_params = 
+					{
+						m_respeakdelay.start = 360.0
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_itemrare_01"
+					m_params = 
+					{
+						m_respeakdelay.start = 300.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_PowerupIsPowerupArcane"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isearth_spirit",
+					"IsPowerupArcane",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_PowerupIsPowerupBounty"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_bounty_01"
+					m_params = 
+					{
+						m_respeakdelay.start = 120.0
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_bounty_02"
+					m_params = 
+					{
+						m_respeakdelay.start = 120.0
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_itemmoderate_01"
+					m_params = 
+					{
+						m_respeakdelay.start = 300.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_PowerupIsPowerupBounty"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isearth_spirit",
+					"IsPowerupBounty",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_PowerupIsPowerupDoubleDamage"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_doubdam_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_PowerupIsPowerupDoubleDamage"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isearth_spirit",
+					"IsPowerupDoubleDamage",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_PowerupIsPowerupDoubleDamageChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_doubdam_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_PowerupIsPowerupDoubleDamageChance_25%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isearth_spirit",
+					"IsPowerupDoubleDamage",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_PowerupIsPowerupRegeneration"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_regen_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_PowerupIsPowerupRegeneration"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isearth_spirit",
+					"IsPowerupRegeneration",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_PowerupIsPowerupRegenerationChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_regen_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_PowerupIsPowerupRegenerationChance_25%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isearth_spirit",
+					"IsPowerupRegeneration",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_PowerupIsPowerupIllusion"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_illus_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_PowerupIsPowerupIllusion"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isearth_spirit",
+					"IsPowerupIllusion",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_PowerupIsPowerupInvisibility"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_invis_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_PowerupIsPowerupInvisibility"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isearth_spirit",
+					"IsPowerupInvisibility",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_PowerupIsPowerupInvisibilityChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_invis_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_invis_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_PowerupIsPowerupInvisibilityChance_25%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isearth_spirit",
+					"IsPowerupInvisibility",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_CooldownLittleNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_notyet_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_notyet_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_notyet_07"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_CooldownLittleNag"
+				m_Requirements = 
+				[
+					"Cooldown",
+					"Isearth_spirit",
+					"LittleNag",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_CooldownMediumNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_notyet_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_notyet_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_notyet_08"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_CooldownMediumNag"
+				m_Requirements = 
+				[
+					"Cooldown",
+					"Isearth_spirit",
+					"MediumNag",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_CooldownSuperNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_notyet_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_notyet_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_notyet_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_CooldownSuperNag"
+				m_Requirements = 
+				[
+					"Cooldown",
+					"Isearth_spirit",
+					"SuperNag",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_NoManaLittleNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_nomana_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_nomana_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_nomana_07"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_NoManaLittleNag"
+				m_Requirements = 
+				[
+					"NoMana",
+					"Isearth_spirit",
+					"LittleNag",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_NoManaMediumNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_nomana_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_nomana_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_nomana_08"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_NoManaMediumNag"
+				m_Requirements = 
+				[
+					"NoMana",
+					"Isearth_spirit",
+					"MediumNag",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_NoManaSuperNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_nomana_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_nomana_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_nomana_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_NoManaSuperNag"
+				m_Requirements = 
+				[
+					"NoMana",
+					"Isearth_spirit",
+					"SuperNag",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_Thanks"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_thanks_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_thanks_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_thanks_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_thanks_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_thanks_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_thanks_07"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_Thanks"
+				m_Requirements = 
+				[
+					"Thanks",
+					"Isearth_spirit",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_ThanksChance_1%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_thanks_05"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_ThanksChance_1%"
+				m_Requirements = 
+				[
+					"Thanks",
+					"Isearth_spirit",
+					"Chance_1%",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_PainChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_underattack_01"
+					m_params = 
+					{
+						m_respeakdelay.start = 120.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_PainChance_25%"
+				m_Requirements = 
+				[
+					"Pain",
+					"Isearth_spirit",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_Pain"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_pain_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_pain_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_pain_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_pain_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_pain_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_pain_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_pain_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_pain_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_pain_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_pain_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_pain_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_pain_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_pain_13"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_Pain"
+				m_Requirements = 
+				[
+					"Pain",
+					"Isearth_spirit",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_InTheBag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_inthebag_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_InTheBag"
+				m_Requirements = 
+				[
+					"InTheBag",
+					"Isearth_spirit",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_Defeat"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_lose_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_lose_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_lose_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_Defeat"
+				m_Requirements = 
+				[
+					"Defeat",
+					"Isearth_spirit",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_Victory"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_win_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_win_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_win_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_Victory"
+				m_Requirements = 
+				[
+					"Victory",
+					"Isearth_spirit",
+				]
+			}
+		},
+		{
+			m_name = "earth_spirit_EmoteIsEmoteLaugh"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_laugh_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_laugh_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_laugh_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_laugh_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_laugh_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_laugh_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "earth_spirit_earthspi_laugh_07"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "earth_spirit_EmoteIsEmoteLaugh"
+				m_Requirements = 
+				[
+					"Emote",
+					"Isearth_spirit",
+					"IsEmoteLaugh",
+				]
+			}
+		},
+	]
+	m_Requirements = 
+	[
+		{
+			m_name = "Isearth_spirit"
+			m_matchKey = "classname"
+			m_matchExpr = "npc_dota_hero_earth_spirit"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsEarthSpiStoneRemnant"
+			m_matchKey = "stoneremnantcast"
+			m_matchExpr = "yes"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsEarthSpiBoulderSmash"
+			m_matchKey = "abilityname"
+			m_matchExpr = "earth_spirit_boulder_smash"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsEarthSpiRollingBoulder"
+			m_matchKey = "abilityname"
+			m_matchExpr = "earth_spirit_rolling_boulder"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsEarthSpiGeoGrip"
+			m_matchKey = "abilityname"
+			m_matchExpr = "earth_spirit_geomagnetic_grip"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsEarthSpiMagnetize"
+			m_matchKey = "abilityname"
+			m_matchExpr = "earth_spirit_magnetize"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsEaSpRock"
+			m_matchKey = "targetclassname"
+			m_matchExpr = "npc_dota_earth_spirit_stone"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsEarthSpiritEnchRemnant"
+			m_matchKey = "abilityname"
+			m_matchExpr = "earth_spirit_petrify"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsEarthSpiLoadoutSpawn"
+			m_matchKey = "special_spawn"
+			m_matchExpr = "earth_spirit_loadout_spawn"
+			m_flWeight = 5.0
+		},
+	]
+}

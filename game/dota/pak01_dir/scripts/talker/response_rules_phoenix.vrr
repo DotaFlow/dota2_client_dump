@@ -1,0 +1,778 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vrr_c1:version{c1f07085-5299-4e8a-b7e9-1cbb66bbbe23} -->
+{
+	m_Includes = 
+	[
+		"scripts/talker/response_rules_shared.vrr",
+	]
+	m_SoundEventScripts = 
+	[
+		"soundevents/voscripts/game_sounds_vo_phoenix.vsndevts",
+	]
+	m_ResponseGroups = 
+	[
+		{
+			m_name = "phoenix_spawn"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/phoenix/phoenix_phoenix_bird_respawn.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phoenix_spawn"
+				m_Requirements = 
+				[
+					"spawn",
+					"Isphoenix",
+				]
+			}
+		},
+		{
+			m_name = "phoenix_CustomIsGameStart"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/phoenix/phoenix_phoenix_bird_victory.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phoenix_CustomIsGameStart"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isphoenix",
+					"IsGameStart",
+				]
+			}
+		},
+		{
+			m_name = "phoenix_Move"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/phoenix/phoenix_phoenix_bird_moving01.vcd"
+				},
+				{
+					m_type = "SCENE"
+					m_value = "scenes/phoenix/phoenix_phoenix_bird_moving02.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phoenix_Move"
+				m_Requirements = 
+				[
+					"Move",
+					"Isphoenix",
+				]
+			}
+		},
+		{
+			m_name = "phoenix_Attack"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/phoenix/phoenix_phoenix_bird_attack.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phoenix_Attack"
+				m_Requirements = 
+				[
+					"Attack",
+					"Isphoenix",
+				]
+			}
+		},
+		{
+			m_name = "phoenix_LevelUp"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/phoenix/phoenix_phoenix_bird_level_up.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phoenix_LevelUp"
+				m_Requirements = 
+				[
+					"LevelUp",
+					"Isphoenix",
+				]
+			}
+		},
+		{
+			m_name = "phoenix_Kill"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/phoenix/phoenix_phoenix_bird_kill.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phoenix_Kill"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isphoenix",
+				]
+			}
+		},
+		{
+			m_name = "phoenix_KillChance_50%IsEnemyInvoker"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/phoenix/phoenix_phoenix_bird_emote_bad.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phoenix_KillChance_50%IsEnemyInvoker"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isphoenix",
+					"Chance_50%",
+					"IsEnemyInvoker",
+				]
+			}
+		},
+		{
+			m_name = "phoenix_KillChance_50%IsEnemyKeeper_of_the_Light"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/phoenix/phoenix_phoenix_bird_emote_bad.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phoenix_KillChance_50%IsEnemyKeeper_of_the_Light"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isphoenix",
+					"Chance_50%",
+					"IsEnemyKeeper_of_the_Light",
+				]
+			}
+		},
+		{
+			m_name = "phoenix_KillChance_50%IsEnemyLina"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/phoenix/phoenix_phoenix_bird_emote_bad.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phoenix_KillChance_50%IsEnemyLina"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isphoenix",
+					"Chance_50%",
+					"IsEnemyLina",
+				]
+			}
+		},
+		{
+			m_name = "phoenix_KillChance_50%IsEnemyAlchemist"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/phoenix/phoenix_phoenix_bird_emote_bad.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phoenix_KillChance_50%IsEnemyAlchemist"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isphoenix",
+					"Chance_50%",
+					"IsEnemyAlchemist",
+				]
+			}
+		},
+		{
+			m_name = "phoenix_KillChance_50%IsEnemySkywrath_Mage"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/phoenix/phoenix_phoenix_bird_emote_bad.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phoenix_KillChance_50%IsEnemySkywrath_Mage"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isphoenix",
+					"Chance_50%",
+					"IsEnemySkywrath_Mage",
+				]
+			}
+		},
+		{
+			m_name = "phoenix_KillChance_50%IsEnemyElder_Titan"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/phoenix/phoenix_phoenix_bird_emote_bad.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phoenix_KillChance_50%IsEnemyElder_Titan"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isphoenix",
+					"Chance_50%",
+					"IsEnemyElder_Titan",
+				]
+			}
+		},
+		{
+			m_name = "phoenix_KillChance_50%IsEnemyAbyssal_Underlord"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/phoenix/phoenix_phoenix_bird_emote_bad.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phoenix_KillChance_50%IsEnemyAbyssal_Underlord"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isphoenix",
+					"Chance_50%",
+					"IsEnemyAbyssal_Underlord",
+				]
+			}
+		},
+		{
+			m_name = "phoenix_KillChance_50%IsEnemyEnigma"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/phoenix/phoenix_phoenix_bird_emote_bad.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phoenix_KillChance_50%IsEnemyEnigma"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isphoenix",
+					"Chance_50%",
+					"IsEnemyEnigma",
+				]
+			}
+		},
+		{
+			m_name = "phoenix_KillChance_50%IsEnemyAncient_Apparition"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/phoenix/phoenix_phoenix_bird_emote_bad.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phoenix_KillChance_50%IsEnemyAncient_Apparition"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isphoenix",
+					"Chance_50%",
+					"IsEnemyAncient_Apparition",
+				]
+			}
+		},
+		{
+			m_name = "phoenix_KillChance_50%IsEnemyTerrorblade"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/phoenix/phoenix_phoenix_bird_emote_bad.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phoenix_KillChance_50%IsEnemyTerrorblade"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isphoenix",
+					"Chance_50%",
+					"IsEnemyTerrorblade",
+				]
+			}
+		},
+		{
+			m_name = "phoenix_Death"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/phoenix/phoenix_phoenix_bird_death_defeat.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phoenix_Death"
+				m_Requirements = 
+				[
+					"Death",
+					"Isphoenix",
+				]
+			}
+		},
+		{
+			m_name = "phoenix_Respawn"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/phoenix/phoenix_phoenix_bird_respawn.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phoenix_Respawn"
+				m_Requirements = 
+				[
+					"Respawn",
+					"Isphoenix",
+				]
+			}
+		},
+		{
+			m_name = "phoenix_LastHit"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/phoenix/phoenix_phoenix_bird_last_hit.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phoenix_LastHit"
+				m_Requirements = 
+				[
+					"LastHit",
+					"Isphoenix",
+				]
+			}
+		},
+		{
+			m_name = "phoenix_Deny"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/phoenix/phoenix_phoenix_bird_denied.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phoenix_Deny"
+				m_Requirements = 
+				[
+					"Deny",
+					"Isphoenix",
+				]
+			}
+		},
+		{
+			m_name = "phoenix_Defeat"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/phoenix/phoenix_phoenix_bird_death_defeat.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phoenix_Defeat"
+				m_Requirements = 
+				[
+					"Defeat",
+					"Isphoenix",
+				]
+			}
+		},
+		{
+			m_name = "phoenix_Victory"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/phoenix/phoenix_phoenix_bird_victory.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phoenix_Victory"
+				m_Requirements = 
+				[
+					"Victory",
+					"Isphoenix",
+				]
+			}
+		},
+		{
+			m_name = "phoenix_Immortality"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/phoenix/phoenix_phoenix_bird_rune.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phoenix_Immortality"
+				m_Requirements = 
+				[
+					"Immortality",
+					"Isphoenix",
+				]
+			}
+		},
+		{
+			m_name = "phoenix_Powerup"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/phoenix/phoenix_phoenix_bird_rune.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phoenix_Powerup"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isphoenix",
+				]
+			}
+		},
+		{
+			m_name = "phoenix_PowerupIsPowerupBounty"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/phoenix/phoenix_phoenix_bird_rune.vcd"
+					m_params = 
+					{
+						m_respeakdelay.start = 300.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phoenix_PowerupIsPowerupBounty"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isphoenix",
+					"IsPowerupBounty",
+				]
+			}
+		},
+		{
+			m_name = "phoenix_PowerupIsPowerupArcane"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/phoenix/phoenix_phoenix_bird_rune.vcd"
+					m_params = 
+					{
+						m_respeakdelay.start = 300.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phoenix_PowerupIsPowerupArcane"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isphoenix",
+					"IsPowerupArcane",
+				]
+			}
+		},
+		{
+			m_name = "phoenix_CooldownLittleNag"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/phoenix/phoenix_phoenix_bird_no01.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phoenix_CooldownLittleNag"
+				m_Requirements = 
+				[
+					"Cooldown",
+					"Isphoenix",
+					"LittleNag",
+				]
+			}
+		},
+		{
+			m_name = "phoenix_CooldownMediumNag"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/phoenix/phoenix_phoenix_bird_no02.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phoenix_CooldownMediumNag"
+				m_Requirements = 
+				[
+					"Cooldown",
+					"Isphoenix",
+					"MediumNag",
+				]
+			}
+		},
+		{
+			m_name = "phoenix_CooldownSuperNag"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/phoenix/phoenix_phoenix_bird_no03.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phoenix_CooldownSuperNag"
+				m_Requirements = 
+				[
+					"Cooldown",
+					"Isphoenix",
+					"SuperNag",
+				]
+			}
+		},
+		{
+			m_name = "phoenix_NoManaLittleNag"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/phoenix/phoenix_phoenix_bird_no01.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phoenix_NoManaLittleNag"
+				m_Requirements = 
+				[
+					"NoMana",
+					"Isphoenix",
+					"LittleNag",
+				]
+			}
+		},
+		{
+			m_name = "phoenix_NoManaMediumNag"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/phoenix/phoenix_phoenix_bird_no02.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phoenix_NoManaMediumNag"
+				m_Requirements = 
+				[
+					"NoMana",
+					"Isphoenix",
+					"MediumNag",
+				]
+			}
+		},
+		{
+			m_name = "phoenix_NoManaSuperNag"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/phoenix/phoenix_phoenix_bird_no03.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phoenix_NoManaSuperNag"
+				m_Requirements = 
+				[
+					"NoMana",
+					"Isphoenix",
+					"SuperNag",
+				]
+			}
+		},
+		{
+			m_name = "phoenix_PainChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/phoenix/phoenix_phoenix_bird_under_attack.vcd"
+					m_params = 
+					{
+						m_respeakdelay.start = 120.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phoenix_PainChance_25%"
+				m_Requirements = 
+				[
+					"Pain",
+					"Isphoenix",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "phoenix_Thanks"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/phoenix/phoenix_phoenix_bird_emote_good.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phoenix_Thanks"
+				m_Requirements = 
+				[
+					"Thanks",
+					"Isphoenix",
+				]
+			}
+		},
+		{
+			m_name = "phoenix_EmoteIsEmoteLaugh"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/phoenix/phoenix_phoenix_bird_laugh.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phoenix_EmoteIsEmoteLaugh"
+				m_Requirements = 
+				[
+					"Emote",
+					"Isphoenix",
+					"IsEmoteLaugh",
+				]
+			}
+		},
+		{
+			m_name = "phoenix_InTheBag"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/phoenix/phoenix_phoenix_bird_inthebag.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "phoenix_InTheBag"
+				m_Requirements = 
+				[
+					"InTheBag",
+					"Isphoenix",
+				]
+			}
+		},
+	]
+	m_Requirements = 
+	[
+		{
+			m_name = "Isphoenix"
+			m_matchKey = "classname"
+			m_matchExpr = "npc_dota_hero_phoenix"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsPhoenixDive"
+			m_matchKey = "abilityname"
+			m_matchExpr = "phoenix_icarus_dive"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsPhoenixSpiritsSummon"
+			m_matchKey = "abilityname"
+			m_matchExpr = "phoenix_fire_spirits"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsPhoenixSpiritsSend"
+			m_matchKey = "abiltyname"
+			m_matchExpr = "phoenix_launch_fire_spirit"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsPhoenixSupernova"
+			m_matchKey = "abilityname"
+			m_matchExpr = "phoenix_supernova"
+			m_flWeight = 5.0
+		},
+	]
+}

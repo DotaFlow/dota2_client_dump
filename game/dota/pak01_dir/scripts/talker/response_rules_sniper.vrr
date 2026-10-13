@@ -1,0 +1,4549 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vrr_c1:version{c1f07085-5299-4e8a-b7e9-1cbb66bbbe23} -->
+{
+	m_Includes = 
+	[
+		"scripts/talker/response_rules_shared.vrr",
+	]
+	m_ResponseGroups = 
+	[
+		{
+			m_name = "sniper_Spawn"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_spawn_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_spawn_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_spawn_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_spawn_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_spawn_06"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_Spawn"
+				m_Requirements = 
+				[
+					"Spawn",
+					"Issniper",
+				]
+			}
+		},
+		{
+			m_name = "sniper_SpawnIsHelmetVoice"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_spawn_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_spawn_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_spawn_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_spawn_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_spawn_06"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_SpawnIsHelmetVoice"
+				m_Requirements = 
+				[
+					"Spawn",
+					"Issniper",
+					"IsHelmetVoice",
+				]
+			}
+		},
+		{
+			m_name = "sniper_CustomIsGameStart"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_spawn_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_CustomIsGameStart"
+				m_Requirements = 
+				[
+					"Custom",
+					"Issniper",
+					"IsGameStart",
+				]
+			}
+		},
+		{
+			m_name = "sniper_CustomIsSniperShrapnelChance_75%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_ability_shrapnel_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_ability_shrapnel_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_CustomIsSniperShrapnelChance_75%"
+				m_Requirements = 
+				[
+					"Custom",
+					"Issniper",
+					"IsSniperShrapnel",
+					"Chance_75%",
+				]
+			}
+		},
+		{
+			m_name = "sniper_CustomIsSniperShrapnelIsGoodShrapnelChance_75%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_ability_shrapnel_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_ability_shrapnel_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_ability_shrapnel_06"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_CustomIsSniperShrapnelIsGoodShrapnelChance_75%"
+				m_Requirements = 
+				[
+					"Custom",
+					"Issniper",
+					"IsSniperShrapnel",
+					"IsGoodShrapnel",
+					"Chance_75%",
+				]
+			}
+		},
+		{
+			m_name = "sniper_CustomIsSniperShrapnelIsGoodShrapnelChance_5%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_ability_shrapnel_07"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_CustomIsSniperShrapnelIsGoodShrapnelChance_5%"
+				m_Requirements = 
+				[
+					"Custom",
+					"Issniper",
+					"IsSniperShrapnel",
+					"IsGoodShrapnel",
+					"Chance_5%",
+				]
+			}
+		},
+		{
+			m_name = "sniper_CustomIsAssassinateFail"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_ability_fail_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_ability_fail_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_ability_fail_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_ability_fail_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_ability_fail_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_ability_fail_08"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_CustomIsAssassinateFail"
+				m_Requirements = 
+				[
+					"Custom",
+					"Issniper",
+					"IsAssassinateFail",
+				]
+			}
+		},
+		{
+			m_name = "sniper_CustomIsGameStartIsTutMap2"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_spawn_07"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_CustomIsGameStartIsTutMap2"
+				m_Requirements = 
+				[
+					"Custom",
+					"Issniper",
+					"IsGameStart",
+					"IsTutMap2",
+				]
+			}
+		},
+		{
+			m_name = "sniper_CustomIsSniperLoadoutSpawn"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_spawn_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_spawn_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_spawn_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_spawn_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_spawn_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_spawn_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_move_15"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_move_24"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_move_25"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_attack_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_cast_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_level_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_CustomIsSniperLoadoutSpawn"
+				m_Requirements = 
+				[
+					"Custom",
+					"Issniper",
+					"IsSniperLoadoutSpawn",
+				]
+			}
+		},
+		{
+			m_name = "sniper_CustomIsHelmetVoiceIsAssassinateFail"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_ability_fail_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_ability_fail_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_ability_fail_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_ability_fail_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_ability_fail_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_ability_fail_08"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_CustomIsHelmetVoiceIsAssassinateFail"
+				m_Requirements = 
+				[
+					"Custom",
+					"Issniper",
+					"IsHelmetVoice",
+					"IsAssassinateFail",
+				]
+			}
+		},
+		{
+			m_name = "sniper_CustomIsHelmetVoiceIsSniperShrapnelChance_75%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_ability_shrapnel_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_ability_shrapnel_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_CustomIsHelmetVoiceIsSniperShrapnelChance_75%"
+				m_Requirements = 
+				[
+					"Custom",
+					"Issniper",
+					"IsHelmetVoice",
+					"IsSniperShrapnel",
+					"Chance_75%",
+				]
+			}
+		},
+		{
+			m_name = "sniper_CustomIsHelmetVoiceIsSniperShrapnelIsGoodShrapnelChance_75%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_ability_shrapnel_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_ability_shrapnel_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_ability_shrapnel_06"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_CustomIsHelmetVoiceIsSniperShrapnelIsGoodShrapnelChance_75%"
+				m_Requirements = 
+				[
+					"Custom",
+					"Issniper",
+					"IsHelmetVoice",
+					"IsSniperShrapnel",
+					"IsGoodShrapnel",
+					"Chance_75%",
+				]
+			}
+		},
+		{
+			m_name = "sniper_CustomIsHelmetVoiceIsSniperShrapnelIsGoodShrapnelChance_5%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_ability_shrapnel_07"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_CustomIsHelmetVoiceIsSniperShrapnelIsGoodShrapnelChance_5%"
+				m_Requirements = 
+				[
+					"Custom",
+					"Issniper",
+					"IsHelmetVoice",
+					"IsSniperShrapnel",
+					"IsGoodShrapnel",
+					"Chance_5%",
+				]
+			}
+		},
+		{
+			m_name = "sniper_CustomIsHelmetVoiceIsSniperLoadoutSpawn"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_attack_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_cast_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_level_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_move_15"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_move_24"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_move_25"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_spawn_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_spawn_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_spawn_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_spawn_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_spawn_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_spawn_06"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_CustomIsHelmetVoiceIsSniperLoadoutSpawn"
+				m_Requirements = 
+				[
+					"Custom",
+					"Issniper",
+					"IsHelmetVoice",
+					"IsSniperLoadoutSpawn",
+				]
+			}
+		},
+		{
+			m_name = "sniper_CustomIsHelmetVoiceIsGameStart"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_spawn_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_CustomIsHelmetVoiceIsGameStart"
+				m_Requirements = 
+				[
+					"Custom",
+					"Issniper",
+					"IsHelmetVoice",
+					"IsGameStart",
+				]
+			}
+		},
+		{
+			m_name = "sniper_CustomIsHelmetVoiceIsGameStartIsTutMap2"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_spawn_07"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_CustomIsHelmetVoiceIsGameStartIsTutMap2"
+				m_Requirements = 
+				[
+					"Custom",
+					"Issniper",
+					"IsHelmetVoice",
+					"IsGameStart",
+					"IsTutMap2",
+				]
+			}
+		},
+		{
+			m_name = "sniper_Move"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_move_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_move_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_move_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_move_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_move_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_move_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_move_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_move_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_move_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_move_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_move_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_move_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_move_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_move_15"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_move_16"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_move_17"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_move_18"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_move_19"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_move_20"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_move_21"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_move_22"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_move_23"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_move_24"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_move_25"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_move_26"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_move_27"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_move_28"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_Move"
+				m_Requirements = 
+				[
+					"Move",
+					"Issniper",
+				]
+			}
+		},
+		{
+			m_name = "sniper_MoveIsHelmetVoice"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_move_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_move_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_move_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_move_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_move_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_move_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_move_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_move_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_move_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_move_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_move_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_move_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_move_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_move_15"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_move_16"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_move_17"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_move_18"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_move_19"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_move_20"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_move_21"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_move_22"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_move_23"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_move_24"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_move_25"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_move_26"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_move_27"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_move_28"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_MoveIsHelmetVoice"
+				m_Requirements = 
+				[
+					"Move",
+					"Issniper",
+					"IsHelmetVoice",
+				]
+			}
+		},
+		{
+			m_name = "sniper_Attack"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_move_29"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_attack_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_attack_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_attack_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_attack_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_attack_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_attack_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_attack_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_attack_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_attack_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_attack_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_attack_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_attack_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_tf2_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_lasthit_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_lasthit_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_lasthit_10"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_Attack"
+				m_Requirements = 
+				[
+					"Attack",
+					"Issniper",
+				]
+			}
+		},
+		{
+			m_name = "sniper_AttackIsHelmetVoice"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_attack_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_attack_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_attack_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_attack_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_attack_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_attack_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_attack_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_attack_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_attack_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_attack_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_attack_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_attack_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_lasthit_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_lasthit_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_lasthit_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_move_29"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_tf2_05"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_AttackIsHelmetVoice"
+				m_Requirements = 
+				[
+					"Attack",
+					"Issniper",
+					"IsHelmetVoice",
+				]
+			}
+		},
+		{
+			m_name = "sniper_CastOrder"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_cast_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_cast_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_cast_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_CastOrder"
+				m_Requirements = 
+				[
+					"CastOrder",
+					"Issniper",
+				]
+			}
+		},
+		{
+			m_name = "sniper_CastOrderIsHelmetVoice"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_cast_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_cast_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_cast_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_CastOrderIsHelmetVoice"
+				m_Requirements = 
+				[
+					"CastOrder",
+					"Issniper",
+					"IsHelmetVoice",
+				]
+			}
+		},
+		{
+			m_name = "sniper_Kill"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_ability_assass_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_ability_assass_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_ability_assass_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_kill_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_kill_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_kill_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_kill_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_kill_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_kill_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_kill_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_kill_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_kill_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_kill_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_tf2_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_tf2_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_tf2_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_laugh_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_laugh_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_laugh_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_laugh_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_laugh_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_laugh_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_laugh_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_laugh_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_Kill"
+				m_Requirements = 
+				[
+					"Kill",
+					"Issniper",
+				]
+			}
+		},
+		{
+			m_name = "sniper_KillIsAssassinateKillChance_50%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_ability_assass_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_ability_assass_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_ability_assass_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_kill_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_kill_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_kill_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_kill_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_tf2_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_tf2_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_KillIsAssassinateKillChance_50%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Issniper",
+					"IsAssassinateKill",
+					"Chance_50%",
+				]
+			}
+		},
+		{
+			m_name = "sniper_KillIsEnemyWindrunnerChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_kill_arrow_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_kill_arrow_07"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_KillIsEnemyWindrunnerChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Issniper",
+					"IsEnemyWindrunner",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "sniper_KillIsEnemyClinkzChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_kill_arrow_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_KillIsEnemyClinkzChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Issniper",
+					"IsEnemyClinkz",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "sniper_KillIsEnemyDrowRangerChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_kill_arrow_04"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_KillIsEnemyDrowRangerChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Issniper",
+					"IsEnemyDrowRanger",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "sniper_KillIsEnemyLinaChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_kill_arrow_06"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_KillIsEnemyLinaChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Issniper",
+					"IsEnemyLina",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "sniper_KillIsEnemyJuggernautChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_kill_blade_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_KillIsEnemyJuggernautChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Issniper",
+					"IsEnemyJuggernaut",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "sniper_KillIsEnemyRikiChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_kill_blade_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_kill_blade_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_KillIsEnemyRikiChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Issniper",
+					"IsEnemyRiki",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "sniper_KillIsHelmetVoice"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_ability_assass_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_ability_assass_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_ability_assass_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_kill_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_kill_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_kill_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_kill_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_kill_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_kill_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_kill_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_kill_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_kill_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_kill_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_laugh_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_laugh_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_laugh_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_laugh_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_laugh_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_laugh_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_laugh_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_laugh_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_tf2_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_tf2_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_tf2_07"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_KillIsHelmetVoice"
+				m_Requirements = 
+				[
+					"Kill",
+					"Issniper",
+					"IsHelmetVoice",
+				]
+			}
+		},
+		{
+			m_name = "sniper_KillIsHelmetVoiceIsAssassinateKillChance_50%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_ability_assass_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_ability_assass_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_ability_assass_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_kill_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_kill_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_kill_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_kill_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_tf2_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_tf2_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_KillIsHelmetVoiceIsAssassinateKillChance_50%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Issniper",
+					"IsHelmetVoice",
+					"IsAssassinateKill",
+					"Chance_50%",
+				]
+			}
+		},
+		{
+			m_name = "sniper_KillIsHelmetVoiceIsEnemyWindrunnerChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_kill_arrow_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_kill_arrow_07"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_KillIsHelmetVoiceIsEnemyWindrunnerChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Issniper",
+					"IsHelmetVoice",
+					"IsEnemyWindrunner",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "sniper_KillIsHelmetVoiceIsEnemyClinkzChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_kill_arrow_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_KillIsHelmetVoiceIsEnemyClinkzChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Issniper",
+					"IsHelmetVoice",
+					"IsEnemyClinkz",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "sniper_KillIsHelmetVoiceIsEnemyDrowRangerChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_kill_arrow_04"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_KillIsHelmetVoiceIsEnemyDrowRangerChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Issniper",
+					"IsHelmetVoice",
+					"IsEnemyDrowRanger",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "sniper_KillIsHelmetVoiceIsEnemyLinaChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_kill_arrow_06"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_KillIsHelmetVoiceIsEnemyLinaChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Issniper",
+					"IsHelmetVoice",
+					"IsEnemyLina",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "sniper_KillIsHelmetVoiceIsEnemyJuggernautChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_kill_blade_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_KillIsHelmetVoiceIsEnemyJuggernautChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Issniper",
+					"IsHelmetVoice",
+					"IsEnemyJuggernaut",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "sniper_KillIsHelmetVoiceIsEnemyRikiChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_kill_blade_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_kill_blade_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_KillIsHelmetVoiceIsEnemyRikiChance_20%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Issniper",
+					"IsHelmetVoice",
+					"IsEnemyRiki",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "sniper_CastExecuteIsSniperAssassinate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_ability_assass_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_ability_assass_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_ability_assass_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_ability_assass_08"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_CastExecuteIsSniperAssassinate"
+				m_Requirements = 
+				[
+					"CastExecute",
+					"Issniper",
+					"IsSniperAssassinate",
+				]
+			}
+		},
+		{
+			m_name = "sniper_CastExecuteIsHelmetVoiceIsSniperAssassinate"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_ability_assass_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_ability_assass_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_ability_assass_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_ability_assass_08"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_CastExecuteIsHelmetVoiceIsSniperAssassinate"
+				m_Requirements = 
+				[
+					"CastExecute",
+					"Issniper",
+					"IsHelmetVoice",
+					"IsSniperAssassinate",
+				]
+			}
+		},
+		{
+			m_name = "sniper_Deny"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_ability_assass_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_ability_assass_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_deny_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_deny_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_deny_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_deny_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_deny_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_deny_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_deny_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_deny_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_deny_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_deny_10"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_Deny"
+				m_Requirements = 
+				[
+					"Deny",
+					"Issniper",
+				]
+			}
+		},
+		{
+			m_name = "sniper_DenyIsHelmetVoice"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_ability_assass_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_ability_assass_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_deny_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_deny_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_deny_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_deny_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_deny_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_deny_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_deny_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_deny_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_deny_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_deny_10"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_DenyIsHelmetVoice"
+				m_Requirements = 
+				[
+					"Deny",
+					"Issniper",
+					"IsHelmetVoice",
+				]
+			}
+		},
+		{
+			m_name = "sniper_LevelUp"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_level_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_level_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_level_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_level_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_level_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_level_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_level_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_level_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_level_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_LevelUp"
+				m_Requirements = 
+				[
+					"LevelUp",
+					"Issniper",
+				]
+			}
+		},
+		{
+			m_name = "sniper_LevelUpIsHelmetVoice"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_level_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_level_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_level_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_level_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_level_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_level_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_level_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_level_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_level_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_LevelUpIsHelmetVoice"
+				m_Requirements = 
+				[
+					"LevelUp",
+					"Issniper",
+					"IsHelmetVoice",
+				]
+			}
+		},
+		{
+			m_name = "sniper_ItemDropIsRareDrop"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_kill_arrow_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_ItemDropIsRareDrop"
+				m_Requirements = 
+				[
+					"ItemDrop",
+					"Issniper",
+					"IsRareDrop",
+				]
+			}
+		},
+		{
+			m_name = "sniper_ItemDropIsCommonDrop"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_happy_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_ItemDropIsCommonDrop"
+				m_Requirements = 
+				[
+					"ItemDrop",
+					"Issniper",
+					"IsCommonDrop",
+				]
+			}
+		},
+		{
+			m_name = "sniper_ItemDropIsUltraRareDrop"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_happy_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_ItemDropIsUltraRareDrop"
+				m_Requirements = 
+				[
+					"ItemDrop",
+					"Issniper",
+					"IsUltraRareDrop",
+				]
+			}
+		},
+		{
+			m_name = "sniper_ItemDropIsHelmetVoiceIsCommonDrop"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_happy_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_ItemDropIsHelmetVoiceIsCommonDrop"
+				m_Requirements = 
+				[
+					"ItemDrop",
+					"Issniper",
+					"IsHelmetVoice",
+					"IsCommonDrop",
+				]
+			}
+		},
+		{
+			m_name = "sniper_ItemDropIsHelmetVoiceIsUltraRareDrop"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_happy_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_ItemDropIsHelmetVoiceIsUltraRareDrop"
+				m_Requirements = 
+				[
+					"ItemDrop",
+					"Issniper",
+					"IsHelmetVoice",
+					"IsUltraRareDrop",
+				]
+			}
+		},
+		{
+			m_name = "sniper_ItemDropIsHelmetVoiceIsRareDrop"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_kill_arrow_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_ItemDropIsHelmetVoiceIsRareDrop"
+				m_Requirements = 
+				[
+					"ItemDrop",
+					"Issniper",
+					"IsHelmetVoice",
+					"IsRareDrop",
+				]
+			}
+		},
+		{
+			m_name = "sniper_Death"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_kill_blade_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_death_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_death_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_death_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_death_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_death_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_death_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_death_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_death_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_death_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_death_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_death_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_death_12"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_Death"
+				m_Requirements = 
+				[
+					"Death",
+					"Issniper",
+				]
+			}
+		},
+		{
+			m_name = "sniper_DeathIsReincarnating"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_laugh_08"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_DeathIsReincarnating"
+				m_Requirements = 
+				[
+					"Death",
+					"Issniper",
+					"IsReincarnating",
+				]
+			}
+		},
+		{
+			m_name = "sniper_DeathIsHelmetVoice"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_death_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_death_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_death_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_death_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_death_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_death_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_death_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_death_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_death_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_death_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_death_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_death_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_kill_blade_04"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_DeathIsHelmetVoice"
+				m_Requirements = 
+				[
+					"Death",
+					"Issniper",
+					"IsHelmetVoice",
+				]
+			}
+		},
+		{
+			m_name = "sniper_DeathIsHelmetVoiceIsReincarnating"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_laugh_08"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_DeathIsHelmetVoiceIsReincarnating"
+				m_Requirements = 
+				[
+					"Death",
+					"Issniper",
+					"IsHelmetVoice",
+					"IsReincarnating",
+				]
+			}
+		},
+		{
+			m_name = "sniper_Select"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_tf2_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_tf2_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_rare_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_rare_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_rare_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_rare_04"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_Select"
+				m_Requirements = 
+				[
+					"Select",
+					"Issniper",
+				]
+			}
+		},
+		{
+			m_name = "sniper_SelectIsHelmetVoice"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_rare_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_rare_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_rare_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_rare_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_tf2_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_tf2_08"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_SelectIsHelmetVoice"
+				m_Requirements = 
+				[
+					"Select",
+					"Issniper",
+					"IsHelmetVoice",
+				]
+			}
+		},
+		{
+			m_name = "sniper_Respawn"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_respawn_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_respawn_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_respawn_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_respawn_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_respawn_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_respawn_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_respawn_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_respawn_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_respawn_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_respawn_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_respawn_11"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_Respawn"
+				m_Requirements = 
+				[
+					"Respawn",
+					"Issniper",
+				]
+			}
+		},
+		{
+			m_name = "sniper_RespawnIsHelmetVoice"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_respawn_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_respawn_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_respawn_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_respawn_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_respawn_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_respawn_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_respawn_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_respawn_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_respawn_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_respawn_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_respawn_11"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_RespawnIsHelmetVoice"
+				m_Requirements = 
+				[
+					"Respawn",
+					"Issniper",
+					"IsHelmetVoice",
+				]
+			}
+		},
+		{
+			m_name = "sniper_LastHit"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_lasthit_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_lasthit_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_lasthit_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_lasthit_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_lasthit_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_lasthit_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_lasthit_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_LastHit"
+				m_Requirements = 
+				[
+					"LastHit",
+					"Issniper",
+				]
+			}
+		},
+		{
+			m_name = "sniper_LastHitIsHelmetVoice"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_lasthit_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_lasthit_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_lasthit_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_lasthit_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_lasthit_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_lasthit_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_lasthit_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_LastHitIsHelmetVoice"
+				m_Requirements = 
+				[
+					"LastHit",
+					"Issniper",
+					"IsHelmetVoice",
+				]
+			}
+		},
+		{
+			m_name = "sniper_PurchaseIsExpensiveItem"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_purch_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_purch_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_purch_03"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_PurchaseIsExpensiveItem"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Issniper",
+					"IsExpensiveItem",
+				]
+			}
+		},
+		{
+			m_name = "sniper_PurchaseIsBlinkDagger"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_blink_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_blink_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_PurchaseIsBlinkDagger"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Issniper",
+					"IsBlinkDagger",
+				]
+			}
+		},
+		{
+			m_name = "sniper_PurchaseIsUltimateScepter"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_scepter_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_scepter_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_PurchaseIsUltimateScepter"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Issniper",
+					"IsUltimateScepter",
+				]
+			}
+		},
+		{
+			m_name = "sniper_PurchaseIsManta"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_manta_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_manta_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_PurchaseIsManta"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Issniper",
+					"IsManta",
+				]
+			}
+		},
+		{
+			m_name = "sniper_PurchaseIsDesolator"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_deso_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_deso_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_deso_03"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_PurchaseIsDesolator"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Issniper",
+					"IsDesolator",
+				]
+			}
+		},
+		{
+			m_name = "sniper_PurchaseIsAssaultCuirass"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_purch_armor_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_PurchaseIsAssaultCuirass"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Issniper",
+					"IsAssaultCuirass",
+				]
+			}
+		},
+		{
+			m_name = "sniper_PurchaseIsHelmetVoiceIsBlinkDagger"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_blink_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_blink_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_PurchaseIsHelmetVoiceIsBlinkDagger"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Issniper",
+					"IsHelmetVoice",
+					"IsBlinkDagger",
+				]
+			}
+		},
+		{
+			m_name = "sniper_PurchaseIsHelmetVoiceIsDesolator"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_deso_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_deso_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_deso_03"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_PurchaseIsHelmetVoiceIsDesolator"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Issniper",
+					"IsHelmetVoice",
+					"IsDesolator",
+				]
+			}
+		},
+		{
+			m_name = "sniper_PurchaseIsHelmetVoiceIsManta"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_manta_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_manta_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_PurchaseIsHelmetVoiceIsManta"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Issniper",
+					"IsHelmetVoice",
+					"IsManta",
+				]
+			}
+		},
+		{
+			m_name = "sniper_PurchaseIsHelmetVoiceIsExpensiveItem"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_purch_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_purch_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_purch_03"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_PurchaseIsHelmetVoiceIsExpensiveItem"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Issniper",
+					"IsHelmetVoice",
+					"IsExpensiveItem",
+				]
+			}
+		},
+		{
+			m_name = "sniper_PurchaseIsHelmetVoiceIsAssaultCuirass"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_purch_armor_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_PurchaseIsHelmetVoiceIsAssaultCuirass"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Issniper",
+					"IsHelmetVoice",
+					"IsAssaultCuirass",
+				]
+			}
+		},
+		{
+			m_name = "sniper_PurchaseIsHelmetVoiceIsUltimateScepter"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_scepter_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_scepter_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_PurchaseIsHelmetVoiceIsUltimateScepter"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Issniper",
+					"IsHelmetVoice",
+					"IsUltimateScepter",
+				]
+			}
+		},
+		{
+			m_name = "sniper_Immortality"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_immort_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_Immortality"
+				m_Requirements = 
+				[
+					"Immortality",
+					"Issniper",
+				]
+			}
+		},
+		{
+			m_name = "sniper_ImmortalityChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_immort_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_ImmortalityChance_25%"
+				m_Requirements = 
+				[
+					"Immortality",
+					"Issniper",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "sniper_ImmortalityIsHelmetVoice"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_immort_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_ImmortalityIsHelmetVoice"
+				m_Requirements = 
+				[
+					"Immortality",
+					"Issniper",
+					"IsHelmetVoice",
+				]
+			}
+		},
+		{
+			m_name = "sniper_ImmortalityIsHelmetVoiceChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_immort_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_ImmortalityIsHelmetVoiceChance_25%"
+				m_Requirements = 
+				[
+					"Immortality",
+					"Issniper",
+					"IsHelmetVoice",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "sniper_PowerupIsPowerupHaste"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_haste_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_PowerupIsPowerupHaste"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Issniper",
+					"IsPowerupHaste",
+				]
+			}
+		},
+		{
+			m_name = "sniper_PowerupIsPowerupHasteChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_haste_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_PowerupIsPowerupHasteChance_25%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Issniper",
+					"IsPowerupHaste",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "sniper_PowerupIsPowerupDoubleDamage"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_doubdam_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_PowerupIsPowerupDoubleDamage"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Issniper",
+					"IsPowerupDoubleDamage",
+				]
+			}
+		},
+		{
+			m_name = "sniper_PowerupIsPowerupDoubleDamageChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_doubdam_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_PowerupIsPowerupDoubleDamageChance_25%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Issniper",
+					"IsPowerupDoubleDamage",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "sniper_PowerupIsPowerupRegeneration"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_regen_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_PowerupIsPowerupRegeneration"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Issniper",
+					"IsPowerupRegeneration",
+				]
+			}
+		},
+		{
+			m_name = "sniper_PowerupIsPowerupRegenerationChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_regen_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_PowerupIsPowerupRegenerationChance_25%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Issniper",
+					"IsPowerupRegeneration",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "sniper_PowerupIsPowerupIllusion"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_illus_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_PowerupIsPowerupIllusion"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Issniper",
+					"IsPowerupIllusion",
+				]
+			}
+		},
+		{
+			m_name = "sniper_PowerupIsPowerupIllusionChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_illus_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_PowerupIsPowerupIllusionChance_25%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Issniper",
+					"IsPowerupIllusion",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "sniper_PowerupIsPowerupInvisibility"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_invis_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_PowerupIsPowerupInvisibility"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Issniper",
+					"IsPowerupInvisibility",
+				]
+			}
+		},
+		{
+			m_name = "sniper_PowerupIsPowerupBounty"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_purch_03"
+					m_params = 
+					{
+						m_respeakdelay.start = 300.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_PowerupIsPowerupBounty"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Issniper",
+					"IsPowerupBounty",
+				]
+			}
+		},
+		{
+			m_name = "sniper_PowerupIsPowerupArcane"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_happy_03"
+					m_params = 
+					{
+						m_respeakdelay.start = 300.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_PowerupIsPowerupArcane"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Issniper",
+					"IsPowerupArcane",
+				]
+			}
+		},
+		{
+			m_name = "sniper_PowerupIsHelmetVoiceIsPowerupDoubleDamage"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_doubdam_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_PowerupIsHelmetVoiceIsPowerupDoubleDamage"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Issniper",
+					"IsHelmetVoice",
+					"IsPowerupDoubleDamage",
+				]
+			}
+		},
+		{
+			m_name = "sniper_PowerupIsHelmetVoiceIsPowerupDoubleDamageChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_doubdam_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_PowerupIsHelmetVoiceIsPowerupDoubleDamageChance_25%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Issniper",
+					"IsHelmetVoice",
+					"IsPowerupDoubleDamage",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "sniper_PowerupIsHelmetVoiceIsPowerupArcane"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_happy_03"
+					m_params = 
+					{
+						m_respeakdelay.start = 300.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_PowerupIsHelmetVoiceIsPowerupArcane"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Issniper",
+					"IsHelmetVoice",
+					"IsPowerupArcane",
+				]
+			}
+		},
+		{
+			m_name = "sniper_PowerupIsHelmetVoiceIsPowerupHaste"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_haste_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_PowerupIsHelmetVoiceIsPowerupHaste"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Issniper",
+					"IsHelmetVoice",
+					"IsPowerupHaste",
+				]
+			}
+		},
+		{
+			m_name = "sniper_PowerupIsHelmetVoiceIsPowerupHasteChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_haste_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_PowerupIsHelmetVoiceIsPowerupHasteChance_25%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Issniper",
+					"IsHelmetVoice",
+					"IsPowerupHaste",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "sniper_PowerupIsHelmetVoiceIsPowerupIllusion"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_illus_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_PowerupIsHelmetVoiceIsPowerupIllusion"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Issniper",
+					"IsHelmetVoice",
+					"IsPowerupIllusion",
+				]
+			}
+		},
+		{
+			m_name = "sniper_PowerupIsHelmetVoiceIsPowerupIllusionChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_illus_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_PowerupIsHelmetVoiceIsPowerupIllusionChance_25%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Issniper",
+					"IsHelmetVoice",
+					"IsPowerupIllusion",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "sniper_PowerupIsHelmetVoiceIsPowerupInvisibility"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_invis_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_PowerupIsHelmetVoiceIsPowerupInvisibility"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Issniper",
+					"IsHelmetVoice",
+					"IsPowerupInvisibility",
+				]
+			}
+		},
+		{
+			m_name = "sniper_PowerupIsHelmetVoiceIsPowerupBounty"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_purch_03"
+					m_params = 
+					{
+						m_respeakdelay.start = 300.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_PowerupIsHelmetVoiceIsPowerupBounty"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Issniper",
+					"IsHelmetVoice",
+					"IsPowerupBounty",
+				]
+			}
+		},
+		{
+			m_name = "sniper_PowerupIsHelmetVoiceIsPowerupRegeneration"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_regen_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_PowerupIsHelmetVoiceIsPowerupRegeneration"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Issniper",
+					"IsHelmetVoice",
+					"IsPowerupRegeneration",
+				]
+			}
+		},
+		{
+			m_name = "sniper_PowerupIsHelmetVoiceIsPowerupRegenerationChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_regen_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_PowerupIsHelmetVoiceIsPowerupRegenerationChance_25%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Issniper",
+					"IsHelmetVoice",
+					"IsPowerupRegeneration",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "sniper_Bottling"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_bottle_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_bottle_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_bottle_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_Bottling"
+				m_Requirements = 
+				[
+					"Bottling",
+					"Issniper",
+				]
+			}
+		},
+		{
+			m_name = "sniper_BottlingChance_5%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_bottle_04"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_BottlingChance_5%"
+				m_Requirements = 
+				[
+					"Bottling",
+					"Issniper",
+					"Chance_5%",
+				]
+			}
+		},
+		{
+			m_name = "sniper_BottlingIsHelmetVoice"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_bottle_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_bottle_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_bottle_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_BottlingIsHelmetVoice"
+				m_Requirements = 
+				[
+					"Bottling",
+					"Issniper",
+					"IsHelmetVoice",
+				]
+			}
+		},
+		{
+			m_name = "sniper_BottlingIsHelmetVoiceChance_5%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_bottle_04"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_BottlingIsHelmetVoiceChance_5%"
+				m_Requirements = 
+				[
+					"Bottling",
+					"Issniper",
+					"IsHelmetVoice",
+					"Chance_5%",
+				]
+			}
+		},
+		{
+			m_name = "sniper_CooldownLittleNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_notyet_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_notyet_01a"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_notyet_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_notyet_02a"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_notyet_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_notyet_03a"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_CooldownLittleNag"
+				m_Requirements = 
+				[
+					"Cooldown",
+					"Issniper",
+					"LittleNag",
+				]
+			}
+		},
+		{
+			m_name = "sniper_CooldownMediumNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_notyet_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_notyet_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_notyet_06"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_CooldownMediumNag"
+				m_Requirements = 
+				[
+					"Cooldown",
+					"Issniper",
+					"MediumNag",
+				]
+			}
+		},
+		{
+			m_name = "sniper_CooldownSuperNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_notyet_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_notyet_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_notyet_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_CooldownSuperNag"
+				m_Requirements = 
+				[
+					"Cooldown",
+					"Issniper",
+					"SuperNag",
+				]
+			}
+		},
+		{
+			m_name = "sniper_CooldownIsHelmetVoiceLittleNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_notyet_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_notyet_01a"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_notyet_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_notyet_02a"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_notyet_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_notyet_03a"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_CooldownIsHelmetVoiceLittleNag"
+				m_Requirements = 
+				[
+					"Cooldown",
+					"Issniper",
+					"IsHelmetVoice",
+					"LittleNag",
+				]
+			}
+		},
+		{
+			m_name = "sniper_CooldownIsHelmetVoiceMediumNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_notyet_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_notyet_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_notyet_06"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_CooldownIsHelmetVoiceMediumNag"
+				m_Requirements = 
+				[
+					"Cooldown",
+					"Issniper",
+					"IsHelmetVoice",
+					"MediumNag",
+				]
+			}
+		},
+		{
+			m_name = "sniper_CooldownIsHelmetVoiceSuperNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_notyet_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_notyet_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_notyet_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_CooldownIsHelmetVoiceSuperNag"
+				m_Requirements = 
+				[
+					"Cooldown",
+					"Issniper",
+					"IsHelmetVoice",
+					"SuperNag",
+				]
+			}
+		},
+		{
+			m_name = "sniper_NoManaLittleNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_nomana_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_nomana_01a"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_nomana_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_nomana_02a"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_nomana_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_nomana_03a"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_NoManaLittleNag"
+				m_Requirements = 
+				[
+					"NoMana",
+					"Issniper",
+					"LittleNag",
+				]
+			}
+		},
+		{
+			m_name = "sniper_NoManaMediumNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_nomana_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_nomana_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_nomana_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_nomana_10"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_NoManaMediumNag"
+				m_Requirements = 
+				[
+					"NoMana",
+					"Issniper",
+					"MediumNag",
+				]
+			}
+		},
+		{
+			m_name = "sniper_NoManaSuperNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_nomana_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_nomana_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_nomana_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_NoManaSuperNag"
+				m_Requirements = 
+				[
+					"NoMana",
+					"Issniper",
+					"SuperNag",
+				]
+			}
+		},
+		{
+			m_name = "sniper_NoManaIsHelmetVoiceLittleNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_nomana_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_nomana_01a"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_nomana_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_nomana_02a"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_nomana_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_nomana_03a"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_NoManaIsHelmetVoiceLittleNag"
+				m_Requirements = 
+				[
+					"NoMana",
+					"Issniper",
+					"IsHelmetVoice",
+					"LittleNag",
+				]
+			}
+		},
+		{
+			m_name = "sniper_NoManaIsHelmetVoiceMediumNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_nomana_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_nomana_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_nomana_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_nomana_10"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_NoManaIsHelmetVoiceMediumNag"
+				m_Requirements = 
+				[
+					"NoMana",
+					"Issniper",
+					"IsHelmetVoice",
+					"MediumNag",
+				]
+			}
+		},
+		{
+			m_name = "sniper_NoManaIsHelmetVoiceSuperNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_nomana_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_nomana_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_nomana_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_NoManaIsHelmetVoiceSuperNag"
+				m_Requirements = 
+				[
+					"NoMana",
+					"Issniper",
+					"IsHelmetVoice",
+					"SuperNag",
+				]
+			}
+		},
+		{
+			m_name = "sniper_Thanks"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_thanks_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_thanks_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_Thanks"
+				m_Requirements = 
+				[
+					"Thanks",
+					"Issniper",
+				]
+			}
+		},
+		{
+			m_name = "sniper_ThanksIsHelmetVoice"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_thanks_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_thanks_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_ThanksIsHelmetVoice"
+				m_Requirements = 
+				[
+					"Thanks",
+					"Issniper",
+					"IsHelmetVoice",
+				]
+			}
+		},
+		{
+			m_name = "sniper_PainChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_underattack_01"
+					m_params = 
+					{
+						m_respeakdelay.start = 120.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_PainChance_25%"
+				m_Requirements = 
+				[
+					"Pain",
+					"Issniper",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "sniper_Pain"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_pain_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_pain_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_pain_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_pain_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_pain_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_pain_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_pain_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_pain_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_pain_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_Pain"
+				m_Requirements = 
+				[
+					"Pain",
+					"Issniper",
+				]
+			}
+		},
+		{
+			m_name = "sniper_PainIsHelmetVoice"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_pain_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_pain_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_pain_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_pain_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_pain_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_pain_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_pain_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_pain_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_pain_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_PainIsHelmetVoice"
+				m_Requirements = 
+				[
+					"Pain",
+					"Issniper",
+					"IsHelmetVoice",
+				]
+			}
+		},
+		{
+			m_name = "sniper_PainIsHelmetVoiceChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_underattack_01"
+					m_params = 
+					{
+						m_respeakdelay.start = 120.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_PainIsHelmetVoiceChance_25%"
+				m_Requirements = 
+				[
+					"Pain",
+					"Issniper",
+					"IsHelmetVoice",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "sniper_InTheBag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_inthebag_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_inthebag_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_InTheBag"
+				m_Requirements = 
+				[
+					"InTheBag",
+					"Issniper",
+				]
+			}
+		},
+		{
+			m_name = "sniper_InTheBagIsHelmetVoice"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_inthebag_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_inthebag_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_InTheBagIsHelmetVoice"
+				m_Requirements = 
+				[
+					"InTheBag",
+					"Issniper",
+					"IsHelmetVoice",
+				]
+			}
+		},
+		{
+			m_name = "sniper_Defeat"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_lose_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_lose_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_lose_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_Defeat"
+				m_Requirements = 
+				[
+					"Defeat",
+					"Issniper",
+				]
+			}
+		},
+		{
+			m_name = "sniper_DefeatIsHelmetVoice"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_lose_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_lose_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_lose_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_DefeatIsHelmetVoice"
+				m_Requirements = 
+				[
+					"Defeat",
+					"Issniper",
+					"IsHelmetVoice",
+				]
+			}
+		},
+		{
+			m_name = "sniper_Victory"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_win_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_win_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_win_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_Victory"
+				m_Requirements = 
+				[
+					"Victory",
+					"Issniper",
+				]
+			}
+		},
+		{
+			m_name = "sniper_VictoryIsHelmetVoice"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_win_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_win_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_win_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_VictoryIsHelmetVoice"
+				m_Requirements = 
+				[
+					"Victory",
+					"Issniper",
+					"IsHelmetVoice",
+				]
+			}
+		},
+		{
+			m_name = "sniper_Taunt"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/sniper/sniper_snip_happy_02.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_Taunt"
+				m_Requirements = 
+				[
+					"Taunt",
+					"Issniper",
+				]
+			}
+		},
+		{
+			m_name = "sniper_TauntIsSniperTauntQuickDraw"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_attack_04"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_TauntIsSniperTauntQuickDraw"
+				m_Requirements = 
+				[
+					"Taunt",
+					"Issniper",
+					"IsSniperTauntQuickDraw",
+				]
+			}
+		},
+		{
+			m_name = "sniper_TauntIsHelmetVoiceIsSniperTauntQuickDraw"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_attack_04"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_TauntIsHelmetVoiceIsSniperTauntQuickDraw"
+				m_Requirements = 
+				[
+					"Taunt",
+					"Issniper",
+					"IsHelmetVoice",
+					"IsSniperTauntQuickDraw",
+				]
+			}
+		},
+		{
+			m_name = "sniper_TauntIsHelmetVoice"
+			m_responses = 
+			[
+				{
+					m_type = "SCENE"
+					m_value = "scenes/sniper/sniper_helmet_snip_happy_02.vcd"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_TauntIsHelmetVoice"
+				m_Requirements = 
+				[
+					"Taunt",
+					"Issniper",
+					"IsHelmetVoice",
+				]
+			}
+		},
+		{
+			m_name = "sniper_EmoteIsEmoteLaugh"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_laugh_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_laugh_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_laugh_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_laugh_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_laugh_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_laugh_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_laugh_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_laugh_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_snip_laugh_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_EmoteIsEmoteLaugh"
+				m_Requirements = 
+				[
+					"Emote",
+					"Issniper",
+					"IsEmoteLaugh",
+				]
+			}
+		},
+		{
+			m_name = "sniper_EmoteIsHelmetVoiceIsEmoteLaugh"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_laugh_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_laugh_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_laugh_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_laugh_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_laugh_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_laugh_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_laugh_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_laugh_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "sniper_helmet_snip_laugh_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "sniper_EmoteIsHelmetVoiceIsEmoteLaugh"
+				m_Requirements = 
+				[
+					"Emote",
+					"Issniper",
+					"IsHelmetVoice",
+					"IsEmoteLaugh",
+				]
+			}
+		},
+	]
+	m_Requirements = 
+	[
+		{
+			m_name = "Issniper"
+			m_matchKey = "classname"
+			m_matchExpr = "npc_dota_hero_sniper"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsSniperShrapnel"
+			m_matchKey = "abilityname"
+			m_matchExpr = "particles/units/heroes/hero_sniper/sniper_shrapnel.vpcf"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsGoodShrapnel"
+			m_matchKey = "shrapneltargets"
+			m_matchExpr = ">3"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsAssassinateKill"
+			m_matchKey = "abilityname"
+			m_matchExpr = "sniper_assassinate"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsAssassinateFail"
+			m_matchKey = "assassinatefail_healthfraction"
+			m_matchExpr = "<=0.1"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsSniperAssassinate"
+			m_matchKey = "abilityname"
+			m_matchExpr = "sniper_assassinate"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsSniperLoadoutSpawn"
+			m_matchKey = "special_spawn"
+			m_matchExpr = "sniper_loadout_spawn"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsHelmetVoice"
+			m_matchKey = "customresponse"
+			m_matchExpr = "sniper_helmet"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsSniperTauntSalute"
+			m_matchKey = "taunt_type"
+			m_matchExpr = "sniper_here_salute"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsSniperTauntQuickDraw"
+			m_matchKey = "taunt_type"
+			m_matchExpr = "quick_draw"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsTutMap2"
+			m_matchKey = "map"
+			m_matchExpr = "tutorial_m2"
+			m_flWeight = 5.0
+		},
+	]
+}

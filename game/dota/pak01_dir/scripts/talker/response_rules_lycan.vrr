@@ -1,0 +1,2662 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vrr_c1:version{c1f07085-5299-4e8a-b7e9-1cbb66bbbe23} -->
+{
+	m_Includes = 
+	[
+		"scripts/talker/response_rules_shared.vrr",
+	]
+	m_ResponseGroups = 
+	[
+		{
+			m_name = "lycan_Spawn"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_spawn_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_spawn_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_spawn_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_spawn_04"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_Spawn"
+				m_Requirements = 
+				[
+					"Spawn",
+					"Islycan",
+				]
+			}
+		},
+		{
+			m_name = "lycan_CustomIsGameStart"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_battlebegins_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_battlebegins_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_CustomIsGameStart"
+				m_Requirements = 
+				[
+					"Custom",
+					"Islycan",
+					"IsGameStart",
+				]
+			}
+		},
+		{
+			m_name = "lycan_CustomIsLycanLoadoutSpawn"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_spawn_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_spawn_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_spawn_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_spawn_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_battlebegins_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_ability_summon_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_level_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_respawn_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_wolf_move_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_wolf_move_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_wolf_move_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_wolf_move_18"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_CustomIsLycanLoadoutSpawn"
+				m_Requirements = 
+				[
+					"Custom",
+					"Islycan",
+					"IsLycanLoadoutSpawn",
+				]
+			}
+		},
+		{
+			m_name = "lycan_KillIsFirstBlood"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_firstblood_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_firstblood_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_KillIsFirstBlood"
+				m_Requirements = 
+				[
+					"Kill",
+					"Islycan",
+					"IsFirstBlood",
+				]
+			}
+		},
+		{
+			m_name = "lycan_Kill"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_kill_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_kill_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_kill_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_kill_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_kill_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_kill_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_kill_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_kill_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_kill_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_kill_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_kill_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_kill_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_laugh_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_laugh_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_laugh_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_laugh_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_laugh_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_laugh_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_laugh_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_laugh_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_laugh_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_laugh_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_laugh_15"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_laugh_16"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_laugh_17"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_Kill"
+				m_Requirements = 
+				[
+					"Kill",
+					"Islycan",
+				]
+			}
+		},
+		{
+			m_name = "lycan_KillIsEnemyLone_DruidChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_rival_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_rival_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_rival_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_rival_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_rival_05"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_KillIsEnemyLone_DruidChance_25%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Islycan",
+					"IsEnemyLone_Druid",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "lycan_KillIsEnemyUrsaChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_rival_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_rival_12"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_KillIsEnemyUrsaChance_25%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Islycan",
+					"IsEnemyUrsa",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "lycan_KillIsEnemySilencerChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_rival_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_KillIsEnemySilencerChance_25%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Islycan",
+					"IsEnemySilencer",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "lycan_KillIsEnemyBeastmasterChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_rival_10"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_KillIsEnemyBeastmasterChance_25%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Islycan",
+					"IsEnemyBeastmaster",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "lycan_KillIsEnemyTinyChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_rival_11"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_KillIsEnemyTinyChance_25%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Islycan",
+					"IsEnemyTiny",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "lycan_KillIsEnemyBroodmotherChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_rival_14"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_KillIsEnemyBroodmotherChance_25%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Islycan",
+					"IsEnemyBroodmother",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "lycan_KillIsEnemySkeleton_KingChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_rival_15"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_rival_16"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_KillIsEnemySkeleton_KingChance_25%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Islycan",
+					"IsEnemySkeleton_King",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "lycan_KillIsEnemyNight_StalkerChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_rival_17"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_rival_28"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_rival_29"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_rival_30"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_KillIsEnemyNight_StalkerChance_25%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Islycan",
+					"IsEnemyNight_Stalker",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "lycan_KillIsEnemyCrystalMaidenChance_5%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_rival_18"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_KillIsEnemyCrystalMaidenChance_5%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Islycan",
+					"IsEnemyCrystalMaiden",
+					"Chance_5%",
+				]
+			}
+		},
+		{
+			m_name = "lycan_KillIsEnemyClinkzChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_rival_19"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_KillIsEnemyClinkzChance_25%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Islycan",
+					"IsEnemyClinkz",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "lycan_KillIsEnemyBounty_HunterChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_rival_23"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_KillIsEnemyBounty_HunterChance_25%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Islycan",
+					"IsEnemyBounty_Hunter",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "lycan_KillIsEnemyDoom_BringerChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_rival_24"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_KillIsEnemyDoom_BringerChance_25%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Islycan",
+					"IsEnemyDoom_Bringer",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "lycan_KillIsEnemyJakiroChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_rival_25"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_KillIsEnemyJakiroChance_25%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Islycan",
+					"IsEnemyJakiro",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "lycan_Move"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_move_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_move_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_move_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_move_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_move_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_move_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_move_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_move_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_move_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_move_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_move_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_move_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_move_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_move_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_move_15"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_move_16"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_move_17"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_Move"
+				m_Requirements = 
+				[
+					"Move",
+					"Islycan",
+				]
+			}
+		},
+		{
+			m_name = "lycan_MoveIsInWolfForm"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_wolf_move_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_wolf_move_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_wolf_move_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_wolf_move_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_wolf_move_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_wolf_move_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_wolf_move_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_wolf_move_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_wolf_move_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_wolf_move_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_wolf_move_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_wolf_move_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_wolf_move_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_wolf_move_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_wolf_move_15"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_wolf_move_16"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_wolf_move_17"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_wolf_move_18"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_MoveIsInWolfForm"
+				m_Requirements = 
+				[
+					"Move",
+					"Islycan",
+					"IsInWolfForm",
+				]
+			}
+		},
+		{
+			m_name = "lycan_Attack"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_attack_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_attack_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_attack_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_attack_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_attack_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_attack_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_attack_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_attack_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_attack_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_attack_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_attack_11"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_Attack"
+				m_Requirements = 
+				[
+					"Attack",
+					"Islycan",
+				]
+			}
+		},
+		{
+			m_name = "lycan_AttackIsInWolfForm"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_wolf_attack_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_wolf_attack_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_wolf_attack_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_wolf_attack_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_wolf_attack_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_wolf_attack_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_wolf_attack_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_wolf_attack_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_wolf_attack_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_wolf_attack_10"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_AttackIsInWolfForm"
+				m_Requirements = 
+				[
+					"Attack",
+					"Islycan",
+					"IsInWolfForm",
+				]
+			}
+		},
+		{
+			m_name = "lycan_CastOrder"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_cast_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_cast_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_cast_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_CastOrder"
+				m_Requirements = 
+				[
+					"CastOrder",
+					"Islycan",
+				]
+			}
+		},
+		{
+			m_name = "lycan_CastOrderIsInWolfForm"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_wolf_cast_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_wolf_cast_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_wolf_cast_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_CastOrderIsInWolfForm"
+				m_Requirements = 
+				[
+					"CastOrder",
+					"Islycan",
+					"IsInWolfForm",
+				]
+			}
+		},
+		{
+			m_name = "lycan_CastExecuteIsAbilitySummon"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_ability_summon_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_ability_summon_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_ability_summon_06"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_CastExecuteIsAbilitySummon"
+				m_Requirements = 
+				[
+					"CastExecute",
+					"Islycan",
+					"IsAbilitySummon",
+				]
+			}
+		},
+		{
+			m_name = "lycan_CastExecuteIsNeutralWolfIsLycanDominator"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_ally_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_ally_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_ally_05"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_CastExecuteIsNeutralWolfIsLycanDominator"
+				m_Requirements = 
+				[
+					"CastExecute",
+					"Islycan",
+					"IsNeutralWolf",
+					"IsLycanDominator",
+				]
+			}
+		},
+		{
+			m_name = "lycan_CastExecuteIsNeutralAlphaWolfIsLycanDominator"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_ally_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_ally_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_ally_05"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_CastExecuteIsNeutralAlphaWolfIsLycanDominator"
+				m_Requirements = 
+				[
+					"CastExecute",
+					"Islycan",
+					"IsNeutralAlphaWolf",
+					"IsLycanDominator",
+				]
+			}
+		},
+		{
+			m_name = "lycan_LevelUp"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_level_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_level_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_level_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_level_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_level_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_laugh_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_laugh_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_laugh_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_laugh_12"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_LevelUp"
+				m_Requirements = 
+				[
+					"LevelUp",
+					"Islycan",
+				]
+			}
+		},
+		{
+			m_name = "lycan_DeathIsEnemyLone_DruidChance_35%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_rival_08"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_DeathIsEnemyLone_DruidChance_35%"
+				m_Requirements = 
+				[
+					"Death",
+					"Islycan",
+					"IsEnemyLone_Druid",
+					"Chance_35%",
+				]
+			}
+		},
+		{
+			m_name = "lycan_DeathIsEnemyGyrocopterChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_rival_26"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_DeathIsEnemyGyrocopterChance_20%"
+				m_Requirements = 
+				[
+					"Death",
+					"Islycan",
+					"IsEnemyGyrocopter",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "lycan_DeathIsEnemyJakiroChance_50%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_rival_27"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_DeathIsEnemyJakiroChance_50%"
+				m_Requirements = 
+				[
+					"Death",
+					"Islycan",
+					"IsEnemyJakiro",
+					"Chance_50%",
+				]
+			}
+		},
+		{
+			m_name = "lycan_Death"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_death_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_death_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_death_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_death_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_death_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_death_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_death_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_death_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_death_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_death_10"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_Death"
+				m_Requirements = 
+				[
+					"Death",
+					"Islycan",
+				]
+			}
+		},
+		{
+			m_name = "lycan_DeathChance_5%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_death_11"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_DeathChance_5%"
+				m_Requirements = 
+				[
+					"Death",
+					"Islycan",
+					"Chance_5%",
+				]
+			}
+		},
+		{
+			m_name = "lycan_DeathIsReincarnating"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_fastres_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_DeathIsReincarnating"
+				m_Requirements = 
+				[
+					"Death",
+					"Islycan",
+					"IsReincarnating",
+				]
+			}
+		},
+		{
+			m_name = "lycan_AllyNearIsAllyDragon_KnightEarlyGame"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_ally_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_AllyNearIsAllyDragon_KnightEarlyGame"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Islycan",
+					"IsAllyDragon_Knight",
+					"EarlyGame",
+				]
+			}
+		},
+		{
+			m_name = "lycan_AllyNearIsAllyLone_DruidEarlyGame"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_ally_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_AllyNearIsAllyLone_DruidEarlyGame"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Islycan",
+					"IsAllyLone_Druid",
+					"EarlyGame",
+				]
+			}
+		},
+		{
+			m_name = "lycan_LastHit"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_lasthit_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_lasthit_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_lasthit_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_lasthit_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_lasthit_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_lasthit_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_lasthit_07"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_LastHit"
+				m_Requirements = 
+				[
+					"LastHit",
+					"Islycan",
+				]
+			}
+		},
+		{
+			m_name = "lycan_Respawn"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_respawn_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_respawn_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_respawn_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_respawn_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_respawn_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_respawn_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_respawn_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_respawn_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_respawn_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_respawn_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_respawn_11"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_Respawn"
+				m_Requirements = 
+				[
+					"Respawn",
+					"Islycan",
+				]
+			}
+		},
+		{
+			m_name = "lycan_PurchaseIsExpensiveItem"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_purch_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_purch_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_purch_03"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_PurchaseIsExpensiveItem"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Islycan",
+					"IsExpensiveItem",
+				]
+			}
+		},
+		{
+			m_name = "lycan_PurchaseIsBlinkDagger"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_blink_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_blink_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_PurchaseIsBlinkDagger"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Islycan",
+					"IsBlinkDagger",
+				]
+			}
+		},
+		{
+			m_name = "lycan_PurchaseIsUltimateScepter"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_scepter_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_scepter_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_PurchaseIsUltimateScepter"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Islycan",
+					"IsUltimateScepter",
+				]
+			}
+		},
+		{
+			m_name = "lycan_PurchaseIsHeart"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_item_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_PurchaseIsHeart"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Islycan",
+					"IsHeart",
+				]
+			}
+		},
+		{
+			m_name = "lycan_PurchaseIsBlackKingBar"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_item_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_PurchaseIsBlackKingBar"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Islycan",
+					"IsBlackKingBar",
+				]
+			}
+		},
+		{
+			m_name = "lycan_PurchaseIsMonkeyKingBar"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_item_03"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_PurchaseIsMonkeyKingBar"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Islycan",
+					"IsMonkeyKingBar",
+				]
+			}
+		},
+		{
+			m_name = "lycan_PurchaseIsAssaultCuirass"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_item_04"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_PurchaseIsAssaultCuirass"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Islycan",
+					"IsAssaultCuirass",
+				]
+			}
+		},
+		{
+			m_name = "lycan_PurchaseIsVladmirs"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_item_05"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_PurchaseIsVladmirs"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Islycan",
+					"IsVladmirs",
+				]
+			}
+		},
+		{
+			m_name = "lycan_PurchaseIsHelmOftheDominator"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_item_06"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_PurchaseIsHelmOftheDominator"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Islycan",
+					"IsHelmOftheDominator",
+				]
+			}
+		},
+		{
+			m_name = "lycan_PurchaseIsDrums"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_item_07"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_PurchaseIsDrums"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Islycan",
+					"IsDrums",
+				]
+			}
+		},
+		{
+			m_name = "lycan_Bottling"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_bottle_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_bottle_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_bottle_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_Bottling"
+				m_Requirements = 
+				[
+					"Bottling",
+					"Islycan",
+				]
+			}
+		},
+		{
+			m_name = "lycan_MissingIsLaneTop"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_missing_lane_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_MissingIsLaneTop"
+				m_Requirements = 
+				[
+					"Missing",
+					"Islycan",
+					"IsLaneTop",
+				]
+			}
+		},
+		{
+			m_name = "lycan_MissingIsLaneMid"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_missing_lane_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_MissingIsLaneMid"
+				m_Requirements = 
+				[
+					"Missing",
+					"Islycan",
+					"IsLaneMid",
+				]
+			}
+		},
+		{
+			m_name = "lycan_MissingIsLaneBot"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_missing_lane_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_MissingIsLaneBot"
+				m_Requirements = 
+				[
+					"Missing",
+					"Islycan",
+					"IsLaneBot",
+				]
+			}
+		},
+		{
+			m_name = "lycan_Deny"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_deny_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_deny_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_deny_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_deny_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_deny_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_deny_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_deny_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_deny_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_deny_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_deny_10"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_Deny"
+				m_Requirements = 
+				[
+					"Deny",
+					"Islycan",
+				]
+			}
+		},
+		{
+			m_name = "lycan_Defeat"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_lose_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_lose_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_lose_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_lose_04"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_Defeat"
+				m_Requirements = 
+				[
+					"Defeat",
+					"Islycan",
+				]
+			}
+		},
+		{
+			m_name = "lycan_Victory"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_win_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_win_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_win_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_Victory"
+				m_Requirements = 
+				[
+					"Victory",
+					"Islycan",
+				]
+			}
+		},
+		{
+			m_name = "lycan_PowerupIsPowerupBounty"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_lasthit_06"
+					m_params = 
+					{
+						m_respeakdelay.start = 300.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_PowerupIsPowerupBounty"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Islycan",
+					"IsPowerupBounty",
+				]
+			}
+		},
+		{
+			m_name = "lycan_PowerupIsPowerupArcane"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_bottle_03"
+					m_params = 
+					{
+						m_respeakdelay.start = 300.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_PowerupIsPowerupArcane"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Islycan",
+					"IsPowerupArcane",
+				]
+			}
+		},
+		{
+			m_name = "lycan_PowerupIsPowerupHaste"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_haste_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_PowerupIsPowerupHaste"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Islycan",
+					"IsPowerupHaste",
+				]
+			}
+		},
+		{
+			m_name = "lycan_PowerupIsPowerupHasteChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_haste_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_PowerupIsPowerupHasteChance_25%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Islycan",
+					"IsPowerupHaste",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "lycan_PowerupIsPowerupDoubleDamage"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_doubdam_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_PowerupIsPowerupDoubleDamage"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Islycan",
+					"IsPowerupDoubleDamage",
+				]
+			}
+		},
+		{
+			m_name = "lycan_PowerupIsPowerupDoubleDamageChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_doubdam_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_PowerupIsPowerupDoubleDamageChance_25%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Islycan",
+					"IsPowerupDoubleDamage",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "lycan_PowerupIsPowerupRegeneration"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_regen_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_PowerupIsPowerupRegeneration"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Islycan",
+					"IsPowerupRegeneration",
+				]
+			}
+		},
+		{
+			m_name = "lycan_PowerupIsPowerupRegenerationChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_regen_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_PowerupIsPowerupRegenerationChance_25%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Islycan",
+					"IsPowerupRegeneration",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "lycan_PowerupIsPowerupIllusion"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_illus_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_PowerupIsPowerupIllusion"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Islycan",
+					"IsPowerupIllusion",
+				]
+			}
+		},
+		{
+			m_name = "lycan_PowerupIsPowerupIllusionChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_illus_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_illus_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_PowerupIsPowerupIllusionChance_25%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Islycan",
+					"IsPowerupIllusion",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "lycan_PowerupIsPowerupInvisibility"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_invis_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_PowerupIsPowerupInvisibility"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Islycan",
+					"IsPowerupInvisibility",
+				]
+			}
+		},
+		{
+			m_name = "lycan_PowerupIsPowerupInvisibilityChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_invis_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_PowerupIsPowerupInvisibilityChance_25%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Islycan",
+					"IsPowerupInvisibility",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "lycan_Immortality"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_immort_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_Immortality"
+				m_Requirements = 
+				[
+					"Immortality",
+					"Islycan",
+				]
+			}
+		},
+		{
+			m_name = "lycan_ImmortalityChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_immort_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_ImmortalityChance_25%"
+				m_Requirements = 
+				[
+					"Immortality",
+					"Islycan",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "lycan_CooldownLittleNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_notyet_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_notyet_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_notyet_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_CooldownLittleNag"
+				m_Requirements = 
+				[
+					"Cooldown",
+					"Islycan",
+					"LittleNag",
+				]
+			}
+		},
+		{
+			m_name = "lycan_CooldownMediumNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_notyet_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_notyet_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_notyet_06"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_CooldownMediumNag"
+				m_Requirements = 
+				[
+					"Cooldown",
+					"Islycan",
+					"MediumNag",
+				]
+			}
+		},
+		{
+			m_name = "lycan_CooldownSuperNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_notyet_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_notyet_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_notyet_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_CooldownSuperNag"
+				m_Requirements = 
+				[
+					"Cooldown",
+					"Islycan",
+					"SuperNag",
+				]
+			}
+		},
+		{
+			m_name = "lycan_NoManaLittleNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_nomana_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_nomana_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_nomana_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_NoManaLittleNag"
+				m_Requirements = 
+				[
+					"NoMana",
+					"Islycan",
+					"LittleNag",
+				]
+			}
+		},
+		{
+			m_name = "lycan_NoManaMediumNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_nomana_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_nomana_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_nomana_06"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_NoManaMediumNag"
+				m_Requirements = 
+				[
+					"NoMana",
+					"Islycan",
+					"MediumNag",
+				]
+			}
+		},
+		{
+			m_name = "lycan_NoManaSuperNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_nomana_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_nomana_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_nomana_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_NoManaSuperNag"
+				m_Requirements = 
+				[
+					"NoMana",
+					"Islycan",
+					"SuperNag",
+				]
+			}
+		},
+		{
+			m_name = "lycan_Thanks"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_thanks_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_thanks_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_Thanks"
+				m_Requirements = 
+				[
+					"Thanks",
+					"Islycan",
+				]
+			}
+		},
+		{
+			m_name = "lycan_Select"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_rare_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_rare_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_rare_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_Select"
+				m_Requirements = 
+				[
+					"Select",
+					"Islycan",
+				]
+			}
+		},
+		{
+			m_name = "lycan_PainChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_underattack_01"
+					m_params = 
+					{
+						m_respeakdelay.start = 120.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_PainChance_25%"
+				m_Requirements = 
+				[
+					"Pain",
+					"Islycan",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "lycan_Pain"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_pain_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_pain_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_pain_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_pain_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_pain_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_pain_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_pain_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_pain_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_pain_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_pain_10"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_Pain"
+				m_Requirements = 
+				[
+					"Pain",
+					"Islycan",
+				]
+			}
+		},
+		{
+			m_name = "lycan_InTheBag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_inthebag_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_InTheBag"
+				m_Requirements = 
+				[
+					"InTheBag",
+					"Islycan",
+				]
+			}
+		},
+		{
+			m_name = "lycan_ItemDropIsCommonDrop"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_happy_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_happy_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_ItemDropIsCommonDrop"
+				m_Requirements = 
+				[
+					"ItemDrop",
+					"Islycan",
+					"IsCommonDrop",
+				]
+			}
+		},
+		{
+			m_name = "lycan_ItemDropIsRareDrop"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_happy_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_happy_04"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_ItemDropIsRareDrop"
+				m_Requirements = 
+				[
+					"ItemDrop",
+					"Islycan",
+					"IsRareDrop",
+				]
+			}
+		},
+		{
+			m_name = "lycan_ItemDropIsUltraRareDrop"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_laugh_18"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_ItemDropIsUltraRareDrop"
+				m_Requirements = 
+				[
+					"ItemDrop",
+					"Islycan",
+					"IsUltraRareDrop",
+				]
+			}
+		},
+		{
+			m_name = "lycan_EmoteIsEmoteLaugh"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_laugh_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_laugh_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_laugh_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_laugh_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_laugh_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_laugh_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_laugh_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_laugh_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_laugh_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_laugh_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_laugh_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_laugh_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_laugh_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_laugh_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_laugh_15"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_laugh_16"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_laugh_17"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "lycan_lycan_laugh_18"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "lycan_EmoteIsEmoteLaugh"
+				m_Requirements = 
+				[
+					"Emote",
+					"Islycan",
+					"IsEmoteLaugh",
+				]
+			}
+		},
+	]
+	m_Requirements = 
+	[
+		{
+			m_name = "Islycan"
+			m_matchKey = "classname"
+			m_matchExpr = "npc_dota_hero_lycan"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsInWolfForm"
+			m_matchKey = "wolfform"
+			m_matchExpr = "1"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsAbilityHowl"
+			m_matchKey = "abilityname"
+			m_matchExpr = "lycan_howl"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsAbilitySummon"
+			m_matchKey = "abilityname"
+			m_matchExpr = "lycan_summon_wolves"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsAbilityShapeshift"
+			m_matchKey = "abilityname"
+			m_matchExpr = "lycan_shapeshift"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsLycanDominator"
+			m_matchKey = "abilityname"
+			m_matchExpr = "item_helm_of_the_dominator"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsNeutralWolf"
+			m_matchKey = "targetunitname"
+			m_matchExpr = "npc_dota_neutral_giant_wolf"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsNeutralAlphaWolf"
+			m_matchKey = "targetunitname"
+			m_matchExpr = "npc_dota_neutral_alpha_wolf"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsLycanLoadoutSpawn"
+			m_matchKey = "special_spawn"
+			m_matchExpr = "lycan_loadout_spawn"
+			m_flWeight = 5.0
+		},
+	]
+}

@@ -1,0 +1,2173 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vrr_c1:version{c1f07085-5299-4e8a-b7e9-1cbb66bbbe23} -->
+{
+	m_Includes = 
+	[
+		"scripts/talker/response_rules_shared.vrr",
+	]
+	m_ResponseGroups = 
+	[
+		{
+			m_name = "broodmother_Spawn"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_spawn_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_spawn_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_spawn_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_spawn_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_spawn_05"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "broodmother_Spawn"
+				m_Requirements = 
+				[
+					"Spawn",
+					"Isbroodmother",
+				]
+			}
+		},
+		{
+			m_name = "broodmother_CustomIsGameStart"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_battlebegins_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "broodmother_CustomIsGameStart"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isbroodmother",
+					"IsGameStart",
+				]
+			}
+		},
+		{
+			m_name = "broodmother_CustomIsBroodmotherLoadoutSpawn"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_spawn_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_spawn_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_spawn_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_spawn_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_spawn_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_battlebegins_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_attack_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_attack_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_ability_spawn_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_kill_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_lasthit_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_ability_hunger_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "broodmother_CustomIsBroodmotherLoadoutSpawn"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isbroodmother",
+					"IsBroodmotherLoadoutSpawn",
+				]
+			}
+		},
+		{
+			m_name = "broodmother_KillIsFirstBlood"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_firstblood_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_firstblood_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "broodmother_KillIsFirstBlood"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isbroodmother",
+					"IsFirstBlood",
+				]
+			}
+		},
+		{
+			m_name = "broodmother_Kill"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_ability_incap_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_ability_incap_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_ability_incap_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_kill_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_kill_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_kill_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_kill_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_kill_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_kill_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_kill_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_kill_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_kill_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_kill_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_kill_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_kill_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_kill_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_kill_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_kill_15"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_kill_16"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_kill_17"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_kill_18"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_laugh_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_laugh_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_laugh_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_laugh_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_laugh_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_laugh_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_laugh_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_laugh_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_laugh_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_laugh_10"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "broodmother_Kill"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isbroodmother",
+				]
+			}
+		},
+		{
+			m_name = "broodmother_KillIsEnemyWeaverChance_35%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_rival_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "broodmother_KillIsEnemyWeaverChance_35%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isbroodmother",
+					"IsEnemyWeaver",
+					"Chance_35%",
+				]
+			}
+		},
+		{
+			m_name = "broodmother_KillIsEnemyNyx_AssassinChance_35%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_rival_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "broodmother_KillIsEnemyNyx_AssassinChance_35%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isbroodmother",
+					"IsEnemyNyx_Assassin",
+					"Chance_35%",
+				]
+			}
+		},
+		{
+			m_name = "broodmother_KillIsEnemySandKingChance_35%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_rival_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "broodmother_KillIsEnemySandKingChance_35%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isbroodmother",
+					"IsEnemySandKing",
+					"Chance_35%",
+				]
+			}
+		},
+		{
+			m_name = "broodmother_KillIsEnemySlardarChance_35%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_rival_04"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "broodmother_KillIsEnemySlardarChance_35%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isbroodmother",
+					"IsEnemySlardar",
+					"Chance_35%",
+				]
+			}
+		},
+		{
+			m_name = "broodmother_KillIsEnemyNight_StalkerChance_35%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_rival_05"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "broodmother_KillIsEnemyNight_StalkerChance_35%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isbroodmother",
+					"IsEnemyNight_Stalker",
+					"Chance_35%",
+				]
+			}
+		},
+		{
+			m_name = "broodmother_KillIsEnemyBounty_HunterChance_35%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_rival_06"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "broodmother_KillIsEnemyBounty_HunterChance_35%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isbroodmother",
+					"IsEnemyBounty_Hunter",
+					"Chance_35%",
+				]
+			}
+		},
+		{
+			m_name = "broodmother_KillIsEnemyEarthShakerChance_35%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_rival_07"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "broodmother_KillIsEnemyEarthShakerChance_35%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isbroodmother",
+					"IsEnemyEarthShaker",
+					"Chance_35%",
+				]
+			}
+		},
+		{
+			m_name = "broodmother_KillIsEnemyKunkkaChance_35%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_rival_08"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "broodmother_KillIsEnemyKunkkaChance_35%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isbroodmother",
+					"IsEnemyKunkka",
+					"Chance_35%",
+				]
+			}
+		},
+		{
+			m_name = "broodmother_KillIsEnemyEnigmaChance_35%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_rival_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "broodmother_KillIsEnemyEnigmaChance_35%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isbroodmother",
+					"IsEnemyEnigma",
+					"Chance_35%",
+				]
+			}
+		},
+		{
+			m_name = "broodmother_Move"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_move_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_move_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_move_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_move_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_move_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_move_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_move_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_move_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_move_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_move_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_move_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_move_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_move_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_move_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_move_15"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_move_16"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "broodmother_Move"
+				m_Requirements = 
+				[
+					"Move",
+					"Isbroodmother",
+				]
+			}
+		},
+		{
+			m_name = "broodmother_MoveIsBroodmotherIsBroodmotherSpiderling"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_ability_spawn_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_ability_spawn_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_ability_spawn_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "broodmother_MoveIsBroodmotherIsBroodmotherSpiderling"
+				m_Requirements = 
+				[
+					"Move",
+					"Isbroodmother",
+					"IsBroodmother",
+					"IsBroodmotherSpiderling",
+				]
+			}
+		},
+		{
+			m_name = "broodmother_Attack"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_attack_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_attack_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_attack_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_attack_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_attack_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_attack_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_attack_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_attack_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_attack_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_attack_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_attack_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_attack_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_attack_13"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "broodmother_Attack"
+				m_Requirements = 
+				[
+					"Attack",
+					"Isbroodmother",
+				]
+			}
+		},
+		{
+			m_name = "broodmother_AttackIsBroodmotherIsBroodmotherSpiderling"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_ability_spawn_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_ability_spawn_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_ability_spawn_12"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "broodmother_AttackIsBroodmotherIsBroodmotherSpiderling"
+				m_Requirements = 
+				[
+					"Attack",
+					"Isbroodmother",
+					"IsBroodmother",
+					"IsBroodmotherSpiderling",
+				]
+			}
+		},
+		{
+			m_name = "broodmother_CastOrder"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_cast_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_cast_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_cast_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_cast_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_ability_spawn_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_ability_hunger_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_ability_hunger_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_ability_hunger_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_ability_hunger_06"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "broodmother_CastOrder"
+				m_Requirements = 
+				[
+					"CastOrder",
+					"Isbroodmother",
+				]
+			}
+		},
+		{
+			m_name = "broodmother_ItemDropIsUltraRareDrop"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_ability_spawn_06"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "broodmother_ItemDropIsUltraRareDrop"
+				m_Requirements = 
+				[
+					"ItemDrop",
+					"Isbroodmother",
+					"IsUltraRareDrop",
+				]
+			}
+		},
+		{
+			m_name = "broodmother_ItemDropIsRareDrop"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_happy_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_happy_07"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "broodmother_ItemDropIsRareDrop"
+				m_Requirements = 
+				[
+					"ItemDrop",
+					"Isbroodmother",
+					"IsRareDrop",
+				]
+			}
+		},
+		{
+			m_name = "broodmother_ItemDropIsCommonDrop"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_happy_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_happy_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_happy_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_happy_08"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "broodmother_ItemDropIsCommonDrop"
+				m_Requirements = 
+				[
+					"ItemDrop",
+					"Isbroodmother",
+					"IsCommonDrop",
+				]
+			}
+		},
+		{
+			m_name = "broodmother_CastExecuteIsBroodmotherWebChance_75%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_ability_spin_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_ability_spin_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_ability_spin_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_ability_spin_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_ability_spin_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_ability_spin_06"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "broodmother_CastExecuteIsBroodmotherWebChance_75%"
+				m_Requirements = 
+				[
+					"CastExecute",
+					"Isbroodmother",
+					"IsBroodmotherWeb",
+					"Chance_75%",
+				]
+			}
+		},
+		{
+			m_name = "broodmother_CastExecuteIsItemSheepstick"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_rare_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "broodmother_CastExecuteIsItemSheepstick"
+				m_Requirements = 
+				[
+					"CastExecute",
+					"Isbroodmother",
+					"IsItemSheepstick",
+				]
+			}
+		},
+		{
+			m_name = "broodmother_LevelUp"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_level_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_level_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_level_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_level_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_level_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_level_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_level_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_level_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_level_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_level_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_level_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_level_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_level_13"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "broodmother_LevelUp"
+				m_Requirements = 
+				[
+					"LevelUp",
+					"Isbroodmother",
+				]
+			}
+		},
+		{
+			m_name = "broodmother_LastHit"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_lasthit_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_lasthit_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_lasthit_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_lasthit_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_lasthit_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_lasthit_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_lasthit_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_lasthit_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_lasthit_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_lasthit_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_lasthit_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_lasthit_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_lasthit_13"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "broodmother_LastHit"
+				m_Requirements = 
+				[
+					"LastHit",
+					"Isbroodmother",
+				]
+			}
+		},
+		{
+			m_name = "broodmother_Death"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_death_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_death_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_death_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_death_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_death_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_death_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_death_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_death_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_death_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_death_10"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "broodmother_Death"
+				m_Requirements = 
+				[
+					"Death",
+					"Isbroodmother",
+				]
+			}
+		},
+		{
+			m_name = "broodmother_DeathIsReincarnating"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_fastres_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "broodmother_DeathIsReincarnating"
+				m_Requirements = 
+				[
+					"Death",
+					"Isbroodmother",
+					"IsReincarnating",
+				]
+			}
+		},
+		{
+			m_name = "broodmother_Respawn"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_respawn_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_respawn_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_respawn_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_respawn_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_respawn_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_respawn_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_respawn_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_respawn_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_respawn_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "broodmother_Respawn"
+				m_Requirements = 
+				[
+					"Respawn",
+					"Isbroodmother",
+				]
+			}
+		},
+		{
+			m_name = "broodmother_PurchaseIsExpensiveItem"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_purch_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_purch_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_purch_03"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "broodmother_PurchaseIsExpensiveItem"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isbroodmother",
+					"IsExpensiveItem",
+				]
+			}
+		},
+		{
+			m_name = "broodmother_PurchaseIsBlinkDagger"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_blink_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "broodmother_PurchaseIsBlinkDagger"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isbroodmother",
+					"IsBlinkDagger",
+				]
+			}
+		},
+		{
+			m_name = "broodmother_PurchaseIsUltimateScepter"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_scepter_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_scepter_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "broodmother_PurchaseIsUltimateScepter"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isbroodmother",
+					"IsUltimateScepter",
+				]
+			}
+		},
+		{
+			m_name = "broodmother_PurchaseIsVladmirs"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_item_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "broodmother_PurchaseIsVladmirs"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isbroodmother",
+					"IsVladmirs",
+				]
+			}
+		},
+		{
+			m_name = "broodmother_PurchaseIsBlackKingBar"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_item_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "broodmother_PurchaseIsBlackKingBar"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isbroodmother",
+					"IsBlackKingBar",
+				]
+			}
+		},
+		{
+			m_name = "broodmother_PurchaseIsButterfly"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_item_03"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "broodmother_PurchaseIsButterfly"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isbroodmother",
+					"IsButterfly",
+				]
+			}
+		},
+		{
+			m_name = "broodmother_PurchaseIsMonkeyKingBar"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_item_04"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "broodmother_PurchaseIsMonkeyKingBar"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isbroodmother",
+					"IsMonkeyKingBar",
+				]
+			}
+		},
+		{
+			m_name = "broodmother_PurchaseIsHeart"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_item_05"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "broodmother_PurchaseIsHeart"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isbroodmother",
+					"IsHeart",
+				]
+			}
+		},
+		{
+			m_name = "broodmother_PurchaseIsRadiance"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_item_06"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "broodmother_PurchaseIsRadiance"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isbroodmother",
+					"IsRadiance",
+				]
+			}
+		},
+		{
+			m_name = "broodmother_Bottling"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_bottle_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_bottle_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_bottle_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "broodmother_Bottling"
+				m_Requirements = 
+				[
+					"Bottling",
+					"Isbroodmother",
+				]
+			}
+		},
+		{
+			m_name = "broodmother_Deny"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_deny_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_deny_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_deny_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_deny_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_deny_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_deny_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_deny_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_deny_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_deny_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_deny_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_deny_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_deny_12"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "broodmother_Deny"
+				m_Requirements = 
+				[
+					"Deny",
+					"Isbroodmother",
+				]
+			}
+		},
+		{
+			m_name = "broodmother_Defeat"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_lose_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_lose_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_lose_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "broodmother_Defeat"
+				m_Requirements = 
+				[
+					"Defeat",
+					"Isbroodmother",
+				]
+			}
+		},
+		{
+			m_name = "broodmother_Victory"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_win_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_win_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_win_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "broodmother_Victory"
+				m_Requirements = 
+				[
+					"Victory",
+					"Isbroodmother",
+				]
+			}
+		},
+		{
+			m_name = "broodmother_Immortality"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_immort_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "broodmother_Immortality"
+				m_Requirements = 
+				[
+					"Immortality",
+					"Isbroodmother",
+				]
+			}
+		},
+		{
+			m_name = "broodmother_ImmortalityChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_immort_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "broodmother_ImmortalityChance_25%"
+				m_Requirements = 
+				[
+					"Immortality",
+					"Isbroodmother",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "broodmother_PowerupIsPowerupBounty"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_deny_11"
+					m_params = 
+					{
+						m_respeakdelay.start = 300.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "broodmother_PowerupIsPowerupBounty"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isbroodmother",
+					"IsPowerupBounty",
+				]
+			}
+		},
+		{
+			m_name = "broodmother_PowerupIsPowerupArcane"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_ability_spawn_06"
+					m_params = 
+					{
+						m_respeakdelay.start = 300.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "broodmother_PowerupIsPowerupArcane"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isbroodmother",
+					"IsPowerupArcane",
+				]
+			}
+		},
+		{
+			m_name = "broodmother_PowerupIsPowerupHaste"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_haste_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "broodmother_PowerupIsPowerupHaste"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isbroodmother",
+					"IsPowerupHaste",
+				]
+			}
+		},
+		{
+			m_name = "broodmother_PowerupIsPowerupDoubleDamage"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_doubdam_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "broodmother_PowerupIsPowerupDoubleDamage"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isbroodmother",
+					"IsPowerupDoubleDamage",
+				]
+			}
+		},
+		{
+			m_name = "broodmother_PowerupIsPowerupRegeneration"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_regen_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "broodmother_PowerupIsPowerupRegeneration"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isbroodmother",
+					"IsPowerupRegeneration",
+				]
+			}
+		},
+		{
+			m_name = "broodmother_PowerupIsPowerupIllusion"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_illus_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "broodmother_PowerupIsPowerupIllusion"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isbroodmother",
+					"IsPowerupIllusion",
+				]
+			}
+		},
+		{
+			m_name = "broodmother_PowerupIsPowerupIllusionChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_illus_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "broodmother_PowerupIsPowerupIllusionChance_25%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isbroodmother",
+					"IsPowerupIllusion",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "broodmother_PowerupIsPowerupInvisibility"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_invis_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "broodmother_PowerupIsPowerupInvisibility"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isbroodmother",
+					"IsPowerupInvisibility",
+				]
+			}
+		},
+		{
+			m_name = "broodmother_PowerupIsPowerupInvisibilityChance_5%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_invis_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "broodmother_PowerupIsPowerupInvisibilityChance_5%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isbroodmother",
+					"IsPowerupInvisibility",
+					"Chance_5%",
+				]
+			}
+		},
+		{
+			m_name = "broodmother_CooldownLittleNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_notyet_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_notyet_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_notyet_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "broodmother_CooldownLittleNag"
+				m_Requirements = 
+				[
+					"Cooldown",
+					"Isbroodmother",
+					"LittleNag",
+				]
+			}
+		},
+		{
+			m_name = "broodmother_CooldownMediumNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_notyet_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_notyet_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_notyet_06"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "broodmother_CooldownMediumNag"
+				m_Requirements = 
+				[
+					"Cooldown",
+					"Isbroodmother",
+					"MediumNag",
+				]
+			}
+		},
+		{
+			m_name = "broodmother_CooldownSuperNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_notyet_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_notyet_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_notyet_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "broodmother_CooldownSuperNag"
+				m_Requirements = 
+				[
+					"Cooldown",
+					"Isbroodmother",
+					"SuperNag",
+				]
+			}
+		},
+		{
+			m_name = "broodmother_NoManaLittleNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_nomana_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_nomana_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_nomana_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "broodmother_NoManaLittleNag"
+				m_Requirements = 
+				[
+					"NoMana",
+					"Isbroodmother",
+					"LittleNag",
+				]
+			}
+		},
+		{
+			m_name = "broodmother_NoManaMediumNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_nomana_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_nomana_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_nomana_06"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "broodmother_NoManaMediumNag"
+				m_Requirements = 
+				[
+					"NoMana",
+					"Isbroodmother",
+					"MediumNag",
+				]
+			}
+		},
+		{
+			m_name = "broodmother_NoManaSuperNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_nomana_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_nomana_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_nomana_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "broodmother_NoManaSuperNag"
+				m_Requirements = 
+				[
+					"NoMana",
+					"Isbroodmother",
+					"SuperNag",
+				]
+			}
+		},
+		{
+			m_name = "broodmother_Thanks"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_thanks_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_thanks_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "broodmother_Thanks"
+				m_Requirements = 
+				[
+					"Thanks",
+					"Isbroodmother",
+				]
+			}
+		},
+		{
+			m_name = "broodmother_PainChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_underattack_01"
+					m_params = 
+					{
+						m_respeakdelay.start = 120.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "broodmother_PainChance_25%"
+				m_Requirements = 
+				[
+					"Pain",
+					"Isbroodmother",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "broodmother_Pain"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_pain_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_pain_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_pain_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_pain_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_pain_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_pain_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_pain_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_pain_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_pain_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "broodmother_Pain"
+				m_Requirements = 
+				[
+					"Pain",
+					"Isbroodmother",
+				]
+			}
+		},
+		{
+			m_name = "broodmother_InTheBag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_inthebag_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "broodmother_InTheBag"
+				m_Requirements = 
+				[
+					"InTheBag",
+					"Isbroodmother",
+				]
+			}
+		},
+		{
+			m_name = "broodmother_EmoteIsEmoteLaugh"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_laugh_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_laugh_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_laugh_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_laugh_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_laugh_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_laugh_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_laugh_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_laugh_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_laugh_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_laugh_10"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "broodmother_EmoteIsEmoteLaugh"
+				m_Requirements = 
+				[
+					"Emote",
+					"Isbroodmother",
+					"IsEmoteLaugh",
+				]
+			}
+		},
+		{
+			m_name = "broodmother_Select"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_respawn_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_rare_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_ability_hunger_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "broodmother_Select"
+				m_Requirements = 
+				[
+					"Select",
+					"Isbroodmother",
+				]
+			}
+		},
+		{
+			m_name = "broodmother_TauntIsBroodTauntSpiderShuffle"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "broodmother_broo_laugh_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "broodmother_TauntIsBroodTauntSpiderShuffle"
+				m_Requirements = 
+				[
+					"Taunt",
+					"Isbroodmother",
+					"IsBroodTauntSpiderShuffle",
+				]
+			}
+		},
+	]
+	m_Requirements = 
+	[
+		{
+			m_name = "Isbroodmother"
+			m_matchKey = "classname"
+			m_matchExpr = "npc_dota_hero_broodmother"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsBroodmotherSpiderling"
+			m_matchKey = "beastname"
+			m_matchExpr = "spiderling"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsBroodmotherWeb"
+			m_matchKey = "abilityname"
+			m_matchExpr = "broodmother_spin_web"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsItemSheepstick"
+			m_matchKey = "abilityname"
+			m_matchExpr = "item_sheepstick"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsBroodmotherLoadoutSpawn"
+			m_matchKey = "special_spawn"
+			m_matchExpr = "broodmother_loadout_spawn"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsBroodTauntSpiderShuffle"
+			m_matchKey = "taunt_type"
+			m_matchExpr = "broodmother_spin"
+			m_flWeight = 5.0
+		},
+	]
+}

@@ -1,0 +1,2823 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vrr_c1:version{c1f07085-5299-4e8a-b7e9-1cbb66bbbe23} -->
+{
+	m_Includes = 
+	[
+		"scripts/talker/response_rules_shared.vrr",
+	]
+	m_ResponseGroups = 
+	[
+		{
+			m_name = "brewmaster_Spawn"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_spawn_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_spawn_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_spawn_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_spawn_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_spawn_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_spawn_06"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_Spawn"
+				m_Requirements = 
+				[
+					"Spawn",
+					"Isbrewmaster",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_CustomIsGameStart"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_battlebegins_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_ability_drunkenbrawler_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_ability_drunkenbrawler_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_CustomIsGameStart"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isbrewmaster",
+					"IsGameStart",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_CustomIsPrimalSplitDone"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_ability_primalsplit_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_ability_primalsplit_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_ability_primalsplit_15"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_ability_primalsplit_16"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_ability_primalsplit_17"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_CustomIsPrimalSplitDone"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isbrewmaster",
+					"IsPrimalSplitDone",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_CustomIsBrewmasterLoadoutSpawn"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_spawn_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_spawn_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_spawn_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_spawn_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_spawn_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_spawn_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_battlebegins_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_ability_drunkenbrawler_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_ability_drunkenbrawler_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_ability_drunkenhaze_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_level_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_respawn_06"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_CustomIsBrewmasterLoadoutSpawn"
+				m_Requirements = 
+				[
+					"Custom",
+					"Isbrewmaster",
+					"IsBrewmasterLoadoutSpawn",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_KillIsFirstBlood"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_firstblood_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_firstblood_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_firstblood_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_KillIsFirstBlood"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isbrewmaster",
+					"IsFirstBlood",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_Kill"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_kill_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_kill_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_kill_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_kill_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_kill_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_kill_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_kill_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_kill_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_kill_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_kill_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_kill_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_kill_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_laugh_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_laugh_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_laugh_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_laugh_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_laugh_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_laugh_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_laugh_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_laugh_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_laugh_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_laugh_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_laugh_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_laugh_15"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_laugh_16"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_laugh_17"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_laugh_18"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_laugh_19"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_laugh_20"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_laugh_21"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_laugh_22"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_laugh_23"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_laugh_24"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_Kill"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isbrewmaster",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_KillIsEnemyMorphlingChance_35%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_rival_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_rival_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_rival_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_rival_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_rival_05"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_KillIsEnemyMorphlingChance_35%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isbrewmaster",
+					"IsEnemyMorphling",
+					"Chance_35%",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_KillIsEnemySlardarChance_35%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_rival_06"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_KillIsEnemySlardarChance_35%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isbrewmaster",
+					"IsEnemySlardar",
+					"Chance_35%",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_KillIsEnemyVengefulSpiritChance_35%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_rival_07"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_KillIsEnemyVengefulSpiritChance_35%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isbrewmaster",
+					"IsEnemyVengefulSpirit",
+					"Chance_35%",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_KillIsEnemyAncient_ApparitionChance_35%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_rival_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_rival_20"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_KillIsEnemyAncient_ApparitionChance_35%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isbrewmaster",
+					"IsEnemyAncient_Apparition",
+					"Chance_35%",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_KillIsEnemySpectreChance_35%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_rival_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_KillIsEnemySpectreChance_35%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isbrewmaster",
+					"IsEnemySpectre",
+					"Chance_35%",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_KillIsEnemyOmniknightChance_35%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_rival_10"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_KillIsEnemyOmniknightChance_35%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isbrewmaster",
+					"IsEnemyOmniknight",
+					"Chance_35%",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_KillIsEnemyLycanChance_35%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_rival_11"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_KillIsEnemyLycanChance_35%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isbrewmaster",
+					"IsEnemyLycan",
+					"Chance_35%",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_KillIsEnemyBloodseekerChance_35%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_rival_12"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_KillIsEnemyBloodseekerChance_35%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isbrewmaster",
+					"IsEnemyBloodseeker",
+					"Chance_35%",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_KillIsEnemyKunkkaChance_35%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_rival_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_rival_15"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_rival_17"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_KillIsEnemyKunkkaChance_35%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isbrewmaster",
+					"IsEnemyKunkka",
+					"Chance_35%",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_KillIsEnemyTidehunterChance_35%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_rival_16"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_KillIsEnemyTidehunterChance_35%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isbrewmaster",
+					"IsEnemyTidehunter",
+					"Chance_35%",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_KillIsEnemyStormSpiritChance_35%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_rival_22"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_rival_23"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_rival_26"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_KillIsEnemyStormSpiritChance_35%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isbrewmaster",
+					"IsEnemyStormSpirit",
+					"Chance_35%",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_KillIsEnemyEmber_SpiritChance_35%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_rival_25"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_rival_26"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_KillIsEnemyEmber_SpiritChance_35%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isbrewmaster",
+					"IsEnemyEmber_Spirit",
+					"Chance_35%",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_KillIsEnemyEarth_SpiritChance_35%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_rival_26"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_KillIsEnemyEarth_SpiritChance_35%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isbrewmaster",
+					"IsEnemyEarth_Spirit",
+					"Chance_35%",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_KillIsEnemyChaos_KnightChance_35%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_rival_28"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_rival_29"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_KillIsEnemyChaos_KnightChance_35%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isbrewmaster",
+					"IsEnemyChaos_Knight",
+					"Chance_35%",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_KillIsEnemyAntimageChance_35%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_rival_31"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_KillIsEnemyAntimageChance_35%"
+				m_Requirements = 
+				[
+					"Kill",
+					"Isbrewmaster",
+					"IsEnemyAntimage",
+					"Chance_35%",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_Move"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_move_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_move_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_move_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_move_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_move_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_move_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_move_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_move_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_move_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_move_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_move_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_move_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_move_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_move_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_move_15"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_move_16"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_move_17"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_Move"
+				m_Requirements = 
+				[
+					"Move",
+					"Isbrewmaster",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_Attack"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_attack_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_attack_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_attack_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_attack_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_attack_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_attack_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_attack_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_attack_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_attack_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_attack_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_attack_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_attack_12"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_Attack"
+				m_Requirements = 
+				[
+					"Attack",
+					"Isbrewmaster",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_CastOrder"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_cast_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_cast_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_cast_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_CastOrder"
+				m_Requirements = 
+				[
+					"CastOrder",
+					"Isbrewmaster",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_CastExecuteIsDrunkenHaze"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_ability_drunkenhaze_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_ability_drunkenhaze_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_ability_drunkenhaze_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_ability_drunkenhaze_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_ability_drunkenhaze_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_ability_drunkenhaze_08"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_CastExecuteIsDrunkenHaze"
+				m_Requirements = 
+				[
+					"CastExecute",
+					"Isbrewmaster",
+					"IsDrunkenHaze",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_CastExecuteIsThunderclapChance_75%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_ability_thunderclap_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_ability_thunderclap_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_ability_thunderclap_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_ability_primalsplit_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_ability_primalsplit_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_CastExecuteIsThunderclapChance_75%"
+				m_Requirements = 
+				[
+					"CastExecute",
+					"Isbrewmaster",
+					"IsThunderclap",
+					"Chance_75%",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_CastExecuteIsPrimalSplitCastStart"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_ability_primalsplit_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_ability_primalsplit_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_ability_primalsplit_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_ability_primalsplit_13"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_CastExecuteIsPrimalSplitCastStart"
+				m_Requirements = 
+				[
+					"CastExecute",
+					"Isbrewmaster",
+					"IsPrimalSplitCastStart",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_LevelUp"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_level_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_level_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_level_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_level_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_level_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_level_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_level_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_level_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_level_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_level_10"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_LevelUp"
+				m_Requirements = 
+				[
+					"LevelUp",
+					"Isbrewmaster",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_DeathIsEnemyBloodseekerChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_rival_13"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_DeathIsEnemyBloodseekerChance_20%"
+				m_Requirements = 
+				[
+					"Death",
+					"Isbrewmaster",
+					"IsEnemyBloodseeker",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_DeathIsEnemyTinyChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_rival_18"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_DeathIsEnemyTinyChance_25%"
+				m_Requirements = 
+				[
+					"Death",
+					"Isbrewmaster",
+					"IsEnemyTiny",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_DeathIsEnemyHuskarChance_20%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_rival_19"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_DeathIsEnemyHuskarChance_20%"
+				m_Requirements = 
+				[
+					"Death",
+					"Isbrewmaster",
+					"IsEnemyHuskar",
+					"Chance_20%",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_DeathIsEnemyCrystalMaidenChance_50%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_rival_21"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_DeathIsEnemyCrystalMaidenChance_50%"
+				m_Requirements = 
+				[
+					"Death",
+					"Isbrewmaster",
+					"IsEnemyCrystalMaiden",
+					"Chance_50%",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_DeathIsEnemyStormSpiritChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_rival_24"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_DeathIsEnemyStormSpiritChance_25%"
+				m_Requirements = 
+				[
+					"Death",
+					"Isbrewmaster",
+					"IsEnemyStormSpirit",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_DeathIsEnemyEarth_SpiritChance_15%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_rival_27"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_DeathIsEnemyEarth_SpiritChance_15%"
+				m_Requirements = 
+				[
+					"Death",
+					"Isbrewmaster",
+					"IsEnemyEarth_Spirit",
+					"Chance_15%",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_DeathIsEnemyChaos_KnightChance_15%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_rival_30"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_DeathIsEnemyChaos_KnightChance_15%"
+				m_Requirements = 
+				[
+					"Death",
+					"Isbrewmaster",
+					"IsEnemyChaos_Knight",
+					"Chance_15%",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_Death"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_death_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_death_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_death_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_death_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_death_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_death_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_death_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_death_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_death_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_death_10"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_Death"
+				m_Requirements = 
+				[
+					"Death",
+					"Isbrewmaster",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_DeathIsReincarnating"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_fastres_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_DeathIsReincarnating"
+				m_Requirements = 
+				[
+					"Death",
+					"Isbrewmaster",
+					"IsReincarnating",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_AllyNearIsAllyTuskEarlyGame"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_ally_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_AllyNearIsAllyTuskEarlyGame"
+				m_Requirements = 
+				[
+					"AllyNear",
+					"Isbrewmaster",
+					"IsAllyTusk",
+					"EarlyGame",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_LastHit"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_lasthit_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_lasthit_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_lasthit_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_lasthit_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_lasthit_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_lasthit_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_lasthit_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_lasthit_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_lasthit_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_LastHit"
+				m_Requirements = 
+				[
+					"LastHit",
+					"Isbrewmaster",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_Respawn"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_respawn_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_respawn_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_respawn_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_respawn_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_respawn_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_respawn_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_respawn_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_respawn_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_respawn_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_respawn_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_respawn_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_respawn_12"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_Respawn"
+				m_Requirements = 
+				[
+					"Respawn",
+					"Isbrewmaster",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_Select"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_rare_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_rare_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_rare_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_rare_04"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_Select"
+				m_Requirements = 
+				[
+					"Select",
+					"Isbrewmaster",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_PurchaseIsExpensiveItem"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_purch_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_purch_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_purch_03"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_PurchaseIsExpensiveItem"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isbrewmaster",
+					"IsExpensiveItem",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_PurchaseIsBlinkDagger"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_blink_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_blink_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_blink_03"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_PurchaseIsBlinkDagger"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isbrewmaster",
+					"IsBlinkDagger",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_PurchaseIsUltimateScepter"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_scepter_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_scepter_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_PurchaseIsUltimateScepter"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isbrewmaster",
+					"IsUltimateScepter",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_PurchaseIsEmptyBottle"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_item_01"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_PurchaseIsEmptyBottle"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isbrewmaster",
+					"IsEmptyBottle",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_PurchaseIsBattleFury"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_item_02"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_PurchaseIsBattleFury"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isbrewmaster",
+					"IsBattleFury",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_PurchaseIsHeart"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_item_03"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_PurchaseIsHeart"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isbrewmaster",
+					"IsHeart",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_PurchaseIsSatanic"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_item_04"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_PurchaseIsSatanic"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isbrewmaster",
+					"IsSatanic",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_PurchaseIsAssaultCuirass"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_item_05"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_PurchaseIsAssaultCuirass"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isbrewmaster",
+					"IsAssaultCuirass",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_PurchaseIsMonkeyKingBar"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_item_06"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_PurchaseIsMonkeyKingBar"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isbrewmaster",
+					"IsMonkeyKingBar",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_PurchaseIsSangeAndYasha"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_item_07"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_PurchaseIsSangeAndYasha"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isbrewmaster",
+					"IsSangeAndYasha",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_PurchaseIsNecronomicon"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_item_08"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_item_09"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_PurchaseIsNecronomicon"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isbrewmaster",
+					"IsNecronomicon",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_PurchaseIsRadiance"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_item_10"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_PurchaseIsRadiance"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isbrewmaster",
+					"IsRadiance",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_PurchaseIsDrums"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_item_11"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_PurchaseIsDrums"
+				m_Requirements = 
+				[
+					"Purchase",
+					"Isbrewmaster",
+					"IsDrums",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_Bottling"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_bottle_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_bottle_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_bottle_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_bottle_04"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_Bottling"
+				m_Requirements = 
+				[
+					"Bottling",
+					"Isbrewmaster",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_MissingIsLaneTop"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_missing_lane_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_MissingIsLaneTop"
+				m_Requirements = 
+				[
+					"Missing",
+					"Isbrewmaster",
+					"IsLaneTop",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_MissingIsLaneMid"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_missing_lane_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_MissingIsLaneMid"
+				m_Requirements = 
+				[
+					"Missing",
+					"Isbrewmaster",
+					"IsLaneMid",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_MissingIsLaneBot"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_missing_lane_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_MissingIsLaneBot"
+				m_Requirements = 
+				[
+					"Missing",
+					"Isbrewmaster",
+					"IsLaneBot",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_Deny"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_deny_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_deny_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_deny_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_deny_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_deny_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_deny_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_deny_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_deny_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_deny_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_deny_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_deny_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_deny_12"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_Deny"
+				m_Requirements = 
+				[
+					"Deny",
+					"Isbrewmaster",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_Defeat"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_lose_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_lose_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_lose_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_Defeat"
+				m_Requirements = 
+				[
+					"Defeat",
+					"Isbrewmaster",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_Victory"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_win_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_win_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_win_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_win_04"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_Victory"
+				m_Requirements = 
+				[
+					"Victory",
+					"Isbrewmaster",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_Immortality"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_immort_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_immort_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_Immortality"
+				m_Requirements = 
+				[
+					"Immortality",
+					"Isbrewmaster",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_PowerupIsPowerupHaste"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_level_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_haste_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_PowerupIsPowerupHaste"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isbrewmaster",
+					"IsPowerupHaste",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_PowerupIsPowerupHasteChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_haste_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_PowerupIsPowerupHasteChance_25%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isbrewmaster",
+					"IsPowerupHaste",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_PowerupIsPowerupDoubleDamage"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_doubdam_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_PowerupIsPowerupDoubleDamage"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isbrewmaster",
+					"IsPowerupDoubleDamage",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_PowerupIsPowerupDoubleDamageChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_doubdam_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_PowerupIsPowerupDoubleDamageChance_25%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isbrewmaster",
+					"IsPowerupDoubleDamage",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_PowerupIsPowerupRegeneration"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_regen_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_PowerupIsPowerupRegeneration"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isbrewmaster",
+					"IsPowerupRegeneration",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_PowerupIsPowerupRegenerationChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_regen_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_PowerupIsPowerupRegenerationChance_25%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isbrewmaster",
+					"IsPowerupRegeneration",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_PowerupIsPowerupIllusion"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_illus_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_PowerupIsPowerupIllusion"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isbrewmaster",
+					"IsPowerupIllusion",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_PowerupIsPowerupIllusionChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_illus_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_PowerupIsPowerupIllusionChance_25%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isbrewmaster",
+					"IsPowerupIllusion",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_PowerupIsPowerupInvisibility"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_invis_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_PowerupIsPowerupInvisibility"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isbrewmaster",
+					"IsPowerupInvisibility",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_PowerupIsPowerupInvisibilityChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_invis_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_PowerupIsPowerupInvisibilityChance_25%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isbrewmaster",
+					"IsPowerupInvisibility",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_PowerupIsPowerupBounty"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_lasthit_01"
+					m_params = 
+					{
+						m_respeakdelay.start = 300.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_PowerupIsPowerupBounty"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isbrewmaster",
+					"IsPowerupBounty",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_PowerupIsPowerupArcane"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_happy_08"
+					m_params = 
+					{
+						m_respeakdelay.start = 300.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_PowerupIsPowerupArcane"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isbrewmaster",
+					"IsPowerupArcane",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_PowerupIsPowerupArcaneChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_lasthit_09"
+					m_params = 
+					{
+						m_bSpeakOnce = true
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_PowerupIsPowerupArcaneChance_25%"
+				m_Requirements = 
+				[
+					"Powerup",
+					"Isbrewmaster",
+					"IsPowerupArcane",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_CooldownLittleNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_notyet_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_notyet_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_notyet_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_CooldownLittleNag"
+				m_Requirements = 
+				[
+					"Cooldown",
+					"Isbrewmaster",
+					"LittleNag",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_CooldownMediumNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_notyet_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_notyet_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_notyet_06"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_CooldownMediumNag"
+				m_Requirements = 
+				[
+					"Cooldown",
+					"Isbrewmaster",
+					"MediumNag",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_CooldownSuperNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_notyet_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_notyet_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_notyet_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_CooldownSuperNag"
+				m_Requirements = 
+				[
+					"Cooldown",
+					"Isbrewmaster",
+					"SuperNag",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_NoManaLittleNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_nomana_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_nomana_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_nomana_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_NoManaLittleNag"
+				m_Requirements = 
+				[
+					"NoMana",
+					"Isbrewmaster",
+					"LittleNag",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_NoManaMediumNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_nomana_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_nomana_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_nomana_06"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_NoManaMediumNag"
+				m_Requirements = 
+				[
+					"NoMana",
+					"Isbrewmaster",
+					"MediumNag",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_NoManaSuperNag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_nomana_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_nomana_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_nomana_09"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_NoManaSuperNag"
+				m_Requirements = 
+				[
+					"NoMana",
+					"Isbrewmaster",
+					"SuperNag",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_Thanks"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_thanks_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_thanks_02"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_Thanks"
+				m_Requirements = 
+				[
+					"Thanks",
+					"Isbrewmaster",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_PainChance_25%"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_underattack_01"
+					m_params = 
+					{
+						m_respeakdelay.start = 120.0
+					}
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_PainChance_25%"
+				m_Requirements = 
+				[
+					"Pain",
+					"Isbrewmaster",
+					"Chance_25%",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_Pain"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_pain_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_pain_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_pain_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_pain_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_pain_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_pain_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_pain_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_pain_08"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_Pain"
+				m_Requirements = 
+				[
+					"Pain",
+					"Isbrewmaster",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_InTheBag"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_inthebag_01"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_InTheBag"
+				m_Requirements = 
+				[
+					"InTheBag",
+					"Isbrewmaster",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_ItemDropIsCommonDrop"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_happy_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_happy_04"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_ItemDropIsCommonDrop"
+				m_Requirements = 
+				[
+					"ItemDrop",
+					"Isbrewmaster",
+					"IsCommonDrop",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_ItemDropIsRareDrop"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_happy_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_happy_03"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_ItemDropIsRareDrop"
+				m_Requirements = 
+				[
+					"ItemDrop",
+					"Isbrewmaster",
+					"IsRareDrop",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_ItemDropIsUltraRareDrop"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_laugh_07"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_ItemDropIsUltraRareDrop"
+				m_Requirements = 
+				[
+					"ItemDrop",
+					"Isbrewmaster",
+					"IsUltraRareDrop",
+				]
+			}
+		},
+		{
+			m_name = "brewmaster_EmoteIsEmoteLaugh"
+			m_responses = 
+			[
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_laugh_01"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_laugh_02"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_laugh_03"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_laugh_04"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_laugh_05"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_laugh_06"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_laugh_07"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_laugh_08"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_laugh_09"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_laugh_10"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_laugh_11"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_laugh_12"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_laugh_13"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_laugh_14"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_laugh_15"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_laugh_16"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_laugh_17"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_laugh_18"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_laugh_19"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_laugh_20"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_laugh_21"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_laugh_22"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_laugh_23"
+				},
+				{
+					m_type = "SPEAK"
+					m_value = "brewmaster_brew_laugh_24"
+				},
+			]
+			m_pEmbeddedRule = 
+			{
+				m_name = "brewmaster_EmoteIsEmoteLaugh"
+				m_Requirements = 
+				[
+					"Emote",
+					"Isbrewmaster",
+					"IsEmoteLaugh",
+				]
+			}
+		},
+	]
+	m_Requirements = 
+	[
+		{
+			m_name = "Isbrewmaster"
+			m_matchKey = "classname"
+			m_matchExpr = "npc_dota_hero_brewmaster"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsDrunkenHaze"
+			m_matchKey = "abilityname"
+			m_matchExpr = "brewmaster_cinder_brew"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsThunderclap"
+			m_matchKey = "abilityname"
+			m_matchExpr = "brewmaster_thunder_clap"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsPrimalSplitCastStart"
+			m_matchKey = "abilityname"
+			m_matchExpr = "brewmaster_primal_split"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsPrimalSplitCastComplete"
+			m_matchKey = "primalstate"
+			m_matchExpr = "1"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsPrimalSplitDone"
+			m_matchKey = "primalstate"
+			m_matchExpr = "2"
+			m_flWeight = 5.0
+		},
+		{
+			m_name = "IsBrewmasterLoadoutSpawn"
+			m_matchKey = "special_spawn"
+			m_matchExpr = "brewmaster_loadout_spawn"
+			m_flWeight = 5.0
+		},
+	]
+}

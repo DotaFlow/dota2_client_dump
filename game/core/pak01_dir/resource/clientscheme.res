@@ -109,13 +109,6 @@ Scheme
 		// if a font fails to load then the subsequent fonts will replace
 		Default
 		{
-			"1"	[$X360]
-			{
-				"name"		"Verdana"
-				"tall"		"12"
-				"weight"	"700"
-				"antialias" "1"
-			}
 			"1"	[$WIN32]
 			{
 				"name"		"Verdana"
@@ -393,15 +386,6 @@ Scheme
 		}
 		QuickInfo
 		{
-			"1"	[$X360]
-			{
-				"name"		"HL2cross"
-				"tall"		"57"
-				"weight"	"0"
-				"antialias" 	"1"
-				"additive"	"1"
-				"custom"	"1"
-			}
 			"1"	[$WIN32]
 			{
 				"name"		"HL2cross"
@@ -418,19 +402,6 @@ Scheme
 			{
 				"name"		"HalfLife2"
 				"tall"		"32"	[$WIN32]
-				"tall"		"38"	[$X360]
-				"weight"	"0"
-				"antialias" "1"
-				"additive"	"1"
-				"custom"	"1"
-			}
-		}
-		SquadIcon	[$X360]
-		{
-			"1"
-			{
-				"name"		"HalfLife2"
-				"tall"		"50"
 				"weight"	"0"
 				"antialias" "1"
 				"additive"	"1"
@@ -443,7 +414,6 @@ Scheme
 			{
 				"name"		"HalfLife2"
 				"tall"		"32"	[$WIN32]
-				"tall"		"38"	[$X360]
 				"weight"	"0"
 				"blur"		"4"
 				"scanlines" "2"
@@ -458,7 +428,6 @@ Scheme
 			{
 				"name"		"HalfLife2"
 				"tall"		"16"	[$WIN32]
-				"tall"		"22"	[$X360]
 				"weight"	"1000"
 				"additive"	"1"
 				"antialias" "1"
@@ -483,14 +452,6 @@ Scheme
 				"name"		"Verdana"
 				"tall"		"11"
 				"weight"	"0"
-				"antialias" "1"
-				"additive"	"1"
-			}
-			"1"	[$X360]
-			{
-				"name"		"Verdana"
-				"tall"		"12"
-				"weight"	"700"
 				"antialias" "1"
 				"additive"	"1"
 			}
@@ -555,13 +516,6 @@ Scheme
 				"name"		"Courier New"
 				"tall"		"14"
 				"weight"	"400"
-				"outline"	"1"
-			}
-			"1"	[$X360]
-			{
-				"name"		"Tahoma"
-				"tall"		"18"
-				"weight"	"200"
 				"outline"	"1"
 			}
 		}
@@ -751,7 +705,6 @@ Scheme
 			{
 				"name"		"Verdana"
 				"tall"		"13"	[$WIN32]
-				"tall"		"20"	[$X360]
 				"weight"	"900"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 				"yres"	"600 767"
