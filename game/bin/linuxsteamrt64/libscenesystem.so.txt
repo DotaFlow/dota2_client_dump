@@ -26,6 +26,7 @@
   %-14s %10s objects    (%s draws, %s verts)\n
   %-14s %10s\n
   %-14s %12s %12s %12s\n
+  %-5s
   %4s   %8d   %8d   %9.1f%%   %9d\n
   %s empty indirect draws compacted\n
   %s objects starting to fade\n
@@ -177,6 +178,9 @@
  [cur %i, targ %i %s, %.1fs]
  [default = $0
  [lod
+ [mesh %i]
+ [shd %i]
+ [sz %.2f]
  _Complex
  _Imaginary
  __vector(
@@ -268,6 +272,7 @@
 " which is not defined or is not an extension of "
 " which is.
 "$0" does not declare $1 as an extension number.
+"%s" %d
 "%s" [window]
 ") is not compatible with this reflection object (which is for type "
 ") to start from the outermost scope.
@@ -461,7 +466,9 @@
 #%02X%02X%02X%02X
 #%02X%02X%02X%02X\nR:%d, G:%d, B:%d, A:%d\n(%.3f, %.3f, %.3f, %.3f)
 #%02X%02X%02X\nR: %d, G: %d, B: %d\n(%.3f, %.3f, %.3f)
+#%03d: 
 #%d: %s 0x%p @ (%g,%g,%g)
+#%s/%s%s
 #%s/SemaphoreWait(%s)
 #%s/SemaphoreWaitOnBuiltInCommandList
 #8465
@@ -481,6 +488,7 @@
 #UNHIDE
 #WindowMenu
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$%.0f
 $0  extend .$1 {\n
 $0  extensions $1 to $2;\n
 $0  reserved 
@@ -492,31 +500,51 @@ $0oneof $1 {
 $0option $1;\n
 $0rpc $1($4.$2) returns ($5.$3)
 $ORIGIN
+%%s: %s
+%*s%.*s
+%*s%s%*s
 %*sHello, sailor! Making this line long enough for the example.
 %*sThis is line %d
+%-16s 
+%.*Lf
+%.*g
+%.*s
+%.*s\n
 %.02f
 %.06f ns
+%.0f
 %.0f (Always)
 %.0f deg
 %.0f us
+%.0f%%
+%.0f/%.0f
 %.0fx%.0f
 %.10f
 %.10f grams
+%.1f
+%.1f s
 %.1fmb / %.1fmb filtered resident
 %.1fmb / %.1fmb resident
 %.1fms
 %.1fms culling, %.1fms rendering in %i jobs\n
+%.2f
 %.2f ms
 %.2f px
 %.2f x %.2f
 %.2f\nsec
 %.2fms
+%.3f
+%.3f V
 %.3f ms
 %.3f | %i%% %i/%i
+%.3g
 %.3s %s %.*s %s %.3s\n
 %.3s %s %.*s\n
+%.4f
+%.8f
 %0.2f
 %0.3f
+%0.f
 %02X%02X%02X
 %02X%02X%02X%02X
 %02d Hz
@@ -532,11 +560,15 @@ $ORIGIN
 %08X
 %08dx.geo
 %3.1f%% (%d)
+%3d: %s\n
 %4d / %4d (%3.1f%%)
 %I:%M:%S %p
 %\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v
 %a %b %e %T %Y
 %c [%02d] where %03d, insert %03d, delete %03d, char_storage %03d "%.*s"
+%c%c
+%c%c%c
+%d %d %d
 %d %d %d %d
 %d assets
 %d columns
@@ -545,8 +577,15 @@ $ORIGIN
 %d some text
 %d vertices, %d indices (%d triangles)
 %d visible windows, %d current allocations
+%d%%
+%d%s
 %d-%02d
 %d-%02d-%02d
+%d-%d
+%d.%d.%d
+%d/%d
+%d/%d/%02d
+%d: %8.4g
 %d: %8.4g\n%d: %8.4g
 %d:%02d%s
 %d:%02d:%02d%s
@@ -554,8 +593,10 @@ $ORIGIN
 %dx%d
 %dx%dTriStrippedVB
 %e grams
+%g %s%s
 %g dB
 %g ms
+%i - %i
 %i The quick brown fox jumps over the lazy dog
 %i The quick brown fox jumps over the lazy dog\n
 %i dynamic, %i cached, %i failed, %i lru'd in %ix%i atlas | %i requests, %i reused, %i re-renders drawn (%i held)
@@ -572,13 +613,22 @@ $ORIGIN
 %lld
 %llu
 %lu ms
+%s %.*s%s
 %s %.1f %.1f %.1f %s
 %s %04d: pos (%8.2f,%8.2f), uv (%.6f,%.6f), col %08X\n
+%s %d
+%s %d,%d
 %s %d: DPI %.0f%%\n MainMin (%.0f,%.0f), MainMax (%.0f,%.0f), MainSize (%.0f,%.0f)\n WorkMin (%.0f,%.0f), WorkMax (%.0f,%.0f), WorkSize (%.0f,%.0f)
+%s %s
+%s %s %s
 %s %s %s %s
+%s '%s'%s
 %s (%-14s): FAIL %s\n
 %s (%-14s): FAIL aborted\n
 %s (%-14s): pass\n
+%s (%d)
+%s (%i)
+%s (%s)
 %s - Dynamic Shadow %d
 %s - Mixed Shadow %d
 %s 0x%04X%s: %d windows (vis: '%s')
@@ -595,15 +645,25 @@ $ORIGIN
 %s is not a 2D texture!\n
 %s is wrong format %s - expected %s!\n
 %s###Menu_%02d
+%s###doc%d
 %s##path
+%s%s%s
+%s%s%s%s%s
+%s'%s'
+%s, %s
 %s, 0x%08x+%s -- Overlaps:
+%s.%s
 %s.ini
 %s.log
 %s/%08X
 %s/%s's viewport (%d,%d - %d,%d) extends outside of the framebuffer (%d,%d)
+%s/%s_%08X
 %s/DockSpace_%08X
+%s: %.3f
+%s: %d
 %s: %d entries, %d bytes
 %s: %i dynamic, %i cached, %i failed, %i lru, %i requests, %i reused, %i re-renders (%i held)
+%s: %s
 %s: %u tiles, average %4.1fms, median %sms, max %4.1fms
 %s: '%s' %d vtx, %d indices, %d cmds
 %s: 0x%08X (scored %d)
@@ -621,6 +681,7 @@ $ORIGIN
 %s: no space for allocation of %u\n
 %s: pass\n
 %s: unable to grow count by %u (currently %u)\n
+%s:%d
 %s:%s after sort (%s %s)\n
 %sLayer
 %s\n%.0f/%.0f
@@ -630,10 +691,12 @@ $ORIGIN
 '%c' (0x%04X)
 (!((uintptr_t)(src_height) & ((2)-1)))
 (!((uintptr_t)(src_width) & ((2)-1)))
+(%.02f)
 (%.1f,%.1f)
 (%.3ff, %.3ff, %.3ff, %.3ff)
 (%6.1f,%6.1f) (%6.1f,%6.1f) Size (%6.1f,%6.1f) %s
 (%6.1f,%6.1f) (%6.1f,%6.1f) Size (%6.1f,%6.1f) Col %d %s
+(%d,%d)
 (%d,%d,%d,%d)
 (%s depth-only
 (2) Or right-click this text
@@ -659,6 +722,7 @@ $ORIGIN
 (also access from 'Examples->Assets Browser' in menu)
 (and more errors)
 (anonymous namespace)
+(as %s)
 (c) 2014-2025 Omar Cornut
 (cannot determine missing fields for lite message)
 (demo menu)
@@ -681,6 +745,7 @@ $ORIGIN
 (see Demo->Configuration for details & more)
 (unnamed)
 (void*)0x%p
+(w: %5.1f)
 )", which is not defined. The innermost scope is searched first in name resolution. Consider using a leading '.'(i.e., "(.
 ).  Contact the program author for an update.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
 * = only on some fragments
@@ -771,6 +836,7 @@ $ORIGIN
 *ZZN15CLightBinnerGPU25DebugLightProbeVolumeGridEP10CSceneViewENKUlP28CSceneLightProbeVolumeObjectE0_clES3_EUlvE_
 *ZZN15CLightBinnerGPU25DebugLightProbeVolumeGridEP10CSceneViewENKUlP28CSceneLightProbeVolumeObjectE_clES3_EUlvE_
 *\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f
++%.0f px
 +Alts
 , %s alpha-tested
 , aliased to the error texture
@@ -787,6 +853,7 @@ $ORIGIN
 -+xX0123456789abcdefABCDEF
 -- %d Scene Worlds: --\n
 -- Dumping Scene World %d: 0x%p '%s': %d objects --\n
+--%02d
 --%02d-%02d
 --------------------------------\n
 --> granting current route\n
@@ -844,6 +911,7 @@ $ORIGIN
 /path/to/some/folder/with/long/filename.cpp
 /path/two
 /src/
+0 %s
 0 0 0
 0 0 0 0
 0 0 0 255
@@ -1717,6 +1785,7 @@ BLAS %d
 BLAS build requires %i bytes, we only have %i\n
 BLAS dynamic
 BVH::Build( void (*customGetAABB)( .. ), instCount ), instCount == 0.
+B[%d]=%.2f
 Bachman
 BackUp() can not exceed the size of the last Next() call.
 BackUp() can only be called after a successful Next().
@@ -2816,6 +2885,7 @@ Data: %p\nSize: %d\nCapacity: %d
 Data_Branch1xy
 Data_Branch1zBranch2x
 Data_Branch2yz
+Day:   %s
 Days
 Dear ImGui %s (%d)
 Dear ImGui 1.92.5 (19250)
@@ -5554,6 +5624,7 @@ Pos: %2.3f, %2.3f, %2.3f\nRange: %2.3f, Falloff: %2.3f\nAtten0: %2.3f Atten1: %2
 Pos: %2.3f, %2.3f, %2.3f\nRange: %2.3f, Falloff: %2.3f\nAtten0: %2.3f Atten1: %2.3f Atten2: %2.3f\nColor: %1.3f, %1.3f, %1.3f\nTheta: %3.1f Phi: %3.1f
 Pos: (%.1f,%.1f), Size: (%.1f,%.1f), ContentSize (%.1f,%.1f) Ideal (%.1f,%.1f)
 Pos: (%.2f,%.2f)->(%.2f,%.2f)
+Pos=%d,%d\n
 Pos=%i,%i
 PosColorUVNormalTangentVertexLayout
 Position
@@ -6836,6 +6907,7 @@ Synced Table %d
 Synced instances
 Synthetic oneofs must be after all other oneofs
 System file
+T: %7.3f\n
 TEST
 TEST##1
 TEST##2
@@ -6938,6 +7010,7 @@ Text aligned to framed item
 Text baseline:
 Text wrapped
 Text() elements don't have stable identifiers so we need to provide one.
+Text: "%s"
 TextDisabled
 TextInput
 TextLen: %d, Cursor: %d%s, Selection: %d..%d
@@ -7507,6 +7580,7 @@ Voxelize Density
 Voxelize Tangents
 VrForward
 Vrad3_001
+W: %.1f
 WANTS_FRAMEBUFFER_COPY_TEXTURE 
 WANTS_PROBE_LIGHTING 
 WARNING
@@ -7788,6 +7862,7 @@ Zoom %f\n
 Zoom Constraints
 Zoom and pan the X-axis. Disable Stems to see a difference in fit.
 [%04d] Window
+[%05d] 
 [%05d] [%s] Hello, current time is %.1f, here's a word: '%s'\n
 [%s] [%05d] 
 [%s][0x%08X,%d]\n
@@ -8305,6 +8380,8 @@ auto
 auto:
 avg %f
 b%d (%.02f secs)
+b%d (%d)
+b%d: %d
 bDisableDynamicRefractionMap
 bReflectDynamicObjectsOnly
 backface
@@ -14640,6 +14717,7 @@ y != __null
 y-axis
 you can drag analog plots over the rising/falling digital edge.
 zero
+{0x%x}
 {default arg#
 {lambda
 {parm#

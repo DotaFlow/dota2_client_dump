@@ -12,6 +12,7 @@
   Count  
   Scope                                                      Calls Calls/Frame  Time+Child    Pct        Time    Pct   Avg/Frame    Avg/Call Avg-NoChild        Peak\n
   what():  
+ %%%d.%ds 
  %%-%d.%ds 
  %02u:%02u:%02u
  (%i core%s
@@ -23,9 +24,11 @@
  + light verifier
  + mem init
  + stackstats
+ - %uP/%uE
  0x%llx
  File
  HUF_buildCTable error \n
+ [%llu]
  [clone 
  _Complex
  _Imaginary
@@ -39,6 +42,8 @@
  failed to dlopen "%s" error=%s\n
  failed to dlopen %s error=%s\n
  for 
+ max. %s
+ min. %s
  new
  noexcept
  requires 
@@ -137,9 +142,19 @@ $xmm6
 $xmm7
 $xmm8
 $xmm9
+%%-%ds 
+%%.%if
+%%.%if%s
+%*s%s
+%*u %zu
+%-*s 
+%-32s    
+%-32s\n
 %-4d    %-32s    %-10s    
 %-4s    %-32s    %-10s    %-10s    %-32s    %-32s\n
 %-80s : %-16s : %-32s : %s\n
+%.*Lf
+%.*f
 %.0f pct of time accounted for\n
 %0*llx bytes at %0*llx is the largest open user-space VA region%s\n
 %0*llx bytes of %s at %0*llx%s\n
@@ -153,6 +168,7 @@ $xmm9
 %08x %s size %08x\n
 %10s:
 %10s: %11s %11s %11s %11s %11s\n
+%10s: %5i\n
 %10s: %5lld.%lld avg\n
 %10s: %5zu.%03zu s\n
 %10s: user: %zu.%03zu s, system: %zu.%03zu s, faults: %zu, peak rss: 
@@ -160,6 +176,7 @@ $xmm9
 %12s
 %14.3f %12.2f
 %14s %10s
+%2u :%7u \n
 %3u:%3u bytes at pos %8u, savings %7u bytes |
 %6.3f: ThreadPoolTest: Testing with %d jobs! Sleep %d, interleave %d, prioritized %d \n
 %8.4f / %9.2f:  %s\n
@@ -169,10 +186,14 @@ $xmm9
 %9.2f
 %I:%M:%S %p
 %a %b %e %T %Y
+%d %d %d
 %d %d %d %d
 %d frames sampled for %.2f seconds\n
 %d.%d.%d.%d:%d
+%f %f
+%f %f %f
 %f %f %f %f
+%i%s
 %i.%i.%i.%i
 %i.%i.%i.%i:%i
 %ld.%ld %-3s
@@ -182,16 +203,24 @@ $xmm9
 %llu %s entries but no formats were defined\n
 %llu,%u,%u,%s\r\n
 %llud.%02u:%02u:%02u
+%p::%p:%d
+%s %c%s
+%s %d +
+%s %i %s\n
+%s %s
+%s %s %s
 %s %s %s %s
 %s %s %s %s\n
 %s %s -nominidumps
 %s %s has conflicting %s flags (child: %s%s, parent: %s%s, parent wins)\n
 %s %s has multiple help strings:\n\tparent (wins): "%s"\n\tchild: "%s"\n
+%s '%s'
 %s (%d) : %s
 %s (%d) : %s\n
 %s (%i) : %s\n
 %s (before "%s")
 %s (tweaked to NOT wait for child outflows)
+%s * %f
 %s + 0x%llx
 %s [wstring, len = %d]
 %s allocation count overflow
@@ -216,8 +245,14 @@ $xmm9
 %s test: single thread push/pop, interleaved... 
 %s total bytes in user-space regions (%s bytes in kernel-space regions)\n
 %s unable to allocate %u bytes\n
+%s%s
+%s%s#%d
+%s%s%s
+%s%s\n
 %s.exe
+%s/%s%d
 %s/source_engine_%u.lock
+%s: %s\n
 %s: CDwarfVector count overflow\n
 %s: Invalid lock state %d\n
 %s: ThreadPoolTest: YieldWaitPerFrameJobs - Basic test (%d jobs executed)\n
@@ -260,8 +295,11 @@ $xmm9
 %s: unable to grow count by %u (currently %u)\n
 %s: unable to load '%s', error %d\n
 %s:%d: assertion failed: %s
+%s_%s
 %sthread 0x%tx: 
+%u - %u
 %u CPU%s
+%u_%u_%u
 %uh:%02u:%02u
 %um:%02u
 &AElig;
@@ -371,11 +409,13 @@ $xmm9
 &yacute;
 &yen;
 &yuml;
+'%s' %s
 ':' not expected inside an array.  ('[]' used when '{}' was intended?)
 'false'
 'null'
 'true'
 ( %s ) * %f
+(%d,%d)
 (Missing)
 (None)
 (Unaccounted)
@@ -500,6 +540,7 @@ $xmm9
 /dev/null
 /dev/random
 /dev/urandom
+/e%s%s
 /executable
 /game/
 /mnt/
@@ -529,6 +570,7 @@ $xmm9
 0123456789ABCDEF
 0123456789abcdef
 0x%016llX
+0x%08X    
 0x%p
 1.2.11
 1.5.7
@@ -3810,6 +3852,7 @@ November
 Number contains invalid character 0x%02x
 Number contains invalid character 0x%02x ('%c')
 OS type: %s (%d)\n
+OS: %s\n
 OSTypesAreCompatible
 OVERRIDE_MINIDUMP_PATH
 October
@@ -5840,16 +5883,28 @@ ZSTD_writeSkippableFrame
 [/code]
 [/list]
 [1;31m%s
+[1;32m:%i:
 [1;33mASSERT: 
 [A:%u:%u:%u]
+[C:%u:%u]
 [ConsoleOnly]
 [DoNotEcho]
+[G:%u:%u]
+[I:%u:%u]
+[L:%u:%u]
 [M:%u:%u:%u]
+[P:%u:%u]
 [Running headless mode, no notes collected.]
+[T:%u:%u]
 [U:%u:%u:%u]
+[U:%u:%u]
+[a:%u:%u]
 [abi:
+[c:%u:%u]
 [code]
 [friend]
+[g:%u:%u]
+[i:%u:%u]
 [img]
 [list]
 [url=http://
@@ -5865,11 +5920,14 @@ ZSTD_writeSkippableFrame
 \nThreadPoolTest: ===== RunThreadPoolPerFrame Tests =====\n
 \n\nCMiniDumpComment encountered an error while generating the comment
 \r%4.2f %% \r
+\r%70s\r
+\r%79s\r
 \r%u%%       
 \t\t\t\n\n\n\n\v\v\v\f\f\f\r\r\r\r
 \u must be followed by exactly 4 hex digits
 \u00
 _%d_%02d%02d_%02d%02d%02d_%d
+_%llx_%x
 _-report-_
 _CCallStackStatsGatherer_GetSharedGlobalInstance
 _CCallStackStatsGatherer_Internal_DumpStatsToFile
@@ -6445,6 +6503,7 @@ current
 curve
 cvar list\n--------------\n
 cvarlist: [ partial ]\n
+d=%u\n
 darwin
 darwin/
 debris
@@ -6816,6 +6875,7 @@ item_definition_index_t::{ctor}
 java Class for 
 java resource 
 jointWeightWeight
+k=%u\n
 keyvalues3_kv1textwriter.cpp
 keyvalues3_textreader.cpp
 keyvaluessystem.cpp

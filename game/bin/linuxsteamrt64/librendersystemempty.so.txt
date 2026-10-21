@@ -49,18 +49,23 @@
 # of channels is zero.\n
 $ORIGIN
 %-100s %-6s %-6s\n
+%.*Lf
 %3d: e=%.3f rms=%.6f %u\n
 %I:%M:%S %p
 %\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v
 %a %b %e %T %Y
+%d %d %d
 %d %d %d %d
 %d.%d.%d.%d
 %ld%c
 %lld
 %llu
+%s %s
+%s %s %s
 %s %s %s %s
 %s allocation count overflow
 %s allocation count overflow( %llu + %llu > %llu )\n
+%s%s%s
 %s: __pos (which is %zu) > __size (which is %zu)
 %s: __pos (which is %zu) > this->size() (which is %zu)
 %s: allocation of %u too large, max %u\n
@@ -69,6 +74,7 @@ $ORIGIN
 %s: max element overflow, cur count %u + %u\n
 %s: member count overflow (%u)\n
 %s: no space for allocation of %u\n
+%s:%s, 
 (!((uintptr_t)(src_height) & ((2)-1)))
 (!((uintptr_t)(src_width) & ((2)-1)))
 (%s): ADD %s = %s\n

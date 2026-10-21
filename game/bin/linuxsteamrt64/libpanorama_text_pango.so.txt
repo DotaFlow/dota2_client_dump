@@ -193,10 +193,14 @@ $0oneof $1 {
 $0option $1;\n
 $0rpc $1($4.$2) returns ($5.$3)
 $ORIGIN
+%.*Lf
+%.*g
+%.1f
 %019lu
 %5lu file=%s, line=%d, 
 %I:%M:%S %p
 %a %b %e %T %Y
+%d.%d.%d
 %ld bytes leaked in %d chunks\n
 %lli
 %s allocation count overflow
@@ -211,6 +215,7 @@ $ORIGIN
 %s: max element overflow, cur count %u + %u\n
 %s: member count overflow (%u)\n
 %s: no space for allocation of %u\n
+%s:%d
 (anonymous namespace)
 (cannot determine missing fields for lite message)
 (merge 
@@ -247,6 +252,7 @@ $ORIGIN
 -inf
 .  Please update your library.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
 . Difference of 
+.%lu
 ...<truncated>...
 ./google/protobuf/arena.h
 ./google/protobuf/arena_impl.h
@@ -2422,6 +2428,7 @@ bindtextdomain
 bio_lib.c
 biometricInfo
 blank
+bn(%d,%d)
 bn_lib.c
 bn_print.c
 bn_shift.c

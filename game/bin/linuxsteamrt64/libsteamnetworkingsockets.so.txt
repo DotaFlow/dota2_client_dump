@@ -27,7 +27,13 @@
   Requested migration.
  !"#$%&'()*+,-./0123
  %4[^ =\t] =%d
+ %d%n %n
  %s%lu (%s0x%lx)\n
+ %s-%s:%d
+ %s:%d
+ %s=%lld
+ %s=%llu
+ %s=%s
  (%ld unused bits)\n
  (BGP MDT)
  (MPLS)
@@ -228,6 +234,8 @@ $0oneof $1 {
 $0option $1;\n
 $0rpc $1($4.$2) returns ($5.$3)
 $\n k_ESteamDatagramMsg_NoConnection
+%%%d
+%*s  
 %*s      %s%s%s%s\n
 %*s    Info Entries:\n
 %*s    Profession OIDs:\n
@@ -237,9 +245,16 @@ $\n k_ESteamDatagramMsg_NoConnection
 %*s  admissionAuthorityId: 
 %*s  namingAuthorityText: 
 %*s  namingAuthorityUrl: 
+%*s%04x - 
+%*s%s
 %*s%s OF %s {\n
 %*s%s Private-Key:\n
 %*s%s Public-Key:\n
+%*s%s-
+%*s%s:\n
+%*s%s:\n%*s
+%*s%s\n
+%*s<%s>\n
 %*s<EMPTY>\n
 %*s<INVALID PRIVATE KEY>\n
 %*s<INVALID PUBLIC KEY>\n
@@ -283,9 +298,16 @@ $\n k_ESteamDatagramMsg_NoConnection
 %*sinherit\n
 %*snamingAuthority: 
 %*spriv:\n
+%*spub:\n
+%*s}\n
 %-18s
+%-8d
+%.*g
+%.0f
 %.14s.%03dZ
 %.18g
+%.1f
+%.2f
 %019lu
 %02X
 %02X%02X
@@ -298,8 +320,10 @@ $\n k_ESteamDatagramMsg_NoConnection
 %08lx
 %12sPublic Key Algorithm: 
 %12sUnable to load Public Key\n
+%5d%%
 %5dms
 %5ld:
+%8.3f %s\n
 %8sIssuer Unique ID: 
 %8sSubject Unique ID: 
 %8sVersion: %ld (0x%lx)\n
@@ -309,12 +333,19 @@ $\n k_ESteamDatagramMsg_NoConnection
 %d byte buffer not big enough; %d bytes required
 %d byte packet is too small
 %d consecutive session request timeouts at %s; marking address as failed.
+%d%+d
 %d%+d/%d%+d
+%d%n
+%d%n %n
+%d.%d.%d
 %d.%d.%d.%d
 %d.%d.%d.%d/%d.%d.%d.%d
 %d.%d.%d.%d:%d
 %i.%i.%i.%i
 %i.%i.%i.%i:%i
+%jd\n
+%ju\n
+%lf%n %n
 %lld
 %llu
 %llu%n %n
@@ -342,8 +373,12 @@ $\n k_ESteamDatagramMsg_NoConnection
 %s    perfect    99+  97-99  95-97  90-95  75-90  50-75    <50   dead\n
 %s %2d %02d:%02d:%02d %d%s
 %s %2d %02d:%02d:%02d%.*s %d%s
+%s %s
 %s %s HTTP/1.0\r\n
 %s %s%lu (%s0x%lx)\n
+%s (%s)
+%s - %s
+%s 0\n
 %s Salt Length: 0x
 %s Setting up FakeIP ref twice?
 %s algorithm "%s" unsupported\n
@@ -359,17 +394,25 @@ $\n k_ESteamDatagramMsg_NoConnection
 %s sent %s without public address
 %s sent routing secret in msg 0x%02x.  Marking as fully trusted.  (Previous trust was %d)\n
 %s set to_virtual_port in rendezvous when connecting by FakeIP; ignored
+%s#%d (%s)
 %s#%d (via %s %s)
+%s#%u %s
 %s#%u %s '%s'
 %s%02X
 %s%02x
 %s%lld
+%s%s%s
+%s%s%s%s\n
+%s%s\n
 %s(%d): Lock '%s' not held
 %s------%s%s
 %s------%s--%s%s
+%s/%u
 %s/ISteamApps/GetSDRConfig/v1?appid=%u%s
 %s: (%d bit)\n
 %s:%d: OpenSSL internal error: %s\n
+%s:%s
+%s=%s
 %s='%s', which isn't a valid IPv%d address
 %sBytes buffered: %s\n
 %sConnection quality distribution:\n
@@ -397,6 +440,9 @@ $\n k_ESteamDatagramMsg_NoConnection
 %steamnetworkingsockets_messages.proto"n\n%CMsgSteamSockets_UDP_ChallengeRequest
 %u.%u.%u.%u
 %u.%u.%u.%u:%u
+%u:%u
+%u:%u:%u
+%x%s
 &\n"k_ESteamDatagramMsg_ConnectRequest
 &\n"k_ESteamDatagramMsg_P2PStatsClient
 &\n"k_ESteamNetworkingUDPMsg_ConnectOK
@@ -463,6 +509,7 @@ $\n k_ESteamDatagramMsg_NoConnection
 (null)
 (only-if-cached) 
 (unknown)
+(x%d)
 )", which is not defined. The innermost scope is searched first in name resolution. Consider using a leading '.'(i.e., "(.
 ).  Contact the program author for an update.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
 )\n!authorized_client_identity_string
@@ -523,6 +570,7 @@ $\n k_ESteamDatagramMsg_NoConnection
 -inf
 .  Please update your library.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
 . Difference of 
+.%lu
 ...<truncated>...
 ./google/protobuf/arena_impl.h
 ./google/protobuf/arenastring.h
@@ -564,6 +612,7 @@ $\n k_ESteamDatagramMsg_NoConnection
 .google.protobuf.SourceCodeInfo
 .include
 .placeholder.proto
+/%d%+d
 /\n'front_quality_remote_instantaneous_time
 /\n+k_ESteamDatagramMsg_ClientPingSampleRequest
 /\n+k_ESteamDatagramMsg_RelayToRelayPingRequest
@@ -4241,6 +4290,7 @@ NETSCAPE_SPKI
 NETSCAPE_SPKI_b64_decode
 NETSCAPE_SPKI_b64_encode
 NEW CERTIFICATE REQUEST
+NEW: %s\n
 NIST CURVE: %s\n
 NIST/SECG curve over a 163 bit binary field
 NIST/SECG curve over a 224 bit prime field
@@ -4415,6 +4465,7 @@ OCTETSTRING
 OCTWRAP
 OGRN
 OK.  Relays: %d valid, %d great, %d good+, %d ok+, %d ignored
+OLD: %s\n
 OPENSSH PRIVATE KEY
 OPENSSL_CONF
 OPENSSL_LH_new
@@ -5758,6 +5809,7 @@ ZUINT64
 [%s]   encode pkt %lld unreliable msg %lld offset %d+%d=%d\n
 [%s]   updating min_waiting_on_ack %lld -> %lld\n
 [%s] %d reply timeouts, last recv %.1fms ago.  Sending keepalive.\n
+[%s] %s
 [%s] %s (%d+%d) appears preferable to current transport %s (%d+%d), but maybe transient.  Pinging via %s.
 [%s] %s (%s) appears preferable to current primary %s (%s), but we aren't sure.  Pinging current primary.
 [%s] %s (%s) appears preferable to current primary %s (%s), but we aren't sure.  Pinging new proposed primary.
@@ -5985,13 +6037,25 @@ ZUINT64
 [%s] stats are in activity level %d, but in state %d?
 [%s] too many segments, aborting packert decode\n
 [%s] unexpected connection state %d
+[%s]:%u
 [A:%u:%u:%u]
+[C:%u:%u]
+[G:%u:%u]
 [HEX DUMP]:
+[I:%u:%u]
+[L:%u:%u]
 [M:%u:%u:%u]
+[P:%u:%u]
+[T:%u:%u]
 [TRACE %s] Recv %s (0x%02x):\n%s\n
 [TRACE %s] Send %s (0x%02x):\n%s\n
 [Trace Recv] %s <- %s | %d bytes\n
 [Trace Send] %s -> %s | %d bytes\n
+[U:%u:%u]
+[a:%u:%u]
+[c:%u:%u]
+[g:%u:%u]
+[i:%u:%u]
 [jjjjjjjjjjjjjjjj
 [lazy = true] can only be specified for submessage fields.
 [libprotobuf %s %s:%d] %s\n
@@ -6023,6 +6087,7 @@ ZUINT64
 \n#CMsgSteamSockets_UDP_ConnectRequest
 \n$CMsgSteamNetworkingICESessionSummary
 \n$steammessages_gamenetworkingui.proto
+\n%*s
 \n%*s            
 \n%*sExtensions: 
 \n%*sLog       : %s
@@ -10502,5 +10567,6 @@ your_public_port
 your_timestamp
 zlib compression
 zone
+{%s %s}
 |47?6
 |<C!FReQ

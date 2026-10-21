@@ -45,17 +45,25 @@ $toolgraphs
 %*sSoundEvent Hash: %d\n
 %*smixgroup: %s\n
 %.1f / %.1f
+%.3f
+%08x (%s)
+%d %d %d
 %d %d %d %d
+%d %s %s\n
 %d channels, %d bits per sample, %d Hz\n
 %d) %s %s -> %s\n
+%d) %s\n
 %dOffset: %i\n
 %f Async I/O Bumped priority for %s (%8.2f msec)\n
 %f: %f : %f : %f : %f\n
 %lld
 %llu
+%s %s
+%s %s %s
 %s %s %s %s
 %s %s audio contains INF/NaN
 %s %s audio contains INF/NaN at index %d\n
+%s : %s
 %s : param size = %i, field size = %i\n
 %s = %s: %i : %i : %i : %i : %i : %i\n
 %s Operator Fields: %i\n
@@ -66,9 +74,21 @@ $toolgraphs
 %s called on a pool arena (no root available)\n
 %s not recording! \n
 %s references : 
+%s%s
+%s%s 
+%s%s%f
+%s%s%i
 %s%s%llu
+%s%s%s
+%s%s%u
 %s, UNKNOWN %i
+%s.%s
+%s.%s.%s
+%s: %f\n
+%s: %s
+%s: %s %s
 %s: %s (%i : %i)\n
+%s: %s\n
 %s: Has a failed library stack message.\n
 %s: Has a failed sound event message.\n
 %s: Sound event executionlist has too many active voices (%d). Index %i : %s\n
@@ -85,8 +105,13 @@ $toolgraphs
 %s: member count overflow (%u)\n
 %s: no space for allocation of %u\n
 %s: params.pSfx is NULL.\n
+%s:%i
+%s::%s
 %s::Execute: Can't find operator stack %s in %s\n
+%s\n%s
 (%2db) %6lli : %s\n
+(%d,%d)
+(%s) %d
 (Expecting %s)
 (Expecting EOF)
 (Steam Audio) Update physics material attribute of a VMAT file. They are used for picking acoustic material property for Steam Audio.
@@ -1303,6 +1328,7 @@ Audio device starved %d samples \n
 AudioMixer
 Available Operators:\n
 BACKSLASH_CHAR
+BPM: %f\n
 Bad FLC data for resource '%s': %s\n
 Bad KV3 data for resource '%s': %s\n
 Bad command in vmix!\n
@@ -1351,6 +1377,7 @@ BinMul
 BinNe
 BinSub
 BinaryProperties_GetValue
+Bool( %s )
 CAssociateResourceBlockLoader::BlockingLoadResourceFileData: Trying to load an illegal resource name %s!\n
 CAsyncWavDataCache:  %i sounds total %s, %.2f %% of capacity\n
 CAtomicMutex::AcquireLock(unsigned long long)
@@ -1890,6 +1917,7 @@ Free
 Free ?: %s\n
 Freq Range End
 Freq Range Start
+Func( %s )
 GAME
 GCC: (SteamRT 14.2.0-19~steamrt3.1+bsrt3.1) 14.2.0
 GLIBCXX_TUNABLES
@@ -1973,6 +2001,7 @@ InsertBeforeGetPtr
 InsertMultipleBefore
 Inside Distance\n%.1f
 InstallSchemaBindings
+Int( %d )
 Interpolation Mode
 Interpolation Time
 Invalid Sound Event
@@ -1987,6 +2016,7 @@ IsKV3Data(CUtlBuffer const*, KV3ID_t*, char*, int)
 JArray
 KV3 Pointer
 KV3TransferPostLoad
+Key:\t%f\n
 KeyValues3
 KeyValues3: pre-allocated array memory is too small for %u elements (%u bytes available, %u bytes needed)\n
 KeyValues3: pre-allocated table memory is too small for %u members (%u bytes available, %u bytes needed)\n
@@ -2184,6 +2214,7 @@ NEW DSP NODE: size:(%.0f,%.0f) height:(%.0f) dif %.4f : refl %.4f : cobj: %.0f :
 NEWLINE
 NSt3_V214error_categoryE
 NULL m_pSfx
+Name:\n\t%s\n
 No 'Mixers' member found in MixLayer in soundmixers.txt\n
 No DATA block for resource\n
 No MP3 support, can't compile!\n
@@ -2318,6 +2349,7 @@ Processor
 Processor Input
 Processor Sidechain
 ProcessorGenerate
+Prop( %s )
 PropWorldOrigin
 PropertyEditorSystem_001
 PurgeAndDeleteAll: Deleting orphaned CSoundEvent pointer for %s via shutdown\n
@@ -2780,6 +2812,7 @@ V_tier0_ispunct
 V_vsnprintf
 Value Operator Offset: %i\n
 Value Stack Offset: %i\n
+Var( %s )
 VertexElementAnnotation
 VertexGenericIntegerData
 VertexPaintBlendParams
@@ -2859,6 +2892,7 @@ ZW][Rb
 \t The lexer was matching from line %d, offset %d, which\n\t 
 \t dspmix %1.2f : lvol %1.2f : cvol %1.2f : rvol %1.2f : rlvol %1.2f : rrvol %1.2f\n
 \t x: %4f y: %4f z: %4f\n
+\t%.*s\n
 \tRefs %16s : Name (Locks)\n
 \tVOL: %f\n\tLVL: %f\n\tDSP: %f\n\tMUTE: %f\n\tSOLO: %f\n\n
 \t[%2d] %16.16s : %s (%d) priority: %d\n
@@ -5820,6 +5854,7 @@ wchar_t
 wcscmp
 weights_field_name
 xcorr_kernel_sse
+{0x%x}
 {default arg#
 {lambda
 {parm#

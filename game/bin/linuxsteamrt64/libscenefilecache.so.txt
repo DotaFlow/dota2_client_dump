@@ -18,12 +18,18 @@
 !anchor_is_external
 #include
 $ORIGIN
+%.*Lf
 %I:%M:%S %p
 %a %b %e %T %Y
+%d %d %d
 %d %d %d %d
+%g %g %g
 %lld
 %llu
+%s %s
+%s %s %s
 %s %s %s %s
+%s '%s'
 %s allocation count overflow
 %s allocation count overflow( %llu + %llu > %llu )\n
 %s allocation count overflow( %llu > %llu )\n
@@ -32,9 +38,15 @@ $ORIGIN
 %s referencing %d missing resources:\n
 %s | %s: discarded rule because of invalid criterion %i:  %s\n
 %s%20s : %40s %5.3f\n
+%s%s
+%s(%d)
 %s(token %i) : %s
 %s(token %i, line %i, col %i) : %s\n
+%s,%s
+%s.%s.%s
+%s/%s
 %s/%s: discarded rule because of invalid criterion %i: %s\n
+%s: %s
 %s: __pos (which is %zu) > __size (which is %zu)
 %s: __pos (which is %zu) > this->size() (which is %zu)
 %s: allocation of %u too large, max %u\n
@@ -43,7 +55,9 @@ $ORIGIN
 %s: max element overflow, cur count %u + %u\n
 %s: member count overflow (%u)\n
 %s: no space for allocation of %u\n
+%s_%s
 '%20s' vs. '%20s' = 
+(%d,%d)
 (None)
 (anonymous namespace)
 (unknown)
@@ -6395,6 +6409,7 @@ world_OFFSET
 xdigit
 zero
 zero_value
+{0x%x}
 {default arg#
 {lambda
 {parm#

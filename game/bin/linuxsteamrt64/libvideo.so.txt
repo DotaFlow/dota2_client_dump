@@ -21,6 +21,7 @@
   message pending type %d, packets %d, seq [%d, %d], first unacked: %d, size %d\n
   message received seq: %d, size %d\n
   what():  
+ %ld
  %s%lu (%s0x%lx)\n
  (%ld unused bits)\n
  (BGP MDT)
@@ -234,6 +235,9 @@ $0oneof $1 {
 $0option $1;\n
 $0rpc $1($4.$2) returns ($5.$3)
 $\n k_EClanInGameContentReleaseEvent
+%%%d
+%%.%if%s
+%*s  
 %*s      %s%s%s%s\n
 %*s    Info Entries:\n
 %*s    Profession OIDs:\n
@@ -243,9 +247,16 @@ $\n k_EClanInGameContentReleaseEvent
 %*s  admissionAuthorityId: 
 %*s  namingAuthorityText: 
 %*s  namingAuthorityUrl: 
+%*s%04x - 
+%*s%s
 %*s%s OF %s {\n
 %*s%s Private-Key:\n
 %*s%s Public-Key:\n
+%*s%s-
+%*s%s:\n
+%*s%s:\n%*s
+%*s%s\n
+%*s<%s>\n
 %*s<EMPTY>\n
 %*s<INVALID PRIVATE KEY>\n
 %*s<INVALID PUBLIC KEY>\n
@@ -289,10 +300,16 @@ $\n k_EClanInGameContentReleaseEvent
 %*sinherit\n
 %*snamingAuthority: 
 %*spriv:\n
+%*spub:\n
+%*s}\n
 %-18s
 %-23s %s Kx=%-8s Au=%-4s Enc=%-9s Mac=%-4s\n
+%-8d
+%.*Lf
+%.*g
 %.14s.%03dZ
 %.18g
+%.1f
 %.1f pct of time accounted for\n
 %019lu
 %02X
@@ -324,19 +341,27 @@ $\n k_EClanInGameContentReleaseEvent
 %a, %e-%b-%Y %H:%M:%S
 %a, %e-%b-%y %H:%M:%S
 %d frames sampled for %.2f seconds\n
+%d.%d.%d
 %d.%d.%d.%d
 %d.%d.%d.%d/%d.%d.%d.%d
 %d.%d.%d.%d:%d
+%i%s
 %i.%i.%i.%i
 %i.%i.%i.%i:%i
+%jd\n
+%ju\n
 %lld
 %llu
 %lu:%s:%s:%d:%s\n
 %s %2d %02d:%02d:%02d %d%s
 %s %2d %02d:%02d:%02d%.*s %d%s
+%s %i %s
 %s %s HTTP/1.0\r\n
 %s %s%lu (%s0x%lx)\n
 %s %s(%llu) / %s
+%s (%s)
+%s - %s
+%s 0\n
 %s PARAMETERS
 %s PRIVATE KEY
 %s Salt Length: 0x
@@ -348,22 +373,39 @@ $\n k_EClanInGameContentReleaseEvent
 %s%02X
 %s%02x
 %s%c%08lx.%s%d
+%s%c%s
+%s%s
+%s%s%s
+%s%s%s%s\n
+%s%s\n
 %s,100 127.0.0.1 stale
+%s-%d
 %s------%s%s
 %s------%s--%s%s
+%s.%%u.txt
 %s.%10u.txt
+%s.*.txt
 %s.async%u.tmp
 %s.current.txt
+%s/%c%c
+%s/%c%c/%s
 %s/%c%c/%s_%s
+%s/%s
+%s/%s/%s
 %s/.steam/steam
 %s/steamXXXXXX
 %s: %s returned %s %d (%s), disconnecting TCP connection. %d sends, %lld bytes outstanding %s\n
 %s: (%d bit)\n
 %s: BScaleImageYUV returned false\n
 %s: __pos (which is %zu) > this->size() (which is %zu)
+%s:%d
 %s:%d: OpenSSL internal error: %s\n
+%s:%s
 %s://%s/%s%s
 %s:443
+%s\%s
+%s_%s
+%x%s
 &\n"k_EClanESportTournamentStreamEvent
 &\n"k_EClanPreAnnounceMajorUpdateEvent
 &p^?CSI
@@ -528,6 +570,7 @@ $\n k_EClanInGameContentReleaseEvent
 -nocrashdialog
 .  Please update your library.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
 . Difference of 
+.%lu
 ...<truncated>...
 ../include/libparsifal/optcfg.h
 ./google/protobuf/arena_impl.h
@@ -7430,13 +7473,25 @@ Zong
 [ func+child   func ]     Count\n
 [ func+child   func ]  [ func+child   func ]  [ func+child   func ]  Count   Peak\n
 [%s] %s=%s\n
+[%s]%-*s
 [A:%u:%u:%u]
+[C:%u:%u]
+[G:%u:%u]
 [HEX DUMP]:
+[I:%u:%u]
 [Invalid]
+[L:%u:%u]
 [M:%u:%u:%u]
+[P:%u:%u]
+[T:%u:%u]
 [TXN:%llu] 
+[U:%u:%u]
+[a:%u:%u]
 [abi:
+[c:%u:%u]
 [dtd]
+[g:%u:%u]
+[i:%u:%u]
 [lazy = true] can only be specified for submessage fields.
 [libprotobuf %s %s:%d] %s\n
 [no name available]
@@ -7458,6 +7513,7 @@ Zong
 \n  Problem     : Enum value did not match field type:\n    Expected  : 
 \n  Problem     : Field is not the right type for this message:\n    Expected  : 
 \n UserContentDescriptorPreferences
+\n%*s
 \n%*s            
 \n%*sExtensions: 
 \n%*sLog       : %s

@@ -19,6 +19,7 @@
  !"#$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$N6google8protobuf2io14ErrorCollectorE
  !"#$$$$$$\n\v\f\r
  %dms faster than direct ping of %dms
+ %s=%d
  - keeping around as cacheable shared connection
  = { <proto text format> }". To set fields within it, use syntax like "
  BackUp() can only be called after Next().
@@ -166,6 +167,8 @@ $0oneof $1 {
 $0option $1;\n
 $0rpc $1($4.$2) returns ($5.$3)
 $ORIGIN
+%%%d.%ds 
+%%s 
 %-10s % 5d no fastpath because field %s %s changed the array size from %d to %d\n
 %-10s % 5d no fastpath because field %s base depth is too large (pointer metadata change?)\n
 %-10s % 5d no fastpath because field %s not resolvable\n
@@ -173,6 +176,11 @@ $ORIGIN
 %-5d %-20s : [%-5d -> %-5d] %-5s bits:  %-32s %-80s : '%s' %s
 %-64.64s has %d CFlattendSerializer permutations\n
 %-75s %-75s offset %10.10s %9.9s %s
+%.*Lf
+%.*g
+%.12s @ %s
+%.1f
+%.2f%%
 %.2fms
 %.3f %% of entities have non-zero metadata entries\n
 %20.20s 
@@ -187,16 +195,20 @@ $ORIGIN
 %8.3f: PollSocket(%d)\n
 %I:%M:%S %p
 %a %b %e %T %Y
+%d %d %d
 %d %d %d %d
+%d %s %u, 
 %d (%d peak) fields allocated in mempool\n
 %d / %s "%s" thinking for %.02f ms!!!\n
 %d [%s,%s] %s
+%d [0x%x]
 %d bits
 %d bytes is too big.
 %d of %d empty (%.3f %%)\n
 %d structs not using DECLARE_NETWORKVAR_STRUCT_NOT_IN_NETWORK_UTLVECTOR_EMBEDDED, consider porting fields to use CNetworkVars!\n
 %d total.\n
 %d,'%s','%s',%d\n
+%d.%d.%d
 %d:  %s %s [ptr 0x%p] 0x%p (%s) (%s *) %s '%s'
 %d:  %s (%s) [ptr 0x%p] %s%s '%s'
 %gms
@@ -204,6 +216,8 @@ $ORIGIN
 %llu
 %s %-32s : %s at '%s'\n
 %s %-32s : %s\n
+%s %s
+%s %s %s
 %s %s %s %s
 %s %s %s offset %u, temporarily adding to ignore list\n
 %s %s = %s\n
@@ -219,6 +233,8 @@ $ORIGIN
 %s Gathering field offsets in %s\n
 %s SendMessages %s failed with EResult %d\n
 %s [%d fields]\n
+%s [%d]
+%s [%u]
 %s allocation count overflow
 %s allocation count overflow( %llu + %llu > %llu )\n
 %s allocation count overflow( %llu > %llu )\n
@@ -231,12 +247,18 @@ $ORIGIN
 %s has tick %d, but this network network frame already set tick to %d\n
 %s rebuild %s::%s at %u\n
 %s!fake
+%s#%s#%s
+%s%c%s
+%s%s
 %s%s %s::%s recursively\n
 %s%s found %s in path %s\n
 %s%s: failed to find match for offset %llu [path %s]\n
 %s%s::%s marked %s by group %s at '%s'\n
 %s%s::%s marked %s by name at '%s'\n
+%s%s\n
+%s,%d
 %s,%s,'%s',%d,%d,%.3f,%d,%.3f,%d,=E%d/J$1,%s,%s\n
+%s.%s
 %s/%d:  AddFieldPathAndOffset (%s) added too large of a bit offset (%u : prev=%u) at element %d\n
 %s/%d:  AddFieldPathAndOffset (%s) added unexpected offset (%u : prev=%u) at element %d\n
 %s0x%p %s Initializing\n
@@ -273,6 +295,7 @@ $ORIGIN
 %s: shrinking removes delegate [0x%p]\n
 %s: timing out, last received %f [%.2f seconds ago]\n
 %s: unable to find serializer named %s\n
+%s:%d
 %s::%s encoder mismatch, local '%s' vs. remote '%s', using local\n
 %s::%s has more than one MNetworkChangeCallback that requires passing network value into handler, this is unsupported\n
 %s::%s was in the original serializer at offset %u but that offset isn't in the ignore list!!!\n
@@ -287,6 +310,8 @@ $ORIGIN
 %sCull fields for %s\n
 %sCulled %s::%s\n
 %sProcess includes/excludes %s %s [%d fields]\n
+%s[%d]
+%s_%s_%s
 %sconsider %s at depth %d\n
 %sexcluding %s::%s due to MNetworkNoBase\n
 %sfound leafmost nobase at %s\n
@@ -294,8 +319,10 @@ $ORIGIN
 %signore offset %u in %s at path '%s'\n
 %sincluding %s::%s to ensure entire chain to field\n
 %smarking %s::%s because it derives from or is a '%s'\n
+%s|%s|%s
 %u serializers with %u fields (approx memory %llu / %llu in fields ) bytes (sizeof field %d, sizeof serializer %d)\n
 %x (int:%d, float:%f)
+(%d,%d)
 (%u %u %u %u)
 (.*)\[(\d+)\]$
 (Message Info)
@@ -2560,14 +2587,25 @@ WriteToBuffer Message %s is not initialized! Probably missing required fields!\n
 [%s] misdelivery %.1f%%, %d/%d of %d frames dropped/reordered, %.0fms ping\n
 [%s] setting extremely high timeout\n
 [A:%u:%u:%u]
+[C:%u:%u]
+[G:%u:%u]
 [GroupID]
 [Group]
+[I:%u:%u]
+[L:%u:%u]
 [M:%u:%u:%u]
 [Name]
+[P:%u:%u]
+[T:%u:%u]
 [U:%u:%u:%u]
+[U:%u:%u]
+[a:%u:%u]
 [abi:
+[c:%u:%u]
 [context entity 0x%p]
 [friend]
+[g:%u:%u]
+[i:%u:%u]
 [lazy = true] can only be specified for submessage fields.
 [libprotobuf %s %s:%d] %s\n
 [opaque]
@@ -3585,6 +3623,7 @@ polymorphic_id
 prediction_errors
 previous only
 pri(%s%+d=%u)
+pri(%s=%u)
 pri(%u)
 print
 problem detected locally
@@ -8257,7 +8296,10 @@ writing (in %s)
 wrong submessage type
 xdigit
 zero
+{0x%x}
 {default arg#
 {lambda
 {parm#
 {unnamed type#
+|%s %s|%s
+|=v%d|%s

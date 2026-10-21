@@ -20,9 +20,13 @@
 !!SyncExtref!!%s
 !!SyncExtref_Material!!%s
 $ORIGIN
+%d %d %d
 %d %d %d %d
+%f %f %f
 %lld
 %llu
+%s %s
+%s %s %s
 %s %s %s %s
 %s (Color)
 %s (Material)
@@ -31,6 +35,8 @@ $ORIGIN
 %s allocation count overflow( %llu > %llu )\n
 %s allocation count overflow( add %llu + current %llu > max %llu )\n
 %s called on a pool arena (no root available)\n
+%s%s_%i
+%s: %s\n
 %s: __pos (which is %zu) > __size (which is %zu)
 %s: __pos (which is %zu) > this->size() (which is %zu)
 %s: allocation of %u too large, max %u\n
@@ -54,6 +60,7 @@ $ORIGIN
 %s_hairsim_PosVelQuat
 %s_hairsim_density
 %s_matgrp
+(%d,%d)
 (anonymous namespace)
 *N12_GLOBAL__N_121system_error_categoryE
 *N12_GLOBAL__N_122generic_error_categoryE
@@ -2037,6 +2044,7 @@ vtable for std::system_error
 vtable for std::type_info
 vtable for std::underflow_error
 wchar_t
+{0x%x}
 {default arg#
 {lambda
 {parm#

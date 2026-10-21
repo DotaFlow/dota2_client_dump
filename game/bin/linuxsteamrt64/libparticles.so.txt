@@ -42,9 +42,12 @@
 "Twist around axis" force now rotates around the specified control point instead of control point 0.\n
 $ORIGIN
 $SFXDetailBlendMode
+%%.%if
 %.4f/%.4f/%.4f
+%0*d
 %02x 
 %40s: Age: %6.2f, asleep: %s next sleep %6.2f NumActive: %3d, flags %d, Bounds Center: (%.2f,%.2f,%.2f) (0x%p)\n
+%d %d %d
 %d %d %d %d
 %d CallInfos:\n
 %d Cells:\n
@@ -58,8 +61,11 @@ $SFXDetailBlendMode
 %d Vars:\n
 %d instruction(s)\n
 %d register(s) %d byte(s)\n
+%d, %d/%d
 %lld
 %llu
+%s %s
+%s %s %s
 %s %s %s %s
 %s '%s' (%s)
 %s Be Batch Rendered
@@ -71,6 +77,8 @@ $SFXDetailBlendMode
 %s is trying to get CP object %d but the function read limit is %d\n
 %s is trying to get CP renderable %d but the function read limit is %d\n
 %s%02d:%02d
+%s->R%d
+%s: %s\n
 %s: __pos (which is %zu) > __size (which is %zu)
 %s: __pos (which is %zu) > this->size() (which is %zu)
 %s: allocation of %u too large, max %u\n
@@ -85,6 +93,9 @@ $SFXDetailBlendMode
 %s:( ActiveParticleCount()=%d, m_bounds=%? simtime=%g )
 %s::%s (%u)
 %s::%s (Entity Output Handler)
+%u %u %u
+(%d,%d)
+(%s:%d)
 (None)
 (anonymous namespace)
 (builtin)
@@ -2384,6 +2395,7 @@ Strings Are Equal Case Sensitive
 Sub R%d <- R%d - R%d
 System Name
 Systems Measured: %d\n
+T%d (%s)
 TINT_RGB
 TLS init function for 
 TLS wrapper function for 
@@ -3951,6 +3963,7 @@ vtable for std::type_info
 vtable for std::underflow_error
 wchar_t
 yield_token
+{0x%x}
 {default arg#
 {lambda
 {parm#

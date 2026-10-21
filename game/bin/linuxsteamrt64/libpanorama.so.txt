@@ -14,6 +14,7 @@
   what():  
  !"#$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$N6google8protobuf2io14ErrorCollectorE
  !"#$$$$$$\n\v\f\r
+ %s %s
  (derived from %s)
  = { <proto text format> }". To set fields within it, use syntax like "
  Average %s commands per frame: %u, %u bytes\n
@@ -171,17 +172,23 @@ $0oneof $1 {
 $0option $1;\n
 $0rpc $1($4.$2) returns ($5.$3)
 $ORIGIN
+%.*Lf
+%.*g
+%.1f
 %019lu
 %1.1f
 %3d: e=%.3f rms=%.6f %u\n
 %5lu file=%s, line=%d, 
+%5s: %s\n
 %I:%M:%S %p
 %\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v
 %a %b %e %T %Y
+%d %d %d
 %d %d %d %d
 %d JS File(s)\n
 %d Layout(s)\n
 %d Style(s)\n
+%d.%d.%d
 %ld bytes leaked in %d chunks\n
 %ld%c
 %lld
@@ -200,7 +207,11 @@ $ORIGIN
 %p Play\n
 %p Stop\n
 %p is repeating\n
+%s %s
+%s %s %s
+%s %s %s 
 %s %s %s %s
+%s > %s
 %s GetMode == NULL? Can't Render\n
 %s allocation count overflow
 %s allocation count overflow( %llu + %llu > %llu )\n
@@ -210,7 +221,12 @@ $ORIGIN
 %s is trying to import %s, but that file has already been included either from the layout file directly, or from a different @import.
 %s property listed in a keyframe but marked as cannot transition
 %s shaders not ready. Can't Render\n
+%s#%s - %s
 %s#%s - script run in context
+%s#%s > %s
+%s%%
+%s%s%s/%s
+%s%s\n
 %s(%d): OpenSSL internal error, assertion failed: %s\n
 %s() could not convert variable values to loc variables
 %s() got invalid optional panel value
@@ -228,11 +244,15 @@ $ORIGIN
 %s: max element overflow, cur count %u + %u\n
 %s: member count overflow (%u)\n
 %s: no space for allocation of %u\n
+%s://%s%s
 %s://%s.valvesoftware.com%s
 %s://127.0.0.1%s
 %s://localhost%s
 %s\n   at %s
+%s\n%s
 %s\n(%s:%d:%d)
+%s\n\n%s
+%s_%s_%s
 %sdeg
 %sms
 %spublic/shared/
@@ -242,6 +262,7 @@ $ORIGIN
 &lt;Needs a description&gt;
 (!((uintptr_t)(src_height) & ((2)-1)))
 (!((uintptr_t)(src_width) & ((2)-1)))
+(%d,%d)
 (_Assert)
 (anonymous namespace)
 (anonymous)
@@ -319,6 +340,7 @@ $ORIGIN
 *ZZN20CLayoutContentParsed20ResolveEachReferenceERKSt8functionIFvPKcRKS0_IFvS2_EERKS0_IFvS2_bEEEEENKUlPN8panorama15CContentASTNodeI15ELayoutNodeTypeEEE_clESJ_EUlS2_bE_
 *\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f
 , %sdeg
+, %sdeg )
 , but was 
 , not just within "
 - %s (%d refs)\n
@@ -330,6 +352,7 @@ $ORIGIN
 -s2-mix-blend-mode
 .  Please update your library.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
 . Difference of 
+.%lu
 ...<truncated>...
 ../../public/tier0/tslist.h
 ../common/jpegloader_common.cpp
@@ -3339,6 +3362,7 @@ P410ToARGBRow_Any_AVX2
 P410ToARGBRow_Any_SSSE3
 P410ToARGBRow_C
 P410ToARGBRow_SSSE3
+P:%s
 PBE-MD2-DES
 PBE-MD2-RC2-64
 PBE-MD5-DES
@@ -5347,6 +5371,7 @@ blue
 blueviolet
 blur
 blur rectangle
+bn(%d,%d)
 bn_lib.c
 bn_print.c
 bn_shift.c
@@ -7719,6 +7744,7 @@ rsaesOaep
 rsassaPss
 run length compression
 s-resize
+s2r://%s
 s5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5Jx
 sOARecord
 s_SymbolStringValidators.IsValidIndex( eSymbolType )
@@ -12404,6 +12430,7 @@ up-wrap
 upper
 uppercase
 url( 
+url( %s )
 url( none )
 useglobalcontext
 userCertificate
@@ -13049,6 +13076,7 @@ zero
 zlib compression
 zoom-in
 zoom-out
+{0x%x}
 {LayoutRoot}
 {Self}
 {SnippetRoot}

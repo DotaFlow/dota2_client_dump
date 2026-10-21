@@ -5,6 +5,7 @@
  _Complex
  _Imaginary
  __vector(
+ at %p
  class
  const
  for 
@@ -17,15 +18,22 @@
  throw
  transaction_safe
  volatile
+"%s":%d
 $ORIGIN
 %016llx
 %02x
 %12.6f
+%d %d %d
 %d %d %d %d
+%g %g
+%g %g %g
 %g %g %g %g
 %lld
 %llu
+%p:%d
 %s %p [%f %f %f]
+%s %s
+%s %s %s
 %s %s %s %s
 %s <null>
 %s allocation count overflow
@@ -36,6 +44,9 @@ $ORIGIN
 %s expected, got %s
 %s near '%s'
 %s parameter %d: expected %s but got %s.\n
+%s%s
+%s%u
+%s: %s
 %s: __pos (which is %zu) > __size (which is %zu)
 %s: __pos (which is %zu) > this->size() (which is %zu)
 %s: allocation of %u too large, max %u\n
@@ -44,7 +55,12 @@ $ORIGIN
 %s: max element overflow, cur count %u + %u\n
 %s: member count overflow (%u)\n
 %s: no space for allocation of %u\n
+%s:%d
+%s:%d: %s
+%s:%u
+%s|%d
 %u nesting levels not completed\n
+%u-%s
 '%s' expected
 '%s' expected (to close '%s' at line %d)
 '=' or 'in' expected
@@ -57,6 +73,7 @@ $ORIGIN
 'package.preload' must be a table
 'setfenv' cannot change environment of given object
 'tostring' must return a string to 'print'
+(%s) %s:%d
 (*MARK) must have an argument
 (*VERB) not recognized or malformed
 (*temporary)
@@ -774,6 +791,7 @@ Warning
 WebSocket
 Xbox VDP is not supported on this platform.
 [ { "description" : "Lua VM Debugging", "devtoolsFrontendUrl" : "/devtools/inspector.html?ws=localhost:41000/process/%u/%s", "id" : "%s", "title" : "%s", "url" : "http://vscript/lua/%s", "type" : "page", "webSocketDebuggerUrl" : "ws://localhost:41000/process/%u/%s" } ]\r\n
+[%02d]
 [abi:
 [builtin#
 [builtin:
@@ -796,6 +814,7 @@ Xbox VDP is not supported on this platform.
 \u%04x
 \vgetregistry\fgetmetatable\fsetmetatable
 ] is an invalid data character in JavaScript compatibility mode
+_%x%llx_%s
 _Float
 _GLOBAL_
 _IO_getc
@@ -1542,6 +1561,7 @@ luaopen_package
 luaopen_string
 luaopen_string_buffer
 luaopen_table
+l|%d|%s
 main
 main function has more than %d %s
 malformed \P or \p sequence
@@ -2622,6 +2642,7 @@ userAgent
 userdata
 userdata length overflow
 utlstringtoken
+u|%d|%s
 v15.0.0
 value expected
 variable names

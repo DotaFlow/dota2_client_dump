@@ -17,8 +17,16 @@
    ~ %d texture(s) are views of another texture's memory and are counted at 0K so that memory is not counted twice\n
   %2d: FontHandle:0x%8.8llx, %s, %s, font:%s, tall:%f.0%s\n
   what():  
+ %*s
+ %2dx 
+ %3d:
+ %5d
  %7sK
+ %7sK 
+ %f %f
+ %f %f %f
  %f %f %f %f
+ %s=%d
  ( %d references )
  (Fallback Shader)
  (NumShaderHandles 
@@ -77,16 +85,21 @@
 #include
 #line
 $ORIGIN
+%*s 
 %10s
 %13s
 %15.15s 
 %6d %-50s
 %6s %-50s %5s %5s %5s %5s %5s %5s %10s\n
 %6s %-50s %5s %5s %5s %5s %5s %5s %5s %10s\n
+%d %d %d
 %d %d %d %d
+%d..%d\n
 %f %f %f %f
 %lld
 %llu
+%s %s
+%s %s %s
 %s %s %s %s
 %s --------------------------------\n
 %s Shader: %s attribute '%s' set in mode '%s' does not match VMatrix value set in another mode.\n
@@ -101,7 +114,10 @@ $ORIGIN
 %s allocation count overflow( %llu > %llu )\n
 %s allocation count overflow( add %llu + current %llu > max %llu )\n
 %s called on a pool arena (no root available)\n
+%s%s
+%s%s-%s
 %s(): Deprecated and unimplemented. Fix client code to use new postprocessing resources.\n
+%s: %s\n
 %s: Warning: No compile targets specified! Shader will not be compiled!\n
 %s: __pos (which is %zu) > __size (which is %zu)
 %s: __pos (which is %zu) > this->size() (which is %zu)
@@ -116,6 +132,7 @@ $ORIGIN
 %s__font_page_%d
 %s_intermediate_%d.vtex
 %vsB,
+(%d,%d)
 (On the line reading %s):\n
 (anonymous namespace)
 (channel = 
@@ -981,6 +998,7 @@ TANGENT
 TEXCOORD
 TLS init function for 
 TLS wrapper function for 
+Tag: %s \n
 Texture %s doesn't exist in %s!\n
 Texture dictionary loading texture "%s" directly\n
 TextureAverageColor
@@ -1286,6 +1304,7 @@ ZN37CTypesafeIntrospectedToKV3TypeManagerILy500152889462E24PostProcessingResourc
 \nvfx_common.cpp(8992): Dynamic shader compile failed for %s in "%s"!\n
 \src\shaders\
 \t The lexer was matching from line %d, offset %d, which\n\t 
+\t%.*s\n
 \t\tStatic:
 ^^^ Attribute-based texture warning is now disabled after outputting 50 warnings.\n
 ^^^ Constant buffer warning is now disabled after outputting 50 warnings.\n
@@ -2818,6 +2837,7 @@ vtable for std::system_error
 vtable for std::type_info
 vtable for std::underflow_error
 wchar_t
+{0x%x}
 {default arg#
 {lambda
 {parm#

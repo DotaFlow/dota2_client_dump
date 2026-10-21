@@ -65,6 +65,8 @@
 !variantA.EqualTo( variantB )
 !variantA.IsInstanceValid()
 $ORIGIN
+%0*d
+%d %d %d
 %d %d %d %d
 %d CallInfos:\n
 %d Cells:\n
@@ -78,6 +80,8 @@ $ORIGIN
 %d register(s) %d byte(s)\n
 %lld
 %llu
+%s %s
+%s %s %s
 %s %s %s %s
 %s '%s' (%s)
 %s (uid=%d)
@@ -90,6 +94,10 @@ $ORIGIN
 %s allocation count overflow( add %llu + current %llu > max %llu )\n
 %s called on a pool arena (no root available)\n
 %s%02d:%02d
+%s%s
+%s->R%d
+%s: %s %s
+%s: %s\n
 %s: __pos (which is %zu) > __size (which is %zu)
 %s: __pos (which is %zu) > this->size() (which is %zu)
 %s: allocation of %u too large, max %u\n
@@ -100,12 +108,16 @@ $ORIGIN
 %s: max element overflow, cur count %u + %u\n
 %s: member count overflow (%u)\n
 %s: no space for allocation of %u\n
+%s::%s
 %s::%s (%u)
 %s::%s (Entity Output Handler)
 %s:autowake
 %s:interrupt
 %s:wait
+%u %u %u
 ( ( const PulseStorage_t< PVAL_EHANDLE > * )asEHandle.GetInstanceStorage() )->GetBitRepresentation() == hEntA.GetRaw()
+(%d,%d)
+(%s:%d)
 (Expecting %s)
 (Expecting EOF)
 (None)
@@ -417,6 +429,7 @@ BinMul
 BinNe
 BinSub
 BinaryProperties_GetValue
+Bool( %s )
 Break node reached a Method-call boundary without finding an enclosing loop.
 Breakpoint Log [%u]
 Breakpoint Log [%u] - %s
@@ -849,6 +862,7 @@ FormatArgumentsToBuffer(IFormatOutputStream*, char const*, CTypeErasedFormatting
 FormatTo(IFormatOutputStream*, CFormatStringElement, float)
 FormatTo(IFormatOutputStream*, CFormatStringElement, int)
 Free
+Func( %s )
 Function signature which has been replaced after compilation.
 Function signature which will be replaced after compilation.
 Functions not supported in this evaluator (%s)
@@ -944,6 +958,7 @@ InflowB
 InsertBeforeGetPtr
 InsertMultipleBefore
 InstallSchemaBindings
+Int( %d )
 Internal cursor flow error: halting due to leaf cell bug!
 InterruptElegantly
 InterruptImmediately
@@ -1181,6 +1196,7 @@ PrintStringWithLeafSuggestions: %s\n
 Probable infinite loop detected! Terminating pulse cursor after %d consecutive instructions (%s)
 Probable runaway cursor creation detected! Permanently disabling this graph instance (%s)
 Process Selector
+Prop( %s )
 PropertyEditorSystem_001
 Pulse system: minimal vpulse definition loading enabled - graphs may be incomplete!\n
 Pulse: %s 
@@ -1307,6 +1323,7 @@ String Length
 String( %s )
 Strings Are Equal Case Sensitive
 Sub R%d <- R%d - R%d
+T%d (%s)
 TLS init function for 
 TLS wrapper function for 
 TOK_COLON
@@ -1478,6 +1495,7 @@ V_strnlen(char const*, int)
 V_tanf
 V_vsnprintf
 Value 0-1 how far along duration (always 0 if duration is -1)
+Var( %s )
 VisBuilder_001
 Vrad3_001
 WARNING: Pulse failed to restore yielded cursor - error with cell state (%d:%s)\n
@@ -1507,6 +1525,7 @@ Yield, Resume=%s
 [unknown]
 \n    near %s\n    
 \t The lexer was matching from line %d, offset %d, which\n\t 
+\t%.*s\n
 _Float
 _GLOBAL_
 _ITM_RU1
@@ -2939,6 +2958,7 @@ vtable for std::type_info
 vtable for std::underflow_error
 wchar_t
 yield_token
+{0x%x}
 {default arg#
 {lambda
 {parm#

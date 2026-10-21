@@ -202,6 +202,8 @@
  Member[%d] Player[%d]: %s DISCONNECTED lobby state %s\n
  NOT
  Outdent() without matching Indent().
+ P1=%d
+ P5=%d
  P95=%.1f
  P95=%u
  P99=%.1f
@@ -386,6 +388,8 @@
 " which is not defined or is not an extension of "
 " which is.
 "$0" does not declare $1 as an extension number.
+"%s":%d
+"%s":%s
 "%s<%i><%s><%s>" changed name to "%s"\n
 "%s<%i><%s><%s>" committed suicide with "%s"\n
 "%s<%i><%s><%s>" committed suicide with "world"\n
@@ -703,10 +707,17 @@ $ORIGIN
 %%%d.%ds [%%3.3s] (%%5d) %%%d.%ds:
 %%s  %%c %%10s : %c%%%ds%c %%s
 %%s  %%c %%10s : %c%%-%d.%ds%c %%s
+%*s%s
 %-15.15s[ %s ]
 %-16.16s %4d %7.2f %4.1f%% %6d\n
 %-32s (p:%8.2f %8.2f %8.2f a:%5.2f %5.2f %5.2f) landmark %s\n
+%.*Lf
+%.*f
+%.*g
+%.*s\n
+%.1f
 %.1fs: %llu of %llu bytes downloaded.\n
+%.2f
 %.2f "%s"  %s : %f (%f): interval %f\n
 %.2f (%.2f)
 %.2f (t=%.2f)
@@ -714,9 +725,12 @@ $ORIGIN
 %.2f -> %.2f (accelT = %.2f dT=%.2fs)
 %.2f -> %.2f (decelT = %.2f)
 %.3d,%.3d,%.3d
+%.3f
 %.3f / %.3f
 %.5f (%.5f)
 %.5f (%.5f) = path %.2f + transitions %.2f
+%.6f
+%0*d
 %0.2f
 %0.2f, SpacePathfind_StringPull_FindLastVisiblePortal - start within future block\n
 %016llx
@@ -738,6 +752,7 @@ $ORIGIN
 %3.2f: WARNING: %s::%s() RESULT_CRITICAL collision\n
 %32.32s: %4.4s, counter % 4d, level %s\n
 %5.3f:%s: adding layer %d (order %d): %s : cycle %5.3f (weight %5.3f)\n
+%5d\t%s\n
 %5lu file=%s, line=%d, 
 %6d unresolved strings\n
 %8.3f[%d] %s:  %s
@@ -747,11 +762,14 @@ $ORIGIN
 %c [%2.2f] Adding buff '%s' index: %d to '%s' (stack %d).\n
 %c [%2.2f] Refreshing buff '%s' to '%s'. - Stack Count: %d\n
 %c [%2.2f] Removing buff '%s' index: %d to '%s'.\n
+%d %d
+%d %d %d
 %d %d %d %d
 %d %s '%s' (%s)\n
 %d %s [%d] offset(s) %s are culled\n
 %d (%s) - %.2f\n
 %d (s/n %d)
+%d : %s
 %d == false\n
 %d CallInfos:\n
 %d Cells:\n
@@ -775,19 +793,31 @@ $ORIGIN
 %d%s: %s:%s\n
 %d(%s):  %s because %f %f %f was %s final landmark\n
 %d(%s):  rejected\n
+%d, %d
 %d, %d, %d, %s\n
 %d, Error parsing Econ Item!\n
+%d,%d
 %d,%d, (%s), id:%llu\n
 %d,%d,%s,%s,%d,%d,%4.2f,%4.2f\n
 %d,Error parsing modifier!\n
+%d. %s\n%s
+%d.%d.%d
+%d/%d
 %d/%d: '%s' %s
 %d/%s\n%s/%s
 %d: %f %f %f
+%d: %s: %s
+%d: %s\n
+%d:%d
 %d:%s::%s %s
 %d_model_contents_%d.vsnap
+%dd_%s
+%f %f %f
 %f %f %f %f %f %f %f
 %f %f %f, %f %f %f
 %f: Player %s at [%0.2f %0.2f %0.2f] took %f damage from %s, type %s\n
+%g %g
+%g %g %g
 %g %g %g %g
 %i : %s (ground %i %s)\n
 %ld bytes leaked in %d chunks\n
@@ -801,21 +831,36 @@ $ORIGIN
 %llu_%d.meta%s
 %llu_%u.edem.battlepass
 %llx
+%s %d
+%s %d\n
+%s %s
+%s %s 
+%s %s %s
 %s %s %s %s
 %s %s @ %s: 
+%s %s%s
+%s %s%s/
 %s %s.HL%s from save file on %s\n
+%s %s: 
 %s %s: %s - %s - %s\n
+%s %s:%s
+%s %s\n
+%s '%s'
 %s '%s' (%s)
 %s '%s' has a base specified as '%s', but there is no matching entry in propdata.vdata.\n
+%s (%.2f)
 %s (%.2f, %.2f, %.2f)
 %s (%d) prepared to speak %s (%f)\n
+%s (%s)
 %s (%s) at (%.3f %.3f %.3f) using obsolete or unknown material type.\n
 %s (%s) has no particle system name specified!\n
 %s (%s) removing class relationships due to level transition\n
 %s (%s) was unable to point at an entity named: %s\n
 %s (%s): started "%s":INT:%s\n
 %s (ALWAYS)
+%s (Bot)
 %s (NEVER)
+%s (PVS)
 %s (account %u) tried to execute invalid order (%d). %s\n
 %s (for %s) called SynchronizeSequence() at %0.2f\n
 %s (for %s) forcing synch of %s at %0.2f\n
@@ -885,7 +930,11 @@ $ORIGIN
 %s Ping wheel reloaded\n
 %s Tick
 %s Z0000
+%s [%d]
 %s [%s%s%s]###%p
+%s [%s:%u]
+%s [%s]
+%s [%u]
 %s allocation count overflow
 %s allocation count overflow( %llu + %llu > %llu )\n
 %s allocation count overflow( %llu > %llu )\n
@@ -938,24 +987,39 @@ $ORIGIN
 %s%02d:%02d
 %s%12.12s:  cycle %6.4f (prev %6.4f) weight %5.3f rate %6.3f: % 4d=[%s]
 %s%20s : %40s %5.3f\n
+%s%d
+%s%s
+%s%s/
 %s%s=%.2f (float)
 %s%s=%.2f,%.2f,%.2f (vector)
+%s%s=%s
 %s%s=%s (bool)
 %s%s=%s (symbol)
 %s%s=? (unsupported type, %s)
 %s%s=pos(%.2f, %.2f, %.2f) ang(%.2f, %.2f, %.2f) 
+%s%s[%d]
 %s( %s, %s )\n
+%s(#%d)
 %s(%-4.1f->%-4.1f avg %-4.1f dev %-4.2f)
 %s(%d)->%s(%d): %s
+%s(%d): %s
 %s(%d): OpenSSL internal error, assertion failed: %s\n
+%s(%s)
 %s(%s) could not find scene %d, named %s\n
 %s(%s) found an entity that wasn't a logic_choreographed_scene or logic_scene_list_manager in slot %d, named %s\n
 %s(%s[%d]%s)
+%s,%u,%s
+%s->R%d
+%s.%s 
+%s.%s#%u
+%s.%s.%s
 %s.Attack
 %s.Attack2
 %s.ProjectileImpact
 %s.vmat
 %s.vpcf
+%s/%llu/%u
+%s/%s
 %s/%s/gameevents_%s.txt
 %s/autosave
 %s/autosavedangerous
@@ -1120,7 +1184,12 @@ $ORIGIN
 %s:  } IGameSystem::LoopActivateAllSystems done\n
 %s:  } IGameSystem::LoopDeactivateAllSystems done\n
 %s: %.2f%% %s for hero %s(%d).\n
+%s: %.3f\t
+%s: %d
 %s: %d volumes found\n
+%s: %f
+%s: %s
+%s: %s %s
 %s: %s could not find viewposition %s.\n
 %s: %s could not find viewtarget %s.\n
 %s: %s has no commentary file.\n
@@ -1135,6 +1204,8 @@ $ORIGIN
 %s: %s: Not spawning break_create_particle as the part name was filtered out (expecting match of %s %s, received %s)\n
 %s: %s: Not spawning particle as the effect name is empty.\n
 %s: %s: Spawning particle effect %s.\n
+%s: %s\n
+%s: %s\t
 %s: %u %s is ready to spawn entities\n
 %s: (%d) Name: %s
 %s: All lanes assigned.  Terminating with success.\n
@@ -1191,10 +1262,15 @@ $ORIGIN
 %s: unexpected parameter format for InputSetBodyGroup. Had %s, expected <bodygroupname,partnumber>\n
 %s: unexpected parameter type %s, expected a CString\n
 %s: unrecognized hero name: %s\n
+%s:%d
+%s:%s
+%s:%s:
+%s::%s
 %s::%s (%u)
 %s::%s (Entity Output Handler)
 %s:Gamerules: entering state #%d\n
 %s:Gamerules: entering state '%s'\n
+%s< %s%s >
 %sChat wheel reloaded\n
 %sError reloading chat wheel '%s'\n
 %sObstructing nav
@@ -1206,6 +1282,7 @@ $ORIGIN
 %s\n%2.f - Pos: %.2f, Orient: %.2f
 %s\n%s\n%s\n%s
 %s\t%32.32s = "%s"\n
+%s_%d
 %s_%d_ang
 %s_%d_extent_max
 %s_%d_extent_min
@@ -1214,6 +1291,8 @@ $ORIGIN
 %s_%d_radius
 %s_%d_tolerance_angle
 %s_%d_type
+%s_%s
+%s_%s_%i
 %s_%s_%i-%i-%i_%02uh%02um%02us
 %s_COMP
 %s_STAT
@@ -1227,7 +1306,11 @@ $ORIGIN
 %s_variant_%d
 %sclassname='%s'\n
 %sjunk
+%u %u %u
 %u:%02u:%02u
+%u:%u
+%u:%u:%u
+%u[%d]
 %u\t%s\t%s\t%s\n
 &0000
 '%20s' vs. '%20s' = 
@@ -1274,10 +1357,14 @@ $ORIGIN
 ( teamNumber, r, g, b )
 ( version )
 (%0.2f): %s
+(%1.3f)
 (%2.2f - %2.2f - %2.2f)
+(%2.2f)
 (%d) Dynamic prop %s (model %s): no sequence named:%s\n
 (%d) Name: %s (%s)
+(%d,%d)
 (%f, %f, %f)
+(%s:%d)
 (0.1s interval)
 (0x%08X)'??'
 (ACTIVE)
@@ -1727,6 +1814,7 @@ $ORIGIN
 +++ %s[%d]: 
 ++CLoopModeGame::SetWorldSession
 +Retiming
+, %s %s
 , at offset %d
 , but was 
 , loss in/out = %.2f%%/%.2f%%
@@ -1817,6 +1905,7 @@ $ORIGIN
 . Difference of 
 .%0*llu
 .%llu
+.%lu
 ... and no start position
 ...<truncated>...
 ../../../_build_/game/server/_vpc_server_dota/unity/linuxsteamrt64/_proto_/../_schema_/release/../../../../../../../../src/game/server/basecombatcharacter.cpp
@@ -20238,6 +20327,9 @@ $ORIGIN
 ;dota_
 ;sv_pausable;sv_cheats
 <%.2f %.2f %.2f> -> <%.2f %.2f %.2f>\n
+<%d:%llu>
+<%s:%llu>
+<%s:%s>
 </link>
 <<ERROR>>
 <CEntityKeyIdIndexList>
@@ -21591,6 +21683,7 @@ BonusTipValue
 BonusTips
 BonusUnderdraftBenchSlot
 BonusUnderdraftGoldPerChallenge
+Bool( %s )
 Boolean default must be true or false.
 Bot %s is in mode %d\n
 Bot (%s) querying nearby units with a distance greater than cached (%2.0f)!\n
@@ -27900,6 +27993,7 @@ FrostivusConsumable.Snowball.Cast
 FrostivusConsumable.Snowball.Target
 FrostivusConsumable.Snowman.Spawn
 FrostivusConsumable.Tree.Target
+Func( %s )
 FuncTrackChange.Blocking
 FuncTrackTrain
 FuncTrackTrain '%s' has no target.\n
@@ -31321,6 +31415,7 @@ InstancedAutoGeneratedSoundScene:  Expecting non-NULL pActor for sound %s\n
 InstantiateNode
 Insufficient memory to compile regular expression
 Insufficient memory to determine regex match
+Int( %d )
 Integer out of range (
 Intensity
 Interacting
@@ -34644,6 +34739,7 @@ Progress updated to %d
 ProjectileCollisionSize
 ProjectileDodge
 ProjectileManager
+Prop( %s )
 PropBreakableCreateAll
 PropData
 PropWorldOrigin
@@ -38516,6 +38612,7 @@ Synchronously spawn an entity group from a list of spawn tables.
 Synchronously spawns a single entity from a table
 Synthetic oneofs must be after all other oneofs
 System %s failed to init\n
+T%d (%s)
 T0d/
 TARGET
 TEAM_DIRE
@@ -39665,6 +39762,7 @@ Value out of range for uint32 option "
 Value: DEAD
 Value: OFF
 Value: ON
+Var( %s )
 Variant Bool
 Variant Color
 Variant Float
@@ -40036,12 +40134,16 @@ Zero input vector for info node!
 [Ability Schema]: %s\n
 [Additional text in debugoverlay_dashboard]
 [BREAK]
+[C:%u:%u]
 [CPulseCell_ReturnValues]
 [DIFFERS]
+[G:%u:%u]
 [GAMEEVENT] Event '%s' (index %d) added %s listener %p\n
+[I:%u:%u]
 [IMMEDIATE_HALT]
 [INVALID]
 [Index: 
+[L:%u:%u]
 [M:%u:%u:%u]
 [NAVGENRT] - The world has changed since navgen started. Aborting.
 [NAVGENRT] Retrying navgen [%g,%g,%g - %g,%g,%g] because the world has changed.
@@ -40049,20 +40151,28 @@ Zero input vector for info node!
 [OBSOLETE - Use SetParticleControlTransformForward] (int nFXIndex, int nPoint, vForward)
 [OBSOLETE - Use SetParticleControlTransform] (int nFXIndex, int nPoint, Vector vecForward, Vector vecLeft, Vector vecUp) - Set the orientation for a control on a particle effect
 [OBSOLETE - Use SetParticleControlTransform] (int nFXIndex, int nPoint, vForward, vRight, vUp) - Set the orientation for a control on a particle effect (NOTE: This is left handed -- bad!!)
+[P:%u:%u]
 [RETURN R%d]
 [RETURN]
 [STARTUP] {%.3f} logged on to Steam\n
 [STARTUP] {%.3f} server module init %s\n
+[T:%u:%u]
 [Tick %d]['%s'
 [U:%u:%u:%u]
+[U:%u:%u]
+[a:%u:%u]
 [abi:
+[c:%u:%u]
 [complete_limit]
 [dt %5.2f] velocity: %s
 [ex %5.2f] extrap  : frac %.6f%s
 [friend]
+[g:%u:%u]
+[i:%u:%u]
 [in %5.2f] interp  : frac %.6f%s
 [lazy = true] can only be specified for submessage fields.
 [libprotobuf %s %s:%d] %s\n
+[net] %s
 [none]
 [null]
 [packed = true] can only be specified for repeated primitive fields.
@@ -40130,6 +40240,7 @@ Zero input vector for info node!
 \t"%s" "%s"\n
 \t"sourcefile" "%s"\n
 \t$$$$$$$\n\v\f\r
+\t%.*s\n
 \t%s - %zu KB (%%%.0f)\n
 \tBy default, additional arguments are of the form [{ "key1" "value1" "key2" "value2" }]\n
 \tCouldn't find a player.\n
@@ -40857,9 +40968,11 @@ associated_item_def
 asterisk
 astral_duration
 async load of
+at %s\n
 at_night_time
 atan2
 atomic, 
+att(%d:%s)
 attach particle effect
 attach_ability1
 attach_attack1
@@ -41367,6 +41480,7 @@ bloodstone_regen_applied
 bloodthirst
 bloom_duration
 blue
+bn(%d,%d)
 bn_lib.c
 bn_print.c
 bn_shift.c
@@ -45281,6 +45395,7 @@ keyBag
 keyUsage
 kez_shadowhawk_passive
 kez_shodo_sai_ad
+kick "%s"\n
 kill eater
 kill eater 2
 kill eater score type
@@ -61061,6 +61176,7 @@ zombie_spawn_padding
 { particle_domain_ui_name = 'Antimage Blink Ability' particle_domain_internal_name = 'CDOTA_Ability_AntiMage_BlinkParticleAPI'  }
 {%s}SAVE/%s.%s
 {%s}SAVE/%s.sav
+{0x%x}
 {default arg#
 {images}/battlepass/international2022/candy_shop/candy_bag.psd
 {lambda

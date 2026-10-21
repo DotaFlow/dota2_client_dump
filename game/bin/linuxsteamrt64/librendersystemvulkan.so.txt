@@ -85,14 +85,20 @@
 #include
 #line
 $ORIGIN
+%%%s%c
+%%%sd
 %-100s %-6s %-6s\n
 %-160s | %8.2fms\n
 %-160s | %8s\n
+%.*Lf
+%.3f
+%0*x
 %016lx
 %3d: e=%.3f rms=%.6f %u\n
 %I:%M:%S %p
 %\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v
 %a %b %e %T %Y
+%d %d %d
 %d %d %d %d
 %d.%d.%d.%d
 %ld%c
@@ -100,6 +106,8 @@ $ORIGIN
 %llu
 %ls_%02d
 %ls_%02d.%ls
+%s %s
+%s %s %s
 %s %s %s %s
 %s %s: vkAllocateMemory failed for (%s) memory indicating heap is full, trying again in non-device local as a fallback.\n
 %s - encountered shader with requiredSubgroupSize (%d), but VK_EXT_subgroup_size_control not enabled.  Will be ignored, might cause rendering artifacts because device subgroup size is (%d).\n
@@ -120,7 +128,11 @@ $ORIGIN
 %s does not support shaderAbort, disabling.\n
 %s required because VulkanRequireBarycentrics is set in gameinfo.gi, but it is not supported.  Vulkan device creation failed.\n
 %s required because VulkanRequireComputeShaderDerivatives is set in gameinfo.gi, but it is not supported.  Vulkan device creation failed.\n
+%s%d
+%s%s
+%s%s%s
 %s.spv
+%s/%s
 %s: Can't concatenate input layouts with more than %d fields total!\n
 %s: Unable to compute hash for shader module\n
 %s: Warning: No compile targets specified! Shader will not be compiled!\n
@@ -134,6 +146,8 @@ $ORIGIN
 %s: no space for allocation of %u\n
 %s: vkAllocateMemory failed fallback system memory allocation.  Fatal error: out of video and system memory.\n
 %s: vkAllocateMemory failed to allocate GPU memory.  Fatal error: out of GPU video memory and no fallback heap available.\n
+%s:%s, 
+%s[%d]
 %s[%s:%d] %s\n
 %s_ColorTargetImageView
 %s_ColorTargetImageViewSrgb
@@ -1366,6 +1380,7 @@ ExternalDescSet
 ExtractModuleMetadata
 Extraneous token
 FEATURES
+FFX: %s\n
 FFX_FSR3UPSCALER_ENABLE_DEPTH_INFINITE and FFX_FSR3UPSCALER_ENABLE_DEPTH_INVERTED present, yet cameraNear != FLT_MAX
 FFX_FSR3UPSCALER_ENABLE_DEPTH_INFINITE present, yet cameraFar != FLT_MAX
 FFX_FSR3UPSCALER_ENABLE_DEPTH_INVERTED flag is present yet cameraNear is less than cameraFar
@@ -3913,6 +3928,7 @@ ZN10MatrixMath17AddMatrixToMatrixILb0E15CVariableMatrixS1_EEvRKT0_PT1_EUliiE_
 ZN10MatrixMath17AddMatrixToMatrixILb1E15CVariableMatrixS1_EEvRKT0_PT1_EUliiE_
 ZN10MatrixMath23AddScaledMatrixToMatrixILb1E15CVariableMatrixS1_EEvfRKT0_PT1_EUliiE_
 [%Y-%m-%d %H:%M:%S] 
+[%s:%d] %s
 [Index: 
 [abi:
 [friend]
@@ -4007,6 +4023,7 @@ ZN10MatrixMath23AddScaledMatrixToMatrixILb1E15CVariableMatrixS1_EEvfRKT0_PT1_EUl
 \nrenderdocapi.cpp(95): ERROR! Can't load %s dll, automatic RenderDoc shader debug info not available.\n
 \src\shaders\
 \t The lexer was matching from line %d, offset %d, which\n\t 
+\t%.*s\n
 \tFramebuffer Count ( %d ): \n
 \tLayout Count( %d ) \n
 \tPMB Type ( %s ): Count ( %d ) ( %llu MB ) \n

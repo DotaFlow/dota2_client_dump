@@ -196,8 +196,14 @@ $0oneof $1 {
 $0option $1;\n
 $0rpc $1($4.$2) returns ($5.$3)
 $ORIGIN
+%.*Lf
+%.*g
+%.1f
+%.2f
+%0*d
 %I:%M:%S %p
 %a %b %e %T %Y
+%d %d %d
 %d %d %d %d
 %d CallInfos:\n
 %d Cells:\n
@@ -209,6 +215,8 @@ $ORIGIN
 %d Vars:\n
 %d instruction(s)\n
 %d register(s) %d byte(s)\n
+%d. %s\n%s
+%d.%d.%d
 %d.Add( %s, %d, %.2f )
 %d.Add( %s, %d, %.2f )\n
 %d.Blend( %d, %.2f )
@@ -234,12 +242,21 @@ $ORIGIN
 %d.Transform( %s, Vector( %.2f, %.2f, %.2f ), DegreeEuler( %.2f %.2f %.2f ) )\n
 %d.Worldspace( %s, %d, %.2f )
 %d.Worldspace( %s, %d, %.2f )\n
+%g %g
+%g %g %g
 %lld
 %llu
+%s %.2f
+%s %.3f
+%s %f %f
+%s %s
+%s %s %s
 %s %s %s %s
 %s %s: %s - %s - %s\n
 %s '%s' (%s)
+%s (%.2f)
 %s (%.2f, %.2f, %.2f)
+%s (%s)
 %s (Color)
 %s (Material)
 %s - %.1f%%, %.2fs, frame %.1f %s
@@ -251,6 +268,11 @@ $ORIGIN
 %s called on a pool arena (no root available)\n
 %s follows %s
 %s%02d:%02d
+%s%s
+%s->R%d
+%s.%s.%s
+%s: %s %s
+%s: %s\n
 %s: __pos (which is %zu) > __size (which is %zu)
 %s: __pos (which is %zu) > this->size() (which is %zu)
 %s: allocation of %u too large, max %u\n
@@ -267,8 +289,11 @@ $ORIGIN
 %s\n%2.f - Pos: %.2f, Orient: %.2f
 %s_color
 %s_matgrp
+%u %u %u
 'Play reversed' has no effect when used with time synchronization!
+(%d,%d)
 (%f, %f, %f)
+(%s:%d)
 (Blend1D):m_flBlendValue
 (Blend1D):m_resetCount
 (Expecting %s)
@@ -1925,6 +1950,7 @@ BoneConstraintRbf :: Cannot find output bone "%s" :: %s\n
 BoneConstraintRbf :: Invalid input %d or output %d bone count :: %s\n
 BoneConstraintRbf :: input bone count %d != input pose count %d :: %s\n
 BoneConstraintRbf :: output bone count %d != output pose count %d :: %s\n
+Bool( %s )
 Boolean default must be true or false.
 Byte size calculation and serialization were inconsistent.  This may indicate a bug in protocol buffers or it may be caused by concurrent modification of 
 C25CDirectPlaybackUpdateNode
@@ -2879,6 +2905,7 @@ Found invalid proto option data for:
 FrameUpdate
 Free
 Friday
+Func( %s )
 Function "%s" takes %i parameters, but %i were given
 Future Facing
 Future Velocity
@@ -3020,6 +3047,7 @@ InstallSchemaBindings
 InstantiateNode
 Insufficient memory to compile regular expression
 Insufficient memory to determine regex match
+Int( %d )
 Integer out of range (
 Intercept point.
 Interpreting non ascii codepoint %d.
@@ -4253,6 +4281,7 @@ Prl Eval
 Process Selector
 Program has invalid instruction %i
 Program uses more temp variables than are supported. Needs %i, max is %i
+Prop( %s )
 PropWorldOrigin
 PropertyEditorSystem_001
 Proto file starts with 0xEF but not UTF-8 BOM. Only UTF-8 is accepted for proto file.
@@ -4667,6 +4696,7 @@ Swap
 Symbol
 Symbol name "
 Synthetic oneofs must be after all other oneofs
+T%d (%s)
 TAG_
 THEM
 TILT_TWIST
@@ -4922,6 +4952,7 @@ Value of type "
 Value out of range for int32 option "
 Value out of range for int64 option "
 Value out of range for uint32 option "
+Var( %s )
 Variable "%s" has %i components, a specific component must be specified, for example use: "%s.x"
 Variable '%s' is referenced but not declared in this system (%s). Adding a fallback now.\n
 VectorAligned
@@ -5026,6 +5057,7 @@ Zero input vector for info node!
 \nParsing attempt:  
 \t The lexer was matching from line %d, offset %d, which\n\t 
 \t$$$$$$$\n\v\f\r
+\t%.*s\n
 \t%d (%d) : %s %s %s %s\n
 \t%d:%d - %s (agrp vs agrp flag mismatch) %s:%s (promoted to match existing) %s:%s\n
 \t%d:%d - %s (match)\n
@@ -11029,6 +11061,7 @@ yaw_start
 yield_token
 zero
 zero dir
+{0x%x}
 {default arg#
 {lambda
 {parm#

@@ -161,9 +161,14 @@
  !"#$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$N6google8protobuf2io14ErrorCollectorE
  !"#$$$$$$\n\v\f\r
  %02X
+ %6d %4d\n
  %d %s is interpolating on %s %s\n
+ %lx %lx
+ %s %s
  %s%lu (%s0x%lx)\n
+ %s=%d
  %s{%.2f,%.2f,%.2f}
+ (%d)%s
  (%d)Unknown
  (%ld unused bits)\n
  (+%d more due to usercommand delivery)
@@ -173,7 +178,12 @@
  (Start: 
  (classmap missing)
  (listed %s)
+ (was %s)
  ** Entrypoint For Method '%s'
+ + %.1f
+ + %.2f
+ - %.1f
+ - %.2f
  - %s (%s)\n
  - (Additive)
  -0000
@@ -432,6 +442,11 @@
 " which is not defined or is not an extension of "
 " which is.
 "$0" does not declare $1 as an extension number.
+"%lld"
+"%llu"
+"%s":%d
+"%s":%s
+"%s1"
 ") is not compatible with this reflection object (which is for type "
 ") to start from the outermost scope.
 ").  Note that the exact same class is required; not just the same descriptor.
@@ -477,6 +492,7 @@
 ##VERSION##
 #%02X%02X%02X%02X
 #%02X%02X%02x%02X
+#%s%s
 #%s_Description
 #%s_hype
 #%s_npedesc1
@@ -5501,9 +5517,17 @@ $ent_renderbounds
 %% 4d=[%%%d.%ds] at cycle %%6.4f weight %%5.3f
 %%%d.%ds %%%d.%ds
 %%%d.%ds [%%3.3s] (%%5d) %%%d.%ds:
+%%%s%%
+%%.%df
+%%0%dd
+%%3.%df
 %%s  %%c %%10s : %c%%%ds%c %%s
 %%s  %%c %%10s : %c%%-%d.%ds%c %%s
+%*s%s
 %*s%s OF %s {\n
+%*s%s:\n
+%*s%s:\n%*s
+%*s%s\n
 %*s<EMPTY>\n
 %*s<Not Supported>
 %*s<Parse Error>
@@ -5537,19 +5561,41 @@ $ent_renderbounds
 %*scrlNum: 
 %*scrlTime: 
 %*scrlUrl: 
+%*s}\n
 %-15.15s[ %s ]
 %-18s
 %-23s %s Kx=%-8s Au=%-4s Enc=%-9s Mac=%-4s%s\n
 %-2d len(%6.3f) (%6.3f %6.3f %6.3f) origin = (%6.3f %6.3f %6.3f) network = (%6.3f %6.3f %6.3f)
 %-50.50s : %s %s\n
+%-8d
+%.*Lf
+%.*f
+%.*g
+%.*s
+%.*s\n
 %.01f
 %.02f
+%.0f
+%.0f%%
 %.14s.%03dZ
+%.1f
+%.1f 
+%.1f%%
+%.1f\n
+%.2f
 %.2f OnHltvReplay %s\n
 %.2f Replay: death at %.2f\n
+%.2f%%
+%.2f%%\n
+%.2f\n
+%.2f\n%s
 %.2f|%.2f|%.2f|%.2f
+%.3f
+%.6f
+%0*d
 %0.02f
 %0.1f
+%0.1f%%
 %0.3f
 %01.1f
 %019lu
@@ -5574,6 +5620,7 @@ $ent_renderbounds
 %04u%02u%02u%02u%02u%02u
 %04u-%02u-%02u
 %04u-%02u-%02u %02u:%02u:%02u
+%04x - 
 %06d
 %08X:
 %09d
@@ -5585,28 +5632,39 @@ $ent_renderbounds
 %12sUnable to load Public Key\n
 %12u | %8u\n
 %2.0f
+%2.0f%%
+%2.1f%%
 %2.1fK
 %2.2f
 %2.2fms
+%2d%%
 %2d:%02d
+%3.0f%%
 %3.1f  (%s) --> (%s),%.1f) \n
 %3.1f  (%s) --> (%s)\n
 %3.1f  (%s) <-- (%s)\n
 %3.1f  (%s,%d) <-- (%s)\n
 %3.1f  (%s,%s) <-- (%s)\n
 %3.3f
+%3.f
 %30s\t\t%5d\t\t%5d\n
+%32s, %s\n
 %3d: NumActive: %3d, AutoBBox: %3s "%s" \n
 %3d: e=%.3f rms=%.6f %u\n
 %3i fps (%3i, %3i) smth:%4.1f ms frm:%4.1f ms on %s frames: %u
 %3i fps on %s
 %3i, %3i, %5.1f\n
+%4d 
 %5.1f,setpos %0.2f %0.2f %0.2f ; setang %0.2f %0.2f %0.2f,%3i,%3i,%4.1f,%4.1f,%5.1f\n
 %50.50s %32.32s: %s %s\n
 %5d: %8.6f msec change '%s()' on field %s(path=%s) for ent %s(%s) name='%s'\n
+%5d\t%s\n
 %5ld:
 %5lu file=%s, line=%d, 
+%6.2f%%
+%6.3f%%
 %8.3f
+%8.3f 
 %8.3f %8.3f %8.3f
 %8.3f[%d] %s:  %s
 %8.4f
@@ -5622,15 +5680,24 @@ $ent_renderbounds
 %LANGUAGE%
 %\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v
 %a %b %e %T %Y
+%b %d
 %c [%2.2f] Adding buff '%s' index: %d to '%s' (stack %d).\n
 %c [%2.2f] Refreshing buff '%s' to '%s'. - Stack Count: %d\n
 %c [%2.2f] Removing buff '%s' index: %d to '%s'.\n
+%c%d%c
+%c%s%c
 %d "No animation data"
+%d %d
+%d %d %d
 %d %d %d %d
+%d %s
 %d %s '%s' (%s)\n
 %d (%s) [%.2f] 
 %d (s/n %d)
+%d - %d
+%d / %d
 %d / %d / %d
+%d : %s
 %d == false\n
 %d CallInfos:\n
 %d Cells:\n
@@ -5658,30 +5725,49 @@ $ent_renderbounds
 %d structs not using DECLARE_NETWORKVAR_STRUCT_NOT_IN_NETWORK_UTLVECTOR_EMBEDDED, consider porting fields to use CNetworkVars!\n
 %d total requeued messages\n
 %d unhooked %s\n
+%d x %s
+%d%%
 %d%d%d%d%d%d
+%d%s
+%d%s+%s
 %d%s: %s:%s\n
 %d(%d) Got %s\n
 %d, %s, %d\n
 %d, %s, %s, %s\n
 %d, Error parsing Econ Item!\n
 %d, Persona %s, %d\n
+%d,%d
 %d,%d, (%s), id:%llu\n
 %d,%d,%s,%s,%d,%d,%4.2f,%4.2f\n
 %d,Error parsing modifier!\n
+%d. %s\n%s
 %d.%02d%s
+%d.%d.%d
 %d.%d.%d.%d
 %d.%d.%d.%d/%d.%d.%d.%d
+%d.%ds
+%d/%d
+%d/%d/%d
 %d/%d: '%s' %s
 %d: %f %f %f
+%d: %s: %s
 %d: %s: %s %s
 %d: World: %s Refcount: %d\n
 %d:%02d
+%d:%02d 
+%d:%02d+
 %d:%02d:%02d
+%d:%0d
+%d:%d
+%d:%d:%d
 %d:%llu
+%d:%s
 %d:%s::%s %s
+%d:%u
 %d:00
 %d<span class='StatNegative'>%d</span>
 %d<span class='StatPositive'>+%d</span>
+%d=%d;
 %d=%s:  pos[ %8.3f %8.3f %8.3f ] ang[ %8.3f %8.3f %8.3f ]
 %dBags
 %dDeaths
@@ -5689,17 +5775,27 @@ $ent_renderbounds
 %dPointsEarned
 %dSaves
 %dScore
+%d_%d_%d
+%dd_%s
 %dto%d
 %dx%d
 %dx%d%s
+%f %f
+%f %f %f
 %f %f %f %f
+%f %f 0.0
+%f 0.0 0.0
 %fpx
 %f|%f|%f|%f
+%g %g
+%g %g %g
 %g %g %g %g
+%i%%
 %i:%02i
 %language%
 %ld bytes leaked in %d chunks\n
 %ld%c
+%ld\n
 %lld
 %lli
 %llu
@@ -5717,34 +5813,51 @@ $ent_renderbounds
 %p Play\n
 %p Stop\n
 %p is repeating\n
+%s "%s"
 %s %-64.64s:  %s
 %s %2d %02d:%02d:%02d %d%s
 %s %2d %02d:%02d:%02d%.*s %d%s
+%s %d
 %s %d %d %d\n
 %s %d runs [%d bytes, %.2f avg bytes/run]
+%s %d\n
 %s %f %f %f;%s %f %f %f
 %s %f %f %f;%s %f %f %f\n
+%s %s
+%s %s %s
+%s %s %s 
 %s %s %s %s
 %s %s : %s\n
 %s %s HTTP/1.0\r\n
 %s %s%lu (%s0x%lx)\n
 %s %s.HL%s from save file on %s\n
 %s %s: %s - %s - %s\n
+%s %s:%s
+%s %s\n
+%s '%s'
 %s '%s' (%s)
 %s '%s' has a base specified as '%s', but there is no matching entry in propdata.vdata.\n
+%s (%.2f)
 %s (%.2f, %.2f, %.2f)
+%s (%d)
 %s (%d). %d Heroes:\n
+%s (%ds)
+%s (%s)
 %s (%s) has no particle system name specified!\n
 %s (%u - %u)
+%s (%u)
 %s (uid=%d)
 %s (unknown)
+%s + %s
 %s - %.1f%%, %.2fs, frame %.1f %s
+%s - %s
 %s - %s %s\n
 %s - Blackboard reference %s: %u (%s) type mismatches
 %s - Could not find blackboard instance for %s
 %s - Could not find blackboard reference %s: %u (%s)
 %s -0700
 %s -0800
+%s 0\n
 %s : %8.2f:  clearing events\n
 %s : %8.2f:  finish %s\n
 %s : %8.2f:  start %s\n
@@ -5755,6 +5868,7 @@ $ent_renderbounds
 %s HEROES:-----------------------------------\n
 %s ID:%d (%d objects):\n
 %s Interp
+%s Min:%d\n
 %s Model '%s' doesn't have attachment '%s' to attach particle system '%s' to.\n
 %s New Settings reloaded\n
 %s PARAMETERS
@@ -5763,6 +5877,8 @@ $ent_renderbounds
 %s Tick
 %s Z0000
 %s [%s%s%s]###%p
+%s [%s:%u]
+%s [%s]
 %s algorithm "%s" unsupported\n
 %s allocation count overflow
 %s allocation count overflow( %llu + %llu > %llu )\n
@@ -5812,6 +5928,8 @@ $ent_renderbounds
 %s writing start offset %d\n
 %s | %s | %s
 %s##DashboardMode
+%s%%
+%s%.0f
 %s%02X
 %s%02d:%02d
 %s%02i:%02i
@@ -5819,27 +5937,43 @@ $ent_renderbounds
 %s%12.12s:  cycle %6.4f (prev %6.4f) weight %5.3f rate %6.3f: % 4d=[%s]
 %s%20s : %40s %5.3f\n
 %s%c%08lx.%s%d
+%s%d
+%s%d %s
+%s%d%%
 %s%d%s%d%s%d
 %s%d:%02d
+%s%i
 %s%i:%02i:%02i
 %s%lld%ss
 %s%llu
 %s%llu %s %dm-%ds.txt
+%s%s
+%s%s%d
+%s%s%s
 %s%s%s crc=0x%x metadatasz=%d
+%s%s%s%s%s
+%s%s%s\n
 %s%s.dota2.com/
 %s%s.vmat
+%s%s/
 %s%s</font>
 %s%s=%.2f (float)
 %s%s=%.2f,%.2f,%.2f (vector)
+%s%s=%s
 %s%s=%s (bool)
 %s%s=%s (symbol)
 %s%s=? (unsupported type, %s)
 %s%s=pos(%.2f, %.2f, %.2f) ang(%.2f, %.2f, %.2f) 
+%s%s[%d]
+%s%s\n
 %s%sb
 %s%sbps
+%s%u
+%s's 
 %s( %s, %s )\n
 %s(%d) [%.2f %.2f %.2f] %.2f
 %s(%d): OpenSSL internal error, assertion failed: %s\n
+%s(%s)
 %s(%s)</font>
 %s(%s[%d): MarkInterpolationLatchFlagsDirty:  C_BaseEntity::IsLatchedPermissible() == false\n
 %s(%s[%d]%s)
@@ -5851,12 +5985,18 @@ $ent_renderbounds
 %s(): Channel [%s] received message:\n
 %s(): Channel [%s] shutdown.\n
 %s(): Deprecated and unimplemented. Fix client code to use new postprocessing resources.\n
+%s, %d
 %s, SUCCEEDED.\n
+%s,%u,%s
+%s-%s
 %s-%s-alt%d
 %s------%s%s
 %s------%s--%s%s
+%s->R%d
 %s-encounter-started
 %s-playtime
+%s.%s
+%s.%s.%s
 %s.Attack
 %s.AttackSpecial
 %s.PreAttack
@@ -5868,6 +6008,9 @@ $ent_renderbounds
 %s.valve.org/community
 %s.vpcf
 %s.vtex
+%s/%s
+%s/%s.%s%s
+%s/%s/%s
 %s/%s/%s/%s
 %s/%s/actionpanel/portrait.png
 %s/%s/manifest.txt
@@ -5917,6 +6060,7 @@ $ent_renderbounds
 %s/sharedfiles/
 %s/thumbnails/%s.%s%s
 %s/using_vulkan
+%s1 
 %s1 %s2
 %s1 %s2 %s3
 %s:  %.3f Anim Event %s:%d -> '%s'(%d)\n
@@ -6042,8 +6186,13 @@ $ent_renderbounds
 %s:  transitioning entities from previous map '%s' (landmark='%s') - start\n
 %s:  } IGameSystem::LoopActivateAllSystems done\n
 %s:  } IGameSystem::LoopDeactivateAllSystems done\n
+%s: %.3f\t
+%s: %d
 %s: %d (%d)\n
 %s: %d challenges
+%s: %f
+%s: %s
+%s: %s %s
 %s: %s [%d/%d] %.2f%%\n
 %s: %s not breaking as there is no model.\n
 %s: %s thinking for %.02f ms!\n
@@ -6053,6 +6202,8 @@ $ent_renderbounds
 %s: %s: Not spawning break_create_particle as the part name was filtered out (expecting match of %s %s, received %s)\n
 %s: %s: Not spawning particle as the effect name is empty.\n
 %s: %s: Spawning particle effect %s.\n
+%s: %s\n
+%s: %s\t
 %s: (%d Chars)\n
 %s: (%d bit)\n
 %s: (%d) Name: %s
@@ -6105,12 +6256,22 @@ $ent_renderbounds
 %s: unable to grow count by %u (currently %u)\n
 %s: unexpected parameter format for InputSetBodyGroup. Had %s, expected <bodygroupname,partnumber>\n
 %s: unexpected parameter type %s, expected a CString\n
+%s:%d
+%s:%d, 
 %s:%d: rec->data != rec->input\n
+%s:%s
+%s:%s:
+%s::%s
 %s::%s (%u)
 %s::%s (Entity Output Handler)
 %s:Gamerules: entering state #%d\n
 %s:Gamerules: entering state '%s'\n
+%s;%s
+%s< %s%s >
+%s<br><br>
 %s<span class="Match">%s</span>%s
+%s=%c
+%s=%s
 %s?interpolation=lanczos-none&output-format=jpeg&output-quality=92&fit=inside|*:%d
 %s?interpolation=lanczos-none&output-format=jpeg&output-quality=95&fit=inside|*:70
 %sAbs Angles: (%.2f, %.2f, %.2f) \n
@@ -6148,15 +6309,21 @@ $ent_renderbounds
 %sSlot%d
 %s[%s] [%.2f %.2f %.2f] %.2f (%d)
 %s\n%2.f - Pos: %.2f, Orient: %.2f
+%s\n+%s
 %s\t%32.32s = "%s"\n
 %s_%03d.vpk
+%s_%d
+%s_%s
 %s_%sComplete
 %s_%s_%d%d%d%d
+%s_%s_%i
 %s_%s_%i-%i-%i_%02uh%02um%02us
 %s_%s_None
 %s_%s_earned
 %s_%s_max
 %s_%s_remaining
+%s_%u
+%s_%u_%u
 %s_1610.png
 %s_BG
 %s_FG
@@ -6167,6 +6334,7 @@ $ent_renderbounds
 %s_Part2
 %s_Right
 %s_Secondary
+%s__%s
 %s__Value
 %s__name_alias
 %s_activity_modifier
@@ -6209,6 +6377,7 @@ $ent_renderbounds
 %s_total_earned
 %s_total_max
 %s_tracker
+%s_v%s
 %s_variant_%d
 %s_weak
 %s_x_offset
@@ -6304,9 +6473,17 @@ $ent_renderbounds
 %swebapi/IStore/GetClientStoreData/v0001%s
 %swebapi/IWorkshop/GetChangeLog/v0001?fileid=%llu
 %swebapi/IWorkshop/GetItemCreators/v0001%s
+%u %u %u
+%u - %u
+%u / %u
 %u scoring %2.3f for stat %d in match %llu\n
+%u,%s,%s\n
+%u-%u
 %u:%02u
 %u:%02u:%02u
+%u:%u
+%u:%u:%u
+%x %x
 &#8592;
 &#8593;
 &#8594;
@@ -6356,6 +6533,7 @@ $ent_renderbounds
 ( string TableName, string KeyName )
 (!((uintptr_t)(src_height) & ((2)-1)))
 (!((uintptr_t)(src_width) & ((2)-1)))
+(%.2fs)
 (%0.2f): %s
 (%d)  unit1:%d  unit2:%d  type:%d  priority:%d  time:%.1f\n
 (%d) Dynamic prop %s (model %s): no sequence named:%s\n
@@ -6366,10 +6544,14 @@ $ent_renderbounds
 (%d) Sending event for shot\n
 (%d) event: %s\n
 (%d) unit1: %d  unit2: %d\n
+(%d,%d)
+(%s,%s)
+(%s:%d)
 ((long)msg_hdr->msg_len) > 0
 (*MARK) must have an argument
 (*VERB) not recognized or malformed
 (0.1s interval)
+(0:%.2d)
 (0x%08X)'??'
 (?R or (?[+-]digits must be followed by )
 (ACTIVE)
@@ -8357,7 +8539,12 @@ $ent_renderbounds
 *\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f
 + <font color="#ffd825">%d</font><panel class="CombatEventGoldIcon" /> 
 + Added %s Player[%d]: %s\n
++%.1f
 +%01.1f
++%1.2f
++%d %s
++%df
++%u%%
 ++CLoopModeGame::SetWorldSession
 +Retiming
 +attack
@@ -8367,6 +8554,7 @@ $ent_renderbounds
 +reload
 +strafe
 , %sdeg
+, %sdeg )
 , Type=
 , at offset %d
 , but was 
@@ -8426,6 +8614,8 @@ $ent_renderbounds
 - invalid: too many econ items\n
 - invalid: trophy doesn't exist\n
 - invalid\n
+-%.1f
+-%d:%02d
 -+xX0123456789abcdef0123456789ABCDEF
 -+xX0123456789abcdefABCDEF
 -- @return 
@@ -8497,6 +8687,7 @@ $ent_renderbounds
 -world
 .  Please update your library.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
 . Difference of 
+.%lu
 ....................
 ...<truncated>...
 ../../../_build_/game/client/_vpc_client_dota/unity/linuxsteamrt64/_proto_/../_schema_/release/../../../../../../../../src/game/client/c_basecombatcharacter.cpp
@@ -8855,6 +9046,8 @@ $ent_renderbounds
 .vpcf
 .vpk
 .vtex
+/%s %s
+/%s %s 
 /<typename>', got: 
 /\*<>{}[]() 
 /addon_
@@ -8903,6 +9096,7 @@ $ent_renderbounds
 0 0 0 255
 0 == ( pInstance->GetOwnerEntity()->GetEntityIdentity()->GetFlags() & EF_IN_STAGING_LIST )
 0 directions!\n
+0%%\t
 0.0 0.0 -1.0
 0.0 0.0 0.0
 0.00
@@ -8916,11 +9110,13 @@ $ent_renderbounds
 0124
 0134
 0234
+0:%.2d
 0:%02d
 0x%4.4x 
 0x%X
 0x%X 
 0x%s
+1 : %2.1f
 1 arguments expected: %s <map name>\n
 1.0 1.0 1.0
 1.0.2, 30-Dec-2001
@@ -30860,6 +31056,9 @@ $ent_renderbounds
 ;models/heroes/pedestal/pedestal_2_ground_dire.vmdl
 ;sv_pausable;sv_cheats
 <!-- dmx encoding keyvalues2_noids 4 format vtex 1 -->\n"CDmeVtex"\n{\n\t"m_inputTextureArray" "element_array"\n\t[\n
+<%d:%llu>
+<%s:%llu>
+<%s:%s>
 </font>
 </span>
 </span> vs <span class="Team">
@@ -31331,6 +31530,7 @@ ANY)
 ANYCRLF)
 AOERadius
 APIN_txt
+APM: %d\n
 APPEND_EXP
 APPSYSTEM: In ConnectGameInterfaces(), s_nRegistrationCount is %d!\n
 APPSYSTEM: In ConnectGameInterfaces(), tried to use different connection modes!\n
@@ -33530,6 +33730,7 @@ BonusUnderdraftGoldPerChallenge
 BonusWeek
 BonusWeekReward
 Book
+Bool( %s )
 Boolean default must be true or false.
 Bopomofo
 Border.Bright
@@ -36937,6 +37138,7 @@ CWorkshopController::Subscribe
 CWorkshopController::Unsubscribe
 CWorldTextSceneObjectDesc
 CWrappedInterpolatedVar< CNetworkViewOffsetVector >
+C_%s
 C_BaseAnimating::InitBoneSetupThreadPool
 C_BaseButton_API
 C_BaseEntity::InterpolateEntities %.2fms\n
@@ -48419,6 +48621,7 @@ FullscreenVideoContainer
 FullscreenVideoTakeover
 FullyComplete
 FullyInstalled
+Func( %s )
 Function requires %d arguments; only %d given.
 Functions not supported in this evaluator (%s)
 Funn1k
@@ -52120,6 +52323,7 @@ Insufficient memory (case %d)
 Insufficient memory to compile regular expression
 Insufficient memory to determine regex match
 InsufficientTime
+Int( %d )
 IntAttribute
 IntParameter
 IntParameter2
@@ -60629,6 +60833,7 @@ ProjectileCollisionSize
 Promise already satisfied
 PromptItemName
 PromptPurchase
+Prop( %s )
 PropBreakableCreateAll
 PropColon
 PropData
@@ -66379,6 +66584,7 @@ Syriac
 System %s failed to init\n
 System Memory (%s): 
 SystemInputLanguageChanged
+T%d (%s)
 T0d/
 T61STRING
 TD_OFFSET_NORMAL
@@ -68936,6 +69142,7 @@ ValueNone
 ValueSet
 ValueYes
 ValveHeadAnim
+Var( %s )
 VariableExchangeInput
 VariableExchangeOutput
 VariableExchangeRecipe
@@ -70165,15 +70372,19 @@ ZoomedOut
 [Ability Schema]: %s\n
 [Additional text in debugoverlay_dashboard]
 [BREAK]
+[C:%u:%u]
 [CC Log %s]: d: %f, ls: %f, %s\n
 [CPulseCell_ReturnValues]
 [DIFFERS]
 [Debug Subtitle]
+[G:%u:%u]
 [GAMEEVENT] Event '%s' (index %d) added %s listener %p\n
 [HEX DUMP]:
+[I:%u:%u]
 [IMMEDIATE_HALT]
 [INVALID]
 [Index: 
+[L:%u:%u]
 [M:%u:%u:%u]
 [MISSING] '%s'
 [NAA] EricL
@@ -70185,21 +70396,29 @@ ZoomedOut
 [OBSOLETE - Use SetParticleControlTransformForward] Set the orientation on a control point on a particle system
 [OBSOLETE - Use SetParticleControlTransform] (int nFXIndex, int nPoint, Vector vecForward, Vector vecLeft, Vector vecUp) - Set the orientation for a control on a particle effect
 [OBSOLETE - Use SetParticleControlTransform] (int nFXIndex, int nPoint, vForward, vRight, vUp) - Set the orientation for a control on a particle effect (NOTE: This is left handed -- bad!!)
+[P:%u:%u]
 [RETURN R%d]
 [RETURN]
+[T:%u:%u]
 [TL] quentins
 [U:%u:%u:%u]
+[U:%u:%u]
+[a:%u:%u]
 [abi:
+[c:%u:%u]
 [complete_limit]
 [dt %5.2f] velocity: %s
 [english]
 [ex %5.2f] extrap  : frac %.6f%s
 [friend]
+[g:%u:%u]
 [h] %8llx (%-30.30s) <%3.3s> [loc] %-33.33s [abs] %-33.33s [ang] %-33.33s [s] %5.3f
 [hud]
+[i:%u:%u]
 [in %5.2f] interp  : frac %.6f%s
 [lazy = true] can only be specified for submessage fields.
 [libprotobuf %s %s:%d] %s\n
+[net] %s
 [none]
 [not bound]
 [null]
@@ -70240,6 +70459,7 @@ ZoomedOut
 \n  Problem     : 
 \n  Problem     : Enum value did not match field type:\n    Expected  : 
 \n  Problem     : Field is not the right type for this message:\n    Expected  : 
+\n%*s
 \n%*s            
 \n%*sExtensions: 
 \n%*sLog ID    : 
@@ -70321,6 +70541,7 @@ ZoomedOut
 \t"nocompress" "1"\n
 \t"nomip" "1"\n\n
 \t$$$$$$$\n\v\f\r
+\t%.*s\n
 \t%2d (%d)%s::%s - %s
 \t%s %d/%d \n
 \t%s - %zu KB (%%%.0f)\n
@@ -70452,12 +70673,15 @@ ZoomedOut
 \tm_fLockTime = gpGlobals->curtime()\n
 \tmaterial materials/overviews/%s\n
 \tno user data available\n
+\tpos_x %d\n
+\tpos_y %d\n
 \tscale %.3f\n
 \tslow_duration: %2.2f\n
 \tstun_duration: %2.2f\n
 \ttarget: %s\n
 \ttarget_source: %s\n
 \ttimestamp: %2.3f\n
+\ttype: %u\n
 \tvalue: %d\n
 \tvalue: %u\n
 \txp_reason: %u\n
@@ -71789,6 +72013,7 @@ at_time
 atan2
 ate_cheese
 atomic, 
+att(%d:%s)
 attach particle effect
 attach_armlet_1
 attach_armlet_2
@@ -72455,6 +72680,7 @@ bn error
 bn lib
 bn pubkey error
 bn to asn1 integer error
+bn(%d,%d)
 bn_add.c
 bn_blind.c
 bn_ctx.c
@@ -72951,6 +73177,7 @@ c2tnb239v2
 c2tnb239v3
 c2tnb359v1
 c2tnb431r1
+c=%s
 cACertificate
 cNAMERecord
 cRLSign
@@ -80186,6 +80413,7 @@ htmlescapednewlines
 http
 http request
 http://
+http://%s/
 http://cdn.dota2.com.cn/apps/dota2/videos/international2025/short_film/%s.webm
 http://img.youtube.com/vi/%s/default.jpg
 http://media.steampowered.com/apps/dota2/images/leagues/
@@ -81638,6 +81866,7 @@ kv 0x%p Release refcount == %d\n
 kv_%s
 l <= sizeof(c->iv)
 l12d
+l=%s
 label
 label_item_def
 labyrinth_all_aghs
@@ -87510,6 +87739,7 @@ null_value
 nullptr == GetControllerInternal( T::s_nControllerTypeID, pOwner, hExternalGraph, false )
 nullptr is not a valid argument.
 nullptr output boolean given.
+num=%d : 
 numStates <= s_nMaxStates
 num_abandons
 num_accepted
@@ -90803,6 +91033,8 @@ rating_change_state
 ratings_count
 rattletrap
 ravage
+raw://%s
+raw://%s%s
 raw://resource/flash3/%s
 raw://resource/flash3/images/items/%s.png
 raw://resource/flash3/images/spellicons/%s.png
@@ -99920,6 +100152,7 @@ uppervalue
 upvotes
 urandom_result > 0 || ( urandom_result < 0 && errno == EINTR )
 url( 
+url( %s )
 url( none )
 usable
 usable_gc
@@ -101332,6 +101565,7 @@ zuus
 { particle_domain_ui_name = 'Tracking Projectile' particle_domain_internal_name = 'C_DOTA_TrackingProjectileInfoParticleAPI'  }
 {"app_id":%d,"cheer_target_id":"%s","cheers":[%s]}
 {"cheer_type":%u,"cheer_amount":%u}
+{0x%x}
 {T:s:match_timestamp} {T:t:match_timestamp}
 {d:event_level}
 {d:hero_damage}
@@ -101368,6 +101602,7 @@ zuus
 {width}
 {| class="standard-table" style="width: 100%;"\n! Enumerator\n! Value\n! Description\n
 {| class="standard-table" style="width: 100%;"\n! Function\n! Signature\n! Description\n
+| %lld\n
 |47?6
 |<C!FReQ
 |}Eq1

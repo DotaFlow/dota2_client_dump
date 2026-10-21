@@ -22,17 +22,23 @@
 !m_boolPunchThroughPixels
 !m_boolTransparent
 $ORIGIN
+%.*Lf
 %3d: e=%.3f rms=%.6f %u\n
 %I:%M:%S %p
 %\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v
 %a %b %e %T %Y
 %cmaps%c
+%d %d %d
 %d %d %d %d
 %d (s/n %d)
+%g %g
+%g %g %g
 %g %g %g %g
 %lld
 %llu
 %s  '%s' --> '%s' : %s (%s) [delay=%.2f;times=%d;type=%d]\n
+%s %s
+%s %s %s
 %s %s %s %s
 %s - unknown entity lump '%s'\n
 %s - unknown or invalid world '%s'\n
@@ -44,8 +50,11 @@ $ORIGIN
 %s allocation count overflow( add %llu + current %llu > max %llu )\n
 %s called on a pool arena (no root available)\n
 %s executing script: %s\n
+%s%s
 %s( No I/O Connections )\n
+%s->R%d
 %s0x%08X:%s = "%s"\n
+%s: %s\n
 %s: Invalid lock state %d\n
 %s: __pos (which is %zu) > __size (which is %zu)
 %s: __pos (which is %zu) > this->size() (which is %zu)
@@ -57,11 +66,15 @@ $ORIGIN
 %s: max element overflow, cur count %u + %u\n
 %s: member count overflow (%u)\n
 %s: no space for allocation of %u\n
+%s:%s
 %s== World '%s' Entity Lump '%s': %d entities ==\n
 %sEntity %d (%s '%s'):\n
 %sI/O Connections:\n
+%u %u %u
 (!((uintptr_t)(src_height) & ((2)-1)))
 (!((uintptr_t)(src_width) & ((2)-1)))
+(%d,%d)
+(%s:%d)
 (None)
 (anonymous namespace)
 (dst_width % 2 == 0) && (dst_width >= 0)
@@ -7983,6 +7996,7 @@ xdigit
 y != __null
 yield_token
 zero
+{0x%x}
 {default arg#
 {lambda
 {parm#

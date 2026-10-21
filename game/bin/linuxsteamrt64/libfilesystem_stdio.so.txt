@@ -49,7 +49,11 @@
 !m_nPackFileNumber
 "; boundary="----%s"%s%s
 $ORIGIN
+%*s%s
 %*s%s OF %s {\n
+%*s%s:\n
+%*s%s:\n%*s
+%*s%s\n
 %*s<EMPTY>\n
 %*s<Not Supported>
 %*s<Parse Error>
@@ -83,9 +87,12 @@ $ORIGIN
 %*scrlNum: 
 %*scrlTime: 
 %*scrlUrl: 
+%*s}\n
 %-18s
 %-20s "%s" %s%s\n
+%-20s %s\n
 %-23s %s Kx=%-8s Au=%-4s Enc=%-9s Mac=%-4s%s\n
+%-8d
 %.14s.%03dZ
 %019lu
 %02X
@@ -95,6 +102,7 @@ $ORIGIN
 %02x%c
 %02x%s
 %04d%02d%02d%02d%02d%02dZ
+%04x - 
 %12sPublic Key Algorithm: 
 %12sUnable to load Public Key\n
 %5ld:
@@ -102,19 +110,25 @@ $ORIGIN
 %8sIssuer Unique ID: 
 %8sSubject Unique ID: 
 %8sVersion: %lu (0x%lx)\n
+%d %d %d
 %d %d %d %d
 %d.%d.%d.%d
 %d.%d.%d.%d/%d.%d.%d.%d
 %ld bytes leaked in %d chunks\n
+%ld\n
 %lld
 %lli
 %llu
 %lu:%s:%s:%d:%s\n
 %s %2d %02d:%02d:%02d %d%s
 %s %2d %02d:%02d:%02d%.*s %d%s
+%s %s
+%s %s %s
 %s %s %s %s
 %s %s HTTP/1.0\r\n
 %s %s%lu (%s0x%lx)\n
+%s (%s)
+%s 0\n
 %s PARAMETERS
 %s PRIVATE KEY
 %s algorithm "%s" unsupported\n
@@ -123,12 +137,14 @@ $ORIGIN
 %s%02X
 %s%04x - <SPACES/NULS>\n
 %s%c%08lx.%s%d
+%s%s
 %s(%d): OpenSSL internal error, assertion failed: %s\n
 %s, %s, %s\n
 %s------%s%s
 %s------%s--%s%s
 %s/%llu
 %s/%llu.vpk
+%s/%s
 %s: (%d bit)\n
 %s: __pos (which is %zu) > __size (which is %zu)
 %s: __pos (which is %zu) > this->size() (which is %zu)
@@ -141,6 +157,7 @@ $ORIGIN
 %s: no space for allocation of %u\n
 %s: unable to grow count by %u (currently %u)\n
 %s:%d: rec->data != rec->input\n
+%s:%s
 %s\nFailed to load file (%s)!\n
 %s_%03d.vpk
 &p^?CSI
@@ -170,6 +187,7 @@ $ORIGIN
 ---FS%s:  close %s 0x%llX %i (%.3f)\n
 ---FS%s:  read %s %i 0x%llX (%.3f)\n
 ---FS%s:  write %s %i 0x%llX\n
+.%lu
 ....................
 ../common/crypto.cpp
 ../common/opensslwrapper.cpp
@@ -2880,6 +2898,7 @@ ZLONG
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 \n            Not After : 
 \n        Public key OCSP hash: 
+\n%*s
 \n%*s            
 \n%*sExtensions: 
 \n%*sLog ID    : 
@@ -3312,6 +3331,7 @@ bn error
 bn lib
 bn pubkey error
 bn to asn1 integer error
+bn(%d,%d)
 bn_add.c
 bn_blind.c
 bn_ctx.c
