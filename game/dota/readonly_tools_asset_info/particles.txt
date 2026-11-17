@@ -563626,7 +563626,7 @@ particles/econ/events/seasonal_reward_line_fall_2025/teleport_end_fallrewardline
 particles/econ/events/seasonal_reward_line_fall_2025/teleport_start_fallrewardline_2025.vpcf
 - GAME: dota/particles/econ/events/seasonal_reward_line_fall_2025/teleport_start_fallrewardline_2025.vpcf_c
 - CONTENT: dota/particles/econ/events/seasonal_reward_line_fall_2025/teleport_start_fallrewardline_2025.vpcf
-- INPUT: dota/particles/econ/events/seasonal_reward_line_fall_2025/teleport_start_fallrewardline_2025.vpcf (crc 1099455678)
+- INPUT: dota/particles/econ/events/seasonal_reward_line_fall_2025/teleport_start_fallrewardline_2025.vpcf (crc 2446369550)
 - REF: particles/econ/events/seasonal_reward_line_fall_2025/teleport_start_fallrewardline_2025_c.vpcf
 - REF: particles/econ/events/seasonal_reward_line_fall_2025/teleport_start_fallrewardline_2025_counter.vpcf
 - REF: particles/econ/events/seasonal_reward_line_fall_2025/teleport_start_fallrewardline_2025_d.vpcf
@@ -563643,8 +563643,11 @@ particles/econ/events/seasonal_reward_line_fall_2025/teleport_start_fallrewardli
 - SUBASSET REF: particle_operator
  - C_INIT_InitFloat 1
  - C_OP_PositionLock 1
+ - C_OP_SetControlPointFieldToScalarExpression 1
  - C_OP_StopAfterCPDuration 1
- - C_OP_SetSingleControlPointPosition 2
+ - C_OP_SetSingleControlPointPosition 3
+ - C_OP_SetControlPointPositions 3
+ - C_OP_SetParentControlPointsToChildCP 1
 
 particles/econ/events/seasonal_reward_line_fall_2025/teleport_start_fallrewardline_2025_c.vpcf
 - GAME: dota/particles/econ/events/seasonal_reward_line_fall_2025/teleport_start_fallrewardline_2025_c.vpcf_c
