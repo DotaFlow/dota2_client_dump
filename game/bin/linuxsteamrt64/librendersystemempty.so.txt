@@ -1,7 +1,5 @@
         %3d %3d %3d %3d %3d %3d %3d %3d
         %4u %4u %4u %4u %4u %4u %4u %4u
-    %u iterated blocks\n
-    %u unfinished blocks\n
     Component %d: %dhx%dv q=%d
     Component %d: dc=%d ac=%d
     with %d x %d thumbnail image
@@ -34,10 +32,6 @@
  throw
  transaction_safe
  volatile
-!m_boolDone
-!m_boolOpaque
-!m_boolPunchThroughPixels
-!m_boolTransparent
 "channels" attribute not found in the header.
 "compression" attribute not found in the header.
 "dataWindow" attribute not found in the header or invalid.
@@ -50,7 +44,6 @@
 $ORIGIN
 %-100s %-6s %-6s\n
 %.*Lf
-%3d: e=%.3f rms=%.6f %u\n
 %I:%M:%S %p
 %\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v
 %a %b %e %T %Y
@@ -84,11 +77,8 @@ $ORIGIN
 (dst_width % 3 == 0) && (dst_width > 0)
 (dy & 0x1ffff) == 0
 (dy & 0x3ffff) == 0
-(fWeightSumLeft + fWeightSumRight) > 0.0f
-(fWeightSumTop + fWeightSumBottom) > 0.0f
 *.spv
 *N12_GLOBAL__N_117io_error_categoryE
-*N12_GLOBAL__N_121future_error_categoryE
 *N12_GLOBAL__N_121system_error_categoryE
 *N12_GLOBAL__N_122generic_error_categoryE
 *NSt13__facet_shims12_GLOBAL__N_112collate_shimIcEE
@@ -107,7 +97,6 @@ $ORIGIN
 *NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIcLb1EEE
 *NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIwLb0EEE
 *NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIwLb1EEE
-*St19_Sp_counted_deleterIPhZN3Etc13EncodeMipmapsEPfjjNS1_5Image6FormatENS1_11ErrorMetricEfjjjjPNS1_8RawImageEPibEUlS0_E_SaIvELN9__gnu_cxx12_Lock_policyE2EE
 *ZL34RenderDocCaptureWindowAutoCompleteRK8CCommandR10CUtlVectorI10CUtlStringi25CUtlVectorMemory_GrowableIS3_iLm0EEEEUlP14CSwapChainBaseE_
 *ZN13CRenderDocAPI22CaptureRenderDocWindowERK15CCommandContextRK8CCommandEUlP14CSwapChainBaseE_
 *ZN13CSOAContainer10FilterFromERKS_iiiiiPKfbEUlvE0_
@@ -128,7 +117,6 @@ $ORIGIN
 *ZN13CSOAContainer9FilterInZEi9IntAABB_tiPKfbEUlvE_
 *ZN19CTextureManagerBase23ReadCompiledTextureMipsE11CWeakHandleI31InfoForResourceTypeCTextureBaseEiii11ImageFormatSt10shared_ptrI26IReadTexturePixelsCallbackEEUlP25IAsyncResourceDataRequestSt10unique_ptrI25IAsyncProcessedDataResultSt14default_deleteISA_EEE_
 *ZN19CTextureManagerBase31MN_AddAsyncTextureBitsHookupJobEP12CTextureBaseRKNS_24AsyncTextureHookupData_tEEUlvE_
-*ZN3Etc13EncodeMipmapsEPfjjNS_5Image6FormatENS_11ErrorMetricEfjjjjPNS_8RawImageEPibEUlPhE_
 *\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f
 , channels = 
 , height = 
@@ -148,20 +136,6 @@ $ORIGIN
 /home/saml/dev/steam/thirdpartycode/nonredist/libyuv/libyuv/source/row_common.cc
 /home/saml/dev/steam/thirdpartycode/nonredist/libyuv/libyuv/source/scale.cc
 /home/saml/dev/steam/thirdpartycode/nonredist/libyuv/libyuv/source/scale_common.cc
-/home/timo/source2/main/src/thirdparty/etc2comp/EtcLib/./EtcCodec/EtcBlock4x4Encoding.h
-/home/timo/source2/main/src/thirdparty/etc2comp/EtcLib/Etc/EtcImage.cpp
-/home/timo/source2/main/src/thirdparty/etc2comp/EtcLib/EtcCodec/EtcBlock4x4.cpp
-/home/timo/source2/main/src/thirdparty/etc2comp/EtcLib/EtcCodec/EtcBlock4x4Encoding.cpp
-/home/timo/source2/main/src/thirdparty/etc2comp/EtcLib/EtcCodec/EtcBlock4x4Encoding.h
-/home/timo/source2/main/src/thirdparty/etc2comp/EtcLib/EtcCodec/EtcBlock4x4Encoding_ETC1.cpp
-/home/timo/source2/main/src/thirdparty/etc2comp/EtcLib/EtcCodec/EtcBlock4x4Encoding_R11.cpp
-/home/timo/source2/main/src/thirdparty/etc2comp/EtcLib/EtcCodec/EtcBlock4x4Encoding_RG11.cpp
-/home/timo/source2/main/src/thirdparty/etc2comp/EtcLib/EtcCodec/EtcBlock4x4Encoding_RGB8.cpp
-/home/timo/source2/main/src/thirdparty/etc2comp/EtcLib/EtcCodec/EtcBlock4x4Encoding_RGB8A1.cpp
-/home/timo/source2/main/src/thirdparty/etc2comp/EtcLib/EtcCodec/EtcBlock4x4Encoding_RGBA8.cpp
-/home/timo/source2/main/src/thirdparty/etc2comp/EtcLib/EtcCodec/EtcDifferentialTrys.cpp
-/home/timo/source2/main/src/thirdparty/etc2comp/EtcLib/EtcCodec/EtcIndividualTrys.cpp
-/home/timo/source2/main/src/thirdparty/etc2comp/EtcLib/EtcCodec/EtcSortedBlockList.cpp
 /src/
 0 0 0
 0 0 0 0
@@ -542,7 +516,6 @@ Bogus message code %d
 Bogus sampling factors
 Bogus virtual array access
 Borderless Window
-Broken promise
 Buffer passed to JPEG library is too small
 ByteToFloat
 ByteToFloatRow_C
@@ -614,7 +587,6 @@ CTSListBase::Detach()
 CTSListBase::InternalPop()
 CTSListBase::InternalPush(TSLNodeBase_t*)
 CTSQueue corruption
-CTSQueue: Misaligned queue\n
 CTextureManagerBase::MarkAsyncUpdatedThisFrame - Invalid texture handle.\n
 CThreadEvent::CThreadEvent(bool)
 CThreadEvent::Set()
@@ -748,6 +720,7 @@ Corrupt JPEG data: bad Huffman code
 Corrupt JPEG data: bad arithmetic code
 Corrupt JPEG data: found marker 0x%02x instead of RST%d
 Corrupt JPEG data: premature end of data segment
+Could not create procedural texture %s\n
 Could not decode alpha data.
 CpuId
 CreateConstantBufferInternal
@@ -793,7 +766,6 @@ DivideRow_16_C
 Don't support DXLevel < 110
 Driver Name:  %s\nDriver Version: %s\nVendorId / DeviceId:  0x%x / 0x%x\nSubSystem / Rev:  0x%x / 0x%x\nDXLevel:  %d\nTexture memory:  %s\nGPU memory (use / budget): %s / %s\nVid:  %s, render at %i x %i, display at %i x %i, refresh rate %.2fHz (%uHz desktop)\n
 ERROR: CUtlSymbolTableLarge element limit of %u exceeded\n
-ETC1
 EXECUTABLE_PATH
 EXPORTSYSTEM_INTERFACE_VERSION_001
 EXRHeader variable is not initialized.
@@ -807,16 +779,13 @@ Empty
 Empty Driver
 Empty JPEG image (DNL not supported)
 Empty input file
-Enable multithreading to use std::thread
 End Of Image
 EnsureElementCapacity
 EnsureMemberCapacity
 EnsureUnusedCapacity
-Etc::DifferentialTrys::DifferentialTrys(Etc::ColorFloatRGBA, Etc::ColorFloatRGBA, const unsigned int*, const unsigned int*, unsigned int, int, int)
-Etc::Image::EncodingStatus Etc::Image::Encode(Etc::Image::Format, Etc::ErrorMetric, float, unsigned int, unsigned int)
-Etc::IndividualTrys::IndividualTrys(Etc::ColorFloatRGBA, Etc::ColorFloatRGBA, const unsigned int*, const unsigned int*, unsigned int)
 Exclusive Fullscreen
 ExtractModuleMetadata
+Failed AllocateTexture for '%s'\n
 Failed to compute channel layout.\n
 Failed to create temporary file %s
 Failed to parse channel info.\n
@@ -833,7 +802,6 @@ FindOrCreateTexture: Dimensions %dx%dx%d exceed maximum supported by device (%dx
 FindOrCreateTexture: Only dynamic textures can have non-global scope!\n
 FindOrCreateTexture: Texture scope is unspecified!\n
 FindOrCreateTexture: Texture usage is unspecified!\n
-Finished %d Blocks out of %d\n
 FixedDiv1_C
 FixedDiv1_X86
 FixedDiv_C
@@ -842,7 +810,6 @@ FixupResourceName: Illegal full path passed in ("%s")!\n
 FixupResourceName: Illegal path, missing extension passed in ("%s")!\n
 FloatBitMap_t::LoadFromBuffer: Received improper buffer size, skipping!\n
 FloatBitMap_t::LoadFromBuffer: Unsupported color format, skipping!\n
-FloatBitMap_t::WriteToBuffer: Received improper buffer size %s (expecting %s), skipping!\n
 FormatArgumentsToBuffer(IFormatOutputStream*, char const*, CTypeErasedFormattingWrapper const*, int)
 FormatTo(IFormatOutputStream*, CFormatStringElement, bool)
 FormatTo(IFormatOutputStream*, CFormatStringElement, float)
@@ -856,10 +823,8 @@ Frame setup failed
 Freed EMS handle %u
 Freed XMS handle %u
 Friday
-Future already retrieved
 GCC: (SteamRT 14.2.0-19~steamrt3.1+bsrt3.1) 14.2.0
 GCC: (SteamRT 4.8.4-1ubuntu15~12.04+steamrt1.2+srt2) 4.8.4
-GCC: (SteamRT 9.3.0-13+steamrt1.2+srt1) 9.3.0
 GLIBCXX_TUNABLES
 GLIBC_2.14
 GLIBC_2.17
@@ -1372,40 +1337,15 @@ N10__cxxabiv117__class_type_infoE
 N10__cxxabiv119__foreign_exceptionE
 N10__cxxabiv120__si_class_type_infoE
 N10__cxxabiv121__vmi_class_type_infoE
-N3Etc16Block4x4EncodingE
-N3Etc20Block4x4Encoding_R11E
-N3Etc21Block4x4Encoding_ETC1E
-N3Etc21Block4x4Encoding_RG11E
-N3Etc21Block4x4Encoding_RGB8E
-N3Etc22Block4x4Encoding_RGBA8E
-N3Etc23Block4x4Encoding_RGB8A1E
-N3Etc29Block4x4Encoding_RGBA8_OpaqueE
-N3Etc30Block4x4Encoding_RGB8A1_OpaqueE
-N3Etc34Block4x4Encoding_RGBA8_TransparentE
-N3Etc35Block4x4Encoding_RGB8A1_TransparentE
 N3psd15MallocAllocatorE
 N3psd4FileE
 N3psd9AllocatorE
 N9__gnu_cxx20recursive_init_errorE
 N9__gnu_cxx24__concurrence_lock_errorE
 N9__gnu_cxx26__concurrence_unlock_errorE
-NSt13__future_base12_Result_baseE
-NSt13__future_base12_Task_setterISt10unique_ptrINS_7_ResultIjEENS_12_Result_base8_DeleterEENSt6thread8_InvokerISt5tupleIJMN3Etc5ImageEFjjjjEPSB_jijEEEEjEE
-NSt13__future_base12_Task_setterISt10unique_ptrINS_7_ResultIvEENS_12_Result_base8_DeleterEENSt6thread8_InvokerISt5tupleIJMN3Etc5ImageEFvjjEPSB_ijEEEEvEE
-NSt13__future_base13_State_baseV2E
-NSt13__future_base15_Deferred_stateINSt6thread8_InvokerISt5tupleIJMN3Etc5ImageEFjjjjEPS5_jijEEEEjEE
-NSt13__future_base15_Deferred_stateINSt6thread8_InvokerISt5tupleIJMN3Etc5ImageEFvjjEPS5_ijEEEEvEE
-NSt13__future_base17_Async_state_implINSt6thread8_InvokerISt5tupleIJMN3Etc5ImageEFjjjjEPS5_jijEEEEjEE
-NSt13__future_base17_Async_state_implINSt6thread8_InvokerISt5tupleIJMN3Etc5ImageEFvjjEPS5_ijEEEEvEE
-NSt13__future_base21_Async_state_commonV2E
-NSt13__future_base7_ResultIjEE
-NSt13__future_base7_ResultIvEE
 NSt3_V214error_categoryE
 NSt6locale5facet6__shimE
 NSt6locale5facetE
-NSt6thread11_State_implINS_8_InvokerISt5tupleIJZNSt13__future_base17_Async_state_implINS1_IS2_IJMN3Etc5ImageEFjjjjEPS6_jijEEEEjEC4EOSB_EUlvE_EEEEEE
-NSt6thread11_State_implINS_8_InvokerISt5tupleIJZNSt13__future_base17_Async_state_implINS1_IS2_IJMN3Etc5ImageEFvjjEPS6_ijEEEEvEC4EOSB_EUlvE_EEEEEE
-NSt6thread6_StateE
 NSt7__cxx1110moneypunctIcLb0EEE
 NSt7__cxx1110moneypunctIcLb1EEE
 NSt7__cxx1110moneypunctIwLb0EEE
@@ -1505,17 +1445,16 @@ NV21ToRGB24Row_SSSE3
 NV21ToYUV24
 NV21ToYUV24Row_C
 NV_NULL
-No associated state
 Not a JPEG file: starts with 0x%02x 0x%02x
 Not a key frame.
 Not implemented yet
 November
+Nsight Graphics GPU Trace is only supported on Vulkan.\n
 NumCols() <= V_ARRAYSIZE( s_DummyRow )
 OUTSTANDING_HOOKUP_REQUEST 
 Obtained EMS handle %u
 Obtained XMS handle %u
 October
-Only DXT1/DXT5 online texture compression supported.\n
 Opened temporary file %s
 Output aborted.
 Output file write error --- out of disk space?
@@ -1549,7 +1488,6 @@ P410ToARGBRow_Any_SSSE3
 P410ToARGBRow_C
 P410ToARGBRow_SSSE3
 PERF WARNING: Texture pool size set to more than 80%% of total GPU memory.\n
-PLANAR
 POSIX
 PSD is %d bits per channel, only 8 bit PSDs can be read into a Bitmap_t\n
 PanoramaTextServices001
@@ -1582,13 +1520,13 @@ Plat_MessageBox
 Plat_NonFatalErrorFunc
 Plat_OsSpecificHandleToPlatWindow
 Plat_ReconfigureWindow
+Plat_RelativeTicks
 Plat_WindowToOsSpecificHandle
 Premature end of JPEG file
 Premature end of input file
 Premature end-of-file encountered.
 Premature end-of-partition0 encountered.
 ProcessResourceThreadEvents
-Promise already satisfied
 PropertyEditorSystem_001
 Push
 QC,A
@@ -1607,6 +1545,7 @@ R32_UINT
 R8G8B8A8_ETC2_EAC
 R8G8B8_ETC2
 R8G8_UINT
+R8G8_UNORM
 R8_UINT
 R8_UNORM
 R9G9B9E5_FLOAT
@@ -1637,7 +1576,6 @@ RAWToYRowMatrix_C
 RAWToYRow_C
 RENDERDOC_GetAPI
 RESOURCE_TYPE_TEXTURE
-RG11
 RG11_EAC
 RG1616
 RG1616F
@@ -1672,15 +1610,12 @@ RGB565ToARGBRow_SSE2
 RGB565ToI420
 RGB565ToUVRow_C
 RGB565ToYRow_C
-RGB8
 RGB888
-RGB8A1
 RGBA1010102
 RGBA16161616
 RGBA16161616F
 RGBA32323232F
 RGBA32323232_UINT
-RGBA8
 RGBA8888
 RGBA8888_LINEAR
 RGBA8888_UINT
@@ -1710,6 +1645,11 @@ RandomFloat
 Read failed on temporary file
 Read from EMS failed
 Read from XMS failed
+ReadCompiledTextureMips: %s has %d pages ending past the %llu bytes read\n
+ReadCompiledTextureMips: %s has a %d byte page layout block, too short\n
+ReadCompiledTextureMips: %s has a bad page offset table ( %d pages )\n
+ReadCompiledTextureMips: %s has no page layout block, it needs recompiling\n
+ReadCompiledTextureMips: %s has no texture header\n
 ReadCompiledTextureMips: callback for %s is still using mip %d, but that data is about to be recycled\n
 ReadCompiledTextureMips: cannot convert %s from %s to %s\n
 ReadCompiledTextureMips: could not create a read request for %s\n
@@ -1720,6 +1660,8 @@ ReadCompiledTextureMips: mip %d of %s is below page size but the texture has no 
 ReadCompiledTextureMips: mip %d of %s runs past the data we read\n
 ReadCompiledTextureMips: mip %d of %s wants pages out to byte %lld but only %llu were read\n
 ReadCompiledTextureMips: no texture data for %s\n
+ReadCompiledTextureMips: page %d of %s did not decompress (format %d, %d bytes)\n
+ReadCompiledTextureMips: short read for %s, %llu bytes do not cover the header\n
 ReadCompiledTextureMips: short read for %s, wanted %lld bytes of mips but got %llu\n
 RegisterConCommand: Unknown error registering con command "%s"!\n
 RegisterConVar: Unknown error registering convar "%s"!\n
@@ -1747,11 +1689,6 @@ RotatePlane
 RotatePlane180
 RotatePlane270
 RotatePlane90
-SIGNED_R11
-SIGNED_RG11
-SRGB8
-SRGB8A1
-SRGBA8
 SSE and SSE2 are required.
 Sampling factors too large for interleaved scan
 Saturday
@@ -2035,7 +1972,6 @@ St12codecvt_base
 St12ctype_bynameIcE
 St12ctype_bynameIwE
 St12domain_error
-St12future_error
 St12length_error
 St12out_of_range
 St12system_error
@@ -2097,10 +2033,7 @@ St20__codecvt_utf16_baseIwE
 St20bad_array_new_length
 St21__ctype_abstract_baseIcE
 St21__ctype_abstract_baseIwE
-St23_Sp_counted_ptr_inplaceINSt13__future_base15_Deferred_stateINSt6thread8_InvokerISt5tupleIJMN3Etc5ImageEFjjjjEPS6_jijEEEEjEESaISC_ELN9__gnu_cxx12_Lock_policyE2EE
-St23_Sp_counted_ptr_inplaceINSt13__future_base15_Deferred_stateINSt6thread8_InvokerISt5tupleIJMN3Etc5ImageEFvjjEPS6_ijEEEEvEESaISC_ELN9__gnu_cxx12_Lock_policyE2EE
-St23_Sp_counted_ptr_inplaceINSt13__future_base17_Async_state_implINSt6thread8_InvokerISt5tupleIJMN3Etc5ImageEFjjjjEPS6_jijEEEEjEESaISC_ELN9__gnu_cxx12_Lock_policyE2EE
-St23_Sp_counted_ptr_inplaceINSt13__future_base17_Async_state_implINSt6thread8_InvokerISt5tupleIJMN3Etc5ImageEFvjjEPS6_ijEEEEvEESaISC_ELN9__gnu_cxx12_Lock_policyE2EE
+St23_Sp_counted_ptr_inplaceI26VirtualTextureTileLayout_tSaIvELN9__gnu_cxx12_Lock_policyE2EE
 St23_Sp_counted_ptr_inplaceINSt8__detail4_NFAISt12regex_traitsIcEEESaIvELN9__gnu_cxx12_Lock_policyE2EE
 St23__codecvt_abstract_baseIDiDu11__mbstate_tE
 St23__codecvt_abstract_baseIDic11__mbstate_tE
@@ -2158,16 +2091,25 @@ SwapUVRow_Any_AVX2
 SwapUVRow_Any_SSSE3
 SwapUVRow_C
 SwapUVRow_SSSE3
+TEXMAN:   %s\n
+TEXMAN: %s %s\n
 TEXMAN: %s LoadStreamingData (%s)\n
 TEXMAN: %s MarkTextureBitsLoaded (%s)\n
 TEXMAN: %s TextureBecameEvicted (%s)\n
+TEXMAN: %s has %d tiles, too few for mip %d, can't sample it as an ordinary texture\n
+TEXMAN: %s has no tile layout block, it needs recompiling\n
+TEXMAN: %s is sampled as an ordinary texture, but the virtual texture manager has no tiles for it\n
+TEXMAN: %s is sampled as an ordinary texture, streaming its mips detiled from its %s\n
 TEXMAN: %s loaded %s %i/%i mips (%ix%i / %ix%i) of %s (%i bytes)\n
+TEXMAN: %s stores its tiled mips out of order, every load of it as an ordinary texture reads all of them\n
 TEXMAN: Abandoning job in %s (%s)\n
 TEXMAN: Adding %llx+%p (binding=%p), %s to abandoned hookup jobs\n
 TEXMAN: Deleting %d textures\n
 TEXMAN: Outstanding stream count %d -> %d (%s)\n
+TEXMAN: no tile layout for %s\n
+TEXMAN: no virtual texture manager, and %s can't stream as an ordinary texture\n
+TEXMAN: reloading %d virtual textures created before the virtual texture manager\n
 TEXMAN: streaming data requested for a virtual texture before the VT manager callbacks were installed, not preloading (%s)\n
-TEXMAN: virtual texture created before the VT manager callbacks were installed, falling back to normal streaming (%s)\n
 TLS init function for 
 TLS wrapper function for 
 Texture Streaming:\n
@@ -2198,6 +2140,7 @@ TransposeWx8_Fast_Any_SSSE3
 TransposeWx8_Fast_SSSE3
 TransposeWx8_SSSE3
 TransposeWxH_C
+Triggers a RenderDoc capture with sc_rendergraph_schedule pass reordering disabled, so passes are captured in submission order
 Truncated header.
 Trying to create a render target with invalid image format %s\n
 Trying to set dxlevel (%d) which is higher than the card can support (%d)!\n
@@ -2261,7 +2204,6 @@ Unknown Adobe color transform code %d
 Unknown compression type.
 Unknown error
 Unrecognized component IDs %d %d %d, assuming YCbCr
-Unsupported ETC image format %d.\n
 Unsupported JPEG data precision %d
 Unsupported JPEG process: SOF type 0x%02x
 Unsupported PSD color mode!\n
@@ -2363,6 +2305,7 @@ V_ZSTD_freeDCtx
 V_ZSTD_getDictID_fromDDict
 V_ZSTD_getDictID_fromFrame
 V_ZSTD_getFrameContentSize
+V_ZSTD_isError
 V_acosd
 V_acosf
 V_asinf
@@ -2412,6 +2355,7 @@ Version
 Video Card %s (%04x : %04x)\n
 Video config version number changed ( '%s' is version %i, current version is %i ). Resetting video config.\n
 Virtual array controller messed up
+Virtual textures created before the virtual texture manager
 VisBuilder_001
 Vrad3_001
 Vulkan
@@ -2484,13 +2428,6 @@ YUY2ToYRow_C
 YUY2ToYRow_SSE2
 Z23DoNotDeleteReadCallbackI14CReadGPUBufferESt10shared_ptrIT_EPS2_EUlPS0_E_
 ZFP compression is not supported.
-ZN10MatrixMath11ScaleMatrixILb0E15CVariableMatrixEEvRT0_fEUliiE_
-ZN10MatrixMath11ScaleMatrixILb1E15CVariableMatrixEEvRT0_fEUliiE_
-ZN10MatrixMath14MatrixMultiplyILb0E15CVariableMatrixS1_EEvRK17CSparseMatrixBaseIfERKT0_PT1_EUliiE_
-ZN10MatrixMath14MatrixMultiplyILb1E15CVariableMatrixS1_EEvRK17CSparseMatrixBaseIfERKT0_PT1_EUliiE_
-ZN10MatrixMath17AddMatrixToMatrixILb0E15CVariableMatrixS1_EEvRKT0_PT1_EUliiE_
-ZN10MatrixMath17AddMatrixToMatrixILb1E15CVariableMatrixS1_EEvRKT0_PT1_EUliiE_
-ZN10MatrixMath23AddScaledMatrixToMatrixILb1E15CVariableMatrixS1_EEvfRKT0_PT1_EUliiE_
 [abi:
 [friend]
 \f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*
@@ -2538,7 +2475,6 @@ __cxa_begin_catch
 __cxa_call_terminate
 __cxa_call_unexpected
 __cxa_current_exception_type
-__cxa_deleted_virtual
 __cxa_demangle
 __cxa_end_catch
 __cxa_finalize
@@ -2671,7 +2607,6 @@ __int128
 __iswctype_l
 __newlocale
 __nl_langinfo_l
-__once_proxy
 __pthread_key_create
 __stack_chk_fail
 __strcoll_l
@@ -2697,9 +2632,6 @@ _txnal_cow_string_c_str(void const*)
 _txnal_logic_error_get_msg(void*)
 _txnal_runtime_error_get_msg(void*)
 _txnal_sso_string_c_str(void const*)
-a_fDecodedAlpha >= 0.0f
-a_uiMultithreadingStride > 0
-a_uiRadius <= MAX_RADIUS
 abort
 alert
 alignof 
@@ -2864,7 +2796,6 @@ char32_t const& std::min<char32_t>(char32_t const&, char32_t const&)
 char8_t
 chunkCount
 circumflex
-clock_gettime
 close
 cmyk document with non 8 bit channels
 cntrl
@@ -2897,7 +2828,6 @@ decltype(nullptr)
 default
 delete 
 delete[] 
-deleted virtual method called\n
 depth <= 16
 depth >= 1
 depth >= 10
@@ -2920,20 +2850,11 @@ dxsupport.cfg
 dy != __null
 dynamic_cast
 eaFO
-effortblocks = %d\n
 eight
-encodingTry.m_fError < 3.40282346638528859811704183484516925e+38F
 equals-sign
 exclamation-mark
 exit
 f5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5Jx
-fMinAlpha <= fMaxAlpha
-fMinGrn <= fMaxGrn
-fMinRed <= fMaxRed
-fWeightSumBottom > 0.0f
-fWeightSumLeft > 0.0f
-fWeightSumRight > 0.0f
-fWeightSumTop > 0.0f
 false
 fclose
 feof
@@ -2943,12 +2864,10 @@ five
 fixed_invtbl8
 fj".T\CMek2>x
 float
-float Etc::Block4x4Encoding::CalcPixelError(Etc::ColorFloatRGBA, float, Etc::ColorFloatRGBA)
-float Etc::Block4x4Encoding::GetError()
 float64
 floatbitmap.cpp
-floatbitmap.cpp(1213): Unsupported color format "%s", skipping!\n
-floatbitmap.cpp(520): Conversion not supported yet!\n
+floatbitmap.cpp(515): Conversion not supported yet!\n
+fmaf
 fopen
 fopen64
 form-feed
@@ -2959,7 +2878,6 @@ fread
 free
 fseek
 ftell
-future
 fwrite
 g_Mathlib_GammaToLinearByteTable
 g_TSPointerListNodes
@@ -2978,9 +2896,7 @@ g_pRenderHardwareConfig is NULL. Display mode information unavailable\n
 g_pThreadPool
 gc^A
 generic
-get_nprocs
 getentropy
-gettimeofday
 glibcxx.eh_pool
 global constructors keyed to 
 global destructors keyed to 
@@ -3035,33 +2951,14 @@ guard variable for std::time_put<char, std::ostreambuf_iterator<char, std::char_
 guard variable for std::time_put<wchar_t, std::ostreambuf_iterator<wchar_t, std::char_traits<wchar_t>>>::id
 half
 hardware
+has a bad tile offset table ( %d tiles )
+has compressed tiles but no offsets
+has no tiles for mip %d
+has tiles in unknown compression %d
 header crc mismatch
 height > 0
 hidden alias for 
 hyphen
-iBlue >= 0 && iBlue <= 15
-iBlue >= 0 && iBlue <= 31
-iBlue1 >= (signed)(0+a_uiRadius) && iBlue1 <= (signed)(31 - a_uiRadius)
-iBlue2 < 0 || iBlue2 > 31
-iBlue2 >= (signed)(0 + a_uiRadius) && iBlue2 <= (signed)(31 - a_uiRadius)
-iDBlue >= -4 && iDBlue < 4
-iDBlue2 >= -4 && iDBlue2 < 4
-iDGreen >= -4 && iDGreen < 4
-iDGreen2 >= -4 && iDGreen2 < 4
-iDRed >= -4 && iDRed < 4
-iDRed2 >= -4 && iDRed2 < 4
-iGreen >= 0 && iGreen <= 15
-iGreen >= 0 && iGreen <= 31
-iGreen1 >= (signed)(0 + a_uiRadius) && iGreen1 <= (signed)(31 - a_uiRadius)
-iGreen2 < 0 || iGreen2 > 31
-iGreen2 >= (signed)(0 + a_uiRadius) && iGreen2 <= (signed)(31 - a_uiRadius)
-iGreen2 >= 0 && iGreen2 <= 31
-iRed >= 0 && iRed <= 15
-iRed >= 0 && iRed <= 31
-iRed1 >= (signed)(0 + a_uiRadius) && iRed1 <= (signed)(31 - a_uiRadius)
-iRed2 < 0 || iRed2 > 31
-iRed2 >= (signed)(0 + a_uiRadius) && iRed2 <= (signed)(31 - a_uiRadius)
-iRed2 >= 0 && iRed2 <= 31
 iboxwidth > 0
 iconv
 iconv_close
@@ -3093,6 +2990,7 @@ int& std::forward<int&>(std::remove_reference<int&>::type&)
 int&& std::forward<int>(std::remove_reference<int>::type&)
 int16
 int64
+int8
 invalid bit length repeat
 invalid block type
 invalid code -- missing end-of-block
@@ -3135,6 +3033,7 @@ kYvuJPEGConstants
 kYvuV2020Constants
 kh9F
 ld-linux-x86-64.so.2
+ldexpf
 left-curly-bracket
 left-parenthesis
 left-square-bracket
@@ -3151,6 +3050,8 @@ locale::facet::_S_create_c_locale name not valid
 locale::facet::_S_lc_ctype_c_locale duplocale error
 locale::facet::_S_lc_ctype_c_locale newlocale error
 localize
+log1p
+log1pf
 long
 long const& std::min<long>(long const&, long const&)
 long double
@@ -3163,18 +3064,7 @@ longjmp
 loongson-ext
 loongson-mmi
 lower
-m_boolDiff
-m_boolDiff == true
-m_boolTransparent
-m_fError >= 0.0f
-m_mode == MODE_ETC1
-m_mode == MODE_H
-m_mode == MODE_PLANAR
-m_mode == MODE_T
-m_paucEncodingBits == nullptr
-m_uiAddedBlocks < m_uiImageBlocks
-m_uiAddedBlocks == m_uiImageBlocks
-m_uiEncodingIterations == 0
+lroundf
 makemelast
 malloc
 max megabytes
@@ -3194,7 +3084,6 @@ min_processor_count
 mold 2.36.0 (compatible with GNU ld)
 mt19937
 nTries < 10000000
-nanosleep
 new 
 new[]
 newline
@@ -3240,8 +3129,6 @@ operator new[](unsigned long, void*)
 operator"" 
 panorama_
 panorama_rt_
-pass %u\n
-pbucket->plinkLast->GetNext() == nullptr
 percent-sign
 period
 pixelAspectRatio
@@ -3251,32 +3138,18 @@ png/jpg
 print
 printf
 pthread_cond_broadcast
-pthread_cond_destroy
-pthread_cond_signal
 pthread_cond_wait
-pthread_create
-pthread_detach
-pthread_getspecific
-pthread_join
-pthread_key_create
-pthread_key_delete
 pthread_mutex_lock
 pthread_mutex_unlock
 pthread_once
 pthread_rwlock_rdlock
 pthread_rwlock_unlock
 pthread_rwlock_wrlock
-pthread_setspecific
-ptry < &a_phalf->m_atry[DifferentialTrys::Half::MAX_TRYS]
-ptry < &a_phalf->m_atry[IndividualTrys::Half::MAX_TRYS]
-ptry->m_fError < 3.40282346638528859811704183484516925e+38F
-ptryBest1 != nullptr
-ptryBest2 != nullptr
 punct
-pure virtual method called\n
 question-mark
 quotation-mark
 rTRC
+r_renderdoc_capture_frame_unscheduled
 random_device could not be read
 random_device: getentropy failed
 random_device: rdrand failed
@@ -3304,7 +3177,6 @@ resourcesystem
 right-curly-bracket
 right-parenthesis
 right-square-bracket
-roundf
 s5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5Jx
 sRGB
 scale <= 32768
@@ -3345,11 +3217,11 @@ signed char
 sizeof 
 sizeof...
 slash
+solid color
 source_file
 source_line
 space
 sprintf
-sqrtf
 src_height != 0
 src_height == ((dst_height + 1) / 2)
 src_width != 0
@@ -3409,16 +3281,6 @@ std::_Function_handler<bool (char), std::__detail::_CharMatcher<std::regex_trait
 std::_Function_handler<bool (char), std::__detail::_CharMatcher<std::regex_traits<char>, true, false>>::_M_manager(std::_Any_data&, std::_Any_data const&, std::_Manager_operation)
 std::_Function_handler<bool (char), std::__detail::_CharMatcher<std::regex_traits<char>, true, true>>::_M_invoke(std::_Any_data const&, char&&)
 std::_Function_handler<bool (char), std::__detail::_CharMatcher<std::regex_traits<char>, true, true>>::_M_manager(std::_Any_data&, std::_Any_data const&, std::_Manager_operation)
-std::_Head_base<0ul, std::__future_base::_State_baseV2::_Make_ready*, false>::_Head_base()
-std::_Head_base<0ul, std::__future_base::_State_baseV2::_Make_ready*, false>::_M_head(std::_Head_base<0ul, std::__future_base::_State_baseV2::_Make_ready*, false> const&)
-std::_Head_base<0ul, std::__future_base::_State_baseV2::_Make_ready*, false>::_M_head(std::_Head_base<0ul, std::__future_base::_State_baseV2::_Make_ready*, false>&)
-std::_Head_base<0ul, std::thread::_State*, false>::_Head_base()
-std::_Head_base<0ul, std::thread::_State*, false>::_M_head(std::_Head_base<0ul, std::thread::_State*, false> const&)
-std::_Head_base<0ul, std::thread::_State*, false>::_M_head(std::_Head_base<0ul, std::thread::_State*, false>&)
-std::_Head_base<1ul, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>, true>::_Head_base()
-std::_Head_base<1ul, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>, true>::_M_head(std::_Head_base<1ul, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>, true>&)
-std::_Head_base<1ul, std::default_delete<std::thread::_State>, true>::_Head_base()
-std::_Head_base<1ul, std::default_delete<std::thread::_State>, true>::_M_head(std::_Head_base<1ul, std::default_delete<std::thread::_State>, true>&)
 std::_Rb_tree_black_count(std::_Rb_tree_node_base const*, std::_Rb_tree_node_base const*)
 std::_Rb_tree_decrement(std::_Rb_tree_node_base const*)
 std::_Rb_tree_decrement(std::_Rb_tree_node_base*)
@@ -3432,27 +3294,13 @@ std::_Rb_tree_rotate_left(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*&)
 std::_Rb_tree_rotate_right(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*&)
 std::_Setfill<char> std::setfill<char>(char)
 std::_Setfill<wchar_t> std::setfill<wchar_t>(wchar_t)
-std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_add_ref_lock_nothrow()
-std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_destroy()
-std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_get_use_count() const
-std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release_last_use()
+std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release()
 std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release_last_use_cold()
-std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_weak_release()
-std::_Sp_counted_ptr<std::nullptr_t, (__gnu_cxx::_Lock_policy)2>::_M_dispose()
 std::_Sp_counted_ptr_inplace<std::__detail::_NFA<std::regex_traits<char>>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_destroy()
 std::_Sp_counted_ptr_inplace<std::__detail::_NFA<std::regex_traits<char>>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_dispose()
 std::_Sp_counted_ptr_inplace<std::__detail::_NFA<std::regex_traits<char>>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_get_deleter(std::type_info const&)
 std::_Sp_counted_ptr_inplace<std::__detail::_NFA<std::regex_traits<char>>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::~_Sp_counted_ptr_inplace()
-std::_Tuple_impl<0ul, std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>::_M_head(std::_Tuple_impl<0ul, std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>> const&)
-std::_Tuple_impl<0ul, std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>::_M_head(std::_Tuple_impl<0ul, std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>&)
-std::_Tuple_impl<0ul, std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>::_Tuple_impl()
-std::_Tuple_impl<0ul, std::thread::_State*, std::default_delete<std::thread::_State>>::_M_head(std::_Tuple_impl<0ul, std::thread::_State*, std::default_delete<std::thread::_State>> const&)
-std::_Tuple_impl<0ul, std::thread::_State*, std::default_delete<std::thread::_State>>::_M_head(std::_Tuple_impl<0ul, std::thread::_State*, std::default_delete<std::thread::_State>>&)
-std::_Tuple_impl<0ul, std::thread::_State*, std::default_delete<std::thread::_State>>::_Tuple_impl()
-std::_Tuple_impl<1ul, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>::_M_head(std::_Tuple_impl<1ul, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>&)
-std::_Tuple_impl<1ul, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>::_Tuple_impl()
-std::_Tuple_impl<1ul, std::default_delete<std::thread::_State>>::_M_head(std::_Tuple_impl<1ul, std::default_delete<std::thread::_State>>&)
-std::_Tuple_impl<1ul, std::default_delete<std::thread::_State>>::_Tuple_impl()
+std::_Sp_make_shared_tag::_S_ti()::__tag
 std::_V2::error_category::_M_message(int) const
 std::_V2::error_category::_M_message[abi:cxx11](int) const
 std::_V2::error_category::default_error_condition(int) const
@@ -3471,10 +3319,6 @@ std::_Vector_base<std::Catalog_info*, std::allocator<std::Catalog_info*>>::_Vect
 std::_Vector_base<std::Catalog_info*, std::allocator<std::Catalog_info*>>::_Vector_impl::~_Vector_impl()
 std::_Vector_base<std::Catalog_info*, std::allocator<std::Catalog_info*>>::_Vector_impl_data::_Vector_impl_data()
 std::_Vector_base<std::Catalog_info*, std::allocator<std::Catalog_info*>>::~_Vector_base()
-std::__at_thread_exit(std::__at_thread_exit_elt*)
-std::__atomic_futex_unsigned_base::_M_futex_notify_all(unsigned int*)
-std::__atomic_futex_unsigned_base::_M_futex_wait_until(unsigned int*, unsigned int, bool, std::chrono::duration<long, std::ratio<1l, 1l>>, std::chrono::duration<long, std::ratio<1l, 1000000000l>>)
-std::__atomic_futex_unsigned_base::_M_futex_wait_until_steady(unsigned int*, unsigned int, bool, std::chrono::duration<long, std::ratio<1l, 1l>>, std::chrono::duration<long, std::ratio<1l, 1000000000l>>)
 std::__codecvt_abstract_base<char, char, __mbstate_t>::__codecvt_abstract_base(unsigned long)
 std::__codecvt_abstract_base<char, char, __mbstate_t>::~__codecvt_abstract_base()
 std::__codecvt_abstract_base<char16_t, char, __mbstate_t>::__codecvt_abstract_base(unsigned long)
@@ -3562,11 +3406,6 @@ std::__codecvt_utf8_utf16_base<wchar_t>::do_max_length() const
 std::__codecvt_utf8_utf16_base<wchar_t>::do_out(__mbstate_t&, wchar_t const*, wchar_t const*, wchar_t const*&, char*, char*, char*&) const
 std::__codecvt_utf8_utf16_base<wchar_t>::do_unshift(__mbstate_t&, char*, char*, char*&) const
 std::__codecvt_utf8_utf16_base<wchar_t>::~__codecvt_utf8_utf16_base()
-std::__condvar::__condvar()
-std::__condvar::notify_all()
-std::__condvar::notify_one()
-std::__condvar::wait(std::mutex&)
-std::__condvar::~__condvar()
 std::__construct_ios_failure(void*, char const*)
 std::__convert_from_v(__locale_struct* const&, char*, int, char const*, ...)
 std::__cow_string::__cow_string()
@@ -4362,22 +4201,6 @@ std::__detail::_Scanner<char>::_M_scan_in_bracket()
 std::__detail::_Scanner<char>::_M_scan_normal()
 std::__detail::_State<char>::~_State()
 std::__detail::_StateSeq<std::regex_traits<char>>::_M_clone()
-std::__exception_ptr::exception_ptr::_M_addref()
-std::__exception_ptr::exception_ptr::_M_get() const
-std::__exception_ptr::exception_ptr::_M_release()
-std::__exception_ptr::exception_ptr::_M_safe_bool_dummy()
-std::__exception_ptr::exception_ptr::__cxa_exception_type() const
-std::__exception_ptr::exception_ptr::exception_ptr()
-std::__exception_ptr::exception_ptr::exception_ptr(std::__exception_ptr::exception_ptr const&)
-std::__exception_ptr::exception_ptr::exception_ptr(void (std::__exception_ptr::exception_ptr::*)())
-std::__exception_ptr::exception_ptr::exception_ptr(void*)
-std::__exception_ptr::exception_ptr::operator void (std::__exception_ptr::exception_ptr::*)()() const
-std::__exception_ptr::exception_ptr::operator!() const
-std::__exception_ptr::exception_ptr::operator=(std::__exception_ptr::exception_ptr const&)
-std::__exception_ptr::exception_ptr::swap(std::__exception_ptr::exception_ptr&)
-std::__exception_ptr::exception_ptr::~exception_ptr()
-std::__exception_ptr::operator!=(std::__exception_ptr::exception_ptr const&, std::__exception_ptr::exception_ptr const&)
-std::__exception_ptr::operator==(std::__exception_ptr::exception_ptr const&, std::__exception_ptr::exception_ptr const&)
 std::__facet_shims::__any_string& std::__facet_shims::__any_string::operator=<char>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)
 std::__facet_shims::__any_string& std::__facet_shims::__any_string::operator=<char>(std::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)
 std::__facet_shims::__any_string& std::__facet_shims::__any_string::operator=<wchar_t>(std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>> const&)
@@ -4388,13 +4211,6 @@ std::__facet_shims::__any_string::__str_rep::operator wchar_t const*() const
 std::__facet_shims::__any_string::operator std::basic_string<char, std::char_traits<char>, std::allocator<char>><char>() const
 std::__facet_shims::__any_string::operator std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>><wchar_t>() const
 std::__facet_shims::__any_string::~__any_string()
-std::__future_base::_Result_base::_Result_base()
-std::__future_base::_Result_base::~_Result_base()
-std::__future_base::_State_baseV2::_Make_ready* const& std::__get_helper<0ul, std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>(std::_Tuple_impl<0ul, std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>> const&)
-std::__future_base::_State_baseV2::_Make_ready*& std::__get_helper<0ul, std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>(std::_Tuple_impl<0ul, std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>&)
-std::__future_base::_State_baseV2::_Make_ready::_M_set()
-std::__future_base::_State_baseV2::_Make_ready::_S_run(void*)
-std::__future_base::_State_baseV2::_Make_ready::~_Make_ready()
 std::__ios_failure::__ios_failure(char const*)
 std::__ios_failure::__ios_failure(char const*, std::error_code const&)
 std::__ios_failure::~__ios_failure()
@@ -4445,32 +4261,12 @@ std::__numpunct_cache<char>::~__numpunct_cache()
 std::__numpunct_cache<wchar_t>::_M_cache(std::locale const&)
 std::__numpunct_cache<wchar_t>::__numpunct_cache(unsigned long)
 std::__numpunct_cache<wchar_t>::~__numpunct_cache()
-std::__once_call
-std::__once_callable
 std::__pad<char, std::char_traits<char>>::_S_pad(std::ios_base&, char, char*, char const*, long, long)
 std::__pad<wchar_t, std::char_traits<wchar_t>>::_S_pad(std::ios_base&, wchar_t, wchar_t*, wchar_t const*, long, long)
 std::__ptr_traits_ptr_to<char const*, char const, false>::pointer_to(char const&)
 std::__ptr_traits_ptr_to<char*, char, false>::pointer_to(char&)
 std::__ptr_traits_ptr_to<wchar_t const*, wchar_t const, false>::pointer_to(wchar_t const&)
 std::__ptr_traits_ptr_to<wchar_t*, wchar_t, false>::pointer_to(wchar_t&)
-std::__shared_count<(__gnu_cxx::_Lock_policy)2>::_M_get_use_count() const
-std::__shared_count<(__gnu_cxx::_Lock_policy)2>::_M_swap(std::__shared_count<(__gnu_cxx::_Lock_policy)2>&)
-std::__shared_count<(__gnu_cxx::_Lock_policy)2>::__shared_count()
-std::__shared_count<(__gnu_cxx::_Lock_policy)2>::__shared_count(std::__weak_count<(__gnu_cxx::_Lock_policy)2> const&, std::nothrow_t)
-std::__shared_count<(__gnu_cxx::_Lock_policy)2>::~__shared_count()
-std::__shared_ptr<std::__future_base::_State_baseV2, (__gnu_cxx::_Lock_policy)2>::__shared_ptr(std::__weak_ptr<std::__future_base::_State_baseV2, (__gnu_cxx::_Lock_policy)2> const&, std::nothrow_t)
-std::__shared_ptr<std::__future_base::_State_baseV2, (__gnu_cxx::_Lock_policy)2>::get() const
-std::__shared_ptr<std::__future_base::_State_baseV2, (__gnu_cxx::_Lock_policy)2>::operator bool() const
-std::__shared_ptr<std::__future_base::_State_baseV2, (__gnu_cxx::_Lock_policy)2>::~__shared_ptr()
-std::__shared_ptr<std::thread::_Impl_base, (__gnu_cxx::_Lock_policy)2>::__shared_ptr()
-std::__shared_ptr<std::thread::_Impl_base, (__gnu_cxx::_Lock_policy)2>::__shared_ptr(std::__shared_ptr<std::thread::_Impl_base, (__gnu_cxx::_Lock_policy)2>&&)
-std::__shared_ptr<std::thread::_Impl_base, (__gnu_cxx::_Lock_policy)2>::get() const
-std::__shared_ptr<std::thread::_Impl_base, (__gnu_cxx::_Lock_policy)2>::operator=(std::__shared_ptr<std::thread::_Impl_base, (__gnu_cxx::_Lock_policy)2>&&)
-std::__shared_ptr<std::thread::_Impl_base, (__gnu_cxx::_Lock_policy)2>::reset()
-std::__shared_ptr<std::thread::_Impl_base, (__gnu_cxx::_Lock_policy)2>::swap(std::__shared_ptr<std::thread::_Impl_base, (__gnu_cxx::_Lock_policy)2>&)
-std::__shared_ptr<std::thread::_Impl_base, (__gnu_cxx::_Lock_policy)2>::~__shared_ptr()
-std::__shared_ptr_access<std::__future_base::_State_baseV2, (__gnu_cxx::_Lock_policy)2, false, false>::_M_get() const
-std::__shared_ptr_access<std::__future_base::_State_baseV2, (__gnu_cxx::_Lock_policy)2, false, false>::operator->() const
 std::__sso_string::__sso_string()
 std::__sso_string::__sso_string(char const*, unsigned long)
 std::__sso_string::__sso_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)
@@ -4488,7 +4284,6 @@ std::__throw_bad_exception()
 std::__throw_bad_function_call()
 std::__throw_bad_typeid()
 std::__throw_domain_error(char const*)
-std::__throw_future_error(int)
 std::__throw_invalid_argument(char const*)
 std::__throw_ios_failure(char const*)
 std::__throw_ios_failure(char const*, int)
@@ -4547,17 +4342,6 @@ std::__timepunct_cache<char>::~__timepunct_cache()
 std::__timepunct_cache<wchar_t>::_S_timezones
 std::__timepunct_cache<wchar_t>::__timepunct_cache(unsigned long)
 std::__timepunct_cache<wchar_t>::~__timepunct_cache()
-std::__uniq_ptr_data<std::__future_base::_State_baseV2::_Make_ready, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>, true, true>::__uniq_ptr_data(std::__future_base::_State_baseV2::_Make_ready*)
-std::__uniq_ptr_data<std::thread::_State, std::default_delete<std::thread::_State>, true, true>::__uniq_ptr_data(std::thread::_State*)
-std::__uniq_ptr_impl<std::__future_base::_State_baseV2::_Make_ready, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>::_M_deleter()
-std::__uniq_ptr_impl<std::__future_base::_State_baseV2::_Make_ready, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>::_M_ptr()
-std::__uniq_ptr_impl<std::__future_base::_State_baseV2::_Make_ready, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>::_M_ptr() const
-std::__uniq_ptr_impl<std::__future_base::_State_baseV2::_Make_ready, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>::__uniq_ptr_impl(std::__future_base::_State_baseV2::_Make_ready*)
-std::__uniq_ptr_impl<std::thread::_State, std::default_delete<std::thread::_State>>::_M_deleter()
-std::__uniq_ptr_impl<std::thread::_State, std::default_delete<std::thread::_State>>::_M_ptr()
-std::__uniq_ptr_impl<std::thread::_State, std::default_delete<std::thread::_State>>::_M_ptr() const
-std::__uniq_ptr_impl<std::thread::_State, std::default_delete<std::thread::_State>>::__uniq_ptr_impl(std::thread::_State*)
-std::__uniq_ptr_impl<std::thread::_State, std::default_delete<std::thread::_State>>::release()
 std::__use_cache<std::__moneypunct_cache<char, false>>::operator()(std::locale const&) const
 std::__use_cache<std::__moneypunct_cache<char, true>>::operator()(std::locale const&) const
 std::__use_cache<std::__moneypunct_cache<wchar_t, false>>::operator()(std::locale const&) const
@@ -4567,11 +4351,7 @@ std::__use_cache<std::__numpunct_cache<wchar_t>>::operator()(std::locale const&)
 std::__verify_grouping(char const*, unsigned long, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)
 std::__verify_grouping(char const*, unsigned long, std::string const&)
 std::__verify_grouping_impl(char const*, unsigned long, char const*, unsigned long)
-std::__weak_count<(__gnu_cxx::_Lock_policy)2>::~__weak_count()
-std::__weak_ptr<std::__future_base::_State_baseV2, (__gnu_cxx::_Lock_policy)2>::~__weak_ptr()
 std::allocator
-std::atomic<bool>::load(std::memory_order) const
-std::atomic<bool>::store(bool, std::memory_order)
 std::auto_ptr<std::Catalog_info>::auto_ptr(std::Catalog_info*)
 std::auto_ptr<std::Catalog_info>::get() const
 std::auto_ptr<std::Catalog_info>::operator->() const
@@ -5282,18 +5062,6 @@ std::char_traits<wchar_t>::move(wchar_t*, wchar_t const*, unsigned long)
 std::char_traits<wchar_t>::not_eof(unsigned int const&)
 std::char_traits<wchar_t>::to_char_type(unsigned int const&)
 std::char_traits<wchar_t>::to_int_type(wchar_t const&)
-std::chrono::_V2::steady_clock::is_steady
-std::chrono::_V2::steady_clock::now()
-std::chrono::_V2::system_clock::is_steady
-std::chrono::_V2::system_clock::now()
-std::chrono::duration<long, std::ratio<1l, 1000000000l>> std::chrono::__duration_cast_impl<std::chrono::duration<long, std::ratio<1l, 1000000000l>>, std::ratio<1000000000l, 1l>, long, false, true>::__cast<long, std::ratio<1l, 1l>>(std::chrono::duration<long, std::ratio<1l, 1l>> const&)
-std::chrono::duration<long, std::ratio<1l, 1000000000l>>::count() const
-std::chrono::duration<long, std::ratio<1l, 1000000000l>>::duration<long, std::ratio<1l, 1l>, void>(std::chrono::duration<long, std::ratio<1l, 1l>> const&)
-std::chrono::duration<long, std::ratio<1l, 1000000000l>>::duration<long, void>(long const&)
-std::chrono::duration<long, std::ratio<1l, 1l>>::count() const
-std::chrono::duration<long, std::ratio<1l, 1l>>::duration<long, void>(long const&)
-std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l>>>::time_point(std::chrono::duration<long, std::ratio<1l, 1000000000l>> const&)
-std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l>>>::time_point(std::chrono::duration<long, std::ratio<1l, 1000000000l>> const&)
 std::codecvt<char, char, __mbstate_t> const& std::use_facet<std::codecvt<char, char, __mbstate_t>>(std::locale const&)
 std::codecvt<char, char, __mbstate_t> const* std::__try_use_facet<std::codecvt<char, char, __mbstate_t>>(std::locale const&)
 std::codecvt<char, char, __mbstate_t>::codecvt(__locale_struct*, unsigned long)
@@ -5402,12 +5170,6 @@ std::collate_byname<char>::~collate_byname()
 std::collate_byname<wchar_t>::collate_byname(char const*, unsigned long)
 std::collate_byname<wchar_t>::collate_byname(std::string const&, unsigned long)
 std::collate_byname<wchar_t>::~collate_byname()
-std::common_type<std::chrono::duration<long, std::ratio<1l, 1l>>, std::chrono::duration<long, std::ratio<1l, 1000000000l>>>::type std::chrono::operator+<long, std::ratio<1l, 1l>, long, std::ratio<1l, 1000000000l>>(std::chrono::duration<long, std::ratio<1l, 1l>> const&, std::chrono::duration<long, std::ratio<1l, 1000000000l>> const&)
-std::condition_variable::condition_variable()
-std::condition_variable::notify_all()
-std::condition_variable::notify_one()
-std::condition_variable::wait(std::unique_lock<std::mutex>&)
-std::condition_variable::~condition_variable()
 std::ctype<char> const& std::__check_facet<std::ctype<char>>(std::ctype<char> const*)
 std::ctype<char> const& std::use_facet<std::ctype<char>>(std::locale const&)
 std::ctype<char> const* std::__try_use_facet<std::ctype<char>>(std::locale const&)
@@ -5477,11 +5239,6 @@ std::ctype_byname<wchar_t>::ctype_byname(char const*, unsigned long)
 std::ctype_byname<wchar_t>::ctype_byname(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, unsigned long)
 std::ctype_byname<wchar_t>::ctype_byname(std::string const&, unsigned long)
 std::ctype_byname<wchar_t>::~ctype_byname()
-std::current_exception()
-std::default_delete<std::__future_base::_State_baseV2::_Make_ready>& std::__get_helper<1ul, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>(std::_Tuple_impl<1ul, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>, >&)
-std::default_delete<std::__future_base::_State_baseV2::_Make_ready>::operator()(std::__future_base::_State_baseV2::_Make_ready*) const
-std::default_delete<std::thread::_State>& std::__get_helper<1ul, std::default_delete<std::thread::_State>>(std::_Tuple_impl<1ul, std::default_delete<std::thread::_State>, >&)
-std::default_delete<std::thread::_State>::operator()(std::thread::_State*) const
 std::deque<std::__detail::_StateSeq<std::regex_traits<char>>, std::allocator<std::__detail::_StateSeq<std::regex_traits<char>>>>::_M_reallocate_map(unsigned long, bool)
 std::deque<std::__detail::_StateSeq<std::regex_traits<char>>, std::allocator<std::__detail::_StateSeq<std::regex_traits<char>>>>::push_back(std::__detail::_StateSeq<std::regex_traits<char>> const&)
 std::domain_error::domain_error(char const*)
@@ -5502,11 +5259,9 @@ std::enable_if<std::__and_<std::__not_<std::__is_tuple_like<std::ios_base::_Word
 std::enable_if<std::__and_<std::__not_<std::__is_tuple_like<std::ios_base::_Words>>, std::is_move_constructible<std::ios_base::_Words>, std::is_move_assignable<std::ios_base::_Words>>::value, void>::type std::swap<std::ios_base::_Words>(std::ios_base::_Words&, std::ios_base::_Words&)
 std::enable_if<std::__and_<std::__not_<std::__is_tuple_like<std::locale>>, std::is_move_constructible<std::locale>, std::is_move_assignable<std::locale>>::value, void>::type std::swap<std::locale>(std::locale&, std::locale&)
 std::enable_if<std::__and_<std::__not_<std::__is_tuple_like<std::ostream*>>, std::is_move_constructible<std::ostream*>, std::is_move_assignable<std::ostream*>>::value, void>::type std::swap<std::ostream*>(std::ostream*&, std::ostream*&)
-std::enable_if<std::__and_<std::__not_<std::__is_tuple_like<std::thread::_Impl_base*>>, std::is_move_constructible<std::thread::_Impl_base*>, std::is_move_assignable<std::thread::_Impl_base*>>::value, void>::type std::swap<std::thread::_Impl_base*>(std::thread::_Impl_base*&, std::thread::_Impl_base*&)
 std::enable_if<std::__and_<std::__not_<std::__is_tuple_like<wchar_t*>>, std::is_move_constructible<wchar_t*>, std::is_move_assignable<wchar_t*>>::value, void>::type std::swap<wchar_t*>(wchar_t*&, wchar_t*&)
 std::enable_if<std::__and_<std::__not_<std::__is_tuple_like<wchar_t>>, std::is_move_constructible<wchar_t>, std::is_move_assignable<wchar_t>>::value, void>::type std::swap<wchar_t>(wchar_t&, wchar_t&)
 std::enable_if<std::__is_swappable<std::ios_base::_Words>::value, void>::type std::swap<std::ios_base::_Words, 8ul>(std::ios_base::_Words (&) [8ul], std::ios_base::_Words (&) [8ul])
-std::enable_if<std::chrono::__is_duration<std::chrono::duration<long, std::ratio<1l, 1000000000l>>>::value, std::chrono::duration<long, std::ratio<1l, 1000000000l>>>::type std::chrono::duration_cast<std::chrono::duration<long, std::ratio<1l, 1000000000l>>, long, std::ratio<1l, 1l>>(std::chrono::duration<long, std::ratio<1l, 1l>> const&)
 std::error_code::category() const
 std::error_code::default_error_condition() const
 std::error_code::error_code(int, std::_V2::error_category const&)
@@ -5525,10 +5280,6 @@ std::exception::what() const
 std::exception::~exception()
 std::fpos<__mbstate_t>::fpos(long)
 std::fpos<__mbstate_t>::operator long() const
-std::future_category()
-std::future_error: 
-std::future_error::what() const
-std::future_error::~future_error()
 std::get_catalogs()
 std::get_new_handler()
 std::get_terminate()
@@ -5812,8 +5563,6 @@ std::logic_error::operator=(std::logic_error const&)
 std::logic_error::operator=(std::logic_error&&)
 std::logic_error::what() const
 std::logic_error::~logic_error()
-std::make_error_code(std::errc)
-std::make_error_code(std::future_errc)
 std::make_error_code(std::io_errc)
 std::messages<char> const& std::use_facet<std::messages<char>>(std::locale const&)
 std::messages<char> const* std::__try_use_facet<std::messages<char>>(std::locale const&)
@@ -6014,10 +5763,7 @@ std::moneypunct_byname<wchar_t, true>::intl
 std::moneypunct_byname<wchar_t, true>::moneypunct_byname(char const*, unsigned long)
 std::moneypunct_byname<wchar_t, true>::moneypunct_byname(std::string const&, unsigned long)
 std::moneypunct_byname<wchar_t, true>::~moneypunct_byname()
-std::mutex::native_handle()
-std::mutex::unlock()
 std::nothrow
-std::notify_all_at_thread_exit(std::condition_variable&, std::unique_lock<std::mutex>)
 std::nullptr_t&& std::forward<std::nullptr_t>(std::remove_reference<std::nullptr_t&&>::type&)
 std::nullptr_t&& std::forward<std::nullptr_t>(std::remove_reference<std::nullptr_t>::type&)
 std::num_get<char, std::istreambuf_iterator<char, std::char_traits<char>>> const& std::__check_facet<std::num_get<char, std::istreambuf_iterator<char, std::char_traits<char>>>>(std::num_get<char, std::istreambuf_iterator<char, std::char_traits<char>>> const*)
@@ -6177,14 +5923,11 @@ std::numpunct_byname<char>::~numpunct_byname()
 std::numpunct_byname<wchar_t>::numpunct_byname(char const*, unsigned long)
 std::numpunct_byname<wchar_t>::numpunct_byname(std::string const&, unsigned long)
 std::numpunct_byname<wchar_t>::~numpunct_byname()
-std::operator!=(std::thread::id, std::thread::id)
 std::operator&(std::_Ios_Fmtflags, std::_Ios_Fmtflags)
 std::operator&(std::_Ios_Iostate, std::_Ios_Iostate)
 std::operator&(std::_Ios_Openmode, std::_Ios_Openmode)
-std::operator&(std::memory_order, std::__memory_order_modifier)
 std::operator&=(std::_Ios_Fmtflags&, std::_Ios_Fmtflags)
 std::operator==(std::error_condition const&, std::error_condition const&)
-std::operator==(std::thread::id, std::thread::id)
 std::operator|(std::_Ios_Fmtflags, std::_Ios_Fmtflags)
 std::operator|(std::_Ios_Iostate, std::_Ios_Iostate)
 std::operator|(std::_Ios_Openmode, std::_Ios_Openmode)
@@ -6305,8 +6048,6 @@ std::remove_reference<std::_Ios_Iostate&>::type&& std::move<std::_Ios_Iostate&>(
 std::remove_reference<std::_Ios_Openmode&>::type&& std::move<std::_Ios_Openmode&>(std::_Ios_Openmode&)
 std::remove_reference<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>&>::type&& std::move<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>&>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>&)
 std::remove_reference<std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>&>::type&& std::move<std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>&>(std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>&)
-std::remove_reference<std::__future_base::_State_baseV2::_Make_ready*&>::type&& std::move<std::__future_base::_State_baseV2::_Make_ready*&>(std::__future_base::_State_baseV2::_Make_ready*&)
-std::remove_reference<std::__shared_ptr<std::thread::_Impl_base, (__gnu_cxx::_Lock_policy)2>&>::type&& std::move<std::__shared_ptr<std::thread::_Impl_base, (__gnu_cxx::_Lock_policy)2>&>(std::__shared_ptr<std::thread::_Impl_base, (__gnu_cxx::_Lock_policy)2>&)
 std::remove_reference<std::allocator<char>&>::type&& std::move<std::allocator<char>&>(std::allocator<char>&)
 std::remove_reference<std::allocator<wchar_t>&>::type&& std::move<std::allocator<wchar_t>&>(std::allocator<wchar_t>&)
 std::remove_reference<std::basic_iostream<wchar_t, std::char_traits<wchar_t>>&>::type&& std::move<std::basic_iostream<wchar_t, std::char_traits<wchar_t>>&>(std::basic_iostream<wchar_t, std::char_traits<wchar_t>>&)
@@ -6327,14 +6068,10 @@ std::remove_reference<std::ios_base::_Words*&>::type&& std::move<std::ios_base::
 std::remove_reference<std::iostream&>::type&& std::move<std::iostream&>(std::iostream&)
 std::remove_reference<std::locale&>::type&& std::move<std::locale&>(std::locale&)
 std::remove_reference<std::ostream*&>::type&& std::move<std::ostream*&>(std::ostream*&)
-std::remove_reference<std::shared_ptr<std::thread::_Impl_base>&>::type&& std::move<std::shared_ptr<std::thread::_Impl_base>&>(std::shared_ptr<std::thread::_Impl_base>&)
 std::remove_reference<std::string&>::type&& std::move<std::string&>(std::string&)
 std::remove_reference<std::string::_Alloc_hider&>::type&& std::move<std::string::_Alloc_hider&>(std::string::_Alloc_hider&)
-std::remove_reference<std::thread::_Impl_base*&>::type&& std::move<std::thread::_Impl_base*&>(std::thread::_Impl_base*&)
-std::remove_reference<std::thread::_State*&>::type&& std::move<std::thread::_State*&>(std::thread::_State*&)
 std::remove_reference<wchar_t&>::type&& std::move<wchar_t&>(wchar_t&)
 std::remove_reference<wchar_t*&>::type&& std::move<wchar_t*&>(wchar_t*&)
-std::rethrow_exception(std::__exception_ptr::exception_ptr)
 std::reverse_iterator<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>>::reverse_iterator(__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>)
 std::reverse_iterator<__gnu_cxx::__normal_iterator<char const*, std::string>>::reverse_iterator(__gnu_cxx::__normal_iterator<char const*, std::string>)
 std::reverse_iterator<__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>>::reverse_iterator(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>)
@@ -6355,11 +6092,6 @@ std::runtime_error::~runtime_error()
 std::set_new_handler(void (*)())
 std::set_terminate(void (*)())
 std::set_unexpected(void (*)())
-std::shared_ptr<std::__future_base::_State_baseV2>::shared_ptr(std::weak_ptr<std::__future_base::_State_baseV2> const&, std::nothrow_t)
-std::shared_ptr<std::__future_base::_State_baseV2>::~shared_ptr()
-std::shared_ptr<std::thread::_Impl_base>::operator=(std::shared_ptr<std::thread::_Impl_base>&&)
-std::shared_ptr<std::thread::_Impl_base>::shared_ptr(std::shared_ptr<std::thread::_Impl_base>&&)
-std::shared_ptr<std::thread::_Impl_base>::~shared_ptr()
 std::string
 std::string std::__str_concat<std::string>(std::string::value_type const*, std::string::size_type, std::string::value_type const*, std::string::size_type, std::string::allocator_type const&)
 std::string std::regex_traits<char>::lookup_collatename<char const*>(char const*, char const*) const
@@ -6533,17 +6265,6 @@ std::system_error::system_error(std::error_code, char const*)
 std::system_error::system_error(std::error_code, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)
 std::system_error::~system_error()
 std::terminate()
-std::this_thread::__sleep_for(std::chrono::duration<long, std::ratio<1l, 1l>>, std::chrono::duration<long, std::ratio<1l, 1000000000l>>)
-std::thread::_M_start_thread(std::shared_ptr<std::thread::_Impl_base>)
-std::thread::_M_start_thread(std::shared_ptr<std::thread::_Impl_base>, void (*)())
-std::thread::_M_start_thread(std::unique_ptr<std::thread::_State, std::default_delete<std::thread::_State>>, void (*)())
-std::thread::_State* const& std::__get_helper<0ul, std::thread::_State*, std::default_delete<std::thread::_State>>(std::_Tuple_impl<0ul, std::thread::_State*, std::default_delete<std::thread::_State>> const&)
-std::thread::_State*& std::__get_helper<0ul, std::thread::_State*, std::default_delete<std::thread::_State>>(std::_Tuple_impl<0ul, std::thread::_State*, std::default_delete<std::thread::_State>>&)
-std::thread::_State::~_State()
-std::thread::detach()
-std::thread::hardware_concurrency()
-std::thread::id::id()
-std::thread::join()
 std::time_base::dateorder std::__facet_shims::__time_get_dateorder<char>(std::integral_constant<bool, false>, std::locale::facet const*)
 std::time_base::dateorder std::__facet_shims::__time_get_dateorder<char>(std::integral_constant<bool, true>, std::locale::facet const*)
 std::time_base::dateorder std::__facet_shims::__time_get_dateorder<wchar_t>(std::integral_constant<bool, false>, std::locale::facet const*)
@@ -6628,14 +6349,6 @@ std::time_put_byname<wchar_t, std::ostreambuf_iterator<wchar_t, std::char_traits
 std::time_put_byname<wchar_t, std::ostreambuf_iterator<wchar_t, std::char_traits<wchar_t>>>::time_put_byname(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, unsigned long)
 std::time_put_byname<wchar_t, std::ostreambuf_iterator<wchar_t, std::char_traits<wchar_t>>>::time_put_byname(std::string const&, unsigned long)
 std::time_put_byname<wchar_t, std::ostreambuf_iterator<wchar_t, std::char_traits<wchar_t>>>::~time_put_byname()
-std::tuple<std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>::tuple<true, true>()
-std::tuple<std::thread::_State*, std::default_delete<std::thread::_State>>::tuple<true, true>()
-std::tuple_element<0ul, std::tuple<std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>>::type const& std::get<0ul, std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>(std::tuple<std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>> const&)
-std::tuple_element<0ul, std::tuple<std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>>::type& std::get<0ul, std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>(std::tuple<std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>&)
-std::tuple_element<0ul, std::tuple<std::thread::_State*, std::default_delete<std::thread::_State>>>::type const& std::get<0ul, std::thread::_State*, std::default_delete<std::thread::_State>>(std::tuple<std::thread::_State*, std::default_delete<std::thread::_State>> const&)
-std::tuple_element<0ul, std::tuple<std::thread::_State*, std::default_delete<std::thread::_State>>>::type& std::get<0ul, std::thread::_State*, std::default_delete<std::thread::_State>>(std::tuple<std::thread::_State*, std::default_delete<std::thread::_State>>&)
-std::tuple_element<1ul, std::tuple<std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>>::type& std::get<1ul, std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>(std::tuple<std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>&)
-std::tuple_element<1ul, std::tuple<std::thread::_State*, std::default_delete<std::thread::_State>>>::type& std::get<1ul, std::thread::_State*, std::default_delete<std::thread::_State>>(std::tuple<std::thread::_State*, std::default_delete<std::thread::_State>>&)
 std::type_info::__do_catch(std::type_info const*, void**, unsigned int) const
 std::type_info::__do_upcast(__cxxabiv1::__class_type_info const*, void**) const
 std::type_info::__is_function_p() const
@@ -6650,19 +6363,6 @@ std::underflow_error::underflow_error(std::__cxx11::basic_string<char, std::char
 std::underflow_error::underflow_error(std::string const&)
 std::underflow_error::~underflow_error()
 std::unexpected()
-std::unique_lock<std::mutex>::mutex() const
-std::unique_lock<std::mutex>::release()
-std::unique_ptr<std::__future_base::_State_baseV2::_Make_ready, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>::get() const
-std::unique_ptr<std::__future_base::_State_baseV2::_Make_ready, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>::get_deleter()
-std::unique_ptr<std::__future_base::_State_baseV2::_Make_ready, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>::operator->() const
-std::unique_ptr<std::__future_base::_State_baseV2::_Make_ready, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>::unique_ptr<std::default_delete<std::__future_base::_State_baseV2::_Make_ready>, void>(std::__future_base::_State_baseV2::_Make_ready*)
-std::unique_ptr<std::__future_base::_State_baseV2::_Make_ready, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>::~unique_ptr()
-std::unique_ptr<std::thread::_State, std::default_delete<std::thread::_State>>::get() const
-std::unique_ptr<std::thread::_State, std::default_delete<std::thread::_State>>::get_deleter()
-std::unique_ptr<std::thread::_State, std::default_delete<std::thread::_State>>::operator->() const
-std::unique_ptr<std::thread::_State, std::default_delete<std::thread::_State>>::release()
-std::unique_ptr<std::thread::_State, std::default_delete<std::thread::_State>>::unique_ptr<std::default_delete<std::thread::_State>, void>(std::thread::_State*)
-std::unique_ptr<std::thread::_State, std::default_delete<std::thread::_State>>::~unique_ptr()
 std::vector<char, std::allocator<char>>::vector(std::vector<char, std::allocator<char>> const&)
 std::vector<std::Catalog_info*, std::allocator<std::Catalog_info*>>::_M_check_len(unsigned long, char const*) const
 std::vector<std::Catalog_info*, std::allocator<std::Catalog_info*>>::_M_erase(__gnu_cxx::__normal_iterator<std::Catalog_info**, std::vector<std::Catalog_info*, std::allocator<std::Catalog_info*>>>)
@@ -6686,8 +6386,6 @@ std::vector<std::regex_traits<char>::_RegexMask, std::allocator<std::regex_trait
 std::vector<std::string, std::allocator<std::string>>::push_back(std::string const&)
 std::vector<std::string, std::allocator<std::string>>::vector(std::vector<std::string, std::allocator<std::string>> const&)
 std::vector<std::sub_match<char const*>, std::allocator<std::sub_match<char const*>>>::vector(std::vector<std::sub_match<char const*>, std::allocator<std::sub_match<char const*>>> const&)
-std::weak_ptr<std::__future_base::_State_baseV2>::lock() const
-std::weak_ptr<std::__future_base::_State_baseV2>::~weak_ptr()
 stderr
 stdin
 strchr
@@ -6703,6 +6401,7 @@ strncmp
 strncpy
 strnlen
 strstr
+strtol
 strtold_l
 strtoul
 syscall
@@ -6713,23 +6412,23 @@ terminate called after throwing an instance of '
 terminate called recursively\n
 terminate called without an active exception\n
 texturebase.cpp
-texturebase.cpp(2873):Error loading texture: %s\n
-texturebase.cpp(3729):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
-texturebase.cpp(3732):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
-texturebase.cpp(3765):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
-texturebase.cpp(3768):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
-texturebase.cpp(3790):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
-texturebase.cpp(3793):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
-texturebase.cpp(3813):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
-texturebase.cpp(3816):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
-texturebase.cpp(3836):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
-texturebase.cpp(3839):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
-texturebase.cpp(3861):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
-texturebase.cpp(3864):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
-texturebase.cpp(3876):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
-texturebase.cpp(3879):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
-texturebase.cpp(3891):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
-texturebase.cpp(3894):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
+texturebase.cpp(3285):Error loading texture: %s\n
+texturebase.cpp(4151):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
+texturebase.cpp(4154):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
+texturebase.cpp(4187):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
+texturebase.cpp(4190):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
+texturebase.cpp(4212):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
+texturebase.cpp(4215):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
+texturebase.cpp(4235):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
+texturebase.cpp(4238):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
+texturebase.cpp(4258):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
+texturebase.cpp(4261):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
+texturebase.cpp(4283):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
+texturebase.cpp(4286):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
+texturebase.cpp(4298):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
+texturebase.cpp(4301):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
+texturebase.cpp(4313):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
+texturebase.cpp(4316):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
 this
 this 
 thread initialization failed.
@@ -6738,6 +6437,7 @@ three
 throw
 throw 
 tilde
+tile %d ( %u bytes at %u ) is not in the %u bytes read or does not decompress
 tiles
 too many length or distance symbols
 transaction clone for 
@@ -6789,6 +6489,8 @@ typeinfo for __cxxabiv1::__vmi_class_type_info
 typeinfo for __gnu_cxx::__concurrence_lock_error
 typeinfo for __gnu_cxx::__concurrence_unlock_error
 typeinfo for __gnu_cxx::recursive_init_error
+typeinfo for std::_Mutex_base<(__gnu_cxx::_Lock_policy)2>
+typeinfo for std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>
 typeinfo for std::_Sp_counted_ptr_inplace<std::__detail::_NFA<std::regex_traits<char>>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>
 typeinfo for std::_V2::error_category
 typeinfo for std::__codecvt_abstract_base<char, char, __mbstate_t>
@@ -6852,7 +6554,6 @@ typeinfo for std::__detail::_CharMatcher<std::regex_traits<char>, false, false>
 typeinfo for std::__detail::_CharMatcher<std::regex_traits<char>, false, true>
 typeinfo for std::__detail::_CharMatcher<std::regex_traits<char>, true, false>
 typeinfo for std::__detail::_CharMatcher<std::regex_traits<char>, true, true>
-typeinfo for std::__future_base::_Result_base
 typeinfo for std::__ios_failure
 typeinfo for std::__iosfail_type_info
 typeinfo for std::__moneypunct_cache<char, false>
@@ -6906,7 +6607,6 @@ typeinfo for std::ctype_byname<char>
 typeinfo for std::ctype_byname<wchar_t>
 typeinfo for std::domain_error
 typeinfo for std::exception
-typeinfo for std::future_error
 typeinfo for std::invalid_argument
 typeinfo for std::ios_base
 typeinfo for std::ios_base::failure
@@ -6950,7 +6650,6 @@ typeinfo for std::range_error
 typeinfo for std::regex_error
 typeinfo for std::runtime_error
 typeinfo for std::system_error
-typeinfo for std::thread::_State
 typeinfo for std::time_base
 typeinfo for std::time_get<char, std::istreambuf_iterator<char, std::char_traits<char>>>
 typeinfo for std::time_get<wchar_t, std::istreambuf_iterator<wchar_t, std::char_traits<wchar_t>>>
@@ -6971,7 +6670,10 @@ typeinfo name for __cxxabiv1::__vmi_class_type_info
 typeinfo name for __gnu_cxx::__concurrence_lock_error
 typeinfo name for __gnu_cxx::__concurrence_unlock_error
 typeinfo name for __gnu_cxx::recursive_init_error
+typeinfo name for std::_Mutex_base<(__gnu_cxx::_Lock_policy)2>
+typeinfo name for std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>
 typeinfo name for std::_Sp_counted_ptr_inplace<std::__detail::_NFA<std::regex_traits<char>>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>
+typeinfo name for std::_Sp_make_shared_tag
 typeinfo name for std::_V2::error_category
 typeinfo name for std::__codecvt_abstract_base<char, char, __mbstate_t>
 typeinfo name for std::__codecvt_abstract_base<char16_t, char, __mbstate_t>
@@ -7034,7 +6736,6 @@ typeinfo name for std::__detail::_CharMatcher<std::regex_traits<char>, false, fa
 typeinfo name for std::__detail::_CharMatcher<std::regex_traits<char>, false, true>
 typeinfo name for std::__detail::_CharMatcher<std::regex_traits<char>, true, false>
 typeinfo name for std::__detail::_CharMatcher<std::regex_traits<char>, true, true>
-typeinfo name for std::__future_base::_Result_base
 typeinfo name for std::__ios_failure
 typeinfo name for std::__iosfail_type_info
 typeinfo name for std::__moneypunct_cache<char, false>
@@ -7088,7 +6789,6 @@ typeinfo name for std::ctype_byname<char>
 typeinfo name for std::ctype_byname<wchar_t>
 typeinfo name for std::domain_error
 typeinfo name for std::exception
-typeinfo name for std::future_error
 typeinfo name for std::invalid_argument
 typeinfo name for std::ios_base
 typeinfo name for std::ios_base::failure
@@ -7132,7 +6832,6 @@ typeinfo name for std::range_error
 typeinfo name for std::regex_error
 typeinfo name for std::runtime_error
 typeinfo name for std::system_error
-typeinfo name for std::thread::_State
 typeinfo name for std::time_base
 typeinfo name for std::time_get<char, std::istreambuf_iterator<char, std::char_traits<char>>>
 typeinfo name for std::time_get<wchar_t, std::istreambuf_iterator<wchar_t, std::char_traits<wchar_t>>>
@@ -7146,7 +6845,6 @@ typeinfo name for std::type_info
 typeinfo name for std::underflow_error
 typename
 t|AO
-uiTransparentPixels < PIXELS
 uint32_t libyuv::SumPixels(int, const uint16_t*)
 uint32_t libyuv::SumPixels_16(int, const uint32_t*)
 unable to register all schema data: %s\n
@@ -7160,7 +6858,6 @@ unsigned
 unsigned __int128
 unsigned char
 unsigned int
-unsigned int Etc::Image::IterateThroughWorstBlocks(unsigned int, unsigned int, unsigned int)
 unsigned long
 unsigned long const& std::max<unsigned long>(unsigned long const&, unsigned long const&)
 unsigned long const& std::min<unsigned long>(unsigned long const&, unsigned long const&)
@@ -7197,47 +6894,7 @@ virtual thunk to std::basic_ostringstream<char, std::char_traits<char>, std::all
 virtual thunk to std::basic_ostringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>::~basic_ostringstream()
 virtual thunk to std::basic_stringstream<char, std::char_traits<char>, std::allocator<char>>::~basic_stringstream()
 virtual thunk to std::basic_stringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>::~basic_stringstream()
-virtual void Etc::Block4x4Encoding_ETC1::PerformIteration(float)
-virtual void Etc::Block4x4Encoding_ETC1::SetEncodingBits()
-virtual void Etc::Block4x4Encoding_R11::InitFromEncodingBits(Etc::Block4x4*, unsigned char*, Etc::ColorFloatRGBA*, Etc::ErrorMetric)
-virtual void Etc::Block4x4Encoding_R11::PerformIteration(float)
-virtual void Etc::Block4x4Encoding_R11::SetEncodingBits()
-virtual void Etc::Block4x4Encoding_RG11::InitFromEncodingBits(Etc::Block4x4*, unsigned char*, Etc::ColorFloatRGBA*, Etc::ErrorMetric)
-virtual void Etc::Block4x4Encoding_RG11::PerformIteration(float)
-virtual void Etc::Block4x4Encoding_RG11::SetEncodingBits()
-virtual void Etc::Block4x4Encoding_RGB8::PerformIteration(float)
-virtual void Etc::Block4x4Encoding_RGB8::SetEncodingBits()
-virtual void Etc::Block4x4Encoding_RGB8A1::PerformIteration(float)
-virtual void Etc::Block4x4Encoding_RGB8A1::SetEncodingBits()
-virtual void Etc::Block4x4Encoding_RGB8A1_Opaque::PerformIteration(float)
-virtual void Etc::Block4x4Encoding_RGB8A1_Transparent::PerformIteration(float)
-virtual void Etc::Block4x4Encoding_RGBA8::PerformIteration(float)
-virtual void Etc::Block4x4Encoding_RGBA8_Opaque::PerformIteration(float)
-virtual void Etc::Block4x4Encoding_RGBA8_Transparent::PerformIteration(float)
 void
-void Etc::Block4x4::InitFromEtcEncodingBits(Etc::Image::Format, unsigned int, unsigned int, unsigned char*, Etc::Image*, Etc::ErrorMetric)
-void Etc::Block4x4::InitFromSource(Etc::Image*, unsigned int, unsigned int, unsigned char*, Etc::ErrorMetric)
-void Etc::Block4x4Encoding_ETC1::CalculateSourceAverages()
-void Etc::Block4x4Encoding_ETC1::TryDifferential(bool, unsigned int, int, int)
-void Etc::Block4x4Encoding_ETC1::TryDifferentialHalf(Etc::DifferentialTrys::Half*)
-void Etc::Block4x4Encoding_ETC1::TryIndividualHalf(Etc::IndividualTrys::Half*)
-void Etc::Block4x4Encoding_R11::CalculateR11(unsigned int, float, float)
-void Etc::Block4x4Encoding_RG11::CalculateG11(unsigned int, float, float)
-void Etc::Block4x4Encoding_RGB8::CalculateBaseColorsForTAndH()
-void Etc::Block4x4Encoding_RGB8::SetEncodingBits_H()
-void Etc::Block4x4Encoding_RGB8::SetEncodingBits_Planar()
-void Etc::Block4x4Encoding_RGB8::SetEncodingBits_T()
-void Etc::Block4x4Encoding_RGB8A1::SetEncodingBits_ETC1()
-void Etc::Block4x4Encoding_RGB8A1::SetEncodingBits_H()
-void Etc::Block4x4Encoding_RGB8A1::SetEncodingBits_T()
-void Etc::Block4x4Encoding_RGB8A1::TryDifferential(bool, unsigned int, int, int)
-void Etc::Block4x4Encoding_RGB8A1::TryDifferentialHalf(Etc::DifferentialTrys::Half*)
-void Etc::Block4x4Encoding_RGBA8::CalculateA8(float)
-void Etc::Image::FindEncodingWarningTypesForCurFormat()
-void Etc::Image::RunFirstPass(unsigned int, unsigned int)
-void Etc::Image::SetEncodingBits(unsigned int, unsigned int)
-void Etc::SortedBlockList::AddBlock(Etc::Block4x4*)
-void Etc::SortedBlockList::Sort()
 void libyuv::Convert16To8Row_C(const uint16_t*, uint8_t*, int, int)
 void libyuv::MergeAR64Row_C(const uint16_t*, const uint16_t*, const uint16_t*, const uint16_t*, uint16_t*, int, int)
 void libyuv::MergeARGB16To8Row_C(const uint16_t*, const uint16_t*, const uint16_t*, const uint16_t*, uint8_t*, int, int)
@@ -7479,7 +7136,6 @@ vtable for std::__cxx11::time_get<char, std::istreambuf_iterator<char, std::char
 vtable for std::__cxx11::time_get<wchar_t, std::istreambuf_iterator<wchar_t, std::char_traits<wchar_t>>>
 vtable for std::__cxx11::time_get_byname<char, std::istreambuf_iterator<char, std::char_traits<char>>>
 vtable for std::__cxx11::time_get_byname<wchar_t, std::istreambuf_iterator<wchar_t, std::char_traits<wchar_t>>>
-vtable for std::__future_base::_Result_base
 vtable for std::__ios_failure
 vtable for std::__iosfail_type_info
 vtable for std::__moneypunct_cache<char, false>
@@ -7531,7 +7187,6 @@ vtable for std::ctype_byname<char>
 vtable for std::ctype_byname<wchar_t>
 vtable for std::domain_error
 vtable for std::exception
-vtable for std::future_error
 vtable for std::invalid_argument
 vtable for std::ios_base
 vtable for std::ios_base::failure
@@ -7572,7 +7227,6 @@ vtable for std::range_error
 vtable for std::regex_error
 vtable for std::runtime_error
 vtable for std::system_error
-vtable for std::thread::_State
 vtable for std::time_get<char, std::istreambuf_iterator<char, std::char_traits<char>>>
 vtable for std::time_get<wchar_t, std::istreambuf_iterator<wchar_t, std::char_traits<wchar_t>>>
 vtable for std::time_get_byname<char, std::istreambuf_iterator<char, std::char_traits<char>>>
@@ -7609,7 +7263,6 @@ wmemcpy
 wmemmove
 wmemset
 wpp >= 1 && wpp <= 2
-write
 wyS]
 x != __null
 xdigit

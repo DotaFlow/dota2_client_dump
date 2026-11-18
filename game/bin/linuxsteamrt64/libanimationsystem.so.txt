@@ -23,6 +23,7 @@
   Input: %f, %f, %f, %f \n
   Invoke%d: Cell%d %s\n
   Invoke%d: LibraryFunc %s\n
+  Lambda%d: %s\n
   Output Connection %d: '%s' -> '%s' : %s( %s )\n
   Output%d: '%s' (%s)\n
   Output: 
@@ -57,13 +58,16 @@
  <-- Arg '%s'
  <-- Retval '%s'
  = { <proto text format> }". To set fields within it, use syntax like "
+ BR%d
  BackUp() can only be called after Next().
  Can't back up over more bytes than were returned by the last call to Next().
  LinePos:
  Outdent() without matching Indent().
  Parameter to BackUp() can't be negative.
+ TempVar(EditorID:%d)
  Tokenizer::ParseFloat() passed text that could not have been tokenized as a float: 
  Tokenizer::ParseStringAppend() passed text that could not have been tokenized as a string: 
+ V%d
  [*OBSERVABLE*]
  [clone 
  [default = $0
@@ -87,6 +91,7 @@
  const
  contains invalid UTF-8 data when 
  definition file imports the proto which defines the option.
+ depends on:
  details: 
  exceeded maximum protobuf size of 2GB: 
  for 
@@ -209,6 +214,7 @@ $ORIGIN
 %d Cells:\n
 %d Chunks:\n
 %d InvokeBindings:\n
+%d Lambdas:\n
 %d OutputConnections:\n
 %d PublicOutputs:\n
 %d TempVarBanks:\n
@@ -290,6 +296,7 @@ $ORIGIN
 %s_color
 %s_matgrp
 %u %u %u
+'%s' (%s) -> Chunk%d I%d 
 'Play reversed' has no effect when used with time synchronization!
 (%d,%d)
 (%f, %f, %f)
@@ -517,7 +524,6 @@ $ORIGIN
 11CPoseRecipe
 11CRefCountedI20CRefCountServiceBaseI6CRefMTEE
 11CRenderMesh
-11IRefCounted
 12CAnimTagBase
 12CDemoUserCmd
 12CMotionGraph
@@ -528,7 +534,6 @@ $ORIGIN
 12CNmScaleTask
 12CNmStateNode
 12CNmValueNode
-12CRefCounted1I11IRefCounted20CRefCountServiceBaseI6CRefMTEE
 12CThreadEvent
 12CThreadedJob
 13CAnimPosePool
@@ -757,6 +762,7 @@ $ORIGIN
 17CNmFrameSnapEvent
 17CNmIDSelectorNode
 17CNmLayerBlendNode
+17CNmSoundEventBase
 17CNmSpeedScaleNode
 17CNmTargetInfoNode
 17CNmTargetWarpNode
@@ -819,6 +825,7 @@ $ORIGIN
 18CRagdollUpdateNode
 18CSequenceGroupData
 18CTaskStatusAnimTag
+18CThreadedJobSource
 18CUnregisterReceiptI9CSmartPtrI21CAnimGraphDebugReplay17CRefCountAccessorEMS1_FvP19IAnimReplayListenerES5_E
 18CUnregisterReceiptI9CSmartPtrI23CAnimationGraphInstance17CRefCountAccessorEMS1_FvP34IAnimGraphSequenceFinishedListenerES5_E
 18IAnimMotorInstance
@@ -850,6 +857,7 @@ $ORIGIN
 19CNmIDComparisonNode
 19CNmOverlayBlendTask
 19CNmStateMachineNode
+19CNmTaggedSoundEvent
 19CNmTargetOffsetNode
 19CNmVectorCreateNode
 19CNmVectorNegateNode
@@ -1036,7 +1044,6 @@ $ORIGIN
 21IAnimationSystemUtils
 21IClothSettingsAnimTag
 21IMotionMetricInstance
-21IPulseInstanceSaveAPI
 21IVConCommDataReceived
 22CAnimComponentInstance
 22CAnimGraphModelBinding
@@ -1074,7 +1081,6 @@ $ORIGIN
 22CPulseCell_FireCursors
 22CPulseCell_Inflow_Wait
 22CPulseCell_RaceCursors
-22CPulseCell_Value_Curve
 22CSchemaInstallCallback
 22CSeqResourceS1Sequence
 22CSingleFrameUpdateNode
@@ -1150,7 +1156,6 @@ $ORIGIN
 24CGenericExpr_BoolLiteral
 24CJiggleBonePoseOperation
 24CModelDocAnimResourceSeq
-24CNmIsExternalPoseSetNode
 24CPPScriptPostLoadContext
 24CParticleRemapFloatInput
 24CPulseCell_Inflow_Method
@@ -1196,7 +1201,6 @@ $ORIGIN
 25CNmVirtualParameterIDNode
 25CPairedSequenceUpdateNode
 25CPathAnimMotorUpdaterBase
-25CPulseCell_Value_Gradient
 25CRagdollComponentInstance
 25CSeqResourceMultiSequence
 25CSequenceAnimNodeInstance
@@ -1291,8 +1295,6 @@ $ORIGIN
 26CNmRootMotionWarpDebugData
 26COrientationWarpUpdateNode
 26CPulseCell_BaseRequirement
-26CPulseCell_Value_RandomInt
-26CPulseInstanceSaveAPI_NoOp
 26CSetParameterActionUpdater
 26CSolveIKChainPoseOperation
 26CSpaceAgnosticBoneAccessor
@@ -1442,7 +1444,6 @@ $ORIGIN
 28CNmVirtualParameterFloatNode
 28CPlayerInputAnimMotorUpdater
 28CPulseCell_Step_PublicOutput
-28CPulseCell_Value_RandomFloat
 28CPulseCell_WaitForObservable
 28CRemapValueComponentInstance
 28CSchemaRegistration_modellib
@@ -1621,7 +1622,6 @@ $ORIGIN
 32CPulseCell_ObservableSwitchState
 32CPulseCell_Outflow_CycleShuffled
 32CPulseCell_WaitForCursorsWithTag
-32CPulseInterfaceHelpers_Save_NoOp
 32CSchemaRegistration_animgraphlib
 32CSchemaRegistration_particleslib
 32IPairedSequenceComponentInstance
@@ -1638,14 +1638,12 @@ $ORIGIN
 34CPulseCell_Inflow_Wait_DebugInfo_t
 34CPulseCell_PickBestOutflowSelector
 34CPulseCell_Step_CallExternalMethod
-34IKV3TransferInterface_EHandle_Save
 34IKV3TransferInterface_ResourceLoad
 35CAnimationGraphVisualizationManager
 35CGameInfo_CDotaGameInfo_CPlayerInfo
 35CParticleCollectionRendererVecInput
 35CSchemaRegistration_animationsystem
 35IAnimationGraphVisualizationManager
-35IKV3TransferInterface_GameTime_Save
 36CAnimationGraphVisualizationRegistry
 36CKV3Transfer_UtlSymbolLargeInterfaceI24CUtlSymbolTableLargeBaseILb0ELm2048E16CThreadNullMutex18CMemAllocAllocatorEE
 36CModelConfigElement_SetMaterialGroup
@@ -1659,20 +1657,16 @@ $ORIGIN
 37CTypesafeIntrospectedToKV3TypeManagerILy1902474102E18CSequenceGroupDataE
 37CTypesafeIntrospectedToKV3TypeManagerILy469920276854E9CAnimDataE
 37CTypesafeIntrospectedToKV3TypeManagerILy482955714934E15CAnimationGroupE
-37IKV3TransferInterface_Worldspace_Save
 38CAnimationGraphVisualizerPrimitiveBase
 38CDefaultKV3TransferResourceTypeManagerILy30510809657208438EE
 38CDefaultKV3TransferResourceTypeManagerILy31641111637094006EE
 38CDefaultKV3TransferResourceTypeManagerILy7525622121325489782EE
 39CCurrentRotationVelocityMetricEvaluator
-39CKV3TransferInterface_EHandle_Save_NoOp
 40CDemoRecovery_DemoInitialSpawnGroupEntry
 40CGameInfo_CDotaGameInfo_CHeroSelectEvent
-40CKV3TransferInterface_GameTime_Save_NoOp
 41CModuleMetadataProvider_ResourceManifests
 41CPulseCell_BooleanSwitchState_DebugInfo_t
 41CSolveIKChainAnimationGraphVisualizerInfo
-42CKV3TransferInterface_Worldspace_Save_NoOp
 43IAnimVarBindingAdditionalContextLabelHelper
 44CPulseCell_Inflow_ObservableVariableListener
 44CPulseCell_ObservableSwitchState_DebugInfo_t
@@ -1855,6 +1849,7 @@ Anim Clip
 AnimGraph Choice Node failed to pick a new choice without repeating.  Check the weights on the Choice node.\n
 AnimGraphEditorUtils001
 AnimGraphInstance
+AnimLayer:m_bDisableSequenceFadeOut
 AnimLayer:m_flCycle
 AnimLayer:m_flWeight
 AnimLayer:m_hSequence
@@ -1887,7 +1882,12 @@ Attempting to perform a global blend without a bone mask! This is not supported 
 Attribute
 August
 BACKSLASH_CHAR
+BIND_LAMBDA
 BLEND_PREALIGNED|
+BROADCAST_INVOKE
+BROADCAST_INVOKE_ARRAY_DOMAIN
+BROADCAST_INVOKE_ARRAY_SIMPLE
+BROADCAST_INVOKE_DOMAIN
 BackUp() can not exceed the size of the last Next() call.
 BackUp() can only be called after a successful Next().
 Bad FLC data for resource '%s': %s\n
@@ -1935,6 +1935,7 @@ BinMul
 BinNe
 BinSub
 BinaryProperties_GetValue
+BindLambda R%d <- Lambda%d
 Blend (Masked): %.2f%%
 Blend: %.2f%%
 BlendNode
@@ -1947,6 +1948,7 @@ Bone Velocity
 BoneChannel
 BoneConstraintRbf :: Cannot find input bone "%s" :: %s\n
 BoneConstraintRbf :: Cannot find output bone "%s" :: %s\n
+BoneConstraintRbf :: Invalid RBF parameters\n
 BoneConstraintRbf :: Invalid input %d or output %d bone count :: %s\n
 BoneConstraintRbf :: input bone count %d != input pose count %d :: %s\n
 BoneConstraintRbf :: output bone count %d != output pose count %d :: %s\n
@@ -2314,6 +2316,7 @@ CIKJointConstraintData_Hinge
 CIKJointConstraintData_Plane
 CKV3MemberNameSet
 CKV3MemberNameWithStorage
+CKV3TransferInterface_PulseEnum_Load
 CKeyValues_Data::Internal_GetString(char const*, char*, unsigned long)
 CLIENT: Activity %d is %s\n
 CLOSE_BRACE
@@ -2330,6 +2333,9 @@ CModelBoneName
 CModelMaterialGroupName
 CMotionTransform
 CNmGraphDefinition::KV3TransferPostLoadFn failed to FindDeclaredClass( '%s' )
+CNmSoundEventBase
+CNmSoundEventBase::Position_t
+CNmTaggedSoundEvent
 COMMA
 CONTENT
 CPPScript Component
@@ -2353,6 +2359,7 @@ CPulseCell_BaseYieldingInflow::BaseFlow_CancelImmediately
 CPulseCell_BaseYieldingInflow::BaseFlow_WakeElegantly
 CPulseCell_BaseYieldingInflow::BaseFlow_WakeImmediately
 CPulseCell_BooleanSwitchState::Activate
+CPulseCell_BooleanSwitchState::CursorState_t
 CPulseCell_CursorQueue::Wait
 CPulseCell_FireCursors::Start
 CPulseCell_FireCursors::StopWaiting
@@ -2370,6 +2377,7 @@ CPulseCell_IsRequirementValid::CheckRequirement
 CPulseCell_LimitCount::CheckRequirement
 CPulseCell_LimitCount::CommitStep
 CPulseCell_ObservableSwitchState::Activate
+CPulseCell_ObservableSwitchState::CursorState_t
 CPulseCell_Outflow_CycleOrdered::Run
 CPulseCell_Outflow_CycleRandom::Run
 CPulseCell_Outflow_CycleShuffled::Run
@@ -2382,11 +2390,8 @@ CPulseCell_Step_CallExternalMethod::Run
 CPulseCell_Step_DebugLog::Run
 CPulseCell_Step_PublicOutput::Run
 CPulseCell_Timeline::Start
-CPulseCell_Value_Curve::Eval
-CPulseCell_Value_Gradient::Eval
-CPulseCell_Value_RandomFloat::Eval
-CPulseCell_Value_RandomInt::Eval
 CPulseCell_WaitForCursorsWithTag::Wait
+CPulseCell_WaitForObservable::CursorState_t
 CPulseCell_WaitForObservable::Start
 CPulseCursorFuncs
 CPulseCursorFuncs::AnyOtherCursorsHaveTag
@@ -2396,7 +2401,8 @@ CPulseCursorFuncs::KillCursorsWithTag
 CPulseCursorFuncs::RemoveTagFromCursor
 CPulseCursorFuncs::TagCursor
 CPulseCursorFuncs::WakeCursorsWithTag
-CPulseObservableExpression
+CPulseInstanceLoadAPI
+CPulseInstanceSaveAPI
 CPulseObservableSwitchCases
 CPulseStringlib
 CPulseStringlib::Format1
@@ -2409,6 +2415,7 @@ CPulseStringlib::StringLength
 CPulseStringlib::StringsAreEqualCaseSensitive
 CPulseType
 CPulseVariant
+CPulse_LambdaDef
 CRC32_ProcessBuffer
 CRC64_ProcessBuffer
 CRelativeArray
@@ -2416,7 +2423,6 @@ CResourceName
 CResourceNameTyped
 CRotation
 CSmartPtr
-CSplitScreenSlot
 CSplitString::Split(char const*, int, char const**, int, bool)
 CStrongHandle
 CStrongHandleCopyable
@@ -2440,7 +2446,9 @@ CThreadSyncObject::WaitImpl(unsigned int)
 CThreadSyncObject::~CThreadSyncObject()
 CThreadedJob::Abort(bool)
 CThreadedJob::WaitOrImmediatelyExecute()
+CThreadedJobSource::SignalEventMonitor(CThreadedJobSource*)
 CTransform
+CURSOR_MAX_INSTRUCTIONS
 CURVE_TANGENT_FLAT
 CURVE_TANGENT_FREE
 CURVE_TANGENT_LINEAR
@@ -2531,6 +2539,7 @@ CVertexKDTree::Nearest(Vec3D<float> const&, CUtlVectorFixedGrowable<float const*
 CWeakHandle
 Call C%d:I%d (%s)
 Call set methods to initialize MapKey.
+Called when timer reaches the duration OR is stopped. NOTE: This will run a little while AFTER the last interval fires unless they line up very closely (0.05s) or 'Fire At End' is set.
 Caller should provide us with *buffer_ when buffer is non-empty
 Can't 
 Can't BackUp() after failed Next().
@@ -2570,6 +2579,7 @@ Cant find specified effector bone ID ('%s') for two bone IK
 Cast of %s loses value information (returning %s)\n
 Cbasic_ios::clear
 Chain Lookat
+Chain Lookat Task - Trying to perform a chain lookat on top of an additive pose, this is not allowed!
 CharacterSetBuild
 Check Requirement
 Check if any yielded cursors on the graph already have the given tag.
@@ -2670,6 +2680,18 @@ Double-save to Member '%s'
 Down
 DrawDebug
 ENUM_
+EQ_ANIM_SEQUENCE
+EQ_MODEL_MATERIAL_GROUP
+EQ_PARTICLE_EHANDLE
+EQ_QANGLE
+EQ_RESOURCE
+EQ_RESOURCE_NAME
+EQ_SNDEVT_GUID
+EQ_SNDEVT_NAME
+EQ_TRANSFORM
+EQ_TRANSFORMWS
+EQ_VARIANT
+EQ_VDATA_CHOICE
 ERROR
 ERROR: CUtlSymbolTableLarge element limit of %u exceeded\n
 ERROR:NoEnum:%s:%d
@@ -2729,6 +2751,7 @@ EnsureUnusedCapacity
 Entity Attribute Base
 Entity Attribute Float
 Entity Attribute Int
+Entity Targetname
 EntityName
 Enum name 
 Enum type "
@@ -2745,9 +2768,6 @@ Error in SolveCubic\n
 Error parsing text-format 
 Error reporting not implemented.
 Error while parsing option value for "
-Eval
-Evaluate the curve at the specified input position
-Evaluate the gradient at a position between 0 and 1
 Exceeds Maximum Package Depth
 Expanded map entry type 
 Expect a decimal number, got: 
@@ -2900,6 +2920,7 @@ FormatTo(IFormatOutputStream*, CFormatStringElement, int)
 FormatTo(IFormatOutputStream*, CFormatStringElement, std::basic_string_view<char, std::char_traits<char>>)
 FormatTo(IFormatOutputStream*, CFormatStringElement, unsigned int)
 FormatTo(IFormatOutputStream*, CFormatStringElement, void const*)
+Forward Stop Only
 Found existing value when inserting into dict - replacing existing value with new value. If this is intended behavior, use InsertOrReplace. If leaving existing values alone is intended, use InsertIfNotFound.
 Found invalid proto option data for: 
 FrameUpdate
@@ -2914,7 +2935,6 @@ GCC: (SteamRT 5.4.0-7.really.6+steamrt1.2+srt2) 5.4.1 20160803
 GLIBCXX_TUNABLES
 GLIBC_2.14
 GLIBC_2.17
-GLIBC_2.18
 GLIBC_2.2.5
 GLIBC_2.25
 GLIBC_2.27
@@ -2983,6 +3003,7 @@ Groups are not supported in proto3 syntax.
 GrowCount
 HAC K  Unused Binding
 HELPER_BONE
+HPulseObservableLambda
 HammerMapLoader001
 Handle Return Values
 HasField
@@ -2992,6 +3013,7 @@ Hex and octal numbers must be integers.
 Hinge Axis
 HitReact:m_hitCount
 HitReact:m_resetCount
+How many cursors to track history for before the oldest is evicted.
 I could not work out what I was expecting, like so many of us these days!\n
 ID Selector: Failed to select a valid option for ID: %s!
 ID_CHAR
@@ -3018,10 +3040,9 @@ IKV3TransferInterface_Worldspace_Save
 INFO
 INTERNAL
 INTERNAL ERROR: Cannot convert or reinterpret from %s to %s
+INTERNAL_CALL_TO_PULSE
 INVALID_ARGUMENT
 INVALID_CPPTYPE
-IPulseInstanceLoadAPI
-IPulseInstanceSaveAPI
 IPulseReloadListener
 If (R%d) Jump to Instr I%d
 If (R%d) Leap to Chunk C%d
@@ -3093,6 +3114,7 @@ Invalid wire type for CPPTYPE_INT64:
 Invalid wire type for CPPTYPE_MESSAGE: 
 Invalid wire type for CPPTYPE_UINT32: 
 Invalid wire type for CPPTYPE_UINT64: 
+Invoke *Broadcast* R%d -> R%d: Cell%d %s
 Invoke Cell%d [eid=%d] %s%s
 Invoke Lib %s
 InvokeMiniDumpHandler
@@ -3104,12 +3126,14 @@ JArray
 JIGGLE_BONE
 January
 JiggleBone:m_resetCount
+JobSource
 July
 Jump to Instr I%d
 JumpOrLeap( C%d:I%d )
 June
 KV3 instances cannot be set to an unspecified specific type
 KV3 save transfer failed: %s
+Keep a history of all instructions run on a per cursor basis.
 Key in map fields cannot be enum types.
 Key in map fields cannot be float/double, bytes or message types.
 KeyValues3
@@ -3239,10 +3263,12 @@ MPulseCellInflow_IsDefault
 MPulseCursorTerminates
 MPulseEditorCanvasItemSpecKV3
 MPulseEditorHeaderIcon
+MPulseEditorSearchExpr
 MPulseExpressionAlias
 MPulseFGDSkipField
 MPulseFunctionAddsCursorTag
 MPulseFunctionHiddenInTool
+MPulseLegacyName
 MPulseRequirementCheck
 MPulseRequirementCommit
 MPulseSignatureForOutflow
@@ -3337,6 +3363,7 @@ ModelBodyGroupName()
 ModelBoneName()
 ModelDocUtils001
 ModelMaterialGroupName()
+ModelMeshDNARig_t
 ModelSpaceBlendTask - Trying to perform a model-space blend using an additive pose
 Monday
 MorphChannel
@@ -3835,10 +3862,6 @@ N24CAnimNodeInstanceFactory14CFactoryMakerTI31CDirectPlaybackAnimNodeInstanceEE
 N24CAnimNodeInstanceFactory14CFactoryMakerTI31CMotionGraphPreviewNodeInstanceEE
 N24CAnimNodeInstanceFactory14CFactoryMakerTI31CMotionMatchingAnimNodeInstanceEE
 N24CAnimNodeInstanceFactory14CFactoryMakerTI31CTargetSelectorAnimNodeInstanceEE
-N24CFieldPathHuffmanEncoder12InternalNodeE
-N24CFieldPathHuffmanEncoder5INodeE
-N24CFieldPathHuffmanEncoder8LeafNodeE
-N24CNmIsExternalPoseSetNode11CDefinitionE
 N25CNmControlParameterIDNode11CDefinitionE
 N25CNmCurrentSyncEventIDNode11CDefinitionE
 N25CNmFootEventConditionNode11CDefinitionE
@@ -4075,6 +4098,18 @@ N9__gnu_cxx24__concurrence_lock_errorE
 N9__gnu_cxx26__concurrence_unlock_errorE
 NEGATIVE_TOK
 NEWLINE
+NE_ANIM_SEQUENCE
+NE_MODEL_MATERIAL_GROUP
+NE_PARTICLE_EHANDLE
+NE_QANGLE
+NE_RESOURCE
+NE_RESOURCE_NAME
+NE_SNDEVT_GUID
+NE_SNDEVT_NAME
+NE_TRANSFORM
+NE_TRANSFORMWS
+NE_VARIANT
+NE_VDATA_CHOICE
 NOT_FOUND
 NSt3_V214error_categoryE
 NSt6locale5facet6__shimE
@@ -4199,6 +4234,7 @@ PDF32x
 PDF64_
 PDF64x
 PERMISSION_DENIED
+PF_TYPE_CONTROL_POINT_PLANE_DISTANCE
 PKDF128_
 PKDF16_
 PKDF16b
@@ -4221,6 +4257,7 @@ POS_FLOATLITERAL
 POS_INTLITERAL
 PVAL_ANY
 PVAL_INVALID
+PVAL_LAMBDA
 PVAL_SCHEMA_ENUM
 PVAL_TYPESAFE_INT
 PVAL_TYPESAFE_INT64
@@ -4236,6 +4273,7 @@ Parameterized Clip Selector: Failed to select a valid option!
 Parameterized Selector: Failed to select a valid option!
 Parameters
 Parent
+Parent Map + VData
 Parent Map: %s\n
 ParentAttachmentName()
 Parser encountered %d error(s)
@@ -4292,11 +4330,14 @@ Pulse domain which enables particle content to query leaf code to introspect gam
 Pulse: %s 
 PulseDebugLog: Calling external method on non-existent entity or game blackboard
 PulseDebugLog: Calling external method on non-existent entity or game blackboard\n
+PulseExecHistoryCallerInfo_t
+PulseRuntimeLambdaIndex_t
 PulseSymbol_t
 QAngle
 Quaternion
 QuaternionStorage
 R%d%s%s
+RECORD_NEXT_SEQ_POINT
 RESOURCE_EXHAUSTED
 RESOURCE_TYPE_ANIMATION_GROUP_INTERNAL
 RESOURCE_TYPE_ANIMATION_INTERNAL
@@ -4317,6 +4358,7 @@ Read Cached Pose
 Recognition Exception
 Recognition exception
 RecordPreGraphEvaluateState
+RecordState
 Recursion limit at end of parse should be 
 Reference Pose Task
 Referenced graph resource failed to load or is invalid: %s
@@ -4347,11 +4389,12 @@ ResourceCompilerSystem001
 ResourceHandleUtils001
 ResourceManifestRegistry001
 Return
-ReturnJobManualEventToPool
 Root
 Root to newly tilted bone
 Root to tilt bone original
 Rotation Only
+Runs OnInterval immediately when waiting begins. Otherwise the first OnInterval happens after the first interval has elapsed.
+Runs OnInterval upon reaching the end of the duration. Otherwise the last OnInterval will fire earlier unless they line up very closely (0.05s)
 SCOPE_QUALIFIER
 SEMICOLON
 SINGLE_LINE_COMMENT
@@ -4705,6 +4748,7 @@ TLS wrapper function for
 TOK_COLON
 TWIST
 Tag Cursor
+Tagged Sound (%s) (%s)
 Tags
 Takes a format string that and 1-5 arguments to insert into that string.<br>Format string can look like, for example, <tt>"Hello {} my name is {}"</tt> to reference arguments 0 and 1 implcictly.<br>Or <tt>"Hello {0} my name is {1}"</tt> to reference arguments 0 and 1 explicitly.<br>Use <tt>{{</tt> and <tt>}}</tt> for literal brace characters.<br>
 TanFrameQuat
@@ -4759,6 +4803,7 @@ Trying to XY warp backwards, falling back to LERP!
 Trying to XY warp to under the distance threshold, falling back to LERP!
 Trying to set an offset on an unset node!
 Tuesday
+Turn To Start
 Turn a time in seconds into a display string. NOT localized.
 TurnHelperNode
 Two Bone IK
@@ -4818,6 +4863,7 @@ VAvi001
 VBik001
 VDataChoice( %s )
 VDataChoice()
+VMAP_AND_VDATA
 VMediaFoundation001
 VP4003
 VProfScopeHelper<0, false>::EnterScopeInternalBudgetFlags(char const*, VProfBudgetGroupCallSite&, CUtlSourceLocation const&)
@@ -4910,6 +4956,7 @@ V_fprintf
 V_fread
 V_frexpf
 V_isEntirelyWhitespace
+V_isfinited
 V_isnand
 V_log10f
 V_log2_uint
@@ -4936,6 +4983,7 @@ V_strtok
 V_tanf
 V_tanhf
 V_vsnprintf
+V_z3_decompress
 Value 0-1 how far along duration (always 0 if duration is -1)
 Value Type
 Value must be "true" or "false" for boolean option "
@@ -5130,8 +5178,6 @@ __cxa_guard_release
 __cxa_init_primary_exception
 __cxa_pure_virtual
 __cxa_rethrow
-__cxa_thread_atexit
-__cxa_thread_atexit_impl
 __cxa_throw
 __cxa_throw_bad_array_new_length
 __cxxabiv1::__base_class_type_info::__is_public_p() const
@@ -5347,6 +5393,7 @@ accessor_ == other.accessor_
 acos
 acosf
 active_frame
+affine
 alert
 alignof 
 allocator
@@ -5376,7 +5423,9 @@ attachment_type_cp1
 auto
 auto:
 auto_unragdoll_duration
+bCondition
 bInherit
+bOverflowedInstructionHistoryLimit
 b_action_restart
 b_movement_type_restart
 backslash
@@ -5521,6 +5570,7 @@ cannot create std::deque larger than max_size()
 cannot create std::vector larger than max_size()
 cantdie
 carriage-return
+cbrtf
 ceil
 cell_info
 char
@@ -5903,21 +5953,28 @@ dl_iterate_phdr
 dollar-sign
 double
 dynamic_cast
+eAim
+eForwardStopOnly
+eTurnToStart
 e_action_desired_shared
 e_movement_type_desired_shared
 editor
+ehandle_serialize
 eight
 embedded_animation
+embedding_norm
 emptyanimwithnoeffect
 entity_name
 enum
 equals-sign
+euclidean_norm
 eventindex
 exclamation-mark
 exp2
 expf
 expr
 extend .$0 {\n
+externalCallerInfo
 f == nullptr || dynamic_cast<To>(f) != nullptr
 fSpeedScale
 false
@@ -5933,12 +5990,14 @@ fixed32
 flDuration
 flDurationSec
 flElapsed
-flMax
-flMin
+flGoalStrength
 flPercentage
+flScale
 flSeconds
 flWaitInterval
 flWaitIntervalHigh
+flZin
+flZout
 flc_columns
 flc_count
 flc_file_ids
@@ -5988,6 +6047,7 @@ game:tools/images/animgraph_editor/animgraph_parameter_base.png
 game:tools/images/animgraph_editor/animgraph_parameter_virtual_base.png
 game:tools/images/animgraph_editor/animgraph_tag_base.png
 generic
+geodesic_norm
 getc
 getentropy
 getwc
@@ -6158,6 +6218,7 @@ hsequence
 hurt_me
 hurt_them
 hyphen
+i < 127
 i < length_
 iconv
 iconv_close
@@ -6168,6 +6229,7 @@ import public "$0";\n
 import weak "$0";\n
 infinity
 initializer for module 
+inputs
 instantly
 int const& std::min<int>(int const&, int const&)
 int google::protobuf::CalculateBase64EscapedLen(int, bool)
@@ -6193,6 +6255,7 @@ int8
 internal error in map key sorting
 interrupt_priority
 invalid
+inverse_threshold
 invert_orientation
 ioctl
 ios_base::_M_grow_words allocation failed
@@ -6207,6 +6270,7 @@ json_name = "
 jstype is only allowed on int64, uint64, sint64, fixed64 or sfixed64 fields.
 kAnimGraphSaveRestoreVersion
 keyvalues
+l2_regularization
 ld-linux-x86-64.so.2
 left-curly-bracket
 left-parenthesis
@@ -6250,29 +6314,42 @@ m_CaseValues
 m_DefaultCaseOutflow
 m_DefaultSolverSettings
 m_DefaultTargetSettings
+m_Deformers
 m_DependentObservableBlackboardReferences
 m_DependentObservableTempVars
 m_DependentObservableVars
 m_EndEffectorFixedOffsetAttachment
 m_EvaluateConnection
+m_FfdZLayers
 m_Format
 m_HingeAxis
 m_IKChains
 m_JointConstraintData
 m_Joints
+m_LambdaDefs
+m_LambdaSubscriptions
+m_LatestValue
 m_ParentJoint
 m_PoleVectorForAxis
+m_ResultType
 m_ReturnType
 m_Stops
 m_TagName
 m_TagValue
 m_attachments
+m_bAbsoluteValue
 m_bBakedTwoSided
+m_bBlendShapes
 m_bCanBatchWithDynamicShaderConstants
 m_bChildCursorsShouldInherit
+m_bCompletingVeryCloseToEndOfInterval
+m_bCompressedZ3
 m_bConditionValue
+m_bDisableSequenceFadeOut
 m_bDoBonesOrientAlongPositiveX
 m_bDrawLast
+m_bFireAtEnd
+m_bFireAtStart
 m_bFirstEvaluate
 m_bHasBakedLightingFromLightMap
 m_bHasBakedLightingFromVertexStream
@@ -6288,35 +6365,47 @@ m_bUseShadowFastPath
 m_constValue
 m_data
 m_deltaTransform\t\t\t\t[%f] [%s]
+m_dnaRigs
 m_eRbfType
 m_events
+m_flDisplayRadius
 m_flMaxRadians
 m_flMinRadians
 m_flSlopeIncoming
 m_flSlopeOutgoing
 m_hCursorOnOtherGraph
 m_hGraphDefinition->m_instanceRequiredMemory > 0
+m_hInstance
 m_hitboxsets
 m_influenceFlags
+m_mapNodeToNewCursorCount
 m_morphSet
 m_nActiveCase
+m_nBlock
 m_nChainLength > 1 && m_nChainLength < 8
+m_nCulledCursorCount
 m_nCurrStackSize
 m_nCurrentWakeIndex
 m_nCursorID
 m_nGraphID
 m_nIncomingTangent
+m_nLambdaIdx
 m_nMax
 m_nMin
 m_nOutgoingTangent
+m_nReferenceNode
+m_nRig
 m_nStackDepthWhenAdded
 m_nUniqueID
+m_nVertexMapIndex
+m_nVertexMapNameHash
 m_nYieldToken
 m_pIsHandshakeDisabled
 m_pRecording->m_recordedUpdateData.Tail()->m_updateType != NmRecordedUpdateType_t::Unknown
 m_params.m_nNumBonesInChain < 8
 m_qFixupRotation
 m_rbfParameters
+m_rbfParametersKV3
 m_spline
 m_stack
 m_tangents
@@ -6346,8 +6435,6 @@ morph_texture
 mt19937
 nFormat
 nKillPriority
-nMax
-nMin
 nNumBuffersChecked < NmCachedPoseID_t::s_nMaxNumberOfCachedPoses
 nRemainderDigits
 nRemainderNoiseDigits
@@ -6375,6 +6462,9 @@ non-virtual thunk to std::basic_stringstream<wchar_t, std::char_traits<wchar_t>,
 null
 nullptr output boolean given.
 numStates <= s_nMaxStates
+num_inputs
+num_outputs
+num_poses
 number-sign
 numframes
 obj_count
@@ -6415,6 +6505,7 @@ optionallycompressedtangentframe
 options.m_pBoneWeights->Count() >= m_boneIDs.Count()
 options.m_pBoneWeights->Count() >= m_pSkeleton->GetNumBones()
 output specified is nullptr
+outputs
 pCachedPoseBuffer->m_ID.IsValid()
 pMessage
 pTagName
@@ -6451,6 +6542,7 @@ pthread_mutex_unlock
 pthread_once
 pulse_open_graph_id %u %u
 pulse_runtime_lib
+pulse_save_cursor_info_limit
 punct
 pure virtual method called\n
 putc
@@ -6491,7 +6583,9 @@ retval
 right-curly-bracket
 right-parenthesis
 right-square-bracket
+rigid
 rootMotionToWarp\t\t\t\t[%f] [%s]
+rotation_ignore_threshold
 rotation_vector
 round
 rsqrt
@@ -6506,6 +6600,7 @@ serialize
 serializing
 service $0 {\n
 setlocale
+settings
 setvbuf
 seven
 sfixed32
@@ -9871,6 +9966,7 @@ std::time_put_byname<wchar_t, std::ostreambuf_iterator<wchar_t, std::char_traits
 std::time_put_byname<wchar_t, std::ostreambuf_iterator<wchar_t, std::char_traits<wchar_t>>>::time_put_byname(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, unsigned long)
 std::time_put_byname<wchar_t, std::ostreambuf_iterator<wchar_t, std::char_traits<wchar_t>>>::time_put_byname(std::string const&, unsigned long)
 std::time_put_byname<wchar_t, std::ostreambuf_iterator<wchar_t, std::char_traits<wchar_t>>>::~time_put_byname()
+std::to_string(int)
 std::type_info::__do_catch(std::type_info const*, void**, unsigned int) const
 std::type_info::__do_upcast(__cxxabiv1::__class_type_info const*, void**) const
 std::type_info::__is_function_p() const
@@ -9887,6 +9983,7 @@ std::underflow_error::underflow_error(std::string const&)
 std::underflow_error::~underflow_error()
 std::unexpected()
 std::vector<char, std::allocator<char>>::vector(std::vector<char, std::allocator<char>> const&)
+std::vector<float, std::allocator<float>>::vector(unsigned long, std::allocator<float> const&)
 std::vector<std::Catalog_info*, std::allocator<std::Catalog_info*>>::_M_check_len(unsigned long, char const*) const
 std::vector<std::Catalog_info*, std::allocator<std::Catalog_info*>>::_M_erase(__gnu_cxx::__normal_iterator<std::Catalog_info**, std::vector<std::Catalog_info*, std::allocator<std::Catalog_info*>>>)
 std::vector<std::Catalog_info*, std::allocator<std::Catalog_info*>>::_M_realloc_append(std::Catalog_info* const&)
@@ -9930,6 +10027,9 @@ strdup
 stream 
 strerror
 strerror_r
+stretch_ignore_threshold
+stretch_mean
+stretch_norm
 string length exceeds max size
 string literal
 string::string
@@ -9951,6 +10051,7 @@ struct
 subclass
 subtype mismatch
 suppress
+switchValue
 syntax = "$0";\n\n
 syscall
 system
@@ -9976,6 +10077,7 @@ text
 text format contains deprecated field "
 the actual field type (for enums T should be the generated enum 
 the global scope
+theta_transpose
 this
 this 
 thread-local initialization routine for g_pThreadLocalStackAllocator
@@ -9986,6 +10088,9 @@ tilde
 to constrain
 tools/images/pulse_editor/cursor_kill.png
 tools/images/pulse_editor/kill_cursor_with_tag.png
+training_rotations
+training_stretches
+training_translations
 transaction clone for 
 transaction clone for operator delete(void*)
 transaction clone for operator new[](unsigned long)
@@ -10023,6 +10128,9 @@ transaction clone for std::underflow_error::underflow_error(char const*)
 transaction clone for std::underflow_error::underflow_error(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)
 transaction clone for std::underflow_error::~underflow_error()
 transform
+transform_mode
+translation_ignore_threshold
+translation_mean
 type or int32_t).
 type() == TYPE_FIXED32
 type() == TYPE_FIXED64

@@ -6,6 +6,7 @@
   Cell%d EditorID:%d [%s]: %s\n
   Invoke%d: Cell%d %s\n
   Invoke%d: LibraryFunc %s\n
+  Lambda%d: %s\n
   Output Connection %d: '%s' -> '%s' : %s( %s )\n
   Output%d: '%s' (%s)\n
   R%d: %15s %25s %s\n
@@ -30,7 +31,10 @@
  : unexpected input...\n  expected one of : 
  <-- Arg '%s'
  <-- Retval '%s'
+ BR%d
  LinePos:
+ TempVar(EditorID:%d)
+ V%d
  [*OBSERVABLE*]
  [clone 
  [loop body, break -> C%d:I%d]
@@ -39,6 +43,7 @@
  __vector(
  class
  const
+ depends on:
  for 
  noexcept
  requires 
@@ -72,6 +77,7 @@ $ORIGIN
 %d Cells:\n
 %d Chunks:\n
 %d InvokeBindings:\n
+%d Lambdas:\n
 %d OutputConnections:\n
 %d PublicOutputs:\n
 %d TempVarBanks:\n
@@ -114,7 +120,9 @@ $ORIGIN
 %s:autowake
 %s:interrupt
 %s:wait
+%s_c
 %u %u %u
+'%s' (%s) -> Chunk%d I%d 
 ( ( const PulseStorage_t< PVAL_EHANDLE > * )asEHandle.GetInstanceStorage() )->GetBitRepresentation() == hEntA.GetRaw()
 (%d,%d)
 (%s:%d)
@@ -132,6 +140,7 @@ $ORIGIN
 *MOVE=>
 *N12_GLOBAL__N_121system_error_categoryE
 *N12_GLOBAL__N_122generic_error_categoryE
+, %d more element(s)...
 , at offset %d
 , near %s
 - Graph Def '
@@ -141,6 +150,7 @@ $ORIGIN
 -unknown source-
 -unknown source-(
 . Dead
+. Probable infinite loop
 . Req FAIL
 . Req PASS
 . Tag Added: '%s'
@@ -175,6 +185,7 @@ $ORIGIN
 16CGenericExprPart
 16CPulseExecCursor
 16CPulseModuleHost
+16ILoggingListener
 17CPulseTypeManager
 17IPulseHost_Cursor
 18CGenericExpr_Unary
@@ -197,13 +208,12 @@ $ORIGIN
 20IResourceTypeManager
 21CGenericExpr_Property
 21CPulseCell_LimitCount
-21IPulseInstanceLoadAPI
-21IPulseInstanceSaveAPI
+21CPulseInstanceLoadAPI
+21CPulseInstanceSaveAPI
 22CPulseCell_CursorQueue
 22CPulseCell_FireCursors
 22CPulseCell_Inflow_Wait
 22CPulseCell_RaceCursors
-22CPulseCell_Value_Curve
 22CPulseGraphLoadContext
 22CSchemaInstallCallback
 22CSimpleLoggingListener
@@ -229,7 +239,6 @@ $ORIGIN
 24CPulseWeakHandleTypeInfo
 25CGenericExpr_FloatLiteral
 25CGenericExpr_FunctionCall
-25CPulseCell_Value_Gradient
 25CPulseInlineValueTypeInfoI22PulseTestInlineValue_tE
 25CTestDomainDerived_Cursor
 25IAsyncProcessedDataResult
@@ -239,7 +248,6 @@ $ORIGIN
 26CPulseCell_BaseRequirement
 26CPulseCell_ExampleCriteria
 26CPulseCell_ExampleSelector
-26CPulseCell_Value_RandomInt
 26CPulseInstanceLoadAPI_NoOp
 26CPulseInstanceSaveAPI_NoOp
 26CPulseTurtleGraphicsCursor
@@ -247,7 +255,6 @@ $ORIGIN
 27CPulseCell_TestYieldForever
 28CBaseVModuleMetadataProvider
 28CPulseCell_Step_PublicOutput
-28CPulseCell_Value_RandomFloat
 28CPulseCell_Value_TestValue50
 28CPulseCell_WaitForObservable
 28CPulseModuleRegistrationHookI16CPulseModuleHostE
@@ -351,7 +358,6 @@ $ORIGIN
 <unknown>
 == PulseGraphDef ==\n
 => TempVarBank: Bank%d\n
-?16ILoggingListener
 A default string (set)
 A string associated with this Cursor, to use later for remote Kill or Wait requests. Cursors can have any number of Tags associated with them.
 A testing-only domain for target-owned graphs.
@@ -385,6 +391,11 @@ AssetSystemTest001
 Async Call Method (Child Cursor) C%d:I%d
 Async Outflow (Child Cursor) C%d:I%d
 BACKSLASH_CHAR
+BIND_LAMBDA
+BROADCAST_INVOKE
+BROADCAST_INVOKE_ARRAY_DOMAIN
+BROADCAST_INVOKE_ARRAY_SIMPLE
+BROADCAST_INVOKE_DOMAIN
 Bad FLC data for resource '%s': %s\n
 Bad KV3 data for resource '%s': %s\n
 Bad array index %d (array has %d elements)
@@ -429,6 +440,7 @@ BinMul
 BinNe
 BinSub
 BinaryProperties_GetValue
+BindLambda R%d <- Lambda%d
 Bool( %s )
 Break node reached a Method-call boundary without finding an enclosing loop.
 Breakpoint Log [%u]
@@ -472,7 +484,6 @@ CBufferString::StripTrailingSlash()
 CBufferString::ToLowerFast(int)
 CBufferString::TrimTail(char const*)
 CBufferString::TruncateAt(int, bool)
-CColorGradient
 CCommand::Tokenize: Encountered command which overflows the tokenizer buffer.. Skipping!\n
 CEntityNameString
 CFilterString::CFilterString(char const*, FilterStringOp_t, FilterStringCase_t)
@@ -481,6 +492,7 @@ CGlobalSymbol
 CGlobalSymbolCaseSensitive
 CKV3MemberNameSet
 CKV3MemberNameWithStorage
+CKV3TransferInterface_PulseEnum_Load
 CKeyValues_Data::Internal_GetString(char const*, char*, unsigned long)
 CLOSE_BRACE
 CLOSE_BRACKET
@@ -488,13 +500,13 @@ CLOSE_PAREN
 CMemAllocSystemInitialize
 COMMA
 COM_TimestampedLog
-CPiecewiseCurve
 CPulseCell_BaseYieldingInflow::BaseFlow_CancelAfter
 CPulseCell_BaseYieldingInflow::BaseFlow_CancelElegantly
 CPulseCell_BaseYieldingInflow::BaseFlow_CancelImmediately
 CPulseCell_BaseYieldingInflow::BaseFlow_WakeElegantly
 CPulseCell_BaseYieldingInflow::BaseFlow_WakeImmediately
 CPulseCell_BooleanSwitchState::Activate
+CPulseCell_BooleanSwitchState::CursorState_t
 CPulseCell_CursorQueue::Wait
 CPulseCell_ExampleCriteria::CheckRequirement
 CPulseCell_ExampleSelector::ProcessSelector
@@ -514,6 +526,7 @@ CPulseCell_IsRequirementValid::CheckRequirement
 CPulseCell_LimitCount::CheckRequirement
 CPulseCell_LimitCount::CommitStep
 CPulseCell_ObservableSwitchState::Activate
+CPulseCell_ObservableSwitchState::CursorState_t
 CPulseCell_Outflow_CycleOrdered::Run
 CPulseCell_Outflow_CycleRandom::Run
 CPulseCell_Outflow_CycleShuffled::Run
@@ -535,6 +548,7 @@ CPulseCell_TestEnums::CompareValues
 CPulseCell_TestWaitWithAutoTracepoints::Wait
 CPulseCell_TestWaitWithCursorState::Wait
 CPulseCell_TestYieldForever::Run
+CPulseCell_TestYieldWithObservables::CursorState_t
 CPulseCell_TestYieldWithObservables::Run
 CPulseCell_Test_MultiInflow_NoDefault::InflowA
 CPulseCell_Test_MultiInflow_NoDefault::InflowB
@@ -553,12 +567,9 @@ CPulseCell_Test_MultiOutflow_WithParams_Yielding::Start
 CPulseCell_Timeline::Start
 CPulseCell_Val_TestDomainFindEntityByName::Eval
 CPulseCell_Val_TestDomainGetEntityName::Eval
-CPulseCell_Value_Curve::Eval
-CPulseCell_Value_Gradient::Eval
-CPulseCell_Value_RandomFloat::Eval
-CPulseCell_Value_RandomInt::Eval
 CPulseCell_Value_TestValue50::Eval
 CPulseCell_WaitForCursorsWithTag::Wait
+CPulseCell_WaitForObservable::CursorState_t
 CPulseCell_WaitForObservable::Start
 CPulseCursorFuncs
 CPulseCursorFuncs::AnyOtherCursorsHaveTag
@@ -576,7 +587,8 @@ CPulseGraphInstance_TestDomain_Derived::GetInstanceValueX
 CPulseGraphInstance_TestDomain_Derived::HandleIntDerived
 CPulseGraphInstance_TestDomain_Derived::SetInstanceValueX
 CPulseGraphInstance_TurtleGraphics::Go
-CPulseObservableExpression
+CPulseInstanceLoadAPI
+CPulseInstanceSaveAPI
 CPulseObservableSwitchCases
 CPulseStringlib
 CPulseStringlib::Format1
@@ -642,6 +654,7 @@ CPulseTypeManager::Allocate( %s )\n
 CPulseTypeManager::Deallocate( %s, %p )\n
 CPulseTypeManager::DeallocateResource( %s, %s, dealloc=%p live=%p )\n
 CPulseVariant
+CPulse_LambdaDef
 CRC32_ProcessBuffer
 CSplitString::Split(char const*, int, char const**, int, bool)
 CStrongHandle
@@ -658,12 +671,7 @@ CThreadEvent::Set()
 CThreadSyncObject::Wait(unsigned int)
 CThreadSyncObject::WaitImpl(unsigned int)
 CThreadSyncObject::~CThreadSyncObject()
-CURVE_TANGENT_FLAT
-CURVE_TANGENT_FREE
-CURVE_TANGENT_LINEAR
-CURVE_TANGENT_MIRROR
-CURVE_TANGENT_SINE
-CURVE_TANGENT_SPLINE
+CURSOR_MAX_INSTRUCTIONS
 CUniformRandomStreamImpl<CThreadNullMutex>::RandomFloat(float, float)
 CUtlBinaryBlock::SetLength(int)
 CUtlBuffer::AddNullTermination()
@@ -716,6 +724,7 @@ Call C%d:I%d (%s)
 CallResume1
 CallResume2
 Called to invoke the graph
+Called when timer reaches the duration OR is stopped. NOTE: This will run a little while AFTER the last interval fires unless they line up very closely (0.05s) or 'Fire At End' is set.
 Canceled
 Cannot allocate abstract class
 Cannot reference domain '%s' from '%s'\n
@@ -781,6 +790,18 @@ Div R%d <- R%d / R%d
 Divide by zero!
 Domain: %s\n
 Double-save to Member '%s'
+EQ_ANIM_SEQUENCE
+EQ_MODEL_MATERIAL_GROUP
+EQ_PARTICLE_EHANDLE
+EQ_QANGLE
+EQ_RESOURCE
+EQ_RESOURCE_NAME
+EQ_SNDEVT_GUID
+EQ_SNDEVT_NAME
+EQ_TRANSFORM
+EQ_TRANSFORMWS
+EQ_VARIANT
+EQ_VDATA_CHOICE
 ERROR: CUtlSymbolTableLarge element limit of %u exceeded\n
 ERROR:NoEnum:%s:%d
 ERROR:NoEnumerator:%s:%d
@@ -797,11 +818,10 @@ EnsureElementCapacity
 EnsureMemberCapacity
 EnsureUnusedCapacity
 EntFire,%s,%s,%s
+Entity Targetname
 EntityName
 Eq R%d <- R%d == R%d
 Eval
-Evaluate the curve at the specified input position
-Evaluate the gradient at a position between 0 and 1
 External system providing an int for the test graph to consume
 External system requesting a vector from the test graph
 External system requesting an int from the test graph
@@ -846,7 +866,6 @@ Fired when A exceeds 5.
 Fired whenever the global A value changes.
 FixupResourceName: Illegal full path passed in ("%s")!\n
 FixupResourceName: Illegal path, missing extension passed in ("%s")!\n
-Flat
 Float( %f )
 Format Duration String From Seconds
 Format encountered } without matching { at column %d
@@ -861,12 +880,12 @@ Format5
 FormatArgumentsToBuffer(IFormatOutputStream*, char const*, CTypeErasedFormattingWrapper const*, int)
 FormatTo(IFormatOutputStream*, CFormatStringElement, float)
 FormatTo(IFormatOutputStream*, CFormatStringElement, int)
-Free
 Func( %s )
 Function signature which has been replaced after compilation.
 Function signature which will be replaced after compilation.
 Functions not supported in this evaluator (%s)
 GCC: (SteamRT 14.2.0-19~steamrt3.1+bsrt3.1) 14.2.0
+GET!%s
 GLIBCXX_TUNABLES
 GLIBC_2.14
 GLIBC_2.17
@@ -919,12 +938,14 @@ GetVar R%d <- V%d (%s)
 GetVar R%d <=MOVE*V%d (%s)
 HPulseCell
 HPulseCellBase
+HPulseObservableLambda
 HYieldedCursor
 HammerMapLoader001
 Handle Return Values
 HandleInt
 HandleIntDerived
 HelpSystem_001
+How many cursors to track history for before the oldest is evicted.
 I could not work out what I was expecting, like so many of us these days!\n
 ID_CHAR
 IFormatOutputStream::Format2DTable(CTypeErasedFormattingWrapper, CFormatStringElement, void const**, int, int)
@@ -942,9 +963,8 @@ IKV3TransferInterface_ResourceSave
 IKV3TransferInterface_Worldspace_Load
 IKV3TransferInterface_Worldspace_Save
 INTERNAL ERROR: Cannot convert or reinterpret from %s to %s
+INTERNAL_CALL_TO_PULSE
 IPulseGraphLoadErrorReporter
-IPulseInstanceLoadAPI
-IPulseInstanceSaveAPI
 IPulseReloadListener
 If (R%d) Jump to Instr I%d
 If (R%d) Leap to Chunk C%d
@@ -964,15 +984,19 @@ InterruptElegantly
 InterruptImmediately
 Invalid use of KV3 specific type %s with basic type %s, must be basic type %s
 Invoke '%s' failed with code %d
+Invoke *Broadcast* R%d -> R%d: Cell%d %s
 Invoke Cell%d [eid=%d] %s%s
 Invoke Lib %s
 Invoke binding %d (%s) not found, converting to NOP\n
+Invoke binding %d broadcasts %s elements to incompatible %s targets; converting to NOP\n
+Invoke binding %d invalid for broadcast, converting to NOP\n
 InvokeMiniDumpHandler
 IsValidIndex( i )
 JArray
 Jump to Instr I%d
 JumpOrLeap( C%d:I%d )
 KV3 instances cannot be set to an unspecified specific type
+Keep a history of all instructions run on a per cursor basis.
 KeyValues3
 KeyValues3: pre-allocated array memory is too small for %u elements (%u bytes available, %u bytes needed)\n
 KeyValues3: pre-allocated table memory is too small for %u members (%u bytes available, %u bytes needed)\n
@@ -1017,6 +1041,7 @@ LoadKV3Text_NoHeader(KeyValues3*, CUtlString*, char const*, KV3ID_t const&, char
 LocalServerClientAccess001
 LoggingSystem_CurrentStateIndex
 LoggingSystem_GetChannel
+LoggingSystem_GetLogCapture(CUtlVector<CUtlString, int, CUtlVectorMemory_Growable<CUtlString, int, 0ul>>*, bool)
 LoggingSystem_IsChannelEnabled
 LoggingSystem_Log
 LoggingSystem_Log(int, LoggingSeverity_t, Color, char const*, ...)
@@ -1051,12 +1076,14 @@ MPropertyFlattenIntoParentRow
 MPropertyFriendlyName
 MPropertyLeafSuggestionProviderFn
 MPropertySuppressEnumerator
+MPulseAPIOutputWithValueAccessor
 MPulseAdvanced
 MPulseCellInflow_IsDefault
 MPulseCursorTerminates
 MPulseEditorCanvasItemSpecKV3
 MPulseEditorHeaderIcon
 MPulseEditorHeaderText
+MPulseEditorSearchExpr
 MPulseExpressionAlias
 MPulseFGDSkipField
 MPulseFunctionAddsCursorTag
@@ -1074,7 +1101,6 @@ MemAlloc_ReallocFunc
 MemAlloc_StrDupFunc
 MemAlloc_StrDupWrapperFunc
 MeshUtils001
-Mirror
 Mismatched Token Exception
 Mismatched set
 Missing cell class '%s', replacing with 'CPulseCell_Unknown'\n
@@ -1098,6 +1124,18 @@ N9__gnu_cxx24__concurrence_lock_errorE
 N9__gnu_cxx26__concurrence_unlock_errorE
 NEGATIVE_TOK
 NEWLINE
+NE_ANIM_SEQUENCE
+NE_MODEL_MATERIAL_GROUP
+NE_PARTICLE_EHANDLE
+NE_QANGLE
+NE_RESOURCE
+NE_RESOURCE_NAME
+NE_SNDEVT_GUID
+NE_SNDEVT_NAME
+NE_TRANSFORM
+NE_TRANSFORMWS
+NE_VARIANT
+NE_VDATA_CHOICE
 NSt3_V214error_categoryE
 NSt6thread6_StateE
 NULL CELL 
@@ -1132,11 +1170,13 @@ POS_FLOATLITERAL
 POS_INTLITERAL
 PVAL_ANY
 PVAL_INVALID
+PVAL_LAMBDA
 PVAL_SCHEMA_ENUM
 PVAL_TYPESAFE_INT
 PVAL_TYPESAFE_INT64
 PanelID
 PanoramaTextServices001
+Parent Map + VData
 Parent Map: %s\n
 Parser encountered %d error(s)
 Pause
@@ -1169,6 +1209,7 @@ Plat_IsDirectory
 Plat_IsInDebugSession
 Plat_IsInTestMode
 Plat_IsRunningOnCustomerMachine
+Plat_IsUnderTestMonitor
 Plat_LoadModule
 Plat_LoadModuleRaw
 Plat_LoadSDL
@@ -1198,19 +1239,23 @@ Probable runaway cursor creation detected! Permanently disabling this graph inst
 Process Selector
 Prop( %s )
 PropertyEditorSystem_001
+Pulse graphs not allowed from untrusted addons.\n
 Pulse system: minimal vpulse definition loading enabled - graphs may be incomplete!\n
 Pulse: %s 
 PulseBindingTypeForCType< PulseTestInlineValue_t >() == valueType
 PulseBindingTypeForCType< const PulseTestInlineValue_t & >() == valueType
 PulseDebugLog: Calling external method on non-existent entity or game blackboard
 PulseDebugLog: Calling external method on non-existent entity or game blackboard\n
+PulseExecHistoryCallerInfo_t
 PulseFindTypeInfo( valueType ).GetBaseType() == CPulseType()
+PulseRuntimeLambdaIndex_t
 PulseSymbol_t
 PulseSystemEventCursorResult_t
 PulseSystemEventObservableVariableListenerNotify_t
 PulseSystemEventObservableVariableSourceChanged_t
 PulseSystemEventYieldResume_t
 R%d%s%s
+RECORD_NEXT_SEQ_POINT
 RESOURCE_TYPE_PULSE_GRAPH_DEF
 Raise pen.
 RandomFloat
@@ -1218,7 +1263,7 @@ RandomInt
 Recognition Exception
 Recognition exception
 Record that the function was called
-RegisterChoice_CPulseTestFuncs_LibraryA_PrintStringWithLeafSuggestions
+RegisterChoice_CPulseTestFuncs_LibraryA_PrintStringWithLeafSuggestions_pValue
 RegisterConCommand: Unknown error registering con command "%s"!\n
 RegisterConVar: Unknown error registering convar "%s"!\n
 Regular
@@ -1235,6 +1280,8 @@ ResourceManifestRegistry001
 Return
 Return the input string, use the code default if none was supplied.
 Root
+Runs OnInterval immediately when waiting begins. Otherwise the first OnInterval happens after the first interval has elapsed.
+Runs OnInterval upon reaching the end of the duration. Otherwise the last OnInterval will fire earlier unless they line up very closely (0.05s)
 SCOPE_QUALIFIER
 SEMICOLON
 SINGLE_LINE_COMMENT
@@ -1291,7 +1338,6 @@ Signature hook to fill out arguments for OnOut2
 SmartPropsSystem_001
 Source2ModTools001
 Spawn a fake entity from a static library function.
-Spline
 SplitNameAndKV3Args
 St10bad_typeid
 St11_Mutex_baseILN9__gnu_cxx12_Lock_policyE2EE
@@ -1409,6 +1455,7 @@ UtlVectorMemory_FailedAllocation
 VApplication001
 VAvi001
 VBik001
+VMAP_AND_VDATA
 VMediaFoundation001
 VP4003
 VRenderDeviceSetupV001
@@ -1438,6 +1485,7 @@ V_StringToFloatArray
 V_StringToInt16
 V_StringToInt32
 V_StringToInt64
+V_StringToInt8
 V_StringToQAngle
 V_StringToUint16
 V_StringToUint32
@@ -1675,8 +1723,10 @@ asInt.GetValueInt() == valueA.m_nValue
 assignedB.EqualTo( variantB, false )
 auto
 auto:
+bCondition
 bInAutoWakeList
 bInherit
+bOverflowedInstructionHistoryLimit
 bValue
 bad_function_call
 bank_unique_id
@@ -1792,9 +1842,11 @@ double
 downcast.EqualTo( variantDerived, false )
 downcast.GetType() == derivedAType
 dynamic_cast
+ehandle_serialize
 entity_name
 execution_history
 expr
+externalCallerInfo
 fakeEnt.m_nHandle.WeakHandle() == PULSE_WEAK_HANDLE_INVALID
 fake_derived_a
 fake_derived_b
@@ -1810,8 +1862,7 @@ flDistance
 flDuration
 flDurationSec
 flElapsed
-flMax
-flMin
+flLiveFloatValue
 flPercentage
 flSeconds
 flValue
@@ -1895,23 +1946,27 @@ m_DependentObservableTempVars
 m_DependentObservableVars
 m_EvaluateConnection
 m_Inargs
+m_LambdaDefs
+m_LambdaSubscriptions
+m_LatestValue
 m_MissingRetvalDefault
 m_ParamType
 m_PreparedHook
+m_ResultType
 m_ResumePoint
 m_ReturnType
-m_Stops
 m_TagName
 m_TagValue
 m_bChildCursorsShouldInherit
+m_bCompletingVeryCloseToEndOfInterval
 m_bConditionValue
+m_bFireAtEnd
+m_bFireAtStart
 m_bFirstEvaluate
 m_bInvokedOrScheduled
 m_bRemoveWhenOutOfScope
 m_bShowInUI
 m_curValue
-m_flSlopeIncoming
-m_flSlopeOutgoing
 m_flWakeTime
 m_hCursor
 m_hCursorOnOtherGraph
@@ -1920,13 +1975,14 @@ m_hGraphInstance
 m_hInstance
 m_hListenerInstance
 m_hObserver
+m_mapNodeToNewCursorCount
 m_nActiveCase
 m_nCellID
+m_nCulledCursorCount
 m_nCurrentWakeIndex
 m_nCursorID
 m_nGraphID
-m_nIncomingTangent
-m_nOutgoingTangent
+m_nLambdaIdx
 m_nResult
 m_nStackDepthWhenAdded
 m_nSubject
@@ -1934,10 +1990,6 @@ m_nUniqueID
 m_nVarDocNodeID
 m_nYieldToken
 m_prevValue
-m_spline
-m_tangents
-m_vDomainMaxs
-m_vDomainMins
 malloc
 matrix3x4
 memchr
@@ -1951,8 +2003,6 @@ nAsyncRet1
 nFormat
 nHandle
 nKillPriority
-nMax
-nMin
 nParam
 nRemainderDigits
 nRemainderNoiseDigits
@@ -2024,7 +2074,6 @@ param
 parent_cursor_id
 pending_events
 pointer
-polymorphic_arg
 port_name
 previous_value
 pthread_cond_broadcast
@@ -2038,10 +2087,12 @@ pthread_once
 pthread_sigmask
 public_output::%s
 public_output::%s::%s
+pulse/pulse_enabled_for_untrusted_addons
 pulse_editor
 pulse_open_graph_id %u
 pulse_open_graph_id %u %u
 pulse_runtime_lib
+pulse_save_cursor_info_limit
 pulse_system
 pulse_system.dll
 pulse_test_example_suggestion
@@ -2069,6 +2120,7 @@ resourcesystem
 return_values
 retval
 rotation_vector
+sLiveStringValue
 scheduled_hooks
 schemasystem
 secure_getenv
@@ -2740,6 +2792,7 @@ strstr
 strtoul
 subclass
 suggestion_name
+switchValue
 syscall
 system
 system_state

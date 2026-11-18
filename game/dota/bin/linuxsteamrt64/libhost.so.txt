@@ -321,6 +321,7 @@ $ORIGIN
 15ISPSharedMemory
 16CLoopModeFactoryI21CLoopModeGameHostDotaE
 16CSource2HostBase
+16ILoggingListener
 16ILoopModeFactory
 17CNETMsg_SetConVar
 17CNETMsg_StringCmd
@@ -372,7 +373,6 @@ $ORIGIN
 ::google::protobuf::FieldDescriptorProto_Type_IsValid(value)
 <no failure reason set>
 <undefined>
-?16ILoggingListener
 ???\f???????\n???\r?\t?\v
 @9ILoopMode
 A file with this name is already in the pool.
@@ -811,7 +811,6 @@ CUtlString::Format(char const*, ...)
 CUtlString::FormatV(char const*, __va_list_tag*)
 CUtlString::FreeMemoryBlock()
 CUtlString::GetExtensionAlloc() const
-CUtlString::GetForModify()
 CUtlString::IsEqual_CaseSensitive(char const*) const
 CUtlString::IsEqual_FastCaseInsensitive(char const*) const
 CUtlString::PathJoin(char const*, char const*)
@@ -1000,7 +999,6 @@ GCC: (SteamRT 5.4.0-7.really.6+steamrt1.2+srt2) 5.4.1 20160803
 GLIBCXX_TUNABLES
 GLIBC_2.14
 GLIBC_2.17
-GLIBC_2.18
 GLIBC_2.2.5
 GLIBC_2.25
 GLIBC_2.27
@@ -1160,6 +1158,7 @@ LoadKV3Text_NoHeader(KeyValues3*, CUtlString*, char const*, KV3ID_t const&, char
 LocalServerClientAccess001
 LoggingSystem_CurrentStateIndex
 LoggingSystem_GetChannel
+LoggingSystem_GetLogCapture(CUtlVector<CUtlString, int, CUtlVectorMemory_Growable<CUtlString, int, 0ul>>*, bool)
 LoggingSystem_IsChannelEnabled
 LoggingSystem_Log
 LoggingSystem_Log(int, LoggingSeverity_t, Color, char const*, ...)
@@ -1244,9 +1243,6 @@ N10__cxxabiv120__si_class_type_infoE
 N10__cxxabiv121__vmi_class_type_infoE
 N10__cxxabiv123__fundamental_type_infoE
 N10__cxxabiv129__pointer_to_member_type_infoE
-N24CFieldPathHuffmanEncoder12InternalNodeE
-N24CFieldPathHuffmanEncoder5INodeE
-N24CFieldPathHuffmanEncoder8LeafNodeE
 N6google8protobuf10TextFormat17BaseTextGeneratorE
 N6google8protobuf10TextFormat17FieldValuePrinterE
 N6google8protobuf10TextFormat21FastFieldValuePrinterE
@@ -1488,6 +1484,7 @@ Plat_IsDirectory
 Plat_IsInDebugSession
 Plat_IsInTestMode
 Plat_IsRunningOnCustomerMachine
+Plat_IsUnderTestMonitor
 Plat_LoadModule
 Plat_LoadModuleRaw
 Plat_LoadSDL
@@ -1863,6 +1860,7 @@ V_fread
 V_frexpf
 V_ftell
 V_fwrite
+V_isfinited
 V_isnand
 V_logf
 V_powd
@@ -1878,9 +1876,9 @@ V_sscanf
 V_stricmp_fast
 V_stristr_fast(char const*, char const*)
 V_strnlen(char const*, int)
-V_strtok
 V_tanf
 V_vsnprintf
+V_z3_decompress
 Value must be "true" or "false" for boolean option "
 Value must be identifier for boolean option "
 Value must be identifier for enum-valued option "
@@ -1940,7 +1938,6 @@ _V_SetExtension
 _V_StringAfterPrefix
 _V_StripLastDir
 _V_strEndsWith
-_V_strncat
 _V_strncmp
 _V_strncpy
 _V_strnicmp_fast
@@ -1977,8 +1974,6 @@ __cxa_guard_release
 __cxa_init_primary_exception
 __cxa_pure_virtual
 __cxa_rethrow
-__cxa_thread_atexit
-__cxa_thread_atexit_impl
 __cxa_throw
 __cxa_throw_bad_array_new_length
 __cxxabiv1::__base_class_type_info::__is_public_p() const
@@ -2337,6 +2332,7 @@ cannot create shim for unknown locale::facet
 cannot create std::deque larger than max_size()
 cannot create std::vector larger than max_size()
 carriage-return
+cbrtf
 char
 char const (&std::forward<char const (&) [10]>(std::remove_reference<char const (&) [10]>::type&)) [10]
 char const (&std::forward<char const (&) [9]>(std::remove_reference<char const (&) [9]>::type&)) [9]
@@ -2636,6 +2632,7 @@ int& std::forward<int&>(std::remove_reference<int&>::type&)
 int&& std::forward<int>(std::remove_reference<int>::type&)
 int16
 int64
+int8
 internal error in map key sorting
 ioctl
 ios_base::_M_grow_words allocation failed
@@ -6216,6 +6213,7 @@ std::time_put_byname<wchar_t, std::ostreambuf_iterator<wchar_t, std::char_traits
 std::time_put_byname<wchar_t, std::ostreambuf_iterator<wchar_t, std::char_traits<wchar_t>>>::time_put_byname(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, unsigned long)
 std::time_put_byname<wchar_t, std::ostreambuf_iterator<wchar_t, std::char_traits<wchar_t>>>::time_put_byname(std::string const&, unsigned long)
 std::time_put_byname<wchar_t, std::ostreambuf_iterator<wchar_t, std::char_traits<wchar_t>>>::~time_put_byname()
+std::to_string(int)
 std::tuple<std::thread::_State*, std::default_delete<std::thread::_State>>::tuple<true, true>()
 std::tuple_element<0ul, std::tuple<std::thread::_State*, std::default_delete<std::thread::_State>>>::type const& std::get<0ul, std::thread::_State*, std::default_delete<std::thread::_State>>(std::tuple<std::thread::_State*, std::default_delete<std::thread::_State>> const&)
 std::tuple_element<0ul, std::tuple<std::thread::_State*, std::default_delete<std::thread::_State>>>::type& std::get<0ul, std::thread::_State*, std::default_delete<std::thread::_State>>(std::tuple<std::thread::_State*, std::default_delete<std::thread::_State>>&)
@@ -6242,6 +6240,7 @@ std::unique_ptr<std::thread::_State, std::default_delete<std::thread::_State>>::
 std::unique_ptr<std::thread::_State, std::default_delete<std::thread::_State>>::unique_ptr<std::default_delete<std::thread::_State>, void>(std::thread::_State*)
 std::unique_ptr<std::thread::_State, std::default_delete<std::thread::_State>>::~unique_ptr()
 std::vector<char, std::allocator<char>>::vector(std::vector<char, std::allocator<char>> const&)
+std::vector<float, std::allocator<float>>::vector(unsigned long, std::allocator<float> const&)
 std::vector<std::Catalog_info*, std::allocator<std::Catalog_info*>>::_M_check_len(unsigned long, char const*) const
 std::vector<std::Catalog_info*, std::allocator<std::Catalog_info*>>::_M_erase(__gnu_cxx::__normal_iterator<std::Catalog_info**, std::vector<std::Catalog_info*, std::allocator<std::Catalog_info*>>>)
 std::vector<std::Catalog_info*, std::allocator<std::Catalog_info*>>::_M_realloc_append(std::Catalog_info* const&)

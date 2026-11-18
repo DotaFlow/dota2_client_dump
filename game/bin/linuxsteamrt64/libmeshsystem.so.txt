@@ -64,9 +64,26 @@ $ORIGIN
 (anonymous namespace)
 *N12_GLOBAL__N_121system_error_categoryE
 *N12_GLOBAL__N_122generic_error_categoryE
+*ZN13CSOAContainer10FilterFromERKS_iiiiiPKfbEUlvE0_
+*ZN13CSOAContainer10FilterFromERKS_iiiiiPKfbEUlvE_
+*ZN13CSOAContainer17SrgbGammaToLinearEiEUlvE_
+*ZN13CSOAContainer17SrgbLinearToGammaEiEUlvE_
+*ZN13CSOAContainer24IIRGaussianApproximationEjfEUliiE0_
+*ZN13CSOAContainer24IIRGaussianApproximationEjfEUliiE1_
+*ZN13CSOAContainer24IIRGaussianApproximationEjfEUliiE_
+*ZN13CSOAContainer28QuarterSizeAttrWithBoxFilterERKS_iiP10CCallQueueEUlvE0_
+*ZN13CSOAContainer28QuarterSizeAttrWithBoxFilterERKS_iiP10CCallQueueEUlvE_
+*ZN13CSOAContainer32Normalized3x3SobelEdgeFilterFromERKS_iiibEUlvE0_
+*ZN13CSOAContainer32Normalized3x3SobelEdgeFilterFromERKS_iiibEUlvE_
+*ZN13CSOAContainer37Normalize3ComponentVectorInAttributesEiii5Vec3DIfEbbEUlvE0_
+*ZN13CSOAContainer37Normalize3ComponentVectorInAttributesEiii5Vec3DIfEbbEUlvE_
+*ZN13CSOAContainer8FillAttrEifEUlvE_
+*ZN13CSOAContainer9FilterInYEi9IntAABB_tiPKfbEUlvE_
+*ZN13CSOAContainer9FilterInZEi9IntAABB_tiPKfbEUlvE_
 *ZN21RayTracingEnvironment10RefineNodeEiPKiiPK16TriangleBounds_t5Vec3DIfES6_iP21CUtlMultiJobProcessorEUlvE0_
 *ZN21RayTracingEnvironment10RefineNodeEiPKiiPK16TriangleBounds_t5Vec3DIfES6_iP21CUtlMultiJobProcessorEUlvE_
 *ZN21RayTracingEnvironment26SetupAccelerationStructureEvEUlvE_
+../../public/tier0/tslist.h
 ../public/scenesystem/memoryvertex.h(145): 
 ../public/tier0/tslist.h
 ../public/tier0/utldict.h
@@ -77,6 +94,7 @@ $ORIGIN
 0 0 0
 0 0 0 0
 0 0 0 255
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789
 10CMeshUtils
 10CModel_Imp
@@ -255,6 +273,7 @@ BinaryProperties_GetValue
 BoneConstraintList
 BoneConstraintRbf :: Cannot find input bone "%s" :: %s\n
 BoneConstraintRbf :: Cannot find output bone "%s" :: %s\n
+BoneConstraintRbf :: Invalid RBF parameters\n
 BoneConstraintRbf :: Invalid input %d or output %d bone count :: %s\n
 BoneConstraintRbf :: input bone count %d != input pose count %d :: %s\n
 BoneConstraintRbf :: output bone count %d != output pose count %d :: %s\n
@@ -433,6 +452,7 @@ FormatTo(IFormatOutputStream*, CFormatStringElement, float)
 FormatTo(IFormatOutputStream*, CFormatStringElement, int)
 FormatTo(IFormatOutputStream*, CFormatStringElement, unsigned int)
 FormatTo(IFormatOutputStream*, CFormatStringElement, void const*)
+Forward Stop Only
 Found existing value when inserting into dict - replacing existing value with new value. If this is intended behavior, use InsertOrReplace. If leaving existing values alone is intended, use InsertIfNotFound.
 Found translucent and opaque grooms in the same groom group. This is not allowed.\n
 G8R8_G8B8_UNORM
@@ -463,6 +483,8 @@ IFormatOutputStream::FormatEnumHelper(CFormatStringElement, int, std::initialize
 IFormatOutputStream::FormatMaskHelper(int, std::initializer_list<std::pair<int, char const*>>)
 IFormatOutputStream::OutputIndentation()
 IFormatOutputStream::PutRepeatedChar(char, int)
+IKV3TransferInterface_EHandle_Load
+IKV3TransferInterface_EHandle_Save
 IKV3TransferInterface_ResourceLoad
 IKV3TransferInterface_ResourceSave
 Inert VModuleMetadata
@@ -547,6 +569,7 @@ ModelBodyGroupName()
 ModelBoneName()
 ModelDocUtils001
 ModelMaterialGroupName()
+ModelMeshDNARig_t
 MorphSetData_t
 N10__cxxabiv115__forced_unwindE
 N10__cxxabiv117__class_type_infoE
@@ -736,6 +759,7 @@ Tried to load a polymorphic pointer with no '%s' key
 Tried to load resource reference '%s' from a value without a resource reference specific type.
 Trying to override a material with an invalid draw call index\n
 Trying to override the same draw call with two different materials!\nOnly the last override will be set!\n
+Turn To Start
 UNKNOWN
 USAGE: print_model_bind_pose <vmdl_name> [bone_name]\n
 UUUU
@@ -808,6 +832,7 @@ V_fmodf
 V_fpclassifyd
 V_fread
 V_frexpf
+V_isfinited
 V_isnand
 V_logf
 V_powd
@@ -826,6 +851,7 @@ V_strlower_fast
 V_strnlen(char const*, int)
 V_tanf
 V_vsnprintf
+V_z3_decompress
 VectorAligned
 VertexElementAnnotation
 VertexGenericIntegerData
@@ -973,6 +999,7 @@ _txnal_runtime_error_get_msg(void*)
 _txnal_sso_string_c_str(void const*)
 abort
 acosf
+affine
 alignof 
 allocator
 angularburst
@@ -1033,6 +1060,7 @@ byte
 cables_list
 calloc
 cannot create std::vector larger than max_size()
+cbrtf
 chancetospawn
 char
 char const (&std::forward<char const (&) [10]>(std::remove_reference<char const (&) [10]>::type&)) [10]
@@ -1077,16 +1105,25 @@ distancefield_data_block
 dl_iterate_phdr
 double
 dynamic_cast
+eAim
+eForwardStopOnly
+eTurnToStart
 embedded_animation
 embedded_distancefield
 embedded_meshes
 embedded_physics
+embedding_norm
 error.vmesh
+euclidean_norm
 expf
 eye_data
 eye_data_list
 false
 fast
+flGoalStrength
+flScale
+flZin
+flZout
 float
 float64
 fputc
@@ -1106,6 +1143,7 @@ g_nSequentialIndices<int>
 g_pMemAlloc
 g_pThreadPool
 generic
+geodesic_norm
 getentropy
 glibcxx.eh_pool
 global constructors keyed to 
@@ -1119,16 +1157,20 @@ half
 hardware
 hidden alias for 
 initializer for module 
+inputs
 int const& std::min<int>(int const&, int const&)
 int& std::forward<int&>(std::remove_reference<int&>::type&)
 int&& std::forward<int>(std::remove_reference<int>::type&)
 int16
 int64
+int8
 interactive
 invalid
+inverse_threshold
 ioctl
 java Class for 
 java resource 
+l2_regularization
 ld-linux-x86-64.so.2
 libc.so.6
 libm.so.6
@@ -1140,11 +1182,15 @@ long double
 long long
 lowprecisionuv
 lowprecisionuv1
+m_Deformers
+m_FfdZLayers
 m_Format
 m_Stops
 m_attachments
 m_bBakedTwoSided
+m_bBlendShapes
 m_bCanBatchWithDynamicShaderConstants
+m_bCompressedZ3
 m_bDrawLast
 m_bHasBakedLightingFromLightMap
 m_bHasBakedLightingFromVertexStream
@@ -1158,23 +1204,31 @@ m_bUseForCollision
 m_bUseForOcclusion
 m_bUseShadowFastPath
 m_distanceFields
+m_dnaRigs
 m_eRbfType
+m_flDisplayRadius
 m_flGridCellSize
 m_flMaxQuantizedDistance
 m_flSurfaceBias
 m_hitboxsets
 m_influenceFlags
 m_morphSet
+m_nBlock
 m_nBodyGroupChoice
 m_nBodyGroupIndex
 m_nMax
 m_nMin
 m_nParentBoneNameHash
+m_nReferenceNode
 m_nResX
 m_nResY
 m_nResZ
+m_nRig
+m_nVertexMapIndex
+m_nVertexMapNameHash
 m_quantizedData
 m_rbfParameters
+m_rbfParametersKV3
 malloc
 materialgroup_driven_morph_list
 materialgroup_name
@@ -1213,6 +1267,9 @@ noexcept
 non-transaction clone for 
 non-virtual thunk to 
 null
+num_inputs
+num_outputs
+num_poses
 obj_count
 obj_size
 open
@@ -1238,6 +1295,7 @@ operator new[](unsigned long, std::align_val_t, std::nothrow_t const&)
 operator new[](unsigned long, std::nothrow_t const&)
 operator"" 
 optionallycompressedtangentframe
+outputs
 particles_list
 phys_data_block
 phys_res
@@ -1267,8 +1325,11 @@ reinterpret_cast
 resource_manifests
 resources
 resourcesystem
+rigid
+rotation_ignore_threshold
 secure_getenv
 seqgroup_data_block
+settings
 short
 signed char
 sincosf
@@ -1542,6 +1603,7 @@ std::basic_ostream<char, std::char_traits<char> >
 std::basic_string
 std::basic_string<char, std::char_traits<char>, std::allocator<char> >
 std::basic_string<char, std::char_traits<char>, std::allocator<char>> std::operator+<char, std::char_traits<char>, std::allocator<char>>(char const*, std::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)
+std::basic_string<char, std::char_traits<char>, std::allocator<char>> std::operator+<char, std::char_traits<char>, std::allocator<char>>(char const*, std::basic_string<char, std::char_traits<char>, std::allocator<char>>&&)
 std::basic_string<char, std::char_traits<char>, std::allocator<char>> std::operator+<char, std::char_traits<char>, std::allocator<char>>(char, std::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)
 std::basic_string<char, std::char_traits<char>, std::allocator<char>> std::operator+<char, std::char_traits<char>, std::allocator<char>>(std::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)
 std::basic_string<char, std::char_traits<char>, std::allocator<char>>::basic_string()
@@ -1836,6 +1898,7 @@ std::system_error::system_error(int, std::_V2::error_category const&, char const
 std::system_error::system_error(std::error_code, char const*)
 std::system_error::~system_error()
 std::terminate()
+std::to_string(int)
 std::type_info::__do_catch(std::type_info const*, void**, unsigned int) const
 std::type_info::__do_upcast(__cxxabiv1::__class_type_info const*, void**) const
 std::type_info::__is_function_p() const
@@ -1850,12 +1913,16 @@ std::underflow_error::underflow_error(std::__cxx11::basic_string<char, std::char
 std::underflow_error::underflow_error(std::string const&)
 std::underflow_error::~underflow_error()
 std::unexpected()
+std::vector<float, std::allocator<float>>::vector(unsigned long, std::allocator<float> const&)
 stderr
 stdin
 strchr
 strcmp
 strcpy
 strerror_r
+stretch_ignore_threshold
+stretch_mean
+stretch_norm
 string literal
 string::string
 strlen
@@ -1875,12 +1942,16 @@ terminate called without an active exception\n
 texcoord
 texcoord0
 texcoord1
+theta_transpose
 this
 this 
 thread-local initialization routine for g_pThreadLocalStackAllocator
 throw
 throw 
 tools_vb_block
+training_rotations
+training_stretches
+training_translations
 transaction clone for 
 transaction clone for operator delete(void*)
 transaction clone for operator new[](unsigned long)
@@ -1917,6 +1988,9 @@ transaction clone for std::runtime_error::~runtime_error()
 transaction clone for std::underflow_error::underflow_error(char const*)
 transaction clone for std::underflow_error::underflow_error(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)
 transaction clone for std::underflow_error::~underflow_error()
+transform_mode
+translation_ignore_threshold
+translation_mean
 typeinfo fn for 
 typeinfo for 
 typeinfo for IFormatOutputStream

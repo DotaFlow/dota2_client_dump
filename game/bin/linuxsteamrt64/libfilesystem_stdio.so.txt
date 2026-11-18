@@ -160,6 +160,7 @@ $ORIGIN
 %s:%s
 %s\nFailed to load file (%s)!\n
 %s_%03d.vpk
+%s_dir.vpk
 &p^?CSI
 '()+,-./:=?
 ( m_nChunkHashesSize % sizeof( ChunkHashFraction_t ) ) == 0
@@ -471,6 +472,7 @@ AssetRenameSystem_001
 AssetSystem001
 AssetSystemTest001
 AsyncFileSystem2: io threads changed %i -> %i
+AsyncFileSystem: failed to start IO thread %d of %d\n
 AsyncFilesystem Callback
 AsyncFilesystem Read
 AsyncFilesystem Write
@@ -689,8 +691,6 @@ CBufferString::StripExtension(bool)
 CBufferString::StripTrailingSlash()
 CBufferString::ToLowerFast(int)
 CBufferString::TruncateAt(int, bool)
-CCountedStringPool_CI::CCountedStringPool_CI()
-CCountedStringPool_CI::~CCountedStringPool_CI()
 CCrypto::GenerateSHA256Digest
 CCrypto::RSAVerifySignature
 CCrypto::RSAVerifySignatureSHA256
@@ -902,9 +902,6 @@ CUtlBuffer::SeekGet(CUtlBuffer::SeekType_t, int)
 CUtlBuffer::SeekPut(CUtlBuffer::SeekType_t, int)
 CUtlBuffer::SetBufferType(bool, bool)
 CUtlBuffer::SetExternalBuffer(void*, int, int, CUtlBuffer::BufferFlags_t)
-CUtlFilenameSymbolTable::FindFileName(char const*) const
-CUtlFilenameSymbolTable::FindOrAddFileName(char const*)
-CUtlFilenameSymbolTable::String(unsigned int const&, CBufferString*)
 CUtlScratchMemoryPool::AllocAligned(int, int)
 CUtlScratchMemoryPool::CUtlScratchMemoryPool(unsigned int, unsigned int, void*, bool)
 CUtlScratchMemoryPool::Purge()
@@ -2110,6 +2107,7 @@ Plat_GetCurrentDirectory
 Plat_GetEnv
 Plat_GetExeModule
 Plat_GetFileType
+Plat_GetGameDirectory
 Plat_GetModuleFilename
 Plat_GetModuleProcAddress
 Plat_GetTime
@@ -2673,10 +2671,12 @@ V_StringToFloat64
 V_StringToInt16
 V_StringToInt32
 V_StringToInt64
+V_StringToInt8
 V_StringToQAngle
 V_StringToUint16
 V_StringToUint32
 V_StringToUint64
+V_StringToUint8
 V_StringToVector
 V_StringToVector2D
 V_StringToVector4D
@@ -4555,6 +4555,7 @@ int& std::forward<int&>(std::remove_reference<int&>::type&)
 int&& std::forward<int>(std::remove_reference<int>::type&)
 int16
 int64
+int8
 int_dhvparams
 int_dhx942_dh
 int_err_get (err.c)

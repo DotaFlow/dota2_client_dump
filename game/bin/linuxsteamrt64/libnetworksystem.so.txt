@@ -6,7 +6,7 @@
          Percentage. . : %9s%9s\n
   % 3d % 8d [%8.3f %%]\n
   %i:  culled %-20s:  %s -> %s (%s)\n
-  %s has flag %s\n
+  %s%2d: %d\n
   %s: %dms via %s (front=%dms, back=%dms)%s\n
   %s: %dms via direct route\n
   %s: %dms\n
@@ -83,8 +83,8 @@
  volatile
  was modified concurrently during serialization.
 !is_large()
-!m_NetworkChangeTagCallback.IsEmpty()
 !m_bNeedsSort
+!s_NetworkChangeTagCallback.IsEmpty()
 " because it is missing required fields: 
 " conflicts with field "
 " conflicts with the existing symbol "
@@ -172,7 +172,7 @@ $ORIGIN
 %-10s % 5d no fastpath because field %s %s changed the array size from %d to %d\n
 %-10s % 5d no fastpath because field %s base depth is too large (pointer metadata change?)\n
 %-10s % 5d no fastpath because field %s not resolvable\n
-%-10s %d %s: %s at offset %d, 0x%p array %s struct %s: index %d array size %d in %s\n
+%-10s %d %s: %s at offset %d, 0x%p array of structs: index %d array size %d in %s\n
 %-5d %-20s : [%-5d -> %-5d] %-5s bits:  %-32s %-80s : '%s' %s
 %-64.64s has %d CFlattendSerializer permutations\n
 %-75s %-75s offset %10.10s %9.9s %s
@@ -187,6 +187,8 @@ $ORIGIN
 %20.20s %s is variant %d/%d of %s\n
 %20.20s omit %d types for %s [convar net_max_polymorphic_spew=%d]\n
 %20.20s omit %s variants, already spewed\n
+%5d%7d%7d%7d %s\n
+%5s%7s%7s%7s %s\n
 %60.60s %15.15s %24.24s %10.10s\n
 %60.60s %15.15s %24s %10d 
 %8.3f: %s: ParseMessagesDemo UNRELIABLE %d bytes\n
@@ -297,7 +299,6 @@ $ORIGIN
 %s: unable to find serializer named %s\n
 %s:%d
 %s::%s encoder mismatch, local '%s' vs. remote '%s', using local\n
-%s::%s has more than one MNetworkChangeCallback that requires passing network value into handler, this is unsupported\n
 %s::%s was in the original serializer at offset %u but that offset isn't in the ignore list!!!\n
 %s::%s:%u (%s ) already encountered at %s::%s:%u (%s)
 %s:Inbound net frame %d dropped\n
@@ -483,7 +484,6 @@ $ORIGIN
 15CTier1AppSystemI14INetworkSystemLx0EE
 15CTier2AppSystemI14INetworkSystemLx0EE
 15INetChannelInfo
-16CDeltaCalculator
 16CNetworkMessages
 16CSVCMsg_BSPDecal
 16CSVCMsg_FixAngle
@@ -541,7 +541,6 @@ $ORIGIN
 21IVConCommDataReceived
 21NetMessagePacketEnd_t
 21NetMessagePacketStart
-22CDecodeSerializerStack
 22CEncodeSerializerStack
 22CMsgServerNetworkStats
 22CMsgSource2SystemSpecs
@@ -610,7 +609,6 @@ $ORIGIN
 30CNetworkFieldChangedEventQueue
 30CSVCMsgList_GameEvents_event_t
 30INetworkFieldChangedEventQueue
-30ISerializedEntityErrorSpewHook
 31CSVCMsg_HltvFixupOperatorStatus
 31ProtoFlattenedSerializerField_t
 32CFlattenedSerializerSpewFunc_Log
@@ -684,7 +682,6 @@ AddUInt32
 AddUInt64
 AlignedByteArray not properly aligned\n
 Alloc
-Allowing IP connections without auth\n
 Already saw decimal point or exponent; can't have another one.
 AnimGraphEditorUtils001
 Applied simulated network conditions from gameinfo.\n
@@ -712,6 +709,7 @@ Average Backing Raw Paths         :  %8.3f\n
 Average Data Bytes                :  %8.3f bytes\n
 Average Memory Usage Per Entity   :  %8.3f bytes\n
 Average Number of Field Paths     :  %8.3f\n
+AvgSz
 BUG! Failed to read from buffer after checking size?
 BackUp() can not exceed the size of the last Next() call.
 BackUp() can only be called after a successful Next().
@@ -722,6 +720,7 @@ Boolean default must be true or false.
 Buffer overflow
 BuildDelta
 BuildDeltaProperties fieldDataBuf
+BuildDeltaProperties fieldDataBuf overflow at %s: ent %d %s field %s (%s) result %d oldwidth %d bitencodingchanged %d resized %d oldbits %d bufbits %d written %d growth %d change %u/%u\n
 BuildEntityClassNetworkSerializer
 BuildHierarchy_R
 BuildMergedSerializedEntity:  delta header with corrupt array count [ ent %d ]:  entry %d/%d == %u!
@@ -752,8 +751,6 @@ CBufferString::TrimTail(char const*)
 CBufferString::TruncateAt(int, bool)
 CBuildNetworkSerializerHierarchyOrder::ComputeDepth
 CCommand::Tokenize: Encountered command which overflows the tokenizer buffer.. Skipping!\n
-CDeltaCalculator::ErrorMsg %s %d\n
-CDeltaCalculator::ErrorMsg: %s\n
 CDeltaCalculator::FieldCalcDelta fromBits
 CDeltaCalculator::FieldCalcDelta toBits
 CEntitySystem::BuildEntityNetworking (%s build of %s) took %.3f msecs for %d out of %d classes\n
@@ -769,7 +766,7 @@ CFieldPath tracing started\n
 CFlattenedSerializer::ApplyOverrides_R
 CFlattenedSerializer::BuildDeltaProperties using %d bytes for encoding %d/%s\n
 CFlattenedSerializer::BuildOverrideField:  Problem initializing replacement field %s::%s\n
-CFlattenedSerializer::Decode
+CFlattenedSerializer::DecodeSerializedEntity
 CFlattenedSerializer::DumpSerializedEntityToConsole
 CFlattenedSerializer::Encode failure for entity %d\n
 CFlattenedSerializer::Encode overflow failure for entity %d max size is %d bytes\n
@@ -1096,11 +1093,8 @@ CNetChan::UpdateMessageStats, bit counter about to roll over with addition of %d
 CNetworkFieldChangedEventQueue::QueueChange:  ran out of scratch data space!!!\n
 CNetworkMessages::FindOrCreateGroupId: Too many network groups!\n
 CNetworkMessages::FindOrCreateNetMessage: It is illegal to register new net messages after serialization!\n
-CNetworkMessages::InitNetworkChangeTag - missing m_NetworkChangeTagCallback, should have been installed by CEntitySystem::Init call to g_pNetworkMessages->RegisterNetworkChangeTagCallback!
 CNetworkMessages::Serialize attempted to serialize a non-serializeable message [%s]!\n
 CNetworkSerializer: Unable to find network encoder named %s!\n
-CNetworkSystem::BufferToBufferDecompress with improperly sized dest buffer (%u in, %llu needed)\n
-CNetworkSystem::BufferToBufferDecompress with improperly sized dest buffer (%u in, %u needed)\n
 CNetworkSystem::CleanupDebugOutputFunction()\n
 CNetworkSystem::CloseAllSockets()\n
 CNetworkSystem::Init() failed - no SteamNetworking()\n
@@ -1254,6 +1248,7 @@ CharacterSetBuild
 Checking for missing CNetworkVar* declarations\n
 Class data is a '%s', not a table\n
 Class,Field,Field Path,Decode Count,Total Bits,Avg Bits,Total Index Bits,Avg Index Bits,Priority,=SUM(E:E),Full Name,Notes\n
+Clear per-entity decode change callback stats
 ClearField
 Client Messages
 ClientLocalServerAccess001
@@ -1265,7 +1260,6 @@ Closing '%s' UDP listen socket\n
 Closing '%s' poll group\n
 Closing Steam Net Connection on socket '%s' to %s, handle #%u (%d %s)\n
 Complexity of regex match exceeded implementation limits
-ComputeOrderForPriority
 ConfirmAllMessageHandlersInstalled
 Conflicting regex grammar options
 ConnectSocket(%s) failed\n
@@ -1282,6 +1276,7 @@ CreateReplayCompatSerializerFromMeta creating fake serializer for %s\n
 Created poll group for socket '%s'\n
 DATA_LOSS
 DEADLINE_EXCEEDED
+DECODE FAILED
 DF128_
 DF16_
 DF16b
@@ -1289,6 +1284,7 @@ DF32_
 DF32x
 DF64_
 DF64x
+DISCARD array size
 DO NOT PARSE: fields may be stripped and missing.\n
 DTI %s\n
 DTI reset\n
@@ -1496,7 +1492,6 @@ GetInt32
 GetInt64
 GetMessage
 GetPacket
-GetPathData failed for read only CFieldPath
 GetRawRepeatedField
 GetRepeatedBool
 GetRepeatedDouble
@@ -1531,6 +1526,7 @@ HammerMapLoader001
 HasField
 HelpSystem_001
 Hex and octal numbers must be integers.
+History: %s\n
 Hltv Replay
 INFO
 INTERNAL
@@ -1553,7 +1549,6 @@ InitFakeField
 InitFakeField:  Couldn't find type lookup for '%s' of type '%s'\n
 InitFakeField:  Parser function returned false for '%s' of type '%s'\n
 InitGameServer
-InitNetworkChangeTag
 InitSteamNetworking
 Input size too large: 
 Insert
@@ -1699,6 +1694,8 @@ MapValueRef::SetStringValue
 MapValueRef::SetUInt32Value
 MapValueRef::SetUInt64Value
 March
+Max struct change callbacks queued at one level, per entity decode (inline capacity %d):\n
+MaxSz
 MaybeAllocateAligned cannot fail here.
 Measured RTT to %d SDR points of presence.\n
 MemAlloc_StrDupFunc
@@ -1719,6 +1716,7 @@ MessageSets cannot have fields, only extensions.
 Messages can't have default values!
 Messages can't have default values.
 MethodOptions
+MinSz
 Mismatched '(' and ')' in regular expression
 Mismatched '[' and ']' in regular expression
 Mismatched '{' and '}' in regular expression
@@ -1872,6 +1870,7 @@ N9__gnu_cxx26__concurrence_unlock_errorE
 NETWORK_FIELD_CHANGED_ARRAY_NO_VALUE
 NETWORK_FIELD_CHANGED_ARRAY_WITH_VALUE
 NETWORK_FIELD_CHANGED_NO_VALUE
+NETWORK_FIELD_CHANGED_NO_VALUE_DECODE_THREAD
 NETWORK_FIELD_CHANGED_NO_VALUE_NO_CONTEXT
 NETWORK_FIELD_CHANGED_REPLAY_COMPAT
 NETWORK_FIELD_CHANGED_TAG
@@ -1942,6 +1941,16 @@ NetChanTransmitReliable
 NetChanTransmitUnreliable
 NetChannel '%s':\n
 NetMessage '%s' still using auto-assigned, has to generate id from name CUtlStringToken hashcode = %d\n
+NetSerializers_ComputeOrderForPriority
+NetSerializers_InitNetworkChangeTag
+NetSerializers_InitNetworkChangeTag - missing s_NetworkChangeTagCallback, should have been installed by CEntitySystem::Init call to g_pNetworkMessages->RegisterNetworkChangeTagCallback!
+NetSerializers_RegisterFieldChangeCallbackPriority
+NetSerializers_RegisterNetworkArrayFieldSerializer
+NetSerializers_RegisterNetworkFieldChangeCallback
+NetSerializers_RegisterNetworkFieldSerializer
+Net_BufferToBufferDecompress: decompressed size %llu exceeds NET_MAX_PAYLOAD\n
+Net_BufferToBufferDecompress: malformed compressed data\n
+Net_BufferToBufferDecompress: uncompressed size %llu exceeds NET_MAX_PAYLOAD\n
 Netchan '%s' closed unexpectedly: %s\n
 Netchan [%s] already associated with hconn #%u, but now we are getting messages on new hconn #%u using the same 'from' address\n
 Netchan queued message new high water mark reached by %s at %d messages\n
@@ -2024,12 +2033,6 @@ PLACEHOLDER_VALUE
 POSIX
 Package name is too long
 PanoramaTextServices001
-Path_AddToTail failed for read only CFieldPath
-Path_AddToTail failed, depth already == DEFAULT_MAX_PATH_DEPTH(%d)
-Path_PopLast failed for read only CFieldPath
-Path_Remove failed for read only CFieldPath
-Path_RemoveAll failed for read only CFieldPath
-Path_SetCount failed, depth already == DEFAULT_MAX_PATH_DEPTH(%d)
 Peer To Peer
 PhysicsBuilderMgr001
 Plat_CPUTickFrequency
@@ -2062,6 +2065,7 @@ PopNPlusN
 PopNPlusOne
 PopOnePlusN
 PopOnePlusOne
+Print per-entity decode change callback stats
 ProcessMessages
 ProcessOverride encountered unknown directive NetworkOverrideType_t(%d)\n
 Processing
@@ -2113,12 +2117,8 @@ Recursion limit at end of parse should be
 Recv
 RegisterConCommand: Unknown error registering con command "%s"!\n
 RegisterConVar: Unknown error registering convar "%s"!\n
-RegisterFieldChangeCallbackPriority
 RegisterNetMessageHandlerAbstract: Attempted to register a message handler for a message which is not valid for this category of channel [message %s]!\n
 RegisterNetMessageHandlerAbstract: Must call StartRegisteringMessageHandlers before, and FinishRegisteringMessageHandlers after [message %s]!\n
-RegisterNetworkArrayFieldSerializer
-RegisterNetworkFieldChangeCallbackInternal
-RegisterNetworkFieldSerializer
 Release
 ReleaseLast
 ReleaseLast() called on a RepeatedPtrField that is on an arena, 
@@ -2512,10 +2512,12 @@ V_StringToFloat64
 V_StringToInt16
 V_StringToInt32
 V_StringToInt64
+V_StringToInt8
 V_StringToQAngle
 V_StringToUint16
 V_StringToUint32
 V_StringToUint64
+V_StringToUint8
 V_StringToVector
 V_StringToVector2D
 V_StringToVector4D
@@ -2581,6 +2583,7 @@ Wednesday
 WriteFields
 WriteToBuffer Message %s is not initialized! Probably missing required fields!\n
 [ Net Message Info: %s ]\n
+[ T-%.1fms  %d msgs  %.1fms ]
 [%s] DISCONNECTING. ProcessMessages has exhausted its CPU time budget.  %dms to process %d messages this call.  (Current message type: '%s')\n
 [%s] Queued message count %d exceeds limit of %s=%d.  Allowing due to engine_frametime_warnings_enable=false\n
 [%s] high frame misdelivery %.1f%%, %d/%d of %d frames dropped/reordered, %.0fms ping, %.0fms peak jitter\n
@@ -2603,6 +2606,14 @@ WriteToBuffer Message %s is not initialized! Probably missing required fields!\n
 [abi:
 [c:%u:%u]
 [context entity 0x%p]
+[ent %d] Decode path %s has polymorphic type id %u for pointer %s::%s [%d], which has %d types.  Rejecting the rest of the entity.\n
+[ent %d] Decode path %s is %d deep under array of primitives %s::%s [%d], expected exactly one level (the element index).  Rejecting the rest of the entity.\n
+[ent %d] Decode path %s is %d deep under primitive field %s::%s [%d], expected to end at the field.  Rejecting the rest of the entity.\n
+[ent %d] Decode path %s is below null element %d of array of pointers %s::%s [%d].  Discarding its fields.\n
+[ent %d] Decode path %s names embedded substruct %s::%s [%d] directly, which is useless.  Ignoring this field path.\n
+[ent %d] Decode path %s names field %d of %s, which has %d fields.  Rejecting the rest of the entity.\n
+[ent %d] Decode path %s repeats array of structs %s::%s [%d].  Rejecting the rest of the entity.\n
+[ent %d] Field %s::%s [%d] is a pointer to a primitive, which is not a supported combination of features.  Rejecting the rest of the entity.\n
 [friend]
 [g:%u:%u]
 [i:%u:%u]
@@ -3139,7 +3150,6 @@ deleted
 deleted virtual method called\n
 delta
 delta >= 1u
-delta_error
 depth %2d: %d serializers\n
 dgettext
 digit
@@ -3169,6 +3179,7 @@ fclose
 fcntl
 fdopen
 fflush
+field encode
 field not in previous encoding
 field pointer
 field serializer '%s' already matched to meta variant %d, cloning serializer to allow matching to different meta variant %d\n
@@ -3182,14 +3193,17 @@ fieldpathpacker.cpp
 fileno
 filesystem
 filesystem_stdio
+final check (missed above)
 five
 fixed array
 fixed32
 fixed8
 flattenedserializer.cpp
+flattenedserializer_setup_gamecode.cpp
 flattenedserializers.cpp
 float
 float64
+floorf
 fopen
 form-feed
 found it %s is %s\n
@@ -3450,6 +3464,7 @@ len >= input_len
 length_ >= n
 less-than-sign
 libc.so.6
+libm.so.6
 libnetworksystem.so
 libpthread.so.0
 libsteam_api.so
@@ -3474,7 +3489,6 @@ loopback:%d
 lower
 lowest
 lseek
-m_bCanStillRegisterCallbackPriorities
 m_nSharedChangeCallbackCount must be <= EncounteredSharedChangedCallbackBitVec_t::knFixedBitSize
 malloc
 map keys are not unique
@@ -3500,13 +3514,17 @@ memset
 mold 2.36.0 (compatible with GNU ld)
 mt19937
 nBits != 32
-nIndex != m_priorityToOrderMap.InvalidIndex()
+nIndex != s_priorityToOrderMap.InvalidIndex()
 nPriority != NETWORK_FIELD_CHANGE_DEFAULT_PRIORITY
 name,type,offset
 nanosleep
+net_decode_callback_queue_stats_clear
+net_decode_callback_queue_stats_dump
 net_fakeclear: Cleared simulated network conditions\n
 net_fakelag = %dms  (net_option FakePacketLag_Send = %dms, net_option FakePacketLag_Recv = %dms)\n
 net_fakeloss = %g%%  (net_option FakePacketLoss_Send = %g%%, net_option FakePacketLoss_Recv = %g%%)\n
+net_limit_sv_message_process_time_ms_drop_rate_per_sec
+net_limit_sv_message_process_time_ms_warn_rate_per_sec
 net_messageinfo "%s"
 net_option %s = %s\n
 net_option settings will not apply to loopback listenservers. To run a listenserver without loopback. Select your map with "map foo loopback=0"\n
@@ -3534,6 +3552,7 @@ networkbasetypes.proto
 networking/%04d_%02d_%02d_%02d_%02d_%02d
 networkmessages.cpp
 networkserializer.cpp
+networkserializerregistry.cpp
 networksystem
 networksystem.cpp
 networksystem_protomessages.proto
@@ -3680,6 +3699,7 @@ right-parenthesis
 right-square-bracket
 rnd_down
 rnd_up
+s_bCanStillRegisterCallbackPriorities
 secure_getenv
 semicolon
 sendnode
@@ -3707,6 +3727,7 @@ size too big:
 sizeof 
 sizeof...
 skip
+skipped field relocate
 slash
 source2_steam_stats.proto
 source_file
@@ -3789,9 +3810,11 @@ std::_Rb_tree_rotate_left(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*&)
 std::_Rb_tree_rotate_right(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*&)
 std::_Setfill<char> std::setfill<char>(char)
 std::_Setfill<wchar_t> std::setfill<wchar_t>(wchar_t)
+std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_destroy()
 std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release()
 std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release_last_use()
 std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release_last_use_cold()
+std::_Sp_counted_ptr<std::nullptr_t, (__gnu_cxx::_Lock_policy)2>::_M_dispose()
 std::_Sp_counted_ptr_inplace<std::__detail::_NFA<std::regex_traits<char>>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_destroy()
 std::_Sp_counted_ptr_inplace<std::__detail::_NFA<std::regex_traits<char>>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_dispose()
 std::_Sp_counted_ptr_inplace<std::__detail::_NFA<std::regex_traits<char>>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_get_deleter(std::type_info const&)
@@ -7233,6 +7256,7 @@ three
 throw
 throw 
 tilde
+trailing span copy
 transaction clone for 
 transaction clone for operator delete(void*)
 transaction clone for operator new[](unsigned long)
@@ -7887,6 +7911,7 @@ uint64_t google::protobuf::UnknownField::fixed64() const
 uint64_t google::protobuf::UnknownField::varint() const
 unable to match %s::%s (type %s) in %s, no likely matches found\n
 unable to register all schema data: %s\n
+unchanged span copy
 underscore
 unfiltered_server_framerate
 ungetc

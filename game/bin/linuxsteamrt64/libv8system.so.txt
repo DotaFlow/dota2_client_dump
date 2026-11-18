@@ -29,7 +29,6 @@ $ORIGIN
 %s %s %s %s
 %s allocation count overflow
 %s allocation count overflow( %llu + %llu > %llu )\n
-%s called on a pool arena (no root available)\n
 %s: __pos (which is %zu) > __size (which is %zu)
 %s: __pos (which is %zu) > this->size() (which is %zu)
 %s: allocation of %u too large, max %u\n
@@ -61,8 +60,6 @@ $ORIGIN
 22CSchemaInstallCallback
 22CTypeScriptTypeManager
 22V8ArrayBufferAllocator
-23CKV3ResourceBlockHelper
-25IAsyncProcessedDataResult
 28CBaseVModuleMetadataProvider
 41CModuleMetadataProvider_ResourceManifests
 <no failure reason set>
@@ -79,32 +76,18 @@ AssetPreviewSystem_001
 AssetRenameSystem_001
 AssetSystem001
 AssetSystemTest001
-Bad KV3 data for resource '%s': %s\n
 BakedLODBuilderMgr001
 BinaryProperties_GetValue
 CBufferString::AppendConcat(int, char const* const*, int const*, bool)
 CBufferString::AppendFormat(char const*, ...)
 CBufferString::AppendFormatV(char const*, __va_list_tag*)
-CBufferString::ComposeFileName(char const*, char const*, char)
-CBufferString::ExtendPath(char const*, char, bool)
-CBufferString::ExtractFilePath(char const*, bool)
 CBufferString::FixSlashes(char)
-CBufferString::FixupPathName(char)
 CBufferString::Format(char const*, ...)
-CBufferString::FormatTo(IFormatOutputStream*, CFormatStringElement) const
 CBufferString::Insert(int, char const*, int, bool)
-CBufferString::MakeAbsolutePath(char const*, char const*)
-CBufferString::MakeRelativePath(char const*, char const*, bool)
 CBufferString::MoveFrom(CBufferString&)
 CBufferString::Purge(int)
 CBufferString::RemoveAt(int, int)
-CBufferString::RemoveDotSlashes(char)
-CBufferString::RemoveFirstDir(CBufferString*)
 CBufferString::Replace(char const*, char const*, bool)
-CBufferString::SetExtension(char const*, bool)
-CBufferString::SetLength(int, bool, int*)
-CBufferString::ShortenPath(bool)
-CBufferString::StripTrailingSlash()
 CBufferString::ToLowerFast(int)
 CBufferString::TruncateAt(int, bool)
 CRC32_ProcessBuffer
@@ -115,21 +98,15 @@ CUtlBuffer::CUtlBuffer(int, int, CUtlBuffer::BufferFlags_t)
 CUtlBuffer::CUtlBuffer(void const*, int, CUtlBuffer::BufferFlags_t)
 CUtlBuffer::CheckArbitraryPeekGet(int, int&)
 CUtlBuffer::CheckGet(int)
-CUtlBuffer::EnsureCapacity(int)
 CUtlBuffer::Get(void*, int)
 CUtlBuffer::ParseToken(characterset_t const*, char*, int, bool)
 CUtlBuffer::SeekPut(CUtlBuffer::SeekType_t, int)
 CUtlString::Acquire(CBufferString*, bool)
-CUtlString::Append(char const*)
-CUtlString::Append(char const*, int)
-CUtlString::CUtlString(CBufferString const&)
 CUtlString::Format(char const*, ...)
 CUtlString::FreeMemoryBlock()
 CUtlString::IsEqual_FastCaseInsensitive(char const*) const
 CUtlString::Purge()
 CUtlString::Set(char const*)
-CUtlString::StripExtension() const
-CUtlString::operator=(CBufferString const&)
 CUtlSymbolTable::AddString(char const*, bool*)
 CUtlSymbolTable::CUtlSymbolTable(int, int, bool)
 CUtlSymbolTable::String(CUtlSymbol) const
@@ -155,9 +132,6 @@ EnsureMemberCapacity
 EnsureUnusedCapacity
 ExtractModuleMetadata
 Fatal V8 Error: %s - %s
-FixupResourceName: Illegal full path passed in ("%s")!\n
-FixupResourceName: Illegal path, missing extension passed in ("%s")!\n
-FormatArgumentsToBuffer(IFormatOutputStream*, char const*, CTypeErasedFormattingWrapper const*, int)
 GCC: (SteamRT 14.2.0-19~steamrt3.1+bsrt3.1) 14.2.0
 GLIBCXX_TUNABLES
 GLIBC_2.14
@@ -171,21 +145,12 @@ GetResourceManifestCount
 GetResourceManifests
 HammerMapLoader001
 HelpSystem_001
-IFormatOutputStream::Format2DTable(CTypeErasedFormattingWrapper, CFormatStringElement, void const**, int, int)
-IFormatOutputStream::FormatArray(CTypeErasedFormattingWrapper, CFormatStringElement, void const**, int, bool)
-IFormatOutputStream::FormatEnumHelper(CFormatStringElement, int, std::initializer_list<std::pair<int, char const*>>)
-IFormatOutputStream::FormatMaskHelper(int, std::initializer_list<std::pair<int, char const*>>)
-IFormatOutputStream::OutputIndentation()
-IFormatOutputStream::PutRepeatedChar(char, int)
 Inert VModuleMetadata
 InsertMultipleBefore
 InstallSchemaBindings
 InvokeMiniDumpHandler
 JArray
-KeyValues3: pre-allocated array memory is too small for %u elements (%u bytes available, %u bytes needed)\n
-KeyValues3: pre-allocated table memory is too small for %u members (%u bytes available, %u bytes needed)\n
 LOG_CONSOLE
-LoadKV3(CKV3Arena*, CUtlString*, CUtlBuffer*, KV3ID_t const&, char const*, unsigned int)
 LocalServerClientAccess001
 LoggingSystem_IsChannelEnabled
 LoggingSystem_Log
@@ -234,9 +199,7 @@ PanoramaTextServices001
 PhysicsBuilderMgr001
 Plat_ExitProcess
 Plat_FatalError
-Plat_GetEnv
 Plat_GetExeModule
-Plat_GetModuleFilename
 Plat_GetModuleProcAddress
 Plat_GetTime
 Plat_IsInDebugSession
@@ -252,7 +215,6 @@ RenderHardwareConfig002
 ResourceCompilerSystem001
 ResourceHandleUtils001
 ResourceManifestRegistry001
-Root
 SchemaTestExternal_One_001
 SchemaTestExternal_Two_001
 SmartPropsSystem_001
@@ -299,13 +261,9 @@ VRenderDeviceSetupV001
 VTT for 
 VWebm001
 V_DoubleToString_Unsafe
-V_FixDoubleSlashes
 V_FloatToString_Unsafe
-V_GetFileExtension
 V_Int64ToString_Unsafe
 V_IsAbsolutePath
-V_PathContainsPath
-V_RemoveDotSlashes
 V_StringParseError
 V_StringToBool
 V_StringToColor
@@ -314,23 +272,22 @@ V_StringToFloat64
 V_StringToInt16
 V_StringToInt32
 V_StringToInt64
+V_StringToInt8
 V_StringToQAngle
 V_StringToUint16
 V_StringToUint32
 V_StringToUint64
+V_StringToUint8
 V_StringToVector
 V_StringToVector2D
 V_StringToVector4D
 V_StringToVectorWS
 V_UInt32ToString_Unsafe
 V_UInt64ToString_Unsafe
-V_UnqualifiedFileName
 V_fpclassifyd
-V_fread
 V_isnand
 V_qsort_s
 V_stricmp_fast
-V_stristr_fast(char const*, char const*)
 V_strnlen(char const*, int)
 VisBuilder_001
 Vrad3_001
@@ -347,11 +304,8 @@ _ITM_memcpyRnWt
 _ITM_memcpyRtWn
 _ITM_registerTMCloneTable
 _V_SetExtension
-_V_StripLastDir
-_V_strEndsWith
 _V_strncmp
 _V_strncpy
-_V_strnicmp_fast
 __cxa_allocate_dependent_exception
 __cxa_allocate_exception
 __cxa_atexit
@@ -571,6 +525,7 @@ int& std::forward<int&>(std::remove_reference<int&>::type&)
 int&& std::forward<int>(std::remove_reference<int>::type&)
 int16
 int64
+int8
 ioctl
 java Class for 
 java resource 
@@ -1228,7 +1183,6 @@ std::underflow_error::underflow_error(std::string const&)
 std::underflow_error::~underflow_error()
 std::unexpected()
 stderr
-stdin
 strchr
 strcmp
 strcpy
@@ -1288,7 +1242,6 @@ transaction clone for std::underflow_error::underflow_error(std::__cxx11::basic_
 transaction clone for std::underflow_error::~underflow_error()
 typeinfo fn for 
 typeinfo for 
-typeinfo for IFormatOutputStream
 typeinfo for _Float128
 typeinfo for _Float128 const*
 typeinfo for _Float128*

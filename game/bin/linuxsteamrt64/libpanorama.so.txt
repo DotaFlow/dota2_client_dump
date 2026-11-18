@@ -1,8 +1,6 @@
         %3d %3d %3d %3d %3d %3d %3d %3d
         %4u %4u %4u %4u %4u %4u %4u %4u
     %4u: %s\n
-    %u iterated blocks\n
-    %u unfinished blocks\n
     Component %d: %dhx%dv q=%d
     Component %d: dc=%d ac=%d
     with %d x %d thumbnail image
@@ -82,10 +80,6 @@
 ! Panel Event\n
 !is_large()
 !m_bNeedsSort
-!m_boolDone
-!m_boolOpaque
-!m_boolPunchThroughPixels
-!m_boolTransparent
 " because it is missing required fields: 
 " conflicts with field "
 " conflicts with the existing symbol "
@@ -157,7 +151,65 @@
 "MutableRawRepeatedField"
 "e" must be followed by exponent.
 #%02X%02X%02X%02X
+#GameUI_Language_Brazilian
+#GameUI_Language_Bulgarian
+#GameUI_Language_Czech
+#GameUI_Language_Danish
+#GameUI_Language_Dutch
+#GameUI_Language_English
+#GameUI_Language_Finnish
+#GameUI_Language_French
+#GameUI_Language_German
+#GameUI_Language_Greek
+#GameUI_Language_Hungarian
+#GameUI_Language_Indonesian
+#GameUI_Language_Italian
+#GameUI_Language_Japanese
+#GameUI_Language_Korean
+#GameUI_Language_Latam_Spanish
+#GameUI_Language_Norwegian
+#GameUI_Language_Polish
+#GameUI_Language_Portuguese
+#GameUI_Language_Romanian
+#GameUI_Language_Russian
+#GameUI_Language_Simplified_Chinese
+#GameUI_Language_Spanish
+#GameUI_Language_Swedish
+#GameUI_Language_Thai
+#GameUI_Language_Traditional_Chinese
+#GameUI_Language_Turkish
+#GameUI_Language_Ukrainian
+#GameUI_Language_Vietnamese
 #UI_Paste_UnknownSource
+#Valve_SelectLanguage_Brazilian
+#Valve_SelectLanguage_Bulgarian
+#Valve_SelectLanguage_Czech
+#Valve_SelectLanguage_Danish
+#Valve_SelectLanguage_Dutch
+#Valve_SelectLanguage_English
+#Valve_SelectLanguage_Finnish
+#Valve_SelectLanguage_French
+#Valve_SelectLanguage_German
+#Valve_SelectLanguage_Greek
+#Valve_SelectLanguage_Hungarian
+#Valve_SelectLanguage_Indonesian
+#Valve_SelectLanguage_Italian
+#Valve_SelectLanguage_Japanese
+#Valve_SelectLanguage_Korean
+#Valve_SelectLanguage_Latam_Spanish
+#Valve_SelectLanguage_Norwegian
+#Valve_SelectLanguage_Polish
+#Valve_SelectLanguage_Portuguese
+#Valve_SelectLanguage_Romanian
+#Valve_SelectLanguage_Russian
+#Valve_SelectLanguage_Simplified_Chinese
+#Valve_SelectLanguage_Spanish
+#Valve_SelectLanguage_Swedish
+#Valve_SelectLanguage_Thai
+#Valve_SelectLanguage_Traditional_Chinese
+#Valve_SelectLanguage_Turkish
+#Valve_SelectLanguage_Ukrainian
+#Valve_SelectLanguage_Vietnamese
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 $.CreatePanelWithProperties is deprecated. Please use $.CreatePanel instead.\n
 $.Schedule() - run JS func
@@ -174,10 +226,10 @@ $0rpc $1($4.$2) returns ($5.$3)
 $ORIGIN
 %.*Lf
 %.*g
+%.*s_%s.%s
 %.1f
 %019lu
 %1.1f
-%3d: e=%.3f rms=%.6f %u\n
 %5lu file=%s, line=%d, 
 %5s: %s\n
 %I:%M:%S %p
@@ -225,6 +277,7 @@ $ORIGIN
 %s#%s - script run in context
 %s#%s > %s
 %s%%
+%s%s
 %s%s%s/%s
 %s%s\n
 %s(%d): OpenSSL internal error, assertion failed: %s\n
@@ -252,6 +305,7 @@ $ORIGIN
 %s\n%s
 %s\n(%s:%d:%d)
 %s\n\n%s
+%s_%s
 %s_%s_%s
 %sdeg
 %sms
@@ -260,6 +314,9 @@ $ORIGIN
 %sweb%s%s
 %sweb/shared/public/%s
 &lt;Needs a description&gt;
+'%s' cannot be listed, because it is the default source.
+'%s' is listed more than once.
+'%s' is not a valid language.
 (!((uintptr_t)(src_height) & ((2)-1)))
 (!((uintptr_t)(src_width) & ((2)-1)))
 (%d,%d)
@@ -272,8 +329,6 @@ $ORIGIN
 (dst_width % 3 == 0) && (dst_width > 0)
 (dy & 0x1ffff) == 0
 (dy & 0x3ffff) == 0
-(fWeightSumLeft + fWeightSumRight) > 0.0f
-(fWeightSumTop + fWeightSumBottom) > 0.0f
 (memory)
 (merge 
 (undefined)
@@ -294,9 +349,9 @@ $ORIGIN
 ***** OUT OF MEMORY! /+/. Sized_CChunkAllocator failed to allocated a new blob of size: %llu ****\n
 ***** Parsing %s on %s%s:  %s\n
 *N12_GLOBAL__N_117io_error_categoryE
-*N12_GLOBAL__N_121future_error_categoryE
 *N12_GLOBAL__N_121system_error_categoryE
 *N12_GLOBAL__N_122generic_error_categoryE
+*N24CParallelProcessLauncher18CParallelLambdaJobIZNK13FloatBitMap_t19WriteToBufferBC_bcnEPvm11ImageFormatRK27FloatBitmapEncodeSettings_tEUliE_EE
 *N6google8protobuf12_GLOBAL__N_123AggregateErrorCollectorE
 *N6google8protobuf12_GLOBAL__N_123GeneratedMessageFactoryE
 *N6google8protobuf12_GLOBAL__N_123StringBaseTextGeneratorE
@@ -317,7 +372,6 @@ $ORIGIN
 *NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIcLb1EEE
 *NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIwLb0EEE
 *NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIwLb1EEE
-*St19_Sp_counted_deleterIPhZN3Etc13EncodeMipmapsEPfjjNS1_5Image6FormatENS1_11ErrorMetricEfjjjjPNS1_8RawImageEPibEUlS0_E_SaIvELN9__gnu_cxx12_Lock_policyE2EE
 *ZN13CSOAContainer10FilterFromERKS_iiiiiPKfbEUlvE0_
 *ZN13CSOAContainer10FilterFromERKS_iiiiiPKfbEUlvE_
 *ZN13CSOAContainer17SrgbGammaToLinearEiEUlvE_
@@ -333,7 +387,6 @@ $ORIGIN
 *ZN13CSOAContainer37Normalize3ComponentVectorInAttributesEiii5Vec3DIfEbbEUlvE_
 *ZN13CSOAContainer9FilterInYEi9IntAABB_tiPKfbEUlvE_
 *ZN13CSOAContainer9FilterInZEi9IntAABB_tiPKfbEUlvE_
-*ZN3Etc13EncodeMipmapsEPfjjNS_5Image6FormatENS_11ErrorMetricEfjjjjPNS_8RawImageEPibEUlPhE_
 *ZN8panorama14ILayoutContent20LoadFromResourceFileEPK21ResourceBindingBase_tPK20ResourceFileHeader_tPviEUlPKcRKSt8functionIFvS9_EESA_IFvS9_bEEE_
 *ZN8panorama20CSource2UIFileSystem23LoadFileIntoBufferAsyncEPKcR10CUtlBufferb12CUtlDelegateIFvS2_S4_bEEEUlP18IAsyncReadRequest220AsyncRequestStatus_tE_
 *ZZN20CLayoutContentParsed20ResolveEachReferenceERKSt8functionIFvPKcRKS0_IFvS2_EERKS0_IFvS2_bEEEEENKUlPN8panorama15CContentASTNodeI15ELayoutNodeTypeEEE_clESJ_EUlS2_E_
@@ -406,20 +459,6 @@ $ORIGIN
 /home/saml/dev/steam/thirdpartycode/nonredist/libyuv/libyuv/source/row_common.cc
 /home/saml/dev/steam/thirdpartycode/nonredist/libyuv/libyuv/source/scale.cc
 /home/saml/dev/steam/thirdpartycode/nonredist/libyuv/libyuv/source/scale_common.cc
-/home/timo/source2/main/src/thirdparty/etc2comp/EtcLib/./EtcCodec/EtcBlock4x4Encoding.h
-/home/timo/source2/main/src/thirdparty/etc2comp/EtcLib/Etc/EtcImage.cpp
-/home/timo/source2/main/src/thirdparty/etc2comp/EtcLib/EtcCodec/EtcBlock4x4.cpp
-/home/timo/source2/main/src/thirdparty/etc2comp/EtcLib/EtcCodec/EtcBlock4x4Encoding.cpp
-/home/timo/source2/main/src/thirdparty/etc2comp/EtcLib/EtcCodec/EtcBlock4x4Encoding.h
-/home/timo/source2/main/src/thirdparty/etc2comp/EtcLib/EtcCodec/EtcBlock4x4Encoding_ETC1.cpp
-/home/timo/source2/main/src/thirdparty/etc2comp/EtcLib/EtcCodec/EtcBlock4x4Encoding_R11.cpp
-/home/timo/source2/main/src/thirdparty/etc2comp/EtcLib/EtcCodec/EtcBlock4x4Encoding_RG11.cpp
-/home/timo/source2/main/src/thirdparty/etc2comp/EtcLib/EtcCodec/EtcBlock4x4Encoding_RGB8.cpp
-/home/timo/source2/main/src/thirdparty/etc2comp/EtcLib/EtcCodec/EtcBlock4x4Encoding_RGB8A1.cpp
-/home/timo/source2/main/src/thirdparty/etc2comp/EtcLib/EtcCodec/EtcBlock4x4Encoding_RGBA8.cpp
-/home/timo/source2/main/src/thirdparty/etc2comp/EtcLib/EtcCodec/EtcDifferentialTrys.cpp
-/home/timo/source2/main/src/thirdparty/etc2comp/EtcLib/EtcCodec/EtcIndividualTrys.cpp
-/home/timo/source2/main/src/thirdparty/etc2comp/EtcLib/EtcCodec/EtcSortedBlockList.cpp
 /src/
 /store/
 0 0 0
@@ -480,6 +519,7 @@ $ORIGIN
 17PolylineElement_t
 18ContainerElement_t
 18ILocVariableSource
+18IMultipleWorkerJob
 19CDragStartCallbacks
 19CLocVariableSetBase
 19CSchemaRegistration
@@ -974,9 +1014,10 @@ Bogus message code %d
 Bogus sampling factors
 Bogus virtual array access
 Boolean default must be true or false.
-Broken promise
+Brazilian
 BrowserGoToURL
 Buffer passed to JPEG library is too small
+Bulgarian
 By default after slicing the image as specified in border-image-slice the 9 regions will be used to fill the space specified by the standard border-width property.  This border-image-width property may be used to override that and specify different widths.  The values appear in top, right, bottom, left order, the 2nd through 4th may be omitted and corresponding earlier values will be used.  Values may be straight floats which specify a multiple of the corresponding border-width value, a percentage (which is relative to the size of the border image in the corresponding dimension), or 'auto' which means to use the intrinsic size of the corresponding border-image-slice.<br><br><b>Examples:</b><pre>border-image-width: 1 1 1 1;\nborder-image-slice: 50% 50% 50% 50%;\nborder-image-slice: auto;</pre>
 Byte size calculation and serialization were inconsistent.  This may indicate a bug in protocol buffers or it may be caused by concurrent modification of 
 ByteToFloat
@@ -1474,7 +1515,6 @@ CUIPanel::Initialize
 CUIPanel::MarkStylesDirty
 CUIPanel::RemoveAndDeleteChildren
 CUIPanel::RemoveAndDeleteChildrenOfType
-CUIPanel::RemoveClasses
 CUIPanel::SetFocusInternal
 CUIPanel::SetFocusToNextPanel
 CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder
@@ -1696,6 +1736,7 @@ CreateVideoPlayer
 CrlID
 CumulativeSumToAverageRow_C
 CumulativeSumToAverageRow_SSE2
+Czech
 D16_SHADOW
 D24FS8
 D24S8
@@ -1748,6 +1789,7 @@ DXT1_ONEBITALPHA
 DXT3
 DXT5
 DXT5_NM
+Danish
 DbgIsReloadingScript
 December
 DeclareCurrentThreadIsMainThread
@@ -1805,13 +1847,13 @@ Drop focus entirely from the window containing this panel.
 DropInputFocus
 DropdownMenuFocusChanged
 Duplicate snippet name: %s
+Dutch
 E-mail Protection
 EC lib
 ENGINE lib
 ERROR
 ERROR: AsyncWebRequest has been removed.
 ERROR: CUtlSymbolTableLarge element limit of %u exceeded\n
-ETC1
 EVP lib
 EXPERIMENTAL: Sets a more-complex brush for the entire border paint area (ignores normal border color).<br><br><b>Examples:</b><pre>border-brush: gradient( linear, 0% 0%, 0% 100%, from( #fbfbfbff ), to( #c0c0c0c0 ) );\nborder-brush: gradient( linear, 0% 0%, 0% 100%, from( #fbfbfbff ), color-stop( 0.3, #ebebebff ), to( #c0c0c0c0 ) );\nborder-brush: gradient( radial, 50% 50%, 0% 0%, 80% 80%, from( #00ff00ff ), to( #0000ffff ) );</pre>
 EXPORTSYSTEM_INTERFACE_VERSION_001
@@ -1821,12 +1863,12 @@ EarlyInit_Tier0
 EconItemToolModel_001
 Empty JPEG image (DNL not supported)
 Empty input file
-Enable multithreading to use std::thread
 End Of Image
 End-of-file inside block comment.
 EndFrame
 EndFrame - opacity lru
 EndFrame - rt cache cleanup
+English
 EnsureCapacity
 EnsureElementCapacity
 EnsureMemberCapacity
@@ -1883,9 +1925,6 @@ Error: Attempting to add stop element to a non-gradient element\n
 Error: Attribute index exceeds valid range\n
 Error: Failed to add sibling element\n
 Error: Transform index exceeds valid range\n
-Etc::DifferentialTrys::DifferentialTrys(Etc::ColorFloatRGBA, Etc::ColorFloatRGBA, const unsigned int*, const unsigned int*, unsigned int, int, int)
-Etc::Image::EncodingStatus Etc::Image::Encode(Etc::Image::Format, Etc::ErrorMetric, float, unsigned int, unsigned int)
-Etc::IndividualTrys::IndividualTrys(Etc::ColorFloatRGBA, Etc::ColorFloatRGBA, const unsigned int*, const unsigned int*, unsigned int)
 Event arguments could not be parsed for %s of %s
 Exceeds Maximum Package Depth
 ExecuteSteamURL
@@ -1988,7 +2027,7 @@ Find an element
 FindChildInContext
 FindChildInContext()/$() require an id selector (start with #) for now
 FindLessOrEqual
-Finished %d Blocks out of %d\n
+Finnish
 Fire another event after a delay (in seconds).
 Fire another event if currently hovering over a panel with the given ID.
 Fire another event if not currently hovering over a panel with the given ID.
@@ -2034,13 +2073,12 @@ Frame setup failed
 FrameTime
 Freed EMS handle %u
 Freed XMS handle %u
+French
 Friday
-Future already retrieved
 GAME
 GCC: (SteamRT 14.2.0-19~steamrt3.1+bsrt3.1) 14.2.0
 GCC: (SteamRT 4.8.4-1ubuntu15~12.04+steamrt1.2+srt2) 4.8.4
 GCC: (SteamRT 5.4.0-7.really.6+steamrt1.2+srt2) 5.4.1 20160803
-GCC: (SteamRT 9.3.0-13+steamrt1.2+srt1) 9.3.0
 GCC: (Ubuntu 4.8.1-2ubuntu1~12.04+steamrt2+srt1) 4.8.1
 GCC: (crosstool-NG 1.17.0) 4.6.3
 GLIBCXX_TUNABLES
@@ -2076,6 +2114,7 @@ GaussCol_F32_C
 GaussPlane_F32
 GaussRow_C
 GaussRow_F32_C
+German
 Get the current language
 Get the current panel context
 GetARGBBlend
@@ -2120,6 +2159,7 @@ GetUInt64
 GetWidth
 GetXCR0
 Gets the time this frame started, in seconds since panorama was initialized
+Greek
 Groups are not supported in proto3 syntax.
 H010ToAB30
 H010ToABGR
@@ -2166,6 +2206,7 @@ Hold Instruction None
 Hold Instruction Reject
 Huffman code size table overflow
 Huffman table 0x%02x was not defined
+Hungarian
 I010AlphaToARGBMatrix
 I010Copy
 I010ToAB30
@@ -2419,10 +2460,12 @@ Index must be -1 for non-repeated fields
 Index must be -1 for singular fields.
 Index must be in range of repeated field values. 
 Index out-of-bounds (field is empty).
+Indonesian
 Inert VModuleMetadata
 Inherit all
 InitCpuFlags
 Initialize
+InitializeDummyRow
 Input file read error
 Input size too large: 
 InputFocusLost
@@ -2451,6 +2494,7 @@ InterpolateRow_C
 InterpolateRow_SSSE3
 Interpreting non ascii codepoint %d.
 Invalid '?', '*', or '+' in regular expression
+Invalid 'languages' attribute "%s"; %s
 Invalid @keyframe name (missing quotes or empty)
 Invalid JPEG file structure: SOS before SOF
 Invalid JPEG file structure: missing SOS marker
@@ -2468,10 +2512,10 @@ Invalid clip-path %s, expecting url(#...)\n
 Invalid collating element in regular expression
 Invalid color quantization mode change
 Invalid component ID %d in SOS
-Invalid content height (flChildHeight = %f) calculated during child panel "%s"; this panel "%s" (reverting to %f)
-Invalid content width (flChildWidth = %f) calculated during child panel "%s"; this panel "%s" (reverting to %f)
-Invalid content wrap offset (flChildWrapOffset = %f) calculated during child panel "%s"; this panel "%s" (reverting to %f)
-Invalid content wrap row size (flChildWrapRowSize = %f) calculated during child panel "%s"; this panel "%s" (reverting to %f)
+Invalid content height (flChildHeight = %f) calculated during child panel "%s"; this panel "%s" (reverting to %f)\n
+Invalid content width (flChildWidth = %f) calculated during child panel "%s"; this panel "%s" (reverting to %f)\n
+Invalid content wrap offset (flChildWrapOffset = %f) calculated during child panel "%s"; this panel "%s" (reverting to %f)\n
+Invalid content wrap row size (flChildWrapRowSize = %f) calculated during child panel "%s"; this panel "%s" (reverting to %f)\n
 Invalid control characters encountered in text.
 Invalid crop request
 Invalid data found at end of file: %s
@@ -2517,6 +2561,7 @@ InvokeJSGenericCallback
 InvokeMiniDumpHandler
 IsPanelBackground
 IsValid
+Italian
 J400ToARGB
 J400ToARGBRow_Any_SSE2
 J400ToARGBRow_C
@@ -2549,6 +2594,7 @@ JSConsoleOutput
 JSON
 JSScheduledFunction
 January
+Japanese
 Javascript
 July
 June
@@ -2574,6 +2620,7 @@ KeyValues::SetInt(char const*, int)
 KeyValues::SetString(char const*, char const*)
 KeyValues::SetUint64(char const*, unsigned long long)
 KeyValues::operator new(unsigned long)
+Korean
 LC_ADDRESS
 LC_COLLATE
 LC_CTYPE
@@ -2595,6 +2642,7 @@ LV_ESSENTIAL
 LV_HIGHEST_VERBOSITY
 LV_MAXIMUM
 LV_MORE_DETAILED
+Latam_Spanish
 Layout FPS:
 Layout FPS:\t%1.2f\nAnimate FPS:\t%1.2f\nRender FPS:\t%1.2f\n
 Layout XSD contents copied to clipboard.\n
@@ -2809,17 +2857,6 @@ N10__cxxabiv120__si_class_type_infoE
 N10__cxxabiv121__vmi_class_type_infoE
 N10__cxxabiv123__fundamental_type_infoE
 N10__cxxabiv129__pointer_to_member_type_infoE
-N3Etc16Block4x4EncodingE
-N3Etc20Block4x4Encoding_R11E
-N3Etc21Block4x4Encoding_ETC1E
-N3Etc21Block4x4Encoding_RG11E
-N3Etc21Block4x4Encoding_RGB8E
-N3Etc22Block4x4Encoding_RGBA8E
-N3Etc23Block4x4Encoding_RGB8A1E
-N3Etc29Block4x4Encoding_RGBA8_OpaqueE
-N3Etc30Block4x4Encoding_RGB8A1_OpaqueE
-N3Etc34Block4x4Encoding_RGBA8_TransparentE
-N3Etc35Block4x4Encoding_RGB8A1_TransparentE
 N6google8protobuf10TextFormat17BaseTextGeneratorE
 N6google8protobuf10TextFormat17FieldValuePrinterE
 N6google8protobuf10TextFormat21FastFieldValuePrinterE
@@ -3150,23 +3187,9 @@ N9__gnu_cxx20recursive_init_errorE
 N9__gnu_cxx24__concurrence_lock_errorE
 N9__gnu_cxx26__concurrence_unlock_errorE
 NOT_FOUND
-NSt13__future_base12_Result_baseE
-NSt13__future_base12_Task_setterISt10unique_ptrINS_7_ResultIjEENS_12_Result_base8_DeleterEENSt6thread8_InvokerISt5tupleIJMN3Etc5ImageEFjjjjEPSB_jijEEEEjEE
-NSt13__future_base12_Task_setterISt10unique_ptrINS_7_ResultIvEENS_12_Result_base8_DeleterEENSt6thread8_InvokerISt5tupleIJMN3Etc5ImageEFvjjEPSB_ijEEEEvEE
-NSt13__future_base13_State_baseV2E
-NSt13__future_base15_Deferred_stateINSt6thread8_InvokerISt5tupleIJMN3Etc5ImageEFjjjjEPS5_jijEEEEjEE
-NSt13__future_base15_Deferred_stateINSt6thread8_InvokerISt5tupleIJMN3Etc5ImageEFvjjEPS5_ijEEEEvEE
-NSt13__future_base17_Async_state_implINSt6thread8_InvokerISt5tupleIJMN3Etc5ImageEFjjjjEPS5_jijEEEEjEE
-NSt13__future_base17_Async_state_implINSt6thread8_InvokerISt5tupleIJMN3Etc5ImageEFvjjEPS5_ijEEEEvEE
-NSt13__future_base21_Async_state_commonV2E
-NSt13__future_base7_ResultIjEE
-NSt13__future_base7_ResultIvEE
 NSt3_V214error_categoryE
 NSt6locale5facet6__shimE
 NSt6locale5facetE
-NSt6thread11_State_implINS_8_InvokerISt5tupleIJZNSt13__future_base17_Async_state_implINS1_IS2_IJMN3Etc5ImageEFjjjjEPS6_jijEEEEjEC4EOSB_EUlvE_EEEEEE
-NSt6thread11_State_implINS_8_InvokerISt5tupleIJZNSt13__future_base17_Async_state_implINS1_IS2_IJMN3Etc5ImageEFvjjEPS6_ijEEEEvEC4EOSB_EUlvE_EEEEEE
-NSt6thread6_StateE
 NSt7__cxx1110moneypunctIcLb0EEE
 NSt7__cxx1110moneypunctIcLb1EEE
 NSt7__cxx1110moneypunctIwLb0EEE
@@ -3285,7 +3308,6 @@ Netscape Revocation Url
 Netscape SSL Server Name
 Netscape Server Gated Crypto
 Newline in string literal
-No associated state
 No closing */ before end of file
 No default value
 No document element found
@@ -3295,6 +3317,7 @@ Non-primitive types can't be packed.
 Non-repeated Any specified multiple times.
 Non-repeated field "
 Nonce
+Norwegian
 Not a JPEG file: starts with 0x%02x 0x%02x
 Not a key frame.
 Not enough arguments to %s
@@ -3303,6 +3326,7 @@ Not implemented yet
 Not supported.
 Note that enum values use C++ scoping rules, meaning that enum values are siblings of their type, not children of it.  Therefore, "
 November
+NumCols() <= V_ARRAYSIZE( s_DummyRow )
 Numbers starting with leading zero must be in octal.
 OBJ lib
 OCSP
@@ -3409,7 +3433,6 @@ PKDu
 PKIX
 PKN8panorama19ILocalizationStringE
 PLACEHOLDER_VALUE
-PLANAR
 PN2v86GlobalINS_8FunctionEEE
 PN8panorama12IImageSourceE
 PN8panorama17CImageProxySourceE
@@ -3433,6 +3456,7 @@ Paint
 PaintEmptyFrameAndForceLaterRepaint
 Panel
 Panel %s is reloading layout %s\n
+Panel of type '%s' defines attribute '%s', which is generated from its 'languages' attribute.
 Panel of type '%s' has duplicate definition for attribute '%s'.
 PanelDestroyed
 PanelImageSource
@@ -3491,13 +3515,14 @@ PlaySoundEffect
 Pointers cannot be used as numeric values
 Policy Qualifier CPS
 Policy Qualifier User Notice
+Polish
+Portuguese
 Premature end of JPEG file
 Premature end of input file
 Premature end-of-file encountered.
 Premature end-of-partition0 encountered.
 ProcessMouseTrackingResults
 ProcessRemoteInput
-Promise already satisfied
 Property getter for CPanelStyle called on invalid object
 Property getter for CPanelStyle called with invalid css property name (%s)
 Property setter for CPanelStyle called on invalid object
@@ -3529,6 +3554,7 @@ R32_UINT
 R8G8B8A8_ETC2_EAC
 R8G8B8_ETC2
 R8G8_UINT
+R8G8_UNORM
 R8_UINT
 R8_UNORM
 R9G9B9E5_FLOAT
@@ -3575,7 +3601,6 @@ RESOURCE_TYPE_PANORAMA_DYNAMIC_IMAGES
 RESOURCE_TYPE_PANORAMA_LAYOUT
 RESOURCE_TYPE_PANORAMA_STYLE
 RESOURCE_TYPE_VECTOR_GRAPHIC
-RG11
 RG11_EAC
 RG1616
 RG1616F
@@ -3610,15 +3635,12 @@ RGB565ToARGBRow_SSE2
 RGB565ToI420
 RGB565ToUVRow_C
 RGB565ToYRow_C
-RGB8
 RGB888
-RGB8A1
 RGBA1010102
 RGBA16161616
 RGBA16161616F
 RGBA32323232F
 RGBA32323232_UINT
-RGBA8
 RGBA8888
 RGBA8888_LINEAR
 RGBA8888_UINT
@@ -3733,6 +3755,7 @@ ResourceStatusChange:\tCRC matches, Ignoring '%s'\n
 ResourceStatusChange:\tReloadChangedFile '%s'\n
 Return the position of the mouse in the parent window.
 Return true if a file exists.  Path will usually start with 'file://{images}'
+Romanian
 Root
 Root node must be named 'root', found '%s'.
 RotatePlane
@@ -3748,6 +3771,7 @@ RunScriptInPanelContext must be called from a context with a domain that matches
 RunScriptInPanelContext takes 1 arguments [script]
 RunScriptInPanelContext was unable to compile provided script
 RunWorkItem
+Russian
 S/MIME
 S/MIME Capabilities
 SDL3_0.0.0
@@ -3792,14 +3816,9 @@ SHA224
 SHA256
 SHA384
 SHA512
-SIGNED_R11
-SIGNED_RG11
 SMIME
 SMIME-CAPS
 SNMPv2
-SRGB8
-SRGB8A1
-SRGBA8
 SSE and SSE2 are required.
 SSL lib
 SSL routines
@@ -4136,6 +4155,7 @@ Should not pass empty string for FindChildInContext()/$()
 Should not reach here.
 ShowTooltip
 Shutdown
+Simplified_Chinese
 SkipBlanks
 Slow image load - %s (dimensions %dx%d, took %d msec)\n
 SmartPropsSystem_001
@@ -4159,6 +4179,7 @@ SoftwareKeyboardVisibilityChanged
 Some options could not be correctly parsed using the proto descriptors compiled into this binary.\nUnparsed options: 
 Source of CopyFrom cannot be a descendant of the target.
 Source2ModTools001
+Spanish
 Specifies a 'wash' color, which means a color that will be blended over the panel and all it's children at composition time, tinting them.  The alpha value of the color determines the intensity of the tinting.<br><br><b>Example:</b><pre>wash-color: #39b0d325;</pre>
 Specifies a clip region within the panel, where contents will be clipped at render time. This clipping has no impact on layout, and is fast and supported for transitions/animations. Radial clip mode takes a center point, start angle and angular width of the revealed sector.<br><br><b>Example:</b><pre>clip: rect( 10%, 90%, 90%, 10% );\nclip: radial( 50% %50, 0deg, 90deg );</pre>
 Specifies a fixed time between frames in order to simulate a lower framerate for stylistic reasons. Default is 0s.<br><br><b>Examples:</b><pre>transition-frame-time: 0.2s;\ntransition-frame-time: 0.2s, 0.0s;</pre>
@@ -4267,7 +4288,6 @@ St12codecvt_base
 St12ctype_bynameIcE
 St12ctype_bynameIwE
 St12domain_error
-St12future_error
 St12length_error
 St12out_of_range
 St12system_error
@@ -4336,10 +4356,6 @@ St20__codecvt_utf16_baseIwE
 St20bad_array_new_length
 St21__ctype_abstract_baseIcE
 St21__ctype_abstract_baseIwE
-St23_Sp_counted_ptr_inplaceINSt13__future_base15_Deferred_stateINSt6thread8_InvokerISt5tupleIJMN3Etc5ImageEFjjjjEPS6_jijEEEEjEESaISC_ELN9__gnu_cxx12_Lock_policyE2EE
-St23_Sp_counted_ptr_inplaceINSt13__future_base15_Deferred_stateINSt6thread8_InvokerISt5tupleIJMN3Etc5ImageEFvjjEPS6_ijEEEEvEESaISC_ELN9__gnu_cxx12_Lock_policyE2EE
-St23_Sp_counted_ptr_inplaceINSt13__future_base17_Async_state_implINSt6thread8_InvokerISt5tupleIJMN3Etc5ImageEFjjjjEPS6_jijEEEEjEESaISC_ELN9__gnu_cxx12_Lock_policyE2EE
-St23_Sp_counted_ptr_inplaceINSt13__future_base17_Async_state_implINSt6thread8_InvokerISt5tupleIJMN3Etc5ImageEFvjjEPS6_ijEEEEvEESaISC_ELN9__gnu_cxx12_Lock_policyE2EE
 St23_Sp_counted_ptr_inplaceINSt8__detail4_NFAISt12regex_traitsIcEEESaIvELN9__gnu_cxx12_Lock_policyE2EE
 St23__codecvt_abstract_baseIDiDu11__mbstate_tE
 St23__codecvt_abstract_baseIDic11__mbstate_tE
@@ -4420,6 +4436,7 @@ SwapUVRow_Any_AVX2
 SwapUVRow_Any_SSSE3
 SwapUVRow_C
 SwapUVRow_SSSE3
+Swedish
 Switch which class the panel has for a given attribute slot. Allows easily changing between multiple states.
 SwitchClass
 SwitchStyle
@@ -4440,6 +4457,8 @@ TextEntryFocusChange(): Set for %s\n
 TextEntryInvalid(): Cleared for %s\n
 TextInputFinished
 TextInputHandlerStateChange
+Thai
+The 'languages' attribute requires a 'src' attribute with a 'file://' image source.
 The JSON camel-case name of field "
 The [proto3_optional=true] option may only be set on proto3fields, not 
 The extension 
@@ -4485,6 +4504,7 @@ Total No. of Svgs parsed: %d\n
 Total No. of Svgs rendered: %d\n
 Total Svg Parse Time (micros): %llu\n
 Total Svg Render Time (micros): %llu\n
+Traditional_Chinese
 TransposePlane
 TransposeUVWx8_Any_SSE2
 TransposeUVWx8_C
@@ -4506,6 +4526,7 @@ Trust Root
 Trying to apply missing animation: %s
 Trying to write %s from a panel without a composition layer texture name\n
 Tuesday
+Turkish
 Type appears to be in generated pool but wasn't 
 Type is already registered: 
 U010ToAB30
@@ -4558,6 +4579,7 @@ UYVYToYRow_Any_AVX2
 UYVYToYRow_Any_SSE2
 UYVYToYRow_C
 UYVYToYRow_SSE2
+Ukrainian
 Unable to @import style file '%s'
 Unable to CreateEventFromString for the supplied string: %s\n
 Unable to append nodes: root is not an element or document
@@ -4600,7 +4622,6 @@ UnregisterJSForUnhandledEvent
 UnsafeArenaAddAllocatedMessage
 UnsafeArenaReleaseLast
 Unsupported
-Unsupported ETC image format %d.\n
 Unsupported JPEG data precision %d
 Unsupported JPEG process: SOF type 0x%02x
 Unsupported KV3 basic type '%s' (%d)!
@@ -4634,6 +4655,8 @@ VP8GetInfo
 VP8LCheckSignature
 VP8LGetInfo
 VProfScopeHelper<0, false>::EnterScopeInternalBudgetFlags(char const*, VProfBudgetGroupCallSite&, CUtlSourceLocation const&)
+VProfScopeHelper<3, false>::EnterScopeInternalBudgetFlags(char const*, VProfBudgetGroupCallSite&, CUtlSourceLocation const&)
+VProfScopeHelper<4, false>::EnterScopeInternalBudgetFlags(char const*, VProfBudgetGroupCallSite&, CUtlSourceLocation const&)
 VRenderDeviceSetupV001
 VTT for 
 VTT for std::basic_fstream<char, std::char_traits<char>>
@@ -4685,10 +4708,12 @@ V_StringToFloat64
 V_StringToInt16
 V_StringToInt32
 V_StringToInt64
+V_StringToInt8
 V_StringToQAngle
 V_StringToUint16
 V_StringToUint32
 V_StringToUint64
+V_StringToUint8
 V_StringToVector
 V_StringToVector2D
 V_StringToVector4D
@@ -4774,6 +4799,7 @@ VideoPlayerInitAudio
 VideoPlayerInitalized
 VideoPlayerPlaybackStateChange
 VideoPlayerRepeated
+Vietnamese
 Virtual array controller messed up
 VisBuilder_001
 Vrad3_001
@@ -5195,10 +5221,7 @@ _txnal_logic_error_get_msg(void*)
 _txnal_runtime_error_get_msg(void*)
 _txnal_sso_string_c_str(void const*)
 aRecord
-a_fDecodedAlpha >= 0.0f
 a_object.c
-a_uiMultithreadingStride > 0
-a_uiRadius <= MAX_RADIUS
 aaControls
 abort
 ac-auditEntity
@@ -5356,6 +5379,7 @@ bf-cbc
 bf-cfb
 bf-ecb
 bf-ofb
+bg_BG
 bignum routines
 binary_auto
 binary_blob
@@ -5509,12 +5533,14 @@ brainpoolP384r1
 brainpoolP384t1
 brainpoolP512r1
 brainpoolP512t1
+brazilian
 brown
 bss_file.c
 btowc
 buf_str.c
 buffer error
 buildingName
+bulgarian
 burlywood
 businessCategory
 butt
@@ -5958,7 +5984,6 @@ clip-path
 clip-rule
 clipPath
 clipaftertransform
-clock_gettime
 close
 close() failed: 
 closedir
@@ -6015,6 +6040,7 @@ crosshair
 cryptlib.c
 cryptocom
 cryptopro
+cs_CZ
 ct_cert_scts
 ct_precert_poison
 ct_precert_scts
@@ -6022,9 +6048,12 @@ ct_precert_signer
 cubic-bezier
 cursor
 cyan
+czech
 dITRedirect
 dNSDomain
 dSAQuality
+da_DK
+danish
 darkblue
 darkcyan
 darken
@@ -6055,6 +6084,7 @@ data:application/json;base64,
 data_ == other.data_
 dcObject
 dcobject
+de_DE
 debug_malloc
 debug_malloc2
 decimal128
@@ -6162,6 +6192,7 @@ dsa_with_SHA256
 dst_height > 0
 dst_width % 3 == 0
 dst_width > 0
+dutch
 dvcs
 dx != __null
 dx == 65536 * 2
@@ -6187,14 +6218,14 @@ ecdsa-with-SHA256
 ecdsa-with-SHA384
 ecdsa-with-SHA512
 ecdsa-with-Specified
-effortblocks = %d\n
 eight
+el_GR
 ellipse
 ellipsis
 elliptic curve routines
 emailAddress
 emailProtection
-encodingTry.m_fError < 3.40282346638528859811704183484516925e+38F
+en_US
 encrypted track 2
 engine
 engine routines
@@ -6205,6 +6236,9 @@ equals-sign
 err.c
 error
 error:%08lX:%s:%s:%s
+es-419
+es_419
+es_ES
 even
 evenodd
 event
@@ -6215,6 +6249,7 @@ ex_data.c
 exclamation-mark
 exit
 expanded
+expected a comma-separated list of language names, found an empty value.
 expecting an asn1 sequence
 experimental
 extReq
@@ -6225,13 +6260,6 @@ extendedStatus
 external
 f == nullptr || dynamic_cast<To>(f) != nullptr
 f5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5Jx
-fMinAlpha <= fMaxAlpha
-fMinGrn <= fMaxGrn
-fMinRed <= fMaxRed
-fWeightSumBottom > 0.0f
-fWeightSumLeft > 0.0f
-fWeightSumRight > 0.0f
-fWeightSumTop > 0.0f
 facsimileTelephoneNumber
 fade
 fade_out
@@ -6245,6 +6273,7 @@ feof
 ferror
 fflush
 fgets
+fi_FI
 file error
 file://
 file://%s
@@ -6258,6 +6287,7 @@ fill-opacity
 fill-parent-flow
 fill-parent-flow( %s )
 fill-rule
+finnish
 fips
 fips2
 firebrick
@@ -6269,12 +6299,14 @@ fixed32
 fixed_invtbl8
 fj".T\CMek2>x
 float
-float Etc::Block4x4Encoding::CalcPixelError(Etc::ColorFloatRGBA, float, Etc::ColorFloatRGBA)
-float Etc::Block4x4Encoding::GetError()
 float64
-floatbitmap.cpp(1213): Unsupported color format "%s", skipping!\n
+floatbitmap.cpp
+floatbitmap.cpp(1207): Unsupported color format "%s", skipping!\n
+floatbitmap.cpp(2135): Error! Allocated %llu bytes when %llu are required!\n
+floatbitmap.cpp:2264
 floralwhite
 flow-children
+fmaf
 focus
 focus_change
 focus_change_fastscroll
@@ -6295,8 +6327,10 @@ forwards
 four
 fputc
 fputs
+fr_FR
 fread
 free
+french
 freshestCRL
 friendlyCountry
 friendlyCountryName
@@ -6309,8 +6343,9 @@ ftello64
 fuchsia
 func(%lu)
 function %s()
-future
 fwrite
+g2[4] b2[4] b3[4] r0[9:0] g0[9:0] b0[9:0] r1[4:0] g3[4] g2[3:0] g1[4:0] b3[0] g3[3:0] b1[4:0] b3[1] b2[3:0] r2[4:0] b3[2] r3[4:0] b3[3]
+g2[5] g3[4] g3[5] r0[6:0] b3[0] b3[1] b2[4] g0[6:0] b2[5] b3[2] g2[4] b0[6:0] b3[3] b3[5] b3[4] r1[5:0] g2[3:0] g1[5:0] g3[3:0] b1[5:0] b2[3:0] r2[5:0] r3[5:0]
 g_BitBuf_BitWriteMasks
 g_BitBuf_ExtraMasks
 g_Mathlib_GammaToLinearByteTable
@@ -6334,7 +6369,7 @@ generate cryptogram
 generationQualifier
 generic
 generic cryptogram
-get_nprocs
+german
 getc
 getentropy
 getenv
@@ -6468,6 +6503,7 @@ graph
 grave-accent
 gray
 greater-than-sign
+greek
 green
 greenyellow
 grey
@@ -6556,33 +6592,12 @@ http
 http://
 https
 https://
+hu_HU
 hue-rotation
+hungarian
 hyphen
 i < length_
 iA5StringSyntax
-iBlue >= 0 && iBlue <= 15
-iBlue >= 0 && iBlue <= 31
-iBlue1 >= (signed)(0+a_uiRadius) && iBlue1 <= (signed)(31 - a_uiRadius)
-iBlue2 < 0 || iBlue2 > 31
-iBlue2 >= (signed)(0 + a_uiRadius) && iBlue2 <= (signed)(31 - a_uiRadius)
-iDBlue >= -4 && iDBlue < 4
-iDBlue2 >= -4 && iDBlue2 < 4
-iDGreen >= -4 && iDGreen < 4
-iDGreen2 >= -4 && iDGreen2 < 4
-iDRed >= -4 && iDRed < 4
-iDRed2 >= -4 && iDRed2 < 4
-iGreen >= 0 && iGreen <= 15
-iGreen >= 0 && iGreen <= 31
-iGreen1 >= (signed)(0 + a_uiRadius) && iGreen1 <= (signed)(31 - a_uiRadius)
-iGreen2 < 0 || iGreen2 > 31
-iGreen2 >= (signed)(0 + a_uiRadius) && iGreen2 <= (signed)(31 - a_uiRadius)
-iGreen2 >= 0 && iGreen2 <= 31
-iRed >= 0 && iRed <= 15
-iRed >= 0 && iRed <= 31
-iRed1 >= (signed)(0 + a_uiRadius) && iRed1 <= (signed)(31 - a_uiRadius)
-iRed2 < 0 || iRed2 > 31
-iRed2 >= (signed)(0 + a_uiRadius) && iRed2 <= (signed)(31 - a_uiRadius)
-iRed2 >= 0 && iRed2 <= 31
 iana
 iboxwidth > 0
 iconv
@@ -6824,6 +6839,7 @@ id-smime-mod-oid
 id-smime-spq
 id-smime-spq-ets-sqt-unotice
 id-smime-spq-ets-sqt-uri
+id_ID
 idea-cbc
 idea-cfb
 idea-ecb
@@ -6843,6 +6859,7 @@ incorrect header check
 incorrect length check
 indianred
 indigo
+indonesian
 infinite
 infinity
 inherit
@@ -6877,6 +6894,7 @@ int& std::forward<int&>(std::remove_reference<int&>::type&)
 int&& std::forward<int>(std::remove_reference<int>::type&)
 int16
 int64
+int8
 int_err_get (err.c)
 int_thread_get (err.c)
 internal
@@ -6913,10 +6931,14 @@ is_large()
 issuer capabilities
 issuerAltName
 issuingDistributionPoint
+it_IT
+italian
 italic
 itu-t
 ivory
+ja_JP
 janetMailbox
+japanese
 java Class for 
 java resource 
 joint-iso-itu-t
@@ -7109,10 +7131,15 @@ keyboard
 kh9F
 khaki
 kisa
+ko_KR
+koreana
+languages
+languagesrc-
 last-child
 lastModifiedBy
 lastModifiedTime
 lastactivate
+latam
 lavender
 lavenderblush
 lawngreen
@@ -7122,6 +7149,7 @@ layout/stylefile.cpp
 layout/stylepropertyfactory.cpp
 layoutfailed
 ld-linux-x86-64.so.2
+ldexpf
 left
 left-curly-bracket
 left-parenthesis
@@ -7179,6 +7207,8 @@ locale::facet::_S_lc_ctype_c_locale newlocale error
 localityName
 localization/localize.cpp
 localtime
+log1p
+log1pf
 long
 long const& std::min<long>(long const&, long const&)
 long double
@@ -7193,25 +7223,14 @@ loongson-ext
 loongson-mmi
 lower
 lowercase
+lroundf
 lseek
 mXRecord
 m_AST
 m_bShuttingDown
-m_boolDiff
-m_boolDiff == true
-m_boolTransparent
-m_fError >= 0.0f
 m_mapPanels.IsValidIndex( hPanel.m_iPanelIndex )
 m_mapPanels[hPanel.m_iPanelIndex] == hPanel.m_unSerialNumber
-m_mode == MODE_ETC1
-m_mode == MODE_H
-m_mode == MODE_PLANAR
-m_mode == MODE_T
 m_pRoot
-m_paucEncodingBits == nullptr
-m_uiAddedBlocks < m_uiImageBlocks
-m_uiAddedBlocks == m_uiImageBlocks
-m_uiEncodingIterations == 0
 m_vecChildren.IsEmpty()
 magenta
 mail
@@ -7314,7 +7333,6 @@ n-resize
 nSRecord
 nTries < 10000000
 nameConstraints
-nanosleep
 navajowhite
 navy
 ne-resize
@@ -7326,11 +7344,13 @@ new
 new[]
 newline
 nine
+nl_NL
 no memory during frame initialization.
 no-drop
 no-repeat
 noCheck
 noRevAvail
+no_NO
 noexcept
 non-transaction clone for 
 non-virtual thunk to 
@@ -7342,6 +7362,7 @@ non-virtual thunk to std::basic_stringstream<char, std::char_traits<char>, std::
 non-virtual thunk to std::basic_stringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>::~basic_stringstream()
 none 
 nonzero
+norwegian
 not set
 not-allowed
 notready
@@ -7525,7 +7546,6 @@ parent-relative
 parentdisabled
 parse
 parsing
-pass %u\n
 pass-through
 passed a null parameter
 password based MAC
@@ -7543,7 +7563,6 @@ pbeWithSHA1And40BitRC2-CBC
 pbeWithSHA1And40BitRC4
 pbeWithSHA1AndDES-CBC
 pbeWithSHA1AndRC2-CBC
-pbucket->plinkLast->GetNext() == nullptr
 peachpuff
 percent-sign
 period
@@ -7578,6 +7597,7 @@ pkcs7-signedAndEnvelopedData
 pkcs7-signedData
 pkcs8ShroudedKeyBag
 pkcs9
+pl_PL
 please implement MergeFrom for your type.
 plum
 plus-sign
@@ -7588,9 +7608,11 @@ pointer != NULL
 points
 policyConstraints
 policyMappings
+polish
 poll
 polygon
 polyline
+portuguese
 postOfficeBox
 postalAddress
 postalCode
@@ -7621,28 +7643,16 @@ proto3
 protocolInformation
 proxyCertInfo
 pseudonym
+pt_BR
+pt_PT
 pthread_cond_broadcast
-pthread_cond_destroy
-pthread_cond_signal
 pthread_cond_wait
-pthread_create
-pthread_detach
-pthread_getspecific
-pthread_join
-pthread_key_create
-pthread_key_delete
 pthread_mutex_lock
 pthread_mutex_unlock
 pthread_once
 pthread_rwlock_rdlock
 pthread_rwlock_unlock
 pthread_rwlock_wrlock
-pthread_setspecific
-ptry < &a_phalf->m_atry[DifferentialTrys::Half::MAX_TRYS]
-ptry < &a_phalf->m_atry[IndividualTrys::Half::MAX_TRYS]
-ptry->m_fError < 3.40282346638528859811704183484516925e+38F
-ptryBest1 != nullptr
-ptryBest2 != nullptr
 punct
 pure virtual method called\n
 purple
@@ -7653,6 +7663,18 @@ qsort
 qualityLabelledData
 question-mark
 quotation-mark
+r0[5:0] g3[4] b3[0] b3[1] b2[4] g0[5:0] g2[5] b2[5] b3[2] g2[4] b0[5:0] g3[5] b3[3] b3[5] b3[4] r1[5:0] g2[3:0] g1[5:0] g3[3:0] b1[5:0] b2[3:0] r2[5:0] r3[5:0]
+r0[7:0] b3[0] b2[4] g0[7:0] g2[5] g2[4] b0[7:0] g3[5] b3[4] r1[4:0] g3[4] g2[3:0] g1[5:0] g3[3:0] b1[4:0] b3[1] b2[3:0] r2[4:0] b3[2] r3[4:0] b3[3]
+r0[7:0] b3[1] b2[4] g0[7:0] b2[5] g2[4] b0[7:0] b3[5] b3[4] r1[4:0] g3[4] g2[3:0] g1[4:0] b3[0] g3[3:0] b1[5:0] b2[3:0] r2[4:0] b3[2] r3[4:0] b3[3]
+r0[7:0] g3[4] b2[4] g0[7:0] b3[2] g2[4] b0[7:0] b3[3] b3[4] r1[5:0] g2[3:0] g1[4:0] b3[0] g3[3:0] b1[4:0] b3[1] b2[3:0] r2[5:0] r3[5:0]
+r0[8:0] b2[4] g0[8:0] g2[4] b0[8:0] b3[4] r1[4:0] g3[4] g2[3:0] g1[4:0] b3[0] g3[3:0] b1[4:0] b3[1] b2[3:0] r2[4:0] b3[2] r3[4:0] b3[3]
+r0[9:0] g0[9:0] b0[9:0] r1[3:0] r0[10:15] g1[3:0] g0[10:15] b1[3:0] b0[10:15]
+r0[9:0] g0[9:0] b0[9:0] r1[3:0] r0[10] b2[4] g2[3:0] g1[3:0] g0[10] b3[0] g3[3:0] b1[4:0] b0[10] b2[3:0] r2[3:0] b3[1] b3[2] r3[3:0] b3[4] b3[3]
+r0[9:0] g0[9:0] b0[9:0] r1[3:0] r0[10] g3[4] g2[3:0] g1[4:0] g0[10] g3[3:0] b1[3:0] b0[10] b3[1] b2[3:0] r2[3:0] b3[0] b3[2] r3[3:0] g2[4] b3[3]
+r0[9:0] g0[9:0] b0[9:0] r1[4:0] r0[10] g2[3:0] g1[3:0] g0[10] b3[0] g3[3:0] b1[3:0] b0[10] b3[1] b2[3:0] r2[4:0] b3[2] r3[4:0] b3[3]
+r0[9:0] g0[9:0] b0[9:0] r1[7:0] r0[10:11] g1[7:0] g0[10:11] b1[7:0] b0[10:11]
+r0[9:0] g0[9:0] b0[9:0] r1[8:0] r0[10] g1[8:0] g0[10] b1[8:0] b0[10]
+r0[9:0] g0[9:0] b0[9:0] r1[9:0] g1[9:0] b1[9:0]
 rFC822localPart
 radial
 radial( 
@@ -7720,8 +7742,10 @@ right-square-bracket
 right-wrap
 ripemd160
 ripemd160WithRSA
+ro_RO
 role
 roleOccupant
+romanian
 room
 roomNumber
 rosybrown
@@ -7732,7 +7756,6 @@ rotatex
 rotatey
 rotatez
 round
-roundf
 row-resize
 royalblue
 rsa routines
@@ -7742,11 +7765,14 @@ rsaSignature
 rsadsi
 rsaesOaep
 rsassaPss
+ru_RU
 run length compression
+russian
 s-resize
 s2r://%s
 s5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5Jx
 sOARecord
+sRGB
 s_SymbolStringValidators.IsValidIndex( eSymbolType )
 saddlebrown
 safeContentsBag
@@ -7763,6 +7789,7 @@ scale3d(
 scalex
 scaley
 scalez
+schinese
 screen
 script
 scripts
@@ -8017,9 +8044,9 @@ source_file
 source_line
 source_map.json
 space
+spanish
 springgreen
 sprintf
-sqrtf
 squish
 src_height != 0
 src_height == ((dst_height + 1) / 2)
@@ -8090,16 +8117,6 @@ std::_Function_handler<bool (char), std::__detail::_CharMatcher<std::regex_trait
 std::_Function_handler<bool (char), std::__detail::_CharMatcher<std::regex_traits<char>, true, true>>::_M_invoke(std::_Any_data const&, char&&)
 std::_Function_handler<bool (char), std::__detail::_CharMatcher<std::regex_traits<char>, true, true>>::_M_manager(std::_Any_data&, std::_Any_data const&, std::_Manager_operation)
 std::_Hash_bytes(void const*, unsigned long, unsigned long)
-std::_Head_base<0ul, std::__future_base::_State_baseV2::_Make_ready*, false>::_Head_base()
-std::_Head_base<0ul, std::__future_base::_State_baseV2::_Make_ready*, false>::_M_head(std::_Head_base<0ul, std::__future_base::_State_baseV2::_Make_ready*, false> const&)
-std::_Head_base<0ul, std::__future_base::_State_baseV2::_Make_ready*, false>::_M_head(std::_Head_base<0ul, std::__future_base::_State_baseV2::_Make_ready*, false>&)
-std::_Head_base<0ul, std::thread::_State*, false>::_Head_base()
-std::_Head_base<0ul, std::thread::_State*, false>::_M_head(std::_Head_base<0ul, std::thread::_State*, false> const&)
-std::_Head_base<0ul, std::thread::_State*, false>::_M_head(std::_Head_base<0ul, std::thread::_State*, false>&)
-std::_Head_base<1ul, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>, true>::_Head_base()
-std::_Head_base<1ul, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>, true>::_M_head(std::_Head_base<1ul, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>, true>&)
-std::_Head_base<1ul, std::default_delete<std::thread::_State>, true>::_Head_base()
-std::_Head_base<1ul, std::default_delete<std::thread::_State>, true>::_M_head(std::_Head_base<1ul, std::default_delete<std::thread::_State>, true>&)
 std::_Ios_Openmode std::__exchange<std::_Ios_Openmode, std::_Ios_Openmode>(std::_Ios_Openmode&, std::_Ios_Openmode&&)
 std::_Ios_Openmode&& std::forward<std::_Ios_Openmode>(std::remove_reference<std::_Ios_Openmode>::type&)
 std::_Rb_tree_black_count(std::_Rb_tree_node_base const*, std::_Rb_tree_node_base const*)
@@ -8115,27 +8132,15 @@ std::_Rb_tree_rotate_left(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*&)
 std::_Rb_tree_rotate_right(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*&)
 std::_Setfill<char> std::setfill<char>(char)
 std::_Setfill<wchar_t> std::setfill<wchar_t>(wchar_t)
-std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_add_ref_lock_nothrow()
 std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_destroy()
-std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_get_use_count() const
-std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release_last_use()
+std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release()
 std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release_last_use_cold()
-std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_weak_release()
 std::_Sp_counted_ptr<std::nullptr_t, (__gnu_cxx::_Lock_policy)2>::_M_dispose()
 std::_Sp_counted_ptr_inplace<std::__detail::_NFA<std::regex_traits<char>>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_destroy()
 std::_Sp_counted_ptr_inplace<std::__detail::_NFA<std::regex_traits<char>>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_dispose()
 std::_Sp_counted_ptr_inplace<std::__detail::_NFA<std::regex_traits<char>>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_get_deleter(std::type_info const&)
 std::_Sp_counted_ptr_inplace<std::__detail::_NFA<std::regex_traits<char>>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::~_Sp_counted_ptr_inplace()
-std::_Tuple_impl<0ul, std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>::_M_head(std::_Tuple_impl<0ul, std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>> const&)
-std::_Tuple_impl<0ul, std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>::_M_head(std::_Tuple_impl<0ul, std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>&)
-std::_Tuple_impl<0ul, std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>::_Tuple_impl()
-std::_Tuple_impl<0ul, std::thread::_State*, std::default_delete<std::thread::_State>>::_M_head(std::_Tuple_impl<0ul, std::thread::_State*, std::default_delete<std::thread::_State>> const&)
-std::_Tuple_impl<0ul, std::thread::_State*, std::default_delete<std::thread::_State>>::_M_head(std::_Tuple_impl<0ul, std::thread::_State*, std::default_delete<std::thread::_State>>&)
-std::_Tuple_impl<0ul, std::thread::_State*, std::default_delete<std::thread::_State>>::_Tuple_impl()
-std::_Tuple_impl<1ul, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>::_M_head(std::_Tuple_impl<1ul, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>&)
-std::_Tuple_impl<1ul, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>::_Tuple_impl()
-std::_Tuple_impl<1ul, std::default_delete<std::thread::_State>>::_M_head(std::_Tuple_impl<1ul, std::default_delete<std::thread::_State>>&)
-std::_Tuple_impl<1ul, std::default_delete<std::thread::_State>>::_Tuple_impl()
+std::_Sp_make_shared_tag::_S_ti()::__tag
 std::_V2::error_category::_M_message(int) const
 std::_V2::error_category::_M_message[abi:cxx11](int) const
 std::_V2::error_category::default_error_condition(int) const
@@ -8154,10 +8159,6 @@ std::_Vector_base<std::Catalog_info*, std::allocator<std::Catalog_info*>>::_Vect
 std::_Vector_base<std::Catalog_info*, std::allocator<std::Catalog_info*>>::_Vector_impl::~_Vector_impl()
 std::_Vector_base<std::Catalog_info*, std::allocator<std::Catalog_info*>>::_Vector_impl_data::_Vector_impl_data()
 std::_Vector_base<std::Catalog_info*, std::allocator<std::Catalog_info*>>::~_Vector_base()
-std::__at_thread_exit(std::__at_thread_exit_elt*)
-std::__atomic_futex_unsigned_base::_M_futex_notify_all(unsigned int*)
-std::__atomic_futex_unsigned_base::_M_futex_wait_until(unsigned int*, unsigned int, bool, std::chrono::duration<long, std::ratio<1l, 1l>>, std::chrono::duration<long, std::ratio<1l, 1000000000l>>)
-std::__atomic_futex_unsigned_base::_M_futex_wait_until_steady(unsigned int*, unsigned int, bool, std::chrono::duration<long, std::ratio<1l, 1l>>, std::chrono::duration<long, std::ratio<1l, 1000000000l>>)
 std::__basic_file<char>::__basic_file(pthread_mutex_t*)
 std::__basic_file<char>::__basic_file(std::__basic_file<char>&&, pthread_mutex_t*)
 std::__basic_file<char>::close()
@@ -8274,11 +8275,6 @@ std::__codecvt_utf8_utf16_base<wchar_t>::do_max_length() const
 std::__codecvt_utf8_utf16_base<wchar_t>::do_out(__mbstate_t&, wchar_t const*, wchar_t const*, wchar_t const*&, char*, char*, char*&) const
 std::__codecvt_utf8_utf16_base<wchar_t>::do_unshift(__mbstate_t&, char*, char*, char*&) const
 std::__codecvt_utf8_utf16_base<wchar_t>::~__codecvt_utf8_utf16_base()
-std::__condvar::__condvar()
-std::__condvar::notify_all()
-std::__condvar::notify_one()
-std::__condvar::wait(std::mutex&)
-std::__condvar::~__condvar()
 std::__construct_ios_failure(void*, char const*)
 std::__convert_from_v(__locale_struct* const&, char*, int, char const*, ...)
 std::__cow_string::__cow_string()
@@ -9077,22 +9073,6 @@ std::__detail::_Scanner<char>::_M_scan_normal()
 std::__detail::_State<char>::~_State()
 std::__detail::_StateSeq<std::regex_traits<char>>::_M_clone()
 std::__detail::__prime_list
-std::__exception_ptr::exception_ptr::_M_addref()
-std::__exception_ptr::exception_ptr::_M_get() const
-std::__exception_ptr::exception_ptr::_M_release()
-std::__exception_ptr::exception_ptr::_M_safe_bool_dummy()
-std::__exception_ptr::exception_ptr::__cxa_exception_type() const
-std::__exception_ptr::exception_ptr::exception_ptr()
-std::__exception_ptr::exception_ptr::exception_ptr(std::__exception_ptr::exception_ptr const&)
-std::__exception_ptr::exception_ptr::exception_ptr(void (std::__exception_ptr::exception_ptr::*)())
-std::__exception_ptr::exception_ptr::exception_ptr(void*)
-std::__exception_ptr::exception_ptr::operator void (std::__exception_ptr::exception_ptr::*)()() const
-std::__exception_ptr::exception_ptr::operator!() const
-std::__exception_ptr::exception_ptr::operator=(std::__exception_ptr::exception_ptr const&)
-std::__exception_ptr::exception_ptr::swap(std::__exception_ptr::exception_ptr&)
-std::__exception_ptr::exception_ptr::~exception_ptr()
-std::__exception_ptr::operator!=(std::__exception_ptr::exception_ptr const&, std::__exception_ptr::exception_ptr const&)
-std::__exception_ptr::operator==(std::__exception_ptr::exception_ptr const&, std::__exception_ptr::exception_ptr const&)
 std::__facet_shims::__any_string& std::__facet_shims::__any_string::operator=<char>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)
 std::__facet_shims::__any_string& std::__facet_shims::__any_string::operator=<char>(std::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)
 std::__facet_shims::__any_string& std::__facet_shims::__any_string::operator=<wchar_t>(std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>> const&)
@@ -9103,13 +9083,6 @@ std::__facet_shims::__any_string::__str_rep::operator wchar_t const*() const
 std::__facet_shims::__any_string::operator std::basic_string<char, std::char_traits<char>, std::allocator<char>><char>() const
 std::__facet_shims::__any_string::operator std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>><wchar_t>() const
 std::__facet_shims::__any_string::~__any_string()
-std::__future_base::_Result_base::_Result_base()
-std::__future_base::_Result_base::~_Result_base()
-std::__future_base::_State_baseV2::_Make_ready* const& std::__get_helper<0ul, std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>(std::_Tuple_impl<0ul, std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>> const&)
-std::__future_base::_State_baseV2::_Make_ready*& std::__get_helper<0ul, std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>(std::_Tuple_impl<0ul, std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>&)
-std::__future_base::_State_baseV2::_Make_ready::_M_set()
-std::__future_base::_State_baseV2::_Make_ready::_S_run(void*)
-std::__future_base::_State_baseV2::_Make_ready::~_Make_ready()
 std::__ios_failure::__ios_failure(char const*)
 std::__ios_failure::__ios_failure(char const*, std::error_code const&)
 std::__ios_failure::~__ios_failure()
@@ -9168,24 +9141,6 @@ std::__ptr_traits_ptr_to<char const*, char const, false>::pointer_to(char const&
 std::__ptr_traits_ptr_to<char*, char, false>::pointer_to(char&)
 std::__ptr_traits_ptr_to<wchar_t const*, wchar_t const, false>::pointer_to(wchar_t const&)
 std::__ptr_traits_ptr_to<wchar_t*, wchar_t, false>::pointer_to(wchar_t&)
-std::__shared_count<(__gnu_cxx::_Lock_policy)2>::_M_get_use_count() const
-std::__shared_count<(__gnu_cxx::_Lock_policy)2>::_M_swap(std::__shared_count<(__gnu_cxx::_Lock_policy)2>&)
-std::__shared_count<(__gnu_cxx::_Lock_policy)2>::__shared_count()
-std::__shared_count<(__gnu_cxx::_Lock_policy)2>::__shared_count(std::__weak_count<(__gnu_cxx::_Lock_policy)2> const&, std::nothrow_t)
-std::__shared_count<(__gnu_cxx::_Lock_policy)2>::~__shared_count()
-std::__shared_ptr<std::__future_base::_State_baseV2, (__gnu_cxx::_Lock_policy)2>::__shared_ptr(std::__weak_ptr<std::__future_base::_State_baseV2, (__gnu_cxx::_Lock_policy)2> const&, std::nothrow_t)
-std::__shared_ptr<std::__future_base::_State_baseV2, (__gnu_cxx::_Lock_policy)2>::get() const
-std::__shared_ptr<std::__future_base::_State_baseV2, (__gnu_cxx::_Lock_policy)2>::operator bool() const
-std::__shared_ptr<std::__future_base::_State_baseV2, (__gnu_cxx::_Lock_policy)2>::~__shared_ptr()
-std::__shared_ptr<std::thread::_Impl_base, (__gnu_cxx::_Lock_policy)2>::__shared_ptr()
-std::__shared_ptr<std::thread::_Impl_base, (__gnu_cxx::_Lock_policy)2>::__shared_ptr(std::__shared_ptr<std::thread::_Impl_base, (__gnu_cxx::_Lock_policy)2>&&)
-std::__shared_ptr<std::thread::_Impl_base, (__gnu_cxx::_Lock_policy)2>::get() const
-std::__shared_ptr<std::thread::_Impl_base, (__gnu_cxx::_Lock_policy)2>::operator=(std::__shared_ptr<std::thread::_Impl_base, (__gnu_cxx::_Lock_policy)2>&&)
-std::__shared_ptr<std::thread::_Impl_base, (__gnu_cxx::_Lock_policy)2>::reset()
-std::__shared_ptr<std::thread::_Impl_base, (__gnu_cxx::_Lock_policy)2>::swap(std::__shared_ptr<std::thread::_Impl_base, (__gnu_cxx::_Lock_policy)2>&)
-std::__shared_ptr<std::thread::_Impl_base, (__gnu_cxx::_Lock_policy)2>::~__shared_ptr()
-std::__shared_ptr_access<std::__future_base::_State_baseV2, (__gnu_cxx::_Lock_policy)2, false, false>::_M_get() const
-std::__shared_ptr_access<std::__future_base::_State_baseV2, (__gnu_cxx::_Lock_policy)2, false, false>::operator->() const
 std::__sso_string::__sso_string()
 std::__sso_string::__sso_string(char const*, unsigned long)
 std::__sso_string::__sso_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)
@@ -9203,7 +9158,6 @@ std::__throw_bad_exception()
 std::__throw_bad_function_call()
 std::__throw_bad_typeid()
 std::__throw_domain_error(char const*)
-std::__throw_future_error(int)
 std::__throw_invalid_argument(char const*)
 std::__throw_ios_failure(char const*)
 std::__throw_ios_failure(char const*, int)
@@ -9262,17 +9216,6 @@ std::__timepunct_cache<char>::~__timepunct_cache()
 std::__timepunct_cache<wchar_t>::_S_timezones
 std::__timepunct_cache<wchar_t>::__timepunct_cache(unsigned long)
 std::__timepunct_cache<wchar_t>::~__timepunct_cache()
-std::__uniq_ptr_data<std::__future_base::_State_baseV2::_Make_ready, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>, true, true>::__uniq_ptr_data(std::__future_base::_State_baseV2::_Make_ready*)
-std::__uniq_ptr_data<std::thread::_State, std::default_delete<std::thread::_State>, true, true>::__uniq_ptr_data(std::thread::_State*)
-std::__uniq_ptr_impl<std::__future_base::_State_baseV2::_Make_ready, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>::_M_deleter()
-std::__uniq_ptr_impl<std::__future_base::_State_baseV2::_Make_ready, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>::_M_ptr()
-std::__uniq_ptr_impl<std::__future_base::_State_baseV2::_Make_ready, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>::_M_ptr() const
-std::__uniq_ptr_impl<std::__future_base::_State_baseV2::_Make_ready, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>::__uniq_ptr_impl(std::__future_base::_State_baseV2::_Make_ready*)
-std::__uniq_ptr_impl<std::thread::_State, std::default_delete<std::thread::_State>>::_M_deleter()
-std::__uniq_ptr_impl<std::thread::_State, std::default_delete<std::thread::_State>>::_M_ptr()
-std::__uniq_ptr_impl<std::thread::_State, std::default_delete<std::thread::_State>>::_M_ptr() const
-std::__uniq_ptr_impl<std::thread::_State, std::default_delete<std::thread::_State>>::__uniq_ptr_impl(std::thread::_State*)
-std::__uniq_ptr_impl<std::thread::_State, std::default_delete<std::thread::_State>>::release()
 std::__use_cache<std::__moneypunct_cache<char, false>>::operator()(std::locale const&) const
 std::__use_cache<std::__moneypunct_cache<char, true>>::operator()(std::locale const&) const
 std::__use_cache<std::__moneypunct_cache<wchar_t, false>>::operator()(std::locale const&) const
@@ -9282,11 +9225,7 @@ std::__use_cache<std::__numpunct_cache<wchar_t>>::operator()(std::locale const&)
 std::__verify_grouping(char const*, unsigned long, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)
 std::__verify_grouping(char const*, unsigned long, std::string const&)
 std::__verify_grouping_impl(char const*, unsigned long, char const*, unsigned long)
-std::__weak_count<(__gnu_cxx::_Lock_policy)2>::~__weak_count()
-std::__weak_ptr<std::__future_base::_State_baseV2, (__gnu_cxx::_Lock_policy)2>::~__weak_ptr()
 std::allocator
-std::atomic<bool>::load(std::memory_order) const
-std::atomic<bool>::store(bool, std::memory_order)
 std::auto_ptr<std::Catalog_info>::auto_ptr(std::Catalog_info*)
 std::auto_ptr<std::Catalog_info>::get() const
 std::auto_ptr<std::Catalog_info>::operator->() const
@@ -10140,18 +10079,6 @@ std::char_traits<wchar_t>::move(wchar_t*, wchar_t const*, unsigned long)
 std::char_traits<wchar_t>::not_eof(unsigned int const&)
 std::char_traits<wchar_t>::to_char_type(unsigned int const&)
 std::char_traits<wchar_t>::to_int_type(wchar_t const&)
-std::chrono::_V2::steady_clock::is_steady
-std::chrono::_V2::steady_clock::now()
-std::chrono::_V2::system_clock::is_steady
-std::chrono::_V2::system_clock::now()
-std::chrono::duration<long, std::ratio<1l, 1000000000l>> std::chrono::__duration_cast_impl<std::chrono::duration<long, std::ratio<1l, 1000000000l>>, std::ratio<1000000000l, 1l>, long, false, true>::__cast<long, std::ratio<1l, 1l>>(std::chrono::duration<long, std::ratio<1l, 1l>> const&)
-std::chrono::duration<long, std::ratio<1l, 1000000000l>>::count() const
-std::chrono::duration<long, std::ratio<1l, 1000000000l>>::duration<long, std::ratio<1l, 1l>, void>(std::chrono::duration<long, std::ratio<1l, 1l>> const&)
-std::chrono::duration<long, std::ratio<1l, 1000000000l>>::duration<long, void>(long const&)
-std::chrono::duration<long, std::ratio<1l, 1l>>::count() const
-std::chrono::duration<long, std::ratio<1l, 1l>>::duration<long, void>(long const&)
-std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l>>>::time_point(std::chrono::duration<long, std::ratio<1l, 1000000000l>> const&)
-std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l>>>::time_point(std::chrono::duration<long, std::ratio<1l, 1000000000l>> const&)
 std::cin
 std::clog
 std::codecvt<char, char, __mbstate_t> const& std::__check_facet<std::codecvt<char, char, __mbstate_t>>(std::codecvt<char, char, __mbstate_t> const*)
@@ -10264,12 +10191,6 @@ std::collate_byname<char>::~collate_byname()
 std::collate_byname<wchar_t>::collate_byname(char const*, unsigned long)
 std::collate_byname<wchar_t>::collate_byname(std::string const&, unsigned long)
 std::collate_byname<wchar_t>::~collate_byname()
-std::common_type<std::chrono::duration<long, std::ratio<1l, 1l>>, std::chrono::duration<long, std::ratio<1l, 1000000000l>>>::type std::chrono::operator+<long, std::ratio<1l, 1l>, long, std::ratio<1l, 1000000000l>>(std::chrono::duration<long, std::ratio<1l, 1l>> const&, std::chrono::duration<long, std::ratio<1l, 1000000000l>> const&)
-std::condition_variable::condition_variable()
-std::condition_variable::notify_all()
-std::condition_variable::notify_one()
-std::condition_variable::wait(std::unique_lock<std::mutex>&)
-std::condition_variable::~condition_variable()
 std::cout
 std::ctype<char> const& std::__check_facet<std::ctype<char>>(std::ctype<char> const*)
 std::ctype<char> const& std::use_facet<std::ctype<char>>(std::locale const&)
@@ -10340,11 +10261,6 @@ std::ctype_byname<wchar_t>::ctype_byname(char const*, unsigned long)
 std::ctype_byname<wchar_t>::ctype_byname(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, unsigned long)
 std::ctype_byname<wchar_t>::ctype_byname(std::string const&, unsigned long)
 std::ctype_byname<wchar_t>::~ctype_byname()
-std::current_exception()
-std::default_delete<std::__future_base::_State_baseV2::_Make_ready>& std::__get_helper<1ul, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>(std::_Tuple_impl<1ul, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>, >&)
-std::default_delete<std::__future_base::_State_baseV2::_Make_ready>::operator()(std::__future_base::_State_baseV2::_Make_ready*) const
-std::default_delete<std::thread::_State>& std::__get_helper<1ul, std::default_delete<std::thread::_State>>(std::_Tuple_impl<1ul, std::default_delete<std::thread::_State>, >&)
-std::default_delete<std::thread::_State>::operator()(std::thread::_State*) const
 std::deque<std::__detail::_StateSeq<std::regex_traits<char>>, std::allocator<std::__detail::_StateSeq<std::regex_traits<char>>>>::_M_reallocate_map(unsigned long, bool)
 std::deque<std::__detail::_StateSeq<std::regex_traits<char>>, std::allocator<std::__detail::_StateSeq<std::regex_traits<char>>>>::push_back(std::__detail::_StateSeq<std::regex_traits<char>> const&)
 std::domain_error::domain_error(char const*)
@@ -10368,13 +10284,11 @@ std::enable_if<std::__and_<std::__not_<std::__is_tuple_like<std::ios_base::_Word
 std::enable_if<std::__and_<std::__not_<std::__is_tuple_like<std::ios_base::_Words>>, std::is_move_constructible<std::ios_base::_Words>, std::is_move_assignable<std::ios_base::_Words>>::value, void>::type std::swap<std::ios_base::_Words>(std::ios_base::_Words&, std::ios_base::_Words&)
 std::enable_if<std::__and_<std::__not_<std::__is_tuple_like<std::locale>>, std::is_move_constructible<std::locale>, std::is_move_assignable<std::locale>>::value, void>::type std::swap<std::locale>(std::locale&, std::locale&)
 std::enable_if<std::__and_<std::__not_<std::__is_tuple_like<std::ostream*>>, std::is_move_constructible<std::ostream*>, std::is_move_assignable<std::ostream*>>::value, void>::type std::swap<std::ostream*>(std::ostream*&, std::ostream*&)
-std::enable_if<std::__and_<std::__not_<std::__is_tuple_like<std::thread::_Impl_base*>>, std::is_move_constructible<std::thread::_Impl_base*>, std::is_move_assignable<std::thread::_Impl_base*>>::value, void>::type std::swap<std::thread::_Impl_base*>(std::thread::_Impl_base*&, std::thread::_Impl_base*&)
 std::enable_if<std::__and_<std::__not_<std::__is_tuple_like<unsigned int>>, std::is_move_constructible<unsigned int>, std::is_move_assignable<unsigned int>>::value, void>::type std::swap<unsigned int>(unsigned int&, unsigned int&)
 std::enable_if<std::__and_<std::__not_<std::__is_tuple_like<unsigned long>>, std::is_move_constructible<unsigned long>, std::is_move_assignable<unsigned long>>::value, void>::type std::swap<unsigned long>(unsigned long&, unsigned long&)
 std::enable_if<std::__and_<std::__not_<std::__is_tuple_like<wchar_t*>>, std::is_move_constructible<wchar_t*>, std::is_move_assignable<wchar_t*>>::value, void>::type std::swap<wchar_t*>(wchar_t*&, wchar_t*&)
 std::enable_if<std::__and_<std::__not_<std::__is_tuple_like<wchar_t>>, std::is_move_constructible<wchar_t>, std::is_move_assignable<wchar_t>>::value, void>::type std::swap<wchar_t>(wchar_t&, wchar_t&)
 std::enable_if<std::__is_swappable<std::ios_base::_Words>::value, void>::type std::swap<std::ios_base::_Words, 8ul>(std::ios_base::_Words (&) [8ul], std::ios_base::_Words (&) [8ul])
-std::enable_if<std::chrono::__is_duration<std::chrono::duration<long, std::ratio<1l, 1000000000l>>>::value, std::chrono::duration<long, std::ratio<1l, 1000000000l>>>::type std::chrono::duration_cast<std::chrono::duration<long, std::ratio<1l, 1000000000l>>, long, std::ratio<1l, 1l>>(std::chrono::duration<long, std::ratio<1l, 1l>> const&)
 std::error_code::category() const
 std::error_code::default_error_condition() const
 std::error_code::error_code(int, std::_V2::error_category const&)
@@ -10395,10 +10309,6 @@ std::fpos<__mbstate_t>::fpos(long)
 std::fpos<__mbstate_t>::operator long() const
 std::fpos<__mbstate_t>::state() const
 std::fpos<__mbstate_t>::state(__mbstate_t)
-std::future_category()
-std::future_error: 
-std::future_error::what() const
-std::future_error::~future_error()
 std::get_catalogs()
 std::get_new_handler()
 std::get_terminate()
@@ -10685,8 +10595,6 @@ std::logic_error::operator=(std::logic_error const&)
 std::logic_error::operator=(std::logic_error&&)
 std::logic_error::what() const
 std::logic_error::~logic_error()
-std::make_error_code(std::errc)
-std::make_error_code(std::future_errc)
 std::make_error_code(std::io_errc)
 std::messages<char> const& std::use_facet<std::messages<char>>(std::locale const&)
 std::messages<char> const* std::__try_use_facet<std::messages<char>>(std::locale const&)
@@ -10887,10 +10795,7 @@ std::moneypunct_byname<wchar_t, true>::intl
 std::moneypunct_byname<wchar_t, true>::moneypunct_byname(char const*, unsigned long)
 std::moneypunct_byname<wchar_t, true>::moneypunct_byname(std::string const&, unsigned long)
 std::moneypunct_byname<wchar_t, true>::~moneypunct_byname()
-std::mutex::native_handle()
-std::mutex::unlock()
 std::nothrow
-std::notify_all_at_thread_exit(std::condition_variable&, std::unique_lock<std::mutex>)
 std::nullptr_t&& std::forward<std::nullptr_t>(std::remove_reference<std::nullptr_t&&>::type&)
 std::nullptr_t&& std::forward<std::nullptr_t>(std::remove_reference<std::nullptr_t>::type&)
 std::num_get<char, std::istreambuf_iterator<char, std::char_traits<char>>> const& std::__check_facet<std::num_get<char, std::istreambuf_iterator<char, std::char_traits<char>>>>(std::num_get<char, std::istreambuf_iterator<char, std::char_traits<char>>> const*)
@@ -11052,14 +10957,11 @@ std::numpunct_byname<wchar_t>::numpunct_byname(char const*, unsigned long)
 std::numpunct_byname<wchar_t>::numpunct_byname(std::string const&, unsigned long)
 std::numpunct_byname<wchar_t>::~numpunct_byname()
 std::once_flag::_Prepare_execution::_Prepare_execution<void std::call_once<void (*)(google::protobuf::FieldDescriptor const*), google::protobuf::FieldDescriptor const*>(std::once_flag&, void (*&&)(google::protobuf::FieldDescriptor const*), google::protobuf::FieldDescriptor const*&&)::'lambda'()>(void std::call_once<void (*)(google::protobuf::FieldDescriptor const*), google::protobuf::FieldDescriptor const*>(std::once_flag&, void (*&&)(google::protobuf::FieldDescriptor const*), google::protobuf::FieldDescriptor const*&&)::'lambda'()&)::'lambda'()::_FUN()
-std::operator!=(std::thread::id, std::thread::id)
 std::operator&(std::_Ios_Fmtflags, std::_Ios_Fmtflags)
 std::operator&(std::_Ios_Iostate, std::_Ios_Iostate)
 std::operator&(std::_Ios_Openmode, std::_Ios_Openmode)
-std::operator&(std::memory_order, std::__memory_order_modifier)
 std::operator&=(std::_Ios_Fmtflags&, std::_Ios_Fmtflags)
 std::operator==(std::error_condition const&, std::error_condition const&)
-std::operator==(std::thread::id, std::thread::id)
 std::operator|(std::_Ios_Fmtflags, std::_Ios_Fmtflags)
 std::operator|(std::_Ios_Iostate, std::_Ios_Iostate)
 std::operator|(std::_Ios_Openmode, std::_Ios_Openmode)
@@ -11188,8 +11090,6 @@ std::remove_reference<std::_Ios_Openmode&>::type&& std::move<std::_Ios_Openmode&
 std::remove_reference<std::__basic_file<char>&>::type&& std::move<std::__basic_file<char>&>(std::__basic_file<char>&)
 std::remove_reference<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>&>::type&& std::move<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>&>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>&)
 std::remove_reference<std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>&>::type&& std::move<std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>&>(std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>&)
-std::remove_reference<std::__future_base::_State_baseV2::_Make_ready*&>::type&& std::move<std::__future_base::_State_baseV2::_Make_ready*&>(std::__future_base::_State_baseV2::_Make_ready*&)
-std::remove_reference<std::__shared_ptr<std::thread::_Impl_base, (__gnu_cxx::_Lock_policy)2>&>::type&& std::move<std::__shared_ptr<std::thread::_Impl_base, (__gnu_cxx::_Lock_policy)2>&>(std::__shared_ptr<std::thread::_Impl_base, (__gnu_cxx::_Lock_policy)2>&)
 std::remove_reference<std::allocator<char>&>::type&& std::move<std::allocator<char>&>(std::allocator<char>&)
 std::remove_reference<std::allocator<wchar_t>&>::type&& std::move<std::allocator<wchar_t>&>(std::allocator<wchar_t>&)
 std::remove_reference<std::basic_filebuf<char, std::char_traits<char>>&>::type&& std::move<std::basic_filebuf<char, std::char_traits<char>>&>(std::basic_filebuf<char, std::char_traits<char>>&)
@@ -11218,16 +11118,12 @@ std::remove_reference<std::ios_base::_Words*&>::type&& std::move<std::ios_base::
 std::remove_reference<std::iostream&>::type&& std::move<std::iostream&>(std::iostream&)
 std::remove_reference<std::locale&>::type&& std::move<std::locale&>(std::locale&)
 std::remove_reference<std::ostream*&>::type&& std::move<std::ostream*&>(std::ostream*&)
-std::remove_reference<std::shared_ptr<std::thread::_Impl_base>&>::type&& std::move<std::shared_ptr<std::thread::_Impl_base>&>(std::shared_ptr<std::thread::_Impl_base>&)
 std::remove_reference<std::string&>::type&& std::move<std::string&>(std::string&)
 std::remove_reference<std::string::_Alloc_hider&>::type&& std::move<std::string::_Alloc_hider&>(std::string::_Alloc_hider&)
-std::remove_reference<std::thread::_Impl_base*&>::type&& std::move<std::thread::_Impl_base*&>(std::thread::_Impl_base*&)
-std::remove_reference<std::thread::_State*&>::type&& std::move<std::thread::_State*&>(std::thread::_State*&)
 std::remove_reference<unsigned int&>::type&& std::move<unsigned int&>(unsigned int&)
 std::remove_reference<unsigned long&>::type&& std::move<unsigned long&>(unsigned long&)
 std::remove_reference<wchar_t&>::type&& std::move<wchar_t&>(wchar_t&)
 std::remove_reference<wchar_t*&>::type&& std::move<wchar_t*&>(wchar_t*&)
-std::rethrow_exception(std::__exception_ptr::exception_ptr)
 std::reverse_iterator<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>>::reverse_iterator(__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>)
 std::reverse_iterator<__gnu_cxx::__normal_iterator<char const*, std::string>>::reverse_iterator(__gnu_cxx::__normal_iterator<char const*, std::string>)
 std::reverse_iterator<__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>>::reverse_iterator(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>)
@@ -11248,11 +11144,6 @@ std::runtime_error::~runtime_error()
 std::set_new_handler(void (*)())
 std::set_terminate(void (*)())
 std::set_unexpected(void (*)())
-std::shared_ptr<std::__future_base::_State_baseV2>::shared_ptr(std::weak_ptr<std::__future_base::_State_baseV2> const&, std::nothrow_t)
-std::shared_ptr<std::__future_base::_State_baseV2>::~shared_ptr()
-std::shared_ptr<std::thread::_Impl_base>::operator=(std::shared_ptr<std::thread::_Impl_base>&&)
-std::shared_ptr<std::thread::_Impl_base>::shared_ptr(std::shared_ptr<std::thread::_Impl_base>&&)
-std::shared_ptr<std::thread::_Impl_base>::~shared_ptr()
 std::string
 std::string std::__str_concat<std::string>(std::string::value_type const*, std::string::size_type, std::string::value_type const*, std::string::size_type, std::string::allocator_type const&)
 std::string std::regex_traits<char>::lookup_collatename<char const*>(char const*, char const*) const
@@ -11426,17 +11317,6 @@ std::system_error::system_error(std::error_code, char const*)
 std::system_error::system_error(std::error_code, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)
 std::system_error::~system_error()
 std::terminate()
-std::this_thread::__sleep_for(std::chrono::duration<long, std::ratio<1l, 1l>>, std::chrono::duration<long, std::ratio<1l, 1000000000l>>)
-std::thread::_M_start_thread(std::shared_ptr<std::thread::_Impl_base>)
-std::thread::_M_start_thread(std::shared_ptr<std::thread::_Impl_base>, void (*)())
-std::thread::_M_start_thread(std::unique_ptr<std::thread::_State, std::default_delete<std::thread::_State>>, void (*)())
-std::thread::_State* const& std::__get_helper<0ul, std::thread::_State*, std::default_delete<std::thread::_State>>(std::_Tuple_impl<0ul, std::thread::_State*, std::default_delete<std::thread::_State>> const&)
-std::thread::_State*& std::__get_helper<0ul, std::thread::_State*, std::default_delete<std::thread::_State>>(std::_Tuple_impl<0ul, std::thread::_State*, std::default_delete<std::thread::_State>>&)
-std::thread::_State::~_State()
-std::thread::detach()
-std::thread::hardware_concurrency()
-std::thread::id::id()
-std::thread::join()
 std::time_base::dateorder std::__facet_shims::__time_get_dateorder<char>(std::integral_constant<bool, false>, std::locale::facet const*)
 std::time_base::dateorder std::__facet_shims::__time_get_dateorder<char>(std::integral_constant<bool, true>, std::locale::facet const*)
 std::time_base::dateorder std::__facet_shims::__time_get_dateorder<wchar_t>(std::integral_constant<bool, false>, std::locale::facet const*)
@@ -11521,14 +11401,6 @@ std::time_put_byname<wchar_t, std::ostreambuf_iterator<wchar_t, std::char_traits
 std::time_put_byname<wchar_t, std::ostreambuf_iterator<wchar_t, std::char_traits<wchar_t>>>::time_put_byname(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, unsigned long)
 std::time_put_byname<wchar_t, std::ostreambuf_iterator<wchar_t, std::char_traits<wchar_t>>>::time_put_byname(std::string const&, unsigned long)
 std::time_put_byname<wchar_t, std::ostreambuf_iterator<wchar_t, std::char_traits<wchar_t>>>::~time_put_byname()
-std::tuple<std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>::tuple<true, true>()
-std::tuple<std::thread::_State*, std::default_delete<std::thread::_State>>::tuple<true, true>()
-std::tuple_element<0ul, std::tuple<std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>>::type const& std::get<0ul, std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>(std::tuple<std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>> const&)
-std::tuple_element<0ul, std::tuple<std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>>::type& std::get<0ul, std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>(std::tuple<std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>&)
-std::tuple_element<0ul, std::tuple<std::thread::_State*, std::default_delete<std::thread::_State>>>::type const& std::get<0ul, std::thread::_State*, std::default_delete<std::thread::_State>>(std::tuple<std::thread::_State*, std::default_delete<std::thread::_State>> const&)
-std::tuple_element<0ul, std::tuple<std::thread::_State*, std::default_delete<std::thread::_State>>>::type& std::get<0ul, std::thread::_State*, std::default_delete<std::thread::_State>>(std::tuple<std::thread::_State*, std::default_delete<std::thread::_State>>&)
-std::tuple_element<1ul, std::tuple<std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>>::type& std::get<1ul, std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>(std::tuple<std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>&)
-std::tuple_element<1ul, std::tuple<std::thread::_State*, std::default_delete<std::thread::_State>>>::type& std::get<1ul, std::thread::_State*, std::default_delete<std::thread::_State>>(std::tuple<std::thread::_State*, std::default_delete<std::thread::_State>>&)
 std::type_info::__do_catch(std::type_info const*, void**, unsigned int) const
 std::type_info::__do_upcast(__cxxabiv1::__class_type_info const*, void**) const
 std::type_info::__is_function_p() const
@@ -11544,19 +11416,6 @@ std::underflow_error::underflow_error(std::__cxx11::basic_string<char, std::char
 std::underflow_error::underflow_error(std::string const&)
 std::underflow_error::~underflow_error()
 std::unexpected()
-std::unique_lock<std::mutex>::mutex() const
-std::unique_lock<std::mutex>::release()
-std::unique_ptr<std::__future_base::_State_baseV2::_Make_ready, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>::get() const
-std::unique_ptr<std::__future_base::_State_baseV2::_Make_ready, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>::get_deleter()
-std::unique_ptr<std::__future_base::_State_baseV2::_Make_ready, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>::operator->() const
-std::unique_ptr<std::__future_base::_State_baseV2::_Make_ready, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>::unique_ptr<std::default_delete<std::__future_base::_State_baseV2::_Make_ready>, void>(std::__future_base::_State_baseV2::_Make_ready*)
-std::unique_ptr<std::__future_base::_State_baseV2::_Make_ready, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>::~unique_ptr()
-std::unique_ptr<std::thread::_State, std::default_delete<std::thread::_State>>::get() const
-std::unique_ptr<std::thread::_State, std::default_delete<std::thread::_State>>::get_deleter()
-std::unique_ptr<std::thread::_State, std::default_delete<std::thread::_State>>::operator->() const
-std::unique_ptr<std::thread::_State, std::default_delete<std::thread::_State>>::release()
-std::unique_ptr<std::thread::_State, std::default_delete<std::thread::_State>>::unique_ptr<std::default_delete<std::thread::_State>, void>(std::thread::_State*)
-std::unique_ptr<std::thread::_State, std::default_delete<std::thread::_State>>::~unique_ptr()
 std::vector<char, std::allocator<char>>::vector(std::vector<char, std::allocator<char>> const&)
 std::vector<std::Catalog_info*, std::allocator<std::Catalog_info*>>::_M_check_len(unsigned long, char const*) const
 std::vector<std::Catalog_info*, std::allocator<std::Catalog_info*>>::_M_erase(__gnu_cxx::__normal_iterator<std::Catalog_info**, std::vector<std::Catalog_info*, std::allocator<std::Catalog_info*>>>)
@@ -11583,8 +11442,6 @@ std::wcerr
 std::wcin
 std::wclog
 std::wcout
-std::weak_ptr<std::__future_base::_State_baseV2>::lock() const
-std::weak_ptr<std::__future_base::_State_baseV2>::~weak_ptr()
 stderr
 stdin
 stdout
@@ -11641,8 +11498,10 @@ subtype mismatch
 supportedAlgorithms
 supportedApplicationContext
 surname
+sv_SE
 svg format not supported for default images, %s not loaded.\n!
 sw-resize
+swedish
 symId != UTL_INVAL_SYMBOL
 symbol
 syntax = "$0";\n\n
@@ -11654,6 +11513,7 @@ tabindex
 table
 targetInformation
 tcgetattr
+tchinese
 tcsetattr
 teal
 telephoneNumber
@@ -11677,6 +11537,8 @@ textEncodedORAddress
 textNotice
 textshadow_blur
 texture-sampling
+th_TH
+thai
 the actual field type (for enums T should be the generated enum 
 the global scope
 thin
@@ -11700,6 +11562,7 @@ tooltip-body-position
 tooltip-position
 topleft
 tpBasis
+tr_TR
 transaction clone for 
 transaction clone for operator delete(void*)
 transaction clone for operator new[](unsigned long)
@@ -11753,6 +11616,7 @@ translatey
 translatez
 transparent
 trustRoot
+turkish
 turquoise
 type or int32_t).
 type() == TYPE_FIXED32
@@ -11856,6 +11720,8 @@ typeinfo for short*
 typeinfo for signed char
 typeinfo for signed char const*
 typeinfo for signed char*
+typeinfo for std::_Mutex_base<(__gnu_cxx::_Lock_policy)2>
+typeinfo for std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>
 typeinfo for std::_Sp_counted_ptr_inplace<std::__detail::_NFA<std::regex_traits<char>>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>
 typeinfo for std::_V2::error_category
 typeinfo for std::__codecvt_abstract_base<char, char, __mbstate_t>
@@ -11919,7 +11785,6 @@ typeinfo for std::__detail::_CharMatcher<std::regex_traits<char>, false, false>
 typeinfo for std::__detail::_CharMatcher<std::regex_traits<char>, false, true>
 typeinfo for std::__detail::_CharMatcher<std::regex_traits<char>, true, false>
 typeinfo for std::__detail::_CharMatcher<std::regex_traits<char>, true, true>
-typeinfo for std::__future_base::_Result_base
 typeinfo for std::__ios_failure
 typeinfo for std::__iosfail_type_info
 typeinfo for std::__moneypunct_cache<char, false>
@@ -11984,7 +11849,6 @@ typeinfo for std::ctype_byname<char>
 typeinfo for std::ctype_byname<wchar_t>
 typeinfo for std::domain_error
 typeinfo for std::exception
-typeinfo for std::future_error
 typeinfo for std::invalid_argument
 typeinfo for std::ios_base
 typeinfo for std::ios_base::failure
@@ -12031,7 +11895,6 @@ typeinfo for std::range_error
 typeinfo for std::regex_error
 typeinfo for std::runtime_error
 typeinfo for std::system_error
-typeinfo for std::thread::_State
 typeinfo for std::time_base
 typeinfo for std::time_get<char, std::istreambuf_iterator<char, std::char_traits<char>>>
 typeinfo for std::time_get<wchar_t, std::istreambuf_iterator<wchar_t, std::char_traits<wchar_t>>>
@@ -12161,7 +12024,10 @@ typeinfo name for short*
 typeinfo name for signed char
 typeinfo name for signed char const*
 typeinfo name for signed char*
+typeinfo name for std::_Mutex_base<(__gnu_cxx::_Lock_policy)2>
+typeinfo name for std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>
 typeinfo name for std::_Sp_counted_ptr_inplace<std::__detail::_NFA<std::regex_traits<char>>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>
+typeinfo name for std::_Sp_make_shared_tag
 typeinfo name for std::_V2::error_category
 typeinfo name for std::__codecvt_abstract_base<char, char, __mbstate_t>
 typeinfo name for std::__codecvt_abstract_base<char16_t, char, __mbstate_t>
@@ -12224,7 +12090,6 @@ typeinfo name for std::__detail::_CharMatcher<std::regex_traits<char>, false, fa
 typeinfo name for std::__detail::_CharMatcher<std::regex_traits<char>, false, true>
 typeinfo name for std::__detail::_CharMatcher<std::regex_traits<char>, true, false>
 typeinfo name for std::__detail::_CharMatcher<std::regex_traits<char>, true, true>
-typeinfo name for std::__future_base::_Result_base
 typeinfo name for std::__ios_failure
 typeinfo name for std::__iosfail_type_info
 typeinfo name for std::__moneypunct_cache<char, false>
@@ -12290,7 +12155,6 @@ typeinfo name for std::ctype_byname<wchar_t>
 typeinfo name for std::domain_error
 typeinfo name for std::exception
 typeinfo name for std::function<void ()>
-typeinfo name for std::future_error
 typeinfo name for std::invalid_argument
 typeinfo name for std::ios_base
 typeinfo name for std::ios_base::failure
@@ -12337,7 +12201,6 @@ typeinfo name for std::range_error
 typeinfo name for std::regex_error
 typeinfo name for std::runtime_error
 typeinfo name for std::system_error
-typeinfo name for std::thread::_State
 typeinfo name for std::time_base
 typeinfo name for std::time_get<char, std::istreambuf_iterator<char, std::char_traits<char>>>
 typeinfo name for std::time_get<wchar_t, std::istreambuf_iterator<wchar_t, std::char_traits<wchar_t>>>
@@ -12379,7 +12242,6 @@ ui-scale
 ui-scale-x
 ui-scale-y
 ui-scale-z
-uiTransparentPixels < PIXELS
 uiengine.cpp
 uint
 uint32_t google::protobuf::UnknownField::fixed32() const
@@ -12390,6 +12252,8 @@ uint64_t google::protobuf::UnknownField::varint() const
 uipanel.cpp
 uiposition
 uitoplevelwindow.cpp
+uk_UA
+ukrainian
 unable to register all schema data: %s\n
 undefined
 underline
@@ -12412,7 +12276,6 @@ unsigned
 unsigned __int128
 unsigned char
 unsigned int
-unsigned int Etc::Image::IterateThroughWorstBlocks(unsigned int, unsigned int, unsigned int)
 unsigned int std::__exchange<unsigned int, unsigned int>(unsigned int&, unsigned int&&)
 unsigned int&& std::forward<unsigned int>(std::remove_reference<unsigned int>::type&)
 unsigned long
@@ -12556,6 +12419,8 @@ vertical-align
 vertical-line
 vertical-tab
 vertical-text
+vi_VN
+vietnamese
 viewBox
 violet
 virtual thunk to 
@@ -12577,50 +12442,10 @@ virtual thunk to std::basic_ostringstream<char, std::char_traits<char>, std::all
 virtual thunk to std::basic_ostringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>::~basic_ostringstream()
 virtual thunk to std::basic_stringstream<char, std::char_traits<char>, std::allocator<char>>::~basic_stringstream()
 virtual thunk to std::basic_stringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>::~basic_stringstream()
-virtual void Etc::Block4x4Encoding_ETC1::PerformIteration(float)
-virtual void Etc::Block4x4Encoding_ETC1::SetEncodingBits()
-virtual void Etc::Block4x4Encoding_R11::InitFromEncodingBits(Etc::Block4x4*, unsigned char*, Etc::ColorFloatRGBA*, Etc::ErrorMetric)
-virtual void Etc::Block4x4Encoding_R11::PerformIteration(float)
-virtual void Etc::Block4x4Encoding_R11::SetEncodingBits()
-virtual void Etc::Block4x4Encoding_RG11::InitFromEncodingBits(Etc::Block4x4*, unsigned char*, Etc::ColorFloatRGBA*, Etc::ErrorMetric)
-virtual void Etc::Block4x4Encoding_RG11::PerformIteration(float)
-virtual void Etc::Block4x4Encoding_RG11::SetEncodingBits()
-virtual void Etc::Block4x4Encoding_RGB8::PerformIteration(float)
-virtual void Etc::Block4x4Encoding_RGB8::SetEncodingBits()
-virtual void Etc::Block4x4Encoding_RGB8A1::PerformIteration(float)
-virtual void Etc::Block4x4Encoding_RGB8A1::SetEncodingBits()
-virtual void Etc::Block4x4Encoding_RGB8A1_Opaque::PerformIteration(float)
-virtual void Etc::Block4x4Encoding_RGB8A1_Transparent::PerformIteration(float)
-virtual void Etc::Block4x4Encoding_RGBA8::PerformIteration(float)
-virtual void Etc::Block4x4Encoding_RGBA8_Opaque::PerformIteration(float)
-virtual void Etc::Block4x4Encoding_RGBA8_Transparent::PerformIteration(float)
 visibility
 visible
 vjs_c
 void
-void Etc::Block4x4::InitFromEtcEncodingBits(Etc::Image::Format, unsigned int, unsigned int, unsigned char*, Etc::Image*, Etc::ErrorMetric)
-void Etc::Block4x4::InitFromSource(Etc::Image*, unsigned int, unsigned int, unsigned char*, Etc::ErrorMetric)
-void Etc::Block4x4Encoding_ETC1::CalculateSourceAverages()
-void Etc::Block4x4Encoding_ETC1::TryDifferential(bool, unsigned int, int, int)
-void Etc::Block4x4Encoding_ETC1::TryDifferentialHalf(Etc::DifferentialTrys::Half*)
-void Etc::Block4x4Encoding_ETC1::TryIndividualHalf(Etc::IndividualTrys::Half*)
-void Etc::Block4x4Encoding_R11::CalculateR11(unsigned int, float, float)
-void Etc::Block4x4Encoding_RG11::CalculateG11(unsigned int, float, float)
-void Etc::Block4x4Encoding_RGB8::CalculateBaseColorsForTAndH()
-void Etc::Block4x4Encoding_RGB8::SetEncodingBits_H()
-void Etc::Block4x4Encoding_RGB8::SetEncodingBits_Planar()
-void Etc::Block4x4Encoding_RGB8::SetEncodingBits_T()
-void Etc::Block4x4Encoding_RGB8A1::SetEncodingBits_ETC1()
-void Etc::Block4x4Encoding_RGB8A1::SetEncodingBits_H()
-void Etc::Block4x4Encoding_RGB8A1::SetEncodingBits_T()
-void Etc::Block4x4Encoding_RGB8A1::TryDifferential(bool, unsigned int, int, int)
-void Etc::Block4x4Encoding_RGB8A1::TryDifferentialHalf(Etc::DifferentialTrys::Half*)
-void Etc::Block4x4Encoding_RGBA8::CalculateA8(float)
-void Etc::Image::FindEncodingWarningTypesForCurFormat()
-void Etc::Image::RunFirstPass(unsigned int, unsigned int)
-void Etc::Image::SetEncodingBits(unsigned int, unsigned int)
-void Etc::SortedBlockList::AddBlock(Etc::Block4x4*)
-void Etc::SortedBlockList::Sort()
 void google::protobuf::FieldDescriptorProto::_internal_set_label(google::protobuf::FieldDescriptorProto_Label)
 void google::protobuf::FieldDescriptorProto::_internal_set_type(google::protobuf::FieldDescriptorProto_Type)
 void google::protobuf::io::CodedInputStream::UnsafeDecrementRecursionDepth()
@@ -12881,7 +12706,6 @@ vtable for std::__cxx11::time_get<char, std::istreambuf_iterator<char, std::char
 vtable for std::__cxx11::time_get<wchar_t, std::istreambuf_iterator<wchar_t, std::char_traits<wchar_t>>>
 vtable for std::__cxx11::time_get_byname<char, std::istreambuf_iterator<char, std::char_traits<char>>>
 vtable for std::__cxx11::time_get_byname<wchar_t, std::istreambuf_iterator<wchar_t, std::char_traits<wchar_t>>>
-vtable for std::__future_base::_Result_base
 vtable for std::__ios_failure
 vtable for std::__iosfail_type_info
 vtable for std::__moneypunct_cache<char, false>
@@ -12941,7 +12765,6 @@ vtable for std::ctype_byname<char>
 vtable for std::ctype_byname<wchar_t>
 vtable for std::domain_error
 vtable for std::exception
-vtable for std::future_error
 vtable for std::invalid_argument
 vtable for std::ios_base
 vtable for std::ios_base::failure
@@ -12982,7 +12805,6 @@ vtable for std::range_error
 vtable for std::regex_error
 vtable for std::runtime_error
 vtable for std::system_error
-vtable for std::thread::_State
 vtable for std::time_get<char, std::istreambuf_iterator<char, std::char_traits<char>>>
 vtable for std::time_get<wchar_t, std::istreambuf_iterator<wchar_t, std::char_traits<wchar_t>>>
 vtable for std::time_get_byname<char, std::istreambuf_iterator<char, std::char_traits<char>>>
@@ -13073,6 +12895,8 @@ yellow
 yellowgreen
 z-index
 zero
+zh_CN
+zh_TW
 zlib compression
 zoom-in
 zoom-out

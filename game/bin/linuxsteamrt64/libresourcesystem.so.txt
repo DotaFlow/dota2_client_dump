@@ -56,8 +56,6 @@ $ORIGIN
 0123456789
 10ConCommand
 10IAppSystem
-11IRefCounted
-12CRefCounted1I11IRefCounted20CRefCountServiceBaseI6CRefMTEE
 12CThreadEvent
 12CThreadedJob
 13ConCommandRef
@@ -73,10 +71,10 @@ $ORIGIN
 16ICommandCallback
 17CVDataTypeManager
 17IVDataTypeManager
+18CThreadedJobSource
 19CSchemaRegistration
 19require_make_sharedI25CAsyncResourceDataRequestE
 20CPostConnectCallback
-20CRefCountServiceBaseI6CRefMTE
 20IResourceHandleUtils
 20IResourceSystemUtils
 20IResourceTypeManager
@@ -226,6 +224,7 @@ CThreadEvent::Set()
 CThreadSyncObject::Wait(unsigned int)
 CThreadSyncObject::WaitImpl(unsigned int)
 CThreadSyncObject::~CThreadSyncObject()
+CThreadedJobSource::SignalEventMonitor(CThreadedJobSource*)
 CUtlBinaryBlock::SetLength(int)
 CUtlBuffer::AddNullTermination()
 CUtlBuffer::CUtlBuffer(int, int, CUtlBuffer::BufferFlags_t)
@@ -350,6 +349,7 @@ IKV3TransferInterface_ResourceSave
 IKV3TransferInterface_UtlSymbolLarge
 Idle (ResourceSystemSleep)
 Inert VModuleMetadata
+InfoForResourceTypeCSurfaceGraph2
 Insert
 InsertMultipleBefore
 InstallResourceTypeManager
@@ -359,6 +359,7 @@ InstallTypeManager
 InvokeMiniDumpHandler
 IsResourceManifestGroupKnown: Manifest group name is empty or null\n
 JArray
+JobSource
 KeyValues3: pre-allocated array memory is too small for %u elements (%u bytes available, %u bytes needed)\n
 KeyValues3: pre-allocated table memory is too small for %u members (%u bytes available, %u bytes needed)\n
 KeyValues::GetInt(char const*, int) const
@@ -451,7 +452,6 @@ ResourceManifestRegistry001
 ResourceSystem/ExitOnResourceLoadFailure
 ResourceSystem/SpewBlockingLoads
 ResourceSystemWaitingForFutureWork
-ReturnJobManualEventToPool
 Root
 STATUS_ABORTED: Request canceled
 STATUS_PENDING: Request still pending
@@ -544,6 +544,7 @@ V_StringToFloat64
 V_StringToInt16
 V_StringToInt32
 V_StringToInt64
+V_StringToInt8
 V_StringToQAngle
 V_StringToUint16
 V_StringToUint32
@@ -1665,7 +1666,6 @@ vents
 vgcxdata
 virtual thunk to 
 vmesh
-vmix
 vmorf
 vmtst
 vnmclip

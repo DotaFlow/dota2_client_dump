@@ -272,6 +272,7 @@ $ORIGIN
 *ZN28VMixDynamicsCompressorDesc_t22GetAttributeTable_ImplEP10CUtlVectorIP13IBaseToolAttri25CUtlVectorMemory_GrowableIS2_iLm0EEEE22CAttr_m_fldbOutputGain
 *ZN28VMixDynamicsCompressorDesc_t22GetAttributeTable_ImplEP10CUtlVectorIP13IBaseToolAttri25CUtlVectorMemory_GrowableIS2_iLm0EEEE23CAttr_m_bAutoMakeupGain
 *ZN28VMixDynamicsCompressorDesc_t22GetAttributeTable_ImplEP10CUtlVectorIP13IBaseToolAttri25CUtlVectorMemory_GrowableIS2_iLm0EEEE23CAttr_m_flReleaseTimeMS
+*ZN28VMixDynamicsCompressorDesc_t22GetAttributeTable_ImplEP10CUtlVectorIP13IBaseToolAttri25CUtlVectorMemory_GrowableIS2_iLm0EEEE23CAttr_m_nCompressorType
 *ZN28VMixDynamicsCompressorDesc_t22GetAttributeTable_ImplEP10CUtlVectorIP13IBaseToolAttri25CUtlVectorMemory_GrowableIS2_iLm0EEEE24CAttr_m_flSCHighPassFreq
 *ZN28VMixDynamicsCompressorDesc_t22GetAttributeTable_ImplEP10CUtlVectorIP13IBaseToolAttri25CUtlVectorMemory_GrowableIS2_iLm0EEEE26CAttr_m_flCompressionRatio
 *ZN28VMixDynamicsCompressorDesc_t22GetAttributeTable_ImplEP10CUtlVectorIP13IBaseToolAttri25CUtlVectorMemory_GrowableIS2_iLm0EEEE32CAttr_m_fldbCompressionThreshold
@@ -297,9 +298,11 @@ $ORIGIN
 0 0 0
 0 0 0 0
 0 0 0 255
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789
 0123456789ABCDEF
 0123456789abcdef
+0: distance ratio only. 1: deviation only (1/r). 2: deviation only (linear). 3: Mode 0 and Mode 1, 4: Mode 0 and Mode 2, 5: Mode 2 and exponential pathing delta, 6: reflection energy ratios.
 10IAppSystem
 11CRefCountedI20CRefCountServiceBaseI6CRefMTEE
 11CSteamAudio
@@ -338,6 +341,7 @@ $ORIGIN
 17CConcreteToolAttrI18VMixDynamicsBand_t23VMixDynamics3BandDesc_tvE
 17CConcreteToolAttrI18VMixDynamicsBand_t24VMixDualCompressorDesc_tvE
 17CConcreteToolAttrI18VMixEQFilterDesc_t13VMixEQ8Desc_tvE
+17CConcreteToolAttrI20VMixCompressorType_t28VMixDynamicsCompressorDesc_tvE
 17CConcreteToolAttrI22VMixChannelOperation_t17VMixUtilityDesc_tvE
 17CConcreteToolAttrI22VMixFilterChannelSet_t18VMixEQFilterDesc_tvE
 17CConcreteToolAttrI37VMixSubgraphSwitchInterpolationType_t24VMixSubgraphSwitchDesc_tvE
@@ -396,6 +400,7 @@ $ORIGIN
 20IToolAttr_TypedValueI16VMixFilterType_tE
 20IToolAttr_TypedValueI16VMixPannerType_tE
 20IToolAttr_TypedValueI17VMixFilterSlope_tE
+20IToolAttr_TypedValueI20VMixCompressorType_tE
 20IToolAttr_TypedValueI22VMixChannelOperation_tE
 20IToolAttr_TypedValueI22VMixFilterChannelSet_tE
 20IToolAttr_TypedValueI37VMixSubgraphSwitchInterpolationType_tE
@@ -419,6 +424,7 @@ $ORIGIN
 21CBaseConcreteToolAttrI18VMixDynamicsBand_t23VMixDynamics3BandDesc_tE
 21CBaseConcreteToolAttrI18VMixDynamicsBand_t24VMixDualCompressorDesc_tE
 21CBaseConcreteToolAttrI18VMixEQFilterDesc_t13VMixEQ8Desc_tE
+21CBaseConcreteToolAttrI20VMixCompressorType_t28VMixDynamicsCompressorDesc_tE
 21CBaseConcreteToolAttrI22VMixChannelOperation_t17VMixUtilityDesc_tE
 21CBaseConcreteToolAttrI22VMixFilterChannelSet_t18VMixEQFilterDesc_tE
 21CBaseConcreteToolAttrI37VMixSubgraphSwitchInterpolationType_t24VMixSubgraphSwitchDesc_tE
@@ -485,6 +491,7 @@ $ORIGIN
 26CBaseConcreteToolAttrValueI16VMixFilterType_t16VMixFilterDesc_tE
 26CBaseConcreteToolAttrValueI16VMixPannerType_t16VMixPannerDesc_tE
 26CBaseConcreteToolAttrValueI17VMixFilterSlope_t16VMixFilterDesc_tE
+26CBaseConcreteToolAttrValueI20VMixCompressorType_t28VMixDynamicsCompressorDesc_tE
 26CBaseConcreteToolAttrValueI22VMixChannelOperation_t17VMixUtilityDesc_tE
 26CBaseConcreteToolAttrValueI22VMixFilterChannelSet_t18VMixEQFilterDesc_tE
 26CBaseConcreteToolAttrValueI37VMixSubgraphSwitchInterpolationType_t24VMixSubgraphSwitchDesc_tE
@@ -545,6 +552,7 @@ $ORIGIN
 27CToolAttrDirectMemberAccessI16VMixPannerType_t16VMixPannerDesc_tE
 27CToolAttrDirectMemberAccessI17VMixFilterSlope_t16VMixFilterDesc_tE
 27CToolAttrDirectMemberAccessI18VMixDynamicsBand_t24VMixDualCompressorDesc_tE
+27CToolAttrDirectMemberAccessI20VMixCompressorType_t28VMixDynamicsCompressorDesc_tE
 27CToolAttrDirectMemberAccessI22VMixChannelOperation_t17VMixUtilityDesc_tE
 27CToolAttrDirectMemberAccessI22VMixFilterChannelSet_t18VMixEQFilterDesc_tE
 27CToolAttrDirectMemberAccessI37VMixSubgraphSwitchInterpolationType_t24VMixSubgraphSwitchDesc_tE
@@ -599,6 +607,7 @@ $ORIGIN
 27IToolAttrConcreteDataAccessI17VMixFilterSlope_tE
 27IToolAttrConcreteDataAccessI18VMixDynamicsBand_tE
 27IToolAttrConcreteDataAccessI18VMixEQFilterDesc_tE
+27IToolAttrConcreteDataAccessI20VMixCompressorType_tE
 27IToolAttrConcreteDataAccessI22VMixChannelOperation_tE
 27IToolAttrConcreteDataAccessI22VMixFilterChannelSet_tE
 27IToolAttrConcreteDataAccessI37VMixSubgraphSwitchInterpolationType_tE
@@ -624,6 +633,7 @@ $ORIGIN
 29CConcreteToolAttrDirectMemberI16VMixPannerType_t16VMixPannerDesc_tE
 29CConcreteToolAttrDirectMemberI17VMixFilterSlope_t16VMixFilterDesc_tE
 29CConcreteToolAttrDirectMemberI18VMixDynamicsBand_t24VMixDualCompressorDesc_tE
+29CConcreteToolAttrDirectMemberI20VMixCompressorType_t28VMixDynamicsCompressorDesc_tE
 29CConcreteToolAttrDirectMemberI22VMixChannelOperation_t17VMixUtilityDesc_tE
 29CConcreteToolAttrDirectMemberI22VMixFilterChannelSet_t18VMixEQFilterDesc_tE
 29CConcreteToolAttrDirectMemberI37VMixSubgraphSwitchInterpolationType_t24VMixSubgraphSwitchDesc_tE
@@ -698,6 +708,8 @@ $ORIGIN
 30CDefaultToolAttrTableForStructI24VMixSubgraphSwitchDesc_tE
 30CDefaultToolAttrTableForStructI28VMixDynamicsCompressorDesc_tE
 30CSchemaRegistration_steamaudio
+33ISteamAudioEnergyFieldDebugTarget
+34ISteamAudioHybridReverbDebugTarget
 41CModuleMetadataProvider_ResourceManifests
 <<ERROR>>
 <INVALID>
@@ -712,6 +724,7 @@ $ORIGIN
 <undefined>
 <unknown KV3 basic type '%s' (%d)>
 <unknown>
+A probe pair keeps the deltas of a dynamic object only if opening it changes the reflection energy by more than this fraction of the energy with all dynamic objects closed, or of snd_steamaudio_baked_occlusion_reflection_regularization if that is higher.
 AD Time Stamping
 AD_DVCS
 AES-128-CBC
@@ -750,8 +763,10 @@ ASCII
 ASCII//TRANSLIT
 ASN1 lib
 Acceptable OCSP Responses
+Add the baked deltas of open dynamic objects (doors, windows) to the baked occlusion.
 AddPage
 Ag*g*
+Air absorption coefficient used when baking occlusion.
 AlignedByteArray not properly aligned\n
 Alloc
 AnimGraphEditorUtils001
@@ -801,10 +816,12 @@ BakeMaterials: No probes generated. Bake cancelled.\n
 BakeOcclusion
 BakeOcclusion: Max probes (%u) limit exceeded (%d). Bake cancelled.\n
 BakeOcclusion: No probes generated. Bake cancelled.\n
+BakeOcclusion: Unable to create energy field accumulator. (%d)\n
 BakeOcclusion: Unable to create probe batch. [%d]\n
 BakeOcclusion: Unable to create reflection simulator. (%d)\n
 BakeOcclusion: Unable to create simulator. (%d)\n
 BakeOcclusion: Unable to create source. (%d)\n
+BakeOcclusionPass
 BakePathData
 BakePathData: Cancelled\n
 BakePathData: Max probes (%u) limit exceeded (%d). Bake cancelled.\n
@@ -904,6 +921,8 @@ CRLReason
 CRYPTO lib
 CSPName
 CSplitString::Split(char const*, int, char const**, int, bool)
+CSteamAudioBakedOcclusionDynamicObject
+CSteamAudioBakedOcclusionDynamicObjectPair
 CSteamAudioMovableBakedData
 CSteamAudioPartitioner
 CSteamAudioPartitioningTask
@@ -946,6 +965,7 @@ CUtlBuffer::PutString(char const*)
 CUtlBuffer::SeekPut(CUtlBuffer::SeekType_t, int)
 CUtlLinkedList overflow! (exhausted index range)\n
 CUtlScratchMemoryPool::AllocAligned(int, int)
+CUtlString
 CUtlString::Acquire(CBufferString*, bool)
 CUtlString::Append(char const*)
 CUtlString::Append(char const*, int)
@@ -955,7 +975,6 @@ CUtlString::Format(char const*, ...)
 CUtlString::FreeMemoryBlock()
 CUtlString::GetBaseFilename() const
 CUtlString::GetExtensionAlloc() const
-CUtlString::GetForModify()
 CUtlString::IsEqual_FastCaseInsensitive(char const*) const
 CUtlString::PathJoin(char const*, char const*)
 CUtlString::Purge()
@@ -997,6 +1016,7 @@ Code Signing
 Complexity
 Complexity of regex match exceeded implementation limits
 CompressBakedReverbInProbeBatch
+Compressor Type
 Conflicting regex grammar options
 Content file %s is corrupt (Chunk: %s). Verify integrity of game files.\n
 Content file %s is corrupt. Hashing could not be verified. Verify integrity of game files.\n
@@ -1058,6 +1078,14 @@ Direct Gain
 Directory
 Domain
 Double-save to Member '%s'
+Dynamic objects:   removed %s\n
+Dynamic objects: %d of %d, %s opened\n
+Dynamic objects: %s changes %d of %d probe pairs\n
+Dynamic objects: %s has no geometry, skipped.\n
+Dynamic objects: Unable to create mesh for %s: %d.\n
+Dynamic objects: pair %s changes %d of %d probe pairs beyond its objects\n
+Dynamic objects: pair %s changes nothing beyond what its objects do on their own. Removing it saves a bake.\n
+Dynamic objects: pair %s does not have two dynamic objects with geometry, skipped.\n
 E-mail Protection
 EC lib
 ENGINE lib
@@ -1161,7 +1189,6 @@ GCC: (Ubuntu 4.8.1-2ubuntu1~12.04+steamrt2+srt1) 4.8.1
 GLIBCXX_TUNABLES
 GLIBC_2.14
 GLIBC_2.17
-GLIBC_2.18
 GLIBC_2.2.5
 GLIBC_2.25
 GLIBC_2.27
@@ -1187,6 +1214,7 @@ GOST R 34.11-94 with GOST R 34.10-94
 GOST R 34.11-94 with GOST R 34.10-94 Cryptocom
 GOST R 3410-2001 Parameter Set Cryptocom
 Generated %d probes with %.2f spacing and %.2f height.\n
+Generated height layer at height %.2f exceeds max height setting, ending generate probes.\n
 Generating Halton Sequence of %d order for %d samples.\n
 GetBLAKE3HashContents
 GetCPUInformation
@@ -1341,6 +1369,7 @@ Materials: Filesystem not initialized.\n
 Materials: Imported %d probes from baked file (%s).\n
 Materials: Loaded baked data file (%s).\n
 Materials: Unable to load baked data file (%s).\n
+Max ray length in meters to find resonant material.
 MemAlloc_StrDupFunc
 MeshUtils001
 Microsoft CSP Name
@@ -1357,6 +1386,7 @@ Mismatched '(' and ')' in regular expression
 Mismatched '[' and ']' in regular expression
 Mismatched '{' and '}' in regular expression
 Missing custom_hrtfs key field in custom hrtf properties file. Cannot load!
+MixBus
 Mod Depth
 Mod Rate
 ModelDocUtils001
@@ -1369,9 +1399,6 @@ N10__cxxabiv121__vmi_class_type_infoE
 N17CConcreteToolAttrI10CUtlVectorI10CUtlStringi25CUtlVectorMemory_GrowableIS1_iLm0EEE24VMixSubgraphSwitchDesc_tvE19CArrayElementAccessE
 N17CConcreteToolAttrIA3_18VMixDynamicsBand_t23VMixDynamics3BandDesc_tvE19CArrayElementAccessE
 N17CConcreteToolAttrIA8_18VMixEQFilterDesc_t13VMixEQ8Desc_tvE19CArrayElementAccessE
-N24CFieldPathHuffmanEncoder12InternalNodeE
-N24CFieldPathHuffmanEncoder5INodeE
-N24CFieldPathHuffmanEncoder8LeafNodeE
 N9__gnu_cxx13stdio_filebufIcSt11char_traitsIcEEE
 N9__gnu_cxx13stdio_filebufIwSt11char_traitsIwEEE
 N9__gnu_cxx18stdio_sync_filebufIcSt11char_traitsIcEEE
@@ -1447,6 +1474,7 @@ Netscape Server Gated Crypto
 Nonce
 Not safe to 'new' this class due to alignment requirements
 November
+Number of rays to trace to find resonant materials.
 OBJ lib
 OCSP
 OCSP Archive Cutoff
@@ -1461,12 +1489,15 @@ OCSPSigning
 OPENSSL_ia32cap
 Oakley-EC2N-3
 Oakley-EC2N-4
+Occlusion bake memory: Total: %s, Base: %s (%.1f%%), Dynamic: %s (%.1f%%), %d dynamic objects, %d pairs\n
+Occlusion bake memory: Total: %s\n
+Occlusion bake time: Total: %.1f s, Base: %.1f s (%.1f%%), Dynamic: %.1f s (%.1f%%)\n
+Occlusion bake time: Total: %.1f s\n
 Occlusion: Cannot find baked data file: %s.\n
 Occlusion: Data not stored in KV3 format. Rebake.\n
 Occlusion: Filesystem not initialized.\n
 Occlusion: Imported %d probes from baked file (%s).\n
 Occlusion: Loaded baked data file (%s).\n
-Occlusion: Spatially filtering occlusion data (mode = %d)\n
 Occlusion: Unable to load baked data file (%s).\n
 October
 Only Tails On Fade Out
@@ -1573,9 +1604,11 @@ RSA-SHA512
 RSAES-OAEP
 RSASSA-PSS
 RSA_blinding
+Radius factor to multiply the distance between probes with to get the radius within which probes are averaged by the occlusion spatial filter, applied when baking.
 RandomFloat
 RandomInt
 Ratio
+Rays are only sampled in half angle measured from +Z. 120 deg covers everything except a 60 deg cap around straight down.
 Reflections... (rays: %d x %d) (bounces: %d) (bidirectional: %s) (#runs: %d)\n
 RegisterConCommand: Unknown error registering con command "%s"!\n
 RegisterConVar: Unknown error registering convar "%s"!\n
@@ -1663,6 +1696,7 @@ SSL routines
 SXNetID
 Saturday
 SaveKV3(KV3ID_t const&, KV3ID_t const&, KeyValues3 const*, CUtlString*, CUtlBuffer*, unsigned int)
+Scales the deltas of the open dynamic objects before they are added to the baked occlusion.
 SchemaTestExternal_One_001
 SchemaTestExternal_Two_001
 Secure Electronic Transactions
@@ -1678,7 +1712,10 @@ Size
 Size Max
 Size Min
 SmartPropsSystem_001
+Smooth
 Source2ModTools001
+Spatial filter of the occlusion reflection energy, applied when baking. 0: No spatial filtering. 1: bidirectional spatial filter.
+Spew Steam Audio scene list changes and realtime direct occlusion results (at most 10 lines a second).
 St10bad_typeid
 St10ctype_base
 St10money_base
@@ -1811,6 +1848,10 @@ St9time_base
 St9type_info
 Stack depth limit hit (%d)
 Stages
+SteamAudio direct: NO SCENE, sound at (%.0f %.0f %.0f) %.0f from the listener is left unoccluded\n
+SteamAudio direct: scene %p, sound at (%.0f %.0f %.0f) %.0f from listener at (%.0f %.0f %.0f): occlusion %.2f, transmission %.2f/%.2f/%.2f (mode %u, method %u)\n
+SteamAudio scene list: added scene %p for physics world %p (%d scenes, GetScene() = %p)\n
+SteamAudio scene list: removed scene %p for physics world %p (%d scenes left, GetScene() = %p)\n
 Strength
 Strong Extranet ID
 Subgraphs
@@ -1857,6 +1898,7 @@ Unknown version %d for vpk %s
 Unrecognized EHashType found: %d
 Unsupported KV3 basic type '%s' (%d)!
 Usage: snd_steamaudio_halton_sequence <order> <numsamples>.\n
+Use alternate probe lookup algorithm to query materials for listener position based on kd-tree of probe points.
 UtlRBTree_FailedInsertDuplicate
 UtlVectorMemory_Alloc
 UtlVectorMemory_CalcNewAllocationCount
@@ -1867,6 +1909,7 @@ VBik001
 VDataChoice( %s )
 VDataChoice()
 VMediaFoundation001
+VMixCompressorType_t
 VP4003
 VPK directory for '%s' corrupt
 VProfScopeHelper<0, false>::EnterScopeInternalBudgetFlags(char const*, VProfBudgetGroupCallSite&, CUtlSourceLocation const&)
@@ -1902,6 +1945,7 @@ V_Int64ToString_Unsafe
 V_Int8ToString_Unsafe
 V_IsAbsolutePath
 V_PathContainsPath
+V_PrettifyMem
 V_StringParseError
 V_StringToBool
 V_StringToColor
@@ -1937,6 +1981,7 @@ V_fmodf
 V_fpclassifyd
 V_fread
 V_isEntirelyWhitespace
+V_isfinited
 V_isnand
 V_log10f
 V_logf
@@ -1948,14 +1993,14 @@ V_sincosf
 V_sind
 V_sinf
 V_sinhf
-V_snprintf
+V_sscanf
 V_stricmp_fast
 V_stristr_fast(char const*, char const*)
 V_strnlen(char const*, int)
-V_strtok
 V_tand
 V_tanf
 V_tanhf
+V_vsnprintf
 VerifySingleChunk
 VisBuilder_001
 Vrad3_001
@@ -1998,7 +2043,8 @@ X9.57
 X9.57 CM ?
 X9cm
 ZLIB
-[ Reflections ] Total Time = %.2f seconds. (Simulation = %.1f%% Accumulate = %.1f%%)\n
+[ Reflections ] Total Time = %.2f seconds. (Simulation = %.1f%% Copy From Device = %.1f%% Accumulate = %.1f%%)\n
+[ Spatial Filter ] Mode = %d, Radius Factor = %.2f, Total Time = %.2f seconds.\n
 [%02d:%02d:%02d] 
 [%3d] [ Pathing %6.2f MB %6d %4.1f %4.1f %7.1f ] %s\n
 [%3d] [ Pathing: Invalid baked data version found. Please rebake. ] %s\n
@@ -2064,8 +2110,6 @@ __cxa_guard_release
 __cxa_init_primary_exception
 __cxa_pure_virtual
 __cxa_rethrow
-__cxa_thread_atexit
-__cxa_thread_atexit_impl
 __cxa_throw
 __cxa_throw_bad_array_new_length
 __cxxabiv1::__base_class_type_info::__is_public_p() const
@@ -2731,7 +2775,6 @@ emailProtection
 enable_compressed_reverb_lookup
 enable_dc_correction_for_phase_interpolation
 enable_iir_order_8
-enable_iir_order_switching
 enable_optix_verbose_logging
 enable_paths_from_all_source_probes
 enable_reverb_probe_caching_for_missing_probes
@@ -2791,8 +2834,6 @@ ftell
 ftello64
 func(%lu)
 fwrite
-g_BitBuf_BitWriteMasks
-g_BitBuf_ExtraMasks
 g_flTValues0To1Inclusive<float vector[4]>
 g_flTValues0To1Inclusive<float>
 g_nSequentialBytes<int vector[4]>
@@ -3167,6 +3208,7 @@ int& std::forward<int&>(std::remove_reference<int&>::type&)
 int&& std::forward<int>(std::remove_reference<int>::type&)
 int16
 int64
+int8
 int_err_get (err.c)
 int_thread_get (err.c)
 internal error
@@ -3216,7 +3258,10 @@ iplDirectivityCalculate
 iplDistanceAttenuationCalculate
 iplEmbreeDeviceCreate
 iplEmbreeDeviceRelease
-iplEnergyFieldCopyDeviceToHost
+iplEnergyFieldAccumulatorAccumulate
+iplEnergyFieldAccumulatorCreate
+iplEnergyFieldAccumulatorGetValues
+iplEnergyFieldAccumulatorRelease
 iplEnergyFieldCreate
 iplEnergyFieldGetBand
 iplEnergyFieldGetChannel
@@ -3345,6 +3390,7 @@ iplStaticMeshAdd
 iplStaticMeshCreate
 iplStaticMeshLoad
 iplStaticMeshRelease
+iplStaticMeshRemove
 iplStaticMeshRetain
 iplStaticMeshSave
 ipsec3
@@ -3405,11 +3451,27 @@ long std::__exchange<long, int>(long&, int&&)
 lower
 lseek
 mXRecord
+m_flSpatialFilterRadiusFactor
+m_nCompressorType
+m_nHammerIdHash
+m_nHammerIdHashA
+m_nHammerIdHashB
+m_nSpatialFilterMode
 m_pClusteredProbeBatch
+m_sHammerId
 m_vecAABBs
 m_vecData
+m_vecDynamicObjectPairs
+m_vecDynamicObjects
 m_vecInitialTransforms
 m_vecKeys
+m_vecPairs
+m_vecPathingDeviationDeltas
+m_vecPathingDeviationResiduals
+m_vecPathingRatioDeltas
+m_vecPathingRatioResiduals
+m_vecReflectionEnergyDeltas
+m_vecReflectionEnergyResiduals
 mail
 mailPreferenceOption
 malloc
@@ -3903,6 +3965,17 @@ singleLevelQuality
 sizeof 
 sizeof...
 slash
+snd_steamaudio_baked_materials_probelookup_usealternate
+snd_steamaudio_baked_occlusion_dynamic_object_delta_scale
+snd_steamaudio_baked_occlusion_dynamic_objects
+snd_steamaudio_custombake_dynamic_object_energy_threshold
+snd_steamaudio_custombake_materials_coneangle
+snd_steamaudio_custombake_materials_max_raylength
+snd_steamaudio_custombake_materials_numrays
+snd_steamaudio_custombake_occlusion_air_absorption_coefficient
+snd_steamaudio_custombake_occlusion_spatialfilter_mode
+snd_steamaudio_custombake_occlusion_spatialfilter_radius_factor
+snd_steamaudio_debug_scene_spew
 snmpv2
 socket
 source_file
@@ -5684,6 +5757,7 @@ std::basic_streambuf<wchar_t, std::char_traits<wchar_t>>::~basic_streambuf()
 std::basic_string
 std::basic_string<char, std::char_traits<char>, std::allocator<char> >
 std::basic_string<char, std::char_traits<char>, std::allocator<char>> std::operator+<char, std::char_traits<char>, std::allocator<char>>(char const*, std::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)
+std::basic_string<char, std::char_traits<char>, std::allocator<char>> std::operator+<char, std::char_traits<char>, std::allocator<char>>(char const*, std::basic_string<char, std::char_traits<char>, std::allocator<char>>&&)
 std::basic_string<char, std::char_traits<char>, std::allocator<char>> std::operator+<char, std::char_traits<char>, std::allocator<char>>(char, std::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)
 std::basic_string<char, std::char_traits<char>, std::allocator<char>> std::operator+<char, std::char_traits<char>, std::allocator<char>>(std::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)
 std::basic_string<char, std::char_traits<char>, std::allocator<char>>::basic_string()
@@ -7359,6 +7433,7 @@ std::time_put_byname<wchar_t, std::ostreambuf_iterator<wchar_t, std::char_traits
 std::time_put_byname<wchar_t, std::ostreambuf_iterator<wchar_t, std::char_traits<wchar_t>>>::time_put_byname(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, unsigned long)
 std::time_put_byname<wchar_t, std::ostreambuf_iterator<wchar_t, std::char_traits<wchar_t>>>::time_put_byname(std::string const&, unsigned long)
 std::time_put_byname<wchar_t, std::ostreambuf_iterator<wchar_t, std::char_traits<wchar_t>>>::~time_put_byname()
+std::to_string(int)
 std::tuple<std::thread::_State*, std::default_delete<std::thread::_State>>::tuple<true, true>()
 std::tuple_element<0ul, std::tuple<std::thread::_State*, std::default_delete<std::thread::_State>>>::type const& std::get<0ul, std::thread::_State*, std::default_delete<std::thread::_State>>(std::tuple<std::thread::_State*, std::default_delete<std::thread::_State>> const&)
 std::tuple_element<0ul, std::tuple<std::thread::_State*, std::default_delete<std::thread::_State>>>::type& std::get<0ul, std::thread::_State*, std::default_delete<std::thread::_State>>(std::tuple<std::thread::_State*, std::default_delete<std::thread::_State>>&)
@@ -7386,6 +7461,7 @@ std::unique_ptr<std::thread::_State, std::default_delete<std::thread::_State>>::
 std::unique_ptr<std::thread::_State, std::default_delete<std::thread::_State>>::unique_ptr<std::default_delete<std::thread::_State>, void>(std::thread::_State*)
 std::unique_ptr<std::thread::_State, std::default_delete<std::thread::_State>>::~unique_ptr()
 std::vector<char, std::allocator<char>>::vector(std::vector<char, std::allocator<char>> const&)
+std::vector<float, std::allocator<float>>::vector(unsigned long, std::allocator<float> const&)
 std::vector<std::Catalog_info*, std::allocator<std::Catalog_info*>>::_M_check_len(unsigned long, char const*) const
 std::vector<std::Catalog_info*, std::allocator<std::Catalog_info*>>::_M_erase(__gnu_cxx::__normal_iterator<std::Catalog_info**, std::vector<std::Catalog_info*, std::allocator<std::Catalog_info*>>>)
 std::vector<std::Catalog_info*, std::allocator<std::Catalog_info*>>::_M_realloc_append(std::Catalog_info* const&)
@@ -7464,6 +7540,7 @@ steamaudio_reverb_height_above_floor
 steamaudio_reverb_ir_duration
 steamaudio_reverb_rays
 steamaudio_reverb_rebake_option
+steamaudiodirectprocessor.cpp
 steamaudioscene.cpp
 store
 strcasecmp

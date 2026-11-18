@@ -1,6 +1,6 @@
 soundevents/soundevents_manifest.vrman
 - GAME: dota/soundevents/soundevents_manifest.vrman_c
-- INPUT: dota/soundevents/soundevents_manifest.vrman (crc 1723045189)
+- INPUT: dota/soundevents/soundevents_manifest.vrman (crc 757241112)
 - REF: soundevents/game_sounds.vsndevts
 - REF: soundevents/game_sounds_creeps.vsndevts
 - REF: soundevents/game_sounds_greevils.vsndevts
@@ -61,10 +61,12 @@ soundevents/soundevents_manifest.vrman
 - REF: soundevents/music/yaskar_01/soundevents_stingers.vsndevts
 - REF: soundevents/soundevents_compendium.vsndevts
 - REF: soundevents/soundevents_dark_carnival.vsndevts
+- REF: soundevents/soundevents_dark_carnival_vn_act2.vsndevts
 - REF: soundevents/soundevents_dark_carnival_vn_part1.vsndevts
 - REF: soundevents/soundevents_dark_carnival_vn_part2.vsndevts
 - REF: soundevents/soundevents_dark_carnival_vn_part3.vsndevts
 - REF: soundevents/soundevents_dota.vsndevts
+- REF: soundevents/soundevents_dota_staging.vsndevts
 - REF: soundevents/soundevents_dota_ui.vsndevts
 - REF: soundevents/soundevents_frostivus.vsndevts
 - REF: soundevents/soundevents_manifest_core.vrman
@@ -494,11 +496,18 @@ soundevents/soundevents_manifest.vrman
 
 sounds/graphs/mixgraphs.vrman
 - GAME: dota/sounds/graphs/mixgraphs.vrman_c
-- INPUT: dota/sounds/graphs/mixgraphs.vrman (crc 1012959202)
-- REF: sounds/graphs/__main__.vmix
-- REF: sounds/graphs/dota_hrtf_basic.vmix
-- REF: sounds/graphs/dota_ui_pan.vmix
-- REF: sounds/graphs/pitch_shift.vmix
+- INPUT: dota/sounds/graphs/mixgraphs.vrman (crc 1101029551)
+- REF: sounds/graphs/__main__.vsnd
+- REF: sounds/graphs/dota_hrtf_basic.vsnd
+- REF: sounds/graphs/dota_ui_pan.vsnd
+- REF: sounds/graphs/pitch_shift.vsnd
+
+sounds/graphs/__main__.vsnd
+- GAME: dota/sounds/graphs/__main__.vsnd_c
+- INPUT: dota/sounds/graphs/__main__.mp3 (crc 0)
+- INPUT: dota/sounds/graphs/__main__.vmix (crc 1472094279)
+- INPUT: dota/sounds/graphs/__main__.vsnd (crc 0)
+- INPUT: dota/sounds/graphs/__main__.wav (crc 0)
 
 soundevents/game_sounds.vsndevts
 - GAME: dota/soundevents/game_sounds.vsndevts_c
@@ -5340,7 +5349,7 @@ soundevents/game_sounds_heroes/game_sounds_alchemist.vsndevts
 
 soundevents/game_sounds_heroes/game_sounds_ancient_apparition.vsndevts
 - GAME: dota/soundevents/game_sounds_heroes/game_sounds_ancient_apparition.vsndevts_c
-- INPUT: dota/soundevents/game_sounds_heroes/game_sounds_ancient_apparition.vsndevts (crc 1041903708)
+- INPUT: dota/soundevents/game_sounds_heroes/game_sounds_ancient_apparition.vsndevts (crc 2539397111)
 - INPUT: dota/sounds/physics/deaths/specials/ancientapp_death.mp3 (crc 0)
 - INPUT: dota/sounds/physics/deaths/specials/ancientapp_death.vsnd (crc 0)
 - INPUT: dota/sounds/physics/deaths/specials/ancientapp_death.wav (crc 1442826463)
@@ -5437,6 +5446,7 @@ soundevents/game_sounds_heroes/game_sounds_ancient_apparition.vsndevts
  - Hero_Ancient_Apparition.Death
  - Hero_Ancient_Apparition.IceVortex.TI8
  - Hero_Ancient_Apparition.Taunt.TI9
+ - Hero_Ancient_Apparition.ChillingTouch2.Target
 
 soundevents/game_sounds_heroes/game_sounds_antimage.vsndevts
 - GAME: dota/soundevents/game_sounds_heroes/game_sounds_antimage.vsndevts_c
@@ -5944,7 +5954,7 @@ soundevents/game_sounds_heroes/game_sounds_batrider.vsndevts
 
 soundevents/game_sounds_heroes/game_sounds_beastmaster.vsndevts
 - GAME: dota/soundevents/game_sounds_heroes/game_sounds_beastmaster.vsndevts_c
-- INPUT: dota/soundevents/game_sounds_heroes/game_sounds_beastmaster.vsndevts (crc 2429296023)
+- INPUT: dota/soundevents/game_sounds_heroes/game_sounds_beastmaster.vsndevts (crc 3420671683)
 - INPUT: dota/sounds/null.mp3 (crc 0)
 - INPUT: dota/sounds/null.vsnd (crc 0)
 - INPUT: dota/sounds/null.wav (crc 3319861283)
@@ -6068,6 +6078,9 @@ soundevents/game_sounds_heroes/game_sounds_beastmaster.vsndevts
 - INPUT: dota/sounds/weapons/hero/beastmaster/primal_ti7_layer.mp3 (crc 0)
 - INPUT: dota/sounds/weapons/hero/beastmaster/primal_ti7_layer.vsnd (crc 0)
 - INPUT: dota/sounds/weapons/hero/beastmaster/primal_ti7_layer.wav (crc 1544123913)
+- INPUT: dota/sounds/weapons/hero/beastmaster/summon_thunderhide.mp3 (crc 0)
+- INPUT: dota/sounds/weapons/hero/beastmaster/summon_thunderhide.vsnd (crc 0)
+- INPUT: dota/sounds/weapons/hero/beastmaster/summon_thunderhide.wav (crc 2912651852)
 - INPUT: dota/sounds/weapons/hero/beastmaster/taunt_ti9.mp3 (crc 0)
 - INPUT: dota/sounds/weapons/hero/beastmaster/taunt_ti9.vsnd (crc 0)
 - INPUT: dota/sounds/weapons/hero/beastmaster/taunt_ti9.wav (crc 1882133761)
@@ -6113,6 +6126,7 @@ soundevents/game_sounds_heroes/game_sounds_beastmaster.vsndevts
  - Hero_Beastmaster.Hawk.Target
  - Hero_Beastmaster.DrumsOfSlom.Strike
  - Hero_Beastmaster.InnerBeast.Berserk
+ - Hero_Beastmaster.Summon.Thunderhide
 
 soundevents/game_sounds_heroes/game_sounds_bloodseeker.vsndevts
 - GAME: dota/soundevents/game_sounds_heroes/game_sounds_bloodseeker.vsndevts_c
@@ -6903,7 +6917,7 @@ soundevents/game_sounds_heroes/game_sounds_centaur.vsndevts
 
 soundevents/game_sounds_heroes/game_sounds_chaos_knight.vsndevts
 - GAME: dota/soundevents/game_sounds_heroes/game_sounds_chaos_knight.vsndevts_c
-- INPUT: dota/soundevents/game_sounds_heroes/game_sounds_chaos_knight.vsndevts (crc 1925509930)
+- INPUT: dota/soundevents/game_sounds_heroes/game_sounds_chaos_knight.vsndevts (crc 1813050324)
 - INPUT: dota/sounds/misc/idles/idle_ck_grab.mp3 (crc 0)
 - INPUT: dota/sounds/misc/idles/idle_ck_grab.vsnd (crc 0)
 - INPUT: dota/sounds/misc/idles/idle_ck_grab.wav (crc 2573400955)
@@ -6955,6 +6969,15 @@ soundevents/game_sounds_heroes/game_sounds_chaos_knight.vsndevts
 - INPUT: dota/sounds/physics/footsteps/hero/enchantress/footstep05.mp3 (crc 0)
 - INPUT: dota/sounds/physics/footsteps/hero/enchantress/footstep05.vsnd (crc 0)
 - INPUT: dota/sounds/physics/footsteps/hero/enchantress/footstep05.wav (crc 3347978183)
+- INPUT: dota/sounds/weapons/hero/chaos_knight/armageddon_cast.mp3 (crc 0)
+- INPUT: dota/sounds/weapons/hero/chaos_knight/armageddon_cast.vsnd (crc 0)
+- INPUT: dota/sounds/weapons/hero/chaos_knight/armageddon_cast.wav (crc 4000380993)
+- INPUT: dota/sounds/weapons/hero/chaos_knight/armageddon_lp.mp3 (crc 0)
+- INPUT: dota/sounds/weapons/hero/chaos_knight/armageddon_lp.vsnd (crc 0)
+- INPUT: dota/sounds/weapons/hero/chaos_knight/armageddon_lp.wav (crc 2442942893)
+- INPUT: dota/sounds/weapons/hero/chaos_knight/armageddon_lp02.mp3 (crc 0)
+- INPUT: dota/sounds/weapons/hero/chaos_knight/armageddon_lp02.vsnd (crc 0)
+- INPUT: dota/sounds/weapons/hero/chaos_knight/armageddon_lp02.wav (crc 2145317272)
 - INPUT: dota/sounds/weapons/hero/chaos_knight/chaos_bolt_cast.mp3 (crc 0)
 - INPUT: dota/sounds/weapons/hero/chaos_knight/chaos_bolt_cast.vsnd (crc 0)
 - INPUT: dota/sounds/weapons/hero/chaos_knight/chaos_bolt_cast.wav (crc 377694941)
@@ -7016,6 +7039,7 @@ soundevents/game_sounds_heroes/game_sounds_chaos_knight.vsndevts
 - INPUT: dota/sounds/weapons/hero/spirit_breaker/preattack02.vsnd (crc 0)
 - INPUT: dota/sounds/weapons/hero/spirit_breaker/preattack02.wav (crc 2843787460)
 - SUBASSET DEF: soundevent
+ - Hero_ChaosKnight.Footstep.Innate
  - Hero_ChaosKnight.PreAttack
  - Hero_ChaosKnight.Attack
  - Hero_ChaosKnight.Attack.Impact
@@ -7035,6 +7059,9 @@ soundevents/game_sounds_heroes/game_sounds_chaos_knight.vsndevts
  - Hero_ChaosKnight.RealityRift.ti7_layer
  - Hero_ChaosKnight.Taunt.TI9
  - Hero_ChaosKnight.Taunt.TI9.Footstep
+ - Hero_ChaosKnight.Armageddon.Cast
+ - Hero_ChaosKnight.Armageddon.Stampede
+ - Hero_ChaosKnight.Armageddon.Stampede.Layer
 
 soundevents/game_sounds_heroes/game_sounds_chen.vsndevts
 - GAME: dota/soundevents/game_sounds_heroes/game_sounds_chen.vsndevts_c
@@ -7865,7 +7892,7 @@ soundevents/game_sounds_heroes/game_sounds_dawnbreaker.vsndevts
 
 soundevents/game_sounds_heroes/game_sounds_dazzle.vsndevts
 - GAME: dota/soundevents/game_sounds_heroes/game_sounds_dazzle.vsndevts_c
-- INPUT: dota/soundevents/game_sounds_heroes/game_sounds_dazzle.vsndevts (crc 4282764949)
+- INPUT: dota/soundevents/game_sounds_heroes/game_sounds_dazzle.vsndevts (crc 1952512553)
 - INPUT: dota/sounds/physics/footsteps/hero/shared/general01.mp3 (crc 0)
 - INPUT: dota/sounds/physics/footsteps/hero/shared/general01.vsnd (crc 0)
 - INPUT: dota/sounds/physics/footsteps/hero/shared/general01.wav (crc 1029099903)
@@ -7905,6 +7932,9 @@ soundevents/game_sounds_heroes/game_sounds_dazzle.vsndevts
 - INPUT: dota/sounds/weapons/hero/dazzle/bad_juju_target.mp3 (crc 0)
 - INPUT: dota/sounds/weapons/hero/dazzle/bad_juju_target.vsnd (crc 0)
 - INPUT: dota/sounds/weapons/hero/dazzle/bad_juju_target.wav (crc 3652736052)
+- INPUT: dota/sounds/weapons/hero/dazzle/nothl_body_return.mp3 (crc 0)
+- INPUT: dota/sounds/weapons/hero/dazzle/nothl_body_return.vsnd (crc 0)
+- INPUT: dota/sounds/weapons/hero/dazzle/nothl_body_return.wav (crc 3842433947)
 - INPUT: dota/sounds/weapons/hero/dazzle/poison_cast.mp3 (crc 0)
 - INPUT: dota/sounds/weapons/hero/dazzle/poison_cast.vsnd (crc 0)
 - INPUT: dota/sounds/weapons/hero/dazzle/poison_cast.wav (crc 3297908382)
@@ -7951,6 +7981,7 @@ soundevents/game_sounds_heroes/game_sounds_dazzle.vsndevts
  - Hero_Dazzle.NothlProjection.Stun
  - Hero_Dazzle.NothlProjection.Soul
  - Hero_Dazzle.NothlProjection.SoulReturn
+ - Hero_Dazzle.NothlProjection.BodyReturn
 
 soundevents/game_sounds_heroes/game_sounds_death_prophet.vsndevts
 - GAME: dota/soundevents/game_sounds_heroes/game_sounds_death_prophet.vsndevts_c
@@ -11551,7 +11582,7 @@ soundevents/game_sounds_heroes/game_sounds_lion.vsndevts
 
 soundevents/game_sounds_heroes/game_sounds_lone_druid.vsndevts
 - GAME: dota/soundevents/game_sounds_heroes/game_sounds_lone_druid.vsndevts_c
-- INPUT: dota/soundevents/game_sounds_heroes/game_sounds_lone_druid.vsndevts (crc 1671142147)
+- INPUT: dota/soundevents/game_sounds_heroes/game_sounds_lone_druid.vsndevts (crc 3842172591)
 - INPUT: dota/sounds/misc/idles/spirit_bear_idle_roar.mp3 (crc 0)
 - INPUT: dota/sounds/misc/idles/spirit_bear_idle_roar.vsnd (crc 0)
 - INPUT: dota/sounds/misc/idles/spirit_bear_idle_roar.wav (crc 2518405084)
@@ -11699,6 +11730,7 @@ soundevents/game_sounds_heroes/game_sounds_lone_druid.vsndevts
  - LoneDruid_SpiritBear_IdleRoar
  - Hero_LoneDruid.SavageRoar.Cast
  - Hero_LoneDruid.Entangle.Cast
+ - LoneDruid_SpiritBear.Summon.Cast
 
 soundevents/game_sounds_heroes/game_sounds_luna.vsndevts
 - GAME: dota/soundevents/game_sounds_heroes/game_sounds_luna.vsndevts_c
@@ -14303,7 +14335,10 @@ soundevents/game_sounds_heroes/game_sounds_pangolier.vsndevts
 
 soundevents/game_sounds_heroes/game_sounds_phantom_assassin.vsndevts
 - GAME: dota/soundevents/game_sounds_heroes/game_sounds_phantom_assassin.vsndevts_c
-- INPUT: dota/soundevents/game_sounds_heroes/game_sounds_phantom_assassin.vsndevts (crc 1183632388)
+- INPUT: dota/soundevents/game_sounds_heroes/game_sounds_phantom_assassin.vsndevts (crc 696572023)
+- INPUT: dota/sounds/items/iron_talon.mp3 (crc 0)
+- INPUT: dota/sounds/items/iron_talon.vsnd (crc 0)
+- INPUT: dota/sounds/items/iron_talon.wav (crc 369574643)
 - INPUT: dota/sounds/physics/damage/npc/rip01.mp3 (crc 0)
 - INPUT: dota/sounds/physics/damage/npc/rip01.vsnd (crc 0)
 - INPUT: dota/sounds/physics/damage/npc/rip01.wav (crc 525578051)
@@ -14411,6 +14446,7 @@ soundevents/game_sounds_heroes/game_sounds_phantom_assassin.vsndevts
  - Hero_PhantomAssassin.FanOfKnives.Cast
  - Hero_PhantomAssassin.PreAttack.Persona
  - Hero_PhantomAssassin.Attack.Persona
+ - Hero_PhantomAssassin.Blur.Refresh
 
 soundevents/game_sounds_heroes/game_sounds_phantom_lancer.vsndevts
 - GAME: dota/soundevents/game_sounds_heroes/game_sounds_phantom_lancer.vsndevts_c
@@ -15086,7 +15122,10 @@ soundevents/game_sounds_heroes/game_sounds_pudge.vsndevts
 
 soundevents/game_sounds_heroes/game_sounds_pugna.vsndevts
 - GAME: dota/soundevents/game_sounds_heroes/game_sounds_pugna.vsndevts_c
-- INPUT: dota/soundevents/game_sounds_heroes/game_sounds_pugna.vsndevts (crc 3747487953)
+- INPUT: dota/soundevents/game_sounds_heroes/game_sounds_pugna.vsndevts (crc 823067344)
+- INPUT: dota/sounds/items/iron_talon.mp3 (crc 0)
+- INPUT: dota/sounds/items/iron_talon.vsnd (crc 0)
+- INPUT: dota/sounds/items/iron_talon.wav (crc 369574643)
 - INPUT: dota/sounds/physics/footsteps/hero/shared/general01.mp3 (crc 0)
 - INPUT: dota/sounds/physics/footsteps/hero/shared/general01.vsnd (crc 0)
 - INPUT: dota/sounds/physics/footsteps/hero/shared/general01.wav (crc 1029099903)
@@ -15182,6 +15221,7 @@ soundevents/game_sounds_heroes/game_sounds_pugna.vsndevts
  - Hero_Pugna.NetherBlast.TI9.Layer
  - Hero_Pugna.IdleLoop
  - Hero_Pugna.IdleLoop.Automaton
+ - Hero_Pugna.Oblivion.Charge
 
 soundevents/game_sounds_heroes/game_sounds_queenofpain.vsndevts
 - GAME: dota/soundevents/game_sounds_heroes/game_sounds_queenofpain.vsndevts_c
@@ -19000,7 +19040,7 @@ soundevents/game_sounds_heroes/game_sounds_tusk.vsndevts
 
 soundevents/game_sounds_heroes/game_sounds_undying.vsndevts
 - GAME: dota/soundevents/game_sounds_heroes/game_sounds_undying.vsndevts_c
-- INPUT: dota/soundevents/game_sounds_heroes/game_sounds_undying.vsndevts (crc 3560641068)
+- INPUT: dota/soundevents/game_sounds_heroes/game_sounds_undying.vsndevts (crc 1493776988)
 - INPUT: dota/sounds/physics/damage/building/dire_tower_distant01.mp3 (crc 0)
 - INPUT: dota/sounds/physics/damage/building/dire_tower_distant01.vsnd (crc 0)
 - INPUT: dota/sounds/physics/damage/building/dire_tower_distant01.wav (crc 1428086890)
@@ -19094,6 +19134,9 @@ soundevents/game_sounds_heroes/game_sounds_undying.vsndevts
 - INPUT: dota/sounds/weapons/hero/shared/large_blade/follow_thru03.mp3 (crc 0)
 - INPUT: dota/sounds/weapons/hero/shared/large_blade/follow_thru03.vsnd (crc 0)
 - INPUT: dota/sounds/weapons/hero/shared/large_blade/follow_thru03.wav (crc 2140515591)
+- INPUT: dota/sounds/weapons/hero/undying/bite_cast.mp3 (crc 0)
+- INPUT: dota/sounds/weapons/hero/undying/bite_cast.vsnd (crc 0)
+- INPUT: dota/sounds/weapons/hero/undying/bite_cast.wav (crc 2184719872)
 - INPUT: dota/sounds/weapons/hero/undying/dead_can_dance.mp3 (crc 0)
 - INPUT: dota/sounds/weapons/hero/undying/dead_can_dance.vsnd (crc 0)
 - INPUT: dota/sounds/weapons/hero/undying/dead_can_dance.wav (crc 631553098)
@@ -19212,6 +19255,8 @@ soundevents/game_sounds_heroes/game_sounds_undying.vsndevts
  - Hero_Undying.Decay.Transfer.PaleAugur
  - Hero_Undying.Tombstone.Spawn.DT
  - Hero_Undying.RelentlessReturn.Trigger
+ - Hero_Undying.Bite.Cast
+ - Hero_Undying.Bite.Target
 
 soundevents/game_sounds_heroes/game_sounds_ursa.vsndevts
 - GAME: dota/soundevents/game_sounds_heroes/game_sounds_ursa.vsndevts_c
@@ -22355,7 +22400,7 @@ soundevents/game_sounds_hero_pick.vsndevts
 
 soundevents/game_sounds_items.vsndevts
 - GAME: dota/soundevents/game_sounds_items.vsndevts_c
-- INPUT: dota/soundevents/game_sounds_items.vsndevts (crc 1684111160)
+- INPUT: dota/soundevents/game_sounds_items.vsndevts (crc 1242448173)
 - INPUT: dota/sounds/items/abyssal_blade.mp3 (crc 0)
 - INPUT: dota/sounds/items/abyssal_blade.vsnd (crc 0)
 - INPUT: dota/sounds/items/abyssal_blade.wav (crc 2577342310)
@@ -22401,6 +22446,9 @@ soundevents/game_sounds_items.vsndevts
 - INPUT: dota/sounds/items/blood_grenade.mp3 (crc 0)
 - INPUT: dota/sounds/items/blood_grenade.vsnd (crc 0)
 - INPUT: dota/sounds/items/blood_grenade.wav (crc 3945901076)
+- INPUT: dota/sounds/items/bloodslinger_cast.mp3 (crc 0)
+- INPUT: dota/sounds/items/bloodslinger_cast.vsnd (crc 0)
+- INPUT: dota/sounds/items/bloodslinger_cast.wav (crc 1070151822)
 - INPUT: dota/sounds/items/bloodstone_cast.mp3 (crc 0)
 - INPUT: dota/sounds/items/bloodstone_cast.vsnd (crc 0)
 - INPUT: dota/sounds/items/bloodstone_cast.wav (crc 2574456001)
@@ -22410,6 +22458,9 @@ soundevents/game_sounds_items.vsndevts
 - INPUT: dota/sounds/items/book_of_shadows.mp3 (crc 0)
 - INPUT: dota/sounds/items/book_of_shadows.vsnd (crc 0)
 - INPUT: dota/sounds/items/book_of_shadows.wav (crc 2734349379)
+- INPUT: dota/sounds/items/brick_target.mp3 (crc 0)
+- INPUT: dota/sounds/items/brick_target.vsnd (crc 0)
+- INPUT: dota/sounds/items/brick_target.wav (crc 279240306)
 - INPUT: dota/sounds/items/brooch_cast.mp3 (crc 0)
 - INPUT: dota/sounds/items/brooch_cast.vsnd (crc 0)
 - INPUT: dota/sounds/items/brooch_cast.wav (crc 4189772231)
@@ -22872,6 +22923,9 @@ soundevents/game_sounds_items.vsndevts
 - INPUT: dota/sounds/weapons/hero/antimage/blink_out.mp3 (crc 0)
 - INPUT: dota/sounds/weapons/hero/antimage/blink_out.vsnd (crc 0)
 - INPUT: dota/sounds/weapons/hero/antimage/blink_out.wav (crc 3748269213)
+- INPUT: dota/sounds/weapons/hero/beastmaster/preattack.mp3 (crc 0)
+- INPUT: dota/sounds/weapons/hero/beastmaster/preattack.vsnd (crc 0)
+- INPUT: dota/sounds/weapons/hero/beastmaster/preattack.wav (crc 1370027666)
 - INPUT: dota/sounds/weapons/hero/hoodwink/projectile_impact01.mp3 (crc 0)
 - INPUT: dota/sounds/weapons/hero/hoodwink/projectile_impact01.vsnd (crc 0)
 - INPUT: dota/sounds/weapons/hero/hoodwink/projectile_impact01.wav (crc 590556741)
@@ -23111,6 +23165,9 @@ soundevents/game_sounds_items.vsndevts
  - item_stonefeather.speed
  - item_foragers_kit.harvest
  - item_foragers_kit.munch
+ - Item.BloodSlinger.Cast
+ - item_brick.cast
+ - item_brick.target
 
 soundevents/game_sounds_roshan_halloween.vsndevts
 - GAME: dota/soundevents/game_sounds_roshan_halloween.vsndevts_c
@@ -1200241,7 +1200298,7 @@ sounds/weapons/hero/axe/culling_layer_auto.vsnd
 
 soundevents/soundevents_dark_carnival.vsndevts
 - GAME: dota/soundevents/soundevents_dark_carnival.vsndevts_c
-- INPUT: dota/soundevents/soundevents_dark_carnival.vsndevts (crc 1742149764)
+- INPUT: dota/soundevents/soundevents_dark_carnival.vsndevts (crc 3928545497)
 - INPUT: dota/sounds/ambient/soundscapes/default_night_lp.mp3 (crc 0)
 - INPUT: dota/sounds/ambient/soundscapes/default_night_lp.vsnd (crc 0)
 - INPUT: dota/sounds/ambient/soundscapes/default_night_lp.wav (crc 1439776775)
@@ -1200314,6 +1200371,15 @@ soundevents/soundevents_dark_carnival.vsndevts
 - INPUT: dota/sounds/weapons/hero/largo/enc/ult_track_1.mp3 (crc 0)
 - INPUT: dota/sounds/weapons/hero/largo/enc/ult_track_1.vsnd (crc 0)
 - INPUT: dota/sounds/weapons/hero/largo/enc/ult_track_1.wav (crc 2558106567)
+- INPUT: dota/sounds/weapons/hero/lich/attack.mp3 (crc 0)
+- INPUT: dota/sounds/weapons/hero/lich/attack.vsnd (crc 0)
+- INPUT: dota/sounds/weapons/hero/lich/attack.wav (crc 610938477)
+- INPUT: dota/sounds/weapons/hero/lich/preattack.mp3 (crc 0)
+- INPUT: dota/sounds/weapons/hero/lich/preattack.vsnd (crc 0)
+- INPUT: dota/sounds/weapons/hero/lich/preattack.wav (crc 22806972)
+- INPUT: dota/sounds/weapons/hero/mirana/arrow.mp3 (crc 0)
+- INPUT: dota/sounds/weapons/hero/mirana/arrow.vsnd (crc 0)
+- INPUT: dota/sounds/weapons/hero/mirana/arrow.wav (crc 1134548352)
 - INPUT: dota/sounds/weapons/hero/oracle/edict_cast.mp3 (crc 0)
 - INPUT: dota/sounds/weapons/hero/oracle/edict_cast.vsnd (crc 0)
 - INPUT: dota/sounds/weapons/hero/oracle/edict_cast.wav (crc 1094612345)
@@ -1200384,6 +1200450,9 @@ soundevents/soundevents_dark_carnival.vsndevts
  - dark_carnival.engine_end_sfx
  - dark_carnival.engine_end2_vn
  - DarkCarnival.MorphlingAutomaton.BullbellyBlitz.Song
+ - DarkCarnival.LifeStealer.OpenWounds.PreJump
+ - DarkCarnival.Lich.Icicle.Cast
+ - DarkCarnival.Lich.IcicleBomb.Cast
 
 soundevents/soundevents_dark_carnival_vn_part1.vsndevts
 - GAME: dota/soundevents/soundevents_dark_carnival_vn_part1.vsndevts_c
@@ -1270462,4 +1270531,121 @@ sounds/weapons/hero/tidehunter/arc_ravage_counter_3.vsnd
 - INPUT: dota/sounds/weapons/hero/tidehunter/arc_ravage_counter_3.vsnd (crc 0)
 - INPUT: dota/sounds/weapons/hero/tidehunter/arc_ravage_counter_3.wav (crc 1129952635)
 - INPUT: dota/sounds/weapons/hero/tidehunter/encoding.txt (crc 0)
+
+sounds/graphs/dota_hrtf_basic.vsnd
+- GAME: dota/sounds/graphs/dota_hrtf_basic.vsnd_c
+- INPUT: dota/sounds/graphs/dota_hrtf_basic.mp3 (crc 0)
+- INPUT: dota/sounds/graphs/dota_hrtf_basic.vmix (crc 1991400794)
+- INPUT: dota/sounds/graphs/dota_hrtf_basic.vsnd (crc 0)
+- INPUT: dota/sounds/graphs/dota_hrtf_basic.wav (crc 0)
+
+sounds/graphs/dota_ui_pan.vsnd
+- GAME: dota/sounds/graphs/dota_ui_pan.vsnd_c
+- INPUT: dota/sounds/graphs/dota_ui_pan.mp3 (crc 0)
+- INPUT: dota/sounds/graphs/dota_ui_pan.vmix (crc 3861561250)
+- INPUT: dota/sounds/graphs/dota_ui_pan.vsnd (crc 0)
+- INPUT: dota/sounds/graphs/dota_ui_pan.wav (crc 0)
+
+sounds/graphs/pitch_shift.vsnd
+- GAME: dota/sounds/graphs/pitch_shift.vsnd_c
+- INPUT: dota/sounds/graphs/pitch_shift.mp3 (crc 0)
+- INPUT: dota/sounds/graphs/pitch_shift.vmix (crc 3346075517)
+- INPUT: dota/sounds/graphs/pitch_shift.vsnd (crc 0)
+- INPUT: dota/sounds/graphs/pitch_shift.wav (crc 0)
+
+sounds/items/bloodslinger_cast.vsnd
+- GAME: dota/sounds/items/bloodslinger_cast.vsnd_c
+- INPUT: dota/sounds/items/bloodslinger_cast.dmx (crc 0)
+- INPUT: dota/sounds/items/bloodslinger_cast.fbx (crc 0)
+- INPUT: dota/sounds/items/bloodslinger_cast.mp3 (crc 0)
+- INPUT: dota/sounds/items/bloodslinger_cast.rts (crc 0)
+- INPUT: dota/sounds/items/bloodslinger_cast.txt (crc 0)
+- INPUT: dota/sounds/items/bloodslinger_cast.vmix (crc 0)
+- INPUT: dota/sounds/items/bloodslinger_cast.vsnd (crc 0)
+- INPUT: dota/sounds/items/bloodslinger_cast.wav (crc 1070151822)
+- INPUT: dota/sounds/items/encoding.txt (crc 0)
+
+sounds/items/brick_target.vsnd
+- GAME: dota/sounds/items/brick_target.vsnd_c
+- INPUT: dota/sounds/items/brick_target.dmx (crc 0)
+- INPUT: dota/sounds/items/brick_target.fbx (crc 0)
+- INPUT: dota/sounds/items/brick_target.mp3 (crc 0)
+- INPUT: dota/sounds/items/brick_target.rts (crc 0)
+- INPUT: dota/sounds/items/brick_target.txt (crc 0)
+- INPUT: dota/sounds/items/brick_target.vmix (crc 0)
+- INPUT: dota/sounds/items/brick_target.vsnd (crc 0)
+- INPUT: dota/sounds/items/brick_target.wav (crc 279240306)
+- INPUT: dota/sounds/items/encoding.txt (crc 0)
+
+sounds/weapons/hero/beastmaster/summon_thunderhide.vsnd
+- GAME: dota/sounds/weapons/hero/beastmaster/summon_thunderhide.vsnd_c
+- INPUT: dota/sounds/weapons/hero/beastmaster/encoding.txt (crc 0)
+- INPUT: dota/sounds/weapons/hero/beastmaster/summon_thunderhide.dmx (crc 0)
+- INPUT: dota/sounds/weapons/hero/beastmaster/summon_thunderhide.fbx (crc 0)
+- INPUT: dota/sounds/weapons/hero/beastmaster/summon_thunderhide.mp3 (crc 0)
+- INPUT: dota/sounds/weapons/hero/beastmaster/summon_thunderhide.rts (crc 0)
+- INPUT: dota/sounds/weapons/hero/beastmaster/summon_thunderhide.txt (crc 0)
+- INPUT: dota/sounds/weapons/hero/beastmaster/summon_thunderhide.vmix (crc 0)
+- INPUT: dota/sounds/weapons/hero/beastmaster/summon_thunderhide.vsnd (crc 0)
+- INPUT: dota/sounds/weapons/hero/beastmaster/summon_thunderhide.wav (crc 2912651852)
+
+sounds/weapons/hero/chaos_knight/armageddon_cast.vsnd
+- GAME: dota/sounds/weapons/hero/chaos_knight/armageddon_cast.vsnd_c
+- INPUT: dota/sounds/weapons/hero/chaos_knight/armageddon_cast.dmx (crc 0)
+- INPUT: dota/sounds/weapons/hero/chaos_knight/armageddon_cast.fbx (crc 0)
+- INPUT: dota/sounds/weapons/hero/chaos_knight/armageddon_cast.mp3 (crc 0)
+- INPUT: dota/sounds/weapons/hero/chaos_knight/armageddon_cast.rts (crc 0)
+- INPUT: dota/sounds/weapons/hero/chaos_knight/armageddon_cast.txt (crc 0)
+- INPUT: dota/sounds/weapons/hero/chaos_knight/armageddon_cast.vmix (crc 0)
+- INPUT: dota/sounds/weapons/hero/chaos_knight/armageddon_cast.vsnd (crc 0)
+- INPUT: dota/sounds/weapons/hero/chaos_knight/armageddon_cast.wav (crc 4000380993)
+- INPUT: dota/sounds/weapons/hero/chaos_knight/encoding.txt (crc 0)
+
+sounds/weapons/hero/chaos_knight/armageddon_lp.vsnd
+- GAME: dota/sounds/weapons/hero/chaos_knight/armageddon_lp.vsnd_c
+- INPUT: dota/sounds/weapons/hero/chaos_knight/armageddon_lp.dmx (crc 0)
+- INPUT: dota/sounds/weapons/hero/chaos_knight/armageddon_lp.fbx (crc 0)
+- INPUT: dota/sounds/weapons/hero/chaos_knight/armageddon_lp.mp3 (crc 0)
+- INPUT: dota/sounds/weapons/hero/chaos_knight/armageddon_lp.rts (crc 0)
+- INPUT: dota/sounds/weapons/hero/chaos_knight/armageddon_lp.txt (crc 0)
+- INPUT: dota/sounds/weapons/hero/chaos_knight/armageddon_lp.vmix (crc 0)
+- INPUT: dota/sounds/weapons/hero/chaos_knight/armageddon_lp.vsnd (crc 0)
+- INPUT: dota/sounds/weapons/hero/chaos_knight/armageddon_lp.wav (crc 2442942893)
+- INPUT: dota/sounds/weapons/hero/chaos_knight/encoding.txt (crc 0)
+
+sounds/weapons/hero/chaos_knight/armageddon_lp02.vsnd
+- GAME: dota/sounds/weapons/hero/chaos_knight/armageddon_lp02.vsnd_c
+- INPUT: dota/sounds/weapons/hero/chaos_knight/armageddon_lp02.dmx (crc 0)
+- INPUT: dota/sounds/weapons/hero/chaos_knight/armageddon_lp02.fbx (crc 0)
+- INPUT: dota/sounds/weapons/hero/chaos_knight/armageddon_lp02.mp3 (crc 0)
+- INPUT: dota/sounds/weapons/hero/chaos_knight/armageddon_lp02.rts (crc 0)
+- INPUT: dota/sounds/weapons/hero/chaos_knight/armageddon_lp02.txt (crc 0)
+- INPUT: dota/sounds/weapons/hero/chaos_knight/armageddon_lp02.vmix (crc 0)
+- INPUT: dota/sounds/weapons/hero/chaos_knight/armageddon_lp02.vsnd (crc 0)
+- INPUT: dota/sounds/weapons/hero/chaos_knight/armageddon_lp02.wav (crc 2145317272)
+- INPUT: dota/sounds/weapons/hero/chaos_knight/encoding.txt (crc 0)
+
+sounds/weapons/hero/dazzle/nothl_body_return.vsnd
+- GAME: dota/sounds/weapons/hero/dazzle/nothl_body_return.vsnd_c
+- INPUT: dota/sounds/weapons/hero/dazzle/encoding.txt (crc 0)
+- INPUT: dota/sounds/weapons/hero/dazzle/nothl_body_return.dmx (crc 0)
+- INPUT: dota/sounds/weapons/hero/dazzle/nothl_body_return.fbx (crc 0)
+- INPUT: dota/sounds/weapons/hero/dazzle/nothl_body_return.mp3 (crc 0)
+- INPUT: dota/sounds/weapons/hero/dazzle/nothl_body_return.rts (crc 0)
+- INPUT: dota/sounds/weapons/hero/dazzle/nothl_body_return.txt (crc 0)
+- INPUT: dota/sounds/weapons/hero/dazzle/nothl_body_return.vmix (crc 0)
+- INPUT: dota/sounds/weapons/hero/dazzle/nothl_body_return.vsnd (crc 0)
+- INPUT: dota/sounds/weapons/hero/dazzle/nothl_body_return.wav (crc 3842433947)
+
+sounds/weapons/hero/undying/bite_cast.vsnd
+- GAME: dota/sounds/weapons/hero/undying/bite_cast.vsnd_c
+- INPUT: dota/sounds/weapons/hero/undying/bite_cast.dmx (crc 0)
+- INPUT: dota/sounds/weapons/hero/undying/bite_cast.fbx (crc 0)
+- INPUT: dota/sounds/weapons/hero/undying/bite_cast.mp3 (crc 0)
+- INPUT: dota/sounds/weapons/hero/undying/bite_cast.rts (crc 0)
+- INPUT: dota/sounds/weapons/hero/undying/bite_cast.txt (crc 0)
+- INPUT: dota/sounds/weapons/hero/undying/bite_cast.vmix (crc 0)
+- INPUT: dota/sounds/weapons/hero/undying/bite_cast.vsnd (crc 0)
+- INPUT: dota/sounds/weapons/hero/undying/bite_cast.wav (crc 2184719872)
+- INPUT: dota/sounds/weapons/hero/undying/encoding.txt (crc 0)
 

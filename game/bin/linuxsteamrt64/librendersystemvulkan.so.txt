@@ -1,7 +1,5 @@
         %3d %3d %3d %3d %3d %3d %3d %3d
         %4u %4u %4u %4u %4u %4u %4u %4u
-    %u iterated blocks\n
-    %u unfinished blocks\n
     Compacted: %llu buffers, %.2f MB (%.1f%% of %.2f MB uncompacted)\n
     Component %d: %dhx%dv q=%d
     Component %d: dc=%d ac=%d
@@ -55,10 +53,6 @@
  throw
  transaction_safe
  volatile
-!m_boolDone
-!m_boolOpaque
-!m_boolPunchThroughPixels
-!m_boolTransparent
 "%.*s" is #defined in terms of itself
 "%.*s" is not a valid integer
 "%.*s" is too long to be a #define name
@@ -94,7 +88,6 @@ $ORIGIN
 %.3f
 %0*x
 %016lx
-%3d: e=%.3f rms=%.6f %u\n
 %I:%M:%S %p
 %\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v
 %a %b %e %T %Y
@@ -125,6 +118,7 @@ $ORIGIN
 %s does not support all required features, disabling.\n
 %s does not support computeDerivativeGroupQuads, disabling.\n
 %s does not support fragmentShaderBarycentric, disabling.\n
+%s does not support maintenance6, disabling.\n
 %s does not support shaderAbort, disabling.\n
 %s required because VulkanRequireBarycentrics is set in gameinfo.gi, but it is not supported.  Vulkan device creation failed.\n
 %s required because VulkanRequireComputeShaderDerivatives is set in gameinfo.gi, but it is not supported.  Vulkan device creation failed.\n
@@ -159,6 +153,7 @@ $ORIGIN
 %s_PerArraySliceColorTargetImageView
 %s_PerArraySliceColorTargetImageViewSrgb
 %s_PerArraySliceDepthStencilView
+%s_PerMipLevelCubeArrayImageView
 %s_PerMipLevelImageView
 %s_PerMipLevelUAVCompressedBlockView
 %s_s_PerMipLevelImageViewSrgb
@@ -180,8 +175,6 @@ $ORIGIN
 (dy & 0x1ffff) == 0
 (dy & 0x3ffff) == 0
 (end of input).\n\t This indicates a poorly specified lexer RULE\n\t or unterminated input element such as: "STRING["]\n
-(fWeightSumLeft + fWeightSumRight) > 0.0f
-(fWeightSumTop + fWeightSumBottom) > 0.0f
 *** Error masking unused parts! Equal sign not found after token "%s"! (line %d)\n
 *** IL "%s": Unable to create input layout; layout has %d fields, which is more than %d!\n
 *** VB "%s": Failed to lock!\n
@@ -190,11 +183,11 @@ $ORIGIN
 *** VB "%s": Tried to lock too much memory (%s > %s)!\n
 *** VB "%s": Tried to lock too much memory for subregion (%s > %s)!\n
 *** VB "%s": Tried to lock twice without an unlock!\n
-*** vfx_common.cpp(1209): Error opening file "%s"!\n\n
-*** vfx_common.cpp(1217): Error opening file "%s"!\n\n
-*** vfx_common.cpp(1369): Source cache incomplete, file "%s" missing!\n\n
-*** vfx_common.cpp(1381): Error masking unused parts for "%s"!\n\n
-*** vfx_common.cpp(7535): Programmer Error! The order of VfxVariableSourceType_t does not match s_shaderVariableSource!\n
+*** vfx_common.cpp(1221): Error opening file "%s"!\n\n
+*** vfx_common.cpp(1229): Error opening file "%s"!\n\n
+*** vfx_common.cpp(1381): Source cache incomplete, file "%s" missing!\n\n
+*** vfx_common.cpp(1393): Error masking unused parts for "%s"!\n\n
+*** vfx_common.cpp(7556): Programmer Error! The order of VfxVariableSourceType_t does not match s_shaderVariableSource!\n
 *.spv
 *N12_GLOBAL__N_117io_error_categoryE
 *N12_GLOBAL__N_121future_error_categoryE
@@ -219,7 +212,6 @@ $ORIGIN
 *NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIcLb1EEE
 *NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIwLb0EEE
 *NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIwLb1EEE
-*St19_Sp_counted_deleterIPhZN3Etc13EncodeMipmapsEPfjjNS1_5Image6FormatENS1_11ErrorMetricEfjjjjPNS1_8RawImageEPibEUlS0_E_SaIvELN9__gnu_cxx12_Lock_policyE2EE
 *ZL34RenderDocCaptureWindowAutoCompleteRK8CCommandR10CUtlVectorI10CUtlStringi25CUtlVectorMemory_GrowableIS3_iLm0EEEEUlP14CSwapChainBaseE_
 *ZN11IThreadPool17QueueJobWithFlagsIZN19CRenderDeviceVulkan29PerformQueuedTextureDeletionsEbEUlvE_EE9CSmartPtrI12CThreadedJob17CRefCountAccessorEPKc13JobPriority_tjOT_E10CLambdaJob
 *ZN11IThreadPool17QueueJobWithFlagsIZN19CRenderThreadVulkan36ExecuteOustandingSWCommandStreamJobsEvEUlvE_EE9CSmartPtrI12CThreadedJob17CRefCountAccessorEPKc13JobPriority_tjOT_E10CLambdaJob
@@ -251,12 +243,12 @@ $ORIGIN
 *ZN22CPipelineManagerVulkan19LinkPipelineLibraryEPK15CPipelineVulkanP21PerThreadDataVulkan_tP22PipelineObjectVulkan_tEUlvE_
 *ZN23CTextureStreamingHelper23IssueTextureLoadRequestEP12CTextureBaseRK22TextureSpecification_tEUlP25IAsyncResourceDataRequestSt10unique_ptrI25IAsyncProcessedDataResultSt14default_deleteIS8_EEE_
 *ZN27CPipelineCacheManagerVulkan12LoadFromPathEP22CPipelineManagerVulkanRK10CUtlStringRK14CUtlStringListS4_iEUlvE_
-*ZN3Etc13EncodeMipmapsEPfjjNS_5Image6FormatENS_11ErrorMetricEfjjjjPNS_8RawImageEPibEUlPhE_
 *\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f
 , at offset %d
 , channels = 
 , height = 
 , near %s
+,VUID-VkImageViewCreateInfo-image-01583
 -+xX0123456789abcdef0123456789ABCDEF
 -+xX0123456789abcdefABCDEF
 --------------------------------------------\n
@@ -311,20 +303,6 @@ $ORIGIN
 /home/saml/dev/steam/thirdpartycode/nonredist/libyuv/libyuv/source/row_common.cc
 /home/saml/dev/steam/thirdpartycode/nonredist/libyuv/libyuv/source/scale.cc
 /home/saml/dev/steam/thirdpartycode/nonredist/libyuv/libyuv/source/scale_common.cc
-/home/timo/source2/main/src/thirdparty/etc2comp/EtcLib/./EtcCodec/EtcBlock4x4Encoding.h
-/home/timo/source2/main/src/thirdparty/etc2comp/EtcLib/Etc/EtcImage.cpp
-/home/timo/source2/main/src/thirdparty/etc2comp/EtcLib/EtcCodec/EtcBlock4x4.cpp
-/home/timo/source2/main/src/thirdparty/etc2comp/EtcLib/EtcCodec/EtcBlock4x4Encoding.cpp
-/home/timo/source2/main/src/thirdparty/etc2comp/EtcLib/EtcCodec/EtcBlock4x4Encoding.h
-/home/timo/source2/main/src/thirdparty/etc2comp/EtcLib/EtcCodec/EtcBlock4x4Encoding_ETC1.cpp
-/home/timo/source2/main/src/thirdparty/etc2comp/EtcLib/EtcCodec/EtcBlock4x4Encoding_R11.cpp
-/home/timo/source2/main/src/thirdparty/etc2comp/EtcLib/EtcCodec/EtcBlock4x4Encoding_RG11.cpp
-/home/timo/source2/main/src/thirdparty/etc2comp/EtcLib/EtcCodec/EtcBlock4x4Encoding_RGB8.cpp
-/home/timo/source2/main/src/thirdparty/etc2comp/EtcLib/EtcCodec/EtcBlock4x4Encoding_RGB8A1.cpp
-/home/timo/source2/main/src/thirdparty/etc2comp/EtcLib/EtcCodec/EtcBlock4x4Encoding_RGBA8.cpp
-/home/timo/source2/main/src/thirdparty/etc2comp/EtcLib/EtcCodec/EtcDifferentialTrys.cpp
-/home/timo/source2/main/src/thirdparty/etc2comp/EtcLib/EtcCodec/EtcIndividualTrys.cpp
-/home/timo/source2/main/src/thirdparty/etc2comp/EtcLib/EtcCodec/EtcSortedBlockList.cpp
 /nvsdk_ngx.log
 /proc/self/exe
 /src/
@@ -344,9 +322,7 @@ $ORIGIN
 11CBLASVulkan
 11CRefCountedI20CRefCountServiceBaseI6CRefMTEE
 11CTLASVulkan
-11IRefCounted
 12CDeviceFence
-12CRefCounted1I11IRefCounted20CRefCountServiceBaseI6CRefMTEE
 12CRenderUtils
 12CTextureBase
 12CThreadEvent
@@ -395,10 +371,12 @@ $ORIGIN
 17CRenderThreadBase
 17CShaderVulkanBase
 17CVertexBufferBase
+17CVkDlssRRUpscaler
 18CPooledIndexBuffer
 18CRayTraceOMMVulkan
 18CRenderContextBase
 18CShaderTableVulkan
+18CThreadedJobSource
 18IMultipleWorkerJob
 18IVmaAllocationBase
 19CPooledVertexBuffer
@@ -430,6 +408,7 @@ $ORIGIN
 21CFramebufferMgrVulkan
 21CRenderHardwareConfig
 21CTextureManagerVulkan
+21IDeviceThreadCallback
 21IRenderHardwareConfig
 21IRenderShaderByteCode
 21PerThreadDataVulkan_t
@@ -868,6 +847,7 @@ BeginImplicitRenderPass
 Binary Size
 Binary varint buffer overflows payload.\n
 BinaryProperties_GetValue
+BindlessSlotValidity
 BlendPlane
 BlendPlaneRow_AVX2
 BlendPlaneRow_Any_AVX2
@@ -1049,6 +1029,7 @@ CThreadSemaphore::~CThreadSemaphore()
 CThreadSyncObject::Wait(unsigned int)
 CThreadSyncObject::WaitImpl(unsigned int)
 CThreadSyncObject::~CThreadSyncObject()
+CThreadedJobSource::SignalEventMonitor(CThreadedJobSource*)
 CUniformRandomStreamImpl<CThreadNullMutex>::CUniformRandomStreamImpl(int)
 CUniformRandomStreamImpl<CThreadNullMutex>::RandomFloat(float, float)
 CUniformRandomStreamImpl<CThreadNullMutex>::RandomInt(int, int)
@@ -1210,12 +1191,15 @@ Corrupt JPEG data: bad Huffman code
 Corrupt JPEG data: bad arithmetic code
 Corrupt JPEG data: found marker 0x%02x instead of RST%d
 Corrupt JPEG data: premature end of data segment
+Could not allocate memory for texture %s, not creating it.\n
+Could not create procedural texture %s\n
 Could not decode alpha data.
 Could not load Vulkan pipeline cache blob from %s - will start fresh.\n
 CpuId
 CreateConstantBufferInternal
 CreateDefaultShaders
 CreateDocument failed
+CreateGPUBufferFormatted(%s)
 CreateIndirectExecutionSet
 CreateInterface
 CreateNewThreadPool
@@ -1241,6 +1225,10 @@ DEVICE_COHERENT_AMD
 DEVICE_LOCAL
 DEVICE_UNCACHED_AMD
 DISABLE_VK_LAYER_VALVE_steam_fossilize_1
+DLSS.Denoise.Mode
+DLSS.DisocclusionMask
+DLSS.DisocclusionMask.Subrect.Base.X
+DLSS.DisocclusionMask.Subrect.Base.Y
 DLSS.Enable.Output.Subrects
 DLSS.Exposure.Scale
 DLSS.Feature.Create.Flags
@@ -1259,8 +1247,18 @@ DLSS.Input.Color.Subrect.Base.X
 DLSS.Input.Color.Subrect.Base.Y
 DLSS.Input.Depth.Subrect.Base.X
 DLSS.Input.Depth.Subrect.Base.Y
+DLSS.Input.DiffuseAlbedo
+DLSS.Input.DiffuseAlbedo.Subrect.Base.X
+DLSS.Input.DiffuseAlbedo.Subrect.Base.Y
 DLSS.Input.MV.Subrect.Base.X
 DLSS.Input.MV.Subrect.Base.Y
+DLSS.Input.Normals.Subrect.Base.X
+DLSS.Input.Normals.Subrect.Base.Y
+DLSS.Input.Roughness.Subrect.Base.X
+DLSS.Input.Roughness.Subrect.Base.Y
+DLSS.Input.SpecularAlbedo
+DLSS.Input.SpecularAlbedo.Subrect.Base.X
+DLSS.Input.SpecularAlbedo.Subrect.Base.Y
 DLSS.Input.Translucency.Subrect.Base.X
 DLSS.Input.Translucency.Subrect.Base.Y
 DLSS.Output.Subrect.Base.X
@@ -1268,6 +1266,90 @@ DLSS.Output.Subrect.Base.Y
 DLSS.Pre.Exposure
 DLSS.Render.Subrect.Dimensions.Height
 DLSS.Render.Subrect.Dimensions.Width
+DLSS.Roughness.Mode
+DLSS.TransparencyLayer
+DLSS.TransparencyLayer.Subrect.Base.X
+DLSS.TransparencyLayer.Subrect.Base.Y
+DLSS.TransparencyLayerMvecs
+DLSS.TransparencyLayerMvecs.Subrect.Base.X
+DLSS.TransparencyLayerMvecs.Subrect.Base.Y
+DLSS.TransparencyLayerOpacity
+DLSS.TransparencyLayerOpacity.Subrect.Base.X
+DLSS.TransparencyLayerOpacity.Subrect.Base.Y
+DLSS.Use.HW.Depth
+DLSSD.Alpha
+DLSSD.Alpha.Subrect.Base.X
+DLSSD.Alpha.Subrect.Base.Y
+DLSSD.ColorAfterDepthOfField
+DLSSD.ColorAfterDepthOfField.Subrect.Base.X
+DLSSD.ColorAfterDepthOfField.Subrect.Base.Y
+DLSSD.ColorAfterFog
+DLSSD.ColorAfterFog.Subrect.Base.X
+DLSSD.ColorAfterFog.Subrect.Base.Y
+DLSSD.ColorAfterParticles
+DLSSD.ColorAfterParticles.Subrect.Base.X
+DLSSD.ColorAfterParticles.Subrect.Base.Y
+DLSSD.ColorAfterScreenSpaceRefraction
+DLSSD.ColorAfterScreenSpaceRefraction.Subrect.Base.X
+DLSSD.ColorAfterScreenSpaceRefraction.Subrect.Base.Y
+DLSSD.ColorAfterScreenSpaceSubsurfaceScattering
+DLSSD.ColorAfterScreenSpaceSubsurfaceScattering.Subrect.Base.X
+DLSSD.ColorAfterScreenSpaceSubsurfaceScattering.Subrect.Base.Y
+DLSSD.ColorAfterTransparency
+DLSSD.ColorAfterTransparency.Subrect.Base.X
+DLSSD.ColorAfterTransparency.Subrect.Base.Y
+DLSSD.ColorBeforeDepthOfField
+DLSSD.ColorBeforeDepthOfField.Subrect.Base.X
+DLSSD.ColorBeforeDepthOfField.Subrect.Base.Y
+DLSSD.ColorBeforeFog
+DLSSD.ColorBeforeFog.Subrect.Base.X
+DLSSD.ColorBeforeFog.Subrect.Base.Y
+DLSSD.ColorBeforeParticles
+DLSSD.ColorBeforeParticles.Subrect.Base.X
+DLSSD.ColorBeforeParticles.Subrect.Base.Y
+DLSSD.ColorBeforeScreenSpaceRefraction
+DLSSD.ColorBeforeScreenSpaceRefraction.Subrect.Base.X
+DLSSD.ColorBeforeScreenSpaceRefraction.Subrect.Base.Y
+DLSSD.ColorBeforeScreenSpaceSubsurfaceScattering
+DLSSD.ColorBeforeScreenSpaceSubsurfaceScattering.Subrect.Base.X
+DLSSD.ColorBeforeScreenSpaceSubsurfaceScattering.Subrect.Base.Y
+DLSSD.ColorBeforeTransparency
+DLSSD.ColorBeforeTransparency.Subrect.Base.X
+DLSSD.ColorBeforeTransparency.Subrect.Base.Y
+DLSSD.DepthOfFieldGuide
+DLSSD.DepthOfFieldGuide.Subrect.Base.X
+DLSSD.DepthOfFieldGuide.Subrect.Base.Y
+DLSSD.DiffuseHitDistance
+DLSSD.DiffuseHitDistance.Subrect.Base.X
+DLSSD.DiffuseHitDistance.Subrect.Base.Y
+DLSSD.DiffuseRayDirection
+DLSSD.DiffuseRayDirection.Subrect.Base.X
+DLSSD.DiffuseRayDirection.Subrect.Base.Y
+DLSSD.DiffuseRayDirectionHitDistance
+DLSSD.DiffuseRayDirectionHitDistance.Subrect.Base.X
+DLSSD.DiffuseRayDirectionHitDistance.Subrect.Base.Y
+DLSSD.OutputAlpha
+DLSSD.OutputAlpha.Subrect.Base.X
+DLSSD.OutputAlpha.Subrect.Base.Y
+DLSSD.ReflectedAlbedo
+DLSSD.ReflectedAlbedo.Subrect.Base.X
+DLSSD.ReflectedAlbedo.Subrect.Base.Y
+DLSSD.ScreenSpaceRefractionGuide
+DLSSD.ScreenSpaceRefractionGuide.Subrect.Base.X
+DLSSD.ScreenSpaceRefractionGuide.Subrect.Base.Y
+DLSSD.ScreenSpaceSubsurfaceScatteringGuide
+DLSSD.ScreenSpaceSubsurfaceScatteringGuide.Subrect.Base.X
+DLSSD.ScreenSpaceSubsurfaceScatteringGuide.Subrect.Base.Y
+DLSSD.SpecularHitDistance
+DLSSD.SpecularHitDistance.Subrect.Base.X
+DLSSD.SpecularHitDistance.Subrect.Base.Y
+DLSSD.SpecularRayDirection
+DLSSD.SpecularRayDirection.Subrect.Base.X
+DLSSD.SpecularRayDirection.Subrect.Base.Y
+DLSSD.SpecularRayDirectionHitDistance
+DLSSD.SpecularRayDirectionHitDistance.Subrect.Base.X
+DLSSD.SpecularRayDirectionHitDistance.Subrect.Base.Y
+DLSSDGetStatsCallback
 DLSSGetStatsCallback
 DX11
 DXLevel:  %d\nTexture memory:  %s\nVid:  %s, render at %i x %i, display at %i x %i\n
@@ -1328,7 +1410,6 @@ ERROR :
 ERROR! VK call failed! result = %s ( %s )\n
 ERROR: CUtlSymbolTableLarge element limit of %u exceeded\n
 ESC_SEQ
-ETC1
 EXECUTABLE_PATH
 EXPORTSYSTEM_INTERFACE_VERSION_001
 EXRHeader variable is not initialized.
@@ -1371,9 +1452,6 @@ Error from SDL_GetCurrentDisplayMode( %d ) = %s\n
 Error parsing supported compile targets from vfx file "%s"\n
 Error resolving symbol "%s"\n
 Error! Cannot find GAME\%s file in current search paths! If this is a new shader, you must run vfxcompile.exe at least once, and then reload shaders.\n
-Etc::DifferentialTrys::DifferentialTrys(Etc::ColorFloatRGBA, Etc::ColorFloatRGBA, const unsigned int*, const unsigned int*, unsigned int, int, int)
-Etc::Image::EncodingStatus Etc::Image::Encode(Etc::Image::Format, Etc::ErrorMetric, float, unsigned int, unsigned int)
-Etc::IndividualTrys::IndividualTrys(Etc::ColorFloatRGBA, Etc::ColorFloatRGBA, const unsigned int*, const unsigned int*, unsigned int)
 Exclusive Fullscreen
 ExposureTexture
 ExternalDescSet
@@ -1421,6 +1499,7 @@ FSR3UPSCALER_ReconstructedPrevNearestDepth
 FSR3UPSCALER_ShadingChange
 FSR3UPSCALER_SpdAtomicCounter
 FSR3UPSCALER_SpdMips
+Failed AllocateTexture for '%s'\n
 Failed to advise of file usage. This is not fatal, but might compromise disk performance.\n
 Failed to compute channel layout.\n
 Failed to create VK shader module.\n
@@ -1462,7 +1541,6 @@ FindOrCreateTexture: Dimensions %dx%dx%d exceed maximum supported by device (%dx
 FindOrCreateTexture: Only dynamic textures can have non-global scope!\n
 FindOrCreateTexture: Texture scope is unspecified!\n
 FindOrCreateTexture: Texture usage is unspecified!\n
-Finished %d Blocks out of %d\n
 FixedDiv1_C
 FixedDiv1_X86
 FixedDiv_C
@@ -1471,8 +1549,8 @@ FixupResourceName: Illegal full path passed in ("%s")!\n
 FixupResourceName: Illegal path, missing extension passed in ("%s")!\n
 FloatBitMap_t::LoadFromBuffer: Received improper buffer size, skipping!\n
 FloatBitMap_t::LoadFromBuffer: Unsupported color format, skipping!\n
-FloatBitMap_t::WriteToBuffer: Received improper buffer size %s (expecting %s), skipping!\n
 Flushing Pipeline Cache...\n
+ForceLoadShader: invalid shader loading state %d, shader %p has likely been freed
 FormatArgumentsToBuffer(IFormatOutputStream*, char const*, CTypeErasedFormattingWrapper const*, int)
 FormatTo(IFormatOutputStream*, CFormatStringElement, bool)
 FormatTo(IFormatOutputStream*, CFormatStringElement, float)
@@ -1506,7 +1584,8 @@ Fractional sampling not implemented yet
 Fragment Output Interface Library
 Frame not displayable.
 Frame setup failed
-FrameSync() - bailing out of vkWaitForFences( fenceCount = %d ) after %f seconds, error = %s\n
+FrameSync() - bailing out waiting on GPU for vkWaitForFences( fenceCount = %d ) = %s after %f seconds\n
+FrameSync() - bailing out waiting on GPU for vkWaitForPresent2KHR( presentId = %llu ) after %f seconds\n
 FrameTimeDeltaInMsec
 FreeMemOnReleaseFeature
 Freed EMS handle %u
@@ -1524,16 +1603,17 @@ GBuffer.Attrib.14
 GBuffer.Attrib.15
 GBuffer.Attrib.8
 GBuffer.Attrib.9
+GBuffer.Emissive
 GBuffer.MaterialId
 GBuffer.Metallic
 GBuffer.Normals
 GBuffer.Roughness
 GBuffer.ShadingModelId
 GBuffer.Specular
+GBuffer.SpecularMvec
 GBuffer.Subsurface
 GCC: (SteamRT 14.2.0-19~steamrt3.1+bsrt3.1) 14.2.0
 GCC: (SteamRT 4.8.4-1ubuntu15~12.04+steamrt1.2+srt2) 4.8.4
-GCC: (SteamRT 9.3.0-13+steamrt1.2+srt1) 9.3.0
 GENERAL
 GLIBCXX_TUNABLES
 GLIBC_2.14
@@ -1587,6 +1667,7 @@ GetVertexBuffer
 GetVertexBufferAllowDeleted
 GetXCR0
 Got parse error: %d\n
+GpuMemoryReport
 Graphics Device changed, resetting video config\n
 H010ToAB30
 H010ToABGR
@@ -1947,6 +2028,7 @@ JSON version mismatches.
 January
 Jitter.Offset.X
 Jitter.Offset.Y
+JobSource
 July
 June
 KNQ\r
@@ -2049,10 +2131,12 @@ MainGs
 MainMs
 MainPs
 MainVs
+Manual GPU memory report
 MapRefCount
 March
 MaskCpuFlags
 MaterialID
+Max pipeline cache size
 MaxDeviceID
 Maximum supported image dimension is %u pixels
 MemAlloc_AllocFunc
@@ -2146,22 +2230,13 @@ MultiDrawIndexedInstancedIndirectCount failed - invalid drawcount buffer\n.
 MultiplyRow_16_AVX2
 MultiplyRow_16_Any_AVX2
 MultiplyRow_16_C
+N10CNsightAPI18CStopTraceCallbackE
+N10CNsightAPI19CStartTraceCallbackE
 N10__cxxabiv115__forced_unwindE
 N10__cxxabiv117__class_type_infoE
 N10__cxxabiv119__foreign_exceptionE
 N10__cxxabiv120__si_class_type_infoE
 N10__cxxabiv121__vmi_class_type_infoE
-N3Etc16Block4x4EncodingE
-N3Etc20Block4x4Encoding_R11E
-N3Etc21Block4x4Encoding_ETC1E
-N3Etc21Block4x4Encoding_RG11E
-N3Etc21Block4x4Encoding_RGB8E
-N3Etc22Block4x4Encoding_RGBA8E
-N3Etc23Block4x4Encoding_RGB8A1E
-N3Etc29Block4x4Encoding_RGBA8_OpaqueE
-N3Etc30Block4x4Encoding_RGB8A1_OpaqueE
-N3Etc34Block4x4Encoding_RGBA8_TransparentE
-N3Etc35Block4x4Encoding_RGB8A1_TransparentE
 N3psd15MallocAllocatorE
 N3psd4FileE
 N3psd9AllocatorE
@@ -2190,21 +2265,12 @@ NGXSafeInitializeLog
 NGXSafeInitializeLog(wchar_t const*, wchar_t const*, int, void (*)(char const*, NVSDK_NGX_Logging_Level, NVSDK_NGX_Feature), bool)
 NORMAL
 NSt13__future_base12_Result_baseE
-NSt13__future_base12_Task_setterISt10unique_ptrINS_7_ResultIjEENS_12_Result_base8_DeleterEENSt6thread8_InvokerISt5tupleIJMN3Etc5ImageEFjjjjEPSB_jijEEEEjEE
-NSt13__future_base12_Task_setterISt10unique_ptrINS_7_ResultIvEENS_12_Result_base8_DeleterEENSt6thread8_InvokerISt5tupleIJMN3Etc5ImageEFvjjEPSB_ijEEEEvEE
 NSt13__future_base13_State_baseV2E
-NSt13__future_base15_Deferred_stateINSt6thread8_InvokerISt5tupleIJMN3Etc5ImageEFjjjjEPS5_jijEEEEjEE
-NSt13__future_base15_Deferred_stateINSt6thread8_InvokerISt5tupleIJMN3Etc5ImageEFvjjEPS5_ijEEEEvEE
-NSt13__future_base17_Async_state_implINSt6thread8_InvokerISt5tupleIJMN3Etc5ImageEFjjjjEPS5_jijEEEEjEE
-NSt13__future_base17_Async_state_implINSt6thread8_InvokerISt5tupleIJMN3Etc5ImageEFvjjEPS5_ijEEEEvEE
 NSt13__future_base21_Async_state_commonV2E
-NSt13__future_base7_ResultIjEE
 NSt13__future_base7_ResultIvEE
 NSt3_V214error_categoryE
 NSt6locale5facet6__shimE
 NSt6locale5facetE
-NSt6thread11_State_implINS_8_InvokerISt5tupleIJZNSt13__future_base17_Async_state_implINS1_IS2_IJMN3Etc5ImageEFjjjjEPS6_jijEEEEjEC4EOSB_EUlvE_EEEEEE
-NSt6thread11_State_implINS_8_InvokerISt5tupleIJZNSt13__future_base17_Async_state_implINS1_IS2_IJMN3Etc5ImageEFvjjEPS6_ijEEEEvEC4EOSB_EUlvE_EEEEEE
 NSt6thread6_StateE
 NSt7__cxx1110moneypunctIcLb0EEE
 NSt7__cxx1110moneypunctIcLb1EEE
@@ -2312,6 +2378,7 @@ NVNGX/AppID
 NVNGX/DLSSDefaultPreset
 NVNGX/ReflexLateWarp
 NVNGX/SupportsDLSS
+NVNGX/SupportsDLSS_RR
 NVSDK_NGX_Parameter_GetD
 NVSDK_NGX_Parameter_GetD3d11Resource
 NVSDK_NGX_Parameter_GetD3d12Resource
@@ -2384,6 +2451,8 @@ Not a key frame.
 Not all required VK_KHR_shader_float16_int8 / VK_KHR_16bit_storage features are supported and VulkanRequireSM6 is set in gameinfo.gi.  Vulkan device creation failed.\n
 Not implemented yet
 November
+Nsight Graphics GPU Trace is only supported on Vulkan.\n
+Nsight Graphics GPU Trace isn't compiled into this build (NSIGHT_API).\n
 NumCols() <= V_ARRAYSIZE( s_DummyRow )
 NvLL_VK_Sleep vkLatencySleepNV error '%s'.\n
 NvStdVector<char>::~NvStdVector()
@@ -2397,7 +2466,6 @@ Obtained XMS handle %u
 October
 OnMultiGpuTransferTexture: No texture specification for destination texture, skipping transfer.\n
 OnQueuePresent
-Only DXT1/DXT5 online texture compression supported.\n
 Opened temporary file %s
 OutHeight
 OutWidth
@@ -2441,7 +2509,6 @@ PC_SM_5_0_VULKAN
 PC_SM_6_0_VULKAN
 PERF WARNING: Texture pool size set to more than 80%% of total GPU memory.\n
 PERFORMANCE
-PLANAR
 PLAT_
 POSITION
 POSITION0
@@ -2451,6 +2518,7 @@ PROGRAM
 PROTECTED
 PSD is %d bits per channel, only 8 bit PSDs can be read into a Bitmap_t\n
 PSIZE
+PS_CS
 PS_RENDER_STATE
 PS_RTX
 PanoramaTextServices001
@@ -2533,6 +2601,7 @@ R32_UINT
 R8G8B8A8_ETC2_EAC
 R8G8B8_ETC2
 R8G8_UINT
+R8G8_UNORM
 R8_UINT
 R8_UNORM
 R9G9B9E5_FLOAT
@@ -2563,7 +2632,6 @@ RAWToYRowMatrix_C
 RAWToYRow_C
 RENDERDOC_GetAPI
 RESOURCE_TYPE_TEXTURE
-RG11
 RG11_EAC
 RG1616
 RG1616F
@@ -2598,15 +2666,12 @@ RGB565ToARGBRow_SSE2
 RGB565ToI420
 RGB565ToUVRow_C
 RGB565ToYRow_C
-RGB8
 RGB888
-RGB8A1
 RGBA1010102
 RGBA16161616
 RGBA16161616F
 RGBA32323232F
 RGBA32323232_UINT
-RGBA8
 RGBA8888
 RGBA8888_LINEAR
 RGBA8888_UINT
@@ -2646,6 +2711,11 @@ RayTracingHitDistance
 Read failed on temporary file
 Read from EMS failed
 Read from XMS failed
+ReadCompiledTextureMips: %s has %d pages ending past the %llu bytes read\n
+ReadCompiledTextureMips: %s has a %d byte page layout block, too short\n
+ReadCompiledTextureMips: %s has a bad page offset table ( %d pages )\n
+ReadCompiledTextureMips: %s has no page layout block, it needs recompiling\n
+ReadCompiledTextureMips: %s has no texture header\n
 ReadCompiledTextureMips: callback for %s is still using mip %d, but that data is about to be recycled\n
 ReadCompiledTextureMips: cannot convert %s from %s to %s\n
 ReadCompiledTextureMips: could not create a read request for %s\n
@@ -2656,6 +2726,8 @@ ReadCompiledTextureMips: mip %d of %s is below page size but the texture has no 
 ReadCompiledTextureMips: mip %d of %s runs past the data we read\n
 ReadCompiledTextureMips: mip %d of %s wants pages out to byte %lld but only %llu were read\n
 ReadCompiledTextureMips: no texture data for %s\n
+ReadCompiledTextureMips: page %d of %s did not decompress (format %d, %d bytes)\n
+ReadCompiledTextureMips: short read for %s, %llu bytes do not cover the header\n
 ReadCompiledTextureMips: short read for %s, wanted %lld bytes of mips but got %llu\n
 Recognition Exception
 Referenced %s %016lx, but it does not exist.\nThis can be expected when replaying an archive from Steam.\nIf replaying just the application cache, make sure to replay together with the common cache, as application cache can depend on common cache.\n
@@ -2727,7 +2799,6 @@ ResolveLayout
 ResourceCompilerSystem001
 ResourceHandleUtils001
 ResourceManifestRegistry001
-ReturnJobManualEventToPool
 Root
 RotatePlane
 RotatePlane180
@@ -2737,8 +2808,6 @@ Run with -vulkan_track_pipeline_compile_times and clear the shader cache to time
 SDL_Vulkan_CreateSurface failed, error: %s.\n
 SHADER_SOURCE
 SHADER_SOURCE_ROOT
-SIGNED_R11
-SIGNED_RG11
 SMQNR
 SPIR-V reflect failed to enumerate specialization constants: %s\n
 SPIR-V reflect failed with error: %s\n
@@ -2768,9 +2837,6 @@ SPV_REFLECT_RESULT_ERROR_SPIRV_UNEXPECTED_BLOCK_DATA
 SPV_REFLECT_RESULT_ERROR_SPIRV_UNEXPECTED_EOF
 SPV_REFLECT_RESULT_NOT_READY
 SPV_REFLECT_RESULT_SUCCESS
-SRGB8
-SRGB8A1
-SRGBA8
 SSE and SSE2 are required.
 STEAM_FOSSILIZE_DUMP_PATH
 STEAM_FOSSILIZE_DUMP_PATH_READ_ONLY
@@ -2782,6 +2848,7 @@ S_EXECUTION_REORDERING
 S_GPU_DEVICE_ID
 S_GPU_VENDOR_ID
 S_MOLTEN_VK
+S_NEEDS_MESHLET_OVERFLOW_HANDLING
 S_REVERSE_DEPTH_BUFFER
 S_SHADER_QUALITY
 S_SUBGROUP_WAVE_OPS
@@ -2994,6 +3061,8 @@ SchemaTestExternal_One_001
 SchemaTestExternal_Two_001
 Seek failed on temporary file
 Selected %d colors for quantization
+Send r_gpu_mem_stats, a VMA memory dump and the console log in a minidump report.  Usage: r_send_gpu_memory_report [name ...] (default dang)
+SendMiniDumpReport
 September
 SeriousWarning
 SetPlane
@@ -3153,10 +3222,7 @@ St20bad_array_new_length
 St21__ctype_abstract_baseIcE
 St21__ctype_abstract_baseIwE
 St23_Sp_counted_ptr_inplaceI26CReadTexturePixelsCallbackSaIvELN9__gnu_cxx12_Lock_policyE2EE
-St23_Sp_counted_ptr_inplaceINSt13__future_base15_Deferred_stateINSt6thread8_InvokerISt5tupleIJMN3Etc5ImageEFjjjjEPS6_jijEEEEjEESaISC_ELN9__gnu_cxx12_Lock_policyE2EE
-St23_Sp_counted_ptr_inplaceINSt13__future_base15_Deferred_stateINSt6thread8_InvokerISt5tupleIJMN3Etc5ImageEFvjjEPS6_ijEEEEvEESaISC_ELN9__gnu_cxx12_Lock_policyE2EE
-St23_Sp_counted_ptr_inplaceINSt13__future_base17_Async_state_implINSt6thread8_InvokerISt5tupleIJMN3Etc5ImageEFjjjjEPS6_jijEEEEjEESaISC_ELN9__gnu_cxx12_Lock_policyE2EE
-St23_Sp_counted_ptr_inplaceINSt13__future_base17_Async_state_implINSt6thread8_InvokerISt5tupleIJMN3Etc5ImageEFvjjEPS6_ijEEEEvEESaISC_ELN9__gnu_cxx12_Lock_policyE2EE
+St23_Sp_counted_ptr_inplaceI26VirtualTextureTileLayout_tSaIvELN9__gnu_cxx12_Lock_policyE2EE
 St23_Sp_counted_ptr_inplaceINSt8__detail4_NFAISt12regex_traitsIcEEESaIvELN9__gnu_cxx12_Lock_policyE2EE
 St23__codecvt_abstract_baseIDiDu11__mbstate_tE
 St23__codecvt_abstract_baseIDic11__mbstate_tE
@@ -3223,7 +3289,13 @@ SuperSampling.FeatureInitResult
 SuperSampling.MinDriverVersionMajor
 SuperSampling.MinDriverVersionMinor
 SuperSampling.NeedsUpdatedDriver
+SuperSamplingDenoising.Available
+SuperSamplingDenoising.FeatureInitResult
+SuperSamplingDenoising.MinDriverVersionMajor
+SuperSamplingDenoising.MinDriverVersionMinor
+SuperSamplingDenoising.NeedsUpdatedDriver
 Suppress
+Surface for swapchain '%s' does not support VK_KHR_present_wait2, disabling it for all swapchains\n
 Suspension not allowed here
 Swap Chain Mode Changing:\n\tm_nVersion: %d -> %d\n\tm_DisplayMode:\n\t\tm_nVersion: %d -> %d\n\t\tm_nWidth: %d -> %d\n\t\tm_nHeight: %d -> %d\n\t\tm_Format: %d -> %d\n\t\tm_nRefreshRateNumerator: %d -> %d\n\t\tm_nRefreshRateDenominator: %d -> %d\n\t\tm_nFlags: 0x%X -> 0x%X\n\tm_nBackBufferCount: %d -> %d\n\tm_nMultisampleType: %d -> %d\n\tm_nModeUsage: %d -> %d\n\tm_bUseStencil: %d -> %d\n\tm_bWaitForVSync: %d -> %d\n\tm_bScaleToOutputResolution: %d -> %d\n\tm_bProgressive: %d -> %d\n\tm_bUsingMultipleWindows: %d -> %d\n\tm_bIsMainWindow: %d -> %d\n
 SwapBuffers
@@ -3244,10 +3316,17 @@ TANGENT
 TEX read request: %d KB; %s\n
 TEXCOORD
 TEXCOORD0
+TEXMAN:   %s\n
+TEXMAN: %s %s\n
 TEXMAN: %s LoadStreamingData (%s)\n
 TEXMAN: %s MarkTextureBitsLoaded (%s)\n
 TEXMAN: %s TextureBecameEvicted (%s)\n
+TEXMAN: %s has %d tiles, too few for mip %d, can't sample it as an ordinary texture\n
+TEXMAN: %s has no tile layout block, it needs recompiling\n
+TEXMAN: %s is sampled as an ordinary texture, but the virtual texture manager has no tiles for it\n
+TEXMAN: %s is sampled as an ordinary texture, streaming its mips detiled from its %s\n
 TEXMAN: %s loaded %s %i/%i mips (%ix%i / %ix%i) of %s (%i bytes)\n
+TEXMAN: %s stores its tiled mips out of order, every load of it as an ordinary texture reads all of them\n
 TEXMAN: Abandoning job in %s (%s)\n
 TEXMAN: Abandoning streaming request early in %s\n
 TEXMAN: Abandoning streaming request in %s\n
@@ -3255,8 +3334,10 @@ TEXMAN: Adding %llx+%p (binding=%p), %s to abandoned hookup jobs\n
 TEXMAN: Deleting %d textures\n
 TEXMAN: Outstanding stream count %d -> %d (%s)\n
 TEXMAN: Oversubscription state is %s, updating additional resolution bias from %.2f -> %.2f\n
+TEXMAN: no tile layout for %s\n
+TEXMAN: no virtual texture manager, and %s can't stream as an ordinary texture\n
+TEXMAN: reloading %d virtual textures created before the virtual texture manager\n
 TEXMAN: streaming data requested for a virtual texture before the VT manager callbacks were installed, not preloading (%s)\n
-TEXMAN: virtual texture created before the VT manager callbacks were installed, falling back to normal streaming (%s)\n
 TEXTURESTREAMING: Extremely low memory: Available mem: %.2f MB, Required: %.2f MB. (Limit: %.2f MB, All Texture Memory: %.2f MB, Streamable Texture Memory %.2fMB)\n
 TEXTURESTREAMING: Filled %d fallback textures in %.3f ms\n
 TEXTURESTREAMING: Resource view ptr or texture resources are still NULL after waiting.\n
@@ -3327,6 +3408,7 @@ TransposeWx8_Fast_Any_SSSE3
 TransposeWx8_Fast_SSSE3
 TransposeWx8_SSSE3
 TransposeWxH_C
+Triggers a RenderDoc capture with sc_rendergraph_schedule pass reordering disabled, so passes are captured in submission order
 Truncated header.
 Trying to create a render target with invalid image format %s\n
 Trying to set dxlevel (%d) which is higher than the card can support (%d)!\n
@@ -3390,6 +3472,7 @@ Unable to determine texture heap size, assuming %llu MB.\n
 Unable to find swapchain named %s
 Unable to initialize DLSS : FeatureInitResult = 0x%08x, info: %s, result %s
 Unable to initialize DLSS : Need to update the driver to %u.%u
+Unable to initialize DLSS RR : FeatureInitResult = 0x%08x, info: %s, result %s
 Unable to initialize NGX Vulkan Instance : error code = 0x%08x, info: %s
 Unable to load psd: %s\n
 Unable to memory-map blob file %s for writing.\n
@@ -3422,7 +3505,6 @@ Unknown error
 Unrecognized component IDs %d %d %d, assuming YCbCr
 Unsatisfied dependency at present time = death!
 Unserialize
-Unsupported ETC image format %d.\n
 Unsupported JPEG data precision %d
 Unsupported JPEG process: SOF type 0x%02x
 Unsupported PSD color mode!\n
@@ -3541,11 +3623,12 @@ VK_KHR_get_memory_requirements2
 VK_KHR_get_physical_device_properties2
 VK_KHR_get_surface_capabilities2
 VK_KHR_maintenance3
+VK_KHR_maintenance6
 VK_KHR_pipeline_executable_properties
 VK_KHR_pipeline_library
-VK_KHR_present_id
-VK_KHR_present_wait
-VK_KHR_present_wait does not support required feature presentWait or presentId, disabling.\n
+VK_KHR_present_id2
+VK_KHR_present_wait2
+VK_KHR_present_wait2 does not support required feature presentWait2 or presentId2, disabling.\n
 VK_KHR_push_descriptor
 VK_KHR_ray_query
 VK_KHR_ray_tracing_maintenance1
@@ -3739,6 +3822,7 @@ V_ZSTD_freeDCtx
 V_ZSTD_getDictID_fromDDict
 V_ZSTD_getDictID_fromFrame
 V_ZSTD_getFrameContentSize
+V_ZSTD_isError
 V_acosd
 V_acosf
 V_asinf
@@ -3790,11 +3874,12 @@ Vendor ID mismatch in pipeline cache blob (Got: %x Expected: %x).\n
 VendorID
 Version
 Vertex Input Library
-Vfx file "%s" has both compute shader and other shaders. Compute shaders must be the only shader type in a vfx file.\n
 Video Card %s (%04x : %04x)\n
 Video config version number changed ( '%s' is version %i, current version is %i ). Resetting video config.\n
+ViewToClipMatrix
 Viewport
 Virtual array controller messed up
+Virtual textures created before the virtual texture manager
 VisBuilder_001
 VisibilityNodeMask
 VkPhysicalDeviceAddressBindingReportFeaturesEXT.reportAddressBinding not supported, disabling extension.\n
@@ -3887,6 +3972,7 @@ WebPSafeMalloc
 WebPSetWorkerInterface
 Wednesday
 Windowed
+WorldToViewMatrix
 Write failed on temporary file --- out of disk space?
 Write to EMS failed
 Write to XMS failed
@@ -3920,13 +4006,6 @@ YUY2ToYRow_C
 YUY2ToYRow_SSE2
 Z23DoNotDeleteReadCallbackI14CReadGPUBufferESt10shared_ptrIT_EPS2_EUlPS0_E_
 ZFP compression is not supported.
-ZN10MatrixMath11ScaleMatrixILb0E15CVariableMatrixEEvRT0_fEUliiE_
-ZN10MatrixMath11ScaleMatrixILb1E15CVariableMatrixEEvRT0_fEUliiE_
-ZN10MatrixMath14MatrixMultiplyILb0E15CVariableMatrixS1_EEvRK17CSparseMatrixBaseIfERKT0_PT1_EUliiE_
-ZN10MatrixMath14MatrixMultiplyILb1E15CVariableMatrixS1_EEvRK17CSparseMatrixBaseIfERKT0_PT1_EUliiE_
-ZN10MatrixMath17AddMatrixToMatrixILb0E15CVariableMatrixS1_EEvRKT0_PT1_EUliiE_
-ZN10MatrixMath17AddMatrixToMatrixILb1E15CVariableMatrixS1_EEvRKT0_PT1_EUliiE_
-ZN10MatrixMath23AddScaledMatrixToMatrixILb1E15CVariableMatrixS1_EEvfRKT0_PT1_EUliiE_
 [%Y-%m-%d %H:%M:%S] 
 [%s:%d] %s
 [Index: 
@@ -3997,15 +4076,15 @@ ZN10MatrixMath23AddScaledMatrixToMatrixILb1E15CVariableMatrixS1_EEvfRKT0_PT1_EUl
 \n*** Unable to parse Version in HEADER section of %s!\n\n
 \n*** Unknown rule "%s" in %s!\n\n
 \n*** Unknown text found in FEATURES section in %s: "%s"\n\n
-\n*** vfx_common.cpp(1484): Error opening file "%s"!\n\n
-\n*** vfx_common.cpp(1561): Error opening file "%s"!\n\n
-\n*** vfx_common.cpp(6339): Error opening file "%s"!\n\n
-\n*** vfx_common.cpp(6489): Error opening include file in features list"%s"!\n\n
-\n*** vfx_common.cpp(6531): Error opening file "%s"!\n\n
-\n*** vfx_common.cpp(6845): Error opening file "%s"!\n\n
-\n*** vfx_common.cpp(6891): Error opening file "%s"!\n\n
-\n*** vfx_common.cpp(6930): Error opening file "%s"!\n\n
-\n*** vfx_common.cpp(7042): Error opening file "%s"!\n\n
+\n*** vfx_common.cpp(1496): Error opening file "%s"!\n\n
+\n*** vfx_common.cpp(1573): Error opening file "%s"!\n\n
+\n*** vfx_common.cpp(6360): Error opening file "%s"!\n\n
+\n*** vfx_common.cpp(6510): Error opening include file in features list"%s"!\n\n
+\n*** vfx_common.cpp(6552): Error opening file "%s"!\n\n
+\n*** vfx_common.cpp(6866): Error opening file "%s"!\n\n
+\n*** vfx_common.cpp(6912): Error opening file "%s"!\n\n
+\n*** vfx_common.cpp(6951): Error opening file "%s"!\n\n
+\n*** vfx_common.cpp(7063): Error opening file "%s"!\n\n
 \n***ASSERT FAILED*** Image data section has too many channels (%d).
 \n***ASSERT FAILED*** Pointer is null.
 \n***ERROR*** [DecompressRle] Malformed RLE data encountered
@@ -4020,7 +4099,7 @@ ZN10MatrixMath23AddScaledMatrixToMatrixILb1E15CVariableMatrixS1_EEvfRKT0_PT1_EUl
 \nRTX
 \n\tCommand Buffer Labels - %d\n
 \n\tObjects - %d\n
-\nrenderdocapi.cpp(95): ERROR! Can't load %s dll, automatic RenderDoc shader debug info not available.\n
+\nrenderdocapi.cpp(98): ERROR! Can't load %s dll, automatic RenderDoc shader debug info not available.\n
 \src\shaders\
 \t The lexer was matching from line %d, offset %d, which\n\t 
 \t%.*s\n
@@ -4093,7 +4172,6 @@ __cxa_begin_catch
 __cxa_call_terminate
 __cxa_call_unexpected
 __cxa_current_exception_type
-__cxa_deleted_virtual
 __cxa_demangle
 __cxa_end_catch
 __cxa_finalize
@@ -4263,9 +4341,6 @@ _txnal_cow_string_c_str(void const*)
 _txnal_logic_error_get_msg(void*)
 _txnal_runtime_error_get_msg(void*)
 _txnal_sso_string_c_str(void const*)
-a_fDecodedAlpha >= 0.0f
-a_uiMultithreadingStride > 0
-a_uiRadius <= MAX_RADIUS
 abort
 addressModeU
 addressModeV
@@ -4534,6 +4609,7 @@ cs_5_0
 cs_6_0
 cullMode
 customBorderColor
+dang
 data
 data height too large.
 data width or data height is negative.
@@ -4553,7 +4629,6 @@ decltype(nullptr)
 default
 delete 
 delete[] 
-deleted virtual method called\n
 dependencies
 dependencyFlags
 depth <= 16
@@ -4618,9 +4693,7 @@ dy != __null
 dynamicState
 dynamic_cast
 eaFO
-effortblocks = %d\n
 eight
-encodingTry.m_fError < 3.40282346638528859811704183484516925e+38F
 engineName
 engineVersion
 equals-sign
@@ -4645,10 +4718,7 @@ fDownscaleFactor
 fFrameIndex
 fJitter
 fJitterSequenceLength
-fMinAlpha <= fMaxAlpha
 fMinDisocclusionAccumulation
-fMinGrn <= fMaxGrn
-fMinRed <= fMaxRed
 fMotionVectorJitterCancellation
 fMotionVectorScale
 fPreviousFrameJitter
@@ -4657,10 +4727,6 @@ fShadingChangeScale
 fTanHalfFOV
 fVelocityFactor
 fViewSpaceToMetersFactor
-fWeightSumBottom > 0.0f
-fWeightSumLeft > 0.0f
-fWeightSumRight > 0.0f
-fWeightSumTop > 0.0f
 failOp
 failed to match address %p to a library
 failed to read link /proc/self/exe - %s
@@ -4687,12 +4753,10 @@ five
 fixed_invtbl8
 fj".T\CMek2>x
 float
-float Etc::Block4x4Encoding::CalcPixelError(Etc::ColorFloatRGBA, float, Etc::ColorFloatRGBA)
-float Etc::Block4x4Encoding::GetError()
 float64
 floatbitmap.cpp
-floatbitmap.cpp(1213): Unsupported color format "%s", skipping!\n
-floatbitmap.cpp(520): Conversion not supported yet!\n
+floatbitmap.cpp(515): Conversion not supported yet!\n
+fmaf
 fopen
 fopen64
 forceExplicitReconstruction
@@ -4769,6 +4833,7 @@ gpuav_enable
 gpuav_reserve_binding_slot
 gpuav_select_instrumented_shaders
 gpuav_shaders_to_instrument
+gpumemreport%d.json
 graph
 graphicsPipelines
 grave-accent
@@ -4824,38 +4889,19 @@ guard variable for std::time_put<char, std::ostreambuf_iterator<char, std::char_
 guard variable for std::time_put<wchar_t, std::ostreambuf_iterator<wchar_t, std::char_traits<wchar_t>>>::id
 half
 hardware
+has a bad tile offset table ( %d tiles )
+has compressed tiles but no offsets
+has no tiles for mip %d
+has tiles in unknown compression %d
 hash
 header crc mismatch
 height > 0
 hidden alias for 
 hyphen
-iBlue >= 0 && iBlue <= 15
-iBlue >= 0 && iBlue <= 31
-iBlue1 >= (signed)(0+a_uiRadius) && iBlue1 <= (signed)(31 - a_uiRadius)
-iBlue2 < 0 || iBlue2 > 31
-iBlue2 >= (signed)(0 + a_uiRadius) && iBlue2 <= (signed)(31 - a_uiRadius)
-iDBlue >= -4 && iDBlue < 4
-iDBlue2 >= -4 && iDBlue2 < 4
-iDGreen >= -4 && iDGreen < 4
-iDGreen2 >= -4 && iDGreen2 < 4
-iDRed >= -4 && iDRed < 4
-iDRed2 >= -4 && iDRed2 < 4
-iGreen >= 0 && iGreen <= 15
-iGreen >= 0 && iGreen <= 31
-iGreen1 >= (signed)(0 + a_uiRadius) && iGreen1 <= (signed)(31 - a_uiRadius)
-iGreen2 < 0 || iGreen2 > 31
-iGreen2 >= (signed)(0 + a_uiRadius) && iGreen2 <= (signed)(31 - a_uiRadius)
-iGreen2 >= 0 && iGreen2 <= 31
 iMaxRenderSize
 iMaxUpscaleSize
 iPreviousFrameRenderSize
 iPreviousFrameUpscaleSize
-iRed >= 0 && iRed <= 15
-iRed >= 0 && iRed <= 31
-iRed1 >= (signed)(0 + a_uiRadius) && iRed1 <= (signed)(31 - a_uiRadius)
-iRed2 < 0 || iRed2 > 31
-iRed2 >= (signed)(0 + a_uiRadius) && iRed2 <= (signed)(31 - a_uiRadius)
-iRed2 >= 0 && iRed2 <= 31
 iRenderSize
 iUpscaleSize
 iboxwidth > 0
@@ -4902,6 +4948,7 @@ int& std::forward<int&>(std::remove_reference<int&>::type&)
 int&& std::forward<int>(std::remove_reference<int>::type&)
 int16
 int64
+int8
 intersectionShader
 invalid bit length repeat
 invalid block type
@@ -4952,6 +4999,7 @@ layout
 layoutBindingFlags
 layoutBindings
 ld-linux-x86-64.so.2
+ldexpf
 left-curly-bracket
 left-parenthesis
 left-square-bracket
@@ -4986,6 +5034,8 @@ locale::facet::_S_lc_ctype_c_locale newlocale error
 localize
 localtime
 localtime_r
+log1p
+log1pf
 log2
 logicOp
 logicOpEnable
@@ -5004,26 +5054,15 @@ looks like this:\n\t\t%.*s\n
 loongson-ext
 loongson-mmi
 lower
+lroundf
 m_MapCount == 0 && "Allocation was not unmapped before destruction."
 m_MapCount == 0 && "VkDeviceMemory block is being destroyed while it is still mapped."
-m_boolDiff
-m_boolDiff == true
-m_boolTransparent
-m_fError >= 0.0f
 m_hMemory != VK_NULL_HANDLE
 m_hMemory == VK_NULL_HANDLE
-m_mode == MODE_ETC1
-m_mode == MODE_H
-m_mode == MODE_PLANAR
-m_mode == MODE_T
 m_pMetadata->IsEmpty() && "Some allocations were not freed before destruction of this memory block!"
-m_paucEncodingBits == nullptr
 m_ppAcquireNextImageSemaphores != nullptr
 m_ppAcquireNextImageSemaphores[ nSemaphoreIndex ] != VK_NULL_HANDLE
 m_tail != QUEUE_ITERATOR_INVALID
-m_uiAddedBlocks < m_uiImageBlocks
-m_uiAddedBlocks == m_uiImageBlocks
-m_uiEncodingIterations == 0
 m_vkRayTracePipeline != VK_NULL_HANDLE
 magFilter
 main
@@ -5188,10 +5227,8 @@ pIntermediateSwapChainImage == pSwapChainVulkan->m_pIntermediateSwapChainImage
 pNext
 panorama_
 panorama_rt_
-pass %u\n
 passOp
 patchControlPoints
-pbucket->plinkLast->GetNext() == nullptr
 percent-sign
 period
 physicalDeviceFeatures
@@ -5236,13 +5273,7 @@ pthread_rwlock_rdlock
 pthread_rwlock_unlock
 pthread_rwlock_wrlock
 pthread_setspecific
-ptry < &a_phalf->m_atry[DifferentialTrys::Half::MAX_TRYS]
-ptry < &a_phalf->m_atry[IndividualTrys::Half::MAX_TRYS]
-ptry->m_fError < 3.40282346638528859811704183484516925e+38F
-ptryBest1 != nullptr
-ptryBest2 != nullptr
 punct
-pure virtual method called\n
 pushConstantRanges
 qsort
 question-mark
@@ -5268,9 +5299,13 @@ r_previous_luma
 r_rcas_input
 r_reactive_mask
 r_reconstructed_previous_nearest_depth
+r_renderdoc_capture_frame_unscheduled
+r_send_gpu_memory_report
 r_shading_change
 r_spd_mips
 r_transparency_and_composition_mask
+r_upscale_rayreconstruct
+r_vulkan_present_wait
 raise
 random_device could not be read
 random_device: getentropy failed
@@ -5320,7 +5355,7 @@ renderdevicebase.cpp
 renderdevicemgrbase.cpp
 renderdoc
 renderdoc_captures
-renderdocapi.cpp:886
+renderdocapi.cpp:934
 rendersystem (%s) tracked resources:\n
 rendersystemvulkan
 requiredSubgroupSize
@@ -5418,7 +5453,7 @@ seven
 shader thread state machine violation
 shaderModules
 shader_%06d.spv
-shadercache/vulkan
+shadercache
 shaders.cache
 shaders.cache.blob
 shaders/vfx
@@ -5435,6 +5470,7 @@ sizeof
 sizeof...
 slash
 snprintf
+solid color
 source_file
 source_line
 space
@@ -5446,7 +5482,6 @@ spdIntermediateR
 specializationInfo
 specular
 sprintf
-sqrtf
 srcAccessMask
 srcAlphaBlendFactor
 srcColorBlendFactor
@@ -5544,6 +5579,7 @@ std::_Setfill<wchar_t> std::setfill<wchar_t>(wchar_t)
 std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_add_ref_lock_nothrow()
 std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_destroy()
 std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_get_use_count() const
+std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release()
 std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release_last_use()
 std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release_last_use_cold()
 std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_weak_release()
@@ -5552,6 +5588,7 @@ std::_Sp_counted_ptr_inplace<std::__detail::_NFA<std::regex_traits<char>>, std::
 std::_Sp_counted_ptr_inplace<std::__detail::_NFA<std::regex_traits<char>>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_dispose()
 std::_Sp_counted_ptr_inplace<std::__detail::_NFA<std::regex_traits<char>>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_get_deleter(std::type_info const&)
 std::_Sp_counted_ptr_inplace<std::__detail::_NFA<std::regex_traits<char>>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::~_Sp_counted_ptr_inplace()
+std::_Sp_make_shared_tag::_S_ti()::__tag
 std::_Tuple_impl<0ul, std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>::_M_head(std::_Tuple_impl<0ul, std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>> const&)
 std::_Tuple_impl<0ul, std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>::_M_head(std::_Tuple_impl<0ul, std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>&)
 std::_Tuple_impl<0ul, std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>::_Tuple_impl()
@@ -6501,13 +6538,21 @@ std::__facet_shims::__any_string::__str_rep::operator wchar_t const*() const
 std::__facet_shims::__any_string::operator std::basic_string<char, std::char_traits<char>, std::allocator<char>><char>() const
 std::__facet_shims::__any_string::operator std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>><wchar_t>() const
 std::__facet_shims::__any_string::~__any_string()
+std::__future_base::_Async_state_commonV2::_M_complete_async()
+std::__future_base::_Async_state_commonV2::~_Async_state_commonV2()
+std::__future_base::_Result<void>::_M_destroy()
+std::__future_base::_Result<void>::~_Result()
 std::__future_base::_Result_base::_Result_base()
 std::__future_base::_Result_base::~_Result_base()
+std::__future_base::_State_baseV2::_M_complete_async()
+std::__future_base::_State_baseV2::_M_do_set(std::function<std::unique_ptr<std::__future_base::_Result_base, std::__future_base::_Result_base::_Deleter> ()>*, bool*)
+std::__future_base::_State_baseV2::_M_is_deferred_future() const
 std::__future_base::_State_baseV2::_Make_ready* const& std::__get_helper<0ul, std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>(std::_Tuple_impl<0ul, std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>> const&)
 std::__future_base::_State_baseV2::_Make_ready*& std::__get_helper<0ul, std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>(std::_Tuple_impl<0ul, std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>&)
 std::__future_base::_State_baseV2::_Make_ready::_M_set()
 std::__future_base::_State_baseV2::_Make_ready::_S_run(void*)
 std::__future_base::_State_baseV2::_Make_ready::~_Make_ready()
+std::__future_base::_State_baseV2::~_State_baseV2()
 std::__ios_failure::__ios_failure(char const*)
 std::__ios_failure::__ios_failure(char const*, std::error_code const&)
 std::__ios_failure::~__ios_failure()
@@ -7640,6 +7685,7 @@ std::fpos<__mbstate_t>::fpos(long)
 std::fpos<__mbstate_t>::operator long() const
 std::future_category()
 std::future_error: 
+std::future_error::future_error(std::error_code)
 std::future_error::what() const
 std::future_error::~future_error()
 std::get_catalogs()
@@ -8878,25 +8924,25 @@ texture2dms
 texture2dmsarray
 texture3d
 texturebase.cpp
-texturebase.cpp(2873):Error loading texture: %s\n
-texturebase.cpp(3707):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
-texturebase.cpp(3710):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
-texturebase.cpp(3729):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
-texturebase.cpp(3732):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
-texturebase.cpp(3765):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
-texturebase.cpp(3768):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
-texturebase.cpp(3790):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
-texturebase.cpp(3793):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
-texturebase.cpp(3813):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
-texturebase.cpp(3816):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
-texturebase.cpp(3836):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
-texturebase.cpp(3839):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
-texturebase.cpp(3861):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
-texturebase.cpp(3864):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
-texturebase.cpp(3876):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
-texturebase.cpp(3879):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
-texturebase.cpp(3891):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
-texturebase.cpp(3894):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
+texturebase.cpp(3285):Error loading texture: %s\n
+texturebase.cpp(4129):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
+texturebase.cpp(4132):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
+texturebase.cpp(4151):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
+texturebase.cpp(4154):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
+texturebase.cpp(4187):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
+texturebase.cpp(4190):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
+texturebase.cpp(4212):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
+texturebase.cpp(4215):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
+texturebase.cpp(4235):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
+texturebase.cpp(4238):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
+texturebase.cpp(4258):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
+texturebase.cpp(4261):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
+texturebase.cpp(4283):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
+texturebase.cpp(4286):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
+texturebase.cpp(4298):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
+texturebase.cpp(4301):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
+texturebase.cpp(4313):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
+texturebase.cpp(4316):ResourceHandleToData( %s ) failed! Falling back to error texture!\n
 texturebuffer
 texturecube
 texturecubearray
@@ -8909,6 +8955,7 @@ three
 throw
 throw 
 tilde
+tile %d ( %u bytes at %u ) is not in the %u bytes read or does not decompress
 tiles
 time
 too many length or distance symbols
@@ -8969,6 +9016,8 @@ typeinfo for __cxxabiv1::__vmi_class_type_info
 typeinfo for __gnu_cxx::__concurrence_lock_error
 typeinfo for __gnu_cxx::__concurrence_unlock_error
 typeinfo for __gnu_cxx::recursive_init_error
+typeinfo for std::_Mutex_base<(__gnu_cxx::_Lock_policy)2>
+typeinfo for std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>
 typeinfo for std::_Sp_counted_ptr_inplace<std::__detail::_NFA<std::regex_traits<char>>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>
 typeinfo for std::_V2::error_category
 typeinfo for std::__codecvt_abstract_base<char, char, __mbstate_t>
@@ -9032,7 +9081,10 @@ typeinfo for std::__detail::_CharMatcher<std::regex_traits<char>, false, false>
 typeinfo for std::__detail::_CharMatcher<std::regex_traits<char>, false, true>
 typeinfo for std::__detail::_CharMatcher<std::regex_traits<char>, true, false>
 typeinfo for std::__detail::_CharMatcher<std::regex_traits<char>, true, true>
+typeinfo for std::__future_base::_Async_state_commonV2
+typeinfo for std::__future_base::_Result<void>
 typeinfo for std::__future_base::_Result_base
+typeinfo for std::__future_base::_State_baseV2
 typeinfo for std::__ios_failure
 typeinfo for std::__iosfail_type_info
 typeinfo for std::__moneypunct_cache<char, false>
@@ -9151,7 +9203,10 @@ typeinfo name for __cxxabiv1::__vmi_class_type_info
 typeinfo name for __gnu_cxx::__concurrence_lock_error
 typeinfo name for __gnu_cxx::__concurrence_unlock_error
 typeinfo name for __gnu_cxx::recursive_init_error
+typeinfo name for std::_Mutex_base<(__gnu_cxx::_Lock_policy)2>
+typeinfo name for std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>
 typeinfo name for std::_Sp_counted_ptr_inplace<std::__detail::_NFA<std::regex_traits<char>>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>
+typeinfo name for std::_Sp_make_shared_tag
 typeinfo name for std::_V2::error_category
 typeinfo name for std::__codecvt_abstract_base<char, char, __mbstate_t>
 typeinfo name for std::__codecvt_abstract_base<char16_t, char, __mbstate_t>
@@ -9214,7 +9269,10 @@ typeinfo name for std::__detail::_CharMatcher<std::regex_traits<char>, false, fa
 typeinfo name for std::__detail::_CharMatcher<std::regex_traits<char>, false, true>
 typeinfo name for std::__detail::_CharMatcher<std::regex_traits<char>, true, false>
 typeinfo name for std::__detail::_CharMatcher<std::regex_traits<char>, true, true>
+typeinfo name for std::__future_base::_Async_state_commonV2
+typeinfo name for std::__future_base::_Result<void>
 typeinfo name for std::__future_base::_Result_base
+typeinfo name for std::__future_base::_State_baseV2
 typeinfo name for std::__ios_failure
 typeinfo name for std::__iosfail_type_info
 typeinfo name for std::__moneypunct_cache<char, false>
@@ -9326,7 +9384,6 @@ typeinfo name for std::type_info
 typeinfo name for std::underflow_error
 typename
 t|AO
-uiTransparentPixels < PIXELS
 uint32_t libyuv::SumPixels(int, const uint16_t*)
 uint32_t libyuv::SumPixels_16(int, const uint32_t*)
 unable to register all schema data: %s\n
@@ -9344,7 +9401,6 @@ unsigned
 unsigned __int128
 unsigned char
 unsigned int
-unsigned int Etc::Image::IterateThroughWorstBlocks(unsigned int, unsigned int, unsigned int)
 unsigned long
 unsigned long const& std::max<unsigned long>(unsigned long const&, unsigned long const&)
 unsigned long const& std::min<unsigned long>(unsigned long const&, unsigned long const&)
@@ -9419,23 +9475,6 @@ virtual thunk to std::basic_ostringstream<char, std::char_traits<char>, std::all
 virtual thunk to std::basic_ostringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>::~basic_ostringstream()
 virtual thunk to std::basic_stringstream<char, std::char_traits<char>, std::allocator<char>>::~basic_stringstream()
 virtual thunk to std::basic_stringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>::~basic_stringstream()
-virtual void Etc::Block4x4Encoding_ETC1::PerformIteration(float)
-virtual void Etc::Block4x4Encoding_ETC1::SetEncodingBits()
-virtual void Etc::Block4x4Encoding_R11::InitFromEncodingBits(Etc::Block4x4*, unsigned char*, Etc::ColorFloatRGBA*, Etc::ErrorMetric)
-virtual void Etc::Block4x4Encoding_R11::PerformIteration(float)
-virtual void Etc::Block4x4Encoding_R11::SetEncodingBits()
-virtual void Etc::Block4x4Encoding_RG11::InitFromEncodingBits(Etc::Block4x4*, unsigned char*, Etc::ColorFloatRGBA*, Etc::ErrorMetric)
-virtual void Etc::Block4x4Encoding_RG11::PerformIteration(float)
-virtual void Etc::Block4x4Encoding_RG11::SetEncodingBits()
-virtual void Etc::Block4x4Encoding_RGB8::PerformIteration(float)
-virtual void Etc::Block4x4Encoding_RGB8::SetEncodingBits()
-virtual void Etc::Block4x4Encoding_RGB8A1::PerformIteration(float)
-virtual void Etc::Block4x4Encoding_RGB8A1::SetEncodingBits()
-virtual void Etc::Block4x4Encoding_RGB8A1_Opaque::PerformIteration(float)
-virtual void Etc::Block4x4Encoding_RGB8A1_Transparent::PerformIteration(float)
-virtual void Etc::Block4x4Encoding_RGBA8::PerformIteration(float)
-virtual void Etc::Block4x4Encoding_RGBA8_Opaque::PerformIteration(float)
-virtual void Etc::Block4x4Encoding_RGBA8_Transparent::PerformIteration(float)
 vkAcquireDrmDisplayEXT
 vkAcquireNextImage2KHR
 vkAcquireNextImageKHR
@@ -9865,6 +9904,7 @@ vkCreateImageView( VulkanDevice(), &imageViewCreateInfo, NULL, m_pImageView->Get
 vkCreateImageView( VulkanDevice(), &imageViewCreateInfo, NULL, m_pImageViewSrgb->GetPtr() )
 vkCreateImageView( VulkanDevice(), &imageViewCreateInfoSrgb, NULL, m_ImageViews.m_pImageViewSrgb->GetPtr() )
 vkCreateImageView( VulkanDevice(), &imageViewCreateInfoSrgb, NULL, m_ImageViews.m_vecPerMipLevelImageViewSrgb[ i ]->GetPtr())
+vkCreateImageView( VulkanDevice(), &mipCreateInfo, NULL, m_ImageViews.m_vecPerMipLevelCubeAsArrayImageView[ i ]->GetPtr() )
 vkCreateIndirectCommandsLayoutEXT
 vkCreateIndirectCommandsLayoutEXT failed with result %s\n
 vkCreateIndirectCommandsLayoutEXT( m_pDeviceVulkan, &createInfo, nullptr, &pIndirectCommandsLayout )
@@ -10166,6 +10206,7 @@ vkGetPhysicalDeviceSparseImageFormatProperties2KHR
 vkGetPhysicalDeviceSupportedFramebufferMixedSamplesCombinationsNV
 vkGetPhysicalDeviceSurfaceCapabilities2EXT
 vkGetPhysicalDeviceSurfaceCapabilities2KHR
+vkGetPhysicalDeviceSurfaceCapabilities2KHR returned error %s, not using VK_KHR_present_wait2 for swapchain '%s'\n
 vkGetPhysicalDeviceSurfaceCapabilitiesKHR
 vkGetPhysicalDeviceSurfaceCapabilitiesKHR returned error %s, skipping swapchain creation\n
 vkGetPhysicalDeviceSurfaceFormats2KHR
@@ -10337,29 +10378,6 @@ vmaMapMemory( GetVmaAllocator(), asyncReadback.m_pVmaAllocation, &pLockedData )
 vma_empty
 vma_memdump%d.json
 void
-void Etc::Block4x4::InitFromEtcEncodingBits(Etc::Image::Format, unsigned int, unsigned int, unsigned char*, Etc::Image*, Etc::ErrorMetric)
-void Etc::Block4x4::InitFromSource(Etc::Image*, unsigned int, unsigned int, unsigned char*, Etc::ErrorMetric)
-void Etc::Block4x4Encoding_ETC1::CalculateSourceAverages()
-void Etc::Block4x4Encoding_ETC1::TryDifferential(bool, unsigned int, int, int)
-void Etc::Block4x4Encoding_ETC1::TryDifferentialHalf(Etc::DifferentialTrys::Half*)
-void Etc::Block4x4Encoding_ETC1::TryIndividualHalf(Etc::IndividualTrys::Half*)
-void Etc::Block4x4Encoding_R11::CalculateR11(unsigned int, float, float)
-void Etc::Block4x4Encoding_RG11::CalculateG11(unsigned int, float, float)
-void Etc::Block4x4Encoding_RGB8::CalculateBaseColorsForTAndH()
-void Etc::Block4x4Encoding_RGB8::SetEncodingBits_H()
-void Etc::Block4x4Encoding_RGB8::SetEncodingBits_Planar()
-void Etc::Block4x4Encoding_RGB8::SetEncodingBits_T()
-void Etc::Block4x4Encoding_RGB8A1::SetEncodingBits_ETC1()
-void Etc::Block4x4Encoding_RGB8A1::SetEncodingBits_H()
-void Etc::Block4x4Encoding_RGB8A1::SetEncodingBits_T()
-void Etc::Block4x4Encoding_RGB8A1::TryDifferential(bool, unsigned int, int, int)
-void Etc::Block4x4Encoding_RGB8A1::TryDifferentialHalf(Etc::DifferentialTrys::Half*)
-void Etc::Block4x4Encoding_RGBA8::CalculateA8(float)
-void Etc::Image::FindEncodingWarningTypesForCurFormat()
-void Etc::Image::RunFirstPass(unsigned int, unsigned int)
-void Etc::Image::SetEncodingBits(unsigned int, unsigned int)
-void Etc::SortedBlockList::AddBlock(Etc::Block4x4*)
-void Etc::SortedBlockList::Sort()
 void libyuv::Convert16To8Row_C(const uint16_t*, uint8_t*, int, int)
 void libyuv::MergeAR64Row_C(const uint16_t*, const uint16_t*, const uint16_t*, const uint16_t*, uint16_t*, int, int)
 void libyuv::MergeARGB16To8Row_C(const uint16_t*, const uint16_t*, const uint16_t*, const uint16_t*, uint8_t*, int, int)
@@ -10609,7 +10627,10 @@ vtable for std::__cxx11::time_get<char, std::istreambuf_iterator<char, std::char
 vtable for std::__cxx11::time_get<wchar_t, std::istreambuf_iterator<wchar_t, std::char_traits<wchar_t>>>
 vtable for std::__cxx11::time_get_byname<char, std::istreambuf_iterator<char, std::char_traits<char>>>
 vtable for std::__cxx11::time_get_byname<wchar_t, std::istreambuf_iterator<wchar_t, std::char_traits<wchar_t>>>
+vtable for std::__future_base::_Async_state_commonV2
+vtable for std::__future_base::_Result<void>
 vtable for std::__future_base::_Result_base
+vtable for std::__future_base::_State_baseV2
 vtable for std::__ios_failure
 vtable for std::__iosfail_type_info
 vtable for std::__moneypunct_cache<char, false>
@@ -10713,38 +10734,42 @@ vtable for std::time_put_byname<char, std::ostreambuf_iterator<char, std::char_t
 vtable for std::time_put_byname<wchar_t, std::ostreambuf_iterator<wchar_t, std::char_traits<wchar_t>>>
 vtable for std::type_info
 vtable for std::underflow_error
+vulkan
 vulkan/asynccompilehelpervulkan.cpp
 vulkan/memorymgrvulkan.cpp
-vulkan/memorymgrvulkan.cpp(1617): vmaCreatePool failed with error: %d\n
-vulkan/memorymgrvulkan.cpp(1691): vmaCreatePool failed with error: %d\n
-vulkan/memorymgrvulkan.cpp:803
+vulkan/memorymgrvulkan.cpp(1660): vmaCreatePool failed with error: %d\n
+vulkan/memorymgrvulkan.cpp(1734): vmaCreatePool failed with error: %d\n
+vulkan/memorymgrvulkan.cpp:839
 vulkan/pipelinecachemgrvulkan.cpp
 vulkan/pipelinemgrvulkan.cpp
 vulkan/raytracevulkan.cpp
 vulkan/rendercontextvulkan.cpp
 vulkan/rendercontextvulkan.cpp(449): 
-vulkan/rendercontextvulkan.cpp(6475):  - invalid offset, aborting texture update to avoid hanging the GPU [texture: %s].\n
+vulkan/rendercontextvulkan.cpp(6464):  - invalid offset, aborting texture update to avoid hanging the GPU [texture: %s].\n
 vulkan/renderdevicevulkan.cpp
-vulkan/renderdevicevulkan.cpp(10054): failed to allocate GPU memory in custom pool for %s.\n
-vulkan/renderdevicevulkan.cpp(10121): vmaBindImageMemory failed for image %s with error %d.\n
-vulkan/renderdevicevulkan.cpp(10153): Unable to get Vulkan image for %s.\n
-vulkan/renderdevicevulkan.cpp(10159): no allocation for image %s.\n
-vulkan/renderdevicevulkan.cpp(10306): failed to allocate GPU memory in custom pool for %s.\n
-vulkan/renderdevicevulkan.cpp(10361): vmaBindImageMemory failed for buffer %s with error %d.\n
-vulkan/renderdevicevulkan.cpp(10399): Unable to get Vulkan buffer.\n
-vulkan/renderdevicevulkan.cpp(10405): no allocation for buffer %s.\n
-vulkan/renderdevicevulkan.cpp(10480): Unable to get Vulkan image for %s.\n
-vulkan/renderdevicevulkan.cpp(10486): no allocation for image %s.\n
-vulkan/renderdevicevulkan.cpp(10504): Unable to get Vulkan buffer.\n
-vulkan/renderdevicevulkan.cpp(10510): no allocation for buffer %s.\n
-vulkan/renderdevicevulkan.cpp(9975): Allocation already set for %s, it is not valid to assign a new allocation.\n
+vulkan/renderdevicevulkan.cpp(10177): Allocation already set for %s, it is not valid to assign a new allocation.\n
+vulkan/renderdevicevulkan.cpp(10256): failed to allocate GPU memory in custom pool for %s.\n
+vulkan/renderdevicevulkan.cpp(10323): vmaBindImageMemory failed for image %s with error %d.\n
+vulkan/renderdevicevulkan.cpp(10356): Unable to get Vulkan image for %s.\n
+vulkan/renderdevicevulkan.cpp(10362): no allocation for image %s.\n
+vulkan/renderdevicevulkan.cpp(10513): failed to allocate GPU memory in custom pool for %s.\n
+vulkan/renderdevicevulkan.cpp(10568): vmaBindImageMemory failed for buffer %s with error %d.\n
+vulkan/renderdevicevulkan.cpp(10606): Unable to get Vulkan buffer.\n
+vulkan/renderdevicevulkan.cpp(10612): no allocation for buffer %s.\n
+vulkan/renderdevicevulkan.cpp(10705): Unable to get Vulkan image for %s.\n
+vulkan/renderdevicevulkan.cpp(10711): no allocation for image %s.\n
+vulkan/renderdevicevulkan.cpp(10729): Unable to get Vulkan buffer.\n
+vulkan/renderdevicevulkan.cpp(10735): no allocation for buffer %s.\n
+vulkan/renderdevicevulkan.cpp(3320): 
+vulkan/renderdevicevulkan.cpp(4535): 
 vulkan/renderdevicevulkan.h
 vulkan/renderthreadvulkan.cpp
 vulkan/shadertablevulkan.cpp
 vulkan/texturevulkan.cpp
-vulkan/texturevulkan.cpp(1405): 
+vulkan/texturevulkan.cpp(1475): 
 vulkan/vulkanfunctions.h
 vulkan_peer2peer_mgpu.vtex
+vulkan_pipeline_cache_max_size_mb
 vulkan_readpixels_resolve
 warning: NVSDK_NGX_VULKAN_RequiredExtensions will be deprecated in future SDK release. Use NVSDK_NGX_VULKAN_GetFeatureInstanceExtensionRequirements() and NVSDK_NGX_VULKAN_GetFeatureRequirements() instead
 wchar_t
@@ -10781,7 +10806,6 @@ wmemset
 workGroupOffset
 wpp >= 1 && wpp <= 2
 wrinkle
-write
 writeMask
 writing renderdoc capture to %s\n
 wyS]

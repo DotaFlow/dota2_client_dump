@@ -12,7 +12,6 @@
    Mip   Resident   Overhead   Overhead %%   256 pages\n
    SST: %.1f MB, uncompressed: %d MB (compression: %.1f%%)\n
    SST: EMPTY (no static geo rendered into any tiles, must be flagged as baked only)\n
-  ! %d leaked drawlists\n
   %-11s %10s %11s %12s %12s %9s\n
   %-14s %10s   %s\n
   %-14s %10s   (%s depth-only, %s fast-path depth-only)\n
@@ -103,6 +102,7 @@
  CentralNode=1
  DebugLevel:
  DockingEnable
+ Faint horizontal lines are the baseline averages.
  HasCentralNodeChild
  HasGamepad
  HasMouseCursors
@@ -403,6 +403,7 @@
 ##VerticalScrolling
 ##XContext
 ##YContext
+##baseline%d
 ##bez
 ##canvas
 ##cell
@@ -413,6 +414,7 @@
 ##columns_count
 ##csx
 ##current
+##cursor
 ##curvessegmentoverride
 ##data
 ##dndxy
@@ -422,7 +424,9 @@
 ##frames
 ##gradient1
 ##gradient2
+##graph
 ##hex
+##hidebelow
 ##hsv
 ##image
 ##input_end_frame
@@ -442,6 +446,7 @@
 ##palette
 ##panel
 ##picker
+##plot
 ##pos
 ##preview
 ##previewing_picker
@@ -452,6 +457,7 @@
 ##right
 ##routes
 ##sec
+##seconds
 ##selectable
 ##show_table_rects_type
 ##show_windows_rect_type
@@ -505,6 +511,7 @@ $ORIGIN
 %*s%s%*s
 %*sHello, sailor! Making this line long enough for the example.
 %*sThis is line %d
+%+.3f
 %-16s 
 %.*Lf
 %.*g
@@ -515,6 +522,7 @@ $ORIGIN
 %.0f
 %.0f (Always)
 %.0f deg
+%.0f s
 %.0f us
 %.0f%%
 %.0f/%.0f
@@ -530,6 +538,7 @@ $ORIGIN
 %.2f
 %.2f ms
 %.2f px
+%.2f s
 %.2f x %.2f
 %.2f\nsec
 %.2fms
@@ -573,12 +582,14 @@ $ORIGIN
 %d assets
 %d columns
 %d current allocations
+%d frames over %.1f s. %s Click a marker to plot it.%s
 %d past errors skipped.
 %d some text
 %d vertices, %d indices (%d triangles)
 %d visible windows, %d current allocations
 %d%%
 %d%s
+%d,%.4f
 %d-%02d
 %d-%02d-%02d
 %d-%d
@@ -599,10 +610,12 @@ $ORIGIN
 %i - %i
 %i The quick brown fox jumps over the lazy dog
 %i The quick brown fox jumps over the lazy dog\n
+%i barrier groups
 %i dynamic, %i cached, %i failed, %i lru'd in %ix%i atlas | %i requests, %i reused, %i re-renders drawn (%i held)
 %i filtered textures
 %i loaded models, %i allocations.  using %.1f%% of atlas
 %i object%s, %i draw call%s, %s tris
+%i of %i passes reordered, %i schedule batches
 %i requests, %i reused without re-render%s
 %i resources used
 %i textures
@@ -646,6 +659,7 @@ $ORIGIN
 %s is wrong format %s - expected %s!\n
 %s###Menu_%02d
 %s###doc%d
+%s##%d
 %s##path
 %s%s%s
 %s%s%s%s%s
@@ -656,6 +670,7 @@ $ORIGIN
 %s.ini
 %s.log
 %s/%08X
+%s/%s
 %s/%s's viewport (%d,%d - %d,%d) extends outside of the framebuffer (%d,%d)
 %s/%s_%08X
 %s/DockSpace_%08X
@@ -687,6 +702,8 @@ $ORIGIN
 %s\n%.0f/%.0f
 %s\nIndex: %d
 %s\nLOD Level: %d Draw Calls: %d Triangles: %d
+%s_frames.csv
+%s_summary.csv
 %u ms
 '%c' (0x%04X)
 (!((uintptr_t)(src_height) & ((2)-1)))
@@ -755,7 +772,6 @@ $ORIGIN
 *EXPERIMENTAL* Ctrl+C copy the contents of focused window into the clipboard.\n\nExperimental because:\n- (1) has known issues with nested Begin/End pairs.\n- (2) text output quality varies.\n- (3) text output is in submission order rather than spatial order.
 *Missing Text*
 *N12_GLOBAL__N_117io_error_categoryE
-*N12_GLOBAL__N_121future_error_categoryE
 *N12_GLOBAL__N_121system_error_categoryE
 *N12_GLOBAL__N_122generic_error_categoryE
 *N24CParallelProcessLauncher18CParallelLambdaJobIZ11ParallelForILb1EZN25CAggregateSceneObjectDesc21OnBeginRenderingFrameEvEUliE_EviiPKcOT0_ii13JobPriority_tQ14is_invocable_vIS6_JiEEEUliE_EE
@@ -786,26 +802,28 @@ $ORIGIN
 *St23_Sp_counted_ptr_inplaceIZN29CInstancedMeshSceneObjectDesc25OnBeginSubmitDisplayListsEP14IRenderContextE19ReadStatsCallback_tSaIvELN9__gnu_cxx12_Lock_policyE2EE
 *Unknown item*
 *ZN10CSceneView8AtFinishEvEUlvE_
-*ZN11IThreadPool17QueueJobWithFlagsIZN12CSceneSystem26Thread_RenderLayerDrawListESt10shared_ptrI13CViewDrawListEP11CSceneLayerP16CRenderBatchList18EBatchStartFlags_tRK16DrawListVector_tEUlvE0_EE9CSmartPtrI12CThreadedJob17CRefCountAccessorEPKc13JobPriority_tjOT_E10CLambdaJob
-*ZN12CSceneSystem11RenderAViewEP10CSceneViewfEUlvE0_
-*ZN12CSceneSystem11RenderAViewEP10CSceneViewfEUlvE_
-*ZN12CSceneSystem16KickoffBatchListESt10shared_ptrI13CViewDrawListEP11CSceneLayerR16DrawListVector_tRN16ISceneObjectDesc24GeneratePrimitivesArgs_tEbEUlvE_
+*ZN11IThreadPool17QueueJobWithFlagsIZN15CVtTileStreamer20DecompressTilesAsyncEO10CUtlVectorI21VtTileStreamRequest_ti25CUtlVectorMemory_GrowableIS3_iLm0EEEOS2_IhiS4_IhiLm0EEEEUlvE_EE9CSmartPtrI12CThreadedJob17CRefCountAccessorEPKc13JobPriority_tjOT_E10CLambdaJob
+*ZN12CSceneSystem11RenderAViewEP10CSceneViewEUlvE0_
+*ZN12CSceneSystem11RenderAViewEP10CSceneViewEUlvE_
+*ZN12CSceneSystem16KickOffBatchListEP11CSceneLayerSt10shared_ptrI13CViewDrawListEO14CUtlLeanVectorI20CMeshDrawPrimitive_ti18CMemAllocAllocatorEEUlvE_
 *ZN12CSceneSystem17Thread_RenderViewEP10CSceneViewEUlvE0_
 *ZN12CSceneSystem17Thread_RenderViewEP10CSceneViewEUlvE1_
 *ZN12CSceneSystem17Thread_RenderViewEP10CSceneViewEUlvE_
 *ZN12CSceneSystem21SubmitAllDisplayListsEP19SwapChainHandle_t__EUlvE1_
 *ZN12CSceneSystem21SubmitAllDisplayListsEP19SwapChainHandle_t__EUlvE2_
-*ZN12CSceneSystem21SubmitAllDisplayListsEP19SwapChainHandle_t__EUlvE3_
 *ZN12CSceneSystem22ReleaseLayerDependentsERKSt10shared_ptrI13CViewDrawListEP11CSceneLayerEUlvE0_
 *ZN12CSceneSystem22ReleaseLayerDependentsERKSt10shared_ptrI13CViewDrawListEP11CSceneLayerEUlvE1_
 *ZN12CSceneSystem22ReleaseLayerDependentsERKSt10shared_ptrI13CViewDrawListEP11CSceneLayerEUlvE_
-*ZN12CSceneSystem26Thread_RenderLayerDrawListESt10shared_ptrI13CViewDrawListEP11CSceneLayerP16CRenderBatchList18EBatchStartFlags_tRK16DrawListVector_tEUlvE_
+*ZN12CSceneSystem22Thread_RenderViewLayerESt10shared_ptrI13CViewDrawListEP11CSceneLayerEUlRK20VisibleSceneObject_tPK8CPVSBitsE_
+*ZN12CSceneSystem26Thread_RenderLayerDrawListESt10shared_ptrI13CViewDrawListEP11CSceneLayerP16CRenderBatchList18EBatchStartFlags_tS0_I14CUtlLeanVectorI20CMeshDrawPrimitive_ti18CMemAllocAllocatorEEEUlvE_
 *ZN12CSceneSystem28Thread_RenderGpuCullingLayerESt10shared_ptrI13CViewDrawListEP11CSceneLayerEUlvE_
+*ZN12CSceneSystem29Thread_ProcessProceduralLayerEP10CSceneViewP11CSceneLayerSt10shared_ptrI13CViewDrawListEEUlRK20VisibleSceneObject_tPK8CPVSBitsE_
 *ZN12CSceneSystem30GenerateVertexCacheUpdateTasksER10CUtlVectorI9CSmartPtrI13CThreadFutureIP12CDisplayListE17CRefCountAccessorEi25CUtlVectorMemory_GrowableIS7_iLm0EEEbbEUlvE0_
 *ZN12CSceneSystem30GenerateVertexCacheUpdateTasksER10CUtlVectorI9CSmartPtrI13CThreadFutureIP12CDisplayListE17CRefCountAccessorEi25CUtlVectorMemory_GrowableIS7_iLm0EEEbbEUlvE1_
 *ZN12CSceneSystem30GenerateVertexCacheUpdateTasksER10CUtlVectorI9CSmartPtrI13CThreadFutureIP12CDisplayListE17CRefCountAccessorEi25CUtlVectorMemory_GrowableIS7_iLm0EEEbbEUlvE2_
+*ZN12CSceneSystem30GenerateVertexCacheUpdateTasksER10CUtlVectorI9CSmartPtrI13CThreadFutureIP12CDisplayListE17CRefCountAccessorEi25CUtlVectorMemory_GrowableIS7_iLm0EEEbbEUlvE3_
 *ZN12CSceneSystem30GenerateVertexCacheUpdateTasksER10CUtlVectorI9CSmartPtrI13CThreadFutureIP12CDisplayListE17CRefCountAccessorEi25CUtlVectorMemory_GrowableIS7_iLm0EEEbbEUlvE_
-*ZN12CSceneSystem32ReleaseProceduralLayerDependentsEP11CSceneLayerEUlvE_
+*ZN12CSceneSystem32ReleaseProceduralLayerDependentsEP11CSceneLayerSt10shared_ptrI13CViewDrawListEEUlvE_
 *ZN15CLightBinnerGPU18GatherHammerLightsEvEUlP17CSceneLightObjectE_
 *ZN15CLightBinnerGPU25AddEnvironmentMapsForViewEP10CSceneViewEUlP18CEnvMapSceneObjectE_
 *ZN15CLightBinnerGPU25DebugLightProbeVolumeGridEP10CSceneViewEUlP28CSceneLightProbeVolumeObjectE0_
@@ -813,6 +831,7 @@ $ORIGIN
 *ZN15CLightBinnerGPU26GatherIndirectBounceLightsEvEUlP17CSceneLightObjectE_
 *ZN15CLightBinnerGPU26GatherIndirectBounceLightsEvEUlP21CSceneBarnLightObjectE_
 *ZN15CLightBinnerGPU27AddLightProbeVolumesForViewEP10CSceneViewEUlP28CSceneLightProbeVolumeObjectE_
+*ZN15CVtTileStreamer21SubmitPendingRequestsEvEUlP25IAsyncResourceDataRequestE_
 *ZN15CVtTileStreamer21SubmitPendingRequestsEvEUlP25IAsyncResourceDataRequestSt10unique_ptrI25IAsyncProcessedDataResultSt14default_deleteIS3_EEE_
 *ZN16CRenderBatchList21DrawCurrentPrimitivesEvEUlvE0_
 *ZN16CRenderBatchList21DrawCurrentPrimitivesEvEUlvE_
@@ -843,6 +862,8 @@ $ORIGIN
 , but was 
 , not just within "
 , still streaming
+,%.3f
+,%.4f,%.4f,%.4f,%.4f,%.4f,%.4f,%d,
 - First Input that contains the glyph is used.\n- Use ImFontConfig::GlyphExcludeRanges[] to specify ranges to ignore glyph in given Input.\n- Prefer using a small number of ranges as the list is scanned every time a new glyph is loaded,\n  - e.g. GlyphExcludeRanges[] = { ICON_MIN_FA, ICON_MAX_FA, 0 };\n- This tool doesn't cache results and is slow, don't keep it open!
 - Load additional fonts with io.Fonts->AddFontXXX() functions.\n- Read FAQ and docs/FONTS.md for more details.
 - Load additional fonts with io.Fonts->AddFontXXX() functions.\n- The font atlas is built when calling io.Fonts->GetTexDataAsXXXX() or io.Fonts->Build().\n- Read FAQ and docs/FONTS.md for more details.\n- If you need to add/remove fonts at runtime (e.g. for DPI change), do it before calling NewFrame().
@@ -858,8 +879,6 @@ $ORIGIN
 --------------------------------\n
 --> granting current route\n
 -0123456789
-->\n  [%s:%s]
-->\n  [%s:%s] %s
 -inf
 .  Please update your library.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
 . Difference of 
@@ -867,8 +886,6 @@ $ORIGIN
 ..-         -XXXXXXX-    X    -           X           -XXXXXXX          -          XXXXXXX-     XX          - XX       XX ..-         -X.....X-   X.X   -          X.X          -X.....X          -          X.....X-    X..X         -X..X     X..X---         -XXX.XXX-  X...X  -         X...X         -X....X           -           X....X-    X..X         -X...X   X...XX           -  X.X  - X.....X -        X.....X        -X...X            -            X...X-    X..X         - X...X X...X XX          -  X.X  -X.......X-       X.......X       -X..X.X           -           X.X..X-    X..X         -  X...X...X  X.X         -  X.X  -XXXX.XXXX-       XXXX.XXXX       -X.X X.X          -          X.X X.X-    X..XXX       -   X.....X   X..X        -  X.X  -   X.X   -          X.X          -XX   X.X         -         X.X   XX-    X..X..XXX    -    X...X    X...X       -  X.X  -   X.X   -    XX    X.X    XX    -      X.X        -        X.X      -    X..X..X..XX  -     X.X     X....X      -  X.X  -   X.X   -   X.X    X.X    X.X   -       X.X       -       X.X       -    X..X..X..X.X -    X...X    X.....X     -  X.X  -   X.X   -  X..X    X.X    X..X  -        X.X      -      X.X        -XXX X..X..X..X..X-   X.....X   X......X    -  X.X  -   X.X   - X...XXXXXX.XXXXXX...X -         X.X   XX-XX   X.X         -X..XX........X..X-  X...X...X  X.......X   -  X.X  -   X.X   -X.....................X-          X.X X.X-X.X X.X          -X...X...........X- X...X X...X X........X  -  X.X  -   X.X   - X...XXXXXX.XXXXXX...X -           X.X..X-X..X.X           - X..............X-X...X   X...XX.........X -XXX.XXX-   X.X   -  X..X    X.X    X..X  -            X...X-X...X            -  X.............X-X..X     X..XX..........X-X.....X-   X.X   -   X.X    X.X    X.X   -           X....X-X....X           -  X.............X- XX       XX X......XXXXX-XXXXXXX-   X.X   -    XX    X.X    XX    -          X.....X-X.....X          -   X............X--------------X...X..X    ---------   X.X   -          X.X          -          XXXXXXX-XXXXXXX          -   X...........X -             X..X X..X   -       -XXXX.XXXX-       XXXX.XXXX       -------------------------------------    X..........X -             X.X  X..X   -       -X.......X-       X.......X       -    XX           XX    -           -    X..........X -             XX    X..X  -       - X.....X -        X.....X        -   X.X           X.X   -           -     X........X  -                   X..X  -       -  X...X  -         X...X         -  X..X           X..X  -           -     X........X  -                    XX   -       -   X.X   -          X.X          - X...XXXXXXXXXXXXX...X -           -     XXXXXXXXXX  -             -------------       -    X    -           X           -X.....................X-           -------------------                                 ----------------------------------- X...XXXXXXXXXXXXX...X -                                                                                                 -  X..X           X..X  -                                                                                                 -   X.X           X.X   -                                                                                                 -    XX           XX    -                                           
 ...<truncated>...
 ../../_build_/scenesystem/_vpc_scenesystem/default/linuxsteamrt64/_schema_/release/../../../../../../../src/scenesystem/lightbinner_gpu.cpp
-../../src/thirdparty/tinybvh/inc_tiny_bvh.h
-../public/scenesystem/sceneobject.h
 ../public/tier0/tslist.h
 ../public/tier0/utldict.h
 ./google/protobuf/arena.h
@@ -949,7 +966,6 @@ $ORIGIN
 11CSceneLayer
 11CSceneUtils
 11CSceneWorld
-11IRefCounted
 11ISceneLayer
 11ISceneUtils
 11ISceneWorld
@@ -958,7 +974,6 @@ $ORIGIN
 123456
 12CMsgVector2D
 12CNETMsg_Tick
-12CRefCounted1I11IRefCounted20CRefCountServiceBaseI6CRefMTEE
 12CSceneObject
 12CSceneSystem
 12CShadowAtlas
@@ -1021,10 +1036,13 @@ $ORIGIN
 18CEnvMapSceneObject
 18CHairRenderContext
 18CMonitorObjectDesc
+18CProceduralRTProxy
 18CRenderingPipeline
 18CSceneSkyBoxObject
+18CThreadedJobSource
 18IModelRenderHelper
 18IMultipleWorkerJob
+18IProceduralRTProxy
 18IRenderingPipeline
 19CClutterSceneObject
 19CDebugLayerRenderer
@@ -1051,6 +1069,7 @@ $ORIGIN
 20CPostConnectCallback
 20CRefCountServiceBaseI6CRefMTE
 20IPathTraceSceneWorld
+20IRayTraceComputeWork
 20ISceneObjectDescBaseI17CSceneLightObjectE
 20ISceneObjectDescBaseI21CSceneBarnLightObjectE
 20ISceneObjectDescBaseI21CSceneDebugTextObjectE
@@ -1062,6 +1081,7 @@ $ORIGIN
 20ISceneObjectDescBaseI33CAmbientOcclusionProxySceneObjectE
 20ISceneObjectDescBaseI33CDistanceFieldInstanceSceneObjectE
 20ISceneObjectDescBaseIN23CCharacterDecalRenderer26CCharacterDecalSceneObjectEE
+20VtDecompressedTile_t
 21CAggregateSceneObject
 21CResolveLayerRenderer
 21CSSTDepthCopyRenderer
@@ -1100,6 +1120,7 @@ $ORIGIN
 23ICharacterDecalRenderer
 23ISceneViewDebugOverlays
 24 Hour Clock
+24CBarnLightObjectDescNull
 24CFixedSizeCircularBufferI20CGPUProfHistoryFrameLi128EiE
 24CPointLightObjectDescGPU
 24CSignalSemaphoreRenderer
@@ -1114,6 +1135,7 @@ $ORIGIN
 25CRenderingPipelineFactoryI25CRenderingPipelineForwardE
 25CRenderingPipelineForward
 25CSceneLPVSampleGridObject
+25IAsyncProcessedDataResult
 25IRenderingPipelineFactory
 26CAnimatableSceneObjectDesc
 26CParallelProcessorAbstractI18CParallelProcessorI22GenerateTileWorkUnit_t27CMemberFuncJobItemProcessorIS1_22CBuildSparseShadowTreeS3_ELi1EEE
@@ -1132,6 +1154,7 @@ $ORIGIN
 28CTextureBarrierLayerRenderer
 28CTextureDisplayLayerRenderer
 28ISceneEnvironmentMapListener
+28ITimestampFrameGraphListener
 28QuantizedFloatEncoderAlias_t
 29CBaseNonPooledSceneObjectDescI18C6FaceSkyboxObjectE
 29CBaseRenderingPipelineFactory
@@ -1143,6 +1166,7 @@ $ORIGIN
 3. I am selectable
 30CDirectionalLightObjectDescGPU
 30CFarfieldProbeVolumeObjectDesc
+30CGPUProfilerFrameGraphListener
 30CLightProbeVolumeObjectDescGPU
 30CProjectedDecalSceneObjectDesc
 30CSVCMsgList_GameEvents_event_t
@@ -1170,7 +1194,6 @@ $ORIGIN
 37CDistanceFieldInstanceSceneObjectDesc
 38IMaxSwapChainDimensionsChangedListener
 3ways
-3|87@
 4 (tab skip)
 4-wide
 4. I am double clickable
@@ -1659,7 +1682,6 @@ Another bullet point
 Anti-aliased fill
 Anti-aliased lines
 Anti-aliased lines use texture
-Any request for a duplicate dispatch/mesh shader primitive in an outputbuffer must previously set the dispatch buffer
 AnyHit0
 AnyHit1
 AnyHit2
@@ -1720,6 +1742,7 @@ Auto/Current
 Avail %.2f
 Available
 Average block Stream Time: %4.2fms
+Avg ms
 Avocado
 Axes
 Axis Constraints
@@ -1808,9 +1831,8 @@ Bar Plot
 Bar Plots
 Bar Stacks
 BarnLight
-BarnLightObjectDesc
-Barrier\n  [%s:%s] %s\n
-Barrier\n  [%s:%s]\n
+Barrier\n  [%s:%s] %s\n->\n  [%s:%s] %s
+Barrier\n  [%s:%s]\n->\n  [%s:%s]
 Barry
 Bars
 BaseSceneObjectDesc
@@ -1882,7 +1904,6 @@ BrBG
 Bream
 Brianna
 Broccoli
-Broken promise
 Brussels Sprouts
 Bryn
 BudgetGroupName - FIXME
@@ -1943,6 +1964,7 @@ CAnimationDecodeContext::AddAnimationDecodeDesc ran out of allocator memory (2)\
 CAnimationDecodeContext::AddAnimationDecodeDesc ran out of allocator memory (3)\n
 CAtomicMutex::AcquireLock(unsigned long long)
 CBarnLightObjectDescGpu
+CBarnLightObjectDescNull
 CBaseSceneObjectDesc
 CBlitTextureToBackBufferLayer
 CBufferString::AppendConcat(int, char const* const*, int const*, bool)
@@ -2375,7 +2397,7 @@ CThreadSemaphore::~CThreadSemaphore()
 CThreadSyncObject::Wait(unsigned int)
 CThreadSyncObject::WaitImpl(unsigned int)
 CThreadSyncObject::~CThreadSyncObject()
-CThreadedJob::WaitOrImmediatelyExecute()
+CThreadedJobSource::SignalEventMonitor(CThreadedJobSource*)
 CULLING
 CURRENTLY APPENDING
 CUniformRandomStreamImpl<CThreadNullMutex>::CUniformRandomStreamImpl()
@@ -2579,6 +2601,7 @@ Clear All
 Clear Queries
 Clear Vel Volume
 Clear bakes
+Clear baseline
 Clear items
 Clear nodes
 Clear settings
@@ -2914,7 +2937,8 @@ DecalRenderingLayer
 DecalRenderingView
 December
 Declared shortcut routes automatically set key owner when mods matches.
-DecompressTextureBits
+DecompressTextureBits: %u bytes of texture data, but %d mips of %dx%d %s need %u; it comes out black\n
+DecompressTextureBits: virtual texture %s; it comes out black\n
 Decoration
 Decorations:
 Deep
@@ -3038,6 +3062,7 @@ Drag and drop to copy/swap items
 Drag bottom border to resize. Double-click bottom border to auto-fit to vertical contents.
 Drag from window title bar or their tab to dock/undock. Hold SHIFT to disable docking.\n\nDrag from window menu button (upper-left button) to undock an entire node (all windows).
 Drag from window title bar or their tab to dock/undock. Hold SHIFT to enable docking.\n\nDrag from window menu button (upper-left button) to undock an entire node (all windows).
+Drag or scroll the plot to change the range.
 Drag to reorder items (simple)
 Drag/Slider Flags
 Drag/drop items between plots.
@@ -3074,7 +3099,6 @@ DrawLists
 DrawLists (%d)
 DrawShadowMapsForLight
 Drawing aggregates without valid meshlets, please recompile the map!
-Drawing instanced meshes without meshlets, please recompile the map!
 Draws/Dispatches
 Dummy
 Dynamic Decals
@@ -3122,6 +3146,7 @@ Enable logarithmic editing (more precision for small values).
 Enable multithreading to use std::thread
 Enable outer-most padding (default if ImGuiTableFlags_BordersOuterV is set)
 Enable resizing of windows from their edges and from the lower-left corner.\nThis requires ImGuiBackendFlags_HasMouseCursors for better mouse cursor feedback.
+Enable scheduler to migrate barriers
 Enable scrolling page by page when clicking outside the scrollbar grab.\nWhen disabled, always scroll to clicked location.\nWhen enabled, Shift+Click scrolls to clicked location.
 Enable turning DragXXX widgets into text input with a simple mouse click-release (without moving).
 Enable various tools calling IM_DEBUG_BREAK().\n\nRequires a debugger being attached, otherwise IM_DEBUG_BREAK() options will appear to crash your application.
@@ -3138,6 +3163,7 @@ Engine2/RenderingPipeline
 Engine2/RenderingPipeline/AmbientOcclusionProxies
 Engine2/RenderingPipeline/DistanceField
 Engine2/RenderingPipeline/OpaqueFade
+Ensure layout\n  -> %s
 EnsureCapacity
 EnsureElementCapacity
 EnsureMemberCapacity
@@ -3274,11 +3300,12 @@ FarfieldProbeVolume
 FarfieldSDFVolume
 FastHexToBuffer() wants non-negative integers, not 
 Faster lines using texture data. Require backend to render with bilinear filtering (not point/nearest filtering).
+Fatal error in %s, line %i:\n%s\n
 Feature is currently in Beta. Please read comments in imgui.h
 Features
 Features:
 February
-Feedback: %u shader writes -> %u unique records (%u readbacks so far)
+Feedback: %u unique records, %u dropped this frame (%u readbacks so far)
 Feel free to add support for more if you need it.
 Field "
 Field "$0" uses reserved number $1.
@@ -3338,6 +3365,7 @@ First argument to Swap() (of type "
 First argument to SwapFields() (of type "
 First calls to Begin()/BeginChild() will return false.\n\nTHIS OPTION IS DISABLED because it needs to be set at application boot-time to make sense. Showing the disabled option is a way to make this feature easier to discover.
 First group hovered
+First use, waits for all earlier work\n->\n  [%s:%s]
 FitPadding
 Five
 Fixed
@@ -3437,6 +3465,7 @@ Friday
 Frogs
 Frozen columns
 Frozen rows
+Frozen while the mouse is over the plot.
 Frust+Illum
 Frustum
 Full-width:
@@ -3445,7 +3474,6 @@ Fullscreen window
 Fullsort
 Functions
 Funding
-Future already retrieved
 FvP12CSceneObjectE
 G8R8_G8B8_UNORM
 G:%0.3f
@@ -3456,11 +3484,11 @@ GC now
 GCC: (SteamRT 14.2.0-19~steamrt3.1+bsrt3.1) 14.2.0
 GCC: (SteamRT 4.8.4-1ubuntu15~12.04+steamrt1.2+srt2) 4.8.4
 GCC: (SteamRT 5.4.0-7.really.6+steamrt1.2+srt2) 5.4.1 20160803
-GCC: (SteamRT 9.3.0-13+steamrt1.2+srt1) 9.3.0
 GENERAL
 GEOMETRY
 GGGG
 GLIBCXX_TUNABLES
+GLIBC_2.12
 GLIBC_2.14
 GLIBC_2.17
 GLIBC_2.2.5
@@ -3481,6 +3509,10 @@ GPU Instance Mem  : %s allocated, %s written, %s used
 GPU Memory Size
 GPU Time: %.2f ms
 GPU Transform Mem : %s allocated, %s written, %s used
+GPU profiler is already recording.\n
+GPU profiler is not recording.\n
+GPU profiler recording has no frames, nothing written.\n
+GPU profiler recording started.\n
 GPUProfiler
 GPUSort
 GameStartup
@@ -3576,6 +3608,7 @@ GrabMinSize
 GrabRounding
 Gradients
 Grapefruit
+Graph
 GraphicsMisc
 GraveAccent
 Greys
@@ -3686,6 +3719,7 @@ Hex-encode non-ASCII
 HiddenTabBar
 Hide
 Hide Filtered
+Hide below
 Hide tab bar###HideTabBar
 Hierarchy lines
 High:  $%.2f
@@ -3735,6 +3769,7 @@ HoveredWindow->Root: '%s'
 HoveredWindow: '%s'
 HoveredWindowUnderMovingWindow: '%s'
 Hovering the colored canvas will override io.WantCaptureXXX fields.\nNotice how normally (when set to none), the value of io.WantCaptureKeyboard would be false when hovering and true when clicking.
+How much more estimated pooled memory than submission order a run of reordered passes may use, as a percentage of the submission order peak
 Hyperlink
 I am a a tooltip for a disabled item.
 I am a fancy tooltip
@@ -4224,6 +4259,7 @@ Infinite Lines
 InitCpuFlags
 InitGfxObjects
 Initial Texture Barriers
+Initial layout\n  UNDEFINED -> %s
 Initialized: %s
 InlayText
 Inline color editor
@@ -4380,6 +4416,7 @@ J444ToARGB
 JArray
 JJJJ
 January
+JobSource
 Jobs
 Joint Indices (%d) Out Of Range for SINT16: Skinning will not work!\n
 Joint Indices (%d) Out Of Range for UINT10: Skinning will not work!\n
@@ -4476,13 +4513,13 @@ Label4
 Label5
 Label: %s
 LabelPadding
+Last
 LastRequest = time: %.2f, frame: %d
 LastSelectionSize = %d
 Layer
 Layer Buffer Barriers
 Layout
 Layout & Scrolling
-Layout -> %s
 Layout/Basic Horizontal Layout
 Layout/Basic Horizontal Layout/Dummy
 Layout/Basic Horizontal Layout/Manual wrapping
@@ -4529,6 +4566,7 @@ LightBinner
 LightProbeVolume
 LightProbeVolumeDebugColors
 LightProbeVolumeDebugColors_%s
+LightSim_Opacity
 LightmapUV
 LightmapUVW
 Like this one
@@ -4676,6 +4714,7 @@ MapValueRef::SetStringValue
 MapValueRef::SetUInt32Value
 MapValueRef::SetUInt64Value
 March
+Marker
 Marker Size
 Marker Weight
 MarkerFill
@@ -4684,6 +4723,7 @@ MarkerSize
 MarkerWeight
 Markers
 Markers and Text
+Markers averaging less than this are left out of the GPU profiler per-frame CSV. They are still in the summary.
 MaskCpuFlags
 Master disable flag (also hide from context menu)
 Material %s - cannot find raytrace shader!\n
@@ -4691,6 +4731,7 @@ Material change on single-material desc
 Max Height (in Lines)
 Max LRU Age: %4d
 Max Time
+Max ms
 Max: %.1f %%
 Max: %d units
 Max: (%.2f, %.2f)
@@ -4797,6 +4838,7 @@ Midterm Exam
 Min / Max
 Min Duration (ms)
 Min Time
+Min ms
 Min: %.1f %%
 Min: %d units
 Min: (%.2f, %.2f)
@@ -4870,6 +4912,7 @@ Modal
 Modal windows are like popups but the user cannot close them by clicking outside.
 ModalWindowDimBg
 Modals
+Model '%s': eye bone '%s' is not skinned by a mesh with an eye shader material, eye ignored\n
 ModelDocUtils001
 Modify
 Monday
@@ -5007,7 +5050,7 @@ N19CRenderGraphBuilder9LayerPassE
 N20CPathTraceSceneWorld9CPipelineE
 N20IPathTraceSceneWorld9IPipelineE
 N22CMeshInstanceGroomData17IVirtualDestuctorE
-N22CVirtualTextureManager18CAuxBufferReadbackE
+N22CVirtualTextureManager17CFeedbackReadbackE
 N23CCharacterDecalRenderer26CCharacterDecalSceneObjectE
 N23CCharacterDecalRenderer27CCharacterDecalRendererDescE
 N6google8protobuf10TextFormat17BaseTextGeneratorE
@@ -5128,8 +5171,6 @@ N9__gnu_cxx26__concurrence_unlock_errorE
 NAV,FOCUS
 NB: Cursor & selection are preserved when refocusing last used item in code.
 NEEDS_DIRTY_UPDATE 
-NEEDS_DYNAMIC_REFLECTION
-NEEDS_DYNAMIC_REFLECTION_OR_REFRACTION 
 NEEDS_FRAMEBUFFER_COPY
 NEEDS_GPU_CULLING
 NEEDS_STATIC_ENVMAP_BINDING 
@@ -5138,12 +5179,10 @@ NOT_BATCHABLE flag change
 NOT_FOUND
 NO_MOTION_VECTORS 
 NO_Z_PREPASS 
-NSt13__future_base12_Result_baseE
 NSt3_V214error_categoryE
 NSt6locale5facet6__shimE
 NSt6locale5facetE
-NSt6thread11_State_implINS_8_InvokerISt5tupleIJPFvjjPN7tinybvh3BVHEEijS5_EEEEEE
-NSt6thread11_State_implINS_8_InvokerISt5tupleIJPFvjjjjjPjPN7tinybvh3BVHEEijjjjS3_S6_EEEEEE
+NSt6thread11_State_implINS_8_InvokerISt5tupleIJZN7tinybvh9JobSystem10InitializeEvEUlvE_EEEEEE
 NSt6thread6_StateE
 NSt7__cxx1110moneypunctIcLb0EEE
 NSt7__cxx1110moneypunctIcLb1EEE
@@ -5274,18 +5313,15 @@ Need space between identifier and decimal point.
 Need space between number and identifier.
 Needs to be called between BeginTabBar() and EndTabBar()!
 NeedsDynamic
-NeedsLightProbe
 Nested tables
 NewFrame(): ClearActiveID() because it isn't marked alive anymore!\n
 Newline in string literal
-Next
 NextColormapColor() needs to be called between BeginPlot() and EndPlot()!
 Nice try, but the number of rows and columns must be greater than 0!
 Nincompoop
 Nine
 No Layers
 No Voxel LOD
-No associated state
 No background
 No bring to front
 No close
@@ -5338,6 +5374,7 @@ Not Selected
 Not a key frame.
 Not a widget per-se, but ImGuiTextFilter is a helper to perform simple filtering on text strings.
 Not implemented field number 
+Not reordering '%s'..'%s': its pooled memory would peak at ~%d KB, %d KB in submission order (only warning once)\n
 Not supported.
 NotAllowed
 Note that enum values use C++ scoping rules, meaning that enum values are siblings of their type, not children of it.  Therefore, "
@@ -5406,6 +5443,7 @@ Options
 Options to configure how we handle recoverable errors.\n- Error recovery is not perfect nor guaranteed! It is a feature to ease development.\n- You not are not supposed to rely on it in the course of a normal application run.\n- Possible usage: facilitate recovery from errors triggered from a scripting language or after specific exceptions handlers.\n- Always ensure that on programmers seat you have at minimum Asserts or Tooltips enabled when making direct imgui API call! Otherwise it would severely hinder your ability to catch and correct mistakes!
 Or, enable 32-bit indices in imconfig.h.
 Orange
+Order
 Order=%d%n
 Original
 OrthoAxis: 0x%08X
@@ -5456,6 +5494,7 @@ P410ToARGBRow_Any_AVX2
 P410ToARGBRow_Any_SSSE3
 P410ToARGBRow_C
 P410ToARGBRow_SSSE3
+P95 ms
 PDF128_
 PDF16_
 PDF16b
@@ -5525,6 +5564,7 @@ PathTracingShaderBindingTable
 Pauciloquent
 Pause
 Pause Streaming Activity Graph
+Pause to zoom into a range.
 Pear
 Pen Pressure: %.1f
 PerVertexLighting
@@ -5559,6 +5599,7 @@ Plat_FloatTime
 Plat_GetCrtEnv
 Plat_GetEnv
 Plat_GetExeModule
+Plat_GetLocalTime
 Plat_GetModuleFilename
 Plat_GetModuleProcAddress
 Plat_GetMonitorResolution
@@ -5604,6 +5645,7 @@ Pointers cannot be used as numeric values
 PolitiFact: Who Lies More?
 Pollock
 Pool Mem
+Pool Mem peak %s, %s in submission order (%+.1f%%)
 Popup
 Popup 
 PopupBg
@@ -5653,8 +5695,7 @@ Price
 Primitives
 PrintScreen
 Printing unusually long amount of text.
-ProceduralGeometry
-ProceduralGeometry Updates
+ProceduralRTProxy Layout
 Processed
 ProggyClean.ttf
 Programmer error: %d visible items with conflicting ID!
@@ -5664,7 +5705,6 @@ Progress Bars
 Project constraints
 ProjectedDecal
 ProjectedSceneObjectDesc
-Promise already satisfied
 PropWorldOrigin
 Property editor
 PropertyEditorSystem_001
@@ -5862,6 +5902,7 @@ Range: [%f,%f]
 RangeSrcItem = %lld (0x%llX), RangeSelected = %d
 Ranges
 Raw HSV values
+Raw frames
 Ray trace shader material %s - has no default mode!\n
 Ray trace shader material %s has invalid RayTypeCount %d - must be between 1 and %d\n
 RayGen
@@ -5880,6 +5921,9 @@ Realtime Plots
 Rebuild
 Rebuild all
 Recent frames with allocations:
+Record
+Record every frame until stopped, then write _frames.csv and _summary.csv. Also sc_gpu_profiler_record_start/stop.
+Recording %.0f s, %d frames
 Rect is %sclicked, %shovered, %sheld
 Rect of child window is: (%.0f,%.0f) (%.0f,%.0f)
 Rects Index
@@ -5895,16 +5939,13 @@ Reduce hit area to the text label and a bit of margin.
 RefScale=%f
 RefScale=%g\n
 Reflection
-Reflection Render View
-ReflectionStencil
-ReflectionTemplate
-Refraction Render View
 RegisterConCommand: Unknown error registering con command "%s"!\n
 RegisterConVar: Unknown error registering convar "%s"!\n
 Release
 ReleaseLast
 ReleaseLast() called on a RepeatedPtrField that is on an arena, 
 ReleaseMessage
+Release\n  [%s:%s]\n->\n  all later work
 Releases
 Reloaded %s into textureset\n
 Remaining
@@ -5914,6 +5955,7 @@ Remove
 Remove 20 items
 Remove all
 Remove one
+RemoveAllInScope
 RemoveLast
 Rename
 Rename..
@@ -5939,6 +5981,7 @@ Reorderable Tabs
 Reorderable, hideable, with headers
 Repeated fields can't have default values.
 Reports what the current virtual texture residency would cost with 256x256 pages instead of 128x128
+RepresentativeTexture
 Requested Blend Weight Limit of %d is too large, setting to system max of %d
 Requested size is too large to fit into size_t.
 Requested split stream input layout from non-split material!
@@ -5979,6 +6022,7 @@ Resource %s was created but never accessed\n
 ResourceCompiler/BakedLighting/DisableCullingForShadows
 ResourceCompiler/BakedLighting/LPVAtlas
 ResourceCompiler/WorldRendererBuilder/BakePrecomputedShadows
+ResourceCompiler/WorldRendererBuilder/BakePrecomputedShadowsForDirectionalLights
 ResourceCompiler/WorldRendererBuilder/UseStaticEnvMapForObjectsWithLightingOrigin
 ResourceCompilerSystem001
 ResourceHandleUtils001
@@ -5987,7 +6031,6 @@ Resources
 Result
 Return to input text into a widget.
 Return value = %d\nIsItemFocused() = %d\nIsItemHovered() = %d\nIsItemHovered(_AllowWhenBlockedByPopup) = %d\nIsItemHovered(_AllowWhenBlockedByActiveItem) = %d\nIsItemHovered(_AllowWhenOverlappedByItem) = %d\nIsItemHovered(_AllowWhenOverlappedByWindow) = %d\nIsItemHovered(_AllowWhenDisabled) = %d\nIsItemHovered(_RectOnly) = %d\nIsItemActive() = %d\nIsItemEdited() = %d\nIsItemActivated() = %d\nIsItemDeactivated() = %d\nIsItemDeactivatedAfterEdit() = %d\nIsItemVisible() = %d\nIsItemClicked() = %d\nIsItemToggledOpen() = %d\nGetItemRectMin() = (%.1f, %.1f)\nGetItemRectMax() = (%.1f, %.1f)\nGetItemRectSize() = (%.1f, %.1f)
-ReturnJobManualEventToPool
 Reversed
 Revert
 Revert Ref
@@ -6068,6 +6111,7 @@ SaveKV3(KV3ID_t const&, KV3ID_t const&, KeyValues3 const*, CUtlString*, CUtlBuff
 SaveKV3Text_NoHeader(KeyValues3 const*, CUtlString*, CUtlBuffer*, unsigned int)
 SaveKV3Text_NoHeader(KeyValues3 const*, CUtlString*, CUtlString*, unsigned int)
 SaveKV3Text_ToString(KV3ID_t const&, KeyValues3 const*, CUtlString*, CUtlString*, unsigned int)
+Saved %s_*.csv
 Scale
 ScaleARGBCols64_C
 ScaleARGBColsUp2_C
@@ -6288,9 +6332,12 @@ SceneSystem/DisableLateAllocatedTransformBuffer
 SceneSystem/DisableShadowFullSort
 SceneSystem/DynamicShadowResolution
 SceneSystem/FogCachedShadowAtlasHeight
+SceneSystem/FogCachedShadowAtlasHeightTools
 SceneSystem/FogCachedShadowAtlasWidth
+SceneSystem/FogCachedShadowAtlasWidthTools
 SceneSystem/FogCachedShadowTileMaxFilterRadius
 SceneSystem/FogCachedShadowTileSize
+SceneSystem/FogCachedShadowTileSizeTools
 SceneSystem/FrameBufferCopyFormat
 SceneSystem/GpuLightBinner
 SceneSystem/GpuLightBinnerBinEnvMaps
@@ -6298,6 +6345,8 @@ SceneSystem/GpuLightBinnerBinLPVs
 SceneSystem/GpuLightBinnerSupportViewModelCascade
 SceneSystem/HDRFrameBuffer
 SceneSystem/HairShading
+SceneSystem/IndirectDispatchBufferSizeMB
+SceneSystem/LightBinner/Debug Visualize Precomputed Shadow Atlas Lights
 SceneSystem/LightCookieAllocGranularity
 SceneSystem/LightCookieMinAllocSize
 SceneSystem/MeshletBufferCPUSlotCount
@@ -6408,6 +6457,7 @@ Set 200x200
 Set 500x500
 Set 800x200
 Set as default
+Set baseline
 Set defaults in code:
 Set io.ConfigDebugHighlightIdConflicts=false to disable this warning in non-programmers builds.
 Set io.ConfigFlags |= ImGuiConfigFlags_DockingEnable in your code, or 
@@ -6581,7 +6631,7 @@ SkinnedObject
 SkinningCS_Dispatch
 Skip NaN
 SkyBox
-SkyBrightnessExposureBias
+SkyTextureFormat
 Skybox
 Slash
 Slice %d
@@ -6612,7 +6662,7 @@ SobelXYRow_C
 SobelXYRow_SSE2
 SobelYRow_C
 SobelYRow_SSE2
-Solid Color Textures Resident: %5d (%3.1f%% of pages in use)
+Solid Color Textures: %5d, one texel each
 Some %s text %d,%d\nOver two lines..
 Some Selectable
 Some calls to Begin()/BeginChild() will return false.\n\nWill cycle through window depths then repeat. Windows should be flickering while running.
@@ -6626,7 +6676,6 @@ Some other contents
 Some test %d
 Some tree contents
 SomeOption
-Sort
 Sort Hair
 Sort=%d%c%n
 Sorting
@@ -6698,7 +6747,6 @@ St12codecvt_base
 St12ctype_bynameIcE
 St12ctype_bynameIwE
 St12domain_error
-St12future_error
 St12length_error
 St12out_of_range
 St12system_error
@@ -6768,14 +6816,15 @@ St20__codecvt_utf16_baseIwE
 St20bad_array_new_length
 St21__ctype_abstract_baseIcE
 St21__ctype_abstract_baseIwE
-St23_Sp_counted_ptr_inplaceI10CUtlVectorI20CMeshDrawPrimitive_ti25CUtlVectorMemory_GrowableIS1_iLm0EEESaIvELN9__gnu_cxx12_Lock_policyE2EE
 St23_Sp_counted_ptr_inplaceI13CViewDrawListSaIvELN9__gnu_cxx12_Lock_policyE2EE
 St23_Sp_counted_ptr_inplaceI14CTonemapSystemSaIvELN9__gnu_cxx12_Lock_policyE2EE
+St23_Sp_counted_ptr_inplaceI14CUtlLeanVectorI20CMeshDrawPrimitive_ti18CMemAllocAllocatorESaIvELN9__gnu_cxx12_Lock_policyE2EE
 St23_Sp_counted_ptr_inplaceI19CRenderGraphBuilderSaIvELN9__gnu_cxx12_Lock_policyE2EE
 St23_Sp_counted_ptr_inplaceI20CThreadFastSemaphoreSaIvELN9__gnu_cxx12_Lock_policyE2EE
 St23_Sp_counted_ptr_inplaceI21ImGuiViewportDrawDataSaIvELN9__gnu_cxx12_Lock_policyE2EE
 St23_Sp_counted_ptr_inplaceI23CSceneViewDebugOverlaysSaIvELN9__gnu_cxx12_Lock_policyE2EE
 St23_Sp_counted_ptr_inplaceI43CSSTTileGenerationReadTexturePixelsCallbackSaIvELN9__gnu_cxx12_Lock_policyE2EE
+St23_Sp_counted_ptr_inplaceIN22CVirtualTextureManager17CFeedbackReadbackESaIvELN9__gnu_cxx12_Lock_policyE2EE
 St23_Sp_counted_ptr_inplaceINSt8__detail4_NFAISt12regex_traitsIcEEESaIvELN9__gnu_cxx12_Lock_policyE2EE
 St23_Sp_counted_ptr_inplaceIP25RenderSemaphoreHandle_t__SaIvELN9__gnu_cxx12_Lock_policyE2EE
 St23__codecvt_abstract_baseIDiDu11__mbstate_tE
@@ -6832,6 +6881,7 @@ Stacked Popup
 Stacked modals..
 Stairstep Plot
 Stairstep Plots
+Start recording every frame of GPU profiler timings.
 Static World Overlays
 StaticOverlayLayer
 Stationary
@@ -6841,15 +6891,14 @@ Stem Plots##
 Stems
 Stems 1
 Stems 2
-Stencil Reflection Render View
 Stencil bit allocation failed\n
 Stencil override change
-StencilReflection
 Stock 1
 Stock 2
 Stock 3
 Stock Prices
 Stop and reset simulation
+Stop recording GPU profiler timings and write <name>_frames.csv and <name>_summary.csv. Optional argument: name (default is timestamped).
 Storage
 Strand Cull %%
 Strawberry
@@ -6877,6 +6926,7 @@ Style the child window like a framed item: use FrameBg, FrameRounding, FrameBord
 Style, Fonts
 Sub-child %d
 Sub-menu
+Submitted as pass %i, runs as pass %i, schedule batch %i
 Subplot
 Subplot [0x%08X]
 Subplots
@@ -7100,7 +7150,7 @@ Thursday
 Tick Labels
 Tick Marks
 Ticks
-Tile Stream Latency, tiles per ms bucket (discarded before hookup: %u)
+Tile Stream Latency, tiles per ms bucket (discarded before hookup: %u, failed reads: %u)
 TileStreamLatency
 Tilefish
 Time Scale
@@ -7109,9 +7159,8 @@ TimeSlicedShadow
 Timer took %.4f
 Timesliced shadow rendering is enabled for view %s, but no shadow atlas id is set: this will corrupt shadows\n
 Tint
-TinyBVH Fatal Error: %s at %s:%d
+TinyBVH: %s
 TinyBVHFatalError
-TinyBVHFatalError(char const*, char const*, int)
 Tip: Use 'Demo->Tools->Debug Log->Selection' to see selection requests as they happen.
 Title
 Title bar Hovered/Active tests
@@ -7280,8 +7329,10 @@ UYVYToYRow_C
 UYVYToYRow_SSE2
 Unable to AddTextureToSet( %s ): %s\n
 Unable to AddTextureToSet( %s ): Loading Texture failed\n
+Unable to open '%s' for writing.\n
 Unable to reload texture %s into textureset: %s\n
 Unable to reload texture %s into textureset: couldn't load from disk\n
+Unable to write '%s'.\n
 Uncertain Data
 Underlying float value: %f
 Undo
@@ -7375,20 +7426,29 @@ VProfScopeHelper<3, false>::EnterScopeInternal(char const*, CUtlSourceLocation c
 VRenderDeviceSetupV001
 VT Mips
 VT residency as 256x256 pages, over %d textures:\n
+VT tile did not decompress for "%s"\n
 VT tile read failed for "%s": %s\n
+VT: %d mips, needs at least %d to reach 128x128, recompile it ( %s )\n
 VT: Unsupported texture format %s\n
 VT: Unsupported texture size %s\n
 VT: Unsupported texture size or flags. %s\n
 VT: alloc failed for tex %d, %dx%d fmt %d, aliasing the error texture (%s)\n
+VT: bad tile layout block, %s ( %d tiles, %d offsets, compression %d ) (%s)\n
 VT: created tex %d, %dx%d, %d mips%s, %d pages (%s)\n
 VT: destroyed tex %d, %d of %d pages were resident%s%s (%s)\n
+VT: evicting all pages, cancelled %d tile requests\n
+VT: no atlas page for %d tiles of mips %d-%d of tex %d, loading it without them (%s)\n
 VT: no physical pages left for tex %d, sampling the error tile (%s)\n
+VT: no tile layout block, the texture needs recompiling (%s)\n
 VT: tex %d low mips loaded, releasing the load (%s)\n
 VT: tex %d preload to %d, mips 2-%d, %d pages outstanding (%s)\n
 VT: tex %d preload to %d, nothing above the pinned mips, %d pages outstanding (%s)\n
+VT: tile %d of tex %d did not decompress\n
+VT: tile layout block is %d bytes, too short (%s)\n
 VTPageAtlas%s
 VTPageAtlasATI2N%s
 VTPageAtlasDXT5%s
+VTSolidColorAtlas
 VTT for 
 VTT for std::basic_fstream<char, std::char_traits<char>>
 VTT for std::basic_fstream<wchar_t, std::char_traits<wchar_t>>
@@ -7453,6 +7513,7 @@ V_UInt64ToString_Unsafe
 V_UInt8ToString_Unsafe
 V_UnqualifiedFileName
 V_ZSTD_decompress
+V_ZSTD_isError
 V_acosd
 V_acosf
 V_asinf
@@ -7476,6 +7537,7 @@ V_fread
 V_frexpf
 V_fwrite
 V_isdigit_str
+V_isfinited
 V_isnand
 V_log2_uint
 V_log2f
@@ -7497,6 +7559,7 @@ V_stristr_fast(char const*, char const*)
 V_strnlen(char const*, int)
 V_tanf
 V_vsnprintf
+V_z3_decompress
 Validate
 Value = %.3f <-- (1) right-click this text
 Value must be "true" or "false" for boolean option "
@@ -7518,6 +7581,7 @@ Vector2f
 Vert:
 VertCount
 VertexCache
+VertexCacheEmptySignal
 VertexColorPos_t
 VertexColorUVPos_t
 VertexElementAnnotation
@@ -7557,10 +7621,14 @@ Views: %d, shadow %d (fog-only %d)  |  CPU: %02.01fms, shadow %02.01fms (fog-onl
 Viridis
 Virtual Texture Debugger
 Virtual Textures: %d
+Virtual texture page atlas size in 16k x 16k slices of about 256MB each, 2 to 32 ( 512MB to 8GB ). 0 picks 4, 6, 8, 12 or 16 slices for GPUs below 8GB, 8GB, 12GB, 16GB and larger. Changing it evicts every virtual texture tile.
 Virtual texture page atlas: %u -> %u slices, evicting all tiles\n
+Virtual texture page atlas: %u slices (%u MB) for a GPU with %llu MB, vt_page_atlas_size %d\n
+Virtual texture page atlas: allocated %u of the %u requested slices\n
+Virtual texture page atlas: could not allocate %u slices, trying %u\n
+Virtual texture page atlas: could not allocate even %u slices\n
 Virtual texture page atlas: could not create %u slices, staying at %u\n
 VirtualTextureAuxBuffer
-VirtualTextureCompactUsageBuffer
 VirtualTextureInfo
 VirtualTextureMgrManifest
 VirtualTexturePageTable
@@ -7573,6 +7641,8 @@ VisibleWindow
 Visualize
 VisualizeCulled
 Voltage
+VolumeFog Integrate %ux%u, %u slices
+VolumeFog Lighting %ux%ux%u, %u volumes, indirect %d, lpv %d, temporal %d
 VolumeMaxs
 VolumeMins
 VolumetricFogManifest
@@ -7580,6 +7650,7 @@ Voxelize Density
 Voxelize Tangents
 VrForward
 Vrad3_001
+VtDecompressTiles
 W: %.1f
 WANTS_FRAMEBUFFER_COPY_TEXTURE 
 WANTS_PROBE_LIGHTING 
@@ -7599,7 +7670,6 @@ Warning parsing text-format
 Warning: Font scaling will NOT be smooth, because\nImGuiBackendFlags_RendererHasTextures is not set!
 Warning: Sizing Constraints won't work if the window is docked!
 Warning: owning Window is inactive. This DrawList is not being rendered!
-WaterRTProxy
 Watermelon
 Waves
 We are colorizing cells to B1->C2 here.
@@ -7795,6 +7865,7 @@ WorldRenderer/LightProbeVolumeAlgorithm
 WorldRenderer/LightProbeVolumeColorSpace
 WorldRenderer/LightProbeVolumeUncompressedFormat
 Wrap width
+Wrote %d frames (%.1f s) of GPU profiler data to %s and %s\n
 X-Axis
 X-Axis %d
 X-Axis %d [0x%08X]
@@ -7976,6 +8047,9 @@ Zoom and pan the X-axis. Disable Stems to see a difference in fit.
 \n<i>PerViewConstantBuffer_t</i>
 \n<i>Procedural Layer</i>
 \nParsing attempt:  
+\ncommandline,
+\nframes,%d\n
+\nframes_csv_min_ms,%.3f\n
 \t$$$$$$$\n\v\f\r
 \tLayer %d "%s": %d inputs, %d outputs\n
 \tLayer %d "%s"\n
@@ -7999,7 +8073,6 @@ _COL4F
 _DefaultHide
 _DefaultSort
 _Disabled
-_Dup
 _Float
 _GLOBAL_
 _HighlightHoveredColumn
@@ -8320,10 +8393,10 @@ accessor_ == other.accessor_
 acosf
 active resources
 active sceneobject: %i clusters
+adapter,
+after
 aggregate
 aggregate cullrequests
-aggregate meshlet indirect dispatch
-aggregate meshlet indirect dispatch recull
 aggregate meshlet overflow handling
 aggregate.fragmentCount
 aggregate.material_flags
@@ -8332,7 +8405,7 @@ aggregate.meshletCount
 aggregate.model_name
 aggregate.object_flags
 aggregatedesc.cpp
-aggregatedesc.cpp:2081
+aggregatedesc.cpp:2064
 aggregatertproxydesc.cpp
 aggregates
 alert
@@ -8374,16 +8447,16 @@ apostrophe
 array
 asinh
 asterisk
+async compute blas scratch memory
 atan
 atan2f
 auto
 auto:
+avg %.3f ms, min %.3f, max %.3f
 avg %f
 b%d (%.02f secs)
 b%d (%d)
 b%d: %d
-bDisableDynamicRefractionMap
-bReflectDynamicObjectsOnly
 backface
 backslash
 backspace
@@ -8400,9 +8473,6 @@ base scene object cull request
 baseobject.material_name
 baseobject.meshletCount
 baseobject.model_name
-basesceneobject meshlet indirect dispatch
-basesceneobject meshlet indirect dispatch debug
-basesceneobject meshlet indirect dispatch recull
 basesceneobject visibility indices
 basic_filebuf::_M_convert_to_external conversion error
 basic_filebuf::underflow codecvt::max_length() is not valid
@@ -8566,6 +8636,7 @@ cascade %d%s
 casing swap
 cb updates
 cbrt
+cbrtf
 ccc1.c
 ccc2.cpp
 cccc
@@ -8747,8 +8818,11 @@ dst_width > 0
 dual_lobe_roughness_0
 dual_lobe_roughness_1
 dual_lobe_roughness_mix
+dummy meshlet overflow handling
 dummybuffer
 dummybuffer_r32uint
+dummycullstats
+dummydebugmeshletdrawargs
 dx != __null
 dx == 65536 * 2
 dx == 65536 * 4
@@ -8771,7 +8845,6 @@ execvp
 exit
 expf
 extend .$0 {\n
-extract.cpp
 eye_data_list
 eye_target
 eye_target_bone_index
@@ -8825,8 +8898,6 @@ five
 fixed32
 fixed_invtbl8
 fj".T\CMek2>x
-flWaterDepth
-flWaterStart
 flags3
 float
 float (indented)##1b
@@ -8843,7 +8914,9 @@ float##5a
 float0
 float1
 float64
+floor
 floorf
+fmaf
 fog volumes
 fog_cached
 fopen
@@ -8856,6 +8929,7 @@ fputc
 fputs
 frag %i
 fragmentbounds
+frame,time_s
 fread
 free
 freeze_cols
@@ -8869,7 +8943,6 @@ ftello64
 full sets
 fullscreenquad
 func
-future
 fwrite
 g_BitBuf_BitWriteMasks
 g_BitBuf_ExtraMasks
@@ -8895,7 +8968,6 @@ geosphere
 get_nprocs
 getc
 getentropy
-gettimeofday
 getwc
 glibcxx.eh_pool
 global constructors keyed to 
@@ -9008,7 +9080,9 @@ google/protobuf/wire_format_lite.cc
 google::protobuf::internal::ExtensionSet::KeyValue* google::protobuf::internal::ExtensionSet::flat_begin()
 google::protobuf::internal::ExtensionSet::KeyValue* google::protobuf::internal::ExtensionSet::flat_end()
 gpu mem
+gpu_profile_%04d%02d%02d_%02d%02d%02d
 graph
+graphstats
 grave-accent
 greater-than-sign
 group
@@ -9069,6 +9143,11 @@ hairsimvelocityvolume
 hairtangentaccumvolume
 half
 hardware
+has a bad tile offset table ( %d tiles )
+has compressed tiles but no offsets
+has no tile layout block, it needs recompiling
+has no tiles for mip %d
+has tiles in unknown compression %d
 has_preferred_x: %d (%.2f)
 heat
 heat1
@@ -9129,10 +9208,14 @@ in Begin()
 in BeginTable()
 in ItemAdd()
 in SetShortcutRouting() for this KeyChord
+inc_tiny_bvh.h
 incl,-excl
 incl. Discarded rects: %d, area: about %d px ~%dx%d px
 index
 indexbuffer
+indirect
+indirect dispatch buffer
+indirect dispatch overflow indices
 infinity
 initial
 initializer for module 
@@ -9167,9 +9250,6 @@ instance cull stats shadow
 instanced
 instanced mesh cull requests
 instanced mesh data
-instanced meshlet indirect dispatch
-instanced meshlet indirect dispatch debug
-instanced meshlet indirect dispatch recull
 instanced meshlet overflow handling
 instancedmesh.material_name
 instancedmesh.max_instances
@@ -9202,6 +9282,7 @@ int& std::forward<int&>(std::remove_reference<int&>::type&)
 int&& std::forward<int>(std::remove_reference<int>::type&)
 int16
 int64
+int8
 internal error in map key sorting
 invalid
 io.BackendFlags: 0x%08X
@@ -9281,6 +9362,8 @@ ios_base::_M_grow_words is not valid
 iostream
 iostream error
 is_large()
+issued after the last pass
+issued in front of %s
 item view
 items_count
 items_type (first column)
@@ -9314,7 +9397,9 @@ kYvuV2020Constants
 kern
 label
 last used by %s
+lb_debug_visualize_precomputed_shadow_atlas_lights
 ld-linux-x86-64.so.2
+ldexpf
 left pane
 left-curly-bracket
 left-parenthesis
@@ -9348,6 +9433,8 @@ locale::facet::_S_lc_ctype_c_locale duplocale error
 locale::facet::_S_lc_ctype_c_locale newlocale error
 localtime_r
 log10
+log1p
+log1pf
 log2
 log2f
 logf
@@ -9367,6 +9454,7 @@ loongson-mmi
 lower
 lowprecisionuv
 lowprecisionuv1
+lroundf
 lseek
 m_Endpoints
 m_Format
@@ -9383,7 +9471,6 @@ m_mFromClipSpace
 m_mToClipSpace
 m_nCookie
 m_nLuminaireType
-m_pDuplicateDispatchPrimitives != nullptr
 m_vAngleFade
 m_vColor
 m_vDistanceFade
@@ -9399,6 +9486,7 @@ map<$0, $1>
 map_entry should not be set explicitly. Use map<KeyType, ValueType> instead.
 mapbuilder.blocklight
 marginally concave
+marker,avg_ms,min_ms,p50_ms,p95_ms,p99_ms,max_ms,frames_present,path\n
 materials/dev/aoproxy_splat.vmat
 materials/dev/compact_indirect_draws.vmat
 materials/dev/compute_depthbin_cullbits.vmat
@@ -9502,7 +9590,6 @@ my_toggle_popup
 mycolumns
 mycolumns3
 mypicker
-nCompressedSize == nUncompressedSize
 nIndex < m_RenderTargets.Count()
 nPrevTransformBufferIndex < V_ARRAYSIZE( m_transformBufferSlotsForIndex )
 nTries < 10000000
@@ -9544,8 +9631,10 @@ obj_size
 objects
 occl
 occlusionproxyvb
+offset count does not match the tile count
 offset_angles
 offset_origin
+offsets are not a packed stream
 open
 operator
 operator 
@@ -9613,6 +9702,9 @@ posxyz
 powf
 print
 printf
+proceduralRTProxyEmissive
+proceduralRTProxyIB
+proceduralRTProxyVB
 proto
 proto2
 proto3
@@ -9632,6 +9724,7 @@ pthread_once
 pthread_rwlock_rdlock
 pthread_rwlock_unlock
 pthread_rwlock_wrlock
+pthread_setname_np
 pthread_setspecific
 punct
 pure virtual method called\n
@@ -9671,6 +9764,7 @@ registered:
 reinterpret_cast
 renderbackfaces
 renderingpipelineforward.cpp
+rendersystem,%s\n
 rendertarget_
 rendertarget_dscratch_%d_%d_%d.vtex
 rendertarget_r11g11b10f_%d_%d
@@ -9693,12 +9787,19 @@ roundf
 row bg target
 row bg type
 row_min_height
+rtx_nonopaque
 rtx_random_samples.vtex
 s5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5Jx
 s_hScrambledHalton != GENERIC_DATA_HANDLE_INVALID
 sc_dumpworld %d
 sc_dumpworld3d %d
 sc_gpu_profiler
+sc_gpu_profiler_record
+sc_gpu_profiler_record_min_ms
+sc_gpu_profiler_record_start
+sc_gpu_profiler_record_stop
+sc_rendergraph_schedule
+sc_rendergraph_schedule_memory_growth_threshold_pct
 sc_setclassflags %s %d
 scale <= 32768
 scale >= 256
@@ -9708,6 +9809,7 @@ scenegfxresources.cpp
 sceneinfo_gpu - Load Materials
 scenelpvdebuggrid.cpp
 sceneobject cull stats
+sceneobject dummy meshlet indirect dispatch debug
 sceneobject_h
 sceneobject_methods.cpp
 sceneobjectdescs.cpp
@@ -9719,12 +9821,13 @@ scenesysDodecahedron
 scenesysPyramid
 scenesystem
 scenesystem.cpp
-scenesystem.cpp(5432): Expecting 1 renderable pass for material "%s" but found %d!\n
-scenesystem.cpp:3094
+scenesystem.cpp(5148): Expecting 1 renderable pass for material "%s" but found %d!\n
+scenesystem.cpp:2832
 scenesystemdebug
 scenesystemperframedata
 scenetextureset_%d
 sceneviewdebugoverlays.cpp
+sched_yield
 scottd_e24c1c6d
 scratch_rt_result_%d_%d
 scratchrendertarget_%d_%dx%d_%d_%d.vtex
@@ -9734,6 +9837,7 @@ script_b94a0343
 scroll
 scrolling
 seaborn style
+seconds,%.3f\n
 secure_getenv
 seen this frame
 semicolon
@@ -9836,7 +9940,6 @@ split
 split1
 split2
 sprintf
-sqrtf
 srand
 src_height != 0
 src_height == ((dst_height + 1) / 2)
@@ -9905,14 +10008,9 @@ std::_Function_handler<bool (char), std::__detail::_CharMatcher<std::regex_trait
 std::_Function_handler<bool (char), std::__detail::_CharMatcher<std::regex_traits<char>, true, true>>::_M_invoke(std::_Any_data const&, char&&)
 std::_Function_handler<bool (char), std::__detail::_CharMatcher<std::regex_traits<char>, true, true>>::_M_manager(std::_Any_data&, std::_Any_data const&, std::_Manager_operation)
 std::_Hash_bytes(void const*, unsigned long, unsigned long)
-std::_Head_base<0ul, std::__future_base::_State_baseV2::_Make_ready*, false>::_Head_base()
-std::_Head_base<0ul, std::__future_base::_State_baseV2::_Make_ready*, false>::_M_head(std::_Head_base<0ul, std::__future_base::_State_baseV2::_Make_ready*, false> const&)
-std::_Head_base<0ul, std::__future_base::_State_baseV2::_Make_ready*, false>::_M_head(std::_Head_base<0ul, std::__future_base::_State_baseV2::_Make_ready*, false>&)
 std::_Head_base<0ul, std::thread::_State*, false>::_Head_base()
 std::_Head_base<0ul, std::thread::_State*, false>::_M_head(std::_Head_base<0ul, std::thread::_State*, false> const&)
 std::_Head_base<0ul, std::thread::_State*, false>::_M_head(std::_Head_base<0ul, std::thread::_State*, false>&)
-std::_Head_base<1ul, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>, true>::_Head_base()
-std::_Head_base<1ul, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>, true>::_M_head(std::_Head_base<1ul, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>, true>&)
 std::_Head_base<1ul, std::default_delete<std::thread::_State>, true>::_Head_base()
 std::_Head_base<1ul, std::default_delete<std::thread::_State>, true>::_M_head(std::_Head_base<1ul, std::default_delete<std::thread::_State>, true>&)
 std::_Ios_Openmode std::__exchange<std::_Ios_Openmode, std::_Ios_Openmode>(std::_Ios_Openmode&, std::_Ios_Openmode&&)
@@ -9930,25 +10028,19 @@ std::_Rb_tree_rotate_left(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*&)
 std::_Rb_tree_rotate_right(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*&)
 std::_Setfill<char> std::setfill<char>(char)
 std::_Setfill<wchar_t> std::setfill<wchar_t>(wchar_t)
-std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_add_ref_lock_nothrow()
 std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_destroy()
-std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_get_use_count() const
+std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release()
 std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release_last_use()
 std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release_last_use_cold()
-std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_weak_release()
 std::_Sp_counted_ptr<std::nullptr_t, (__gnu_cxx::_Lock_policy)2>::_M_dispose()
 std::_Sp_counted_ptr_inplace<std::__detail::_NFA<std::regex_traits<char>>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_destroy()
 std::_Sp_counted_ptr_inplace<std::__detail::_NFA<std::regex_traits<char>>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_dispose()
 std::_Sp_counted_ptr_inplace<std::__detail::_NFA<std::regex_traits<char>>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_get_deleter(std::type_info const&)
 std::_Sp_counted_ptr_inplace<std::__detail::_NFA<std::regex_traits<char>>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::~_Sp_counted_ptr_inplace()
-std::_Tuple_impl<0ul, std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>::_M_head(std::_Tuple_impl<0ul, std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>> const&)
-std::_Tuple_impl<0ul, std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>::_M_head(std::_Tuple_impl<0ul, std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>&)
-std::_Tuple_impl<0ul, std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>::_Tuple_impl()
+std::_Sp_make_shared_tag::_S_ti()::__tag
 std::_Tuple_impl<0ul, std::thread::_State*, std::default_delete<std::thread::_State>>::_M_head(std::_Tuple_impl<0ul, std::thread::_State*, std::default_delete<std::thread::_State>> const&)
 std::_Tuple_impl<0ul, std::thread::_State*, std::default_delete<std::thread::_State>>::_M_head(std::_Tuple_impl<0ul, std::thread::_State*, std::default_delete<std::thread::_State>>&)
 std::_Tuple_impl<0ul, std::thread::_State*, std::default_delete<std::thread::_State>>::_Tuple_impl()
-std::_Tuple_impl<1ul, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>::_M_head(std::_Tuple_impl<1ul, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>&)
-std::_Tuple_impl<1ul, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>::_Tuple_impl()
 std::_Tuple_impl<1ul, std::default_delete<std::thread::_State>>::_M_head(std::_Tuple_impl<1ul, std::default_delete<std::thread::_State>>&)
 std::_Tuple_impl<1ul, std::default_delete<std::thread::_State>>::_Tuple_impl()
 std::_V2::error_category::_M_message(int) const
@@ -9970,9 +10062,6 @@ std::_Vector_base<std::Catalog_info*, std::allocator<std::Catalog_info*>>::_Vect
 std::_Vector_base<std::Catalog_info*, std::allocator<std::Catalog_info*>>::_Vector_impl_data::_Vector_impl_data()
 std::_Vector_base<std::Catalog_info*, std::allocator<std::Catalog_info*>>::~_Vector_base()
 std::__at_thread_exit(std::__at_thread_exit_elt*)
-std::__atomic_futex_unsigned_base::_M_futex_notify_all(unsigned int*)
-std::__atomic_futex_unsigned_base::_M_futex_wait_until(unsigned int*, unsigned int, bool, std::chrono::duration<long, std::ratio<1l, 1l>>, std::chrono::duration<long, std::ratio<1l, 1000000000l>>)
-std::__atomic_futex_unsigned_base::_M_futex_wait_until_steady(unsigned int*, unsigned int, bool, std::chrono::duration<long, std::ratio<1l, 1l>>, std::chrono::duration<long, std::ratio<1l, 1000000000l>>)
 std::__basic_file<char>::__basic_file(pthread_mutex_t*)
 std::__basic_file<char>::__basic_file(std::__basic_file<char>&&, pthread_mutex_t*)
 std::__basic_file<char>::close()
@@ -10892,22 +10981,6 @@ std::__detail::_Scanner<char>::_M_scan_normal()
 std::__detail::_State<char>::~_State()
 std::__detail::_StateSeq<std::regex_traits<char>>::_M_clone()
 std::__detail::__prime_list
-std::__exception_ptr::exception_ptr::_M_addref()
-std::__exception_ptr::exception_ptr::_M_get() const
-std::__exception_ptr::exception_ptr::_M_release()
-std::__exception_ptr::exception_ptr::_M_safe_bool_dummy()
-std::__exception_ptr::exception_ptr::__cxa_exception_type() const
-std::__exception_ptr::exception_ptr::exception_ptr()
-std::__exception_ptr::exception_ptr::exception_ptr(std::__exception_ptr::exception_ptr const&)
-std::__exception_ptr::exception_ptr::exception_ptr(void (std::__exception_ptr::exception_ptr::*)())
-std::__exception_ptr::exception_ptr::exception_ptr(void*)
-std::__exception_ptr::exception_ptr::operator void (std::__exception_ptr::exception_ptr::*)()() const
-std::__exception_ptr::exception_ptr::operator!() const
-std::__exception_ptr::exception_ptr::operator=(std::__exception_ptr::exception_ptr const&)
-std::__exception_ptr::exception_ptr::swap(std::__exception_ptr::exception_ptr&)
-std::__exception_ptr::exception_ptr::~exception_ptr()
-std::__exception_ptr::operator!=(std::__exception_ptr::exception_ptr const&, std::__exception_ptr::exception_ptr const&)
-std::__exception_ptr::operator==(std::__exception_ptr::exception_ptr const&, std::__exception_ptr::exception_ptr const&)
 std::__facet_shims::__any_string& std::__facet_shims::__any_string::operator=<char>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)
 std::__facet_shims::__any_string& std::__facet_shims::__any_string::operator=<char>(std::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)
 std::__facet_shims::__any_string& std::__facet_shims::__any_string::operator=<wchar_t>(std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>> const&)
@@ -10918,13 +10991,6 @@ std::__facet_shims::__any_string::__str_rep::operator wchar_t const*() const
 std::__facet_shims::__any_string::operator std::basic_string<char, std::char_traits<char>, std::allocator<char>><char>() const
 std::__facet_shims::__any_string::operator std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>><wchar_t>() const
 std::__facet_shims::__any_string::~__any_string()
-std::__future_base::_Result_base::_Result_base()
-std::__future_base::_Result_base::~_Result_base()
-std::__future_base::_State_baseV2::_Make_ready* const& std::__get_helper<0ul, std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>(std::_Tuple_impl<0ul, std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>> const&)
-std::__future_base::_State_baseV2::_Make_ready*& std::__get_helper<0ul, std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>(std::_Tuple_impl<0ul, std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>&)
-std::__future_base::_State_baseV2::_Make_ready::_M_set()
-std::__future_base::_State_baseV2::_Make_ready::_S_run(void*)
-std::__future_base::_State_baseV2::_Make_ready::~_Make_ready()
 std::__ios_failure::__ios_failure(char const*)
 std::__ios_failure::__ios_failure(char const*, std::error_code const&)
 std::__ios_failure::~__ios_failure()
@@ -10983,15 +11049,9 @@ std::__ptr_traits_ptr_to<char const*, char const, false>::pointer_to(char const&
 std::__ptr_traits_ptr_to<char*, char, false>::pointer_to(char&)
 std::__ptr_traits_ptr_to<wchar_t const*, wchar_t const, false>::pointer_to(wchar_t const&)
 std::__ptr_traits_ptr_to<wchar_t*, wchar_t, false>::pointer_to(wchar_t&)
-std::__shared_count<(__gnu_cxx::_Lock_policy)2>::_M_get_use_count() const
 std::__shared_count<(__gnu_cxx::_Lock_policy)2>::_M_swap(std::__shared_count<(__gnu_cxx::_Lock_policy)2>&)
 std::__shared_count<(__gnu_cxx::_Lock_policy)2>::__shared_count()
-std::__shared_count<(__gnu_cxx::_Lock_policy)2>::__shared_count(std::__weak_count<(__gnu_cxx::_Lock_policy)2> const&, std::nothrow_t)
 std::__shared_count<(__gnu_cxx::_Lock_policy)2>::~__shared_count()
-std::__shared_ptr<std::__future_base::_State_baseV2, (__gnu_cxx::_Lock_policy)2>::__shared_ptr(std::__weak_ptr<std::__future_base::_State_baseV2, (__gnu_cxx::_Lock_policy)2> const&, std::nothrow_t)
-std::__shared_ptr<std::__future_base::_State_baseV2, (__gnu_cxx::_Lock_policy)2>::get() const
-std::__shared_ptr<std::__future_base::_State_baseV2, (__gnu_cxx::_Lock_policy)2>::operator bool() const
-std::__shared_ptr<std::__future_base::_State_baseV2, (__gnu_cxx::_Lock_policy)2>::~__shared_ptr()
 std::__shared_ptr<std::thread::_Impl_base, (__gnu_cxx::_Lock_policy)2>::__shared_ptr()
 std::__shared_ptr<std::thread::_Impl_base, (__gnu_cxx::_Lock_policy)2>::__shared_ptr(std::__shared_ptr<std::thread::_Impl_base, (__gnu_cxx::_Lock_policy)2>&&)
 std::__shared_ptr<std::thread::_Impl_base, (__gnu_cxx::_Lock_policy)2>::get() const
@@ -10999,8 +11059,6 @@ std::__shared_ptr<std::thread::_Impl_base, (__gnu_cxx::_Lock_policy)2>::operator
 std::__shared_ptr<std::thread::_Impl_base, (__gnu_cxx::_Lock_policy)2>::reset()
 std::__shared_ptr<std::thread::_Impl_base, (__gnu_cxx::_Lock_policy)2>::swap(std::__shared_ptr<std::thread::_Impl_base, (__gnu_cxx::_Lock_policy)2>&)
 std::__shared_ptr<std::thread::_Impl_base, (__gnu_cxx::_Lock_policy)2>::~__shared_ptr()
-std::__shared_ptr_access<std::__future_base::_State_baseV2, (__gnu_cxx::_Lock_policy)2, false, false>::_M_get() const
-std::__shared_ptr_access<std::__future_base::_State_baseV2, (__gnu_cxx::_Lock_policy)2, false, false>::operator->() const
 std::__sso_string::__sso_string()
 std::__sso_string::__sso_string(char const*, unsigned long)
 std::__sso_string::__sso_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)
@@ -11018,7 +11076,6 @@ std::__throw_bad_exception()
 std::__throw_bad_function_call()
 std::__throw_bad_typeid()
 std::__throw_domain_error(char const*)
-std::__throw_future_error(int)
 std::__throw_invalid_argument(char const*)
 std::__throw_ios_failure(char const*)
 std::__throw_ios_failure(char const*, int)
@@ -11077,12 +11134,7 @@ std::__timepunct_cache<char>::~__timepunct_cache()
 std::__timepunct_cache<wchar_t>::_S_timezones
 std::__timepunct_cache<wchar_t>::__timepunct_cache(unsigned long)
 std::__timepunct_cache<wchar_t>::~__timepunct_cache()
-std::__uniq_ptr_data<std::__future_base::_State_baseV2::_Make_ready, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>, true, true>::__uniq_ptr_data(std::__future_base::_State_baseV2::_Make_ready*)
 std::__uniq_ptr_data<std::thread::_State, std::default_delete<std::thread::_State>, true, true>::__uniq_ptr_data(std::thread::_State*)
-std::__uniq_ptr_impl<std::__future_base::_State_baseV2::_Make_ready, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>::_M_deleter()
-std::__uniq_ptr_impl<std::__future_base::_State_baseV2::_Make_ready, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>::_M_ptr()
-std::__uniq_ptr_impl<std::__future_base::_State_baseV2::_Make_ready, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>::_M_ptr() const
-std::__uniq_ptr_impl<std::__future_base::_State_baseV2::_Make_ready, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>::__uniq_ptr_impl(std::__future_base::_State_baseV2::_Make_ready*)
 std::__uniq_ptr_impl<std::thread::_State, std::default_delete<std::thread::_State>>::_M_deleter()
 std::__uniq_ptr_impl<std::thread::_State, std::default_delete<std::thread::_State>>::_M_ptr()
 std::__uniq_ptr_impl<std::thread::_State, std::default_delete<std::thread::_State>>::_M_ptr() const
@@ -11097,11 +11149,7 @@ std::__use_cache<std::__numpunct_cache<wchar_t>>::operator()(std::locale const&)
 std::__verify_grouping(char const*, unsigned long, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)
 std::__verify_grouping(char const*, unsigned long, std::string const&)
 std::__verify_grouping_impl(char const*, unsigned long, char const*, unsigned long)
-std::__weak_count<(__gnu_cxx::_Lock_policy)2>::~__weak_count()
-std::__weak_ptr<std::__future_base::_State_baseV2, (__gnu_cxx::_Lock_policy)2>::~__weak_ptr()
 std::allocator
-std::atomic<bool>::load(std::memory_order) const
-std::atomic<bool>::store(bool, std::memory_order)
 std::auto_ptr<std::Catalog_info>::auto_ptr(std::Catalog_info*)
 std::auto_ptr<std::Catalog_info>::get() const
 std::auto_ptr<std::Catalog_info>::operator->() const
@@ -12155,9 +12203,6 @@ std::ctype_byname<wchar_t>::ctype_byname(char const*, unsigned long)
 std::ctype_byname<wchar_t>::ctype_byname(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, unsigned long)
 std::ctype_byname<wchar_t>::ctype_byname(std::string const&, unsigned long)
 std::ctype_byname<wchar_t>::~ctype_byname()
-std::current_exception()
-std::default_delete<std::__future_base::_State_baseV2::_Make_ready>& std::__get_helper<1ul, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>(std::_Tuple_impl<1ul, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>, >&)
-std::default_delete<std::__future_base::_State_baseV2::_Make_ready>::operator()(std::__future_base::_State_baseV2::_Make_ready*) const
 std::default_delete<std::thread::_State>& std::__get_helper<1ul, std::default_delete<std::thread::_State>>(std::_Tuple_impl<1ul, std::default_delete<std::thread::_State>, >&)
 std::default_delete<std::thread::_State>::operator()(std::thread::_State*) const
 std::deque<std::__detail::_StateSeq<std::regex_traits<char>>, std::allocator<std::__detail::_StateSeq<std::regex_traits<char>>>>::_M_reallocate_map(unsigned long, bool)
@@ -12210,10 +12255,6 @@ std::fpos<__mbstate_t>::fpos(long)
 std::fpos<__mbstate_t>::operator long() const
 std::fpos<__mbstate_t>::state() const
 std::fpos<__mbstate_t>::state(__mbstate_t)
-std::future_category()
-std::future_error: 
-std::future_error::what() const
-std::future_error::~future_error()
 std::get_catalogs()
 std::get_new_handler()
 std::get_terminate()
@@ -12501,7 +12542,6 @@ std::logic_error::operator=(std::logic_error&&)
 std::logic_error::what() const
 std::logic_error::~logic_error()
 std::make_error_code(std::errc)
-std::make_error_code(std::future_errc)
 std::make_error_code(std::io_errc)
 std::messages<char> const& std::use_facet<std::messages<char>>(std::locale const&)
 std::messages<char> const* std::__try_use_facet<std::messages<char>>(std::locale const&)
@@ -12871,7 +12911,6 @@ std::operator!=(std::thread::id, std::thread::id)
 std::operator&(std::_Ios_Fmtflags, std::_Ios_Fmtflags)
 std::operator&(std::_Ios_Iostate, std::_Ios_Iostate)
 std::operator&(std::_Ios_Openmode, std::_Ios_Openmode)
-std::operator&(std::memory_order, std::__memory_order_modifier)
 std::operator&=(std::_Ios_Fmtflags&, std::_Ios_Fmtflags)
 std::operator==(std::error_condition const&, std::error_condition const&)
 std::operator==(std::thread::id, std::thread::id)
@@ -13003,7 +13042,6 @@ std::remove_reference<std::_Ios_Openmode&>::type&& std::move<std::_Ios_Openmode&
 std::remove_reference<std::__basic_file<char>&>::type&& std::move<std::__basic_file<char>&>(std::__basic_file<char>&)
 std::remove_reference<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>&>::type&& std::move<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>&>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>&)
 std::remove_reference<std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>&>::type&& std::move<std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>&>(std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>&)
-std::remove_reference<std::__future_base::_State_baseV2::_Make_ready*&>::type&& std::move<std::__future_base::_State_baseV2::_Make_ready*&>(std::__future_base::_State_baseV2::_Make_ready*&)
 std::remove_reference<std::__shared_ptr<std::thread::_Impl_base, (__gnu_cxx::_Lock_policy)2>&>::type&& std::move<std::__shared_ptr<std::thread::_Impl_base, (__gnu_cxx::_Lock_policy)2>&>(std::__shared_ptr<std::thread::_Impl_base, (__gnu_cxx::_Lock_policy)2>&)
 std::remove_reference<std::allocator<char>&>::type&& std::move<std::allocator<char>&>(std::allocator<char>&)
 std::remove_reference<std::allocator<wchar_t>&>::type&& std::move<std::allocator<wchar_t>&>(std::allocator<wchar_t>&)
@@ -13042,7 +13080,6 @@ std::remove_reference<unsigned int&>::type&& std::move<unsigned int&>(unsigned i
 std::remove_reference<unsigned long&>::type&& std::move<unsigned long&>(unsigned long&)
 std::remove_reference<wchar_t&>::type&& std::move<wchar_t&>(wchar_t&)
 std::remove_reference<wchar_t*&>::type&& std::move<wchar_t*&>(wchar_t*&)
-std::rethrow_exception(std::__exception_ptr::exception_ptr)
 std::reverse_iterator<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>>::reverse_iterator(__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>)
 std::reverse_iterator<__gnu_cxx::__normal_iterator<char const*, std::string>>::reverse_iterator(__gnu_cxx::__normal_iterator<char const*, std::string>)
 std::reverse_iterator<__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>>::reverse_iterator(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>)
@@ -13063,8 +13100,6 @@ std::runtime_error::~runtime_error()
 std::set_new_handler(void (*)())
 std::set_terminate(void (*)())
 std::set_unexpected(void (*)())
-std::shared_ptr<std::__future_base::_State_baseV2>::shared_ptr(std::weak_ptr<std::__future_base::_State_baseV2> const&, std::nothrow_t)
-std::shared_ptr<std::__future_base::_State_baseV2>::~shared_ptr()
 std::shared_ptr<std::thread::_Impl_base>::operator=(std::shared_ptr<std::thread::_Impl_base>&&)
 std::shared_ptr<std::thread::_Impl_base>::shared_ptr(std::shared_ptr<std::thread::_Impl_base>&&)
 std::shared_ptr<std::thread::_Impl_base>::~shared_ptr()
@@ -13249,10 +13284,8 @@ std::thread::_M_thread_deps_never_run()
 std::thread::_State* const& std::__get_helper<0ul, std::thread::_State*, std::default_delete<std::thread::_State>>(std::_Tuple_impl<0ul, std::thread::_State*, std::default_delete<std::thread::_State>> const&)
 std::thread::_State*& std::__get_helper<0ul, std::thread::_State*, std::default_delete<std::thread::_State>>(std::_Tuple_impl<0ul, std::thread::_State*, std::default_delete<std::thread::_State>>&)
 std::thread::_State::~_State()
-std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (*)(unsigned int, unsigned int, tinybvh::BVH*), int, unsigned int, tinybvh::BVH*>>>::_M_run()
-std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (*)(unsigned int, unsigned int, tinybvh::BVH*), int, unsigned int, tinybvh::BVH*>>>::~_State_impl()
-std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (*)(unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int*, tinybvh::BVH*), int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int*, tinybvh::BVH*>>>::_M_run()
-std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (*)(unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int*, tinybvh::BVH*), int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int*, tinybvh::BVH*>>>::~_State_impl()
+std::thread::_State_impl<std::thread::_Invoker<std::tuple<tinybvh::JobSystem::Initialize()::'lambda'()>>>::_M_run()
+std::thread::_State_impl<std::thread::_Invoker<std::tuple<tinybvh::JobSystem::Initialize()::'lambda'()>>>::~_State_impl()
 std::thread::detach()
 std::thread::hardware_concurrency()
 std::thread::id::id()
@@ -13341,13 +13374,10 @@ std::time_put_byname<wchar_t, std::ostreambuf_iterator<wchar_t, std::char_traits
 std::time_put_byname<wchar_t, std::ostreambuf_iterator<wchar_t, std::char_traits<wchar_t>>>::time_put_byname(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, unsigned long)
 std::time_put_byname<wchar_t, std::ostreambuf_iterator<wchar_t, std::char_traits<wchar_t>>>::time_put_byname(std::string const&, unsigned long)
 std::time_put_byname<wchar_t, std::ostreambuf_iterator<wchar_t, std::char_traits<wchar_t>>>::~time_put_byname()
-std::tuple<std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>::tuple<true, true>()
+std::to_string(int)
 std::tuple<std::thread::_State*, std::default_delete<std::thread::_State>>::tuple<true, true>()
-std::tuple_element<0ul, std::tuple<std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>>::type const& std::get<0ul, std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>(std::tuple<std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>> const&)
-std::tuple_element<0ul, std::tuple<std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>>::type& std::get<0ul, std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>(std::tuple<std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>&)
 std::tuple_element<0ul, std::tuple<std::thread::_State*, std::default_delete<std::thread::_State>>>::type const& std::get<0ul, std::thread::_State*, std::default_delete<std::thread::_State>>(std::tuple<std::thread::_State*, std::default_delete<std::thread::_State>> const&)
 std::tuple_element<0ul, std::tuple<std::thread::_State*, std::default_delete<std::thread::_State>>>::type& std::get<0ul, std::thread::_State*, std::default_delete<std::thread::_State>>(std::tuple<std::thread::_State*, std::default_delete<std::thread::_State>>&)
-std::tuple_element<1ul, std::tuple<std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>>::type& std::get<1ul, std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>(std::tuple<std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>&)
 std::tuple_element<1ul, std::tuple<std::thread::_State*, std::default_delete<std::thread::_State>>>::type& std::get<1ul, std::thread::_State*, std::default_delete<std::thread::_State>>(std::tuple<std::thread::_State*, std::default_delete<std::thread::_State>>&)
 std::type_info::__do_catch(std::type_info const*, void**, unsigned int) const
 std::type_info::__do_upcast(__cxxabiv1::__class_type_info const*, void**) const
@@ -13366,11 +13396,6 @@ std::underflow_error::~underflow_error()
 std::unexpected()
 std::unique_lock<std::mutex>::mutex() const
 std::unique_lock<std::mutex>::release()
-std::unique_ptr<std::__future_base::_State_baseV2::_Make_ready, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>::get() const
-std::unique_ptr<std::__future_base::_State_baseV2::_Make_ready, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>::get_deleter()
-std::unique_ptr<std::__future_base::_State_baseV2::_Make_ready, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>::operator->() const
-std::unique_ptr<std::__future_base::_State_baseV2::_Make_ready, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>::unique_ptr<std::default_delete<std::__future_base::_State_baseV2::_Make_ready>, void>(std::__future_base::_State_baseV2::_Make_ready*)
-std::unique_ptr<std::__future_base::_State_baseV2::_Make_ready, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>::~unique_ptr()
 std::unique_ptr<std::thread::_State, std::default_delete<std::thread::_State>>::get() const
 std::unique_ptr<std::thread::_State, std::default_delete<std::thread::_State>>::get_deleter()
 std::unique_ptr<std::thread::_State, std::default_delete<std::thread::_State>>::operator->() const
@@ -13378,6 +13403,7 @@ std::unique_ptr<std::thread::_State, std::default_delete<std::thread::_State>>::
 std::unique_ptr<std::thread::_State, std::default_delete<std::thread::_State>>::unique_ptr<std::default_delete<std::thread::_State>, void>(std::thread::_State*)
 std::unique_ptr<std::thread::_State, std::default_delete<std::thread::_State>>::~unique_ptr()
 std::vector<char, std::allocator<char>>::vector(std::vector<char, std::allocator<char>> const&)
+std::vector<float, std::allocator<float>>::vector(unsigned long, std::allocator<float> const&)
 std::vector<std::Catalog_info*, std::allocator<std::Catalog_info*>>::_M_check_len(unsigned long, char const*) const
 std::vector<std::Catalog_info*, std::allocator<std::Catalog_info*>>::_M_erase(__gnu_cxx::__normal_iterator<std::Catalog_info**, std::vector<std::Catalog_info*, std::allocator<std::Catalog_info*>>>)
 std::vector<std::Catalog_info*, std::allocator<std::Catalog_info*>>::_M_realloc_append(std::Catalog_info* const&)
@@ -13403,8 +13429,6 @@ std::wcerr
 std::wcin
 std::wclog
 std::wcout
-std::weak_ptr<std::__future_base::_State_baseV2>::lock() const
-std::weak_ptr<std::__future_base::_State_baseV2>::~weak_ptr()
 stderr
 stdin
 stdout
@@ -13507,10 +13531,12 @@ throw
 throw 
 tied
 tilde
+tile %d ( %u bytes at %u ) is not in the %u bytes read or does not decompress
 tile cull items
 time
 timegm
-tiny_bvh.h
+tiny_bvh_base.h
+tinybvh_%u
 tom-hi
 tom-low
 tom-mid
@@ -13661,6 +13687,8 @@ typeinfo for short*
 typeinfo for signed char
 typeinfo for signed char const*
 typeinfo for signed char*
+typeinfo for std::_Mutex_base<(__gnu_cxx::_Lock_policy)2>
+typeinfo for std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>
 typeinfo for std::_Sp_counted_ptr_inplace<std::__detail::_NFA<std::regex_traits<char>>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>
 typeinfo for std::_V2::error_category
 typeinfo for std::__codecvt_abstract_base<char, char, __mbstate_t>
@@ -13724,7 +13752,6 @@ typeinfo for std::__detail::_CharMatcher<std::regex_traits<char>, false, false>
 typeinfo for std::__detail::_CharMatcher<std::regex_traits<char>, false, true>
 typeinfo for std::__detail::_CharMatcher<std::regex_traits<char>, true, false>
 typeinfo for std::__detail::_CharMatcher<std::regex_traits<char>, true, true>
-typeinfo for std::__future_base::_Result_base
 typeinfo for std::__ios_failure
 typeinfo for std::__iosfail_type_info
 typeinfo for std::__moneypunct_cache<char, false>
@@ -13789,7 +13816,6 @@ typeinfo for std::ctype_byname<char>
 typeinfo for std::ctype_byname<wchar_t>
 typeinfo for std::domain_error
 typeinfo for std::exception
-typeinfo for std::future_error
 typeinfo for std::invalid_argument
 typeinfo for std::ios_base
 typeinfo for std::ios_base::failure
@@ -13837,8 +13863,7 @@ typeinfo for std::regex_error
 typeinfo for std::runtime_error
 typeinfo for std::system_error
 typeinfo for std::thread::_State
-typeinfo for std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (*)(unsigned int, unsigned int, tinybvh::BVH*), int, unsigned int, tinybvh::BVH*>>>
-typeinfo for std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (*)(unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int*, tinybvh::BVH*), int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int*, tinybvh::BVH*>>>
+typeinfo for std::thread::_State_impl<std::thread::_Invoker<std::tuple<tinybvh::JobSystem::Initialize()::'lambda'()>>>
 typeinfo for std::time_base
 typeinfo for std::time_get<char, std::istreambuf_iterator<char, std::char_traits<char>>>
 typeinfo for std::time_get<wchar_t, std::istreambuf_iterator<wchar_t, std::char_traits<wchar_t>>>
@@ -13964,7 +13989,10 @@ typeinfo name for short*
 typeinfo name for signed char
 typeinfo name for signed char const*
 typeinfo name for signed char*
+typeinfo name for std::_Mutex_base<(__gnu_cxx::_Lock_policy)2>
+typeinfo name for std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>
 typeinfo name for std::_Sp_counted_ptr_inplace<std::__detail::_NFA<std::regex_traits<char>>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>
+typeinfo name for std::_Sp_make_shared_tag
 typeinfo name for std::_V2::error_category
 typeinfo name for std::__codecvt_abstract_base<char, char, __mbstate_t>
 typeinfo name for std::__codecvt_abstract_base<char16_t, char, __mbstate_t>
@@ -14027,7 +14055,6 @@ typeinfo name for std::__detail::_CharMatcher<std::regex_traits<char>, false, fa
 typeinfo name for std::__detail::_CharMatcher<std::regex_traits<char>, false, true>
 typeinfo name for std::__detail::_CharMatcher<std::regex_traits<char>, true, false>
 typeinfo name for std::__detail::_CharMatcher<std::regex_traits<char>, true, true>
-typeinfo name for std::__future_base::_Result_base
 typeinfo name for std::__ios_failure
 typeinfo name for std::__iosfail_type_info
 typeinfo name for std::__moneypunct_cache<char, false>
@@ -14092,7 +14119,6 @@ typeinfo name for std::ctype_byname<char>
 typeinfo name for std::ctype_byname<wchar_t>
 typeinfo name for std::domain_error
 typeinfo name for std::exception
-typeinfo name for std::future_error
 typeinfo name for std::invalid_argument
 typeinfo name for std::ios_base
 typeinfo name for std::ios_base::failure
@@ -14140,8 +14166,7 @@ typeinfo name for std::regex_error
 typeinfo name for std::runtime_error
 typeinfo name for std::system_error
 typeinfo name for std::thread::_State
-typeinfo name for std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (*)(unsigned int, unsigned int, tinybvh::BVH*), int, unsigned int, tinybvh::BVH*>>>
-typeinfo name for std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (*)(unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int*, tinybvh::BVH*), int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int*, tinybvh::BVH*>>>
+typeinfo name for std::thread::_State_impl<std::thread::_Invoker<std::tuple<tinybvh::JobSystem::Initialize()::'lambda'()>>>
 typeinfo name for std::time_base
 typeinfo name for std::time_get<char, std::istreambuf_iterator<char, std::char_traits<char>>>
 typeinfo name for std::time_get<wchar_t, std::istreambuf_iterator<wchar_t, std::char_traits<wchar_t>>>
@@ -14187,6 +14212,7 @@ uint64_t google::protobuf::UnknownField::fixed64() const
 uint64_t google::protobuf::UnknownField::varint() const
 unable to register all schema data: %s\n
 unbatchable
+uncompressed tile size is not a page
 underscore
 undo_point: %d, redo_point: %d, undo_char_point: %d, redo_char_point: %d
 undopoints
@@ -14198,6 +14224,7 @@ uninitialized __any_string
 uninterpreted_option
 unique mats
 unknown
+unknown compression
 unsigned
 unsigned __int128
 unsigned char
@@ -14457,6 +14484,7 @@ void std::vector<std::regex_traits<char>::_RegexMask, std::allocator<std::regex_
 void_context
 volumetric fog
 volumetric_fog.vtex
+vs Baseline
 vsnprintf
 vt_analyze_256_pages
 vt_evict_all
@@ -14527,7 +14555,6 @@ vtable for std::__cxx11::time_get<char, std::istreambuf_iterator<char, std::char
 vtable for std::__cxx11::time_get<wchar_t, std::istreambuf_iterator<wchar_t, std::char_traits<wchar_t>>>
 vtable for std::__cxx11::time_get_byname<char, std::istreambuf_iterator<char, std::char_traits<char>>>
 vtable for std::__cxx11::time_get_byname<wchar_t, std::istreambuf_iterator<wchar_t, std::char_traits<wchar_t>>>
-vtable for std::__future_base::_Result_base
 vtable for std::__ios_failure
 vtable for std::__iosfail_type_info
 vtable for std::__moneypunct_cache<char, false>
@@ -14587,7 +14614,6 @@ vtable for std::ctype_byname<char>
 vtable for std::ctype_byname<wchar_t>
 vtable for std::domain_error
 vtable for std::exception
-vtable for std::future_error
 vtable for std::invalid_argument
 vtable for std::ios_base
 vtable for std::ios_base::failure
@@ -14629,8 +14655,7 @@ vtable for std::regex_error
 vtable for std::runtime_error
 vtable for std::system_error
 vtable for std::thread::_State
-vtable for std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (*)(unsigned int, unsigned int, tinybvh::BVH*), int, unsigned int, tinybvh::BVH*>>>
-vtable for std::thread::_State_impl<std::thread::_Invoker<std::tuple<void (*)(unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int*, tinybvh::BVH*), int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int*, tinybvh::BVH*>>>
+vtable for std::thread::_State_impl<std::thread::_Invoker<std::tuple<tinybvh::JobSystem::Initialize()::'lambda'()>>>
 vtable for std::time_get<char, std::istreambuf_iterator<char, std::char_traits<char>>>
 vtable for std::time_get<wchar_t, std::istreambuf_iterator<wchar_t, std::char_traits<wchar_t>>>
 vtable for std::time_get_byname<char, std::istreambuf_iterator<char, std::char_traits<char>>>

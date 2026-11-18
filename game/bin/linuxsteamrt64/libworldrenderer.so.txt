@@ -1,7 +1,9 @@
-    %u iterated blocks\n
-    %u unfinished blocks\n
+             ( Resource "%s type %lld", handle is%s set\n
   what():  
+ NOT
  [clone 
+ [procedural] 
+ [removed w REMOVED_KEYFIELD] 
  _Complex
  _Imaginary
  __vector(
@@ -17,13 +19,8 @@
  throw
  transaction_safe
  volatile
-!m_boolDone
-!m_boolOpaque
-!m_boolPunchThroughPixels
-!m_boolTransparent
 $ORIGIN
 %.*Lf
-%3d: e=%.3f rms=%.6f %u\n
 %I:%M:%S %p
 %\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v
 %a %b %e %T %Y
@@ -81,17 +78,15 @@ $ORIGIN
 (dst_width % 3 == 0) && (dst_width > 0)
 (dy & 0x1ffff) == 0
 (dy & 0x3ffff) == 0
-(fWeightSumLeft + fWeightSumRight) > 0.0f
-(fWeightSumTop + fWeightSumBottom) > 0.0f
 (hide)
 (null)
 (show)
 (spew)
 *MOVE=>
 *N12_GLOBAL__N_117io_error_categoryE
-*N12_GLOBAL__N_121future_error_categoryE
 *N12_GLOBAL__N_121system_error_categoryE
 *N12_GLOBAL__N_122generic_error_categoryE
+*N24CParallelProcessLauncher18CParallelLambdaJobIZNK13FloatBitMap_t19WriteToBufferBC_bcnEPvm11ImageFormatRK27FloatBitmapEncodeSettings_tEUliE_EE
 *NSt13__facet_shims12_GLOBAL__N_112collate_shimIcEE
 *NSt13__facet_shims12_GLOBAL__N_112collate_shimIwEE
 *NSt13__facet_shims12_GLOBAL__N_113messages_shimIcEE
@@ -108,7 +103,6 @@ $ORIGIN
 *NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIcLb1EEE
 *NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIwLb0EEE
 *NSt13__facet_shims12_GLOBAL__N_115moneypunct_shimIwLb1EEE
-*St19_Sp_counted_deleterIPhZN3Etc13EncodeMipmapsEPfjjNS1_5Image6FormatENS1_11ErrorMetricEfjjjjPNS1_8RawImageEPibEUlS0_E_SaIvELN9__gnu_cxx12_Lock_policyE2EE
 *ZN13CSOAContainer10FilterFromERKS_iiiiiPKfbEUlvE0_
 *ZN13CSOAContainer10FilterFromERKS_iiiiiPKfbEUlvE_
 *ZN13CSOAContainer17SrgbGammaToLinearEiEUlvE_
@@ -127,7 +121,6 @@ $ORIGIN
 *ZN13CSOAContainer9FilterInZEi9IntAABB_tiPKfbEUlvE_
 *ZN17CWorldRendererMgr15UnmountWorldVPKEPKcbEUlvE_
 *ZN17CWorldRendererMgr22HandleGrassLoadRequestEP18GrassLoadRequest_tEUlP18IAsyncReadRequest220AsyncRequestStatus_tE_
-*ZN3Etc13EncodeMipmapsEPfjjNS_5Image6FormatENS_11ErrorMetricEfjjjjPNS_8RawImageEPibEUlPhE_
 *\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f
 ++%s is at refcount %d\n
 -+xX0123456789abcdef0123456789ABCDEF
@@ -148,24 +141,11 @@ $ORIGIN
 /home/saml/dev/steam/thirdpartycode/nonredist/libyuv/libyuv/source/row_common.cc
 /home/saml/dev/steam/thirdpartycode/nonredist/libyuv/libyuv/source/scale.cc
 /home/saml/dev/steam/thirdpartycode/nonredist/libyuv/libyuv/source/scale_common.cc
-/home/timo/source2/main/src/thirdparty/etc2comp/EtcLib/./EtcCodec/EtcBlock4x4Encoding.h
-/home/timo/source2/main/src/thirdparty/etc2comp/EtcLib/Etc/EtcImage.cpp
-/home/timo/source2/main/src/thirdparty/etc2comp/EtcLib/EtcCodec/EtcBlock4x4.cpp
-/home/timo/source2/main/src/thirdparty/etc2comp/EtcLib/EtcCodec/EtcBlock4x4Encoding.cpp
-/home/timo/source2/main/src/thirdparty/etc2comp/EtcLib/EtcCodec/EtcBlock4x4Encoding.h
-/home/timo/source2/main/src/thirdparty/etc2comp/EtcLib/EtcCodec/EtcBlock4x4Encoding_ETC1.cpp
-/home/timo/source2/main/src/thirdparty/etc2comp/EtcLib/EtcCodec/EtcBlock4x4Encoding_R11.cpp
-/home/timo/source2/main/src/thirdparty/etc2comp/EtcLib/EtcCodec/EtcBlock4x4Encoding_RG11.cpp
-/home/timo/source2/main/src/thirdparty/etc2comp/EtcLib/EtcCodec/EtcBlock4x4Encoding_RGB8.cpp
-/home/timo/source2/main/src/thirdparty/etc2comp/EtcLib/EtcCodec/EtcBlock4x4Encoding_RGB8A1.cpp
-/home/timo/source2/main/src/thirdparty/etc2comp/EtcLib/EtcCodec/EtcBlock4x4Encoding_RGBA8.cpp
-/home/timo/source2/main/src/thirdparty/etc2comp/EtcLib/EtcCodec/EtcDifferentialTrys.cpp
-/home/timo/source2/main/src/thirdparty/etc2comp/EtcLib/EtcCodec/EtcIndividualTrys.cpp
-/home/timo/source2/main/src/thirdparty/etc2comp/EtcLib/EtcCodec/EtcSortedBlockList.cpp
 /src/
 0 0 0
 0 0 0 0
 0 0 0 255
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789
 10CEntityMgr
 10ConCommand
@@ -206,6 +186,7 @@ $ORIGIN
 17IPulseHost_Cursor
 17IWorldRendererMgr
 18CWorldVPKReference
+18IMultipleWorkerJob
 18IPulseHost_Unknown
 18IPulseTypeEnumInfo
 18IWorldVPKReference
@@ -220,9 +201,8 @@ $ORIGIN
 20IResourceTypeManager
 20PermEntityLumpData_t
 21CGrassTileSceneObject
+21CPulseInstanceSaveAPI
 21IGrassTileSceneObject
-21IPulseInstanceLoadAPI
-21IPulseInstanceSaveAPI
 22CDefScriptAccessorBase
 22CEntityComponentHelper
 22CSchemaInstallCallback
@@ -240,7 +220,6 @@ $ORIGIN
 25IPulseHost_BaseObservable
 25IPulseHost_YieldingCursor
 26CPulseCell_BaseRequirement
-26CPulseInstanceLoadAPI_NoOp
 26CPulseInstanceSaveAPI_NoOp
 26ICommandCompletionCallback
 26IKV3TransferSaveRestoreOps
@@ -251,29 +230,21 @@ $ORIGIN
 32CEntityAPIModuleMetadataProvider
 32CEntityComponentHelperReferencedI16CScriptComponentE
 32CPulseCell_Inflow_BaseEntrypoint
-32CPulseInterfaceHelpers_Load_NoOp
 32CPulseInterfaceHelpers_Save_NoOp
 33CBaseIntrospectedToKV3TypeManager
 33CSchemaRegistration_worldrenderer
 34CKV3Transfer_ResourceLoadInterface
-34IKV3TransferInterface_EHandle_Load
 34IKV3TransferInterface_EHandle_Save
 34IKV3TransferInterface_ResourceLoad
-35IKV3TransferInterface_GameTime_Load
 35IKV3TransferInterface_GameTime_Save
 36CDefaultIntrospectedToKV3TypeManagerILy431316170614E7World_tE
 37CTypesafeIntrospectedToKV3TypeManagerILy431366240118E11WorldNode_tE
 37CTypesafeIntrospectedToKV3TypeManagerILy495874631030E20PermEntityLumpData_tE
-37IKV3TransferInterface_Worldspace_Load
 37IKV3TransferInterface_Worldspace_Save
 38CEntityClassInfoModuleMetadataProvider
-39CKV3TransferInterface_EHandle_Load_NoOp
 39CKV3TransferInterface_EHandle_Save_NoOp
-39CKV3Transfer_EmptyResourceLoadInterface
-40CKV3TransferInterface_GameTime_Load_NoOp
 40CKV3TransferInterface_GameTime_Save_NoOp
 41CModuleMetadataProvider_ResourceManifests
-42CKV3TransferInterface_Worldspace_Load_NoOp
 42CKV3TransferInterface_Worldspace_Save_NoOp
 5;FJ$,XEK4<
 6CWorld
@@ -291,6 +262,7 @@ $ORIGIN
 <none>
 <pointer>
 <table: %u members>
+<type name is DEBUG only>
 <undefined>
 <unknown KV3 basic type '%s' (%d)>
 <unknown>
@@ -586,6 +558,10 @@ BGRX8888
 BGRX8888_LINEAR
 Bad KV3 data for resource '%s': %s\n
 Bad code word
+Bad key for entity "%s": Invalid parsed value for CUtlString field "%s" (%s)!\n
+Bad key for entity "%s": Invalid parsed value for char[] field "%s" (%s)!\n
+Bad key for entity "%s": Invalid parsed value for field "%s" of type '%s' ('%s')!\n
+Bad key for entity "%s": Invalid parsed value for string_t field "%s" (%s)!\n
 Bad type %d in saved CVariant\n
 BakedLODBuilderMgr001
 BankID%d
@@ -603,7 +579,6 @@ BlendPlaneRow_Any_AVX2
 BlendPlaneRow_Any_SSSE3
 BlendPlaneRow_C
 BlendPlaneRow_SSSE3
-Broken promise
 ByteToFloat
 ByteToFloatRow_C
 CAtomicMutex::AcquireLock(unsigned long long)
@@ -636,6 +611,7 @@ CBufferString::ToLowerFast(int)
 CBufferString::TrimTail(char const*)
 CBufferString::TruncateAt(int, bool)
 CCallQueue::ParallelCallQueued(char const*, IThreadPool*)
+CEntityClass::Unserialize( %d:%s:%s )\n{\n
 CEntityComponent_API
 CEntityHandle
 CEntityIdentity *
@@ -656,6 +632,7 @@ CGridStringPrinter::SetString(int, int, char const*)
 CGridStringPrinter::Spew(int, char const*) const
 CHandle
 CHandle\<\s*(.*?)\s*\>
+CKV3TransferInterface_PulseEnum_Load
 CKeyValues_Data::Internal_GetString(char const*, char*, unsigned long)
 CMemAllocSystemInitialize
 CMemoryStack::CMemoryStack()
@@ -683,9 +660,9 @@ CPulseCell_ReturnValues::HandleReturnValues
 CPulseCell_Step_CallExternalMethod::Run
 CPulseCell_Step_DebugLog::Run
 CPulseCell_Step_PublicOutput::Run
-CPulseCell_Value_RandomFloat::Eval
-CPulseCell_Value_RandomInt::Eval
 CPulseInputParamMap
+CPulseInstanceLoadAPI
+CPulseInstanceSaveAPI
 CRC32_ProcessBuffer
 CRC64_ProcessBuffer
 CSOAContainer::SetAttributeType - ERROR, trying to change type of previously-defined attribute %d!\n
@@ -921,20 +898,18 @@ Double-save to Member '%s'
 ERROR: CUtlSymbolTableLarge element limit of %u exceeded\n
 ERROR:NoEnum:%s:%d
 ERROR:NoEnumerator:%s:%d
-ETC1
 EXPORTSYSTEM_INTERFACE_VERSION_001
 EarlyInit_Tier0
 EconItemToolModel_001
-Enable multithreading to use std::thread
+Encountered bad enum value "%s" for type %s, entity "%s" field "%s"!\n
 EnsureCapacity
 EnsureElementCapacity
 EnsureMemberCapacity
 EnsureUnusedCapacity
+Entity Targetname
+EntityKey
+EntitySpawnKeyWarning( entity "%s" class "%s" field "%s" ): %s\n
 Error running script named %s\n
-Etc::DifferentialTrys::DifferentialTrys(Etc::ColorFloatRGBA, Etc::ColorFloatRGBA, const unsigned int*, const unsigned int*, unsigned int, int, int)
-Etc::Image::EncodingStatus Etc::Image::Encode(Etc::Image::Format, Etc::ErrorMetric, float, unsigned int, unsigned int)
-Etc::IndividualTrys::IndividualTrys(Etc::ColorFloatRGBA, Etc::ColorFloatRGBA, const unsigned int*, const unsigned int*, unsigned int)
-Eval
 ExtractModuleMetadata
 FTYPEDESC_ADDED_KEYFIELD
 FTYPEDESC_ADDITIONAL_FIELDS
@@ -961,7 +936,6 @@ Features
 February
 FillAttr
 FindElement
-Finished %d Blocks out of %d\n
 Fire an entity output
 FireOutput
 FixedDiv1_C
@@ -987,15 +961,12 @@ Found existing value when inserting into dict - replacing existing value with ne
 Frame not displayable.
 Frame setup failed
 Friday
-Future already retrieved
 GAME
 GCC: (SteamRT 14.2.0-19~steamrt3.1+bsrt3.1) 14.2.0
 GCC: (SteamRT 4.8.4-1ubuntu15~12.04+steamrt1.2+srt2) 4.8.4
-GCC: (SteamRT 9.3.0-13+steamrt1.2+srt1) 9.3.0
 GLIBCXX_TUNABLES
 GLIBC_2.14
 GLIBC_2.17
-GLIBC_2.18
 GLIBC_2.2.5
 GLIBC_2.25
 GLIBC_2.27
@@ -1084,6 +1055,7 @@ HammerMapLoader001
 Handle Return Values
 HelpSystem_001
 Hitbox indexing is incorrect for set %s, hitbox %s. Hitboxes will not be setup properly.\n
+How many cursors to track history for before the oldest is evicted.
 I010AlphaToARGBMatrix
 I010Copy
 I010ToAB30
@@ -1304,9 +1276,10 @@ IKV3TransferInterface_Worldspace_Save
 IMAGE_FORMAT_IMC2
 IMAGE_FORMAT_NV12
 INTERNAL ERROR: Cannot convert or reinterpret from %s to %s
-IPulseInstanceLoadAPI
-IPulseInstanceSaveAPI
 IPulseReloadListener
+Implicit conversion qangle -> quaternion 
+Implicit conversion qangle string -> quaternion 
+Implicit conversion quaternion string -> qangle
 IncludeScript stack overflow\n
 Inconsistent treatment of '%s' (existing key is %s)!\n
 Incorrect keyframe parameters.
@@ -1357,6 +1330,7 @@ January
 July
 June
 KV3 load transfer failed for resource '%s': %s
+Keep a history of all instructions run on a per cursor basis.
 KeyValues3
 KeyValues3: pre-allocated array memory is too small for %u elements (%u bytes available, %u bytes needed)\n
 KeyValues3: pre-allocated table memory is too small for %u members (%u bytes available, %u bytes needed)\n
@@ -1438,6 +1412,7 @@ MPulseCellInflow_IsDefault
 MPulseCursorTerminates
 MPulseFGDSkipField
 MResourceTypeForInfoType
+MTreatUnknownEnumeratorsAsZero
 MakeStringToken
 March
 MaskCpuFlags
@@ -1528,45 +1503,17 @@ N10__cxxabiv120__si_class_type_infoE
 N10__cxxabiv121__vmi_class_type_infoE
 N10__cxxabiv123__fundamental_type_infoE
 N10__cxxabiv129__pointer_to_member_type_infoE
-N24CFieldPathHuffmanEncoder12InternalNodeE
-N24CFieldPathHuffmanEncoder5INodeE
-N24CFieldPathHuffmanEncoder8LeafNodeE
 N33CBaseIntrospectedToKV3TypeManager18AsyncProcessResultE
 N37CTypesafeIntrospectedToKV3TypeManagerILy431366240118E11WorldNode_tE26IKV3ResourceAllocatorUtilsE
 N37CTypesafeIntrospectedToKV3TypeManagerILy431366240118E11WorldNode_tE28IKV3ResourceDeallocatorUtilsE
 N37CTypesafeIntrospectedToKV3TypeManagerILy495874631030E20PermEntityLumpData_tE26IKV3ResourceAllocatorUtilsE
 N37CTypesafeIntrospectedToKV3TypeManagerILy495874631030E20PermEntityLumpData_tE28IKV3ResourceDeallocatorUtilsE
-N3Etc16Block4x4EncodingE
-N3Etc20Block4x4Encoding_R11E
-N3Etc21Block4x4Encoding_ETC1E
-N3Etc21Block4x4Encoding_RG11E
-N3Etc21Block4x4Encoding_RGB8E
-N3Etc22Block4x4Encoding_RGBA8E
-N3Etc23Block4x4Encoding_RGB8A1E
-N3Etc29Block4x4Encoding_RGBA8_OpaqueE
-N3Etc30Block4x4Encoding_RGB8A1_OpaqueE
-N3Etc34Block4x4Encoding_RGBA8_TransparentE
-N3Etc35Block4x4Encoding_RGB8A1_TransparentE
 N9__gnu_cxx20recursive_init_errorE
 N9__gnu_cxx24__concurrence_lock_errorE
 N9__gnu_cxx26__concurrence_unlock_errorE
-NSt13__future_base12_Result_baseE
-NSt13__future_base12_Task_setterISt10unique_ptrINS_7_ResultIjEENS_12_Result_base8_DeleterEENSt6thread8_InvokerISt5tupleIJMN3Etc5ImageEFjjjjEPSB_jijEEEEjEE
-NSt13__future_base12_Task_setterISt10unique_ptrINS_7_ResultIvEENS_12_Result_base8_DeleterEENSt6thread8_InvokerISt5tupleIJMN3Etc5ImageEFvjjEPSB_ijEEEEvEE
-NSt13__future_base13_State_baseV2E
-NSt13__future_base15_Deferred_stateINSt6thread8_InvokerISt5tupleIJMN3Etc5ImageEFjjjjEPS5_jijEEEEjEE
-NSt13__future_base15_Deferred_stateINSt6thread8_InvokerISt5tupleIJMN3Etc5ImageEFvjjEPS5_ijEEEEvEE
-NSt13__future_base17_Async_state_implINSt6thread8_InvokerISt5tupleIJMN3Etc5ImageEFjjjjEPS5_jijEEEEjEE
-NSt13__future_base17_Async_state_implINSt6thread8_InvokerISt5tupleIJMN3Etc5ImageEFvjjEPS5_ijEEEEvEE
-NSt13__future_base21_Async_state_commonV2E
-NSt13__future_base7_ResultIjEE
-NSt13__future_base7_ResultIvEE
 NSt3_V214error_categoryE
 NSt6locale5facet6__shimE
 NSt6locale5facetE
-NSt6thread11_State_implINS_8_InvokerISt5tupleIJZNSt13__future_base17_Async_state_implINS1_IS2_IJMN3Etc5ImageEFjjjjEPS6_jijEEEEjEC4EOSB_EUlvE_EEEEEE
-NSt6thread11_State_implINS_8_InvokerISt5tupleIJZNSt13__future_base17_Async_state_implINS1_IS2_IJMN3Etc5ImageEFvjjEPS6_ijEEEEvEC4EOSB_EUlvE_EEEEEE
-NSt6thread6_StateE
 NSt7__cxx1110moneypunctIcLb0EEE
 NSt7__cxx1110moneypunctIcLb1EEE
 NSt7__cxx1110moneypunctIwLb0EEE
@@ -1670,7 +1617,6 @@ NV_NULL
 Newline in string literal
 No DATA block for resource '%s'\n
 No DATA block for resource\n
-No associated state
 No closing */ before end of file
 No conversion from %s to bool now\n
 No conversion from %s to string at the moment!\n
@@ -1731,10 +1677,10 @@ PKDi
 PKDn
 PKDs
 PKDu
-PLANAR
 POSIX
 PVAL_ANY
 PVAL_INVALID
+PVAL_LAMBDA
 PVAL_SCHEMA_ENUM
 PVAL_TYPESAFE_INT
 PVAL_TYPESAFE_INT64
@@ -1765,7 +1711,6 @@ Precache
 Precaches a specific resource
 Premature end-of-file encountered.
 Premature end-of-partition0 encountered.
-Promise already satisfied
 PropWorldOrigin
 PropertyEditorSystem_001
 Pulse: %s 
@@ -1787,6 +1732,7 @@ R32_UINT
 R8G8B8A8_ETC2_EAC
 R8G8B8_ETC2
 R8G8_UINT
+R8G8_UNORM
 R8_UINT
 R8_UNORM
 R9G9B9E5_FLOAT
@@ -1819,7 +1765,6 @@ RESOURCE_TYPE_ENTITY_LUMP
 RESOURCE_TYPE_WORLD
 RESOURCE_TYPE_WORLD_NODE
 RESOURCE_TYPE_WORLD_VIS
-RG11
 RG11_EAC
 RG1616
 RG1616F
@@ -1854,15 +1799,12 @@ RGB565ToARGBRow_SSE2
 RGB565ToI420
 RGB565ToUVRow_C
 RGB565ToYRow_C
-RGB8
 RGB888
-RGB8A1
 RGBA1010102
 RGBA16161616
 RGBA16161616F
 RGBA32323232F
 RGBA32323232_UINT
-RGBA8
 RGBA8888
 RGBA8888_LINEAR
 RGBA8888_UINT
@@ -1903,7 +1845,6 @@ Removes a connected script function from an I/O event on the passed entity.
 Removes a connected script function from an I/O event on this entity.
 RenderDevice003
 RenderHardwareConfig002
-ResourceCompiler/BakedLighting/Version
 ResourceCompiler/DefaultMapBuilders/bakedlighting
 ResourceCompiler/DefaultMapBuilders/dontrequirebakedlighting
 ResourceCompilerSystem001
@@ -1919,11 +1860,6 @@ RotatePlane
 RotatePlane180
 RotatePlane270
 RotatePlane90
-SIGNED_R11
-SIGNED_RG11
-SRGB8
-SRGB8A1
-SRGBA8
 SSE and SSE2 are required.
 Saturday
 SaveKV3Text_NoHeader(KeyValues3 const*, CUtlString*, CBufferString*, unsigned int)
@@ -2218,7 +2154,6 @@ St12codecvt_base
 St12ctype_bynameIcE
 St12ctype_bynameIwE
 St12domain_error
-St12future_error
 St12length_error
 St12out_of_range
 St12system_error
@@ -2279,10 +2214,6 @@ St20__codecvt_utf16_baseIwE
 St20bad_array_new_length
 St21__ctype_abstract_baseIcE
 St21__ctype_abstract_baseIwE
-St23_Sp_counted_ptr_inplaceINSt13__future_base15_Deferred_stateINSt6thread8_InvokerISt5tupleIJMN3Etc5ImageEFjjjjEPS6_jijEEEEjEESaISC_ELN9__gnu_cxx12_Lock_policyE2EE
-St23_Sp_counted_ptr_inplaceINSt13__future_base15_Deferred_stateINSt6thread8_InvokerISt5tupleIJMN3Etc5ImageEFvjjEPS6_ijEEEEvEESaISC_ELN9__gnu_cxx12_Lock_policyE2EE
-St23_Sp_counted_ptr_inplaceINSt13__future_base17_Async_state_implINSt6thread8_InvokerISt5tupleIJMN3Etc5ImageEFjjjjEPS6_jijEEEEjEESaISC_ELN9__gnu_cxx12_Lock_policyE2EE
-St23_Sp_counted_ptr_inplaceINSt13__future_base17_Async_state_implINSt6thread8_InvokerISt5tupleIJMN3Etc5ImageEFvjjEPS6_ijEEEEvEESaISC_ELN9__gnu_cxx12_Lock_policyE2EE
 St23_Sp_counted_ptr_inplaceINSt8__detail4_NFAISt12regex_traitsIcEEESaIvELN9__gnu_cxx12_Lock_policyE2EE
 St23__codecvt_abstract_baseIDiDu11__mbstate_tE
 St23__codecvt_abstract_baseIDic11__mbstate_tE
@@ -2418,10 +2349,11 @@ Unknown error
 Unknown lightmap texture: %s\n
 Unlock
 UnmountWorldVPK() --%s is at refcount %d\n
-Unsupported ETC image format %d.\n
 Unsupported Grass File Version. Expected %d. Found %d\n
 Unsupported KV3 basic type '%s' (%d)!
+Unsupported SpawnKeyType_t for entity "%s" class "%s" field "%s": %s (%d)
 Unsupported number of values found in grass tile. Expected %d. Found %d\n
+UnsupportedSpawnKeyType: %s
 UpdateOnRemove
 Usage: %s <world_name> <layer_name> <visible>\n
 Usage: %s <world_name> <lump_name>\n
@@ -2523,6 +2455,7 @@ V_fputc
 V_fread
 V_frexpf
 V_fwrite
+V_isfinited
 V_isnand
 V_logf
 V_longjmp
@@ -2540,9 +2473,9 @@ V_sscanf
 V_stricmp_fast
 V_stristr_fast(char const*, char const*)
 V_strnlen(char const*, int)
-V_strtok
 V_tanf
 V_vsnprintf
+V_z3_decompress
 VertexElementAnnotation
 VertexGenericIntegerData
 VertexPaintBlendParams
@@ -2624,13 +2557,6 @@ YUY2ToYRow_Any_AVX2
 YUY2ToYRow_Any_SSE2
 YUY2ToYRow_C
 YUY2ToYRow_SSE2
-ZN10MatrixMath11ScaleMatrixILb0E15CVariableMatrixEEvRT0_fEUliiE_
-ZN10MatrixMath11ScaleMatrixILb1E15CVariableMatrixEEvRT0_fEUliiE_
-ZN10MatrixMath14MatrixMultiplyILb0E15CVariableMatrixS1_EEvRK17CSparseMatrixBaseIfERKT0_PT1_EUliiE_
-ZN10MatrixMath14MatrixMultiplyILb1E15CVariableMatrixS1_EEvRK17CSparseMatrixBaseIfERKT0_PT1_EUliiE_
-ZN10MatrixMath17AddMatrixToMatrixILb0E15CVariableMatrixS1_EEvRKT0_PT1_EUliiE_
-ZN10MatrixMath17AddMatrixToMatrixILb1E15CVariableMatrixS1_EEvRKT0_PT1_EUliiE_
-ZN10MatrixMath23AddScaledMatrixToMatrixILb1E15CVariableMatrixS1_EEvfRKT0_PT1_EUliiE_
 ZN37CTypesafeIntrospectedToKV3TypeManagerILy431366240118E11WorldNode_tE15AllocateAndLoadER23CKV3TransferLoadContextPK21ResourceBindingBase_tP29IRD_RegisterResourceDataUtilsE15CAllocatorUtils
 ZN37CTypesafeIntrospectedToKV3TypeManagerILy431366240118E11WorldNode_tE24DeallocateDestroyCleanupEPvP25IResourceDeallocatorUtilsE17CDeallocatorUtils
 ZN37CTypesafeIntrospectedToKV3TypeManagerILy495874631030E20PermEntityLumpData_tE15AllocateAndLoadER23CKV3TransferLoadContextPK21ResourceBindingBase_tP29IRD_RegisterResourceDataUtilsE15CAllocatorUtils
@@ -2640,6 +2566,7 @@ ZN37CTypesafeIntrospectedToKV3TypeManagerILy495874631030E20PermEntityLumpData_tE
 \f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*
 \nLoaded List:\n
 \nPending List:\n
+\tRead %s\t%s%s%s,\tOffs 0x%04x\n
 \tWorld: %s
 \t\t\tWorld Node Loaded: %s\n
 \v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%
@@ -2682,7 +2609,6 @@ __cxa_begin_catch
 __cxa_call_terminate
 __cxa_call_unexpected
 __cxa_current_exception_type
-__cxa_deleted_virtual
 __cxa_demangle
 __cxa_end_catch
 __cxa_finalize
@@ -2697,8 +2623,6 @@ __cxa_guard_release
 __cxa_init_primary_exception
 __cxa_pure_virtual
 __cxa_rethrow
-__cxa_thread_atexit
-__cxa_thread_atexit_impl
 __cxa_throw
 __cxa_throw_bad_array_new_length
 __cxxabiv1::__base_class_type_info::__is_public_p() const
@@ -2825,7 +2749,6 @@ __iswctype_l
 __m_BaseFlow_WhileActive__
 __newlocale
 __nl_langinfo_l
-__once_proxy
 __pthread_key_create
 __stack_chk_fail
 __strcoll_l
@@ -2851,9 +2774,6 @@ _txnal_cow_string_c_str(void const*)
 _txnal_logic_error_get_msg(void*)
 _txnal_runtime_error_get_msg(void*)
 _txnal_sso_string_c_str(void const*)
-a_fDecodedAlpha >= 0.0f
-a_uiMultithreadingStride > 0
-a_uiRadius <= MAX_RADIUS
 abort
 acosf
 active_frame
@@ -3003,6 +2923,7 @@ cannot parse partitions
 cannot parse picture header
 cannot parse segment header
 carriage-return
+cbrtf
 cell_info
 chandle, 
 char
@@ -3028,7 +2949,6 @@ char32_t const& std::min<char32_t>(char32_t const&, char32_t const&)
 char8_t
 character
 circumflex
-clock_gettime
 close
 cntrl
 co_await 
@@ -3060,7 +2980,6 @@ default
 default_ents
 delete 
 delete[] 
-deleted virtual method called\n
 depth <= 16
 depth >= 1
 depth >= 10
@@ -3080,10 +2999,8 @@ dx == 65536 * 4
 dy != __null
 dynamic_cast
 edited_as_type
-effortblocks = %d\n
 eight
 ekv_%08x
-encodingTry.m_fError < 3.40282346638528859811704183484516925e+38F
 entindex
 entity2
 entity_api
@@ -3098,13 +3015,6 @@ exclamation-mark
 exit
 expf
 f5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5Jx
-fMinAlpha <= fMaxAlpha
-fMinGrn <= fMaxGrn
-fMinRed <= fMaxRed
-fWeightSumBottom > 0.0f
-fWeightSumLeft > 0.0f
-fWeightSumRight > 0.0f
-fWeightSumTop > 0.0f
 false
 fast
 fclose
@@ -3120,15 +3030,14 @@ fixed_array
 fixed_invtbl8
 fj".T\CMek2>x
 flDurationSec
-flMax
-flMin
 float
-float Etc::Block4x4Encoding::CalcPixelError(Etc::ColorFloatRGBA, float, Etc::ColorFloatRGBA)
-float Etc::Block4x4Encoding::GetError()
 float64
 floatbitmap.cpp
-floatbitmap.cpp(1213): Unsupported color format "%s", skipping!\n
-floatbitmap.cpp(520): Conversion not supported yet!\n
+floatbitmap.cpp(1207): Unsupported color format "%s", skipping!\n
+floatbitmap.cpp(2135): Error! Allocated %llu bytes when %llu are required!\n
+floatbitmap.cpp(515): Conversion not supported yet!\n
+floatbitmap.cpp:2264
+fmaf
 fopen
 fopen64
 form-feed
@@ -3140,10 +3049,9 @@ free
 fseek
 ft: %-60s %-40s : %-80.80s raw:%s\n
 ftell
-future
 fwrite
-g_BitBuf_BitWriteMasks
-g_BitBuf_ExtraMasks
+g2[4] b2[4] b3[4] r0[9:0] g0[9:0] b0[9:0] r1[4:0] g3[4] g2[3:0] g1[4:0] b3[0] g3[3:0] b1[4:0] b3[1] b2[3:0] r2[4:0] b3[2] r3[4:0] b3[3]
+g2[5] g3[4] g3[5] r0[6:0] b3[0] b3[1] b2[4] g0[6:0] b2[5] b3[2] g2[4] b0[6:0] b3[3] b3[5] b3[4] r1[5:0] g2[3:0] g1[5:0] g3[3:0] b1[5:0] b2[3:0] r2[5:0] r3[5:0]
 g_Mathlib_GammaToLinearByteTable
 g_flConfigMaxCoord
 g_flTValues0To1Inclusive<float vector[4]>
@@ -3157,9 +3065,7 @@ g_nSequentialIndices<int>
 g_pMemAlloc
 g_pThreadPool
 generic
-get_nprocs
 getentropy
-gettimeofday
 glibcxx.eh_pool
 global constructors keyed to 
 global destructors keyed to 
@@ -3221,29 +3127,6 @@ hidden alias for
 hscript
 hscript_lightbinding
 hyphen
-iBlue >= 0 && iBlue <= 15
-iBlue >= 0 && iBlue <= 31
-iBlue1 >= (signed)(0+a_uiRadius) && iBlue1 <= (signed)(31 - a_uiRadius)
-iBlue2 < 0 || iBlue2 > 31
-iBlue2 >= (signed)(0 + a_uiRadius) && iBlue2 <= (signed)(31 - a_uiRadius)
-iDBlue >= -4 && iDBlue < 4
-iDBlue2 >= -4 && iDBlue2 < 4
-iDGreen >= -4 && iDGreen < 4
-iDGreen2 >= -4 && iDGreen2 < 4
-iDRed >= -4 && iDRed < 4
-iDRed2 >= -4 && iDRed2 < 4
-iGreen >= 0 && iGreen <= 15
-iGreen >= 0 && iGreen <= 31
-iGreen1 >= (signed)(0 + a_uiRadius) && iGreen1 <= (signed)(31 - a_uiRadius)
-iGreen2 < 0 || iGreen2 > 31
-iGreen2 >= (signed)(0 + a_uiRadius) && iGreen2 <= (signed)(31 - a_uiRadius)
-iGreen2 >= 0 && iGreen2 <= 31
-iRed >= 0 && iRed <= 15
-iRed >= 0 && iRed <= 31
-iRed1 >= (signed)(0 + a_uiRadius) && iRed1 <= (signed)(31 - a_uiRadius)
-iRed2 < 0 || iRed2 > 31
-iRed2 >= (signed)(0 + a_uiRadius) && iRed2 <= (signed)(31 - a_uiRadius)
-iRed2 >= 0 && iRed2 <= 31
 iboxwidth > 0
 iconv
 iconv_close
@@ -3267,6 +3150,7 @@ int& std::forward<int&>(std::remove_reference<int&>::type&)
 int&& std::forward<int>(std::remove_reference<int>::type&)
 int16
 int64
+int8
 integer
 interrupt_priority
 invalid
@@ -3306,6 +3190,7 @@ keyValues3Data
 kv 0x%p AddRef refcount == %d\n
 kv 0x%p Release refcount == %d\n
 ld-linux-x86-64.so.2
+ldexpf
 left-curly-bracket
 left-parenthesis
 left-square-bracket
@@ -3321,6 +3206,8 @@ locale::_S_normalize_category category not found
 locale::facet::_S_create_c_locale name not valid
 locale::facet::_S_lc_ctype_c_locale duplocale error
 locale::facet::_S_lc_ctype_c_locale newlocale error
+log1p
+log1pf
 long
 long const& std::min<long>(long const&, long const&)
 long double
@@ -3335,30 +3222,22 @@ loongson-mmi
 lower
 lowprecisionuv
 lowprecisionuv1
+lroundf
 m_Format
 m_InstanceOrientations32
+m_LambdaSubscriptions
+m_LatestValue
 m_ReturnType
 m_VisClusterMemberBits
 m_bChildCursorsShouldInherit
 m_bRemoveWhenOutOfScope
 m_bShowInUI
-m_boolDiff
-m_boolDiff == true
-m_boolTransparent
-m_fError >= 0.0f
-m_mode == MODE_ETC1
-m_mode == MODE_H
-m_mode == MODE_PLANAR
-m_mode == MODE_T
+m_hInstance
 m_nCursorID
 m_nGraphID
 m_nStackDepthWhenAdded
 m_nUniqueID
 m_nYieldToken
-m_paucEncodingBits == nullptr
-m_uiAddedBlocks < m_uiImageBlocks
-m_uiAddedBlocks == m_uiImageBlocks
-m_uiEncodingIterations == 0
 malloc
 mapUsageType
 maps/%s/world.vrman
@@ -3380,10 +3259,7 @@ meshsystem
 modifierhandle, 
 mold 2.36.0 (compatible with GNU ld)
 mt19937
-nMax
-nMin
 nTries < 10000000
-nanosleep
 net_array
 new 
 new[]
@@ -3399,6 +3275,8 @@ non-virtual thunk to std::basic_iostream<char, std::char_traits<char>>::~basic_i
 non-virtual thunk to std::basic_iostream<wchar_t, std::char_traits<wchar_t>>::~basic_iostream()
 non-virtual thunk to std::basic_stringstream<char, std::char_traits<char>, std::allocator<char>>::~basic_stringstream()
 non-virtual thunk to std::basic_stringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>::~basic_stringstream()
+not enough elements in QAngle string\n
+not enough elements in Quaternion string\n
 null
 null VP8Io passed to VP8GetHeaders()
 number-sign
@@ -3435,8 +3313,6 @@ optionallycompressedtangentframe
 pMessage
 param
 parent_cursor_id
-pass %u\n
-pbucket->plinkLast->GetNext() == nullptr
 percent-sign
 period
 phys_res
@@ -3447,30 +3323,28 @@ posxyz
 print
 printf
 pthread_cond_broadcast
-pthread_cond_destroy
-pthread_cond_signal
 pthread_cond_wait
-pthread_create
-pthread_detach
-pthread_getspecific
-pthread_join
-pthread_key_create
-pthread_key_delete
 pthread_mutex_lock
 pthread_mutex_unlock
 pthread_once
-pthread_setspecific
-ptry < &a_phalf->m_atry[DifferentialTrys::Half::MAX_TRYS]
-ptry < &a_phalf->m_atry[IndividualTrys::Half::MAX_TRYS]
-ptry->m_fError < 3.40282346638528859811704183484516925e+38F
-ptryBest1 != nullptr
-ptryBest2 != nullptr
 pulse_open_graph_id %u %u
+pulse_save_cursor_info_limit
 punct
-pure virtual method called\n
 quaternion
 question-mark
 quotation-mark
+r0[5:0] g3[4] b3[0] b3[1] b2[4] g0[5:0] g2[5] b2[5] b3[2] g2[4] b0[5:0] g3[5] b3[3] b3[5] b3[4] r1[5:0] g2[3:0] g1[5:0] g3[3:0] b1[5:0] b2[3:0] r2[5:0] r3[5:0]
+r0[7:0] b3[0] b2[4] g0[7:0] g2[5] g2[4] b0[7:0] g3[5] b3[4] r1[4:0] g3[4] g2[3:0] g1[5:0] g3[3:0] b1[4:0] b3[1] b2[3:0] r2[4:0] b3[2] r3[4:0] b3[3]
+r0[7:0] b3[1] b2[4] g0[7:0] b2[5] g2[4] b0[7:0] b3[5] b3[4] r1[4:0] g3[4] g2[3:0] g1[4:0] b3[0] g3[3:0] b1[5:0] b2[3:0] r2[4:0] b3[2] r3[4:0] b3[3]
+r0[7:0] g3[4] b2[4] g0[7:0] b3[2] g2[4] b0[7:0] b3[3] b3[4] r1[5:0] g2[3:0] g1[4:0] b3[0] g3[3:0] b1[4:0] b3[1] b2[3:0] r2[5:0] r3[5:0]
+r0[8:0] b2[4] g0[8:0] g2[4] b0[8:0] b3[4] r1[4:0] g3[4] g2[3:0] g1[4:0] b3[0] g3[3:0] b1[4:0] b3[1] b2[3:0] r2[4:0] b3[2] r3[4:0] b3[3]
+r0[9:0] g0[9:0] b0[9:0] r1[3:0] r0[10:15] g1[3:0] g0[10:15] b1[3:0] b0[10:15]
+r0[9:0] g0[9:0] b0[9:0] r1[3:0] r0[10] b2[4] g2[3:0] g1[3:0] g0[10] b3[0] g3[3:0] b1[4:0] b0[10] b2[3:0] r2[3:0] b3[1] b3[2] r3[3:0] b3[4] b3[3]
+r0[9:0] g0[9:0] b0[9:0] r1[3:0] r0[10] g3[4] g2[3:0] g1[4:0] g0[10] g3[3:0] b1[3:0] b0[10] b3[1] b2[3:0] r2[3:0] b3[0] b3[2] r3[3:0] g2[4] b3[3]
+r0[9:0] g0[9:0] b0[9:0] r1[4:0] r0[10] g2[3:0] g1[3:0] g0[10] b3[0] g3[3:0] b1[3:0] b0[10] b3[1] b2[3:0] r2[4:0] b3[2] r3[4:0] b3[3]
+r0[9:0] g0[9:0] b0[9:0] r1[7:0] r0[10:11] g1[7:0] g0[10:11] b1[7:0] b0[10:11]
+r0[9:0] g0[9:0] b0[9:0] r1[8:0] r0[10] g1[8:0] g0[10] b1[8:0] b0[10]
+r0[9:0] g0[9:0] b0[9:0] r1[9:0] g1[9:0] b1[9:0]
 random_device could not be read
 random_device: getentropy failed
 random_device: rdrand failed
@@ -3496,7 +3370,6 @@ retval
 right-curly-bracket
 right-parenthesis
 right-square-bracket
-roundf
 s5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5Jx
 sRGB
 scale <= 32768
@@ -3518,7 +3391,6 @@ source_file
 source_line
 space
 sprintf
-sqrtf
 src_height != 0
 src_height == ((dst_height + 1) / 2)
 src_width != 0
@@ -3579,16 +3451,6 @@ std::_Function_handler<bool (char), std::__detail::_CharMatcher<std::regex_trait
 std::_Function_handler<bool (char), std::__detail::_CharMatcher<std::regex_traits<char>, true, false>>::_M_manager(std::_Any_data&, std::_Any_data const&, std::_Manager_operation)
 std::_Function_handler<bool (char), std::__detail::_CharMatcher<std::regex_traits<char>, true, true>>::_M_invoke(std::_Any_data const&, char&&)
 std::_Function_handler<bool (char), std::__detail::_CharMatcher<std::regex_traits<char>, true, true>>::_M_manager(std::_Any_data&, std::_Any_data const&, std::_Manager_operation)
-std::_Head_base<0ul, std::__future_base::_State_baseV2::_Make_ready*, false>::_Head_base()
-std::_Head_base<0ul, std::__future_base::_State_baseV2::_Make_ready*, false>::_M_head(std::_Head_base<0ul, std::__future_base::_State_baseV2::_Make_ready*, false> const&)
-std::_Head_base<0ul, std::__future_base::_State_baseV2::_Make_ready*, false>::_M_head(std::_Head_base<0ul, std::__future_base::_State_baseV2::_Make_ready*, false>&)
-std::_Head_base<0ul, std::thread::_State*, false>::_Head_base()
-std::_Head_base<0ul, std::thread::_State*, false>::_M_head(std::_Head_base<0ul, std::thread::_State*, false> const&)
-std::_Head_base<0ul, std::thread::_State*, false>::_M_head(std::_Head_base<0ul, std::thread::_State*, false>&)
-std::_Head_base<1ul, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>, true>::_Head_base()
-std::_Head_base<1ul, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>, true>::_M_head(std::_Head_base<1ul, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>, true>&)
-std::_Head_base<1ul, std::default_delete<std::thread::_State>, true>::_Head_base()
-std::_Head_base<1ul, std::default_delete<std::thread::_State>, true>::_M_head(std::_Head_base<1ul, std::default_delete<std::thread::_State>, true>&)
 std::_Rb_tree_black_count(std::_Rb_tree_node_base const*, std::_Rb_tree_node_base const*)
 std::_Rb_tree_decrement(std::_Rb_tree_node_base const*)
 std::_Rb_tree_decrement(std::_Rb_tree_node_base*)
@@ -3602,27 +3464,14 @@ std::_Rb_tree_rotate_left(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*&)
 std::_Rb_tree_rotate_right(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*&)
 std::_Setfill<char> std::setfill<char>(char)
 std::_Setfill<wchar_t> std::setfill<wchar_t>(wchar_t)
-std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_add_ref_lock_nothrow()
 std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_destroy()
-std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_get_use_count() const
-std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release_last_use()
 std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release_last_use_cold()
-std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_weak_release()
 std::_Sp_counted_ptr<std::nullptr_t, (__gnu_cxx::_Lock_policy)2>::_M_dispose()
 std::_Sp_counted_ptr_inplace<std::__detail::_NFA<std::regex_traits<char>>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_destroy()
 std::_Sp_counted_ptr_inplace<std::__detail::_NFA<std::regex_traits<char>>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_dispose()
 std::_Sp_counted_ptr_inplace<std::__detail::_NFA<std::regex_traits<char>>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_get_deleter(std::type_info const&)
 std::_Sp_counted_ptr_inplace<std::__detail::_NFA<std::regex_traits<char>>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::~_Sp_counted_ptr_inplace()
-std::_Tuple_impl<0ul, std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>::_M_head(std::_Tuple_impl<0ul, std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>> const&)
-std::_Tuple_impl<0ul, std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>::_M_head(std::_Tuple_impl<0ul, std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>&)
-std::_Tuple_impl<0ul, std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>::_Tuple_impl()
-std::_Tuple_impl<0ul, std::thread::_State*, std::default_delete<std::thread::_State>>::_M_head(std::_Tuple_impl<0ul, std::thread::_State*, std::default_delete<std::thread::_State>> const&)
-std::_Tuple_impl<0ul, std::thread::_State*, std::default_delete<std::thread::_State>>::_M_head(std::_Tuple_impl<0ul, std::thread::_State*, std::default_delete<std::thread::_State>>&)
-std::_Tuple_impl<0ul, std::thread::_State*, std::default_delete<std::thread::_State>>::_Tuple_impl()
-std::_Tuple_impl<1ul, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>::_M_head(std::_Tuple_impl<1ul, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>&)
-std::_Tuple_impl<1ul, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>::_Tuple_impl()
-std::_Tuple_impl<1ul, std::default_delete<std::thread::_State>>::_M_head(std::_Tuple_impl<1ul, std::default_delete<std::thread::_State>>&)
-std::_Tuple_impl<1ul, std::default_delete<std::thread::_State>>::_Tuple_impl()
+std::_Sp_make_shared_tag::_S_ti()::__tag
 std::_V2::error_category::_M_message(int) const
 std::_V2::error_category::_M_message[abi:cxx11](int) const
 std::_V2::error_category::default_error_condition(int) const
@@ -3641,10 +3490,6 @@ std::_Vector_base<std::Catalog_info*, std::allocator<std::Catalog_info*>>::_Vect
 std::_Vector_base<std::Catalog_info*, std::allocator<std::Catalog_info*>>::_Vector_impl::~_Vector_impl()
 std::_Vector_base<std::Catalog_info*, std::allocator<std::Catalog_info*>>::_Vector_impl_data::_Vector_impl_data()
 std::_Vector_base<std::Catalog_info*, std::allocator<std::Catalog_info*>>::~_Vector_base()
-std::__at_thread_exit(std::__at_thread_exit_elt*)
-std::__atomic_futex_unsigned_base::_M_futex_notify_all(unsigned int*)
-std::__atomic_futex_unsigned_base::_M_futex_wait_until(unsigned int*, unsigned int, bool, std::chrono::duration<long, std::ratio<1l, 1l>>, std::chrono::duration<long, std::ratio<1l, 1000000000l>>)
-std::__atomic_futex_unsigned_base::_M_futex_wait_until_steady(unsigned int*, unsigned int, bool, std::chrono::duration<long, std::ratio<1l, 1l>>, std::chrono::duration<long, std::ratio<1l, 1000000000l>>)
 std::__codecvt_abstract_base<char, char, __mbstate_t>::__codecvt_abstract_base(unsigned long)
 std::__codecvt_abstract_base<char, char, __mbstate_t>::~__codecvt_abstract_base()
 std::__codecvt_abstract_base<char16_t, char, __mbstate_t>::__codecvt_abstract_base(unsigned long)
@@ -3732,11 +3577,6 @@ std::__codecvt_utf8_utf16_base<wchar_t>::do_max_length() const
 std::__codecvt_utf8_utf16_base<wchar_t>::do_out(__mbstate_t&, wchar_t const*, wchar_t const*, wchar_t const*&, char*, char*, char*&) const
 std::__codecvt_utf8_utf16_base<wchar_t>::do_unshift(__mbstate_t&, char*, char*, char*&) const
 std::__codecvt_utf8_utf16_base<wchar_t>::~__codecvt_utf8_utf16_base()
-std::__condvar::__condvar()
-std::__condvar::notify_all()
-std::__condvar::notify_one()
-std::__condvar::wait(std::mutex&)
-std::__condvar::~__condvar()
 std::__construct_ios_failure(void*, char const*)
 std::__convert_from_v(__locale_struct* const&, char*, int, char const*, ...)
 std::__cow_string::__cow_string()
@@ -4529,22 +4369,6 @@ std::__detail::_Scanner<char>::_M_scan_in_bracket()
 std::__detail::_Scanner<char>::_M_scan_normal()
 std::__detail::_State<char>::~_State()
 std::__detail::_StateSeq<std::regex_traits<char>>::_M_clone()
-std::__exception_ptr::exception_ptr::_M_addref()
-std::__exception_ptr::exception_ptr::_M_get() const
-std::__exception_ptr::exception_ptr::_M_release()
-std::__exception_ptr::exception_ptr::_M_safe_bool_dummy()
-std::__exception_ptr::exception_ptr::__cxa_exception_type() const
-std::__exception_ptr::exception_ptr::exception_ptr()
-std::__exception_ptr::exception_ptr::exception_ptr(std::__exception_ptr::exception_ptr const&)
-std::__exception_ptr::exception_ptr::exception_ptr(void (std::__exception_ptr::exception_ptr::*)())
-std::__exception_ptr::exception_ptr::exception_ptr(void*)
-std::__exception_ptr::exception_ptr::operator void (std::__exception_ptr::exception_ptr::*)()() const
-std::__exception_ptr::exception_ptr::operator!() const
-std::__exception_ptr::exception_ptr::operator=(std::__exception_ptr::exception_ptr const&)
-std::__exception_ptr::exception_ptr::swap(std::__exception_ptr::exception_ptr&)
-std::__exception_ptr::exception_ptr::~exception_ptr()
-std::__exception_ptr::operator!=(std::__exception_ptr::exception_ptr const&, std::__exception_ptr::exception_ptr const&)
-std::__exception_ptr::operator==(std::__exception_ptr::exception_ptr const&, std::__exception_ptr::exception_ptr const&)
 std::__facet_shims::__any_string& std::__facet_shims::__any_string::operator=<char>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)
 std::__facet_shims::__any_string& std::__facet_shims::__any_string::operator=<char>(std::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)
 std::__facet_shims::__any_string& std::__facet_shims::__any_string::operator=<wchar_t>(std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>> const&)
@@ -4555,13 +4379,6 @@ std::__facet_shims::__any_string::__str_rep::operator wchar_t const*() const
 std::__facet_shims::__any_string::operator std::basic_string<char, std::char_traits<char>, std::allocator<char>><char>() const
 std::__facet_shims::__any_string::operator std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>><wchar_t>() const
 std::__facet_shims::__any_string::~__any_string()
-std::__future_base::_Result_base::_Result_base()
-std::__future_base::_Result_base::~_Result_base()
-std::__future_base::_State_baseV2::_Make_ready* const& std::__get_helper<0ul, std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>(std::_Tuple_impl<0ul, std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>> const&)
-std::__future_base::_State_baseV2::_Make_ready*& std::__get_helper<0ul, std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>(std::_Tuple_impl<0ul, std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>&)
-std::__future_base::_State_baseV2::_Make_ready::_M_set()
-std::__future_base::_State_baseV2::_Make_ready::_S_run(void*)
-std::__future_base::_State_baseV2::_Make_ready::~_Make_ready()
 std::__ios_failure::__ios_failure(char const*)
 std::__ios_failure::__ios_failure(char const*, std::error_code const&)
 std::__ios_failure::~__ios_failure()
@@ -4612,32 +4429,12 @@ std::__numpunct_cache<char>::~__numpunct_cache()
 std::__numpunct_cache<wchar_t>::_M_cache(std::locale const&)
 std::__numpunct_cache<wchar_t>::__numpunct_cache(unsigned long)
 std::__numpunct_cache<wchar_t>::~__numpunct_cache()
-std::__once_call
-std::__once_callable
 std::__pad<char, std::char_traits<char>>::_S_pad(std::ios_base&, char, char*, char const*, long, long)
 std::__pad<wchar_t, std::char_traits<wchar_t>>::_S_pad(std::ios_base&, wchar_t, wchar_t*, wchar_t const*, long, long)
 std::__ptr_traits_ptr_to<char const*, char const, false>::pointer_to(char const&)
 std::__ptr_traits_ptr_to<char*, char, false>::pointer_to(char&)
 std::__ptr_traits_ptr_to<wchar_t const*, wchar_t const, false>::pointer_to(wchar_t const&)
 std::__ptr_traits_ptr_to<wchar_t*, wchar_t, false>::pointer_to(wchar_t&)
-std::__shared_count<(__gnu_cxx::_Lock_policy)2>::_M_get_use_count() const
-std::__shared_count<(__gnu_cxx::_Lock_policy)2>::_M_swap(std::__shared_count<(__gnu_cxx::_Lock_policy)2>&)
-std::__shared_count<(__gnu_cxx::_Lock_policy)2>::__shared_count()
-std::__shared_count<(__gnu_cxx::_Lock_policy)2>::__shared_count(std::__weak_count<(__gnu_cxx::_Lock_policy)2> const&, std::nothrow_t)
-std::__shared_count<(__gnu_cxx::_Lock_policy)2>::~__shared_count()
-std::__shared_ptr<std::__future_base::_State_baseV2, (__gnu_cxx::_Lock_policy)2>::__shared_ptr(std::__weak_ptr<std::__future_base::_State_baseV2, (__gnu_cxx::_Lock_policy)2> const&, std::nothrow_t)
-std::__shared_ptr<std::__future_base::_State_baseV2, (__gnu_cxx::_Lock_policy)2>::get() const
-std::__shared_ptr<std::__future_base::_State_baseV2, (__gnu_cxx::_Lock_policy)2>::operator bool() const
-std::__shared_ptr<std::__future_base::_State_baseV2, (__gnu_cxx::_Lock_policy)2>::~__shared_ptr()
-std::__shared_ptr<std::thread::_Impl_base, (__gnu_cxx::_Lock_policy)2>::__shared_ptr()
-std::__shared_ptr<std::thread::_Impl_base, (__gnu_cxx::_Lock_policy)2>::__shared_ptr(std::__shared_ptr<std::thread::_Impl_base, (__gnu_cxx::_Lock_policy)2>&&)
-std::__shared_ptr<std::thread::_Impl_base, (__gnu_cxx::_Lock_policy)2>::get() const
-std::__shared_ptr<std::thread::_Impl_base, (__gnu_cxx::_Lock_policy)2>::operator=(std::__shared_ptr<std::thread::_Impl_base, (__gnu_cxx::_Lock_policy)2>&&)
-std::__shared_ptr<std::thread::_Impl_base, (__gnu_cxx::_Lock_policy)2>::reset()
-std::__shared_ptr<std::thread::_Impl_base, (__gnu_cxx::_Lock_policy)2>::swap(std::__shared_ptr<std::thread::_Impl_base, (__gnu_cxx::_Lock_policy)2>&)
-std::__shared_ptr<std::thread::_Impl_base, (__gnu_cxx::_Lock_policy)2>::~__shared_ptr()
-std::__shared_ptr_access<std::__future_base::_State_baseV2, (__gnu_cxx::_Lock_policy)2, false, false>::_M_get() const
-std::__shared_ptr_access<std::__future_base::_State_baseV2, (__gnu_cxx::_Lock_policy)2, false, false>::operator->() const
 std::__sso_string::__sso_string()
 std::__sso_string::__sso_string(char const*, unsigned long)
 std::__sso_string::__sso_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)
@@ -4655,7 +4452,6 @@ std::__throw_bad_exception()
 std::__throw_bad_function_call()
 std::__throw_bad_typeid()
 std::__throw_domain_error(char const*)
-std::__throw_future_error(int)
 std::__throw_invalid_argument(char const*)
 std::__throw_ios_failure(char const*)
 std::__throw_ios_failure(char const*, int)
@@ -4714,17 +4510,6 @@ std::__timepunct_cache<char>::~__timepunct_cache()
 std::__timepunct_cache<wchar_t>::_S_timezones
 std::__timepunct_cache<wchar_t>::__timepunct_cache(unsigned long)
 std::__timepunct_cache<wchar_t>::~__timepunct_cache()
-std::__uniq_ptr_data<std::__future_base::_State_baseV2::_Make_ready, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>, true, true>::__uniq_ptr_data(std::__future_base::_State_baseV2::_Make_ready*)
-std::__uniq_ptr_data<std::thread::_State, std::default_delete<std::thread::_State>, true, true>::__uniq_ptr_data(std::thread::_State*)
-std::__uniq_ptr_impl<std::__future_base::_State_baseV2::_Make_ready, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>::_M_deleter()
-std::__uniq_ptr_impl<std::__future_base::_State_baseV2::_Make_ready, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>::_M_ptr()
-std::__uniq_ptr_impl<std::__future_base::_State_baseV2::_Make_ready, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>::_M_ptr() const
-std::__uniq_ptr_impl<std::__future_base::_State_baseV2::_Make_ready, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>::__uniq_ptr_impl(std::__future_base::_State_baseV2::_Make_ready*)
-std::__uniq_ptr_impl<std::thread::_State, std::default_delete<std::thread::_State>>::_M_deleter()
-std::__uniq_ptr_impl<std::thread::_State, std::default_delete<std::thread::_State>>::_M_ptr()
-std::__uniq_ptr_impl<std::thread::_State, std::default_delete<std::thread::_State>>::_M_ptr() const
-std::__uniq_ptr_impl<std::thread::_State, std::default_delete<std::thread::_State>>::__uniq_ptr_impl(std::thread::_State*)
-std::__uniq_ptr_impl<std::thread::_State, std::default_delete<std::thread::_State>>::release()
 std::__use_cache<std::__moneypunct_cache<char, false>>::operator()(std::locale const&) const
 std::__use_cache<std::__moneypunct_cache<char, true>>::operator()(std::locale const&) const
 std::__use_cache<std::__moneypunct_cache<wchar_t, false>>::operator()(std::locale const&) const
@@ -4734,11 +4519,7 @@ std::__use_cache<std::__numpunct_cache<wchar_t>>::operator()(std::locale const&)
 std::__verify_grouping(char const*, unsigned long, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)
 std::__verify_grouping(char const*, unsigned long, std::string const&)
 std::__verify_grouping_impl(char const*, unsigned long, char const*, unsigned long)
-std::__weak_count<(__gnu_cxx::_Lock_policy)2>::~__weak_count()
-std::__weak_ptr<std::__future_base::_State_baseV2, (__gnu_cxx::_Lock_policy)2>::~__weak_ptr()
 std::allocator
-std::atomic<bool>::load(std::memory_order) const
-std::atomic<bool>::store(bool, std::memory_order)
 std::auto_ptr<std::Catalog_info>::auto_ptr(std::Catalog_info*)
 std::auto_ptr<std::Catalog_info>::get() const
 std::auto_ptr<std::Catalog_info>::operator->() const
@@ -5449,18 +5230,6 @@ std::char_traits<wchar_t>::move(wchar_t*, wchar_t const*, unsigned long)
 std::char_traits<wchar_t>::not_eof(unsigned int const&)
 std::char_traits<wchar_t>::to_char_type(unsigned int const&)
 std::char_traits<wchar_t>::to_int_type(wchar_t const&)
-std::chrono::_V2::steady_clock::is_steady
-std::chrono::_V2::steady_clock::now()
-std::chrono::_V2::system_clock::is_steady
-std::chrono::_V2::system_clock::now()
-std::chrono::duration<long, std::ratio<1l, 1000000000l>> std::chrono::__duration_cast_impl<std::chrono::duration<long, std::ratio<1l, 1000000000l>>, std::ratio<1000000000l, 1l>, long, false, true>::__cast<long, std::ratio<1l, 1l>>(std::chrono::duration<long, std::ratio<1l, 1l>> const&)
-std::chrono::duration<long, std::ratio<1l, 1000000000l>>::count() const
-std::chrono::duration<long, std::ratio<1l, 1000000000l>>::duration<long, std::ratio<1l, 1l>, void>(std::chrono::duration<long, std::ratio<1l, 1l>> const&)
-std::chrono::duration<long, std::ratio<1l, 1000000000l>>::duration<long, void>(long const&)
-std::chrono::duration<long, std::ratio<1l, 1l>>::count() const
-std::chrono::duration<long, std::ratio<1l, 1l>>::duration<long, void>(long const&)
-std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l>>>::time_point(std::chrono::duration<long, std::ratio<1l, 1000000000l>> const&)
-std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long, std::ratio<1l, 1000000000l>>>::time_point(std::chrono::duration<long, std::ratio<1l, 1000000000l>> const&)
 std::codecvt<char, char, __mbstate_t> const& std::use_facet<std::codecvt<char, char, __mbstate_t>>(std::locale const&)
 std::codecvt<char, char, __mbstate_t> const* std::__try_use_facet<std::codecvt<char, char, __mbstate_t>>(std::locale const&)
 std::codecvt<char, char, __mbstate_t>::codecvt(__locale_struct*, unsigned long)
@@ -5569,12 +5338,6 @@ std::collate_byname<char>::~collate_byname()
 std::collate_byname<wchar_t>::collate_byname(char const*, unsigned long)
 std::collate_byname<wchar_t>::collate_byname(std::string const&, unsigned long)
 std::collate_byname<wchar_t>::~collate_byname()
-std::common_type<std::chrono::duration<long, std::ratio<1l, 1l>>, std::chrono::duration<long, std::ratio<1l, 1000000000l>>>::type std::chrono::operator+<long, std::ratio<1l, 1l>, long, std::ratio<1l, 1000000000l>>(std::chrono::duration<long, std::ratio<1l, 1l>> const&, std::chrono::duration<long, std::ratio<1l, 1000000000l>> const&)
-std::condition_variable::condition_variable()
-std::condition_variable::notify_all()
-std::condition_variable::notify_one()
-std::condition_variable::wait(std::unique_lock<std::mutex>&)
-std::condition_variable::~condition_variable()
 std::ctype<char> const& std::__check_facet<std::ctype<char>>(std::ctype<char> const*)
 std::ctype<char> const& std::use_facet<std::ctype<char>>(std::locale const&)
 std::ctype<char> const* std::__try_use_facet<std::ctype<char>>(std::locale const&)
@@ -5644,11 +5407,6 @@ std::ctype_byname<wchar_t>::ctype_byname(char const*, unsigned long)
 std::ctype_byname<wchar_t>::ctype_byname(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, unsigned long)
 std::ctype_byname<wchar_t>::ctype_byname(std::string const&, unsigned long)
 std::ctype_byname<wchar_t>::~ctype_byname()
-std::current_exception()
-std::default_delete<std::__future_base::_State_baseV2::_Make_ready>& std::__get_helper<1ul, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>(std::_Tuple_impl<1ul, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>, >&)
-std::default_delete<std::__future_base::_State_baseV2::_Make_ready>::operator()(std::__future_base::_State_baseV2::_Make_ready*) const
-std::default_delete<std::thread::_State>& std::__get_helper<1ul, std::default_delete<std::thread::_State>>(std::_Tuple_impl<1ul, std::default_delete<std::thread::_State>, >&)
-std::default_delete<std::thread::_State>::operator()(std::thread::_State*) const
 std::deque<std::__detail::_StateSeq<std::regex_traits<char>>, std::allocator<std::__detail::_StateSeq<std::regex_traits<char>>>>::_M_reallocate_map(unsigned long, bool)
 std::deque<std::__detail::_StateSeq<std::regex_traits<char>>, std::allocator<std::__detail::_StateSeq<std::regex_traits<char>>>>::push_back(std::__detail::_StateSeq<std::regex_traits<char>> const&)
 std::domain_error::domain_error(char const*)
@@ -5669,11 +5427,9 @@ std::enable_if<std::__and_<std::__not_<std::__is_tuple_like<std::ios_base::_Word
 std::enable_if<std::__and_<std::__not_<std::__is_tuple_like<std::ios_base::_Words>>, std::is_move_constructible<std::ios_base::_Words>, std::is_move_assignable<std::ios_base::_Words>>::value, void>::type std::swap<std::ios_base::_Words>(std::ios_base::_Words&, std::ios_base::_Words&)
 std::enable_if<std::__and_<std::__not_<std::__is_tuple_like<std::locale>>, std::is_move_constructible<std::locale>, std::is_move_assignable<std::locale>>::value, void>::type std::swap<std::locale>(std::locale&, std::locale&)
 std::enable_if<std::__and_<std::__not_<std::__is_tuple_like<std::ostream*>>, std::is_move_constructible<std::ostream*>, std::is_move_assignable<std::ostream*>>::value, void>::type std::swap<std::ostream*>(std::ostream*&, std::ostream*&)
-std::enable_if<std::__and_<std::__not_<std::__is_tuple_like<std::thread::_Impl_base*>>, std::is_move_constructible<std::thread::_Impl_base*>, std::is_move_assignable<std::thread::_Impl_base*>>::value, void>::type std::swap<std::thread::_Impl_base*>(std::thread::_Impl_base*&, std::thread::_Impl_base*&)
 std::enable_if<std::__and_<std::__not_<std::__is_tuple_like<wchar_t*>>, std::is_move_constructible<wchar_t*>, std::is_move_assignable<wchar_t*>>::value, void>::type std::swap<wchar_t*>(wchar_t*&, wchar_t*&)
 std::enable_if<std::__and_<std::__not_<std::__is_tuple_like<wchar_t>>, std::is_move_constructible<wchar_t>, std::is_move_assignable<wchar_t>>::value, void>::type std::swap<wchar_t>(wchar_t&, wchar_t&)
 std::enable_if<std::__is_swappable<std::ios_base::_Words>::value, void>::type std::swap<std::ios_base::_Words, 8ul>(std::ios_base::_Words (&) [8ul], std::ios_base::_Words (&) [8ul])
-std::enable_if<std::chrono::__is_duration<std::chrono::duration<long, std::ratio<1l, 1000000000l>>>::value, std::chrono::duration<long, std::ratio<1l, 1000000000l>>>::type std::chrono::duration_cast<std::chrono::duration<long, std::ratio<1l, 1000000000l>>, long, std::ratio<1l, 1l>>(std::chrono::duration<long, std::ratio<1l, 1l>> const&)
 std::error_code::category() const
 std::error_code::default_error_condition() const
 std::error_code::error_code(int, std::_V2::error_category const&)
@@ -5692,10 +5448,6 @@ std::exception::what() const
 std::exception::~exception()
 std::fpos<__mbstate_t>::fpos(long)
 std::fpos<__mbstate_t>::operator long() const
-std::future_category()
-std::future_error: 
-std::future_error::what() const
-std::future_error::~future_error()
 std::get_catalogs()
 std::get_new_handler()
 std::get_terminate()
@@ -5979,8 +5731,6 @@ std::logic_error::operator=(std::logic_error const&)
 std::logic_error::operator=(std::logic_error&&)
 std::logic_error::what() const
 std::logic_error::~logic_error()
-std::make_error_code(std::errc)
-std::make_error_code(std::future_errc)
 std::make_error_code(std::io_errc)
 std::messages<char> const& std::use_facet<std::messages<char>>(std::locale const&)
 std::messages<char> const* std::__try_use_facet<std::messages<char>>(std::locale const&)
@@ -6181,10 +5931,7 @@ std::moneypunct_byname<wchar_t, true>::intl
 std::moneypunct_byname<wchar_t, true>::moneypunct_byname(char const*, unsigned long)
 std::moneypunct_byname<wchar_t, true>::moneypunct_byname(std::string const&, unsigned long)
 std::moneypunct_byname<wchar_t, true>::~moneypunct_byname()
-std::mutex::native_handle()
-std::mutex::unlock()
 std::nothrow
-std::notify_all_at_thread_exit(std::condition_variable&, std::unique_lock<std::mutex>)
 std::nullptr_t&& std::forward<std::nullptr_t>(std::remove_reference<std::nullptr_t&&>::type&)
 std::nullptr_t&& std::forward<std::nullptr_t>(std::remove_reference<std::nullptr_t>::type&)
 std::num_get<char, std::istreambuf_iterator<char, std::char_traits<char>>> const& std::__check_facet<std::num_get<char, std::istreambuf_iterator<char, std::char_traits<char>>>>(std::num_get<char, std::istreambuf_iterator<char, std::char_traits<char>>> const*)
@@ -6344,14 +6091,11 @@ std::numpunct_byname<char>::~numpunct_byname()
 std::numpunct_byname<wchar_t>::numpunct_byname(char const*, unsigned long)
 std::numpunct_byname<wchar_t>::numpunct_byname(std::string const&, unsigned long)
 std::numpunct_byname<wchar_t>::~numpunct_byname()
-std::operator!=(std::thread::id, std::thread::id)
 std::operator&(std::_Ios_Fmtflags, std::_Ios_Fmtflags)
 std::operator&(std::_Ios_Iostate, std::_Ios_Iostate)
 std::operator&(std::_Ios_Openmode, std::_Ios_Openmode)
-std::operator&(std::memory_order, std::__memory_order_modifier)
 std::operator&=(std::_Ios_Fmtflags&, std::_Ios_Fmtflags)
 std::operator==(std::error_condition const&, std::error_condition const&)
-std::operator==(std::thread::id, std::thread::id)
 std::operator|(std::_Ios_Fmtflags, std::_Ios_Fmtflags)
 std::operator|(std::_Ios_Iostate, std::_Ios_Iostate)
 std::operator|(std::_Ios_Openmode, std::_Ios_Openmode)
@@ -6472,8 +6216,6 @@ std::remove_reference<std::_Ios_Iostate&>::type&& std::move<std::_Ios_Iostate&>(
 std::remove_reference<std::_Ios_Openmode&>::type&& std::move<std::_Ios_Openmode&>(std::_Ios_Openmode&)
 std::remove_reference<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>&>::type&& std::move<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>&>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>&)
 std::remove_reference<std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>&>::type&& std::move<std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>&>(std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>&)
-std::remove_reference<std::__future_base::_State_baseV2::_Make_ready*&>::type&& std::move<std::__future_base::_State_baseV2::_Make_ready*&>(std::__future_base::_State_baseV2::_Make_ready*&)
-std::remove_reference<std::__shared_ptr<std::thread::_Impl_base, (__gnu_cxx::_Lock_policy)2>&>::type&& std::move<std::__shared_ptr<std::thread::_Impl_base, (__gnu_cxx::_Lock_policy)2>&>(std::__shared_ptr<std::thread::_Impl_base, (__gnu_cxx::_Lock_policy)2>&)
 std::remove_reference<std::allocator<char>&>::type&& std::move<std::allocator<char>&>(std::allocator<char>&)
 std::remove_reference<std::allocator<wchar_t>&>::type&& std::move<std::allocator<wchar_t>&>(std::allocator<wchar_t>&)
 std::remove_reference<std::basic_iostream<wchar_t, std::char_traits<wchar_t>>&>::type&& std::move<std::basic_iostream<wchar_t, std::char_traits<wchar_t>>&>(std::basic_iostream<wchar_t, std::char_traits<wchar_t>>&)
@@ -6494,14 +6236,10 @@ std::remove_reference<std::ios_base::_Words*&>::type&& std::move<std::ios_base::
 std::remove_reference<std::iostream&>::type&& std::move<std::iostream&>(std::iostream&)
 std::remove_reference<std::locale&>::type&& std::move<std::locale&>(std::locale&)
 std::remove_reference<std::ostream*&>::type&& std::move<std::ostream*&>(std::ostream*&)
-std::remove_reference<std::shared_ptr<std::thread::_Impl_base>&>::type&& std::move<std::shared_ptr<std::thread::_Impl_base>&>(std::shared_ptr<std::thread::_Impl_base>&)
 std::remove_reference<std::string&>::type&& std::move<std::string&>(std::string&)
 std::remove_reference<std::string::_Alloc_hider&>::type&& std::move<std::string::_Alloc_hider&>(std::string::_Alloc_hider&)
-std::remove_reference<std::thread::_Impl_base*&>::type&& std::move<std::thread::_Impl_base*&>(std::thread::_Impl_base*&)
-std::remove_reference<std::thread::_State*&>::type&& std::move<std::thread::_State*&>(std::thread::_State*&)
 std::remove_reference<wchar_t&>::type&& std::move<wchar_t&>(wchar_t&)
 std::remove_reference<wchar_t*&>::type&& std::move<wchar_t*&>(wchar_t*&)
-std::rethrow_exception(std::__exception_ptr::exception_ptr)
 std::reverse_iterator<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>>::reverse_iterator(__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>)
 std::reverse_iterator<__gnu_cxx::__normal_iterator<char const*, std::string>>::reverse_iterator(__gnu_cxx::__normal_iterator<char const*, std::string>)
 std::reverse_iterator<__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>>::reverse_iterator(__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>)
@@ -6522,11 +6260,6 @@ std::runtime_error::~runtime_error()
 std::set_new_handler(void (*)())
 std::set_terminate(void (*)())
 std::set_unexpected(void (*)())
-std::shared_ptr<std::__future_base::_State_baseV2>::shared_ptr(std::weak_ptr<std::__future_base::_State_baseV2> const&, std::nothrow_t)
-std::shared_ptr<std::__future_base::_State_baseV2>::~shared_ptr()
-std::shared_ptr<std::thread::_Impl_base>::operator=(std::shared_ptr<std::thread::_Impl_base>&&)
-std::shared_ptr<std::thread::_Impl_base>::shared_ptr(std::shared_ptr<std::thread::_Impl_base>&&)
-std::shared_ptr<std::thread::_Impl_base>::~shared_ptr()
 std::string
 std::string std::__str_concat<std::string>(std::string::value_type const*, std::string::size_type, std::string::value_type const*, std::string::size_type, std::string::allocator_type const&)
 std::string std::regex_traits<char>::lookup_collatename<char const*>(char const*, char const*) const
@@ -6700,17 +6433,6 @@ std::system_error::system_error(std::error_code, char const*)
 std::system_error::system_error(std::error_code, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)
 std::system_error::~system_error()
 std::terminate()
-std::this_thread::__sleep_for(std::chrono::duration<long, std::ratio<1l, 1l>>, std::chrono::duration<long, std::ratio<1l, 1000000000l>>)
-std::thread::_M_start_thread(std::shared_ptr<std::thread::_Impl_base>)
-std::thread::_M_start_thread(std::shared_ptr<std::thread::_Impl_base>, void (*)())
-std::thread::_M_start_thread(std::unique_ptr<std::thread::_State, std::default_delete<std::thread::_State>>, void (*)())
-std::thread::_State* const& std::__get_helper<0ul, std::thread::_State*, std::default_delete<std::thread::_State>>(std::_Tuple_impl<0ul, std::thread::_State*, std::default_delete<std::thread::_State>> const&)
-std::thread::_State*& std::__get_helper<0ul, std::thread::_State*, std::default_delete<std::thread::_State>>(std::_Tuple_impl<0ul, std::thread::_State*, std::default_delete<std::thread::_State>>&)
-std::thread::_State::~_State()
-std::thread::detach()
-std::thread::hardware_concurrency()
-std::thread::id::id()
-std::thread::join()
 std::time_base::dateorder std::__facet_shims::__time_get_dateorder<char>(std::integral_constant<bool, false>, std::locale::facet const*)
 std::time_base::dateorder std::__facet_shims::__time_get_dateorder<char>(std::integral_constant<bool, true>, std::locale::facet const*)
 std::time_base::dateorder std::__facet_shims::__time_get_dateorder<wchar_t>(std::integral_constant<bool, false>, std::locale::facet const*)
@@ -6795,14 +6517,7 @@ std::time_put_byname<wchar_t, std::ostreambuf_iterator<wchar_t, std::char_traits
 std::time_put_byname<wchar_t, std::ostreambuf_iterator<wchar_t, std::char_traits<wchar_t>>>::time_put_byname(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, unsigned long)
 std::time_put_byname<wchar_t, std::ostreambuf_iterator<wchar_t, std::char_traits<wchar_t>>>::time_put_byname(std::string const&, unsigned long)
 std::time_put_byname<wchar_t, std::ostreambuf_iterator<wchar_t, std::char_traits<wchar_t>>>::~time_put_byname()
-std::tuple<std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>::tuple<true, true>()
-std::tuple<std::thread::_State*, std::default_delete<std::thread::_State>>::tuple<true, true>()
-std::tuple_element<0ul, std::tuple<std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>>::type const& std::get<0ul, std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>(std::tuple<std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>> const&)
-std::tuple_element<0ul, std::tuple<std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>>::type& std::get<0ul, std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>(std::tuple<std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>&)
-std::tuple_element<0ul, std::tuple<std::thread::_State*, std::default_delete<std::thread::_State>>>::type const& std::get<0ul, std::thread::_State*, std::default_delete<std::thread::_State>>(std::tuple<std::thread::_State*, std::default_delete<std::thread::_State>> const&)
-std::tuple_element<0ul, std::tuple<std::thread::_State*, std::default_delete<std::thread::_State>>>::type& std::get<0ul, std::thread::_State*, std::default_delete<std::thread::_State>>(std::tuple<std::thread::_State*, std::default_delete<std::thread::_State>>&)
-std::tuple_element<1ul, std::tuple<std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>>::type& std::get<1ul, std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>(std::tuple<std::__future_base::_State_baseV2::_Make_ready*, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>&)
-std::tuple_element<1ul, std::tuple<std::thread::_State*, std::default_delete<std::thread::_State>>>::type& std::get<1ul, std::thread::_State*, std::default_delete<std::thread::_State>>(std::tuple<std::thread::_State*, std::default_delete<std::thread::_State>>&)
+std::to_string(int)
 std::type_info::__do_catch(std::type_info const*, void**, unsigned int) const
 std::type_info::__do_upcast(__cxxabiv1::__class_type_info const*, void**) const
 std::type_info::__is_function_p() const
@@ -6818,20 +6533,8 @@ std::underflow_error::underflow_error(std::__cxx11::basic_string<char, std::char
 std::underflow_error::underflow_error(std::string const&)
 std::underflow_error::~underflow_error()
 std::unexpected()
-std::unique_lock<std::mutex>::mutex() const
-std::unique_lock<std::mutex>::release()
-std::unique_ptr<std::__future_base::_State_baseV2::_Make_ready, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>::get() const
-std::unique_ptr<std::__future_base::_State_baseV2::_Make_ready, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>::get_deleter()
-std::unique_ptr<std::__future_base::_State_baseV2::_Make_ready, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>::operator->() const
-std::unique_ptr<std::__future_base::_State_baseV2::_Make_ready, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>::unique_ptr<std::default_delete<std::__future_base::_State_baseV2::_Make_ready>, void>(std::__future_base::_State_baseV2::_Make_ready*)
-std::unique_ptr<std::__future_base::_State_baseV2::_Make_ready, std::default_delete<std::__future_base::_State_baseV2::_Make_ready>>::~unique_ptr()
-std::unique_ptr<std::thread::_State, std::default_delete<std::thread::_State>>::get() const
-std::unique_ptr<std::thread::_State, std::default_delete<std::thread::_State>>::get_deleter()
-std::unique_ptr<std::thread::_State, std::default_delete<std::thread::_State>>::operator->() const
-std::unique_ptr<std::thread::_State, std::default_delete<std::thread::_State>>::release()
-std::unique_ptr<std::thread::_State, std::default_delete<std::thread::_State>>::unique_ptr<std::default_delete<std::thread::_State>, void>(std::thread::_State*)
-std::unique_ptr<std::thread::_State, std::default_delete<std::thread::_State>>::~unique_ptr()
 std::vector<char, std::allocator<char>>::vector(std::vector<char, std::allocator<char>> const&)
+std::vector<float, std::allocator<float>>::vector(unsigned long, std::allocator<float> const&)
 std::vector<std::Catalog_info*, std::allocator<std::Catalog_info*>>::_M_check_len(unsigned long, char const*) const
 std::vector<std::Catalog_info*, std::allocator<std::Catalog_info*>>::_M_erase(__gnu_cxx::__normal_iterator<std::Catalog_info**, std::vector<std::Catalog_info*, std::allocator<std::Catalog_info*>>>)
 std::vector<std::Catalog_info*, std::allocator<std::Catalog_info*>>::_M_realloc_append(std::Catalog_info* const&)
@@ -6852,8 +6555,6 @@ std::vector<std::Catalog_info*, std::allocator<std::Catalog_info*>>::vector()
 std::vector<std::Catalog_info*, std::allocator<std::Catalog_info*>>::~vector()
 std::vector<std::string, std::allocator<std::string>>::push_back(std::string const&)
 std::vector<std::string, std::allocator<std::string>>::vector(std::vector<std::string, std::allocator<std::string>> const&)
-std::weak_ptr<std::__future_base::_State_baseV2>::lock() const
-std::weak_ptr<std::__future_base::_State_baseV2>::~weak_ptr()
 stderr
 stdin
 strchr
@@ -6870,6 +6571,7 @@ strncpy
 strnlen
 stronghandle, 
 strstr
+strtol
 strtold_l
 strtoul
 syscall
@@ -7022,6 +6724,8 @@ typeinfo for short*
 typeinfo for signed char
 typeinfo for signed char const*
 typeinfo for signed char*
+typeinfo for std::_Mutex_base<(__gnu_cxx::_Lock_policy)2>
+typeinfo for std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>
 typeinfo for std::_Sp_counted_ptr_inplace<std::__detail::_NFA<std::regex_traits<char>>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>
 typeinfo for std::_V2::error_category
 typeinfo for std::__codecvt_abstract_base<char, char, __mbstate_t>
@@ -7085,7 +6789,6 @@ typeinfo for std::__detail::_CharMatcher<std::regex_traits<char>, false, false>
 typeinfo for std::__detail::_CharMatcher<std::regex_traits<char>, false, true>
 typeinfo for std::__detail::_CharMatcher<std::regex_traits<char>, true, false>
 typeinfo for std::__detail::_CharMatcher<std::regex_traits<char>, true, true>
-typeinfo for std::__future_base::_Result_base
 typeinfo for std::__ios_failure
 typeinfo for std::__iosfail_type_info
 typeinfo for std::__moneypunct_cache<char, false>
@@ -7142,7 +6845,6 @@ typeinfo for std::ctype_byname<char>
 typeinfo for std::ctype_byname<wchar_t>
 typeinfo for std::domain_error
 typeinfo for std::exception
-typeinfo for std::future_error
 typeinfo for std::invalid_argument
 typeinfo for std::ios_base
 typeinfo for std::ios_base::failure
@@ -7189,7 +6891,6 @@ typeinfo for std::range_error
 typeinfo for std::regex_error
 typeinfo for std::runtime_error
 typeinfo for std::system_error
-typeinfo for std::thread::_State
 typeinfo for std::time_base
 typeinfo for std::time_get<char, std::istreambuf_iterator<char, std::char_traits<char>>>
 typeinfo for std::time_get<wchar_t, std::istreambuf_iterator<wchar_t, std::char_traits<wchar_t>>>
@@ -7310,7 +7011,10 @@ typeinfo name for short*
 typeinfo name for signed char
 typeinfo name for signed char const*
 typeinfo name for signed char*
+typeinfo name for std::_Mutex_base<(__gnu_cxx::_Lock_policy)2>
+typeinfo name for std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>
 typeinfo name for std::_Sp_counted_ptr_inplace<std::__detail::_NFA<std::regex_traits<char>>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>
+typeinfo name for std::_Sp_make_shared_tag
 typeinfo name for std::_V2::error_category
 typeinfo name for std::__codecvt_abstract_base<char, char, __mbstate_t>
 typeinfo name for std::__codecvt_abstract_base<char16_t, char, __mbstate_t>
@@ -7373,7 +7077,6 @@ typeinfo name for std::__detail::_CharMatcher<std::regex_traits<char>, false, fa
 typeinfo name for std::__detail::_CharMatcher<std::regex_traits<char>, false, true>
 typeinfo name for std::__detail::_CharMatcher<std::regex_traits<char>, true, false>
 typeinfo name for std::__detail::_CharMatcher<std::regex_traits<char>, true, true>
-typeinfo name for std::__future_base::_Result_base
 typeinfo name for std::__ios_failure
 typeinfo name for std::__iosfail_type_info
 typeinfo name for std::__moneypunct_cache<char, false>
@@ -7430,7 +7133,6 @@ typeinfo name for std::ctype_byname<char>
 typeinfo name for std::ctype_byname<wchar_t>
 typeinfo name for std::domain_error
 typeinfo name for std::exception
-typeinfo name for std::future_error
 typeinfo name for std::invalid_argument
 typeinfo name for std::ios_base
 typeinfo name for std::ios_base::failure
@@ -7477,7 +7179,6 @@ typeinfo name for std::range_error
 typeinfo name for std::regex_error
 typeinfo name for std::runtime_error
 typeinfo name for std::system_error
-typeinfo name for std::thread::_State
 typeinfo name for std::time_base
 typeinfo name for std::time_get<char, std::istreambuf_iterator<char, std::char_traits<char>>>
 typeinfo name for std::time_get<wchar_t, std::istreambuf_iterator<wchar_t, std::char_traits<wchar_t>>>
@@ -7517,7 +7218,6 @@ typename
 typesafe_float, 
 typesafe_int, 
 t|AO
-uiTransparentPixels < PIXELS
 uint
 uint32_t libyuv::SumPixels(int, const uint16_t*)
 uint32_t libyuv::SumPixels_16(int, const uint32_t*)
@@ -7525,22 +7225,26 @@ unable to register all schema data: %s\n
 underscore
 uninitialized __any_string
 unknown_variant_type
+unparsed text after QAngle string, '%s'\n
+unparsed text after Quaternion string, '%s'\n
 unsigned
 unsigned __int128
 unsigned char
 unsigned int
-unsigned int Etc::Image::IterateThroughWorstBlocks(unsigned int, unsigned int, unsigned int)
 unsigned long
 unsigned long const& std::max<unsigned long>(unsigned long const&, unsigned long const&)
 unsigned long const& std::min<unsigned long>(unsigned long const&, unsigned long const&)
 unsigned long long
 unsigned short
+unsupported QAngle KV3 input, type %s\n
+unsupported Quaternion KV3 input, type %s\n
 upper
 utl_vector, 
 utlstringtoken
 value_override
 values
 variant
+vdata
 vector2
 vector2d
 vector3
@@ -7564,48 +7268,8 @@ virtual thunk to std::basic_ostringstream<char, std::char_traits<char>, std::all
 virtual thunk to std::basic_ostringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>::~basic_ostringstream()
 virtual thunk to std::basic_stringstream<char, std::char_traits<char>, std::allocator<char>>::~basic_stringstream()
 virtual thunk to std::basic_stringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>::~basic_stringstream()
-virtual void Etc::Block4x4Encoding_ETC1::PerformIteration(float)
-virtual void Etc::Block4x4Encoding_ETC1::SetEncodingBits()
-virtual void Etc::Block4x4Encoding_R11::InitFromEncodingBits(Etc::Block4x4*, unsigned char*, Etc::ColorFloatRGBA*, Etc::ErrorMetric)
-virtual void Etc::Block4x4Encoding_R11::PerformIteration(float)
-virtual void Etc::Block4x4Encoding_R11::SetEncodingBits()
-virtual void Etc::Block4x4Encoding_RG11::InitFromEncodingBits(Etc::Block4x4*, unsigned char*, Etc::ColorFloatRGBA*, Etc::ErrorMetric)
-virtual void Etc::Block4x4Encoding_RG11::PerformIteration(float)
-virtual void Etc::Block4x4Encoding_RG11::SetEncodingBits()
-virtual void Etc::Block4x4Encoding_RGB8::PerformIteration(float)
-virtual void Etc::Block4x4Encoding_RGB8::SetEncodingBits()
-virtual void Etc::Block4x4Encoding_RGB8A1::PerformIteration(float)
-virtual void Etc::Block4x4Encoding_RGB8A1::SetEncodingBits()
-virtual void Etc::Block4x4Encoding_RGB8A1_Opaque::PerformIteration(float)
-virtual void Etc::Block4x4Encoding_RGB8A1_Transparent::PerformIteration(float)
-virtual void Etc::Block4x4Encoding_RGBA8::PerformIteration(float)
-virtual void Etc::Block4x4Encoding_RGBA8_Opaque::PerformIteration(float)
-virtual void Etc::Block4x4Encoding_RGBA8_Transparent::PerformIteration(float)
 vmap
 void
-void Etc::Block4x4::InitFromEtcEncodingBits(Etc::Image::Format, unsigned int, unsigned int, unsigned char*, Etc::Image*, Etc::ErrorMetric)
-void Etc::Block4x4::InitFromSource(Etc::Image*, unsigned int, unsigned int, unsigned char*, Etc::ErrorMetric)
-void Etc::Block4x4Encoding_ETC1::CalculateSourceAverages()
-void Etc::Block4x4Encoding_ETC1::TryDifferential(bool, unsigned int, int, int)
-void Etc::Block4x4Encoding_ETC1::TryDifferentialHalf(Etc::DifferentialTrys::Half*)
-void Etc::Block4x4Encoding_ETC1::TryIndividualHalf(Etc::IndividualTrys::Half*)
-void Etc::Block4x4Encoding_R11::CalculateR11(unsigned int, float, float)
-void Etc::Block4x4Encoding_RG11::CalculateG11(unsigned int, float, float)
-void Etc::Block4x4Encoding_RGB8::CalculateBaseColorsForTAndH()
-void Etc::Block4x4Encoding_RGB8::SetEncodingBits_H()
-void Etc::Block4x4Encoding_RGB8::SetEncodingBits_Planar()
-void Etc::Block4x4Encoding_RGB8::SetEncodingBits_T()
-void Etc::Block4x4Encoding_RGB8A1::SetEncodingBits_ETC1()
-void Etc::Block4x4Encoding_RGB8A1::SetEncodingBits_H()
-void Etc::Block4x4Encoding_RGB8A1::SetEncodingBits_T()
-void Etc::Block4x4Encoding_RGB8A1::TryDifferential(bool, unsigned int, int, int)
-void Etc::Block4x4Encoding_RGB8A1::TryDifferentialHalf(Etc::DifferentialTrys::Half*)
-void Etc::Block4x4Encoding_RGBA8::CalculateA8(float)
-void Etc::Image::FindEncodingWarningTypesForCurFormat()
-void Etc::Image::RunFirstPass(unsigned int, unsigned int)
-void Etc::Image::SetEncodingBits(unsigned int, unsigned int)
-void Etc::SortedBlockList::AddBlock(Etc::Block4x4*)
-void Etc::SortedBlockList::Sort()
 void libyuv::Convert16To8Row_C(const uint16_t*, uint8_t*, int, int)
 void libyuv::MergeAR64Row_C(const uint16_t*, const uint16_t*, const uint16_t*, const uint16_t*, uint16_t*, int, int)
 void libyuv::MergeARGB16To8Row_C(const uint16_t*, const uint16_t*, const uint16_t*, const uint16_t*, uint8_t*, int, int)
@@ -7851,7 +7515,6 @@ vtable for std::__cxx11::time_get<char, std::istreambuf_iterator<char, std::char
 vtable for std::__cxx11::time_get<wchar_t, std::istreambuf_iterator<wchar_t, std::char_traits<wchar_t>>>
 vtable for std::__cxx11::time_get_byname<char, std::istreambuf_iterator<char, std::char_traits<char>>>
 vtable for std::__cxx11::time_get_byname<wchar_t, std::istreambuf_iterator<wchar_t, std::char_traits<wchar_t>>>
-vtable for std::__future_base::_Result_base
 vtable for std::__ios_failure
 vtable for std::__iosfail_type_info
 vtable for std::__moneypunct_cache<char, false>
@@ -7903,7 +7566,6 @@ vtable for std::ctype_byname<char>
 vtable for std::ctype_byname<wchar_t>
 vtable for std::domain_error
 vtable for std::exception
-vtable for std::future_error
 vtable for std::invalid_argument
 vtable for std::ios_base
 vtable for std::ios_base::failure
@@ -7944,7 +7606,6 @@ vtable for std::range_error
 vtable for std::regex_error
 vtable for std::runtime_error
 vtable for std::system_error
-vtable for std::thread::_State
 vtable for std::time_get<char, std::istreambuf_iterator<char, std::char_traits<char>>>
 vtable for std::time_get<wchar_t, std::istreambuf_iterator<wchar_t, std::char_traits<wchar_t>>>
 vtable for std::time_get_byname<char, std::istreambuf_iterator<char, std::char_traits<char>>>
@@ -7989,7 +7650,6 @@ worldrenderer
 worldrenderermgr.cpp
 worldspawn
 wpp >= 1 && wpp <= 2
-write
 wyS]
 x != __null
 xdigit
