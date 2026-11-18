@@ -692927,3 +692927,131 @@ particles/units/heroes/hero_undying/undying_zombie_bite_teeth_trail.vpcf
  - C_OP_ContinuousEmitter 1
  - C_OP_SetVectorAttributeToVectorExpression 1
 
+particles/units/heroes/hero_kunkka/kunkka_tidebringer_aoe.vpcf
+- GAME: dota/particles/units/heroes/hero_kunkka/kunkka_tidebringer_aoe.vpcf_c
+- CONTENT: dota/particles/units/heroes/hero_kunkka/kunkka_tidebringer_aoe.vpcf
+- INPUT: dota/particles/units/heroes/hero_kunkka/kunkka_tidebringer_aoe.vpcf (crc 3137793097)
+- REF: materials/particle/particle_beam_generic.vtex
+- REF: particles/units/heroes/hero_kunkka/kunkka_tidebringer_aoe_front.vpcf
+- SUBASSET REF: particle_operator
+ - C_OP_InstantaneousEmitter 1
+ - C_OP_Decay 1
+ - C_OP_SetFloat 1
+ - C_OP_RenderRopes 1
+ - C_INIT_PositionOffset 1
+ - C_OP_SetSingleControlPointPosition 6
+ - C_INIT_CreateSequentialPathV2 1
+ - C_INIT_PositionPlaceOnGround 1
+
+particles/units/heroes/hero_kunkka/kunkka_tidebringer_aoe_front.vpcf
+- GAME: dota/particles/units/heroes/hero_kunkka/kunkka_tidebringer_aoe_front.vpcf_c
+- CONTENT: dota/particles/units/heroes/hero_kunkka/kunkka_tidebringer_aoe_front.vpcf
+- INPUT: dota/particles/units/heroes/hero_kunkka/kunkka_tidebringer_aoe_front.vpcf (crc 628530887)
+- REF: particles/units/heroes/hero_kunkka/kunkka_tidebringer_aoe_normal.vpcf
+- SUBASSET REF: particle_operator
+ - C_OP_InstantaneousEmitter 1
+ - C_INIT_InitFloat 2
+ - C_OP_Decay 1
+ - C_OP_RenderSprites 1
+ - C_INIT_CreateSequentialPathV2 1
+ - C_OP_MaintainSequentialPath 1
+ - C_OP_SetControlPointToVectorExpression 2
+
+particles/units/heroes/hero_kunkka/kunkka_tidebringer_aoe_normal.vpcf
+- GAME: dota/particles/units/heroes/hero_kunkka/kunkka_tidebringer_aoe_normal.vpcf_c
+- CONTENT: dota/particles/units/heroes/hero_kunkka/kunkka_tidebringer_aoe_normal.vpcf
+- INPUT: dota/particles/units/heroes/hero_kunkka/kunkka_tidebringer_aoe_normal.vpcf (crc 1817115928)
+- REF: materials/particle/spray2/spray2_normal.vtex
+- SUBASSET REF: particle_operator
+ - C_INIT_InitFloat 6
+ - C_OP_Decay 1
+ - C_OP_BasicMovement 1
+ - C_OP_RenderSprites 1
+ - C_INIT_VelocityRadialRandom 1
+ - C_OP_SetFloat 2
+ - C_INIT_RandomSequence 1
+ - C_OP_ContinuousEmitter 1
+ - C_OP_SpinUpdate 1
+ - C_INIT_InitialVelocityNoise 1
+ - C_OP_LerpEndCapScalar 1
+ - C_OP_LerpScalar 1
+ - C_OP_MaxVelocity 1
+ - C_INIT_CreateFromParentParticles 1
+ - C_OP_EndCapTimedDecay 1
+ - C_OP_Orient2DRelToCP 1
+ - C_INIT_InheritFromParentParticles 1
+- SUBASSET REF: particle_feature
+ - refraction 1
+
+particles/units/heroes/hero_kunkka/kunkka_tidebringer_aoe_normal_quick.vpcf
+- GAME: dota/particles/units/heroes/hero_kunkka/kunkka_tidebringer_aoe_normal_quick.vpcf_c
+- CONTENT: dota/particles/units/heroes/hero_kunkka/kunkka_tidebringer_aoe_normal_quick.vpcf
+- INPUT: dota/particles/units/heroes/hero_kunkka/kunkka_tidebringer_aoe_normal_quick.vpcf (crc 1470011581)
+- REF: materials/particle/spray2/spray2_normal.vtex
+- SUBASSET REF: particle_operator
+ - C_INIT_InitFloat 6
+ - C_OP_Decay 1
+ - C_OP_BasicMovement 1
+ - C_OP_RenderSprites 1
+ - C_INIT_VelocityRadialRandom 1
+ - C_OP_SetFloat 2
+ - C_INIT_RandomSequence 1
+ - C_OP_ContinuousEmitter 1
+ - C_OP_SpinUpdate 1
+ - C_INIT_InitialVelocityNoise 1
+ - C_OP_LerpEndCapScalar 1
+ - C_OP_LerpScalar 1
+ - C_OP_MaxVelocity 1
+ - C_INIT_CreateFromParentParticles 1
+ - C_OP_EndCapTimedDecay 1
+ - C_OP_Orient2DRelToCP 1
+- SUBASSET REF: particle_feature
+ - refraction 1
+
+particles/units/heroes/hero_kunkka/kunkka_tidebringer_aoe_splash.vpcf
+- GAME: dota/particles/units/heroes/hero_kunkka/kunkka_tidebringer_aoe_splash.vpcf_c
+- CONTENT: dota/particles/units/heroes/hero_kunkka/kunkka_tidebringer_aoe_splash.vpcf
+- INPUT: dota/particles/units/heroes/hero_kunkka/kunkka_tidebringer_aoe_splash.vpcf (crc 23847262)
+- REF: materials/particle/spray2/spray2.vtex
+- REF: materials/particle/spray2/spray2_normal.vtex
+- SUBASSET REF: particle_operator
+ - C_INIT_InitFloat 6
+ - C_OP_Decay 1
+ - C_OP_BasicMovement 1
+ - C_OP_RenderSprites 1
+ - C_INIT_VelocityRadialRandom 1
+ - C_OP_SetFloat 2
+ - C_INIT_RandomSequence 1
+ - C_OP_ContinuousEmitter 1
+ - C_OP_SpinUpdate 1
+ - C_INIT_InitialVelocityNoise 1
+ - C_OP_LerpEndCapScalar 1
+ - C_OP_ColorInterpolate 1
+ - C_OP_LerpScalar 1
+ - C_OP_MaxVelocity 1
+ - C_INIT_CreateFromParentParticles 1
+ - C_OP_EndCapTimedDecay 1
+ - C_OP_Orient2DRelToCP 1
+
+particles/units/heroes/hero_kunkka/kunkka_tidebringer_aoe_spray.vpcf
+- GAME: dota/particles/units/heroes/hero_kunkka/kunkka_tidebringer_aoe_spray.vpcf_c
+- CONTENT: dota/particles/units/heroes/hero_kunkka/kunkka_tidebringer_aoe_spray.vpcf
+- INPUT: dota/particles/units/heroes/hero_kunkka/kunkka_tidebringer_aoe_spray.vpcf (crc 1847360461)
+- REF: materials/models/heroes/morphling/watersprites/waveform_sprites2.vtex
+- REF: materials/particles/light_flare/light_glow_01.vtex
+- SUBASSET REF: particle_operator
+ - C_INIT_InitFloat 3
+ - C_OP_Decay 1
+ - C_OP_BasicMovement 1
+ - C_OP_RenderSprites 2
+ - C_INIT_VelocityRadialRandom 1
+ - C_OP_SetFloat 2
+ - C_INIT_RandomSequence 1
+ - C_OP_ContinuousEmitter 1
+ - C_INIT_InitialVelocityNoise 1
+ - C_OP_LerpEndCapScalar 1
+ - C_OP_MaxVelocity 1
+ - C_INIT_CreateFromParentParticles 1
+ - C_OP_EndCapTimedDecay 1
+ - C_OP_Orient2DRelToCP 1
+
