@@ -689802,7 +689802,7 @@ particles/units/heroes/hero_chaos_knight/chaos_knight_armageddon_ambient_tail_d.
 particles/units/heroes/hero_chaos_knight/chaos_knight_armageddon_charge.vpcf
 - GAME: dota/particles/units/heroes/hero_chaos_knight/chaos_knight_armageddon_charge.vpcf_c
 - CONTENT: dota/particles/units/heroes/hero_chaos_knight/chaos_knight_armageddon_charge.vpcf
-- INPUT: dota/particles/units/heroes/hero_chaos_knight/chaos_knight_armageddon_charge.vpcf (crc 689387773)
+- INPUT: dota/particles/units/heroes/hero_chaos_knight/chaos_knight_armageddon_charge.vpcf (crc 214752523)
 - REF: particles/units/heroes/hero_chaos_knight/chaos_knight_armageddon_charge_debris.vpcf
 - REF: particles/units/heroes/hero_chaos_knight/chaos_knight_armageddon_charge_debris_continuous.vpcf
 - REF: particles/units/heroes/hero_chaos_knight/chaos_knight_armageddon_charge_dust.vpcf
@@ -689810,7 +689810,7 @@ particles/units/heroes/hero_chaos_knight/chaos_knight_armageddon_charge.vpcf
 - REF: particles/units/heroes/hero_chaos_knight/chaos_knight_armageddon_charge_ground.vpcf
 - REF: particles/units/heroes/hero_chaos_knight/chaos_knight_armageddon_charge_rocks.vpcf
 - REF: particles/units/heroes/hero_chaos_knight/chaos_knight_armageddon_charge_trails.vpcf
-- REF: particles/units/heroes/hero_chaos_knight/chaos_knight_armageddon_ribbon.vpcf
+- REF: particles/units/heroes/hero_chaos_knight/chaos_knight_armageddon_ribbon_b.vpcf
 - SUBASSET REF: particle_operator
  - C_OP_InstantaneousEmitter 1
  - C_OP_PositionLock 1
@@ -689983,7 +689983,7 @@ particles/units/heroes/hero_chaos_knight/chaos_knight_armageddon_charge_dust.vpc
 particles/units/heroes/hero_chaos_knight/chaos_knight_armageddon_charge_dust_trail.vpcf
 - GAME: dota/particles/units/heroes/hero_chaos_knight/chaos_knight_armageddon_charge_dust_trail.vpcf_c
 - CONTENT: dota/particles/units/heroes/hero_chaos_knight/chaos_knight_armageddon_charge_dust_trail.vpcf
-- INPUT: dota/particles/units/heroes/hero_chaos_knight/chaos_knight_armageddon_charge_dust_trail.vpcf (crc 310019620)
+- INPUT: dota/particles/units/heroes/hero_chaos_knight/chaos_knight_armageddon_charge_dust_trail.vpcf (crc 1255856028)
 - REF: materials/particle/smoke3/smoke3.vtex
 - SUBASSET REF: particle_operator
  - C_INIT_InitFloat 4
@@ -690067,9 +690067,9 @@ particles/units/heroes/hero_chaos_knight/chaos_knight_armageddon_charge_ground.v
 particles/units/heroes/hero_chaos_knight/chaos_knight_armageddon_charge_ground_glow.vpcf
 - GAME: dota/particles/units/heroes/hero_chaos_knight/chaos_knight_armageddon_charge_ground_glow.vpcf_c
 - CONTENT: dota/particles/units/heroes/hero_chaos_knight/chaos_knight_armageddon_charge_ground_glow.vpcf
-- INPUT: dota/particles/units/heroes/hero_chaos_knight/chaos_knight_armageddon_charge_ground_glow.vpcf (crc 1435686080)
+- INPUT: dota/particles/units/heroes/hero_chaos_knight/chaos_knight_armageddon_charge_ground_glow.vpcf (crc 1089833179)
 - SUBASSET REF: particle_operator
- - C_INIT_InitFloat 4
+ - C_INIT_InitFloat 3
  - C_OP_Decay 1
  - C_OP_BasicMovement 1
  - C_OP_RenderSprites 1
@@ -690080,7 +690080,6 @@ particles/units/heroes/hero_chaos_knight/chaos_knight_armageddon_charge_ground_g
  - C_INIT_CreateWithinSphereTransform 1
  - C_INIT_RandomSequence 1
  - C_OP_ContinuousEmitter 1
- - C_INIT_RandomYawFlip 1
  - C_OP_ColorInterpolate 1
  - C_OP_LerpScalar 1
 
@@ -693009,4 +693008,24 @@ particles/items5_fx/starforge_burn_glow.vpcf
  - C_OP_RampScalarLinearSimple 2
 - SUBASSET REF: particle_feature
  - Hitbox 2
+
+particles/units/heroes/hero_chaos_knight/chaos_knight_armageddon_ribbon_b.vpcf
+- GAME: dota/particles/units/heroes/hero_chaos_knight/chaos_knight_armageddon_ribbon_b.vpcf_c
+- CONTENT: dota/particles/units/heroes/hero_chaos_knight/chaos_knight_armageddon_ribbon_b.vpcf
+- INPUT: dota/particles/units/heroes/hero_chaos_knight/chaos_knight_armageddon_ribbon_b.vpcf (crc 2136793606)
+- REF: materials/particle/beam_smoke_03.vtex
+- SUBASSET REF: particle_operator
+ - C_INIT_InitFloat 2
+ - C_OP_Decay 1
+ - C_OP_BasicMovement 1
+ - C_INIT_InitVec 1
+ - C_OP_RenderRopes 1
+ - C_INIT_CreateWithinSphereTransform 1
+ - C_OP_FadeOutSimple 1
+ - C_OP_ContinuousEmitter 1
+ - C_INIT_PositionOffset 1
+ - C_OP_ColorInterpolate 1
+ - C_INIT_RemapParticleCountToScalar 1
+ - C_OP_RampScalarLinearSimple 2
+ - C_OP_EndCapTimedDecay 1
 
