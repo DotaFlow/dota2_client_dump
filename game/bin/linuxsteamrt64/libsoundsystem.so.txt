@@ -1339,7 +1339,6 @@ AudioMixer
 Available Operators:\n
 BACKSLASH_CHAR
 BPM: %f\n
-BROADCAST
 Bad FLC data for resource '%s': %s\n
 Bad KV3 data for resource '%s': %s\n
 Bad command in vmix!\n
@@ -1389,7 +1388,6 @@ BinNe
 BinSub
 BinaryProperties_GetValue
 Bool( %s )
-Broadcast Mono
 CAssociateResourceBlockLoader::BlockingLoadResourceFileData: Trying to load an illegal resource name %s!\n
 CAsyncWavDataCache:  %i sounds total %s, %.2f %% of capacity\n
 CAtomicMutex::AcquireLock(unsigned long long)
@@ -1637,7 +1635,6 @@ CVertexKDTree::BuildMidpointFromVertexSubSet(float const*, int, int const*, int)
 CVertexKDTree::FindVertsInBox(CUtlVectorFixedGrowable<float const*, 64ul, int>&, Vec3D<float> const&, Vec3D<float> const&, int) const
 CVertexKDTree::Nearest(Vec3D<float> const&, CUtlVectorFixedGrowable<float const*, 64ul, int>&) const
 CVoiceContainerRandomSampler: Loaded %d grains into table Total of %lld samples, %f MB.\n
-CVoiceContainerReference
 Can't find mix layer %s\n
 Can't find mixgroup name %s for submix\n
 Can't find sound event to remove for %s!\n
@@ -1659,7 +1656,6 @@ Cleaning up leaked audio stream!\n
 ClientLocalServerAccess001
 Cluster size: %u
 Complexity
-Compressor Type
 ConMsg(char const*, ...)
 Connection Offset: %i\n
 Container has %d Arguments:\n
@@ -1689,7 +1685,6 @@ Cutoff Freq
 Cutoff Frequency
 DEFAULT_WRITE_PATH
 DIGIT
-DIVIDE
 DOUBLE_AND
 DOUBLE_OR
 DOUBLE_QUOTED_STRING
@@ -1738,7 +1733,6 @@ DemoUpconverterVersion001
 Denominator:\t%u\n
 Depth
 Depth Reflectivity
-Describe the current sound device without an active voice list, and the speaker layout the panner uses. Called from a tool stream tool it replies with the speaker layout instead (layout record)
 Detected %d-level recursion in sound operator stack, abort!\n
 DevMsg(char const*, ...)
 DevWarning(char const*, ...)
@@ -1753,7 +1747,6 @@ Disallowed variable name: %s
 Distortion Mix (1.0 = wet)
 Distortion Threshold
 Distortion feedback
-Divide into channels
 Double-save to Member '%s'
 DspPresetModifiers
 Duration: %f\n
@@ -1860,7 +1853,6 @@ Event Type: STEP\n
 Event VSNDS:\n
 Event: %f pattern: %f glob: %f loops: %i\n
 Event: %s\n
-EventPlayerConsoleCommand_t
 Execute
 Exponential
 Exponential Ramp
@@ -1889,8 +1881,6 @@ Failed to load voice container: %s\n
 Failed to read soundmixers.txt as KV3: %s\n
 Failed to save unsupported class
 Failed to start voice for %s\n
-Far reverb gain amount for listener DSP.
-Far reverb gain amount for source-specific DSP.
 Feedback Depth
 Feedback Diffusion1
 Feedback Diffusion2
@@ -1955,7 +1945,6 @@ GLIBC_2.29
 GLIBC_2.3
 GLIBC_2.3.2
 Gain
-Gain applied to the tail of sounds whose source is in this DSP preset (see csgo_mega use_tail_distance_attenuation). 1.0 leaves the tail unchanged.
 Game
 GameChat
 GameInput
@@ -2084,8 +2073,6 @@ LightmapUVW
 Limiter Ratio
 Line: 
 ListenerForwardVector
-Lists the global opvars (opvars of library stacks) with their values: snd_sos_list_global_opvars [stack name filter]. Called from a tool stream tool it replies with them instead (globalOpVar records)
-Lists the operators of each operator stack (library stack) and their fields, by the full names stackValues uses: snd_sos_list_stack_fields [stack name filter] [field name filter] ("" for any stack). Called from a tool stream tool it replies with them instead (stackFields records, one per stack)
 LoadKV3(CKV3Arena*, CUtlString*, CUtlBuffer*, KV3ID_t const&, char const*, unsigned int)
 LoadKV3(KeyValues3*, CUtlString*, CUtlBuffer*, KV3ID_t const&, char const*, unsigned int)
 LoadKV3(KeyValues3*, CUtlString*, char const*, KV3ID_t const&, char const*, unsigned int)
@@ -2178,7 +2165,6 @@ Missing token %s
 Mix (1.0 = wet)
 Mix2x1: mix gain is INF/NaN (start %f, end %f), command skipped
 MixAudioFrame
-MixBus
 MixGroup %s: %f : %f : %f : %f : %f \n
 MixGroup %s:\n
 MixGroups
@@ -2246,8 +2232,6 @@ NEWLINE
 NSt3_V214error_categoryE
 NULL m_pSfx
 Name:\n\t%s\n
-Near reverb gain amount for listener DSP.
-Near reverb gain amount for source-specific DSP.
 No 'Mixers' member found in MixLayer in soundmixers.txt\n
 No DATA block for resource\n
 No MP3 support, can't compile!\n
@@ -2355,12 +2339,10 @@ Play Mult:\t%f\n
 Play Tail
 Playback Jitter
 Playback Type: FWD\n
-Plays a vsnd file.
 Pointers cannot be used as numeric values
 Pre-Roll
 Prefilter
 Prewview VMIX voice on the game graph, preview will be different!\n
-Prints a list of currently available stacks with their operator and field counts: snd_sos_print_operator_stacks [stack name filter]. Called from a tool stream tool it replies with them instead (stack records)
 Priority volume scalar: %f
 Proc Type
 Process
@@ -2409,7 +2391,6 @@ Ratio
 Recognition Exception
 Recognition exception
 Recorded into %s...\n
-Reference Container
 RegisterConCommand: Unknown error registering con command "%s"!\n
 RegisterConVar: Unknown error registering convar "%s"!\n
 Release
@@ -2503,7 +2484,6 @@ Size in bytes
 Size of TRASHSYNTH instance on stack: %d\n
 Size of TRASHSYNTH on stack: %d\n
 SmartPropsSystem_001
-Smooth
 Something Weird ( check the BindInstanceParams implementation )
 SosBaseDataTypeDef_t: %i\n
 SosOpFieldInfo_t: %i\n
@@ -2630,7 +2610,6 @@ TOPOLOGY: Stack %s has %i VSND operators\n
 TOPOLOGY: Stack %s, soundevent_start operator %s, soundevent_name field, source unresolved\n
 TRUE
 TUNNEL Detected \n
-Tail volume for sources in this DSP preset.
 TanFrameQuat
 Taps
 TargetCastForModify
@@ -2752,10 +2731,8 @@ VDataChoice()
 VERTICAL SHAFT Detected \n
 VMIX %s switching to subgraph %s\n
 VMediaFoundation001
-VMixCompressorType_t
 VMixStartup
 VMixTableInit
-VMixUpMixRule_t
 VNotify Abandoned (Not enabled)\n
 VOICE: %f : %f\n
 VP4003
@@ -4048,14 +4025,10 @@ lvl: %3.2f
 m_PreviewInputs
 m_PreviewTweak
 m_bIsTrackSend
-m_bIsValidForPlayback
 m_bPreviewInGame
-m_bRegisteredVMix
 m_bShouldPause
 m_controlInputs
 m_effectsPreview
-m_flListenerReverbFar
-m_flListenerReverbNear
 m_flMasterVolume
 m_flMaxVolumeChangePerBuffer
 m_flMix
@@ -4065,22 +4038,16 @@ m_flSendFacingDSP
 m_flSendRoomDSP
 m_flSlopeIncoming
 m_flSlopeOutgoing
-m_flSourceReverbFar
-m_flSourceReverbNear
 m_flSystemVolumeFadeRate
-m_flTailVolume
 m_graphDesc
 m_graphPreview
 m_nChannelSelect
-m_nCompressorType
 m_nGuid
 m_nIncomingTangent
 m_nMemSize: %i -> %i\n
 m_nMixGroups
 m_nOutgoingTangent
-m_nResourceName
 m_nStartSample
-m_nUpMixRule
 m_nameInputs
 m_pHandle
 m_pStack
@@ -4926,17 +4893,13 @@ sizeof
 sizeof...
 slerp
 slerp_bounce
-snd_audio_nan_paranoid_check
 snd_mixgroups.cpp
 snd_op_sys/sos_beatpattern_system.cpp
 snd_op_sys/sos_op_falloff.cpp
 snd_op_sys/sos_system.cpp
 snd_print_soundevent %s
-snd_sos_list_global_opvars
-snd_sos_list_stack_fields
 snd_sos_update_server_message %s
 snd_soundmixer_setmixlayer_amount %s %f\n
-snd_use_baked_occlusion_mode
 snd_wave_mixer.cpp
 snd_wave_mixer_mp3.cpp
 sndevt

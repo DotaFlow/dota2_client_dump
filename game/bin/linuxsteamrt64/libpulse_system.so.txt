@@ -391,11 +391,6 @@ AssetSystemTest001
 Async Call Method (Child Cursor) C%d:I%d
 Async Outflow (Child Cursor) C%d:I%d
 BACKSLASH_CHAR
-BIND_LAMBDA
-BROADCAST_INVOKE
-BROADCAST_INVOKE_ARRAY_DOMAIN
-BROADCAST_INVOKE_ARRAY_SIMPLE
-BROADCAST_INVOKE_DOMAIN
 Bad FLC data for resource '%s': %s\n
 Bad KV3 data for resource '%s': %s\n
 Bad array index %d (array has %d elements)
@@ -506,7 +501,6 @@ CPulseCell_BaseYieldingInflow::BaseFlow_CancelImmediately
 CPulseCell_BaseYieldingInflow::BaseFlow_WakeElegantly
 CPulseCell_BaseYieldingInflow::BaseFlow_WakeImmediately
 CPulseCell_BooleanSwitchState::Activate
-CPulseCell_BooleanSwitchState::CursorState_t
 CPulseCell_CursorQueue::Wait
 CPulseCell_ExampleCriteria::CheckRequirement
 CPulseCell_ExampleSelector::ProcessSelector
@@ -526,7 +520,6 @@ CPulseCell_IsRequirementValid::CheckRequirement
 CPulseCell_LimitCount::CheckRequirement
 CPulseCell_LimitCount::CommitStep
 CPulseCell_ObservableSwitchState::Activate
-CPulseCell_ObservableSwitchState::CursorState_t
 CPulseCell_Outflow_CycleOrdered::Run
 CPulseCell_Outflow_CycleRandom::Run
 CPulseCell_Outflow_CycleShuffled::Run
@@ -548,7 +541,6 @@ CPulseCell_TestEnums::CompareValues
 CPulseCell_TestWaitWithAutoTracepoints::Wait
 CPulseCell_TestWaitWithCursorState::Wait
 CPulseCell_TestYieldForever::Run
-CPulseCell_TestYieldWithObservables::CursorState_t
 CPulseCell_TestYieldWithObservables::Run
 CPulseCell_Test_MultiInflow_NoDefault::InflowA
 CPulseCell_Test_MultiInflow_NoDefault::InflowB
@@ -569,7 +561,6 @@ CPulseCell_Val_TestDomainFindEntityByName::Eval
 CPulseCell_Val_TestDomainGetEntityName::Eval
 CPulseCell_Value_TestValue50::Eval
 CPulseCell_WaitForCursorsWithTag::Wait
-CPulseCell_WaitForObservable::CursorState_t
 CPulseCell_WaitForObservable::Start
 CPulseCursorFuncs
 CPulseCursorFuncs::AnyOtherCursorsHaveTag
@@ -654,7 +645,6 @@ CPulseTypeManager::Allocate( %s )\n
 CPulseTypeManager::Deallocate( %s, %p )\n
 CPulseTypeManager::DeallocateResource( %s, %s, dealloc=%p live=%p )\n
 CPulseVariant
-CPulse_LambdaDef
 CRC32_ProcessBuffer
 CSplitString::Split(char const*, int, char const**, int, bool)
 CStrongHandle
@@ -671,7 +661,6 @@ CThreadEvent::Set()
 CThreadSyncObject::Wait(unsigned int)
 CThreadSyncObject::WaitImpl(unsigned int)
 CThreadSyncObject::~CThreadSyncObject()
-CURSOR_MAX_INSTRUCTIONS
 CUniformRandomStreamImpl<CThreadNullMutex>::RandomFloat(float, float)
 CUtlBinaryBlock::SetLength(int)
 CUtlBuffer::AddNullTermination()
@@ -724,7 +713,6 @@ Call C%d:I%d (%s)
 CallResume1
 CallResume2
 Called to invoke the graph
-Called when timer reaches the duration OR is stopped. NOTE: This will run a little while AFTER the last interval fires unless they line up very closely (0.05s) or 'Fire At End' is set.
 Canceled
 Cannot allocate abstract class
 Cannot reference domain '%s' from '%s'\n
@@ -790,18 +778,6 @@ Div R%d <- R%d / R%d
 Divide by zero!
 Domain: %s\n
 Double-save to Member '%s'
-EQ_ANIM_SEQUENCE
-EQ_MODEL_MATERIAL_GROUP
-EQ_PARTICLE_EHANDLE
-EQ_QANGLE
-EQ_RESOURCE
-EQ_RESOURCE_NAME
-EQ_SNDEVT_GUID
-EQ_SNDEVT_NAME
-EQ_TRANSFORM
-EQ_TRANSFORMWS
-EQ_VARIANT
-EQ_VDATA_CHOICE
 ERROR: CUtlSymbolTableLarge element limit of %u exceeded\n
 ERROR:NoEnum:%s:%d
 ERROR:NoEnumerator:%s:%d
@@ -818,7 +794,6 @@ EnsureElementCapacity
 EnsureMemberCapacity
 EnsureUnusedCapacity
 EntFire,%s,%s,%s
-Entity Targetname
 EntityName
 Eq R%d <- R%d == R%d
 Eval
@@ -945,7 +920,6 @@ Handle Return Values
 HandleInt
 HandleIntDerived
 HelpSystem_001
-How many cursors to track history for before the oldest is evicted.
 I could not work out what I was expecting, like so many of us these days!\n
 ID_CHAR
 IFormatOutputStream::Format2DTable(CTypeErasedFormattingWrapper, CFormatStringElement, void const**, int, int)
@@ -963,7 +937,6 @@ IKV3TransferInterface_ResourceSave
 IKV3TransferInterface_Worldspace_Load
 IKV3TransferInterface_Worldspace_Save
 INTERNAL ERROR: Cannot convert or reinterpret from %s to %s
-INTERNAL_CALL_TO_PULSE
 IPulseGraphLoadErrorReporter
 IPulseReloadListener
 If (R%d) Jump to Instr I%d
@@ -996,7 +969,6 @@ JArray
 Jump to Instr I%d
 JumpOrLeap( C%d:I%d )
 KV3 instances cannot be set to an unspecified specific type
-Keep a history of all instructions run on a per cursor basis.
 KeyValues3
 KeyValues3: pre-allocated array memory is too small for %u elements (%u bytes available, %u bytes needed)\n
 KeyValues3: pre-allocated table memory is too small for %u members (%u bytes available, %u bytes needed)\n
@@ -1124,18 +1096,6 @@ N9__gnu_cxx24__concurrence_lock_errorE
 N9__gnu_cxx26__concurrence_unlock_errorE
 NEGATIVE_TOK
 NEWLINE
-NE_ANIM_SEQUENCE
-NE_MODEL_MATERIAL_GROUP
-NE_PARTICLE_EHANDLE
-NE_QANGLE
-NE_RESOURCE
-NE_RESOURCE_NAME
-NE_SNDEVT_GUID
-NE_SNDEVT_NAME
-NE_TRANSFORM
-NE_TRANSFORMWS
-NE_VARIANT
-NE_VDATA_CHOICE
 NSt3_V214error_categoryE
 NSt6thread6_StateE
 NULL CELL 
@@ -1170,13 +1130,11 @@ POS_FLOATLITERAL
 POS_INTLITERAL
 PVAL_ANY
 PVAL_INVALID
-PVAL_LAMBDA
 PVAL_SCHEMA_ENUM
 PVAL_TYPESAFE_INT
 PVAL_TYPESAFE_INT64
 PanelID
 PanoramaTextServices001
-Parent Map + VData
 Parent Map: %s\n
 Parser encountered %d error(s)
 Pause
@@ -1246,16 +1204,13 @@ PulseBindingTypeForCType< PulseTestInlineValue_t >() == valueType
 PulseBindingTypeForCType< const PulseTestInlineValue_t & >() == valueType
 PulseDebugLog: Calling external method on non-existent entity or game blackboard
 PulseDebugLog: Calling external method on non-existent entity or game blackboard\n
-PulseExecHistoryCallerInfo_t
 PulseFindTypeInfo( valueType ).GetBaseType() == CPulseType()
-PulseRuntimeLambdaIndex_t
 PulseSymbol_t
 PulseSystemEventCursorResult_t
 PulseSystemEventObservableVariableListenerNotify_t
 PulseSystemEventObservableVariableSourceChanged_t
 PulseSystemEventYieldResume_t
 R%d%s%s
-RECORD_NEXT_SEQ_POINT
 RESOURCE_TYPE_PULSE_GRAPH_DEF
 Raise pen.
 RandomFloat
@@ -1280,8 +1235,6 @@ ResourceManifestRegistry001
 Return
 Return the input string, use the code default if none was supplied.
 Root
-Runs OnInterval immediately when waiting begins. Otherwise the first OnInterval happens after the first interval has elapsed.
-Runs OnInterval upon reaching the end of the duration. Otherwise the last OnInterval will fire earlier unless they line up very closely (0.05s)
 SCOPE_QUALIFIER
 SEMICOLON
 SINGLE_LINE_COMMENT
@@ -1455,7 +1408,6 @@ UtlVectorMemory_FailedAllocation
 VApplication001
 VAvi001
 VBik001
-VMAP_AND_VDATA
 VMediaFoundation001
 VP4003
 VRenderDeviceSetupV001
@@ -1726,7 +1678,6 @@ auto:
 bCondition
 bInAutoWakeList
 bInherit
-bOverflowedInstructionHistoryLimit
 bValue
 bad_function_call
 bank_unique_id
@@ -1846,7 +1797,6 @@ ehandle_serialize
 entity_name
 execution_history
 expr
-externalCallerInfo
 fakeEnt.m_nHandle.WeakHandle() == PULSE_WEAK_HANDLE_INVALID
 fake_derived_a
 fake_derived_b
@@ -1865,7 +1815,6 @@ flElapsed
 flLiveFloatValue
 flPercentage
 flSeconds
-flValue
 flWaitInterval
 flWaitIntervalHigh
 flWakeTime
@@ -1941,27 +1890,18 @@ m_CaseOutflows
 m_CaseValues
 m_ClockScopeID
 m_DefaultCaseOutflow
-m_DependentObservableBlackboardReferences
-m_DependentObservableTempVars
-m_DependentObservableVars
-m_EvaluateConnection
 m_Inargs
-m_LambdaDefs
 m_LambdaSubscriptions
 m_LatestValue
 m_MissingRetvalDefault
 m_ParamType
 m_PreparedHook
-m_ResultType
 m_ResumePoint
 m_ReturnType
 m_TagName
 m_TagValue
 m_bChildCursorsShouldInherit
-m_bCompletingVeryCloseToEndOfInterval
 m_bConditionValue
-m_bFireAtEnd
-m_bFireAtStart
 m_bFirstEvaluate
 m_bInvokedOrScheduled
 m_bRemoveWhenOutOfScope
@@ -1975,14 +1915,11 @@ m_hGraphInstance
 m_hInstance
 m_hListenerInstance
 m_hObserver
-m_mapNodeToNewCursorCount
 m_nActiveCase
 m_nCellID
-m_nCulledCursorCount
 m_nCurrentWakeIndex
 m_nCursorID
 m_nGraphID
-m_nLambdaIdx
 m_nResult
 m_nStackDepthWhenAdded
 m_nSubject
@@ -2092,7 +2029,6 @@ pulse_editor
 pulse_open_graph_id %u
 pulse_open_graph_id %u %u
 pulse_runtime_lib
-pulse_save_cursor_info_limit
 pulse_system
 pulse_system.dll
 pulse_test_example_suggestion

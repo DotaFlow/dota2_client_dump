@@ -302,7 +302,6 @@ $ORIGIN
 0123456789
 0123456789ABCDEF
 0123456789abcdef
-0: distance ratio only. 1: deviation only (1/r). 2: deviation only (linear). 3: Mode 0 and Mode 1, 4: Mode 0 and Mode 2, 5: Mode 2 and exponential pathing delta, 6: reflection energy ratios.
 10IAppSystem
 11CRefCountedI20CRefCountServiceBaseI6CRefMTEE
 11CSteamAudio
@@ -724,7 +723,6 @@ $ORIGIN
 <undefined>
 <unknown KV3 basic type '%s' (%d)>
 <unknown>
-A probe pair keeps the deltas of a dynamic object only if opening it changes the reflection energy by more than this fraction of the energy with all dynamic objects closed, or of snd_steamaudio_baked_occlusion_reflection_regularization if that is higher.
 AD Time Stamping
 AD_DVCS
 AES-128-CBC
@@ -763,10 +761,8 @@ ASCII
 ASCII//TRANSLIT
 ASN1 lib
 Acceptable OCSP Responses
-Add the baked deltas of open dynamic objects (doors, windows) to the baked occlusion.
 AddPage
 Ag*g*
-Air absorption coefficient used when baking occlusion.
 AlignedByteArray not properly aligned\n
 Alloc
 AnimGraphEditorUtils001
@@ -921,8 +917,6 @@ CRLReason
 CRYPTO lib
 CSPName
 CSplitString::Split(char const*, int, char const**, int, bool)
-CSteamAudioBakedOcclusionDynamicObject
-CSteamAudioBakedOcclusionDynamicObjectPair
 CSteamAudioMovableBakedData
 CSteamAudioPartitioner
 CSteamAudioPartitioningTask
@@ -1016,7 +1010,6 @@ Code Signing
 Complexity
 Complexity of regex match exceeded implementation limits
 CompressBakedReverbInProbeBatch
-Compressor Type
 Conflicting regex grammar options
 Content file %s is corrupt (Chunk: %s). Verify integrity of game files.\n
 Content file %s is corrupt. Hashing could not be verified. Verify integrity of game files.\n
@@ -1369,7 +1362,6 @@ Materials: Filesystem not initialized.\n
 Materials: Imported %d probes from baked file (%s).\n
 Materials: Loaded baked data file (%s).\n
 Materials: Unable to load baked data file (%s).\n
-Max ray length in meters to find resonant material.
 MemAlloc_StrDupFunc
 MeshUtils001
 Microsoft CSP Name
@@ -1386,7 +1378,6 @@ Mismatched '(' and ')' in regular expression
 Mismatched '[' and ']' in regular expression
 Mismatched '{' and '}' in regular expression
 Missing custom_hrtfs key field in custom hrtf properties file. Cannot load!
-MixBus
 Mod Depth
 Mod Rate
 ModelDocUtils001
@@ -1474,7 +1465,6 @@ Netscape Server Gated Crypto
 Nonce
 Not safe to 'new' this class due to alignment requirements
 November
-Number of rays to trace to find resonant materials.
 OBJ lib
 OCSP
 OCSP Archive Cutoff
@@ -1604,11 +1594,9 @@ RSA-SHA512
 RSAES-OAEP
 RSASSA-PSS
 RSA_blinding
-Radius factor to multiply the distance between probes with to get the radius within which probes are averaged by the occlusion spatial filter, applied when baking.
 RandomFloat
 RandomInt
 Ratio
-Rays are only sampled in half angle measured from +Z. 120 deg covers everything except a 60 deg cap around straight down.
 Reflections... (rays: %d x %d) (bounces: %d) (bidirectional: %s) (#runs: %d)\n
 RegisterConCommand: Unknown error registering con command "%s"!\n
 RegisterConVar: Unknown error registering convar "%s"!\n
@@ -1696,7 +1684,6 @@ SSL routines
 SXNetID
 Saturday
 SaveKV3(KV3ID_t const&, KV3ID_t const&, KeyValues3 const*, CUtlString*, CUtlBuffer*, unsigned int)
-Scales the deltas of the open dynamic objects before they are added to the baked occlusion.
 SchemaTestExternal_One_001
 SchemaTestExternal_Two_001
 Secure Electronic Transactions
@@ -1712,10 +1699,7 @@ Size
 Size Max
 Size Min
 SmartPropsSystem_001
-Smooth
 Source2ModTools001
-Spatial filter of the occlusion reflection energy, applied when baking. 0: No spatial filtering. 1: bidirectional spatial filter.
-Spew Steam Audio scene list changes and realtime direct occlusion results (at most 10 lines a second).
 St10bad_typeid
 St10ctype_base
 St10money_base
@@ -1898,7 +1882,6 @@ Unknown version %d for vpk %s
 Unrecognized EHashType found: %d
 Unsupported KV3 basic type '%s' (%d)!
 Usage: snd_steamaudio_halton_sequence <order> <numsamples>.\n
-Use alternate probe lookup algorithm to query materials for listener position based on kd-tree of probe points.
 UtlRBTree_FailedInsertDuplicate
 UtlVectorMemory_Alloc
 UtlVectorMemory_CalcNewAllocationCount
@@ -1909,7 +1892,6 @@ VBik001
 VDataChoice( %s )
 VDataChoice()
 VMediaFoundation001
-VMixCompressorType_t
 VP4003
 VPK directory for '%s' corrupt
 VProfScopeHelper<0, false>::EnterScopeInternalBudgetFlags(char const*, VProfBudgetGroupCallSite&, CUtlSourceLocation const&)
@@ -3451,27 +3433,11 @@ long std::__exchange<long, int>(long&, int&&)
 lower
 lseek
 mXRecord
-m_flSpatialFilterRadiusFactor
-m_nCompressorType
-m_nHammerIdHash
-m_nHammerIdHashA
-m_nHammerIdHashB
-m_nSpatialFilterMode
 m_pClusteredProbeBatch
-m_sHammerId
 m_vecAABBs
 m_vecData
-m_vecDynamicObjectPairs
-m_vecDynamicObjects
 m_vecInitialTransforms
 m_vecKeys
-m_vecPairs
-m_vecPathingDeviationDeltas
-m_vecPathingDeviationResiduals
-m_vecPathingRatioDeltas
-m_vecPathingRatioResiduals
-m_vecReflectionEnergyDeltas
-m_vecReflectionEnergyResiduals
 mail
 mailPreferenceOption
 malloc
@@ -3965,17 +3931,6 @@ singleLevelQuality
 sizeof 
 sizeof...
 slash
-snd_steamaudio_baked_materials_probelookup_usealternate
-snd_steamaudio_baked_occlusion_dynamic_object_delta_scale
-snd_steamaudio_baked_occlusion_dynamic_objects
-snd_steamaudio_custombake_dynamic_object_energy_threshold
-snd_steamaudio_custombake_materials_coneangle
-snd_steamaudio_custombake_materials_max_raylength
-snd_steamaudio_custombake_materials_numrays
-snd_steamaudio_custombake_occlusion_air_absorption_coefficient
-snd_steamaudio_custombake_occlusion_spatialfilter_mode
-snd_steamaudio_custombake_occlusion_spatialfilter_radius_factor
-snd_steamaudio_debug_scene_spew
 snmpv2
 socket
 source_file

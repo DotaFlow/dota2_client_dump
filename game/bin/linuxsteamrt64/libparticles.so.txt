@@ -40,15 +40,12 @@
  throw
  transaction_safe
  volatile
-!m_bUseMesh || !is_gpu_particle_system
 "Position within sphere random" no longer supports the "randomly distribute to highest supplied Control Point" feature\n\t"Emit continuously" and "Emit noise" no longer support "scale emission to used control points".\n\t"Position from control points" had a max control point added to it.
 "Remap control point orientation to rotation" does something approaching sanity for the cases I looked at.  If we have cases where this isn't appropriate, we can split out the behavior.\n
 "Remap control point orientation to rotation" rewritten to make more sense.\n
 "Set control point rotation" pre-emission operator now correctly produces right-handed matrices [previously it would produce left-handed ones].
 "Twist around axis" force now rotates around the specified control point instead of control point 0.\n
 $ORIGIN
-$SFXAnimationTimeOffset
-$SFXAnimationTimePerFrame
 $SFXDetailBlendMode
 %%.%if
 %.4f/%.4f/%.4f
@@ -1138,7 +1135,6 @@ Alpha window threshold random
 And R%d <- R%d && R%d
 AnimGraphEditorUtils001
 Any Other Cursors Have Tag
-Artificially softens direct specular by clamping the minimum roughness this light sees (0-1)
 Assert_ConditionFailed(_AssertCompileTimeConstantStruct_t const&, char const*, ...)
 Assert_ConditionFailed_Fatal(_AssertCompileTimeConstantStruct_t const&)
 Assert_ConditionFailed_Fatal(_AssertCompileTimeConstantStruct_t const&, char const*, ...)
@@ -1158,17 +1154,12 @@ Avg Actual Traces
 Avg Intersection Tests
 Avg. Render (us)
 Avg. Sim (us)
-BIND_LAMBDA
 BONE_INDICES
 BONE_WEIGHTS
 BOX_ANGLES
 BOX_FLAGS
 BOX_MAXS
 BOX_MINS
-BROADCAST_INVOKE
-BROADCAST_INVOKE_ARRAY_DOMAIN
-BROADCAST_INVOKE_ARRAY_SIMPLE
-BROADCAST_INVOKE_DOMAIN
 Bad KV3 data (%s)
 Bad KV3 data for resource '%s': %s\n
 Bad compression
@@ -1271,7 +1262,6 @@ CPulseCell_BaseYieldingInflow::BaseFlow_CancelImmediately
 CPulseCell_BaseYieldingInflow::BaseFlow_WakeElegantly
 CPulseCell_BaseYieldingInflow::BaseFlow_WakeImmediately
 CPulseCell_BooleanSwitchState::Activate
-CPulseCell_BooleanSwitchState::CursorState_t
 CPulseCell_CursorQueue::Wait
 CPulseCell_FireCursors::Start
 CPulseCell_FireCursors::StopWaiting
@@ -1289,7 +1279,6 @@ CPulseCell_IsRequirementValid::CheckRequirement
 CPulseCell_LimitCount::CheckRequirement
 CPulseCell_LimitCount::CommitStep
 CPulseCell_ObservableSwitchState::Activate
-CPulseCell_ObservableSwitchState::CursorState_t
 CPulseCell_Outflow_CycleOrdered::Run
 CPulseCell_Outflow_CycleRandom::Run
 CPulseCell_Outflow_CycleShuffled::Run
@@ -1303,7 +1292,6 @@ CPulseCell_Step_DebugLog::Run
 CPulseCell_Step_PublicOutput::Run
 CPulseCell_Timeline::Start
 CPulseCell_WaitForCursorsWithTag::Wait
-CPulseCell_WaitForObservable::CursorState_t
 CPulseCell_WaitForObservable::Start
 CPulseCursorFuncs
 CPulseCursorFuncs::AnyOtherCursorsHaveTag
@@ -1327,7 +1315,6 @@ CPulseStringlib::StringLength
 CPulseStringlib::StringsAreEqualCaseSensitive
 CPulseType
 CPulseVariant
-CPulse_LambdaDef
 CRC32_ProcessBuffer
 CRC64_ProcessBuffer
 CREATION_TIME
@@ -1358,7 +1345,6 @@ CThreadSyncObject::WaitImpl(unsigned int)
 CThreadSyncObject::~CThreadSyncObject()
 CThreadedJob::Abort(bool)
 CThreadedJobSource::SignalEventMonitor(CThreadedJobSource*)
-CURSOR_MAX_INSTRUCTIONS
 CURVE_TANGENT_FLAT
 CURVE_TANGENT_FREE
 CURVE_TANGENT_LINEAR
@@ -1437,12 +1423,10 @@ C_INIT_InitFromCPSnapshot: Unsupported attribute data type! (%d)\n
 C_INIT_InitFromCPSnapshot: cannot initialize PREV_XYZ - XYZ cannot be read!\n
 C_INIT_InitFromCPSnapshot: framerate unknown initializing PREV_XYZ! Defaulting to 30fps, but particle velocity may look wrong...\n
 C_INIT_InitFromParentKilled: Unsupported attribute data type! (%d)\n
-C_OP_SetControlPointFromRenderAttribute
 C_OP_SetFromCPSnapshot: cannot initialize PREV_XYZ - XYZ cannot be read!\n
 C_OP_SetFromCPSnapshot: framerate unknown initializing PREV_XYZ! Defaulting to 30fps, but particle velocity may look wrong...\n
 Calculate vector attribute
 Call C%d:I%d (%s)
-Called when timer reaches the duration OR is stopped. NOTE: This will run a little while AFTER the last interval fires unless they line up very closely (0.05s) or 'Fire At End' is set.
 Can NOT
 Cannot allocate abstract class
 Cannot reference domain '%s' from '%s'\n
@@ -1504,7 +1488,6 @@ Cursor[ ptr:%p | id:%d | graph:%p ]: Resumed from cell ptr:%p id:%d\n
 Cursor[ ptr:%p | id:%d | graph:%p ]: Yielded at cell ptr:%p id:%d\n
 Cursor[ ptr:%p | id:%d | graph:%p ]: ~CPulseExecCursor()\n
 Cycle Scalar
-D_ANIMATED_NORMAL
 Dampen Movement Relative to Plane
 Dampen Movement relative to model
 Data_Branch1xy
@@ -1526,18 +1509,6 @@ DoNotCastShadows
 Domain: %s\n
 Double-save to Member '%s'
 Drive CP from global sound float
-EQ_ANIM_SEQUENCE
-EQ_MODEL_MATERIAL_GROUP
-EQ_PARTICLE_EHANDLE
-EQ_QANGLE
-EQ_RESOURCE
-EQ_RESOURCE_NAME
-EQ_SNDEVT_GUID
-EQ_SNDEVT_NAME
-EQ_TRANSFORM
-EQ_TRANSFORMWS
-EQ_VARIANT
-EQ_VDATA_CHOICE
 ERROR: CUtlSymbolTableLarge element limit of %u exceeded\n
 ERROR:NoEnum:%s:%d
 ERROR:NoEnumerator:%s:%d
@@ -1558,7 +1529,6 @@ EnsureCapacity
 EnsureElementCapacity
 EnsureMemberCapacity
 EnsureUnusedCapacity
-Entity Targetname
 EntityName
 Eq R%d <- R%d == R%d
 Error in child list of particle system %s [%p], parent: %p\n
@@ -1708,7 +1678,6 @@ Hit maximum implicit index buffer size of %u, desired %u\n
 Hit maximum implicit vertex buffer size of %u, desired %u\n
 Hitbox Index
 Hitbox Offset Position
-How many cursors to track history for before the oldest is evicted.
 IFormatOutputStream::Format2DTable(CTypeErasedFormattingWrapper, CFormatStringElement, void const**, int, int)
 IFormatOutputStream::FormatArray(CTypeErasedFormattingWrapper, CFormatStringElement, void const**, int, bool)
 IFormatOutputStream::FormatEnumHelper(CFormatStringElement, int, std::initializer_list<std::pair<int, char const*>>)
@@ -1726,7 +1695,6 @@ IKV3TransferInterface_UtlSymbolLarge
 IKV3TransferInterface_Worldspace_Load
 IKV3TransferInterface_Worldspace_Save
 INTERNAL ERROR: Cannot convert or reinterpret from %s to %s
-INTERNAL_CALL_TO_PULSE
 IPulseReloadListener
 If (R%d) Jump to Instr I%d
 If (R%d) Leap to Chunk C%d
@@ -1780,7 +1748,6 @@ IsValidIndex( i )
 JArray
 Jump to Instr I%d
 JumpOrLeap( C%d:I%d )
-Keep a history of all instructions run on a per cursor basis.
 KeyValues3
 KeyValues3: pre-allocated array memory is too small for %u elements (%u bytes available, %u bytes needed)\n
 KeyValues3: pre-allocated table memory is too small for %u members (%u bytes available, %u bytes needed)\n
@@ -1961,18 +1928,6 @@ N10__cxxabiv121__vmi_class_type_infoE
 N9__gnu_cxx20recursive_init_errorE
 N9__gnu_cxx24__concurrence_lock_errorE
 N9__gnu_cxx26__concurrence_unlock_errorE
-NE_ANIM_SEQUENCE
-NE_MODEL_MATERIAL_GROUP
-NE_PARTICLE_EHANDLE
-NE_QANGLE
-NE_RESOURCE
-NE_RESOURCE_NAME
-NE_SNDEVT_GUID
-NE_SNDEVT_NAME
-NE_TRANSFORM
-NE_TRANSFORMWS
-NE_VARIANT
-NE_VDATA_CHOICE
 NONE/Disabled
 NORMAL
 NSt3_V214error_categoryE
@@ -2016,19 +1971,16 @@ PARENT_PARTICLE_ID
 PARENT_PARTICLE_INDEX
 PARTICLE_ID
 PET_SupportFadingOpaqueModels
-PF_TYPE_CONTROL_POINT_PLANE_DISTANCE
 PITCH
 PREV_XYZ
 PVAL_ANY
 PVAL_INVALID
-PVAL_LAMBDA
 PVAL_SCHEMA_ENUM
 PVAL_TYPESAFE_INT
 PVAL_TYPESAFE_INT64
 PanelID
 PanoramaTextServices001
 ParallelForSharedCode
-Parent Map + VData
 Parent Map: %s\n
 Parent Particle ID
 Parent Particle Index
@@ -2134,15 +2086,12 @@ Pulse domain which enables particle content to query leaf code to introspect gam
 Pulse: %s 
 PulseDebugLog: Calling external method on non-existent entity or game blackboard
 PulseDebugLog: Calling external method on non-existent entity or game blackboard\n
-PulseExecHistoryCallerInfo_t
-PulseRuntimeLambdaIndex_t
 PulseSymbol_t
 Push
 QAngle
 Quantize Float
 Quantize Float to Control Point Component
 R%d%s%s
-RECORD_NEXT_SEQ_POINT
 REFCOUNTED_PTR
 RESOURCE_TYPE_PARTICLE_SNAPSHOT
 RESOURCE_TYPE_PARTICLE_SYSTEM
@@ -2302,8 +2251,6 @@ Rotation spin roll
 Rotation spin yaw
 Rotation yaw flip random
 Rotation yaw random
-Runs OnInterval immediately when waiting begins. Otherwise the first OnInterval happens after the first interval has elapsed.
-Runs OnInterval upon reaching the end of the duration. Otherwise the last OnInterval will fire earlier unless they line up very closely (0.05s)
 SCENEOBJECTPTR
 SCENEOBJECTPTR_NOFREE
 SCRATCH_FLOAT
@@ -2408,7 +2355,6 @@ Sim Time Min: %.2fms\n
 SmartPropsSystem_001
 Snapshot load error for resource '%s': %s\n
 Source2ModTools001
-Specular Softness
 SphericalHarmonicsTextureA
 SphericalHarmonicsTextureB
 SphericalHarmonicsTextureC
@@ -2504,7 +2450,6 @@ UtlVectorMemory_FailedAllocation
 VApplication001
 VAvi001
 VBik001
-VMAP_AND_VDATA
 VMediaFoundation001
 VP4003
 VProfScopeHelper<0, false>::EnterScopeInternalBudgetFlags(char const*, VProfBudgetGroupCallSite&, CUtlSourceLocation const&)
@@ -2808,7 +2753,6 @@ b#Bg
 bCondition
 bE"g
 bInherit
-bOverflowedInstructionHistoryLimit
 bWantsFBCopyTexture
 bad_function_call
 bank_unique_id
@@ -2907,7 +2851,6 @@ decltype(auto)
 decltype(fp.base() - fp0.base()) __gnu_cxx::operator-<char const*, char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>(__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>> const&, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>> const&)
 decltype(nullptr)
 default
-default value (no entity / attribute)
 default_sort
 delete 
 delete[] 
@@ -2917,7 +2860,6 @@ double
 dynamic_cast
 error.vpcf
 expf
-externalCallerInfo
 false
 fast
 features
@@ -2984,10 +2926,7 @@ implicit sort payload
 implicit vertex colors
 implicit vertices
 inherit attribute from peer particle systems
-init color from the mesh albedo
-init normal from the mesh normals
 initializer for module 
-input control point number (entity to read from)
 int const& std::min<int>(int const&, int const&)
 int& std::forward<int&>(std::remove_reference<int&>::type&)
 int&& std::forward<int>(std::remove_reference<int>::type&)
@@ -3021,51 +2960,31 @@ m_CaseOutflows
 m_CaseValues
 m_Children.m_pHead: [%p]\n
 m_DefaultCaseOutflow
-m_DependentObservableBlackboardReferences
-m_DependentObservableTempVars
-m_DependentObservableVars
-m_EvaluateConnection
-m_LambdaDefs
 m_LambdaSubscriptions
 m_LatestValue
-m_ResultType
 m_ReturnType
 m_Stops
 m_TagName
 m_TagValue
-m_bAbsoluteValue
-m_bAnimatedNormal
 m_bChildCursorsShouldInherit
-m_bCompletingVeryCloseToEndOfInterval
 m_bConditionValue
-m_bFireAtEnd
-m_bFireAtStart
 m_bFirstEvaluate
-m_bInitColorToAlbedo
-m_bInitNormal
 m_bRemoveWhenOutOfScope
 m_bShowInUI
-m_bUseParticleColorForVertColor
 m_buffer=
-m_flSFXAnimationTimeOffset
-m_flSFXAnimationTimePerFrame
 m_flSlopeIncoming
 m_flSlopeOutgoing
 m_hCursorOnOtherGraph
 m_hInstance
-m_mapNodeToNewCursorCount
 m_nActiveCase
-m_nCulledCursorCount
 m_nCurrentWakeIndex
 m_nCursorID
 m_nGraphID
 m_nIncomingTangent
-m_nLambdaIdx
 m_nOutgoingTangent
 m_nStackDepthWhenAdded
 m_nUniqueID
 m_nYieldToken
-m_pszAttributeName
 m_spline
 m_szEffect
 m_tangents
@@ -3146,7 +3065,6 @@ operator new[](unsigned long, std::nothrow_t const&)
 operator"" 
 operators
 optionallycompressedtangentframe
-output component (0 = X, 1 = Y, 2 = Z)
 pMessage
 pTagName
 param
@@ -3191,13 +3109,9 @@ pthread_rwlock_unlock
 pthread_rwlock_wrlock
 pulse_open_graph_id %u %u
 pulse_runtime_lib
-pulse_save_cursor_info_limit
 pulse_system
 pvec_color_black
 pvec_color_white
-r_particle_allow_transform_instancing
-r_particle_gpu_implicit_skip_empty_bricks
-r_particle_render_nonsprites_issue_vizquery
 random_device could not be read
 random_device: getentropy failed
 random_device: rdrand failed
@@ -3214,7 +3128,6 @@ reference temporary #
 registers
 reinterpret_cast
 remap vector component to scalar
-render attribute name
 report_columns
 report_info
 report_rows
