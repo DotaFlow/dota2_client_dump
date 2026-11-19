@@ -685445,12 +685445,15 @@ particles/dev/preview_ground.vpcf
 particles/items2_fx/blood_grenade_debuff.vpcf
 - GAME: dota/particles/items2_fx/blood_grenade_debuff.vpcf_c
 - CONTENT: dota/particles/items2_fx/blood_grenade_debuff.vpcf
-- INPUT: dota/particles/items2_fx/blood_grenade_debuff.vpcf (crc 2969809567)
+- INPUT: dota/particles/items2_fx/blood_grenade_debuff.vpcf (crc 2086655429)
+- REF: particles/items2_fx/blood_grenade_debuff_b.vpcf
+- REF: particles/items2_fx/blood_grenade_debuff_drips.vpcf
+- REF: particles/items2_fx/blood_grenade_debuff_glow.vpcf
 
 particles/items2_fx/blood_grenade_debuff_b.vpcf
 - GAME: dota/particles/items2_fx/blood_grenade_debuff_b.vpcf_c
 - CONTENT: dota/particles/items2_fx/blood_grenade_debuff_b.vpcf
-- INPUT: dota/particles/items2_fx/blood_grenade_debuff_b.vpcf (crc 100760820)
+- INPUT: dota/particles/items2_fx/blood_grenade_debuff_b.vpcf (crc 3196732035)
 - REF: materials/particle/electricity/electricity_22_a.vtex
 - SUBASSET REF: particle_operator
  - C_INIT_InitFloat 3
@@ -685467,21 +685470,19 @@ particles/items2_fx/blood_grenade_debuff_b.vpcf
 - SUBASSET REF: particle_feature
  - Hitbox 2
 
-particles/items2_fx/blood_grenade_debuff_c.vpcf
-- GAME: dota/particles/items2_fx/blood_grenade_debuff_c.vpcf_c
-- CONTENT: dota/particles/items2_fx/blood_grenade_debuff_c.vpcf
-- INPUT: dota/particles/items2_fx/blood_grenade_debuff_c.vpcf (crc 3997155949)
-- REF: materials/particle/particle_glow_02.vtex
+particles/items2_fx/blood_grenade_debuff_drips.vpcf
+- GAME: dota/particles/items2_fx/blood_grenade_debuff_drips.vpcf_c
+- CONTENT: dota/particles/items2_fx/blood_grenade_debuff_drips.vpcf
+- INPUT: dota/particles/items2_fx/blood_grenade_debuff_drips.vpcf (crc 1729599003)
+- REF: materials/particle/particle_glow_01.vtex
 - SUBASSET REF: particle_operator
  - C_OP_InstantaneousEmitter 1
  - C_INIT_InitFloat 5
  - C_OP_Decay 1
  - C_OP_BasicMovement 1
  - C_INIT_CreateOnModel 1
- - C_OP_InterpolateRadius 1
+ - C_OP_SetFloat 2
  - C_INIT_RandomColor 1
- - C_OP_FadeOutSimple 1
- - C_OP_FadeInSimple 1
  - C_OP_ContinuousEmitter 1
  - C_OP_RampScalarLinear 1
  - C_OP_LockToBone 1
@@ -685489,10 +685490,10 @@ particles/items2_fx/blood_grenade_debuff_c.vpcf
 - SUBASSET REF: particle_feature
  - Hitbox 2
 
-particles/items2_fx/blood_grenade_debuff_d.vpcf
-- GAME: dota/particles/items2_fx/blood_grenade_debuff_d.vpcf_c
-- CONTENT: dota/particles/items2_fx/blood_grenade_debuff_d.vpcf
-- INPUT: dota/particles/items2_fx/blood_grenade_debuff_d.vpcf (crc 2181370953)
+particles/items2_fx/blood_grenade_debuff_glow.vpcf
+- GAME: dota/particles/items2_fx/blood_grenade_debuff_glow.vpcf_c
+- CONTENT: dota/particles/items2_fx/blood_grenade_debuff_glow.vpcf
+- INPUT: dota/particles/items2_fx/blood_grenade_debuff_glow.vpcf (crc 110208049)
 - REF: materials/particle/particle_glow_04.vtex
 - SUBASSET REF: particle_operator
  - C_OP_InstantaneousEmitter 1
@@ -685501,55 +685502,13 @@ particles/items2_fx/blood_grenade_debuff_d.vpcf
  - C_OP_BasicMovement 1
  - C_OP_RenderSprites 1
  - C_INIT_CreateOnModel 1
- - C_OP_InterpolateRadius 1
+ - C_OP_SetFloat 2
  - C_INIT_RandomColor 1
- - C_OP_FadeOutSimple 1
- - C_OP_FadeInSimple 1
  - C_OP_ContinuousEmitter 1
  - C_OP_RampScalarLinear 1
  - C_OP_LockToBone 1
 - SUBASSET REF: particle_feature
  - Hitbox 2
-
-particles/items2_fx/blood_grenade_debuff_drips.vpcf
-- GAME: dota/particles/items2_fx/blood_grenade_debuff_drips.vpcf_c
-- CONTENT: dota/particles/items2_fx/blood_grenade_debuff_drips.vpcf
-- INPUT: dota/particles/items2_fx/blood_grenade_debuff_drips.vpcf (crc 3912222610)
-- REF: materials/particle/spray1/spray1.vtex
-- SUBASSET REF: particle_operator
- - C_INIT_InitFloat 4
- - C_OP_Decay 1
- - C_OP_BasicMovement 1
- - C_INIT_CreateOnModel 1
- - C_OP_InterpolateRadius 1
- - C_INIT_RandomSequence 1
- - C_OP_FadeInSimple 1
- - C_OP_ContinuousEmitter 1
- - C_INIT_InitialVelocityNoise 2
- - C_OP_ColorInterpolate 1
- - C_OP_LockToBone 1
- - C_OP_RenderTrails 1
- - C_OP_NoiseEmitter 1
-- SUBASSET REF: particle_feature
- - Hitbox 2
-
-particles/items2_fx/blood_grenade_debuff_glow.vpcf
-- GAME: dota/particles/items2_fx/blood_grenade_debuff_glow.vpcf_c
-- CONTENT: dota/particles/items2_fx/blood_grenade_debuff_glow.vpcf
-- INPUT: dota/particles/items2_fx/blood_grenade_debuff_glow.vpcf (crc 117346695)
-- REF: materials/particle/particle_modulate_01.vtex
-- SUBASSET REF: particle_operator
- - C_OP_InstantaneousEmitter 1
- - C_INIT_InitFloat 3
- - C_OP_Decay 1
- - C_OP_BasicMovement 1
- - C_OP_PositionLock 1
- - C_OP_RenderSprites 1
- - C_OP_InterpolateRadius 1
- - C_INIT_CreateWithinSphereTransform 1
- - C_INIT_RandomColor 1
- - C_INIT_PositionOffset 1
- - C_OP_FadeOut 1
 
 particles/items2_fx/blood_grenade_projectile_blobs.vpcf
 - GAME: dota/particles/items2_fx/blood_grenade_projectile_blobs.vpcf_c
@@ -686180,7 +686139,7 @@ particles/items5_fx/helm_of_the_hivemind_buff_cast.vpcf
 particles/items5_fx/helm_of_the_hivemind_buff_glow.vpcf
 - GAME: dota/particles/items5_fx/helm_of_the_hivemind_buff_glow.vpcf_c
 - CONTENT: dota/particles/items5_fx/helm_of_the_hivemind_buff_glow.vpcf
-- INPUT: dota/particles/items5_fx/helm_of_the_hivemind_buff_glow.vpcf (crc 418244034)
+- INPUT: dota/particles/items5_fx/helm_of_the_hivemind_buff_glow.vpcf (crc 1709856126)
 - REF: materials/particle/circle.vtex
 - REF: materials/particle/flare/flare_01_hole.vtex
 - REF: materials/particle/tile/tile_noise_cellular_painted.vtex
@@ -686519,7 +686478,7 @@ particles/items5_fx/starforge_aoe_verticals.vpcf
 particles/items5_fx/starforge_cast.vpcf
 - GAME: dota/particles/items5_fx/starforge_cast.vpcf_c
 - CONTENT: dota/particles/items5_fx/starforge_cast.vpcf
-- INPUT: dota/particles/items5_fx/starforge_cast.vpcf (crc 3877705658)
+- INPUT: dota/particles/items5_fx/starforge_cast.vpcf (crc 500684480)
 - REF: particles/items5_fx/starforge_cast_burst.vpcf
 - REF: particles/items5_fx/starforge_cast_embers.vpcf
 - REF: particles/items5_fx/starforge_cast_eyes_grp.vpcf
@@ -686618,7 +686577,7 @@ particles/items5_fx/starforge_cast_eyes_glow.vpcf
 particles/items5_fx/starforge_cast_eyes_grp.vpcf
 - GAME: dota/particles/items5_fx/starforge_cast_eyes_grp.vpcf_c
 - CONTENT: dota/particles/items5_fx/starforge_cast_eyes_grp.vpcf
-- INPUT: dota/particles/items5_fx/starforge_cast_eyes_grp.vpcf (crc 13251941)
+- INPUT: dota/particles/items5_fx/starforge_cast_eyes_grp.vpcf (crc 749713280)
 - REF: materials/particle/arrow_down.vtex
 - REF: particles/items5_fx/starforge_cast_eyes.vpcf
 - SUBASSET REF: particle_operator
@@ -686629,6 +686588,7 @@ particles/items5_fx/starforge_cast_eyes_grp.vpcf
  - C_OP_SetChildControlPoints 1
  - C_OP_SetControlPointsToParticle 1
  - C_OP_SetControlPointPositions 2
+ - C_OP_EndCapTimedDecay 1
  - C_OP_SetCPOrientationToPointAtCP 1
  - C_OP_SetParentControlPointsToChildCP 2
  - C_OP_SetControlPointToVectorExpression 1
@@ -686855,7 +686815,7 @@ particles/items5_fx/starforge_debuff_eyes_glow.vpcf
 particles/items5_fx/starforge_debuff_eyes_grp.vpcf
 - GAME: dota/particles/items5_fx/starforge_debuff_eyes_grp.vpcf_c
 - CONTENT: dota/particles/items5_fx/starforge_debuff_eyes_grp.vpcf
-- INPUT: dota/particles/items5_fx/starforge_debuff_eyes_grp.vpcf (crc 2586454853)
+- INPUT: dota/particles/items5_fx/starforge_debuff_eyes_grp.vpcf (crc 3009980064)
 - REF: materials/particle/arrow_down.vtex
 - REF: particles/items5_fx/starforge_debuff_eyes.vpcf
 - SUBASSET REF: particle_operator
@@ -686866,6 +686826,7 @@ particles/items5_fx/starforge_debuff_eyes_grp.vpcf
  - C_OP_SetChildControlPoints 1
  - C_OP_SetControlPointsToParticle 1
  - C_OP_SetControlPointPositions 2
+ - C_OP_EndCapTimedDecay 1
  - C_OP_SetCPOrientationToPointAtCP 1
  - C_OP_SetParentControlPointsToChildCP 2
  - C_OP_SetControlPointToVectorExpression 1
@@ -687385,11 +687346,12 @@ particles/items5_fx/starforge_spell_ground_impact_sphere_full.vpcf
 particles/items5_fx/starforge_spell_ground_shadow.vpcf
 - GAME: dota/particles/items5_fx/starforge_spell_ground_shadow.vpcf_c
 - CONTENT: dota/particles/items5_fx/starforge_spell_ground_shadow.vpcf
-- INPUT: dota/particles/items5_fx/starforge_spell_ground_shadow.vpcf (crc 2600210176)
+- INPUT: dota/particles/items5_fx/starforge_spell_ground_shadow.vpcf (crc 278282115)
 - REF: materials/particle/ring/ring_soft.vtex
 - SUBASSET REF: particle_operator
  - C_OP_InstantaneousEmitter 1
  - C_INIT_InitFloat 2
+ - C_OP_Decay 1
  - C_OP_PositionLock 1
  - C_OP_RenderSprites 1
  - C_OP_SetFloat 2
@@ -689234,12 +689196,11 @@ particles/neutral_fx/tusk_frostmage_snowball_trail_a.vpcf
 particles/status_fx/chaos_knight_armageddon_illusion_status_effect.vpcf
 - GAME: dota/particles/status_fx/chaos_knight_armageddon_illusion_status_effect.vpcf_c
 - CONTENT: dota/particles/status_fx/chaos_knight_armageddon_illusion_status_effect.vpcf
-- INPUT: dota/particles/status_fx/chaos_knight_armageddon_illusion_status_effect.vpcf (crc 2106910578)
-- REF: materials/models/heroes/statuseffects/colorwarp_c2015_lvl2_dire.vtex
+- INPUT: dota/particles/status_fx/chaos_knight_armageddon_illusion_status_effect.vpcf (crc 3044814802)
+- REF: materials/models/heroes/statuseffects/colorwarp_chaos_knight_illusion.vtex
 - REF: materials/models/heroes/statuseffects/colorwarp_desat_stone_mix.vtex
 - REF: materials/models/heroes/statuseffects/dark_stone_status.vtex
 - SUBASSET REF: particle_operator
- - C_INIT_RandomColor 1
  - C_OP_EndCapTimedDecay 2
  - C_INIT_StatusEffect 1
  - C_OP_RenderStatusEffect 1
@@ -691241,7 +691202,7 @@ particles/units/heroes/hero_gyrocopter/gyro_calldown_marker_plain.vpcf
 particles/units/heroes/hero_juggernaut/juggernaut_blade_fury_attacks.vpcf
 - GAME: dota/particles/units/heroes/hero_juggernaut/juggernaut_blade_fury_attacks.vpcf_c
 - CONTENT: dota/particles/units/heroes/hero_juggernaut/juggernaut_blade_fury_attacks.vpcf
-- INPUT: dota/particles/units/heroes/hero_juggernaut/juggernaut_blade_fury_attacks.vpcf (crc 1502424760)
+- INPUT: dota/particles/units/heroes/hero_juggernaut/juggernaut_blade_fury_attacks.vpcf (crc 4135888896)
 - REF: particles/units/heroes/hero_juggernaut/juggernaut_blade_fury_attacks_model.vpcf
 - SUBASSET REF: particle_operator
  - C_OP_StopAfterCPDuration 1
@@ -691271,13 +691232,13 @@ particles/units/heroes/hero_juggernaut/juggernaut_blade_fury_attacks_arc.vpcf
 particles/units/heroes/hero_juggernaut/juggernaut_blade_fury_attacks_arc_core.vpcf
 - GAME: dota/particles/units/heroes/hero_juggernaut/juggernaut_blade_fury_attacks_arc_core.vpcf_c
 - CONTENT: dota/particles/units/heroes/hero_juggernaut/juggernaut_blade_fury_attacks_arc_core.vpcf
-- INPUT: dota/particles/units/heroes/hero_juggernaut/juggernaut_blade_fury_attacks_arc_core.vpcf (crc 1689911826)
+- INPUT: dota/particles/units/heroes/hero_juggernaut/juggernaut_blade_fury_attacks_arc_core.vpcf (crc 1153773286)
 - REF: materials/particle/beam_ice_half.vtex
 - SUBASSET REF: particle_operator
  - C_INIT_InitFloat 1
  - C_OP_Decay 1
  - C_OP_BasicMovement 1
- - C_OP_PositionLock 1
+ - C_INIT_VelocityFromCP 1
  - C_OP_RenderRopes 1
  - C_OP_InterpolateRadius 1
  - C_OP_FadeInSimple 1
@@ -691337,8 +691298,10 @@ particles/units/heroes/hero_juggernaut/juggernaut_blade_fury_attacks_hit_burst.v
 particles/units/heroes/hero_juggernaut/juggernaut_blade_fury_attacks_model.vpcf
 - GAME: dota/particles/units/heroes/hero_juggernaut/juggernaut_blade_fury_attacks_model.vpcf_c
 - CONTENT: dota/particles/units/heroes/hero_juggernaut/juggernaut_blade_fury_attacks_model.vpcf
-- INPUT: dota/particles/units/heroes/hero_juggernaut/juggernaut_blade_fury_attacks_model.vpcf (crc 1625432056)
+- INPUT: dota/particles/units/heroes/hero_juggernaut/juggernaut_blade_fury_attacks_model.vpcf (crc 3740155964)
+- REF: materials/models/heroes/juggernaut/juggernaut_bladefury_attacks_morphling.vmat
 - REF: materials/models/heroes/juggernaut/juggernaut_bladefury_attacks_outline.vmat
+- REF: materials/models/heroes/juggernaut/juggernaut_bladefury_attacks_rubick.vmat
 - REF: models/heroes/juggernaut/juggernaut.vmdl
 - REF: particles/units/heroes/hero_juggernaut/juggernaut_blade_fury_attacks_arc.vpcf
 - REF: particles/units/heroes/hero_juggernaut/juggernaut_blade_fury_attacks_hit.vpcf
@@ -691354,7 +691317,7 @@ particles/units/heroes/hero_juggernaut/juggernaut_blade_fury_attacks_model.vpcf
  - C_INIT_VelocityRadialRandom 1
  - C_OP_SetFloat 2
  - C_INIT_Orient2DRelToCP 1
- - C_OP_RenderModels 2
+ - C_OP_RenderModels 4
  - C_OP_SetSingleControlPointPosition 1
  - C_INIT_RingWave 1
  - C_OP_SetChildControlPoints 1
@@ -692930,7 +692893,7 @@ particles/units/heroes/hero_undying/undying_zombie_bite_teeth_trail.vpcf
 particles/units/heroes/hero_kunkka/kunkka_tidebringer_aoe.vpcf
 - GAME: dota/particles/units/heroes/hero_kunkka/kunkka_tidebringer_aoe.vpcf_c
 - CONTENT: dota/particles/units/heroes/hero_kunkka/kunkka_tidebringer_aoe.vpcf
-- INPUT: dota/particles/units/heroes/hero_kunkka/kunkka_tidebringer_aoe.vpcf (crc 3137793097)
+- INPUT: dota/particles/units/heroes/hero_kunkka/kunkka_tidebringer_aoe.vpcf (crc 441711923)
 - REF: materials/particle/particle_beam_generic.vtex
 - REF: particles/units/heroes/hero_kunkka/kunkka_tidebringer_aoe_front.vpcf
 - SUBASSET REF: particle_operator
@@ -692946,7 +692909,7 @@ particles/units/heroes/hero_kunkka/kunkka_tidebringer_aoe.vpcf
 particles/units/heroes/hero_kunkka/kunkka_tidebringer_aoe_front.vpcf
 - GAME: dota/particles/units/heroes/hero_kunkka/kunkka_tidebringer_aoe_front.vpcf_c
 - CONTENT: dota/particles/units/heroes/hero_kunkka/kunkka_tidebringer_aoe_front.vpcf
-- INPUT: dota/particles/units/heroes/hero_kunkka/kunkka_tidebringer_aoe_front.vpcf (crc 628530887)
+- INPUT: dota/particles/units/heroes/hero_kunkka/kunkka_tidebringer_aoe_front.vpcf (crc 3088253542)
 - REF: particles/units/heroes/hero_kunkka/kunkka_tidebringer_aoe_normal.vpcf
 - SUBASSET REF: particle_operator
  - C_OP_InstantaneousEmitter 1
@@ -692960,87 +692923,10 @@ particles/units/heroes/hero_kunkka/kunkka_tidebringer_aoe_front.vpcf
 particles/units/heroes/hero_kunkka/kunkka_tidebringer_aoe_normal.vpcf
 - GAME: dota/particles/units/heroes/hero_kunkka/kunkka_tidebringer_aoe_normal.vpcf_c
 - CONTENT: dota/particles/units/heroes/hero_kunkka/kunkka_tidebringer_aoe_normal.vpcf
-- INPUT: dota/particles/units/heroes/hero_kunkka/kunkka_tidebringer_aoe_normal.vpcf (crc 1817115928)
-- REF: materials/particle/spray2/spray2_normal.vtex
+- INPUT: dota/particles/units/heroes/hero_kunkka/kunkka_tidebringer_aoe_normal.vpcf (crc 3294074421)
+- REF: materials/particle/water/splash.vtex
 - SUBASSET REF: particle_operator
  - C_INIT_InitFloat 6
- - C_OP_Decay 1
- - C_OP_BasicMovement 1
- - C_OP_RenderSprites 1
- - C_INIT_VelocityRadialRandom 1
- - C_OP_SetFloat 2
- - C_INIT_RandomSequence 1
- - C_OP_ContinuousEmitter 1
- - C_OP_SpinUpdate 1
- - C_INIT_InitialVelocityNoise 1
- - C_OP_LerpEndCapScalar 1
- - C_OP_LerpScalar 1
- - C_OP_MaxVelocity 1
- - C_INIT_CreateFromParentParticles 1
- - C_OP_EndCapTimedDecay 1
- - C_OP_Orient2DRelToCP 1
- - C_INIT_InheritFromParentParticles 1
-- SUBASSET REF: particle_feature
- - refraction 1
-
-particles/units/heroes/hero_kunkka/kunkka_tidebringer_aoe_normal_quick.vpcf
-- GAME: dota/particles/units/heroes/hero_kunkka/kunkka_tidebringer_aoe_normal_quick.vpcf_c
-- CONTENT: dota/particles/units/heroes/hero_kunkka/kunkka_tidebringer_aoe_normal_quick.vpcf
-- INPUT: dota/particles/units/heroes/hero_kunkka/kunkka_tidebringer_aoe_normal_quick.vpcf (crc 1470011581)
-- REF: materials/particle/spray2/spray2_normal.vtex
-- SUBASSET REF: particle_operator
- - C_INIT_InitFloat 6
- - C_OP_Decay 1
- - C_OP_BasicMovement 1
- - C_OP_RenderSprites 1
- - C_INIT_VelocityRadialRandom 1
- - C_OP_SetFloat 2
- - C_INIT_RandomSequence 1
- - C_OP_ContinuousEmitter 1
- - C_OP_SpinUpdate 1
- - C_INIT_InitialVelocityNoise 1
- - C_OP_LerpEndCapScalar 1
- - C_OP_LerpScalar 1
- - C_OP_MaxVelocity 1
- - C_INIT_CreateFromParentParticles 1
- - C_OP_EndCapTimedDecay 1
- - C_OP_Orient2DRelToCP 1
-- SUBASSET REF: particle_feature
- - refraction 1
-
-particles/units/heroes/hero_kunkka/kunkka_tidebringer_aoe_splash.vpcf
-- GAME: dota/particles/units/heroes/hero_kunkka/kunkka_tidebringer_aoe_splash.vpcf_c
-- CONTENT: dota/particles/units/heroes/hero_kunkka/kunkka_tidebringer_aoe_splash.vpcf
-- INPUT: dota/particles/units/heroes/hero_kunkka/kunkka_tidebringer_aoe_splash.vpcf (crc 23847262)
-- REF: materials/particle/spray2/spray2.vtex
-- REF: materials/particle/spray2/spray2_normal.vtex
-- SUBASSET REF: particle_operator
- - C_INIT_InitFloat 6
- - C_OP_Decay 1
- - C_OP_BasicMovement 1
- - C_OP_RenderSprites 1
- - C_INIT_VelocityRadialRandom 1
- - C_OP_SetFloat 2
- - C_INIT_RandomSequence 1
- - C_OP_ContinuousEmitter 1
- - C_OP_SpinUpdate 1
- - C_INIT_InitialVelocityNoise 1
- - C_OP_LerpEndCapScalar 1
- - C_OP_ColorInterpolate 1
- - C_OP_LerpScalar 1
- - C_OP_MaxVelocity 1
- - C_INIT_CreateFromParentParticles 1
- - C_OP_EndCapTimedDecay 1
- - C_OP_Orient2DRelToCP 1
-
-particles/units/heroes/hero_kunkka/kunkka_tidebringer_aoe_spray.vpcf
-- GAME: dota/particles/units/heroes/hero_kunkka/kunkka_tidebringer_aoe_spray.vpcf_c
-- CONTENT: dota/particles/units/heroes/hero_kunkka/kunkka_tidebringer_aoe_spray.vpcf
-- INPUT: dota/particles/units/heroes/hero_kunkka/kunkka_tidebringer_aoe_spray.vpcf (crc 1847360461)
-- REF: materials/models/heroes/morphling/watersprites/waveform_sprites2.vtex
-- REF: materials/particles/light_flare/light_glow_01.vtex
-- SUBASSET REF: particle_operator
- - C_INIT_InitFloat 3
  - C_OP_Decay 1
  - C_OP_BasicMovement 1
  - C_OP_RenderSprites 2
@@ -693048,10 +692934,79 @@ particles/units/heroes/hero_kunkka/kunkka_tidebringer_aoe_spray.vpcf
  - C_OP_SetFloat 2
  - C_INIT_RandomSequence 1
  - C_OP_ContinuousEmitter 1
+ - C_OP_SpinUpdate 1
  - C_INIT_InitialVelocityNoise 1
  - C_OP_LerpEndCapScalar 1
+ - C_OP_LerpScalar 1
  - C_OP_MaxVelocity 1
  - C_INIT_CreateFromParentParticles 1
  - C_OP_EndCapTimedDecay 1
+ - C_OP_SetVec 1
  - C_OP_Orient2DRelToCP 1
+ - C_INIT_InheritFromParentParticles 1
+- SUBASSET REF: particle_feature
+ - refraction 1
+
+particles/items5_fx/starforge_burn.vpcf
+- GAME: dota/particles/items5_fx/starforge_burn.vpcf_c
+- CONTENT: dota/particles/items5_fx/starforge_burn.vpcf
+- INPUT: dota/particles/items5_fx/starforge_burn.vpcf (crc 621504126)
+- REF: particles/items5_fx/starforge_debuff_burst.vpcf
+- REF: particles/items5_fx/starforge_debuff_embers.vpcf
+- REF: particles/items5_fx/starforge_debuff_smoke.vpcf
+- REF: particles/items5_fx/starforge_debuff_stars.vpcf
+- REF: particles/items5_fx/starforge_debuff_verticals.vpcf
+- REF: particles/items5_fx/starforge_debuff_warp.vpcf
+- SUBASSET REF: particle_operator
+ - C_OP_SetSingleControlPointPosition 2
+
+particles/items5_fx/starforge_burn_detail.vpcf
+- GAME: dota/particles/items5_fx/starforge_burn_detail.vpcf_c
+- CONTENT: dota/particles/items5_fx/starforge_burn_detail.vpcf
+- INPUT: dota/particles/items5_fx/starforge_burn_detail.vpcf (crc 1881504114)
+- REF: materials/particle/lanaya/plasma_flame.vtex
+- SUBASSET REF: particle_operator
+ - C_INIT_InitFloat 4
+ - C_OP_Decay 1
+ - C_OP_BasicMovement 1
+ - C_OP_RenderSprites 1
+ - C_INIT_CreateOnModel 1
+ - C_OP_InterpolateRadius 1
+ - C_INIT_RandomColor 1
+ - C_INIT_RandomSequence 1
+ - C_OP_FadeOutSimple 1
+ - C_OP_FadeInSimple 1
+ - C_OP_ContinuousEmitter 1
+ - C_INIT_InitialVelocityNoise 1
+ - C_INIT_RandomYawFlip 1
+ - C_OP_ColorInterpolate 1
+ - C_OP_LockToBone 1
+ - C_OP_RampScalarLinearSimple 2
+ - C_INIT_CreationNoise 1
+- SUBASSET REF: particle_feature
+ - Hitbox 2
+
+particles/items5_fx/starforge_burn_glow.vpcf
+- GAME: dota/particles/items5_fx/starforge_burn_glow.vpcf_c
+- CONTENT: dota/particles/items5_fx/starforge_burn_glow.vpcf
+- INPUT: dota/particles/items5_fx/starforge_burn_glow.vpcf (crc 2438428635)
+- REF: materials/particle/particle_flares/particle_flare_004b_mod.vtex
+- SUBASSET REF: particle_operator
+ - C_INIT_InitFloat 4
+ - C_OP_Decay 1
+ - C_OP_BasicMovement 1
+ - C_OP_RenderSprites 1
+ - C_INIT_CreateOnModel 1
+ - C_OP_InterpolateRadius 1
+ - C_OP_FadeOutSimple 1
+ - C_OP_FadeInSimple 1
+ - C_OP_ContinuousEmitter 1
+ - C_INIT_InitialVelocityNoise 1
+ - C_INIT_RandomYawFlip 1
+ - C_OP_ColorInterpolate 1
+ - C_OP_LockToBone 1
+ - C_INIT_RemapParticleCountToScalar 1
+ - C_OP_RampScalarLinearSimple 2
+- SUBASSET REF: particle_feature
+ - Hitbox 2
 
